@@ -4,8 +4,8 @@
 # Depends on:  ncurses, readline
 
 name=sqlite3
-version=3.6.21
-release=2
+version=3.6.22
+release=1
 
 source=(http://www.sqlite.org/sqlite-amalgamation-$version.tar.gz)
 
@@ -14,8 +14,7 @@ build () {
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
-                --enable-threadsafe \
-                CFLAGS="$CFLAGS -DNDEBUG"
+                --enable-threadsafe 
 
     make
     make DESTDIR=$PKG install
