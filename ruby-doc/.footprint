@@ -10340,6 +10340,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/WEBrick/AccessLog/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/WEBrick/AccessLog/AccessLogError/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/AccessLog/AccessLogError/cdesc-AccessLogError.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/AccessLog/cdesc-AccessLog.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/AccessLog/escape-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/AccessLog/format-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/AccessLog/setup_params-i.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/WEBrick/BasicLog/
@@ -10662,6 +10663,10 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/ServerError/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/ServerError/cdesc-ServerError.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/Status/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/Status/cdesc-Status.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/Status/code-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/Status/new-c.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/Status/reason_phrase-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/Status/to_i-i.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/Success/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/Success/cdesc-Success.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/WEBrick/HTTPStatus/cdesc-HTTPStatus.yaml
