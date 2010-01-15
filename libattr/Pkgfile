@@ -1,25 +1,33 @@
 # Description: Extented attributes library
-# URL: http://acl.bestbits.at/
+# URL: http://savannah.nongnu.org/projects/attr/
 # Maintainer: Antti Nykanen, aon at iki dot fi
 # Depends on:
 
 name=libattr
-version=2.4.43-1
-release=2
-source=(ftp://oss.sgi.com/projects/xfs/cmd_tars/attr_${version}.tar.gz)
+version=2.4.44
+release=1
+source=(http://mirrors.zerg.biz/nongnu/attr/attr-$version.src.tar.gz)
 
 build() {
-	cd attr-${version%-1}
-	./configure --prefix=$PKG/usr --libexecdir=$PKG/usr/lib
-	make
-	make install-lib
-	make install-dev
+    cd attr-$version
 
-	rm $PKG/usr/lib/libattr.so
-	ln -s /usr/lib/libattr.so.1 $PKG/usr/lib/libattr.so
+    export DEBUG=-DNDEBUG
+    export OPTIMIZER=$CFLAGS
 
-	# category 2 manuals are included in core/man-pages
-	rm -rf $PKG/usr/man/man2
+    ./configure --prefix=/usr \
+                --bindir=/bin \
+                --libexecdir=/usr/lib \
+                --mandir=/usr/man
+    make
+    make DIST_ROOT=$PKG install install-lib install-dev
 
-	sed -i "s:libdir=.*:libdir='/usr/lib':" $PKG/usr/lib/libattr.la
+    install -d $PKG/lib
+    mv $PKG/usr/lib/libattr.so.* $PKG/lib
+    rm $PKG/usr/lib/libattr.so
+    ln -s ../../lib/libattr.so.1.1.0 $PKG/usr/lib/libattr.so
+
+    # category 2 manuals are included in core/man-pages
+    rm -r $PKG/usr/man/man2
+
+    rm -r $PKG/usr/share
 }
