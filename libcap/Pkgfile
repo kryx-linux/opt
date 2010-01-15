@@ -1,26 +1,23 @@
 # Description: POSIX.1e capabilities library
-# URL: http://linux.kernel.org/pub/linux/libs/security/linux-privs/
+# URL: http://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/README
 # Maintainer: Antti Nykanen, aon at iki dot fi
 # Depends on: libattr
 
 name=libcap
-version=2.17
+version=2.18
 release=1
-source=(ftp://ftp.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.6/libcap-$version.tar.gz
-	$name-$version-makefile.patch)
+source=(ftp://ftp.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-$version.tar.bz2)
 
 build () {
-	cd libcap-$version
-	
-	patch -p0 -i $SRC/$name-$version-makefile.patch
+    cd libcap-$version
 
-	make
-	make \
-		INCDIR=$PKG/usr/include \
-		LIBDIR=$PKG/usr/lib \
-		SBINDIR=$PKG/usr/sbin \
-		MANDIR=$PKG/usr/man install
+    sed -i '/^CFLAGS :=/s/:/\?/' Make.Rules 
 
-	# man8 is empty, cap{set,get}(2) come from core/man-pages
-	rm -rf $PKG/usr/man/man{2,8}
+    make
+    make DESTDIR=$PKG man_prefix=/usr install
+
+    install -d $PKG/usr/lib
+    mv $PKG/lib/libcap.a $PKG/usr/lib
+    rm $PKG/lib/libcap.so
+    ln -s ../../lib/libcap.so.$version $PKG/usr/lib/libcap.so
 }
