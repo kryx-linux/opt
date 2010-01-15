@@ -25,6 +25,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeASM-ATTInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeASMCompiler.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeASMInformation.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeASM_MASMInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeBackwardCompatibilityC.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeBackwardCompatibilityCXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeBorlandFindMake.cmake
@@ -43,6 +44,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeDependentOption.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeDetermineASM-ATTCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeDetermineASMCompiler.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeDetermineASM_MASMCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeDetermineCCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeDetermineCXXCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeDetermineCompilerABI.cmake
@@ -75,6 +77,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeSystemSpecificInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeTestASM-ATTCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeTestASMCompiler.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeTestASM_MASMCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeTestCCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeTestCXXCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeTestForFreeVC.cxx
@@ -95,7 +98,9 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CPack.Description.plist.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CPack.Info.plist.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CPack.OSXScriptLauncher.in
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CPack.OSXScriptLauncher.rsrc.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CPack.OSXX11.Info.plist.in
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CPack.OSXX11.main.scpt.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CPack.RuntimeScript.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CPack.STGZ_Header.sh.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CPack.VolumeIcon.icns.in
@@ -145,11 +150,14 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindCABLE.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindCURL.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindCVS.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindCoin3D.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindCups.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindCurses.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindCxxTest.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindCygwin.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindDCMTK.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindDart.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindDevIL.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindDoxygen.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindEXPAT.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindFLTK.cmake
@@ -187,7 +195,9 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindMotif.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindOpenAL.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindOpenGL.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindOpenMP.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindOpenSSL.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindOpenSceneGraph.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindOpenThreads.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindPHP4.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindPNG.cmake
@@ -205,6 +215,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindQt3.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindQt4.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindQuickTime.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindRTI.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindRuby.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindSDL.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindSDL_image.cmake
@@ -214,6 +225,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindSDL_ttf.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindSWIG.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindSelfPackers.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindSquish.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindSubversion.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindTCL.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindTIFF.cmake
@@ -228,6 +240,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindXMLRPC.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindZLIB.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Findosg.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindosgAnimation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindosgDB.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindosgFX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindosgGA.cmake
@@ -241,8 +254,13 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindosgText.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindosgUtil.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindosgViewer.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindosgVolume.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindosgWidget.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Findosg_functions.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindwxWidgets.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FindwxWindows.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FortranCInterface.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/FortranCInterface.h.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/GetPrerequisites.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/ITKCompatibility.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/InstallRequiredSystemLibraries.cmake
@@ -275,6 +293,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/Generic-SDCC-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/Generic.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/HP-UX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/Haiku.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/IRIX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/IRIX64.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/Linux-GNU-Fortran.cmake
@@ -329,6 +348,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/kFreeBSD.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/syllable.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/Platform/xlf.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/SquishTestScript.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/SystemInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/SystemInformation.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/TestBigEndian.cmake
