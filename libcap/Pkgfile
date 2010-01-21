@@ -4,7 +4,7 @@
 # Depends on: libattr
 
 name=libcap
-version=2.18
+version=2.19
 release=1
 source=(ftp://ftp.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-$version.tar.bz2)
 
