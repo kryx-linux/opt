@@ -7,7 +7,7 @@
 
 name=pinentry
 version=0.7.5
-release=2
+release=3
 source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.gz $name-$version.patch)
 
 build() {
@@ -20,10 +20,6 @@ build() {
   --with-qt-dir=/usr/share/qt3 \
   --enable-fallback-curses \
   --disable-pinentry-gtk
-    cd qt
-    moc-qt3 pinentrydialog.h > pinentrydialog.moc
-    moc-qt3  secqlineedit.h >  secqlineedit.moc
-    cd ..
     make
     make DESTDIR=$PKG install
 
