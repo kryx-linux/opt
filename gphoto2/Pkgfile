@@ -1,12 +1,12 @@
 # Description: Command-line client for libgphoto2
 # URL:         http://www.gphoto.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  ncurses readline libtool popt libgphoto2
+# Depends on:  readline popt libgphoto2
 
 name=gphoto2
-version=2.4.7
+version=2.4.8
 release=1
-source=(http://download.sourceforge.net/sourceforge/gphoto/$name-$version.tar.gz)
+source=(http://download.sourceforge.net/sourceforge/gphoto/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
