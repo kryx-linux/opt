@@ -3,14 +3,16 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=enscript
-version=1.6.4
+version=1.6.5
 release=1
-source=(http://www.sfr-fresh.com/unix/misc/$name-$version.tar.gz)
+source=(http://ftp.gnu.org/gnu/enscript/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --disable-nls
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --disable-nls
     make
-    make prefix=$PKG/usr install
-    rm -r $PKG/usr/info
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/share/info
 }
