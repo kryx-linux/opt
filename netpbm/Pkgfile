@@ -4,16 +4,16 @@
 # Depends on: ghostscript
 
 name=netpbm
-version=10.35.68
+version=10.47.9
 release=1
 source=(http://crux.nu/~aon/$name/$name-$version.tar.gz
-	Makefile.config)
+	config.mk)
 
 build() {
 	export MAKEFLAGS="$MAKEFLAGS -j1"
 
 	cd netpbm-$version
-	sed -e "s|#CFLAGS#|$CFLAGS|" $SRC/Makefile.config > Makefile.config
+	sed -e "s|#CFLAGS#|$CFLAGS|" $SRC/config.mk > config.mk
 	make
 	make pkgdir=$PKG/usr package
 	mkdir $PKG/usr/share

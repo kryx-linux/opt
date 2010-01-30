@@ -43,6 +43,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/palmtopnm
 -rwxr-xr-x	root/root	usr/bin/pamaddnoise
 -rwxr-xr-x	root/root	usr/bin/pamarith
+-rwxr-xr-x	root/root	usr/bin/pambackground
 -rwxr-xr-x	root/root	usr/bin/pambayer
 -rwxr-xr-x	root/root	usr/bin/pamchannel
 -rwxr-xr-x	root/root	usr/bin/pamcomp
@@ -55,6 +56,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamendian
 -rwxr-xr-x	root/root	usr/bin/pamenlarge
 -rwxr-xr-x	root/root	usr/bin/pamfile
+-rwxr-xr-x	root/root	usr/bin/pamfixtrunc
 -rwxr-xr-x	root/root	usr/bin/pamflip
 -rwxr-xr-x	root/root	usr/bin/pamfunc
 -rwxr-xr-x	root/root	usr/bin/pamgauss
@@ -71,6 +73,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamseq
 -rwxr-xr-x	root/root	usr/bin/pamsharpmap
 -rwxr-xr-x	root/root	usr/bin/pamsharpness
+-rwxr-xr-x	root/root	usr/bin/pamsistoaglyph
 -rwxr-xr-x	root/root	usr/bin/pamslice
 -rwxr-xr-x	root/root	usr/bin/pamsplit
 -rwxr-xr-x	root/root	usr/bin/pamstack
@@ -83,9 +86,13 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamtilt
 -rwxr-xr-x	root/root	usr/bin/pamtodjvurle
 -rwxr-xr-x	root/root	usr/bin/pamtofits
+-rwxr-xr-x	root/root	usr/bin/pamtogif
 -rwxr-xr-x	root/root	usr/bin/pamtohdiff
 -rwxr-xr-x	root/root	usr/bin/pamtohtmltbl
 -rwxr-xr-x	root/root	usr/bin/pamtojpeg2k
+-rwxr-xr-x	root/root	usr/bin/pamtompfont
+-rwxr-xr-x	root/root	usr/bin/pamtooctaveimg
+-rwxr-xr-x	root/root	usr/bin/pamtopam
 -rwxr-xr-x	root/root	usr/bin/pamtopfm
 -rwxr-xr-x	root/root	usr/bin/pamtopnm
 -rwxr-xr-x	root/root	usr/bin/pamtosvg
@@ -93,11 +100,13 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamtotiff
 -rwxr-xr-x	root/root	usr/bin/pamtouil
 -rwxr-xr-x	root/root	usr/bin/pamtoxvmini
+-rwxr-xr-x	root/root	usr/bin/pamundice
 -rwxr-xr-x	root/root	usr/bin/pamx
 -rwxr-xr-x	root/root	usr/bin/pbmclean
 -rwxr-xr-x	root/root	usr/bin/pbmlife
 -rwxr-xr-x	root/root	usr/bin/pbmmake
 -rwxr-xr-x	root/root	usr/bin/pbmmask
+-rwxr-xr-x	root/root	usr/bin/pbmminkowski
 -rwxr-xr-x	root/root	usr/bin/pbmpage
 -rwxr-xr-x	root/root	usr/bin/pbmpscale
 -rwxr-xr-x	root/root	usr/bin/pbmreduce
@@ -172,6 +181,7 @@ lrwxrwxrwx	root/root	usr/bin/pgmslice -> pamslice
 -rwxr-xr-x	root/root	usr/bin/picttoppm
 -rwxr-xr-x	root/root	usr/bin/pjtoppm
 -rwxr-xr-x	root/root	usr/bin/pktopbm
+-rwxr-xr-x	root/root	usr/bin/pngtopam
 -rwxr-xr-x	root/root	usr/bin/pngtopnm
 -rwxr-xr-x	root/root	usr/bin/pnmalias
 lrwxrwxrwx	root/root	usr/bin/pnmarith -> pamarith
@@ -180,7 +190,7 @@ lrwxrwxrwx	root/root	usr/bin/pnmarith -> pamarith
 -rwxr-xr-x	root/root	usr/bin/pnmcomp
 -rwxr-xr-x	root/root	usr/bin/pnmconvol
 -rwxr-xr-x	root/root	usr/bin/pnmcrop
--rwxr-xr-x	root/root	usr/bin/pnmcut
+lrwxrwxrwx	root/root	usr/bin/pnmcut -> pamcut
 lrwxrwxrwx	root/root	usr/bin/pnmdepth -> pamdepth
 lrwxrwxrwx	root/root	usr/bin/pnmenlarge -> pamenlarge
 lrwxrwxrwx	root/root	usr/bin/pnmfile -> pamfile
@@ -202,7 +212,7 @@ lrwxrwxrwx	root/root	usr/bin/pnmnoraw -> pnmtoplainpnm
 -rwxr-xr-x	root/root	usr/bin/pnmquant
 -rwxr-xr-x	root/root	usr/bin/pnmremap
 -rwxr-xr-x	root/root	usr/bin/pnmrotate
--rwxr-xr-x	root/root	usr/bin/pnmscale
+lrwxrwxrwx	root/root	usr/bin/pnmscale -> pamscale
 -rwxr-xr-x	root/root	usr/bin/pnmscalefixed
 -rwxr-xr-x	root/root	usr/bin/pnmshear
 -rwxr-xr-x	root/root	usr/bin/pnmsmooth
@@ -323,27 +333,29 @@ lrwxrwxrwx	root/root	usr/bin/ppmtouil -> pamtouil
 -rwxr-xr-x	root/root	usr/bin/yuvtoppm
 -rwxr-xr-x	root/root	usr/bin/zeisstopnm
 drwxr-xr-x	root/root	usr/include/
--rw-r--r--	root/root	usr/include/bitio.h
--rw-r--r--	root/root	usr/include/colorname.h
--rw-r--r--	root/root	usr/include/mallocvar.h
--rw-r--r--	root/root	usr/include/nstring.h
--rw-r--r--	root/root	usr/include/pam.h
--rw-r--r--	root/root	usr/include/pammap.h
--rw-r--r--	root/root	usr/include/pbm.h
--rw-r--r--	root/root	usr/include/pbmfont.h
--rw-r--r--	root/root	usr/include/pgm.h
--rw-r--r--	root/root	usr/include/pm.h
--rw-r--r--	root/root	usr/include/pm_config.h
--rw-r--r--	root/root	usr/include/pm_gamma.h
--rw-r--r--	root/root	usr/include/pm_system.h
--rw-r--r--	root/root	usr/include/pnm.h
--rw-r--r--	root/root	usr/include/ppm.h
--rw-r--r--	root/root	usr/include/ppmcmap.h
--rw-r--r--	root/root	usr/include/ppmfloyd.h
--rw-r--r--	root/root	usr/include/shhopt.h
+drwxr-xr-x	root/root	usr/include/netpbm/
+-rw-r--r--	root/root	usr/include/netpbm/bitio.h
+-rw-r--r--	root/root	usr/include/netpbm/colorname.h
+-rw-r--r--	root/root	usr/include/netpbm/mallocvar.h
+-rw-r--r--	root/root	usr/include/netpbm/pam.h
+-rw-r--r--	root/root	usr/include/netpbm/pammap.h
+-rw-r--r--	root/root	usr/include/netpbm/pbm.h
+-rw-r--r--	root/root	usr/include/netpbm/pbmfont.h
+-rw-r--r--	root/root	usr/include/netpbm/pgm.h
+-rw-r--r--	root/root	usr/include/netpbm/pm.h
+-rw-r--r--	root/root	usr/include/netpbm/pm_config.h
+-rw-r--r--	root/root	usr/include/netpbm/pm_gamma.h
+-rw-r--r--	root/root	usr/include/netpbm/pm_system.h
+-rw-r--r--	root/root	usr/include/netpbm/pnm.h
+-rw-r--r--	root/root	usr/include/netpbm/ppm.h
+-rw-r--r--	root/root	usr/include/netpbm/ppmcmap.h
+-rw-r--r--	root/root	usr/include/netpbm/ppmdfont.h
+-rw-r--r--	root/root	usr/include/netpbm/ppmdraw.h
+-rw-r--r--	root/root	usr/include/netpbm/ppmfloyd.h
+-rw-r--r--	root/root	usr/include/netpbm/shhopt.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.10 -> libnetpbm.so.10.35
--rwxr-xr-x	root/root	usr/lib/libnetpbm.so.10.35
+lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.10 -> libnetpbm.so.10.47
+-rwxr-xr-x	root/root	usr/lib/libnetpbm.so.10.47
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/netpbm/
 -rw-r--r--	root/root	usr/share/netpbm/palmcolor8.map
