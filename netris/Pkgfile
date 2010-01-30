@@ -2,7 +2,7 @@
 # URL: ftp://ftp.netris.org/pub/netris/
 # Maintainer: Antti Nykanen, aon at iki dot fi
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
-# Depends on:
+# Depends on: ncurses
 
 name=netris
 version=0.52
