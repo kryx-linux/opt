@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=maradns
-version=1.4.02
+version=1.4.03
 release=1
 source=(http://www.maradns.org/download/1.4/$version/maradns-$version.tar.bz2 \
         mararc maradns db.localhost)
