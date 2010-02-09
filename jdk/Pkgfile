@@ -6,7 +6,7 @@
 name=jdk
 version=1.6.0_18
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-6u17-dlj-linux-i586.bin)
+source=(http://download.java.net/dlj/binaries/jdk-6u18-dlj-linux-i586.bin)
 
 build(){
 	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib
