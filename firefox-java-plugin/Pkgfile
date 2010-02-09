@@ -1,20 +1,20 @@
 # Description: Java plugin for Mozilla Firefox
 # URL: http://java.sun.com
-# Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Jay Dolan, jdolan at jdolan dot dyndns dot org
-# Depends on: jre, firefox
+# Depends on: jre firefox
 
 name=firefox-java-plugin
-version=1.6.0
+version=1.6.0_18
 release=1
 source=()
 
 build(){
   plugins=(
     # jre
-    /usr/lib/java/plugin/i386/ns7/libjavaplugin_oji.so \
+    /usr/lib/java/lib/i386/libnpjp2.so \
     # jdk
-    /usr/lib/java/jre/plugin/i386/ns7/libjavaplugin_oji.so
+    /usr/lib/java/jre/lib/i386/libnpjp2.so
     )
   
   for p in ${plugins[@]}; do
