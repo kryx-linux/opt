@@ -1,16 +1,19 @@
 # Description: Postscript interpreter
-# URL:         http://www.ghostscript.com/awki
+# URL:         http://www.ghostscript.com
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  cups, fontconfig, xorg-libxt, xorg-libxext
 
 name=ghostscript
-version=8.70
+version=8.71
 release=1
-source=(http://ghostscript.com/releases/$name-$version.tar.xz \
-        http://dl.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz)
+source=(http://ghostscript.com/releases/$name-$version.tar.xz
+        http://dl.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz
+        $name-$version.patch)
 
 build () {
     cd $name-$version
+
+    patch -p1 -i $SRC/$name-$version.patch
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
@@ -18,7 +21,7 @@ build () {
                 --disable-gtk \
                 --with-drivers=ALL
 
-    make so
+    make -j1 so
     make DESTDIR=$PKG install soinstall
     cp -r $SRC/fonts $PKG/usr/share/ghostscript
 
