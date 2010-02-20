@@ -4,7 +4,7 @@
 # Depends on:  curl
 
 name=transmission
-version=1.83
+version=1.90
 release=1
 source=(http://download.m0k.org/$name/files/$name-$version.tar.xz)
 
