@@ -1,17 +1,17 @@
-# Maintainer: Antti Nykanen, aon at iki dot fi
-# Packager: Robert McMeekin, viper at mcmeekin dot info
 # Description: PDF viewer
-# URL: http://foolabs.com/xpdf
+# URL:         http://foolabs.com/xpdf
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Robert McMeekin, viper at mcmeekin dot info
 # Depends on: lesstif, t1lib
 
 name=xpdf
 version=3.02
 release=5
 source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz
-	$name-${version}pl1.patch
-	$name-${version}pl2.patch
-	$name-${version}pl3.patch
-	$name-${version}pl4.patch)
+  $name-${version}pl1.patch
+  $name-${version}pl2.patch
+  $name-${version}pl3.patch
+  $name-${version}pl4.patch)
 
 build() {
     cd $name-$version
@@ -20,10 +20,10 @@ build() {
     patch -p1 -i $SRC/$name-${version}pl3.patch
     patch -p1 -i $SRC/$name-${version}pl4.patch
     ./configure \
-	--prefix=/usr \
+  --prefix=/usr \
         --with-Xm-library=/usr/lib \
         --with-Xm-includes=/usr/include/Xm \
-	--with-freetype2-includes=/usr/include/freetype2 \
+  --with-freetype2-includes=/usr/include/freetype2 \
         --sysconfdir=/etc \
         --enable-a4-paper \
         --enable-opi
