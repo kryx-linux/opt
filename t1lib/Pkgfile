@@ -5,9 +5,9 @@
 # Depends on: xorg-libxaw
 
 name=t1lib
-version=5.1.0
+version=5.1.2
 release=1
-source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz)
+source=(ftp://sunsite.unc.edu/pub/Linux/libs/graphics/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
