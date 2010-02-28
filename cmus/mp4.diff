@@ -1,0 +1,58 @@
+From fff730440d21dab90e41371cce1146aa820e64fb Mon Sep 17 00:00:00 2001
+From: Gregory Petrosyan <gregory.petrosyan@gmail.com>
+Date: Thu, 18 Feb 2010 01:39:27 +0300
+Subject: [PATCH] Fix MP4 compilation when using new libmp4v2
+
+Up-to-date libmp4v2 from http://code.google.com/p/mp4v2/ provides
+<mp4v2/mp4v2.h> instead of <mp4.h>, so use it if available.
+
+Reported-by: David Flatz <solanum0@gmail.com>
+Signed-off-by: Gregory Petrosyan <gregory.petrosyan@gmail.com>
+---
+ configure |    3 +++
+ mp4.c     |    6 ++++++
+ 2 files changed, 9 insertions(+), 0 deletions(-)
+
+diff --git a/configure b/configure
+index aba3779..16d9fba 100755
+--- a/configure
++++ b/configure
+@@ -222,6 +222,8 @@ check_waveout()
+ 
+ check_mp4()
+ {
++	check_header mp4v2/mp4v2.h
++	MP4_USE_OLD_HEADER=$?
+ 	check_header faad.h &&
+ 	check_library MP4 "" "-lmp4v2 -lfaad -lm"
+ 	return $?
+@@ -344,6 +346,7 @@ config_header config/datadir.h DATADIR
+ config_header config/libdir.h LIBDIR
+ config_header config/debug.h DEBUG
+ config_header config/tremor.h CONFIG_TREMOR
++config_header config/mp4.h MP4_USE_OLD_HEADER
+ 
+ makefile_vars bindir datadir libdir mandir exampledir
+ makefile_vars CONFIG_FLAC CONFIG_MAD CONFIG_MIKMOD CONFIG_MODPLUG CONFIG_MPC CONFIG_VORBIS CONFIG_WAVPACK CONFIG_WAV CONFIG_MP4 CONFIG_AAC CONFIG_FFMPEG
+diff --git a/mp4.c b/mp4.c
+index c1969b4..07e8339 100644
+--- a/mp4.c
++++ b/mp4.c
+@@ -21,8 +21,14 @@
+ #include "xmalloc.h"
+ #include "debug.h"
+ #include "file.h"
++#include "config/mp4.h"
+ 
++#if MP4_USE_OLD_HEADER
+ #include <mp4.h>
++#else
++#include <mp4v2/mp4v2.h>
++#endif
++
+ #include <faad.h>
+ 
+ #include <errno.h>
+-- 
+1.6.1
+
