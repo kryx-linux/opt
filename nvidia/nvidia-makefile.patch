@@ -1,7 +1,7 @@
---- Makefile.kbuild.orig	2008-07-18 03:42:51.000000000 +0200
-+++ Makefile.kbuild	2008-08-02 10:14:22.000000000 +0200
-@@ -239,10 +239,10 @@
- #
+--- Makefile.kbuild.orig	2010-02-27 09:32:11.000000000 +0100
++++ Makefile.kbuild	2010-02-27 09:31:40.000000000 +0100
+@@ -213,10 +213,10 @@
+ .PHONY: suser-sanity-check rmmod-sanity-check build-sanity-checks
  
  suser-sanity-check:
 -	@if ! $(CONFTEST) suser_sanity_check; then exit 1; fi
@@ -11,9 +11,9 @@
 -	@if ! $(CONFTEST) rmmod_sanity_check; then exit 1; fi
 +	#@if ! $(CONFTEST) rmmod_sanity_check; then exit 1; fi
  
- cc-version-check:
- 	@if ! $(CONFTEST) cc_version_check full_output; then exit 1; fi
-@@ -284,9 +284,9 @@
+ build-sanity-checks:
+ 	@if ! $(CONFTEST) cc_version_check 		full_output; then exit 1; fi
+@@ -244,9 +244,9 @@
  #
  
  module-install: suser-sanity-check module
@@ -26,14 +26,14 @@
  
  #
  # This target builds, then installs, then creates device nodes and inserts
-@@ -294,8 +294,8 @@
+@@ -254,8 +254,8 @@
  #
  
  package-install: module-install rmmod-sanity-check
--	PATH="$(PATH):/bin:/sbin" modprobe $(MODULE_NAME) && \
+-	@PATH="$(PATH):/bin:/sbin" modprobe $(MODULE_NAME) && \
 -	echo "$(MODULE_OBJECT) installed successfully.";
-+	#PATH="$(PATH):/bin:/sbin" modprobe $(MODULE_NAME) && \
++	#@PATH="$(PATH):/bin:/sbin" modprobe $(MODULE_NAME) && \
 +	#echo "$(MODULE_OBJECT) installed successfully.";
  
  #
- # Build an object file suitable for further processing by the installer and
+ # Build an object file suitable for further processing by the installer
