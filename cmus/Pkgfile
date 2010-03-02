@@ -6,14 +6,12 @@
 # Nice to have: alsa-lib, flac, libao, libid3tag, libmad, libmodplug, libmpcdec, libvorbis
 
 name=cmus
-version=2.2.0
+version=2.3.0
 release=2
-source=(http://mirror.greaterscope.net/$name/$name-$version.tar.bz2 mp4.diff ffmpeg.diff)
+source=(http://downloads.sourceforge.net/project/cmus/cmus-v${version}.tar.bz2)
 
 build() {
-    cd $name-$version
-    patch -p1 -i ../mp4.diff
-    patch -p1 -i ../ffmpeg.diff
+    cd $name-v${version}
     ./configure prefix=/usr mandir=/usr/man CONFIG_ARTS=n
     make
     make DESTDIR=$PKG install install-man
