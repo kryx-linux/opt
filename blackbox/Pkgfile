@@ -1,7 +1,8 @@
 # Description: Fast and small window manager
-# URL:         http://blackboxwm.sourceforge.net
-# Maintainer:  Johannes Winkelmann, jw at smts dot ch
-# Depends on:  xorg-libxext, xorg-libxft
+# URL: http://blackboxwm.sourceforge.net
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Johannes Winkelmann, jw at smts dot ch
+# Depends on: xorg-libxext xorg-libxft
 
 name=blackbox
 version=0.70.1
