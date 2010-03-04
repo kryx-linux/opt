@@ -4,7 +4,7 @@
 # Packager: Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=smartmontools
-version=5.38
+version=5.39.1
 release=1
 source=(http://dl.sourceforge.net/$name/$name-$version.tar.gz \
         smartd)
@@ -12,15 +12,19 @@ source=(http://dl.sourceforge.net/$name/$name-$version.tar.gz \
 build () {
     cd $name-$version
 
-    ./configure \
-	--prefix=/usr \
-	--mandir=/usr/man \
-	--sysconfdir=/etc
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --enable-drivedb \
+                --enable-savestates \
+                --enable-attributelog
+
     make
     make DESTDIR=$PKG install
 
-    install -m 755 ../smartd $PKG/etc/rc.d
+    install -m 755 $SRC/smartd $PKG/etc/rc.d
 
-    rm -r $PKG/usr/share
+    rm -r $PKG/usr/share/doc
     rm -r $PKG/etc/rc.d/init.d
 }
