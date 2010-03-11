@@ -6,7 +6,7 @@
 
 name=gstreamer
 version=0.10.28
-release=1
+release=2
 source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.bz2)
 
 build() {
@@ -14,6 +14,7 @@ build() {
   
   ./configure --prefix=/usr \
               --mandir=/usr/man \
+              --libexecdir=/usr/lib \
               --disable-static \
               --disable-debug \
               --disable-nls \
