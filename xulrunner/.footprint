@@ -8,11 +8,21 @@ drwxr-xr-x	root/root	usr/bin/
 lrwxrwxrwx	root/root	usr/bin/xulrunner -> /usr/lib/xulrunner-1.9.2/xulrunner
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/xulrunner-1.9.2/
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/Allocator.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/Assembler.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/CodeAlloc.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/Containers.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/Fragmento.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/ImageErrors.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/ImageLogging.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/LIR.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/NSReg.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/Native.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/Nativei386.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/RegAlloc.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/VerReg.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/XPCIDispatch.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/avmplus.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/domstubs.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/expat.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/expat_config.h
@@ -90,6 +100,7 @@ drwxr-xr-x	root/root	usr/include/xulrunner-1.9.2/fishsound/
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/jsautokw.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/jsbit.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/jsbool.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/jsbuiltins.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/jsclist.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/jscntxt.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/jscompat.h
@@ -178,6 +189,7 @@ drwxr-xr-x	root/root	usr/include/xulrunner-1.9.2/mozilla/storage/
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/mozilla/storage/Variant.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/mozilla/storage/Variant_inl.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/mozpngconf.h
+-rw-r--r--	root/root	usr/include/xulrunner-1.9.2/nanojit.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/necko-config.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/netCore.h
 -rw-r--r--	root/root	usr/include/xulrunner-1.9.2/npapi.h
