@@ -1297,7 +1297,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/json/
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/
--rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.4-py2.6.egg-info
+-rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.5-py2.6.egg-info
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bisect.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bsddb.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bytesio.so
@@ -1422,9 +1422,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib-tk/
 -rw-r--r--	root/root	usr/lib/python2.6/lib-tk/turtle.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.4.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.5.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.4.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.5.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyo
@@ -1528,6 +1528,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/fixes/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_numliterals.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_numliterals.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_numliterals.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_operator.py
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_operator.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_operator.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_paren.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_paren.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_paren.pyo
@@ -1625,7 +1628,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/pgen2/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/pytree.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/pytree.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/pytree.pyo
--rwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/refactor.py
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/refactor.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/refactor.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/refactor.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/linecache.py
@@ -2169,6 +2172,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/test/decimaltestdata/
 -rw-r--r--	root/root	usr/lib/python2.6/test/list_tests.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/list_tests.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/list_tests.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/test/lock_tests.py
+-rw-r--r--	root/root	usr/lib/python2.6/test/lock_tests.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/test/lock_tests.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/test/mapping_tests.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/mapping_tests.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/mapping_tests.pyo
@@ -3018,6 +3024,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/test/decimaltestdata/
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_re.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_re.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_re.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_readline.py
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_readline.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_readline.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_repr.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_repr.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_repr.pyo
