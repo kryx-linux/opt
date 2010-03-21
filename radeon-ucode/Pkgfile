@@ -1,0 +1,15 @@
+# Description:  Needed userspace firmware for radeon r6xx and r7xx KMS.
+# URL:          http://people.freedesktop.org/~agd5f/radeon_ucode/.
+# Maintainer:   Fredrik Rinnestam, fredrik at rinnestam dot se
+# Depends on:   
+ 
+name=radeon-ucode
+version=1.0
+release=1
+source=(http://people.freedesktop.org/~agd5f/radeon_ucode/R600_rlc.bin \
+        http://people.freedesktop.org/~agd5f/radeon_ucode/R700_rlc.bin)
+
+build() {
+    mkdir -p $PKG/lib/firmware/radeon
+    cp R{6,7}00_rlc.bin $PKG/lib/firmware/radeon/
+}
