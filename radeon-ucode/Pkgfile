@@ -7,7 +7,8 @@ name=radeon-ucode
 version=1.0
 release=1
 source=(http://people.freedesktop.org/~agd5f/radeon_ucode/R600_rlc.bin \
-        http://people.freedesktop.org/~agd5f/radeon_ucode/R700_rlc.bin)
+        http://people.freedesktop.org/~agd5f/radeon_ucode/R700_rlc.bin \
+        LICENSE.radeon)
 
 build() {
     mkdir -p $PKG/lib/firmware/radeon
