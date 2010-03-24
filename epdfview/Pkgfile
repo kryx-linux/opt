@@ -5,11 +5,15 @@
 
 name=epdfview
 version=0.1.7
-release=1
-source=(http://www.emma-soft.com/projects/epdfview/chrome/site/releases/$name-$version.tar.bz2)
+release=2
+source=(http://www.emma-soft.com/projects/epdfview/chrome/site/releases/$name-$version.tar.bz2
+        $name.diff)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/$name.diff
+
         ./configure --prefix=/usr --disable-nls
         make
         make DESTDIR=$PKG install
