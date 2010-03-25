@@ -1,10 +1,10 @@
 # Description: SMB server and client for unix
 # URL:         http://www.samba.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  ncurses openssl readline zlib
+# Depends on:  ncurses openssl readline zlib tdb libcap
 
 name=samba
-version=3.4.7
+version=3.5.1
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
@@ -15,7 +15,6 @@ build () {
     patch -d .. -p1 -i $SRC/samba-config.patch
 
     ./configure --prefix=/usr \
-                --libdir=/usr/lib/samba \
                 --localstatedir=/var \
                 --with-fhs \
                 --with-configdir=/etc/samba \
@@ -24,17 +23,16 @@ build () {
                 --with-piddir=/var/run/samba \
                 --with-mandir=/usr/man \
                 --with-logfilebase=/var/log/samba \
-                --disable-swat
+                --disable-swat \
+                --with-included-popt \
+                --with-cifs{mount,umount} \
+                --enable-external-libtdb
 
-    make -j1
+    make
     make DESTDIR=$PKG install
 
     install -d $PKG/sbin
     mv $PKG/usr/sbin/*.cifs $PKG/sbin
-    ln -s samba/libsmbclient.so.0 $PKG/usr/lib/libsmbclient.so 
-
-    install -d $PKG/etc/ld.so.conf.d
-    echo "/usr/lib/samba" > $PKG/etc/ld.so.conf.d/samba.conf
 
     # nsswitch extensions
     install -d $PKG/lib
@@ -52,5 +50,5 @@ build () {
 
     # cleanup
     rm -r $PKG/usr/share
-    rm -r $PKG/usr/man/man8/swat.8
+    rm $PKG/usr/man/man8/{swat.8,tdb*.8}
 }

@@ -1,6 +1,4 @@
 drwxr-xr-x	root/root	etc/
-drwxr-xr-x	root/root	etc/ld.so.conf.d/
--rw-r--r--	root/root	etc/ld.so.conf.d/samba.conf
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/samba
 drwxr-xr-x	root/root	etc/samba/
@@ -41,9 +39,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/smbstatus
 -rwxr-xr-x	root/root	usr/bin/smbtar
 -rwxr-xr-x	root/root	usr/bin/smbtree
--rwxr-xr-x	root/root	usr/bin/tdbbackup
--rwxr-xr-x	root/root	usr/bin/tdbdump
--rwxr-xr-x	root/root	usr/bin/tdbtool
 -rwxr-xr-x	root/root	usr/bin/testparm
 -rwxr-xr-x	root/root	usr/bin/wbinfo
 drwxr-xr-x	root/root	usr/include/
@@ -51,10 +46,19 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/netapi.h
 -rw-r--r--	root/root	usr/include/smb_share_modes.h
 -rw-r--r--	root/root	usr/include/talloc.h
--rw-r--r--	root/root	usr/include/tdb.h
+-rw-r--r--	root/root	usr/include/wbc_async.h
 -rw-r--r--	root/root	usr/include/wbclient.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> samba/libsmbclient.so.0
+lrwxrwxrwx	root/root	usr/lib/libnetapi.so -> libnetapi.so.0
+-rwxr-xr-x	root/root	usr/lib/libnetapi.so.0
+lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> libsmbclient.so.0
+-rwxr-xr-x	root/root	usr/lib/libsmbclient.so.0
+lrwxrwxrwx	root/root	usr/lib/libsmbsharemodes.so -> libsmbsharemodes.so.0
+-rwxr-xr-x	root/root	usr/lib/libsmbsharemodes.so.0
+lrwxrwxrwx	root/root	usr/lib/libtalloc.so -> libtalloc.so.2
+-rwxr-xr-x	root/root	usr/lib/libtalloc.so.2
+lrwxrwxrwx	root/root	usr/lib/libwbclient.so -> libwbclient.so.0
+-rwxr-xr-x	root/root	usr/lib/libwbclient.so.0
 drwxr-xr-x	root/root	usr/lib/samba/
 drwxr-xr-x	root/root	usr/lib/samba/auth/
 -rwxr-xr-x	root/root	usr/lib/samba/auth/script.so
@@ -63,18 +67,6 @@ drwxr-xr-x	root/root	usr/lib/samba/charset/
 -rwxr-xr-x	root/root	usr/lib/samba/charset/CP850.so
 drwxr-xr-x	root/root	usr/lib/samba/gpext/
 drwxr-xr-x	root/root	usr/lib/samba/idmap/
-lrwxrwxrwx	root/root	usr/lib/samba/libnetapi.so -> libnetapi.so.0
--rwxr-xr-x	root/root	usr/lib/samba/libnetapi.so.0
-lrwxrwxrwx	root/root	usr/lib/samba/libsmbclient.so -> libsmbclient.so.0
--rwxr-xr-x	root/root	usr/lib/samba/libsmbclient.so.0
-lrwxrwxrwx	root/root	usr/lib/samba/libsmbsharemodes.so -> libsmbsharemodes.so.0
--rwxr-xr-x	root/root	usr/lib/samba/libsmbsharemodes.so.0
-lrwxrwxrwx	root/root	usr/lib/samba/libtalloc.so -> libtalloc.so.1
--rwxr-xr-x	root/root	usr/lib/samba/libtalloc.so.1
-lrwxrwxrwx	root/root	usr/lib/samba/libtdb.so -> libtdb.so.1
--rwxr-xr-x	root/root	usr/lib/samba/libtdb.so.1
-lrwxrwxrwx	root/root	usr/lib/samba/libwbclient.so -> libwbclient.so.0
--rwxr-xr-x	root/root	usr/lib/samba/libwbclient.so.0
 -rw-r--r--	root/root	usr/lib/samba/lowcase.dat
 drwxr-xr-x	root/root	usr/lib/samba/nss_info/
 drwxr-xr-x	root/root	usr/lib/samba/pdb/
@@ -87,6 +79,7 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/acl_xattr.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/audit.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/cap.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/catia.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/default_quota.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/dirsort.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/expand_msdfs.so
@@ -99,6 +92,7 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/readahead.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/readonly.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/recycle.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/scannedonly.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/shadow_copy.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/shadow_copy2.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/smb_traffic_analyzer.so
@@ -134,6 +128,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/wbinfo.1.gz
 drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/lmhosts.5.gz
+-rw-r--r--	root/root	usr/man/man5/pam_winbind.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/smb.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/smbgetrc.5.gz
 -rw-r--r--	root/root	usr/man/man5/smbpasswd.5.gz
@@ -159,9 +154,6 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/smbd.8.gz
 -rw-r--r--	root/root	usr/man/man8/smbpasswd.8.gz
 -rw-r--r--	root/root	usr/man/man8/smbspool.8.gz
--rw-r--r--	root/root	usr/man/man8/tdbbackup.8.gz
--rw-r--r--	root/root	usr/man/man8/tdbdump.8.gz
--rw-r--r--	root/root	usr/man/man8/tdbtool.8.gz
 -rw-r--r--	root/root	usr/man/man8/umount.cifs.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_acl_tdb.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_acl_xattr.8.gz
@@ -184,6 +176,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_readahead.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_readonly.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_recycle.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_scannedonly.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_shadow_copy.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_shadow_copy2.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_smb_traffic_analyzer.8.gz
