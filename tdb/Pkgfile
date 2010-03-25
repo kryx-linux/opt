@@ -1,0 +1,18 @@
+# Description: Trivial DataBase similar gdbm
+# URL:         http://tdb.samba.org/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=tdb
+version=1.2.1
+release=1
+source=(http://samba.org/ftp/$name/$name-$version.tar.gz
+        $name-man-$version.tar.xz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --disable-python
+    make
+    make DESTDIR=$PKG install
+}
