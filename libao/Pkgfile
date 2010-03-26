@@ -4,7 +4,7 @@
 # Packager: Olle Gustafsson, ogg at linux dot se
 
 name=libao
-version=0.8.8
+version=1.0.0
 release=1
 source=(http://downloads.xiph.org/releases/ao/${name}-${version}.tar.gz)
 
