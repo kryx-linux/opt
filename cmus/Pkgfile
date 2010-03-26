@@ -6,8 +6,8 @@
 # Nice to have: alsa-lib, flac, libao, libid3tag, libmad, libmodplug, libmpcdec, libvorbis
 
 name=cmus
-version=2.3.0
-release=2
+version=2.3.1
+release=1
 source=(http://downloads.sourceforge.net/project/cmus/cmus-v${version}.tar.bz2)
 
 build() {
