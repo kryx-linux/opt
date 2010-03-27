@@ -1,27 +1,26 @@
 # Description: Secure PinEntry Dialog
-# URL: http://www.gnupg.org
-# Maintainer: Simon Glossner, viper at hometux dot de
-# Packager: Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on: ncurses, xorg-libx11
-# Nice to have: gtk, qt3
+# URL:         http://www.gnupg.org
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Alan Mizrahi, alan at mizrahi dot com dot ve
+# Depends on: 
+# Nice to have: pinentry-gtk2 pinentry-qt4
 
 name=pinentry
-version=0.7.5
-release=3
-source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.gz $name-$version.patch)
+version=0.8.0
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.gz pinentry)
 
 build() {
     cd $name-$version
 
-    patch -p1 < $SRC/$name-$version.patch
-        
     ./configure \
-  --prefix=/usr \
-  --with-qt-dir=/usr/share/qt3 \
-  --enable-fallback-curses \
-  --disable-pinentry-gtk
+      --prefix=/usr \
+      --disable-pinentry-{gtk,gtk2,qt,qt4} \
+      --enable-pinentry-curses
     make
     make DESTDIR=$PKG install
 
     rm -rf $PKG/usr/share
+    rm $PKG/usr/bin/pinentry
+    install -m 755 ../pinentry $PKG/usr/bin/pinentry
 }
