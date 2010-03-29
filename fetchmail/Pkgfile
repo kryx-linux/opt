@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=fetchmail
-version=6.3.14
+version=6.3.15
 release=1
 source=(http://download.berlios.de/$name/$name-$version.tar.xz)
 
@@ -14,11 +14,8 @@ build() {
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --with-ssl=/usr \
-                --disable-nls
+                --disable-nls \
+                PYTHON=:
     make
     make DESTDIR=$PKG install
-
-    rm -rf $PKG/usr/bin/fetchmailconf \
-           $PKG/usr/man/man?/fetchmailconf.? \
-           $PKG/usr/lib
 }
