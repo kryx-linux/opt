@@ -5,7 +5,7 @@
 
 case $1 in
 start)
-	/usr/sbin/squid -DY
+	/usr/sbin/squid -Y
 	;;
 stop)
 	/usr/sbin/squid -k shutdown

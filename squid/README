@@ -7,9 +7,11 @@ PRE-INSTALL
    'groupadd -g 40 squid'
    'useradd -g squid -u 40 -d /var/squid -s /bin/false squid'
    'passwd -l squid'
-   
+
 POST-INSTALL
-1. run '/usr/sbin/squid -z' to build the cache structure
+1. add a cache_dir entry to /etc/squid/squid.conf:
+   cache_dir diskd /var/squid 2000 16 256
+2. run '/usr/sbin/squid -z' to build the cache structure
 
 PRECAUTION
 1. all directories used by squid must be chown to 

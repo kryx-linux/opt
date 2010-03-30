@@ -3,15 +3,15 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=squid
-version=3.0.STABLE25
+version=3.1.1
 release=1
-source=(http://www.squid-cache.org/Versions/v3/3.0/$name-$version.tar.bz2 \
-        squid squid-config.patch)
+source=(http://www.squid-cache.org/Versions/v3/3.1/$name-$version.tar.bz2 \
+        squid)
 
 build () {
     cd $name-$version
 
-    patch -p1 -i $SRC/squid-config.patch
+    sed -i '/^DEFAULT_SWAP_DIR/s/cache/squid/' src/Makefile.in
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
@@ -19,20 +19,21 @@ build () {
                 --libexecdir=/usr/lib/squid \
                 --localstatedir=/var \
                 --datadir=/usr/share/squid \
+                --with-logdir=/var/log/squid \
+                --with-pidfile=/var/run/squid.pid \
                 --with-default-user=squid \
                 --enable-linux-netfilter \
-                --enable-err-languages=English \
                 --enable-storeio=ufs,aufs,diskd \
                 --with-large-files \
                 --with-pthreads \
-                --with-aufs-threads=16
+                --with-aufs-threads=16 \
+                --disable-auto-locale
 
     make all
     make DESTDIR=$PKG install
 
-    rm $PKG/usr/bin/{RunCache,RunAccel}
-    mv $PKG/usr/share/squid/errors/{English/*,.}
-    rm -r $PKG/usr/share/squid/errors/{English,templates}
+    rm -r $PKG/usr/include
+    find $PKG/usr/share/squid/errors/* -prune ! -name templates | xargs rm -r
 
     install -d -m 0700 -o squid -g squid $PKG/var/{log/squid,squid}
     install -D -m 755 $SRC/squid $PKG/etc/rc.d/squid
