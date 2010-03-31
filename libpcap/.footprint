@@ -6,16 +6,19 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/pcap-namedb.h
 -rw-r--r--	root/root	usr/include/pcap.h
 drwxr-xr-x	root/root	usr/include/pcap/
+-rw-r--r--	root/root	usr/include/pcap/bluetooth.h
 -rw-r--r--	root/root	usr/include/pcap/bpf.h
+-rw-r--r--	root/root	usr/include/pcap/ipnet.h
 -rw-r--r--	root/root	usr/include/pcap/namedb.h
 -rw-r--r--	root/root	usr/include/pcap/pcap.h
 -rw-r--r--	root/root	usr/include/pcap/sll.h
 -rw-r--r--	root/root	usr/include/pcap/usb.h
+-rw-r--r--	root/root	usr/include/pcap/vlan.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libpcap.a
-lrwxrwxrwx	root/root	usr/lib/libpcap.so -> libpcap.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libpcap.so.1 -> libpcap.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libpcap.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libpcap.so -> libpcap.so.1
+lrwxrwxrwx	root/root	usr/lib/libpcap.so.1 -> libpcap.so.1.1
+-rwxr-xr-x	root/root	usr/lib/libpcap.so.1.1
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pcap-config.1.gz
