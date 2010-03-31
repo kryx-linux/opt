@@ -1,6 +1,6 @@
 # GdkPixbuf Image Loader Modules file
 # Automatically generated file, do not edit
-# Created by gdk-pixbuf-query-loaders from gtk+-2.18.9
+# Created by gdk-pixbuf-query-loaders from gtk+-2.20.0
 #
 # LoaderDir = /usr/lib/gtk-2.0/2.10.0/loaders
 #
@@ -82,6 +82,13 @@
 "application/x-navi-animation" ""
 "ani" ""
 "RIFF    ACON" "    xxxx    " 100
+
+"/usr/lib/gtk-2.0/2.10.0/loaders/libpixbufloader-qtif.so"
+"qtif" 4 "gtk20" "The QTIF image format" "LGPL"
+"image/x-quicktime" "image/qtif" ""
+"qtif" "qif" ""
+"abcdidsc" "xxxx    " 100
+"abcdidat" "xxxx    " 100
 
 "/usr/lib/gtk-2.0/2.10.0/loaders/libpixbufloader-tiff.so"
 "tiff" 1 "gtk20" "The TIFF image format" "LGPL"
