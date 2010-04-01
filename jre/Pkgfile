@@ -4,9 +4,9 @@
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
-version=1.6.0_18
+version=1.6.0_19
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-6u18-dlj-linux-i586.bin)
+source=(http://download.java.net/dlj/binaries/jdk-6u19-dlj-linux-i586.bin)
 
 build(){
     sh $SRC/jdk-*.bin --accept-license --unpack
