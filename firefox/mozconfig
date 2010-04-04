@@ -1,8 +1,8 @@
 # use an OBJDIR
 mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
 
-# parallel build
-mk_add_options MOZ_MAKE_FLAGS=-j2
+# inherit possible makeflags from pkgmk.
+mk_add_options MOZ_MAKE_FLAGS="#MAKEFLAGS#"
 
 # grab the defaults from the firefox tarball
 . $topsrcdir/browser/config/mozconfig
