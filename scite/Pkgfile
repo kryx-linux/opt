@@ -4,18 +4,18 @@
 # Depends on:  gtk
 
 name=scite
-version=203
+version=210
 release=1
 source=(http://dl.sourceforge.net/sourceforge/scintilla/$name$version.tgz)
 
 build () {
     cd scintilla/gtk
     sed -i "s/-Os/$CXXFLAGS/" makefile
-    make GTK2=1
+    make
 
     cd $SRC/$name/gtk
     sed -i "s/-Os/$CXXFLAGS/" makefile
-    make GTK2=1 prefix=/usr
+    make prefix=/usr
     make DESTDIR=$PKG install
 
     sed -i '/^#buffers/s/#//
