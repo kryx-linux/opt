@@ -1,10 +1,10 @@
 # Description: Stunnel wraps normal socket connections with SSL/TLS
 # URL:         http://www.stunnel.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  openssl, zlib
+# Depends on:  openssl tcp_wrappers zlib
 
 name=stunnel
-version=4.32
+version=4.33
 release=1
 source=(http://www.stunnel.org/download/stunnel/src/$name-$version.tar.gz \
         $name-config.patch $name)
