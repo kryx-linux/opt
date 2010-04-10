@@ -5,9 +5,9 @@
 
 name=nss
 version=3.12.6
-release=1
+release=2
 source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_6_RTM/src/$name-$version.tar.gz \
-        nss-config.in)
+        nss-config.in nss.pc.in)
 
 build() {
     cd $name-$version
@@ -21,7 +21,7 @@ build() {
 
     make -j1 -C mozilla/security/nss build_coreconf build_dbm all
 
-    install -d $PKG/usr/{bin,lib,include/nss}
+    install -d $PKG/usr/{bin,lib/pkgconfig,include/nss}
 
     for file in \
         libnss3.so libssl3.so libsmime3.so libsoftokn3.so \
@@ -43,5 +43,19 @@ build() {
 
     # we have to provide our own nss-config, because xulrunner needs it
     install -m 0755 $SRC/nss-config.in $PKG/usr/bin/nss-config
+
     sed -i "s/@VERSION@/$version/" $PKG/usr/bin/nss-config
+
+    NSS_LIBS=`$PKG/usr/bin/nss-config --libs`
+    NSS_CFLAGS=`$PKG/usr/bin/nss-config --cflags`
+    sed $SRC/nss.pc.in \
+        -e "s,%libdir%,/usr/lib," \
+        -e "s,%prefix%,/usr," \
+        -e "s,%exec_prefix%,/usr/bin," \
+        -e "s,%includedir%,/usr/include/nss," \
+        -e "s,%NSS_VERSION%,$version," \
+        -e "s,%FULL_NSS_LIBS%,$NSS_LIBS," \
+        -e "s,%FULL_NSS_CFLAGS%,$NSS_CFLAGS," > \
+            $PKG/usr/lib/pkgconfig/nss.pc
+
 }
