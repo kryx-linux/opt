@@ -2,6 +2,7 @@
 # URL:         http://sourceforge.net/projects/linuxquota/
 # Packager:    Mikhail Kolesnik, mike at openbunker dot org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  e2fsprogs tcp_wrappers
 
 name=quota
 version=3.17
