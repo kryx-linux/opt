@@ -1,7 +1,7 @@
 # Description: SOcket CAT - netcat-like utility with many enhancements
 # URL:         http://www.dest-unreach.org/socat
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  ncurses, openssl, readline
+# Depends on:  ncurses openssl readline tcp_wrappers
 
 name=socat
 version=1.7.1.2
