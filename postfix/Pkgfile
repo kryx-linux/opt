@@ -55,7 +55,7 @@ build() {
     #
     ( cd $PKG/etc/postfix
       cp postfix-files temp-files
-      cat temp-files | grep -v LICENSE | sed 's#\(/man[0-9]/[a-zA-Z0-9_-]\+\.[0-9]\):#\1\.gz:#' > postfix-files
+      grep -v LICENSE temp-files | sed 's#\(/man[0-9]/[a-zA-Z0-9_-]\+\.[0-9]\):#\1\.gz:#' > postfix-files
       rm -f temp-files LICENSE )
 
     install -D -m 00644 ../aliases    $PKG/etc/postfix/aliases
