@@ -1,11 +1,11 @@
 # Description: Postfix Mail Transport Agent (MTA)
 # URL: http://www.postfix.org
-# Maintainer: Simon Glossner, viper at hometux dot de
+# Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Victor, victord at users dot berlios dot de
 # Depends on: cyrus-sasl, openssl, db
 
 name=postfix
-version=2.5.5
+version=2.5.10
 release=1
 source=(ftp://ftp.porcupine.org/mirrors/postfix-release/official/$name-$version.tar.gz
         aliases postfix.rc postfix.patch)
@@ -23,17 +23,17 @@ build() {
     make           DEBUG="" OPT="$CFLAGS" CCARGS="$_CCARGS" AUXLIBS="$_AUXLIBS"
     
     make non-interactive-package install_root=$PKG \
-	mail_owner=mail \
-	setgid_group=postdrop \
-	config_directory=/etc/postfix \
-	manpage_directory=/usr/man \
-	daemon_directory=/usr/lib/postfix \
-	data_directory=/var/lib/postfix \
-	command_directory=/usr/sbin \
-	queue_directory=/var/spool/postfix \
-	sendmail_path=/usr/sbin/sendmail \
-	newaliases_path=/usr/bin/newaliases \
-	mailq_path=/usr/bin/mailq
+    mail_owner=mail \
+    setgid_group=postdrop \
+    config_directory=/etc/postfix \
+    manpage_directory=/usr/man \
+    daemon_directory=/usr/lib/postfix \
+    data_directory=/var/lib/postfix \
+    command_directory=/usr/sbin \
+    queue_directory=/var/spool/postfix \
+    sendmail_path=/usr/sbin/sendmail \
+    newaliases_path=/usr/bin/newaliases \
+    mailq_path=/usr/bin/mailq
 
     #
     # Set proper permissions
