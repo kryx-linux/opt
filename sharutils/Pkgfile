@@ -5,9 +5,9 @@
 # Depends on: 
 
 name=sharutils
-version=4.7
+version=4.9
 release=1
-source=(ftp://ftp.gnu.org/gnu/$name/REL-$version/$name-$version.tar.bz2)
+source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
 
 build(){
 	cd $name-$version
