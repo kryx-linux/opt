@@ -4,9 +4,9 @@
 # Depends on:  python, mysql
 
 name=mysql-python
-version=1.2-r618
+version=1.2-r641
 release=1
-source=(http://jue.li/crux/files/MySQL-python-$version.tar.gz \
+source=(http://crux.s3.amazonaws.com/dist/MySQL-python-$version.tar.xz \
         http://cheeseshop.python.org/packages/2.6/s/setuptools/setuptools-0.6c9-py2.6.egg)
 
 build () {
