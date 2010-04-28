@@ -5,7 +5,7 @@
 # Depends on: libxml2 iso-codes
 
 name=libxklavier
-version=4.0
+version=5.0
 release=1
 source=(http://download.gnome.org/sources/$name/$version/$name-$version.tar.bz2)
 
