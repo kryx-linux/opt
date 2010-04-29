@@ -4,7 +4,7 @@
 # Depends on:  libjpeg libpng xorg-libxft xorg-libxi xorg-libxinerama  
 
 name=fltk2
-version=r6970
+version=r7513
 release=1
 source=(http://ftp.easysw.com/pub/fltk/snapshots/fltk-2.0.x-$version.tar.bz2)
 
@@ -12,13 +12,12 @@ build() {
     cd fltk-2.0.x-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --enable-shared \
                 --enable-xft
 
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/man
+    rm -r $PKG/usr/share
 }
 
