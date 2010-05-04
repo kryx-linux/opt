@@ -1,25 +1,25 @@
 
 REQUIREMENTS
 
-   1. Remove Sendmail.  Postfix and Sendmail can NOT coexist.     
+   1. Remove exim.  Postfix and exim can NOT coexist.     
 
    2. Group "postdrop" MUST exist and MUST be empty.
 
 PRE-INSTALL
 
-   pkgrm sendmail
+   pkgrm exim
    groupadd postdrop
 
    NOTICE: If upgrading from 1.x.x / 2.0 / 2.1 series: STOP postfix
-	   before update. 
+     before update. 
 
-	   AFTER upgrading from an older release DO NOT copy the old
-	   master.cf/main.cf files over the new files. Instead, you MUST
-	   let the Postfix installation procedure update the existing
-	   configuration files with new service entries.
+     AFTER upgrading from an older release DO NOT copy the old
+     master.cf/main.cf files over the new files. Instead, you MUST
+     let the Postfix installation procedure update the existing
+     configuration files with new service entries.
 
-	   Please consult postfix release notes on Postfix website for
-	   further update details.
+     Please consult postfix release notes on Postfix website for
+     further update details.
 
 POST-INSTALL
 
