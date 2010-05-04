@@ -4,7 +4,7 @@
 # Depends on:  curl intltool gtk
 
 name=transmission-gtk
-version=1.92
+version=1.93
 release=1
 source=(http://download.m0k.org/transmission/files/transmission-$version.tar.xz)
 
