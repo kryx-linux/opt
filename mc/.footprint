@@ -1,6 +1,7 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/mc
+lrwxrwxrwx	root/root	usr/bin/mcdiff -> mc
 lrwxrwxrwx	root/root	usr/bin/mcedit -> mc
 -rwxr-xr-x	root/root	usr/bin/mcmfmt
 lrwxrwxrwx	root/root	usr/bin/mcview -> mc
@@ -73,6 +74,7 @@ drwxr-xr-x	root/root	usr/share/mc/skins/
 -rw-r--r--	root/root	usr/share/mc/skins/double-lines.ini
 -rw-r--r--	root/root	usr/share/mc/skins/featured.ini
 -rw-r--r--	root/root	usr/share/mc/skins/gotar.ini
+-rw-r--r--	root/root	usr/share/mc/skins/nicedark.ini
 drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/PKGBUILD.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/ada95.syntax
@@ -101,6 +103,7 @@ drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/haskell.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/html.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/idl.syntax
+-rw-r--r--	root/root	usr/share/mc/syntax/ini.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/j.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/java.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/js.syntax
