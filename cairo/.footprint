@@ -4,7 +4,6 @@ drwxr-xr-x	root/root	usr/include/cairo/
 -rw-r--r--	root/root	usr/include/cairo/cairo-deprecated.h
 -rw-r--r--	root/root	usr/include/cairo/cairo-features.h
 -rw-r--r--	root/root	usr/include/cairo/cairo-ft.h
--rw-r--r--	root/root	usr/include/cairo/cairo-glitz.h
 -rw-r--r--	root/root	usr/include/cairo/cairo-pdf.h
 -rw-r--r--	root/root	usr/include/cairo/cairo-ps.h
 -rw-r--r--	root/root	usr/include/cairo/cairo-svg.h
@@ -22,7 +21,6 @@ lrwxrwxrwx	root/root	usr/lib/libcairo.so.2 -> libcairo.so.2.10800.10
 -rwxr-xr-x	root/root	usr/lib/libcairo.so.2.10800.10
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/cairo-ft.pc
--rw-r--r--	root/root	usr/lib/pkgconfig/cairo-glitz.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/cairo-pdf.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/cairo-png.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/cairo-ps.pc
