@@ -4,12 +4,21 @@
 
 name=x11-fonts-dejavu
 version=2.30
-release=1
+release=2
 source=(http://dfn.dl.sourceforge.net/sourceforge/dejavu/dejavu-fonts-ttf-$version.tar.bz2)
 
 build() {
     cd dejavu-fonts-ttf-$version
-    mkdir -p $PKG/usr/share/fonts/dejavu
+    mkdir -p $PKG/usr/share/fonts/dejavu $PKG/etc/fonts/conf.{d,avail}
     install -o root -g root -m 0644 ttf/*.ttf \
         $PKG/usr/share/fonts/dejavu/
+
+    cd fontconfig
+
+    install -o root -g root -m644 *.conf \
+        $PKG/etc/fonts/conf.avail/
+
+    for x in *.conf; do
+        ln -s ../conf.avail/$x $PKG/etc/fonts/conf.d/
+    done
 }
