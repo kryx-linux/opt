@@ -4,7 +4,7 @@
 # Depends on:  gdbm libpcre
 
 name=maildrop
-version=2.4.3
+version=2.5.0
 release=1
 source=(http://dl.sourceforge.net/project/courier/$name/$version/$name-$version.tar.bz2)
 
@@ -16,11 +16,13 @@ build () {
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --with-db=gdbm \
+                --enable-maildrop-uid=root \
+                --enable-maildrop-gid=root \
                 --disable-tempdir \
                 --enable-syslog=1
     make
     make DESTDIR=$PKG install
-
-    chown root:root $PKG/usr/bin/{maildrop,lockmail}
+    
+    chmod u+s $PKG/usr/bin/maildrop
     rm -r $PKG/usr/{include,lib,man/man3,share}
 }
