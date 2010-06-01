@@ -1,10 +1,9 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/masqmail/
--rw-r--r--	root/root	etc/masqmail/connect_route
 -rw-r--r--	root/root	etc/masqmail/example.conf
--rw-r--r--	root/root	etc/masqmail/example.get
--rw-r--r--	root/root	etc/masqmail/example.route
--rw-r--r--	root/root	etc/masqmail/inet.route
+-rw-------	root/root	etc/masqmail/example.get
+-rw-------	root/root	etc/masqmail/example.route
+-rw-------	root/root	etc/masqmail/inet.route
 -rw-r--r--	root/root	etc/masqmail/masqmail.alias
 -rw-r--r--	root/root	etc/masqmail/masqmail.conf
 drwxr-xr-x	root/root	etc/rc.d/
@@ -37,6 +36,7 @@ drwxr-xr-x	mail/mail	var/log/masqmail/
 -rw-r--r--	mail/mail	var/log/masqmail/masqmail.log (EMPTY)
 drwxr-xr-x	root/root	var/run/
 drwxr-xr-x	mail/mail	var/run/masqmail/
+-rw-r--r--	root/root	var/run/masqmail/masqmail-route
 drwxr-xr-x	root/root	var/spool/
 drwxr-xr-x	mail/mail	var/spool/masqmail/
 drwxr-xr-x	mail/mail	var/spool/masqmail/input/
