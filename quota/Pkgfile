@@ -6,7 +6,7 @@
 
 name=quota
 version=3.17
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/linuxquota/$name-$version.tar.gz \
         warnquota.conf)
 
@@ -23,6 +23,7 @@ build(){
                 --enable-rootsbin=yes
     make
     make install ROOTDIR=$PKG
+    rm -r $PKG/usr/include
     install -D -m 644 $SRC/warnquota.conf $PKG/etc/quota/warnquota.conf
     find $PKG/etc/quota -type f | xargs sed -i 's|/etc|/etc/quota|'
 }
