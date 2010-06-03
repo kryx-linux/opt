@@ -1,0 +1,13 @@
+# http://dev.mutt.org/trac/changeset/6031%3A1cf34ea1f128/mutt_ssl.c
+
+Index: mutt_ssl.c
+===================================================================
+--- mutt_ssl.c	(revision 6016:dc09812e63a3)
++++ mutt_ssl.c	(revision 6031:1cf34ea1f128)
+@@ -653,5 +653,5 @@
+   int bufsize;
+   /* needed to get the DNS subjectAltNames: */
+-  STACK *subj_alt_names;
++  STACK_OF(GENERAL_NAME) *subj_alt_names;
+   int subj_alt_names_count;
+   GENERAL_NAME *subj_alt_name;
