@@ -754,6 +754,9 @@ drwxr-xr-x	root/root	usr/lib/python2.7/encodings/
 -rw-r--r--	root/root	usr/lib/python2.7/encodings/cp857.py
 -rw-r--r--	root/root	usr/lib/python2.7/encodings/cp857.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/encodings/cp857.pyo
+-rw-r--r--	root/root	usr/lib/python2.7/encodings/cp858.py
+-rw-r--r--	root/root	usr/lib/python2.7/encodings/cp858.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/encodings/cp858.pyo
 -rw-r--r--	root/root	usr/lib/python2.7/encodings/cp860.py
 -rw-r--r--	root/root	usr/lib/python2.7/encodings/cp860.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/encodings/cp860.pyo
@@ -1326,7 +1329,7 @@ drwxr-xr-x	root/root	usr/lib/python2.7/json/
 -rw-r--r--	root/root	usr/lib/python2.7/keyword.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/keyword.pyo
 drwxr-xr-x	root/root	usr/lib/python2.7/lib-dynload/
--rw-r--r--	root/root	usr/lib/python2.7/lib-dynload/Python-2.7b2-py2.7.egg-info
+-rw-r--r--	root/root	usr/lib/python2.7/lib-dynload/Python-2.7rc1-py2.7.egg-info
 -rwxr-xr-x	root/root	usr/lib/python2.7/lib-dynload/_bisect.so
 -rwxr-xr-x	root/root	usr/lib/python2.7/lib-dynload/_bsddb.so
 -rwxr-xr-x	root/root	usr/lib/python2.7/lib-dynload/_codecs_cn.so
@@ -1486,9 +1489,9 @@ drwxr-xr-x	root/root	usr/lib/python2.7/lib-tk/test/test_ttk/
 -rw-r--r--	root/root	usr/lib/python2.7/lib-tk/turtle.pyo
 drwxr-xr-x	root/root	usr/lib/python2.7/lib2to3/
 -rw-r--r--	root/root	usr/lib/python2.7/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python2.7/lib2to3/Grammar2.7.0.beta.2.pickle
+-rw-r--r--	root/root	usr/lib/python2.7/lib2to3/Grammar2.7.0.candidate.1.pickle
 -rw-r--r--	root/root	usr/lib/python2.7/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python2.7/lib2to3/PatternGrammar2.7.0.beta.2.pickle
+-rw-r--r--	root/root	usr/lib/python2.7/lib2to3/PatternGrammar2.7.0.candidate.1.pickle
 -rw-r--r--	root/root	usr/lib/python2.7/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.7/lib2to3/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/lib2to3/__init__.pyo
