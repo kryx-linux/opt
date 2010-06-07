@@ -4,20 +4,16 @@
 # Depends on:  ruby, sqlite3
 
 name=sqlite3-ruby
-version=1.2.5
+version=1.3.0
 release=1
-source=(http://rubyforge.org/frs/download.php/60923/$name-$version.gem)
+source=(http://rubyforge.org/frs/download.php/71085/$name-$version.tgz)
 
 build() {
-    gem unpack $name-$version.gem
     cd $name-$version
-
-    ruby ext/sqlite3_api/extconf.rb 
-    make 
-    make DESTDIR=$PKG install
-
+    
     ruby setup.rb config
+    ruby setup.rb setup
     ruby setup.rb install --prefix=$PKG
-
+    
     mv $PKG/usr/lib/ruby/{site_ruby,vendor_ruby}
 }
