@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=dnsmasq
-version=2.53
+version=2.55
 release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.lzma \
         $name-config.patch dnsmasq)
@@ -12,7 +12,6 @@ build () {
     cd $name-$version
 
     patch -p1 -i $SRC/$name-config.patch
-    sed -i 's/2\.54/2\.53/' src/config.h
     
     make
     make PREFIX=$PKG/usr install
