@@ -3,13 +3,18 @@
 # /etc/rc.d/nfsserver: start/stop nfs server
 #
 
+NFSD=/proc/fs/nfsd
+PIPEFS=/var/lib/nfs/rpc_pipefs
+
 case $1 in
 start)
-	/bin/mount -t nfsd nfsd /proc/fs/nfsd 
-	/usr/sbin/exportfs -r
+	/bin/mount -t nfsd nfsd $NFSD
+	/bin/mount -t rpc_pipefs rpc_pipefs $PIPEFS
+	/usr/sbin/rpc.idmapd
+	/usr/sbin/exportfs -a
 	/usr/sbin/rpc.mountd
 	/usr/sbin/rpc.statd --no-notify
-	/usr/sbin/rpc.nfsd 8
+	/usr/sbin/rpc.nfsd --syslog 8
 	/usr/sbin/sm-notify
 	;;
 stop)
@@ -17,7 +22,9 @@ stop)
 	killall -q /usr/sbin/rpc.statd
 	killall -q /usr/sbin/rpc.mountd
 	/usr/sbin/exportfs -au
-	/bin/umount /proc/fs/nfsd
+	killall -q /usr/sbin/rpc.idmapd
+	/bin/umount $PIPEFS
+	/bin/umount $NFSD
 	;;
 restart)
 	$0 stop
@@ -29,4 +36,4 @@ restart)
 	;;
 esac
 
-# End of
+# End of file
