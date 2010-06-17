@@ -15,11 +15,11 @@ diff -aur lua-5.1.2.orig/Makefile lua-5.1.2/Makefile
 @@ -65,6 +65,7 @@
  	cd src && $(INSTALL_DATA) $(TO_LIB) $(INSTALL_LIB)
  	cd doc && $(INSTALL_DATA) $(TO_MAN) $(INSTALL_MAN)
- #	$(RANLIB) $(INSTALL_LIB)/$(TO_LIB)
 +	ln -s liblua.so.5.1 $(INSTALL_LIB)/liblua.so
  
- local:
- 	$(MAKE) install INSTALL_TOP=.. INSTALL_EXEC="cp -p" INSTALL_DATA="cp -p"
+ ranlib:
+ 	cd src && cd $(INSTALL_LIB) && $(RANLIB) $(TO_LIB)
+ 
 diff -aur lua-5.1.2.orig/etc/lua.pc lua-5.1.2/etc/lua.pc
 --- lua-5.1.2.orig/etc/lua.pc	2007-03-23 20:58:49.000000000 +0100
 +++ lua-5.1.2/etc/lua.pc	2007-04-09 20:00:26.642825529 +0200
