@@ -4,14 +4,16 @@
 # Depends on:  python, mysql
 
 name=mysql-python
-version=1.2-r641
+version=1.2.3
 release=1
-source=(http://crux.s3.amazonaws.com/dist/MySQL-python-$version.tar.xz \
-        http://cheeseshop.python.org/packages/2.6/s/setuptools/setuptools-0.6c9-py2.6.egg)
+source=(http://downloads.sourceforge.net/project/$name/$name/$version/MySQL-python-$version.tar.gz
+        http://pypi.python.org/packages/2.6/s/setuptools/setuptools-0.6c11-py2.6.egg
+        $name-setup.diff)
 
 build () {
     cd MySQL-python-$version
-    cp $SRC/setuptools-0.6c9-py2.6.egg .
+    patch -p1 -i $SRC/$name-setup.diff
+    cp $SRC/setuptools-0.6c11-py2.6.egg .
     python setup.py install --root=$PKG --prefix=/usr
     rm -r $PKG/usr/lib/python2.6/site-packages/*.egg-info
 }
