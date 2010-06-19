@@ -4,13 +4,15 @@
 # Depends on:  ncurses readline zlib
 
 name=mysql
-version=5.1.47
+version=5.1.48
 release=1
 source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.1/$name-$version.tar.gz \
-        my.cnf mysqld)
+        my.cnf mysqld mysql-5.1-gcc45-apicheck.patch)
 
 build () {
     cd $name-$version
+
+    patch -p1 -i $SRC/mysql-5.1-gcc45-apicheck.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
@@ -22,7 +24,7 @@ build () {
                 --without-{readline,debug,docs} \
                 --with-ssl \
                 --with-plugins=myisam,innobase
-    
+
     make
     make DESTDIR=$PKG install
 
