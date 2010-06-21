@@ -4,9 +4,9 @@
 # Depends on:  glib
 
 name=masqmail
-version=0.2.23
+version=0.2.24
 release=1
-source=(http://marmaro.de/prog/masqmail/$name-$version.tar.gz
+source=(http://marmaro.de/prog/masqmail/files/$name-$version.tar.gz
         masqmail masqmail.conf masqmail.alias inet.route)
 
 build () {
