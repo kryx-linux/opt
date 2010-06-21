@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=mailx
-version=12.5pre-100509
+version=12.5-100620
 release=1
 source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
 

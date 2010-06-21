@@ -1,10 +1,10 @@
 # Description: CUPS - Common UNIX Printing System
 # URL:         http://www.cups.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  libpng, libtiff, openssl
+# Depends on:  tcp_wrappers libusb-compat libpng libtiff openssl dbus
 
 name=cups
-version=1.4.3
+version=1.4.4
 release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
         cups-config.patch cups)
@@ -26,12 +26,13 @@ build () {
                 --with-languages="" \
                 --without-{java,perl,php,python} \
                 --without-{rcdir,menudir,icondir}  \
-                --enable-ssl \
-                --enable-gnutls=no \
-                --enable-openssl=yes \
-                --enable-pam=no \
-                --enable-pdftops=no \
-                --enable-libusb=no
+                --with-optim="$CFLAGS" \
+                --enable-{ssl,openssl} --disable-gnutls \
+                --disable-pam \
+                --disable-pdftops \
+                --enable-tcp-wrappers \
+                --enable-dbus \
+                --enable-libusb
 
     make
     make BUILDROOT=$PKG install

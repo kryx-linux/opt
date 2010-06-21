@@ -6,7 +6,7 @@
 
 name=adobereader
 version=9.3.2
-release=1
+release=2
 source=(ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/$version/enu/AdbeRdr${version}-1_i486linux_enu.tar.bz2)
 PKGMK_NO_STRIP="yes"
 
@@ -14,8 +14,11 @@ build() {
   install -d $PKG/usr/{bin,lib}
   tar -C $PKG/usr/lib -xf $SRC/AdobeReader/COMMON.TAR
   tar -C $PKG/usr/lib -xf $SRC/AdobeReader/ILINXR.TAR
+
   rm -rf $PKG/usr/lib/Adobe/Reader9/{help,HowTo,bin/UNINSTALL} \
     $PKG/usr/lib/Adobe/Reader9/Browser/{HowTo,install_browser_plugin} \
-    $(find $PKG/usr/lib -name PPKLite.api)
+    $(find $PKG/usr/lib -name PPKLite.api) \
+    $PKG/usr/lib/Adobe/Reader9/Reader/intellinux/lib/libauthplay*
+
   ln -sf /usr/lib/Adobe/Reader9/bin/acroread $PKG/usr/bin/acroread
 }

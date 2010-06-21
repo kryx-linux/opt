@@ -1,0 +1,31 @@
+# http://bugs.mysql.com/bug.php?id=52514
+
+diff -Nru mysql-5.1.47.orig/Makefile.in mysql-5.1.47/Makefile.in
+--- mysql-5.1.47.orig/Makefile.in	2010-05-25 21:39:20.411815787 +0200
++++ mysql-5.1.47/Makefile.in	2010-05-25 21:40:35.201822062 +0200
+@@ -1132,24 +1132,7 @@
+ 	$(MAKE) abi_headers="$^" do_abi_check
+ 
+ do_abi_check:
+-	set -ex; \
+-	for file in $(abi_headers); do \
+-	         @CC@ -E -nostdinc -dI \
+-	                  -I$(top_srcdir)/include \
+-	                  -I$(top_srcdir)/include/mysql \
+-	                  -I$(top_srcdir)/sql \
+-	                  -I$(top_builddir)/include \
+-	                  -I$(top_builddir)/include/mysql \
+-	                  -I$(top_builddir)/sql \
+-	                                 $$file 2>/dev/null | \
+-	                  @SED@ -e '/^# /d' \
+-	                            -e '/^[ 	]*$$/d' \
+-	                            -e '/^#pragma GCC set_debug_pwd/d' \
+-	                            -e '/^#ident/d' > \
+-	                                       $(top_builddir)/abi_check.out; \
+-	                  @DIFF@ -w $$file.pp $(top_builddir)/abi_check.out; \
+-	                  @RM@ $(top_builddir)/abi_check.out; \
+-	done
++	echo "Skipping do_abi_check"
+ 
+ # Don't update the files from bitkeeper
+ %::SCCS/s.%
