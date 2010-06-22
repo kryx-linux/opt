@@ -4,9 +4,9 @@
 # Depends on:  openssl
 
 name=mailx
-version=12.4
+version=12.5-100620
 release=1
-source=(http://dl.sourceforge.net/sourceforge/heirloom/$name-$version.tar.bz2)
+source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
