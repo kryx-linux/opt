@@ -147,6 +147,7 @@ drwxr-xr-x	root/root	usr/lib/firefox/xulrunner/components/
 -rw-r--r--	root/root	usr/lib/firefox/xulrunner/components/nsFormAutoComplete.js
 -rw-r--r--	root/root	usr/lib/firefox/xulrunner/components/nsHandlerService.js
 -rw-r--r--	root/root	usr/lib/firefox/xulrunner/components/nsHelperAppDlg.js
+-rw-r--r--	root/root	usr/lib/firefox/xulrunner/components/nsINIProcessor.js
 -rw-r--r--	root/root	usr/lib/firefox/xulrunner/components/nsLivemarkService.js
 -rw-r--r--	root/root	usr/lib/firefox/xulrunner/components/nsLoginInfo.js
 -rw-r--r--	root/root	usr/lib/firefox/xulrunner/components/nsLoginManager.js
@@ -217,6 +218,7 @@ drwxr-xr-x	root/root	usr/lib/firefox/xulrunner/modules/
 -rw-r--r--	root/root	usr/lib/firefox/xulrunner/modules/utils.js
 -rwxr-xr-x	root/root	usr/lib/firefox/xulrunner/mozilla-xremote-client
 -rw-r--r--	root/root	usr/lib/firefox/xulrunner/platform.ini
+-rwxr-xr-x	root/root	usr/lib/firefox/xulrunner/plugin-container
 drwxr-xr-x	root/root	usr/lib/firefox/xulrunner/plugins/
 -rwxr-xr-x	root/root	usr/lib/firefox/xulrunner/plugins/libnullplugin.so
 -rwxr-xr-x	root/root	usr/lib/firefox/xulrunner/plugins/libunixprintplugin.so
