@@ -1,6 +1,6 @@
---- Makefile.kbuild.orig	2010-02-27 09:32:11.000000000 +0100
-+++ Makefile.kbuild	2010-02-27 09:31:40.000000000 +0100
-@@ -213,10 +213,10 @@
+--- Makefile.kbuild.orig	2010-06-17 03:57:34.000000000 +0200
++++ Makefile.kbuild	2010-06-25 18:48:49.692516261 +0200
+@@ -215,10 +215,10 @@
  .PHONY: suser-sanity-check rmmod-sanity-check build-sanity-checks
  
  suser-sanity-check:
@@ -13,7 +13,7 @@
  
  build-sanity-checks:
  	@if ! $(CONFTEST) cc_version_check 		full_output; then exit 1; fi
-@@ -244,9 +244,9 @@
+@@ -246,9 +246,9 @@
  #
  
  module-install: suser-sanity-check module
@@ -26,7 +26,7 @@
  
  #
  # This target builds, then installs, then creates device nodes and inserts
-@@ -254,8 +254,8 @@
+@@ -256,8 +256,8 @@
  #
  
  package-install: module-install rmmod-sanity-check
