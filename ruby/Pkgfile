@@ -4,7 +4,7 @@
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=ruby
-version=1.9.1-p378
+version=1.9.1-p429
 release=1
 source=(ftp://ftp.ruby-lang.org/pub/$name/1.9/$name-$version.tar.bz2 \
         $name-arch.patch)
@@ -12,13 +12,18 @@ source=(ftp://ftp.ruby-lang.org/pub/$name/1.9/$name-$version.tar.bz2 \
 build () {
     cd $name-$version
 
-    patch -p1 < $SRC/$name-arch.patch
-
+    patch -p0 -i $SRC/$name-arch.patch
+    
+    # http://redmine.ruby-lang.org/issues/show/3528 
+    # http://redmine.ruby-lang.org/issues/show/2727
+    export CFLAGS=$(sed 's/-O[1-9]*/-O0/' <<<$CFLAGS)
+    
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
                 --disable-install-doc \
-                --with-ruby-version=minor
+                --with-ruby-version=minor \
+                optflags=''
 
     make -j1
     make DESTDIR=$PKG install
