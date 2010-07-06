@@ -5176,6 +5176,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Prime/EratosthenesGenerator/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Prime/EratosthenesSieve/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Prime/EratosthenesSieve/cdesc-EratosthenesSieve.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Prime/EratosthenesSieve/extend_table-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Prime/EratosthenesSieve/indices-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Prime/EratosthenesSieve/next_to-i.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Prime/Generator23/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Prime/Generator23/cdesc-Generator23.yaml
@@ -9158,6 +9159,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Ripper/TokenPattern/MatchError/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Ripper/compile_error-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Ripper/encoding-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Ripper/end_seen%3f-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Ripper/filename-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Ripper/lex-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Ripper/lineno-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Ripper/new-c.yaml

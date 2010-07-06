@@ -5,9 +5,9 @@
 # Depends on:  openssl
 
 name=msmtp
-version=1.4.20
+version=1.4.21
 release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
+source=(http://downloads.sourceforge.net/project/msmtp/msmtp/$version/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version

@@ -73,6 +73,7 @@ drwxr-xr-x	root/root	usr/include/ImageMagick/magick/
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/hashmap.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/histogram.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/identify.h
+-rw-r--r--	root/root	usr/include/ImageMagick/magick/image-view.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/image.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/layer.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/list.h
@@ -141,37 +142,37 @@ drwxr-xr-x	root/root	usr/include/ImageMagick/wand/
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/mogrify.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/montage.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/pixel-iterator.h
--rw-r--r--	root/root	usr/include/ImageMagick/wand/pixel-view.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/pixel-wand.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/stream.h
+-rw-r--r--	root/root	usr/include/ImageMagick/wand/wand-view.h
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.6.1/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.6.1/config/
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/configure.xml
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/delegates.xml
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/english.xml
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/francais.xml
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/locale.xml
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/policy.xml
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/type-dejavu.xml
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/type-ghostscript.xml
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/type-windows.xml
--rw-r--r--	root/root	usr/lib/ImageMagick-6.6.1/config/type.xml
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.6.2/
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.6.2/config/
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/configure.xml
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/delegates.xml
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/english.xml
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/francais.xml
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/locale.xml
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/policy.xml
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/type-dejavu.xml
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/type-ghostscript.xml
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/type-windows.xml
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.6.2/config/type.xml
 -rw-r--r--	root/root	usr/lib/libMagick++.a
 -rwxr-xr-x	root/root	usr/lib/libMagick++.la
-lrwxrwxrwx	root/root	usr/lib/libMagick++.so -> libMagick++.so.3.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagick++.so.3 -> libMagick++.so.3.0.0
--rwxr-xr-x	root/root	usr/lib/libMagick++.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagick++.so -> libMagick++.so.4.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagick++.so.4 -> libMagick++.so.4.0.0
+-rwxr-xr-x	root/root	usr/lib/libMagick++.so.4.0.0
 -rw-r--r--	root/root	usr/lib/libMagickCore.a
 -rwxr-xr-x	root/root	usr/lib/libMagickCore.la
-lrwxrwxrwx	root/root	usr/lib/libMagickCore.so -> libMagickCore.so.3.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagickCore.so.3 -> libMagickCore.so.3.0.0
--rwxr-xr-x	root/root	usr/lib/libMagickCore.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagickCore.so -> libMagickCore.so.4.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagickCore.so.4 -> libMagickCore.so.4.0.0
+-rwxr-xr-x	root/root	usr/lib/libMagickCore.so.4.0.0
 -rw-r--r--	root/root	usr/lib/libMagickWand.a
 -rwxr-xr-x	root/root	usr/lib/libMagickWand.la
-lrwxrwxrwx	root/root	usr/lib/libMagickWand.so -> libMagickWand.so.3.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagickWand.so.3 -> libMagickWand.so.3.0.0
--rwxr-xr-x	root/root	usr/lib/libMagickWand.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagickWand.so -> libMagickWand.so.4.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagickWand.so.4 -> libMagickWand.so.4.0.0
+-rwxr-xr-x	root/root	usr/lib/libMagickWand.so.4.0.0
 drwxr-xr-x	root/root	usr/lib/perl5/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.10.1/
@@ -212,12 +213,12 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Image::Magick.3pm.gz
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/ImageMagick-6.6.1/
-drwxr-xr-x	root/root	usr/share/ImageMagick-6.6.1/config/
--rw-r--r--	root/root	usr/share/ImageMagick-6.6.1/config/coder.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.6.1/config/colors.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.6.1/config/log.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.6.1/config/magic.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.6.1/config/mime.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.6.1/config/sRGB.icm
--rw-r--r--	root/root	usr/share/ImageMagick-6.6.1/config/thresholds.xml
+drwxr-xr-x	root/root	usr/share/ImageMagick-6.6.2/
+drwxr-xr-x	root/root	usr/share/ImageMagick-6.6.2/config/
+-rw-r--r--	root/root	usr/share/ImageMagick-6.6.2/config/coder.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.6.2/config/colors.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.6.2/config/log.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.6.2/config/magic.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.6.2/config/mime.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.6.2/config/sRGB.icm
+-rw-r--r--	root/root	usr/share/ImageMagick-6.6.2/config/thresholds.xml
