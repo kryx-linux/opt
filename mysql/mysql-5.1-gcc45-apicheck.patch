@@ -1,31 +1,49 @@
 # http://bugs.mysql.com/bug.php?id=52514
 
-diff -Nru mysql-5.1.47.orig/Makefile.in mysql-5.1.47/Makefile.in
---- mysql-5.1.47.orig/Makefile.in	2010-05-25 21:39:20.411815787 +0200
-+++ mysql-5.1.47/Makefile.in	2010-05-25 21:40:35.201822062 +0200
-@@ -1132,24 +1132,7 @@
- 	$(MAKE) abi_headers="$^" do_abi_check
- 
+diff -Nru mysql-5.1.49.orig/Makefile.in mysql-5.1.49/Makefile.in
+--- mysql-5.1.49.orig/Makefile.in	2010-07-23 11:19:04.883436681 +0200
++++ mysql-5.1.49/Makefile.in	2010-07-23 11:24:08.673443229 +0200
+@@ -1097,9 +1097,10 @@
+ # 1) Generate preprocessor output for the files that need to
+ #    be tested for abi/api changes. use -nostdinc to prevent
+ #    generation of preprocessor output for system headers. This
+-#    results in messages in stderr saying that these headers
+-#    were not found. Redirect the stderr output to /dev/null
+-#    to prevent seeing these messages.
++#    results in messages in stderr saying that these headers were not found
++#    with older gccs and in an error with newer ones. Redirect the stderr
++#    output to /dev/null to prevent seeing these messages, and guard includes
++#    with #ifndef mysql_abi_check; define mysql_abi_check for the abi check.
+ # 2) sed the output to 
+ #    2.1) remove blank lines and lines that begin with "# "
+ #    2.2) When gcc -E is run on the Mac OS  and solaris sparc platforms it
+@@ -1135,7 +1136,7 @@
  do_abi_check:
--	set -ex; \
--	for file in $(abi_headers); do \
+ 	set -ex; \
+ 	for file in $(abi_headers); do \
 -	         @CC@ -E -nostdinc -dI \
--	                  -I$(top_srcdir)/include \
--	                  -I$(top_srcdir)/include/mysql \
--	                  -I$(top_srcdir)/sql \
--	                  -I$(top_builddir)/include \
--	                  -I$(top_builddir)/include/mysql \
--	                  -I$(top_builddir)/sql \
--	                                 $$file 2>/dev/null | \
--	                  @SED@ -e '/^# /d' \
--	                            -e '/^[ 	]*$$/d' \
--	                            -e '/^#pragma GCC set_debug_pwd/d' \
--	                            -e '/^#ident/d' > \
--	                                       $(top_builddir)/abi_check.out; \
--	                  @DIFF@ -w $$file.pp $(top_builddir)/abi_check.out; \
--	                  @RM@ $(top_builddir)/abi_check.out; \
--	done
-+	echo "Skipping do_abi_check"
++	         @CC@ -Dmysql_abi_check -E -nostdinc -dI \
+ 	                  -I$(top_srcdir)/include \
+ 	                  -I$(top_srcdir)/include/mysql \
+ 	                  -I$(top_srcdir)/sql \
+diff -Nru mysql-5.1.49.orig/include/mysql.h mysql-5.1.49/include/mysql.h
+--- mysql-5.1.49.orig/include/mysql.h	2010-07-23 11:19:05.353433926 +0200
++++ mysql-5.1.49/include/mysql.h	2010-07-23 11:24:08.673443229 +0200
+@@ -44,7 +44,9 @@
+ #endif
  
- # Don't update the files from bitkeeper
- %::SCCS/s.%
+ #ifndef _global_h				/* If not standard header */
++#ifndef mysql_abi_check
+ #include <sys/types.h>
++#endif
+ #ifdef __LCC__
+ #include <winsock2.h>				/* For windows */
+ #endif
+diff -Nru mysql-5.1.49.orig/include/mysql.h.pp mysql-5.1.49/include/mysql.h.pp
+--- mysql-5.1.49.orig/include/mysql.h.pp	2010-07-23 11:19:05.353433926 +0200
++++ mysql-5.1.49/include/mysql.h.pp	2010-07-23 11:24:08.673443229 +0200
+@@ -1,4 +1,3 @@
+-#include <sys/types.h>
+ typedef char my_bool;
+ typedef int my_socket;
+ #include "mysql_version.h"
