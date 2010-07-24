@@ -5,11 +5,14 @@
 
 name=sitecopy
 version=0.16.6
-release=1
-source=(http://www.manyfish.co.uk/sitecopy/$name-$version.tar.gz)
+release=2
+source=(http://www.manyfish.co.uk/sitecopy/$name-$version.tar.gz
+        $name-$version.patch)
 
 build () {
     cd $name-$version
+    patch -p1 -i $SRC/$name-$version.patch
+    autoconf
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --with-neon=/usr \
