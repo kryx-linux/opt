@@ -4,7 +4,7 @@
 # Depends on:  glib
 
 name=masqmail
-version=0.2.27
+version=0.2.28
 release=1
 source=(http://marmaro.de/prog/masqmail/files/$name-$version.tar.gz
         masqmail masqmail.conf masqmail.alias inet.route)
@@ -16,6 +16,7 @@ build () {
                 --mandir=/usr/man \
                 --enable-auth \
                 --enable-maildir \
+                --enable-ident \
                 --with-user=mail \
                 --with-group=mail
     make
