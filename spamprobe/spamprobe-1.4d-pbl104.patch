@@ -1,0 +1,12 @@
+diff -Nru spamprobe-1.4d.orig/src/database/FrequencyDBImpl_pbl.cc spamprobe-1.4d/src/database/FrequencyDBImpl_pbl.cc
+--- spamprobe-1.4d.orig/src/database/FrequencyDBImpl_pbl.cc	2010-07-24 16:02:39.115311539 +0200
++++ spamprobe-1.4d/src/database/FrequencyDBImpl_pbl.cc	2010-07-24 16:10:34.885311626 +0200
+@@ -260,7 +260,7 @@
+                                   WordData &counts)
+ {
+   char key[BUFFER_SIZE];
+-  int keylen = 0;
++  size_t keylen = 0;
+   int rc = 0;
+ 
+   switch (pbl_code) {
