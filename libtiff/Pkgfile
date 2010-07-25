@@ -1,12 +1,12 @@
 # Description: Library for manipulation of TIFF (Tag Image File Format) images
-# URL:         http://www.remotesensing.org/libtiff/
+# URL:         http://libtiff.maptools.org/
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
 # Depends on:  libjpeg, zlib
 
 name=libtiff
 version=3.9.4
 release=1
-source=(ftp://ftp.remotesensing.org/libtiff/tiff-$version.tar.gz)
+source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz)
 
 build() {
     cd tiff-$version
