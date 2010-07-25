@@ -119,6 +119,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-ftps
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-http
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-https
+-rwxr-xr-x	root/root	usr/lib/git-core/git-remote-testgit
 -rwxr-xr-x	root/root	usr/lib/git-core/git-repack
 -rwxr-xr-x	root/root	usr/lib/git-core/git-replace
 -rwxr-xr-x	root/root	usr/lib/git-core/git-repo-config
@@ -176,8 +177,16 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/__init__.py (EMPTY)
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/__init__.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/exporter.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/exporter.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/git.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/git.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/importer.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/importer.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/non_local.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/non_local.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/repo.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/git/repo.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/util.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/git_remote_helpers/util.pyc
 drwxr-xr-x	root/root	usr/man/
@@ -336,6 +345,7 @@ drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/gitcvs-migration.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitdiffcore.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitglossary.7.gz
+-rw-r--r--	root/root	usr/man/man7/gitrevisions.7.gz
 -rw-r--r--	root/root	usr/man/man7/gittutorial-2.7.gz
 -rw-r--r--	root/root	usr/man/man7/gittutorial.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitworkflows.7.gz
@@ -411,3 +421,10 @@ drwxr-xr-x	root/root	usr/share/git-gui/lib/msgs/
 -rw-r--r--	root/root	usr/share/git-gui/lib/transport.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/win32.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/win32_shortcut.js
+drwxr-xr-x	root/root	usr/share/gitweb/
+-rwxr-xr-x	root/root	usr/share/gitweb/gitweb.cgi
+drwxr-xr-x	root/root	usr/share/gitweb/static/
+-rw-r--r--	root/root	usr/share/gitweb/static/git-favicon.png
+-rw-r--r--	root/root	usr/share/gitweb/static/git-logo.png
+-rw-r--r--	root/root	usr/share/gitweb/static/gitweb.css
+-rw-r--r--	root/root	usr/share/gitweb/static/gitweb.js
