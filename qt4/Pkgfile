@@ -6,7 +6,7 @@
 
 name=qt4
 version=4.6.3
-release=1
+release=2
 source=(ftp://ftp.trolltech.com/pub/qt/source/qt-everywhere-opensource-src-$version.tar.gz)
 
 build () {
@@ -42,8 +42,8 @@ build () {
     install -d $PKG/{etc/ld.so.conf.d,usr/{bin,lib,include}}
     echo "/usr/share/qt4/lib" > $PKG/etc/ld.so.conf.d/qt4.conf
 
-    ln -s ../../share/qt4/include  $PKG/usr/include/qt4
-    ln -s ../../share/qt4/lib      $PKG/usr/lib/qt4
+    ln -s ../share/qt4/include     $PKG/usr/include/qt4
+    ln -s ../share/qt4/lib         $PKG/usr/lib/qt4
     ln -s linux-g++                $PKG/usr/share/qt4/mkspecs/default
 
     mv $PKG/usr/share/qt4/lib/pkgconfig $PKG/usr/lib
