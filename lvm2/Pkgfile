@@ -5,14 +5,11 @@
 
 name=lvm2
 version=2.02.72
-release=1
-source=(ftp://sources.redhat.com/pub/lvm2/LVM2.$version.tgz
-        lvm2-static_build.patch)
+release=2
+source=(ftp://sources.redhat.com/pub/lvm2/LVM2.$version.tgz)
 
 build() {
     cd LVM2.$version
-
-    patch -p1 -i $SRC/lvm2-static_build.patch
 
     ./configure --prefix=/usr \
                 --exec_prefix= \
