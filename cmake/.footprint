@@ -151,6 +151,8 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckVariableExists.c
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckVariableExists.cmake
 drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Compiler/
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Clang-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Clang-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/G95-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/GNU-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/GNU-CXX.cmake
@@ -228,6 +230,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/FindCUDA/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindGTK2.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindGTest.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindGettext.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindGit.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindGnuTLS.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindGnuplot.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindHDF5.cmake
@@ -400,6 +403,8 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Haiku.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/IRIX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/IRIX64.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-Clang-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-Clang-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-GNU-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-GNU-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-GNU-Fortran.cmake
@@ -447,6 +452,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Borland-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Borland-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Borland.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-G95-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-Fortran.cmake
