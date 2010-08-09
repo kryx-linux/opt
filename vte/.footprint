@@ -7,13 +7,15 @@ drwxr-xr-x	root/root	usr/include/vte/
 -rw-r--r--	root/root	usr/include/vte/reaper.h
 -rw-r--r--	root/root	usr/include/vte/vte.h
 -rw-r--r--	root/root	usr/include/vte/vteaccess.h
+-rw-r--r--	root/root	usr/include/vte/vtedeprecated.h
+-rw-r--r--	root/root	usr/include/vte/vtepty.h
 -rw-r--r--	root/root	usr/include/vte/vtetypebuiltins.h
 -rw-r--r--	root/root	usr/include/vte/vteversion.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libvte.la
-lrwxrwxrwx	root/root	usr/lib/libvte.so -> libvte.so.9.13.1
-lrwxrwxrwx	root/root	usr/lib/libvte.so.9 -> libvte.so.9.13.1
--rwxr-xr-x	root/root	usr/lib/libvte.so.9.13.1
+lrwxrwxrwx	root/root	usr/lib/libvte.so -> libvte.so.9.2501.0
+lrwxrwxrwx	root/root	usr/lib/libvte.so.9 -> libvte.so.9.2501.0
+-rwxr-xr-x	root/root	usr/lib/libvte.so.9.2501.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/vte.pc
 drwxr-xr-x	root/root	usr/lib/vte/
