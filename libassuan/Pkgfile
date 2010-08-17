@@ -2,10 +2,10 @@
 # URL:         http://www.gnupg.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Simon Glossner, viper at hometux dot de
-# Depends on:  libpth
+# Depends on:  libpth libgpg-error
 
 name=libassuan
-version=2.0.0
+version=2.0.1
 release=1
 source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2)
 
