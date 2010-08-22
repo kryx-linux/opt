@@ -14,8 +14,9 @@ source=(http://download.berlios.de/$name/$name-$version.tar.gz \
 build () {
    # fix the build with g++ 4.4
    patch -p0 -i $SRC/$name.diff
-
    cd $name-$version
+   sed -i -e "s:-I/usr/include/libpng12:$(pkg-config --cflags-only-I libpng):" \
+          -e "s:-lpng12:$(pkg-config --libs-only-l libpng):" Makefile
    make
    make DESTDIR=$PKG install
    mkdir $PKG/etc/rc.d
