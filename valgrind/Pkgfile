@@ -4,14 +4,21 @@
 
 name=valgrind
 version=3.5.0
-release=1
-source=(http://$name.org/downloads/$name-$version.tar.bz2)
+release=2
+source=(http://$name.org/downloads/$name-$version.tar.bz2
+        $name.diff)
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr
+	# Add support for glibc 2.12:
+	patch -p0 -i $SRC/$name.diff
+	autoreconf -if
+
+	./configure --prefix=/usr --mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/share
+
+	rm -rf $PKG/usr/share/doc
+	rmdir $PKG/usr/share
 }
