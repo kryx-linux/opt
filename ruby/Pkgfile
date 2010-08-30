@@ -4,15 +4,14 @@
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=ruby
-version=1.9.1-p429
-release=2
+version=1.9.2-p0
+release=1
 source=(ftp://ftp.ruby-lang.org/pub/$name/1.9/$name-$version.tar.bz2 \
-        $name-arch.patch $name-openssl-1.0.patch)
+        $name-arch.patch)
 
 build () {
     cd $name-$version
 
-    patch -p1 -i $SRC/$name-openssl-1.0.patch
     patch -p0 -i $SRC/$name-arch.patch
     
     ./configure --prefix=/usr \
@@ -21,6 +20,6 @@ build () {
                 --disable-install-doc \
                 --with-ruby-version=minor \
 
-    make -j1
+    make
     make DESTDIR=$PKG install
 }
