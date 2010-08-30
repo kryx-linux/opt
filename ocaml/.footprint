@@ -22,6 +22,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/ocamllex
 -rwxr-xr-x	root/root	usr/bin/ocamlmklib
 -rwxr-xr-x	root/root	usr/bin/ocamlmktop
+-rwxr-xr-x	root/root	usr/bin/ocamlobjinfo
 -rwxr-xr-x	root/root	usr/bin/ocamlopt
 -rwxr-xr-x	root/root	usr/bin/ocamlprof
 -rwxr-xr-x	root/root	usr/bin/ocamlrun
@@ -29,7 +30,6 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/ocaml/
 -rw-r--r--	root/root	usr/lib/ocaml/Makefile.config
--rwxr-xr-x	root/root	usr/lib/ocaml/addlabels
 -rw-r--r--	root/root	usr/lib/ocaml/arg.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/arg.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/arg.ml
@@ -83,6 +83,8 @@ drwxr-xr-x	root/root	usr/lib/ocaml/caml/
 -rw-r--r--	root/root	usr/lib/ocaml/caml/mlvalues.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/printexc.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/signals.h
+-rw-r--r--	root/root	usr/lib/ocaml/caml/socketaddr.h
+-rw-r--r--	root/root	usr/lib/ocaml/caml/threads.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/unixsupport.h
 -rw-r--r--	root/root	usr/lib/ocaml/camlheader
 -rw-r--r--	root/root	usr/lib/ocaml/camlheader_ur
@@ -335,9 +337,9 @@ drwxr-xr-x	root/root	usr/lib/ocaml/camlp4/Camlp4Top/
 -rw-r--r--	root/root	usr/lib/ocaml/libbigarray.a
 -rw-r--r--	root/root	usr/lib/ocaml/libcamlrun.a
 -rwxr-xr-x	root/root	usr/lib/ocaml/libcamlrun_shared.so
+-rw-r--r--	root/root	usr/lib/ocaml/libcamlstr.a
 -rw-r--r--	root/root	usr/lib/ocaml/libmldbm.a
 -rw-r--r--	root/root	usr/lib/ocaml/libnums.a
--rw-r--r--	root/root	usr/lib/ocaml/libstr.a
 -rw-r--r--	root/root	usr/lib/ocaml/libthreads.a
 -rw-r--r--	root/root	usr/lib/ocaml/libthreadsnat.a
 -rw-r--r--	root/root	usr/lib/ocaml/libunix.a
@@ -387,6 +389,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/camlp4/Camlp4Top/
 -rw-r--r--	root/root	usr/lib/ocaml/obj.ml
 -rw-r--r--	root/root	usr/lib/ocaml/obj.mli
 -rw-r--r--	root/root	usr/lib/ocaml/obj.p.cmx
+-rwxr-xr-x	root/root	usr/lib/ocaml/objinfo_helper
 drwxr-xr-x	root/root	usr/lib/ocaml/ocamlbuild/
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild.cmo
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild.cmx
@@ -504,7 +507,6 @@ drwxr-xr-x	root/root	usr/lib/ocaml/ocamldoc/custom/
 -rw-r--r--	root/root	usr/lib/ocaml/scanf.ml
 -rw-r--r--	root/root	usr/lib/ocaml/scanf.mli
 -rw-r--r--	root/root	usr/lib/ocaml/scanf.p.cmx
--rwxr-xr-x	root/root	usr/lib/ocaml/scrapelabels
 -rw-r--r--	root/root	usr/lib/ocaml/set.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/set.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/set.ml
@@ -561,9 +563,9 @@ drwxr-xr-x	root/root	usr/lib/ocaml/ocamldoc/custom/
 -rw-r--r--	root/root	usr/lib/ocaml/stringLabels.p.cmx
 drwxr-xr-x	root/root	usr/lib/ocaml/stublibs/
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllbigarray.so
+-rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllcamlstr.so
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllmldbm.so
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllnums.so
--rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllstr.so
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllthreads.so
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllunix.so
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllvmthreads.so
