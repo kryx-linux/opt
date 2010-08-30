@@ -1297,7 +1297,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/json/
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/
--rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.5-py2.6.egg-info
+-rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.6-py2.6.egg-info
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bisect.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bsddb.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bytesio.so
@@ -1330,6 +1330,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_ssl.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_struct.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_testcapi.so
+-rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_tkinter.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_weakref.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/array.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/audioop.so
@@ -1422,9 +1423,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib-tk/
 -rw-r--r--	root/root	usr/lib/python2.6/lib-tk/turtle.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.5.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.6.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.5.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.6.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyo
@@ -1462,6 +1463,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/fixes/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_execfile.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_execfile.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_execfile.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_exitfunc.py
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_exitfunc.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_exitfunc.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_filter.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_filter.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_filter.pyo
@@ -1653,7 +1657,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/logging/
 -rw-r--r--	root/root	usr/lib/python2.6/macurl2path.py
 -rw-r--r--	root/root	usr/lib/python2.6/macurl2path.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/macurl2path.pyo
--rwxr-xr-x	root/root	usr/lib/python2.6/mailbox.py
+-rw-r--r--	root/root	usr/lib/python2.6/mailbox.py
 -rw-r--r--	root/root	usr/lib/python2.6/mailbox.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/mailbox.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/mailcap.py
@@ -2225,6 +2229,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/test/decimaltestdata/
 -rw-r--r--	root/root	usr/lib/python2.6/test/seq_tests.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/seq_tests.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/test/sgml_input.html
+-rw-r--r--	root/root	usr/lib/python2.6/test/sha256.pem
 -rw-r--r--	root/root	usr/lib/python2.6/test/sortperf.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/sortperf.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/sortperf.pyo
