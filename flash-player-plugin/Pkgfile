@@ -2,14 +2,14 @@
 # URL: http://www.adobe.com/products/flashplayer/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Matt Housh, jaeger at crux dot nu
-# Depends on: firefox
+# Depends on:
 
-name=firefox-flash-plugin
+name=flash-player-plugin
 version=10.1
 release=1
 source=(http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_${version%%.*}_linux.tar.gz)
 
 build() {
   install -D -m 0755 libflashplayer.so \
-    $PKG/usr/lib/firefox/plugins/libflashplayer.so
+    $PKG/usr/lib/mozilla/plugins/libflashplayer.so
 }
