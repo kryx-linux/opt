@@ -17,10 +17,8 @@ build () {
     --prefix=/usr \
     --libexecdir=/usr/lib \
     --mandir=/usr/man \
-    --enable-static-rnd=linux \
-    --enable-dev-random \
     --disable-nls \
-    --disable-ldap 
+    --disable-ldap
 
     make
     make DESTDIR=$PKG install
