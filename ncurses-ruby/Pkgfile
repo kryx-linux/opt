@@ -5,11 +5,13 @@
 
 name=ncurses-ruby
 version=1.2.4
-release=1
-source=(http://download.berlios.de/$name/$name-$version.tar.bz2)
+release=2
+source=(http://download.berlios.de/$name/$name-$version.tar.bz2
+        $name-${version}_ruby-1.9.2.patch)
 
 build () {
     cd $name-$version
+    patch -p1 -i $SRC/$name-${version}_ruby-1.9.2.patch
     ruby extconf.rb --vendor
     make
     make DESTDIR=$PKG install
