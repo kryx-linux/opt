@@ -1,8 +1,8 @@
 # Description: Package management tool for CRUX Linux
 # URL: http://www.varlock.com
-# Maintainer: Simone Rota, sip at crux dot nu
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on:
+# Depends on: perl
 
 name=pkg-get
 version=0.4.5
@@ -12,6 +12,6 @@ source=(http://www.varlock.com/files/$name-$version.tar.gz \
 
 build() {
 	cd $name-$version
-	patch -p1 < ../$name.patch
+	patch -p1 -i $SRC/$name.patch
 	make PREFIX=$PKG/usr CFGDIR=$PKG/etc install
 }
