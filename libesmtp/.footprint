@@ -19,6 +19,6 @@ drwxr-xr-x	root/root	usr/lib/esmtp-plugins/
 -rwxr-xr-x	root/root	usr/lib/esmtp-plugins/sasl-plain.so
 -rw-r--r--	root/root	usr/lib/libesmtp.a
 -rwxr-xr-x	root/root	usr/lib/libesmtp.la
-lrwxrwxrwx	root/root	usr/lib/libesmtp.so -> libesmtp.so.5.1.5
-lrwxrwxrwx	root/root	usr/lib/libesmtp.so.5 -> libesmtp.so.5.1.5
--rwxr-xr-x	root/root	usr/lib/libesmtp.so.5.1.5
+lrwxrwxrwx	root/root	usr/lib/libesmtp.so -> libesmtp.so.6.1.6
+lrwxrwxrwx	root/root	usr/lib/libesmtp.so.6 -> libesmtp.so.6.1.6
+-rwxr-xr-x	root/root	usr/lib/libesmtp.so.6.1.6
