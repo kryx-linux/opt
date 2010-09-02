@@ -1,0 +1,14 @@
+This fixes the installation of binaries if PKGMK_WORK_DIR is something like
+   /home/foo/.tmp/pkgmk/work/$name
+ 
+diff -aur ruby-1.9.2-p0.orig/tool/rbinstall.rb ruby-1.9.2-p0/tool/rbinstall.rb
+--- ruby-1.9.2-p0.orig/tool/rbinstall.rb	2010-07-24 12:37:26.000000000 +0200
++++ ruby-1.9.2-p0/tool/rbinstall.rb	2010-09-02 10:41:21.417001125 +0200
+@@ -404,7 +404,6 @@
+   end
+   for src in Dir[File.join(srcdir, "bin/*")]
+     next unless File.file?(src)
+-    next if /\/[.#]|(\.(old|bak|orig|rej|diff|patch|core)|~|\/core)$/i =~ src
+ 
+     name = RbConfig.expand(trans[File.basename(src)])
+ 
