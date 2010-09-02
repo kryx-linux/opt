@@ -1,11 +1,13 @@
-# Maintainer:  Johannes Winkelmann, jw at smts dot ch
-# URL:         http://bash-completion.alioth.debian.org/
 # Description: Bash completion functions
+# URL: http://bash-completion.alioth.debian.org/
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Johannes Winkelmann, jw at smts dot ch
+# Depends on: bash
 
 name=bash-completion
-version=1.1
+version=1.2
 release=1
-source=(http://$name.alioth.debian.org/files/$name-$version.tar.gz)
+source=(http://$name.alioth.debian.org/files/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
