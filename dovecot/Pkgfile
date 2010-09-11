@@ -4,7 +4,7 @@
 # Depends on:  zlib bzip2 openssl tcp_wrappers
 
 name=dovecot
-version=2.0.1
+version=2.0.2
 release=1
 source=(http://dovecot.org/releases/2.0/$name-$version.tar.gz \
         dovecot-config.patch dovecot)
