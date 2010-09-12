@@ -1,5 +1,17 @@
 drwxr-xr-x	root/root	lib/
 drwxr-xr-x	root/root	lib/firmware/
 drwxr-xr-x	root/root	lib/firmware/radeon/
+-rw-r--r--	root/root	lib/firmware/radeon/CEDAR_me.bin
+-rw-r--r--	root/root	lib/firmware/radeon/CEDAR_pfp.bin
+-rw-r--r--	root/root	lib/firmware/radeon/CEDAR_rlc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/CYPRESS_me.bin
+-rw-r--r--	root/root	lib/firmware/radeon/CYPRESS_pfp.bin
+-rw-r--r--	root/root	lib/firmware/radeon/CYPRESS_rlc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/JUNIPER_me.bin
+-rw-r--r--	root/root	lib/firmware/radeon/JUNIPER_pfp.bin
+-rw-r--r--	root/root	lib/firmware/radeon/JUNIPER_rlc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/R600_rlc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/R700_rlc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/REDWOOD_me.bin
+-rw-r--r--	root/root	lib/firmware/radeon/REDWOOD_pfp.bin
+-rw-r--r--	root/root	lib/firmware/radeon/REDWOOD_rlc.bin
