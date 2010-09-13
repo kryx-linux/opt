@@ -10,8 +10,9 @@ release=1
 source=(http://fpdownload.macromedia.com/get/flashplayer/current/flash-plugin-$version-release.i386.rpm)
 
 build() {
-  rpm2targz ${source##*/}
-  tar xvzf $(basename ${source##*/} .rpm).tar.gz
+  local tgz="$PKGMK_SOURCE_DIR/$(basename ${source##*/} .rpm).tar.gz"
+  [ ! -f "$tgz" ] && rpm2targz $PKGMK_SOURCE_DIR/${source##*/}
+  tar xvzf "$tgz" -C $SRC
   install -D -m 0755 usr/lib/flash-plugin/libflashplayer.so \
     $PKG/usr/lib/mozilla/plugins/libflashplayer.so
 }
