@@ -6,7 +6,7 @@
 name=radeon-ucode
 version=20100912
 release=1
-source=(http://www.obra.se/distfiles/$name-$version.tar.xz )
+source=(http://crux.nu/~rehabdoll/distfiles/$name-$version.tar.xz )
 
 build() {
     mkdir -p $PKG/lib/firmware/radeon
