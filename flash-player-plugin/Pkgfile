@@ -2,16 +2,15 @@
 # URL: http://www.adobe.com/products/flashplayer/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Matt Housh, jaeger at crux dot nu
-# Depends on: rpm2targz
+# Depends on:
 
 name=flash-player-plugin
 version=10.1.82.76
-release=1
+release=2
 source=(http://fpdownload.macromedia.com/get/flashplayer/current/flash-plugin-$version-release.i386.rpm)
 
 build() {
-  rpm2targz ${source##*/}
-  tar xvzf $(basename ${source##*/} .rpm).tar.gz
+  bsdtar -xf $PKGMK_SOURCE_DIR/${source##*/} -C $SRC
   install -D -m 0755 usr/lib/flash-plugin/libflashplayer.so \
     $PKG/usr/lib/mozilla/plugins/libflashplayer.so
 }
