@@ -6,7 +6,7 @@
 
 name=p5-uri
 version=1.54
-release=1
+release=2
 source=(http://www.cpan.org/modules/by-module/URI/GAAS/URI-$version.tar.gz)
 
 build() {
