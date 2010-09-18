@@ -6,11 +6,10 @@
 
 name=flash-player-plugin
 version=10.1.82.76
-release=2
+release=3
 source=(http://fpdownload.macromedia.com/get/flashplayer/current/flash-plugin-$version-release.i386.rpm)
 
 build() {
-  bsdtar -xf $PKGMK_SOURCE_DIR/${source##*/} -C $SRC
   install -D -m 0755 usr/lib/flash-plugin/libflashplayer.so \
     $PKG/usr/lib/mozilla/plugins/libflashplayer.so
 }
