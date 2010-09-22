@@ -1,7 +1,7 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: libidl, nss, gtk, perl, python, dbus-glib, alsa-lib
+# Depends on: xorg-libxt, libidl, nss, gtk, perl, python, dbus-glib, alsa-lib
 
 name=xulrunner
 version=1.9.2.10
