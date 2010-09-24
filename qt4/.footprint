@@ -24,10 +24,10 @@ lrwxrwxrwx	root/root	usr/include/qt4 -> ../share/qt4/include
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt3Support.pc
--rw-r--r--	root/root	usr/lib/pkgconfig/QtAssistantClient.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/QtCLucene.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/QtCore.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/QtDBus.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/QtDeclarative.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/QtDesigner.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/QtDesignerComponents.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/QtGui.pc
@@ -49,7 +49,6 @@ drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/qt4/
 drwxr-xr-x	root/root	usr/share/qt4/bin/
 -rwxr-xr-x	root/root	usr/share/qt4/bin/assistant
--rwxr-xr-x	root/root	usr/share/qt4/bin/assistant_adp
 -rwxr-xr-x	root/root	usr/share/qt4/bin/designer
 -rwxr-xr-x	root/root	usr/share/qt4/bin/lconvert
 -rwxr-xr-x	root/root	usr/share/qt4/bin/linguist
@@ -66,6 +65,7 @@ drwxr-xr-x	root/root	usr/share/qt4/bin/
 -rwxr-xr-x	root/root	usr/share/qt4/bin/qhelpconverter
 -rwxr-xr-x	root/root	usr/share/qt4/bin/qhelpgenerator
 -rwxr-xr-x	root/root	usr/share/qt4/bin/qmake
+-rwxr-xr-x	root/root	usr/share/qt4/bin/qmlviewer
 -rwxr-xr-x	root/root	usr/share/qt4/bin/qt3to4
 -rwxr-xr-x	root/root	usr/share/qt4/bin/qtconfig
 -rwxr-xr-x	root/root	usr/share/qt4/bin/qttracereplay
@@ -74,11 +74,27 @@ drwxr-xr-x	root/root	usr/share/qt4/bin/
 -rwxr-xr-x	root/root	usr/share/qt4/bin/uic3
 -rwxr-xr-x	root/root	usr/share/qt4/bin/xmlpatterns
 -rwxr-xr-x	root/root	usr/share/qt4/bin/xmlpatternsvalidator
+drwxr-xr-x	root/root	usr/share/qt4/imports/
+drwxr-xr-x	root/root	usr/share/qt4/imports/Qt/
+drwxr-xr-x	root/root	usr/share/qt4/imports/Qt/labs/
+drwxr-xr-x	root/root	usr/share/qt4/imports/Qt/labs/folderlistmodel/
+-rwxr-xr-x	root/root	usr/share/qt4/imports/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.so
+-rw-r--r--	root/root	usr/share/qt4/imports/Qt/labs/folderlistmodel/qmldir
+drwxr-xr-x	root/root	usr/share/qt4/imports/Qt/labs/gestures/
+-rwxr-xr-x	root/root	usr/share/qt4/imports/Qt/labs/gestures/libqmlgesturesplugin.so
+-rw-r--r--	root/root	usr/share/qt4/imports/Qt/labs/gestures/qmldir
+drwxr-xr-x	root/root	usr/share/qt4/imports/Qt/labs/particles/
+-rwxr-xr-x	root/root	usr/share/qt4/imports/Qt/labs/particles/libqmlparticlesplugin.so
+-rw-r--r--	root/root	usr/share/qt4/imports/Qt/labs/particles/qmldir
+drwxr-xr-x	root/root	usr/share/qt4/imports/QtWebKit/
+-rwxr-xr-x	root/root	usr/share/qt4/imports/QtWebKit/libqmlwebkitplugin.so
+-rw-r--r--	root/root	usr/share/qt4/imports/QtWebKit/qmldir
 drwxr-xr-x	root/root	usr/share/qt4/include/
 drwxr-xr-x	root/root	usr/share/qt4/include/Qt/
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/Qt3Support
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/QtCore
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/QtDBus
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/QtDeclarative
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/QtGui
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/QtHelp
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/QtMultimedia
@@ -270,6 +286,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/Qt/
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qbasicatomic.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qbasictimer.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qbenchmark.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qbenchmarkmetric.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qbitarray.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qbitmap.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qboxlayout.h
@@ -328,6 +345,27 @@ drwxr-xr-x	root/root	usr/share/qt4/include/Qt/
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qdbusserver.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qdbusservicewatcher.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qdebug.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarative.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativecomponent.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativecontext.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeengine.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeerror.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeexpression.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeextensioninterface.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeextensionplugin.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeimageprovider.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeinfo.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeitem.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativelist.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativenetworkaccessmanagerfactory.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeparserstatus.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeprivate.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeproperty.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativepropertymap.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativepropertyvalueinterceptor.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativepropertyvaluesource.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativescriptstring.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qdeclarativeview.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qdecoration_qws.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qdecorationdefault_qws.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qdecorationfactory_qws.h
@@ -348,6 +386,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/Qt/
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qdrag.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qdrawutil.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qeasingcurve.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qelapsedtimer.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qendian.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qerrormessage.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qevent.h
@@ -383,6 +422,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/Qt/
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qgesture.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qgesturerecognizer.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qgl.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qglbuffer.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qglcolormap.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qglframebufferobject.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qglobal.h
@@ -500,6 +540,8 @@ drwxr-xr-x	root/root	usr/share/qt4/include/Qt/
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qmutex.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qnamespace.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworkaccessmanager.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworkconfigmanager.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworkconfiguration.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworkcookie.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworkcookiejar.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworkdiskcache.h
@@ -507,6 +549,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/Qt/
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworkproxy.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworkreply.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworkrequest.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qnetworksession.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qnumeric.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qobject.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qobjectcleanuphandler.h
@@ -647,6 +690,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/Qt/
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qstandarditemmodel.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qstate.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qstatemachine.h
+-rw-r--r--	root/root	usr/share/qt4/include/Qt/qstatictext.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qstatusbar.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qstring.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt/qstringbuilder.h
@@ -1106,11 +1150,6 @@ drwxr-xr-x	root/root	usr/share/qt4/include/Qt3Support/
 -rw-r--r--	root/root	usr/share/qt4/include/Qt3Support/q3widgetstack.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt3Support/q3wizard.h
 -rw-r--r--	root/root	usr/share/qt4/include/Qt3Support/qiconset.h
-drwxr-xr-x	root/root	usr/share/qt4/include/QtAssistant/
--rw-r--r--	root/root	usr/share/qt4/include/QtAssistant/QAssistantClient
--rw-r--r--	root/root	usr/share/qt4/include/QtAssistant/QtAssistant
--rw-r--r--	root/root	usr/share/qt4/include/QtAssistant/qassistantclient.h
--rw-r--r--	root/root	usr/share/qt4/include/QtAssistant/qassistantclient_global.h
 drwxr-xr-x	root/root	usr/share/qt4/include/QtCore/
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QAbstractAnimation
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QAbstractConcatenable
@@ -1158,6 +1197,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtCore/
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QDirIterator
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QDynamicPropertyChangeEvent
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QEasingCurve
+-rw-r--r--	root/root	usr/share/qt4/include/QtCore/QElapsedTimer
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QEvent
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QEventLoop
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QEventTransition
@@ -1371,6 +1411,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtCore/
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QtConcurrentFilter
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QtConcurrentMap
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QtConcurrentRun
+-rw-r--r--	root/root	usr/share/qt4/include/QtCore/QtConfig
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QtContainerFwd
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QtCore
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/QtDebug
@@ -1436,6 +1477,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtCore/
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/qdir.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/qdiriterator.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/qeasingcurve.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtCore/qelapsedtimer.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/qendian.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/qeventloop.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtCore/qeventtransition.h
@@ -1586,6 +1628,52 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtDBus/
 -rw-r--r--	root/root	usr/share/qt4/include/QtDBus/qdbusreply.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtDBus/qdbusserver.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtDBus/qdbusservicewatcher.h
+drwxr-xr-x	root/root	usr/share/qt4/include/QtDeclarative/
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeAttachedPropertiesFunc
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeComponent
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeContext
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeEngine
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeError
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeExpression
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeExtensionInterface
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeExtensionPlugin
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeImageProvider
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeInfo
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeItem
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeListProperty
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeListReference
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeNetworkAccessManagerFactory
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeParserStatus
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeProperties
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeProperty
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativePropertyMap
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativePropertyValueInterceptor
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativePropertyValueSource
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeScriptString
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeTypeInfo
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QDeclarativeView
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/QtDeclarative
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarative.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativecomponent.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativecontext.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeengine.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeerror.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeexpression.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeextensioninterface.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeextensionplugin.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeimageprovider.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeinfo.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeitem.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativelist.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativenetworkaccessmanagerfactory.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeparserstatus.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeprivate.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeproperty.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativepropertymap.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativepropertyvalueinterceptor.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativepropertyvaluesource.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativescriptstring.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtDeclarative/qdeclarativeview.h
 drwxr-xr-x	root/root	usr/share/qt4/include/QtDesigner/
 -rw-r--r--	root/root	usr/share/qt4/include/QtDesigner/QAbstractExtensionFactory
 -rw-r--r--	root/root	usr/share/qt4/include/QtDesigner/QAbstractExtensionManager
@@ -1961,8 +2049,15 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtGui/
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QRgb
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QRubberBand
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60MainAppUi
+-rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60MainAppUiBase
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60MainApplication
+-rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60MainApplicationBase
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60MainDocument
+-rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60MainDocumentBase
+-rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60StubAknAppUi
+-rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60StubAknAppUiBase
+-rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60StubMAknTouchPaneObserver
+-rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60StubMEikStatusPaneObserver
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QS60Style
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QScreen
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QScreenCursor
@@ -1990,6 +2085,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtGui/
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QStandardItem
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QStandardItemEditorCreator
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QStandardItemModel
+-rw-r--r--	root/root	usr/share/qt4/include/QtGui/QStaticText
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QStatusBar
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QStatusTipEvent
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/QStringListModel
@@ -2385,6 +2481,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtGui/
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/qstackedlayout.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/qstackedwidget.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/qstandarditemmodel.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtGui/qstatictext.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/qstatusbar.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/qstringlistmodel.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtGui/qstyle.h
@@ -2521,6 +2618,8 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtNetwork/
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkAccessManager
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkAddressEntry
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkCacheMetaData
+-rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkConfiguration
+-rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkConfigurationManager
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkCookie
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkCookieJar
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkDiskCache
@@ -2530,6 +2629,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtNetwork/
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkProxyQuery
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkReply
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkRequest
+-rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QNetworkSession
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QSsl
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QSslCertificate
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/QSslCipher
@@ -2553,6 +2653,8 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtNetwork/
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qlocalserver.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qlocalsocket.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworkaccessmanager.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworkconfigmanager.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworkconfiguration.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworkcookie.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworkcookiejar.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworkdiskcache.h
@@ -2560,6 +2662,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtNetwork/
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworkproxy.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworkreply.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworkrequest.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qnetworksession.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qssl.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qsslcertificate.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qsslcipher.h
@@ -2572,6 +2675,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtNetwork/
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qudpsocket.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtNetwork/qurlinfo.h
 drwxr-xr-x	root/root	usr/share/qt4/include/QtOpenGL/
+-rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/QGLBuffer
 -rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/QGLColormap
 -rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/QGLContext
 -rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/QGLFormat
@@ -2589,6 +2693,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtOpenGL/
 -rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/QMacGLCompatTypes
 -rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/QtOpenGL
 -rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/qgl.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/qglbuffer.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/qglcolormap.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/qglframebufferobject.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtOpenGL/qglpixelbuffer.h
@@ -2726,6 +2831,7 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtTest/
 -rw-r--r--	root/root	usr/share/qt4/include/QtTest/QtTest
 -rw-r--r--	root/root	usr/share/qt4/include/QtTest/QtTestGui
 -rw-r--r--	root/root	usr/share/qt4/include/QtTest/qbenchmark.h
+-rw-r--r--	root/root	usr/share/qt4/include/QtTest/qbenchmarkmetric.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtTest/qsignalspy.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtTest/qtest.h
 -rw-r--r--	root/root	usr/share/qt4/include/QtTest/qtest_global.h
@@ -2868,133 +2974,157 @@ drwxr-xr-x	root/root	usr/share/qt4/include/QtXmlPatterns/
 drwxr-xr-x	root/root	usr/share/qt4/lib/
 -rw-r--r--	root/root	usr/share/qt4/lib/libQt3Support.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQt3Support.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQt3Support.so -> libQt3Support.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQt3Support.so.4 -> libQt3Support.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQt3Support.so.4.6 -> libQt3Support.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQt3Support.so.4.6.3
--rw-r--r--	root/root	usr/share/qt4/lib/libQtAssistantClient.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtAssistantClient.so -> libQtAssistantClient.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtAssistantClient.so.4 -> libQtAssistantClient.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtAssistantClient.so.4.6 -> libQtAssistantClient.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtAssistantClient.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQt3Support.so -> libQt3Support.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQt3Support.so.4 -> libQt3Support.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQt3Support.so.4.7 -> libQt3Support.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQt3Support.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtCLucene.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtCLucene.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCLucene.so -> libQtCLucene.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCLucene.so.4 -> libQtCLucene.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCLucene.so.4.6 -> libQtCLucene.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtCLucene.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCLucene.so -> libQtCLucene.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCLucene.so.4 -> libQtCLucene.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCLucene.so.4.7 -> libQtCLucene.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtCLucene.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtCore.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtCore.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCore.so -> libQtCore.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCore.so.4 -> libQtCore.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCore.so.4.6 -> libQtCore.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtCore.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCore.so -> libQtCore.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCore.so.4 -> libQtCore.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtCore.so.4.7 -> libQtCore.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtCore.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtDBus.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtDBus.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDBus.so -> libQtDBus.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDBus.so.4 -> libQtDBus.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDBus.so.4.6 -> libQtDBus.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtDBus.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDBus.so -> libQtDBus.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDBus.so.4 -> libQtDBus.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDBus.so.4.7 -> libQtDBus.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtDBus.so.4.7.0
+-rw-r--r--	root/root	usr/share/qt4/lib/libQtDeclarative.la
+-rw-r--r--	root/root	usr/share/qt4/lib/libQtDeclarative.prl
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDeclarative.so -> libQtDeclarative.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDeclarative.so.4 -> libQtDeclarative.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDeclarative.so.4.7 -> libQtDeclarative.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtDeclarative.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtDesigner.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesigner.so -> libQtDesigner.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesigner.so.4 -> libQtDesigner.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesigner.so.4.6 -> libQtDesigner.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtDesigner.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesigner.so -> libQtDesigner.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesigner.so.4 -> libQtDesigner.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesigner.so.4.7 -> libQtDesigner.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtDesigner.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtDesignerComponents.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesignerComponents.so -> libQtDesignerComponents.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesignerComponents.so.4 -> libQtDesignerComponents.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesignerComponents.so.4.6 -> libQtDesignerComponents.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtDesignerComponents.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesignerComponents.so -> libQtDesignerComponents.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesignerComponents.so.4 -> libQtDesignerComponents.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtDesignerComponents.so.4.7 -> libQtDesignerComponents.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtDesignerComponents.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtGui.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtGui.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtGui.so -> libQtGui.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtGui.so.4 -> libQtGui.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtGui.so.4.6 -> libQtGui.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtGui.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtGui.so -> libQtGui.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtGui.so.4 -> libQtGui.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtGui.so.4.7 -> libQtGui.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtGui.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtHelp.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtHelp.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtHelp.so -> libQtHelp.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtHelp.so.4 -> libQtHelp.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtHelp.so.4.6 -> libQtHelp.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtHelp.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtHelp.so -> libQtHelp.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtHelp.so.4 -> libQtHelp.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtHelp.so.4.7 -> libQtHelp.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtHelp.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtMultimedia.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtMultimedia.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtMultimedia.so -> libQtMultimedia.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtMultimedia.so.4 -> libQtMultimedia.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtMultimedia.so.4.6 -> libQtMultimedia.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtMultimedia.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtMultimedia.so -> libQtMultimedia.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtMultimedia.so.4 -> libQtMultimedia.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtMultimedia.so.4.7 -> libQtMultimedia.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtMultimedia.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtNetwork.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtNetwork.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtNetwork.so -> libQtNetwork.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtNetwork.so.4 -> libQtNetwork.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtNetwork.so.4.6 -> libQtNetwork.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtNetwork.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtNetwork.so -> libQtNetwork.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtNetwork.so.4 -> libQtNetwork.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtNetwork.so.4.7 -> libQtNetwork.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtNetwork.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtOpenGL.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtOpenGL.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtOpenGL.so -> libQtOpenGL.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtOpenGL.so.4 -> libQtOpenGL.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtOpenGL.so.4.6 -> libQtOpenGL.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtOpenGL.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtOpenGL.so -> libQtOpenGL.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtOpenGL.so.4 -> libQtOpenGL.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtOpenGL.so.4.7 -> libQtOpenGL.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtOpenGL.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtScript.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtScript.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScript.so -> libQtScript.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScript.so.4 -> libQtScript.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScript.so.4.6 -> libQtScript.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtScript.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScript.so -> libQtScript.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScript.so.4 -> libQtScript.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScript.so.4.7 -> libQtScript.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtScript.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtScriptTools.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtScriptTools.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScriptTools.so -> libQtScriptTools.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScriptTools.so.4 -> libQtScriptTools.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScriptTools.so.4.6 -> libQtScriptTools.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtScriptTools.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScriptTools.so -> libQtScriptTools.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScriptTools.so.4 -> libQtScriptTools.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtScriptTools.so.4.7 -> libQtScriptTools.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtScriptTools.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtSql.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtSql.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSql.so -> libQtSql.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSql.so.4 -> libQtSql.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSql.so.4.6 -> libQtSql.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtSql.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSql.so -> libQtSql.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSql.so.4 -> libQtSql.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSql.so.4.7 -> libQtSql.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtSql.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtSvg.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtSvg.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSvg.so -> libQtSvg.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSvg.so.4 -> libQtSvg.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSvg.so.4.6 -> libQtSvg.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtSvg.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSvg.so -> libQtSvg.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSvg.so.4 -> libQtSvg.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtSvg.so.4.7 -> libQtSvg.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtSvg.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtTest.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtTest.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtTest.so -> libQtTest.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtTest.so.4 -> libQtTest.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtTest.so.4.6 -> libQtTest.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtTest.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtTest.so -> libQtTest.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtTest.so.4 -> libQtTest.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtTest.so.4.7 -> libQtTest.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtTest.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtUiTools.a
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtUiTools.prl
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtWebKit.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtWebKit.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtWebKit.so -> libQtWebKit.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtWebKit.so.4 -> libQtWebKit.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtWebKit.so.4.6 -> libQtWebKit.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtWebKit.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtWebKit.so -> libQtWebKit.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtWebKit.so.4 -> libQtWebKit.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtWebKit.so.4.7 -> libQtWebKit.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtWebKit.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtXml.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtXml.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXml.so -> libQtXml.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXml.so.4 -> libQtXml.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXml.so.4.6 -> libQtXml.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtXml.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXml.so -> libQtXml.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXml.so.4 -> libQtXml.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXml.so.4.7 -> libQtXml.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtXml.so.4.7.0
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtXmlPatterns.la
 -rw-r--r--	root/root	usr/share/qt4/lib/libQtXmlPatterns.prl
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXmlPatterns.so -> libQtXmlPatterns.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXmlPatterns.so.4 -> libQtXmlPatterns.so.4.6.3
-lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXmlPatterns.so.4.6 -> libQtXmlPatterns.so.4.6.3
--rwxr-xr-x	root/root	usr/share/qt4/lib/libQtXmlPatterns.so.4.6.3
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXmlPatterns.so -> libQtXmlPatterns.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXmlPatterns.so.4 -> libQtXmlPatterns.so.4.7.0
+lrwxrwxrwx	root/root	usr/share/qt4/lib/libQtXmlPatterns.so.4.7 -> libQtXmlPatterns.so.4.7.0
+-rwxr-xr-x	root/root	usr/share/qt4/lib/libQtXmlPatterns.so.4.7.0
 drwxr-xr-x	root/root	usr/share/qt4/mkspecs/
 drwxr-xr-x	root/root	usr/share/qt4/mkspecs/common/
+drwxr-xr-x	root/root	usr/share/qt4/mkspecs/common/aix/
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/aix/qplatformdefs.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/armcc.conf
+drwxr-xr-x	root/root	usr/share/qt4/mkspecs/common/c89/
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/c89/qplatformdefs.h
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/common/g++.conf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/common/linux.conf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/common/llvm.conf
+drwxr-xr-x	root/root	usr/share/qt4/mkspecs/common/posix/
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/posix/qplatformdefs.h
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/common/qws.conf
 drwxr-xr-x	root/root	usr/share/qt4/mkspecs/common/symbian/
+drwxr-xr-x	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknDoc.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknLayoutFont.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknPopupFader.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknServerApp.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknUtils.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknsBasicBackgroundControlContext.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknsConstants.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknsDrawUtils.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknsItemID.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknsSkinInstance.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/AknsUtils.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/CDirectoryLocalizer.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/header-wrappers/DocumentHandler.h
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/qplatformdefs.h
 drwxr-xr-x	root/root	usr/share/qt4/mkspecs/common/symbian/stl-off/
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/stl-off/new
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/symbian-makefile.conf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/symbian-mmp.conf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/common/symbian/symbian.conf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/common/unix.conf
 drwxr-xr-x	root/root	usr/share/qt4/mkspecs/common/wince/
@@ -3002,7 +3132,6 @@ drwxr-xr-x	root/root	usr/share/qt4/mkspecs/common/wince/
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/common/wince/qplatformdefs.h
 lrwxrwxrwx	root/root	usr/share/qt4/mkspecs/default -> linux-g++
 drwxr-xr-x	root/root	usr/share/qt4/mkspecs/features/
--rw-r--r--	root/root	usr/share/qt4/mkspecs/features/assistant.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/build_pass.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/dbusadaptors.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/dbusinterfaces.prf
@@ -3033,6 +3162,7 @@ drwxr-xr-x	root/root	usr/share/qt4/mkspecs/features/
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/resources.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/shared.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/silent.prf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/features/sis_targets.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/static.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/static_and_shared.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/staticlib.prf
@@ -3041,16 +3171,24 @@ drwxr-xr-x	root/root	usr/share/qt4/mkspecs/features/symbian/
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/application_icon.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/armcc_warnings.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/data_caging_paths.prf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/debug.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/def_files.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/def_files_disabled.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/default_post.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/default_pre.prf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/do_not_build_as_thumb.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/epocallowdlldata.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/moc.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/platform_paths.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/qt.prf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/qt_config.prf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/release.prf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/run_on_phone.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/stl.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/stl_off.prf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/symbian_building.prf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/features/symbian/thread.prf
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/features/testcase.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/uic.prf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/features/uitools.prf
 drwxr-xr-x	root/root	usr/share/qt4/mkspecs/features/unix/
@@ -3088,12 +3226,16 @@ drwxr-xr-x	root/root	usr/share/qt4/plugins/
 drwxr-xr-x	root/root	usr/share/qt4/plugins/accessible/
 -rwxr-xr-x	root/root	usr/share/qt4/plugins/accessible/libqtaccessiblecompatwidgets.so
 -rwxr-xr-x	root/root	usr/share/qt4/plugins/accessible/libqtaccessiblewidgets.so
+drwxr-xr-x	root/root	usr/share/qt4/plugins/bearer/
+-rwxr-xr-x	root/root	usr/share/qt4/plugins/bearer/libqgenericbearer.so
+-rwxr-xr-x	root/root	usr/share/qt4/plugins/bearer/libqnmbearer.so
 drwxr-xr-x	root/root	usr/share/qt4/plugins/codecs/
 -rwxr-xr-x	root/root	usr/share/qt4/plugins/codecs/libqcncodecs.so
 -rwxr-xr-x	root/root	usr/share/qt4/plugins/codecs/libqjpcodecs.so
 -rwxr-xr-x	root/root	usr/share/qt4/plugins/codecs/libqkrcodecs.so
 -rwxr-xr-x	root/root	usr/share/qt4/plugins/codecs/libqtwcodecs.so
 drwxr-xr-x	root/root	usr/share/qt4/plugins/designer/
+-rwxr-xr-x	root/root	usr/share/qt4/plugins/designer/libqdeclarativeview.so
 -rwxr-xr-x	root/root	usr/share/qt4/plugins/designer/libqt3supportwidgets.so
 -rwxr-xr-x	root/root	usr/share/qt4/plugins/designer/libqwebview.so
 drwxr-xr-x	root/root	usr/share/qt4/plugins/graphicssystems/
@@ -3116,16 +3258,11 @@ drwxr-xr-x	root/root	usr/share/qt4/plugins/sqldrivers/
 -rwxr-xr-x	root/root	usr/share/qt4/plugins/sqldrivers/libqsqlite.so
 -rw-r--r--	root/root	usr/share/qt4/q3porting.xml
 drwxr-xr-x	root/root	usr/share/qt4/translations/
--rw-r--r--	root/root	usr/share/qt4/translations/assistant_adp_de.qm
--rw-r--r--	root/root	usr/share/qt4/translations/assistant_adp_ja.qm
--rw-r--r--	root/root	usr/share/qt4/translations/assistant_adp_pl.qm
--rw-r--r--	root/root	usr/share/qt4/translations/assistant_adp_ru.qm
--rw-r--r--	root/root	usr/share/qt4/translations/assistant_adp_zh_CN.qm
--rw-r--r--	root/root	usr/share/qt4/translations/assistant_adp_zh_TW.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/assistant_cs.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/assistant_da.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/assistant_de.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/assistant_fr.qm
+-rw-r--r--	root/root	usr/share/qt4/translations/assistant_hu.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/assistant_ja.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/assistant_pl.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/assistant_ru.qm
@@ -3134,6 +3271,7 @@ drwxr-xr-x	root/root	usr/share/qt4/translations/
 -rw-r--r--	root/root	usr/share/qt4/translations/designer_cs.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/designer_de.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/designer_fr.qm
+-rw-r--r--	root/root	usr/share/qt4/translations/designer_hu.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/designer_ja.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/designer_pl.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/designer_ru.qm
@@ -3143,6 +3281,7 @@ drwxr-xr-x	root/root	usr/share/qt4/translations/
 -rw-r--r--	root/root	usr/share/qt4/translations/linguist_cs.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/linguist_de.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/linguist_fr.qm
+-rw-r--r--	root/root	usr/share/qt4/translations/linguist_hu.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/linguist_ja.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/linguist_pl.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/linguist_ru.qm
@@ -3159,12 +3298,14 @@ drwxr-xr-x	root/root	usr/share/qt4/translations/
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_help_da.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_help_de.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_help_fr.qm
+-rw-r--r--	root/root	usr/share/qt4/translations/qt_help_hu.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_help_ja.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_help_pl.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_help_ru.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_help_zh_CN.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_help_zh_TW.qm
--rw-r--r--	root/root	usr/share/qt4/translations/qt_ja_JP.qm
+-rw-r--r--	root/root	usr/share/qt4/translations/qt_hu.qm
+-rw-r--r--	root/root	usr/share/qt4/translations/qt_ja.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_pl.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_pt.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_ru.qm
@@ -3174,10 +3315,12 @@ drwxr-xr-x	root/root	usr/share/qt4/translations/
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_uk.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_zh_CN.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qt_zh_TW.qm
+-rw-r--r--	root/root	usr/share/qt4/translations/qtconfig_hu.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qtconfig_pl.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qtconfig_ru.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qtconfig_zh_CN.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qtconfig_zh_TW.qm
+-rw-r--r--	root/root	usr/share/qt4/translations/qvfb_hu.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qvfb_pl.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qvfb_ru.qm
 -rw-r--r--	root/root	usr/share/qt4/translations/qvfb_zh_CN.qm
