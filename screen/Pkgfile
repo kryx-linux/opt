@@ -6,7 +6,7 @@
 name=screen
 version=4.0.3
 release=2
-source=(http://fresh.t-systems-sfr.com/unix/src/misc//$name-$version.tar.gz)
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
