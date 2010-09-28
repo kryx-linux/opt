@@ -7,7 +7,7 @@
 name=rox-lib
 version=2.0.6
 release=1
-source=(http://dl.sourceforge.net/sourceforge/rox/${name}2-$version.tar.bz2)
+source=(http://download.sourceforge.net/rox/${name}2-$version.tar.bz2)
 
 build() {
 	mkdir -p $PKG/usr/lib

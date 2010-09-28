@@ -6,7 +6,7 @@
 name=gqview
 version=2.0.4
 release=2
-source=(http://dl.sourceforge.net/gqview/$name-$version.tar.gz)
+source=(http://download.sourceforge.net/gqview/$name-$version.tar.gz)
 
 build() {
     cd $name-$version

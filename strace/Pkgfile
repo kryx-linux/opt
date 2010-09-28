@@ -5,7 +5,7 @@
 name=strace
 version=4.5.19
 release=1
-source=(http://dl.sourceforge.net/$name/$name-$version.tar.bz2)
+source=(http://download.sourceforge.net/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version

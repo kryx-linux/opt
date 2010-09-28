@@ -7,7 +7,7 @@
 name=imlib2
 version=1.4.4
 release=1
-source=(http://dl.sourceforge.net/sourceforge/enlightenment/$name-$version.tar.bz2)
+source=(http://download.sourceforge.net/enlightenment/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version

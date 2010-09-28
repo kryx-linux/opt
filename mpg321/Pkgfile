@@ -6,7 +6,7 @@
 name=mpg321
 version=0.2.10
 release=1
-source=(http://dl.sourceforge.net/mpg321/$name-$version.tar.gz)
+source=(http://download.sourceforge.net/mpg321/$name-$version.tar.gz)
 
 build() {
     cd $name-$version

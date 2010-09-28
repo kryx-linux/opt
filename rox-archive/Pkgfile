@@ -7,7 +7,7 @@
 name=rox-archive
 version=2.2
 release=1
-source=(http://dl.sourceforge.net/sourceforge/rox/archive-$version.tar.bz2)
+source=(http://download.sourceforge.net/rox/archive-$version.tar.bz2)
 
 build() {
 	cd archive-$version

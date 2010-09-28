@@ -6,7 +6,7 @@
 name=pal
 version=0.4.3
 release=1
-source=(http://dl.sourceforge.net/palcal/$name-$version.tgz)
+source=(http://download.sourceforge.net/palcal/$name-$version.tgz)
 
 build() {
     cd $name-$version

@@ -7,7 +7,7 @@
 name=rdiff
 version=0.9.7
 release=2
-source=(http://dl.sourceforge.net/librsync/librsync-${version}.tar.gz
+source=(http://download.sourceforge.net/librsync/librsync-${version}.tar.gz
   librsync.patch)
 
 build() {
