@@ -5,7 +5,7 @@
 name=x11-fonts-dejavu
 version=2.30
 release=2
-source=(http://dfn.dl.sourceforge.net/sourceforge/dejavu/dejavu-fonts-ttf-$version.tar.bz2)
+source=(http://dfn.download.sourceforge.net/dejavu/dejavu-fonts-ttf-$version.tar.bz2)
 
 build() {
     cd dejavu-fonts-ttf-$version

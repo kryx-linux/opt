@@ -6,7 +6,7 @@
 name=fontforge
 version=20090923
 release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/${name}_full-$version.tar.bz2)
+source=(http://download.sourceforge.net/$name/${name}_full-$version.tar.bz2)
 
 build() {
 	cd $name-$version

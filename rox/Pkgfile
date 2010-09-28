@@ -7,7 +7,7 @@
 name=rox
 version=2.10
 release=1
-source=(http://dl.sourceforge.net/sourceforge/rox/$name-filer-$version.tar.bz2)
+source=(http://download.sourceforge.net/rox/$name-filer-$version.tar.bz2)
 
 build () {
 	cd $name-filer-$version/ROX-Filer

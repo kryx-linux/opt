@@ -1,13 +1,13 @@
 # Description: XML::Parser
-# URL: http://search.cpan.org/~msergeant/XML-Parser-2.34/
+# URL: http://search.cpan.org/dist/XML-Parser/
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: expat, perl
 
 name=p5-xml-parser
-version=2.36
-release=5
-source=(http://cpan.develooper.com/modules/by-category/11_String_Lang_Text_Proc/XML/XML-Parser-$version.tar.gz)
+version=2.40
+release=1
+source=(http://search.cpan.org/CPAN/authors/id/C/CH/CHORNY/XML-Parser-$version.tar.gz)
 
 build() {
 	cd XML-Parser-$version

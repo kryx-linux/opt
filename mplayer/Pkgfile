@@ -2,7 +2,7 @@
 # URL:          http://www.mplayerhq.hu/
 # Maintainer:   Thomas Penteker, tek at serverop dot de
 # Packager:     Matt Housh, jaeger at morpheus dot net
-# Depends on:   expat, freetype, xorg-libxinerama, xorg-libxv, xorg-libxxf86dga, xorg-libxxf86vm
+# Depends on:   expat, freetype, xorg-libxinerama, xorg-libxv, xorg-libxxf86dga, xorg-libxxf86vm, yasm
 # Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis, cdparanoia, win32-essential-codecs, faac, x264, libdvdnav, libdca
 
 name=mplayer

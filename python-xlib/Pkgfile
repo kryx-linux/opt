@@ -7,7 +7,7 @@
 name=python-xlib
 version=0.14
 release=1
-source=(http://dl.sourceforge.net/sourceforge/python-xlib/python-xlib-$version.tar.gz)
+source=(http://download.sourceforge.net/python-xlib/python-xlib-$version.tar.gz)
 
 build() {
     cd python-xlib-$version
