@@ -174,15 +174,16 @@ lrwxrwxrwx	root/root	usr/lib/libMagickWand.so -> libMagickWand.so.4.0.0
 lrwxrwxrwx	root/root	usr/lib/libMagickWand.so.4 -> libMagickWand.so.4.0.0
 -rwxr-xr-x	root/root	usr/lib/libMagickWand.so.4.0.0
 drwxr-xr-x	root/root	usr/lib/perl5/
-drwxr-xr-x	root/root	usr/lib/perl5/5.12/
-drwxr-xr-x	root/root	usr/lib/perl5/5.12/linux-thread-multi/
-drwxr-xr-x	root/root	usr/lib/perl5/5.12/linux-thread-multi/Image/
--r--r--r--	root/root	usr/lib/perl5/5.12/linux-thread-multi/Image/Magick.pm
-drwxr-xr-x	root/root	usr/lib/perl5/5.12/linux-thread-multi/auto/
-drwxr-xr-x	root/root	usr/lib/perl5/5.12/linux-thread-multi/auto/Image/
-drwxr-xr-x	root/root	usr/lib/perl5/5.12/linux-thread-multi/auto/Image/Magick/
--r-xr-xr-x	root/root	usr/lib/perl5/5.12/linux-thread-multi/auto/Image/Magick/Magick.so
--r--r--r--	root/root	usr/lib/perl5/5.12/linux-thread-multi/auto/Image/Magick/autosplit.ix
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.12/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Image/
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Image/Magick.pm
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/auto/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/auto/Image/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/auto/Image/Magick/
+-r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/auto/Image/Magick/Magick.so
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/auto/Image/Magick/autosplit.ix
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick++.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick.pc
