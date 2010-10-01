@@ -5,12 +5,14 @@
 
 name=aspell
 version=0.60.6
-release=1
+release=2
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --enable-curses=ncursesw
     make
     make DESTDIR=$PKG install
     rm -R $PKG/usr/share

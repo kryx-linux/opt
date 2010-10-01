@@ -4,9 +4,9 @@
 # Depends on:  zlib
 
 name=swig
-version=1.3.40
+version=2.0.0
 release=1
-source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
+source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
