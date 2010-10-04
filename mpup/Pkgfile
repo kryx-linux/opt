@@ -5,7 +5,7 @@
 # Depends on: bash ports findutils coreutils
 
 name=mpup
-version=1.1d
+version=1.1e
 release=1
 source=(http://sepen.mine.nu/releases/$name-$version.tar.bz2)
 
