@@ -5,16 +5,18 @@
 
 name=sc
 version=7.16
-release=3
+release=4
 source=(http://www.ibiblio.org/pub/Linux/apps/financial/spreadsheet/$name-$version.tar.gz \
-        $name-$version.patch)
+        http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16-3.debian.tar.gz)
 
 build () {
     cd $name-$version
-    patch -p1 < $SRC/$name-$version.patch
-    sed -i "/^CFLAGS/s/-O2 -pipe/$CFLAGS/" Makefile
-    make 
-    mkdir -p $PKG/usr/{bin,man/man1,share/sc}
+    patch -p1 -i $SRC/debian/patches/debian-changes-7.16-3
+    sed -e "/^CFLAGS=/s/-O2 -pipe/$CFLAGS/" \
+        -e "/^LIBDIR=/s|doc/||" \
+        -e "/^LIB=/s/ncurses/ncursesw/" -i Makefile
+    install -d $PKG/usr/{bin,man/man1,share/sc}
+    make
     make prefix=$PKG/usr install
     sed -i "s|$PKG||g" $PKG/usr/man/man1/sc.1
 }
