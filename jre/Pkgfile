@@ -4,20 +4,17 @@
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
-version=1.6.0_21
+version=1.6.0_22
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-6u21-dlj-linux-i586.bin)
+source=(http://download.java.net/dlj/binaries/jdk-6u22-dlj-linux-i586.bin)
 
 build(){
     sh $SRC/jdk-*.bin --accept-license --unpack
 
     cd jdk$version
 
-    install -d $PKG/usr/{bin,lib} jre/man/man1
-    install -m 644 man/man1/{java,javaws,keytool,orbd,rmid,rmiregistry}.1 jre/man/man1
-    install -m 644 man/man1/{servertool,policytool,tnameserv,unpack200}.1 jre/man/man1
+    install -d $PKG/usr/{bin,lib}
     mv jre $PKG/usr/lib/jre$version
-
     ln -s jre$version $PKG/usr/lib/java
     ln -s ../lib/java/bin/java $PKG/usr/bin/java
     ln -s ../lib/java/bin/javaws $PKG/usr/bin/javaws
