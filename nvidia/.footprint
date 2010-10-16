@@ -7,39 +7,32 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/nvidia-settings
 -rwxr-xr-x	root/root	usr/bin/nvidia-xconfig
-drwxr-xr-x	root/root	usr/include/
-drwxr-xr-x	root/root	usr/include/cuda/
--rw-r--r--	root/root	usr/include/cuda/cuda.h
--rw-r--r--	root/root	usr/include/cuda/cudaGL.h
--rw-r--r--	root/root	usr/include/cuda/cudaVDPAU.h
-drwxr-xr-x	root/root	usr/include/vdpau/
--rw-r--r--	root/root	usr/include/vdpau/vdpau.h
--rw-r--r--	root/root	usr/include/vdpau/vdpau_x11.h
 drwxr-xr-x	root/root	usr/lib/
--rwxr-xr-x	root/root	usr/lib/libGL.so.256.53
-lrwxrwxrwx	root/root	usr/lib/libGL_so_1_2_nvidia -> libGL.so.256.53
+-rwxr-xr-x	root/root	usr/lib/libGL.so.260.19.12
+lrwxrwxrwx	root/root	usr/lib/libGL_so_1_2_nvidia -> libGL.so.260.19.12
 -rwxr-xr-x	root/root	usr/lib/libOpenCL.so.1.0.0
 -rw-r--r--	root/root	usr/lib/libXvMCNVIDIA.a
--rwxr-xr-x	root/root	usr/lib/libXvMCNVIDIA.so.256.53
--rwxr-xr-x	root/root	usr/lib/libcuda.so.256.53
--rwxr-xr-x	root/root	usr/lib/libnvidia-cfg.so.256.53
--rwxr-xr-x	root/root	usr/lib/libnvidia-compiler.so.256.53
--rwxr-xr-x	root/root	usr/lib/libnvidia-glcore.so.256.53
--rwxr-xr-x	root/root	usr/lib/libnvidia-tls.so.256.53
--rwxr-xr-x	root/root	usr/lib/libvdpau.so.256.53
+-rwxr-xr-x	root/root	usr/lib/libXvMCNVIDIA.so.260.19.12
+-rwxr-xr-x	root/root	usr/lib/libcuda.so.260.19.12
+-rwxr-xr-x	root/root	usr/lib/libnvcuvid.so.260.19.12
+-rwxr-xr-x	root/root	usr/lib/libnvidia-cfg.so.260.19.12
+-rwxr-xr-x	root/root	usr/lib/libnvidia-compiler.so.260.19.12
+-rwxr-xr-x	root/root	usr/lib/libnvidia-glcore.so.260.19.12
+-rwxr-xr-x	root/root	usr/lib/libnvidia-tls.so.260.19.12
+-rwxr-xr-x	root/root	usr/lib/libvdpau.so.260.19.12
 drwxr-xr-x	root/root	usr/lib/tls/
--rwxr-xr-x	root/root	usr/lib/tls/libnvidia-tls.so.256.53
+-rwxr-xr-x	root/root	usr/lib/tls/libnvidia-tls.so.260.19.12
 drwxr-xr-x	root/root	usr/lib/vdpau/
--rwxr-xr-x	root/root	usr/lib/vdpau/libvdpau_nvidia.so.256.53
--rwxr-xr-x	root/root	usr/lib/vdpau/libvdpau_trace.so.256.53
+-rwxr-xr-x	root/root	usr/lib/vdpau/libvdpau_nvidia.so.260.19.12
+-rwxr-xr-x	root/root	usr/lib/vdpau/libvdpau_trace.so.260.19.12
 drwxr-xr-x	root/root	usr/lib/xorg/
 drwxr-xr-x	root/root	usr/lib/xorg/modules/
 drwxr-xr-x	root/root	usr/lib/xorg/modules/drivers/
 -rwxr-xr-x	root/root	usr/lib/xorg/modules/drivers/nvidia_drv.so
 drwxr-xr-x	root/root	usr/lib/xorg/modules/extensions/
--rwxr-xr-x	root/root	usr/lib/xorg/modules/extensions/libglx.so.256.53
-lrwxrwxrwx	root/root	usr/lib/xorg/modules/extensions/libglx_so_nvidia -> libglx.so.256.53
--rwxr-xr-x	root/root	usr/lib/xorg/modules/libnvidia-wfb.so.256.53
+-rwxr-xr-x	root/root	usr/lib/xorg/modules/extensions/libglx.so.260.19.12
+lrwxrwxrwx	root/root	usr/lib/xorg/modules/extensions/libglx_so_nvidia -> libglx.so.260.19.12
+-rwxr-xr-x	root/root	usr/lib/xorg/modules/libnvidia-wfb.so.260.19.12
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/nvidia-settings.1.gz
