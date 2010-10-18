@@ -26,6 +26,7 @@ lrwxrwxrwx	root/root	usr/bin/mmove -> mtools
 lrwxrwxrwx	root/root	usr/bin/mpartition -> mtools
 lrwxrwxrwx	root/root	usr/bin/mrd -> mtools
 lrwxrwxrwx	root/root	usr/bin/mren -> mtools
+lrwxrwxrwx	root/root	usr/bin/mshortname -> mtools
 lrwxrwxrwx	root/root	usr/bin/mshowfat -> mtools
 -rwxr-xr-x	root/root	usr/bin/mtools
 lrwxrwxrwx	root/root	usr/bin/mtoolstest -> mtools
@@ -58,6 +59,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/mpartition.1.gz
 -rw-r--r--	root/root	usr/man/man1/mrd.1.gz
 -rw-r--r--	root/root	usr/man/man1/mren.1.gz
+-rw-r--r--	root/root	usr/man/man1/mshortname.1.gz
 -rw-r--r--	root/root	usr/man/man1/mshowfat.1.gz
 -rw-r--r--	root/root	usr/man/man1/mtools.1.gz
 -rw-r--r--	root/root	usr/man/man1/mtoolstest.1.gz

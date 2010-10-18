@@ -5,14 +5,13 @@
 # Depends on:
 
 name=mtools
-version=4.0.13
+version=4.0.14
 release=1
 source=(ftp://ftp.gnu.org/gnu/mtools/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
   ./configure --prefix=/usr \
-              --datarootdir=$PKG/usr \
               --sysconfdir=/etc \
               --enable-floppyd
   make
