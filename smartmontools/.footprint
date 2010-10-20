@@ -12,6 +12,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/smartctl
 -rwxr-xr-x	root/root	usr/sbin/smartd
+-rwxr-xr-x	root/root	usr/sbin/update-smart-drivedb
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/smartmontools/
 -rw-r--r--	root/root	usr/share/smartmontools/drivedb.h

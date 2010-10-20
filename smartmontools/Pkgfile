@@ -4,9 +4,9 @@
 # Packager: Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=smartmontools
-version=5.39.1
+version=5.40
 release=1
-source=(http://download.sourceforge.net/$name/$name-$version.tar.gz \
+source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz \
         smartd)
 
 build () {
