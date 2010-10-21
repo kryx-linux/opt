@@ -3,17 +3,12 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=valgrind
-version=3.5.0
-release=2
-source=(http://$name.org/downloads/$name-$version.tar.bz2
-        $name.diff)
+version=3.6.0
+release=1
+source=(http://$name.org/downloads/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-
-	# Add support for glibc 2.12:
-	patch -p0 -i $SRC/$name.diff
-	autoreconf -if
 
 	./configure --prefix=/usr --mandir=/usr/man
 	make
