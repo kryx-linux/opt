@@ -4,9 +4,9 @@
 # Depends on: ghostscript
 
 name=netpbm
-version=10.47.9
+version=10.52.3
 release=1
-source=(http://crux.nu/~aon/$name/$name-$version.tar.gz
+source=(http://crux.nu/files/distfiles/$name-$version.tar.xz
 	config.mk)
 
 build() {
