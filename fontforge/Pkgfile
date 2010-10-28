@@ -4,18 +4,17 @@
 # Depends on: freetype, libpng, libtiff, libungif, xorg-libxi, xorg-libxkbui
 
 name=fontforge
-version=20090923
+version=20100501
 release=1
 source=(http://download.sourceforge.net/$name/${name}_full-$version.tar.bz2)
 
 build() {
 	cd $name-$version
+	sed "s|PyBytes_Decode|PyString_Decode|g" -i fontforge/ffpython.h
 	./configure	--prefix=/usr \
-			--mandir=$PKG/usr/man \
-			--disable-nls \
+			--mandir=/usr/man \
 			--without-freetype-src
-	sed -i 's|^prefix.*|prefix ?= /usr|' Makefile
 	make
-	make install prefix=$PKG/usr
+	make install DESTDIR=$PKG
 	rm -r $PKG/usr/share/locale/
 }
