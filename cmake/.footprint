@@ -77,6 +77,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeMSYSFindMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeMinGWFindMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeNMakeFindMake.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeParseArguments.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeParseImplicitLinkInfo.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePlatformId.h.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePrintSystemInformation.cmake
@@ -246,6 +247,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/FindCUDA/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindKDE4.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindLAPACK.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindLATEX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindLibArchive.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindLibXml2.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindLibXslt.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindLua50.cmake
@@ -271,6 +273,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/FindCUDA/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindPhysFS.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindPike.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindPkgConfig.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindPostgreSQL.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindProducer.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindProtobuf.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindPythonInterp.cmake
@@ -369,6 +372,21 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BSDOS.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BeOS.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneL.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-base.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-GNU-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-GNU-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-GNU-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-XL-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-XL-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-XL-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-static-GNU-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-static-GNU-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-static-GNU-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-static-XL-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-static-XL-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-static-XL-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/BlueGeneP-static.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/CYGWIN-GNU-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/CYGWIN-GNU-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/CYGWIN-GNU-Fortran.cmake
