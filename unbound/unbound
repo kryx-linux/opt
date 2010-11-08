@@ -5,6 +5,7 @@
 
 case $1 in
 start)
+	/usr/sbin/unbound-anchor
 	/usr/sbin/unbound
 	;;
 stop)

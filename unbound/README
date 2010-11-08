@@ -1,0 +1,20 @@
+README for unbound 1.*
+
+REQUIREMENTS
+
+PRE/POST-INSTALL
+
+1. Create a user/group unbound with a unused id < 99 or run the
+   provided pre-install script:
+
+   'groupadd -g 41 unbound'
+   'useradd -u 41 -g unbound -d /etc/unbound -s /bin/false unbound'
+   'passwd -l unbound'
+
+PRECAUTION
+
+The effective user unbound is running as (default: unbound) needs
+write access for /etc/unbound/root.key to update the trust anchor
+for DNSSEC validation. Adjust the user of that file if you run
+unbound as a different user.
+
