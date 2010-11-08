@@ -97,3 +97,7 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/pangoft2.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/pangox.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/pangoxft.pc
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/pango-querymodules.1.gz
+-rw-r--r--	root/root	usr/man/man1/pango-view.1.gz
