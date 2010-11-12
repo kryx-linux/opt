@@ -7,7 +7,7 @@
 name=lcms
 version=1.19
 release=1
-source=(http://download.sourceforge.net/lcms/lcms/$version/lcms-$version.tar.gz)
+source=(http://downloads.sourceforge.net/project/lcms/lcms/$version/lcms-$version.tar.gz)
 
 build() {
     cd $name-$version

@@ -6,7 +6,7 @@
 name=mysql-python
 version=1.2.3
 release=1
-source=(http://download.sourceforge.net/$name/$name/$version/MySQL-python-$version.tar.gz
+source=(http://downloads.sourceforge.net/project/$name/$name/$version/MySQL-python-$version.tar.gz
         http://pypi.python.org/packages/2.6/s/setuptools/setuptools-0.6c11-py2.6.egg
         $name-setup.diff)
 

@@ -6,7 +6,7 @@
 name=spamprobe
 version=1.4d
 release=4
-source=(http://download.sourceforge.net/$name/$name/$version/$name-$version.tar.gz
+source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz
         $name-$version-gcc43.patch $name-$version-libpng14.patch)
 
 build () {

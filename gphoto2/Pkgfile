@@ -6,7 +6,7 @@
 name=gphoto2
 version=2.4.10
 release=1
-source=(http://download.sourceforge.net/gphoto/gphoto/$version/$name-$version.tar.bz2)
+source=(http://downloads.sourceforge.net/project/gphoto/gphoto/$version/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
