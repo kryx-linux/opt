@@ -6,7 +6,7 @@
 name=hpijs
 version=3.10.9
 release=1
-source=(http://downloads.sourceforge.net/project/hplip/hplip/$version/hplip-$version.tar.gz)
+source=(http://download.sourceforge.net/hplip/hplip/$version/hplip-$version.tar.gz)
 
 build () {
     cd hplip-$version

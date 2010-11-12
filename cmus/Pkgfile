@@ -8,7 +8,7 @@
 name=cmus
 version=2.3.3
 release=1
-source=(http://downloads.sourceforge.net/project/cmus/cmus-v${version}.tar.bz2)
+source=(http://download.sourceforge.net/cmus/cmus-v${version}.tar.bz2)
 
 build() {
     cd $name-v${version}

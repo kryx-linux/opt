@@ -6,7 +6,7 @@
 name=scite
 version=2.22
 release=1
-source=(http://downloads.sourceforge.net/project/scintilla/SciTE/$version/$name${version/./}.tgz)
+source=(http://download.sourceforge.net/scintilla/SciTE/$version/$name${version/./}.tgz)
 
 build () {
     cd scintilla/gtk

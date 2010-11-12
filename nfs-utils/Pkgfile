@@ -6,7 +6,7 @@
 name=nfs-utils
 version=1.2.3
 release=1
-source=(http://downloads.sourceforge.net/project/nfs/$name/$version/$name-$version.tar.bz2 \
+source=(http://download.sourceforge.net/nfs/$name/$version/$name-$version.tar.bz2 \
         exports idmapd.conf nfs nfsserver)
 
 build () {
