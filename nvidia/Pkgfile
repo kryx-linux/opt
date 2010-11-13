@@ -5,7 +5,7 @@
 # Depends on: gtk gl-select
 
 name=nvidia
-version=260.19.12
+version=260.19.21
 release=1
 source=(ftp://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version.run \
         $name-makefile.patch)
