@@ -4,7 +4,7 @@
 # Depends on:  tcp_wrappers libusb-compat libpng libtiff openssl dbus
 
 name=cups
-version=1.4.4
+version=1.4.5
 release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
         cups-config.patch cups)
