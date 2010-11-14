@@ -6,24 +6,19 @@
 
 name=xpdf
 version=3.02
-release=5
+release=6
 source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz
-  $name-${version}pl1.patch
-  $name-${version}pl2.patch
-  $name-${version}pl3.patch
-  $name-${version}pl4.patch)
+  ftp://ftp.foolabs.com/pub/xpdf/$name-3.02pl{1,2,3,4,5}.patch)
 
 build() {
     cd $name-$version
-    patch -p1 -i $SRC/$name-${version}pl1.patch
-    patch -p1 -i $SRC/$name-${version}pl2.patch
-    patch -p1 -i $SRC/$name-${version}pl3.patch
-    patch -p1 -i $SRC/$name-${version}pl4.patch
+    cat $SRC/$name-3.02pl*.patch | patch -p1
+
     ./configure \
-  --prefix=/usr \
+        --prefix=/usr \
         --with-Xm-library=/usr/lib \
         --with-Xm-includes=/usr/include/Xm \
-  --with-freetype2-includes=/usr/include/freetype2 \
+        --with-freetype2-includes=/usr/include/freetype2 \
         --sysconfdir=/etc \
         --enable-a4-paper \
         --enable-opi
