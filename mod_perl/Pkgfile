@@ -6,7 +6,7 @@
 
 name=mod_perl
 version=2.0.4
-release=3
+release=4
 source=(http://perl.apache.org/dist/$name-$version.tar.gz)
 
 build(){
@@ -19,7 +19,7 @@ build(){
     make -j1 DESTDIR=$PKG install
 
     rm -r $PKG/usr/bin
-    rm -r $PKG/usr/lib/perl5/site_perl/5.10.?/linux/{Apache,Bundle}
+    rm -r $PKG/usr/lib/perl5/site_perl/5.12/linux-thread-multi/{Apache,Bundle}
     rm $PKG/usr/man/man3/{Bundle::*,Apache::*}
     find $PKG -regex '.*\(perllocal\.pod\|\.packlist\|\.bs\)' -delete
     find $PKG -depth -empty -exec rm -rf {} \;
