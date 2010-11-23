@@ -6,12 +6,12 @@
 
 name=prt-get-bashcompletion
 version=5.18
-release=1
+release=2
 source=(http://jw.tks6.net/files/crux/prt-get-$version.tar.gz)
 
 build() {
-    cd prt-get-$version/misc
-    install -D -m 755 prt-get_complete \
+    sed -i prt-get-$version/misc/prt-get_complete \
+        -e 's|listofphans|listorphans|'
+    install -D -m 755 prt-get-$version/misc/prt-get_complete \
         $PKG/etc/bash_completion.d/prt-get
-    
 }
