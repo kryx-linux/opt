@@ -4,17 +4,14 @@
 # Depends on: atk, hicolor-icon-theme, libtiff, pango, xorg-libsm, xorg-libxcursor, xorg-libxinerama, xorg-libxrandr
 
 name=gtk
-version=2.20.1
+version=2.22.1
 release=1
-source=(http://download.gnome.org/sources/gtk+/2.20/${name}+-2.20.0.tar.bz2 \
-        http://download.gnome.org/sources/gtk+/2.20/${name}+-2.20.0-2.20.1.diff.gz \
+source=(http://download.gnome.org/sources/gtk+/2.20/${name}+-2.20.1.tar.bz2 \
 	gdk-pixbuf.loaders gtk.immodules \
 	gtk-register.sh)
 
 build () {
-	cd gtk+-2.20.0
-
-	zcat $SRC/gtk+-2.20.0-2.20.1.diff.gz | patch -p1
+	cd gtk+-2.20.1
 
 	./configure --prefix=/usr \
 		--mandir=/usr/man --without-libjasper
