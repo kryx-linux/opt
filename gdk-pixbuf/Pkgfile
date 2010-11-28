@@ -5,14 +5,15 @@
 
 name=gdk-pixbuf
 version=2.22.1
-release=1
+release=2
 source=(http://download.gnome.org/sources/$name/2.22/$name-$version.tar.bz2 \
         gdk-pixbuf.loaders gdk-pixbuf-register.sh)
 
 build () {
 	cd $name-$version
 
-	./configure --prefix=/usr --mandir=/usr/man --disable-nls
+	./configure --prefix=/usr --mandir=/usr/man --disable-nls \
+	            --without-libjasper
 	make
 	make DESTDIR=$PKG install
 
