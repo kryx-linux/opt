@@ -5,12 +5,15 @@
 
 name=gtk
 version=2.22.1
-release=1
+release=2
 source=(http://download.gnome.org/sources/gtk+/2.22/${name}+-2.22.1.tar.bz2 \
-	gtk.immodules gtk-register.sh)
+	gtk.immodules gtk-register.sh
+	old-icon-symlinks.patch)
 
 build () {
 	cd gtk+-2.22.1
+
+	patch -p1 -i $SRC/old-icon-symlinks.patch
 
 	./configure --prefix=/usr --mandir=/usr/man
 	make
