@@ -12,8 +12,7 @@ source=(http://download.gnome.org/sources/gtk+/2.22/${name}+-2.22.1.tar.bz2 \
 build () {
 	cd gtk+-2.22.1
 
-	./configure --prefix=/usr \
-		--mandir=/usr/man --without-libjasper
+	./configure --prefix=/usr --mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
 	mkdir -p $PKG/usr/etc/gtk-2.0
