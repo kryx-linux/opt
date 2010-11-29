@@ -4,9 +4,9 @@
 # Depends on:  db gdbm ncurses openssl readline bzip2 zlib sqlite3
 
 name=python
-version=2.7
+version=2.7.1
 release=1
-source=(http://www.python.org/ftp/$name/2.7/Python-$version.tar.bz2)
+source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2)
 
 build () {
     cd Python-$version
@@ -27,7 +27,7 @@ build () {
 
     rm -r $PKG/usr/lib/python/{bsddb,ctypes,email,sqlite3}/test
     rm -r $PKG/usr/lib/python/{distutils,json,lib2to3}/tests
-    rm $PKG/usr/lib/python/{distutils,site-packages}/README
+    rm $PKG/usr/lib/python/{distutils,site-packages,test/data}/README
     rm $PKG/usr/lib/python/idlelib/{ChangeLog,{NEWS,README,TODO}.txt}
     rm $PKG/usr/lib/python/ctypes/macholib/README.ctypes
 }
