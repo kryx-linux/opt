@@ -45,3 +45,4 @@ ac_add_options --enable-storage
 ac_add_options --enable-places_bookmarks
 ac_add_options --enable-image-encoder=all
 ac_add_options --enable-xft
+ac_add_options --disable-dbus
