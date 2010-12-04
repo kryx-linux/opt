@@ -5,14 +5,15 @@
 # Depends on:
 
 name=whois
-version=5.0.9
+version=5.0.10
 release=1
 source=(http://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.gz)
 
 build() {
     cd $name-$version
     sed -i "/^CFLAGS/s/=.*$/=$CFLAGS/" Makefile
-    make whois
+    make CONFIG_FILE='/etc/whois.conf' whois
     install -D -m 755 whois $PKG/usr/bin/whois
     install -D -m 644 whois.1 $PKG/usr/man/man1/whois.1
+    install -D -m 644 whois.conf $PKG/etc/whois.conf
 }
