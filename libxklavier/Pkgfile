@@ -6,7 +6,7 @@
 
 name=libxklavier
 version=5.0
-release=1
+release=2
 source=(http://download.gnome.org/sources/$name/$version/$name-$version.tar.bz2)
 
 build() {
@@ -14,7 +14,7 @@ build() {
   ./configure --prefix=/usr \
               --disable-static \
               --disable-doxygen \
-              --with-xkb-base=/etc/X11/xkb \
+              --with-xkb-base=/etc/share/X11/xkb \
               --with-x
   make
   make DESTDIR=$PKG install
