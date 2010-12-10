@@ -1,8 +1,8 @@
 # Description: A set of python bindings for cairo
 # URL: http://cairographics.org/pycairo
-# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: cairo, python
+# Depends on: cairo python
 
 name=pycairo
 version=1.8.8
