@@ -7,7 +7,7 @@
 name=pygobject
 version=2.20.0
 release=1
-source=(http://ftp.acc.umu.se/pub/GNOME/sources/$name/${version::4}/$name-$version.tar.bz2)
+source=(http://ftp.gnome.org/pub/GNOME/sources/$name/${version::4}/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
