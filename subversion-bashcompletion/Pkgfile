@@ -5,9 +5,9 @@
 # Depends on: bash-completion subversion 
 
 name=subversion-bashcompletion
-version=1.6.11
+version=1.6.15
 release=1
-source=(http://svn.apache.org/repos/asf/subversion/tags/1.6.11/tools/client-side/bash_completion)
+source=(http://svn.apache.org/repos/asf/subversion/tags/$version/tools/client-side/bash_completion)
 
 build() {
   install -D -m 755 bash_completion $PKG/usr/lib/bash-completion/subversion_complete
