@@ -1,12 +1,12 @@
 # Description: Filter script to convert PostScript data into the printers nativ format
-# URL:         http://linuxprinting.org
+# URL:         http://openprinting.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ghostscript
 
 name=foomatic-filters
-version=4.0.5
+version=4.0.6
 release=1
-source=(http://www.linuxprinting.org/download/foomatic/$name-$version.tar.gz)
+source=(http://www.openprinting.org/download/foomatic/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
