@@ -4,13 +4,13 @@
 # Depends on: file, cmake, libcap
 
 name=cdrkit
-version=1.1.10
+version=1.1.11
 release=1
 source=(http://cdrkit.org/releases/cdrkit-$version.tar.gz)
 
 build () {
 	cd cdrkit-$version
-	sed -i 's:share/\(man\):\1:' 3rd-party/dirsplit/CMakeLists.txt
-	cmake -DCMAKE_INSTALL_PREFIX=$PKG/usr -DMANSUBDIR=man
+	sed -i 's:share/man:${MANSUBDIR}:' 3rd-party/dirsplit/CMakeLists.txt
+	cmake -Wno-dev -DCMAKE_INSTALL_PREFIX=$PKG/usr -DMANSUBDIR=man
     make install
 }
