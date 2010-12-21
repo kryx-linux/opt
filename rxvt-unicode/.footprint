@@ -7,10 +7,13 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/urxvt/
 drwxr-xr-x	root/root	usr/lib/urxvt/perl/
 -rw-r--r--	root/root	usr/lib/urxvt/perl/block-graphics-to-ascii
+-rw-r--r--	root/root	usr/lib/urxvt/perl/clipboard-osc
+-rw-r--r--	root/root	usr/lib/urxvt/perl/confirm-paste
 -rw-r--r--	root/root	usr/lib/urxvt/perl/digital-clock
 -rw-r--r--	root/root	usr/lib/urxvt/perl/example-refresh-hooks
 -rw-r--r--	root/root	usr/lib/urxvt/perl/kuake
 -rw-r--r--	root/root	usr/lib/urxvt/perl/macosx-clipboard
+-rw-r--r--	root/root	usr/lib/urxvt/perl/macosx-clipboard-native
 -rw-r--r--	root/root	usr/lib/urxvt/perl/matcher
 -rw-r--r--	root/root	usr/lib/urxvt/perl/option-popup
 -rw-r--r--	root/root	usr/lib/urxvt/perl/overlay-osc
@@ -38,3 +41,4 @@ drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/terminfo/
 drwxr-xr-x	root/root	usr/share/terminfo/r/
 -rw-r--r--	root/root	usr/share/terminfo/r/rxvt-unicode
+-rw-r--r--	root/root	usr/share/terminfo/r/rxvt-unicode-256color
