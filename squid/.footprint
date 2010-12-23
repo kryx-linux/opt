@@ -80,6 +80,7 @@ drwxr-xr-x	root/root	usr/share/squid/errors/templates/
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_LIFETIME_EXP
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_NO_RELAY
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_ONLY_IF_CACHED_MISS
+-rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_PRECONDITION_FAILED
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_READ_ERROR
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_READ_TIMEOUT
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_SECURE_CONNECT_FAIL
