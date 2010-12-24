@@ -5,7 +5,7 @@
 
 name=cups
 version=1.4.5
-release=1
+release=2
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
         cups-config.patch cups)
 
@@ -27,11 +27,11 @@ build () {
                 --without-{java,perl,php,python} \
                 --without-{rcdir,menudir,icondir}  \
                 --with-optim="$CFLAGS" \
+                --with-pdftops=none \
                 --enable-{ssl,openssl} --disable-gnutls \
                 --disable-pam \
-                --disable-pdftops \
                 --enable-tcp-wrappers \
-                --enable-dbus \
+                --disable-dbus \
                 --enable-libusb
 
     make
