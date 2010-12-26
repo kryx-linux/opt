@@ -1,14 +1,14 @@
 # Description: Implementation of S3TC
-# URL: http://homepage.hispeed.ch/rscheidegger/dri_experimental/s3tc_index.html
+# URL: http://people.freedesktop.org/~cbrill/libtxc_dxtn/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=libtxc_dxtn
 version=070518
 release=1
-source=(http://homepage.hispeed.ch/rscheidegger/dri_experimental/$name$version.tar.gz)
+source=(http://cgit.freedesktop.org/~cbrill/libtxc_dxtn/snapshot/libtxc_dxtn070518.tar.bz2)
 
 build() {
-	cd $name
+	cd $name$version
 
 	make
 	make DESTDIR=$PKG install
