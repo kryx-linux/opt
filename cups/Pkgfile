@@ -1,18 +1,19 @@
 # Description: CUPS - Common UNIX Printing System
 # URL:         http://www.cups.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  tcp_wrappers libusb-compat libpng libtiff openssl dbus
+# Depends on:  acl tcp_wrappers libusb-compat libpng libtiff openssl
 
 name=cups
 version=1.4.5
-release=2
-source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
-        cups-config.patch cups)
+release=3
+source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2
+        cups-config.patch cups usb-backend-both-usblp-and-libusb.dpatch)
 
 build () {
     cd $name-$version
 
     patch -p1 -i $SRC/cups-config.patch
+    patch -p1 -i $SRC/usb-backend-both-usblp-and-libusb.dpatch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
@@ -20,7 +21,6 @@ build () {
                 --localstatedir=/var \
                 --with-docdir=/usr/share/cups/doc \
                 --with-logdir=/var/log/cups \
-                --with-dbusdir=/usr/etc/dbus-1 \
                 --with-cups-user=daemon \
                 --with-cups-group=lp \
                 --with-languages="" \
@@ -31,8 +31,7 @@ build () {
                 --enable-{ssl,openssl} --disable-gnutls \
                 --disable-pam \
                 --enable-tcp-wrappers \
-                --disable-dbus \
-                --enable-libusb
+                --disable-dbus
 
     make
     make BUILDROOT=$PKG install
