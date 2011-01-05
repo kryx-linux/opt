@@ -538,7 +538,6 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/srrestoreptapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/sspi.h
 -rw-r--r--	root/root	usr/include/wine/windows/stdole2.idl
--rw-r--r--	root/root	usr/include/wine/windows/stdole2.tlb
 -rw-r--r--	root/root	usr/include/wine/windows/sti.h
 -rw-r--r--	root/root	usr/include/wine/windows/storage.h
 -rw-r--r--	root/root	usr/include/wine/windows/strmif.h
@@ -1009,7 +1008,6 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/olesvr32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/olethk32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/oleview.exe
--rw-r--r--	root/root	usr/lib/wine/fakedlls/openal32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/opengl32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/pdh.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/pidgen.dll
@@ -1466,7 +1464,6 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/olesvr32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/olethk32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/oleview.exe.so
--rwxr-xr-x	root/root	usr/lib/wine/openal32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/opengl32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/pdh.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/pidgen.dll.so
@@ -1637,14 +1634,25 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/xmllite.dll.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/msiexec.1.gz
+-rw-r--r--	root/root	usr/man/man1/notepad.1.gz
+-rw-r--r--	root/root	usr/man/man1/regedit.1.gz
+-rw-r--r--	root/root	usr/man/man1/regsvr32.1.gz
 -rw-r--r--	root/root	usr/man/man1/widl.1.gz
 -rw-r--r--	root/root	usr/man/man1/wine.1.gz
+-rw-r--r--	root/root	usr/man/man1/wineboot.1.gz
 -rw-r--r--	root/root	usr/man/man1/winebuild.1.gz
+-rw-r--r--	root/root	usr/man/man1/winecfg.1.gz
+-rw-r--r--	root/root	usr/man/man1/wineconsole.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/winecpp.1.gz -> winegcc.1.gz
 -rw-r--r--	root/root	usr/man/man1/winedbg.1.gz
 -rw-r--r--	root/root	usr/man/man1/winedump.1.gz
+-rw-r--r--	root/root	usr/man/man1/winefile.1.gz
 lrwxrwxrwx	root/root	usr/man/man1/wineg++.1.gz -> winegcc.1.gz
 -rw-r--r--	root/root	usr/man/man1/winegcc.1.gz
 -rw-r--r--	root/root	usr/man/man1/winemaker.1.gz
+-rw-r--r--	root/root	usr/man/man1/winemine.1.gz
+-rw-r--r--	root/root	usr/man/man1/winepath.1.gz
 -rw-r--r--	root/root	usr/man/man1/wineserver.1.gz
 -rw-r--r--	root/root	usr/man/man1/wmc.1.gz
 -rw-r--r--	root/root	usr/man/man1/wrc.1.gz
