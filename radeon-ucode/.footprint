@@ -1,6 +1,13 @@
 drwxr-xr-x	root/root	lib/
 drwxr-xr-x	root/root	lib/firmware/
 drwxr-xr-x	root/root	lib/firmware/radeon/
+-rw-r--r--	root/root	lib/firmware/radeon/BARTS_mc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/BARTS_me.bin
+-rw-r--r--	root/root	lib/firmware/radeon/BARTS_pfp.bin
+-rw-r--r--	root/root	lib/firmware/radeon/BTC_rlc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/CAICOS_mc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/CAICOS_me.bin
+-rw-r--r--	root/root	lib/firmware/radeon/CAICOS_pfp.bin
 -rw-r--r--	root/root	lib/firmware/radeon/CEDAR_me.bin
 -rw-r--r--	root/root	lib/firmware/radeon/CEDAR_pfp.bin
 -rw-r--r--	root/root	lib/firmware/radeon/CEDAR_rlc.bin
@@ -18,3 +25,6 @@ drwxr-xr-x	root/root	lib/firmware/radeon/
 -rw-r--r--	root/root	lib/firmware/radeon/REDWOOD_pfp.bin
 -rw-r--r--	root/root	lib/firmware/radeon/REDWOOD_rlc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/SUMO_rlc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/TURKS_mc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/TURKS_me.bin
+-rw-r--r--	root/root	lib/firmware/radeon/TURKS_pfp.bin
