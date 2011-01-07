@@ -4,8 +4,8 @@
 # Depends on:  acl tcp_wrappers libusb-compat libpng libtiff openssl
 
 name=cups
-version=1.4.5
-release=3
+version=1.4.6
+release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2
         cups-config.patch cups usb-backend-both-usblp-and-libusb.dpatch)
 
@@ -25,7 +25,7 @@ build () {
                 --with-cups-group=lp \
                 --with-languages="" \
                 --without-{java,perl,php,python} \
-                --without-{rcdir,menudir,icondir}  \
+                --without-rcdir \
                 --with-optim="$CFLAGS" \
                 --with-pdftops=none \
                 --enable-{ssl,openssl} --disable-gnutls \
@@ -36,6 +36,7 @@ build () {
     make
     make BUILDROOT=$PKG install
 
+    rm -r $PKG/usr/share/{applications,icons}
     chmod 0755 $PKG/var/{cache,spool}   
     chmod -R +w $PKG
  
