@@ -4,7 +4,7 @@
 # Depends on: fontconfig, libpng, xorg-libxrender, xorg-libpixman, xorg-xcb-util
 
 name=cairo
-version=1.10.0
+version=1.10.2
 release=1
 source=(http://cairographics.org/releases/$name-$version.tar.gz)
 
