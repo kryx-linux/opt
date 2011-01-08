@@ -4,7 +4,7 @@
 # Depends on: popt
 
 name=oprofile
-version=0.9.5
+version=0.9.6
 release=1
 source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
 
