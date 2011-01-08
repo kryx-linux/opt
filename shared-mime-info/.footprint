@@ -331,6 +331,7 @@ drwxr-xr-x	root/root	usr/share/mime/application/
 -rw-r--r--	root/root	usr/share/mime/application/x-xpinstall.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-xz-compressed-tar.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-xz.xml
+-rw-r--r--	root/root	usr/share/mime/application/x-xzpdf.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-yaml.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-zerosize.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-zoo.xml
@@ -453,6 +454,7 @@ drwxr-xr-x	root/root	usr/share/mime/image/
 -rw-r--r--	root/root	usr/share/mime/image/x-nikon-nef.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-olympus-orf.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-panasonic-raw.xml
+-rw-r--r--	root/root	usr/share/mime/image/x-panasonic-raw2.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-pcx.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-pentax-pef.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-photo-cd.xml
@@ -542,6 +544,7 @@ drwxr-xr-x	root/root	usr/share/mime/text/
 -rw-r--r--	root/root	usr/share/mime/text/x-changelog.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-chdr.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-cmake.xml
+-rw-r--r--	root/root	usr/share/mime/text/x-cobol.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-copying.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-credits.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-csharp.xml
@@ -555,6 +558,7 @@ drwxr-xr-x	root/root	usr/share/mime/text/
 -rw-r--r--	root/root	usr/share/mime/text/x-fortran.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-gettext-translation-template.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-gettext-translation.xml
+-rw-r--r--	root/root	usr/share/mime/text/x-go.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-google-video-pointer.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-haskell.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-iMelody.xml
@@ -580,6 +584,7 @@ drwxr-xr-x	root/root	usr/share/mime/text/
 -rw-r--r--	root/root	usr/share/mime/text/x-objcsrc.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-ocaml.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-ocl.xml
+-rw-r--r--	root/root	usr/share/mime/text/x-ooc.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-opml+xml.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-pascal.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-patch.xml
