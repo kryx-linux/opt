@@ -6,7 +6,7 @@
 
 name=nvidia
 version=260.19.29
-release=2
+release=3
 source=(http://us.download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version.run \
         $name-makefile.patch)
 
@@ -42,6 +42,12 @@ build() {
     install -d $PKG/usr/{bin,man/man1}
     install -m 0755 nvidia-{settings,xconfig}      $PKG/usr/bin
     install -m 0644 nvidia-{settings,xconfig}.1.gz $PKG/usr/man/man1
+
+    # desktop file and icon
+    install -d $PKG/usr/share/{applications,pixmaps}
+    sed -i 's:__UTILS_PATH__:/usr/bin: ; s:__PIXMAP_PATH__:/usr/share/pixmaps:' nvidia-settings.desktop
+    install -m 0644 nvidia-settings.desktop $PKG/usr/share/applications
+    install -m 0644 nvidia-settings.png $PKG/usr/share/pixmaps
 
     # additional symlinks required by gl-select
     ln -s libGL.so.$version $PKG/usr/lib/libGL_so_1_2_nvidia
