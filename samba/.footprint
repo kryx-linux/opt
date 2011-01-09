@@ -45,7 +45,6 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/libsmbclient.h
 -rw-r--r--	root/root	usr/include/netapi.h
 -rw-r--r--	root/root	usr/include/smb_share_modes.h
--rw-r--r--	root/root	usr/include/talloc.h
 -rw-r--r--	root/root	usr/include/wbc_async.h
 -rw-r--r--	root/root	usr/include/wbclient.h
 drwxr-xr-x	root/root	usr/lib/
@@ -55,8 +54,6 @@ lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> libsmbclient.so.0
 -rwxr-xr-x	root/root	usr/lib/libsmbclient.so.0
 lrwxrwxrwx	root/root	usr/lib/libsmbsharemodes.so -> libsmbsharemodes.so.0
 -rwxr-xr-x	root/root	usr/lib/libsmbsharemodes.so.0
-lrwxrwxrwx	root/root	usr/lib/libtalloc.so -> libtalloc.so.2
--rwxr-xr-x	root/root	usr/lib/libtalloc.so.2
 lrwxrwxrwx	root/root	usr/lib/libwbclient.so -> libwbclient.so.0
 -rwxr-xr-x	root/root	usr/lib/libwbclient.so.0
 drwxr-xr-x	root/root	usr/lib/samba/
