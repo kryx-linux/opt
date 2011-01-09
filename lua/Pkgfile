@@ -4,14 +4,16 @@
 # Depends on:
 
 name=lua
-version=5.1.4
+version=5.1.4.2
 release=1
-source=(http://www.lua.org/ftp/$name-$version.tar.gz \
+source=(http://www.lua.org/ftp/$name-5.1.4.tar.gz \
+        http://www.lua.org/ftp/patch-lua-5.1.4-2 \
         $name.diff)
 
 build() {
-	cd $name-$version
+	cd $name-5.1.4
 
+	patch -d src -p0 -i $SRC/patch-lua-5.1.4-2
 	patch -Np1 -i $SRC/$name.diff
 
 	make linux
