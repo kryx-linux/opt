@@ -6,7 +6,7 @@
 
 name=nvidia
 version=260.19.29
-release=1
+release=2
 source=(http://us.download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version.run \
         $name-makefile.patch)
 
@@ -25,12 +25,13 @@ build() {
     install -m 0755 libnvidia-compiler.so.$version $PKG/usr/lib
     install -m 0755 libnvidia-glcore.so.$version   $PKG/usr/lib
     install -m 0755 libnvidia-tls.so.$version      $PKG/usr/lib
-    install -m 0755 libvdpau.so.$version           $PKG/usr/lib
     install -m 0755 libnvcuvid.so.$version         $PKG/usr/lib
     install -m 0755 tls/libnvidia-tls.so.$version  $PKG/usr/lib/tls
     install -m 0755 libvdpau_nvidia.so.$version    $PKG/usr/lib/vdpau
-    install -m 0755 libvdpau_trace.so.$version     $PKG/usr/lib/vdpau
     
+    ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so.1
+    ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so
+
     # xorg driver/extensions
     install -d $PKG/usr/lib/xorg/modules/{drivers,extensions}
     install -m 0755 nvidia_drv.so                  $PKG/usr/lib/xorg/modules/drivers
