@@ -1,6 +1,8 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/vsyasm
 -rwxr-xr-x	root/root	usr/bin/yasm
+-rwxr-xr-x	root/root	usr/bin/ytasm
 drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/libyasm-stdint.h
 -rw-r--r--	root/root	usr/include/libyasm.h
