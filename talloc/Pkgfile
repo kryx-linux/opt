@@ -1,10 +1,11 @@
 # Description: Hierarchical, reference counted memory pool system with destructors
 # URL: http://talloc.samba.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: python
 
 name=talloc
 version=2.0.5
-release=1
+release=2
 source=(ftp://ftp.samba.org/pub/$name/$name-$version.tar.gz
         talloc.3)
 
@@ -12,7 +13,7 @@ build() {
 	cd $name-$version
 
 	./configure --prefix=/usr --mandir=/usr/man \
-	            --enable-talloc-compat1 --disable-python
+	            --enable-talloc-compat1
 
 	# Don't depend on xsltproc or docbook.sourceforge.net being available
 	cp $SRC/talloc.3 .
