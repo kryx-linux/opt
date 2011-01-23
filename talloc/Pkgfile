@@ -3,7 +3,7 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=talloc
-version=2.0.1
+version=2.0.5
 release=1
 source=(ftp://ftp.samba.org/pub/$name/$name-$version.tar.gz
         talloc.3)
@@ -12,7 +12,7 @@ build() {
 	cd $name-$version
 
 	./configure --prefix=/usr --mandir=/usr/man \
-	            --enable-talloc-compat1
+	            --enable-talloc-compat1 --disable-python
 
 	# Don't depend on xsltproc or docbook.sourceforge.net being available
 	cp $SRC/talloc.3 .
@@ -20,4 +20,7 @@ build() {
 
 	make
 	make install DESTDIR=$PKG
+
+	install -d $PKG/usr/man/man3
+	install -m 644 talloc.3 $PKG/usr/man/man3
 }
