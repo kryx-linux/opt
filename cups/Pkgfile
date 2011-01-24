@@ -34,9 +34,8 @@ build () {
                 --disable-dbus
 
     make
-    make BUILDROOT=$PKG install
+    make {MENU,ICON}DIR="" BUILDROOT=$PKG install
 
-    rm -r $PKG/usr/share/{applications,icons}
     chmod 0755 $PKG/var/{cache,spool}   
     chmod -R +w $PKG
  
