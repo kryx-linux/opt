@@ -51,7 +51,7 @@ ipv4_alias["orsn"] += "194.116.123.194,193.93.167.222,217.173.157.225,"
 ipv4_alias["orsn"] += "192.83.249.100,213.145.82.34"
 
 root_servers = {}
-root_servers["."] = "orsn"
+root_servers["."] = "icann"
 
 # upstream_servers = {}
 # upstream_servers["."] = "usually_your_isps_dns_servers"
