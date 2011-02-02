@@ -1,6 +1,6 @@
 # Description: IMAP and POP3 server with ssl/ipv6 support, written with security primarily in mind
 # URL:         http://dovecot.org
-# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  zlib bzip2 openssl tcp_wrappers libcap
 
 name=dovecot

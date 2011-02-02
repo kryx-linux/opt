@@ -1,6 +1,6 @@
 # Description: FUSE filesystem client based on libgphoto2
 # URL:         http://www.gphoto.org
-# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  fuse, glib, libgphoto2
 
 name=gphotofs

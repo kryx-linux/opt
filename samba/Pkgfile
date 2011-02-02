@@ -1,6 +1,6 @@
 # Description: SMB server and client for unix
 # URL:         http://www.samba.org
-# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  ncurses openssl readline zlib tdb talloc libcap acl
 
 name=samba
