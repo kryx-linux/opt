@@ -1,32 +1,31 @@
 # Description: SQL database server
 # URL:         http://www.mysql.com
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  ncurses readline zlib
+# Depends on:  tcp_wrappers ncurses zlib openssl cmake libaio
 
 name=mysql
-version=5.1.54
+version=5.5.9
 release=1
-source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.1/$name-$version.tar.gz \
+source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.5/$name-$version.tar.gz \
         my.cnf mysqld)
 
 build () {
     cd $name-$version
-
-    ./configure --prefix=/usr \
-                --sysconfdir=/etc \
-                --libexecdir=/usr/sbin \
-                --localstatedir=/var/lib \
-                --mandir=/usr/man \
-                --enable-assembler \
-                --enable-thread-safe-client \
-                --without-{readline,debug,docs} \
-                --with-ssl \
-                --with-plugins=myisam,innobase
+    
+    cmake . \
+        -DBUILD_CONFIG=mysql_release \
+        -DINSTALL_LAYOUT=RPM \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DSYSCONFDIR=/etc \
+        -DINSTALL_MANDIR=man \
+        -DWITH_LIBWRAP=1 \
+        -DWITH_SSL=system \
+        -DWITH_ZLIB=system
 
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/{mysql-test,sql-bench}
+    rm -r $PKG/usr/share/{mysql-test,info}
     rm $PKG/usr/share/mysql/charsets/README
     find $PKG/usr/share/mysql/* -type d ! -name english ! -name charsets | xargs rm -rf {} \;
 
@@ -36,7 +35,4 @@ build () {
     install -d -m 700 -o mysql -g mysql $PKG/var/lib/mysql
     install -D -m 755 $SRC/mysqld $PKG/etc/rc.d/mysqld
     install -m 600 $SRC/my.cnf $PKG/etc
-
-    install -d $PKG/etc/ld.so.conf.d
-    echo "/usr/lib/mysql" > $PKG/etc/ld.so.conf.d/mysql.conf
 }
