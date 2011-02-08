@@ -73,6 +73,7 @@ drwxr-xr-x	root/root	usr/share/squid/errors/templates/
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_FTP_PUT_ERROR
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_FTP_PUT_MODIFIED
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_FTP_UNAVAILABLE
+-rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_GATEWAY_FAILURE
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_ICAP_FAILURE
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_INVALID_REQ
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_INVALID_RESP
