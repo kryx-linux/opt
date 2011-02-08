@@ -106,6 +106,7 @@ drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Apache2/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Apache2/PerlSections/
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Apache2/PerlSections/Dump.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Apache2/Process.pm
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Apache2/Reload.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Apache2/RequestIO.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Apache2/RequestRec.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.12/linux-thread-multi/Apache2/RequestUtil.pm
@@ -301,6 +302,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Apache2::Module.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::PerlSections.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::Process.3pm.gz
+-r--r--r--	root/root	usr/man/man3/Apache2::Reload.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::RequestIO.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::RequestRec.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::RequestUtil.3pm.gz

@@ -5,8 +5,8 @@
 # Group:       apache
 
 name=mod_perl
-version=2.0.4
-release=4
+version=2.0.5
+release=1
 source=(http://perl.apache.org/dist/$name-$version.tar.gz)
 
 build(){
