@@ -4,7 +4,7 @@
 # Packager:    Robert McMeekin, rrm3 at rrm3 dot org
 
 name=libevent
-version=1.4.14b
+version=2.0.10
 release=1
 source=(http://www.monkey.org/~provos/$name-$version-stable.tar.gz)
 
