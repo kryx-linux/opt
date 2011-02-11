@@ -25,7 +25,11 @@ drwxr-xr-x	root/root	usr/include/gio-unix-2.0/gio/
 -rw-r--r--	root/root	usr/include/gio-unix-2.0/gio/gunixsocketaddress.h
 drwxr-xr-x	root/root	usr/include/glib-2.0/
 drwxr-xr-x	root/root	usr/include/glib-2.0/gio/
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gaction.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gactiongroup.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gappinfo.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gapplication.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gapplicationcommandline.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gasyncinitable.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gasyncresult.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gbufferedinputstream.h
@@ -89,6 +93,8 @@ drwxr-xr-x	root/root	usr/include/glib-2.0/gio/
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gnetworkservice.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/goutputstream.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gpermission.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gpollableinputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gpollableoutputstream.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gproxy.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gproxyaddress.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gproxyaddressenumerator.h
@@ -97,6 +103,8 @@ drwxr-xr-x	root/root	usr/include/glib-2.0/gio/
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gseekable.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gsettings.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gsettingsbackend.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gsimpleaction.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gsimpleactiongroup.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gsimpleasyncresult.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gsimplepermission.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gsocket.h
@@ -110,8 +118,14 @@ drwxr-xr-x	root/root	usr/include/glib-2.0/gio/
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gsocketservice.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gsrvtarget.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gtcpconnection.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gtcpwrapperconnection.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gthemedicon.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gthreadedsocketservice.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gtlsbackend.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gtlscertificate.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gtlsclientconnection.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gtlsconnection.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gtlsserverconnection.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gvfs.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gvolume.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gvolumemonitor.h
@@ -213,25 +227,25 @@ drwxr-xr-x	root/root	usr/lib/glib-2.0/
 drwxr-xr-x	root/root	usr/lib/glib-2.0/include/
 -rw-r--r--	root/root	usr/lib/glib-2.0/include/glibconfig.h
 -rwxr-xr-x	root/root	usr/lib/libgio-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so -> libgio-2.0.so.0.2600.1
-lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so.0 -> libgio-2.0.so.0.2600.1
--rwxr-xr-x	root/root	usr/lib/libgio-2.0.so.0.2600.1
+lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so -> libgio-2.0.so.0.2800.0
+lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so.0 -> libgio-2.0.so.0.2800.0
+-rwxr-xr-x	root/root	usr/lib/libgio-2.0.so.0.2800.0
 -rwxr-xr-x	root/root	usr/lib/libglib-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so -> libglib-2.0.so.0.2600.1
-lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so.0 -> libglib-2.0.so.0.2600.1
--rwxr-xr-x	root/root	usr/lib/libglib-2.0.so.0.2600.1
+lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so -> libglib-2.0.so.0.2800.0
+lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so.0 -> libglib-2.0.so.0.2800.0
+-rwxr-xr-x	root/root	usr/lib/libglib-2.0.so.0.2800.0
 -rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so -> libgmodule-2.0.so.0.2600.1
-lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.2600.1
--rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.so.0.2600.1
+lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so -> libgmodule-2.0.so.0.2800.0
+lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.2800.0
+-rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.so.0.2800.0
 -rwxr-xr-x	root/root	usr/lib/libgobject-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so -> libgobject-2.0.so.0.2600.1
-lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.2600.1
--rwxr-xr-x	root/root	usr/lib/libgobject-2.0.so.0.2600.1
+lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so -> libgobject-2.0.so.0.2800.0
+lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.2800.0
+-rwxr-xr-x	root/root	usr/lib/libgobject-2.0.so.0.2800.0
 -rwxr-xr-x	root/root	usr/lib/libgthread-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so -> libgthread-2.0.so.0.2600.1
-lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.2600.1
--rwxr-xr-x	root/root	usr/lib/libgthread-2.0.so.0.2600.1
+lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so -> libgthread-2.0.so.0.2800.0
+lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.2800.0
+-rwxr-xr-x	root/root	usr/lib/libgthread-2.0.so.0.2800.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gio-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gio-unix-2.0.pc
@@ -260,8 +274,8 @@ drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/gsettings.m4
 drwxr-xr-x	root/root	usr/share/gdb/
 drwxr-xr-x	root/root	usr/share/gdb/auto-load/
--rwxr-xr-x	root/root	usr/share/gdb/auto-load/libglib-2.0.so.0.2600.1-gdb.py
--rwxr-xr-x	root/root	usr/share/gdb/auto-load/libgobject-2.0.so.0.2600.1-gdb.py
+-rwxr-xr-x	root/root	usr/share/gdb/auto-load/libglib-2.0.so.0.2800.0-gdb.py
+-rwxr-xr-x	root/root	usr/share/gdb/auto-load/libgobject-2.0.so.0.2800.0-gdb.py
 drwxr-xr-x	root/root	usr/share/glib-2.0/
 drwxr-xr-x	root/root	usr/share/glib-2.0/gdb/
 -rwxr-xr-x	root/root	usr/share/glib-2.0/gdb/glib.py
