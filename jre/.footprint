@@ -182,6 +182,7 @@ drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/fonts/
 drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/
 drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/client/
 -rw-r--r--	root/root	usr/lib/jre1.6.0_23/lib/i386/client/Xusage.txt
+-r--r--r--	root/root	usr/lib/jre1.6.0_23/lib/i386/client/classes.jsa
 lrwxrwxrwx	root/root	usr/lib/jre1.6.0_23/lib/i386/client/libjsig.so -> ../libjsig.so
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/client/libjvm.so
 drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/headless/
@@ -190,7 +191,6 @@ drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/jli/
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/jli/libjli.so
 -rw-r--r--	root/root	usr/lib/jre1.6.0_23/lib/i386/jvm.cfg
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libJdbcOdbc.so
--rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libattach.so
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libawt.so
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libcmm.so
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libdcpr.so
@@ -224,7 +224,6 @@ drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/jli/
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libnpjp2.so
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libnpt.so
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/librmi.so
--rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libsaproc.so
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libsplashscreen.so
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libunpack.so
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/i386/libverify.so
@@ -333,6 +332,7 @@ drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/security/
 -rw-r--r--	root/root	usr/lib/jre1.6.0_23/lib/security/trusted.libraries
 drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/servicetag/
 -r--r--r--	root/root	usr/lib/jre1.6.0_23/lib/servicetag/jdk_header.png
+-rw-r--r--	root/root	usr/lib/jre1.6.0_23/lib/servicetag/registration.xml
 -rw-r--r--	root/root	usr/lib/jre1.6.0_23/lib/sound.properties
 drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/zi/
 drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/lib/zi/Africa/
@@ -807,3 +807,16 @@ drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/plugin/i386/ns7-gcc29/
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/plugin/i386/ns7-gcc29/libjavaplugin_oji.so
 drwxr-xr-x	root/root	usr/lib/jre1.6.0_23/plugin/i386/ns7/
 -rwxr-xr-x	root/root	usr/lib/jre1.6.0_23/plugin/i386/ns7/libjavaplugin_oji.so
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/java.1.gz
+-rw-r--r--	root/root	usr/man/man1/javaws.1.gz
+-rw-r--r--	root/root	usr/man/man1/keytool.1.gz
+-rw-r--r--	root/root	usr/man/man1/orbd.1.gz
+-rw-r--r--	root/root	usr/man/man1/pack200.1.gz
+-rw-r--r--	root/root	usr/man/man1/policytool.1.gz
+-rw-r--r--	root/root	usr/man/man1/rmid.1.gz
+-rw-r--r--	root/root	usr/man/man1/rmiregistry.1.gz
+-rw-r--r--	root/root	usr/man/man1/servertool.1.gz
+-rw-r--r--	root/root	usr/man/man1/tnameserv.1.gz
+-rw-r--r--	root/root	usr/man/man1/unpack200.1.gz

@@ -1,0 +1,12 @@
+README for Java Runtime Enironment 6
+
+REQUIREMENTS
+
+   Download the Java Runtime Environment (JRE) from
+   -  http://www.oracle.com/technetwork/java/javase/downloads/index.html
+   
+   and put the file 
+   -  jre-6u*-linux-i586.bin 
+   
+   into the directory defined by PKGMK_SOURCE_DIR. See pkgmk.conf(5).
+
