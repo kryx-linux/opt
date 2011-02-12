@@ -5,7 +5,7 @@
 
 name=mysql
 version=5.5.9
-release=1
+release=2
 source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.5/$name-$version.tar.gz \
         my.cnf mysqld)
 
@@ -17,6 +17,8 @@ build () {
         -DINSTALL_LAYOUT=RPM \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DSYSCONFDIR=/etc \
+        -DINSTALL_LIBDIR=lib \
+        -DINSTALL_PLUGINDIR=lib/mysql/plugin \
         -DINSTALL_MANDIR=man \
         -DWITH_LIBWRAP=1 \
         -DWITH_SSL=system \
