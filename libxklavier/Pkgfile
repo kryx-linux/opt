@@ -6,20 +6,17 @@
 
 name=libxklavier
 version=5.1
-release=1
+release=2
 source=(http://download.gnome.org/sources/$name/$version/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
 
   ./configure --prefix=/usr \
-              --disable-static \
-              --disable-doxygen \
-              --with-xkb-base=/etc/share/X11/xkb \
-              --with-x
+              --disable-static
 
   make
   make DESTDIR=$PKG install
 
-  rm -rf $PKG/usr/share/gtk-doc
+  rm -rf $PKG/usr/share
 }
