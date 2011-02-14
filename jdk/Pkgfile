@@ -5,17 +5,19 @@
 
 name=jdk
 version=1.6.0_23
-release=1
-source=(http://download.java.net/dlj/binaries/jdk-6u${version/*_/}-dlj-linux-i586.bin)
+release=2
+source=(file:///jdk-6u${version/*_/}-linux-i586.bin)
 
 build(){
-	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib
-	sh $SRC/jdk-*.bin --accept-license --unpack
-	
-	export GLOBIGNORE="*/man1"
-	rm -rf jdk*/{man/,jre/lib/javaws/messages_,demo,sample}*
+	mkdir -p $PKG/usr/lib && cd $PKG/usr/lib
+	sh $SRC/jdk-*.bin -noregister
+
+	rm -rf jdk*/{man/ja,jre/lib/javaws/messages_,demo,sample}*
 	rm -rf jdk*/jre/lib/fontconfig.{RedHat,SuSE,Sun,Turbo}.*
 	rm -rf jdk*/jre/plugin/i386/ns7-gcc29
+	rm -rf jdk*/jre/.systemPrefs
+	rm $PKG/usr/lib/jdk$version/{,jre/}[A-Z]*
+	mv jdk$version/man $PKG/usr
 
 	export GLOBIGNORE="*/src.zip"
 	for i in jdk*/* jdk*/jre/*; do
@@ -35,8 +37,5 @@ build(){
 		ln -s ../lib/java/bin/$j
 	done
 
-	# fix for xcb assertions
-	sed -i 's/XINERAMA/FAKEEXTN/g' \
-		$PKG/usr/lib/java/jre/lib/i386/xawt/libmawt.so 
 }
 
