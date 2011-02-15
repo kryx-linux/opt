@@ -4,7 +4,7 @@
 # Depends on:  libusb-compat libtiff
 
 name=sane
-version=1.0.21
+version=1.0.22
 release=1
 source=(ftp://ftp.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
 
