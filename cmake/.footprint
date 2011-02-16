@@ -27,6 +27,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeASMCompiler.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeASMInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeASM_MASMInformation.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeASM_NASMInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeAddNewLanguage.txt
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeBackwardCompatibilityC.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeBackwardCompatibilityCXX.cmake
@@ -47,6 +48,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineASM-ATTCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineASMCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineASM_MASMCompiler.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineASM_NASMCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineCCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineCXXCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineCompilerABI.cmake
@@ -88,6 +90,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestASM-ATTCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestASMCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestASM_MASMCompiler.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestASM_NASMCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestCCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestCXXCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestCompilerCommon.cmake
@@ -154,6 +157,9 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Clang-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Clang-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Cray-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Cray-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Cray-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/G95-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/GNU-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/GNU-CXX.cmake
@@ -168,6 +174,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/MIPSpro-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/MIPSpro-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/MIPSpro-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/NAG-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/PGI-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/PGI-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/PGI-Fortran.cmake
@@ -176,6 +183,9 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/PathScale-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/PathScale-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/PathScale.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/SCO-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/SCO-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/SCO.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/SunPro-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/SunPro-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/SunPro-Fortran.cmake
@@ -391,12 +401,14 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/CYGWIN-GNU-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/CYGWIN-GNU-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/CYGWIN-GNU.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/CYGWIN-windres.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/CYGWIN.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Catamount.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-GNU-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-GNU-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-GNU-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-GNU.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-NAG-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-VisualAge-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-VisualAge-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-XL-C.cmake
@@ -431,6 +443,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-Intel-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-Intel-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-Intel.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-NAG-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-PGI-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-PGI-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-PGI-Fortran.cmake
@@ -475,15 +488,16 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Intel-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Intel-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Intel-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Intel.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-NMcl.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-cl.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-cl.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-df.cmake
--rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-g++.cmake
--rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-icl.cmake
--rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-ifort.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-wcl386.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-windres.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/WindowsPaths.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Xenix.cmake
