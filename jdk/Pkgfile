@@ -4,13 +4,13 @@
 # Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
-version=1.6.0_23
-release=2
-source=(file:///jdk-6u${version/*_/}-linux-i586.bin)
+version=1.6.0_24
+release=1
+source=(http://download.java.net/dlj/binaries/$name-6u${version/*_/}-dlj-linux-i586.bin)
 
 build(){
 	mkdir -p $PKG/usr/lib && cd $PKG/usr/lib
-	sh $SRC/jdk-*.bin -noregister
+	sh $SRC/jdk-*.bin --accept-license --unpack
 
 	rm -rf jdk*/{man/ja,jre/lib/javaws/messages_,demo,sample}*
 	rm -rf jdk*/jre/lib/fontconfig.{RedHat,SuSE,Sun,Turbo}.*
@@ -38,4 +38,3 @@ build(){
 	done
 
 }
-
