@@ -4,23 +4,25 @@
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
-version=1.6.0_23
-release=2
-source=(file:///jre-6u23-linux-i586.bin)
+version=1.6.0_24
+release=1
+source=(http://download.java.net/dlj/binaries/jdk-6u24-dlj-linux-i586.bin)
 
 build(){
-    sh $SRC/jre-*.bin --accept-license --unpack
+    sh $SRC/jdk-*.bin --accept-license --unpack
 
-    install -d $PKG/usr/{bin,lib}
-    mv jre$version $PKG/usr/lib
-    mv $PKG/usr/lib/jre$version/man $PKG/usr
+    cd jdk$version
 
+    install -d $PKG/usr/{bin,lib,man/man1}
+    install -m 644 man/man1/{java,javaws,keytool,orbd,rmid,rmiregistry}.1 $PKG/usr/man/man1
+    install -m 644 man/man1/{servertool,policytool,tnameserv,unpack200}.1 $PKG/usr/man/man1
+    mv jre $PKG/usr/lib/jre$version
+    
     ln -s jre$version $PKG/usr/lib/java
     ln -s ../lib/java/bin/java $PKG/usr/bin/java
     ln -s ../lib/java/bin/javaws $PKG/usr/bin/javaws
     ln -s ../lib/java/bin/keytool $PKG/usr/bin/keytool
 
     rm $PKG/usr/lib/jre$version/[A-Z]*
-    rm -r $PKG/usr/lib/jre$version/.systemPrefs
-    rm -r $PKG/usr/man/ja*
 }
+
