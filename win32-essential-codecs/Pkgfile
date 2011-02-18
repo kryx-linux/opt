@@ -13,4 +13,5 @@ build() {
   mkdir -p $PKG/usr/share/codecs
   install -m 0644 * $PKG/usr/share/codecs/
   rm -f $PKG/usr/lib
+  rm $PKG/usr/share/codecs/README
 }
