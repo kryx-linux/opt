@@ -1,6 +1,6 @@
-diff -Nru dnsmasq-2.53.orig/Makefile dnsmasq-2.53/Makefile
---- dnsmasq-2.53.orig/Makefile	2010-06-04 07:00:56.695385709 +0200
-+++ dnsmasq-2.53/Makefile	2010-06-04 07:02:52.285384778 +0200
+diff -Nru dnsmasq-2.57.orig/Makefile dnsmasq-2.57/Makefile
+--- dnsmasq-2.57.orig/Makefile	2011-02-18 19:40:32.338780931 +0100
++++ dnsmasq-2.57/Makefile	2011-02-18 19:41:05.227367036 +0100
 @@ -15,7 +15,7 @@
  
  PREFIX = /usr/local
@@ -19,9 +19,9 @@ diff -Nru dnsmasq-2.53.orig/Makefile dnsmasq-2.53/Makefile
  
  #################################################################
  
-diff -Nru dnsmasq-2.53.orig/dnsmasq.conf.example dnsmasq-2.53/dnsmasq.conf.example
---- dnsmasq-2.53.orig/dnsmasq.conf.example	2010-06-04 07:00:56.705377927 +0200
-+++ dnsmasq-2.53/dnsmasq.conf.example	2010-06-04 07:02:52.285384778 +0200
+diff -Nru dnsmasq-2.57.orig/dnsmasq.conf.example dnsmasq-2.57/dnsmasq.conf.example
+--- dnsmasq-2.57.orig/dnsmasq.conf.example	2011-02-18 19:40:32.342114459 +0100
++++ dnsmasq-2.57/dnsmasq.conf.example	2011-02-18 19:41:05.227367036 +0100
 @@ -75,8 +75,8 @@
  
  # If you want dnsmasq to change uid and gid to something other
@@ -33,7 +33,7 @@ diff -Nru dnsmasq-2.53.orig/dnsmasq.conf.example dnsmasq-2.53/dnsmasq.conf.examp
  
  # If you want dnsmasq to listen for DHCP and DNS requests only on
  # specified interfaces (and the loopback) give the name of the
-@@ -427,7 +427,7 @@
+@@ -428,7 +428,7 @@
  # The DHCP server needs somewhere on disk to keep its lease database.
  # This defaults to a sane location, but if you want to change it, use
  # the line below.
@@ -42,24 +42,24 @@ diff -Nru dnsmasq-2.53.orig/dnsmasq.conf.example dnsmasq-2.53/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.53.orig/src/config.h dnsmasq-2.53/src/config.h
---- dnsmasq-2.53.orig/src/config.h	2010-06-04 07:00:56.725386449 +0200
-+++ dnsmasq-2.53/src/config.h	2010-06-04 07:02:52.285384778 +0200
-@@ -47,7 +47,7 @@
- #   elif defined(__sun__) || defined (__sun)
- #      define LEASEFILE "/var/cache/dnsmasq.leases"
+diff -Nru dnsmasq-2.57.orig/src/config.h dnsmasq-2.57/src/config.h
+--- dnsmasq-2.57.orig/src/config.h	2011-02-18 19:40:32.342114459 +0100
++++ dnsmasq-2.57/src/config.h	2011-02-18 19:41:55.626975423 +0100
+@@ -49,7 +49,7 @@
+ #   elif defined(__ANDROID__)
+ #      define LEASEFILE "/data/misc/dhcp/dnsmasq.leases"
  #   else
 -#      define LEASEFILE "/var/lib/misc/dnsmasq.leases"
 +#      define LEASEFILE "/var/lib/dhcp/dnsmasq.leases"
  #   endif
  #endif
  
-@@ -61,7 +61,7 @@
+@@ -63,7 +63,7 @@
  
  #define DEFLEASE 3600 /* default lease time, 1 hour */
  #define CHUSER "nobody"
 -#define CHGRP "dip"
 +#define CHGRP "nobody"
+ #define NAMESERVER_PORT 53
  #define DHCP_SERVER_PORT 67
  #define DHCP_CLIENT_PORT 68
- #define DHCP_SERVER_ALTPORT 1067
