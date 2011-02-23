@@ -14,17 +14,14 @@ drwxr-xr-x	root/root	usr/include/vte-0.0/vte/
 -rw-r--r--	root/root	usr/include/vte-0.0/vte/vteversion.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libvte.la
-lrwxrwxrwx	root/root	usr/lib/libvte.so -> libvte.so.9.2705.0
-lrwxrwxrwx	root/root	usr/lib/libvte.so.9 -> libvte.so.9.2705.0
--rwxr-xr-x	root/root	usr/lib/libvte.so.9.2705.0
+lrwxrwxrwx	root/root	usr/lib/libvte.so -> libvte.so.9.2790.0
+lrwxrwxrwx	root/root	usr/lib/libvte.so.9 -> libvte.so.9.2790.0
+-rwxr-xr-x	root/root	usr/lib/libvte.so.9.2790.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/vte.pc
 drwxr-xr-x	root/root	usr/lib/vte/
 -rwxr-sr-x	root/root	usr/lib/vte/gnome-pty-helper
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/glib-2.0/
-drwxr-xr-x	root/root	usr/share/glib-2.0/schemas/
--rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gnome.vte.v0.enums.xml
 drwxr-xr-x	root/root	usr/share/vte/
 drwxr-xr-x	root/root	usr/share/vte/termcap-0.0/
 -rw-r--r--	root/root	usr/share/vte/termcap-0.0/xterm
