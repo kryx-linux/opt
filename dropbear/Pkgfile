@@ -4,14 +4,14 @@
 # Depends on:  zlib
 
 name=dropbear
-version=0.52
+version=0.53
 release=1
 source=(http://matt.ucc.asn.au/$name/releases/$name-$version.tar.gz \
         $name)
 
 build () {
     cd $name-$version
-    sed -i 's|libexec|lib/ssh|; s|X11R6/bin|bin|' options.h
+    sed -i 's|libexec|lib/ssh|; s|X11R6/bin|bin|; s|bin/X11|bin|' options.h
     ./configure --prefix=/usr 
     make
     make DESTDIR=$PKG install
