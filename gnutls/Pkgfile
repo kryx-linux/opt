@@ -5,16 +5,19 @@
 # Depends on: libgcrypt
 
 name=gnutls
-version=2.10.4
+version=2.10.5
 release=1
 source=(http://ftp.gnu.org/pub/gnu/$name/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr \
-		--mandir=/usr/man \
-		--disable-guile
-	make
-	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/share/{info,locale}
+  cd $name-$version
+
+  ./configure --prefix=/usr \
+              --mandir=/usr/man \
+              --disable-guile
+
+  make
+  make DESTDIR=$PKG install
+
+  rm -rf $PKG/usr/share/{info,locale}
 }
