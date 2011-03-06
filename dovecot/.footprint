@@ -385,6 +385,11 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-lda.so.0 -> libdovecot-lda.so.0.
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-login.so -> libdovecot-login.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-login.so.0 -> libdovecot-login.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-login.so.0.0.0
+-rw-r--r--	root/root	usr/lib/dovecot/libdovecot-sql.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-sql.la
+lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-sql.so -> libdovecot-sql.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-sql.so.0 -> libdovecot-sql.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-sql.so.0.0.0
 -rw-r--r--	root/root	usr/lib/dovecot/libdovecot-storage.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-storage.la
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-storage.so -> libdovecot-storage.so.0.0.0
@@ -402,6 +407,9 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot.so.0 -> libdovecot.so.0.0.0
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/auth/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
+-rw-r--r--	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_acl_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_acl_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_acl_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_expire_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_expire_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_expire_plugin.so
