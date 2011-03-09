@@ -1,9 +1,10 @@
 # Description: Powerful task manager for the command-line 
 # URL:         http://taskwarrior.org/projects/show/taskwarrior/ 
 # Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  cmake
 
 name=task
-version=1.9.3
+version=1.9.4
 release=1
 source=(http://www.taskwarrior.org/download/$name-$version.tar.gz)
 
@@ -11,16 +12,17 @@ build () {
     cd $name-$version
     
     sed -i 's|local/share/doc|share|' src/Config.cpp
-    sed -i 's/-O3//' configure
-
-    ./configure --prefix=/usr \
-                --mandir=/usr/man \
-                --docdir=/usr/share/task
     
-    make CFLAGS="$CFLAGS"
+    cmake . \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DTASK_MAN1DIR=man/man1 \
+        -DTASK_MAN5DIR=man/man5 \
+        -DTASK_DOCDIR=share/task
+    
+    make
     make DESTDIR=$PKG install
 
     rm -r $PKG/usr/share/task/i18n
-    rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,NEWS,README}
+    rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,NEWS,README,INSTALL}
     rm $PKG/usr/share/task/scripts/vim/README
 }
