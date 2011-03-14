@@ -5,21 +5,28 @@
 
 name=lvm2
 version=2.02.84
-release=1
+release=2
 source=(ftp://sources.redhat.com/pub/lvm2/releases/LVM2.$version.tgz
-        lvm2-static_build.patch)
+	lvm2-static_udev_rt.patch
+	lvm2-static_build.patch)
 
 build() {
     cd LVM2.$version
 
     patch -p1 -i $SRC/lvm2-static_build.patch
+    patch -p1 -i $SRC/lvm2-static_udev_rt.patch
 
     ./configure --prefix=/usr \
-                --exec_prefix= \
-                --datarootdir=/usr \
-                --disable-readline \
-                --enable-static_link \
-                --with-{user,group}=root
+		--exec-prefix= \
+		--datarootdir=/usr \
+		--with-udev-prefix= \
+		--disable-readline \
+		--enable-pkgconfig \
+		--enable-static_link \
+		--enable-udev_sync \
+		--enable-udev_rules \
+		--with-{user,group}=root
+
     make
     make DESTDIR=$PKG install_lvm2
 
