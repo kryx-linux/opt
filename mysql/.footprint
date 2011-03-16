@@ -102,13 +102,13 @@ drwxr-xr-x	root/root	usr/include/mysql/mysql/psi/
 -rw-r--r--	root/root	usr/include/mysql/typelib.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libmysqlclient.a
-lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so -> libmysqlclient.so.16
-lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so.16 -> libmysqlclient.so.16.0.0
--rwxr-xr-x	root/root	usr/lib/libmysqlclient.so.16.0.0
+lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so -> libmysqlclient.so.18
+lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so.18 -> libmysqlclient.so.18.0.0
+-rwxr-xr-x	root/root	usr/lib/libmysqlclient.so.18.0.0
 lrwxrwxrwx	root/root	usr/lib/libmysqlclient_r.a -> libmysqlclient.a
 lrwxrwxrwx	root/root	usr/lib/libmysqlclient_r.so -> libmysqlclient.so
-lrwxrwxrwx	root/root	usr/lib/libmysqlclient_r.so.16 -> libmysqlclient.so
-lrwxrwxrwx	root/root	usr/lib/libmysqlclient_r.so.16.0.0 -> libmysqlclient.so
+lrwxrwxrwx	root/root	usr/lib/libmysqlclient_r.so.18 -> libmysqlclient.so
+lrwxrwxrwx	root/root	usr/lib/libmysqlclient_r.so.18.0.0 -> libmysqlclient.so
 -rw-r--r--	root/root	usr/lib/libmysqld.a
 -rw-r--r--	root/root	usr/lib/libmysqlservices.a
 drwxr-xr-x	root/root	usr/lib/mysql/
