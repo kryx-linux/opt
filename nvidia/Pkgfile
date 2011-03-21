@@ -5,9 +5,9 @@
 # Depends on: gtk gl-select
 
 name=nvidia
-version=260.19.44
+version=270.30
 release=1
-source=(http://us.download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version.run \
+source=(ftp://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version.run \
         $name-makefile.patch)
 
 build() {
@@ -24,6 +24,7 @@ build() {
     install -m 0755 libnvidia-cfg.so.$version      $PKG/usr/lib
     install -m 0755 libnvidia-compiler.so.$version $PKG/usr/lib
     install -m 0755 libnvidia-glcore.so.$version   $PKG/usr/lib
+    install -m 0755 libnvidia-ml.so.$version       $PKG/usr/lib
     install -m 0755 libnvidia-tls.so.$version      $PKG/usr/lib
     install -m 0755 libnvcuvid.so.$version         $PKG/usr/lib
     install -m 0755 tls/libnvidia-tls.so.$version  $PKG/usr/lib/tls
