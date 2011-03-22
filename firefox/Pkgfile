@@ -1,12 +1,12 @@
-# Description: Mozilla Web Browser Component
+# Description: The Mozilla Firefox browser
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: xulrunner
+# Depends on: libidl, nss, gtk, perl, python, alsa-lib, yasm
 
 name=firefox
-version=3.6.15
+version=4.0
 release=1
-source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
+source=(ftp://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
         mozconfig)
     
 build() {
@@ -15,7 +15,7 @@ build() {
     export MOZILLA_OFFICIAL=1
     export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
-    cd mozilla-1.9.2
+    cd mozilla-2.0
     sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
     ./configure
     make
@@ -32,4 +32,10 @@ build() {
     # devel stuff
     cp -frL dist/idl/* $PKG/usr/share/idl/firefox/
     cp -frL dist/include/* $PKG/usr/include/firefox/
+
+    install -d $PKG/etc/ld.so.conf.d
+    echo "/usr/lib/$name" > $PKG/etc/ld.so.conf.d/$name.conf
+
+    # cleanup
+    rm $PKG/usr/lib/firefox/README.txt
 }
