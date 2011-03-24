@@ -4,7 +4,7 @@
 # Depends on:  openssl expat
 
 name=unbound
-version=1.4.8
+version=1.4.9
 release=1
 source=(http://unbound.net/downloads/$name-$version.tar.gz
         unbound)
@@ -26,7 +26,6 @@ build () {
 
     rm -r $PKG/usr/{lib,include,man/man3}
 
-    sed -i '314s/# //' $PKG/etc/unbound/unbound.conf
     touch $PKG/etc/unbound/root.key
     chown unbound $PKG/etc/unbound/root.key
 
