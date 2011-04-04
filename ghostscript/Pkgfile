@@ -4,9 +4,9 @@
 # Depends on:  util-linux-ng, cups, fontconfig, xorg-libxt, xorg-libxext
 
 name=ghostscript
-version=9.01
+version=9.02
 release=1
-source=(http://ghostscript.com/releases/$name-$version.tar.bz2
+source=(http://downloads.ghostscript.com/public/$name-$version.tar.bz2
         http://downloads.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz)
 
 build () {
@@ -19,8 +19,8 @@ build () {
                 --with-drivers=ALL \
                 --with-fontpath=/usr/share/ghostscript/fonts:/usr/share/fonts
 
-    make
-    make DESTDIR=$PKG install soinstall
+    make -j1 so all 
+    make DESTDIR=$PKG install-so install
     cp -r $SRC/fonts $PKG/usr/share/ghostscript
 
     rm -r $PKG/usr/{share/ghostscript/$version/{examples,doc},man/de}
