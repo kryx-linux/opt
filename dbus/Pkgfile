@@ -5,7 +5,7 @@
 # Depends on: expat
 
 name=dbus
-version=1.4.6
+version=1.4.8
 release=1
 source=(http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
 rc.dbus 30-dbus.launch)
@@ -25,5 +25,6 @@ build() {
 	make DESTDIR=$PKG install
 	install -D -m 0755 $SRC/rc.dbus $PKG/etc/rc.d/dbus
 	install -D -m 0755 $SRC/30-dbus.launch \
-		$PKG/etc/X11/xinit/xinitrc.d/30-dbus.launch
+	$PKG/etc/X11/xinit/xinitrc.d/30-dbus.launch
+	rm -r $PKG/usr/share/doc
 }
