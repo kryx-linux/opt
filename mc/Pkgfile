@@ -4,7 +4,7 @@
 # Depends on:  ncurses glib
 
 name=mc
-version=4.7.5.1
+version=4.7.5.2
 release=1
 source=(http://www.midnight-commander.org/downloads/$name-$version.tar.lzma)
 
@@ -20,5 +20,5 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    rm $PKG/usr/{share/mc/hints/mc.hint.*,lib/mc/*/README*}
+    rm $PKG/usr/lib/mc/*/README*
 }
