@@ -25,4 +25,10 @@ build() {
 	rmdir $PKG/usr/man/man7
 
 	install -D -m 0755 $SRC/rc.alsa $PKG/etc/rc.d/alsa
+
+	# Not sure about this yet.
+	rm $PKG/lib/udev/rules.d/90-alsa-restore.rules
+	rmdir $PKG/lib/udev/rules.d
+	rmdir $PKG/lib/udev
+	rmdir $PKG/lib
 }
