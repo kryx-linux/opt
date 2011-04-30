@@ -4,13 +4,12 @@
 # Depends on:  xaw3d, ghostscript
 
 name=gv
-version=3.7.1
-release=3
+version=3.7.2
+release=1
 source=(http://ftp.gnu.org/pub/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    sed -i '/apLineDel/d' src/gv_misc_res.dat
     ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
