@@ -29,9 +29,9 @@ drwxr-xr-x	root/root	usr/include/neon/
 -rw-r--r--	root/root	usr/include/neon/ne_xmlreq.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libneon.la
-lrwxrwxrwx	root/root	usr/lib/libneon.so -> libneon.so.27.2.5
-lrwxrwxrwx	root/root	usr/lib/libneon.so.27 -> libneon.so.27.2.5
--rwxr-xr-x	root/root	usr/lib/libneon.so.27.2.5
+lrwxrwxrwx	root/root	usr/lib/libneon.so -> libneon.so.27.2.6
+lrwxrwxrwx	root/root	usr/lib/libneon.so.27 -> libneon.so.27.2.6
+-rwxr-xr-x	root/root	usr/lib/libneon.so.27.2.6
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/neon.pc
 drwxr-xr-x	root/root	usr/man/
@@ -71,7 +71,10 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/ne_iaddr_cmp.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_iaddr_free.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_iaddr_make.3.gz
+-rw-r--r--	root/root	usr/man/man3/ne_iaddr_parse.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_iaddr_print.3.gz
+-rw-r--r--	root/root	usr/man/man3/ne_iaddr_raw.3.gz
+-rw-r--r--	root/root	usr/man/man3/ne_iaddr_reverse.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_iaddr_typeof.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_malloc.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_oom_callback.3.gz
