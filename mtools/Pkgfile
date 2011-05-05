@@ -5,7 +5,7 @@
 # Depends on:
 
 name=mtools
-version=4.0.15
+version=4.0.16
 release=2
 source=(ftp://ftp.gnu.org/gnu/mtools/$name-$version.tar.bz2)
 
@@ -14,9 +14,12 @@ build() {
 
   ./configure --prefix=/usr \
               --sysconfdir=/etc \
+              --mandir=$PKG/usr/man \
               --disable-floppyd
 
   make
   sed -i Makefile -e 's|install-scripts install-info|install-scripts|'
   make -j1 prefix=$PKG/usr install
+
+  rm -f $PKG/usr/man/man1/floppyd*
 }

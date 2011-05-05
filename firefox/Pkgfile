@@ -4,9 +4,9 @@
 # Depends on: libidl, nss, gtk, perl, python, alsa-lib, yasm
 
 name=firefox
-version=4.0
+version=4.0.1
 release=1
-source=(ftp://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
+source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
         mozconfig)
     
 build() {
