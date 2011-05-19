@@ -1,7 +1,7 @@
 # Description: Minimalistic tiling window manager
 # URL:         http://www.peereboom.us/scrotwm/html/scrotwm.html
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  xorg-libxrandr xorg-font-misc-misc xorg-font-alias
+# Depends on:  xorg-libxt xorg-libxrandr xorg-font-misc-misc xorg-font-alias
 
 name=scrotwm
 version=0.9.28
