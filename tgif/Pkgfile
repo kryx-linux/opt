@@ -1,18 +1,17 @@
 # Description: Xlib based interactive 2-D drawing tool
 # URL:         http://bourbon.usc.edu/tgif
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  xorg-libxmu xorg-font-adobe-75dpi xorg-font-adobe-100dp
+# Depends on:  xorg-imake xorg-libxmu xorg-font-adobe-75dpi xorg-font-adobe-100dp
 
 name=tgif
-version=4.2.2
+version=4.2.3
 release=1
 source=(ftp://bourbon.usc.edu/pub/tgif/tgif-QPL-$version.tar.gz)
 
 build () {
     cd $name-QPL-$version
-    sed -i '/^TGIFDIR/s|=.*$|= /usr/share/tgif|' Makefile.in
-    ./configure --prefix=/usr
-    make
-    make DESTDIR=$PKG install
+    sed -i '/SYS_LIBRARIES/s/-lidn//' Tgif.tmpl
+    xmkmf
+    make TGIFDIR=/usr/share/tgif DESTDIR=$PKG install
     install -D -m 644 tgif.man $PKG/usr/man/man1/tgif.1
 }
