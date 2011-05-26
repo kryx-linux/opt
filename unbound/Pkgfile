@@ -4,9 +4,9 @@
 # Depends on:  openssl expat
 
 name=unbound
-version=1.4.9
+version=1.4.10
 release=1
-source=(http://unbound.net/downloads/$name-$version.tar.gz
+source=(http://www.unbound.net/downloads/$name-$version.tar.gz
         unbound)
 
 build () {
