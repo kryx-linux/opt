@@ -6,10 +6,12 @@
 name=fontforge
 version=20100501
 release=1
-source=(http://download.sourceforge.net/$name/${name}_full-$version.tar.bz2)
+source=(http://download.sourceforge.net/$name/${name}_full-$version.tar.bz2 \
+       CVE-2010-4259.patch)
 
 build() {
 	cd $name-$version
+	patch -p1 -i $SRC/CVE-2010-4259.patch
 	sed "s|PyBytes_Decode|PyString_Decode|g" -i fontforge/ffpython.h
 	./configure	--prefix=/usr \
 			--mandir=/usr/man \
