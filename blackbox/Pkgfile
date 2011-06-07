@@ -6,7 +6,7 @@
 
 name=blackbox
 version=0.70.1
-release=1
+release=2
 source=(http://download.sourceforge.net/blackboxwm/$name-$version.tar.bz2
         blackbox-0.70.1-include-fix.diff)
  
