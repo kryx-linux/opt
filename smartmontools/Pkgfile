@@ -4,7 +4,7 @@
 # Packager: Juergen Daubert, jue at crux dot nu
 
 name=smartmontools
-version=5.40
+version=5.41
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz \
         smartd)
@@ -26,5 +26,4 @@ build () {
     install -m 755 $SRC/smartd $PKG/etc/rc.d
 
     rm -r $PKG/usr/share/doc
-    rm -r $PKG/etc/rc.d/init.d
 }
