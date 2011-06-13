@@ -1,12 +1,12 @@
 # Description: Python interpreter, version 2.7
 # URL:         http://www.python.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  db gdbm ncurses openssl readline bzip2 zlib sqlite3
+# Depends on:  db gdbm openssl bzip2 zlib sqlite3
 
 name=python
-version=2.7.1
+version=2.7.2
 release=1
-source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2)
+source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.xz)
 
 build () {
     cd Python-$version
