@@ -5,7 +5,7 @@
 # Depends on: expat
 
 name=dbus
-version=1.4.8
+version=1.4.12
 release=1
 source=(http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
 rc.dbus 30-dbus.launch)
@@ -27,4 +27,5 @@ build() {
 	install -D -m 0755 $SRC/30-dbus.launch \
 	$PKG/etc/X11/xinit/xinitrc.d/30-dbus.launch
 	rm -r $PKG/usr/share/doc
+	rm -r $PKG/usr/lib/dbus-1.0/test
 }
