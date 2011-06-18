@@ -1,7 +1,7 @@
-diff -Nru stunnel-4.32.orig/src/Makefile.in stunnel-4.32/src/Makefile.in
---- stunnel-4.32.orig/src/Makefile.in	2010-03-24 18:40:21.000000000 +0100
-+++ stunnel-4.32/src/Makefile.in	2010-03-24 18:40:41.000000000 +0100
-@@ -227,7 +227,7 @@
+diff -Nru stunnel-4.37.orig/src/Makefile.in stunnel-4.37/src/Makefile.in
+--- stunnel-4.37.orig/src/Makefile.in	2011-06-18 15:07:36.992908219 +0200
++++ stunnel-4.37/src/Makefile.in	2011-06-18 15:07:58.782119316 +0200
+@@ -254,7 +254,7 @@
  INCLUDES = -I/usr/kerberos/include
  
  # Additional compiler flags
@@ -9,38 +9,43 @@ diff -Nru stunnel-4.32.orig/src/Makefile.in stunnel-4.32/src/Makefile.in
 +AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"' -DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
  
  # Win32 executable
- EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak nogui.c os2.mak
-diff -Nru stunnel-4.32.orig/tools/stunnel.conf-sample.in stunnel-4.32/tools/stunnel.conf-sample.in
---- stunnel-4.32.orig/tools/stunnel.conf-sample.in	2010-03-24 18:40:21.000000000 +0100
-+++ stunnel-4.32/tools/stunnel.conf-sample.in	2010-03-24 19:09:56.000000000 +0100
-@@ -4,17 +4,20 @@
- ; please read the manual and make sure you understand them
- 
- ; certificate/key is needed in server mode and optional in client mode
+ EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak makew32.bat version.rc nogui.c os2.mak
+diff -Nru stunnel-4.37.orig/tools/stunnel.conf-sample.in stunnel-4.37/tools/stunnel.conf-sample.in
+--- stunnel-4.37.orig/tools/stunnel.conf-sample.in	2011-06-18 15:07:36.989575006 +0200
++++ stunnel-4.37/tools/stunnel.conf-sample.in	2011-06-18 15:29:57.970924542 +0200
+@@ -5,14 +5,14 @@
+ ; Certificate/key is needed in server mode and optional in client mode
+ ; The default certificate is provided only for testing and should not
+ ; be used in a production environment
 -cert = @prefix@/etc/stunnel/mail.pem
 -;key = @prefix@/etc/stunnel/mail.pem
 +cert = /etc/ssl/certs/stunnel.crt
 +key = /etc/ssl/keys/stunnel.key
  
- ; protocol version (all, SSLv2, SSLv3, TLSv1)
- sslVersion = SSLv3
+ ; Security enhancements for UNIX systems - comment them out on Win32
+ ; for chroot a copy of some devices and files is needed within the jail
+-chroot = @prefix@/var/lib/stunnel/
+-setuid = nobody
+-setgid = @DEFAULT_GROUP@
++chroot = /var/run/stunnel/
++setuid = stunnel
++setgid = stunnel
+ ; PID is created inside the chroot jail
+ pid = /stunnel.pid
+ 
+@@ -23,6 +23,9 @@
+ ; Disable support for insecure SSLv2 protocol
+ options = NO_SSLv2
  
 +; Enable or disable the use of libwrap
 +libwrap = yes
 +
- ; security enhancements for UNIX systems - comment them out on Win32
- ; for chroot a copy of some devices and files is needed within the jail
--chroot = @prefix@/var/lib/stunnel/
-+chroot = /var/run/stunnel/
- setuid = nobody
--setgid = @DEFAULT_GROUP@
-+setgid = nobody
- ; PID is created inside the chroot jail
- pid = /stunnel.pid
+ ; Workaround for Eudora bug
+ ;options = DONT_INSERT_EMPTY_FRAGMENTS
  
 @@ -42,7 +45,12 @@
  
- ; debugging stuff (may useful for troubleshooting)
+ ; Debugging stuff (may useful for troubleshooting)
  ;debug = 7
 +; logfile is created inside the chroot jail
  ;output = stunnel.log
