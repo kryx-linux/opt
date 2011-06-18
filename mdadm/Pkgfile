@@ -1,9 +1,9 @@
 # Description: Multiple device (RAID) admin tool
-# URL:         http://www.cse.unsw.edu.au/~neilb/source/mdadm/
+# URL:         http://neil.brown.name/blog/mdadm
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=mdadm
-version=3.1.5
+version=3.2.2
 release=1
 source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.bz2)
 
