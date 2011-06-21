@@ -23,9 +23,9 @@ drwxr-xr-x	root/root	usr/include/gnutls/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libgnutls-extra.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls-extra.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so -> libgnutls-extra.so.26.21.0
-lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so.26 -> libgnutls-extra.so.26.21.0
--rwxr-xr-x	root/root	usr/lib/libgnutls-extra.so.26.21.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so -> libgnutls-extra.so.26.21.1
+lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so.26 -> libgnutls-extra.so.26.21.1
+-rwxr-xr-x	root/root	usr/lib/libgnutls-extra.so.26.21.1
 -rw-r--r--	root/root	usr/lib/libgnutls-openssl.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.la
 lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so -> libgnutls-openssl.so.27.0.0
@@ -33,9 +33,9 @@ lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so.27 -> libgnutls-openssl.so.27.
 -rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.so.27.0.0
 -rw-r--r--	root/root	usr/lib/libgnutls.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.26.21.0
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so.26 -> libgnutls.so.26.21.0
--rwxr-xr-x	root/root	usr/lib/libgnutls.so.26.21.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.26.21.1
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so.26 -> libgnutls.so.26.21.1
+-rwxr-xr-x	root/root	usr/lib/libgnutls.so.26.21.1
 -rw-r--r--	root/root	usr/lib/libgnutlsxx.a
 -rwxr-xr-x	root/root	usr/lib/libgnutlsxx.la
 lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so -> libgnutlsxx.so.27.0.0
@@ -79,6 +79,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_free_credentials.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_free_crls.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_free_keys.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_certificate_get_issuer.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_get_openpgp_keyring.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_get_ours.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_get_peers.3.gz
@@ -187,6 +188,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_global_set_log_level.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_global_set_mem_functions.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_global_set_mutex.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_global_set_time_function.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_handshake.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_handshake_get_last_in.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_handshake_get_last_out.3.gz
@@ -584,6 +586,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_set_version.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_sign.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_sign2.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_verify.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_check_hostname.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_check_issuer.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_check_revocation.3.gz
