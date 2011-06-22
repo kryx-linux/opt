@@ -4,7 +4,7 @@
 # Depends on: libidl, nss, gtk, perl, python, alsa-lib, yasm
 
 name=firefox
-version=4.0.1
+version=5.0
 release=1
 source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
         mozconfig)
@@ -15,7 +15,7 @@ build() {
     export MOZILLA_OFFICIAL=1
     export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
-    cd mozilla-2.0
+    cd mozilla-release
     sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
     ./configure
     make
