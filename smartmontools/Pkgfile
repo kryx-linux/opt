@@ -5,7 +5,7 @@
 
 name=smartmontools
 version=5.41
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz \
         smartd)
 
@@ -15,6 +15,7 @@ build () {
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --sysconfdir=/etc \
+                --with-initscriptdir=/etc/rc.d \
                 --localstatedir=/var \
                 --enable-drivedb \
                 --enable-savestates \
