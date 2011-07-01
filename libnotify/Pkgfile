@@ -2,7 +2,7 @@
 # URL: http://www.galago-project.org/news/index.php
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Depends on: dbus, gtk
+# Depends on: dbus-glib, gtk
 
 name=libnotify
 version=0.4.5

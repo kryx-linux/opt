@@ -5,8 +5,8 @@
 # Depends on:
 
 name=mtools
-version=4.0.16
-release=2
+version=4.0.17
+release=1
 source=(ftp://ftp.gnu.org/gnu/mtools/$name-$version.tar.bz2)
 
 build() {
