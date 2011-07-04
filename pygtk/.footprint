@@ -64,6 +64,9 @@ drwxr-xr-x	root/root	usr/lib/pygtk/2.0/demos/images/
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/images/gnome-gsame.png
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/images/gnu-keys.png
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/images/gtk-logo-rgb.gif
+-rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/infobar.py
+-rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/infobar.pyc
+-rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/infobar.pyo
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/list_store.py
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/list_store.pyc
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/list_store.pyo
@@ -151,6 +154,9 @@ drwxr-xr-x	root/root	usr/share/pygtk/2.0/defs/
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gdk-2.14.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gdk-2.16.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gdk-2.18.defs
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gdk-2.20.defs
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gdk-2.22.defs
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gdk-2.24.defs (EMPTY)
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gdk-base-types.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gdk-base.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gdk-types.defs
@@ -165,6 +171,12 @@ drwxr-xr-x	root/root	usr/share/pygtk/2.0/defs/
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-2.16.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-2.18-types.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-2.18.defs
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-2.20-types.defs
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-2.20.defs
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-2.22-types.defs (EMPTY)
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-2.22.defs
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-2.24-types.defs
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-2.24.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-base-types.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-base.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-extrafuncs.defs
