@@ -85,6 +85,7 @@ drwxr-xr-x	root/root	usr/include/mysql/mysql/psi/
 -rw-r--r--	root/root	usr/include/mysql/mysql/service_thd_wait.h
 -rw-r--r--	root/root	usr/include/mysql/mysql/service_thread_scheduler.h
 -rw-r--r--	root/root	usr/include/mysql/mysql/services.h
+-rw-r--r--	root/root	usr/include/mysql/mysql/thread_pool_priv.h
 -rw-r--r--	root/root	usr/include/mysql/mysql_com.h
 -rw-r--r--	root/root	usr/include/mysql/mysql_embed.h
 -rw-r--r--	root/root	usr/include/mysql/mysql_time.h
