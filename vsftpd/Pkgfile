@@ -6,7 +6,7 @@
 name=vsftpd
 version=2.3.4
 release=1
-source=(ftp://vsftpd.beasts.org/users/cevans/$name-$version.tar.gz \
+source=(https://security.appspot.com/downloads/$name-$version.tar.gz \
         $name-config.patch vsftpd)
 
 build () {
