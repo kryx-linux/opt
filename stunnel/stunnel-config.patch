@@ -1,6 +1,6 @@
-diff -Nru stunnel-4.37.orig/src/Makefile.in stunnel-4.37/src/Makefile.in
---- stunnel-4.37.orig/src/Makefile.in	2011-06-18 15:07:36.992908219 +0200
-+++ stunnel-4.37/src/Makefile.in	2011-06-18 15:07:58.782119316 +0200
+diff -Nru stunnel-4.39.orig/src/Makefile.in stunnel-4.39/src/Makefile.in
+--- stunnel-4.39.orig/src/Makefile.in	2011-07-07 13:55:58.083872713 +0200
++++ stunnel-4.39/src/Makefile.in	2011-07-07 13:56:09.396802299 +0200
 @@ -254,7 +254,7 @@
  INCLUDES = -I/usr/kerberos/include
  
@@ -10,10 +10,10 @@ diff -Nru stunnel-4.37.orig/src/Makefile.in stunnel-4.37/src/Makefile.in
  
  # Win32 executable
  EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak makew32.bat version.rc nogui.c os2.mak
-diff -Nru stunnel-4.37.orig/tools/stunnel.conf-sample.in stunnel-4.37/tools/stunnel.conf-sample.in
---- stunnel-4.37.orig/tools/stunnel.conf-sample.in	2011-06-18 15:07:36.989575006 +0200
-+++ stunnel-4.37/tools/stunnel.conf-sample.in	2011-06-18 15:29:57.970924542 +0200
-@@ -5,14 +5,14 @@
+diff -Nru stunnel-4.39.orig/tools/stunnel.conf-sample.in stunnel-4.39/tools/stunnel.conf-sample.in
+--- stunnel-4.39.orig/tools/stunnel.conf-sample.in	2011-07-07 13:55:58.083872713 +0200
++++ stunnel-4.39/tools/stunnel.conf-sample.in	2011-07-07 13:56:09.396802299 +0200
+@@ -5,20 +5,23 @@
  ; Certificate/key is needed in server mode and optional in client mode
  ; The default certificate is provided only for testing and should not
  ; be used in a production environment
@@ -33,7 +33,6 @@ diff -Nru stunnel-4.37.orig/tools/stunnel.conf-sample.in stunnel-4.37/tools/stun
  ; PID is created inside the chroot jail
  pid = /stunnel.pid
  
-@@ -23,6 +23,9 @@
  ; Disable support for insecure SSLv2 protocol
  options = NO_SSLv2
  
@@ -43,7 +42,7 @@ diff -Nru stunnel-4.37.orig/tools/stunnel.conf-sample.in stunnel-4.37/tools/stun
  ; Workaround for Eudora bug
  ;options = DONT_INSERT_EMPTY_FRAGMENTS
  
-@@ -42,7 +45,12 @@
+@@ -38,7 +41,12 @@
  
  ; Debugging stuff (may useful for troubleshooting)
  ;debug = 7
