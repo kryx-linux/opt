@@ -4,14 +4,13 @@
 # Depends on:  ncurses libevent
 
 name=tmux
-version=1.4
+version=1.5
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure
+    ./configure --prefix=/usr --mandir=/usr/man
     make
-    install -D -m 0755 tmux $PKG/usr/bin/tmux
-    install -D -m 0644 tmux.1 $PKG/usr/man/man1/tmux.1
+    make DESTDIR=$PKG install
 }
