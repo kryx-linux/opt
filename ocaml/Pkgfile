@@ -2,10 +2,10 @@
 # URL:         http://caml.inria.fr/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Packager:    Erlend Bergsas Mikkelsen, howl at online dot no
-# Depends on:  ncurses, gdbm
+# Depends on:  binutils gdbm
 
 name=ocaml
-version=3.12.0
+version=3.12.1
 release=1
 source=(http://caml.inria.fr/pub/distrib/$name-3.12/$name-$version.tar.bz2)
 
