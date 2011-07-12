@@ -1,10 +1,10 @@
 # Description: The Mozilla Firefox browser
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: libidl, nss, gtk, python, alsa-lib, yasm, mesa3d
+# Depends on: libidl, nss, gtk, perl, python, alsa-lib, yasm
 
 name=firefox
-version=5.0
+version=5.0.1
 release=1
 source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
         mozconfig)
