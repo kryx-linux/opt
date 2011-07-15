@@ -4,17 +4,15 @@
 # Depends on:  libdevmapper
 
 name=lvm2
-version=2.02.84
-release=2
+version=2.02.86
+release=1
 source=(ftp://sources.redhat.com/pub/lvm2/releases/LVM2.$version.tgz
-	lvm2-static_udev_rt.patch
 	lvm2-static_build.patch)
 
 build() {
     cd LVM2.$version
 
     patch -p1 -i $SRC/lvm2-static_build.patch
-    patch -p1 -i $SRC/lvm2-static_udev_rt.patch
 
     ./configure --prefix=/usr \
 		--exec-prefix= \
