@@ -1572,6 +1572,8 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/FileUtils/DryRun/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/FileUtils/DryRun/cdesc-DryRun.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/FileUtils/Entry_/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/FileUtils/Entry_/cdesc-Entry_.ri
+drwxr-xr-x	root/root	usr/share/ri/1.9/system/FileUtils/LowMethods/
+-rw-r--r--	root/root	usr/share/ri/1.9/system/FileUtils/LowMethods/cdesc-LowMethods.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/FileUtils/NoWrite/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/FileUtils/NoWrite/cdesc-NoWrite.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/FileUtils/StreamUtils_/
@@ -5574,9 +5576,6 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/PP/SingleLine/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/PStore/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/PStore/%5b%5d%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/PStore/%5b%5d-i.ri
-drwxr-xr-x	root/root	usr/share/ri/1.9/system/PStore/DummyMutex/
--rw-r--r--	root/root	usr/share/ri/1.9/system/PStore/DummyMutex/cdesc-DummyMutex.ri
--rw-r--r--	root/root	usr/share/ri/1.9/system/PStore/DummyMutex/synchronize-i.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/PStore/Error/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/PStore/Error/cdesc-Error.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/PStore/abort-i.ri
@@ -10598,6 +10597,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Test/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Test/Unit/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Test/Unit/Assertions/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Test/Unit/Assertions/assert-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Test/Unit/Assertions/assert_block-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Test/Unit/Assertions/assert_equal-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Test/Unit/Assertions/assert_no_match-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Test/Unit/Assertions/assert_not_equal-i.ri
