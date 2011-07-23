@@ -1,4 +1,4 @@
-README for uw-imap 2006
+README for uw-imap 2007
 
 REQUIREMENTS
 
@@ -8,7 +8,6 @@ POST-INSTALL
 1. To activate the required services add some of the following lines to 
    /etc/inetd.conf:
 
-    pop2   stream  tcp  nowait  root  /usr/sbin/tcpd  ipop2d
     pop3   stream  tcp  nowait  root  /usr/sbin/tcpd  ipop3d
     imap   stream  tcp  nowait  root  /usr/sbin/tcpd  imapd
     pop3s  stream  tcp  nowait  root  /usr/sbin/tcpd  ipop3d
