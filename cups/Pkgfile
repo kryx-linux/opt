@@ -4,7 +4,7 @@
 # Depends on:  acl tcp_wrappers libusb-compat libpng libtiff openssl
 
 name=cups
-version=1.4.6
+version=1.4.8
 release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2
         cups-config.patch cups usb-backend-both-usblp-and-libusb.dpatch)
@@ -29,8 +29,9 @@ build () {
                 --with-optim="$CFLAGS" \
                 --with-pdftops=none \
                 --enable-{ssl,openssl} --disable-gnutls \
-                --disable-pam \
                 --enable-tcp-wrappers \
+                --enable-acl \
+                --disable-pam \
                 --disable-dbus
 
     make
