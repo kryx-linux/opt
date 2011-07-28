@@ -5,7 +5,7 @@
 # Depends on: cups dbus-glib ffmpeg gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt sqlite3 openssl
 
 name=chromium
-version=14.0.816.0
+version=14.0.832.0
 release=1
 source=(http://build.chromium.org/official/$name-$version.tar.bz2 \
         $name.sh)
@@ -37,7 +37,8 @@ build() {
 	-Dremove_webcore_debug_symbols=1 \
 	-Duse_gconf=0 \
 	-Duse_gnome_keyring=0 \
-	-Dlinux_link_gnome_keyring=0 
+	-Dlinux_link_gnome_keyring=0 \
+        -Denable_webrtc=0
 
   make chrome chrome_sandbox BUILDTYPE=Release
 
