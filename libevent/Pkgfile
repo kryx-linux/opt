@@ -4,9 +4,9 @@
 # Packager:    Robert McMeekin, rrm3 at rrm3 dot org
 
 name=libevent
-version=2.0.12
+version=2.0.13
 release=1
-source=(http://www.monkey.org/~provos/$name-$version-stable.tar.gz)
+source=(http://downloads.sourceforge.net/project/levent/$name/$name-2.0/$name-$version-stable.tar.gz)
 
 build() {
     cd $name-$version-stable
