@@ -4,7 +4,7 @@
 # Depends on:  openssl, zlib
 
 name=elinks
-version=0.12-534bb38
+version=0.12-3b8e36d
 release=1
 source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
 

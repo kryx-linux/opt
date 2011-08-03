@@ -5,7 +5,7 @@
 
 name=cups
 version=1.4.8
-release=2
+release=3
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2
         cups-config.patch cups usb-backend-both-usblp-and-libusb.dpatch)
 
@@ -17,6 +17,7 @@ build () {
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
+                --libdir=/usr/lib \
                 --mandir=/usr/man \
                 --localstatedir=/var \
                 --with-docdir=/usr/share/cups/doc \

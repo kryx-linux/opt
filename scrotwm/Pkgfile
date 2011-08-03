@@ -4,7 +4,7 @@
 # Depends on:  xorg-libxt xorg-libxrandr xorg-font-misc-misc xorg-font-alias
 
 name=scrotwm
-version=0.9.32
+version=0.9.33
 release=1
 source=(http://opensource.conformal.com/snapshots/$name/$name-$version.tgz)
 
