@@ -15,28 +15,23 @@ timeout 5
 ## default boot kernel 
 default 0
 
-### GRUB Devices:
+### GRUB Devices: (see /boot/grub/device.map)
 ##
 ## Linux         Grub
 ## ======================
-## /dev/hda      (hd0)
-## /dev/hda1     (hd0,0)
-## /dev/hdb      (hd1)
-## /dev/hdb1     (hd1,0)
+## /dev/sda      (hd0)
+## /dev/sda1     (hd0,0)
+## /dev/sdb      (hd1)
+## /dev/sdb1     (hd1,0)
 ## /dev/fd0      (fd0)
-
-### Remember:
-## The Linux kernel 2.4.19 has a bug which prevents using of devfs
-## device names (/dev/disc/disc0/part1,..). CRUX 0.9.4 comes with
-## 2.4.19 !
 
 ## Default menu entries
 
 title CRUX
-kernel (hd0,0)/boot/vmlinuz root=/dev/hda1
+kernel (hd0,0)/boot/vmlinuz root=/dev/sda1
 
 title CRUX
-kernel (hd0,0)/boot/vmlinuz.old root=/dev/hda1 
+kernel (hd0,0)/boot/vmlinuz.old root=/dev/sda1 
 
 ### Special cases
 
@@ -56,9 +51,9 @@ kernel (hd0,0)/boot/vmlinuz.old root=/dev/hda1
 #chainloader +1
 
 ## Boot with different /boot partition
-## /     = /dev/hdb2 = (hd1,1)
-## /boot = /dev/hdb1 = (hd1,0)
+## /     = /dev/sdb2 = (hd1,1)
+## /boot = /dev/sdb1 = (hd1,0)
 ##
 #title CRUX GNU/Linux drive 2
-#kernel (hd1,0)/vmlinuz root=/dev/hdb2 
+#kernel (hd1,0)/vmlinuz root=/dev/sdb2 
 

@@ -1,14 +1,15 @@
 # Description: GNU GRUB (GRand Unified Bootloader)
 # URL: http://www.gnu.org/software/grub/
-# Packager: Daniel Mueller, daniel at danm dot de
-# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Lucas Hazel, lucas at die dot net dot au
+# Maintainer: Alan Mizrahi, alan at mizrahi dot com dot ve
 # Depends on: gettext
 
 name=grub
 version=0.97
-release=5
+release=6
 source=(ftp://alpha.gnu.org/gnu/grub/$name-$version.tar.gz \
 	http://crux.nu/files/grub/0.97/$name-$version-patches-2.tar.bz2 \
+	ext4.patch \
 	http://crux.nu/files/grub/common/crux02.xpm.gz \
 	http://crux.nu/files/grub/common/crux03.xpm.gz \
 	menu.lst.sample)
