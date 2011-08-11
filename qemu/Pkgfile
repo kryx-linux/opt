@@ -6,9 +6,9 @@
 # Nice to have: kqemu
 
 name=qemu
-version=0.14.1
+version=0.15.0
 release=1
-source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz)
+source=(http://wiki.qemu.org/download/qemu-$version.tar.gz)
 
 build() {
   cd $name-$version
@@ -17,6 +17,9 @@ build() {
       --host-cc="${CC:=gcc}" \
       --sysconfdir=/etc \
       --disable-docs
+
+  # fix include issues with nspr
+  echo 'QEMU_CFLAGS+=-I/usr/include/nspr' >> libcacard/Makefile
   make
   make DESTDIR=$PKG install
 
