@@ -110,7 +110,9 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-quiltimport
 -rwxr-xr-x	root/root	usr/lib/git-core/git-read-tree
 -rwxr-xr-x	root/root	usr/lib/git-core/git-rebase
--rwxr-xr-x	root/root	usr/lib/git-core/git-rebase--interactive
+-rw-r--r--	root/root	usr/lib/git-core/git-rebase--am
+-rw-r--r--	root/root	usr/lib/git-core/git-rebase--interactive
+-rw-r--r--	root/root	usr/lib/git-core/git-rebase--merge
 -rwxr-xr-x	root/root	usr/lib/git-core/git-receive-pack
 -rwxr-xr-x	root/root	usr/lib/git-core/git-reflog
 -rwxr-xr-x	root/root	usr/lib/git-core/git-relink
@@ -134,6 +136,8 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-rm
 -rwxr-xr-x	root/root	usr/lib/git-core/git-send-email
 -rwxr-xr-x	root/root	usr/lib/git-core/git-send-pack
+-rw-r--r--	root/root	usr/lib/git-core/git-sh-i18n
+-rwxr-xr-x	root/root	usr/lib/git-core/git-sh-i18n--envsubst
 -rw-r--r--	root/root	usr/lib/git-core/git-sh-setup
 -rwxr-xr-x	root/root	usr/lib/git-core/git-shell
 -rwxr-xr-x	root/root	usr/lib/git-core/git-shortlog
@@ -306,6 +310,8 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-rm.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-send-email.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-send-pack.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-sh-i18n--envsubst.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-sh-i18n.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-sh-setup.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-shell.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-shortlog.1.gz
@@ -409,6 +415,7 @@ drwxr-xr-x	root/root	usr/share/git-gui/lib/msgs/
 -rw-r--r--	root/root	usr/share/git-gui/lib/msgs/it.msg
 -rw-r--r--	root/root	usr/share/git-gui/lib/msgs/ja.msg
 -rw-r--r--	root/root	usr/share/git-gui/lib/msgs/nb.msg
+-rw-r--r--	root/root	usr/share/git-gui/lib/msgs/pt_br.msg
 -rw-r--r--	root/root	usr/share/git-gui/lib/msgs/ru.msg
 -rw-r--r--	root/root	usr/share/git-gui/lib/msgs/sv.msg
 -rw-r--r--	root/root	usr/share/git-gui/lib/msgs/zh_cn.msg
