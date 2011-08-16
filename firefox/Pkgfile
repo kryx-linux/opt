@@ -4,7 +4,7 @@
 # Depends on: libidl, nss, gtk, perl, python, alsa-lib, yasm, mesa3d
 
 name=firefox
-version=5.0.1
+version=6.0
 release=1
 source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
         mozconfig)
