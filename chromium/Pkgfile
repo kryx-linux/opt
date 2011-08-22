@@ -2,10 +2,10 @@
 # URL: http://chromium.org/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Tadeusz Sosnierz, tadzikes gmail com
-# Depends on: cups dbus-glib ffmpeg gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt sqlite3 openssl
+# Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt sqlite3 openssl
 
 name=chromium
-version=15.0.842.0
+version=15.0.858.0
 release=1
 source=(http://build.chromium.org/official/$name-$version.tar.bz2 \
         $name.sh)
@@ -36,6 +36,7 @@ build() {
 	-Duse_system_ssl=0 \
 	-Dremove_webcore_debug_symbols=1 \
 	-Duse_gconf=0 \
+        -Duse_cups=0 \
 	-Duse_gnome_keyring=0 \
 	-Dlinux_link_gnome_keyring=0 \
         -Denable_webrtc=0
@@ -51,7 +52,7 @@ build() {
   cp -a out/Release/resources $PKG/usr/lib/chromium
   install -m 0644 -D out/Release/chrome.1 $PKG/usr/man/man1/chromium.1
 
-  for size in 16 22 24 32 48 64 128 256; do
+  for size in 16 22 24 32 48 128 256; do
     install -m 0644 -D chrome/app/theme/chromium/product_logo_${size}.png \
       $PKG/usr/share/icons/hicolor/${size}x${size}/apps/chromium.png
   done

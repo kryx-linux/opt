@@ -164,8 +164,11 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/warningOrangeDot.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/warningsErrors.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/ScriptFormatterWorker.js
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/dataGrid.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devTools.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devtools.html
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/inspectorCommon.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/networkLogView.css
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/chromium.1.gz
@@ -193,6 +196,3 @@ drwxr-xr-x	root/root	usr/share/icons/hicolor/32x32/apps/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/apps/
 -rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/chromium.png
-drwxr-xr-x	root/root	usr/share/icons/hicolor/64x64/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/64x64/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/64x64/apps/chromium.png
