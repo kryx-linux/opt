@@ -5,7 +5,7 @@
 
 name=poppler-qt4
 version=0.16.7
-release=1
+release=2
 source=(http://poppler.freedesktop.org/poppler-$version.tar.gz)
 
 build() {
@@ -15,12 +15,12 @@ build() {
                 --mandir=/usr/man \
                 --enable-{zlib,libjpeg,libpng,cms} \
                 --disable-utils \
-                --disable-{abiword,splash}-output \
+                --disable-abiword-output \
                 --disable-poppler-{glib,qt,cpp}
 
     make
     make DESTDIR=$PKG install
 
-    rm $PKG/usr/lib/pkgconfig/poppler{,-cairo}.pc
+    rm $PKG/usr/lib/pkgconfig/poppler{,-cairo,-splash}.pc
     rm $PKG/usr/lib/libpoppler.*
 }
