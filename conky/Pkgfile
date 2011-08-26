@@ -5,11 +5,12 @@
 
 name=conky
 version=1.8.1
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
+    sed -i '/^#include <curl\/types.h>/d' src/*.c
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --disable-lua \
