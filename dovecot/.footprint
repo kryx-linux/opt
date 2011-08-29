@@ -169,6 +169,8 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ioloop-notify-fd.h
 -rw-r--r--	root/root	usr/include/dovecot/ioloop.h
 -rw-r--r--	root/root	usr/include/dovecot/iostream-internal.h
+-rw-r--r--	root/root	usr/include/dovecot/ipc-client.h
+-rw-r--r--	root/root	usr/include/dovecot/ipc-server.h
 -rw-r--r--	root/root	usr/include/dovecot/ipwd.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-attachment.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-base64-encoder.h
@@ -376,6 +378,7 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/deliver -> dovecot-lda
 -rwxr-xr-x	root/root	usr/lib/dovecot/gdbhelper
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap-login
+-rwxr-xr-x	root/root	usr/lib/dovecot/ipc
 -rw-r--r--	root/root	usr/lib/dovecot/libdovecot-lda.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-lda.la
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-lda.so -> libdovecot-lda.so.0.0.0
