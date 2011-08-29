@@ -1,6 +1,6 @@
-diff -Nru dnsmasq-2.57.orig/Makefile dnsmasq-2.57/Makefile
---- dnsmasq-2.57.orig/Makefile	2011-02-18 19:40:32.338780931 +0100
-+++ dnsmasq-2.57/Makefile	2011-02-18 19:41:05.227367036 +0100
+diff -Nru dnsmasq-2.58.orig/Makefile dnsmasq-2.58/Makefile
+--- dnsmasq-2.58.orig/Makefile	2011-08-27 10:05:03.610645122 +0200
++++ dnsmasq-2.58/Makefile	2011-08-27 10:05:18.486783402 +0200
 @@ -15,7 +15,7 @@
  
  PREFIX = /usr/local
@@ -19,9 +19,9 @@ diff -Nru dnsmasq-2.57.orig/Makefile dnsmasq-2.57/Makefile
  
  #################################################################
  
-diff -Nru dnsmasq-2.57.orig/dnsmasq.conf.example dnsmasq-2.57/dnsmasq.conf.example
---- dnsmasq-2.57.orig/dnsmasq.conf.example	2011-02-18 19:40:32.342114459 +0100
-+++ dnsmasq-2.57/dnsmasq.conf.example	2011-02-18 19:41:05.227367036 +0100
+diff -Nru dnsmasq-2.58.orig/dnsmasq.conf.example dnsmasq-2.58/dnsmasq.conf.example
+--- dnsmasq-2.58.orig/dnsmasq.conf.example	2011-08-27 10:05:03.610645122 +0200
++++ dnsmasq-2.58/dnsmasq.conf.example	2011-08-27 10:05:18.486783402 +0200
 @@ -75,8 +75,8 @@
  
  # If you want dnsmasq to change uid and gid to something other
@@ -33,7 +33,7 @@ diff -Nru dnsmasq-2.57.orig/dnsmasq.conf.example dnsmasq-2.57/dnsmasq.conf.examp
  
  # If you want dnsmasq to listen for DHCP and DNS requests only on
  # specified interfaces (and the loopback) give the name of the
-@@ -428,7 +428,7 @@
+@@ -439,7 +439,7 @@
  # The DHCP server needs somewhere on disk to keep its lease database.
  # This defaults to a sane location, but if you want to change it, use
  # the line below.
@@ -42,9 +42,9 @@ diff -Nru dnsmasq-2.57.orig/dnsmasq.conf.example dnsmasq-2.57/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.57.orig/src/config.h dnsmasq-2.57/src/config.h
---- dnsmasq-2.57.orig/src/config.h	2011-02-18 19:40:32.342114459 +0100
-+++ dnsmasq-2.57/src/config.h	2011-02-18 19:41:55.626975423 +0100
+diff -Nru dnsmasq-2.58.orig/src/config.h dnsmasq-2.58/src/config.h
+--- dnsmasq-2.58.orig/src/config.h	2011-08-27 10:05:03.607311907 +0200
++++ dnsmasq-2.58/src/config.h	2011-08-27 10:05:18.486783402 +0200
 @@ -49,7 +49,7 @@
  #   elif defined(__ANDROID__)
  #      define LEASEFILE "/data/misc/dhcp/dnsmasq.leases"
