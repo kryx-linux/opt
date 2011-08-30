@@ -2,7 +2,7 @@
 # URL: http://chromium.org/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Tadeusz Sosnierz, tadzikes gmail com
-# Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt sqlite3 openssl
+# Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt sqlite3 openssl yasm xorg-libxt alsa-lib
 
 name=chromium
 version=15.0.858.0
