@@ -12,7 +12,7 @@ source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
 build () {
     cd $name-$version/source3
 
-    #patch -d .. -p1 -i $SRC/samba-config.patch
+    patch -d .. -p1 -i $SRC/samba-config.patch
 
     ./configure --prefix=/usr \
                 --localstatedir=/var \
