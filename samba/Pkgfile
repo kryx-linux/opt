@@ -4,7 +4,7 @@
 # Depends on:  ncurses openssl readline zlib tdb talloc libcap acl
 
 name=samba
-version=3.5.11
+version=3.6.0
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
@@ -12,7 +12,7 @@ source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
 build () {
     cd $name-$version/source3
 
-    patch -d .. -p1 -i $SRC/samba-config.patch
+    #patch -d .. -p1 -i $SRC/samba-config.patch
 
     ./configure --prefix=/usr \
                 --localstatedir=/var \
@@ -21,18 +21,15 @@ build () {
                 --with-modulesdir=/usr/lib/samba \
                 --with-lockdir=/var/run/samba \
                 --with-piddir=/var/run/samba \
+                --with-nmbdsocketdir=/var/run/samba \
                 --with-mandir=/usr/man \
                 --with-logfilebase=/var/log/samba \
                 --disable-swat \
                 --with-included-popt \
-                --with-cifs{mount,umount} \
                 --enable-external-{libtdb,libtalloc}
 
     make
     make DESTDIR=$PKG install
-
-    install -d $PKG/sbin
-    mv $PKG/usr/sbin/*.cifs $PKG/sbin
 
     # nsswitch extensions
     install -d $PKG/lib
