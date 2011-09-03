@@ -6,7 +6,7 @@
 name=nss
 version=3.12.11
 release=1
-source=(http://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_11_RTM/src/$name-$version.tar.gz \
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_11_WITH_CKBI_1_87_RTM/src/$name-$version.with.ckbi.1.87.tar.gz \
         nss-config.in nss.pc.in)
 
 build() {
