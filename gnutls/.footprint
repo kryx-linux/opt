@@ -24,19 +24,19 @@ drwxr-xr-x	root/root	usr/include/gnutls/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libgnutls-extra.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls-extra.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so -> libgnutls-extra.so.28.0.1
-lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so.28 -> libgnutls-extra.so.28.0.1
--rwxr-xr-x	root/root	usr/lib/libgnutls-extra.so.28.0.1
+lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so -> libgnutls-extra.so.28.0.2
+lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so.28 -> libgnutls-extra.so.28.0.2
+-rwxr-xr-x	root/root	usr/lib/libgnutls-extra.so.28.0.2
 -rw-r--r--	root/root	usr/lib/libgnutls-openssl.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so -> libgnutls-openssl.so.27.0.0
-lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so.27 -> libgnutls-openssl.so.27.0.0
--rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.so.27.0.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so -> libgnutls-openssl.so.27.0.1
+lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so.27 -> libgnutls-openssl.so.27.0.1
+-rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.so.27.0.1
 -rw-r--r--	root/root	usr/lib/libgnutls.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.0.1
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.0.1
--rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.0.1
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.0.2
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.0.2
+-rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.0.2
 -rw-r--r--	root/root	usr/lib/libgnutlsxx.a
 -rwxr-xr-x	root/root	usr/lib/libgnutlsxx.la
 lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so -> libgnutlsxx.so.28.0.0
@@ -662,6 +662,4 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_init.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_verify_crt.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_verify_named_crt.3.gz
-drwxr-xr-x	root/root	usr/man/man8/
--rw-r--r--	root/root	usr/man/man8/crywrap.8.gz
 drwxr-xr-x	root/root	usr/share/
