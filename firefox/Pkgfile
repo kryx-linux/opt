@@ -4,10 +4,10 @@
 # Depends on: libidl, gtk, python, alsa-lib, yasm, mesa3d
 
 name=firefox
-version=6.0.1
+version=6.0.2
 release=1
 source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
-        mozconfig)
+        mozconfig coreconf-linux3.patch)
     
 build() {
     export MOZ_CO_PROJECT=browser
@@ -16,9 +16,8 @@ build() {
     export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
     cd mozilla-release
+    patch -p1 -i $SRC/coreconf-linux3.patch
     sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
-    # fix broken part
-    cp security/coreconf/Linux2.6.mk security/coreconf/Linux3.0.mk
     ./configure
     make
 
