@@ -13,17 +13,17 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/wireshark
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libwireshark.la
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so.0 -> libwireshark.so.0.0.1
--rwxr-xr-x	root/root	usr/lib/libwireshark.so.0.0.1
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so.1 -> libwireshark.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib/libwireshark.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libwiretap.la
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so.0 -> libwiretap.so.0.0.1
--rwxr-xr-x	root/root	usr/lib/libwiretap.so.0.0.1
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so.1 -> libwiretap.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib/libwiretap.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libwsutil.la
-lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.0.0.0
-lrwxrwxrwx	root/root	usr/lib/libwsutil.so.0 -> libwsutil.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/libwsutil.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so.1 -> libwsutil.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib/libwsutil.so.1.0.0
 drwxr-xr-x	root/root	usr/lib/wireshark/
 drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/asn1.la
@@ -89,10 +89,12 @@ drwxr-xr-x	root/root	usr/share/wireshark/
 -rw-r--r--	root/root	usr/share/wireshark/dfilters
 -rw-r--r--	root/root	usr/share/wireshark/dftest.html
 drwxr-xr-x	root/root	usr/share/wireshark/diameter/
+-rw-r--r--	root/root	usr/share/wireshark/diameter/Cisco.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/Ericsson.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPGmb.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPRx.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPSh.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/Vodafone.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/chargecontrol.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/dictionary.dtd
 -rw-r--r--	root/root	usr/share/wireshark/diameter/dictionary.xml
@@ -132,6 +134,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/help/
 -rw-r--r--	root/root	usr/share/wireshark/ipmap.html
 -rw-r--r--	root/root	usr/share/wireshark/manuf
 -rw-r--r--	root/root	usr/share/wireshark/mergecap.html
+-rw-r--r--	root/root	usr/share/wireshark/pdml2html.xsl
 drwxr-xr-x	root/root	usr/share/wireshark/pixmaps/
 -rw-r--r--	root/root	usr/share/wireshark/pixmaps/hi16-app-wireshark.png
 -rw-r--r--	root/root	usr/share/wireshark/pixmaps/hi32-app-wireshark.png
@@ -175,6 +178,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.cosine
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.dhcp
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.digium
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.eltex
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.epygi
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.ericsson
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.erx
