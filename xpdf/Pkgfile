@@ -5,14 +5,14 @@
 # Depends on: lesstif
 
 name=xpdf
-version=3.02
+version=3.03
 release=7
-source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz
-  ftp://ftp.foolabs.com/pub/xpdf/$name-3.02pl{1,2,3,4,5}.patch)
+source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    cat $SRC/$name-3.02pl*.patch | patch -p1
+
+    sed -i 's/\(s = XmStringCreateLocalized(\)/\1(char *)/g' xpdf/XPDFViewer.cc
 
     ./configure \
         --prefix=/usr \
@@ -22,7 +22,9 @@ build() {
         --sysconfdir=/etc \
         --enable-a4-paper \
         --enable-opi \
-        --with-t1-library=no
+        --with-t1-library=no \
+        --mandir=/usr/man
+
     make
     make install DESTDIR=$PKG
 }

@@ -2,6 +2,7 @@ drwxr-xr-x	root/root	etc/
 -rw-r--r--	root/root	etc/xpdfrc
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/pdfdetach
 -rwxr-xr-x	root/root	usr/bin/pdffonts
 -rwxr-xr-x	root/root	usr/bin/pdfimages
 -rwxr-xr-x	root/root	usr/bin/pdfinfo
@@ -11,6 +12,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/xpdf
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/pdfdetach.1.gz
 -rw-r--r--	root/root	usr/man/man1/pdffonts.1.gz
 -rw-r--r--	root/root	usr/man/man1/pdfimages.1.gz
 -rw-r--r--	root/root	usr/man/man1/pdfinfo.1.gz
