@@ -1,18 +1,18 @@
-diff -Nru stunnel-4.40.orig/src/Makefile.in stunnel-4.40/src/Makefile.in
---- stunnel-4.40.orig/src/Makefile.in	2011-07-24 18:51:26.817760413 +0200
-+++ stunnel-4.40/src/Makefile.in	2011-07-24 18:52:09.849519637 +0200
-@@ -254,7 +254,7 @@
- INCLUDES = -I/usr/kerberos/include
+diff -Nru stunnel-4.44.orig/src/Makefile.in stunnel-4.44/src/Makefile.in
+--- stunnel-4.44.orig/src/Makefile.in	2011-09-18 10:30:18.379034964 +0200
++++ stunnel-4.44/src/Makefile.in	2011-09-18 10:31:40.922747057 +0200
+@@ -271,7 +271,7 @@
  
- # Additional compiler flags
--AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' -DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
-+AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"' -DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
+ # Additional preprocesor definitions
+ stunnel_CPPFLAGS = -I/usr/kerberos/include -I$(SSLDIR)/include \
+-	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' \
++	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"' \
+ 	-DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
  
  # Win32 executable
- EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak makew32.bat nogui.c os2.mak
-diff -Nru stunnel-4.40.orig/tools/stunnel.conf-sample.in stunnel-4.40/tools/stunnel.conf-sample.in
---- stunnel-4.40.orig/tools/stunnel.conf-sample.in	2011-07-24 18:51:26.814427202 +0200
-+++ stunnel-4.40/tools/stunnel.conf-sample.in	2011-07-24 18:58:14.352979341 +0200
+diff -Nru stunnel-4.44.orig/tools/stunnel.conf-sample.in stunnel-4.44/tools/stunnel.conf-sample.in
+--- stunnel-4.44.orig/tools/stunnel.conf-sample.in	2011-09-18 10:30:18.379034964 +0200
++++ stunnel-4.44/tools/stunnel.conf-sample.in	2011-09-18 10:30:54.207752510 +0200
 @@ -8,25 +8,33 @@
  
  ; A copy of some devices and system files is needed within the chroot jail
