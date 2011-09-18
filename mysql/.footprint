@@ -16,9 +16,11 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/mysql_client_test_embedded
 -rwxr-xr-x	root/root	usr/bin/mysql_config
 -rwxr-xr-x	root/root	usr/bin/mysql_convert_table_format
+-rwxr-xr-x	root/root	usr/bin/mysql_embedded
 -rwxr-xr-x	root/root	usr/bin/mysql_find_rows
 -rwxr-xr-x	root/root	usr/bin/mysql_fix_extensions
 -rwxr-xr-x	root/root	usr/bin/mysql_install_db
+-rwxr-xr-x	root/root	usr/bin/mysql_plugin
 -rwxr-xr-x	root/root	usr/bin/mysql_secure_installation
 -rwxr-xr-x	root/root	usr/bin/mysql_setpermission
 -rwxr-xr-x	root/root	usr/bin/mysql_tzinfo_to_sql
@@ -118,6 +120,7 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_socket.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_test_plugin.so
+-rw-r--r--	root/root	usr/lib/mysql/plugin/daemon_example.ini
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/libdaemon_example.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/mypluglib.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/qa_auth_client.so
@@ -146,6 +149,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/mysql_find_rows.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_fix_extensions.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_install_db.1.gz
+-rw-r--r--	root/root	usr/man/man1/mysql_plugin.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_secure_installation.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_setpermission.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_tzinfo_to_sql.1.gz
