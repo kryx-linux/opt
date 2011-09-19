@@ -24,9 +24,9 @@ drwxr-xr-x	root/root	usr/include/gnutls/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libgnutls-extra.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls-extra.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so -> libgnutls-extra.so.28.0.2
-lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so.28 -> libgnutls-extra.so.28.0.2
--rwxr-xr-x	root/root	usr/lib/libgnutls-extra.so.28.0.2
+lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so -> libgnutls-extra.so.28.1.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so.28 -> libgnutls-extra.so.28.1.0
+-rwxr-xr-x	root/root	usr/lib/libgnutls-extra.so.28.1.0
 -rw-r--r--	root/root	usr/lib/libgnutls-openssl.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.la
 lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so -> libgnutls-openssl.so.27.0.1
@@ -34,9 +34,9 @@ lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so.27 -> libgnutls-openssl.so.27.
 -rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.so.27.0.1
 -rw-r--r--	root/root	usr/lib/libgnutls.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.0.2
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.0.2
--rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.0.2
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.1.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.1.0
+-rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.1.0
 -rw-r--r--	root/root	usr/lib/libgnutlsxx.a
 -rwxr-xr-x	root/root	usr/lib/libgnutlsxx.la
 lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so -> libgnutlsxx.so.28.0.0
@@ -301,6 +301,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_obj_list_import_url.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_deinit.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_export_url.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_generate.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_get_info.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_get_pk_algorithm.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_import_url.3.gz
@@ -390,11 +391,14 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_get_pk_algorithm.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_get_pk_dsa_raw.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_get_pk_ecc_raw.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_get_pk_ecc_x962.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_get_pk_rsa_raw.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_get_preferred_hash_algorithm.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_get_verify_algorithm.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_dsa_raw.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_ecc_raw.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_ecc_x962.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_openpgp.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_pkcs11.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_pkcs11_url.3.gz
