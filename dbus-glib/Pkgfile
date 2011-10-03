@@ -6,15 +6,14 @@
 
 name=dbus-glib
 version=0.98
-release=1
+release=2
 source=(http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 	export PATH="$PATH:/usr/sbin"
 	./configure --prefix=/usr \
-		--disable-static \
-		--with-xml=expat
+		--disable-static
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/{etc,libexec,share}
