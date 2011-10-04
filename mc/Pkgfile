@@ -4,9 +4,9 @@
 # Depends on:  ncurses glib
 
 name=mc
-version=4.7.5.4
+version=4.7.5.5
 release=1
-source=(http://www.midnight-commander.org/downloads/$name-$version.tar.lzma)
+source=(http://www.midnight-commander.org/downloads/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
