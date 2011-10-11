@@ -17,10 +17,15 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/cpack.1.gz
 -rw-r--r--	root/root	usr/man/man1/ctest.1.gz
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/aclocal/
+-rw-r--r--	root/root	usr/share/aclocal/cmake.m4
 drwxr-xr-x	root/root	usr/share/cmake-2.8/
 drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/.NoDartCoverage
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/AddFileDependencies.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/AutomocInfo.cmake.in
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/BundleUtilities.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeASM-ATTInformation.cmake
@@ -59,11 +64,13 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineSystem.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineVSServicePack.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeExportBuildSettings.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFindBinUtils.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFindCodeBlocks.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFindEclipseCDT4.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFindFrameworks.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFindKDevelop3.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFindPackageMode.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFindWMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFindXCode.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeForceCompiler.cmake
@@ -83,6 +90,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeParseImplicitLinkInfo.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePlatformId.h.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePrintSystemInformation.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePushCheckState.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeRCCompiler.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeRCInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeSystem.cmake.in
@@ -100,8 +108,10 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestJavaCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestNMakeCLVersion.c
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestRCCompiler.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeTestWatcomVersion.c
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeUnixFindMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeVS10FindMake.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeVS11FindMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeVS6BackwardCompatibility.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeVS6FindMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeVS71FindMake.cmake
@@ -138,6 +148,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckCXXCompilerFlag.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckCXXSourceCompiles.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckCXXSourceRuns.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckCXXSymbolExists.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckForPthreads.c
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckFortranFunctionExists.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckFunctionExists.c
@@ -373,9 +384,14 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/FortranCInterface/Verify/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FortranCInterface/mysub.f
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FortranCInterface/symbol.c.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/GNUInstallDirs.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/GenerateExportHeader.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/GetPrerequisites.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/ITKCompatibility.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/InstallRequiredSystemLibraries.cmake
+drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/IntelVSImplicitPath/
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/IntelVSImplicitPath/CMakeLists.txt
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/IntelVSImplicitPath/detect.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/IntelVSImplicitPath/hello.f (EMPTY)
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/KDE3Macros.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/MacOSXBundleInfo.plist.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/MacOSXFrameworkInfo.plist.in
@@ -389,6 +405,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/AIX-GNU.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/AIX-VisualAge-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/AIX-VisualAge-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/AIX-VisualAge-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/AIX-XL-ASM.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/AIX-XL-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/AIX-XL-CXX.cmake
@@ -552,6 +569,9 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/TestForSTDNamespace.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/TestForSTDNamespace.cxx
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/UseEcos.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/UseJava.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/UseJavaClassFilelist.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/UseJavaSymlinks.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/UsePkgConfig.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/UseQt4.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/UseSWIG.cmake
@@ -561,7 +581,9 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Use_wxWindows.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/UsewxWidgets.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/VTKCompatibility.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/WriteBasicConfigVersionFile.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/ecos_clean.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/exportheader.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/kde3init_dummy.cpp.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/kde3uic.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/readme.txt
