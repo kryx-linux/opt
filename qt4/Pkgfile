@@ -7,7 +7,7 @@
 name=qt4
 version=4.7.4
 release=1
-source=(ftp://ftp.trolltech.com/pub/qt/source/qt-everywhere-opensource-src-$version.tar.gz)
+source=(http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-$version.tar.gz)
 
 build () {
     cd qt-everywhere-opensource-src-$version
