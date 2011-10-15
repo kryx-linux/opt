@@ -6,7 +6,7 @@
 # Nice to have: kqemu
 
 name=qemu
-version=0.15.0
+version=0.15.1
 release=1
 source=(http://wiki.qemu.org/download/qemu-$version.tar.gz)
 
