@@ -16,7 +16,7 @@ drwxr-xr-x	root/root	usr/include/fontforge/
 -rw-r--r--	root/root	usr/include/fontforge/chardata.h
 -rw-r--r--	root/root	usr/include/fontforge/charset.h
 -rw-r--r--	root/root	usr/include/fontforge/config.h
--rw-r--r--	root/root	usr/include/fontforge/configure-pfaedit.h
+-rw-r--r--	root/root	usr/include/fontforge/configure-fontforge.h
 -rw-r--r--	root/root	usr/include/fontforge/delta.h
 -rw-r--r--	root/root	usr/include/fontforge/dynamic.h
 -rw-r--r--	root/root	usr/include/fontforge/edgelist.h
@@ -25,6 +25,7 @@ drwxr-xr-x	root/root	usr/include/fontforge/
 -rw-r--r--	root/root	usr/include/fontforge/fffreetype.h
 -rw-r--r--	root/root	usr/include/fontforge/ffpython.h
 -rw-r--r--	root/root	usr/include/fontforge/fileutil.h
+-rw-r--r--	root/root	usr/include/fontforge/fontforge.h
 -rw-r--r--	root/root	usr/include/fontforge/fontforgevw.h
 -rw-r--r--	root/root	usr/include/fontforge/fvmetrics.h
 -rw-r--r--	root/root	usr/include/fontforge/gdraw.h
@@ -48,7 +49,6 @@ drwxr-xr-x	root/root	usr/include/fontforge/
 -rw-r--r--	root/root	usr/include/fontforge/namehash.h
 -rw-r--r--	root/root	usr/include/fontforge/nonlineartrans.h
 -rw-r--r--	root/root	usr/include/fontforge/ofl.h
--rw-r--r--	root/root	usr/include/fontforge/pfaedit.h
 -rw-r--r--	root/root	usr/include/fontforge/plugins.h
 -rw-r--r--	root/root	usr/include/fontforge/print.h
 -rw-r--r--	root/root	usr/include/fontforge/psfont.h
@@ -98,6 +98,12 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/sfddiff.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/fontforge/
+-rw-r--r--	root/root	usr/share/fontforge/Adobe-CNS1-5.cidmap
+-rw-r--r--	root/root	usr/share/fontforge/Adobe-GB1-5.cidmap
+-rw-r--r--	root/root	usr/share/fontforge/Adobe-Identity-0.cidmap
+-rw-r--r--	root/root	usr/share/fontforge/Adobe-Japan1-6.cidmap
+-rw-r--r--	root/root	usr/share/fontforge/Adobe-Japan2-0.cidmap
+-rw-r--r--	root/root	usr/share/fontforge/Adobe-Korea1-2.cidmap
 drwxr-xr-x	root/root	usr/share/fontforge/pixmaps/
 -rw-r--r--	root/root	usr/share/fontforge/pixmaps/colorwheel.png
 -rw-r--r--	root/root	usr/share/fontforge/pixmaps/editclear.png
