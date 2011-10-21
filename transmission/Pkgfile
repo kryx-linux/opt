@@ -4,7 +4,7 @@
 # Depends on:  curl libevent
 
 name=transmission
-version=2.41
+version=2.42
 release=1
 source=(http://download.m0k.org/$name/files/$name-$version.tar.xz)
 
@@ -14,9 +14,9 @@ build() {
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --disable-nls \
-                --disable-gtk \
                 --enable-cli \
-                --enable-daemon
+                --enable-daemon \
+                --without-gtk
     make
     make DESTDIR=$PKG install
 
