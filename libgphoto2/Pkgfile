@@ -15,7 +15,6 @@ build () {
     udevscriptdir=/lib/udev \
     ./configure --prefix=/usr \
                 --disable-nls \
-                --disable-static \
                 --mandir=/usr/man
 
     make
