@@ -1,6 +1,6 @@
 # Description: Gstreamer is a library that allows the construction of graphs of media-handling components.
 # URL: http://gstreamer.freedesktop.org/
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: glib libxml2 python
 
@@ -10,19 +10,19 @@ release=1
 source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.bz2)
 
 build() {
-  cd $name-$version
+	cd $name-$version
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--libexecdir=/usr/lib \
+		--disable-debug \
+		--disable-nls \
+		--disable-dependency-tracking \
+		--disable-valgrind \
+		--disable-examples
   
-  ./configure --prefix=/usr \
-              --mandir=/usr/man \
-              --libexecdir=/usr/lib \
-              --disable-static \
-              --disable-debug \
-              --disable-nls \
-              --disable-dependency-tracking \
-              --disable-valgrind \
-              --disable-examples
-  
-  make
-  make DESTDIR=$PKG install
-  rm -r $PKG/usr/share/gtk-doc
+	make
+	make DESTDIR=$PKG install
+	rm -r $PKG/usr/share/gtk-doc
 }
