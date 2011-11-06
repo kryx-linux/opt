@@ -4,10 +4,10 @@
 # Depends on: libidl, gtk, python, alsa-lib, yasm, mesa3d
 
 name=firefox
-version=7.0.1
+version=8.0
 release=1
 source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
-        mozconfig coreconf-linux3.patch)
+        mozconfig)
     
 build() {
     export MOZ_CO_PROJECT=browser
@@ -16,7 +16,6 @@ build() {
     export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
     cd mozilla-release
-    patch -p1 -i $SRC/coreconf-linux3.patch
     sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
     ./configure
     make
@@ -37,7 +36,4 @@ build() {
 
     install -d $PKG/etc/ld.so.conf.d
     echo "/usr/lib/$name" > $PKG/etc/ld.so.conf.d/$name.conf
-
-    # cleanup
-    rm $PKG/usr/lib/firefox/README.txt
 }
