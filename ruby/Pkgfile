@@ -7,14 +7,12 @@ name=ruby
 version=1.9.3-p0
 release=1
 source=(ftp://ftp.ruby-lang.org/pub/$name/1.9/$name-$version.tar.bz2 \
-        $name-arch.patch $name-install.patch)
+        $name-arch.patch)
 
 build () {
     cd $name-$version
 
     patch -p0 -i $SRC/$name-arch.patch
-    #patch -p1 -i $SRC/$name-install.patch
-   
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
