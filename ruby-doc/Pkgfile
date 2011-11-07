@@ -4,7 +4,7 @@
 # Depends on:  ruby
 
 name=ruby-doc
-version=1.9.2-p290
+version=1.9.3-p0
 release=1
 source=(ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-$version.tar.bz2)
 
