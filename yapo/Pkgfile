@@ -5,10 +5,11 @@
 
 name=yapo
 version=0.3.2
-release=1
+release=2
 source=(http://jue.li/crux/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
+    sed -ri 's/(Config)($|[.])/YapoConfig\2/' yapo.rb
     make DESTDIR=$PKG install
 }
