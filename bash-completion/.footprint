@@ -1,13 +1,12 @@
 drwxr-xr-x	root/root	etc/
-drwxr-xr-x	root/root	etc/profile.d/
--rw-r--r--	root/root	etc/profile.d/bash_completion.sh
+-rw-r--r--	root/root	etc/bash_completion
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/bash-completion.pc
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/bash-completion/
--rw-------	root/root	usr/share/bash-completion/bash_completion
+-rwxr-xr-x	root/root	usr/share/bash-completion/bash_completion
 drwxr-xr-x	root/root	usr/share/bash-completion/completions/
 -rw-r--r--	root/root	usr/share/bash-completion/completions/a2x
 -rw-r--r--	root/root	usr/share/bash-completion/completions/abook
