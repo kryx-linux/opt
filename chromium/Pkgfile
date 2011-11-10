@@ -2,12 +2,12 @@
 # URL: http://chromium.org/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Tadeusz Sosnierz, tadzikes gmail com
-# Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt sqlite3 openssl yasm xorg-libxt alsa-lib
+# Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt sqlite3 yasm xorg-libxt alsa-lib krb5
 
 name=chromium
-version=15.0.858.0
+version=17.0.934.0
 release=1
-source=(http://build.chromium.org/official/$name-$version.tar.bz2 \
+source=(http://gsdview.appspot.com/chromium-browser-official/$name-$version.tar.bz2 \
         $name.sh)
 
 build() {
@@ -39,7 +39,8 @@ build() {
         -Duse_cups=0 \
 	-Duse_gnome_keyring=0 \
 	-Dlinux_link_gnome_keyring=0 \
-        -Denable_webrtc=0
+        -Denable_webrtc=0 \
+        -Ddisable_nacl=1
 
   make chrome chrome_sandbox BUILDTYPE=Release
 
