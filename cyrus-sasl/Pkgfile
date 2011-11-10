@@ -28,7 +28,7 @@ build(){
 	    --enable-shared \
       --mandir=/usr/man
 
-	make
+	make -j1
 	make DESTDIR=$PKG install
 
 	mkdir -p \
