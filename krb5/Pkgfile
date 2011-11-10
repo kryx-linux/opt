@@ -1,0 +1,29 @@
+# Description: Network Authentication Protocol
+# URL: http://web.mit.edu/kerberos
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Alan Mizrahi, alan at mizrahi dot com dot ve
+# Depends on: openldap
+
+name=krb5
+version=1.9.2
+release=1
+source=(http://web.mit.edu/kerberos/dist/$name/${version%.*}/$name-$version-signed.tar)
+
+build() {
+	tar -xf $SRC/$name-$version-signed.tar
+	tar -xzf $SRC/$name-$version.tar.gz
+
+    	cd $name-$version/src
+
+	export CFLAGS="-I/usr/include/et"
+	./configure --prefix=/usr \
+		    --with-system-et \
+                    --with-system-ss
+
+	make
+    	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
+
+	# Comment this if you want kerberized versions of ftp and telnet
+	rm -rf $PKG/usr/bin/{ftp,telnet} $PKG/usr/man/man1/{ftp,telnet}.1
+}
