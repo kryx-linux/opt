@@ -5,9 +5,9 @@
 # Depends on:
 
 name=flash-player-plugin
-version=10.3.183.10
+version=11.1.102.55
 release=1
-source=(http://fpdownload.macromedia.com/get/flashplayer/current/flash-plugin-$version-release.i386.rpm)
+source=(http://fpdownload.macromedia.com/get/flashplayer/pdc/$version/flash-plugin-$version-release.i386.rpm)
 
 build() {
   install -D -m 0755 usr/lib/flash-plugin/libflashplayer.so \
