@@ -5,9 +5,9 @@
 # Nice to have: tk
 
 name=git
-version=1.7.6
+version=1.7.7.3
 release=1
-source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
+source=(https://git-core.googlecode.com/files/$name-{,manpages-}$version.tar.gz)
 
 build() {
 	cd $name-$version

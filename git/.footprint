@@ -167,6 +167,22 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-web--browse
 -rwxr-xr-x	root/root	usr/lib/git-core/git-whatchanged
 -rwxr-xr-x	root/root	usr/lib/git-core/git-write-tree
+drwxr-xr-x	root/root	usr/lib/git-core/mergetools/
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/araxis
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/bc3
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/defaults
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/diffuse
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/ecmerge
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/emerge
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/kdiff3
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/kompare
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/meld
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/opendiff
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/p4merge
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/tkdiff
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/tortoisemerge
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/vim
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/xxdiff
 drwxr-xr-x	root/root	usr/lib/perl5/
 drwxr-xr-x	root/root	usr/lib/perl5/5.12/
 drwxr-xr-x	root/root	usr/lib/perl5/5.12/linux-thread-multi/
@@ -297,6 +313,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-remote-ext.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-remote-fd.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-remote-helpers.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-remote-testgit.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-remote.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-repack.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-replace.1.gz
@@ -358,6 +375,7 @@ drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/gitcvs-migration.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitdiffcore.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitglossary.7.gz
+-rw-r--r--	root/root	usr/man/man7/gitnamespaces.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitrevisions.7.gz
 -rw-r--r--	root/root	usr/man/man7/gittutorial-2.7.gz
 -rw-r--r--	root/root	usr/man/man7/gittutorial.7.gz
@@ -370,8 +388,6 @@ drwxr-xr-x	root/root	usr/share/git-core/templates/branches/
 drwxr-xr-x	root/root	usr/share/git-core/templates/hooks/
 -rwxr-xr-x	root/root	usr/share/git-core/templates/hooks/applypatch-msg.sample
 -rwxr-xr-x	root/root	usr/share/git-core/templates/hooks/commit-msg.sample
--rwxr-xr-x	root/root	usr/share/git-core/templates/hooks/post-commit.sample
--rwxr-xr-x	root/root	usr/share/git-core/templates/hooks/post-receive.sample
 -rwxr-xr-x	root/root	usr/share/git-core/templates/hooks/post-update.sample
 -rwxr-xr-x	root/root	usr/share/git-core/templates/hooks/pre-applypatch.sample
 -rwxr-xr-x	root/root	usr/share/git-core/templates/hooks/pre-commit.sample
