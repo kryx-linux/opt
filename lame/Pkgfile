@@ -4,7 +4,7 @@
 # Depends on:  ncurses
 
 name=lame
-version=3.99.1
+version=3.99.2
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/${version%.*}/$name-$version.tar.gz)
 
@@ -15,7 +15,7 @@ build () {
                 --disable-analyzer-hooks \
                 --disable-gtktest \
                 --enable-nasm
-    make -j1
+    make
     make DESTDIR=$PKG install
     rm -r $PKG/usr/share
 }
