@@ -5,7 +5,7 @@
 name=libaio
 version=0.3.109
 release=1
-source=(ftp://ftp.kernel.org/pub/linux/libs/aio/$name-$version.tar.bz2)
+source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
