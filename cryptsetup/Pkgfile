@@ -4,8 +4,8 @@
 # Depends on: libdevmapper,  util-linux-ng, libgcrypt, popt
 
 name=cryptsetup
-version=1.2.0
-release=2
+version=1.4.1
+release=1
 source=(http://$name.googlecode.com/files/$name-$version.tar.bz2)
 
 build() {
