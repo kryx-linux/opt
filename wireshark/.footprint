@@ -13,13 +13,13 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/wireshark
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libwireshark.la
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so.1 -> libwireshark.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libwireshark.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.1.1.0
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so.1 -> libwireshark.so.1.1.0
+-rwxr-xr-x	root/root	usr/lib/libwireshark.so.1.1.0
 -rwxr-xr-x	root/root	usr/lib/libwiretap.la
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so.1 -> libwiretap.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libwiretap.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.1.0.1
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so.1 -> libwiretap.so.1.0.1
+-rwxr-xr-x	root/root	usr/lib/libwiretap.so.1.0.1
 -rwxr-xr-x	root/root	usr/lib/libwsutil.la
 lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libwsutil.so.1 -> libwsutil.so.1.0.0
@@ -149,8 +149,11 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.3gpp
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.3gpp2
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.acc
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.acme
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.airespace
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alcatel
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alcatel.esam
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alcatel.sr
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alteon
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.altiga
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alvarion
@@ -159,6 +162,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.aruba
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.ascend
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.asn
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.audiocodes
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.avaya
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.azaire
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.bay
@@ -194,6 +198,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.h3c
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.hp
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.huawei
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.iea
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.infonet
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.ipunplugged
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.issanni
@@ -210,6 +215,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.microsoft
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.mikrotik
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.motorola
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.motorola.wimax
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.navini
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.netscreen
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.networkphysics
@@ -238,12 +244,16 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc3580
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc4072
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc4372
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc4603
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc4675
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc4679
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc4818
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc4849
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5090
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5176
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5580
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5607
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5904
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.riverstone
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.roaringpenguin
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.shasta
@@ -258,8 +268,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.telkom
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.trapeze
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.tropos
--rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.tunnel
--rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.unisphere
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.ukerna
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.unix
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.usr
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.utstarcom
@@ -268,7 +277,9 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.vqp
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.walabi
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.waverider
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.wichorus
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.wimax
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.wimax.wichorus
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.wispr
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.xedia
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.xylan
