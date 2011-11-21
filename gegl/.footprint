@@ -9,6 +9,7 @@ drwxr-xr-x	root/root	usr/include/gegl-0.1/
 -rw-r--r--	root/root	usr/include/gegl-0.1/gegl-chant.h
 -rw-r--r--	root/root	usr/include/gegl-0.1/gegl-color.h
 -rw-r--r--	root/root	usr/include/gegl-0.1/gegl-curve.h
+-rw-r--r--	root/root	usr/include/gegl-0.1/gegl-enums.h
 -rw-r--r--	root/root	usr/include/gegl-0.1/gegl-lookup.h
 -rw-r--r--	root/root	usr/include/gegl-0.1/gegl-matrix.h
 -rw-r--r--	root/root	usr/include/gegl-0.1/gegl-paramspecs.h
@@ -37,8 +38,6 @@ drwxr-xr-x	root/root	usr/include/gegl-0.1/operation/
 -rw-r--r--	root/root	usr/include/gegl-0.1/operation/gegl-operation.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/gegl-0.1/
--rwxr-xr-x	root/root	usr/lib/gegl-0.1/add-noise.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.1/add-noise.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/add.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/add.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/affine.la
@@ -97,6 +96,10 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.1/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/dst-over.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/dst.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/dst.so
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/edge-laplace.la
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/edge-laplace.so
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/edge-sobel.la
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/edge-sobel.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/exclusion.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/exclusion.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/exp-combine.la
@@ -127,6 +130,8 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.1/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/invert.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/jpg-load.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/jpg-load.so
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/jpg-save.la
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/jpg-save.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/layer.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/layer.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/levels.la
@@ -139,8 +144,10 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.1/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/magick-load.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/mantiuk06.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/mantiuk06.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.1/map_absolute.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.1/map_absolute.so
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/map-absolute.la
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/map-absolute.so
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/map-relative.la
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/map-relative.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/mblur.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/mblur.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/mirrors.la
@@ -151,6 +158,8 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.1/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/motion-blur.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/multiply.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/multiply.so
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/noise-reduction.la
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/noise-reduction.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/noise.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/noise.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/nop.la
@@ -197,6 +206,8 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.1/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/save.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/screen.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/screen.so
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/sdl-display.la
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/sdl-display.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/snn-mean.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/snn-mean.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/soft-light.la
@@ -243,6 +254,8 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.1/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/vector-fill.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/vector-stroke.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/vector-stroke.so
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/vignette.la
+-rwxr-xr-x	root/root	usr/lib/gegl-0.1/vignette.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/weighted-blend.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/weighted-blend.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/whitebalance.la
@@ -252,8 +265,8 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.1/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/xor.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.1/xor.so
 -rwxr-xr-x	root/root	usr/lib/libgegl-0.1.la
-lrwxrwxrwx	root/root	usr/lib/libgegl-0.1.so -> libgegl-0.1.so.0.105.1
-lrwxrwxrwx	root/root	usr/lib/libgegl-0.1.so.0 -> libgegl-0.1.so.0.105.1
--rwxr-xr-x	root/root	usr/lib/libgegl-0.1.so.0.105.1
+lrwxrwxrwx	root/root	usr/lib/libgegl-0.1.so -> libgegl-0.1.so.0.107.1
+lrwxrwxrwx	root/root	usr/lib/libgegl-0.1.so.0 -> libgegl-0.1.so.0.107.1
+-rwxr-xr-x	root/root	usr/lib/libgegl-0.1.so.0.107.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gegl.pc
