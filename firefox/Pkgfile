@@ -4,7 +4,7 @@
 # Depends on: libidl, gtk, python, alsa-lib, yasm, mesa3d
 
 name=firefox
-version=8.0
+version=8.0.1
 release=1
 source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
         mozconfig)
