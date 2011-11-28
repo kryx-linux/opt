@@ -5,7 +5,7 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt sqlite3 yasm xorg-libxt alsa-lib krb5
 
 name=chromium
-version=17.0.934.0
+version=17.0.952.0
 release=1
 source=(http://gsdview.appspot.com/chromium-browser-official/$name-$version.tar.bz2 \
         $name.sh)

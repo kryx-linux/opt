@@ -6,6 +6,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/
 -rw-r--r--	root/root	usr/lib/chromium/chrome.pak
 -rwxr-xr-x	root/root	usr/lib/chromium/chromium
 -r-sr-xr-x	root/root	usr/lib/chromium/chromium-sandbox
+-rw-r--r--	root/root	usr/lib/chromium/content_resources.pak
 -rwxr-xr-x	root/root	usr/lib/chromium/libffmpegsumo.so
 drwxr-xr-x	root/root	usr/lib/chromium/locales/
 -rw-r--r--	root/root	usr/lib/chromium/locales/en-US.pak
@@ -179,6 +180,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/resourceView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/resourcesPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/scriptsPanel.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/splitView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/textPrompt.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/textViewer.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/timelinePanel.css
