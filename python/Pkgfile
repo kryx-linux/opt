@@ -5,12 +5,16 @@
 
 name=python
 version=2.7.2
-release=1
-source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.xz)
+release=2
+source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.xz
+        configure_linux2.patch)
 
 build () {
     cd Python-$version
 
+    # http://bugs.python.org/issue12326
+    patch -p1 -i $SRC/configure_linux2.patch
+    
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
