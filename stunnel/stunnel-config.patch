@@ -1,6 +1,6 @@
-diff -Nru stunnel-4.44.orig/src/Makefile.in stunnel-4.44/src/Makefile.in
---- stunnel-4.44.orig/src/Makefile.in	2011-09-18 10:30:18.379034964 +0200
-+++ stunnel-4.44/src/Makefile.in	2011-09-18 10:31:40.922747057 +0200
+diff -Nru stunnel-4.50.orig/src/Makefile.in stunnel-4.50/src/Makefile.in
+--- stunnel-4.50.orig/src/Makefile.in	2011-12-04 09:43:44.928367692 +0100
++++ stunnel-4.50/src/Makefile.in	2011-12-04 09:44:40.733021677 +0100
 @@ -271,7 +271,7 @@
  
  # Additional preprocesor definitions
@@ -10,10 +10,10 @@ diff -Nru stunnel-4.44.orig/src/Makefile.in stunnel-4.44/src/Makefile.in
  	-DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
  
  # Win32 executable
-diff -Nru stunnel-4.44.orig/tools/stunnel.conf-sample.in stunnel-4.44/tools/stunnel.conf-sample.in
---- stunnel-4.44.orig/tools/stunnel.conf-sample.in	2011-09-18 10:30:18.379034964 +0200
-+++ stunnel-4.44/tools/stunnel.conf-sample.in	2011-09-18 10:30:54.207752510 +0200
-@@ -8,25 +8,33 @@
+diff -Nru stunnel-4.50.orig/tools/stunnel.conf-sample.in stunnel-4.50/tools/stunnel.conf-sample.in
+--- stunnel-4.50.orig/tools/stunnel.conf-sample.in	2011-12-04 09:43:44.931700905 +0100
++++ stunnel-4.50/tools/stunnel.conf-sample.in	2011-12-04 09:48:22.478352458 +0100
+@@ -9,25 +9,33 @@
  
  ; A copy of some devices and system files is needed within the chroot jail
  ; Chroot conflicts with configuration file reload and many other features
@@ -40,9 +40,9 @@ diff -Nru stunnel-4.44.orig/tools/stunnel.conf-sample.in stunnel-4.44/tools/stun
 +; Enable or disable the use of libwrap
 +libwrap = yes
  
- ; *****************************************************************************
- ; * Service Defaults (may also be specified in individual service sections)   *
- ; *****************************************************************************
+ ; **************************************************************************
+ ; * Service defaults may also be specified in individual service sections  *
+ ; **************************************************************************
  
  ; Certificate/key is needed in server mode and optional in client mode
 -cert = @prefix@/etc/stunnel/mail.pem
