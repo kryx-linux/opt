@@ -4,7 +4,7 @@
 # Depends on:  samba keyutils
 
 name=cifs-utils
-version=5.1
+version=5.2
 release=1
 source=(ftp://ftp.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2)
 
@@ -13,5 +13,4 @@ build () {
     ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
-    rm -r $PKG/usr/bin
 }
