@@ -5,8 +5,8 @@
 
 name=emacs
 version=23.3
-release=2
-source=(http://ftp.gnu.org/gnu/$name/$name-23.3a.tar.gz
+release=3
+source=(http://ftp.gnu.org/gnu/$name/$name-${version}b.tar.gz
 	$name-$version-etc-blacklist)
 
 build() {
