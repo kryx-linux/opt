@@ -2,7 +2,7 @@
 # URL: http://freedesktop.org/Software/LibXklavier
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: libxml2 iso-codes
+# Depends on: libxml2 iso-codes xorg-libx11
 
 name=libxklavier
 version=5.1
