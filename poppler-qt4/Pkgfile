@@ -1,11 +1,11 @@
-# Description: GLib-based shared library for poppler
+# Description: QT4-based shared library for poppler
 # URL:         http://poppler.freedesktop.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  qt4 poppler
 
 name=poppler-qt4
-version=0.16.7
-release=2
+version=0.18.2
+release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.gz)
 
 build() {
@@ -15,8 +15,7 @@ build() {
                 --mandir=/usr/man \
                 --enable-{zlib,libjpeg,libpng,cms} \
                 --disable-utils \
-                --disable-abiword-output \
-                --disable-poppler-{glib,qt,cpp}
+                --disable-poppler-{glib,cpp}
 
     make
     make DESTDIR=$PKG install
