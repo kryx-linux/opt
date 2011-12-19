@@ -4,7 +4,7 @@
 # Depends on:  glib poppler
 
 name=poppler-glib
-version=0.16.7
+version=0.18.2
 release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.gz)
 
@@ -15,13 +15,13 @@ build() {
                 --mandir=/usr/man \
                 --enable-{zlib,libjpeg,libpng,cms} \
                 --disable-utils \
-                --disable-{abiword,splash}-output \
-                --disable-poppler-{qt4,qt,cpp}
+                --disable-gtk-test \
+                --disable-poppler-{qt4,cpp}
 
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/share
-    rm $PKG/usr/lib/pkgconfig/poppler{,-cairo}.pc
+    rm -r $PKG/usr/{bin,share}
+    rm $PKG/usr/lib/pkgconfig/poppler{,-cairo,-splash}.pc
     rm $PKG/usr/lib/libpoppler.*
 }
