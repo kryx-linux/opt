@@ -5,7 +5,7 @@
 # Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus
 
 name=qt4
-version=4.7.4
+version=4.8.0
 release=1
 source=(http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-$version.tar.gz)
 
@@ -22,7 +22,7 @@ build () {
                 -libdir /usr/share/qt4/lib \
                 -plugindir /usr/share/qt4/plugins \
                 -platform linux-g++ -release -shared -sm \
-                -nis -verbose -qt-gif -system-zlib \
+                -nis -verbose -system-zlib \
                 -system-lib{png,jpeg} -xmlpatterns \
                 -no-{cups,fast,nas-sound,phonon} \
                 -x{cursor,inerama,kb,randr,render} \
