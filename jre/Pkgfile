@@ -4,9 +4,9 @@
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
-version=1.7.0_01
+version=1.7.0_02
 release=1
-source=(http://download.oracle.com/otn-pub/java/jdk/7u1-b08/$name-7u1-linux-i586.tar.gz)
+source=(http://download.oracle.com/otn-pub/java/jdk/7u2-b13/$name-7u2-linux-i586.tar.gz)
 
 build(){
     cd $name$version
