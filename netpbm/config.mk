@@ -8,9 +8,9 @@
 # This file is meant to contain variable settings that customize the
 # build for a particular target system configuration.
 
-# The distribution contains the file Makefile.config.in.  You edit
-# Makefile.config.in in ways relevant to your particular environment 
-# to create Makefile.config.  The "configure" program will do this
+# The distribution contains the file config.mk.in.  You edit
+# config.mk.in in ways relevant to your particular environment 
+# to create config.mk.  The "configure" program will do this
 # for you in simple cases.
 
 # Some of the variables that the including make file must set for this
@@ -101,6 +101,7 @@ HAVE_INT64 = Y
 CC_FOR_BUILD = $(CC)
 LD_FOR_BUILD = $(LD)
 CFLAGS_FOR_BUILD = $(CFLAGS)
+LDFLAGS_FOR_BUILD = $(LDFLAGS)
 
 # MAKE is set automatically by Make to what was used to invoke Make.
 
@@ -157,7 +158,7 @@ LEX = flex
 # -pedantic isn't a problem because it causes at worst a warning.
 #CFLAGS = -O3 -ffast-math -pedantic -fno-common \
 #          -Wall -Wno-uninitialized -Wmissing-declarations -Wimplicit \
-#          -Wwrite-string -Wmissing-prototypes -Wundef
+#          -Wwrite-strings -Wmissing-prototypes -Wundef -Wno-unknown-pragmas
 # The merged programs have a main_XXX subroutine instead of main(),
 # which would cause a warning with -Wmissing-declarations or 
 # -Wmissing-prototypes.
@@ -252,6 +253,17 @@ LDSHLIB = -shared -Wl,-soname,$(SONAME)
 #LDSHLIB = -shared
 #AIX Visual Age C:
 #LDSHLIB = -qmkshrobj
+#Mac OSX:
+# According to experiments done by Peter A Crowley in May 2007, if
+# libnetpbm goes in a standard place such as /usr/local/lib,
+# programs need not be built with libnetpbm's location included.
+# But if it goes elsewhere, the link-editor must include the
+# location in the executable.  It finds the runtime location by
+# looking inside the library.  The information in the library
+# comes from the install_name option with which the library was
+# built.  It's an alternative to the -rpath option on other systems.
+#LDSHLIB=-dynamiclib
+#LDSHLIB=-dynamiclib -install_name $(NETPBMLIB_RUNTIME_PATH)/libnetpbm.$(MAJ).dylib
 
 # LDRELOC is the command to combine two .o files (relocateable object files)
 # into a single .o file that can later be linked into something else.  NONE
@@ -285,7 +297,7 @@ LDRELOC = NONE
 # know why -- history seems to be repeating itself.  2005.02.23.
 
 CFLAGS_SHLIB = 
-# Solaris or SunOS with gcc, and NetBSD:
+# Gcc:
 #CFLAGS_SHLIB = -fpic
 #CFLAGS_SHLIB = -fPIC
 # Sun compiler:
@@ -306,7 +318,7 @@ CFLAGS_SHLIB =
 
 SHLIB_CLIB = -lc
 # SCO:
-SHLIB_CLIB =
+#SHLIB_CLIB =
 
 # On some systems you have to build into an executable the list of
 # directories where its dynamically linked libraries can be found at
@@ -416,6 +428,14 @@ JPEGHDR_DIR =
 # files will use that program if it exists (must be in the PATH).  In that
 # case, PNGLIB and PNGHDR_DIR are irrelevant, but PNGVER is still meaningful,
 # because the make file runs 'libpng$(PNGVER)-config'.
+#
+# Even more recent versions have the more modern Pkgconfig database entry
+# to tell how to link it.  The make files will try to use that first.
+#
+# The normal way to choose the libpng the Netpbm build uses from among multiple
+# versions on your system is not to mess with the variables below, but rather
+# to mess with PKG_CONFIG_PATH or PATH environment variable so that the version
+# you want to use appears first in the search path.
 
 PNGLIB = NONE
 PNGHDR_DIR =
@@ -497,10 +517,6 @@ NETWORKLD =
 #NETWORKLD = -lsocket -lnsl
 # SCO:
 #NETWORKLD = -lsocket, -lresolv
-
-VMS = 
-#VMS:
-#VMS = yes
 
 # DONT_HAVE_PROCESS_MGMT is Y if this system doesn't have the usual
 # Unix process management stuff - fork, wait, etc.  N for a regular Unix
@@ -630,20 +646,19 @@ NETPBM_DOCURL = http://netpbm.sourceforge.net/doc/
 
 
 
-####Lines above were copied from Makefile.config.in by 'configure'.
+####Lines above were copied from config.mk.in by 'configure'.
 ####Lines below were added by 'configure' based on the GNU platform.
 DEFAULT_TARGET = nonmerge
 NETPBMLIBTYPE=unixshared
 NETPBMLIBSUFFIX=so
 STATICLIB_TOO=y
-CFLAGS = #CFLAGS#
+CFLAGS = #CFLAGS# -O3 -ffast-math -pedantic -fno-common -Wall -Wno-uninitialized -Wmissing-declarations -Wimplicit -Wwrite-strings -Wmissing-prototypes -Wundef -Wno-unknown-pragmas
 CFLAGS_MERGE = -Wno-missing-declarations -Wno-missing-prototypes
 LDRELOC = ld --reloc
 LINKER_CAN_DO_EXPLICIT_LIBRARY=Y
 LINKERISCOMPILER = Y
+CFLAGS_SHLIB += -fPIC
 TIFFLIB = libtiff.so
 JPEGLIB = libjpeg.so
-PNGLIB = libpng.so
 ZLIB = libz.so
-X11LIB = /usr/lib/libX11.so
 NETPBM_DOCURL = http://netpbm.sourceforge.net/doc/

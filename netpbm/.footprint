@@ -26,7 +26,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/hdifftopam
 -rwxr-xr-x	root/root	usr/bin/hipstopgm
 -rwxr-xr-x	root/root	usr/bin/hpcdtoppm
--rwxr-xr-x	root/root	usr/bin/icontopbm
+lrwxrwxrwx	root/root	usr/bin/icontopbm -> sunicontopnm
 -rwxr-xr-x	root/root	usr/bin/ilbmtoppm
 -rwxr-xr-x	root/root	usr/bin/imgtoppm
 -rwxr-xr-x	root/root	usr/bin/infotopam
@@ -57,6 +57,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamedge
 -rwxr-xr-x	root/root	usr/bin/pamendian
 -rwxr-xr-x	root/root	usr/bin/pamenlarge
+-rwxr-xr-x	root/root	usr/bin/pamexec
 -rwxr-xr-x	root/root	usr/bin/pamfile
 -rwxr-xr-x	root/root	usr/bin/pamfixtrunc
 -rwxr-xr-x	root/root	usr/bin/pamflip
@@ -66,6 +67,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamlookup
 -rwxr-xr-x	root/root	usr/bin/pammasksharpen
 -rwxr-xr-x	root/root	usr/bin/pammixinterlace
+-rwxr-xr-x	root/root	usr/bin/pammosaicknit
 -rwxr-xr-x	root/root	usr/bin/pamoil
 -rwxr-xr-x	root/root	usr/bin/pampaintspill
 -rwxr-xr-x	root/root	usr/bin/pamperspective
@@ -73,6 +75,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pampop9
 -rwxr-xr-x	root/root	usr/bin/pamrecolor
 -rwxr-xr-x	root/root	usr/bin/pamrgbatopng
+-rwxr-xr-x	root/root	usr/bin/pamrubber
 -rwxr-xr-x	root/root	usr/bin/pamscale
 -rwxr-xr-x	root/root	usr/bin/pamseq
 -rwxr-xr-x	root/root	usr/bin/pamsharpmap
@@ -101,13 +104,14 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamtopdbimg
 -rwxr-xr-x	root/root	usr/bin/pamtopfm
 -rwxr-xr-x	root/root	usr/bin/pamtopnm
+-rwxr-xr-x	root/root	usr/bin/pamtosrf
 -rwxr-xr-x	root/root	usr/bin/pamtosvg
 -rwxr-xr-x	root/root	usr/bin/pamtotga
 -rwxr-xr-x	root/root	usr/bin/pamtotiff
 -rwxr-xr-x	root/root	usr/bin/pamtouil
 -rwxr-xr-x	root/root	usr/bin/pamtoxvmini
 -rwxr-xr-x	root/root	usr/bin/pamundice
--rwxr-xr-x	root/root	usr/bin/pamx
+-rwxr-xr-x	root/root	usr/bin/pamwipeout
 -rwxr-xr-x	root/root	usr/bin/pbmclean
 -rwxr-xr-x	root/root	usr/bin/pbmlife
 -rwxr-xr-x	root/root	usr/bin/pbmmake
@@ -133,7 +137,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pbmtogem
 -rwxr-xr-x	root/root	usr/bin/pbmtogo
 -rwxr-xr-x	root/root	usr/bin/pbmtoibm23xx
--rwxr-xr-x	root/root	usr/bin/pbmtoicon
+lrwxrwxrwx	root/root	usr/bin/pbmtoicon -> pbmtosunicon
 -rwxr-xr-x	root/root	usr/bin/pbmtolj
 -rwxr-xr-x	root/root	usr/bin/pbmtoln03
 -rwxr-xr-x	root/root	usr/bin/pbmtolps
@@ -150,6 +154,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pbmtoppa
 -rwxr-xr-x	root/root	usr/bin/pbmtopsg3
 -rwxr-xr-x	root/root	usr/bin/pbmtoptx
+-rwxr-xr-x	root/root	usr/bin/pbmtosunicon
 -rwxr-xr-x	root/root	usr/bin/pbmtowbmp
 -rwxr-xr-x	root/root	usr/bin/pbmtox10bm
 -rwxr-xr-x	root/root	usr/bin/pbmtoxbm
@@ -279,6 +284,7 @@ lrwxrwxrwx	root/root	usr/bin/ppmnorm -> pnmnorm
 -rwxr-xr-x	root/root	usr/bin/ppmshift
 -rwxr-xr-x	root/root	usr/bin/ppmspread
 -rwxr-xr-x	root/root	usr/bin/ppmtoacad
+-rwxr-xr-x	root/root	usr/bin/ppmtoapplevol
 -rwxr-xr-x	root/root	usr/bin/ppmtoarbtxt
 -rwxr-xr-x	root/root	usr/bin/ppmtoascii
 -rwxr-xr-x	root/root	usr/bin/ppmtobmp
@@ -327,6 +333,8 @@ lrwxrwxrwx	root/root	usr/bin/ppmtouil -> pamtouil
 -rwxr-xr-x	root/root	usr/bin/spctoppm
 -rwxr-xr-x	root/root	usr/bin/spottopgm
 -rwxr-xr-x	root/root	usr/bin/sputoppm
+-rwxr-xr-x	root/root	usr/bin/srftopam
+-rwxr-xr-x	root/root	usr/bin/sunicontopnm
 -rwxr-xr-x	root/root	usr/bin/svgtopam
 -rwxr-xr-x	root/root	usr/bin/tgatoppm
 -rwxr-xr-x	root/root	usr/bin/thinkjettopbm
@@ -348,6 +356,7 @@ drwxr-xr-x	root/root	usr/include/netpbm/
 -rw-r--r--	root/root	usr/include/netpbm/colorname.h
 -rw-r--r--	root/root	usr/include/netpbm/mallocvar.h
 -rw-r--r--	root/root	usr/include/netpbm/pam.h
+-rw-r--r--	root/root	usr/include/netpbm/pamdraw.h
 -rw-r--r--	root/root	usr/include/netpbm/pammap.h
 -rw-r--r--	root/root	usr/include/netpbm/pbm.h
 -rw-r--r--	root/root	usr/include/netpbm/pbmfont.h
@@ -364,8 +373,10 @@ drwxr-xr-x	root/root	usr/include/netpbm/
 -rw-r--r--	root/root	usr/include/netpbm/ppmfloyd.h
 -rw-r--r--	root/root	usr/include/netpbm/shhopt.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.10 -> libnetpbm.so.10.52
--rwxr-xr-x	root/root	usr/lib/libnetpbm.so.10.52
+-rw-r--r--	root/root	usr/lib/libnetpbm.a
+lrwxrwxrwx	root/root	usr/lib/libnetpbm.so -> libnetpbm.so.11
+lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.11 -> libnetpbm.so.11.56
+-rwxr-xr-x	root/root	usr/lib/libnetpbm.so.11.56
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/netpbm/
 -rw-r--r--	root/root	usr/share/netpbm/palmcolor8.map

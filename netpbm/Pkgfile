@@ -1,22 +1,31 @@
-# Maintainer: Antti Nykanen, aon at iki dot fi
-# Description: A toolkit for manipulation of graphic images
-# URL: http://netpbm.sf.net
-# Depends on: ghostscript
+# Description: A set of utilities for converting to/from the netpbm (and related) formats.
+# URL: http://netpbm.sourceforge.net/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Antti Nykanen, aon at iki dot fi
+# Depends on: libjpeg libpng libtiff zlib libxml2
+# Optional: xorg-libx11
 
 name=netpbm
-version=10.52.3
+version=10.56.00
 release=1
-source=(http://crux.nu/files/distfiles/$name-$version.tar.xz
-	config.mk)
+source=(http://www.hvlinux.net/crux/distfiles/$name/$name-$version.tar.bz2
+	config.mk netpbm-10.34-build.patch)
 
 build() {
-	export MAKEFLAGS="$MAKEFLAGS -j1"
+	cd $name-$version
 
-	cd netpbm-$version
+	unset MAKEFLAGS
+	patch -p 1 -i $SRC/netpbm-10.34-build.patch
+
 	sed -e "s|#CFLAGS#|$CFLAGS|" $SRC/config.mk > config.mk
-	make
+	sed -i -e 's/\(.*\$(SYMLINK) \)\(pnmtopnm\)\(\$(EXE) \)\(pamtopnm\)/\1\4\3\2/' \
+		converter/other/Makefile
+
+	make CC="${CC:-gcc}"
 	make pkgdir=$PKG/usr package
-	mkdir $PKG/usr/share
+
+	install -d $PKG/usr/share
 	mv $PKG/usr/misc $PKG/usr/share/netpbm
-	rm -rf $PKG/usr/{README,VERSION,link,man,config_template,pkginfo,bin/doc.url}
+
+	rm -r $PKG/usr/{README,VERSION,link,man,config_template,pkginfo,bin/doc.url}
 }
