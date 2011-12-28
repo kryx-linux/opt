@@ -34,10 +34,10 @@ BUILD_FIASCO = Y
 # do not get built into anything.
 
 # The C compiler (including macro preprocessor)
-#CC = gcc
+CC ?= gcc
 # Note that 'cc' is usually an alias for whatever is the main compiler
 # on a system, e.g. the GNU Compiler on Linux.
-CC = cc
+#CC = cc
 
 # The linker.
 LD = $(CC)
