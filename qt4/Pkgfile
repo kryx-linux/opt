@@ -6,7 +6,7 @@
 
 name=qt4
 version=4.8.0
-release=1
+release=2
 source=(http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-$version.tar.gz)
 
 build () {
@@ -15,6 +15,7 @@ build () {
     sed -i 's|X11R6/||g' mkspecs/*/*.conf
     sed -i "s|-O2|$CXXFLAGS|" mkspecs/common/g++.conf
     sed -i "s|INSTALLS += translations||" projects.pro
+    sed -i 's|"$COMPILER" -c|$COMPILER -c|' config.tests/unix/fvisibility.test
 
     ./configure -prefix /usr/share/qt4 \
                 -bindir /usr/share/qt4/bin \
