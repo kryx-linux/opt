@@ -210,6 +210,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/SunPro-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/SunPro-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/SunPro-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/TinyCC-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/VisualAge-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/VisualAge-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/VisualAge-Fortran.cmake
@@ -220,6 +221,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/XL.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Dart.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/DartConfiguration.tcl.in
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/DeployQt4.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Documentation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/DummyCXXFile.cxx
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/ExternalProject.cmake
@@ -453,6 +455,8 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/DragonFly.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/FreeBSD.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/GNU.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/GNUtoMS_lib.bat.in
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/GNUtoMS_lib.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Generic-ADSP-ASM.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Generic-ADSP-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Generic-ADSP-CXX.cmake
@@ -493,6 +497,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-PathScale-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-PathScale.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-SunPro-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-TinyCC-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-VisualAge-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-VisualAge-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Linux-VisualAge-Fortran.cmake
@@ -524,8 +529,11 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Borland-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Borland.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-G95-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-C-ABI.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-CXX-ABI.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-Fortran-ABI.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Intel-ASM.cmake
