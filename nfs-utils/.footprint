@@ -55,7 +55,7 @@ drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/start-statd
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
-drwxr-xr-x	root/root	var/lib/nfs/
+drwxr-xr-x	nobody/root	var/lib/nfs/
 -rw-r--r--	root/root	var/lib/nfs/etab (EMPTY)
 -rw-r--r--	root/root	var/lib/nfs/rmtab (EMPTY)
 drwxr-xr-x	root/root	var/lib/nfs/rpc_pipefs/
