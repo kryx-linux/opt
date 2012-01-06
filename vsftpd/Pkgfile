@@ -4,7 +4,7 @@
 # Depends on:  openssl libcap tcp_wrappers
 
 name=vsftpd
-version=2.3.4
+version=2.3.5
 release=1
 source=(https://security.appspot.com/downloads/$name-$version.tar.gz \
         $name-config.patch vsftpd)
