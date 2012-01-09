@@ -5,8 +5,8 @@
 # Depends on: bash
 
 name=bash-completion
-version=1.90
-release=2
+version=1.99
+release=1
 source=(http://$name.alioth.debian.org/files/$name-$version.tar.bz2)
 
 build() {
