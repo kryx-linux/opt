@@ -17,6 +17,7 @@ build () {
     patch -p1 -i $SRC/cups-config.patch
     patch -p1 -i $SRC/usb-backend-gracefully-fail-on-more-cases-of-bad-device-id.patch
     patch -p0 -d backend -i $SRC/usb-skip-interface-altsetting.patch
+    sed -i '/^LANGUAGES/,+2s/^/#/' Makedefs.in
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
@@ -36,8 +37,7 @@ build () {
                 --enable-tcp-wrappers \
                 --enable-acl \
                 --disable-pam \
-                --disable-dbus \
-                --without-bundledir
+                --disable-dbus 
 
     make
     make {MENU,ICON}DIR="" BUILDROOT=$PKG install
