@@ -5,7 +5,7 @@
 # Depends on:  cairo lcms
 
 name=poppler
-version=0.18.2
+version=0.18.3
 release=1
 source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
 
@@ -15,6 +15,7 @@ build() {
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-{zlib,libjpeg,libpng,cms} \
+                --enable-xpdf-headers \
                 --disable-poppler-{glib,qt4,cpp}
 
     make
