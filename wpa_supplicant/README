@@ -28,13 +28,11 @@ POST-INSTALL
    /sbin/modprobe ipw2100
    /sbin/ifconfig eth1 xxx.xxx.xxx.xxx netmask 255.255.255.xxx
    /sbin/route add default gw xxx.xxx.xxx.xxx
-   /usr/sbin/wpa_supplicant -B -Dwext -ieth1 -c/etc/wpa.conf
+   /usr/sbin/wpa_supplicant -B -Dnl80211 -ieth1 -c/etc/wpa.conf
 
-   Note: the above configuration makes use of the generic wext
-         wpa_supplicant driver (Linux wireless extensions), 
-         which is the preferred nowadays. Use this driver for
-         ndiswrapper as well.
-
+   Note: the above configuration makes use of the generic nl80211
+         wpa_supplicant driver, which is the preferred nowadays 
+         and supersedes the wext (wireless extensions) driver.
 
 PRECAUTION
 
