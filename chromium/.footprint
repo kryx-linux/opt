@@ -42,6 +42,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/disclosureTriangleSmallRightDownBlack.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/disclosureTriangleSmallRightDownWhite.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/disclosureTriangleSmallRightWhite.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/domain.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/errorIcon.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/errorMediumIcon.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/errorRedDot.png
@@ -171,6 +172,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devtools.html
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devtools_extension_api.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/elementsPanel.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/filteredItemSelectionDialog.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/heapProfiler.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/inspectorCommon.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/networkLogView.css
@@ -181,6 +183,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/resourcesPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/scriptsPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/splitView.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/tabbedPane.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/textPrompt.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/textViewer.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/timelinePanel.css

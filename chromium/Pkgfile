@@ -5,7 +5,7 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt alsa-lib krb5
 
 name=chromium
-version=17.0.952.0
+version=18.0.1017.3
 release=1
 source=(http://gsdview.appspot.com/chromium-browser-official/$name-$version.tar.bz2 \
         $name.sh)
@@ -39,7 +39,7 @@ build() {
         -Duse_cups=0 \
 	-Duse_gnome_keyring=0 \
 	-Dlinux_link_gnome_keyring=0 \
-        -Denable_webrtc=0 \
+        -Denable_webrtc=1 \
         -Ddisable_nacl=1
 
   make chrome chrome_sandbox BUILDTYPE=Release
