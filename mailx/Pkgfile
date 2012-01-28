@@ -13,7 +13,7 @@ build() {
 
     sed -i 's|/etc/nail.rc|/usr/etc/mailx.rc|' mailx.1
 
-    make install \
+    make -j1 install \
          PREFIX=/usr \
          SYSCONFDIR=/usr/etc \
          MAILRC=/usr/etc/mailx.rc \
