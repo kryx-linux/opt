@@ -4,7 +4,7 @@
 # Depends on:  samba keyutils
 
 name=cifs-utils
-version=5.2
+version=5.3
 release=1
 source=(ftp://ftp.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2)
 

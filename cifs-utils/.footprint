@@ -2,10 +2,12 @@ drwxr-xr-x	root/root	sbin/
 -rwxr-xr-x	root/root	sbin/mount.cifs
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/cifscreds
 -rwxr-xr-x	root/root	usr/bin/getcifsacl
 -rwxr-xr-x	root/root	usr/bin/setcifsacl
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/cifscreds.1.gz
 -rw-r--r--	root/root	usr/man/man1/getcifsacl.1.gz
 -rw-r--r--	root/root	usr/man/man1/setcifsacl.1.gz
 drwxr-xr-x	root/root	usr/man/man8/
