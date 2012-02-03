@@ -13,8 +13,10 @@ PRE/POST-INSTALL
 
 PRECAUTION
 
+To enable DNSSEC validation all you have to do is to enable the 
+"auto-trust-anchor-file" option in /etc/unbound/unbound.conifg.
 The effective user unbound is running as (default: unbound) needs
-write access for /etc/unbound/root.key to update the trust anchor
-for DNSSEC validation. Adjust the user of that file if you run
+write access to /var/lib/unbound to update the trust anchor for 
+DNSSEC validation. Adjust the owner of that directory if you run 
 unbound as a different user.
 
