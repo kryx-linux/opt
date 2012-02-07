@@ -4,20 +4,15 @@
 # Depends on:  acl tcp_wrappers libusb-compat libpng libtiff openssl poppler
 
 name=cups
-version=1.5.0
-release=2
+version=1.5.2
+release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2
-        cups-config.patch cups 
-        usb-backend-gracefully-fail-on-more-cases-of-bad-device-id.patch
-        usb-skip-interface-altsetting.patch)
+        cups-config.patch cups)
 
 build () {
     cd $name-$version
 
     patch -p1 -i $SRC/cups-config.patch
-    patch -p1 -i $SRC/usb-backend-gracefully-fail-on-more-cases-of-bad-device-id.patch
-    patch -p0 -d backend -i $SRC/usb-skip-interface-altsetting.patch
-    sed -i '/^LANGUAGES/,+2s/^/#/' Makedefs.in
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
