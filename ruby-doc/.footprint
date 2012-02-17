@@ -1758,6 +1758,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Encoding/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Encoding/CompatibilityError/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Encoding/CompatibilityError/cdesc-CompatibilityError.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Encoding/Converter/
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Encoding/Converter/%3d%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Encoding/Converter/asciicompat_encoding-c.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Encoding/Converter/cdesc-Converter.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Encoding/Converter/convert-i.ri
@@ -6352,17 +6353,14 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/Cipher/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/Cipher/cdesc-Cipher.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/CipherError/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/CipherError/cdesc-CipherError.ri
--rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/block_size-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/cdesc-Cipher.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/ciphers-c.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/decrypt-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/encrypt-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/final-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/iv%3d-i.ri
--rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/iv_len-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/key%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/key_len%3d-i.ri
--rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/key_len-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/name-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/OpenSSL/Cipher/padding%3d-i.ri
@@ -7674,6 +7672,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Psych/Nodes/Node/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Nodes/Node/to_ruby-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Nodes/Node/to_yaml-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Nodes/Node/transform-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Nodes/Node/yaml-i.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Psych/Nodes/Scalar/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Nodes/Scalar/anchor-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Nodes/Scalar/cdesc-Scalar.ri
@@ -7782,6 +7781,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Psych/Visitors/Visitor/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Psych/Visitors/YAMLTree/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Visitors/YAMLTree/%3c%3c-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Visitors/YAMLTree/accept-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Visitors/YAMLTree/binary%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Visitors/YAMLTree/cdesc-YAMLTree.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Visitors/YAMLTree/dump_coder-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Visitors/YAMLTree/dump_ivars-i.ri
@@ -9363,6 +9363,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/REXML/Parsers/BaseParser/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Parsers/BaseParser/peek-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Parsers/BaseParser/position-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Parsers/BaseParser/pull-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Parsers/BaseParser/pull_event-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Parsers/BaseParser/source-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Parsers/BaseParser/stream%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Parsers/BaseParser/unnormalize-i.ri
@@ -11247,6 +11248,12 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicModel/TaxonomyTopi
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicModel/cdesc-TaxonomyTopicModel.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/
+drwxr-xr-x	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/Bag/
+-rw-r--r--	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/Bag/cdesc-Bag.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/Bag/full_name-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/Bag/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/Bag/required_uri-c.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/Bag/setup_maker-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/cdesc-TaxonomyTopics.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/full_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RSS/TaxonomyTopicsModel/TaxonomyTopics/maker_target-i.ri
