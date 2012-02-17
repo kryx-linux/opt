@@ -4,9 +4,9 @@
 # Depends on:  nspr sqlite3
 
 name=nss
-version=3.13.1
-release=2
-source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_13_1_WITH_CKBI_1_88_RTM/src/$name-$version.with.ckbi.1.88.tar.gz \
+version=3.13.2
+release=1
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_13_2_RTM/src/$name-$version.tar.gz \
         nss-config.in nss.pc.in)
 
 build() {
