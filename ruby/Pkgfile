@@ -5,7 +5,7 @@
 
 name=ruby
 version=1.9.3-p125
-release=1
+release=2
 source=(ftp://ftp.ruby-lang.org/pub/$name/1.9/$name-$version.tar.bz2 \
         $name-arch.patch)
 
