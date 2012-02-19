@@ -1,15 +1,16 @@
 # Description: Minimalistic tiling window manager
-# URL:         http://www.peereboom.us/scrotwm/html/scrotwm.html
+# URL:         https://opensource.conformal.com/wiki/spectrwm
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  xorg-libxt xorg-libxrandr xorg-font-misc-misc xorg-font-alias
 
-name=scrotwm
-version=0.11.0
+name=spectrwm
+version=1.0.0
 release=1
 source=(https://opensource.conformal.com/snapshots/$name/$name-$version.tgz)
 
 build () {
     cd $name-$version/linux
     make PREFIX=/usr MANDIR=/usr/man DESTDIR=$PKG install
-    rm $PKG/usr/man/man1/scrotwm_*.1
+    rm $PKG/usr/man/man1/spectrwm_*.1
+    ln -sf spectrwm $PKG/usr/bin/scrotwm
 }
