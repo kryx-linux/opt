@@ -4,9 +4,9 @@
 # Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
-version=1.7.2
+version=1.7.0_03
 release=1
-source=(http://download.oracle.com/otn-pub/java/$name/7u2-b13/$name-7u2-linux-i586.tar.gz)
+source=(http://download.oracle.com/otn-pub/java/$name/7u3-b04/$name-7u3-linux-i586.tar.gz)
 
 build(){
 	rm -rf $SRC/jdk*/{man/ja,jre/lib/javaws/messages_,demo,sample}*
