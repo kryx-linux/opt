@@ -1,7 +1,7 @@
-diff -Nru dovecot-2.0.8.orig/doc/example-config/conf.d/10-master.conf dovecot-2.0.8/doc/example-config/conf.d/10-master.conf
---- dovecot-2.0.8.orig/doc/example-config/conf.d/10-master.conf	2010-12-03 22:56:31.710163837 +0100
-+++ dovecot-2.0.8/doc/example-config/conf.d/10-master.conf	2010-12-03 22:56:47.755566859 +0100
-@@ -109,3 +109,10 @@
+diff -Nru dovecot-2.1.0.orig/doc/example-config/conf.d/10-master.conf dovecot-2.1.0/doc/example-config/conf.d/10-master.conf
+--- dovecot-2.1.0.orig/doc/example-config/conf.d/10-master.conf	2012-02-17 17:51:20.453196669 +0100
++++ dovecot-2.1.0/doc/example-config/conf.d/10-master.conf	2012-02-17 17:51:36.765941691 +0100
+@@ -117,3 +117,10 @@
      #group = 
    }
  }
@@ -12,9 +12,9 @@ diff -Nru dovecot-2.0.8.orig/doc/example-config/conf.d/10-master.conf dovecot-2.
 +   }
 +}
 +
-diff -Nru dovecot-2.0.8.orig/doc/example-config/conf.d/10-ssl.conf dovecot-2.0.8/doc/example-config/conf.d/10-ssl.conf
---- dovecot-2.0.8.orig/doc/example-config/conf.d/10-ssl.conf	2010-12-03 22:56:31.710163837 +0100
-+++ dovecot-2.0.8/doc/example-config/conf.d/10-ssl.conf	2010-12-03 22:56:47.755566859 +0100
+diff -Nru dovecot-2.1.0.orig/doc/example-config/conf.d/10-ssl.conf dovecot-2.1.0/doc/example-config/conf.d/10-ssl.conf
+--- dovecot-2.1.0.orig/doc/example-config/conf.d/10-ssl.conf	2012-02-17 17:51:20.453196669 +0100
++++ dovecot-2.1.0/doc/example-config/conf.d/10-ssl.conf	2012-02-17 17:51:36.765941691 +0100
 @@ -9,8 +9,8 @@
  # dropping root privileges, so keep the key file unreadable by anyone but
  # root. Included doc/mkcert.sh can be used to easily generate self-signed
@@ -26,9 +26,9 @@ diff -Nru dovecot-2.0.8.orig/doc/example-config/conf.d/10-ssl.conf dovecot-2.0.8
  
  # If key file is password protected, give the password here. Alternatively
  # give it when starting dovecot with -p parameter. Since this file is often
-diff -Nru dovecot-2.0.8.orig/doc/example-config/conf.d/auth-system.conf.ext dovecot-2.0.8/doc/example-config/conf.d/auth-system.conf.ext
---- dovecot-2.0.8.orig/doc/example-config/conf.d/auth-system.conf.ext	2010-12-03 22:56:31.710163837 +0100
-+++ dovecot-2.0.8/doc/example-config/conf.d/auth-system.conf.ext	2010-12-03 22:56:47.755566859 +0100
+diff -Nru dovecot-2.1.0.orig/doc/example-config/conf.d/auth-system.conf.ext dovecot-2.1.0/doc/example-config/conf.d/auth-system.conf.ext
+--- dovecot-2.1.0.orig/doc/example-config/conf.d/auth-system.conf.ext	2012-02-17 17:51:20.453196669 +0100
++++ dovecot-2.1.0/doc/example-config/conf.d/auth-system.conf.ext	2012-02-17 17:51:36.765941691 +0100
 @@ -7,12 +7,12 @@
  # PAM is typically used with either userdb passwd or userdb static.
  # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
@@ -60,9 +60,9 @@ diff -Nru dovecot-2.0.8.orig/doc/example-config/conf.d/auth-system.conf.ext dove
  
  # PAM-like authentication for OpenBSD.
  # <doc/wiki/PasswordDatabase.BSDAuth.txt>
-diff -Nru dovecot-2.0.8.orig/doc/example-config/dovecot.conf dovecot-2.0.8/doc/example-config/dovecot.conf
---- dovecot-2.0.8.orig/doc/example-config/dovecot.conf	2010-12-03 22:56:31.710163837 +0100
-+++ dovecot-2.0.8/doc/example-config/dovecot.conf	2010-12-03 22:56:47.755566859 +0100
+diff -Nru dovecot-2.1.0.orig/doc/example-config/dovecot.conf dovecot-2.1.0/doc/example-config/dovecot.conf
+--- dovecot-2.1.0.orig/doc/example-config/dovecot.conf	2012-02-17 17:51:20.453196669 +0100
++++ dovecot-2.1.0/doc/example-config/dovecot.conf	2012-02-17 17:51:36.765941691 +0100
 @@ -24,6 +24,7 @@
  # If you want to specify non-default ports or anything more complex,
  # edit conf.d/master.conf.
@@ -71,7 +71,7 @@ diff -Nru dovecot-2.0.8.orig/doc/example-config/dovecot.conf dovecot-2.0.8/doc/e
  
  # Base directory where to store runtime data.
  #base_dir = /var/run/dovecot/
-@@ -38,7 +39,7 @@
+@@ -44,7 +45,7 @@
  #login_trusted_networks =
  
  # Sepace separated list of login access check sockets (e.g. tcpwrap)
