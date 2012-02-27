@@ -6,10 +6,11 @@
 
 name=grub
 version=0.97
-release=6
+release=7
 source=(ftp://alpha.gnu.org/gnu/grub/$name-$version.tar.gz \
 	http://crux.nu/files/grub/0.97/$name-$version-patches-2.tar.bz2 \
 	ext4.patch \
+	automake.patch \
 	http://crux.nu/files/grub/common/crux02.xpm.gz \
 	http://crux.nu/files/grub/common/crux03.xpm.gz \
 	menu.lst.sample)
