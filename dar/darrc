@@ -41,6 +41,7 @@ create:
 -Z "*.mpeg"
 -Z "*.zip"
 -Z "*.Z"
+-Z "*.xz"
 
 # create slices of 700MB to fit on one CD-ROM
 -s 700M
