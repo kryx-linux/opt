@@ -11,6 +11,10 @@ source=(http://sjeng.org/ftp/vorbis/$name-$version.zip)
 build() {
 	cd $name-$version
 
+	# Fix space-vs-tab confusion:
+	sed -i -e '420s/^ /	/' Makefile.in
+	sed -i -e '423s/^ /	/' Makefile.in
+
 	sh configure --prefix=/usr
 
 	make
