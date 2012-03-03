@@ -4,16 +4,12 @@
 # Depends on: libogg, libvorbis
 
 name=vorbisgain
-version=0.34
+version=0.36
 release=1
 source=(http://sjeng.org/ftp/vorbis/$name-$version.zip)
 
 build() {
 	cd $name-$version
-
-	# Fix space-vs-tab confusion:
-	sed -i -e '420s/^ /	/' Makefile.in
-	sed -i -e '423s/^ /	/' Makefile.in
 
 	sh configure --prefix=/usr
 
