@@ -2,11 +2,11 @@
 # URL: http://www.winehq.com/
 # Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Daniel Walpole, daniel at walpole dot id dot au
-# Depends on: fontconfig fontforge freeglut gnutls lcms mpg123 openal xorg-libxcomposite xorg-libxcursor xorg-libxinerama xorg-libxrandr xorg-libxxf86dga
+# Depends on: fontconfig fontforge freeglut gnutls lcms mpg123 openal xorg-libxcomposite xorg-libxcursor xorg-libxinerama xorg-libxrandr xorg-libxxf86dga prelink
 
 name=wine
 version=1.4-rc6
-release=1
+release=2
 source=(http://ibiblio.org/pub/linux/system/emulators/wine/wine-$version.tar.bz2
 	http://downloads.sourceforge.net/project/wine/Wine%20Gecko/1.4/wine_gecko-1.4-x86.msi)
 
