@@ -5,7 +5,7 @@
 # Depends on: fontconfig fontforge freeglut gnutls lcms mpg123 openal xorg-libxcomposite xorg-libxcursor xorg-libxinerama xorg-libxrandr xorg-libxxf86dga
 
 name=wine
-version=1.4-rc5
+version=1.4-rc6
 release=1
 source=(http://ibiblio.org/pub/linux/system/emulators/wine/wine-$version.tar.bz2
 	http://downloads.sourceforge.net/project/wine/Wine%20Gecko/1.4/wine_gecko-1.4-x86.msi)
