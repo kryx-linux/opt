@@ -6,7 +6,7 @@
 # Optional: xorg-libx11
 
 name=netpbm
-version=10.56.00
+version=10.57.00
 release=1
 source=(http://www.hvlinux.net/crux/distfiles/$name/$name-$version.tar.bz2
 	config.mk netpbm-10.34-build.patch)

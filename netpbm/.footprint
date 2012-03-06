@@ -375,8 +375,8 @@ drwxr-xr-x	root/root	usr/include/netpbm/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libnetpbm.a
 lrwxrwxrwx	root/root	usr/lib/libnetpbm.so -> libnetpbm.so.11
-lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.11 -> libnetpbm.so.11.56
--rwxr-xr-x	root/root	usr/lib/libnetpbm.so.11.56
+lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.11 -> libnetpbm.so.11.57
+-rwxr-xr-x	root/root	usr/lib/libnetpbm.so.11.57
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/netpbm/
 -rw-r--r--	root/root	usr/share/netpbm/palmcolor8.map
