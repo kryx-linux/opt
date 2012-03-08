@@ -1,27 +1,23 @@
-diff -Nru dnsmasq-2.58.orig/Makefile dnsmasq-2.58/Makefile
---- dnsmasq-2.58.orig/Makefile	2011-08-27 10:05:03.610645122 +0200
-+++ dnsmasq-2.58/Makefile	2011-08-27 10:05:18.486783402 +0200
-@@ -15,7 +15,7 @@
+diff -Nru dnsmasq-2.60.orig/Makefile dnsmasq-2.60/Makefile
+--- dnsmasq-2.60.orig/Makefile	2012-03-06 09:13:14.574103519 +0100
++++ dnsmasq-2.60/Makefile	2012-03-06 09:11:44.000000000 +0100
+@@ -20,11 +20,11 @@
  
- PREFIX = /usr/local
- BINDIR = ${PREFIX}/sbin
--MANDIR = ${PREFIX}/share/man
-+MANDIR = ${PREFIX}/man
- LOCALEDIR = ${PREFIX}/share/locale
- 
- PKG_CONFIG = pkg-config
-@@ -24,7 +24,7 @@
- MSGFMT = msgfmt
- XGETTEXT = xgettext
- 
--CFLAGS = -Wall -W -O2
-+CFLAGS += -Wall -W
- 
- #################################################################
- 
-diff -Nru dnsmasq-2.58.orig/dnsmasq.conf.example dnsmasq-2.58/dnsmasq.conf.example
---- dnsmasq-2.58.orig/dnsmasq.conf.example	2011-08-27 10:05:03.610645122 +0200
-+++ dnsmasq-2.58/dnsmasq.conf.example	2011-08-27 10:05:18.486783402 +0200
+ PREFIX        = /usr/local
+ BINDIR        = $(PREFIX)/sbin
+-MANDIR        = $(PREFIX)/share/man
++MANDIR        = $(PREFIX)/man
+ LOCALEDIR     = $(PREFIX)/share/locale
+ BUILDDIR      = $(SRC)
+ DESTDIR       = 
+-CFLAGS        = -Wall -W -O2
++CFLAGS        += -Wall -W
+ LDFLAGS       = 
+ COPTS         = 
+ RPM_OPT_FLAGS = 
+diff -Nru dnsmasq-2.60.orig/dnsmasq.conf.example dnsmasq-2.60/dnsmasq.conf.example
+--- dnsmasq-2.60.orig/dnsmasq.conf.example	2012-03-06 09:13:14.574103519 +0100
++++ dnsmasq-2.60/dnsmasq.conf.example	2012-03-06 09:07:32.000000000 +0100
 @@ -75,8 +75,8 @@
  
  # If you want dnsmasq to change uid and gid to something other
@@ -33,7 +29,7 @@ diff -Nru dnsmasq-2.58.orig/dnsmasq.conf.example dnsmasq-2.58/dnsmasq.conf.examp
  
  # If you want dnsmasq to listen for DHCP and DNS requests only on
  # specified interfaces (and the loopback) give the name of the
-@@ -439,7 +439,7 @@
+@@ -466,7 +466,7 @@
  # The DHCP server needs somewhere on disk to keep its lease database.
  # This defaults to a sane location, but if you want to change it, use
  # the line below.
@@ -42,10 +38,19 @@ diff -Nru dnsmasq-2.58.orig/dnsmasq.conf.example dnsmasq-2.58/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.58.orig/src/config.h dnsmasq-2.58/src/config.h
---- dnsmasq-2.58.orig/src/config.h	2011-08-27 10:05:03.607311907 +0200
-+++ dnsmasq-2.58/src/config.h	2011-08-27 10:05:18.486783402 +0200
-@@ -49,7 +49,7 @@
+diff -Nru dnsmasq-2.60.orig/src/config.h dnsmasq-2.60/src/config.h
+--- dnsmasq-2.60.orig/src/config.h	2012-03-06 09:13:14.574103519 +0100
++++ dnsmasq-2.60/src/config.h	2012-03-06 09:12:38.000000000 +0100
+@@ -35,7 +35,7 @@
+ #define RUNFILE "/var/run/dnsmasq.pid"
+ #define DEFLEASE 3600 /* default lease time, 1 hour */
+ #define CHUSER "nobody"
+-#define CHGRP "dip"
++#define CHGRP "nobody"
+ #define TFTP_MAX_CONNECTIONS 50 /* max simultaneous connections */
+ #define LOG_MAX 5 /* log-queue length */
+ #define RANDFILE "/dev/urandom"
+@@ -137,7 +137,7 @@
  #   elif defined(__ANDROID__)
  #      define LEASEFILE "/data/misc/dhcp/dnsmasq.leases"
  #   else
@@ -54,12 +59,3 @@ diff -Nru dnsmasq-2.58.orig/src/config.h dnsmasq-2.58/src/config.h
  #   endif
  #endif
  
-@@ -63,7 +63,7 @@
- 
- #define DEFLEASE 3600 /* default lease time, 1 hour */
- #define CHUSER "nobody"
--#define CHGRP "dip"
-+#define CHGRP "nobody"
- #define NAMESERVER_PORT 53
- #define DHCP_SERVER_PORT 67
- #define DHCP_CLIENT_PORT 68
