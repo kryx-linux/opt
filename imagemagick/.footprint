@@ -25,6 +25,7 @@ drwxr-xr-x	root/root	usr/etc/ImageMagick/
 -rw-r--r--	root/root	usr/etc/ImageMagick/magic.xml
 -rw-r--r--	root/root	usr/etc/ImageMagick/mime.xml
 -rw-r--r--	root/root	usr/etc/ImageMagick/policy.xml
+-rw-r--r--	root/root	usr/etc/ImageMagick/quantization-table.xml
 -rw-r--r--	root/root	usr/etc/ImageMagick/sRGB.icc
 -rw-r--r--	root/root	usr/etc/ImageMagick/thresholds.xml
 -rw-r--r--	root/root	usr/etc/ImageMagick/type-dejavu.xml
@@ -100,6 +101,7 @@ drwxr-xr-x	root/root	usr/include/ImageMagick/magick/
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/magick.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/matrix.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/memory_.h
+-rw-r--r--	root/root	usr/include/ImageMagick/magick/method-attribute.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/methods.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/mime.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/module.h
@@ -154,6 +156,7 @@ drwxr-xr-x	root/root	usr/include/ImageMagick/wand/
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/magick-property.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/magick-wand.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/magick_wand.h
+-rw-r--r--	root/root	usr/include/ImageMagick/wand/method-attribute.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/mogrify.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/montage.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/pixel-iterator.h
