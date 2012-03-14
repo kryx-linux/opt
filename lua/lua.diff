@@ -38,7 +38,7 @@ diff -aur lua-5.2.0.orig/Makefile lua-5.2.0/Makefile
 +	@echo "Name: Lua"
 +	@echo "Description: An Extensible Extension Language"
 +	@echo "Version: $R"
-+	@echo "Libs: -l$(INSTALL_LIB) -llua -lm"
++	@echo "Libs: -L$(INSTALL_LIB) -llua -lm"
 +	@echo "Cflags: -I$(INSTALL_INC)"
  
  # list targets that do not create files (but not all makes understand .PHONY)
