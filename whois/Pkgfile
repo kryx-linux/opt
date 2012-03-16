@@ -5,9 +5,9 @@
 # Depends on:
 
 name=whois
-version=5.0.14
+version=5.0.15
 release=1
-source=(http://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.gz)
+source=(http://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.xz)
 
 build() {
     cd $name-$version
