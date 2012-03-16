@@ -244,6 +244,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/mail-transaction-log-view-private.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-transaction-log.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-types.h
+-rw-r--r--	root/root	usr/include/dovecot/mail-user-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-user.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-guid-cache.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-delete.h
@@ -392,6 +393,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/write-full.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/dovecot/
+-rwxr-xr-x	root/root	usr/lib/dovecot/aggregator
 -rwxr-xr-x	root/root	usr/lib/dovecot/anvil
 -rwxr-xr-x	root/root	usr/lib/dovecot/auth
 -rwxr-xr-x	root/root	usr/lib/dovecot/checkpassword-reply
@@ -503,6 +505,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_mail_log_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mail_log_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mail_log_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_virtual_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_virtual_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_virtual_plugin.so
@@ -524,6 +529,7 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3-login
 -rwxr-xr-x	root/root	usr/lib/dovecot/rawlog
+-rwxr-xr-x	root/root	usr/lib/dovecot/replicator
 -rwxr-xr-x	root/root	usr/lib/dovecot/script
 -rwxr-xr-x	root/root	usr/lib/dovecot/script-login
 -rwxr-xr-x	root/root	usr/lib/dovecot/ssl-params
