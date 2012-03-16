@@ -5,13 +5,11 @@
 # Depends on: prt-get
 
 name=prt-utils
-version=0.9.3
-release=2
-source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.gz
-        prtverify-set_locale.patch)
+version=0.9.4
+release=1
+source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    patch -p1 -i $SRC/prtverify-set_locale.patch
     make DESTDIR=$PKG install
 }
