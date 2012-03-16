@@ -37,6 +37,4 @@ build () {
     install -m 644 sapi/fpm/php-fpm.conf $PKG/etc/php/
     install -m 644 sapi/fpm/php-fpm.8 $PKG/usr/man/man8/
     install -m 755 $SRC/php-fpm $PKG/etc/rc.d/
-
-    echo 'php_flag[extension] = true' >> $PKG/etc/php/php-fpm.conf
 }
