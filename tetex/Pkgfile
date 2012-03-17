@@ -1,26 +1,28 @@
-# Maintainer: Johannes Winkelmann, jw at smts dot ch
-# Packager: Robert McMeekin, viper at mcmeekin dot info
-# Description: TeX distribution for UNIX compatible systems
+# Description: TeX distribution for UNIX compatible systems.
 # URL: http://www.tug.org/tetex/
-# Depends on: libpng, ncurses, t1lib, libgd
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Robert McMeekin, viper at mcmeekin dot info
+# Depends on: libpng ncurses t1lib libgd xorg-libxaw
 
 name=tetex
 version=3.0
-release=4
-source=(ftp://dante.ctan.org/pub/tex/systems/unix/teTeX/current/distrib/$name-src-$version.tar.gz \
-    ftp://dante.ctan.org/pub/tex/systems/unix/teTeX/current/distrib/$name-texmf-$version.tar.gz \
-    ftp://dante.ctan.org/pub/tex/systems/unix/teTeX/current/distrib/$name-texmfsrc-$version.tar.gz \
-    $name.patch.gz)
+release=5
+source=(http://www.hvlinux.net/crux/distfiles/$name//$name-src-$version.tar.gz
+	http://www.hvlinux.net/crux/distfiles/$name//$name-texmf-$version.tar.gz
+	http://www.hvlinux.net/crux/distfiles/$name//$name-texmfsrc-$version.tar.gz
+	$name.patch.gz)
 
 build() {
-    mkdir -p $PKG/usr/share/texmf
-    cp -r `/bin/ls | grep -v $name-src-$version` $PKG/usr/share/texmf/
-    cd $name-src-$version
-    zcat $SRC/tetex.patch.gz| patch -p0
-    ./configure --prefix=/usr \
+	mkdir -p $PKG/usr/share/texmf
+	cp -r $(/bin/ls | grep -v $name-src-$version) $PKG/usr/share/texmf/
+	cd $name-src-$version
+	zcat $SRC/tetex.patch.gz | patch -p0
+
+	./configure \
+		--prefix=/usr \
 		--datadir=/usr/share \
 		--disable-multiplatform \
-        	--without-texinfo \
+		--without-texinfo \
 		--without-texi2html \
 		--without-dialog \
 		--without-psutils \
@@ -32,27 +34,26 @@ build() {
 		--with-system-t1lib \
 		--with-system-gd
 
-    # Files generated during make, use conflicing getline function.
-    # Build these manually first.
-    cd texk/web2c
-    for i in tangleboot tangle mft otangle weave
-    do
-	make ${i}.c
-	sed 's|getline|&_|' -i ${i}.[ch]
-    done
-    cd ../../
+	# Files generated during make, use conflicing getline function.
+	# Build these manually first.
+	cd texk/web2c
+	for i in tangleboot tangle mft otangle weave; do
+		make ${i}.c
+		sed -i -e 's|getline|&_|' ${i}.[ch]
+	done
+	cd -
 
-    # Fix some more getline conflicts
-    sed 's|getline|&_|' -i texk/web2c/mpware/mpto.c
-    sed 's|getline|&_|' -i texk/dvipsk/afm2tfm.c
+	# Fix some more getline conflicts
+	sed -i -e 's|getline|&_|' texk/web2c/mpware/mpto.c
+	sed -i -e 's|getline|&_|' texk/dvipsk/afm2tfm.c
 
-    make
+	make
 
-    # temp fix, this tools tries to write in real root
-    sed -i 's/fmtutil-sys/fmtutil-sys-fix/g' Makefile
-    sed -i 's/updmap-sys/updmap-sys-fix/g' Makefile
+	# temp fix, this tools tries to write in real root
+	sed -i -e 's/fmtutil-sys/fmtutil-sys-fix/g' Makefile
+	sed -i -e 's/updmap-sys/updmap-sys-fix/g' Makefile
 
-    make DESTDIR=$PKG prefix=$PKG/usr texmf=$PKG/usr/share/texmf install
-    rm -rf $PKG/usr/info $PKG/usr/share/texmf/doc
-    rm -f $PKG/usr/share/texmf/tetex.patch.gz
+	make DESTDIR=$PKG prefix=$PKG/usr texmf=$PKG/usr/share/texmf install
+	rm -rf $PKG/usr/info $PKG/usr/share/texmf/doc
+	rm -f $PKG/usr/share/texmf/tetex.patch.gz
 }
