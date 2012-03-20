@@ -257,10 +257,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-gamma.so
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-high-contrast.la
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-high-contrast.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-lcms.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-lcms.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-proof.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-proof.so
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/alien-map
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/align-layers
@@ -310,7 +306,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge-sobel
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/emboss
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/engrave
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-aa
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-bmp
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-cel
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-compressor
@@ -329,10 +324,8 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-html-table
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-ico
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-jpeg
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-mng
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pat
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pcx
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pdf
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pix
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-png
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pnm
@@ -343,7 +336,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-raw
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-sgi
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-sunras
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-svg
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tga
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tiff-load
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tiff-save
@@ -372,7 +364,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/imagemap
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/iwarp
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/jigsaw
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lcms
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens-apply
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens-distortion
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens-flare
