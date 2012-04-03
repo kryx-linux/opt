@@ -28,6 +28,10 @@ drwxr-xr-x	root/root	usr/include/X11/Xaw3d/
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/ListP.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/MenuButtoP.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/MenuButton.h
+-rw-r--r--	root/root	usr/include/X11/Xaw3d/MultiSink.h
+-rw-r--r--	root/root	usr/include/X11/Xaw3d/MultiSinkP.h
+-rw-r--r--	root/root	usr/include/X11/Xaw3d/MultiSrc.h
+-rw-r--r--	root/root	usr/include/X11/Xaw3d/MultiSrcP.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/Paned.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/PanedP.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/Panner.h
@@ -67,9 +71,11 @@ drwxr-xr-x	root/root	usr/include/X11/Xaw3d/
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/ToggleP.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/Tree.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/TreeP.h
+-rw-r--r--	root/root	usr/include/X11/Xaw3d/VendorEP.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/Viewport.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/ViewportP.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/Xaw3dP.h
+-rw-r--r--	root/root	usr/include/X11/Xaw3d/XawImP.h
 -rw-r--r--	root/root	usr/include/X11/Xaw3d/XawInit.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libXaw3d.a
