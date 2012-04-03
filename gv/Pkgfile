@@ -4,14 +4,12 @@
 # Depends on:  xaw3d, ghostscript
 
 name=gv
-version=3.7.3
-release=2
-source=(http://ftp.gnu.org/pub/gnu/$name/$name-$version.tar.gz
-        $name-$version-libXaw3d-1.6.patch)
+version=3.7.3.90
+release=1
+source=(ftp://alpha.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    patch -p0 -i $SRC/$name-$version-libXaw3d-1.6.patch
     ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
