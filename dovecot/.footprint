@@ -475,6 +475,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib02_lazy_expunge_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib02_lazy_expunge_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib02_lazy_expunge_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib05_pop3_migration_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_pop3_migration_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_pop3_migration_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.so
