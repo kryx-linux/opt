@@ -7,14 +7,14 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/tdb.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libtdb.so -> libtdb.so.1.2.9
-lrwxrwxrwx	root/root	usr/lib/libtdb.so.1 -> libtdb.so.1.2.9
--rw-r--r--	root/root	usr/lib/libtdb.so.1.2.9
+lrwxrwxrwx	root/root	usr/lib/libtdb.so -> libtdb.so.1.2.10
+lrwxrwxrwx	root/root	usr/lib/libtdb.so.1 -> libtdb.so.1.2.10
+-rwxr-xr-x	root/root	usr/lib/libtdb.so.1.2.10
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/tdb.pc
 drwxr-xr-x	root/root	usr/lib/python2.7/
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/tdb.so
+-rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/tdb.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/tdbbackup.8.gz
