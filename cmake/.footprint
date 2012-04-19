@@ -25,6 +25,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/AddFileDependencies.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/AutomocInfo.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/BasicConfigVersion-ExactVersion.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/BundleUtilities.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMake.cmake
@@ -33,6 +34,10 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeASMInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeASM_MASMInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeASM_NASMInformation.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeAddFortranSubdirectory.cmake
+drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/CMakeAddFortranSubdirectory/
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeAddFortranSubdirectory/build_mingw.cmake.in
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeAddFortranSubdirectory/config_mingw.cmake.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeAddNewLanguage.txt
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeBackwardCompatibilityC.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeBackwardCompatibilityCXX.cmake
@@ -63,6 +68,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineRCCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineSystem.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeDetermineVSServicePack.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeExpandImportedTargets.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeExportBuildSettings.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFindBinUtils.cmake
@@ -86,6 +92,8 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeMSYSFindMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeMinGWFindMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeNMakeFindMake.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeNinjaFindMake.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePackageConfigHelpers.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeParseArguments.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeParseImplicitLinkInfo.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePlatformId.h.in
@@ -135,8 +143,11 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPack.distribution.dist.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPackBundle.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPackComponent.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPackCygwin.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPackDMG.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPackDeb.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPackNSIS.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPackPackageMaker.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPackRPM.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CPackZIP.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CTest.cmake
@@ -158,6 +169,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckIncludeFile.cxx.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckIncludeFileCXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckIncludeFiles.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckLanguage.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckLibraryExists.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckLibraryExists.lists.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CheckPrototypeDefinition.c.in
@@ -350,7 +362,9 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/FindCUDA/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindosgIntrospection.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindosgManipulator.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindosgParticle.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindosgPresentation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindosgProducer.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindosgQt.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindosgShadow.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindosgSim.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/FindosgTerrain.cmake
@@ -527,7 +541,9 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/UnixWare.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Borland-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Borland-CXX.cmake
--rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Borland.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Embarcadero-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Embarcadero-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-Embarcadero.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-G95-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-C-ABI.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Windows-GNU-C.cmake
