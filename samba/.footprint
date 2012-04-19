@@ -47,6 +47,11 @@ lrwxrwxrwx	root/root	usr/lib/libsmbsharemodes.so -> libsmbsharemodes.so.0
 -rwxr-xr-x	root/root	usr/lib/libsmbsharemodes.so.0
 lrwxrwxrwx	root/root	usr/lib/libwbclient.so -> libwbclient.so.0
 -rwxr-xr-x	root/root	usr/lib/libwbclient.so.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rwxr-xr-x	root/root	usr/lib/pkgconfig/netapi.pc
+-rwxr-xr-x	root/root	usr/lib/pkgconfig/smbclient.pc
+-rwxr-xr-x	root/root	usr/lib/pkgconfig/smbsharemodes.pc
+-rwxr-xr-x	root/root	usr/lib/pkgconfig/wbclient.pc
 drwxr-xr-x	root/root	usr/lib/samba/
 drwxr-xr-x	root/root	usr/lib/samba/auth/
 -rwxr-xr-x	root/root	usr/lib/samba/auth/script.so

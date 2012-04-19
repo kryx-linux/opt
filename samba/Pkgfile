@@ -5,7 +5,7 @@
 
 name=samba
 version=3.6.4
-release=1
+release=2
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
 
@@ -30,6 +30,10 @@ build () {
 
     make
     make DESTDIR=$PKG install
+
+    # pkg-config files
+    install -d $PKG/usr/lib/pkgconfig
+    install pkgconfig/*.pc $PKG/usr/lib/pkgconfig
 
     # nsswitch extensions
     install -d $PKG/lib
