@@ -690,6 +690,8 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.9/rubygems/package/tar_reader/
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/package_task.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/path_support.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/platform.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/psych_additions.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/psych_tree.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/remote_fetcher.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/require_paths_builder.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/requirement.rb
@@ -698,6 +700,12 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.9/rubygems/package/tar_reader/
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/source_index.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/spec_fetcher.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/specification.rb
+drwxr-xr-x	root/root	usr/lib/ruby/1.9/rubygems/ssl_certs/
+-rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/ssl_certs/AddTrustExternalCARoot.pem
+-rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/ssl_certs/Entrust_net-Secure-Server-Certification-Authority.pem
+-rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/ssl_certs/VerisignClass3PublicPrimaryCertificationAuthority-G2.pem
+-rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/ssl_certs/ca-bundle.pem
+-rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/syck_hack.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/test_case.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/test_utilities.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/rubygems/text.rb
