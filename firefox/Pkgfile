@@ -4,11 +4,11 @@
 # Depends on: libidl, gtk, python, alsa-lib, yasm, mesa3d
 
 name=firefox
-version=11.0
+version=12.0
 release=1
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
         mozconfig)
-    
+
 build() {
     export MOZ_CO_PROJECT=browser
     export BUILD_OFFICIAL=1
@@ -22,10 +22,10 @@ build() {
     make
 
     install -d \
-	$PKG$MOZILLA_FIVE_HOME \
-	$PKG/usr/bin \
-	$PKG/usr/share/idl/firefox \
-	$PKG/usr/include/firefox
+        $PKG$MOZILLA_FIVE_HOME \
+        $PKG/usr/bin \
+        $PKG/usr/share/idl/firefox \
+        $PKG/usr/include/firefox
 
     cp -rL dist/bin/* $PKG$MOZILLA_FIVE_HOME
     ln -s /usr/lib/firefox/firefox $PKG/usr/bin/firefox
