@@ -4,12 +4,15 @@
 # Depends on:  apache libxml2
 
 name=mod_php
-version=5.3.10
+version=5.3.11
 release=1
 source=(http://www.php.net/distributions/php-$version.tar.bz2)
 
 build () {
     cd php-$version
+
+    local APXS
+    APXS=$(which apxs) || APXS='/usr/sbin/apxs'
 
     local PHP_CONFIG="
     --prefix=/usr \
@@ -22,7 +25,7 @@ build () {
     EXTENSION_DIR=/usr/lib/php/extensions \
     ./configure \
         $PHP_CONFIG \
-        --with-apxs2=/usr/sbin/apxs \
+        --with-apxs2=$APXS \
         --disable-cli
 
     make
