@@ -5,11 +5,14 @@
 
 name=mc
 version=4.8.3
-release=1
-source=(http://www.midnight-commander.org/downloads/$name-$version.tar.xz)
+release=2
+source=(http://www.midnight-commander.org/downloads/$name-$version.tar.xz
+        $name-$version-$release.patch)
 
 build () {
     cd $name-$version
+
+    patch -p1 -i $SRC/$name-$version-$release.patch
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \

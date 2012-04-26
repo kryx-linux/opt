@@ -1,0 +1,97 @@
+commit 8607bcc103ce2f9449b6b9736a9709cdb62a7178
+Author: Andrew Borodin <aborodin@vmail.ru>
+Date:   Mon Apr 23 20:46:49 2012 +0400
+
+    Ticket #2785: error message when entering into compressed tar and cpio archives.
+    
+    Signed-off-by: Andrew Borodin <aborodin@vmail.ru>
+
+diff --git a/src/vfs/cpio/cpio.c b/src/vfs/cpio/cpio.c
+index cf43749..a76d376 100644
+--- a/src/vfs/cpio/cpio.c
++++ b/src/vfs/cpio/cpio.c
+@@ -249,7 +249,7 @@ cpio_open_cpio_file (struct vfs_class *me, struct vfs_s_super *super, const vfs_
+ 
+         mc_close (fd);
+         s = g_strconcat (super->name, decompress_extension (type), (char *) NULL);
+-        tmp_vpath = vfs_path_from_str (s);
++        tmp_vpath = vfs_path_from_str_flags (s, VPF_NO_CANON);
+         fd = mc_open (tmp_vpath, O_RDONLY);
+         vfs_path_free (tmp_vpath);
+         if (fd == -1)
+diff --git a/src/vfs/tar/tar.c b/src/vfs/tar/tar.c
+index 7406dbe..a1164d5 100644
+--- a/src/vfs/tar/tar.c
++++ b/src/vfs/tar/tar.c
+@@ -316,7 +316,7 @@ tar_open_archive_int (struct vfs_class *me, const vfs_path_t * vpath, struct vfs
+ 
+         mc_close (result);
+         s = g_strconcat (archive->name, decompress_extension (type), (char *) NULL);
+-        tmp_vpath = vfs_path_from_str (s);
++        tmp_vpath = vfs_path_from_str_flags (s, VPF_NO_CANON);
+         result = mc_open (tmp_vpath, O_RDONLY);
+         vfs_path_free (tmp_vpath);
+         if (result == -1)
+
+
+commit 038b5e7406d177792d3e2cd904f6d32e5f392903
+Author: Andrew Borodin <aborodin@vmail.ru>
+Date:   Tue Apr 24 20:41:37 2012 +0400
+
+    Ticket #2787: crash when creating relative symlink.
+    
+    Signed-off-by: Andrew Borodin <aborodin@vmail.ru>
+
+diff --git a/lib/util.c b/lib/util.c
+index 2c6011b..490bdfc 100644
+--- a/lib/util.c
++++ b/lib/util.c
+@@ -112,14 +112,14 @@ is_8bit_printable (unsigned char c)
+ static char *
+ resolve_symlinks (const vfs_path_t *vpath)
+ {
+-    char *p;
++    char *p, *p2;
+     char *buf, *buf2, *q, *r, c;
+     struct stat mybuf;
+ 
+     if (vpath->relative)
+         return NULL;
+ 
+-    p = vfs_path_to_str (vpath);
++    p = p2 = vfs_path_to_str (vpath);
+     r = buf = g_malloc (MC_MAXPATHLEN);
+     buf2 = g_malloc (MC_MAXPATHLEN);
+     *r++ = PATH_SEP;
+@@ -181,7 +181,7 @@ resolve_symlinks (const vfs_path_t *vpath)
+ 
+   ret:
+     g_free (buf2);
+-    g_free (p);
++    g_free (p2);
+     return buf;
+ }
+ 
+
+
+commit ac880c71a74c1fc75d7162b2ca3613970479e663
+Author: Andrew Borodin <aborodin@vmail.ru>
+Date:   Mon Apr 23 09:37:32 2012 +0400
+
+    Ticket #2784: segfault at chown.
+    
+    Signed-off-by: Andrew Borodin <aborodin@vmail.ru>
+
+diff --git a/src/filemanager/chown.c b/src/filemanager/chown.c
+index 77ce0ae..5953023 100644
+--- a/src/filemanager/chown.c
++++ b/src/filemanager/chown.c
+@@ -378,7 +378,7 @@ chown_cmd (void)
+                     if (mc_chown (fname_vpath, new_user, new_group) == -1)
+                         message (D_ERROR, MSG_ERROR, _("Cannot chown \"%s\"\n%s"),
+                                  fname, unix_error_string (errno));
+-                    vfs_path_free (vpath);
++                    vfs_path_free (fname_vpath);
+                 }
+                 else
+                     apply_chowns (new_user, new_group);
