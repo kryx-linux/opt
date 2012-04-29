@@ -1,6 +1,5 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/postfix/
--rw-r--r--	root/root	etc/postfix/TLS_LICENSE
 -rw-r--r--	root/root	etc/postfix/access
 -rw-r--r--	root/root	etc/postfix/access.db (EMPTY)
 -rw-r--r--	root/root	etc/postfix/aliases
@@ -16,9 +15,6 @@ drwxr-xr-x	root/root	etc/postfix/
 -rw-r--r--	root/root	etc/postfix/makedefs.out
 -rw-r--r--	root/root	etc/postfix/master.cf
 -rw-r--r--	root/root	etc/postfix/mime_header_checks (EMPTY)
--rwxr-xr-x	root/root	etc/postfix/post-install
--rw-r--r--	root/root	etc/postfix/postfix-files
--rwxr-xr-x	root/root	etc/postfix/postfix-script
 -rw-r--r--	root/root	etc/postfix/relay_domains (EMPTY)
 -rw-r--r--	root/root	etc/postfix/relocated
 -rw-r--r--	root/root	etc/postfix/relocated.db (EMPTY)
@@ -42,11 +38,18 @@ drwxr-xr-x	root/root	usr/lib/postfix/
 -rwxr-xr-x	root/root	usr/lib/postfix/flush
 -rwxr-xr-x	root/root	usr/lib/postfix/lmtp
 -rwxr-xr-x	root/root	usr/lib/postfix/local
+-rw-r--r--	root/root	usr/lib/postfix/main.cf
 -rwxr-xr-x	root/root	usr/lib/postfix/master
+-rw-r--r--	root/root	usr/lib/postfix/master.cf
 -rwxr-xr-x	root/root	usr/lib/postfix/nqmgr
 -rwxr-xr-x	root/root	usr/lib/postfix/oqmgr
 -rwxr-xr-x	root/root	usr/lib/postfix/pickup
 -rwxr-xr-x	root/root	usr/lib/postfix/pipe
+-rwxr-xr-x	root/root	usr/lib/postfix/post-install
+-rw-r--r--	root/root	usr/lib/postfix/postfix-files
+-rwxr-xr-x	root/root	usr/lib/postfix/postfix-script
+-rwxr-xr-x	root/root	usr/lib/postfix/postfix-wrapper
+-rwxr-xr-x	root/root	usr/lib/postfix/postmulti-script
 -rwxr-xr-x	root/root	usr/lib/postfix/proxymap
 -rwxr-xr-x	root/root	usr/lib/postfix/qmgr
 -rwxr-xr-x	root/root	usr/lib/postfix/qmqpd
@@ -72,6 +75,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/postlock.1.gz
 -rw-r--r--	root/root	usr/man/man1/postlog.1.gz
 -rw-r--r--	root/root	usr/man/man1/postmap.1.gz
+-rw-r--r--	root/root	usr/man/man1/postmulti.1.gz
 -rw-r--r--	root/root	usr/man/man1/postqueue.1.gz
 -rw-r--r--	root/root	usr/man/man1/postsuper.1.gz
 -rw-r--r--	root/root	usr/man/man1/sendmail.1.gz
@@ -91,6 +95,7 @@ drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/pcre_table.5.gz
 -rw-r--r--	root/root	usr/man/man5/pgsql_table.5.gz
 -rw-r--r--	root/root	usr/man/man5/postconf.5.gz
+-rw-r--r--	root/root	usr/man/man5/postfix-wrapper.5.gz
 -rw-r--r--	root/root	usr/man/man5/regexp_table.5.gz
 -rw-r--r--	root/root	usr/man/man5/relocated.5.gz
 -rw-r--r--	root/root	usr/man/man5/tcp_table.5.gz
@@ -133,6 +138,7 @@ drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/postlock
 -rwxr-xr-x	root/root	usr/sbin/postlog
 -rwxr-xr-x	root/root	usr/sbin/postmap
+-rwxr-xr-x	root/root	usr/sbin/postmulti
 -rwxr-sr-x	root/postdrop	usr/sbin/postqueue
 -rwxr-xr-x	root/root	usr/sbin/postsuper
 -rwxr-xr-x	root/root	usr/sbin/sendmail

@@ -5,7 +5,7 @@
 # Depends on: cyrus-sasl
 
 name=postfix
-version=2.5.17
+version=2.6.15
 release=1
 source=(ftp://ftp.porcupine.org/mirrors/postfix-release/official/$name-$version.tar.gz
         aliases postfix.rc postfix.patch)
@@ -51,12 +51,12 @@ build() {
 
     #
     # Add .gz extensions to manpages (pkgmk compresses them)
-    # Remove LICENSE (will be removed)
+    # *LICENSE files will be removed
     #
-    ( cd $PKG/etc/postfix
+    ( cd $PKG/usr/lib/postfix
       cp postfix-files temp-files
       grep -v LICENSE temp-files | sed 's#\(/man[0-9]/[a-zA-Z0-9_-]\+\.[0-9]\):#\1\.gz:#' > postfix-files
-      rm -f temp-files LICENSE )
+      rm -f temp-files $PKG/etc/postfix/*LICENSE )
 
     install -D -m 00644 ../aliases    $PKG/etc/postfix/aliases
     install -D -m 00755 ../postfix.rc $PKG/etc/rc.d/postfix

@@ -1,8 +1,9 @@
 #!/bin/sh
 
-cd /etc/postfix
+cd /usr/lib/postfix
 
 /bin/sh post-install \
+  daemon_directory=/usr/lib/postfix \
   manpage_directory=/usr/man \
   command_directory=/usr/sbin \
   config_directory=/etc/postfix \
@@ -11,6 +12,7 @@ cd /etc/postfix
   upgrade-package
 
 /bin/sh post-install \
+  daemon_directory=/usr/lib/postfix \
   command_directory=/usr/sbin \
   config_directory=/etc/postfix \
   setgid_group=postdrop \
