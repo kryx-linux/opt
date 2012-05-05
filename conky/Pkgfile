@@ -4,13 +4,12 @@
 # Depends on:  curl, glib, xorg-libxdamage, xorg-libxext, xorg-libxft
 
 name=conky
-version=1.8.1
-release=2
+version=1.9.0
+release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    sed -i '/^#include <curl\/types.h>/d' src/*.c
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --disable-lua \
@@ -21,5 +20,4 @@ build() {
                 --enable-curl
     make
     make DESTDIR=$PKG install
-    rm -r $PKG/usr/lib
 }
