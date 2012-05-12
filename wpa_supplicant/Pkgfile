@@ -4,15 +4,14 @@
 # Depends on:  openssl ncurses readline libnl
 
 name=wpa_supplicant
-version=0.7.3
-release=2
+version=1.0
+release=1
 source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz)
 
 build () {
     cd $name-$version/$name
 
     cp defconfig .config
-    echo "CONFIG_DRIVER_NL80211=y" >> .config
     echo "CONFIG_READLINE=y" >> .config
 
     make
