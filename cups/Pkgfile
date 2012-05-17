@@ -1,10 +1,10 @@
 # Description: CUPS - Common UNIX Printing System
 # URL:         http://www.cups.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  acl tcp_wrappers libusb-compat libpng libtiff openssl poppler
+# Depends on:  acl tcp_wrappers libusb libpng libtiff openssl poppler
 
 name=cups
-version=1.5.2
+version=1.5.3
 release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2
         cups-config.patch cups)
