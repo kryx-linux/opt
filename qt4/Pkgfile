@@ -5,8 +5,8 @@
 # Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus
 
 name=qt4
-version=4.8.0
-release=2
+version=4.8.1
+release=1
 source=(http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-$version.tar.gz)
 
 build () {
@@ -30,7 +30,7 @@ build () {
                 -nomake demos -nomake examples -nomake docs \
                 -no-separate-debug-info -opensource -confirm-license
 
-    make
+    LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$PWD/lib" make
     make INSTALL_ROOT=$PKG install
 
     rm -rf `find $PKG/usr/share/qt4/mkspecs/* | \
