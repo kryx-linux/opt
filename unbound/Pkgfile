@@ -4,14 +4,14 @@
 # Depends on:  openssl expat
 
 name=unbound
-version=1.4.16
+version=1.4.17
 release=1
 source=(http://www.unbound.net/downloads/$name-$version.tar.gz
-        http://www.nlnetlabs.nl/downloads/ldns/ldns-1.6.12.tar.gz
+        http://www.nlnetlabs.nl/downloads/ldns/ldns-1.6.13.tar.gz
         unbound)
 
 build () {
-    cd ldns-1.6.12
+    cd ldns-1.6.13
     ./configure --disable-shared
     make
 
@@ -20,16 +20,17 @@ build () {
                 --mandir=/usr/man \
                 --sysconfdir=/etc \
                 --with-pidfile=/var/run/unbound.pid \
-                --with-rootkey-file=/var/lib/unbound/root.key \
+                --with-chroot-dir=/etc/unbound \
+                --with-rootkey-file=/etc/unbound/anchor/root.key \
                 --disable-shared \
                 --with-username=unbound \
-                --with-ldns=../ldns-1.6.12
+                --with-ldns=../ldns-1.6.13
 
     make
     make DESTDIR=$PKG install
 
     rm -r $PKG/usr/{lib,include,man/man3}
 
-    install -d -o unbound -g unbound $PKG/var/lib/unbound/
+    install -d -o unbound -g unbound $PKG/etc/unbound/anchor
     install -D -m 755 $SRC/unbound $PKG/etc/rc.d/unbound
 }
