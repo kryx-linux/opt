@@ -5,19 +5,12 @@
 # Depends on:  zlib
 
 name=libxml2
-version=2.7.8
-release=2
-source=(ftp://xmlsoft.org/libxml2/$name-$version.tar.gz
-        CVE-2010-4494.patch
-        CVE-2011-{0216,2821,2834,3905,3919}.patch)
+version=2.8.0
+release=1
+source=(ftp://xmlsoft.org/libxml2/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-
-    cat $SRC/CVE-201?-*.patch | patch -p1
-
-    # http://mail.gnome.org/archives/xml/2010-November/msg00016.html
-    sed -i '/VERSION_SCRIPT_FLAGS/s/-z/-n/' configure
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
