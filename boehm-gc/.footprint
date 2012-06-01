@@ -2,12 +2,12 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/gc.h
 drwxr-xr-x	root/root	usr/include/gc/
+-rw-r--r--	root/root	usr/include/gc/cord.h
 -rw-r--r--	root/root	usr/include/gc/gc.h
 -rw-r--r--	root/root	usr/include/gc/gc_allocator.h
 -rw-r--r--	root/root	usr/include/gc/gc_amiga_redirects.h
 -rw-r--r--	root/root	usr/include/gc/gc_backptr.h
 -rw-r--r--	root/root	usr/include/gc/gc_config_macros.h
--rw-r--r--	root/root	usr/include/gc/gc_cpp.h
 -rw-r--r--	root/root	usr/include/gc/gc_gcj.h
 -rw-r--r--	root/root	usr/include/gc/gc_inline.h
 -rw-r--r--	root/root	usr/include/gc/gc_mark.h
@@ -18,7 +18,6 @@ drwxr-xr-x	root/root	usr/include/gc/
 -rw-r--r--	root/root	usr/include/gc/leak_detector.h
 -rw-r--r--	root/root	usr/include/gc/new_gc_alloc.h
 -rw-r--r--	root/root	usr/include/gc/weakpointer.h
--rw-r--r--	root/root	usr/include/gc_cpp.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libcord.a
 -rwxr-xr-x	root/root	usr/lib/libcord.la

@@ -4,12 +4,12 @@
 # Packager: Han Boetes, han at mijncomputer dot dl
 
 name=boehm-gc
-version=7.1
+version=7.2b
 release=1
 source=(http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/gc-${version}.tar.gz)
 
 build () {
-    cd gc-${version}
+    cd gc-7.2
 
     ./configure \
         --prefix=/usr \
