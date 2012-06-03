@@ -4,10 +4,10 @@
 # Depends on: libidl, gtk, python, alsa-lib, yasm, mesa3d
 
 name=firefox
-version=12.0
+version=13.0
 release=1
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
-        mozconfig)
+        mozconfig bz736961.patch)
 
 build() {
     export MOZ_CO_PROJECT=browser
@@ -16,6 +16,7 @@ build() {
     export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
     cd mozilla-release
+    patch -p0 -i $SRC/bz736961.patch
     export CFLAGS="$CFLAGS -mno-avx"
     sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
     ./configure
