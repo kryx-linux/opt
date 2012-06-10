@@ -57,6 +57,9 @@ drwxr-xr-x	root/root	usr/share/squid/
 drwxr-xr-x	root/root	usr/share/squid/errors/
 drwxr-xr-x	root/root	usr/share/squid/errors/templates/
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_ACCESS_DENIED
+-rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_ACL_TIME_QUOTA_EXCEEDED
+-rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_AGENT_CONFIGURE
+-rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_AGENT_WPAD
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_CACHE_ACCESS_DENIED
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_CACHE_MGR_ACCESS_DENIED
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_CANNOT_FORWARD
@@ -93,6 +96,7 @@ drwxr-xr-x	root/root	usr/share/squid/errors/templates/
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_URN_RESOLVE
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_WRITE_ERROR
 -rw-r--r--	root/root	usr/share/squid/errors/templates/ERR_ZERO_SIZE_OBJECT
+-rw-r--r--	root/root	usr/share/squid/errors/templates/error-details.txt
 drwxr-xr-x	root/root	usr/share/squid/icons/
 -rw-r--r--	root/root	usr/share/squid/icons/anthony-binhex.gif
 -rw-r--r--	root/root	usr/share/squid/icons/anthony-bomb.gif
