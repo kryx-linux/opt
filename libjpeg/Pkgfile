@@ -5,7 +5,7 @@
 name=libjpeg
 version=8c
 release=1
-source=(ftp://ftp.uni-frankfurt.de/pub/Mirrors2/gentoo.org/distfiles/jpegsrc.v$version.tar.gz)
+source=(http://www.ijg.org/files/jpegsrc.v$version.tar.gz)
 
 build() {
     cd jpeg-$version
