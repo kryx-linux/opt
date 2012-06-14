@@ -1,6 +1,6 @@
 # Description: a GTK based pdf viewer
 # URL: http://www.emma-soft.com/projects/epdfview
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
 # Depends on: poppler poppler-glib
 
 name=epdfview
@@ -9,9 +9,9 @@ release=2
 source=(http://www.emma-soft.com/projects/epdfview/chrome/site/releases/$name-$version.tar.bz2 $name.diff)
 
 build() {
-	cd $name-$version
-	patch -p2 -i $SRC/$name.diff
-	./configure --prefix=/usr --disable-nls --mandir=/usr/man
-	make
-	make DESTDIR=$PKG install
+        cd $name-$version
+        patch -p2 -i $SRC/$name.diff
+        ./configure --prefix=/usr --disable-nls --mandir=/usr/man
+        make
+        make DESTDIR=$PKG install
 }
