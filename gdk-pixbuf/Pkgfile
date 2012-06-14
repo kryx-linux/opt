@@ -4,9 +4,9 @@
 # Depends on: glib, xorg-libx11, libpng, libtiff, libjpeg
 
 name=gdk-pixbuf
-version=2.22.1
-release=2
-source=(http://download.gnome.org/sources/$name/2.22/$name-$version.tar.bz2 \
+version=2.26.1
+release=1
+source=(http://download.gnome.org/sources/$name/2.26/$name-$version.tar.xz \
         gdk-pixbuf.loaders gdk-pixbuf-register.sh)
 
 build () {
@@ -19,7 +19,8 @@ build () {
 
     install -m 644 $SRC/gdk-pixbuf.loaders \
             $PKG/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
-
+    install -m 755 $SRC/gdk-pixbuf-register.sh \
+            $PKG/usr/bin/gdk-pixbuf-register
     rm -r $PKG/usr/share/gtk-doc
     rmdir $PKG/usr/share
 }
