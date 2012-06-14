@@ -5,11 +5,12 @@
 
 name=epdfview
 version=0.1.8
-release=2
+release=3
 source=(http://www.emma-soft.com/projects/epdfview/chrome/site/releases/$name-$version.tar.bz2 $name.diff)
 
 build() {
         cd $name-$version
+        sed -i 's|<glib/.*\.h>|<glib.h>|' src/gtk/StockIcons.h
         patch -p2 -i $SRC/$name.diff
         ./configure --prefix=/usr --disable-nls --mandir=/usr/man
         make
