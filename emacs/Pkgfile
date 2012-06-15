@@ -5,7 +5,7 @@
 
 name=emacs
 version=24.1
-release=1
+release=2
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
 	$name-$version-etc-blacklist)
 
@@ -29,6 +29,7 @@ build() {
 	done
 
 	rm $PKG/usr/bin/emacs-$version
+	rm $PKG/usr/{bin/{c,e}tags,man/man1/{c,e}tags.1.gz}
 
 	for i in $(< $SRC/$name-$version-etc-blacklist); do
 		rm -r $PKG/usr/share/emacs/$version/etc/$i
