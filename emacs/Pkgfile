@@ -4,9 +4,9 @@
 # Depends on: xorg, libtiff, libungif, ctags, libpng
 
 name=emacs
-version=23.3
-release=3
-source=(http://ftp.gnu.org/gnu/$name/$name-${version}b.tar.gz
+version=24.1
+release=1
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
 	$name-$version-etc-blacklist)
 
 build() {
@@ -28,9 +28,7 @@ build() {
 		[ -f ${file%.gz}c ] && rm -f $file
 	done
 
-	rm $PKG/usr/bin/emacs-$version 
-	rm $PKG/usr/{bin/{c,e}tags,man/man1/{c,e}tags.1}
-	rm $PKG/usr/share/emacs/$version/lisp/{COPYING,calc/README.prev,nxml/TODO,{,term/,international/}README}
+	rm $PKG/usr/bin/emacs-$version
 
 	for i in $(< $SRC/$name-$version-etc-blacklist); do
 		rm -r $PKG/usr/share/emacs/$version/etc/$i
