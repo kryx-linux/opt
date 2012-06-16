@@ -4,7 +4,7 @@
 # Depends on:  apache libxml2
 
 name=mod_php
-version=5.3.13
+version=5.3.14
 release=1
 source=(http://www.php.net/distributions/php-$version.tar.bz2)
 
