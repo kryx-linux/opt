@@ -1342,6 +1342,7 @@ drwxr-xr-x	root/root	usr/include/firefox/nestegg/
 -rw-r--r--	root/root	usr/include/firefox/nsIDOMWindow.h
 -rw-r--r--	root/root	usr/include/firefox/nsIDOMWindowCollection.h
 -rw-r--r--	root/root	usr/include/firefox/nsIDOMWindowUtils.h
+-rw-r--r--	root/root	usr/include/firefox/nsIDOMWindow_globalStorage.h
 -rw-r--r--	root/root	usr/include/firefox/nsIDOMXMLDocument.h
 -rw-r--r--	root/root	usr/include/firefox/nsIDOMXPathEvaluator.h
 -rw-r--r--	root/root	usr/include/firefox/nsIDOMXPathException.h
@@ -5038,6 +5039,7 @@ drwxr-xr-x	root/root	usr/share/idl/firefox/
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIDOMWindow.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIDOMWindowCollection.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIDOMWindowUtils.idl
+-rw-r--r--	root/root	usr/share/idl/firefox/nsIDOMWindow_globalStorage.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIDOMXMLDocument.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIDOMXPathEvaluator.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIDOMXPathException.idl
