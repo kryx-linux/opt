@@ -1,16 +1,3 @@
-drwxr-xr-x	root/root	lib/
-drwxr-xr-x	root/root	lib/gio/
-drwxr-xr-x	root/root	lib/gio/modules/
-lrwxrwxrwx	root/root	lib/libgio-2.0.so.0 -> libgio-2.0.so.0.3200.3
--rwxr-xr-x	root/root	lib/libgio-2.0.so.0.3200.3
-lrwxrwxrwx	root/root	lib/libglib-2.0.so.0 -> libglib-2.0.so.0.3200.3
--rwxr-xr-x	root/root	lib/libglib-2.0.so.0.3200.3
-lrwxrwxrwx	root/root	lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.3200.3
--rwxr-xr-x	root/root	lib/libgmodule-2.0.so.0.3200.3
-lrwxrwxrwx	root/root	lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.3200.3
--rwxr-xr-x	root/root	lib/libgobject-2.0.so.0.3200.3
-lrwxrwxrwx	root/root	lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.3200.3
--rwxr-xr-x	root/root	lib/libgthread-2.0.so.0.3200.3
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/gdbus
@@ -302,19 +289,31 @@ drwxr-xr-x	root/root	usr/lib/gdbus-2.0/codegen/
 -rw-r--r--	root/root	usr/lib/gdbus-2.0/codegen/utils.py
 -rw-r--r--	root/root	usr/lib/gdbus-2.0/codegen/utils.pyc
 -rw-r--r--	root/root	usr/lib/gdbus-2.0/codegen/utils.pyo
+drwxr-xr-x	root/root	usr/lib/gio/
+drwxr-xr-x	root/root	usr/lib/gio/modules/
 drwxr-xr-x	root/root	usr/lib/glib-2.0/
 drwxr-xr-x	root/root	usr/lib/glib-2.0/include/
 -rw-r--r--	root/root	usr/lib/glib-2.0/include/glibconfig.h
 -rwxr-xr-x	root/root	usr/lib/libgio-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so -> ../../lib/libgio-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so -> libgio-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so.0 -> libgio-2.0.so.0.3200.3
+-rwxr-xr-x	root/root	usr/lib/libgio-2.0.so.0.3200.3
 -rwxr-xr-x	root/root	usr/lib/libglib-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so -> ../../lib/libglib-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so -> libglib-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so.0 -> libglib-2.0.so.0.3200.3
+-rwxr-xr-x	root/root	usr/lib/libglib-2.0.so.0.3200.3
 -rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so -> ../../lib/libgmodule-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so -> libgmodule-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.3200.3
+-rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.so.0.3200.3
 -rwxr-xr-x	root/root	usr/lib/libgobject-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so -> ../../lib/libgobject-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so -> libgobject-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.3200.3
+-rwxr-xr-x	root/root	usr/lib/libgobject-2.0.so.0.3200.3
 -rwxr-xr-x	root/root	usr/lib/libgthread-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so -> ../../lib/libgthread-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so -> libgthread-2.0.so.0.3200.3
+lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.3200.3
+-rwxr-xr-x	root/root	usr/lib/libgthread-2.0.so.0.3200.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gio-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gio-unix-2.0.pc
