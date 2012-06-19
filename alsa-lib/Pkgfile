@@ -1,10 +1,10 @@
 # Description: ALSA libraries
-# URL: http://www.alsa-project.org
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# URL: http://www.alsa-project.org/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
 # Depends on: python
 
 name=alsa-lib
-version=1.0.24.1
+version=1.0.25
 release=1
 source=(ftp://ftp.alsa-project.org/pub/lib/$name-$version.tar.bz2)
 
@@ -13,4 +13,5 @@ build() {
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
+	rm -f $PKG/usr/share/alsa/alsa.conf.d/README
 }
