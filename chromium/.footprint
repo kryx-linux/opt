@@ -55,7 +55,12 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/goArrow.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/graphLabelCalloutLeft.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/graphLabelCalloutRight.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/indexedDB.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/indexedDBIndex.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/indexedDBObjectStore.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/localStorage.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/navigatorPinButton.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/navigatorShowHideButton.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/paneAddButtons.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/paneBottomGrow.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/paneBottomGrowActive.png
@@ -174,6 +179,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/elementsPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/filteredItemSelectionDialog.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/heapProfiler.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/indexedDBViews.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/inspectorCommon.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/networkLogView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/networkPanel.css
