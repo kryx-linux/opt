@@ -1,14 +1,14 @@
-# Description: Free Lossless Audio Codec
+# Description: Free Lossless Audio Codec.
 # URL: http://flac.sourceforge.net/
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: libogg
 
 name=flac
 version=1.2.1
 release=2
-source=(http://download.sourceforge.net/$name/$name-$version.tar.gz
-        $name.diff)
+source=(http://downloads.sourceforge.net/project/$name/flac-src/$name-$version-src/$name-$version.tar.gz
+	$name.diff)
 
 build() {
 	cd $name-$version
