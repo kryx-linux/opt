@@ -1,11 +1,11 @@
 # Description: Network Sniffer with nice GTK+ UI
 # URL: http://www.wireshark.org
+# Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Martin Opel, mo at obbl-net dot de
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: gtk libpcap libpcre
 
 name=wireshark
-version=1.6.7
+version=1.6.8
 release=1
 source=(http://www.$name.org/download/src/all-versions/$name-$version.tar.bz2)
 
