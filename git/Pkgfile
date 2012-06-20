@@ -13,12 +13,8 @@ source=(https://git-core.googlecode.com/files/$name-{,manpages-}$version.tar.gz)
 build() {
 	cd $name-$version
 
-	# install Error.pm. this pretty much sucks, but i'm too lazy to
-	# investigate whether there's a better way.
-	sed -i -e '34,35d' -e '37d' perl/Makefile.PL
-
 	make CFLAGS="$CFLAGS" prefix=/usr gitexecdir=/usr/lib/git-core \
-	     DESTDIR=$PKG install
+	     INSTALLSITEMAN3DIR=/usr/man/man3 DESTDIR=$PKG install
 
 	cd $SRC
 
@@ -27,16 +23,6 @@ build() {
 		install -m 644 $i/* $PKG/usr/man/$i;
 	done
 
-	install -d $PKG/usr/man/man3
-  find $PKG/usr/share/man/man3 -type f -exec mv '{}' $PKG/usr/man/man3 \;
- 
-	rmdir $PKG/usr/share/{man/man3,man}
-
-	find $PKG -name perllocal.pod -delete
-	find $PKG -name .packlist -delete
-
-	rm -rf $PKG/usr/share/gitk/lib/msgs
-	rmdir $PKG/usr/share/gitk/{lib,}
-
-	rm -rf $PKG/usr/share/locale
+	find $PKG \( -name perllocal.pod -o -name .packlist \) -delete
+	rm -rf $PKG/usr/share/{locale,gitk}
 }
