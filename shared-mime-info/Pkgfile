@@ -1,13 +1,13 @@
 # Description: core database of common types
 # URL: http://freedesktop.org/Software/shared-mime-info
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: glib,libxml2,intltool
-# Group: gnome
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: glib libxml2 intltool
 
 name=shared-mime-info
-version=0.90
+version=1.0
 release=1
-source=(http://freedesktop.org/~hadess/$name-$version.tar.bz2)
+source=(http://freedesktop.org/~hadess/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
