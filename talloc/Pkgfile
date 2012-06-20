@@ -1,6 +1,7 @@
 # Description: Hierarchical, reference counted memory pool system with destructors
 # URL: http://talloc.samba.org/
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: python
 
 name=talloc
