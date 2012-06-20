@@ -1,6 +1,7 @@
 # Description: A debugging and profiling system for Linux programs
 # URL: http://valgrind.org
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
 
 name=valgrind
 version=3.7.0
