@@ -8,6 +8,9 @@ drwxr-xr-x	root/root	etc/fonts/conf.avail/
 -rw-r--r--	root/root	etc/fonts/conf.avail/10-sub-pixel-vbgr.conf
 -rw-r--r--	root/root	etc/fonts/conf.avail/10-sub-pixel-vrgb.conf
 -rw-r--r--	root/root	etc/fonts/conf.avail/10-unhinted.conf
+-rw-r--r--	root/root	etc/fonts/conf.avail/11-lcdfilter-default.conf
+-rw-r--r--	root/root	etc/fonts/conf.avail/11-lcdfilter-legacy.conf
+-rw-r--r--	root/root	etc/fonts/conf.avail/11-lcdfilter-light.conf
 -rw-r--r--	root/root	etc/fonts/conf.avail/20-fix-globaladvance.conf
 -rw-r--r--	root/root	etc/fonts/conf.avail/20-unhint-small-vera.conf
 -rw-r--r--	root/root	etc/fonts/conf.avail/25-unhint-nonlatin.conf
@@ -52,6 +55,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/fc-cat
 -rwxr-xr-x	root/root	usr/bin/fc-list
 -rwxr-xr-x	root/root	usr/bin/fc-match
+-rwxr-xr-x	root/root	usr/bin/fc-pattern
 -rwxr-xr-x	root/root	usr/bin/fc-query
 -rwxr-xr-x	root/root	usr/bin/fc-scan
 drwxr-xr-x	root/root	usr/include/
@@ -62,9 +66,9 @@ drwxr-xr-x	root/root	usr/include/fontconfig/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libfontconfig.a
 -rwxr-xr-x	root/root	usr/lib/libfontconfig.la
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.4.4
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.4.4
--rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.4.4
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.5.0
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.5.0
+-rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.5.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/fontconfig.pc
 drwxr-xr-x	root/root	usr/man/
@@ -73,6 +77,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/fc-cat.1.gz
 -rw-r--r--	root/root	usr/man/man1/fc-list.1.gz
 -rw-r--r--	root/root	usr/man/man1/fc-match.1.gz
+-rw-r--r--	root/root	usr/man/man1/fc-pattern.1.gz
 -rw-r--r--	root/root	usr/man/man1/fc-query.1.gz
 -rw-r--r--	root/root	usr/man/man1/fc-scan.1.gz
 drwxr-xr-x	root/root	usr/man/man3/
@@ -98,6 +103,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/FcCharSetCount.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetCoverage.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetCreate.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcCharSetDelChar.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetDestroy.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetEqual.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetFirstPage.3.gz
@@ -180,11 +186,14 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/FcLangSetContains.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetCopy.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetCreate.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcLangSetDel.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetDestroy.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetEqual.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetGetLangs.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetHasLang.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetHash.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcLangSetSubtract.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcLangSetUnion.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcMatrixCopy.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcMatrixEqual.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcMatrixInit.3.gz
