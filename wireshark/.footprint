@@ -4,7 +4,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/dftest
 -rwxr-xr-x	root/root	usr/bin/dumpcap
 -rwxr-xr-x	root/root	usr/bin/editcap
--rwxr-xr-x	root/root	usr/bin/idl2wrs
 -rwxr-xr-x	root/root	usr/bin/mergecap
 -rwxr-xr-x	root/root	usr/bin/randpkt
 -rwxr-xr-x	root/root	usr/bin/rawshark
@@ -13,33 +12,27 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/wireshark
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libwireshark.la
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.1.1.8
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so.1 -> libwireshark.so.1.1.8
--rwxr-xr-x	root/root	usr/lib/libwireshark.so.1.1.8
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so.2 -> libwireshark.so.2.0.0
+-rwxr-xr-x	root/root	usr/lib/libwireshark.so.2.0.0
 -rwxr-xr-x	root/root	usr/lib/libwiretap.la
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.1.0.8
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so.1 -> libwiretap.so.1.0.8
--rwxr-xr-x	root/root	usr/lib/libwiretap.so.1.0.8
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so.2 -> libwiretap.so.2.0.0
+-rwxr-xr-x	root/root	usr/lib/libwiretap.so.2.0.0
 -rwxr-xr-x	root/root	usr/lib/libwsutil.la
-lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libwsutil.so.1 -> libwsutil.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libwsutil.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so.2 -> libwsutil.so.2.0.0
+-rwxr-xr-x	root/root	usr/lib/libwsutil.so.2.0.0
 drwxr-xr-x	root/root	usr/lib/wireshark/
 drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/asn1.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/asn1.so
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/coseventcomm.la
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/coseventcomm.so
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/cosnaming.la
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/cosnaming.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/docsis.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/docsis.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/ethercat.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/ethercat.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/gryphon.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/gryphon.so
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/interlink.la
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/interlink.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/irda.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/irda.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/m2m.la
@@ -48,16 +41,10 @@ drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/mate.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/opcua.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/opcua.so
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/parlay.la
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/parlay.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/profinet.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/profinet.so
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/sercosiii.la
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/sercosiii.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/stats_tree.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/stats_tree.so
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/tango.la
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/tango.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/unistim.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/unistim.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/wimax.la
@@ -70,7 +57,6 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/dftest.1.gz
 -rw-r--r--	root/root	usr/man/man1/dumpcap.1.gz
 -rw-r--r--	root/root	usr/man/man1/editcap.1.gz
--rw-r--r--	root/root	usr/man/man1/idl2wrs.1.gz
 -rw-r--r--	root/root	usr/man/man1/mergecap.1.gz
 -rw-r--r--	root/root	usr/man/man1/randpkt.1.gz
 -rw-r--r--	root/root	usr/man/man1/rawshark.1.gz
@@ -93,6 +79,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/diameter/
 -rw-r--r--	root/root	usr/share/wireshark/diameter/Ericsson.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPGmb.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPRx.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPS9.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPSh.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/Vodafone.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/chargecontrol.xml
@@ -130,7 +117,6 @@ drwxr-xr-x	root/root	usr/share/wireshark/help/
 -rw-r--r--	root/root	usr/share/wireshark/help/getting_started.txt
 -rw-r--r--	root/root	usr/share/wireshark/help/overview.txt
 -rw-r--r--	root/root	usr/share/wireshark/help/toc
--rw-r--r--	root/root	usr/share/wireshark/idl2wrs.html
 -rw-r--r--	root/root	usr/share/wireshark/ipmap.html
 -rw-r--r--	root/root	usr/share/wireshark/manuf
 -rw-r--r--	root/root	usr/share/wireshark/mergecap.html
@@ -152,6 +138,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.acme
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.airespace
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alcatel
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alcatel-lucent.xylan
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alcatel.esam
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alcatel.sr
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alteon
@@ -282,7 +269,6 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.wimax.wichorus
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.wispr
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.xedia
--rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.xylan
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.zyxel
 -rw-r--r--	root/root	usr/share/wireshark/randpkt.html
 -rw-r--r--	root/root	usr/share/wireshark/rawshark.html
