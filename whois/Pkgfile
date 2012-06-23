@@ -2,10 +2,9 @@
 # URL:         http://www.linux.it/~md/software/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Packager:    Olle Gustafsson, ogg at linux dot se
-# Depends on:
 
 name=whois
-version=5.0.15
+version=5.0.16
 release=1
 source=(http://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.xz)
 
