@@ -5,9 +5,9 @@
 # Depends on: libogg libvorbis
 
 name=vorbisgain
-version=0.36
+version=0.37
 release=1
-source=(http://sjeng.org/ftp/vorbis/$name-$version.zip)
+source=(http://sjeng.org/ftp/vorbis/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
