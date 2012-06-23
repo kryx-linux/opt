@@ -1,6 +1,7 @@
-# Description: a free alternative to the OpenGL Utility Toolkit (GLUT) library
-# URL: http://freeglut.sourceforge.net
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Description: a free alternative to the OpenGL Utility Toolkit (GLUT) library.
+# URL: http://freeglut.sourceforge.net/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: mesa3d xorg-libxi
 
 name=freeglut
@@ -9,9 +10,12 @@ release=1
 source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
 
 build() {
-    cd $name-$version
-    ./configure --prefix=/usr \
-        --disable-warnings
-    make
-    make DESTDIR=$PKG install
+	cd $name-$version
+
+	./configure \
+		--prefix=/usr \
+		--disable-warnings
+
+	make
+	make DESTDIR=$PKG install
 }
