@@ -1,7 +1,8 @@
-# Description: Computes replaygain information for Ogg Vorbis files
+# Description: Computes replaygain information for Ogg Vorbis files.
 # URL: http://sjeng.org/vorbisgain.html
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: libogg, libvorbis
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: libogg libvorbis
 
 name=vorbisgain
 version=0.36
