@@ -5,8 +5,8 @@
 # Depends on: readline
 
 name=lua
-version=5.2.0
-release=2
+version=5.2.1
+release=1
 source=(http://www.lua.org/ftp/$name-$version.tar.gz
 	$name.diff)
 
