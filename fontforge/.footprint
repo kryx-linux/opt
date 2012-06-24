@@ -90,6 +90,10 @@ lrwxrwxrwx	root/root	usr/lib/libgutils.so.1 -> libgutils.so.1.0.3
 -rwxr-xr-x	root/root	usr/lib/libgutils.so.1.0.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/fontforge.pc
+drwxr-xr-x	root/root	usr/lib/python2.7/
+drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/
+-rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/fontforge.so
+-rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/psMat.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/fontforge.1.gz
@@ -98,9 +102,10 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/sfddiff.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/fontforge/
--rw-r--r--	root/root	usr/share/fontforge/Adobe-CNS1-5.cidmap
+-rw-r--r--	root/root	usr/share/fontforge/Adobe-CNS1-6.cidmap
 -rw-r--r--	root/root	usr/share/fontforge/Adobe-GB1-5.cidmap
 -rw-r--r--	root/root	usr/share/fontforge/Adobe-Identity-0.cidmap
+-rw-r--r--	root/root	usr/share/fontforge/Adobe-Japan1-5.cidmap
 -rw-r--r--	root/root	usr/share/fontforge/Adobe-Japan1-6.cidmap
 -rw-r--r--	root/root	usr/share/fontforge/Adobe-Japan2-0.cidmap
 -rw-r--r--	root/root	usr/share/fontforge/Adobe-Korea1-2.cidmap

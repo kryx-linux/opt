@@ -5,27 +5,25 @@
 # Depends on: freetype libpng libtiff libungif libuninameslist xorg-libxi xorg-libxkbui
 
 name=fontforge
-version=20110222
+version=20120119
 release=1
-source=(http://downloads.sourceforge.net/project/$name/fontforge-source/fontforge_full-$version.tar.bz2
-	http://fontforge.sourceforge.net/cidmaps.tgz
-	fontforge-20110222-libz.so-linkage.patch)
+source=(http://www.hvlinux.net/crux/distfiles/$name/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
-	patch -p 1 -i $SRC/fontforge-20110222-libz.so-linkage.patch
-
-	install -d $PKG/usr/share/fontforge
-	cp $SRC/*.cidmap $PKG/usr/share/fontforge/
-
 	./configure \
 		--prefix=/usr \
 		--mandir=/usr/man \
-		--without-freetype-src \
-		--disable-static
+		--enable-type3 \
+		--enable-devicetables \
+		--enable-double \
+		--with-regular-link \
+		--enable-pyextension \
+		--disable-freetype
 
 	make
 	make install DESTDIR=$PKG
-	rm -r $PKG/usr/share/locale
+	rm -r $PKG/usr/share/{locale,doc}
+	find $PKG -name '*.egg-info' | xargs rm -rf
 }
