@@ -5,7 +5,7 @@
 # Depends on: xorg-libxaw xorg-font-alias xorg-font-misc-misc
 
 name=xterm
-version=277
+version=281
 release=1
 source=(ftp://invisible-island.net/$name/$name-$version.tgz \
         configure.diff)
@@ -19,5 +19,4 @@ build() {
                 --enable-wide-chars
     make
     make install DESTDIR=$PKG
-    chmod 0755 $PKG/usr/bin/$name
 }
