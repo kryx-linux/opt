@@ -26,7 +26,6 @@ drwxr-xr-x	root/root	usr/etc/ImageMagick/
 -rw-r--r--	root/root	usr/etc/ImageMagick/mime.xml
 -rw-r--r--	root/root	usr/etc/ImageMagick/policy.xml
 -rw-r--r--	root/root	usr/etc/ImageMagick/quantization-table.xml
--rw-r--r--	root/root	usr/etc/ImageMagick/sRGB.icc
 -rw-r--r--	root/root	usr/etc/ImageMagick/thresholds.xml
 -rw-r--r--	root/root	usr/etc/ImageMagick/type-dejavu.xml
 -rw-r--r--	root/root	usr/etc/ImageMagick/type-ghostscript.xml
@@ -164,9 +163,9 @@ drwxr-xr-x	root/root	usr/include/ImageMagick/wand/
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/stream.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/wand-view.h
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.6/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.6/config/
--rw-r--r--	root/root	usr/lib/ImageMagick-6.7.6/config/configure.xml
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.7/
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.7/config/
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.7.7/config/configure.xml
 -rw-r--r--	root/root	usr/lib/libMagick++.a
 -rwxr-xr-x	root/root	usr/lib/libMagick++.la
 lrwxrwxrwx	root/root	usr/lib/libMagick++.so -> libMagick++.so.5.0.0
@@ -222,7 +221,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Image::Magick.3pm.gz
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/ImageMagick-6.7.6/
--rw-r--r--	root/root	usr/share/ImageMagick-6.7.6/english.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.7.6/francais.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.7.6/locale.xml
+drwxr-xr-x	root/root	usr/share/ImageMagick-6.7.7/
+-rw-r--r--	root/root	usr/share/ImageMagick-6.7.7/english.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.7.7/francais.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.7.7/locale.xml
