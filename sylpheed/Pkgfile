@@ -4,15 +4,12 @@
 # Depends on:  gtk, openssl
 
 name=sylpheed
-version=3.1.4
+version=3.2.0
 release=1
-source=(http://sylpheed.sraoss.jp/sylpheed/v3.1/$name-$version.tar.bz2)
+source=(http://sylpheed.sraoss.jp/sylpheed/v3.2/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-
-    # http://sylpheed.sraoss.jp/redmine/issues/53
-    sed -i 's/glibconfig\.h/glib\.h/' libsylph/defs.h
 
     ./configure --prefix=/usr
     make
