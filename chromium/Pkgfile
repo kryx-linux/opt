@@ -5,13 +5,17 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt alsa-lib krb5
 
 name=chromium
-version=19.0.1085.0
+version=20.0.1132.47
 release=1
 source=(http://gsdview.appspot.com/chromium-browser-official/$name-$version.tar.bz2 \
-        $name.sh)
+        $name.sh fix-svnversion.patch)
 
 build() {
   cd $name-$version
+
+  # http://code.google.com/p/chromium/issues/detail?id=126452
+  # fix build when subversion is not installed
+  patch -p0 -i $SRC/fix-svnversion.patch
 
   find third_party/WebKit/Source ui/base/ime \
     -type f -exec sed -e 's|<glib/.*\.h>|<glib.h>|g' -i {} \;
