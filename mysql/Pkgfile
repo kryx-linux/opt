@@ -4,9 +4,9 @@
 # Depends on:  tcp_wrappers ncurses zlib openssl cmake libaio
 
 name=mysql
-version=5.5.25
+version=5.5.25a
 release=1
-source=(http://downloads.mysql.com/archives/mysql-5.5/mysql-$version.tar.gz \
+source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.5/$name-$version.tar.gz \
         my.cnf mysqld)
 
 build () {
