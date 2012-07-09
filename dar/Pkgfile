@@ -4,7 +4,7 @@
 # Depends on:  attr, openssl, zlib, bzip2, libgcrypt
 
 name=dar
-version=2.4.6
+version=2.4.7
 release=1
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz \
         darrc)
