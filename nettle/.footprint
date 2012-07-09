@@ -40,6 +40,7 @@ drwxr-xr-x	root/root	usr/include/nettle/
 -rw-r--r--	root/root	usr/include/nettle/ripemd160.h
 -rw-r--r--	root/root	usr/include/nettle/rsa-compat.h
 -rw-r--r--	root/root	usr/include/nettle/rsa.h
+-rw-r--r--	root/root	usr/include/nettle/salsa20.h
 -rw-r--r--	root/root	usr/include/nettle/serpent.h
 -rw-r--r--	root/root	usr/include/nettle/sexp.h
 -rw-r--r--	root/root	usr/include/nettle/sha.h
@@ -47,7 +48,13 @@ drwxr-xr-x	root/root	usr/include/nettle/
 -rw-r--r--	root/root	usr/include/nettle/yarrow.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libhogweed.a
+lrwxrwxrwx	root/root	usr/lib/libhogweed.so -> libhogweed.so.2.2
+lrwxrwxrwx	root/root	usr/lib/libhogweed.so.2 -> libhogweed.so.2.2
+-rw-r--r--	root/root	usr/lib/libhogweed.so.2.2
 -rw-r--r--	root/root	usr/lib/libnettle.a
+lrwxrwxrwx	root/root	usr/lib/libnettle.so -> libnettle.so.4.4
+lrwxrwxrwx	root/root	usr/lib/libnettle.so.4 -> libnettle.so.4.4
+-rw-r--r--	root/root	usr/lib/libnettle.so.4.4
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/hogweed.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/nettle.pc
