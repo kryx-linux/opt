@@ -5,7 +5,7 @@
 # Depends on: openldap
 
 name=krb5
-version=1.9.2
+version=1.10.2
 release=1
 source=(http://web.mit.edu/kerberos/dist/$name/${version%.*}/$name-$version-signed.tar)
 
