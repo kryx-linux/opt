@@ -1,19 +1,24 @@
-# Description: HTML::Tagset
-# URL: http://search.cpan.org/~petdance/HTML-Tagset-3.04/
-# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Description: Data tables useful in parsing HTML.
+# URL: http://search.cpan.org/dist/HTML-Tagset
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: perl
 
 name=p5-html-tagset
-version=3.04
-release=4
-source=(http://www.cpan.org/authors/id/S/SB/SBURKE/HTML-Tagset-$version.tar.gz)
+version=3.20
+release=1
+source=(http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/HTML-Tagset-$version.tar.gz)
 
 build() {
 	cd HTML-Tagset-$version
 	perl Makefile.PL
 	make OPTIMIZE="$CFLAGS"
 	make DESTDIR=$PKG install
-	find ${PKG} -name perllocal.pod -exec rm '{}' \;
-	find ${PKG} -name .packlist -exec rm '{}' \;
+
+	find $PKG -type f \( \
+		-name '.packlist' -or \
+		-name '*.bs' -or \
+		-name 'autosplit.ix' -or \
+		-name 'perllocal.pod' \) -delete
+
+	find $PKG -depth -empty -exec rm -r {} \;
 }
