@@ -4,9 +4,9 @@
 # Depends on:  fuse, glib, libgphoto2
 
 name=gphotofs
-version=0.4.0
+version=0.5
 release=1
-source=(http://downloads.sourceforge.net/project/gphoto/$name/$version/$name-$version.tar.bz2)
+source=(http://downloads.sourceforge.net/project/gphoto/$name/$version.0/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
