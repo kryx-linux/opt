@@ -6,8 +6,7 @@ lrwxrwxrwx	root/root	usr/bin/mcedit -> mc
 lrwxrwxrwx	root/root	usr/bin/mcview -> mc
 drwxr-xr-x	root/root	usr/etc/
 drwxr-xr-x	root/root	usr/etc/mc/
--rw-r--r--	root/root	usr/etc/mc/edit.indent.rc
--rw-r--r--	root/root	usr/etc/mc/edit.spell.rc
+-rwxr-xr-x	root/root	usr/etc/mc/edit.indent.rc
 -rw-r--r--	root/root	usr/etc/mc/filehighlight.ini
 -rw-r--r--	root/root	usr/etc/mc/mc.ext
 -rw-r--r--	root/root	usr/etc/mc/mc.keymap
@@ -20,6 +19,16 @@ drwxr-xr-x	root/root	usr/etc/mc/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/mc/
 -rwxr-xr-x	root/root	usr/lib/mc/cons.saver
+drwxr-xr-x	root/root	usr/lib/mc/ext.d/
+-rwxr-xr-x	root/root	usr/lib/mc/ext.d/archive.sh
+-rwxr-xr-x	root/root	usr/lib/mc/ext.d/doc.sh
+-rwxr-xr-x	root/root	usr/lib/mc/ext.d/image.sh
+-rwxr-xr-x	root/root	usr/lib/mc/ext.d/misc.sh
+-rwxr-xr-x	root/root	usr/lib/mc/ext.d/package.sh
+-rwxr-xr-x	root/root	usr/lib/mc/ext.d/sound.sh
+-rwxr-xr-x	root/root	usr/lib/mc/ext.d/text.sh
+-rwxr-xr-x	root/root	usr/lib/mc/ext.d/video.sh
+-rwxr-xr-x	root/root	usr/lib/mc/ext.d/web.sh
 drwxr-xr-x	root/root	usr/lib/mc/extfs.d/
 -rwxr-xr-x	root/root	usr/lib/mc/extfs.d/a+
 -rwxr-xr-x	root/root	usr/lib/mc/extfs.d/apt+
@@ -51,6 +60,7 @@ drwxr-xr-x	root/root	usr/lib/mc/extfs.d/
 -rwxr-xr-x	root/root	usr/lib/mc/extfs.d/ucab
 -rwxr-xr-x	root/root	usr/lib/mc/extfs.d/uha
 -rwxr-xr-x	root/root	usr/lib/mc/extfs.d/ulha
+-rwxr-xr-x	root/root	usr/lib/mc/extfs.d/ulib
 -rwxr-xr-x	root/root	usr/lib/mc/extfs.d/urar
 -rwxr-xr-x	root/root	usr/lib/mc/extfs.d/uzip
 -rwxr-xr-x	root/root	usr/lib/mc/extfs.d/uzoo
