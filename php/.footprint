@@ -15,7 +15,6 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/php/
 drwxr-xr-x	root/root	usr/include/php/TSRM/
 -rw-r--r--	root/root	usr/include/php/TSRM/TSRM.h
--rw-r--r--	root/root	usr/include/php/TSRM/acconfig.h
 -rw-r--r--	root/root	usr/include/php/TSRM/readdir.h
 -rw-r--r--	root/root	usr/include/php/TSRM/tsrm_config.h
 -rw-r--r--	root/root	usr/include/php/TSRM/tsrm_config.w32.h
@@ -25,7 +24,6 @@ drwxr-xr-x	root/root	usr/include/php/TSRM/
 -rw-r--r--	root/root	usr/include/php/TSRM/tsrm_virtual_cwd.h
 -rw-r--r--	root/root	usr/include/php/TSRM/tsrm_win32.h
 drwxr-xr-x	root/root	usr/include/php/Zend/
--rw-r--r--	root/root	usr/include/php/Zend/acconfig.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_API.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_alloc.h
@@ -37,12 +35,12 @@ drwxr-xr-x	root/root	usr/include/php/Zend/
 -rw-r--r--	root/root	usr/include/php/Zend/zend_config.nw.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_config.w32.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_constants.h
+-rw-r--r--	root/root	usr/include/php/Zend/zend_dtrace.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_dynamic_array.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_errors.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_exceptions.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_execute.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_extensions.h
--rw-r--r--	root/root	usr/include/php/Zend/zend_fast_cache.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_float.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_gc.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_globals.h
@@ -71,9 +69,11 @@ drwxr-xr-x	root/root	usr/include/php/Zend/
 -rw-r--r--	root/root	usr/include/php/Zend/zend_operators.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_ptr_stack.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_qsort.h
+-rw-r--r--	root/root	usr/include/php/Zend/zend_signal.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_stack.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_static_allocator.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_stream.h
+-rw-r--r--	root/root	usr/include/php/Zend/zend_string.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_strtod.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_ts_hash.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_types.h
@@ -106,11 +106,12 @@ drwxr-xr-x	root/root	usr/include/php/ext/hash/
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash.h
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_adler32.h
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_crc32.h
+-rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_fnv.h
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_gost.h
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_haval.h
+-rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_joaat.h
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_md.h
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_ripemd.h
--rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_salsa.h
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_sha.h
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_snefru.h
 -rw-r--r--	root/root	usr/include/php/ext/hash/php_hash_tiger.h
@@ -152,10 +153,6 @@ drwxr-xr-x	root/root	usr/include/php/ext/spl/
 -rw-r--r--	root/root	usr/include/php/ext/spl/spl_heap.h
 -rw-r--r--	root/root	usr/include/php/ext/spl/spl_iterators.h
 -rw-r--r--	root/root	usr/include/php/ext/spl/spl_observer.h
-drwxr-xr-x	root/root	usr/include/php/ext/sqlite/
-drwxr-xr-x	root/root	usr/include/php/ext/sqlite/libsqlite/
-drwxr-xr-x	root/root	usr/include/php/ext/sqlite/libsqlite/src/
--rw-r--r--	root/root	usr/include/php/ext/sqlite/libsqlite/src/sqlite.h
 drwxr-xr-x	root/root	usr/include/php/ext/sqlite3/
 drwxr-xr-x	root/root	usr/include/php/ext/sqlite3/libsqlite/
 -rw-r--r--	root/root	usr/include/php/ext/sqlite3/libsqlite/sqlite3.h
@@ -178,6 +175,7 @@ drwxr-xr-x	root/root	usr/include/php/ext/standard/
 -rw-r--r--	root/root	usr/include/php/ext/standard/fsock.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/head.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/html.h
+-rw-r--r--	root/root	usr/include/php/ext/standard/html_tables.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/info.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/md5.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/microtime.h
@@ -231,7 +229,6 @@ drwxr-xr-x	root/root	usr/include/php/main/
 -rw-r--r--	root/root	usr/include/php/main/fopen_wrappers.h
 -rw-r--r--	root/root	usr/include/php/main/logos.h
 -rw-r--r--	root/root	usr/include/php/main/php.h
--rw-r--r--	root/root	usr/include/php/main/php3_compat.h
 -rw-r--r--	root/root	usr/include/php/main/php_compat.h
 -rw-r--r--	root/root	usr/include/php/main/php_config.h
 -rw-r--r--	root/root	usr/include/php/main/php_content_types.h
@@ -252,7 +249,6 @@ drwxr-xr-x	root/root	usr/include/php/main/
 -rw-r--r--	root/root	usr/include/php/main/php_variables.h
 -rw-r--r--	root/root	usr/include/php/main/php_version.h
 -rw-r--r--	root/root	usr/include/php/main/rfc1867.h
--rw-r--r--	root/root	usr/include/php/main/safe_mode.h
 -rw-r--r--	root/root	usr/include/php/main/snprintf.h
 -rw-r--r--	root/root	usr/include/php/main/spprintf.h
 drwxr-xr-x	root/root	usr/include/php/main/streams/

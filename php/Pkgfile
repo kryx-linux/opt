@@ -4,7 +4,7 @@
 # Depends on:  ncurses readline libpcre libxml2 curl db gdbm zip
 
 name=php
-version=5.3.14
+version=5.4.5
 release=1
 source=(http://www.php.net/distributions/php-$version.tar.bz2 
         extensions.ini)
@@ -13,7 +13,7 @@ build () {
     cd php-$version
 
     local PHP_CONFIG="
-    --prefix=/usr \
+    --prefix=/usr --mandir=/usr/man \
     --with-config-file-path=/etc/php \
     --with-config-file-scan-dir=/etc/php/conf.d \
     --with-zlib \
