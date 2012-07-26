@@ -6,7 +6,7 @@
 
 name=poppler
 version=0.20.2
-release=1
+release=2
 source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
 
 build() {
@@ -16,7 +16,7 @@ build() {
                 --mandir=/usr/man \
                 --enable-{zlib,libjpeg,libpng,cms} \
                 --enable-xpdf-headers \
-                --disable-poppler-{glib,qt4,cpp}
+                --disable-poppler-{glib,qt4}
 
     make
     make DESTDIR=$PKG install
