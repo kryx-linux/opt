@@ -4,7 +4,7 @@
 # Depends on:  util-linux-ng cmake
 
 name=task
-version=2.1.0
+version=2.1.1
 release=1
 source=(http://www.taskwarrior.org/download/$name-$version.tar.gz)
 
