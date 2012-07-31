@@ -5,16 +5,17 @@
 
 name=wvdial
 version=1.61
-release=3
+release=4
 source=(http://wvstreams.googlecode.com/files/$name-$version.tar.gz \
         http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz \
         $name-$version.patch wvstreams-4.6.1-openssl.patch \
-        wvstreams-4.6.1-include_stat.patch)
+        wvstreams-4.6.1-include_stat.patch wvstreams-4.6.1-gcc47.patch)
 
 build() {
     cd wvstreams-4.6.1
     patch -p1 -i $SRC/wvstreams-4.6.1-openssl.patch
     patch -p1 -i $SRC/wvstreams-4.6.1-include_stat.patch
+    patch -p1 -i $SRC/wvstreams-4.6.1-gcc47.patch
     ./configure --prefix=/usr --without-{pam,tcl,qt,dbus}
     make -j1
 
