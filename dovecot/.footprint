@@ -83,11 +83,13 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/config-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/config-request.h
 -rw-r--r--	root/root	usr/include/dovecot/config.h
+-rw-r--r--	root/root	usr/include/dovecot/connection.h
 -rw-r--r--	root/root	usr/include/dovecot/crc32.h
 -rw-r--r--	root/root	usr/include/dovecot/cydir-storage.h
 -rw-r--r--	root/root	usr/include/dovecot/cydir-sync.h
 -rw-r--r--	root/root	usr/include/dovecot/data-stack.h
 -rw-r--r--	root/root	usr/include/dovecot/db-checkpassword.h
+-rw-r--r--	root/root	usr/include/dovecot/db-dict.h
 -rw-r--r--	root/root	usr/include/dovecot/db-ldap.h
 -rw-r--r--	root/root	usr/include/dovecot/db-passwd-file.h
 -rw-r--r--	root/root	usr/include/dovecot/db-sql.h
@@ -203,6 +205,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/istream-seekable.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-tee.h
 -rw-r--r--	root/root	usr/include/dovecot/istream.h
+-rw-r--r--	root/root	usr/include/dovecot/json-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/lda-settings.h
 -rw-r--r--	root/root	usr/include/dovecot/lib-signals.h
 -rw-r--r--	root/root	usr/include/dovecot/lib.h
