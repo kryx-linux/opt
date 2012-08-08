@@ -4,16 +4,12 @@
 # Depends on:  libjpeg, zlib
 
 name=libtiff
-version=3.9.6
-release=3
-source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz \
-        CVE-2012-2088.patch CVE-2012-2113.patch CVE-2012-3401.patch)
+version=4.0.2
+release=1
+source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz)
 
 build() {
     cd tiff-$version
-    patch -p0 -i $SRC/CVE-2012-2088.patch
-    patch -p0 -i $SRC/CVE-2012-2113.patch
-    patch -p1 -i $SRC/CVE-2012-3401.patch
     ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
