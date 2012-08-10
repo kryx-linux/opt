@@ -1,13 +1,13 @@
-# Description: An outline font editor.
+# Description: Outline and bitmap font editor.
 # URL: http://fontforge.sourceforge.net
 # Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Antti Nykanen, aon at iki dot fi
-# Depends on: freetype libpng libtiff libungif libuninameslist xorg-libxi xorg-libxkbui
+# Depends on: freetype libpng libspiro libtiff libungif libuninameslist util-linux-ng xorg-libxi xorg-libxkbui xz
 
 name=fontforge
-version=20120119
+version=20120731-b
 release=1
-source=(http://www.hvlinux.net/crux/distfiles/$name/$name-$version.tar.xz)
+source=(http://downloads.sourceforge.net/project/$name/$name-source/fontforge_full-$version.tar.bz2)
 
 build() {
 	cd $name-$version
@@ -19,11 +19,10 @@ build() {
 		--enable-devicetables \
 		--enable-double \
 		--with-regular-link \
-		--enable-pyextension \
-		--disable-freetype
+		--enable-pyextension
 
 	make
 	make install DESTDIR=$PKG
-	rm -r $PKG/usr/share/{locale,doc}
+	rm -r $PKG/usr/share/locale
 	find $PKG -name '*.egg-info' | xargs rm -rf
 }
