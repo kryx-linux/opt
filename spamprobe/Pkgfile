@@ -5,14 +5,13 @@
 
 name=spamprobe
 version=1.4d
-release=4
+release=5
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz
-        $name-$version-gcc43.patch $name-$version-libpng14.patch)
+        $name-$version-11.patch)
 
 build () {
     cd $SRC/$name-$version
-    patch -p1 -i $SRC/$name-$version-gcc43.patch
-    patch -p0 -i $SRC/$name-$version-libpng14.patch
+    patch -p1 -i $SRC/$name-$version-11.patch
     ./configure --prefix=/usr --enable-default-8-bit
     make 
     make DESTDIR=$PKG install
