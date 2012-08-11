@@ -8,10 +8,12 @@ name=slim
 version=1.3.4
 release=1
 source=(http://download.berlios.de/$name/$name-$version.tar.gz \
-        http://jw.tks6.net/files/slim-crux-smooth.tar.gz $name.rc)
+        http://jw.tks6.net/files/slim-crux-smooth.tar.gz libpng.patch $name.rc)
 
 build () {
    cd $name-$version
+
+   patch -i ../libpng.patch -p1
 
    sed -i 's:${MANDIR}:/usr/man:g' CMakeLists.txt
    cmake -DCMAKE_INSTALL_PREFIX=/usr
