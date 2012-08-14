@@ -1,0 +1,8 @@
+POST-INSTALL
+
+If you come across crashes such as:
+
+(transmission-gtk:19791): GLib-GIO-ERROR **: No GSettings schemas are installed on the system
+
+This can be resolved by generating a glib-schema with the command :
+$ glib-compile-schemas /usr/share/glib-2.0/schemas/
