@@ -6,7 +6,7 @@
 # Nice to have: tk
 
 name=git
-version=1.7.11.4
+version=1.7.11.5
 release=1
 source=(https://git-core.googlecode.com/files/$name-{,manpages-}$version.tar.gz)
 
