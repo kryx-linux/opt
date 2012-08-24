@@ -5,12 +5,12 @@
 # Depends on:  libsdl
 
 name=qemu
-version=1.2.0-rc0
+version=1.2.0-rc1
 release=1
 source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
 
 build() {
-  cd $name-1.2.0-rc0
+  cd $name-$version
   ./configure --prefix=/usr \
       --cc="${CC:=gcc}" \
       --host-cc="${CC:=gcc}" \
