@@ -1,10 +1,10 @@
 # Description: Minimalistic tiling window manager
 # URL:         https://opensource.conformal.com/wiki/spectrwm
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  xorg-libxt xorg-libxrandr xorg-font-misc-misc xorg-font-alias
+# Depends on:  xorg-libxrender fontconfig xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=spectrwm
-version=1.1.2
+version=2.0.0
 release=1
 source=(https://opensource.conformal.com/snapshots/$name/$name-$version.tgz)
 
