@@ -6,13 +6,14 @@
 
 name=w3m
 version=0.5.3
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
 
     sed -i s/showaudio/mplayer/ config.h.in
+    sed -i '836d' main.c # function type is void
 
     ./configure \
         --prefix=/usr \

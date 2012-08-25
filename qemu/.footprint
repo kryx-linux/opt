@@ -17,6 +17,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-mips
 -rwxr-xr-x	root/root	usr/bin/qemu-mipsel
 -rwxr-xr-x	root/root	usr/bin/qemu-nbd
+-rwxr-xr-x	root/root	usr/bin/qemu-or32
 -rwxr-xr-x	root/root	usr/bin/qemu-ppc
 -rwxr-xr-x	root/root	usr/bin/qemu-ppc64
 -rwxr-xr-x	root/root	usr/bin/qemu-ppc64abi32
@@ -38,6 +39,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-system-mips64
 -rwxr-xr-x	root/root	usr/bin/qemu-system-mips64el
 -rwxr-xr-x	root/root	usr/bin/qemu-system-mipsel
+-rwxr-xr-x	root/root	usr/bin/qemu-system-or32
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppc
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppc64
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppcemb
@@ -46,6 +48,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-system-sh4eb
 -rwxr-xr-x	root/root	usr/bin/qemu-system-sparc
 -rwxr-xr-x	root/root	usr/bin/qemu-system-sparc64
+-rwxr-xr-x	root/root	usr/bin/qemu-system-unicore32
 -rwxr-xr-x	root/root	usr/bin/qemu-system-x86_64
 -rwxr-xr-x	root/root	usr/bin/qemu-system-xtensa
 -rwxr-xr-x	root/root	usr/bin/qemu-system-xtensaeb
@@ -67,6 +70,7 @@ drwxr-xr-x	root/root	usr/share/qemu/
 -rw-r--r--	root/root	usr/share/qemu/cpus-x86_64.conf
 drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/keymaps/ar
+-rw-r--r--	root/root	usr/share/qemu/keymaps/bepo
 -rw-r--r--	root/root	usr/share/qemu/keymaps/common
 -rw-r--r--	root/root	usr/share/qemu/keymaps/da
 -rw-r--r--	root/root	usr/share/qemu/keymaps/de
@@ -103,7 +107,6 @@ drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/keymaps/tr
 -rw-r--r--	root/root	usr/share/qemu/kvmvapic.bin
 -rw-r--r--	root/root	usr/share/qemu/linuxboot.bin
--rw-r--r--	root/root	usr/share/qemu/mpc8544ds.dtb
 -rw-r--r--	root/root	usr/share/qemu/multiboot.bin
 -rw-r--r--	root/root	usr/share/qemu/openbios-ppc
 -rw-r--r--	root/root	usr/share/qemu/openbios-sparc32

@@ -1,4 +1,5 @@
 #!/bin/sh
 
-mkfontdir /usr/lib/X11/fonts/msttcorefonts
-mkfontscale /usr/lib/X11/fonts/msttcorefonts
+fc-cache /usr/share/fonts/X11/TTF
+mkfontscale /usr/share/fonts/X11/TTF
+mkfontdir /usr/share/fonts/X11/TTF

@@ -2,11 +2,11 @@
 # Description: Microsoft's Web Fonts (truetype)
 # Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: xorg-mkfontdir xorg-mkfontscale cabextract
+# Depends on: fontconfig xorg-mkfontdir xorg-mkfontscale cabextract
 
 name=xorg-font-msttcorefonts
 version=1.4
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/corefonts/the%20fonts/final/webdin32.exe
 	http://downloads.sourceforge.net/project/corefonts/the%20fonts/final/andale32.exe
 	http://downloads.sourceforge.net/project/corefonts/the%20fonts/final/arial32.exe
@@ -30,8 +30,8 @@ build() {
 	done
 
 	cabextract --lowercase viewer1.cab
-	install -d $PKG/usr/lib/X11/fonts/msttcorefonts
+	install -d $PKG/usr/share/fonts/X11/TTF
 
 	install -o root -g root -m 0644 \
-		-t $PKG/usr/lib/X11/fonts/msttcorefonts/ *.ttf
+		-t $PKG/usr/share/fonts/X11/TTF *.ttf
 }

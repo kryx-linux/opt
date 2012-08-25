@@ -5,17 +5,16 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt alsa-lib krb5
 
 name=chromium
-version=20.0.1132.47
+version=21.0.1180.82
 release=1
 source=(http://gsdview.appspot.com/chromium-browser-official/$name-$version.tar.bz2 \
-        $name.sh fix-svnversion.patch)
+        $name.sh bison.patch)
 
 build() {
   cd $name-$version
 
-  # http://code.google.com/p/chromium/issues/detail?id=126452
-  # fix build when subversion is not installed
-  patch -p0 -i $SRC/fix-svnversion.patch
+  # https://bugs.webkit.org/show_bug.cgi?id=92264
+  patch -d ./third_party/WebKit -p1 -i $SRC/bison.patch
 
   find third_party/WebKit/Source ui/base/ime \
     -type f -exec sed -e 's|<glib/.*\.h>|<glib.h>|g' -i {} \;
@@ -61,7 +60,7 @@ build() {
   cp -a out/Release/resources $PKG/usr/lib/chromium
   install -m 0644 -D out/Release/chrome.1 $PKG/usr/man/man1/chromium.1
 
-  for size in 16 22 24 32 48 128 256; do
+  for size in 22 24 48 128 256; do
     install -m 0644 -D chrome/app/theme/chromium/product_logo_${size}.png \
       $PKG/usr/share/icons/hicolor/${size}x${size}/apps/chromium.png
   done

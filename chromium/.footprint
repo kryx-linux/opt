@@ -12,6 +12,9 @@ drwxr-xr-x	root/root	usr/lib/chromium/locales/
 -rw-r--r--	root/root	usr/lib/chromium/locales/en-US.pak
 -rw-r--r--	root/root	usr/lib/chromium/resources.pak
 drwxr-xr-x	root/root	usr/lib/chromium/resources/
+drwxr-xr-x	root/root	usr/lib/chromium/resources/extension/
+drwxr-xr-x	root/root	usr/lib/chromium/resources/extension/demo/
+-rw-r--r--	root/root	usr/lib/chromium/resources/extension/demo/library.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/DevTools.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/HeapSnapshotWorker.js
@@ -46,6 +49,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/errorIcon.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/errorMediumIcon.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/errorRedDot.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/fileSystem.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/forward.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/frame.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/glossyHeader.png
@@ -59,7 +63,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/indexedDBIndex.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/indexedDBObjectStore.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/localStorage.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/navigatorPinButton.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/navigatorShowHideButton.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/paneAddButtons.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/paneBottomGrow.png
@@ -131,15 +134,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/thumbHoverHoriz.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/thumbHoverVert.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/thumbVert.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineBarBlue.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineBarGray.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineBarGreen.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineBarOrange.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineBarPurple.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineBarRed.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineBarYellow.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineCheckmarks.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineDots.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/tickMark.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineHollowPillBlue.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineHollowPillGray.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelineHollowPillGreen.png
@@ -181,8 +176,10 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/elementsPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/filteredItemSelectionDialog.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/heapProfiler.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/helpScreen.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/indexedDBViews.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/inspectorCommon.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/nativeMemoryProfiler.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/navigatorView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/networkLogView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/networkPanel.css
@@ -190,6 +187,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/profilesPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/resourceView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/resourcesPanel.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/revisionHistory.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/scriptsPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/splitView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/tabbedPane.css
@@ -207,9 +205,6 @@ drwxr-xr-x	root/root	usr/share/icons/hicolor/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/128x128/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/128x128/apps/
 -rw-r--r--	root/root	usr/share/icons/hicolor/128x128/apps/chromium.png
-drwxr-xr-x	root/root	usr/share/icons/hicolor/16x16/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/16x16/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/16x16/apps/chromium.png
 drwxr-xr-x	root/root	usr/share/icons/hicolor/22x22/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/22x22/apps/
 -rw-r--r--	root/root	usr/share/icons/hicolor/22x22/apps/chromium.png
@@ -219,9 +214,6 @@ drwxr-xr-x	root/root	usr/share/icons/hicolor/24x24/apps/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/256x256/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/256x256/apps/
 -rw-r--r--	root/root	usr/share/icons/hicolor/256x256/apps/chromium.png
-drwxr-xr-x	root/root	usr/share/icons/hicolor/32x32/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/32x32/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/32x32/apps/chromium.png
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/apps/
 -rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/chromium.png

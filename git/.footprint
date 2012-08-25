@@ -37,6 +37,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-commit-tree
 -rwxr-xr-x	root/root	usr/lib/git-core/git-config
 -rwxr-xr-x	root/root	usr/lib/git-core/git-count-objects
+-rwxr-xr-x	root/root	usr/lib/git-core/git-credential
 -rwxr-xr-x	root/root	usr/lib/git-core/git-credential-cache
 -rwxr-xr-x	root/root	usr/lib/git-core/git-credential-cache--daemon
 -rwxr-xr-x	root/root	usr/lib/git-core/git-credential-store
@@ -198,13 +199,19 @@ drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git.pm
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/Git/
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/I18N.pm
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/IndexInfo.pm
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN.pm
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/Editor.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/Fetcher.pm
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/GlobSpec.pm
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/Log.pm
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/Memoize/
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/Memoize/YAML.pm
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/Migration.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/Prompt.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/Ra.pm
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/Git/SVN/Utils.pm
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/linux-thread-multi/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/linux-thread-multi/auto/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/linux-thread-multi/auto/Git/
@@ -259,6 +266,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-credential-cache--daemon.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-credential-cache.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-credential-store.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-credential.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-cvsexportcommit.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-cvsimport.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-cvsserver.1.gz
@@ -389,6 +397,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Git::SVN::Memoize::YAML.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Git::SVN::Prompt.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Git::SVN::Ra.3pm.gz
+-r--r--r--	root/root	usr/man/man3/Git::SVN::Utils.3pm.gz
 -r--r--r--	root/root	usr/man/man3/private-Error.3pm.gz
 drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/gitattributes.5.gz

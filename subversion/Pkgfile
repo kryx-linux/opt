@@ -5,12 +5,16 @@
 # Depends on: apr neon expat sqlite3
 
 name=subversion
-version=1.7.5
+version=1.7.6
 release=1
-source=(http://www.apache.org/dist/$name/$name-$version.tar.bz2)
+source=(http://www.apache.org/dist/$name/$name-$version.tar.bz2 \
+        mod_dontdothat.patch)
 
 build() {
     cd $name-$version
+
+    # fix build issues with server-side modules
+    patch -p1 -i $SRC/mod_dontdothat.patch
 
     ./configure --prefix=/usr \
        --mandir=/usr/man \
