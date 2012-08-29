@@ -4,11 +4,17 @@
 # Depends on:  libusb-compat libtiff
 
 name=sane
-version=1.0.22
+version=1.0.23
 release=1
-source=(ftp://ftp2.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
+source=(https://alioth.debian.org/frs/download.php/3752/$name-backends-$version.tar.gz.1 \
+        https://alioth.debian.org/frs/download.php/3753/$name-backends-$version.tar.gz.2 \
+        https://alioth.debian.org/frs/download.php/3754/$name-backends-$version.tar.gz.3)
 
 build () {
+
+    cat $name-backends-$version.tar.gz.* > $name-backends-$version.tar.gz
+    tar xf $name-backends-$version.tar.gz 
+
     cd $name-backends-$version
 
     ./configure --prefix=/usr \
@@ -16,16 +22,13 @@ build () {
                 --localstatedir=/var \
                 --sysconfdir=/etc \
                 --disable-translations \
-                --enable-locking \
+                --disable-locking \
                 --with-group=scanner
+    
     make
     make -j1 DESTDIR=$PKG install
 
     install -D -m 644 tools/udev/libsane.rules $PKG/etc/udev/rules.d/85-libsane.rules
-
-    chown root:root $PKG/{var,var/lock}
-    chmod 0755 $PKG/var
-    chmod 1777 $PKG/var/lock
 
     rm -r $PKG/usr/{doc,share}
 }
