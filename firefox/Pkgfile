@@ -1,13 +1,13 @@
 # Description: The Mozilla Firefox browser
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: libidl, gtk, python, alsa-lib, yasm, mesa3d
+# Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
 
 name=firefox
-version=14.0.1
+version=15.0
 release=1
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
-        mozconfig bz736961.patch)
+        mozconfig)
 
 build() {
     export MOZ_CO_PROJECT=browser
@@ -16,7 +16,6 @@ build() {
     export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
     cd mozilla-release
-    patch -p0 -i $SRC/bz736961.patch
     export CFLAGS="$CFLAGS -mno-avx"
     sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
     ./configure
