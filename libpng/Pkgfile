@@ -5,12 +5,13 @@
 
 name=libpng
 version=1.5.12
-release=1
-source=(http://download.sourceforge.net/$name/$name-$version.tar.xz)
+release=2
+source=(http://download.sourceforge.net/$name/$name-$version.tar.xz \
+        http://downloads.sourceforge.net/project/libpng-apng/libpng15/$version/$name-$version-apng.patch.gz)
 
 build() {
     cd $name-$version
-
+    zcat $SRC/$name-$version-apng.patch.gz | patch -p1
     ./configure --prefix=/usr --mandir=/usr/man
 
     make
