@@ -576,7 +576,6 @@ drwxr-xr-x	root/root	usr/include/firefox/mozilla/threads/
 -rw-r--r--	root/root	usr/include/firefox/mozilla/threads/nsThreadIDs.h
 -rw-r--r--	root/root	usr/include/firefox/mozilla/throw_gcc.h
 -rw-r--r--	root/root	usr/include/firefox/mozilla/unused.h
--rw-r--r--	root/root	usr/include/firefox/mozpngconf.h
 -rw-r--r--	root/root	usr/include/firefox/necko-config.h
 drwxr-xr-x	root/root	usr/include/firefox/nestegg/
 -rw-r--r--	root/root	usr/include/firefox/nestegg/nestegg-stdint.h
@@ -2318,8 +2317,6 @@ drwxr-xr-x	root/root	usr/include/firefox/opus/
 -rw-r--r--	root/root	usr/include/firefox/pixman-version.h
 -rw-r--r--	root/root	usr/include/firefox/pixman.h
 -rw-r--r--	root/root	usr/include/firefox/pldhash.h
--rw-r--r--	root/root	usr/include/firefox/png.h
--rw-r--r--	root/root	usr/include/firefox/pngconf.h
 -rw-r--r--	root/root	usr/include/firefox/qcms.h
 -rw-r--r--	root/root	usr/include/firefox/qcmstypes.h
 -rw-r--r--	root/root	usr/include/firefox/qsObjectHelper.h
