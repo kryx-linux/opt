@@ -2442,7 +2442,6 @@ drwxr-xr-x	root/root	usr/include/firefox/snappy/
 drwxr-xr-x	root/root	usr/include/firefox/speex/
 -rw-r--r--	root/root	usr/include/firefox/speex/speex_resampler.h
 -rw-r--r--	root/root	usr/include/firefox/sps_sampler.h
--rw-r--r--	root/root	usr/include/firefox/sqlite3.h
 -rw-r--r--	root/root	usr/include/firefox/string-template-def-char.h
 -rw-r--r--	root/root	usr/include/firefox/string-template-def-unichar.h
 -rw-r--r--	root/root	usr/include/firefox/string-template-undef.h
@@ -4217,7 +4216,6 @@ drwxr-xr-x	root/root	usr/lib/firefox/icons/
 -rw-r--r--	root/root	usr/lib/firefox/icons/mozicon128.png
 -rwxr-xr-x	root/root	usr/lib/firefox/js
 -rwxr-xr-x	root/root	usr/lib/firefox/libmozalloc.so
--rwxr-xr-x	root/root	usr/lib/firefox/libmozsqlite3.so
 -rwxr-xr-x	root/root	usr/lib/firefox/libxpcom.so
 -rwxr-xr-x	root/root	usr/lib/firefox/libxul.so
 drwxr-xr-x	root/root	usr/lib/firefox/modules/
