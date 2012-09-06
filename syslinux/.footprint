@@ -41,6 +41,7 @@ drwxr-xr-x	root/root	usr/share/syslinux/com32/include/bitsize/
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/bitsize/stdint.h
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/bitsize/stdintconst.h
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/bitsize/stdintlimits.h
+-rw-r--r--	root/root	usr/share/syslinux/com32/include/bufprintf.h
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/colortbl.h
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/com32.h
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/console.h
@@ -102,6 +103,8 @@ drwxr-xr-x	root/root	usr/share/syslinux/com32/include/gplinclude/dmi/
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/gplinclude/memory.h
 drwxr-xr-x	root/root	usr/share/syslinux/com32/include/gplinclude/vpd/
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/gplinclude/vpd/vpd.h
+drwxr-xr-x	root/root	usr/share/syslinux/com32/include/gplinclude/zzjson/
+-rw-r--r--	root/root	usr/share/syslinux/com32/include/gplinclude/zzjson/zzjson.h
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/ilog2.h
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/inttypes.h
 drwxr-xr-x	root/root	usr/share/syslinux/com32/include/klibc/
@@ -174,6 +177,7 @@ drwxr-xr-x	root/root	usr/share/syslinux/com32/include/syslinux/
 -rw-r--r--	root/root	usr/share/syslinux/com32/include/zlib.h
 -rw-r--r--	root/root	usr/share/syslinux/com32/libcom32.a
 -rw-r--r--	root/root	usr/share/syslinux/com32/libcom32gpl.a
+-rw-r--r--	root/root	usr/share/syslinux/com32/libcom32upload.a
 -rw-r--r--	root/root	usr/share/syslinux/com32/libutil_com.a
 -rw-r--r--	root/root	usr/share/syslinux/com32/libutil_lnx.a
 -rw-r--r--	root/root	usr/share/syslinux/config.c32
@@ -243,3 +247,4 @@ drwxr-xr-x	root/root	usr/share/syslinux/dosutil/
 -rw-r--r--	root/root	usr/share/syslinux/vesamenu.c32
 -rw-r--r--	root/root	usr/share/syslinux/vpdtest.c32
 -rw-r--r--	root/root	usr/share/syslinux/whichsys.c32
+-rw-r--r--	root/root	usr/share/syslinux/zzjson.c32
