@@ -1704,7 +1704,6 @@ drwxr-xr-x	root/root	usr/include/firefox/nestegg/
 -rw-r--r--	root/root	usr/include/firefox/nsIPrintingPrompt.h
 -rw-r--r--	root/root	usr/include/firefox/nsIPrintingPromptService.h
 -rw-r--r--	root/root	usr/include/firefox/nsIPrivacyTransitionObserver.h
--rw-r--r--	root/root	usr/include/firefox/nsIPrivateBrowsingConsumer.h
 -rw-r--r--	root/root	usr/include/firefox/nsIPrivateBrowsingService.h
 -rw-r--r--	root/root	usr/include/firefox/nsIPrivateDOMEvent.h
 -rw-r--r--	root/root	usr/include/firefox/nsIPrivateTextEvent.h
@@ -5316,7 +5315,6 @@ drwxr-xr-x	root/root	usr/share/idl/firefox/
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIPrintingPrompt.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIPrintingPromptService.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIPrivacyTransitionObserver.idl
--rw-r--r--	root/root	usr/share/idl/firefox/nsIPrivateBrowsingConsumer.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIPrivateBrowsingService.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIProcess.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIProfile.idl

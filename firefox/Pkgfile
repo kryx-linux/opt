@@ -4,8 +4,8 @@
 # Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
 
 name=firefox
-version=15.0
-release=2
+version=15.0.1
+release=1
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
         mozconfig)
 
