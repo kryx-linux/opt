@@ -4,7 +4,7 @@
 # Depends on:  glib poppler
 
 name=poppler-glib
-version=0.20.3
+version=0.20.4
 release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.gz)
 
@@ -21,7 +21,7 @@ build() {
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/{bin,share}
+    rm -r $PKG/usr/share
     rm $PKG/usr/lib/pkgconfig/poppler{,-cairo,-splash}.pc
     rm $PKG/usr/lib/libpoppler.*
 }
