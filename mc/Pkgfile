@@ -4,15 +4,12 @@
 # Depends on:  ncurses glib
 
 name=mc
-version=4.8.5
-release=2
-source=(http://www.midnight-commander.org/downloads/$name-$version.tar.xz
-        mcedit.diff)
+version=4.8.6
+release=1
+source=(http://www.midnight-commander.org/downloads/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
-
-    patch -p0 -i $SRC/mcedit.diff
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
