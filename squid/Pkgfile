@@ -3,15 +3,13 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=squid
-version=3.1.20
+version=3.2.1
 release=1
-source=(http://www.squid-cache.org/Versions/v3/3.1/$name-$version.tar.bz2 \
+source=(http://www.squid-cache.org/Versions/v3/3.2/$name-$version.tar.bz2 \
         squid)
 
 build () {
     cd $name-$version
-
-    sed -i '/^DEFAULT_SWAP_DIR/s/cache/squid/' src/Makefile.in
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
@@ -21,9 +19,10 @@ build () {
                 --datadir=/usr/share/squid \
                 --with-logdir=/var/log/squid \
                 --with-pidfile=/var/run/squid.pid \
+                --with-swapdir=/var/squid \
                 --with-default-user=squid \
                 --enable-linux-netfilter \
-                --enable-storeio=ufs,aufs,diskd \
+                --enable-storeio=ufs,aufs,diskd,rock \
                 --with-large-files \
                 --with-pthreads \
                 --with-aufs-threads=16 \
