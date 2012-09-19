@@ -33,6 +33,12 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/id3v2header.h
 -rw-r--r--	root/root	usr/include/taglib/id3v2synchdata.h
 -rw-r--r--	root/root	usr/include/taglib/id3v2tag.h
+-rw-r--r--	root/root	usr/include/taglib/itfile.h
+-rw-r--r--	root/root	usr/include/taglib/itproperties.h
+-rw-r--r--	root/root	usr/include/taglib/modfile.h
+-rw-r--r--	root/root	usr/include/taglib/modfilebase.h
+-rw-r--r--	root/root	usr/include/taglib/modproperties.h
+-rw-r--r--	root/root	usr/include/taglib/modtag.h
 -rw-r--r--	root/root	usr/include/taglib/mp4atom.h
 -rw-r--r--	root/root	usr/include/taglib/mp4coverart.h
 -rw-r--r--	root/root	usr/include/taglib/mp4file.h
@@ -48,10 +54,13 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/oggflacfile.h
 -rw-r--r--	root/root	usr/include/taglib/oggpage.h
 -rw-r--r--	root/root	usr/include/taglib/oggpageheader.h
+-rw-r--r--	root/root	usr/include/taglib/ownershipframe.h
 -rw-r--r--	root/root	usr/include/taglib/popularimeterframe.h
 -rw-r--r--	root/root	usr/include/taglib/privateframe.h
 -rw-r--r--	root/root	usr/include/taglib/relativevolumeframe.h
 -rw-r--r--	root/root	usr/include/taglib/rifffile.h
+-rw-r--r--	root/root	usr/include/taglib/s3mfile.h
+-rw-r--r--	root/root	usr/include/taglib/s3mproperties.h
 -rw-r--r--	root/root	usr/include/taglib/speexfile.h
 -rw-r--r--	root/root	usr/include/taglib/speexproperties.h
 -rw-r--r--	root/root	usr/include/taglib/tag.h
@@ -61,12 +70,16 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/taglib_export.h
 -rw-r--r--	root/root	usr/include/taglib/tbytevector.h
 -rw-r--r--	root/root	usr/include/taglib/tbytevectorlist.h
+-rw-r--r--	root/root	usr/include/taglib/tbytevectorstream.h
 -rw-r--r--	root/root	usr/include/taglib/textidentificationframe.h
 -rw-r--r--	root/root	usr/include/taglib/tfile.h
+-rw-r--r--	root/root	usr/include/taglib/tfilestream.h
+-rw-r--r--	root/root	usr/include/taglib/tiostream.h
 -rw-r--r--	root/root	usr/include/taglib/tlist.h
 -rw-r--r--	root/root	usr/include/taglib/tlist.tcc
 -rw-r--r--	root/root	usr/include/taglib/tmap.h
 -rw-r--r--	root/root	usr/include/taglib/tmap.tcc
+-rw-r--r--	root/root	usr/include/taglib/tpropertymap.h
 -rw-r--r--	root/root	usr/include/taglib/trueaudiofile.h
 -rw-r--r--	root/root	usr/include/taglib/trueaudioproperties.h
 -rw-r--r--	root/root	usr/include/taglib/tstring.h
@@ -83,10 +96,12 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/wavproperties.h
 -rw-r--r--	root/root	usr/include/taglib/xingheader.h
 -rw-r--r--	root/root	usr/include/taglib/xiphcomment.h
+-rw-r--r--	root/root	usr/include/taglib/xmfile.h
+-rw-r--r--	root/root	usr/include/taglib/xmproperties.h
 drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libtag.so -> libtag.so.1
-lrwxrwxrwx	root/root	usr/lib/libtag.so.1 -> libtag.so.1.7.2
--rwxr-xr-x	root/root	usr/lib/libtag.so.1.7.2
+lrwxrwxrwx	root/root	usr/lib/libtag.so.1 -> libtag.so.1.12.0
+-rwxr-xr-x	root/root	usr/lib/libtag.so.1.12.0
 lrwxrwxrwx	root/root	usr/lib/libtag_c.so -> libtag_c.so.0
 lrwxrwxrwx	root/root	usr/lib/libtag_c.so.0 -> libtag_c.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libtag_c.so.0.0.0
