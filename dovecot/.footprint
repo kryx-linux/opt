@@ -511,6 +511,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_mail_log_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mail_log_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mail_log_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_mailbox_alias_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mailbox_alias_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mailbox_alias_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.so
