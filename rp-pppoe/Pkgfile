@@ -5,13 +5,18 @@
 
 name=rp-pppoe
 version=3.11
-release=1
+release=2
 source=(http://www.roaringpenguin.com/files/download/$name-$version.tar.gz)
 
 build () {
     cd $name-$version/src
-    ./configure --prefix=/usr --mandir=/usr/man
-    make
-    make DESTDIR=$PKG install
-    rm -r $PKG/{usr/share/,etc/ppp/plugins}
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --enable-plugin
+
+    make DESTDIR=$PKG PLUGIN_DIR=/usr/lib/rp-pppoe install
+    chmod u+s $PKG/usr/lib/rp-pppoe/rp-pppoe.so
+    
+    rm -r $PKG/usr/{share,lib/rp-pppoe/README}
 }
