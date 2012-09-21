@@ -12,6 +12,8 @@ source=(ftp://ftp.gnu.org/gnu/grub/grub-$version.tar.xz \
 build() {
 	export CFLAGS="${CFLAGS} -Wno-error"
 	cd grub-$version
+	# fix for glibc 'gets' removal
+	sed -i -e '/gets is a/d' grub-core/gnulib/stdio.in.h
 	patch -i $SRC/$name-10_linux.diff util/grub.d/10_linux.in
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
@@ -20,5 +22,5 @@ build() {
 		--disable-grub-mount
 	make
 	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/share/{info,locale}
+	rm -rf $PKG/usr/share/{info,locale,grub/themes}
 }
