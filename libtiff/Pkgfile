@@ -4,11 +4,7 @@
 # Depends on:  libjpeg, zlib
 
 name=libtiff
-<<<<<<< HEAD
 version=4.0.3
-=======
-version=3.9.7
->>>>>>> b7344dae15c9c494429402ba0e2ddb91759c6024
 release=1
 source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz)
 
