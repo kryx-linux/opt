@@ -10,7 +10,7 @@ PRE-INSTALL
 
 POST-INSTALL
 1. add a cache_dir entry to /etc/squid/squid.conf:
-   cache_dir diskd /var/squid 2000 16 256
+   cache_dir aufs /var/squid 2000 16 256
 2. run '/usr/sbin/squid -z' to build the cache structure
 
 PRECAUTION

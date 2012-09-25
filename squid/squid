@@ -8,13 +8,24 @@ start)
 	/usr/sbin/squid -Y
 	;;
 stop)
+	/usr/sbin/squid -k interrupt
+	;;
+shutdown)
 	/usr/sbin/squid -k shutdown
+	while [[ $(pidof /usr/sbin/squid) ]]; do
+		sleep 2
+	done
 	;;
 reload)
 	/usr/sbin/squid -k reconfigure
 	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
 *)
-	echo "usage: $0 [start|stop|reload]"
+	echo "usage: $0 [start|stop|shutdown|reload|restart]"
 	;;
 esac
 
