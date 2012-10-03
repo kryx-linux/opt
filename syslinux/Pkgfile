@@ -6,11 +6,14 @@
 
 name=syslinux
 version=4.05
-release=1
-source=(http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.bz2)
+release=2
+source=(http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.bz2 \
+        avoid-ext2_fs.patch)
 
 build() {
   cd $name-$version
+
+  patch -p1 -i $SRC/avoid-ext2_fs.patch
 
   # compilation will fail with LDFLAGS
   unset LDFLAGS
