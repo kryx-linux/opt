@@ -5,7 +5,7 @@
 # Depends on: fontconfig fontforge freeglut gnutls lcms mpg123 openal xorg-libxcomposite xorg-libxcursor xorg-libxinerama xorg-libxrandr xorg-libxxf86dga prelink
 
 name=wine
-version=1.5.13
+version=1.5.14
 release=1
 source=(http://mirrors.ibiblio.org/$name/source/${version%.*}/$name-$version.tar.bz2
 	https://downloads.sourceforge.net/project/wine/Wine%20Gecko/1.7/wine_gecko-1.7-x86.msi)
