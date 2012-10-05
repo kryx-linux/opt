@@ -6,11 +6,13 @@
 
 name=distribute
 version=0.6.28
-release=1
+release=2
 source=(http://pypi.python.org/packages/source/d/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
 	python setup.py install --root=$PKG
+
+	chmod -R og-w $PKG
 }
