@@ -5,9 +5,9 @@
 # Depends on:  binutils gdbm
 
 name=ocaml
-version=3.12.1
+version=4.00.1
 release=1
-source=(http://caml.inria.fr/pub/distrib/$name-3.12/$name-$version.tar.bz2)
+source=(http://caml.inria.fr/pub/distrib/$name-4.00/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
