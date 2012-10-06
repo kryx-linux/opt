@@ -6,7 +6,7 @@
 
 name=fontforge
 version=20120731-b
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/$name/$name-source/fontforge_full-$version.tar.bz2)
 
 build() {
@@ -23,6 +23,6 @@ build() {
 
 	make
 	make install DESTDIR=$PKG
+
 	rm -r $PKG/usr/share/locale
-	find $PKG -name '*.egg-info' | xargs rm -rf
 }
