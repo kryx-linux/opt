@@ -2,7 +2,7 @@
 # URL: http://fontforge.sourceforge.net
 # Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Antti Nykanen, aon at iki dot fi
-# Depends on: freetype libpng libspiro libtiff libungif libuninameslist util-linux-ng xorg-libxi xorg-libxkbui xz
+# Depends on: freetype libpng libspiro libtiff giflib libuninameslist util-linux xorg-libxi xorg-libxkbui xz
 
 name=fontforge
 version=20120731-b
