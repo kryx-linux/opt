@@ -3,25 +3,31 @@
 # /etc/rc.d/squid: start/stop squid daemon
 #
 
+SQUID=/usr/sbin/squid
+
+wait_until_down() {
+	while [[ $(pidof $SQUID) ]]; do
+		sleep 1
+	done
+}
+
 case $1 in
 start)
-	/usr/sbin/squid -Y
+	$SQUID -Y
 	;;
 stop)
-	/usr/sbin/squid -k interrupt
+	$SQUID -k interrupt
 	;;
 shutdown)
-	/usr/sbin/squid -k shutdown
-	while [[ $(pidof /usr/sbin/squid) ]]; do
-		sleep 2
-	done
+	$SQUID -k shutdown
+	wait_until_down
 	;;
 reload)
-	/usr/sbin/squid -k reconfigure
+	$SQUID -k reconfigure
 	;;
 restart)
 	$0 stop
-	sleep 2
+	wait_until_down
 	$0 start
 	;;
 *)
