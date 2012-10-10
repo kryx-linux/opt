@@ -4,9 +4,9 @@
 # Depends on:  libpcre libffi python
 
 name=glib
-version=2.32.4
+version=2.34.0
 release=1
-source=(http://download.gnome.org/sources/$name/2.32/$name-$version.tar.xz)
+source=(http://download.gnome.org/sources/$name/2.34/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
