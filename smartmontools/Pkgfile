@@ -4,7 +4,7 @@
 # Packager: Juergen Daubert, jue at crux dot nu
 
 name=smartmontools
-version=5.43
+version=6.0
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz \
         smartd)
@@ -24,6 +24,7 @@ build () {
     make
     make DESTDIR=$PKG install
 
+    install -d $PKG/var/lib/smartmontools
     install -m 755 $SRC/smartd $PKG/etc/rc.d
 
     rm -r $PKG/usr/share/doc
