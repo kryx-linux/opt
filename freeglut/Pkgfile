@@ -2,19 +2,22 @@
 # URL: http://freeglut.sourceforge.net/
 # Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: mesa3d xorg-libxi
+# Depends on: glu xorg-libxi
 
 name=freeglut
 version=2.8.0
-release=1
+release=2
 source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
+	sed -i -e 's/^SUBDIRS = src include progs doc/SUBDIRS = src include doc/' Makefile.in
+
 	./configure \
 		--prefix=/usr \
-		--disable-warnings
+		--disable-warnings \
+		--disable-dependency-tracking
 
 	make
 	make DESTDIR=$PKG install
