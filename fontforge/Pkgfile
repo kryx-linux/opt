@@ -6,11 +6,13 @@
 
 name=fontforge
 version=20120731-b
-release=2
+release=3
 source=(http://downloads.sourceforge.net/project/$name/$name-source/fontforge_full-$version.tar.bz2)
 
 build() {
 	cd $name-$version
+
+	export LDFLAGS="$LDFLAGS $(pkg-config libpng --libs)"
 
 	./configure \
 		--prefix=/usr \
