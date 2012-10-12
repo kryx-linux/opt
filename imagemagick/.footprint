@@ -110,6 +110,7 @@ drwxr-xr-x	root/root	usr/include/ImageMagick/magick/
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/morphology.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/option.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/paint.h
+-rw-r--r--	root/root	usr/include/ImageMagick/magick/pixel-accessor.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/pixel.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/policy.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/prepress.h
@@ -164,9 +165,9 @@ drwxr-xr-x	root/root	usr/include/ImageMagick/wand/
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/stream.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/wand-view.h
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.8/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.8/config/
--rw-r--r--	root/root	usr/lib/ImageMagick-6.7.8/config/configure.xml
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.9/
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.9/config/
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.7.9/config/configure.xml
 -rw-r--r--	root/root	usr/lib/libMagick++.a
 -rwxr-xr-x	root/root	usr/lib/libMagick++.la
 lrwxrwxrwx	root/root	usr/lib/libMagick++.so -> libMagick++.so.5.0.0
@@ -222,7 +223,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Image::Magick.3pm.gz
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/ImageMagick-6.7.8/
--rw-r--r--	root/root	usr/share/ImageMagick-6.7.8/english.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.7.8/francais.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.7.8/locale.xml
+drwxr-xr-x	root/root	usr/share/ImageMagick-6.7.9/
+-rw-r--r--	root/root	usr/share/ImageMagick-6.7.9/english.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.7.9/francais.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.7.9/locale.xml
