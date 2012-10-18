@@ -5,7 +5,7 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt alsa-lib krb5
 
 name=chromium
-version=21.0.1180.82
+version=21.0.1180.92
 release=1
 source=(http://gsdview.appspot.com/chromium-browser-official/$name-$version.tar.bz2 \
         $name.sh bison.patch)
@@ -43,11 +43,11 @@ build() {
 	-Duse_system_ssl=0 \
 	-Dremove_webcore_debug_symbols=1 \
 	-Duse_gconf=0 \
-        -Duse_cups=0 \
+	-Duse_cups=0 \
 	-Duse_gnome_keyring=0 \
 	-Dlinux_link_gnome_keyring=0 \
-        -Denable_webrtc=1 \
-        -Ddisable_nacl=1
+	-Denable_webrtc=1 \
+	-Ddisable_nacl=1
 
   make chrome chrome_sandbox BUILDTYPE=Release
 
