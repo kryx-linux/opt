@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=squid
-version=3.2.2
+version=3.2.3
 release=1
 source=(ftp://mirror.switch.ch/mirror/squid/$name-$version.tar.bz2 \
         squid)
