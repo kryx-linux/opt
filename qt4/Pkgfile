@@ -5,15 +5,13 @@
 # Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus
 
 name=qt4
-version=4.8.1
-release=2
-source=(http://get.qt.nokia.com/qt/source/qt-everywhere-opensource-src-$version.tar.gz \
-	http://www.linuxfromscratch.org/patches/blfs/svn/qt-everywhere-opensource-src-4.8.2-glib_fix-1.patch)
+version=4.8.3
+release=1
+source=(http://releases.qt-project.org/qt4/source/qt-everywhere-opensource-src-$version.tar.gz)
 
 build () {
     cd qt-everywhere-opensource-src-$version
 
-    patch -p1 -i $SRC/qt-everywhere-opensource-src-4.8.2-glib_fix-1.patch
     sed -i 's|X11R6/||g' mkspecs/*/*.conf
     sed -i "s|-O2|$CXXFLAGS|" mkspecs/common/g++.conf
     sed -i "s|INSTALLS += translations||" projects.pro
