@@ -1026,6 +1026,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/explorerframe.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/extrac32.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/faultrep.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/findstr.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/fltlib.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/fusion.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/fwpuclnt.dll
@@ -1237,6 +1238,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sccbase.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/schannel.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/scrrun.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/scsiport.sys
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/secedit.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/secur32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/security.dll
@@ -1385,6 +1387,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xolehlp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xpsprint.dll
 -rwxr-xr-x	root/root	usr/lib/wine/faultrep.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/findstr.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/fltlib.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/fusion.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/fwpuclnt.dll.so
@@ -1758,6 +1761,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/sccbase.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/schannel.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/scrrun.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/scsiport.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/secedit.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/secur32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/security.dll.so
@@ -1987,7 +1991,9 @@ drwxr-xr-x	root/root	usr/share/wine/fonts/
 -rw-r--r--	root/root	usr/share/wine/fonts/vgasysr.fon
 -rw-r--r--	root/root	usr/share/wine/fonts/vgasyst.fon
 drwxr-xr-x	root/root	usr/share/wine/gecko/
--rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-1.5-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-1.8-x86.msi
 -rw-r--r--	root/root	usr/share/wine/generic.ppd
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
+drwxr-xr-x	root/root	usr/share/wine/mono/
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-0.0.8.msi
 -rw-r--r--	root/root	usr/share/wine/wine.inf
