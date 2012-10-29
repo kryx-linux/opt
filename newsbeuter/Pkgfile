@@ -5,11 +5,13 @@
 
 name=newsbeuter
 version=2.5
-release=1
-source=(http://www.newsbeuter.org/downloads/$name-$version.tar.gz)
+release=2
+source=(http://www.newsbeuter.org/downloads/$name-$version.tar.gz
+        $name-$version-gcc47.patch)
 
 build () {
     cd $name-$version
+    patch -p1 -i $SRC/$name-$version-gcc47.patch
     export prefix=/usr mandir=/usr/man
     ./config.sh
     make
