@@ -5,7 +5,7 @@
 
 name=libxml2-python
 version=2.9.0
-release=1
+release=2
 source=(ftp://xmlsoft.org/libxml2/libxml2-$version.tar.gz \
         $name-config.patch)
 
@@ -18,7 +18,9 @@ build () {
     cd python
     make
     make DESTDIR=$PKG install
-    
+
+    python -m compileall $PKG/usr/lib/python2.7/
+
     rm $PKG/usr/lib/python2.7/site-packages/libxml2mod.{a,la}
     rm -r $PKG/usr/share
 }
