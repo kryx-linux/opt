@@ -1,0 +1,55 @@
+# Description: TeX distribution for UNIX compatible systems.
+# URL: http://www.tug.org/tetex/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Danny Rawlins, monster dot romster at gmail dot com
+# Depends on: icu libgd libsigsegv poppler t1lib util-linux xz clisp
+
+name=texlive
+version=20120701
+release=1
+source=(ftp://tug.org/historic/systems/texlive/2012/$name-$version-source.tar.xz
+	ftp://tug.org/historic/systems/texlive/2012/$name-$version-texmf.tar.xz)
+
+build() {
+	cd $name-$version-source
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--disable-native-texlive-build \
+		--enable-build-in-source-tree \
+		--without-luatex \
+		--enable-mktextex-default \
+		--disable-dependency-tracking \
+		--with-banner-add=" - CRUX" \
+		--disable-multiplatform \
+		--disable-dialog \
+		--disable-psutils \
+		--disable-t1utils \
+		--disable-xdvik \
+		--disable-lcdf-typetools \
+		--with-system-zlib \
+		--with-system-pnglib \
+		--with-system-ncurses \
+		--with-system-t1lib \
+		--with-system-gd \
+		--with-system-xpdf \
+		--with-system-freetype2 \
+		--with-system-icu \
+		--disable-dump-share  \
+		--without-graphite \
+		--enable-shared \
+		--with-clisp-runtime=default \
+		--enable-xindy \
+		--disable-xindy-rules \
+		--disable-xindy-docs
+
+	make
+	make DESTDIR=$PKG install
+
+	install -d $PKG/usr/share/texmf $PKG/usr/share/texmf-dist
+	cp -r ../$name-$version-texmf/texmf/* $PKG/usr/share/texmf/
+	cp -r ../$name-$version-texmf/texmf-dist/* $PKG/usr/share/texmf-dist/
+
+	rm -r $PKG/usr/share/info
+}
