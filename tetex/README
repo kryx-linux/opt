@@ -1,8 +1,0 @@
-README FILE FOR TETEX
-
-post-install:
-  
-  execute (as root) the following commands:
-  
-  # fmtutil-sys --all
-  # updmap-sys
