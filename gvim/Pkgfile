@@ -4,7 +4,7 @@
 # Depends on:  vim, gtk
 
 name=gvim
-version=7.3.659
+version=7.3.712
 release=1
 source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
         http://crux.nu/files/distfiles/vim-7.3.001-050.xz
@@ -19,6 +19,7 @@ source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
         http://crux.nu/files/distfiles/vim-7.3.471-515.xz
         http://crux.nu/files/distfiles/vim-7.3.516-600.xz
         http://crux.nu/files/distfiles/vim-7.3.601-659.xz
+        http://crux.nu/files/distfiles/vim-7.3.660-712.xz
         gvim.desktop)
 
 build () {
