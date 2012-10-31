@@ -6,7 +6,7 @@
 name=alsa-utils
 version=1.0.26
 release=1
-source=(ftp://ftp.alsa-project.org/pub/utils/$name-$version.tar.bz2 \
+source=(http://crux.nu/files/distfiles/$name-$version.tar.bz2 \
 	rc.alsa)
 
 build() {
