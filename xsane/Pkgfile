@@ -5,11 +5,15 @@
 
 name=xsane
 version=0.998
-release=1
+release=2
 source=(http://www.xsane.org/download/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
+    
+    # http://www.linuxfromscratch.org/blfs/view/svn/pst/xsane.html
+    sed -i -e 's/png_ptr->jmpbuf/png_jmpbuf(png_ptr)/' src/xsane-save.c
+    
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --disable-nls \
