@@ -3939,8 +3939,6 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/IPSocket/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IPSocket/getaddress_orig-c.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IPSocket/peeraddr-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IPSocket/recvfrom-i.ri
--rw-r--r--	root/root	usr/share/ri/1.9/system/IPSocket/valid%3f-c.ri
--rw-r--r--	root/root	usr/share/ri/1.9/system/IPSocket/valid_v4%3f-c.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IPSocket/valid_v6%3f-c.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/IRB/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/IRB/Abort/
@@ -7656,6 +7654,12 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Psych/Emitter/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Psych/Exception/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Exception/cdesc-Exception.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Psych/Handler/
+drwxr-xr-x	root/root	usr/share/ri/1.9/system/Psych/Handler/DumperOptions/
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Handler/DumperOptions/canonical-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Handler/DumperOptions/cdesc-DumperOptions.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Handler/DumperOptions/indentation-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Handler/DumperOptions/line_width-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Handler/DumperOptions/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Handler/alias-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Handler/cdesc-Handler.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Psych/Handler/empty-i.ri
