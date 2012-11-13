@@ -82,9 +82,9 @@ doGLsymlinks() {
 
 doStatus() {
   # check which selection its being used
-  local file=$(file -h /usr/lib/libGL.so.1.2 | cut -d'`' -f2 | cut -d":" -f1 | sed "s|'||")
+  local file=$(file -h /usr/lib/libGL.so.1.2.0 | cut -d'`' -f2 | cut -d":" -f1 | sed "s|'||")
   case $file in
-    *libGL.so.1.2) echo "* xorg gl/glx is selected" ;;
+    *libGL.so.1.2.0) echo "* xorg gl/glx is selected" ;;
     *libGL_so_1_2_nvidia) echo "* nvidia gl/glx is selected" ;;
     *libGL_so_1_2_ati) echo "* ati gl/glx is selected" ;;
     *) echo "unsupported: $file"; infoOldStuff ;;
@@ -107,12 +107,9 @@ doUse() {
       # libglx
       rm -f /usr/lib/xorg/modules/extensions/libglx.so
       mv /usr/lib/xorg/modules/extensions/libglx{_so,.so}
-      # libdri
-      rm -f /usr/lib/xorg/modules/extensions/libdri.so
-      mv /usr/lib/xorg/modules/extensions/libdri{_so,.so}
       # libGL
-      rm -f usr/lib/libGL.so.1.2
-      mv /usr/lib/libGL{_so_1_2,.so.1.2}
+      rm -f usr/lib/libGL.so.1.2.0
+      mv /usr/lib/libGL{_so_1_2,.so.1.2.0}
       doGLsymlinks
       ) && echo "* xorg gl/glx selected"
       ;;
@@ -129,11 +126,9 @@ doUse() {
       # libglx
       mv /usr/lib/xorg/modules/extensions/libglx{.so,_so}
       ln -s libglx_so_nvidia /usr/lib/xorg/modules/extensions/libglx.so
-      # libdri
-      cp /usr/lib/xorg/modules/extensions/libdri{.so,_so}
       # libGL
-      mv /usr/lib/libGL{.so.1.2,_so_1_2}
-      ln -sf libGL_so_1_2_nvidia /usr/lib/libGL.so.1.2
+      mv /usr/lib/libGL{.so.1.2.0,_so_1_2}
+      ln -sf libGL_so_1_2_nvidia /usr/lib/libGL.so.1.2.0
       doGLsymlinks
       ) && echo "* nvidia gl/glx selected"
       ;;
@@ -145,17 +140,14 @@ doUse() {
       [ ! -z "$ebackups" ] && infoRevert $ebackups
       # switch to ati stuff
       # conflicting files which ati provides:
-      # libglx_so_ati, libdri_so_ati, libGL_so_1_2_ati
+      # libglx_so_ati, libGL_so_1_2_ati
       (
       # libglx
       mv /usr/lib/xorg/modules/extensions/libglx{.so,_so}
       ln -s libglx_so_ati /usr/lib/xorg/modules/extensions/libglx.so
-      # libdri
-      mv /usr/lib/xorg/modules/extensions/libdri{.so,_so}
-      ln -s libdri_so_ati /usr/lib/xorg/modules/extensions/libdri.so
       # libGL
-      mv /usr/lib/libGL{.so.1.2,_so_1_2}
-      ln -sf libGL_so_1_2_ati /usr/lib/libGL.so.1.2
+      mv /usr/lib/libGL{.so.1.2.0,_so_1_2}
+      ln -sf libGL_so_1_2_ati /usr/lib/libGL.so.1.2.0
       doGLsymlinks
       ) && echo "* ati gl/glx selected"
       ;;
@@ -177,7 +169,7 @@ oldStuff() {
   rm -f /usr/lib/xorg/modules/extensions/libglx.so
   mv /usr/lib/xorg/modules/extensions/libglx{_so,.so}
   # libGL
-  mv /usr/lib/libGL{_so_1_2,.so.1.2}
+  mv /usr/lib/libGL{_so_1_2,.so.1.2.0}
   rm -f /usr/lib/libGL.so /usr/lib/libGL.so.1
   doGLsymlinks || echo "done"
   ) && echo "* xorg gl/glx selected"
@@ -187,7 +179,6 @@ oldStuff() {
 # backup files which are also provided by nvidia and ati ports
 BACKUPS="
 /usr/lib/xorg/modules/extensions/libglx_so
-/usr/lib/xorg/modules/extensions/libdri_so
 /usr/lib/libGL_so_1_2
 "
 
