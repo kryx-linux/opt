@@ -31,15 +31,16 @@ lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so.27 -> libgnutls-openssl.so.27.
 -rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.so.27.0.2
 -rw-r--r--	root/root	usr/lib/libgnutls.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.13.0
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.13.0
--rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.13.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.14.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.14.0
+-rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.14.0
 -rw-r--r--	root/root	usr/lib/libgnutlsxx.a
 -rwxr-xr-x	root/root	usr/lib/libgnutlsxx.la
 lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so -> libgnutlsxx.so.28.1.0
 lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so.28 -> libgnutlsxx.so.28.1.0
 -rwxr-xr-x	root/root	usr/lib/libgnutlsxx.so.28.1.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/gnutls-dane.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gnutls.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
@@ -120,7 +121,9 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_type_get_name.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_type_list.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_type_set_priority.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_certificate_verification_status_print.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_verify_peers2.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_certificate_verify_peers3.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_check_version.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_cipher_add_auth.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_cipher_decrypt.3.gz
@@ -272,6 +275,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_ocsp_resp_verify_direct.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_ocsp_status_request_enable_client.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_ocsp_status_request_get.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_ocsp_status_request_is_checked.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_openpgp_crt_check_hostname.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_openpgp_crt_deinit.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_openpgp_crt_export.3.gz
@@ -549,6 +553,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_data.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_data2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_id.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_session_get_id2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_ptr.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_random.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_is_resumed.3.gz
@@ -569,6 +574,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_sign_get_id.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_sign_get_name.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_sign_get_pk_algorithm.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_sign_is_secure.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_sign_list.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_srp_allocate_client_credentials.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_srp_allocate_server_credentials.3.gz
@@ -585,6 +591,14 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_srp_set_server_credentials_file.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_srp_set_server_credentials_function.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_srp_verifier.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_srtp_get_keys.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_srtp_get_mki.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_srtp_get_profile_id.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_srtp_get_profile_name.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_srtp_get_selected_profile.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_srtp_set_mki.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_srtp_set_profile.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_srtp_set_profile_direct.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_store_commitment.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_store_pubkey.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_strerror.3.gz
