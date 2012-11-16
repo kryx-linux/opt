@@ -5,8 +5,8 @@
 # Depends on: python
 
 name=distribute
-version=0.6.28
-release=2
+version=0.6.30
+release=1
 source=(http://pypi.python.org/packages/source/d/$name/$name-$version.tar.gz)
 
 build() {
