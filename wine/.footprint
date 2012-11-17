@@ -1237,6 +1237,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/scarddlg.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sccbase.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/schannel.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/schtasks.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/scrrun.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/scsiport.sys
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/secedit.exe
@@ -1386,6 +1387,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xmllite.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xolehlp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xpsprint.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/xpssvcs.dll
 -rwxr-xr-x	root/root	usr/lib/wine/faultrep.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/findstr.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/fltlib.dll.so
@@ -1760,6 +1762,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/scarddlg.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/sccbase.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/schannel.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/schtasks.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/scrrun.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/scsiport.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/secedit.exe.so
@@ -1909,6 +1912,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/xmllite.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xolehlp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xpsprint.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/xpssvcs.dll.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/msiexec.1.gz
