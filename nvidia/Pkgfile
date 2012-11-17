@@ -5,7 +5,7 @@
 # Depends on: gtk gl-select
 
 name=nvidia
-version=304.64
+version=310.19
 release=1
 source=(ftp://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version.run \
         $name-makefile.patch)
@@ -18,13 +18,13 @@ build() {
     install -d $PKG/usr/lib/{tls,vdpau}
     install -m 0755 libGL.so.$version              $PKG/usr/lib
     install -m 0755 libOpenCL.so.1.0.0             $PKG/usr/lib
-    install -m 0755 libXvMCNVIDIA.so.$version      $PKG/usr/lib
-    install -m 0644 libXvMCNVIDIA.a                $PKG/usr/lib
     install -m 0755 libcuda.so.$version            $PKG/usr/lib
     install -m 0755 libnvidia-cfg.so.$version      $PKG/usr/lib
     install -m 0755 libnvidia-compiler.so.$version $PKG/usr/lib
+    install -m 0755 libnvidia-encode.so.$version   $PKG/usr/lib
     install -m 0755 libnvidia-glcore.so.$version   $PKG/usr/lib
     install -m 0755 libnvidia-ml.so.$version       $PKG/usr/lib
+    install -m 0755 libnvidia-opencl.so.$version   $PKG/usr/lib
     install -m 0755 libnvidia-tls.so.$version      $PKG/usr/lib
     install -m 0755 libnvcuvid.so.$version         $PKG/usr/lib
     install -m 0755 tls/libnvidia-tls.so.$version  $PKG/usr/lib/tls
@@ -32,6 +32,9 @@ build() {
     
     ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so.1
     ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so
+
+    ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so.1
+    ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so
 
     # xorg driver/extensions
     install -d $PKG/usr/lib/xorg/modules/{drivers,extensions}
@@ -41,8 +44,8 @@ build() {
     
     # nvidia programs amd man-pages
     install -d $PKG/usr/{bin,man/man1}
-    install -m 0755 nvidia-{settings,xconfig}      $PKG/usr/bin
-    install -m 0644 nvidia-{settings,xconfig}.1.gz $PKG/usr/man/man1
+    install -m 0755 nvidia-{settings,smi,xconfig}      $PKG/usr/bin
+    install -m 0644 nvidia-{settings,smi,xconfig}.1.gz $PKG/usr/man/man1
 
     # desktop file and icon
     install -d $PKG/usr/share/{applications,pixmaps}
