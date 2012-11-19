@@ -1,22 +1,19 @@
 # Description: Mail Transfer Agent for workstations and local networks 
 # URL:         http://marmaro.de/prog/masqmail/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  glib
 
 name=masqmail
-version=0.2.30
+version=0.3.4
 release=1
 source=(http://marmaro.de/prog/masqmail/files/$name-$version.tar.gz
-        masqmail masqmail.conf masqmail.alias inet.route)
+        masqmail)
 
 build () {
     cd $name-$version
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
-                --enable-auth \
-                --enable-maildir \
-                --enable-ident \
                 --with-user=mail \
                 --with-group=mail
     make
@@ -25,16 +22,13 @@ build () {
     ln -s masqmail $PKG/usr/sbin/sendmail
     ln -s ../sbin/masqmail $PKG/usr/bin/mailq
 
-    install -m 644 $SRC/masqmail.{conf,alias} $PKG/etc/masqmail
-    install -m 600 $SRC/inet.route $PKG/etc/masqmail
-    echo -n "inet" > $PKG/var/run/masqmail/masqmail-route
-    install -m 600 examples/example.* $PKG/etc/masqmail
-    install -m 644 examples/masqmail.conf $PKG/etc/masqmail/example.conf
+    install -m 644 examples/* $PKG/etc/masqmail
     install -D -m 755 $SRC/masqmail $PKG/etc/rc.d/masqmail
+
+    install -d -o mail -g mail $PKG/var/{log,lock,spool}/masqmail
+    touch $PKG/var/log/masqmail/{masqmail,debug}.log
+    chown mail:mail $PKG/var/log/masqmail/*
 
     rm $PKG/usr/share/masqmail/tpl/*.tpl.*
     rm -r $PKG/usr/share/doc
-    
-    touch $PKG/var/log/masqmail/{masqmail,debug}.log
-    chown mail:mail $PKG/var/log/masqmail/*
 }
