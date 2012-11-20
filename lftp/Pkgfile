@@ -12,6 +12,8 @@ source=(ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/$name-$version.tar.xz)
 build() {
 	cd $name-$version
 
+  sed -i -e '/gets is a/d' lib/stdio.in.h
+
 	./configure --prefix=/usr --disable-nls --with-openssl=/usr \
 	            --mandir=/usr/man --sysconfdir=/usr/etc
 
