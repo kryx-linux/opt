@@ -1,7 +1,7 @@
 # Description: GTK version of the vim editor
 # URL:         http://www.vim.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  vim, gtk
+# Depends on:  vim, gtk, xorg-libxt
 
 name=gvim
 version=7.3.712
