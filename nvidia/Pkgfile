@@ -2,17 +2,18 @@
 # URL: http://www.nvidia.com/
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Maintainer: Juergen Daubert, jue at crux dot nu 
+# Arch Maintainer: Predrag Ivanovic, predivan at open dot telekom dot rs
 # Depends on: gtk gl-select
 
 name=nvidia
 version=310.19
 release=1
-source=(ftp://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version.run \
+source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run
         $name-makefile.patch)
 
 build() {
-    sh NVIDIA-Linux-x86-$version.run --extract-only
-    cd NVIDIA-Linux-x86-$version
+    sh NVIDIA-Linux-x86_64-$version-no-compat32.run --extract-only
+    cd NVIDIA-Linux-x86_64-$version-no-compat32
 
     # libraries
     install -d $PKG/usr/lib/{tls,vdpau}

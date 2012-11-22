@@ -1,15 +1,20 @@
 # Description: Java 2 Runtime Kit
-# URL:         http://www.oracle.com/technetwork/java/index.html
+# URL:         http://java.sun.com
 # Maintainer:  Juergen Daubert, jue at crux dot nu
+# Arch Maintainer: Predrag Ivanovic, predivan at open dot telekom dot rs
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
 version=1.7.0_09
 release=1
-source=(file:///$name-7u9-linux-i586.tar.gz)
+source=(file:///$name-7u9-linux-x64.tar.gz)
+
 
 build(){
     cd $name$version
+    rm -rf $SRC/jre*/{man/ja,lib/{locale,deploy/messages_}}*
+    rm -rf $SRC/jre*/lib/fontconfig.{RedHat,SuSE,Sun,Turbo}.*
+    rm -rf $SRC/jre*/[A-Z]*
 
     install -d $PKG/usr/{bin,man,lib/$name$version}
     mv man/man1 $PKG/usr/man

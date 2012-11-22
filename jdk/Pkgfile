@@ -1,18 +1,17 @@
 # Description: Java 2 Software Development Kit
 # URL: http://java.sun.com
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Arch Maintainer: Predrag Ivanovic, predivan at open dot telekom dot rs
 # Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
 version=1.7.0_09
 release=1
-source=(file:///$name-7u9-linux-i586.tar.gz)
+source=(file:///$name-7u9-linux-x64.tar.gz)
 
 build(){
-	rm -rf $SRC/jdk*/{man/ja,jre/lib/javaws/messages_,demo,sample}*
+	rm -rf $SRC/jdk*/{man/ja,jre/lib/{locale,deploy/messages_},db/lib/derbyLocale*}*
 	rm -rf $SRC/jdk*/jre/lib/fontconfig.{RedHat,SuSE,Sun,Turbo}.*
-	rm -rf $SRC/jdk*/jre/plugin/i386/ns7-gcc29
-	rm -rf $SRC/jdk*/jre/.systemPrefs
 	rm -rf $SRC/jdk*/{,jre/}[A-Z]*
 
 	install -d $PKG/usr/lib
