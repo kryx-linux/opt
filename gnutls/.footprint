@@ -2,6 +2,7 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/certtool
 -rwxr-xr-x	root/root	usr/bin/crywrap
+-rwxr-xr-x	root/root	usr/bin/danetool
 -rwxr-xr-x	root/root	usr/bin/gnutls-cli
 -rwxr-xr-x	root/root	usr/bin/gnutls-cli-debug
 -rwxr-xr-x	root/root	usr/bin/gnutls-serv
@@ -31,9 +32,9 @@ lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so.27 -> libgnutls-openssl.so.27.
 -rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.so.27.0.2
 -rw-r--r--	root/root	usr/lib/libgnutls.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.14.0
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.14.0
--rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.14.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.15.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.15.0
+-rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.15.0
 -rw-r--r--	root/root	usr/lib/libgnutlsxx.a
 -rwxr-xr-x	root/root	usr/lib/libgnutlsxx.la
 lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so -> libgnutlsxx.so.28.1.0
@@ -381,6 +382,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_deinit.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_export_url.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_generate.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_generate2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_get_info.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_get_pk_algorithm.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pkcs11_privkey_import_url.3.gz
@@ -513,8 +515,10 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_tpm_url.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_url.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_x509.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_x509_crq.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_import_x509_raw.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_init.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_print.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_set_key_usage.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_set_pin_function.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_pubkey_verify_data.3.gz
@@ -742,6 +746,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_pk_algorithm.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_pk_dsa_raw.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_pk_rsa_raw.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_policy.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_preferred_hash_algorithm.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_private_key_usage_period.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_proxy.3.gz
@@ -785,6 +790,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_set_key_purpose_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_set_key_usage.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_set_pin_function.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_set_policy.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_set_private_key_usage_period.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_set_proxy.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_set_proxy_dn.3.gz
@@ -807,6 +813,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_dn_init.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_dn_oid_known.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_dn_oid_name.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_policy_release.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_privkey_cpy.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_privkey_deinit.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_privkey_export.3.gz

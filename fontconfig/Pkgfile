@@ -5,8 +5,8 @@
 # Depends on: freetype, expat
 
 name=fontconfig
-version=2.10.0
-release=2
+version=2.10.2
+release=1
 source=(http://fontconfig.org/release/$name-$version.tar.bz2)
 
 build() {
