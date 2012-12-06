@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=dnsmasq
-version=2.63
+version=2.64
 release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.xz \
         $name-config.patch dnsmasq)
@@ -11,7 +11,6 @@ source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.xz \
 build () {
     cd $name-$version
 
-    sed -i 's/rc6//' VERSION
     patch -p1 -i $SRC/$name-config.patch
     
     make
