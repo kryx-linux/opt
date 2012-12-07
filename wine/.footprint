@@ -100,8 +100,10 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/asptlb.idl
 -rw-r--r--	root/root	usr/include/wine/windows/asynot.idl
 -rw-r--r--	root/root	usr/include/wine/windows/asysta.idl
+-rw-r--r--	root/root	usr/include/wine/windows/atlbase.h
 -rw-r--r--	root/root	usr/include/wine/windows/atliface.h
 -rw-r--r--	root/root	usr/include/wine/windows/atliface.idl
+-rw-r--r--	root/root	usr/include/wine/windows/atlwin.h
 -rw-r--r--	root/root	usr/include/wine/windows/audevcod.h
 -rw-r--r--	root/root	usr/include/wine/windows/audioclient.h
 -rw-r--r--	root/root	usr/include/wine/windows/audioclient.idl
@@ -751,6 +753,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/appwiz.cpl.so
 -rwxr-xr-x	root/root	usr/lib/wine/aspnet_regiis.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/atl.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/atl100.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/atl80.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/attrib.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/authz.dll.so
@@ -894,6 +897,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/appwiz.cpl
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/aspnet_regiis.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/atl100.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl80.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/attrib.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/authz.dll
@@ -1441,6 +1445,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libadvapi32.def
 -rw-r--r--	root/root	usr/lib/wine/libadvpack.def
 -rw-r--r--	root/root	usr/lib/wine/libatl.def
+-rw-r--r--	root/root	usr/lib/wine/libatl100.def
 -rw-r--r--	root/root	usr/lib/wine/libavicap32.def
 -rw-r--r--	root/root	usr/lib/wine/libavifil32.def
 -rw-r--r--	root/root	usr/lib/wine/libavrt.def
@@ -1493,6 +1498,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libglu32.def
 -rw-r--r--	root/root	usr/lib/wine/libhid.def
 -rw-r--r--	root/root	usr/lib/wine/libhlink.def
+-rw-r--r--	root/root	usr/lib/wine/libhtmlhelp.def
 -rw-r--r--	root/root	usr/lib/wine/libieframe.def
 -rw-r--r--	root/root	usr/lib/wine/libimagehlp.def
 -rw-r--r--	root/root	usr/lib/wine/libimm32.def
