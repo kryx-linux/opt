@@ -1,7 +1,7 @@
 # Description: NFS utilities 
 # URL:         http://nfs.sourceforge.net/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  util-linux-ng tcp_wrappers libcap rpcbind libnfsidmap libevent keyutils
+# Depends on:  util-linux tcp_wrappers libcap rpcbind libnfsidmap libevent keyutils
 
 name=nfs-utils
 version=1.2.7
