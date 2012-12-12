@@ -5,16 +5,12 @@
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
-version=1.7.0_09
+version=1.7.0_10
 release=1
-source=(file:///$name-7u9-linux-x64.tar.gz)
-
+source=(file:///$name-7u10-linux-x64.tar.gz)
 
 build(){
     cd $name$version
-    rm -rf $SRC/jre*/{man/ja,lib/{locale,deploy/messages_}}*
-    rm -rf $SRC/jre*/lib/fontconfig.{RedHat,SuSE,Sun,Turbo}.*
-    rm -rf $SRC/jre*/[A-Z]*
 
     install -d $PKG/usr/{bin,man,lib/$name$version}
     mv man/man1 $PKG/usr/man
