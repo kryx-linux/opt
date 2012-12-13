@@ -4,8 +4,8 @@
 # Depends on:  openssl expat
 
 name=unbound
-version=1.4.18
-release=2
+version=1.4.19
+release=1
 source=(http://www.unbound.net/downloads/$name-$version.tar.gz
         http://www.nlnetlabs.nl/downloads/ldns/ldns-1.6.16.tar.gz
         unbound)
