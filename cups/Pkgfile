@@ -1,11 +1,11 @@
 # Description: CUPS - Common UNIX Printing System
 # URL:         http://www.cups.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  acl tcp_wrappers libusb openssl
+# Depends on:  acl tcp_wrappers libusb openssl zlib
 
 name=cups
 version=1.6.1
-release=1
+release=2
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2
         cups-config.patch cups)
 
@@ -25,7 +25,7 @@ build () {
                 --with-cups-group=lp \
                 --with-languages="" \
                 --without-{java,perl,php,python} \
-                --without-rcdir \
+                --without-{icon,menu,rc}dir \
                 --with-optim="$CFLAGS" \
                 --enable-{ssl,openssl} --disable-gnutls \
                 --enable-tcp-wrappers \
@@ -40,7 +40,6 @@ build () {
     rm -r $PKG/usr/share/cups/{banners,data}
     
     # cleanup
-    rm -r $PKG/usr/share/{applications,icons}
     chmod 0755 $PKG/var/{cache,spool}   
     chmod -R +w $PKG
 
