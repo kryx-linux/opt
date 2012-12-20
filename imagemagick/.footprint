@@ -96,6 +96,7 @@ drwxr-xr-x	root/root	usr/include/ImageMagick/magick/
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/locale_.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/log.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/magic.h
+-rw-r--r--	root/root	usr/include/ImageMagick/magick/magick-baseconfig.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/magick-config.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/magick-type.h
 -rw-r--r--	root/root	usr/include/ImageMagick/magick/magick.h
@@ -165,24 +166,24 @@ drwxr-xr-x	root/root	usr/include/ImageMagick/wand/
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/stream.h
 -rw-r--r--	root/root	usr/include/ImageMagick/wand/wand-view.h
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.9/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.7.9/config/
--rw-r--r--	root/root	usr/lib/ImageMagick-6.7.9/config/configure.xml
--rw-r--r--	root/root	usr/lib/libMagick++.a
--rwxr-xr-x	root/root	usr/lib/libMagick++.la
-lrwxrwxrwx	root/root	usr/lib/libMagick++.so -> libMagick++.so.5.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagick++.so.5 -> libMagick++.so.5.0.0
--rwxr-xr-x	root/root	usr/lib/libMagick++.so.5.0.0
--rw-r--r--	root/root	usr/lib/libMagickCore.a
--rwxr-xr-x	root/root	usr/lib/libMagickCore.la
-lrwxrwxrwx	root/root	usr/lib/libMagickCore.so -> libMagickCore.so.5.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagickCore.so.5 -> libMagickCore.so.5.0.0
--rwxr-xr-x	root/root	usr/lib/libMagickCore.so.5.0.0
--rw-r--r--	root/root	usr/lib/libMagickWand.a
--rwxr-xr-x	root/root	usr/lib/libMagickWand.la
-lrwxrwxrwx	root/root	usr/lib/libMagickWand.so -> libMagickWand.so.5.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagickWand.so.5 -> libMagickWand.so.5.0.0
--rwxr-xr-x	root/root	usr/lib/libMagickWand.so.5.0.0
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.0/
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.0/config-Q16/
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.8.0/config-Q16/configure.xml
+-rw-r--r--	root/root	usr/lib/libMagick++-Q16.a
+-rwxr-xr-x	root/root	usr/lib/libMagick++-Q16.la
+lrwxrwxrwx	root/root	usr/lib/libMagick++-Q16.so -> libMagick++-Q16.so.7.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagick++-Q16.so.7 -> libMagick++-Q16.so.7.0.0
+-rwxr-xr-x	root/root	usr/lib/libMagick++-Q16.so.7.0.0
+-rw-r--r--	root/root	usr/lib/libMagickCore-Q16.a
+-rwxr-xr-x	root/root	usr/lib/libMagickCore-Q16.la
+lrwxrwxrwx	root/root	usr/lib/libMagickCore-Q16.so -> libMagickCore-Q16.so.7.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagickCore-Q16.so.7 -> libMagickCore-Q16.so.7.0.0
+-rwxr-xr-x	root/root	usr/lib/libMagickCore-Q16.so.7.0.0
+-rw-r--r--	root/root	usr/lib/libMagickWand-Q16.a
+-rwxr-xr-x	root/root	usr/lib/libMagickWand-Q16.la
+lrwxrwxrwx	root/root	usr/lib/libMagickWand-Q16.so -> libMagickWand-Q16.so.7.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagickWand-Q16.so.7 -> libMagickWand-Q16.so.7.0.0
+-rwxr-xr-x	root/root	usr/lib/libMagickWand-Q16.so.7.0.0
 drwxr-xr-x	root/root	usr/lib/perl5/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/
@@ -195,11 +196,17 @@ drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/linux-thread-multi/auto/Image/
 -r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.16/linux-thread-multi/auto/Image/Magick/Magick.so
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.16/linux-thread-multi/auto/Image/Magick/autosplit.ix
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick++-Q16.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick++.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick-Q16.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/Magick++-Q16.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/Magick++.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/MagickCore-Q16.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/MagickCore.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/MagickWand-Q16.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/MagickWand.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/Wand-Q16.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/Wand.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
@@ -223,7 +230,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Image::Magick.3pm.gz
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/ImageMagick-6.7.9/
--rw-r--r--	root/root	usr/share/ImageMagick-6.7.9/english.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.7.9/francais.xml
--rw-r--r--	root/root	usr/share/ImageMagick-6.7.9/locale.xml
+drwxr-xr-x	root/root	usr/share/ImageMagick-6.8.0/
+-rw-r--r--	root/root	usr/share/ImageMagick-6.8.0/english.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.8.0/francais.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.8.0/locale.xml
