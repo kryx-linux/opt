@@ -3,6 +3,9 @@ README for wine 0.9.1+
 
 REQUIREMENTS
 
+Wine requires compat-32 ports to be enabled, as wine builds for
+32bit and 64bit.
+
 
 PRE-INSTALL
 
