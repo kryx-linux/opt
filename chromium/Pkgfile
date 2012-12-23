@@ -5,16 +5,13 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt alsa-lib krb5
 
 name=chromium
-version=21.0.1180.92
-release=2
-source=(http://gsdview.appspot.com/chromium-browser-official/$name-$version.tar.bz2 \
-        $name.sh bison.patch use-siginfo_t.patch)
+version=23.0.1271.97
+release=1
+source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.bz2 \
+        $name.sh use-siginfo_t.patch)
 
 build() {
   cd $name-$version
-
-  # https://bugs.webkit.org/show_bug.cgi?id=92264
-  patch -d ./third_party/WebKit -p1 -i $SRC/bison.patch
 
   # fix building issues
   patch -p1 -i $SRC/use-siginfo_t.patch
@@ -37,7 +34,7 @@ build() {
 	-Duse_system_libxslt=1 \
 	-Duse_system_libxml=1 \
 	-Duse_system_bzip2=1 \
-	-Duse_system_zlib=1 \
+	-Duse_system_zlib=0 \
 	-Duse_system_libpng=1 \
 	-Duse_system_ffmpeg=0 \
 	-Duse_system_yasm=1 \
