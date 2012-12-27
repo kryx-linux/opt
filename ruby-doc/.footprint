@@ -29,9 +29,11 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/ARGF/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/chars-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/close-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/closed%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/codepoints-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/each-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/each_byte-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/each_char-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/each_codepoint-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/each_line-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/eof%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/ARGF/eof-i.ri
