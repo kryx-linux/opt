@@ -8,6 +8,7 @@ lrwxrwxrwx	root/root	usr/bin/afm2afm -> ../share/texmf-dist/scripts/fontools/afm
 -rwxr-xr-x	root/root	usr/bin/allcm
 lrwxrwxrwx	root/root	usr/bin/allec -> allcm
 -rwxr-xr-x	root/root	usr/bin/allneeded
+lrwxrwxrwx	root/root	usr/bin/amstex -> pdftex
 lrwxrwxrwx	root/root	usr/bin/arlatex -> ../share/texmf-dist/scripts/bundledoc/arlatex
 lrwxrwxrwx	root/root	usr/bin/authorindex -> ../share/texmf-dist/scripts/authorindex/authorindex
 lrwxrwxrwx	root/root	usr/bin/autoinst -> ../share/texmf-dist/scripts/fontools/autoinst
@@ -33,11 +34,14 @@ lrwxrwxrwx	root/root	usr/bin/cachepic -> ../share/texmf-dist/scripts/cachepic/ca
 -rwxr-xr-x	root/root	usr/bin/cefsconv
 -rwxr-xr-x	root/root	usr/bin/cefslatex
 -rwxr-xr-x	root/root	usr/bin/cefspdflatex
+-rwxr-xr-x	root/root	usr/bin/cfftot1
 lrwxrwxrwx	root/root	usr/bin/checkcites -> ../share/texmf-dist/scripts/checkcites/checkcites.lua
 -rwxr-xr-x	root/root	usr/bin/chktex
 -rwxr-xr-x	root/root	usr/bin/chkweb
 -rwxr-xr-x	root/root	usr/bin/context
 lrwxrwxrwx	root/root	usr/bin/convbkmk -> ../share/texmf-dist/scripts/uptex/convbkmk.rb
+lrwxrwxrwx	root/root	usr/bin/cslatex -> pdftex
+lrwxrwxrwx	root/root	usr/bin/csplain -> pdftex
 -rwxr-xr-x	root/root	usr/bin/ctangle
 lrwxrwxrwx	root/root	usr/bin/ctanify -> ../share/texmf-dist/scripts/ctanify/ctanify
 lrwxrwxrwx	root/root	usr/bin/ctanupload -> ../share/texmf-dist/scripts/ctanupload/ctanupload.pl
@@ -66,6 +70,8 @@ lrwxrwxrwx	root/root	usr/bin/dvigif -> dvipng
 -rwxr-xr-x	root/root	usr/bin/dvilj4
 -rwxr-xr-x	root/root	usr/bin/dvilj4l
 lrwxrwxrwx	root/root	usr/bin/dvilj6 -> dvilj4
+lrwxrwxrwx	root/root	usr/bin/dvilualatex -> luatex
+lrwxrwxrwx	root/root	usr/bin/dviluatex -> luatex
 lrwxrwxrwx	root/root	usr/bin/dvipdfm -> dvipdfmx
 -rwxr-xr-x	root/root	usr/bin/dvipdfmx
 -rwxr-xr-x	root/root	usr/bin/dvipdft
@@ -81,22 +87,36 @@ lrwxrwxrwx	root/root	usr/bin/dvitomp -> mpost
 lrwxrwxrwx	root/root	usr/bin/e2pall -> ../share/texmf/scripts/tetex/e2pall.pl
 lrwxrwxrwx	root/root	usr/bin/ebb -> dvipdfmx
 lrwxrwxrwx	root/root	usr/bin/ebong -> ../share/texmf-dist/scripts/ebong/ebong.py
+lrwxrwxrwx	root/root	usr/bin/eplain -> pdftex
+-rwxr-xr-x	root/root	usr/bin/epsffit
 lrwxrwxrwx	root/root	usr/bin/epspdf -> ../share/texmf-dist/scripts/epspdf/epspdf.rb
 lrwxrwxrwx	root/root	usr/bin/epspdftk -> ../share/texmf-dist/scripts/epspdf/epspdftk.tcl
 lrwxrwxrwx	root/root	usr/bin/epstopdf -> ../share/texmf-dist/scripts/epstopdf/epstopdf.pl
 -rwxr-xr-x	root/root	usr/bin/eptex
+lrwxrwxrwx	root/root	usr/bin/etex -> pdftex
 -rwxr-xr-x	root/root	usr/bin/euptex
 lrwxrwxrwx	root/root	usr/bin/exceltex -> ../share/texmf-dist/scripts/exceltex/exceltex
 -rwxr-xr-x	root/root	usr/bin/extconv
 lrwxrwxrwx	root/root	usr/bin/extractbb -> dvipdfmx
+lrwxrwxrwx	root/root	usr/bin/extractres -> ../share/texmf/scripts/psutils/extractres.pl
 lrwxrwxrwx	root/root	usr/bin/fig4latex -> ../share/texmf-dist/scripts/fig4latex/fig4latex
 lrwxrwxrwx	root/root	usr/bin/findhyph -> ../share/texmf-dist/scripts/findhyph/findhyph
+lrwxrwxrwx	root/root	usr/bin/fixdlsrps -> ../share/texmf/scripts/psutils/fixdlsrps.pl
+lrwxrwxrwx	root/root	usr/bin/fixfmps -> ../share/texmf/scripts/psutils/fixfmps.pl
+lrwxrwxrwx	root/root	usr/bin/fixpsditps -> ../share/texmf/scripts/psutils/fixpsditps.pl
+lrwxrwxrwx	root/root	usr/bin/fixpspps -> ../share/texmf/scripts/psutils/fixpspps.pl
+lrwxrwxrwx	root/root	usr/bin/fixscribeps -> ../share/texmf/scripts/psutils/fixscribeps.pl
+lrwxrwxrwx	root/root	usr/bin/fixtpps -> ../share/texmf/scripts/psutils/fixtpps.pl
+lrwxrwxrwx	root/root	usr/bin/fixwfwps -> ../share/texmf/scripts/psutils/fixwfwps.pl
+lrwxrwxrwx	root/root	usr/bin/fixwpps -> ../share/texmf/scripts/psutils/fixwpps.pl
+lrwxrwxrwx	root/root	usr/bin/fixwwps -> ../share/texmf/scripts/psutils/fixwwps.pl
 -rwxr-xr-x	root/root	usr/bin/fmtutil
 -rwxr-xr-x	root/root	usr/bin/fmtutil-sys
 -rwxr-xr-x	root/root	usr/bin/fontinst
 lrwxrwxrwx	root/root	usr/bin/fragmaster -> ../share/texmf-dist/scripts/fragmaster/fragmaster.pl
 -rwxr-xr-x	root/root	usr/bin/gbklatex
 -rwxr-xr-x	root/root	usr/bin/gbkpdflatex
+-rwxr-xr-x	root/root	usr/bin/getafm
 -rwxr-xr-x	root/root	usr/bin/gftodvi
 -rwxr-xr-x	root/root	usr/bin/gftopk
 -rwxr-xr-x	root/root	usr/bin/gftype
@@ -110,9 +130,11 @@ lrwxrwxrwx	root/root	usr/bin/httex -> ../share/texmf-dist/scripts/tex4ht/httex.s
 lrwxrwxrwx	root/root	usr/bin/httexi -> ../share/texmf-dist/scripts/tex4ht/httexi.sh
 lrwxrwxrwx	root/root	usr/bin/htxelatex -> ../share/texmf-dist/scripts/tex4ht/htxelatex.sh
 lrwxrwxrwx	root/root	usr/bin/htxetex -> ../share/texmf-dist/scripts/tex4ht/htxetex.sh
+lrwxrwxrwx	root/root	usr/bin/includeres -> ../share/texmf/scripts/psutils/includeres.pl
 lrwxrwxrwx	root/root	usr/bin/inimf -> mf
 lrwxrwxrwx	root/root	usr/bin/initex -> tex
 lrwxrwxrwx	root/root	usr/bin/installfont-tl -> ../share/texmf-dist/scripts/installfont/installfont-tl
+lrwxrwxrwx	root/root	usr/bin/jadetex -> pdftex
 -rwxr-xr-x	root/root	usr/bin/kpseaccess
 lrwxrwxrwx	root/root	usr/bin/kpsepath -> kpsetool
 -rwxr-xr-x	root/root	usr/bin/kpsereadlink
@@ -122,6 +144,8 @@ lrwxrwxrwx	root/root	usr/bin/kpsepath -> kpsetool
 -rwxr-xr-x	root/root	usr/bin/kpsewhich
 lrwxrwxrwx	root/root	usr/bin/kpsexpand -> kpsetool
 -rwxr-xr-x	root/root	usr/bin/lacheck
+lrwxrwxrwx	root/root	usr/bin/lamed -> aleph
+lrwxrwxrwx	root/root	usr/bin/latex -> pdftex
 lrwxrwxrwx	root/root	usr/bin/latex2man -> ../share/texmf-dist/scripts/latex2man/latex2man
 lrwxrwxrwx	root/root	usr/bin/latexdiff -> ../share/texmf-dist/scripts/latexdiff/latexdiff.pl
 lrwxrwxrwx	root/root	usr/bin/latexdiff-vc -> ../share/texmf-dist/scripts/latexdiff/latexdiff-vc.pl
@@ -130,6 +154,7 @@ lrwxrwxrwx	root/root	usr/bin/latexmk -> ../share/texmf-dist/scripts/latexmk/late
 lrwxrwxrwx	root/root	usr/bin/latexrevise -> ../share/texmf-dist/scripts/latexdiff/latexrevise.pl
 lrwxrwxrwx	root/root	usr/bin/listbib -> ../share/texmf-dist/scripts/listbib/listbib
 lrwxrwxrwx	root/root	usr/bin/listings-ext.sh -> ../share/texmf-dist/scripts/listings-ext/listings-ext.sh
+lrwxrwxrwx	root/root	usr/bin/lualatex -> luatex
 -rwxr-xr-x	root/root	usr/bin/luatex
 -rwxr-xr-x	root/root	usr/bin/luatools
 lrwxrwxrwx	root/root	usr/bin/m-tx -> ../share/texmf-dist/scripts/m-tx/m-tx.lua
@@ -140,6 +165,7 @@ lrwxrwxrwx	root/root	usr/bin/makeglossaries -> ../share/texmf-dist/scripts/gloss
 lrwxrwxrwx	root/root	usr/bin/match_parens -> ../share/texmf-dist/scripts/match_parens/match_parens
 lrwxrwxrwx	root/root	usr/bin/mathspic -> ../share/texmf-dist/scripts/mathspic/mathspic.pl
 -rwxr-xr-x	root/root	usr/bin/mendex
+lrwxrwxrwx	root/root	usr/bin/mex -> pdftex
 -rwxr-xr-x	root/root	usr/bin/mf
 -rwxr-xr-x	root/root	usr/bin/mf-nowin
 lrwxrwxrwx	root/root	usr/bin/mf2pt1 -> ../share/texmf-dist/scripts/mf2pt1/mf2pt1.pl
@@ -158,6 +184,10 @@ lrwxrwxrwx	root/root	usr/bin/mktexfmt -> fmtutil
 -rwxr-xr-x	root/root	usr/bin/mktexmf
 -rwxr-xr-x	root/root	usr/bin/mktexpk
 -rwxr-xr-x	root/root	usr/bin/mktextfm
+lrwxrwxrwx	root/root	usr/bin/mllatex -> pdftex
+lrwxrwxrwx	root/root	usr/bin/mltex -> pdftex
+-rwxr-xr-x	root/root	usr/bin/mmafm
+-rwxr-xr-x	root/root	usr/bin/mmpfb
 -rwxr-xr-x	root/root	usr/bin/mpost
 lrwxrwxrwx	root/root	usr/bin/mptopdf -> ../share/texmf-dist/scripts/context/perl/mptopdf.pl
 -rwxr-xr-x	root/root	usr/bin/mtxrun
@@ -170,6 +200,8 @@ lrwxrwxrwx	root/root	usr/bin/ofm2opl -> omfonts
 lrwxrwxrwx	root/root	usr/bin/opl2ofm -> omfonts
 lrwxrwxrwx	root/root	usr/bin/ot2kpx -> ../share/texmf-dist/scripts/fontools/ot2kpx
 -rwxr-xr-x	root/root	usr/bin/otangle
+-rwxr-xr-x	root/root	usr/bin/otfinfo
+-rwxr-xr-x	root/root	usr/bin/otftotfm
 -rwxr-xr-x	root/root	usr/bin/otp2ocp
 -rwxr-xr-x	root/root	usr/bin/outocp
 lrwxrwxrwx	root/root	usr/bin/ovf2ovp -> omfonts
@@ -184,17 +216,24 @@ lrwxrwxrwx	root/root	usr/bin/pdfatfi -> ../share/texmf-dist/scripts/oberdiek/pdf
 lrwxrwxrwx	root/root	usr/bin/pdfbook -> ../share/texmf-dist/scripts/pdfjam/pdfbook
 -rwxr-xr-x	root/root	usr/bin/pdfclose
 lrwxrwxrwx	root/root	usr/bin/pdfcrop -> ../share/texmf-dist/scripts/pdfcrop/pdfcrop.pl
+lrwxrwxrwx	root/root	usr/bin/pdfcslatex -> pdftex
+lrwxrwxrwx	root/root	usr/bin/pdfcsplain -> pdftex
+lrwxrwxrwx	root/root	usr/bin/pdfetex -> pdftex
 lrwxrwxrwx	root/root	usr/bin/pdfflip -> ../share/texmf-dist/scripts/pdfjam/pdfflip
+lrwxrwxrwx	root/root	usr/bin/pdfjadetex -> pdftex
 lrwxrwxrwx	root/root	usr/bin/pdfjam -> ../share/texmf-dist/scripts/pdfjam/pdfjam
 lrwxrwxrwx	root/root	usr/bin/pdfjam-pocketmod -> ../share/texmf-dist/scripts/pdfjam/pdfjam-pocketmod
 lrwxrwxrwx	root/root	usr/bin/pdfjam-slides3up -> ../share/texmf-dist/scripts/pdfjam/pdfjam-slides3up
 lrwxrwxrwx	root/root	usr/bin/pdfjam-slides6up -> ../share/texmf-dist/scripts/pdfjam/pdfjam-slides6up
 lrwxrwxrwx	root/root	usr/bin/pdfjoin -> ../share/texmf-dist/scripts/pdfjam/pdfjoin
+lrwxrwxrwx	root/root	usr/bin/pdflatex -> pdftex
+lrwxrwxrwx	root/root	usr/bin/pdfmex -> pdftex
 lrwxrwxrwx	root/root	usr/bin/pdfnup -> ../share/texmf-dist/scripts/pdfjam/pdfnup
 -rwxr-xr-x	root/root	usr/bin/pdfopen
 lrwxrwxrwx	root/root	usr/bin/pdfpun -> ../share/texmf-dist/scripts/pdfjam/pdfpun
 -rwxr-xr-x	root/root	usr/bin/pdftex
 -rwxr-xr-x	root/root	usr/bin/pdftosrc
+lrwxrwxrwx	root/root	usr/bin/pdfxmltex -> pdftex
 -rwxr-xr-x	root/root	usr/bin/pdvitype
 lrwxrwxrwx	root/root	usr/bin/pedigree -> ../share/texmf-dist/scripts/pedigree-perl/pedigree.pl
 lrwxrwxrwx	root/root	usr/bin/perltex -> ../share/texmf-dist/scripts/perltex/perltex.pl
@@ -204,6 +243,7 @@ lrwxrwxrwx	root/root	usr/bin/pkfix -> ../share/texmf-dist/scripts/pkfix/pkfix.pl
 lrwxrwxrwx	root/root	usr/bin/pkfix-helper -> ../share/texmf-dist/scripts/pkfix-helper/pkfix-helper
 -rwxr-xr-x	root/root	usr/bin/pktogf
 -rwxr-xr-x	root/root	usr/bin/pktype
+lrwxrwxrwx	root/root	usr/bin/platex -> eptex
 -rwxr-xr-x	root/root	usr/bin/pltotf
 lrwxrwxrwx	root/root	usr/bin/pmx2pdf -> ../share/texmf-dist/scripts/pmx/pmx2pdf.lua
 -rwxr-xr-x	root/root	usr/bin/pmxab
@@ -214,9 +254,15 @@ lrwxrwxrwx	root/root	usr/bin/ps2eps -> ../share/texmf/scripts/ps2eps/ps2eps.pl
 -rwxr-xr-x	root/root	usr/bin/ps2frag
 -rwxr-xr-x	root/root	usr/bin/ps2pk
 lrwxrwxrwx	root/root	usr/bin/ps4pdf -> ../share/texmf-dist/scripts/pst-pdf/ps4pdf
+-rwxr-xr-x	root/root	usr/bin/psbook
 -rwxr-xr-x	root/root	usr/bin/pslatex
+lrwxrwxrwx	root/root	usr/bin/psmerge -> ../share/texmf/scripts/psutils/psmerge.pl
+-rwxr-xr-x	root/root	usr/bin/psnup
+-rwxr-xr-x	root/root	usr/bin/psresize
+-rwxr-xr-x	root/root	usr/bin/psselect
 lrwxrwxrwx	root/root	usr/bin/pst2pdf -> ../share/texmf-dist/scripts/pst2pdf/pst2pdf
 -rwxr-xr-x	root/root	usr/bin/pstopdf
+-rwxr-xr-x	root/root	usr/bin/pstops
 -rwxr-xr-x	root/root	usr/bin/ptex
 -rwxr-xr-x	root/root	usr/bin/ptftopl
 lrwxrwxrwx	root/root	usr/bin/purifyeps -> ../share/texmf-dist/scripts/purifyeps/purifyeps
@@ -226,6 +272,7 @@ lrwxrwxrwx	root/root	usr/bin/rpdfcrop -> pdfcrop
 -rwxr-xr-x	root/root	usr/bin/rumakeindex
 lrwxrwxrwx	root/root	usr/bin/rungs -> ../share/texmf/scripts/texlive/rungs.tlu
 -rwxr-xr-x	root/root	usr/bin/scor2prt
+-rwxr-xr-x	root/root	usr/bin/showchar
 lrwxrwxrwx	root/root	usr/bin/simpdftex -> ../share/texmf/scripts/simpdftex/simpdftex
 -rwxr-xr-x	root/root	usr/bin/sjisconv
 -rwxr-xr-x	root/root	usr/bin/sjislatex
@@ -234,11 +281,21 @@ lrwxrwxrwx	root/root	usr/bin/splitindex -> ../share/texmf-dist/scripts/splitinde
 lrwxrwxrwx	root/root	usr/bin/sty2dtx -> ../share/texmf-dist/scripts/sty2dtx/sty2dtx.pl
 lrwxrwxrwx	root/root	usr/bin/svn-multi -> ../share/texmf-dist/scripts/svn-multi/svn-multi.pl
 -rwxr-xr-x	root/root	usr/bin/synctex
+-rwxr-xr-x	root/root	usr/bin/t1ascii
+-rwxr-xr-x	root/root	usr/bin/t1asm
+-rwxr-xr-x	root/root	usr/bin/t1binary
+-rwxr-xr-x	root/root	usr/bin/t1disasm
+-rwxr-xr-x	root/root	usr/bin/t1dotlessj
+-rwxr-xr-x	root/root	usr/bin/t1lint
+-rwxr-xr-x	root/root	usr/bin/t1mac
+-rwxr-xr-x	root/root	usr/bin/t1rawafm
+-rwxr-xr-x	root/root	usr/bin/t1reencode
+-rwxr-xr-x	root/root	usr/bin/t1testpage
+-rwxr-xr-x	root/root	usr/bin/t1unmac
 -rwxr-xr-x	root/root	usr/bin/t4ht
 -rwxr-xr-x	root/root	usr/bin/tangle
 -rwxr-xr-x	root/root	usr/bin/teckit_compile
 -rwxr-xr-x	root/root	usr/bin/tex
--rwxr-xr-x	root/root	usr/bin/tex2xindy
 -rwxr-xr-x	root/root	usr/bin/tex4ht
 -rwxr-xr-x	root/root	usr/bin/texconfig
 -rwxr-xr-x	root/root	usr/bin/texconfig-dialog
@@ -251,13 +308,14 @@ lrwxrwxrwx	root/root	usr/bin/texdoc -> ../share/texmf/scripts/texdoc/texdoc.tlu
 lrwxrwxrwx	root/root	usr/bin/texdoctk -> ../share/texmf/scripts/tetex/texdoctk.pl
 -rwxr-xr-x	root/root	usr/bin/texexec
 lrwxrwxrwx	root/root	usr/bin/texhash -> mktexlsr
-lrwxrwxrwx	root/root	usr/bin/texindy -> ../share/texmf/scripts/xindy/texindy.pl
+-rwxr-xr-x	root/root	usr/bin/texi2html
 -rwxr-xr-x	root/root	usr/bin/texlinks
 lrwxrwxrwx	root/root	usr/bin/texliveonfly -> ../share/texmf-dist/scripts/texliveonfly/texliveonfly.py
 lrwxrwxrwx	root/root	usr/bin/texloganalyser -> ../share/texmf-dist/scripts/texloganalyser/texloganalyser
 lrwxrwxrwx	root/root	usr/bin/texlua -> luatex
 lrwxrwxrwx	root/root	usr/bin/texluac -> luatex
 -rwxr-xr-x	root/root	usr/bin/texmfstart
+lrwxrwxrwx	root/root	usr/bin/texsis -> pdftex
 -rwxr-xr-x	root/root	usr/bin/tftopl
 lrwxrwxrwx	root/root	usr/bin/thumbpdf -> ../share/texmf-dist/scripts/thumbpdf/thumbpdf.pl
 -rwxr-xr-x	root/root	usr/bin/tie
@@ -267,6 +325,7 @@ lrwxrwxrwx	root/root	usr/bin/tlmgr -> ../share/texmf/scripts/texlive/tlmgr.pl
 -rwxr-xr-x	root/root	usr/bin/ttf2pk
 -rwxr-xr-x	root/root	usr/bin/ttf2tfm
 -rwxr-xr-x	root/root	usr/bin/ttfdump
+-rwxr-xr-x	root/root	usr/bin/ttftotype42
 lrwxrwxrwx	root/root	usr/bin/typeoutfileinfo -> ../share/texmf-dist/scripts/typeoutfileinfo/typeoutfileinfo.sh
 lrwxrwxrwx	root/root	usr/bin/ulqda -> ../share/texmf-dist/scripts/ulqda/ulqda.pl
 -rwxr-xr-x	root/root	usr/bin/upbibtex
@@ -274,10 +333,12 @@ lrwxrwxrwx	root/root	usr/bin/updmap -> ../share/texmf/scripts/tetex/updmap.pl
 lrwxrwxrwx	root/root	usr/bin/updmap-setup-kanji -> ../share/texmf-dist/scripts/jfontmaps/updmap-setup-kanji.pl
 lrwxrwxrwx	root/root	usr/bin/updmap-sys -> ../share/texmf/scripts/tetex/updmap-sys.sh
 -rwxr-xr-x	root/root	usr/bin/updvitype
+lrwxrwxrwx	root/root	usr/bin/uplatex -> euptex
 -rwxr-xr-x	root/root	usr/bin/uppltotf
 -rwxr-xr-x	root/root	usr/bin/uptex
 -rwxr-xr-x	root/root	usr/bin/uptftopl
 lrwxrwxrwx	root/root	usr/bin/urlbst -> ../share/texmf-dist/scripts/urlbst/urlbst
+lrwxrwxrwx	root/root	usr/bin/utf8mex -> pdftex
 -rwxr-xr-x	root/root	usr/bin/vftovp
 -rwxr-xr-x	root/root	usr/bin/vlna
 lrwxrwxrwx	root/root	usr/bin/vpe -> ../share/texmf-dist/scripts/vpe/vpe.pl
@@ -286,11 +347,22 @@ lrwxrwxrwx	root/root	usr/bin/vpl2vpl -> ../share/texmf-dist/scripts/accfonts/vpl
 -rwxr-xr-x	root/root	usr/bin/vptovf
 -rwxr-xr-x	root/root	usr/bin/weave
 -rwxr-xr-x	root/root	usr/bin/wovp2ovf
+-rwxr-xr-x	root/root	usr/bin/xdvi
+-rwxr-xr-x	root/root	usr/bin/xdvi-xaw
 -rwxr-xr-x	root/root	usr/bin/xdvipdfmx
+lrwxrwxrwx	root/root	usr/bin/xelatex -> xetex
 -rwxr-xr-x	root/root	usr/bin/xetex
-lrwxrwxrwx	root/root	usr/bin/xindy -> ../share/texmf/scripts/xindy/xindy.pl
--rw-r--r--	root/root	usr/bin/xindy.mem
--rwxr-xr-x	root/root	usr/bin/xindy.run
+lrwxrwxrwx	root/root	usr/bin/xmltex -> pdftex
+drwxr-xr-x	root/root	usr/doc/
+drwxr-xr-x	root/root	usr/doc/texlive-20120701/
+-rw-r--r--	root/root	usr/doc/texlive-20120701/ChangeLog
+-rw-r--r--	root/root	usr/doc/texlive-20120701/README
+-rw-r--r--	root/root	usr/doc/texlive-20120701/README.coding
+-rw-r--r--	root/root	usr/doc/texlive-20120701/README.config
+-rw-r--r--	root/root	usr/doc/texlive-20120701/README.cross
+-rw-r--r--	root/root	usr/doc/texlive-20120701/README.distro
+-rw-r--r--	root/root	usr/doc/texlive-20120701/README.hacking
+-rw-r--r--	root/root	usr/doc/texlive-20120701/README.layout
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/kpathsea/
 -rw-r--r--	root/root	usr/include/kpathsea/absolute.h
@@ -342,12 +414,10 @@ drwxr-xr-x	root/root	usr/include/ptexenc/
 -rw-r--r--	root/root	usr/include/ptexenc/ptexenc.h
 -rw-r--r--	root/root	usr/include/ptexenc/unicode.h
 drwxr-xr-x	root/root	usr/lib/
--rw-r--r--	root/root	usr/lib/libkpathsea.a
 -rwxr-xr-x	root/root	usr/lib/libkpathsea.la
 lrwxrwxrwx	root/root	usr/lib/libkpathsea.so -> libkpathsea.so.6.1.0
 lrwxrwxrwx	root/root	usr/lib/libkpathsea.so.6 -> libkpathsea.so.6.1.0
 -rwxr-xr-x	root/root	usr/lib/libkpathsea.so.6.1.0
--rw-r--r--	root/root	usr/lib/libptexenc.a
 -rwxr-xr-x	root/root	usr/lib/libptexenc.la
 lrwxrwxrwx	root/root	usr/lib/libptexenc.so -> libptexenc.so.1.3.0
 lrwxrwxrwx	root/root	usr/lib/libptexenc.so.1 -> libptexenc.so.1.3.0
@@ -367,6 +437,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/cef5conv.1.gz
 -rw-r--r--	root/root	usr/man/man1/cefconv.1.gz
 -rw-r--r--	root/root	usr/man/man1/cefsconv.1.gz
+-rw-r--r--	root/root	usr/man/man1/cfftot1.1.gz
 -rw-r--r--	root/root	usr/man/man1/chktex.1.gz
 -rw-r--r--	root/root	usr/man/man1/chkweb.1.gz
 -rw-r--r--	root/root	usr/man/man1/context.1.gz
@@ -407,16 +478,29 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/e2pall.1.gz
 -rw-r--r--	root/root	usr/man/man1/ebb.1.gz
 -rw-r--r--	root/root	usr/man/man1/eplain.1.gz
+-rw-r--r--	root/root	usr/man/man1/epsffit.1.gz
 -rw-r--r--	root/root	usr/man/man1/extconv.1.gz
 -rw-r--r--	root/root	usr/man/man1/extractbb.1.gz
+-rw-r--r--	root/root	usr/man/man1/extractres.1.gz
+-rw-r--r--	root/root	usr/man/man1/fixdlsrps.1.gz
+-rw-r--r--	root/root	usr/man/man1/fixfmps.1.gz
+-rw-r--r--	root/root	usr/man/man1/fixpsditps.1.gz
+-rw-r--r--	root/root	usr/man/man1/fixpspps.1.gz
+-rw-r--r--	root/root	usr/man/man1/fixscribeps.1.gz
+-rw-r--r--	root/root	usr/man/man1/fixtpps.1.gz
+-rw-r--r--	root/root	usr/man/man1/fixwfwps.1.gz
+-rw-r--r--	root/root	usr/man/man1/fixwpps.1.gz
+-rw-r--r--	root/root	usr/man/man1/fixwwps.1.gz
 -rw-r--r--	root/root	usr/man/man1/fmtutil-sys.1.gz
 -rw-r--r--	root/root	usr/man/man1/fmtutil.1.gz
 -rw-r--r--	root/root	usr/man/man1/fontinst.1.gz
+-rw-r--r--	root/root	usr/man/man1/getafm.1.gz
 -rw-r--r--	root/root	usr/man/man1/gftodvi.1.gz
 -rw-r--r--	root/root	usr/man/man1/gftopk.1.gz
 -rw-r--r--	root/root	usr/man/man1/gftype.1.gz
 -rw-r--r--	root/root	usr/man/man1/gsftopk.1.gz
 -rw-r--r--	root/root	usr/man/man1/hbf2gf.1.gz
+-rw-r--r--	root/root	usr/man/man1/includeres.1.gz
 -rw-r--r--	root/root	usr/man/man1/kpseaccess.1.gz
 -rw-r--r--	root/root	usr/man/man1/kpsepath.1.gz
 -rw-r--r--	root/root	usr/man/man1/kpsereadlink.1.gz
@@ -444,6 +528,8 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/mktexmf.1.gz
 -rw-r--r--	root/root	usr/man/man1/mktexpk.1.gz
 -rw-r--r--	root/root	usr/man/man1/mktextfm.1.gz
+-rw-r--r--	root/root	usr/man/man1/mmafm.1.gz
+-rw-r--r--	root/root	usr/man/man1/mmpfb.1.gz
 -rw-r--r--	root/root	usr/man/man1/mpost.1.gz
 -rw-r--r--	root/root	usr/man/man1/mptopdf.1.gz
 -rw-r--r--	root/root	usr/man/man1/odvicopy.1.gz
@@ -451,6 +537,8 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/ofm2opl.1.gz
 -rw-r--r--	root/root	usr/man/man1/opl2ofm.1.gz
 -rw-r--r--	root/root	usr/man/man1/otangle.1.gz
+-rw-r--r--	root/root	usr/man/man1/otfinfo.1.gz
+-rw-r--r--	root/root	usr/man/man1/otftotfm.1.gz
 -rw-r--r--	root/root	usr/man/man1/otp2ocp.1.gz
 -rw-r--r--	root/root	usr/man/man1/outocp.1.gz
 -rw-r--r--	root/root	usr/man/man1/ovf2ovp.1.gz
@@ -474,22 +562,38 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/ps2eps.1.gz
 -rw-r--r--	root/root	usr/man/man1/ps2frag.1.gz
 -rw-r--r--	root/root	usr/man/man1/ps2pk.1.gz
+-rw-r--r--	root/root	usr/man/man1/psbook.1.gz
 -rw-r--r--	root/root	usr/man/man1/pslatex.1.gz
+-rw-r--r--	root/root	usr/man/man1/psmerge.1.gz
+-rw-r--r--	root/root	usr/man/man1/psnup.1.gz
+-rw-r--r--	root/root	usr/man/man1/psresize.1.gz
+-rw-r--r--	root/root	usr/man/man1/psselect.1.gz
 -rw-r--r--	root/root	usr/man/man1/pstopdf.1.gz
+-rw-r--r--	root/root	usr/man/man1/pstops.1.gz
 -rw-r--r--	root/root	usr/man/man1/rubibtex.1.gz
 -rw-r--r--	root/root	usr/man/man1/rumakeindex.1.gz
 -rw-r--r--	root/root	usr/man/man1/scor2prt.1.gz
 -rw-r--r--	root/root	usr/man/man1/sjisconv.1.gz
 -rw-r--r--	root/root	usr/man/man1/synctex.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1ascii.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1asm.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1binary.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1disasm.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1dotlessj.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1lint.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1mac.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1rawafm.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1reencode.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1testpage.1.gz
+-rw-r--r--	root/root	usr/man/man1/t1unmac.1.gz
 -rw-r--r--	root/root	usr/man/man1/tangle.1.gz
 -rw-r--r--	root/root	usr/man/man1/tex.1.gz
--rw-r--r--	root/root	usr/man/man1/tex2xindy.1.gz
 -rw-r--r--	root/root	usr/man/man1/texconfig-sys.1.gz
 -rw-r--r--	root/root	usr/man/man1/texconfig.1.gz
 -rw-r--r--	root/root	usr/man/man1/texdoctk.1.gz
 -rw-r--r--	root/root	usr/man/man1/texexec.1.gz
 -rw-r--r--	root/root	usr/man/man1/texhash.1.gz
--rw-r--r--	root/root	usr/man/man1/texindy.1.gz
+-rw-r--r--	root/root	usr/man/man1/texi2html.1.gz
 -rw-r--r--	root/root	usr/man/man1/texlinks.1.gz
 -rw-r--r--	root/root	usr/man/man1/texlua.1.gz
 -rw-r--r--	root/root	usr/man/man1/texluac.1.gz
@@ -502,18 +606,268 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/ttf2pk.1.gz
 -rw-r--r--	root/root	usr/man/man1/ttf2tfm.1.gz
 -rw-r--r--	root/root	usr/man/man1/ttfdump.1.gz
+-rw-r--r--	root/root	usr/man/man1/ttftotype42.1.gz
 -rw-r--r--	root/root	usr/man/man1/updmap-sys.1.gz
 -rw-r--r--	root/root	usr/man/man1/updmap.1.gz
 -rw-r--r--	root/root	usr/man/man1/vftovp.1.gz
 -rw-r--r--	root/root	usr/man/man1/vlna.1.gz
 -rw-r--r--	root/root	usr/man/man1/vptovf.1.gz
 -rw-r--r--	root/root	usr/man/man1/weave.1.gz
--rw-r--r--	root/root	usr/man/man1/xindy.1.gz
+-rw-r--r--	root/root	usr/man/man1/xdvi.1.gz
 drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/fmtutil.cnf.5.gz
 -rw-r--r--	root/root	usr/man/man5/synctex.5.gz
 -rw-r--r--	root/root	usr/man/man5/updmap.cfg.5.gz
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/texi2html/
+drwxr-xr-x	root/root	usr/share/texi2html/i18n/
+-rw-r--r--	root/root	usr/share/texi2html/i18n/de.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/en.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/es.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/fr.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/hu.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/it.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/ja.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/nl.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/no.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/pt.thl
+-rw-r--r--	root/root	usr/share/texi2html/i18n/pt_BR.thl
+drwxr-xr-x	root/root	usr/share/texi2html/images/
+-rw-r--r--	root/root	usr/share/texi2html/images/COPYING
+-rw-r--r--	root/root	usr/share/texi2html/images/COPYING.Attribution-ShareAlike
+-rw-r--r--	root/root	usr/share/texi2html/images/GPL
+-rw-r--r--	root/root	usr/share/texi2html/images/Mybg.png
+-rw-r--r--	root/root	usr/share/texi2html/images/README
+-rw-r--r--	root/root	usr/share/texi2html/images/a_begin.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_begin_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_document.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_document_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_empty.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_end.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_end_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_help.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_help_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_index.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_index_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_left.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_left_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_leftdouble.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_leftdouble_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_page.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_page_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_right.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_right_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_rightdouble.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_rightdouble_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_search.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_search_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_searchdoc.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_searchdoc_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_tableofcon.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_tableofcon_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_top.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_top_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_up.png
+-rw-r--r--	root/root	usr/share/texi2html/images/a_up_na.png
+-rw-r--r--	root/root	usr/share/texi2html/images/bg.jpg
+-rw-r--r--	root/root	usr/share/texi2html/images/bg_left.png
+-rw-r--r--	root/root	usr/share/texi2html/images/bg_right.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_dir.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_down.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_grab.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_help.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_next.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_nnext.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_pprev.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_prev.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_readme.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_top.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_up.png
+-rw-r--r--	root/root	usr/share/texi2html/images/blue_uup.png
+-rw-r--r--	root/root	usr/share/texi2html/images/contents_motif.png
+-rw-r--r--	root/root	usr/share/texi2html/images/index_motif.png
+-rw-r--r--	root/root	usr/share/texi2html/images/next_motif.png
+-rw-r--r--	root/root	usr/share/texi2html/images/next_motif_gr.png
+-rw-r--r--	root/root	usr/share/texi2html/images/previous_motif.png
+-rw-r--r--	root/root	usr/share/texi2html/images/previous_motif_gr.png
+-rw-r--r--	root/root	usr/share/texi2html/images/spacer3.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_contents.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_foot.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_next.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_next_gr.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_nextsection.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_nextsection_gr.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_previous.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_previous_gr.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_previoussection.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_previoussection_gr.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_up.png
+-rw-r--r--	root/root	usr/share/texi2html/images/xy_up_gr.png
+drwxr-xr-x	root/root	usr/share/texi2html/lib/
+drwxr-xr-x	root/root	usr/share/texi2html/lib/Unicode-EastAsianWidth/
+drwxr-xr-x	root/root	usr/share/texi2html/lib/Unicode-EastAsianWidth/lib/
+drwxr-xr-x	root/root	usr/share/texi2html/lib/Unicode-EastAsianWidth/lib/Unicode/
+-rw-r--r--	root/root	usr/share/texi2html/lib/Unicode-EastAsianWidth/lib/Unicode/EastAsianWidth.pm
+drwxr-xr-x	root/root	usr/share/texi2html/lib/libintl-perl/
+drwxr-xr-x	root/root	usr/share/texi2html/lib/libintl-perl/lib/
+drwxr-xr-x	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/Messages.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/Recode.pm
+drwxr-xr-x	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/Recode/
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/Recode/_Aliases.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/Recode/_Conversions.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData.pm
+drwxr-xr-x	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ASMO_449.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ATARI_ST.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ATARI_ST_EURO.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CP10007.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CP1250.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CP1251.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CP1252.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CP1253.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CP1254.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CP1256.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CP1257.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CSN_369103.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/CWI.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/DEC_MCS.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_AT_DE.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_AT_DE_A.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_CA_FR.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_DK_NO.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_DK_NO_A.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_ES.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_ES_A.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_ES_S.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_FI_SE.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_FI_SE_A.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_FR.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_IS_FRISS.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_IT.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_PT.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_UK.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/EBCDIC_US.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ECMA_CYRILLIC.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/GEORGIAN_ACADEMY.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/GEORGIAN_PS.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/GOST_19768_74.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/GREEK7.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/GREEK7_OLD.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/GREEK_CCITT.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/HP_ROMAN8.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM037.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM038.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM1004.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM1026.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM1047.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM256.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM273.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM274.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM275.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM277.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM278.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM280.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM281.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM284.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM285.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM290.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM297.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM420.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM423.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM424.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM437.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM500.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM850.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM851.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM852.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM855.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM857.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM860.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM861.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM862.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM863.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM864.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM865.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM866.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM868.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM869.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM870.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM871.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM874.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM875.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM880.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM891.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM903.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM904.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM905.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IBM918.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/IEC_P27_1.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/INIS.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/INIS_8.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/INIS_CYRILLIC.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_10367_BOX.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_2033_1983.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_5427.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_5427_EXT.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_5428.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_1.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_10.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_11.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_13.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_14.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_15.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_16.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_2.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_3.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_4.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_5.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_6.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_7.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_8.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/ISO_8859_9.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/KOI8_R.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/KOI8_RU.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/KOI8_T.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/KOI8_U.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/KOI_8.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/LATIN_GREEK.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/LATIN_GREEK_1.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACARABIC.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACCROATIAN.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACCYRILLIC.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACGREEK.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACHEBREW.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACICELAND.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACINTOSH.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACROMANIA.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACTHAI.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACTURKISH.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MACUKRAINE.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MAC_IS.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MAC_SAMI.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/MAC_UK.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/NATS_DANO.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/NATS_SEFI.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/NEXTSTEP.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/SAMI_WS2.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/TIS_620.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/US_ASCII.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/UTF_8.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/VISCII.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/RecodeData/_Encode.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/TextDomain.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/Util.pm
+-rw-r--r--	root/root	usr/share/texi2html/lib/libintl-perl/lib/Locale/gettext_pp.pm
+drwxr-xr-x	root/root	usr/share/texinfo/
+drwxr-xr-x	root/root	usr/share/texinfo/html/
+-rw-r--r--	root/root	usr/share/texinfo/html/texi2html.html
+drwxr-xr-x	root/root	usr/share/texinfo/init/
+-rw-r--r--	root/root	usr/share/texinfo/init/book.init
+-rw-r--r--	root/root	usr/share/texinfo/init/chm.init
+-rw-r--r--	root/root	usr/share/texinfo/init/html32.init
+-rw-r--r--	root/root	usr/share/texinfo/init/mediawiki.init
+-rw-r--r--	root/root	usr/share/texinfo/init/tex4ht.init
 drwxr-xr-x	root/root	usr/share/texmf-dist/
 -rw-r--r--	root/root	usr/share/texmf-dist/README
 drwxr-xr-x	root/root	usr/share/texmf-dist/bibtex/
