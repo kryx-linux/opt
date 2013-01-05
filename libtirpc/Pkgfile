@@ -4,7 +4,7 @@
 
 name=libtirpc
 version=0.2.2
-release=3
+release=4
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2)
 
 build() {
@@ -14,6 +14,10 @@ build() {
     # http://git.infradead.org/users/steved/libtirpc.git/patch/9bdcba10aa67ce3f67810c7aaac944a00dcfcee5
     # because it breaks linking of other applications against libtirpc
     sed -i 's/des_crypt\.c//' src/Makefile.am
+    
+    # autmake 1.13
+    sed -i 's/^AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac
+    
     aclocal
     automake
 
