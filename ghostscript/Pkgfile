@@ -5,7 +5,7 @@
 
 name=ghostscript
 version=9.06
-release=1
+release=2
 source=(http://downloads.ghostscript.com/public/$name-$version.tar.bz2
         http://downloads.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz)
 
@@ -25,6 +25,10 @@ build () {
     make DESTDIR=$PKG install-so install
 
     cd ijs
+    
+    # automake 1.13
+    sed -i '120s/^/dnl /' configure.ac
+    
     ./autogen.sh
     ./configure --prefix=/usr --mandir=/usr/man --enable-shared
     make
