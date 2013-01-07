@@ -762,6 +762,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-downlevel-shlwapi-l2-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-downlevel-user32-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-downlevel-version-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-base-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/apphelp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/appwiz.cpl.so
 -rwxr-xr-x	root/root	usr/lib/wine/aspnet_regiis.exe.so
@@ -792,6 +793,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/commdlg.dll16.so
 -rwxr-xr-x	root/root	usr/lib/wine/compobj.dll16.so
 -rwxr-xr-x	root/root	usr/lib/wine/compstui.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/conhost.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/control.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/credui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/crtdll.dll.so
@@ -918,6 +920,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-downlevel-shlwapi-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-downlevel-user32-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-downlevel-version-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-base-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/apphelp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/appwiz.cpl
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/aspnet_regiis.exe
@@ -948,6 +951,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/commdlg.dll16
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/compobj.dll16
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/compstui.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/conhost.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/control.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/credui.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/crtdll.dll
@@ -1190,6 +1194,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/net.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/netapi32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/netsh.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/netstat.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/newdev.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ngen.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/normaliz.dll
@@ -1472,6 +1477,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libadvpack.def
 -rw-r--r--	root/root	usr/lib/wine/libatl.def
 -rw-r--r--	root/root	usr/lib/wine/libatl100.def
+-rw-r--r--	root/root	usr/lib/wine/libatl80.def
 -rw-r--r--	root/root	usr/lib/wine/libavicap32.def
 -rw-r--r--	root/root	usr/lib/wine/libavifil32.def
 -rw-r--r--	root/root	usr/lib/wine/libavrt.def
@@ -1717,6 +1723,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/net.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/netapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/netsh.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/netstat.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/newdev.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ngen.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/normaliz.dll.so
