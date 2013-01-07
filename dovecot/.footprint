@@ -25,6 +25,7 @@ drwxr-xr-x	root/root	etc/dovecot/conf.d/
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-system.conf.ext
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-vpopmail.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-db.conf.ext
+-rw-r--r--	root/root	etc/dovecot/dovecot-dict-auth.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-dict-sql.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-ldap.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-sql.conf.ext
