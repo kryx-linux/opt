@@ -4,7 +4,7 @@
 # Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
 
 name=firefox
-version=17.0.1
+version=18.0
 release=1
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
         mozconfig)
@@ -19,6 +19,10 @@ build() {
     export CFLAGS="$CFLAGS -mno-avx"
     sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
     ./configure
+
+    #mozilla sucks: BZ #824381
+    mkdir $SRC/mozilla-release/js/src/.deps
+
     make
 
     install -d \
