@@ -3,16 +3,13 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=squid
-version=3.2.4
+version=3.2.6
 release=1
-source=(ftp://mirror.switch.ch/mirror/squid/$name-$version.tar.bz2
-        http://www.squid-cache.org/Versions/v3/3.2/changesets/squid-3.2-11738.patch 
+source=(http://www.squid-cache.org/Versions/v3/3.2/$name-$version.tar.bz2
         squid)
 
 build () {
     cd $name-$version
-
-    patch -p0 -i $SRC/$name-3.2-11738.patch
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
