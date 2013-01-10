@@ -5,15 +5,12 @@
 # Depends on: 
 
 name=sharutils
-version=4.11.1
-release=2
-source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
+version=4.13.3
+release=1
+source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 
 build(){
   cd $name-$version
-
-  # fix for glibc 'gets' removal
-  sed -i -e '/gets is a/d' lib/stdio.in.h
 
   ./configure --prefix=/usr \
               --mandir=/usr/man \

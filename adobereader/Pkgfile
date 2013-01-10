@@ -5,10 +5,9 @@
 # Depends on: gtk libstdc++-compat
 
 name=adobereader
-version=9.5.1
+version=9.5.3
 release=1
-source=(ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/$version/enu/AdbeRdr${version}-1_i486linux_enu.tar.bz2 \
-        acroread.diff)
+source=(ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/$version/enu/AdbeRdr${version}-1_i486linux_enu.tar.bz2)
 
 PKGMK_NO_STRIP="yes"
 
@@ -22,6 +21,5 @@ build() {
     $(find $PKG/usr/lib -name PPKLite.api) \
     $PKG/usr/lib/Adobe/Reader9/Reader/intellinux/lib/libauthplay*
 
-  patch $PKG/usr/lib/Adobe/Reader9/bin/acroread $SRC/acroread.diff
   ln -sf /usr/lib/Adobe/Reader9/bin/acroread $PKG/usr/bin/acroread
 }
