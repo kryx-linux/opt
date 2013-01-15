@@ -5,7 +5,7 @@
 # Depends on:  libsdl
 
 name=qemu
-version=1.2.1
+version=1.2.2
 release=1
 source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
 
