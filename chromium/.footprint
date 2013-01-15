@@ -5,6 +5,7 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/chromium/
 -rw-r--r--	root/root	usr/lib/chromium/chrome.pak
 -rw-r--r--	root/root	usr/lib/chromium/chrome_100_percent.pak
+-rw-r--r--	root/root	usr/lib/chromium/chrome_remote_desktop.pak
 -rwxr-xr-x	root/root	usr/lib/chromium/chromium
 -r-sr-xr-x	root/root	usr/lib/chromium/chromium-sandbox
 -rw-r--r--	root/root	usr/lib/chromium/content_resources.pak
@@ -174,6 +175,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/TimelinePanel.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/auditsPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/breadcrumbList.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/canvasProfiler.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/cmdevtools.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/codemirror.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/cssNamedFlows.css
@@ -202,7 +204,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/textEditor.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/textPrompt.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/timelinePanel.css
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/webGLProfiler.css
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/chromium.1.gz
