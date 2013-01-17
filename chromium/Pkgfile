@@ -5,7 +5,7 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt alsa-lib krb5
 
 name=chromium
-version=23.0.1271.97
+version=24.0.1312.52
 release=1
 source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.bz2 \
         $name.sh use-siginfo_t.patch)
@@ -30,6 +30,7 @@ build() {
 	-Dlinux_strip_binary=1 \
 	-Drelease_extra_cflags="$CFLAGS" \
 	-Dproprietary_codecs=1 \
+        -Dffmpeg_branding=Chrome \
 	-Duse_system_libjpeg=1 \
 	-Duse_system_libxslt=1 \
 	-Duse_system_libxml=1 \
