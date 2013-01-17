@@ -91,24 +91,24 @@ drwxr-xr-x	root/root	usr/include/libnl3/netlink/route/qdisc/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libnl-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-3.so -> libnl-3.so.201.13.1
-lrwxrwxrwx	root/root	usr/lib/libnl-3.so.201 -> libnl-3.so.201.13.1
--rwxr-xr-x	root/root	usr/lib/libnl-3.so.201.13.1
+lrwxrwxrwx	root/root	usr/lib/libnl-3.so -> libnl-3.so.201.14.0
+lrwxrwxrwx	root/root	usr/lib/libnl-3.so.201 -> libnl-3.so.201.14.0
+-rwxr-xr-x	root/root	usr/lib/libnl-3.so.201.14.0
 -rw-r--r--	root/root	usr/lib/libnl-genl-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-genl-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-genl-3.so -> libnl-genl-3.so.201.13.1
-lrwxrwxrwx	root/root	usr/lib/libnl-genl-3.so.201 -> libnl-genl-3.so.201.13.1
--rwxr-xr-x	root/root	usr/lib/libnl-genl-3.so.201.13.1
+lrwxrwxrwx	root/root	usr/lib/libnl-genl-3.so -> libnl-genl-3.so.201.14.0
+lrwxrwxrwx	root/root	usr/lib/libnl-genl-3.so.201 -> libnl-genl-3.so.201.14.0
+-rwxr-xr-x	root/root	usr/lib/libnl-genl-3.so.201.14.0
 -rw-r--r--	root/root	usr/lib/libnl-nf-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-nf-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-nf-3.so -> libnl-nf-3.so.201.13.1
-lrwxrwxrwx	root/root	usr/lib/libnl-nf-3.so.201 -> libnl-nf-3.so.201.13.1
--rwxr-xr-x	root/root	usr/lib/libnl-nf-3.so.201.13.1
+lrwxrwxrwx	root/root	usr/lib/libnl-nf-3.so -> libnl-nf-3.so.201.14.0
+lrwxrwxrwx	root/root	usr/lib/libnl-nf-3.so.201 -> libnl-nf-3.so.201.14.0
+-rwxr-xr-x	root/root	usr/lib/libnl-nf-3.so.201.14.0
 -rw-r--r--	root/root	usr/lib/libnl-route-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-route-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-route-3.so -> libnl-route-3.so.201.13.1
-lrwxrwxrwx	root/root	usr/lib/libnl-route-3.so.201 -> libnl-route-3.so.201.13.1
--rwxr-xr-x	root/root	usr/lib/libnl-route-3.so.201.13.1
+lrwxrwxrwx	root/root	usr/lib/libnl-route-3.so -> libnl-route-3.so.201.14.0
+lrwxrwxrwx	root/root	usr/lib/libnl-route-3.so.201 -> libnl-route-3.so.201.14.0
+-rwxr-xr-x	root/root	usr/lib/libnl-route-3.so.201.14.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libnl-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libnl-genl-3.0.pc
