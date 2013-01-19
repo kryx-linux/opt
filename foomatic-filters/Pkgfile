@@ -1,7 +1,7 @@
 # Description: Filter script to convert PostScript data into the printers nativ format
 # URL:         http://openprinting.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  ghostscript
+# Depends on:  ghostscript cups-filters
 
 name=foomatic-filters
 version=4.0.17
