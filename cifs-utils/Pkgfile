@@ -5,11 +5,13 @@
 
 name=cifs-utils
 version=5.9
-release=1
-source=(ftp://ftp.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2)
+release=2
+source=(ftp://ftp.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2
+        $name-$version-got_user.patch)
 
 build () {
     cd $name-$version
+    patch -p1 -i $SRC/$name-$version-got_user.patch
     ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
