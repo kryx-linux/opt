@@ -6,8 +6,9 @@
 
 name=fontforge
 version=20120731-b
-release=3
-source=(http://downloads.sourceforge.net/project/$name/$name-source/fontforge_full-$version.tar.bz2)
+release=4
+source=(http://downloads.sourceforge.net/project/$name/$name-source/fontforge_full-$version.tar.bz2
+	http://download.savannah.gnu.org/releases/freetype/freetype-2.4.11.tar.bz2)
 
 build() {
 	cd $name-$version
@@ -21,7 +22,8 @@ build() {
 		--enable-devicetables \
 		--enable-double \
 		--with-regular-link \
-		--enable-pyextension
+		--enable-pyextension \
+		--with-freetype-src=$SRC/freetype-2.4.11
 
 	make
 	make install DESTDIR=$PKG
