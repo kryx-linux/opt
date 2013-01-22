@@ -1,7 +1,7 @@
 # Description: a GTK based pdf viewer
 # URL: http://www.emma-soft.com/projects/epdfview
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: poppler poppler-glib
+# Depends on: gtk, poppler-glib
 
 name=epdfview
 version=0.1.8
