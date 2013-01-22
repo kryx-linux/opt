@@ -1,11 +1,11 @@
 # Description: NFS utilities 
 # URL:         http://nfs.sourceforge.net/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  util-linux tcp_wrappers libcap rpcbind libnfsidmap libevent keyutils
+# Depends on:  util-linux udev libcap rpcbind libnfsidmap libevent keyutils sqlite3
 
 name=nfs-utils
 version=1.2.7
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/nfs/$name/$version/$name-$version.tar.bz2 \
         exports idmapd.conf nfs nfsserver)
 
@@ -18,7 +18,8 @@ build () {
                 --sysconfdir=/etc \
                 --with-statedir=/var/lib/nfs \
                 --disable-gss \
-                --with-tcp-wrappers 
+                --with-tcp-wrappers \
+                --enable-libmount-mount 
     make
     install -d $PKG/sbin
     make DESTDIR=$PKG install
