@@ -33,10 +33,6 @@ drwxr-xr-x	root/root	usr/include/gutenprint/
 -rw-r--r--	root/root	usr/include/gutenprint/weave.h
 -rw-r--r--	root/root	usr/include/gutenprint/xml.h
 drwxr-xr-x	root/root	usr/include/gutenprintui2/
--rw-r--r--	root/root	usr/include/gutenprintui2/curve.h
--rw-r--r--	root/root	usr/include/gutenprintui2/gammacurve.h
--rw-r--r--	root/root	usr/include/gutenprintui2/gutenprintui.h
--rw-r--r--	root/root	usr/include/gutenprintui2/typebuiltins.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cups/
 drwxr-xr-x	root/root	usr/lib/cups/driver/
@@ -53,14 +49,8 @@ drwxr-xr-x	root/root	usr/lib/gutenprint/5.2/modules/
 lrwxrwxrwx	root/root	usr/lib/libgutenprint.so -> libgutenprint.so.2.1.0
 lrwxrwxrwx	root/root	usr/lib/libgutenprint.so.2 -> libgutenprint.so.2.1.0
 -rwxr-xr-x	root/root	usr/lib/libgutenprint.so.2.1.0
--rw-r--r--	root/root	usr/lib/libgutenprintui2.a
--rwxr-xr-x	root/root	usr/lib/libgutenprintui2.la
-lrwxrwxrwx	root/root	usr/lib/libgutenprintui2.so -> libgutenprintui2.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libgutenprintui2.so.1 -> libgutenprintui2.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libgutenprintui2.so.1.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gutenprint.pc
--rw-r--r--	root/root	usr/lib/pkgconfig/gutenprintui2.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/escputil.1.gz
