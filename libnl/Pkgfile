@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=libnl
-version=3.2.19
+version=3.2.21
 release=1
 source=(http://www.infradead.org/~tgr/$name/files/$name-$version.tar.gz)
 
