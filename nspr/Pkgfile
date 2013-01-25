@@ -1,6 +1,6 @@
 # Description: Netscape Portable Runtime library
 # URL:         http://www.mozilla.org/projects/nspr/
-# Maintainer:  Fredrik Rinnestam, fredrik at rinnestam dot se
+# Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
 
 name=nspr
 version=4.9.4
@@ -18,7 +18,6 @@ build() {
         --libdir=/usr/lib \
         --includedir=/usr/include/nspr \
         --enable-optimize="$CFLAGS" \
-        --enable-64bit \
         --disable-debug
 
     make
