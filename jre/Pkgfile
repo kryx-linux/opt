@@ -1,13 +1,12 @@
 # Description: Java 2 Runtime Kit
-# URL:         http://java.sun.com
+# URL:         http://www.oracle.com/technetwork/java/index.html
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Arch Maintainer: Predrag Ivanovic, predivan at open dot telekom dot rs
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
 version=1.7.0_11
 release=1
-source=(file:///$name-7u11-linux-x64.tar.gz)
+source=(file:///$name-7u11-linux-i586.tar.gz)
 
 build(){
     cd $name$version
