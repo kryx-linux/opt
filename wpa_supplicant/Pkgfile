@@ -5,16 +5,14 @@
 
 name=wpa_supplicant
 version=1.1
-release=2
+release=1
 source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz)
 
 build () {
     cd $name-$version/$name
 
     cp defconfig .config
-    echo "CONFIG_READLINE=y
-          CONFIG_LIBNL32=y
-          CFLAGS+=-I/usr/include/libnl3" >> .config
+    echo "CONFIG_READLINE=y" >> .config
 
     make
 
