@@ -6,14 +6,18 @@
 
 name=hal
 version=0.5.14
-release=2
-source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz \
+release=3
+source=(http://hal.freedesktop.org/releases/$name-$version.tar.bz2 \
 	hal.conf rc.hald)
 
 build() {
     cd $name-$version
+
+    sed -i $(find . -type f -name '*.c' -or -name '*.h') \
+        -e 's|<glib/.*\.h>|<glib.h>|g'
     sed -i -e 's/USE_NLS=yes/USE_NLS=no/' \
 	-e 's/ENABLE_NLS 1/ENABLE_NLS 0/' configure
+
     ./configure --prefix=/usr \
 	--mandir=/usr/man \
 	--libexecdir=/usr/lib/$name \
@@ -25,9 +29,15 @@ build() {
 	--with-hwdata=/usr/share \
 	--disable-policy-kit \
 	--disable-console-kit
+
     sed -i -e '/device-manager/d' tools/Makefile
+    sed -i hald/linux/probing/Makefile \
+        -e 's|bluetooth$(EXEEXT) \\|bluetooth$(EXEEXT)|' \
+        -e 's|hald-probe-video4linux$(EXEEXT)||'
+
     make
     make DESTDIR=$PKG install
+
     install -D -o root -g root -m 0755 $SRC/rc.hald \
 	$PKG/etc/rc.d/hald
     rm -rf $PKG/usr/share/{doc,locale}
