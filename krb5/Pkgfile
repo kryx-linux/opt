@@ -5,19 +5,16 @@
 # Depends on: openldap
 
 name=krb5
-version=1.10.2
-release=2
-source=(http://web.mit.edu/kerberos/dist/$name/${version%.*}/$name-$version-signed.tar \
-        http://web.mit.edu/kerberos/advisories/2012-001-patch.txt)
+version=1.11
+release=1
+source=(http://web.mit.edu/kerberos/dist/$name/$version/$name-$version-signed.tar)
 
 build() {
-	tar -xf $SRC/$name-$version-signed.tar
 	tar -xzf $SRC/$name-$version.tar.gz
 
     	cd $name-$version/src
 
         sed -e '/KRB5ROOT=/ s/\/local//' -i util/ac_check_krb5.m4
-        patch -p2 -i $SRC/2012-001-patch.txt
 
 	export CFLAGS="-I/usr/include/et"
 	./configure --prefix=/usr \

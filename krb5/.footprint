@@ -82,18 +82,15 @@ lrwxrwxrwx	root/root	usr/lib/libkadm5srv.so -> libkadm5srv_mit.so
 lrwxrwxrwx	root/root	usr/lib/libkadm5srv_mit.so -> libkadm5srv_mit.so.8.0
 lrwxrwxrwx	root/root	usr/lib/libkadm5srv_mit.so.8 -> libkadm5srv_mit.so.8.0
 -rw-r--r--	root/root	usr/lib/libkadm5srv_mit.so.8.0
-lrwxrwxrwx	root/root	usr/lib/libkdb5.so -> libkdb5.so.6.0
-lrwxrwxrwx	root/root	usr/lib/libkdb5.so.6 -> libkdb5.so.6.0
--rw-r--r--	root/root	usr/lib/libkdb5.so.6.0
+lrwxrwxrwx	root/root	usr/lib/libkdb5.so -> libkdb5.so.7.0
+lrwxrwxrwx	root/root	usr/lib/libkdb5.so.7 -> libkdb5.so.7.0
+-rw-r--r--	root/root	usr/lib/libkdb5.so.7.0
 lrwxrwxrwx	root/root	usr/lib/libkrb5.so -> libkrb5.so.3.3
 lrwxrwxrwx	root/root	usr/lib/libkrb5.so.3 -> libkrb5.so.3.3
 -rw-r--r--	root/root	usr/lib/libkrb5.so.3.3
 lrwxrwxrwx	root/root	usr/lib/libkrb5support.so -> libkrb5support.so.0.1
 lrwxrwxrwx	root/root	usr/lib/libkrb5support.so.0 -> libkrb5support.so.0.1
 -rw-r--r--	root/root	usr/lib/libkrb5support.so.0.1
-lrwxrwxrwx	root/root	usr/lib/libverto-k5ev.so -> libverto-k5ev.so.0.0
-lrwxrwxrwx	root/root	usr/lib/libverto-k5ev.so.0 -> libverto-k5ev.so.0.0
--rw-r--r--	root/root	usr/lib/libverto-k5ev.so.0.0
 lrwxrwxrwx	root/root	usr/lib/libverto.so -> libverto.so.0.0
 lrwxrwxrwx	root/root	usr/lib/libverto.so.0 -> libverto.so.0.0
 -rw-r--r--	root/root	usr/lib/libverto.so.0.0
