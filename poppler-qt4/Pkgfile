@@ -4,7 +4,7 @@
 # Depends on:  qt4 poppler
 
 name=poppler-qt4
-version=0.20.5
+version=0.22.1
 release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.gz)
 
@@ -13,7 +13,8 @@ build() {
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
-                --enable-{zlib,libjpeg,libpng,cms} \
+                --enable-{zlib,libjpeg,libpng} \
+                --enable-cms=lcms1 \
                 --disable-utils \
                 --disable-poppler-{glib,cpp}
 
