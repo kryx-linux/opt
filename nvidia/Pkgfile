@@ -1,7 +1,6 @@
 # Description: nVIDIA Linux Display Driver
 # URL: http://www.nvidia.com/
-# Packager: Matt Housh, jaeger at morpheus dot net
-# Maintainer: Juergen Daubert, jue at crux dot nu 
+# Maintainer: Matt Housh, jaeger at morpheus dot net
 # Depends on: gtk gl-select pangox-compat
 
 name=nvidia
@@ -13,6 +12,9 @@ source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86
 build() {
     sh NVIDIA-Linux-x86_64-$version-no-compat32.run --extract-only
     cd NVIDIA-Linux-x86_64-$version-no-compat32
+
+    # workaround for 3.7.6+ kernels
+    sed -i -e '1706s/le 5/le 99/' kernel/conftest.sh
 
     # libraries
     install -d $PKG/usr/lib/{tls,vdpau}
