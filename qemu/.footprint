@@ -65,6 +65,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/qemu-nbd.8.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/qemu/
+-rw-r--r--	root/root	usr/share/qemu/acpi-dsdt.aml
 -rw-r--r--	root/root	usr/share/qemu/bamboo.dtb
 -rw-r--r--	root/root	usr/share/qemu/bios.bin
 drwxr-xr-x	root/root	usr/share/qemu/keymaps/
@@ -120,6 +121,7 @@ drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/pxe-pcnet.rom
 -rw-r--r--	root/root	usr/share/qemu/pxe-rtl8139.rom
 -rw-r--r--	root/root	usr/share/qemu/pxe-virtio.rom
+-rw-r--r--	root/root	usr/share/qemu/q35-acpi-dsdt.aml
 -rw-r--r--	root/root	usr/share/qemu/qemu-icon.bmp
 -rw-r--r--	root/root	usr/share/qemu/s390-zipl.rom
 -rw-r--r--	root/root	usr/share/qemu/sgabios.bin
