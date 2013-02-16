@@ -19,7 +19,7 @@ build() {
 
   # fix include issues with nspr
   echo 'QEMU_CFLAGS+=-I/usr/include/nspr' >> libcacard/Makefile
-  make
+  make ${MAKEFLAGS:=}
   make DESTDIR=$PKG install
 
   make qemu.1 qemu-img.1 qemu-nbd.8
