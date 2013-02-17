@@ -1294,6 +1294,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wevtapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wiaservc.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/windowscodecs.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/windowscodecsext.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winealsa.drv
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wineboot.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winebrowser.exe
@@ -1540,6 +1541,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libversion.def
 -rw-r--r--	root/root	usr/lib/wine/libwer.def
 -rw-r--r--	root/root	usr/lib/wine/libwindowscodecs.def
+-rw-r--r--	root/root	usr/lib/wine/libwindowscodecsext.def
 -rw-r--r--	root/root	usr/lib/wine/libwinecrt0.a
 -rw-r--r--	root/root	usr/lib/wine/libwined3d.def
 -rw-r--r--	root/root	usr/lib/wine/libwinhttp.def
@@ -1765,6 +1767,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/wevtapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wiaservc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/windowscodecs.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/windowscodecsext.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winealsa.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/wineboot.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winebrowser.exe.so
@@ -2438,6 +2441,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winaspi.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/windebug.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/windowscodecs.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/windowscodecsext.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winealsa.drv
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wineboot.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winebrowser.exe
@@ -2699,6 +2703,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libversion.def
 -rw-r--r--	root/root	usr/lib32/wine/libwer.def
 -rw-r--r--	root/root	usr/lib32/wine/libwindowscodecs.def
+-rw-r--r--	root/root	usr/lib32/wine/libwindowscodecsext.def
 -rw-r--r--	root/root	usr/lib32/wine/libwinecrt0.a
 -rw-r--r--	root/root	usr/lib32/wine/libwined3d.def
 -rw-r--r--	root/root	usr/lib32/wine/libwinhttp.def
@@ -2965,6 +2970,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/winaspi.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/windebug.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/windowscodecs.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/windowscodecsext.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/winealsa.drv.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wineboot.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/winebrowser.exe.so
@@ -3113,8 +3119,8 @@ drwxr-xr-x	root/root	usr/share/wine/fonts/
 -rw-r--r--	root/root	usr/share/wine/fonts/vgasysr.fon
 -rw-r--r--	root/root	usr/share/wine/fonts/vgasyst.fon
 drwxr-xr-x	root/root	usr/share/wine/gecko/
--rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-1.8-x86.msi
--rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-1.8-x86_64.msi
+-rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-1.9-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-1.9-x86_64.msi
 -rw-r--r--	root/root	usr/share/wine/generic.ppd
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
 drwxr-xr-x	root/root	usr/share/wine/mono/
