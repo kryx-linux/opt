@@ -5,8 +5,8 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt alsa-lib gperf
 
 name=chromium
-version=24.0.1312.52
-release=2
+version=25.0.1364.97
+release=1
 source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.bz2 \
         $name.sh use-siginfo_t.patch)
 
