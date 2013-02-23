@@ -1,0 +1,15 @@
+# Description: PDF plugin for the chromium browser
+# URL:         http://chromium.org/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Depends on:  chromium
+
+name=chromium-pdf
+version=25.0.1364.97
+release=1
+source=(https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb)
+
+build() {
+  ar -x google-chrome-stable_current_amd64.deb
+  tar --use-compress-program=lzma -xf data.tar.lzma
+  install -D opt/google/chrome/libpdf.so $PKG/usr/lib/chromium/libpdf.so
+}
