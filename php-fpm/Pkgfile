@@ -1,10 +1,10 @@
 # Description: FastCGI Process Manager for PHP
 # URL:         http://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libpcre libxml2
+# Depends on:  xz libpcre libxml2
 
 name=php-fpm
-version=5.4.11
+version=5.4.12
 release=1
 source=(http://www.php.net/distributions/php-$version.tar.bz2 
         php-fpm)
@@ -20,7 +20,9 @@ build () {
     --with-config-file-scan-dir=/etc/php/conf.d \
     --with-zlib \
     --with-pcre-regex=/usr \
-    --disable-static --disable-debug --without-pear"
+    --disable-static --disable-debug \
+    --without-sqlite3 --without-pdo-sqlite \
+    --without-pear"
 
     EXTENSION_DIR=/usr/lib/php/extensions \
     ./configure \
@@ -28,7 +30,7 @@ build () {
         --enable-fpm \
         --disable-cli \
         --with-fpm-user=www \
-        --with-fpm-group=www
+        --with-fpm-group=www 
 
     make
 
