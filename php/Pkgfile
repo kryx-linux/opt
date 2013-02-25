@@ -6,8 +6,7 @@
 name=php
 version=5.4.12
 release=1
-source=(http://www.php.net/distributions/php-$version.tar.bz2 
-        extensions.ini)
+source=(http://www.php.net/distributions/php-$version.tar.bz2)
 
 build () {
     cd php-$version
