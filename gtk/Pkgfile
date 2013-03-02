@@ -5,14 +5,14 @@
 
 name=gtk
 version=2.24.16
-release=1
+release=2
 source=(http://download.gnome.org/sources/gtk+/2.24/${name}+-$version.tar.xz \
         gtk.immodules gtk-register.sh)
 
 build () {
     cd gtk+-$version
 
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --disable-introspection --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
     mkdir -p $PKG/usr/etc/gtk-2.0
