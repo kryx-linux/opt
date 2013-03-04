@@ -342,7 +342,6 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-relink.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-remote-ext.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-remote-fd.1.gz
--rw-r--r--	root/root	usr/man/man1/git-remote-helpers.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-remote-testgit.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-remote.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-repack.1.gz
@@ -390,6 +389,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-write-tree.1.gz
 -rw-r--r--	root/root	usr/man/man1/git.1.gz
 -rw-r--r--	root/root	usr/man/man1/gitk.1.gz
+-rw-r--r--	root/root	usr/man/man1/gitremote-helpers.1.gz
 -rw-r--r--	root/root	usr/man/man1/gitweb.1.gz
 drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Git.3pm.gz
