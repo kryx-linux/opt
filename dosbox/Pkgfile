@@ -1,7 +1,7 @@
 # Description: SDL-based DOS emulator for classic games
 # URL: http://dosbox.sourceforge.net
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Packager: 
+# Maintainer: Alan Mizrahi, alan at mizrahi dot com dot ve
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: libsdl
 
 name=dosbox
@@ -12,6 +12,7 @@ source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
 build() {
 	cd $name-$version
 	./configure --prefix=/usr --mandir=/usr/man
+	sed -i '23a#include <cstddef>' include/dos_inc.h
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share
