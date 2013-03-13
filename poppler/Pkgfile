@@ -5,7 +5,7 @@
 # Depends on:  cairo lcms
 
 name=poppler
-version=0.22.1
+version=0.22.2
 release=1
 source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
 
