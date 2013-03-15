@@ -8,7 +8,7 @@
 name=netpbm
 version=10.57.00
 release=1
-source=(http://www.hvlinux.net/crux/distfiles/$name/$name-$version.tar.bz2
+source=(http://crux.ster.so/distfiles/$name/$name-$version.tar.bz2
 	config.mk netpbm-10.34-build.patch)
 
 build() {
