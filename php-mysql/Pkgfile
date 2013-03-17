@@ -4,7 +4,7 @@
 # Depends on:  mysql
 
 name=php-mysql
-version=5.4.12
+version=5.4.13
 release=1
 source=(http://www.php.net/distributions/php-$version.tar.bz2)
 
@@ -13,13 +13,16 @@ build () {
 
     ./configure --disable-all \
                 --enable-pdo=shared \
-                --with-mysql=shared,/usr \
-                --with-pdo-mysql=shared,/usr
-
+                --enable-mysqlnd=shared \
+                --with-mysql=shared,mysqlnd \
+                --with-mysqli=shared,mysqlnd \
+                --with-pdo-mysql=shared,mysqlnd
+    
     make build-modules
 
     install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
-    install -m 755 modules/*mysql.so $PKG/usr/lib/php/extensions
+    install -m 755 modules/*mysql*.so $PKG/usr/lib/php/extensions
 
-    printf "extension=%s\n" {pdo_,}mysql.so > $PKG/etc/php/conf.d/mysql.ini
+    printf 'extension=%s\n' {mysqlnd,mysql,mysqli,pdo_mysql}.so \
+           > $PKG/etc/php/conf.d/mysql.ini
 }
