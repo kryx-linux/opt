@@ -4,9 +4,9 @@
 # Depends on:  xaw3d, ghostscript
 
 name=gv
-version=3.7.3.90
+version=3.7.4
 release=1
-source=(ftp://alpha.gnu.org/gnu/$name/$name-$version.tar.gz)
+source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
