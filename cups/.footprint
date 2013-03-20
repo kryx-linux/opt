@@ -1,5 +1,6 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/lp	etc/cups/
+-rw-r-----	root/lp	etc/cups/cups-files.conf
 -rw-r-----	root/lp	etc/cups/cupsd.conf
 -rw-r-----	root/lp	etc/cups/cupsd.conf.default
 drwxr-xr-x	root/lp	etc/cups/interfaces/
@@ -124,6 +125,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/classes.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/client.conf.5.gz
+-rw-r--r--	root/root	usr/man/man5/cups-files.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/cups-snmp.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/cupsd.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/ipptoolfile.5.gz
@@ -237,6 +239,7 @@ drwxr-xr-x	root/root	usr/share/cups/doc/help/
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-access_log.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-classes-conf.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-client-conf.html
+-rw-r--r--	root/root	usr/share/cups/doc/help/ref-cups-files-conf.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-cupsd-conf.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-error_log.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-mailto-conf.html

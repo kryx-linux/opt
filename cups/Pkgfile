@@ -4,8 +4,8 @@
 # Depends on:  acl tcp_wrappers libusb openssl zlib
 
 name=cups
-version=1.6.1
-release=2
+version=1.6.2
+release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2
         cups-config.patch cups)
 
