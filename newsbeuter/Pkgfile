@@ -4,14 +4,12 @@
 # Depends on:  curl libxml2 sqlite3 stfl json-c
 
 name=newsbeuter
-version=2.5
-release=2
-source=(http://www.newsbeuter.org/downloads/$name-$version.tar.gz
-        $name-$version-gcc47.patch)
+version=2.6
+release=1
+source=(http://www.newsbeuter.org/downloads/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    patch -p1 -i $SRC/$name-$version-gcc47.patch
     export prefix=/usr mandir=/usr/man
     ./config.sh
     make
