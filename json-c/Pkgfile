@@ -3,13 +3,14 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=json-c
-version=0.9
+version=0.10
 release=1
-source=(http://oss.metaparadigm.com/$name/$name-$version.tar.gz)
+source=(https://s3.amazonaws.com/json-c_releases/releases/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
     ./configure --prefix=/usr 
     make
     make DESTDIR=$PKG install
+    install -m 0644 json_object_iterator.h $PKG/usr/include/json
 }
