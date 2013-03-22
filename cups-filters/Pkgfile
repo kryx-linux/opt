@@ -4,23 +4,19 @@
 # Depends on:  cups poppler qpdf
 
 name=cups-filters
-version=1.0.30
+version=1.0.31
 release=1
-source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz
-        $name-build_without_avahi.patch)
+source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
 
-    patch -p0 -i $SRC/$name-build_without_avahi.patch
-
-    autoconf
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
                 --mandir=/usr/man \
                 --without-php \
                 --disable-avahi \
-                --with-browseremoteprotocols=none
+                --without-rcdir
 
     make
     make DESTDIR=$PKG install
