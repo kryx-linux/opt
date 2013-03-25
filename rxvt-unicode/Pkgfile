@@ -5,7 +5,7 @@
 
 name=rxvt-unicode
 version=9.18
-release=1
+release=2
 source=(http://dist.schmorp.de/$name/Attic/$name-$version.tar.bz2)
 
 build() {
@@ -13,8 +13,8 @@ build() {
 
    ./configure --prefix=/usr --mandir=/usr/man \
                --enable-utmp --enable-wtmp \
-               --enable-transparency --enable-tinting --enable-fading \
-               --enable-mousewheel \
+               --enable-transparency --enable-fading \
+               --enable-mousewheel --enable-256-color \
                --enable-xft --enable-font-styles 
 
    make
