@@ -5,7 +5,7 @@
 
 name=gdk-pixbuf
 version=2.26.5
-release=2
+release=3
 source=(http://download.gnome.org/sources/$name/2.26/$name-$version.tar.xz \
         gdk-pixbuf.loaders gdk-pixbuf-register.sh)
 
@@ -21,5 +21,5 @@ build () {
             $PKG/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
     install -m 755 $SRC/gdk-pixbuf-register.sh \
             $PKG/usr/bin/gdk-pixbuf-register
-    rm -r $PKG/usr/share
+    rm -r $PKG/usr/share/gtk-doc
 }
