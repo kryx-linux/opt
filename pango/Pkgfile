@@ -5,7 +5,7 @@
 
 name=pango
 version=1.32.5
-release=1
+release=2
 source=(http://download.gnome.org/sources/$name/1.32/$name-$version.tar.xz \
         pango.modules)
 
@@ -15,5 +15,5 @@ build () {
         make
         make DESTDIR=$PKG install
         install -D -m 644 $SRC/pango.modules $PKG/usr/etc/pango/pango.modules
-        rm -r $PKG/usr/share
+        rm -r $PKG/usr/share/gtk-doc
 }
