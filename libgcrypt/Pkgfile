@@ -5,8 +5,8 @@
 # Depends on:  libgpg-error
 
 name=libgcrypt
-version=1.5.0
-release=2
+version=1.5.1
+release=1
 source=(ftp://ftp.gnupg.org/gcrypt/libgcrypt/$name-$version.tar.bz2)
 
 build() {
