@@ -6,11 +6,14 @@
 
 name=qt4
 version=4.8.4
-release=3
-source=(http://releases.qt-project.org/qt4/source/qt-everywhere-opensource-src-$version.tar.gz)
+release=4
+source=(http://releases.qt-project.org/qt4/source/qt-everywhere-opensource-src-$version.tar.gz \
+	boost-1.48.patch)
 
 build () {
     cd qt-everywhere-opensource-src-$version
+
+    patch -p1 -i $SRC/boost-1.48.patch
 
     sed -i 's|X11R6/||g' mkspecs/*/*.conf
 
