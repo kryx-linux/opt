@@ -1,10 +1,10 @@
 # Description:  Userspace firmware for newer AMD Radeon GPU's.
 # URL:          http://people.freedesktop.org/~agd5f/radeon_ucode/.
 # Maintainer:   Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on:   
+# Depends on:
  
 name=radeon-ucode
-version=20130205
+version=20130402
 release=1
 source=(http://crux.nu/~rehabdoll/distfiles/$name-$version.tar.xz )
 
