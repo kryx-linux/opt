@@ -2,7 +2,7 @@
 # URL: http://dosbox.sourceforge.net
 # Maintainer: Alan Mizrahi, alan at mizrahi dot com dot ve
 # Packager: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: libsdl
+# Depends on: libsdl glu
 
 name=dosbox
 version=0.74
