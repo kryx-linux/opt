@@ -343,6 +343,10 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/printf-format-fix.h
 -rw-r--r--	root/root	usr/include/dovecot/priorityq.h
 -rw-r--r--	root/root	usr/include/dovecot/process-title.h
+-rw-r--r--	root/root	usr/include/dovecot/quota-fs.h
+-rw-r--r--	root/root	usr/include/dovecot/quota-plugin.h
+-rw-r--r--	root/root	usr/include/dovecot/quota-private.h
+-rw-r--r--	root/root	usr/include/dovecot/quota.h
 -rw-r--r--	root/root	usr/include/dovecot/quoted-printable.h
 -rw-r--r--	root/root	usr/include/dovecot/randgen.h
 -rw-r--r--	root/root	usr/include/dovecot/raw-storage.h
@@ -538,6 +542,7 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib95_imap_stats_plugin.so
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3-login
+-rwxr-xr-x	root/root	usr/lib/dovecot/quota-status
 -rwxr-xr-x	root/root	usr/lib/dovecot/rawlog
 -rwxr-xr-x	root/root	usr/lib/dovecot/replicator
 -rwxr-xr-x	root/root	usr/lib/dovecot/script
