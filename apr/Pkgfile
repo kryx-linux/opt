@@ -5,9 +5,9 @@
 
 name=apr
 version=1.4.6
-release=2
+release=3
 source=(http://www.apache.org/dist/$name/$name-$version.tar.bz2 \
-        http://www.apache.org/dist/$name/$name-util-1.5.1.tar.bz2)
+        http://www.apache.org/dist/$name/$name-util-1.5.2.tar.bz2)
 
 build(){
     cd $name-$version
@@ -16,7 +16,7 @@ build(){
     make 
     make DESTDIR=$PKG install
 
-    cd $SRC/$name-util-1.5.1
+    cd $SRC/$name-util-1.5.2
     ./configure --prefix=/usr \
                 --with-apr=$SRC/$name-$version \
                 --with-expat=/usr \
