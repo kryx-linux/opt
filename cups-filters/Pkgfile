@@ -4,9 +4,10 @@
 # Depends on:  cups poppler qpdf
 
 name=cups-filters
-version=1.0.31
+version=1.0.33
 release=1
-source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz)
+source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz
+        cups-browsed)
 
 build () {
     cd $name-$version
@@ -20,6 +21,8 @@ build () {
 
     make
     make DESTDIR=$PKG install
+    
+    install -D -m 0755 $SRC/cups-browsed $PKG/etc/rc.d/cups-browsed
 
-    rm -r $PKG/{usr/share/doc,etc/cups}
+    rm -r $PKG/usr/share/doc
 }
