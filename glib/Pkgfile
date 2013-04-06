@@ -5,32 +5,20 @@
 
 name=glib
 version=2.36.0
-release=2
-source=(http://download.gnome.org/sources/$name/2.36/$name-$version.tar.xz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/glib-gettextize.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/glib-genmarshal.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/gtester.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/gdbus.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/gsettings.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/gio-querymodules.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/gresource.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/glib-compile-schemas.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/glib-mkenums.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/gobject-query.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/gdbus-codegen.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/gtester-report.1.gz \
-	http://crux.nu/~rehabdoll/distfiles/glib-man/2.36/glib-compile-resources.1.gz)
+release=3
+source=(http://download.gnome.org/sources/$name/2.36/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
     ./configure --prefix=/usr \
                 --disable-man \
-                --with-pcre=system 
+                --with-pcre=system
     make
     make -j1 DESTDIR=$PKG install
+
+    install -d $PKG/usr/man/man1
+    find docs -name '*.1' -exec install -m 0644 {} $PKG/usr/man/man1 \;
+
     rm -rf $PKG/usr/share/{gtk-doc,locale}
     rm -r $PKG/usr/share/bash-completion
-    mkdir -p $PKG/usr/man/man1
-    install -m 644 $SRC/*.1.gz $PKG/usr/man/man1/
 }
-
