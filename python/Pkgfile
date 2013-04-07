@@ -1,25 +1,27 @@
 # Description: Python interpreter, version 2.7
 # URL:         http://www.python.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  gdbm openssl bzip2 zlib sqlite3
+# Depends on:  db gdbm openssl bzip2 zlib sqlite3
 
 name=python
-version=2.7.3
-release=3
+version=2.7.4
+release=1
 source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.xz \
-	pyconfig.h)
+        pyconfig.h)
 
 build () {
     cd Python-$version
-    
+
+    # set OPT to the python default without -O3
+    # our CFLAGS are used as well
+    OPT="-Wall -Wstrict-prototypes -fwrapv" \
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
                 --with-threads \
-                --enable-ipv6 \
-                --with-dbmliborder=gdbm
+                --enable-ipv6 
 
-    make EXTRA_CFLAGS="$CFLAGS"
+    make 
     make -j1 DESTDIR=$PKG install
 
     ln -sf python2.7 $PKG/usr/bin/python
@@ -33,6 +35,6 @@ build () {
     rm $PKG/usr/lib/python/idlelib/{ChangeLog,{NEWS,README,TODO}.txt}
     rm $PKG/usr/lib/python/ctypes/macholib/README.ctypes
 
-	mv $PKG/usr/include/python2.7/pyconfig{,-64}.h
-	cp $SRC/pyconfig.h $PKG/usr/include/python2.7/
+    mv $PKG/usr/include/python2.7/pyconfig{,-64}.h
+    cp $SRC/pyconfig.h $PKG/usr/include/python2.7/
 }
