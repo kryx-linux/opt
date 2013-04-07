@@ -1,12 +1,13 @@
-# Description: Fast CPU emulator and virtualizer
+# Description: Fast CPU emulator and virtualizer for the x86 platform
 # URL:         http://www.qemu.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Lucas Hazel, lucas at die dot net dot au
 # Depends on:  libsdl
-
+# Nice to have: libseccomp libiscsi 
+ 
 name=qemu
 version=1.4.0
-release=1
+release=2
 source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
 
 build() {
@@ -15,7 +16,11 @@ build() {
       --cc="${CC:=gcc}" \
       --host-cc="${CC:=gcc}" \
       --sysconfdir=/etc \
-      --disable-docs
+      --disable-docs \
+      --libexecdir=/usr/lib/qemu \
+      --disable-system \
+      --disable-user \
+      --target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu
 
   # fix include issues with nspr
   echo 'QEMU_CFLAGS+=-I/usr/include/nspr' >> libcacard/Makefile
