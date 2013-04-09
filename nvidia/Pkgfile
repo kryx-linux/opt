@@ -4,7 +4,7 @@
 # Depends on: gtk gl-select pangox-compat
 
 name=nvidia
-version=310.40
+version=310.44
 release=1
 source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run
         $name-makefile.patch)
