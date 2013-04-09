@@ -48,6 +48,7 @@ drwxr-xr-x	root/root	usr/share/task/scripts/add-ons/
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-html.pl
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-ical.pl
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-sql.py
+-rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-tsv.pl
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-xml.pl
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-xml.py
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-xml.rb
@@ -58,13 +59,6 @@ drwxr-xr-x	root/root	usr/share/task/scripts/add-ons/
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/update-holidays.pl
 drwxr-xr-x	root/root	usr/share/task/scripts/bash/
 -rw-r--r--	root/root	usr/share/task/scripts/bash/task.sh
-drwxr-xr-x	root/root	usr/share/task/scripts/extensions/
--rw-r--r--	root/root	usr/share/task/scripts/extensions/command.lua
--rw-r--r--	root/root	usr/share/task/scripts/extensions/dom.lua
--rw-r--r--	root/root	usr/share/task/scripts/extensions/format.lua
--rw-r--r--	root/root	usr/share/task/scripts/extensions/program_hook.lua
--rw-r--r--	root/root	usr/share/task/scripts/extensions/task_hook.lua
--rw-r--r--	root/root	usr/share/task/scripts/extensions/uda.lua
 drwxr-xr-x	root/root	usr/share/task/scripts/fish/
 -rw-r--r--	root/root	usr/share/task/scripts/fish/task.fish
 drwxr-xr-x	root/root	usr/share/task/scripts/vim/
