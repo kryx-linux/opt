@@ -4,31 +4,14 @@
 # Depends on:  vim, gtk, xorg-libxt
 
 name=gvim
-version=7.3.843
+version=7.3.884
 release=1
-source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
-        http://crux.nu/files/distfiles/vim-7.3.001-050.xz
-        http://crux.nu/files/distfiles/vim-7.3.051-102.xz
-        http://crux.nu/files/distfiles/vim-7.3.103-154.xz
-        http://crux.nu/files/distfiles/vim-7.3.155-198.xz
-        http://crux.nu/files/distfiles/vim-7.3.199-260.xz
-        http://crux.nu/files/distfiles/vim-7.3.261-303.xz
-        http://crux.nu/files/distfiles/vim-7.3.304-353.xz
-        http://crux.nu/files/distfiles/vim-7.3.354-401.xz
-        http://crux.nu/files/distfiles/vim-7.3.402-470.xz
-        http://crux.nu/files/distfiles/vim-7.3.471-515.xz
-        http://crux.nu/files/distfiles/vim-7.3.516-600.xz
-        http://crux.nu/files/distfiles/vim-7.3.601-659.xz
-        http://crux.nu/files/distfiles/vim-7.3.660-712.xz
-        http://crux.nu/files/distfiles/vim-7.3.713-754.xz
-        http://crux.nu/files/distfiles/vim-7.3.755-843.xz
+source=(http://crux.nu/files/distfiles/vim-$version.tar.xz
         gvim.desktop)
 
 build () {
-    cd vim73/src
+    cd vim-$version/src
     
-    unxz -c $SRC/vim-7.3.*.xz | patch -p0 -d $SRC/vim73
-
     ./configure --prefix=/usr \
                 --with-vim-name=gvim \
                 --with-x=yes \
