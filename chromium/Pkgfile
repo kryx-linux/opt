@@ -2,18 +2,20 @@
 # URL: http://chromium.org/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Tadeusz Sosnierz, tadzikes gmail com
-# Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt alsa-lib gperf
+# Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher
 
 name=chromium
-version=25.0.1364.97
+version=26.0.1410.63
 release=1
-source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.bz2 \
-        $name.sh use-siginfo_t.patch)
+source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.xz \
+        $name.sh {audio-buffer,speech-dispatcher,use-siginfo_t}.patch)
 
 build() {
   cd $name-$version
 
   # fix building issues
+  patch -p1 -i $SRC/audio-buffer.patch
+  patch -p2 -i $SRC/speech-dispatcher.patch
   patch -p1 -i $SRC/use-siginfo_t.patch
 
   find third_party/WebKit/Source ui/base/ime \
@@ -23,7 +25,6 @@ build() {
   export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
 
   build/gyp_chromium -f make build/all.gyp --depth=. \
-	-Dgcc_version=45 \
 	-Dno_strict_aliasing=1 \
 	-Dwerror= \
 	-Dlinux_sandbox_path=/usr/lib/chromium/chromium-sandbox \
@@ -48,6 +49,8 @@ build() {
 	-Duse_gnome_keyring=0 \
         -Duse_kerberos=0 \
 	-Dlinux_link_gnome_keyring=0 \
+        -Dlinux_link_libpci=1 \
+        -Dlinux_link_libspeechd=1 \
 	-Denable_webrtc=1 \
 	-Ddisable_nacl=1
 
