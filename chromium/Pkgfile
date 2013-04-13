@@ -6,7 +6,7 @@
 
 name=chromium
 version=26.0.1410.63
-release=1
+release=2
 source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.xz \
         $name.sh {audio-buffer,speech-dispatcher,use-siginfo_t}.patch)
 
@@ -37,7 +37,7 @@ build() {
 	-Duse_system_libxml=1 \
 	-Duse_system_bzip2=1 \
 	-Duse_system_zlib=0 \
-	-Duse_system_libpng=1 \
+	-Duse_system_libpng=0 \
 	-Duse_system_ffmpeg=0 \
 	-Duse_system_yasm=1 \
 	-Duse_system_libevent=1 \
