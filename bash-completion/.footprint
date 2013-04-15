@@ -21,10 +21,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/animate -> convert
 -rw-r--r--	root/root	usr/share/bash-completion/completions/ant
 -rw-r--r--	root/root	usr/share/bash-completion/completions/apache2ctl
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/apropos -> man
--rw-r--r--	root/root	usr/share/bash-completion/completions/apt-build
--rw-r--r--	root/root	usr/share/bash-completion/completions/apt-cache
--rw-r--r--	root/root	usr/share/bash-completion/completions/apt-get
--rw-r--r--	root/root	usr/share/bash-completion/completions/aptitude
 -rw-r--r--	root/root	usr/share/bash-completion/completions/arch
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/arm-koji -> koji
 -rw-r--r--	root/root	usr/share/bash-completion/completions/arping
@@ -110,11 +106,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/display -> convert
 -rw-r--r--	root/root	usr/share/bash-completion/completions/dmesg
 -rw-r--r--	root/root	usr/share/bash-completion/completions/dnsspoof
 -rw-r--r--	root/root	usr/share/bash-completion/completions/dot
--rw-r--r--	root/root	usr/share/bash-completion/completions/dpkg
-lrwxrwxrwx	root/root	usr/share/bash-completion/completions/dpkg-deb -> dpkg
-lrwxrwxrwx	root/root	usr/share/bash-completion/completions/dpkg-query -> dpkg
-lrwxrwxrwx	root/root	usr/share/bash-completion/completions/dpkg-reconfigure -> dpkg
--rw-r--r--	root/root	usr/share/bash-completion/completions/dpkg-source
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/dropdb -> psql
 -rw-r--r--	root/root	usr/share/bash-completion/completions/dselect
 -rw-r--r--	root/root	usr/share/bash-completion/completions/dsniff
@@ -127,7 +118,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/edquota -> quota
 -rw-r--r--	root/root	usr/share/bash-completion/completions/eog
 -rw-r--r--	root/root	usr/share/bash-completion/completions/ether-wake
 -rw-r--r--	root/root	usr/share/bash-completion/completions/evince
--rw-r--r--	root/root	usr/share/bash-completion/completions/explodepkg
 -rw-r--r--	root/root	usr/share/bash-completion/completions/export
 -rw-r--r--	root/root	usr/share/bash-completion/completions/faillog
 -rw-r--r--	root/root	usr/share/bash-completion/completions/fbgs
@@ -204,7 +194,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/import -> convert
 -rw-r--r--	root/root	usr/share/bash-completion/completions/inject
 -rw-r--r--	root/root	usr/share/bash-completion/completions/insmod
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/insmod.static -> insmod
--rw-r--r--	root/root	usr/share/bash-completion/completions/installpkg
 -rw-r--r--	root/root	usr/share/bash-completion/completions/interdiff
 -rw-r--r--	root/root	usr/share/bash-completion/completions/invoke-rc.d
 -rw-r--r--	root/root	usr/share/bash-completion/completions/ionice
@@ -289,7 +278,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/lvscan -> lvm
 -rw-r--r--	root/root	usr/share/bash-completion/completions/mailmanctl
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/mailsnarf -> filesnarf
 -rw-r--r--	root/root	usr/share/bash-completion/completions/make
--rw-r--r--	root/root	usr/share/bash-completion/completions/makepkg
 -rw-r--r--	root/root	usr/share/bash-completion/completions/man
 -rw-r--r--	root/root	usr/share/bash-completion/completions/mc
 -rw-r--r--	root/root	usr/share/bash-completion/completions/mcrypt
@@ -358,14 +346,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/pinfo -> info
 -rw-r--r--	root/root	usr/share/bash-completion/completions/ping
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/ping6 -> ping
 -rw-r--r--	root/root	usr/share/bash-completion/completions/pkg-config
--rw-r--r--	root/root	usr/share/bash-completion/completions/pkg-get
-lrwxrwxrwx	root/root	usr/share/bash-completion/completions/pkg_deinstall -> pkg_delete
--rw-r--r--	root/root	usr/share/bash-completion/completions/pkg_delete
-lrwxrwxrwx	root/root	usr/share/bash-completion/completions/pkg_info -> pkg_delete
--rw-r--r--	root/root	usr/share/bash-completion/completions/pkgadd
--rw-r--r--	root/root	usr/share/bash-completion/completions/pkgrm
--rw-r--r--	root/root	usr/share/bash-completion/completions/pkgtool
--rw-r--r--	root/root	usr/share/bash-completion/completions/pkgutil
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/pkill -> pgrep
 -rw-r--r--	root/root	usr/share/bash-completion/completions/plague-client
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/plzip -> lzip
@@ -427,7 +407,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/rcsdiff -> rcs
 -rw-r--r--	root/root	usr/share/bash-completion/completions/rdesktop
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/rdict -> dict
 -rw-r--r--	root/root	usr/share/bash-completion/completions/remove_members
--rw-r--r--	root/root	usr/share/bash-completion/completions/removepkg
 -rw-r--r--	root/root	usr/share/bash-completion/completions/renice
 -rw-r--r--	root/root	usr/share/bash-completion/completions/reportbug
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/repquota -> quota
@@ -454,7 +433,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/rpmbuild-md5 -> rpm
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/s390-koji -> koji
 -rw-r--r--	root/root	usr/share/bash-completion/completions/sbcl
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/sbcl-mt -> sbcl
--rw-r--r--	root/root	usr/share/bash-completion/completions/sbopkg
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/scp -> ssh
 -rw-r--r--	root/root	usr/share/bash-completion/completions/screen
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/sdptool -> hcitool
@@ -462,9 +440,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/setquota -> quota
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/sftp -> ssh
 -rw-r--r--	root/root	usr/share/bash-completion/completions/sh
 -rw-r--r--	root/root	usr/share/bash-completion/completions/sitecopy
--rw-r--r--	root/root	usr/share/bash-completion/completions/slackpkg
--rw-r--r--	root/root	usr/share/bash-completion/completions/slapt-get
--rw-r--r--	root/root	usr/share/bash-completion/completions/slapt-src
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/slogin -> ssh
 -rw-r--r--	root/root	usr/share/bash-completion/completions/smartctl
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/smbcacls -> smbclient
@@ -514,7 +489,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/typeset -> function
 -rw-r--r--	root/root	usr/share/bash-completion/completions/unshunt
 -rw-r--r--	root/root	usr/share/bash-completion/completions/update-alternatives
 -rw-r--r--	root/root	usr/share/bash-completion/completions/update-rc.d
--rw-r--r--	root/root	usr/share/bash-completion/completions/upgradepkg
 -rw-r--r--	root/root	usr/share/bash-completion/completions/urlsnarf
 -rw-r--r--	root/root	usr/share/bash-completion/completions/useradd
 -rw-r--r--	root/root	usr/share/bash-completion/completions/userdel

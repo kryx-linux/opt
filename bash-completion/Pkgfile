@@ -6,7 +6,7 @@
 
 name=bash-completion
 version=2.1
-release=1
+release=2
 source=(http://$name.alioth.debian.org/files/$name-$version.tar.bz2)
 
 build() {
@@ -23,4 +23,9 @@ build() {
 
     mv $PKG/etc/bash_completion{.sh,}
     chmod 0755 $PKG/usr/share/$name/bash_completion
+
+    # removed package tools from other systems rather than CRUX
+    rm $PKG/usr/share/$name/completions/{apt-*,aptitude,dpkg*}
+    rm $PKG/usr/share/$name/completions/{explode,install,make,remove,sbo,slack,upgrade}pkg
+    rm $PKG/usr/share/$name/completions/{pkg-get,pkg_*,pkg{add,rm,tool,util},slapt-*}
 }
