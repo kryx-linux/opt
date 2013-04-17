@@ -4,7 +4,7 @@
 # Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
-version=1.7.0_17
+version=1.7.0_21
 release=1
 source=(file:///$name-7u${version##*_}-linux-x64.tar.gz)
 
@@ -14,16 +14,16 @@ build(){
 	rm -rf $SRC/jdk*/{,jre/}[A-Z]*
 
 	install -d $PKG/usr/lib
-	mv $SRC/jdk* $PKG/usr/lib
+	mv $SRC/jdk* $PKG/usr/lib/$name
 	mv $PKG/usr/lib/jdk*/man $PKG/usr
 
 	cd $PKG/usr/lib
 	export GLOBIGNORE="*/src.zip"
-	for i in jdk*/* jdk*/jre/*; do
+	for i in jdk/* jdk/jre/*; do
 	  test -f $i && rm -rf $i;
 	done
 	
-	ln -s jdk* $PKG/usr/lib/java
+	ln -s $name $PKG/usr/lib/java
 
 	# generate classes.jsa
 	cd $PKG/usr/lib/java
