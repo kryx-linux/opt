@@ -5,7 +5,7 @@
 # Depends on:  openssl
 
 name=msmtp
-version=1.4.30
+version=1.4.31
 release=1
 source=(http://downloads.sourceforge.net/project/msmtp/msmtp/$version/$name-$version.tar.bz2)
 
