@@ -5,17 +5,17 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/MagickCore-config
 -rwxr-xr-x	root/root	usr/bin/MagickWand-config
 -rwxr-xr-x	root/root	usr/bin/Wand-config
-lrwxrwxrwx	root/root	usr/bin/animate -> /usr/lib/ImageMagick-6.8.3/bin-Q16/animate
-lrwxrwxrwx	root/root	usr/bin/compare -> /usr/lib/ImageMagick-6.8.3/bin-Q16/compare
-lrwxrwxrwx	root/root	usr/bin/composite -> /usr/lib/ImageMagick-6.8.3/bin-Q16/composite
-lrwxrwxrwx	root/root	usr/bin/conjure -> /usr/lib/ImageMagick-6.8.3/bin-Q16/conjure
-lrwxrwxrwx	root/root	usr/bin/convert -> /usr/lib/ImageMagick-6.8.3/bin-Q16/convert
-lrwxrwxrwx	root/root	usr/bin/display -> /usr/lib/ImageMagick-6.8.3/bin-Q16/display
-lrwxrwxrwx	root/root	usr/bin/identify -> /usr/lib/ImageMagick-6.8.3/bin-Q16/identify
-lrwxrwxrwx	root/root	usr/bin/import -> /usr/lib/ImageMagick-6.8.3/bin-Q16/import
-lrwxrwxrwx	root/root	usr/bin/mogrify -> /usr/lib/ImageMagick-6.8.3/bin-Q16/mogrify
-lrwxrwxrwx	root/root	usr/bin/montage -> /usr/lib/ImageMagick-6.8.3/bin-Q16/montage
-lrwxrwxrwx	root/root	usr/bin/stream -> /usr/lib/ImageMagick-6.8.3/bin-Q16/stream
+-rwxr-xr-x	root/root	usr/bin/animate
+-rwxr-xr-x	root/root	usr/bin/compare
+-rwxr-xr-x	root/root	usr/bin/composite
+-rwxr-xr-x	root/root	usr/bin/conjure
+-rwxr-xr-x	root/root	usr/bin/convert
+-rwxr-xr-x	root/root	usr/bin/display
+-rwxr-xr-x	root/root	usr/bin/identify
+-rwxr-xr-x	root/root	usr/bin/import
+-rwxr-xr-x	root/root	usr/bin/mogrify
+-rwxr-xr-x	root/root	usr/bin/montage
+-rwxr-xr-x	root/root	usr/bin/stream
 drwxr-xr-x	root/root	usr/etc/
 drwxr-xr-x	root/root	usr/etc/ImageMagick-6/
 -rw-r--r--	root/root	usr/etc/ImageMagick-6/coder.xml
@@ -133,6 +133,7 @@ drwxr-xr-x	root/root	usr/include/ImageMagick-6/magick/
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/statistic.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/stream.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/string_.h
+-rw-r--r--	root/root	usr/include/ImageMagick-6/magick/studio.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/threshold.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/timer.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/token.h
@@ -167,21 +168,9 @@ drwxr-xr-x	root/root	usr/include/ImageMagick-6/wand/
 -rw-r--r--	root/root	usr/include/ImageMagick-6/wand/stream.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/wand/wand-view.h
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/animate
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/compare
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/composite
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/conjure
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/convert
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/display
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/identify
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/import
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/mogrify
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/montage
--rwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/bin-Q16/stream
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.3/config-Q16/
--rw-r--r--	root/root	usr/lib/ImageMagick-6.8.3/config-Q16/configure.xml
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.4/
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.4/config-Q16/
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.8.4/config-Q16/configure.xml
 -rw-r--r--	root/root	usr/lib/libMagick++-6.Q16.a
 -rwxr-xr-x	root/root	usr/lib/libMagick++-6.Q16.la
 lrwxrwxrwx	root/root	usr/lib/libMagick++-6.Q16.so -> libMagick++-6.Q16.so.1.0.0
