@@ -2,13 +2,12 @@
 # URL: http://netpbm.sourceforge.net/
 # Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Antti Nykanen, aon at iki dot fi
-# Depends on: libpng libtiff libxml2
-# Optional: xorg-libx11
+# Depends on: libpng libtiff libxml2 xz
 
 name=netpbm
-version=10.57.00
+version=10.61.00
 release=1
-source=(http://crux.ster.so/distfiles/$name/$name-$version.tar.bz2
+source=(http://crux.ster.so/distfiles/$name/$name-$version.tar.xz
 	config.mk netpbm-10.34-build.patch)
 
 build() {

@@ -224,6 +224,7 @@ lrwxrwxrwx	root/root	usr/bin/pnmnoraw -> pnmtoplainpnm
 -rwxr-xr-x	root/root	usr/bin/pnmpaste
 -rwxr-xr-x	root/root	usr/bin/pnmpsnr
 -rwxr-xr-x	root/root	usr/bin/pnmquant
+-rwxr-xr-x	root/root	usr/bin/pnmquantall
 -rwxr-xr-x	root/root	usr/bin/pnmremap
 -rwxr-xr-x	root/root	usr/bin/pnmrotate
 lrwxrwxrwx	root/root	usr/bin/pnmscale -> pamscale
@@ -276,7 +277,7 @@ lrwxrwxrwx	root/root	usr/bin/ppmnorm -> pnmnorm
 -rwxr-xr-x	root/root	usr/bin/ppmntsc
 -rwxr-xr-x	root/root	usr/bin/ppmpat
 -rwxr-xr-x	root/root	usr/bin/ppmquant
--rwxr-xr-x	root/root	usr/bin/ppmquantall
+lrwxrwxrwx	root/root	usr/bin/ppmquantall -> pnmquantall
 -rwxr-xr-x	root/root	usr/bin/ppmrainbow
 -rwxr-xr-x	root/root	usr/bin/ppmrelief
 -rwxr-xr-x	root/root	usr/bin/ppmrough
@@ -309,6 +310,7 @@ lrwxrwxrwx	root/root	usr/bin/ppmtojpeg -> pnmtojpeg
 -rwxr-xr-x	root/root	usr/bin/ppmtopuzz
 -rwxr-xr-x	root/root	usr/bin/ppmtorgb3
 -rwxr-xr-x	root/root	usr/bin/ppmtosixel
+-rwxr-xr-x	root/root	usr/bin/ppmtospu
 -rwxr-xr-x	root/root	usr/bin/ppmtoterm
 lrwxrwxrwx	root/root	usr/bin/ppmtouil -> pamtouil
 -rwxr-xr-x	root/root	usr/bin/ppmtowinicon
@@ -375,8 +377,8 @@ drwxr-xr-x	root/root	usr/include/netpbm/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libnetpbm.a
 lrwxrwxrwx	root/root	usr/lib/libnetpbm.so -> libnetpbm.so.11
-lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.11 -> libnetpbm.so.11.57
--rwxr-xr-x	root/root	usr/lib/libnetpbm.so.11.57
+lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.11 -> libnetpbm.so.11.61
+-rwxr-xr-x	root/root	usr/lib/libnetpbm.so.11.61
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/netpbm/
 -rw-r--r--	root/root	usr/share/netpbm/palmcolor8.map
