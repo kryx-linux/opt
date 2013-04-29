@@ -6,9 +6,9 @@
 # Nice to have: pinentry-gtk2 pinentry-qt4
 
 name=pinentry
-version=0.8.1
+version=0.8.3
 release=1
-source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.gz pinentry)
+source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2 pinentry)
 
 build() {
     cd $name-$version
