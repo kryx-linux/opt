@@ -5,13 +5,13 @@
 # Depends on:
 
 name=unrar
-version=4.2.4
+version=5.0.0
 release=1
 source=(http://www.rarlab.com/rar/${name}src-$version.tar.gz)
 
 build() {
     cd $name
-    sed -i "s/-O2/$CFLAGS/" makefile.unix
-    make -f makefile.unix
-    install -D -m 755 unrar $PKG/usr/bin/unrar
+    sed -i "s/^CXXFLAGS=.*/CXXFLAGS=$CXXFLAGS/" makefile
+    make
+    make install DESTDIR=$PKG/usr
 }
