@@ -5,7 +5,7 @@
 
 name=firefox
 version=20.0
-release=1
+release=2
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
         mozconfig)
 
@@ -40,4 +40,7 @@ build() {
 
     install -d $PKG/etc/ld.so.conf.d
     echo "/usr/lib/$name" > $PKG/etc/ld.so.conf.d/$name.conf
+
+    # cleanup
+    find $PKG -name .mkdir.done -delete
 }
