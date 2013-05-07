@@ -16,7 +16,7 @@ build() {
 
 	./configure --prefix=/usr --without-oprofile
 
-	make
+	make $MAKEFLAGS
 	make DESTDIR=$PKG install
 
 	# Unfortunately, llvm's configure script seems to ignore --mandir.
