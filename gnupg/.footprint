@@ -11,7 +11,6 @@ lrwxrwxrwx	root/root	usr/bin/gpg -> /usr/bin/gpg2
 -rwxr-xr-x	root/root	usr/bin/gpgsm-gencert.sh
 -rwxr-xr-x	root/root	usr/bin/gpgv2
 -rwxr-xr-x	root/root	usr/bin/kbxutil
--rwxr-xr-x	root/root	usr/bin/scdaemon
 -rwxr-xr-x	root/root	usr/bin/watchgnupg
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/gnupg-pcsc-wrapper
@@ -21,6 +20,7 @@ drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/gpg2keys_curl
 -rwxr-xr-x	root/root	usr/lib/gpg2keys_finger
 -rwxr-xr-x	root/root	usr/lib/gpg2keys_hkp
+-rwxr-xr-x	root/root	usr/lib/scdaemon
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/gpg-agent.1.gz
