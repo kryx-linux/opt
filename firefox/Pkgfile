@@ -20,7 +20,6 @@ build() {
     sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
     ./configure
 
-    #mozilla sucks: BZ #824381
     mkdir $SRC/mozilla-release/js/src/.deps
 
     make
