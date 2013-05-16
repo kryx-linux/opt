@@ -9115,6 +9115,8 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/REXML/Document/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Document/entity_expansion_count-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Document/entity_expansion_limit%3d-c.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Document/entity_expansion_limit-c.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Document/entity_expansion_text_limit%3d-c.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Document/entity_expansion_text_limit-c.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Document/expanded_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Document/name-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Document/new-c.ri
@@ -9597,6 +9599,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/REXML/Text/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Text/clone-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Text/doctype-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Text/empty%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Text/expand-c.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Text/indent_text-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Text/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/Text/new-c.ri
@@ -9753,6 +9756,8 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/REXML/XPathParser/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/XPathParser/recurse-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/XPathParser/variables%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/cdesc-REXML.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/entity_expansion_text_limit%3d-c.ri
+-rw-r--r--	root/root	usr/share/ri/1.9/system/REXML/entity_expansion_text_limit-c.ri
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/RSS/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/RSS/Atom/
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/RSS/Atom/CommonModel/
