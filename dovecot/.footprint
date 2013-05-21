@@ -17,6 +17,7 @@ drwxr-xr-x	root/root	etc/dovecot/conf.d/
 -rw-r--r--	root/root	etc/dovecot/conf.d/90-quota.conf
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-checkpassword.conf.ext
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-deny.conf.ext
+-rw-r--r--	root/root	etc/dovecot/conf.d/auth-dict.conf.ext
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-ldap.conf.ext
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-master.conf.ext
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-passwdfile.conf.ext
@@ -24,7 +25,6 @@ drwxr-xr-x	root/root	etc/dovecot/conf.d/
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-static.conf.ext
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-system.conf.ext
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-vpopmail.conf.ext
--rw-r--r--	root/root	etc/dovecot/dovecot-db.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-dict-auth.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-dict-sql.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-ldap.conf.ext

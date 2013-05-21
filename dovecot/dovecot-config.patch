@@ -1,6 +1,6 @@
-diff -Nru dovecot-2.2.0.orig/doc/example-config/conf.d/10-master.conf dovecot-2.2.0/doc/example-config/conf.d/10-master.conf
---- dovecot-2.2.0.orig/doc/example-config/conf.d/10-master.conf	2013-04-14 19:29:42.774750340 +0200
-+++ dovecot-2.2.0/doc/example-config/conf.d/10-master.conf	2013-04-14 19:30:12.737013342 +0200
+diff -Nru dovecot-2.2.2.orig/doc/example-config/conf.d/10-master.conf dovecot-2.2.2/doc/example-config/conf.d/10-master.conf
+--- dovecot-2.2.2.orig/doc/example-config/conf.d/10-master.conf	2013-05-20 09:01:57.619437034 +0200
++++ dovecot-2.2.2/doc/example-config/conf.d/10-master.conf	2013-05-20 09:02:27.065041953 +0200
 @@ -117,3 +117,10 @@
      #group = 
    }
@@ -12,9 +12,9 @@ diff -Nru dovecot-2.2.0.orig/doc/example-config/conf.d/10-master.conf dovecot-2.
 +   }
 +}
 +
-diff -Nru dovecot-2.2.0.orig/doc/example-config/conf.d/10-ssl.conf dovecot-2.2.0/doc/example-config/conf.d/10-ssl.conf
---- dovecot-2.2.0.orig/doc/example-config/conf.d/10-ssl.conf	2013-04-14 19:29:42.774750340 +0200
-+++ dovecot-2.2.0/doc/example-config/conf.d/10-ssl.conf	2013-04-14 19:30:12.737013342 +0200
+diff -Nru dovecot-2.2.2.orig/doc/example-config/conf.d/10-ssl.conf dovecot-2.2.2/doc/example-config/conf.d/10-ssl.conf
+--- dovecot-2.2.2.orig/doc/example-config/conf.d/10-ssl.conf	2013-05-20 09:01:57.619437034 +0200
++++ dovecot-2.2.2/doc/example-config/conf.d/10-ssl.conf	2013-05-20 09:02:27.065041953 +0200
 @@ -9,8 +9,8 @@
  # dropping root privileges, so keep the key file unreadable by anyone but
  # root. Included doc/mkcert.sh can be used to easily generate self-signed
@@ -26,9 +26,9 @@ diff -Nru dovecot-2.2.0.orig/doc/example-config/conf.d/10-ssl.conf dovecot-2.2.0
  
  # If key file is password protected, give the password here. Alternatively
  # give it when starting dovecot with -p parameter. Since this file is often
-diff -Nru dovecot-2.2.0.orig/doc/example-config/conf.d/auth-system.conf.ext dovecot-2.2.0/doc/example-config/conf.d/auth-system.conf.ext
---- dovecot-2.2.0.orig/doc/example-config/conf.d/auth-system.conf.ext	2013-04-14 19:29:42.774750340 +0200
-+++ dovecot-2.2.0/doc/example-config/conf.d/auth-system.conf.ext	2013-04-14 19:30:12.737013342 +0200
+diff -Nru dovecot-2.2.2.orig/doc/example-config/conf.d/auth-system.conf.ext dovecot-2.2.2/doc/example-config/conf.d/auth-system.conf.ext
+--- dovecot-2.2.2.orig/doc/example-config/conf.d/auth-system.conf.ext	2013-05-20 09:01:57.619437034 +0200
++++ dovecot-2.2.2/doc/example-config/conf.d/auth-system.conf.ext	2013-05-20 09:02:27.065041953 +0200
 @@ -7,12 +7,12 @@
  # PAM is typically used with either userdb passwd or userdb static.
  # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
@@ -60,9 +60,9 @@ diff -Nru dovecot-2.2.0.orig/doc/example-config/conf.d/auth-system.conf.ext dove
  
  # PAM-like authentication for OpenBSD.
  # <doc/wiki/PasswordDatabase.BSDAuth.txt>
-diff -Nru dovecot-2.2.0.orig/doc/example-config/dovecot.conf dovecot-2.2.0/doc/example-config/dovecot.conf
---- dovecot-2.2.0.orig/doc/example-config/dovecot.conf	2013-04-14 19:29:42.774750340 +0200
-+++ dovecot-2.2.0/doc/example-config/dovecot.conf	2013-04-14 19:30:12.737013342 +0200
+diff -Nru dovecot-2.2.2.orig/doc/example-config/dovecot.conf dovecot-2.2.2/doc/example-config/dovecot.conf
+--- dovecot-2.2.2.orig/doc/example-config/dovecot.conf	2013-05-20 09:01:57.619437034 +0200
++++ dovecot-2.2.2/doc/example-config/dovecot.conf	2013-05-20 09:04:33.220519452 +0200
 @@ -28,6 +28,7 @@
  # If you want to specify non-default ports or anything more complex,
  # edit conf.d/master.conf.
@@ -74,9 +74,9 @@ diff -Nru dovecot-2.2.0.orig/doc/example-config/dovecot.conf dovecot-2.2.0/doc/e
 @@ -48,7 +49,7 @@
  #login_trusted_networks =
  
- # Sepace separated list of login access check sockets (e.g. tcpwrap)
+ # Space separated list of login access check sockets (e.g. tcpwrap)
 -#login_access_sockets = 
-+login_access_sockets = tcpwrap
++login_access_sockets = tcpwrap 
  
  # With proxy_maybe=yes if proxy destination matches any of these IPs, don't do
  # proxying. This isn't necessary normally, but may be useful if the destination
