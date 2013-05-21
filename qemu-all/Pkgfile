@@ -6,7 +6,7 @@
 # Nice to have: libseccomp libiscsi 
  
 name=qemu-all
-version=1.4.1
+version=1.5.0
 release=1
 source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
 
@@ -28,4 +28,6 @@ build() {
   install -D -m 644 qemu.1 $PKG/usr/man/man1/qemu.1
   install -D -m 644 qemu-img.1 $PKG/usr/man/man1/qemu-img.1
   install -D -m 644 qemu-nbd.8 $PKG/usr/man/man8/qemu-nbd.8
+
+  rm -rf $PKG/usr/share/locale
 }
