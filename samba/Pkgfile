@@ -5,7 +5,7 @@
 
 name=samba
 version=4.0.6
-release=1
+release=2
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
 
@@ -34,6 +34,7 @@ build () {
     #cleanup
     rm -r $PKG/usr/share/samba/swat
     rm $PKG/usr/man/man8/swat.8
+    chmod 1777 $PKG/var/lock
     
     # config-file and start-script
     install -d $PKG/etc/{samba,rc.d}

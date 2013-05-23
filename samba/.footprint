@@ -1065,7 +1065,7 @@ drwxr-xr-x	root/root	var/cache/
 drwxr-xr-x	root/root	var/cache/samba/
 drwxr-xr-x	root/root	var/lib/
 drwxr-xr-x	root/root	var/lib/samba/
-drwxr-xr-x	root/root	var/lock/
+drwxrwxrwt	root/root	var/lock/
 drwxr-xr-x	root/root	var/lock/samba/
 drwxr-xr-x	root/root	var/log/
 drwxr-xr-x	root/root	var/log/samba/
