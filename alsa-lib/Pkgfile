@@ -3,14 +3,12 @@
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 
 name=alsa-lib
-version=1.0.27
-release=2
-source=(http://crux.nu/files/distfiles/$name-$version.tar.bz2 \
-	0004-Use-__inline__-for-exported-headers.patch)
+version=1.0.27.1
+release=1
+source=(http://crux.nu/files/distfiles/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	patch -p1 -i $SRC/0004-Use-__inline__-for-exported-headers.patch
 	./configure --prefix=/usr \
 		--disable-python
 	make
