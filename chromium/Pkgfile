@@ -5,18 +5,16 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher
 
 name=chromium
-version=26.0.1410.63
-release=2
+version=27.0.1453.93
+release=1
 source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.xz \
-        $name.sh {audio-buffer,speech-dispatcher,use-siginfo_t}.patch)
+        $name.sh speech-dispatcher.patch)
 
 build() {
   cd $name-$version
 
   # fix building issues
-  patch -p1 -i $SRC/audio-buffer.patch
   patch -p2 -i $SRC/speech-dispatcher.patch
-  patch -p1 -i $SRC/use-siginfo_t.patch
 
   find third_party/WebKit/Source ui/base/ime \
     -type f -exec sed -e 's|<glib/.*\.h>|<glib.h>|g' -i {} \;
@@ -48,6 +46,7 @@ build() {
 	-Duse_cups=0 \
 	-Duse_gnome_keyring=0 \
         -Duse_kerberos=0 \
+        -Duse_pulseaudio=0 \
 	-Dlinux_link_gnome_keyring=0 \
         -Dlinux_link_libpci=1 \
         -Dlinux_link_libspeechd=1 \
