@@ -4,7 +4,7 @@
 # Depends on:  python
 
 name=tdb
-version=1.2.11
+version=1.2.12
 release=1
 source=(http://www.samba.org/ftp/$name/$name-$version.tar.gz
         $name-man-$version.tar.xz)
@@ -15,5 +15,5 @@ build () {
     make
     make DESTDIR=$PKG install
     install -d $PKG/usr/man/man8
-    install -m 0644 manpages/*.8 $PKG/usr/man/man8
+    install -m 0644 man/*.8 $PKG/usr/man/man8
 }
