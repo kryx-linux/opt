@@ -7,22 +7,23 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/mergecap
 -rwxr-xr-x	root/root	usr/bin/randpkt
 -rwxr-xr-x	root/root	usr/bin/rawshark
+-rwxr-xr-x	root/root	usr/bin/reordercap
 -rwxr-xr-x	root/root	usr/bin/text2pcap
 -rwxr-xr-x	root/root	usr/bin/tshark
 -rwxr-xr-x	root/root	usr/bin/wireshark
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libwireshark.la
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.2.0.7
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so.2 -> libwireshark.so.2.0.7
--rwxr-xr-x	root/root	usr/lib/libwireshark.so.2.0.7
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so.3 -> libwireshark.so.3.0.0
+-rwxr-xr-x	root/root	usr/lib/libwireshark.so.3.0.0
 -rwxr-xr-x	root/root	usr/lib/libwiretap.la
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.2.1.7
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so.2 -> libwiretap.so.2.1.7
--rwxr-xr-x	root/root	usr/lib/libwiretap.so.2.1.7
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so.3 -> libwiretap.so.3.0.0
+-rwxr-xr-x	root/root	usr/lib/libwiretap.so.3.0.0
 -rwxr-xr-x	root/root	usr/lib/libwsutil.la
-lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.2.0.0
-lrwxrwxrwx	root/root	usr/lib/libwsutil.so.2 -> libwsutil.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/libwsutil.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so.3 -> libwsutil.so.3.0.0
+-rwxr-xr-x	root/root	usr/lib/libwsutil.so.3.0.0
 drwxr-xr-x	root/root	usr/lib/wireshark/
 drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/asn1.la
@@ -51,6 +52,8 @@ drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/wimax.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/wimaxasncp.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/wimaxasncp.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/wimaxmacphy.la
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/wimaxmacphy.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/capinfos.1.gz
@@ -60,6 +63,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/mergecap.1.gz
 -rw-r--r--	root/root	usr/man/man1/randpkt.1.gz
 -rw-r--r--	root/root	usr/man/man1/rawshark.1.gz
+-rw-r--r--	root/root	usr/man/man1/reordercap.1.gz
 -rw-r--r--	root/root	usr/man/man1/text2pcap.1.gz
 -rw-r--r--	root/root	usr/man/man1/tshark.1.gz
 -rw-r--r--	root/root	usr/man/man1/wireshark.1.gz
@@ -76,8 +80,12 @@ drwxr-xr-x	root/root	usr/share/wireshark/
 -rw-r--r--	root/root	usr/share/wireshark/dftest.html
 drwxr-xr-x	root/root	usr/share/wireshark/diameter/
 -rw-r--r--	root/root	usr/share/wireshark/diameter/AlcatelLucent.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/ChinaTelecom.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/Cisco.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/Ericsson.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/Nokia.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/NokiaSiemensNetworks.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/SKT.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPGmb.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPRx.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPS9.xml
@@ -129,8 +137,14 @@ drwxr-xr-x	root/root	usr/share/wireshark/pixmaps/
 -rw-r--r--	root/root	usr/share/wireshark/pixmaps/lo16-app-wireshark.png
 -rw-r--r--	root/root	usr/share/wireshark/pixmaps/lo32-app-wireshark.png
 -rw-r--r--	root/root	usr/share/wireshark/pixmaps/lo48-app-wireshark.png
+drwxr-xr-x	root/root	usr/share/wireshark/profiles/
+drwxr-xr-x	root/root	usr/share/wireshark/profiles/Bluetooth/
+-rw-r--r--	root/root	usr/share/wireshark/profiles/Bluetooth/colorfilters
+drwxr-xr-x	root/root	usr/share/wireshark/profiles/Classic/
+-rw-r--r--	root/root	usr/share/wireshark/profiles/Classic/colorfilters
 drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/README.radius_dictionary
+-rw-r--r--	root/root	usr/share/wireshark/radius/custom.includes
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.3com
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.3gpp
@@ -239,9 +253,12 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc4849
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5090
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5176
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5447
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5580
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5607
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc5904
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc6519
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.rfc6572
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.riverstone
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.roaringpenguin
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.shasta
@@ -273,6 +290,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.zyxel
 -rw-r--r--	root/root	usr/share/wireshark/randpkt.html
 -rw-r--r--	root/root	usr/share/wireshark/rawshark.html
+-rw-r--r--	root/root	usr/share/wireshark/reordercap.html
 -rw-r--r--	root/root	usr/share/wireshark/services
 -rw-r--r--	root/root	usr/share/wireshark/smi_modules
 -rw-r--r--	root/root	usr/share/wireshark/text2pcap.html
