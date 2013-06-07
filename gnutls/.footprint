@@ -38,9 +38,9 @@ lrwxrwxrwx	root/root	usr/lib/libgnutls-xssl.so.0 -> libgnutls-xssl.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgnutls-xssl.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libgnutls.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.17.0
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.17.0
--rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.17.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.28.22.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so.28 -> libgnutls.so.28.22.0
+-rwxr-xr-x	root/root	usr/lib/libgnutls.so.28.22.0
 -rw-r--r--	root/root	usr/lib/libgnutlsxx.a
 -rwxr-xr-x	root/root	usr/lib/libgnutlsxx.la
 lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so -> libgnutlsxx.so.28.1.0
@@ -65,6 +65,8 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_alert_get_strname.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_alert_send.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_alert_send_appropriate.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_alpn_get_selected_protocol.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_alpn_set_protocols.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_anon_allocate_client_credentials.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_anon_allocate_server_credentials.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_anon_free_client_credentials.3.gz
@@ -115,7 +117,9 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_set_x509_crl_mem.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_set_x509_key.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_set_x509_key_file.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_certificate_set_x509_key_file2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_set_x509_key_mem.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_certificate_set_x509_key_mem2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_set_x509_simple_pkcs12_file.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_set_x509_simple_pkcs12_mem.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_certificate_set_x509_system_trust.3.gz
@@ -140,6 +144,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_cipher_get.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_cipher_get_block_size.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_cipher_get_id.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_cipher_get_iv_size.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_cipher_get_key_size.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_cipher_get_name.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_cipher_init.3.gz
@@ -234,6 +239,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_hmac_get_len.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_hmac_init.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_hmac_output.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_hmac_set_nonce.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_init.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_key_generate.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_kx_get.3.gz
@@ -246,6 +252,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_mac_get_id.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_mac_get_key_size.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_mac_get_name.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_mac_get_nonce_size.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_mac_list.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_mac_set_priority.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_ocsp_req_add_cert.3.gz
@@ -476,6 +483,8 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_privkey_set_pin_function.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_privkey_sign_data.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_privkey_sign_hash.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_privkey_sign_raw_data.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_privkey_status.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_protocol_get_id.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_protocol_get_name.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_protocol_get_version.3.gz
@@ -573,6 +582,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_force_valid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_data.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_data2.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_session_get_desc.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_id.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_id2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_get_ptr.3.gz
@@ -580,6 +590,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_is_resumed.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_resumption_requested.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_set_data.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_session_set_id.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_set_premaster.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_set_ptr.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_session_ticket_enable_client.3.gz
@@ -588,6 +599,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_set_default_export_priority.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_set_default_priority.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_sign_algorithm_get.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_sign_algorithm_get_client.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_sign_algorithm_get_requested.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_sign_callback_get.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_sign_callback_set.3.gz
@@ -664,6 +676,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crl_get_extension_info.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crl_get_extension_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crl_get_issuer_dn.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_crl_get_issuer_dn2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crl_get_issuer_dn_by_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crl_get_next_update.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crl_get_number.3.gz
@@ -697,6 +710,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_get_basic_constraints.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_get_challenge_password.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_get_dn.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_get_dn2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_get_dn_by_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_get_dn_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crq_get_extension_by_oid.3.gz
@@ -746,6 +760,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_ca_status.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_crl_dist_points.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_dn.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_dn2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_dn_by_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_dn_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_expiration_time.3.gz
@@ -759,6 +774,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_issuer_alt_name2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_issuer_alt_othername_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_issuer_dn.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_issuer_dn2.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_issuer_dn_by_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_issuer_dn_oid.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_issuer_unique_id.3.gz
@@ -878,6 +894,9 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_deinit.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_get_issuer.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_init.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_remove_cas.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_remove_trust_file.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_remove_trust_mem.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_verify_crt.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_trust_list_verify_named_crt.3.gz
 drwxr-xr-x	root/root	usr/share/
