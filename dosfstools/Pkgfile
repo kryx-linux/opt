@@ -5,15 +5,21 @@
 # Depends on:
 
 name=dosfstools
-version=3.0.17
+version=3.0.18
 release=1
 source=(http://www.daniel-baumann.ch/files/software/$name/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
-  sed -e 's|^install: .*|install: install-bin install-man|' -i Makefile
+
+  sed -i Makefile \
+      -e 's|^install: .*|install: install-bin install-man|' \
+      -e 's|/share/man|/man|g'
+
+  # avoid extra manpages
+  rm -r manpages/po/*
+
   make install DESTDIR=$PKG \
                PREFIX=/usr \
-               SBINDIR=/sbin \
-               MANDIR=/usr/man
+               SBINDIR=/sbin
 }
