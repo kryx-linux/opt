@@ -241,6 +241,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/devicetopology.idl
 -rw-r--r--	root/root	usr/include/wine/windows/devpkey.h
 -rw-r--r--	root/root	usr/include/wine/windows/devpropdef.h
+-rw-r--r--	root/root	usr/include/wine/windows/difxapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/digitalv.h
 -rw-r--r--	root/root	usr/include/wine/windows/dimm.h
 -rw-r--r--	root/root	usr/include/wine/windows/dimm.idl
@@ -631,6 +632,10 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/transact.h
 -rw-r--r--	root/root	usr/include/wine/windows/transact.idl
 -rw-r--r--	root/root	usr/include/wine/windows/twain.h
+-rw-r--r--	root/root	usr/include/wine/windows/txcoord.h
+-rw-r--r--	root/root	usr/include/wine/windows/txcoord.idl
+-rw-r--r--	root/root	usr/include/wine/windows/txdtc.h
+-rw-r--r--	root/root	usr/include/wine/windows/txdtc.idl
 -rw-r--r--	root/root	usr/include/wine/windows/udpmib.h
 -rw-r--r--	root/root	usr/include/wine/windows/uiautomation.h
 -rw-r--r--	root/root	usr/include/wine/windows/uiautomationclient.h
@@ -758,6 +763,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/advapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/advpack.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/amstream.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-localregistry-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-winrt-error-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-winrt-string-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-downlevel-advapi32-l1-1-0.dll.so
@@ -865,6 +871,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/ddrawex.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/devenum.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dhcpcsvc.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/difxapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dinput.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dinput8.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dispex.dll.so
@@ -907,6 +914,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/advapi32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/advpack.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/amstream.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-localregistry-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-winrt-error-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-winrt-string-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-downlevel-advapi32-l1-1-0.dll
@@ -1014,6 +1022,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ddrawex.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/devenum.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dhcpcsvc.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/difxapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dinput.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dinput8.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dispex.dll
@@ -1849,6 +1858,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/advapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/advpack.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/amstream.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-localregistry-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-winrt-error-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-winrt-string-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-downlevel-advapi32-l1-1-0.dll.so
@@ -1963,6 +1973,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/ddrawex.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/devenum.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dhcpcsvc.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/difxapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dinput.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dinput8.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dispdib.dll16.so
@@ -2007,6 +2018,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/advapi32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/advpack.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/amstream.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-localregistry-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-winrt-error-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-winrt-string-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-downlevel-advapi32-l1-1-0.dll
@@ -2121,6 +2133,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ddrawex.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/devenum.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dhcpcsvc.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/difxapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dinput.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dinput8.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dispdib.dll16
@@ -3141,8 +3154,8 @@ drwxr-xr-x	root/root	usr/share/wine/fonts/
 -rw-r--r--	root/root	usr/share/wine/fonts/vgasyst.fon
 -rw-r--r--	root/root	usr/share/wine/fonts/wingding.ttf
 drwxr-xr-x	root/root	usr/share/wine/gecko/
--rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-1.9-x86.msi
--rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-1.9-x86_64.msi
+-rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-2.21-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-2.21-x86_64.msi
 -rw-r--r--	root/root	usr/share/wine/generic.ppd
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
 drwxr-xr-x	root/root	usr/share/wine/mono/
