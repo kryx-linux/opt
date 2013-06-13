@@ -6,7 +6,7 @@
 
 name=dosfstools
 version=3.0.20
-release=1
+release=2
 source=(http://www.daniel-baumann.ch/files/software/$name/$name-$version.tar.xz)
 
 build() {
@@ -17,9 +17,10 @@ build() {
   # avoid extra manpages
   rm -r manpages/po/*
 
-  make install DESTDIR=$PKG \
+  make -j1 install DESTDIR=$PKG \
                PREFIX=/usr \
                SBINDIR=/sbin
 
+  ln -s fatlabel.8 $PKG/usr/man/man8/dosfslabel.8.gz
   rm -r $PKG/usr/share
 }
