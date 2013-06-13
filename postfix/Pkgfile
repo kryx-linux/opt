@@ -5,17 +5,15 @@
 # Depends on: cyrus-sasl
 
 name=postfix
-version=2.6.19
+version=2.7.13
 release=1
 source=(ftp://ftp.porcupine.org/mirrors/postfix-release/official/$name-$version.tar.gz \
-        ftp://ftp.porcupine.org/mirrors/postfix-release/official/postfix-2.6-milter-header-checks-20090607-patch.gz
         aliases postfix.rc postfix.patch)
 
 build() {
     cd $name-$version
 
     patch -p1 < $SRC/postfix.patch
-    zcat $SRC/postfix-2.6-milter-header-checks-20090607-patch.gz | patch -p4
     
     _CCARGS="$CCARGS -DUSE_SASL_AUTH -DUSE_CYRUS_SASL -I/usr/include/sasl -DUSE_TLS -I/usr/include/openssl"
     _AUXLIBS="-L/usr/lib -lsasl2 -lssl -lcrypto"
