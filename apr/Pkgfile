@@ -4,8 +4,8 @@
 # Depends on:  util-linux, expat, db, gdbm
 
 name=apr
-version=1.4.6
-release=3
+version=1.4.8
+release=1
 source=(http://www.apache.org/dist/$name/$name-$version.tar.bz2 \
         http://www.apache.org/dist/$name/$name-util-1.5.2.tar.bz2)
 
