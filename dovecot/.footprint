@@ -412,6 +412,8 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/safe-memset.h
 -rw-r--r--	root/root	usr/include/dovecot/safe-mkdir.h
 -rw-r--r--	root/root	usr/include/dovecot/safe-mkstemp.h
+-rw-r--r--	root/root	usr/include/dovecot/sasl-client-private.h
+-rw-r--r--	root/root	usr/include/dovecot/sasl-client.h
 -rw-r--r--	root/root	usr/include/dovecot/sasl-server.h
 -rw-r--r--	root/root	usr/include/dovecot/sdbox-file.h
 -rw-r--r--	root/root	usr/include/dovecot/sdbox-storage.h
