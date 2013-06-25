@@ -5,22 +5,20 @@
 # Depends on: mtools perl
 
 name=syslinux
-version=4.06
+version=5.10
 release=1
-source=(http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.xz \
-        avoid-ext2_fs.patch)
+source=(http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
-
-  # compilation will fail with LDFLAGS
-  unset LDFLAGS
 
   # fix to install extlinux in /usr/bin
   sed -i Makefile -e 's|SBINDIR|BINDIR|g'
 
   make clean
   make OPTFLAGS="$CFLAGS" installer
+  make OPTFLAGS="$CFLAGS" -C utils
+  make OPTFLAGS="$CFLAGS" -C com32
   make OPTFLAGS="$CFLAGS" INSTALLROOT=$PKG install
 
   # fix perms when building with fakeroot
