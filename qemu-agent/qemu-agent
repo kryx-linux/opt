@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# /etc/rc.d/qemu-agent: start/stop qemu guest agent
+#
+
+case $1 in
+start)
+	/usr/bin/qemu-ga
+	;;
+stop)
+	if [ -f /var/run/sshd.pid ]; then
+		kill $(< /var/run/sshd.pid)
+		rm -f /var/run/sshd.pid
+	else
+		killall -q /usr/sbin/sshd
+	fi
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file
