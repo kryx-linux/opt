@@ -4,7 +4,7 @@
 # Depends on:  cups poppler qpdf
 
 name=cups-filters
-version=1.0.34
+version=1.0.35
 release=1
 source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz
         cups-browsed)
@@ -17,7 +17,8 @@ build () {
                 --mandir=/usr/man \
                 --without-php \
                 --disable-avahi \
-                --without-rcdir
+                --without-rcdir \
+                --with-browseremoteprotocols=cups
 
     make
     make DESTDIR=$PKG install
