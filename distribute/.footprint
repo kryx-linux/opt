@@ -10,13 +10,13 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/_markerlib/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/_markerlib/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/_markerlib/markers.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/_markerlib/markers.pyc
-drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/distribute-0.6.40-py2.7.egg-info/
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.40-py2.7.egg-info/PKG-INFO
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.40-py2.7.egg-info/SOURCES.txt
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.40-py2.7.egg-info/dependency_links.txt
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.40-py2.7.egg-info/entry_points.txt
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.40-py2.7.egg-info/top_level.txt
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.40-py2.7.egg-info/zip-safe
+drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/distribute-0.6.45-py2.7.egg-info/
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.45-py2.7.egg-info/PKG-INFO
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.45-py2.7.egg-info/SOURCES.txt
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.45-py2.7.egg-info/dependency_links.txt
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.45-py2.7.egg-info/entry_points.txt
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.45-py2.7.egg-info/top_level.txt
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/distribute-0.6.45-py2.7.egg-info/zip-safe
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/easy_install.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/easy_install.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/pkg_resources.py
@@ -30,7 +30,7 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/archive_util.pyc
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/cli-32.exe
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/cli-64.exe
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/cli-arm-32.exe
+-rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/cli-arm-32.exe
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/cli.exe
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/command/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/command/__init__.py
@@ -86,16 +86,20 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/command/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/extension.pyc
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/gui-32.exe
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/gui-64.exe
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/gui-arm-32.exe
+-rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/gui-arm-32.exe
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/gui.exe
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/package_index.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/package_index.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/py24compat.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/py24compat.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/sandbox.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/sandbox.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template (dev).py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template (dev).pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/site-patch.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/site-patch.pyc
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/tests/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/__init__.pyc
@@ -129,5 +133,3 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/tests/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_test.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_upload_docs.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_upload_docs.pyc
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/site.py
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/site.pyc
