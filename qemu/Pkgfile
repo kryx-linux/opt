@@ -18,6 +18,7 @@ build() {
       --sysconfdir=/etc \
       --disable-docs \
       --libexecdir=/usr/lib/qemu \
+      --disable-gtk \
       --disable-system \
       --disable-user \
       --target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu
