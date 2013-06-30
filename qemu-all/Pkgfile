@@ -17,7 +17,8 @@ build() {
       --host-cc="${CC:=gcc}" \
       --sysconfdir=/etc \
       --disable-docs \
-      --libexecdir=/usr/lib/qemu
+      --libexecdir=/usr/lib/qemu \
+      --disable-gtk \
 
   # fix include issues with nspr
   echo 'QEMU_CFLAGS+=-I/usr/include/nspr' >> libcacard/Makefile
