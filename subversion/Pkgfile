@@ -22,7 +22,7 @@ build() {
                 --disable-nls
 
     make
-    make DESTDIR=$PKG install
+    make -j1 DESTDIR=$PKG install
 
     # info pages seem to get generated when makeinfo is available
     rm -rf $PKG/usr/info
