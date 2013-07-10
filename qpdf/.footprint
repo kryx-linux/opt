@@ -21,6 +21,7 @@ drwxr-xr-x	root/root	usr/include/qpdf/
 -rw-r--r--	root/root	usr/include/qpdf/PointerHolder.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDF.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFExc.hh
+-rw-r--r--	root/root	usr/include/qpdf/QPDFObjGen.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFObject.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFObjectHandle.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFTokenizer.hh
@@ -33,9 +34,9 @@ drwxr-xr-x	root/root	usr/include/qpdf/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libqpdf.a
 -rwxr-xr-x	root/root	usr/lib/libqpdf.la
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.10.1.0
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so.10 -> libqpdf.so.10.1.0
--rwxr-xr-x	root/root	usr/lib/libqpdf.so.10.1.0
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.10.2.0
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so.10 -> libqpdf.so.10.2.0
+-rwxr-xr-x	root/root	usr/lib/libqpdf.so.10.2.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libqpdf.pc
 drwxr-xr-x	root/root	usr/man/
