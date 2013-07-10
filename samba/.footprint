@@ -44,6 +44,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/smbspool
 -rwxr-xr-x	root/root	usr/bin/smbstatus
 -rwxr-xr-x	root/root	usr/bin/smbta-util
+-rwxr-xr-x	root/root	usr/bin/smbtar
 -rwxr-xr-x	root/root	usr/bin/smbtorture
 -rwxr-xr-x	root/root	usr/bin/smbtree
 -rwxr-xr-x	root/root	usr/bin/testparm
@@ -703,8 +704,8 @@ lrwxrwxrwx	root/root	usr/lib/samba/libkrb5-samba4.so.26 -> libkrb5-samba4.so.26.
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5-samba4.so.26.0.0
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5samba.so
 -rwxr-xr-x	root/root	usr/lib/samba/libldb-cmdline.so
-lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.1.15
--rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.1.15
+lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.1.16
+-rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.1.16
 -rwxr-xr-x	root/root	usr/lib/samba/libldbsamba.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli_lsa3.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli_netlogon3.so
@@ -722,8 +723,8 @@ lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.1.15
 -rwxr-xr-x	root/root	usr/lib/samba/libposix_eadb.so
 -rwxr-xr-x	root/root	usr/lib/samba/libprinting_migrate.so
 -rwxr-xr-x	root/root	usr/lib/samba/libprocess_model.so
-lrwxrwxrwx	root/root	usr/lib/samba/libpyldb-util.so.1 -> libpyldb-util.so.1.1.15
--rwxr-xr-x	root/root	usr/lib/samba/libpyldb-util.so.1.1.15
+lrwxrwxrwx	root/root	usr/lib/samba/libpyldb-util.so.1 -> libpyldb-util.so.1.1.16
+-rwxr-xr-x	root/root	usr/lib/samba/libpyldb-util.so.1.1.16
 -rwxr-xr-x	root/root	usr/lib/samba/libreplace.so
 lrwxrwxrwx	root/root	usr/lib/samba/libroken-samba4.so.19 -> libroken-samba4.so.19.0.1
 -rwxr-xr-x	root/root	usr/lib/samba/libroken-samba4.so.19.0.1
