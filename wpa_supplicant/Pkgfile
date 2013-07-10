@@ -5,7 +5,7 @@
 
 name=wpa_supplicant
 version=2.0
-release=1
+release=2
 source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz)
 
 build () {
@@ -23,6 +23,9 @@ build () {
     install -m 0644 doc/docbook/wpa_{background,cli,passphrase,supplicant}.8 $PKG/usr/man/man8
     install -m 0644 doc/docbook/wpa_supplicant.conf.5 $PKG/usr/man/man5
 
-    echo -e "ctrl_interface=/var/run/wpa_supplicant\n" > $PKG/etc/wpa.conf
-    chmod 0600 $PKG/etc/wpa.conf
+    echo -e "ctrl_interface=/var/run/wpa_supplicant\n" > $PKG/etc/wpa_supplicant.conf
+    chmod 0600 $PKG/etc/wpa_supplicant.conf
+    
+    # symlink for compatibility with older releases
+    ln -s wpa_supplicant.conf $PKG/etc/wpa.conf
 }
