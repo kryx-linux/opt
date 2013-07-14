@@ -4,23 +4,23 @@
 # Depends on:  openssl
 
 name=mailx
-version=12.5-100620
+version=14.3.2
 release=1
-source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
+source=(http://downloads.sourceforge.net/project/s-nail/s-nail-${version//./_}.tar.gz)
 
 build() {
-    cd $name-$version
+    cd s-nail-$version
 
-    sed -i 's|/etc/nail.rc|/usr/etc/mailx.rc|' mailx.1
+    # Fix version string
+    sed -r -e 's/s-nail-(.+)/\1/' -i version.c
 
-    make -j1 install \
+    make install \
+         NAIL=mailx \
+         SID='' \
+         CFLAGS="$CFLAGS" \
          PREFIX=/usr \
-         SYSCONFDIR=/usr/etc \
-         MAILRC=/usr/etc/mailx.rc \
-         MANDIR=/usr/man \
-         SENDMAIL=/usr/sbin/sendmail \
+         SYSCONFRC=/usr/etc/mailx.rc \
          MAILSPOOL=/var/spool/mail \
-         UCBINSTALL=/usr/bin/install \
          DESTDIR=$PKG
 
     ln -s mailx   $PKG/usr/bin/Mail
