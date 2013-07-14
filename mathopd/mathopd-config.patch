@@ -1,6 +1,6 @@
-diff -Nru mathopd-1.5p6.orig/src/Makefile mathopd-1.5p6/src/Makefile
---- mathopd-1.5p6.orig/src/Makefile	2007-07-21 14:56:57.000000000 +0200
-+++ mathopd-1.5p6/src/Makefile	2007-07-21 14:58:26.000000000 +0200
+diff -Nru mathopd-1.6b15.orig/src/Makefile mathopd-1.6b15/src/Makefile
+--- mathopd-1.6b15.orig/src/Makefile	2013-07-14 11:24:58.467932282 +0200
++++ mathopd-1.6b15/src/Makefile	2013-07-14 11:25:16.330733913 +0200
 @@ -1,6 +1,6 @@
  BIN = mathopd
  CC = gcc
@@ -10,7 +10,7 @@ diff -Nru mathopd-1.5p6.orig/src/Makefile mathopd-1.5p6/src/Makefile
  LDFLAGS = 
  LIBS = -lcrypt
 @@ -12,12 +12,12 @@
- # LIBS = -lsocket -lnsl -lresolv
+ # LIBS = -lsocket -lnsl
  
  # On Linux, uncomment the following
 -# CPPFLAGS = -DHAVE_CRYPT_H
@@ -23,7 +23,7 @@ diff -Nru mathopd-1.5p6.orig/src/Makefile mathopd-1.5p6/src/Makefile
 +CPPFLAGS += -D_FILE_OFFSET_BITS=64
  
  OBJS = base64.o cgi.o config.o core.o dump.o imap.o log.o main.o \
- 	redirect.o request.o util.o stub.o $(EXTRA_OBJS)
+ 	redirect.o request.o util.o stub.o addr.o $(EXTRA_OBJS)
 @@ -31,15 +31,15 @@
  # CPPFLAGS += -DNEED_SOCKLEN_T
  
