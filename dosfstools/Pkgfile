@@ -5,8 +5,8 @@
 # Depends on:
 
 name=dosfstools
-version=3.0.20
-release=2
+version=3.0.22
+release=1
 source=(http://www.daniel-baumann.ch/files/software/$name/$name-$version.tar.xz)
 
 build() {
