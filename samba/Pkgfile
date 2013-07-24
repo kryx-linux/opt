@@ -12,6 +12,7 @@ source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
 build () {
     cd $name-$version
 
+    test -n "$MAKEFLAGS" && \
     export JOBS=$(awk 'BEGIN{RS="-j|--jobs="} NR==2 {print $1}' <<< $MAKEFLAGS)
 
     ./configure --enable-fhs \
