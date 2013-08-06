@@ -5,7 +5,7 @@
 
 name=firefox-java-plugin
 version=1.7.0
-release=1
+release=2
 source=()
 
 build(){
@@ -25,6 +25,6 @@ build(){
     return
   fi
   
-  mkdir -p $PKG/usr/lib/firefox/plugins
-  ln -s $p $PKG/usr/lib/firefox/plugins
+  mkdir -p $PKG/usr/lib/mozilla/plugins
+  ln -s $p $PKG/usr/lib/mozilla/plugins
 }
