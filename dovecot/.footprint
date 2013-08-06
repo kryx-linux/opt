@@ -117,6 +117,8 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/doveadm-util.h
 -rw-r--r--	root/root	usr/include/dovecot/doveadm.h
 -rw-r--r--	root/root	usr/include/dovecot/dovecot-version.h
+-rw-r--r--	root/root	usr/include/dovecot/dsasl-client-private.h
+-rw-r--r--	root/root	usr/include/dovecot/dsasl-client.h
 -rw-r--r--	root/root	usr/include/dovecot/duplicate.h
 -rw-r--r--	root/root	usr/include/dovecot/eacces-error.h
 -rw-r--r--	root/root	usr/include/dovecot/env-util.h
@@ -152,8 +154,11 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/http-client.h
 -rw-r--r--	root/root	usr/include/dovecot/http-date.h
 -rw-r--r--	root/root	usr/include/dovecot/http-header-parser.h
+-rw-r--r--	root/root	usr/include/dovecot/http-message-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/http-parser.h
+-rw-r--r--	root/root	usr/include/dovecot/http-request-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/http-response-parser.h
+-rw-r--r--	root/root	usr/include/dovecot/http-response.h
 -rw-r--r--	root/root	usr/include/dovecot/http-transfer.h
 -rw-r--r--	root/root	usr/include/dovecot/http-url.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-arg.h
@@ -412,8 +417,6 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/safe-memset.h
 -rw-r--r--	root/root	usr/include/dovecot/safe-mkdir.h
 -rw-r--r--	root/root	usr/include/dovecot/safe-mkstemp.h
--rw-r--r--	root/root	usr/include/dovecot/sasl-client-private.h
--rw-r--r--	root/root	usr/include/dovecot/sasl-client.h
 -rw-r--r--	root/root	usr/include/dovecot/sasl-server.h
 -rw-r--r--	root/root	usr/include/dovecot/sdbox-file.h
 -rw-r--r--	root/root	usr/include/dovecot/sdbox-storage.h
@@ -616,10 +619,13 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/doveadm-altmove.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-auth.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-config.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-deduplicate.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-director.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-dump.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-exec.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-expunge.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-fetch.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-flags.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-force-resync.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-help.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-import.1.gz
