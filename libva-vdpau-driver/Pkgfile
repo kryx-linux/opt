@@ -1,0 +1,24 @@
+# Description: VDPAU back-end for NVIDIA and VIA chipsets.
+# URL: http://freedesktop.org/wiki/Software/vaapi
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Danny Rawlins, monster dot romster at gmail dot com
+# Depends on: libva libvdpau
+
+name=libva-vdpau-driver
+version=0.7.4
+release=1
+source=(http://www.freedesktop.org/software/vaapi/releases/$name/$name-$version.tar.bz2
+	glx.patch)
+
+build() {
+	cd $name-$version
+
+	patch -p1 -i $SRC/glx.patch
+
+	./configure \
+		--prefix=/usr \
+		--enable-glx
+
+	make
+	make DESTDIR=$PKG install
+}
