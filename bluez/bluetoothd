@@ -1,0 +1,43 @@
+#!/bin/sh
+#
+# bluetooth startup script
+#
+
+NAME=bluetoothd
+DAEMON=/usr/sbin/bluetoothd
+
+case $1 in
+start)
+	pid=$(pgrep -f -x $DAEMON)
+	if [ -n "$pid" ]; then
+		echo "$NAME is already running with pid $pid" >&2
+		exit 1
+	fi
+	$DAEMON
+	;;
+stop)
+	pid=$(pgrep -f -x $DAEMON)
+	if [ -z "$pid" ]; then
+		echo "$NAME is not running" >&2
+		exit 1
+	fi
+	kill $pid
+	t=0
+	while [ -d /proc/$pid -a $t -lt 10 ]; do
+		sleep 0.5
+		let t++
+	done
+	if [ -d /proc/$pid ]; then
+		echo "$NAME still running with pid $pid" >&2
+		exit 1
+	fi
+	;;
+restart)
+	$0 stop
+	$0 start
+	;;
+*)
+	echo "Usage: $0 [start|stop|restart]" >&2
+	exit 1
+	;;
+esac

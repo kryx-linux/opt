@@ -1,0 +1,7 @@
+Bluez uses dbus for inter-process communication.
+If your desktop applications are unable to connect to the bluetooth daemon
+please check the bluetooth security policies in
+/usr/etc/dbus-1/system.d/bluetooth.conf
+
+pygobject 3.2.2 and dbus-python are required for the tools for pairing and such,
+but they can be omitted at will.
