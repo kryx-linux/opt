@@ -5,12 +5,16 @@
 # Depends on: mesa3d xorg-libpciaccess
 
 name=libva
-version=1.1.1
+version=1.2.1
 release=1
 source=(http://www.freedesktop.org/software/vaapi/releases/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
+
+	echo "Be sure to install a backend."
+	echo "See README file in the libva port directory."
+	sleep 10
 
 	./configure \
 		--prefix=/usr \
