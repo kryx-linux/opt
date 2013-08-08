@@ -5,7 +5,7 @@
 
 name=nss
 version=3.15.1
-release=1
+release=2
 source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_1_RTM/src/$name-$version.tar.gz \
         nss-config.in nss.pc.in)
 
@@ -14,18 +14,15 @@ build() {
 
     local file
 
-         # Do not override CC from commands.mk
-         # CCC is unused for g++, comment out
-         # And respect system CFLAGS
-        # sed -i mozilla/security/coreconf/Linux.mk \
-        #         -e 's|^CC.*=.*gcc$|#&|' \
-        #         -e 's|^CCC.*=.*g++$|#&|' \
-        #         -e "s|^OS_CFLAGS.*= |& $CFLAGS |"
+    sed -i nss/coreconf/Linux.mk \
+        -e 's|^CC.*=.*gcc$|#&|' \
+        -e 's|^CCC.*=.*g++$|#&|'
 
     export NSPR_INCLUDE_DIR=/usr/include/nspr
     export NSPR_LIB_DIR=/usr/lib
     export NSS_USE_SYSTEM_SQLITE=1
     export BUILD_OPT=1
+    export XCFLAGS="${CFLAGS}"
 
     make -j1 USE_64=1 -C nss all
 
