@@ -6,13 +6,14 @@
 
 name=pulseaudio
 version=4.0
-release=1
+release=2
 source=(http://freedesktop.org/software/pulseaudio/releases/pulseaudio-$version.tar.xz)
 
 build() {
 	cd $name-$version
 	./configure \
 		--prefix=/usr \
+		--libexecdir=/usr/lib/pulseaudio/libexec \
 		--sysconfdir=/etc \
 		--mandir=/usr/man \
 		--localstatedir=/var \
@@ -28,7 +29,8 @@ build() {
 		--disable-legacy-database-entry-format \
 		--disable-hal-compat \
 		--disable-systemd \
-		--with-database=tdb
+		--with-database=tdb \
+		--disable-tests
 
 	# fight unused direct deps
 	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
@@ -41,4 +43,9 @@ build() {
 	mv $PKG/etc/dbus-1 $PKG/usr/etc
 
 	rm -rf $PKG/etc/bash_completion.d
+
+	# Remove setuid bit in proximity helper
+	# If needed, run:
+	# setcap cap_net_raw=ep /usr/lib/pulseaudio/libexec/pulse/proximity-helper
+	chmod -s $PKG/usr/lib/pulseaudio/libexec/pulse/proximity-helper
 }
