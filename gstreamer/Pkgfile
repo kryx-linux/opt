@@ -6,11 +6,14 @@
 
 name=gstreamer
 version=0.10.36
-release=1
-source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
+release=2
+source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz
+	bison.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/bison.patch
 
 	./configure \
 		--prefix=/usr \
