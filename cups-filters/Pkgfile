@@ -5,12 +5,14 @@
 
 name=cups-filters
 version=1.0.35
-release=1
+release=2
 source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz
-        cups-browsed)
+        cups-browsed $name-poppler-0.24.patch)
 
 build () {
     cd $name-$version
+
+    patch -p0 -i $SRC/$name-poppler-0.24.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
@@ -18,7 +20,7 @@ build () {
                 --without-php \
                 --disable-avahi \
                 --without-rcdir \
-                --with-browseremoteprotocols=cups
+                --with-browseremoteprotocols=cups 
 
     make
     make DESTDIR=$PKG install
