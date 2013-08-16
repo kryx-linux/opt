@@ -1,18 +1,23 @@
 # Description: Lightweight PDF and XPS viewer
 # URL:         http://www.mupdf.com/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  freetype libjpeg xorg-libxext
+# Depends on:  curl freetype libjpeg xorg-libxext
 
 name=mupdf
-version=1.2
+version=1.3
 release=1
-source=(http://mupdf.googlecode.com/files/$name-$version-source.zip)
+source=(https://mupdf.googlecode.com/files/$name-$version-source.tar.gz
+        $name-sys_curl.patch)
 
 build() {
     cd $name-$version-source
-    rm -r thirdparty/{freetype*,jpeg*,zlib*}
-    sed -i 's/MUBUSY/MUTOOL/' Makefile
-    make build=release
+    
+    patch -p1 -i $SRC/$name-sys_curl.patch
+    
+    rm -r thirdparty/{freetype*,jpeg*,zlib,curl}
+    make build=release 
     make prefix=$PKG/usr mandir=$PKG/usr/man install
-    rm -r $PKG/usr/{include,lib}
+    
+    ln -s mupdf-x11-curl $PKG/usr/bin/mupdf
+    rm -r $PKG/usr/{include,lib,share}
 }

@@ -1,0 +1,27 @@
+diff -Nru mupdf-1.3-source.orig/Makerules mupdf-1.3-source/Makerules
+--- mupdf-1.3-source.orig/Makerules	2013-08-16 11:07:13.627597342 +0200
++++ mupdf-1.3-source/Makerules	2013-08-16 11:09:31.525988042 +0200
+@@ -67,6 +67,8 @@
+ SYS_JBIG2DEC_LIBS = -ljbig2dec
+ SYS_JPEG_LIBS = -ljpeg
+ SYS_ZLIB_LIBS = -lz
++SYS_CURL_CFLAGS = $(shell pkg-config --cflags libcurl)
++SYS_CURL_LIBS = $(shell pkg-config --libs libcurl) -lpthread
+ 
+ endif
+ 
+diff -Nru mupdf-1.3-source.orig/Makethird mupdf-1.3-source/Makethird
+--- mupdf-1.3-source.orig/Makethird	2013-08-16 11:07:13.730926974 +0200
++++ mupdf-1.3-source/Makethird	2013-08-16 11:09:04.700283008 +0200
+@@ -443,6 +443,10 @@
+ 
+ CURL_CFLAGS := -I$(CURL_DIR)/include
+ CURL_LIBS := $(SYS_CURL_DEPS)
++
+ else
+-NOCURL := yes
++
++CURL_CFLAGS := $(SYS_CURL_CFLAGS)
++CURL_LIBS := $(SYS_CURL_LIBS)
++
+ endif
