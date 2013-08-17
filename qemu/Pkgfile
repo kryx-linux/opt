@@ -6,7 +6,7 @@
 # Nice to have: libseccomp libiscsi libusb
  
 name=qemu
-version=1.5.2
+version=1.6.0
 release=1
 source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
 
@@ -19,8 +19,6 @@ build() {
       --disable-docs \
       --libexecdir=/usr/lib/qemu \
       --disable-gtk \
-      --disable-system \
-      --disable-user \
       --target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu
 
   # fix include issues with nspr
