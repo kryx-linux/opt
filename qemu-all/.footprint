@@ -135,6 +135,7 @@ drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/pxe-virtio.rom
 -rw-r--r--	root/root	usr/share/qemu/q35-acpi-dsdt.aml
 -rw-r--r--	root/root	usr/share/qemu/qemu-icon.bmp
+-rw-r--r--	root/root	usr/share/qemu/qemu_logo_no_text.svg
 -rw-r--r--	root/root	usr/share/qemu/s390-ccw.img
 -rw-r--r--	root/root	usr/share/qemu/s390-zipl.rom
 -rw-r--r--	root/root	usr/share/qemu/sgabios.bin
@@ -145,3 +146,5 @@ drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/vgabios-stdvga.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-vmware.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios.bin
+drwxr-xr-x	root/root	usr/var/
+drwxr-xr-x	root/root	usr/var/run/
