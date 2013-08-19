@@ -5,11 +5,14 @@
 
 name=libtiff
 version=4.0.3
-release=1
-source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz)
+release=2
+source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz \
+        gif2tiff-buffer-overflow.patch tiff2pdf_use-after-free.patch)
 
 build() {
     cd tiff-$version
+    patch -d tools -p0 -i $SRC/tiff2pdf_use-after-free.patch
+    patch -d tools -p0 -i $SRC/gif2tiff-buffer-overflow.patch
     ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
