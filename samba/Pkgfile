@@ -4,7 +4,7 @@
 # Depends on:  ncurses openssl readline zlib tdb talloc libcap acl libaio popt
 
 name=samba
-version=4.0.8
+version=4.0.9
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
