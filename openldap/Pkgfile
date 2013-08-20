@@ -5,7 +5,7 @@
 # Depends on: perl, openssl, cyrus-sasl
 
 name=openldap
-version=2.4.34
+version=2.4.36
 release=1
 source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/$name-$version.tgz \
 	$name-config.patch slurpd slapd)
@@ -13,10 +13,6 @@ source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/$name-$version.tgz 
 build() {
 	cd $name-$version
 	patch -p0 -i $SRC/$name-config.patch
-
-	# Workaround for: (ITS#5464) ucred guarded by __USE_GNU in glibc 2.8
-	# http://www.openldap.org/lists/openldap-bugs/200804/msg00074.html
-	export CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE"
 
 	./configure --prefix=/usr \
                 --mandir=/usr/man \
