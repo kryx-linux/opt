@@ -1,0 +1,26 @@
+diff -u -r spamprobe-1.4d.orig/src/parser/GifParser.cc spamprobe-1.4d/src/parser/GifParser.cc
+--- spamprobe-1.4d.orig/src/parser/GifParser.cc	2013-08-19 09:32:03.637652517 +0900
++++ spamprobe-1.4d/src/parser/GifParser.cc	2013-08-19 09:33:56.728655212 +0900
+@@ -99,7 +99,11 @@
+ void GifParser::openImage()
+ {
+   m_nextByteIndex = 0;
++#if GIFLIB_MAJOR >= 5
++  m_gif = DGifOpen(this, readFromBuffer, NULL);
++#else
+   m_gif = DGifOpen(this, readFromBuffer);
++#endif
+   if (!m_gif) {
+     throw runtime_error("open gif failed");
+   }
+diff -u -r spamprobe-1.4d.orig/src/parser/GifParser.h spamprobe-1.4d/src/parser/GifParser.h
+--- spamprobe-1.4d.orig/src/parser/GifParser.h	2013-08-19 09:32:03.638652517 +0900
++++ spamprobe-1.4d/src/parser/GifParser.h	2013-08-19 09:45:07.019487685 +0900
+@@ -33,6 +33,7 @@
+ #ifndef _GifParser_h
+ #define _GifParser_h
+ 
++#include <stddef.h>
+ extern "C" {
+ #include <gif_lib.h>
+ }
