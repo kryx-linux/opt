@@ -4,7 +4,7 @@
 # Depends on:  subversion apache
 
 name=mod_svn
-version=1.7.10
+version=1.8.1
 release=1
 source=(http://www.apache.org/dist/subversion/subversion-$version.tar.bz2)
 
@@ -13,8 +13,8 @@ build() {
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
-                --with-{apr,apr-util,neon}=/usr \
-                --disable-neon-version-check \
+                --with-apache-libexecdir=/usr/lib/apache \
+                --with-{apr,apr-util}=/usr \
                 --disable-mod-activation \
                 --without-swig \
                 --disable-nls \
