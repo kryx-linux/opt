@@ -334,6 +334,7 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-jpeg
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pat
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pcx
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pdf-load
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pdf-save
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pix
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-png
@@ -431,41 +432,41 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/whirl-pinch
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/wind
 -rwxr-xr-x	root/root	usr/lib/libgimp-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so -> libgimp-2.0.so.0.800.2
-lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so.0 -> libgimp-2.0.so.0.800.2
--rwxr-xr-x	root/root	usr/lib/libgimp-2.0.so.0.800.2
+lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so -> libgimp-2.0.so.0.800.6
+lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so.0 -> libgimp-2.0.so.0.800.6
+-rwxr-xr-x	root/root	usr/lib/libgimp-2.0.so.0.800.6
 -rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so -> libgimpbase-2.0.so.0.800.2
-lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so.0 -> libgimpbase-2.0.so.0.800.2
--rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.so.0.800.2
+lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so -> libgimpbase-2.0.so.0.800.6
+lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so.0 -> libgimpbase-2.0.so.0.800.6
+-rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.so.0.800.6
 -rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so -> libgimpcolor-2.0.so.0.800.2
-lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so.0 -> libgimpcolor-2.0.so.0.800.2
--rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.so.0.800.2
+lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so -> libgimpcolor-2.0.so.0.800.6
+lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so.0 -> libgimpcolor-2.0.so.0.800.6
+-rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.so.0.800.6
 -rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so -> libgimpconfig-2.0.so.0.800.2
-lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so.0 -> libgimpconfig-2.0.so.0.800.2
--rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.so.0.800.2
+lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so -> libgimpconfig-2.0.so.0.800.6
+lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so.0 -> libgimpconfig-2.0.so.0.800.6
+-rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.so.0.800.6
 -rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so -> libgimpmath-2.0.so.0.800.2
-lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so.0 -> libgimpmath-2.0.so.0.800.2
--rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.so.0.800.2
+lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so -> libgimpmath-2.0.so.0.800.6
+lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so.0 -> libgimpmath-2.0.so.0.800.6
+-rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.so.0.800.6
 -rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so -> libgimpmodule-2.0.so.0.800.2
-lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so.0 -> libgimpmodule-2.0.so.0.800.2
--rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.so.0.800.2
+lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so -> libgimpmodule-2.0.so.0.800.6
+lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so.0 -> libgimpmodule-2.0.so.0.800.6
+-rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.so.0.800.6
 -rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so -> libgimpthumb-2.0.so.0.800.2
-lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so.0 -> libgimpthumb-2.0.so.0.800.2
--rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.so.0.800.2
+lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so -> libgimpthumb-2.0.so.0.800.6
+lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so.0 -> libgimpthumb-2.0.so.0.800.6
+-rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.so.0.800.6
 -rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so -> libgimpui-2.0.so.0.800.2
-lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so.0 -> libgimpui-2.0.so.0.800.2
--rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.so.0.800.2
+lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so -> libgimpui-2.0.so.0.800.6
+lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so.0 -> libgimpui-2.0.so.0.800.6
+-rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.so.0.800.6
 -rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so -> libgimpwidgets-2.0.so.0.800.2
-lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so.0 -> libgimpwidgets-2.0.so.0.800.2
--rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.so.0.800.2
+lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so -> libgimpwidgets-2.0.so.0.800.6
+lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so.0 -> libgimpwidgets-2.0.so.0.800.6
+-rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.so.0.800.6
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimp-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimpthumb-2.0.pc
@@ -597,6 +598,7 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/dynamics/Basic/
 -rw-r--r--	root/root	usr/share/gimp/2.0/dynamics/Basic/Pencil-Generic.gdyn
 -rw-r--r--	root/root	usr/share/gimp/2.0/dynamics/Basic/Pencil-Shader.gdyn
 -rw-r--r--	root/root	usr/share/gimp/2.0/dynamics/Basic/Pressure-Opacity.gdyn
+-rw-r--r--	root/root	usr/share/gimp/2.0/dynamics/Color-From-Gradient.gdyn
 -rw-r--r--	root/root	usr/share/gimp/2.0/dynamics/Dynamics-Off.gdyn
 drwxr-xr-x	root/root	usr/share/gimp/2.0/dynamics/FX/
 -rw-r--r--	root/root	usr/share/gimp/2.0/dynamics/FX/Confetti.gdyn
@@ -1171,6 +1173,7 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/tool-presets/FX/
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/FX/Smooth-Clone.gtp
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/FX/Vignette.gtp
 drwxr-xr-x	root/root	usr/share/gimp/2.0/tool-presets/Paint/
+-rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Airbrush-Color-From-Gradient.gtp
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Airbrush.gtp
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Basic-Knife.gtp
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Basic-Round-Detail.gtp
@@ -1178,6 +1181,8 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/tool-presets/Paint/
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Bristles.gtp
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Eraser-Hard.gtp
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Noise.gtp
+-rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Paintbrush-Color-From-Gradient.gtp
+-rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Pencil-Color-From-Gradient.gtp
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Smudge-Rough.gtp
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Smudge-Soft.gtp
 -rw-r--r--	root/root	usr/share/gimp/2.0/tool-presets/Paint/Soft-Oil.gtp
