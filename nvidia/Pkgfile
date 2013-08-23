@@ -4,7 +4,7 @@
 # Depends on: gtk gl-select pangox-compat
 
 name=nvidia
-version=319.32
+version=319.49
 release=1
 source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run
         $name-makefile.patch)
@@ -12,9 +12,6 @@ source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86
 build() {
     sh NVIDIA-Linux-x86_64-$version-no-compat32.run --extract-only
     cd NVIDIA-Linux-x86_64-$version-no-compat32
-
-    # workaround for 3.7.6+ kernels
-    sed -i -e '1706s/le 5/le 99/' kernel/conftest.sh
 
     # libraries
     install -d $PKG/usr/lib/{tls,vdpau}
