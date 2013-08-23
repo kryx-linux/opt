@@ -89,6 +89,8 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/segmentSelected.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/segmentSelectedEnd.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/sessionStorage.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/settingsListRemove.png
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/settingsListRemove_2x.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/spinner.gif
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/spinnerActive.gif
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/spinnerActiveSelected.gif
@@ -159,6 +161,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/resourcesPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/revisionHistory.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/scriptsPanel.css
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/showhint.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/sidebarPane.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/spectrum.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/splitView.css

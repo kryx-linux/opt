@@ -5,7 +5,7 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher
 
 name=chromium
-version=28.0.1500.95
+version=29.0.1547.57
 release=1
 source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.xz \
         $name.sh nss-3.15.diff)
@@ -16,12 +16,6 @@ build() {
   # fix for speech-dispatcher >= 0.8
   sed -e 's|<<(libspeechd_h_prefix)libspeechd.h>|<speech-dispatcher/libspeechd.h>|' \
       -i build/linux/system.gyp
-
-  # fix for nss >= 3.15
-  patch -p1 -i $SRC/nss-3.15.diff
-
-  find third_party/WebKit/Source ui/base/ime \
-    -type f -exec sed -e 's|<glib/.*\.h>|<glib.h>|g' -i {} \;
 
   export CFLAGS="$CFLAGS $(pkg-config --cflags nspr)"
   export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
