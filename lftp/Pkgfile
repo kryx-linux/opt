@@ -5,9 +5,9 @@
 # Depends on: openssl
 
 name=lftp
-version=4.4.8
+version=4.4.9
 release=1
-source=(ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/$name-$version.tar.xz)
+source=(http://lftp.yar.ru/ftp/lftp-$version.tar.xz)
 
 build() {
 	cd $name-$version
