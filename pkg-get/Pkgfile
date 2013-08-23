@@ -5,13 +5,11 @@
 # Depends on: perl
 
 name=pkg-get
-version=0.4.5
-release=2
-source=(http://www.varlock.com/files/$name-$version.tar.gz \
-	$name.patch)
+version=0.4.6
+release=1
+source=(http://crux.nu/files/distfiles/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	patch -p1 -i $SRC/$name.patch
 	make PREFIX=$PKG/usr CFGDIR=$PKG/etc install
 }
