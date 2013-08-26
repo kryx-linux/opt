@@ -7,14 +7,15 @@
 name=llvm
 version=3.3
 release=1
-source=(http://llvm.org/releases/$version/{$name,cfe}-$version.src.tar.gz)
+source=(http://llvm.org/releases/$version/{$name,cfe,lldb}-$version.src.tar.gz)
 
 build() {
 	mv cfe-$version.src $name-$version.src/tools/clang
+	mv lldb-$version.src $name-$version.src/tools/lldb
 
 	cd $name-$version.src
 
-	./configure --prefix=/usr --without-oprofile
+	./configure --prefix=/usr --without-oprofile --enable-cxx11
 
 	make $MAKEFLAGS
 	make DESTDIR=$PKG install
