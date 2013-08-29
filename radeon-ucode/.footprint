@@ -15,6 +15,7 @@ drwxr-xr-x	root/root	lib/firmware/radeon/
 -rw-r--r--	root/root	lib/firmware/radeon/BONAIRE_pfp.bin
 -rw-r--r--	root/root	lib/firmware/radeon/BONAIRE_rlc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/BONAIRE_sdma.bin
+-rw-r--r--	root/root	lib/firmware/radeon/BONAIRE_smc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/BONAIRE_uvd.bin
 -rw-r--r--	root/root	lib/firmware/radeon/BTC_rlc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/CAICOS_mc.bin
@@ -51,6 +52,12 @@ drwxr-xr-x	root/root	lib/firmware/radeon/
 -rw-r--r--	root/root	lib/firmware/radeon/KABINI_pfp.bin
 -rw-r--r--	root/root	lib/firmware/radeon/KABINI_rlc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/KABINI_sdma.bin
+-rw-r--r--	root/root	lib/firmware/radeon/KAVERI_ce.bin
+-rw-r--r--	root/root	lib/firmware/radeon/KAVERI_me.bin
+-rw-r--r--	root/root	lib/firmware/radeon/KAVERI_mec.bin
+-rw-r--r--	root/root	lib/firmware/radeon/KAVERI_pfp.bin
+-rw-r--r--	root/root	lib/firmware/radeon/KAVERI_rlc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/KAVERI_sdma.bin
 -rw-r--r--	root/root	lib/firmware/radeon/OLAND_ce.bin
 -rw-r--r--	root/root	lib/firmware/radeon/OLAND_mc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/OLAND_me.bin
