@@ -4,7 +4,7 @@
 # Depends on:  curl libxml2 sqlite3 stfl json-c
 
 name=newsbeuter
-version=2.6
+version=2.7
 release=1
 source=(http://www.newsbeuter.org/downloads/$name-$version.tar.gz)
 
