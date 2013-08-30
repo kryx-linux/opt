@@ -4,7 +4,7 @@
 # Depends on:  cairo
 
 name=harfbuzz
-version=0.9.19
+version=0.9.20
 release=1
 source=(http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-$version.tar.bz2)
 
@@ -20,4 +20,5 @@ build() {
 
 	make
 	make DESTDIR=$PKG install
+	rm -r $PKG/usr/share
 }
