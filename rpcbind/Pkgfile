@@ -5,7 +5,7 @@
 
 name=rpcbind
 version=0.2.1
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2 \
         rpcbind)
 
@@ -14,7 +14,8 @@ build() {
     ./configure --prefix=/usr \
                 --bindir=/sbin \
                 --mandir=/usr/man \
-                --enable-libwrap
+                --enable-libwrap \
+                --with-rpcuser=root
     make
     make DESTDIR=$PKG install
     install -D -m 755 $SRC/rpcbind $PKG/etc/rc.d/rpcbind
