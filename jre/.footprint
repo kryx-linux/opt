@@ -70,7 +70,6 @@ drwxr-xr-x	root/root	usr/lib/jre/lib/amd64/jli/
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libnpjp2.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libnpt.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libprism-es2.so
--rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/librmi.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libsctp.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libsplashscreen.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libsunec.so
@@ -248,12 +247,15 @@ drwxr-xr-x	root/root	usr/lib/jre/lib/images/icons/
 -rw-r--r--	root/root	usr/lib/jre/lib/images/icons/sun-java_HighContrast.png
 -rw-r--r--	root/root	usr/lib/jre/lib/images/icons/sun-java_HighContrastInverse.png
 -rw-r--r--	root/root	usr/lib/jre/lib/images/icons/sun-java_LowContrast.png
--rwxr-xr-x	root/root	usr/lib/jre/lib/javafx.properties
+-rw-r--r--	root/root	usr/lib/jre/lib/javafx.properties
 -rwxr-xr-x	root/root	usr/lib/jre/lib/javaws.jar
 -rwxr-xr-x	root/root	usr/lib/jre/lib/jce.jar
 -rwxr-xr-x	root/root	usr/lib/jre/lib/jexec
 -rwxr-xr-x	root/root	usr/lib/jre/lib/jfr.jar
--rwxr-xr-x	root/root	usr/lib/jre/lib/jfxrt.jar
+drwxr-xr-x	root/root	usr/lib/jre/lib/jfr/
+-rw-r--r--	root/root	usr/lib/jre/lib/jfr/default.jfc
+-rw-r--r--	root/root	usr/lib/jre/lib/jfr/profile.jfc
+-rw-r--r--	root/root	usr/lib/jre/lib/jfxrt.jar
 -rw-r--r--	root/root	usr/lib/jre/lib/jsse.jar
 -rwxr-xr-x	root/root	usr/lib/jre/lib/jvm.hprof.txt
 drwxr-xr-x	root/root	usr/lib/jre/lib/locale/
@@ -325,12 +327,10 @@ drwxr-xr-x	root/root	usr/lib/jre/lib/security/
 -rw-r--r--	root/root	usr/lib/jre/lib/security/cacerts
 -rw-r--r--	root/root	usr/lib/jre/lib/security/java.policy
 -rw-r--r--	root/root	usr/lib/jre/lib/security/java.security
--rwxr-xr-x	root/root	usr/lib/jre/lib/security/javafx.policy
+-rw-r--r--	root/root	usr/lib/jre/lib/security/javafx.policy
 -rw-r--r--	root/root	usr/lib/jre/lib/security/javaws.policy
 -rw-r--r--	root/root	usr/lib/jre/lib/security/local_policy.jar
 -rw-r--r--	root/root	usr/lib/jre/lib/security/trusted.libraries (EMPTY)
-drwxr-xr-x	root/root	usr/lib/jre/lib/servicetag/
--r--r--r--	root/root	usr/lib/jre/lib/servicetag/jdk_header.png
 -rwxr-xr-x	root/root	usr/lib/jre/lib/sound.properties
 drwxr-xr-x	root/root	usr/lib/jre/lib/zi/
 drwxr-xr-x	root/root	usr/lib/jre/lib/zi/Africa/
