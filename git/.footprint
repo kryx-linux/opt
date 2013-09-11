@@ -25,6 +25,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-cat-file
 -rwxr-xr-x	root/root	usr/lib/git-core/git-check-attr
 -rwxr-xr-x	root/root	usr/lib/git-core/git-check-ignore
+-rwxr-xr-x	root/root	usr/lib/git-core/git-check-mailmap
 -rwxr-xr-x	root/root	usr/lib/git-core/git-check-ref-format
 -rwxr-xr-x	root/root	usr/lib/git-core/git-checkout
 -rwxr-xr-x	root/root	usr/lib/git-core/git-checkout-index
@@ -130,7 +131,6 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-ftps
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-http
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-https
--rwxr-xr-x	root/root	usr/lib/git-core/git-remote-testpy
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-testsvn
 -rwxr-xr-x	root/root	usr/lib/git-core/git-repack
 -rwxr-xr-x	root/root	usr/lib/git-core/git-replace
@@ -256,6 +256,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-cat-file.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-check-attr.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-check-ignore.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-check-mailmap.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-check-ref-format.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-checkout-index.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-checkout.1.gz
