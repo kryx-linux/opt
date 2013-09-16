@@ -268,6 +268,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/asmlibrarian.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/asmlink.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/asmpackager.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/ast_mapper.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/asttypes.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/btype.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/bytegen.cmi
@@ -287,8 +288,10 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmx_format.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/coloring.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/comballoc.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compenv.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compile.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compilenv.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compmisc.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/config.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/consistbl.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/ctype.cmi
@@ -299,6 +302,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/emitaux.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/emitcode.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/env.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/envaux.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/errors.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/expunge.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/genprintval.cmi
@@ -349,6 +353,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/parsetree.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/path.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/pparse.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/pprintast.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/predef.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/primitive.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/printast.cmi
@@ -393,6 +398,8 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typecore.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedtree.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedtreeIter.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedtreeMap.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typemod.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typeopt.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/types.cmi
@@ -532,6 +539,8 @@ drwxr-xr-x	root/root	usr/lib/ocaml/ocamlbuild/
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_executor.o
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_pack.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmo
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmo
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmx
