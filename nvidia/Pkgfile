@@ -5,9 +5,8 @@
 
 name=nvidia
 version=319.49
-release=1
-source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run
-        $name-makefile.patch)
+release=2
+source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run $name-kernel311.patch)
 
 build() {
     sh NVIDIA-Linux-x86_64-$version-no-compat32.run --extract-only
@@ -56,9 +55,12 @@ build() {
     ln -s libGL.so.$version $PKG/usr/lib/libGL_so_1_2_nvidia
     ln -s libglx.so.$version $PKG/usr/lib/xorg/modules/extensions/libglx_so_nvidia
 
-    # kernel module, patch Makefile.kbuild for normal users and no load during build
+    # opencl icd file
+    install -m 0644 -D nvidia.icd $PKG/etc/OpenCL/vendors/nvidia.icd
+
+    # kernel module
+    patch -p1 -i $SRC/$name-kernel311.patch
     cd kernel
-    patch -p0 -i $SRC/$name-makefile.patch
     ln -s Makefile.kbuild Makefile
     IGNORE_CC_MISMATCH=1 make module
     install -D -m 0644 nvidia.ko $PKG/lib/modules/`uname -r`/extra/nvidia.ko

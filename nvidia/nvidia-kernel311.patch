@@ -1,0 +1,15 @@
+diff -urN NVIDIA-Linux-x86_64-319.49-no-compat32.orig/kernel/nv-linux.h NVIDIA-Linux-x86_64-319.49-no-compat32/kernel/nv-linux.h
+--- NVIDIA-Linux-x86_64-319.49-no-compat32.orig/kernel/nv-linux.h	2013-08-13 21:33:23.000000000 -0500
++++ NVIDIA-Linux-x86_64-319.49-no-compat32/kernel/nv-linux.h	2013-09-17 11:13:44.959178433 -0500
+@@ -1037,7 +1037,11 @@
+ #endif
+ 
+ #if !defined(NV_VMWARE)
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 11, 0)
+ #define NV_NUM_PHYSPAGES                num_physpages
++#else
++#define NV_NUM_PHYSPAGES                get_num_physpages()
++#endif
+ #define NV_GET_CURRENT_PROCESS()        current->tgid
+ #define NV_IN_ATOMIC()                  in_atomic()
+ #define NV_LOCAL_BH_DISABLE()           local_bh_disable()

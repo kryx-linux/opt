@@ -1,3 +1,7 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/OpenCL/
+drwxr-xr-x	root/root	etc/OpenCL/vendors/
+-rw-r--r--	root/root	etc/OpenCL/vendors/nvidia.icd
 drwxr-xr-x	root/root	lib/
 drwxr-xr-x	root/root	lib/modules/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/
