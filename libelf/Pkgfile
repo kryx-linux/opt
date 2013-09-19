@@ -1,0 +1,18 @@
+# Description: ELF object file access library
+# URL: http://www.mr511.de/software/
+# Packager : Maxim Falcony, falcony at users dot sourceforge dot net
+# Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
+
+name=libelf
+version=0.8.13
+release=1
+source=(http://www.mr511.de/software/$name-$version.tar.gz)
+
+build() {
+        cd $name-$version
+
+	./configure --prefix=/usr --disable-nls 
+
+	make -j1 
+	make instroot=$PKG install
+}
