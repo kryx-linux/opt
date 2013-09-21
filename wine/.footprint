@@ -130,6 +130,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/cderr.h
 -rw-r--r--	root/root	usr/include/wine/windows/cfgmgr32.h
 -rw-r--r--	root/root	usr/include/wine/windows/cguid.h
+-rw-r--r--	root/root	usr/include/wine/windows/chprst.idl
 -rw-r--r--	root/root	usr/include/wine/windows/cierror.h
 -rw-r--r--	root/root	usr/include/wine/windows/clusapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/cmdbas.idl
@@ -237,6 +238,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/ddrawi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddstream.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddstream.idl
+-rw-r--r--	root/root	usr/include/wine/windows/delayloadhandler.h
 -rw-r--r--	root/root	usr/include/wine/windows/devenum.idl
 -rw-r--r--	root/root	usr/include/wine/windows/devguid.h
 -rw-r--r--	root/root	usr/include/wine/windows/devicetopology.h
@@ -313,6 +315,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/exdispid.h
 -rw-r--r--	root/root	usr/include/wine/windows/fci.h
 -rw-r--r--	root/root	usr/include/wine/windows/fdi.h
+-rw-r--r--	root/root	usr/include/wine/windows/fileapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/fltdefs.h
 -rw-r--r--	root/root	usr/include/wine/windows/fusion.h
 -rw-r--r--	root/root	usr/include/wine/windows/fusion.idl
@@ -366,6 +369,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/indexsrv.h
 -rw-r--r--	root/root	usr/include/wine/windows/indexsrv.idl
 -rw-r--r--	root/root	usr/include/wine/windows/initguid.h
+-rw-r--r--	root/root	usr/include/wine/windows/inputscope.h
+-rw-r--r--	root/root	usr/include/wine/windows/inputscope.idl
 -rw-r--r--	root/root	usr/include/wine/windows/intshcut.h
 -rw-r--r--	root/root	usr/include/wine/windows/ipexport.h
 -rw-r--r--	root/root	usr/include/wine/windows/iphlpapi.h
@@ -671,6 +676,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/vssym32.h
 -rw-r--r--	root/root	usr/include/wine/windows/wbemcli.h
 -rw-r--r--	root/root	usr/include/wine/windows/wbemcli.idl
+-rw-r--r--	root/root	usr/include/wine/windows/wbemdisp.h
+-rw-r--r--	root/root	usr/include/wine/windows/wbemdisp.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wbemprov.h
 -rw-r--r--	root/root	usr/include/wine/windows/wbemprov.idl
 -rw-r--r--	root/root	usr/include/wine/windows/werapi.h
@@ -788,6 +795,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/aspnet_regiis.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/atl.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/atl100.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/atl110.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/atl80.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/attrib.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/authz.dll.so
@@ -809,6 +817,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/comctl32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/comdlg32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/compstui.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/comsvcs.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/conhost.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/control.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/credui.dll.so
@@ -850,6 +859,8 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/d3dx10_41.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dx10_42.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dx10_43.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/d3dx11_42.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/d3dx11_43.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dx9_24.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dx9_25.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dx9_26.dll.so
@@ -940,6 +951,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/aspnet_regiis.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl100.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/atl110.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl80.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/attrib.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/authz.dll
@@ -961,6 +973,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/comctl32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/comdlg32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/compstui.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/comsvcs.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/conhost.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/control.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/credui.dll
@@ -1002,6 +1015,8 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx10_41.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx10_42.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx10_43.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx11_42.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx11_43.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx9_24.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx9_25.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx9_26.dll
@@ -1189,6 +1204,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/nddeapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/net.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/netapi32.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/netcfgx.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/netsh.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/netstat.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/newdev.dll
@@ -1291,6 +1307,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/t2embed.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/tapi32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/taskkill.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/tasklist.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/taskmgr.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/termsv.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/traffic.dll
@@ -1313,6 +1330,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vdmdbg.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/version.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/view.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/wbemdisp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wbemprox.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/webservices.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wer.dll
@@ -1372,6 +1390,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xinput1_1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xinput1_2.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xinput1_3.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/xinput1_4.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xinput9_1_0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xmllite.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xolehlp.dll
@@ -1438,6 +1457,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libcomctl32.def
 -rw-r--r--	root/root	usr/lib/wine/libcomdlg32.def
 -rw-r--r--	root/root	usr/lib/wine/libcompstui.def
+-rw-r--r--	root/root	usr/lib/wine/libcomsvcs.def
 -rw-r--r--	root/root	usr/lib/wine/libcredui.def
 -rw-r--r--	root/root	usr/lib/wine/libcrtdll.def
 -rw-r--r--	root/root	usr/lib/wine/libcrypt32.def
@@ -1666,6 +1686,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/nddeapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/net.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/netapi32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/netcfgx.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/netsh.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/netstat.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/newdev.dll.so
@@ -1768,6 +1789,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/t2embed.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/tapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/taskkill.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/tasklist.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/taskmgr.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/termsv.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/traffic.dll.so
@@ -1790,6 +1812,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/vdmdbg.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/version.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/view.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/wbemdisp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wbemprox.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/webservices.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wer.dll.so
@@ -1849,6 +1872,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/xinput1_1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xinput1_2.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xinput1_3.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/xinput1_4.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xinput9_1_0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xmllite.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xolehlp.dll.so
@@ -1885,6 +1909,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/aspnet_regiis.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/atl.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/atl100.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/atl110.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/atl80.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/attrib.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/authz.dll.so
@@ -1910,6 +1935,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/commdlg.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/compobj.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/compstui.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/comsvcs.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/conhost.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/control.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/credui.dll.so
@@ -1953,6 +1979,8 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dx10_41.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dx10_42.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dx10_43.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/d3dx11_42.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/d3dx11_43.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dx9_24.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dx9_25.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dx9_26.dll.so
@@ -2046,6 +2074,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/aspnet_regiis.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl100.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl110.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl80.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/attrib.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/authz.dll
@@ -2071,6 +2100,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/commdlg.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/compobj.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/compstui.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/comsvcs.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/conhost.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/control.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/credui.dll
@@ -2114,6 +2144,8 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx10_41.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx10_42.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx10_43.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx11_42.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx11_43.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx9_24.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx9_25.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx9_26.dll
@@ -2316,6 +2348,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/nddeapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/net.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/netapi32.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/netcfgx.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/netsh.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/netstat.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/newdev.dll
@@ -2434,6 +2467,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/t2embed.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/tapi32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/taskkill.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/tasklist.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/taskmgr.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/termsv.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/toolhelp.dll16
@@ -2469,6 +2503,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vwin32.vxd
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/w32skrnl.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/w32sys.dll16
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/wbemdisp.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wbemprox.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/webservices.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wer.dll
@@ -2541,6 +2576,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xinput1_1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xinput1_2.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xinput1_3.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/xinput1_4.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xinput9_1_0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xmllite.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xolehlp.dll
@@ -2612,6 +2648,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libcomctl32.def
 -rw-r--r--	root/root	usr/lib32/wine/libcomdlg32.def
 -rw-r--r--	root/root	usr/lib32/wine/libcompstui.def
+-rw-r--r--	root/root	usr/lib32/wine/libcomsvcs.def
 -rw-r--r--	root/root	usr/lib32/wine/libcredui.def
 -rw-r--r--	root/root	usr/lib32/wine/libcrtdll.def
 -rw-r--r--	root/root	usr/lib32/wine/libcrypt32.def
@@ -2849,6 +2886,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/nddeapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/net.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/netapi32.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/netcfgx.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/netsh.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/netstat.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/newdev.dll.so
@@ -2967,6 +3005,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/t2embed.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/tapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/taskkill.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/tasklist.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/taskmgr.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/termsv.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/toolhelp.dll16.so
@@ -3002,6 +3041,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/vwin32.vxd.so
 -rwxr-xr-x	root/root	usr/lib32/wine/w32skrnl.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/w32sys.dll16.so
+-rwxr-xr-x	root/root	usr/lib32/wine/wbemdisp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wbemprox.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/webservices.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wer.dll.so
@@ -3074,6 +3114,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/xinput1_1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xinput1_2.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xinput1_3.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/xinput1_4.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xinput9_1_0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xmllite.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xolehlp.dll.so
