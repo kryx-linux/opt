@@ -4,15 +4,12 @@
 # Depends on:  openssl
 
 name=mailx
-version=14.3.2
+version=14.4.2
 release=1
 source=(http://downloads.sourceforge.net/project/s-nail/s-nail-${version//./_}.tar.gz)
 
 build() {
     cd s-nail-$version
-
-    # Fix version string
-    sed -r -e 's/s-nail-(.+)/\1/' -i version.c
 
     make install \
          NAIL=mailx \
@@ -21,7 +18,8 @@ build() {
          PREFIX=/usr \
          SYSCONFRC=/usr/etc/mailx.rc \
          MAILSPOOL=/var/spool/mail \
-         DESTDIR=$PKG
+         DESTDIR=$PKG \
+         WANT_LINE_EDITOR=0
 
     ln -s mailx   $PKG/usr/bin/Mail
     ln -s mailx   $PKG/usr/bin/mail
