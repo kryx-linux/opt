@@ -11,6 +11,7 @@ drwxr-xr-x	root/root	lib/udev/rules.d/
 -r--r--r--	root/root	lib/udev/rules.d/11-dm-lvm.rules
 drwxr-xr-x	root/root	sbin/
 -r-xr-xr-x	root/root	sbin/blkdeactivate
+lrwxrwxrwx	root/root	sbin/devtypes -> lvm
 -r-xr-xr-x	root/root	sbin/fsadm
 lrwxrwxrwx	root/root	sbin/lvchange -> lvm
 lrwxrwxrwx	root/root	sbin/lvconvert -> lvm
