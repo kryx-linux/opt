@@ -1,0 +1,28 @@
+# Description:	Javascript engine library
+# URL:		http://www.mozilla.org/js/spidermonkey/
+# Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
+# Depends on:	
+
+name=spidermonkey
+version=1.8.5
+release=1
+source=(http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz)
+
+build() {
+	cd js-$version/js/src
+
+	./configure \
+		--prefix=/usr \
+		--disable-static
+
+	make
+	make DESTDIR=$PKG install
+
+	# disable-static doesn't work
+	rm $PKG/usr/lib/libmozjs185-1.0.a
+
+	# symlinks are not relative, fix that
+	rm -f $PKG/usr/lib/libmozjs185.so{,.1.0}
+	ln -s libmozjs185.so.1.0.0 $PKG/usr/lib/libmozjs185.so
+	ln -s libmozjs185.so.1.0.0 $PKG/usr/lib/libmozjs185.so.1.0
+}
