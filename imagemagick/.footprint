@@ -110,6 +110,7 @@ drwxr-xr-x	root/root	usr/include/ImageMagick-6/magick/
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/monitor.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/montage.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/morphology.h
+-rw-r--r--	root/root	usr/include/ImageMagick-6/magick/opencl.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/option.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/paint.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/magick/pixel-accessor.h
@@ -168,14 +169,14 @@ drwxr-xr-x	root/root	usr/include/ImageMagick-6/wand/
 -rw-r--r--	root/root	usr/include/ImageMagick-6/wand/stream.h
 -rw-r--r--	root/root	usr/include/ImageMagick-6/wand/wand-view.h
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.5/
-drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.5/config-Q16/
--rw-r--r--	root/root	usr/lib/ImageMagick-6.8.5/config-Q16/configure.xml
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.6/
+drwxr-xr-x	root/root	usr/lib/ImageMagick-6.8.6/config-Q16/
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.8.6/config-Q16/configure.xml
 -rw-r--r--	root/root	usr/lib/libMagick++-6.Q16.a
 -rwxr-xr-x	root/root	usr/lib/libMagick++-6.Q16.la
-lrwxrwxrwx	root/root	usr/lib/libMagick++-6.Q16.so -> libMagick++-6.Q16.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagick++-6.Q16.so.1 -> libMagick++-6.Q16.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libMagick++-6.Q16.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagick++-6.Q16.so -> libMagick++-6.Q16.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagick++-6.Q16.so.3 -> libMagick++-6.Q16.so.3.0.0
+-rwxr-xr-x	root/root	usr/lib/libMagick++-6.Q16.so.3.0.0
 -rw-r--r--	root/root	usr/lib/libMagickCore-6.Q16.a
 -rwxr-xr-x	root/root	usr/lib/libMagickCore-6.Q16.la
 lrwxrwxrwx	root/root	usr/lib/libMagickCore-6.Q16.so -> libMagickCore-6.Q16.so.1.0.0
