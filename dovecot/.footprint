@@ -154,9 +154,11 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/http-client.h
 -rw-r--r--	root/root	usr/include/dovecot/http-date.h
 -rw-r--r--	root/root	usr/include/dovecot/http-header-parser.h
+-rw-r--r--	root/root	usr/include/dovecot/http-header.h
 -rw-r--r--	root/root	usr/include/dovecot/http-message-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/http-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/http-request-parser.h
+-rw-r--r--	root/root	usr/include/dovecot/http-request.h
 -rw-r--r--	root/root	usr/include/dovecot/http-response-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/http-response.h
 -rw-r--r--	root/root	usr/include/dovecot/http-transfer.h
@@ -239,6 +241,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/istream-concat.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-crlf.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-dot.h
+-rw-r--r--	root/root	usr/include/dovecot/istream-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-header-filter.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-jsonstr.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-mail.h
