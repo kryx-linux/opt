@@ -404,6 +404,8 @@ drwxr-xr-x	root/root	usr/share/cups/templates/
 -rw-r--r--	root/root	usr/share/cups/templates/test-page.tmpl
 -rw-r--r--	root/root	usr/share/cups/templates/trailer.tmpl
 -rw-r--r--	root/root	usr/share/cups/templates/users.tmpl
+drwxr-xr-x	root/root	usr/share/cups/usb/
+-rw-r--r--	root/root	usr/share/cups/usb/org.cups.usb-quirks
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/cache/
 drwxrwxr-x	root/lp	var/cache/cups/
