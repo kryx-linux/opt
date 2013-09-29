@@ -4,7 +4,7 @@
 # Depends on:  gdbm libpcre
 
 name=maildrop
-version=2.6.0
+version=2.7.0
 release=1
 source=(http://download.sourceforge.net/project/courier/$name/$version/$name-$version.tar.bz2)
 
@@ -24,5 +24,5 @@ build () {
     make DESTDIR=$PKG install
     
     chmod u+s $PKG/usr/bin/maildrop
-    rm -r $PKG/usr/{include,lib,man/man3,share}
+    rm -r $PKG/usr/{man/man3,share}
 }
