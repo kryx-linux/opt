@@ -4,7 +4,7 @@
 # Depends on:  glib poppler
 
 name=poppler-glib
-version=0.24.1
+version=0.24.2
 release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz)
 
