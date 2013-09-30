@@ -5,11 +5,11 @@
 # Depends on: fontconfig-32 freeglut-32 xorg-libxcomposite-32 xorg-libxcursor-32 xorg-libxinerama-32 xorg-libxrandr-32 xorg-libxxf86dga-32 alsa-lib-32 libpng-32 libjpeg-32 prelink gnutls-32
 
 name=wine
-version=1.7.2
+version=1.7.3
 release=1
 source=(http://downloads.sourceforge.net/wine/$name-$version.tar.bz2
-	http://downloads.sourceforge.net/wine/wine_gecko-2.21-x86.msi
-	http://downloads.sourceforge.net/wine/wine_gecko-2.21-x86_64.msi
+	http://downloads.sourceforge.net/wine/wine_gecko-2.24-x86.msi
+	http://downloads.sourceforge.net/wine/wine_gecko-2.24-x86_64.msi
 	http://downloads.sourceforge.net/wine/wine-mono-0.0.8.msi)
 
 build() {
@@ -50,8 +50,8 @@ build() {
 	install -d $PKG/usr/share/wine/mono
 
 	install -t $PKG/usr/share/wine/gecko/ \
-		$SRC/wine_gecko-2.21-x86.msi \
-		$SRC/wine_gecko-2.21-x86_64.msi
+		$SRC/wine_gecko-2.24-x86.msi \
+		$SRC/wine_gecko-2.24-x86_64.msi
 
 	install $SRC/wine-mono-0.0.8.msi $PKG/usr/share/wine/mono/
 
