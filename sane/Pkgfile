@@ -1,20 +1,14 @@
 # Description: Scanner Access Now Easy - Scanner driver for Linux
 # URL:         http://www.sane-project.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libusb-compat libtiff
+# Depends on:  libusb libtiff
 
 name=sane
-version=1.0.23
+version=1.0.24
 release=1
-source=(ftp://ftp2.sane-project.org/pub/sane/$name-backends-$version.tar.gz.1 \
-        ftp://ftp2.sane-project.org/pub/sane/$name-backends-$version.tar.gz.2 \
-        ftp://ftp2.sane-project.org/pub/sane/$name-backends-$version.tar.gz.3)
+source=(https://alioth.debian.org/frs/download.php/file/3958/$name-backends-$version.tar.gz)
 
 build () {
-
-    cat $name-backends-$version.tar.gz.* > $name-backends-$version.tar.gz
-    tar xf $name-backends-$version.tar.gz 
-
     cd $name-backends-$version
 
     ./configure --prefix=/usr \
@@ -23,7 +17,8 @@ build () {
                 --sysconfdir=/etc \
                 --disable-translations \
                 --disable-locking \
-                --with-group=scanner
+                --with-group=scanner \
+                --enable-libusb_1_0
     
     make
     make -j1 DESTDIR=$PKG install
