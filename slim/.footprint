@@ -5,6 +5,9 @@ drwxr-xr-x	root/root	etc/rc.d/
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/slim
+drwxr-xr-x	root/root	usr/lib/
+lrwxrwxrwx	root/root	usr/lib/libslim.so -> libslim.so.1.3.6
+-rwxr-xr-x	root/root	usr/lib/libslim.so.1.3.6
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/slim.1.gz
@@ -19,4 +22,3 @@ drwxr-xr-x	root/root	usr/share/slim/themes/default/
 -rw-r--r--	root/root	usr/share/slim/themes/default/background.jpg
 -rw-r--r--	root/root	usr/share/slim/themes/default/panel.png
 -rw-r--r--	root/root	usr/share/slim/themes/default/slim.theme
-drwxr-xr-x	root/root	usr/usr/
