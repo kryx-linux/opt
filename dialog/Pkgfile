@@ -1,13 +1,13 @@
 # Description: A tool to display dialog boxes from shell scripts
-# URL: http://hightek.org/dialog/
+# URL: http://invisible-island.net/dialog/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
 # Depends on: ncurses
 
 name=dialog
-version=1.2-20131001
+version=1.2-20130928
 release=1
-source=(ftp://dickey.his.com/dialog/$name-$version.tgz)
+source=(ftp://dickey.his.com/$name/$name-$version.tgz)
 
 build () {
   cd $name-$version
