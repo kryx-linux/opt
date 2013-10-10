@@ -3,12 +3,11 @@
 # Maintainer:  Thomas Penteker, tek at serverop dot de
  
 name=qemu-agent
-version=1.5.1
+version=1.6.1
 release=1
 source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2 qemu-agent)
 
 build() {
-  ls
   cd qemu-$version
   ./configure --prefix=/usr \
       --cc="${CC:=gcc}" \
@@ -16,8 +15,7 @@ build() {
       --sysconfdir=/etc \
       --disable-docs \
       --libexecdir=/usr/lib/qemu \
-      --disable-system \
-      --disable-user \
+      --disable-gtk \
       --target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu \
       --enable-guest-agent
 
