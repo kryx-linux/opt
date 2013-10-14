@@ -87,6 +87,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/CMakeAddFortranSubdirectory/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFortranCompilerId.F.in
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeFortranInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeGenericSystem.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeGraphVizOptions.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeImportBuildSettings.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeJOMFindMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeJavaCompiler.cmake.in
@@ -99,6 +100,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/CMakeAddFortranSubdirectory/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeParseArguments.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeParseImplicitLinkInfo.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePlatformId.h.in
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePrintHelpers.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePrintSystemInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakePushCheckState.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/CMakeRCCompiler.cmake.in
@@ -204,6 +206,10 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/HP-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/HP-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/HP-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/IAR-ASM.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/IAR-C.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/IAR-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/IAR.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Intel-ASM.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Intel-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Compiler/Intel-CXX.cmake
@@ -485,6 +491,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.8/Modules/Platform/
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-GNU-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-GNU-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-GNU.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-Intel-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-NAG-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-VisualAge-C.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.8/Modules/Platform/Darwin-VisualAge-CXX.cmake
