@@ -197,6 +197,7 @@ drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/cmm/
 -rwxr-xr-x	root/root	usr/lib/jdk/jre/lib/deploy.jar
 drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/deploy/
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/deploy/MixedCodeMainDialog.ui
+-rw-r--r--	root/root	usr/lib/jdk/jre/lib/deploy/MixedCodeMainDialogJs.ui
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/deploy/cautionshield.icns
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/deploy/ffjcext.zip
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/deploy/java-icon.ico
@@ -844,6 +845,9 @@ drwxr-xr-x	root/root	usr/lib/jdk/jre/plugin/desktop/
 -rw-r--r--	root/root	usr/lib/jdk/jre/plugin/desktop/sun_java.desktop
 -rw-r--r--	root/root	usr/lib/jdk/jre/plugin/desktop/sun_java.png
 drwxr-xr-x	root/root	usr/lib/jdk/lib/
+drwxr-xr-x	root/root	usr/lib/jdk/lib/amd64/
+drwxr-xr-x	root/root	usr/lib/jdk/lib/amd64/jli/
+-rwxr-xr-x	root/root	usr/lib/jdk/lib/amd64/jli/libjli.so
 -rw-r--r--	root/root	usr/lib/jdk/lib/ant-javafx.jar
 -rw-r--r--	root/root	usr/lib/jdk/lib/ct.sym
 -rw-r--r--	root/root	usr/lib/jdk/lib/dt.jar
