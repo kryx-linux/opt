@@ -22,6 +22,10 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/net
 -rwxr-xr-x	root/root	usr/bin/nmblookup
 -rwxr-xr-x	root/root	usr/bin/nmblookup4
+-rwxr-xr-x	root/root	usr/bin/ntdbbackup
+-rwxr-xr-x	root/root	usr/bin/ntdbdump
+-rwxr-xr-x	root/root	usr/bin/ntdbrestore
+-rwxr-xr-x	root/root	usr/bin/ntdbtool
 -rwxr-xr-x	root/root	usr/bin/ntlm_auth
 -rwxr-xr-x	root/root	usr/bin/oLschema2ldif
 -rwxr-xr-x	root/root	usr/bin/pdbedit
@@ -32,6 +36,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/regshell
 -rwxr-xr-x	root/root	usr/bin/regtree
 -rwxr-xr-x	root/root	usr/bin/rpcclient
+-rwxr-xr-x	root/root	usr/bin/samba-regedit
 -rwxr-xr-x	root/root	usr/bin/samba-tool
 -rwxr-xr-x	root/root	usr/bin/sharesec
 -rwxr-xr-x	root/root	usr/bin/smbcacls
@@ -126,6 +131,7 @@ drwxr-xr-x	root/root	usr/include/samba-4.0/samba/
 -rw-r--r--	root/root	usr/include/samba-4.0/smb2.h
 -rw-r--r--	root/root	usr/include/samba-4.0/smb2_constants.h
 -rw-r--r--	root/root	usr/include/samba-4.0/smb2_create_blob.h
+-rw-r--r--	root/root	usr/include/samba-4.0/smb2_lease.h
 -rw-r--r--	root/root	usr/include/samba-4.0/smb2_signing.h
 -rw-r--r--	root/root	usr/include/samba-4.0/smb_cli.h
 -rw-r--r--	root/root	usr/include/samba-4.0/smb_cliraw.h
@@ -191,9 +197,9 @@ lrwxrwxrwx	root/root	usr/lib/libndr-nbt.so.0 -> libndr-nbt.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libndr-standard.so -> libndr-standard.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libndr-standard.so.0 -> libndr-standard.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libndr-standard.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libndr.so -> libndr.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libndr.so.0 -> libndr.so.0.0.1
--rwxr-xr-x	root/root	usr/lib/libndr.so.0.0.1
+lrwxrwxrwx	root/root	usr/lib/libndr.so -> libndr.so.0.0.2
+lrwxrwxrwx	root/root	usr/lib/libndr.so.0 -> libndr.so.0.0.2
+-rwxr-xr-x	root/root	usr/lib/libndr.so.0.0.2
 lrwxrwxrwx	root/root	usr/lib/libnetapi.so -> libnetapi.so.0
 -rwxr-xr-x	root/root	usr/lib/libnetapi.so.0
 lrwxrwxrwx	root/root	usr/lib/libnss_winbind.so -> libnss_winbind.so.2
@@ -223,9 +229,9 @@ lrwxrwxrwx	root/root	usr/lib/libsamdb.so.0 -> libsamdb.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsmbclient-raw.so -> libsmbclient-raw.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsmbclient-raw.so.0 -> libsmbclient-raw.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libsmbclient-raw.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> libsmbclient.so.0.2.0
-lrwxrwxrwx	root/root	usr/lib/libsmbclient.so.0 -> libsmbclient.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libsmbclient.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> libsmbclient.so.0.2.1
+lrwxrwxrwx	root/root	usr/lib/libsmbclient.so.0 -> libsmbclient.so.0.2.1
+-rwxr-xr-x	root/root	usr/lib/libsmbclient.so.0.2.1
 lrwxrwxrwx	root/root	usr/lib/libsmbconf.so -> libsmbconf.so.0
 -rwxr-xr-x	root/root	usr/lib/libsmbconf.so.0
 lrwxrwxrwx	root/root	usr/lib/libsmbsharemodes.so -> libsmbsharemodes.so.0
@@ -266,6 +272,7 @@ drwxr-xr-x	root/root	usr/lib/python2.7/
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/_tevent.so
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/ldb.so
+-rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/ntdb.so
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/__init__.py
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/_glue.so
@@ -402,6 +409,7 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/external/subunit/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/subunit/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/subunit/chunked.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/subunit/details.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/subunit/filters.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/subunit/iso8601.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/subunit/progress_model.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/subunit/run.py
@@ -432,10 +440,20 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/deferredruntest.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/distutilscmd.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/helpers.py
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers.py
+drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/__init__.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/_basic.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/_datastructures.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/_dict.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/_doctest.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/_exception.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/_filesystem.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/_higherorder.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/matchers/_impl.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/monkey.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/run.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/runtest.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tags.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/testcase.py
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/testresult/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/testresult/__init__.py
@@ -444,6 +462,17 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/te
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/helpers.py
+drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/__init__.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/helpers.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/test_basic.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/test_datastructures.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/test_dict.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/test_doctest.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/test_exception.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/test_filesystem.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/test_higherorder.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/matchers/test_impl.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_compat.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_content.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_content_type.py
@@ -451,11 +480,11 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/te
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_distutilscmd.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_fixturesupport.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_helpers.py
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_matchers.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_monkey.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_run.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_runtest.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_spinner.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_tags.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_testcase.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_testresult.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/samba/external/testtools/tests/test_testsuite.py
@@ -715,8 +744,11 @@ lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.1.16
 -rwxr-xr-x	root/root	usr/lib/samba/libndr-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnet_keytab.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnetif.so
+-rwxr-xr-x	root/root	usr/lib/samba/libnon_posix_acls.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnpa_tstream.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnss_info.so
+lrwxrwxrwx	root/root	usr/lib/samba/libntdb.so.0 -> libntdb.so.0.9
+-rwxr-xr-x	root/root	usr/lib/samba/libntdb.so.0.9
 -rwxr-xr-x	root/root	usr/lib/samba/libntvfs.so
 -rwxr-xr-x	root/root	usr/lib/samba/libpac.so
 -rwxr-xr-x	root/root	usr/lib/samba/libpopt_samba3.so
@@ -752,6 +784,7 @@ lrwxrwxrwx	root/root	usr/lib/samba/libtevent.so.0 -> libtevent.so.0.9.18
 -rwxr-xr-x	root/root	usr/lib/samba/libtevent.so.0.9.18
 -rwxr-xr-x	root/root	usr/lib/samba/libtrusts_util.so
 -rwxr-xr-x	root/root	usr/lib/samba/libutil_cmdline.so
+-rwxr-xr-x	root/root	usr/lib/samba/libutil_ntdb.so
 -rwxr-xr-x	root/root	usr/lib/samba/libutil_reg.so
 -rwxr-xr-x	root/root	usr/lib/samba/libutil_setid.so
 -rwxr-xr-x	root/root	usr/lib/samba/libutil_tdb.so
@@ -789,6 +822,7 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/aio_posix.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/aio_pthread.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/audit.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/btrfs.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/cap.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/catia.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/commit.so
@@ -859,6 +893,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/idmap_hash.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_ldap.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_nss.8.gz
+-rw-r--r--	root/root	usr/man/man8/idmap_rfc2307.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_rid.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_tdb.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_tdb2.8.gz
@@ -866,6 +901,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/nmbd.8.gz
 -rw-r--r--	root/root	usr/man/man8/pam_winbind.8.gz
 -rw-r--r--	root/root	usr/man/man8/pdbedit.8.gz
+-rw-r--r--	root/root	usr/man/man8/samba-regedit.8.gz
 -rw-r--r--	root/root	usr/man/man8/samba-tool.8.gz
 -rw-r--r--	root/root	usr/man/man8/samba.8.gz
 -rw-r--r--	root/root	usr/man/man8/smbd.8.gz
@@ -878,6 +914,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_aio_linux.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_aio_pthread.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_audit.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_btrfs.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_cacheprime.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_cap.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_catia.8.gz
@@ -890,6 +927,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_fileid.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_full_audit.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_gpfs.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_linux_xfs_sgid.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_media_harmony.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_netatalk.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_notify_fam.8.gz
@@ -904,9 +942,11 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_smb_traffic_analyzer.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_streams_depot.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_streams_xattr.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_syncops.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_time_audit.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_tsmsm.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_xattr_tdb.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_zfsacl.8.gz
 -rw-r--r--	root/root	usr/man/man8/winbindd.8.gz
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/nmbd
@@ -955,17 +995,7 @@ drwxr-xr-x	root/root	usr/share/perl5/Parse/Yapp/
 -rw-r--r--	root/root	usr/share/perl5/Parse/Yapp/Driver.pm
 drwxr-xr-x	root/root	usr/share/samba/
 drwxr-xr-x	root/root	usr/share/samba/codepages/
--rw-r--r--	root/root	usr/share/samba/codepages/de.msg
--rw-r--r--	root/root	usr/share/samba/codepages/en.msg
--rw-r--r--	root/root	usr/share/samba/codepages/fi.msg
--rw-r--r--	root/root	usr/share/samba/codepages/fr.msg
--rw-r--r--	root/root	usr/share/samba/codepages/it.msg
--rw-r--r--	root/root	usr/share/samba/codepages/ja.msg
 -rw-r--r--	root/root	usr/share/samba/codepages/lowcase.dat
--rw-r--r--	root/root	usr/share/samba/codepages/nl.msg
--rw-r--r--	root/root	usr/share/samba/codepages/pl.msg
--rw-r--r--	root/root	usr/share/samba/codepages/ru.msg
--rw-r--r--	root/root	usr/share/samba/codepages/tr.msg
 -rw-r--r--	root/root	usr/share/samba/codepages/upcase.dat
 -rw-r--r--	root/root	usr/share/samba/codepages/valid.dat
 drwxr-xr-x	root/root	usr/share/samba/setup/

@@ -4,7 +4,7 @@
 # Depends on:  ncurses openssl readline zlib tdb talloc libcap acl libaio popt
 
 name=samba
-version=4.0.10
+version=4.1.0
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
@@ -20,8 +20,7 @@ build () {
                 --localstatedir=/var \
                 --mandir=/usr/man \
                 --sysconfdir=/etc \
-                --with-privatedir=/etc/samba/private \
-                --without-swat
+                --with-privatedir=/etc/samba/private
 
     make
     make DESTDIR=$PKG install
@@ -32,9 +31,7 @@ build () {
     install -m 644 docs/manpages/*.5 $PKG/usr/man/man5
     install -m 644 docs/manpages/*.8 $PKG/usr/man/man8
     
-    #cleanup
-    rm -r $PKG/usr/share/samba/swat
-    rm $PKG/usr/man/man8/swat.8
+    # cleanup
     chmod 1777 $PKG/var/lock
     
     # config-file and start-script
