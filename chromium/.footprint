@@ -5,7 +5,6 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/chromium/
 -rw-r--r--	root/root	usr/lib/chromium/chrome.pak
 -rw-r--r--	root/root	usr/lib/chromium/chrome_100_percent.pak
--rw-r--r--	root/root	usr/lib/chromium/chrome_remote_desktop.pak
 -rwxr-xr-x	root/root	usr/lib/chromium/chromium
 -r-sr-xr-x	root/root	usr/lib/chromium/chromium-sandbox
 -rw-r--r--	root/root	usr/lib/chromium/content_resources.pak
@@ -120,8 +119,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelinePillPurple.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelinePillRed.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/timelinePillYellow.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/toolbarIcons.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/toolbarIconsSmall.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/toolbarItemSelected.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/trackHoriz.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/trackVert.png
@@ -151,7 +148,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/inspector.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/inspector.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/inspectorCommon.css
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/nativeMemoryProfiler.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/navigatorView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/networkLogView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/networkPanel.css
@@ -161,12 +157,10 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/resourcesPanel.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/revisionHistory.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/scriptsPanel.css
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/showhint.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/sidebarPane.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/spectrum.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/splitView.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/tabbedPane.css
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/textEditor.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/textPrompt.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/timelinePanel.css
 drwxr-xr-x	root/root	usr/man/
