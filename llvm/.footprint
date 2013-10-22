@@ -1159,14 +1159,6 @@ drwxr-xr-x	root/root	usr/lib/clang/3.3/include/
 -rwxr-xr-x	root/root	usr/lib/libclangStaticAnalyzerCore.a
 -rwxr-xr-x	root/root	usr/lib/libclangStaticAnalyzerFrontend.a
 -rwxr-xr-x	root/root	usr/lib/libclangTooling.a
--rwxr-xr-x	root/root	usr/lib/libllvm.a
--rwxr-xr-x	root/root	usr/lib/libllvm_analysis.a
--rwxr-xr-x	root/root	usr/lib/libllvm_bitreader.a
--rwxr-xr-x	root/root	usr/lib/libllvm_bitwriter.a
--rwxr-xr-x	root/root	usr/lib/libllvm_executionengine.a
--rwxr-xr-x	root/root	usr/lib/libllvm_ipo.a
--rwxr-xr-x	root/root	usr/lib/libllvm_scalar_opts.a
--rwxr-xr-x	root/root	usr/lib/libllvm_target.a
 -rwxr-xr-x	root/root	usr/lib/libprofile_rt.a
 -rwxr-xr-x	root/root	usr/lib/libprofile_rt.so
 drwxr-xr-x	root/root	usr/man/
