@@ -800,6 +800,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/atl100.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/atl110.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/atl80.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/atl90.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/attrib.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/authz.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/avicap32.dll.so
@@ -956,6 +957,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl100.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl110.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl80.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/atl90.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/attrib.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/authz.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/avicap32.dll
@@ -1915,6 +1917,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/atl100.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/atl110.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/atl80.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/atl90.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/attrib.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/authz.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/avicap32.dll.so
@@ -2080,6 +2083,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl100.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl110.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl80.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl90.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/attrib.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/authz.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/avicap32.dll
