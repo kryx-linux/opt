@@ -7,7 +7,7 @@
 name=libmusicbrainz
 version=2.1.5
 release=2
-source=(http://ftp.musicbrainz.org/pub/musicbrainz/$name-$version.tar.gz
+source=(http://ftp.musicbrainz.org/pub/musicbrainz/historical/$name-$version.tar.gz
 	$name.diff)
 
 build() {
