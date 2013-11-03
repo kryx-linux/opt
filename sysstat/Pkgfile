@@ -5,13 +5,14 @@
 # Depends on:
 
 name=sysstat
-version=10.0.5
+version=10.2.0
 release=1
 source=(http://perso.orange.fr/sebastien.godard/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
   ./configure --prefix=/usr --mandir=/usr/man --disable-nls
+  sed -i "/^SA_LIB_DIR/s/lib64/lib/" Makefile
 
   make
   make DESTDIR=$PKG install
