@@ -1,12 +1,12 @@
 # Description: nVIDIA Linux Display Driver
 # URL: http://www.nvidia.com/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: gtk gl-select pangox-compat
+# Depends on: gtk gl-select
 
 name=nvidia
-version=319.60
+version=331.20
 release=1
-source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run $name-kernel311.patch)
+source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run)
 
 build() {
     sh NVIDIA-Linux-x86_64-$version-no-compat32.run --extract-only
@@ -59,9 +59,7 @@ build() {
     install -m 0644 -D nvidia.icd $PKG/etc/OpenCL/vendors/nvidia.icd
 
     # kernel module
-    patch -p1 -i $SRC/$name-kernel311.patch
     cd kernel
-    ln -s Makefile.kbuild Makefile
     IGNORE_CC_MISMATCH=1 make module
     install -D -m 0644 nvidia.ko $PKG/lib/modules/`uname -r`/extra/nvidia.ko
 }
