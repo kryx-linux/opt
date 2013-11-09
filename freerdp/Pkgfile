@@ -6,10 +6,12 @@
 
 name=freerdp
 version=1.0.2
-release=1
-source=(http://pub.freerdp.com/releases/freerdp-$version.tar.gz)
+release=2
+source=(http://pub.freerdp.com/releases/freerdp-$version.tar.gz ffmpeg.patch)
 
 build() {
+	patch -p0 -i $SRC/ffmpeg.patch
+
 	mkdir build; cd build
 
 	cmake ../$name-$version \
