@@ -4,15 +4,12 @@
 # Depends on:  libpcre libffi python
 
 name=glib
-version=2.36.4
+version=2.38.1
 release=1
-source=(http://download.gnome.org/sources/$name/2.36/$name-$version.tar.xz)
+source=(http://download.gnome.org/sources/$name/2.38/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
-
-    aclocal
-    automake
 
     ./configure --prefix=/usr \
                 --disable-man \
