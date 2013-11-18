@@ -17,6 +17,7 @@ drwxr-xr-x	root/root	usr/include/apr-1/
 -rw-r--r--	root/root	usr/include/apr-1/apr_dso.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_env.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_errno.h
+-rw-r--r--	root/root	usr/include/apr-1/apr_escape.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_file_info.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_file_io.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_fnmatch.h
@@ -52,6 +53,7 @@ drwxr-xr-x	root/root	usr/include/apr-1/
 -rw-r--r--	root/root	usr/include/apr-1/apr_sha1.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_shm.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_signal.h
+-rw-r--r--	root/root	usr/include/apr-1/apr_skiplist.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_strings.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_strmatch.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_support.h
@@ -76,14 +78,14 @@ drwxr-xr-x	root/root	usr/include/apr-1/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libapr-1.a
 -rwxr-xr-x	root/root	usr/lib/libapr-1.la
-lrwxrwxrwx	root/root	usr/lib/libapr-1.so -> libapr-1.so.0.4.8
-lrwxrwxrwx	root/root	usr/lib/libapr-1.so.0 -> libapr-1.so.0.4.8
--rwxr-xr-x	root/root	usr/lib/libapr-1.so.0.4.8
+lrwxrwxrwx	root/root	usr/lib/libapr-1.so -> libapr-1.so.0.5.0
+lrwxrwxrwx	root/root	usr/lib/libapr-1.so.0 -> libapr-1.so.0.5.0
+-rwxr-xr-x	root/root	usr/lib/libapr-1.so.0.5.0
 -rw-r--r--	root/root	usr/lib/libaprutil-1.a
 -rwxr-xr-x	root/root	usr/lib/libaprutil-1.la
-lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so -> libaprutil-1.so.0.5.2
-lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so.0 -> libaprutil-1.so.0.5.2
--rwxr-xr-x	root/root	usr/lib/libaprutil-1.so.0.5.2
+lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so -> libaprutil-1.so.0.5.3
+lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so.0 -> libaprutil-1.so.0.5.3
+-rwxr-xr-x	root/root	usr/lib/libaprutil-1.so.0.5.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/apr-1.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/apr-util-1.pc
