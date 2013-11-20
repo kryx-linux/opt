@@ -2,6 +2,7 @@
 # URL:         http://valgrind.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Tilman Sauerbeck, tilman at crux dot nu
+# Nice to have: gdb
 
 name=valgrind
 version=3.9.0
@@ -11,7 +12,7 @@ source=(http://$name.org/downloads/$name-$version.tar.bz2)
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr --mandir=/usr/man
+	./configure --prefix=/usr --mandir=/usr/man --enable-gdb
 	make
 	make DESTDIR=$PKG install
 
