@@ -5,7 +5,7 @@
 # Depends on: elfutils
 
 name=prelink
-version=20111012
+version=20130503
 release=1
 source=(http://people.redhat.com/jakub/prelink/$name-$version.tar.bz2
 	prelink.conf)
