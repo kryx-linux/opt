@@ -242,6 +242,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/istream-concat.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-crlf.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-dot.h
+-rw-r--r--	root/root	usr/include/dovecot/istream-fs-file.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-header-filter.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-jsonstr.h
@@ -622,7 +623,9 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/deliver.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-altmove.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-auth.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-batch.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-config.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-copy.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-deduplicate.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-director.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-dump.1.gz
