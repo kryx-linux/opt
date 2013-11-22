@@ -1,0 +1,18 @@
+
+README for librsvg
+
+
+NOTES
+
+	Version 2.39.0 is the last one with support for GTK+2:
+        http://ftp.acc.umu.se/pub/GNOME/sources/librsvg/2.40/librsvg-2.40.0.news
+
+
+POST-INSTALL
+
+	For this application to work properly with SVG-based themes, you must
+	update your gdk-pixbuf.loaders:
+
+	# gdk-pixbuf-query-loaders > /usr/etc/gtk-2.0/gdk-pixbuf.loaders
+
+	To do that also you can execute the post-install script.
