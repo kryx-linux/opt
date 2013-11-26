@@ -553,6 +553,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib10_mail_filter_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_mail_filter_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_mail_filter_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib10_quota_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_quota_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_quota_plugin.so
