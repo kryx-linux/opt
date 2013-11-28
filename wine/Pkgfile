@@ -6,11 +6,11 @@
 
 name=wine
 version=1.7.7
-release=1
+release=2
 source=(http://downloads.sourceforge.net/wine/$name-$version.tar.bz2
 	http://downloads.sourceforge.net/wine/wine_gecko-2.24-x86.msi
 	http://downloads.sourceforge.net/wine/wine_gecko-2.24-x86_64.msi
-	http://downloads.sourceforge.net/wine/wine-mono-0.0.8.msi)
+	http://downloads.sourceforge.net/wine/wine-mono-4.5.2.msi)
 
 build() {
 	install -d wine32 wine64
@@ -53,7 +53,7 @@ build() {
 		$SRC/wine_gecko-2.24-x86.msi \
 		$SRC/wine_gecko-2.24-x86_64.msi
 
-	install $SRC/wine-mono-0.0.8.msi $PKG/usr/share/wine/mono/
+	install $SRC/wine-mono-4.5.2.msi $PKG/usr/share/wine/mono/
 
 	rm -r $PKG/usr/man/??.UTF-8
 }
