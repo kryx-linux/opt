@@ -4,14 +4,19 @@
 # Depends on:  udev libusb
 
 name=libpcap
-version=1.4.0
+version=1.5.1
 release=1
 source=(http://www.tcpdump.org/release/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
+
     sed -i '/ln [^-][^s]/s/ln/ln -s/' Makefile.in
-    ./configure --prefix=/usr --mandir=/usr/man
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --disable-dbus \
+                --without-libnl
     make
     make DESTDIR=$PKG install install-shared
 }
