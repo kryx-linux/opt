@@ -11,6 +11,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/ttfread
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/cupsfilters/
+-rw-r--r--	root/root	usr/include/cupsfilters/colord.h
 -rw-r--r--	root/root	usr/include/cupsfilters/driver.h
 -rw-r--r--	root/root	usr/include/cupsfilters/image.h
 -rw-r--r--	root/root	usr/include/cupsfilters/raster.h
@@ -29,6 +30,7 @@ drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/bannertopdf
 -rwxr-xr-x	root/root	usr/lib/cups/filter/commandtoescpx
 -rwxr-xr-x	root/root	usr/lib/cups/filter/commandtopclx
+-rwxr-xr-x	root/root	usr/lib/cups/filter/foomatic-rip
 -rwxr-xr-x	root/root	usr/lib/cups/filter/gstopxl
 -rwxr-xr-x	root/root	usr/lib/cups/filter/gstoraster
 -rwxr-xr-x	root/root	usr/lib/cups/filter/imagetopdf
@@ -61,6 +63,8 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libcupsfilters.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libfontembed.pc
 drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/foomatic-rip.1.gz
 drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/cups-browsed.conf.5.gz
 drwxr-xr-x	root/root	usr/man/man8/
