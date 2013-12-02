@@ -12,11 +12,11 @@ source=(http://$name.googlecode.com/files/$name-$version.tar.bz2)
 build() {
     cd $name-$version
 
-    ./configure \
-	--prefix=/usr \
-	--mandir=/usr/man \
-	--disable-nls \
-	--enable-static-cryptsetup
+    LIBS="-lpthread" ./configure \
+      --prefix=/usr \
+      --mandir=/usr/man \
+      --disable-nls \
+      --enable-static-cryptsetup
     make
     make DESTDIR=$PKG install
 
