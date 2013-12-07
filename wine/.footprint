@@ -121,11 +121,17 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/basetsd.h
 -rw-r--r--	root/root	usr/include/wine/windows/basetyps.h
 -rw-r--r--	root/root	usr/include/wine/windows/bcrypt.h
+-rw-r--r--	root/root	usr/include/wine/windows/bdaiface.h
+-rw-r--r--	root/root	usr/include/wine/windows/bdaiface.idl
+-rw-r--r--	root/root	usr/include/wine/windows/bdaiface_enums.h
+-rw-r--r--	root/root	usr/include/wine/windows/bdatypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/binres.idl
 -rw-r--r--	root/root	usr/include/wine/windows/bits.h
 -rw-r--r--	root/root	usr/include/wine/windows/bits.idl
 -rw-r--r--	root/root	usr/include/wine/windows/bits1_5.h
 -rw-r--r--	root/root	usr/include/wine/windows/bits1_5.idl
+-rw-r--r--	root/root	usr/include/wine/windows/bits3_0.h
+-rw-r--r--	root/root	usr/include/wine/windows/bits3_0.idl
 -rw-r--r--	root/root	usr/include/wine/windows/bitsmsg.h
 -rw-r--r--	root/root	usr/include/wine/windows/cderr.h
 -rw-r--r--	root/root	usr/include/wine/windows/cfgmgr32.h
@@ -795,6 +801,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-base-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/apphelp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/appwiz.cpl.so
+-rwxr-xr-x	root/root	usr/lib/wine/arp.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/aspnet_regiis.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/atl.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/atl100.dll.so
@@ -952,6 +959,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-base-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/apphelp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/appwiz.cpl
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/arp.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/aspnet_regiis.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/atl100.dll
@@ -1912,6 +1920,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-base-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/apphelp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/appwiz.cpl.so
+-rwxr-xr-x	root/root	usr/lib32/wine/arp.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/aspnet_regiis.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/atl.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/atl100.dll.so
@@ -2078,6 +2087,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-base-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/apphelp.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/appwiz.cpl
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/arp.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/aspnet_regiis.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/atl100.dll
