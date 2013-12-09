@@ -6,12 +6,16 @@
 # Nice to have: gimp-print, libsdl, ghostscript, librsvg, libmng
 
 name=gimp
-version=2.8.6
+version=2.8.10
 release=1
-source=(ftp://ftp.gimp.org/pub/gimp/v2.8/gimp-$version.tar.bz2)
+source=(ftp://ftp.gimp.org/pub/gimp/v2.8/gimp-$version.tar.bz2 cve-2013-1913 cve-2013-1978)
 
 build() {
   cd gimp-$version
+  
+  patch -p1 -i ../cve-2013-1913
+  patch -p1 -i ../cve-2013-1978
+
   sed -i -e '/$(helpbrowser)/d' plug-ins/Makefile.in
   ./configure --prefix=/usr \
     --mandir=/usr/man \
