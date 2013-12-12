@@ -7,7 +7,7 @@
 name=bash-completion
 version=2.1
 release=2
-source=(http://$name.alioth.debian.org/files/$name-$version.tar.bz2)
+source=(https://launchpad.net/$name/master/$version/+download/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
