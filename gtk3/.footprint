@@ -359,6 +359,10 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/unix-print/gtk/
 -rw-r--r--	root/root	usr/include/gtk-3.0/unix-print/gtk/gtkprintunixdialog.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/unix-print/gtk/gtkunixprint.h
 drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/girepository-1.0/
+-rw-r--r--	root/root	usr/lib/girepository-1.0/Gdk-3.0.typelib
+-rw-r--r--	root/root	usr/lib/girepository-1.0/GdkX11-3.0.typelib
+-rw-r--r--	root/root	usr/lib/girepository-1.0/Gtk-3.0.typelib
 drwxr-xr-x	root/root	usr/lib/gtk-3.0/
 drwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/
 drwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/
@@ -417,6 +421,10 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/gtk-3.0.m4
+drwxr-xr-x	root/root	usr/share/gir-1.0/
+-rw-r--r--	root/root	usr/share/gir-1.0/Gdk-3.0.gir
+-rw-r--r--	root/root	usr/share/gir-1.0/GdkX11-3.0.gir
+-rw-r--r--	root/root	usr/share/gir-1.0/Gtk-3.0.gir
 drwxr-xr-x	root/root	usr/share/glib-2.0/
 drwxr-xr-x	root/root	usr/share/glib-2.0/schemas/
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Demo.gschema.xml
