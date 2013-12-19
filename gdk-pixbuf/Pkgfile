@@ -1,7 +1,7 @@
 # Description: An image loading library for GTK+
 # URL: http://www.gtk.org/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: glib, xorg-libx11, libpng, libtiff, libjpeg
+# Depends on: glib, xorg-libx11, libpng, libtiff, libjpeg, gobject-introspection
 
 name=gdk-pixbuf
 version=2.30.2
