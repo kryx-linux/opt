@@ -3,7 +3,7 @@
 # URL:         http://nfsv4.bullopensource.org/doc/tirpc_rpcbind.php
 
 name=libtirpc
-version=0.2.3
+version=0.2.4
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2)
 
@@ -12,7 +12,8 @@ build() {
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
-                --mandir=/usr/man 
+                --mandir=/usr/man \
+                --disable-gssapi
     
     make
     make DESTDIR=$PKG install
