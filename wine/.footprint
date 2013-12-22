@@ -636,6 +636,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/svrapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/t2embapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/tapi.h
+-rw-r--r--	root/root	usr/include/wine/windows/taskschd.h
+-rw-r--r--	root/root	usr/include/wine/windows/taskschd.idl
 -rw-r--r--	root/root	usr/include/wine/windows/tchar.h
 -rw-r--r--	root/root	usr/include/wine/windows/tcpmib.h
 -rw-r--r--	root/root	usr/include/wine/windows/textserv.h
@@ -1531,8 +1533,12 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libmshtml.def
 -rw-r--r--	root/root	usr/lib/wine/libmsi.def
 -rw-r--r--	root/root	usr/lib/wine/libmsimg32.def
+-rw-r--r--	root/root	usr/lib/wine/libmsvcr100.def
+-rw-r--r--	root/root	usr/lib/wine/libmsvcr110.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcr70.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcr71.def
+-rw-r--r--	root/root	usr/lib/wine/libmsvcr80.def
+-rw-r--r--	root/root	usr/lib/wine/libmsvcr90.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcrt.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcrt20.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcrt40.def
@@ -2728,8 +2734,12 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libmshtml.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsi.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsimg32.def
+-rw-r--r--	root/root	usr/lib32/wine/libmsvcr100.def
+-rw-r--r--	root/root	usr/lib32/wine/libmsvcr110.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcr70.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcr71.def
+-rw-r--r--	root/root	usr/lib32/wine/libmsvcr80.def
+-rw-r--r--	root/root	usr/lib32/wine/libmsvcr90.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcrt.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcrt20.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcrt40.def
