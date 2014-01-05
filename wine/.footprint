@@ -167,6 +167,9 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/ctxtcall.idl
 -rw-r--r--	root/root	usr/include/wine/windows/custcntl.h
 -rw-r--r--	root/root	usr/include/wine/windows/cvconst.h
+-rw-r--r--	root/root	usr/include/wine/windows/d2d1.h
+-rw-r--r--	root/root	usr/include/wine/windows/d2d1.idl
+-rw-r--r--	root/root	usr/include/wine/windows/d2dbasetypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d10.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d10.idl
@@ -1324,6 +1327,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/taskkill.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/tasklist.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/taskmgr.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/taskschd.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/termsv.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/traffic.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/twain_32.dll
@@ -1811,6 +1815,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/taskkill.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/tasklist.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/taskmgr.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/taskschd.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/termsv.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/traffic.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/twain_32.dll.so
@@ -2493,6 +2498,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/taskkill.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/tasklist.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/taskmgr.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/taskschd.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/termsv.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/toolhelp.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/traffic.dll
@@ -3036,6 +3042,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/taskkill.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/tasklist.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/taskmgr.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/taskschd.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/termsv.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/toolhelp.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/traffic.dll.so
