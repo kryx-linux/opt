@@ -17,8 +17,8 @@ drwxr-xr-x	root/root	usr/include/pcap/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libpcap.a
 lrwxrwxrwx	root/root	usr/lib/libpcap.so -> libpcap.so.1
-lrwxrwxrwx	root/root	usr/lib/libpcap.so.1 -> libpcap.so.1.5.2
--rwxr-xr-x	root/root	usr/lib/libpcap.so.1.5.2
+lrwxrwxrwx	root/root	usr/lib/libpcap.so.1 -> libpcap.so.1.5.3
+-rwxr-xr-x	root/root	usr/lib/libpcap.so.1.5.3
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pcap-config.1.gz
