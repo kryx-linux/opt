@@ -1,0 +1,22 @@
+# Description: Easily download, build, install, upgrade, and uninstall Python packages.
+# URL: http://pypi.python.org/pypi/setuptools
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Danny Rawlins, monster dot romster at gmail dot com
+# Depends on: python
+
+name=setuptools
+version=2.1
+release=1
+source=(http://pypi.python.org/packages/source/s/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	python setup.py build
+
+	python setup.py install \
+		--prefix=/usr \
+		--root=$PKG \
+		--optimize=1 \
+		--skip-build
+}
