@@ -5,7 +5,7 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher
 
 name=chromium
-version=31.0.1650.57
+version=32.0.1700.77
 release=1
 source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.xz \
         $name.sh)
@@ -21,6 +21,7 @@ build() {
   export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
 
   build/gyp_chromium -f make build/all.gyp --depth=. \
+        -Dpython_ver="2.7" \
 	-Dno_strict_aliasing=1 \
 	-Dwerror= \
 	-Dlinux_sandbox_path=/usr/lib/chromium/chrome-sandbox \
