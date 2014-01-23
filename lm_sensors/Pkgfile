@@ -5,12 +5,13 @@
 # Nice to have: i2c-tools
 
 name=lm_sensors
-version=3.3.4
+version=3.3.5
 release=1
 source=(http://dl.lm-sensors.org/lm-sensors/releases/$name-$version.tar.bz2)
 
 build () {
   cd $name-$version
+
   make install PREFIX=/usr \
                ETCDIR=/usr/etc \
                DESTDIR=$PKG
