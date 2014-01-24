@@ -99,6 +99,12 @@ drwxr-xr-x	root/root	usr/include/gstreamer-1.0/gst/net/
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/net/gstnettimepacket.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/net/gstnettimeprovider.h
 drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/girepository-1.0/
+-rw-r--r--	root/root	usr/lib/girepository-1.0/Gst-1.0.typelib
+-rw-r--r--	root/root	usr/lib/girepository-1.0/GstBase-1.0.typelib
+-rw-r--r--	root/root	usr/lib/girepository-1.0/GstCheck-1.0.typelib
+-rw-r--r--	root/root	usr/lib/girepository-1.0/GstController-1.0.typelib
+-rw-r--r--	root/root	usr/lib/girepository-1.0/GstNet-1.0.typelib
 drwxr-xr-x	root/root	usr/lib/gstreamer-1.0/
 -rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/gst-plugin-scanner
 -rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/libgstcoreelements.la
@@ -137,3 +143,9 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/gst-element-check-1.0.m4
+drwxr-xr-x	root/root	usr/share/gir-1.0/
+-rw-r--r--	root/root	usr/share/gir-1.0/Gst-1.0.gir
+-rw-r--r--	root/root	usr/share/gir-1.0/GstBase-1.0.gir
+-rw-r--r--	root/root	usr/share/gir-1.0/GstCheck-1.0.gir
+-rw-r--r--	root/root	usr/share/gir-1.0/GstController-1.0.gir
+-rw-r--r--	root/root	usr/share/gir-1.0/GstNet-1.0.gir
