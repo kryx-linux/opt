@@ -1,0 +1,22 @@
+# Description: instant messaging via IRC
+# URL:         http://bitlbee.org
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Depends on:
+
+name=bitlbee
+version=3.2.1
+release=1
+source=(http://get.bitlbee.org/src/bitlbee-$version.tar.gz)
+
+build() {
+	cd $name-$version
+  ./configure --ssl=openssl \
+              --prefix=/usr \
+              --mandir=/usr/man \
+              --etcdir=/etc/bitlbee   
+
+  make
+
+  make install DESTDIR=$PKG
+  make install-etc DESTDIR=$PKG
+}
