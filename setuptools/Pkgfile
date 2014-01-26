@@ -6,7 +6,7 @@
 
 name=setuptools
 version=2.1
-release=1
+release=2
 source=(http://pypi.python.org/packages/source/s/$name/$name-$version.tar.gz)
 
 build() {
@@ -19,4 +19,6 @@ build() {
 		--root=$PKG \
 		--optimize=1 \
 		--skip-build
+
+	chmod o-w -R $PKG/usr/lib/python2.7/site-packages/setuptools-*-py*.egg-info
 }
