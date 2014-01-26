@@ -2,6 +2,8 @@ drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/bitlbee/
 -rw-r--r--	root/root	etc/bitlbee/bitlbee.conf
 -rw-r--r--	root/root	etc/bitlbee/motd.txt
+drwxr-xr-x	root/root	etc/rc.d/
+-rwxr-xr-x	root/root	etc/rc.d/bitlbee
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man5/
@@ -13,3 +15,6 @@ drwxr-xr-x	root/root	usr/sbin/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/bitlbee/
 -rw-r--r--	root/root	usr/share/bitlbee/help.txt
+drwxr-xr-x	root/root	var/
+drwxr-xr-x	root/root	var/lib/
+drwxr-xr-x	108/root	var/lib/bitlbee/
