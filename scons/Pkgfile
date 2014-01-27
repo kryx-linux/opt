@@ -12,5 +12,5 @@ source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
 build() {
 	cd $name-$version
 
-	python setup.py install --prefix=/usr --root=$PKG
+	/usr/bin/python setup.py install --prefix=/usr --root=$PKG
 }
