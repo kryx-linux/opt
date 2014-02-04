@@ -2,22 +2,19 @@
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
 # Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
-
+ 
 name=firefox
-version=26.0
+version=27.0
 release=1
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
-        firefox.desktop)
-
+	firefox-install-dir.patch firefox.desktop)
+ 
 build() {
-    export MOZ_CO_PROJECT=browser
-    export BUILD_OFFICIAL=1
-    export MOZILLA_OFFICIAL=1
-    export MOZILLA_FIVE_HOME=/usr/lib/firefox
-
     cd mozilla-release
-
-    cat <<- EOF > .mozconfig
+ 
+patch -p 1 -i $SRC/firefox-install-dir.patch
+ 
+cat <<- EOF > .mozconfig
     mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
     mk_add_options MOZ_MAKE_FLAGS="$MAKEFLAGS -s"
     ac_add_options --prefix=/usr
@@ -62,30 +59,13 @@ build() {
     ac_add_options --disable-libnotify
     ac_add_options --disable-gstreamer
 EOF
-    mkdir $SRC/mozilla-release/js/src/.deps
 
-    ./configure
-    make
-    install -d \
-       $PKG$MOZILLA_FIVE_HOME \
-       $PKG/usr/bin \
-       $PKG/usr/share/idl/firefox \
-       $PKG/usr/include/firefox
-
-    cp -rL dist/bin/* $PKG$MOZILLA_FIVE_HOME
-    ln -s /usr/lib/firefox/firefox $PKG/usr/bin/firefox
-
-    # devel stuff
-    cp -frL dist/idl/* $PKG/usr/share/idl/firefox/
-    cp -frL dist/include/* $PKG/usr/include/firefox/
-
+    make -f client.mk build
+    make -f client.mk DESTDIR=$PKG install
+ 
     install -d $PKG/etc/ld.so.conf.d
-    echo "/usr/lib/$name" > $PKG/etc/ld.so.conf.d/$name.conf
+    echo "/usr/lib/firefox" > $PKG/etc/ld.so.conf.d/$name.conf
 
-    # cleanup
-    find $PKG -type f -empty -delete
-
-    # desktop stuff
     mkdir -p $PKG/usr/share/pixmaps
     ln -s /usr/lib/firefox/browser/chrome/browser/content/branding/icon48.png $PKG/usr/share/pixmaps/firefox_default48.png
     install -D -m 0644 $SRC/firefox.desktop $PKG/usr/share/applications/firefox.desktop
