@@ -1667,6 +1667,7 @@ drwxr-xr-x	root/root	usr/include/firefox/mozilla/threads/
 -rw-r--r--	root/root	usr/include/firefox/mozilla/unused.h
 -rw-r--r--	root/root	usr/include/firefox/mozmemory.h
 -rw-r--r--	root/root	usr/include/firefox/mozmemory_wrap.h
+-rw-r--r--	root/root	usr/include/firefox/mozpngconf.h
 drwxr-xr-x	root/root	usr/include/firefox/mtransport/
 -rw-r--r--	root/root	usr/include/firefox/mtransport/dtlsidentity.h
 -rw-r--r--	root/root	usr/include/firefox/mtransport/m_cpp_utils.h
@@ -3390,6 +3391,8 @@ drwxr-xr-x	root/root	usr/include/firefox/opus/
 -rw-r--r--	root/root	usr/include/firefox/opus/opus_types.h
 -rw-r--r--	root/root	usr/include/firefox/ots-memory-stream.h
 -rw-r--r--	root/root	usr/include/firefox/pldhash.h
+-rw-r--r--	root/root	usr/include/firefox/png.h
+-rw-r--r--	root/root	usr/include/firefox/pngconf.h
 drwxr-xr-x	root/root	usr/include/firefox/protobuf/
 drwxr-xr-x	root/root	usr/include/firefox/protobuf/google/
 drwxr-xr-x	root/root	usr/include/firefox/protobuf/google/protobuf/
