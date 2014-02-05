@@ -4,8 +4,8 @@
 # Depends on: harfbuzz, glib, xorg-libsm, xorg-libxext, xorg-libxft, gobject-introspection
 
 name=pango
-version=1.36.1
-release=2
+version=1.36.2
+release=1
 source=(http://download.gnome.org/sources/$name/1.36/$name-$version.tar.xz \
         pango.modules)
 
