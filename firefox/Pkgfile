@@ -5,7 +5,7 @@
  
 name=firefox
 version=27.0
-release=2
+release=3
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
 	firefox-install-dir.patch firefox.desktop)
  
@@ -67,6 +67,6 @@ EOF
     echo "/usr/lib/firefox" > $PKG/etc/ld.so.conf.d/$name.conf
 
     mkdir -p $PKG/usr/share/pixmaps
-    ln -s /usr/lib/firefox/browser/chrome/browser/content/branding/icon48.png $PKG/usr/share/pixmaps/firefox_default48.png
+    ln -s /usr/lib/firefox/browser/chrome/icons/default/default48.png $PKG/usr/share/pixmaps/firefox_default48.png
     install -D -m 0644 $SRC/firefox.desktop $PKG/usr/share/applications/firefox.desktop
 }
