@@ -1,0 +1,15 @@
+# Description: manipulate efi boot managers
+# URL: http://linux.dell.com/efibootmgr/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+
+name=efibootmgr
+version=0.6.0
+release=1
+source=(http://linux.dell.com/efibootmgr/$name-$version/$name-$version.tar.gz)
+
+build() {
+  cd $name-$version
+	make
+  install -D src/efibootmgr/efibootmgr $PKG/usr/sbin/efibootmgr
+  install -D src/man/man8/efibootmgr.8 $PKG/usr/man/man8/efibootmgr.8
+}
