@@ -1,7 +1,7 @@
 # Description: Library for manipulation of TIFF (Tag Image File Format) images
 # URL:         http://www.remotesensing.org/libtiff/
 # Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on:  libjpeg, zlib
+# Depends on:  libjpeg-turbo, zlib
 
 name=libtiff
 version=4.0.3
