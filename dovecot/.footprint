@@ -223,6 +223,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ioloop-notify-fd.h
 -rw-r--r--	root/root	usr/include/dovecot/ioloop-private.h
 -rw-r--r--	root/root	usr/include/dovecot/ioloop.h
+-rw-r--r--	root/root	usr/include/dovecot/iostream-lz4.h
 -rw-r--r--	root/root	usr/include/dovecot/iostream-openssl.h
 -rw-r--r--	root/root	usr/include/dovecot/iostream-private.h
 -rw-r--r--	root/root	usr/include/dovecot/iostream-rawlog-private.h

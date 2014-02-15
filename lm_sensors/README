@@ -4,16 +4,10 @@ README for lm_sensors
 
 IMPORTANT NOTES
 
-  * The libsensors configuration file (/etc/sensors.conf) is never overwritten
-  by our installation process, so that you won't lose your personal settings
-  in that file. You still can get our latest default config file in 
-  etc/sensors.conf.eg and manually copy it to /etc/sensors.conf if you want.
-  You will then want to edit it to fit your needs again.
-
-  * The format of /etc/sensors.conf changed with lm-sensors >= 3.0.0.
-  If you have a custom configuration file using the old format, you can convert
-  it using the sensors-conf-convert script. Otherwise just overwrite your old
-  configuration file with the new default one.
+  * The format of /usr/etc/sensors3.conf changed with lm-sensors 3.0.0.
+  If you have a custom configuration file using the old format, you
+  can convert it using the sensors-conf-convert script. Otherwise just
+  overwrite your old configuration file with the new default one.
 
 
 KERNEL CONFIGURATION

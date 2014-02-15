@@ -4,7 +4,7 @@
 # Depends on:  libpcap, ncurses
 
 name=iftop
-version=1.0pre2
+version=1.0pre4
 release=1
 source=(http://www.ex-parrot.com/~pdw/iftop/download/$name-$version.tar.gz)
 

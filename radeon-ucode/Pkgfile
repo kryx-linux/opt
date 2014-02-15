@@ -4,12 +4,11 @@
 # Depends on:
  
 name=radeon-ucode
-version=20131124
+version=20140209
 release=1
 source=(http://crux.nu/~rehabdoll/distfiles/$name-$version.tar.xz )
 
 build() {
     mkdir -p $PKG/lib/firmware
-    #cp -r $name $PKG/lib/firmware/radeon
     mv $name $PKG/lib/firmware/radeon
 }

@@ -1,12 +1,12 @@
 # Description: Replacement for Berkeley Mail and System V mailx command
 # URL:         http://nail.sourceforge.net/ 
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  openssl
+# Depends on:  openssl readline
 
 name=mailx
-version=14.4.5
+version=14.5.2
 release=1
-source=(http://downloads.sourceforge.net/project/s-nail/s-nail-${version//./_}.tar.gz)
+source=(http://downloads.sourceforge.net/project/s-nail/s-nail-${version//./_}.tar.xz)
 
 build() {
     cd s-nail-$version
@@ -19,7 +19,7 @@ build() {
          SYSCONFRC=/usr/etc/mailx.rc \
          MAILSPOOL=/var/spool/mail \
          DESTDIR=$PKG \
-         WANT_LINE_EDITOR=0
+         WANT_READLINE=1
 
     ln -s mailx   $PKG/usr/bin/Mail
     ln -s mailx   $PKG/usr/bin/mail
