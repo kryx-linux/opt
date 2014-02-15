@@ -308,13 +308,7 @@ drwxr-xr-x	root/root	usr/include/firefox/ipc/
 -rw-r--r--	root/root	usr/include/firefox/ipc/IPCMessageUtils.h
 -rw-r--r--	root/root	usr/include/firefox/ipc/nsGUIEventIPC.h
 -rw-r--r--	root/root	usr/include/firefox/jArray.h
--rw-r--r--	root/root	usr/include/firefox/jconfig.h
 -rw-r--r--	root/root	usr/include/firefox/jemalloc_types.h
--rw-r--r--	root/root	usr/include/firefox/jerror.h
--rw-r--r--	root/root	usr/include/firefox/jinclude.h
--rw-r--r--	root/root	usr/include/firefox/jmorecfg.h
--rw-r--r--	root/root	usr/include/firefox/jpegint.h
--rw-r--r--	root/root	usr/include/firefox/jpeglib.h
 -rw-r--r--	root/root	usr/include/firefox/js-config.h
 -rw-r--r--	root/root	usr/include/firefox/js.msg
 drwxr-xr-x	root/root	usr/include/firefox/js/
@@ -1667,7 +1661,6 @@ drwxr-xr-x	root/root	usr/include/firefox/mozilla/threads/
 -rw-r--r--	root/root	usr/include/firefox/mozilla/unused.h
 -rw-r--r--	root/root	usr/include/firefox/mozmemory.h
 -rw-r--r--	root/root	usr/include/firefox/mozmemory_wrap.h
--rw-r--r--	root/root	usr/include/firefox/mozpngconf.h
 drwxr-xr-x	root/root	usr/include/firefox/mtransport/
 -rw-r--r--	root/root	usr/include/firefox/mtransport/dtlsidentity.h
 -rw-r--r--	root/root	usr/include/firefox/mtransport/m_cpp_utils.h
@@ -3391,8 +3384,6 @@ drwxr-xr-x	root/root	usr/include/firefox/opus/
 -rw-r--r--	root/root	usr/include/firefox/opus/opus_types.h
 -rw-r--r--	root/root	usr/include/firefox/ots-memory-stream.h
 -rw-r--r--	root/root	usr/include/firefox/pldhash.h
--rw-r--r--	root/root	usr/include/firefox/png.h
--rw-r--r--	root/root	usr/include/firefox/pngconf.h
 drwxr-xr-x	root/root	usr/include/firefox/protobuf/
 drwxr-xr-x	root/root	usr/include/firefox/protobuf/google/
 drwxr-xr-x	root/root	usr/include/firefox/protobuf/google/protobuf/
