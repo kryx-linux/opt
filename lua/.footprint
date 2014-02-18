@@ -10,8 +10,8 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/lualib.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/liblua.a
--rw-r--r--	root/root	usr/lib/liblua.so
--rw-r--r--	root/root	usr/lib/liblua.so.5.2
+lrwxrwxrwx	root/root	usr/lib/liblua.so -> liblua.so.5.2
+lrwxrwxrwx	root/root	usr/lib/liblua.so.5.2 -> liblua.so.5.2.3
 -rw-r--r--	root/root	usr/lib/liblua.so.5.2.3
 drwxr-xr-x	root/root	usr/lib/lua/
 drwxr-xr-x	root/root	usr/lib/lua/5.2/
