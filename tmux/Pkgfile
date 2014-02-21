@@ -4,7 +4,7 @@
 # Depends on:  ncurses libevent
 
 name=tmux
-version=1.8
+version=1.9
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
 
