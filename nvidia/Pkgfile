@@ -4,7 +4,7 @@
 # Depends on: gtk gl-select
 
 name=nvidia
-version=331.38
+version=331.49
 release=1
 source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run)
 
@@ -20,16 +20,23 @@ build() {
     install -m 0755 libnvidia-cfg.so.$version      $PKG/usr/lib
     install -m 0755 libnvidia-compiler.so.$version $PKG/usr/lib
     install -m 0755 libnvidia-encode.so.$version   $PKG/usr/lib
+    install -m 0755 libnvidia-fbc.so.$version      $PKG/usr/lib
     install -m 0755 libnvidia-glcore.so.$version   $PKG/usr/lib
+    install -m 0755 libnvidia-ifr.so.$version      $PKG/usr/lib
     install -m 0755 libnvidia-ml.so.$version       $PKG/usr/lib
     install -m 0755 libnvidia-opencl.so.$version   $PKG/usr/lib
     install -m 0755 libnvidia-tls.so.$version      $PKG/usr/lib
     install -m 0755 libnvcuvid.so.$version         $PKG/usr/lib
     install -m 0755 tls/libnvidia-tls.so.$version  $PKG/usr/lib/tls
+    install -m 0755 libvdpau.so.$version           $PKG/usr/lib
     install -m 0755 libvdpau_nvidia.so.$version    $PKG/usr/lib/vdpau
+    install -m 0755 libvdpau_trace.so.$version     $PKG/usr/lib/vdpau
     
     ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so.1
     ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so
+
+    ln -s libvdpau_trace.so.$version $PKG/usr/lib/vdpau/libvdpau_trace.so.1
+    ln -s libvdpau_trace.so.$version $PKG/usr/lib/vdpau/libvdpau_trace.so
 
     ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so.1
     ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so
@@ -42,8 +49,10 @@ build() {
     
     # nvidia programs amd man-pages
     install -d $PKG/usr/{bin,man/man1}
-    install -m 0755 nvidia-{settings,smi,xconfig}      $PKG/usr/bin
-    install -m 0644 nvidia-{settings,smi,xconfig}.1.gz $PKG/usr/man/man1
+    install -m 0755 nvidia-{debugdump,persistenced,settings,smi,xconfig} \
+        $PKG/usr/bin
+    install -m 0644 nvidia-{persistenced,settings,smi,xconfig}.1.gz \
+        $PKG/usr/man/man1
 
     # desktop file and icon
     install -d $PKG/usr/share/{applications,pixmaps}
