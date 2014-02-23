@@ -885,7 +885,9 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/cscript.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/ctapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ctl3d32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/d2d1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3d10.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/d3d10_1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3d10core.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3d11.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3d8.dll.so
@@ -964,6 +966,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dpnet.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpnhpast.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpnlobby.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dpnsvr.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpwsockx.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/drmclien.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dsound.dll.so
@@ -1081,7 +1084,9 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/cscript.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ctapi32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ctl3d32.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/d2d1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d10.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d10_1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d10core.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d11.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d8.dll
@@ -1160,6 +1165,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnet.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnhpast.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnlobby.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnsvr.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpwsockx.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/drmclien.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dsound.dll
@@ -1563,7 +1569,9 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libcryptnet.def
 -rw-r--r--	root/root	usr/lib/wine/libcryptui.def
 -rw-r--r--	root/root	usr/lib/wine/libctl3d32.def
+-rw-r--r--	root/root	usr/lib/wine/libd2d1.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d10.def
+-rw-r--r--	root/root	usr/lib/wine/libd3d10_1.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d10core.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d8.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d9.def
@@ -1707,6 +1715,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libwsock32.def
 -rw-r--r--	root/root	usr/lib/wine/libwtsapi32.def
 -rw-r--r--	root/root	usr/lib/wine/libxinput.def
+-rw-r--r--	root/root	usr/lib/wine/libxmllite.def
 -rwxr-xr-x	root/root	usr/lib/wine/loadperf.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/localspl.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/localui.dll.so
@@ -2094,7 +2103,9 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/ctl3d.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ctl3d32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ctl3dv2.dll16.so
+-rwxr-xr-x	root/root	usr/lib32/wine/d2d1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3d10.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/d3d10_1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3d10core.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3d11.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3d8.dll.so
@@ -2176,6 +2187,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnet.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnhpast.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnlobby.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/dpnsvr.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpwsockx.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/drmclien.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dsound.dll.so
@@ -2299,7 +2311,9 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ctl3d.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ctl3d32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ctl3dv2.dll16
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/d2d1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d10.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d10_1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d10core.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d11.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d8.dll
@@ -2381,6 +2395,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnet.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnhpast.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnlobby.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnsvr.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpwsockx.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/drmclien.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dsound.dll
@@ -2843,7 +2858,9 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libcryptnet.def
 -rw-r--r--	root/root	usr/lib32/wine/libcryptui.def
 -rw-r--r--	root/root	usr/lib32/wine/libctl3d32.def
+-rw-r--r--	root/root	usr/lib32/wine/libd2d1.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d10.def
+-rw-r--r--	root/root	usr/lib32/wine/libd3d10_1.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d10core.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d8.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d9.def
@@ -2989,6 +3006,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libwsock32.def
 -rw-r--r--	root/root	usr/lib32/wine/libwtsapi32.def
 -rw-r--r--	root/root	usr/lib32/wine/libxinput.def
+-rw-r--r--	root/root	usr/lib32/wine/libxmllite.def
 -rwxr-xr-x	root/root	usr/lib32/wine/loadperf.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/localspl.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/localui.dll.so
