@@ -4,14 +4,14 @@
 # Depends on:  zlib
 
 name=libpng
-version=1.6.7
+version=1.6.9
 release=1
 source=(http://download.sourceforge.net/$name/$name-$version.tar.xz \
-        http://downloads.sourceforge.net/project/libpng-apng/libpng16/$version/$name-1.6.7-apng.patch.gz)
+        http://downloads.sourceforge.net/project/libpng-apng/libpng16/$version/$name-1.6.9-apng.patch.gz)
 
 build() {
     cd $name-$version
-    zcat $SRC/$name-1.6.7-apng.patch.gz | patch -p1
+    zcat $SRC/$name-1.6.9-apng.patch.gz | patch -p1
     ./configure --prefix=/usr --mandir=/usr/man
 
     make
