@@ -4,9 +4,9 @@
 # Depends on:  ncurses libevent
 
 name=tmux
-version=1.9
+version=1.9a
 release=1
-source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
+source=(http://downloads.sourceforge.net/project/$name/$name/$name-1.9/$name-$version.tar.gz)
 
 build() {
     cd $name-$version

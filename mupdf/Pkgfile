@@ -5,15 +5,16 @@
 
 name=mupdf
 version=1.3
-release=1
+release=2
 source=(https://mupdf.googlecode.com/files/$name-$version-source.tar.gz
-        $name-sys_curl.patch)
+        $name-sys_curl.patch $name-694957.patch)
 
 build() {
     cd $name-$version-source
     
     patch -p1 -i $SRC/$name-sys_curl.patch
-    
+    patch -p1 -i $SRC/$name-694957.patch
+
     rm -r thirdparty/{freetype*,jpeg*,zlib,curl}
     make build=release 
     make prefix=$PKG/usr mandir=$PKG/usr/man install
