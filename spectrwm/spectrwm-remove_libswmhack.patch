@@ -1,13 +1,15 @@
-diff -Nru spectrwm-2.4.0.orig/linux/Makefile spectrwm-2.4.0/linux/Makefile
---- spectrwm-2.4.0.orig/linux/Makefile	2013-11-27 12:41:41.935783480 +0100
-+++ spectrwm-2.4.0/linux/Makefile	2013-11-27 12:44:47.562396671 +0100
-@@ -1,5 +1,5 @@
+diff -Nru spectrwm-2.5.0.orig/linux/Makefile spectrwm-2.5.0/linux/Makefile
+--- spectrwm-2.5.0.orig/linux/Makefile	2014-02-27 10:30:41.708091165 +0100
++++ spectrwm-2.5.0/linux/Makefile	2014-02-27 10:32:12.751479280 +0100
+@@ -6,7 +6,7 @@
+ LVERS= $(shell . ../lib/shlib_version; echo $$major.$$minor)
+ 
  CFLAGS+= -std=c99 -Wmissing-prototypes -Wall -Wextra -Wshadow -Wno-uninitialized -g
--CFLAGS+= -D_GNU_SOURCE -I. -I/usr/include/freetype2 -DSWM_LIB=\"libswmhack.so.$(LVERS)\"
+-CFLAGS+= -D_GNU_SOURCE -I. -I/usr/include/freetype2 -DSWM_LIB=\"$(LIBDIR)/libswmhack.so.$(LVERS)\"
 +CFLAGS+= -D_GNU_SOURCE -I. -I/usr/include/freetype2 
  LDADD+= -lX11 -lX11-xcb -lxcb -lxcb-icccm -lxcb-randr -lxcb-keysyms -lxcb-util -lxcb-xtest -lXft -lXcursor
  
- PREFIX?= /usr/local
+ CC?= cc
 @@ -16,7 +16,7 @@
  CFLAGS+= -DSPECTRWM_BUILDSTR=\"$(BUILDVERSION)\"
  endif
@@ -33,10 +35,10 @@ diff -Nru spectrwm-2.4.0.orig/linux/Makefile spectrwm-2.4.0/linux/Makefile
  
  clean:
  	rm -f spectrwm *.o *.so libswmhack.so.* spectrwm.c swm_hack.c version.h
-diff -Nru spectrwm-2.4.0.orig/spectrwm.c spectrwm-2.4.0/spectrwm.c
---- spectrwm-2.4.0.orig/spectrwm.c	2013-11-27 12:41:41.935783480 +0100
-+++ spectrwm-2.4.0/spectrwm.c	2013-11-27 12:50:27.810081824 +0100
-@@ -273,9 +273,9 @@
+diff -Nru spectrwm-2.5.0.orig/spectrwm.c spectrwm-2.5.0/spectrwm.c
+--- spectrwm-2.5.0.orig/spectrwm.c	2014-02-27 10:30:41.708091165 +0100
++++ spectrwm-2.5.0/spectrwm.c	2014-02-27 10:31:08.557124812 +0100
+@@ -299,9 +299,9 @@
  #define SWM_CONF_DEFAULT	(0)
  #define SWM_CONF_KEYMAPPING	(1)
  
@@ -48,7 +50,7 @@ diff -Nru spectrwm-2.4.0.orig/spectrwm.c spectrwm-2.4.0/spectrwm.c
  
  char			**start_argv;
  xcb_atom_t		a_state;
-@@ -3117,7 +3117,7 @@
+@@ -3317,7 +3317,7 @@
  
  	close(xcb_get_file_descriptor(conn));
  
