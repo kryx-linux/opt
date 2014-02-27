@@ -6,7 +6,7 @@
 name=stunnel
 version=4.56
 release=1
-source=(ftp://ftp.stunnel.org/stunnel/archive/4.x/$name-$version.tar.gz \
+source=(https://www.stunnel.org/downloads/$name-$version.tar.gz \
         $name-config.patch $name)
 
 build () {
