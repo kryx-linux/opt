@@ -1,15 +1,20 @@
 # Description: A library and frontend to manipulate partition tables
 # URL: http://www.gnu.org/software/parted/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: libdevmapper, readline, eudev, util-linux
+# Depends on: libdevmapper, readline, udev, util-linux
 
 name=parted
 version=3.1
-release=1
-source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
+release=2
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
+	$name-$version-readline-6.3.patch)
 
 build() {
 	cd $name-$version
+
+	# http://article.gmane.org/gmane.comp.gnu.parted.bugs/11261	
+	patch -p1 -i $SRC/$name-$version-readline-6.3.patch
+	
 	./configure --prefix=/usr \
 		--mandir=/usr/man
 	make
