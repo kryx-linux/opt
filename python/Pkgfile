@@ -5,12 +5,15 @@
 
 name=python
 version=2.7.6
-release=1
+release=2
 source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.xz \
-        pyconfig.h)
+        pyconfig.h $name-$version-readline-6.3.patch)
 
 build () {
     cd Python-$version
+
+    # http://bugs.python.org/issue20374
+    patch -p1 -i $SRC/$name-$version-readline-6.3.patch
 
     # set OPT to the python default without -O3
     # our CFLAGS are used as well
