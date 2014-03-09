@@ -4,9 +4,9 @@
 # Depends on:  openssl tcp_wrappers zlib
 
 name=stunnel
-version=4.56
+version=5.00
 release=1
-source=(http://stunnel.cybermirror.org/archive/4.x/$name-$version.tar.gz \
+source=(http://stunnel.cybermirror.org/archive/5.x/$name-$version.tar.gz \
         $name-config.patch $name)
 
 build () {
@@ -26,6 +26,7 @@ build () {
     install -D -m 0644 doc/stunnel.8 $PKG/usr/man/man8/stunnel.8
     install -D -m 0755 $SRC/stunnel  $PKG/etc/rc.d/stunnel
     install -m 0644 tools/stunnel.conf-sample $PKG/etc/stunnel.conf
+
     install -d $PKG/{var/run,etc/ssl/{certs,keys}}
     install -d -m 770 -o stunnel -g stunnel $PKG/var/run/stunnel
     touch $PKG/etc/ssl/{certs/stunnel.crt,keys/stunnel.key}

@@ -1,18 +1,18 @@
-diff -Nru stunnel-4.50.orig/src/Makefile.in stunnel-4.50/src/Makefile.in
---- stunnel-4.50.orig/src/Makefile.in	2011-12-04 09:43:44.928367692 +0100
-+++ stunnel-4.50/src/Makefile.in	2011-12-04 09:44:40.733021677 +0100
-@@ -271,7 +271,7 @@
+diff -Nru stunnel-5.00.orig/src/Makefile.in stunnel-5.00/src/Makefile.in
+--- stunnel-5.00.orig/src/Makefile.in	2014-03-07 10:30:11.982768737 +0100
++++ stunnel-5.00/src/Makefile.in	2014-03-07 10:31:17.433779070 +0100
+@@ -310,7 +310,7 @@
  
  # Additional preprocesor definitions
  stunnel_CPPFLAGS = -I/usr/kerberos/include -I$(SSLDIR)/include \
--	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' \
-+	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"' \
- 	-DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
+-	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"'
++	-DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"'
  
  # Win32 executable
-diff -Nru stunnel-4.50.orig/tools/stunnel.conf-sample.in stunnel-4.50/tools/stunnel.conf-sample.in
---- stunnel-4.50.orig/tools/stunnel.conf-sample.in	2011-12-04 09:43:44.931700905 +0100
-+++ stunnel-4.50/tools/stunnel.conf-sample.in	2011-12-04 09:48:22.478352458 +0100
+ EXTRA_DIST = make.bat makece.bat makew32.bat mingw.mak evc.mak vc.mak \
+diff -Nru stunnel-5.00.orig/tools/stunnel.conf-sample.in stunnel-5.00/tools/stunnel.conf-sample.in
+--- stunnel-5.00.orig/tools/stunnel.conf-sample.in	2014-03-07 10:30:11.986101953 +0100
++++ stunnel-5.00/tools/stunnel.conf-sample.in	2014-03-07 10:30:40.365094717 +0100
 @@ -9,25 +9,33 @@
  
  ; A copy of some devices and system files is needed within the chroot jail
