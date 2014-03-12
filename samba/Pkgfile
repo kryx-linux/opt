@@ -4,15 +4,15 @@
 # Depends on:  ncurses openssl readline zlib tdb talloc libcap acl libaio popt
 
 name=samba
-version=4.1.5
-release=2
+version=4.1.6
+release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
-        samba $name-$version-readline-6.3.patch)
+        samba $name-4.1.5-readline-6.3.patch)
 
 build () {
     cd $name-$version
 
-    patch -p1 -i $SRC/$name-$version-readline-6.3.patch
+    patch -p1 -i $SRC/$name-4.1.5-readline-6.3.patch
 
     local JOBS=$(awk 'BEGIN{RS="-j|--jobs="} NR==2 {print $1}' <<< $MAKEFLAGS)
     test -n "$JOBS" && export JOBS="$JOBS"

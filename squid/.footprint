@@ -45,6 +45,7 @@ drwxr-xr-x	root/root	usr/lib/squid/
 -rwxr-xr-x	root/root	usr/lib/squid/negotiate_wrapper_auth
 -rwxr-xr-x	root/root	usr/lib/squid/ntlm_fake_auth
 -rwxr-xr-x	root/root	usr/lib/squid/ntlm_smb_lm_auth
+-rwxr-xr-x	root/root	usr/lib/squid/storeid_file_rewrite
 -rwxr-xr-x	root/root	usr/lib/squid/unlinkd
 -rwxr-xr-x	root/root	usr/lib/squid/url_fake_rewrite
 -rwxr-xr-x	root/root	usr/lib/squid/url_fake_rewrite.sh
@@ -66,6 +67,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/ext_wbinfo_group_acl.8.gz
 -rw-r--r--	root/root	usr/man/man8/log_db_daemon.8.gz
 -rw-r--r--	root/root	usr/man/man8/squid.8.gz
+-rw-r--r--	root/root	usr/man/man8/storeid_file_rewrite.8.gz
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/squid
 drwxr-xr-x	root/root	usr/share/
