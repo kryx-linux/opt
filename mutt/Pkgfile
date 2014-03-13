@@ -4,9 +4,9 @@
 # Depends on:  gdbm ncurses openssl zlib
 
 name=mutt
-version=1.5.22
+version=1.5.23
 release=1
-source=(ftp://ftp.mutt.org/mutt/devel/$name-$version.tar.gz)
+source=(ftp://ftp.mutt.org/mutt/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
