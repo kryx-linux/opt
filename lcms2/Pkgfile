@@ -1,10 +1,10 @@
 # Description: Little CMS intends to be an small-footprint color management engine
 # URL:         http://www.littlecms.com/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  zlib, libtiff, libjpeg
+# Depends on:  zlib, xz, libtiff, libjpeg
 
 name=lcms2
-version=2.5
+version=2.6
 release=1
 source=(http://downloads.sourceforge.net/project/lcms/lcms/$version/$name-$version.tar.gz)
 
