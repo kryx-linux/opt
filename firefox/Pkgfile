@@ -4,8 +4,8 @@
 # Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
  
 name=firefox
-version=27.0
-release=3
+version=28.0
+release=1
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
 	firefox-install-dir.patch firefox.desktop)
  
@@ -58,6 +58,7 @@ cat <<- EOF > .mozconfig
     ac_add_options --disable-necko-wifi
     ac_add_options --disable-libnotify
     ac_add_options --disable-gstreamer
+    ac_add_options --disable-pulseaudio
 EOF
 
     make -f client.mk build
