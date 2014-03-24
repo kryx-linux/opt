@@ -6,7 +6,7 @@
 name=sane
 version=1.0.24
 release=1
-source=(https://alioth.debian.org/frs/download.php/file/3958/$name-backends-$version.tar.gz)
+source=(http://ftp.uni-erlangen.de/pub/mirrors/gentoo/distfiles/$name-backends-$version.tar.gz)
 
 build () {
     cd $name-backends-$version
