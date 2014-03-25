@@ -1,15 +1,14 @@
 # Description: MySQL interface for Python
 # URL:         http://sourceforge.net/projects/mysql-python/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  distribute, mysql
+# Depends on:  setuptools mysql
 
 name=mysql-python
-version=1.2.4
-release=2
-source=(http://pypi.python.org/packages/source/M/MySQL-python/MySQL-python-$version.zip)
+version=1.2.5
+release=1
+source=(https://pypi.python.org/packages/source/M/MySQL-python/MySQL-python-$version.zip)
 
 build () {
     cd MySQL-python-$version
-    python setup.py install --root=$PKG --prefix=/usr
-    chmod -R go-w $PKG
+    /usr/bin/python setup.py install --root=$PKG --prefix=/usr
 }
