@@ -4,8 +4,8 @@
 # Depends on:  chromium
 
 name=chromium-pdf
-version=27.0.1453.116
-release=2
+version=33.0.1750.152
+release=1
 source=()
 
 build() {
