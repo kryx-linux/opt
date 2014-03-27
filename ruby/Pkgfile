@@ -5,11 +5,14 @@
 
 name=ruby
 version=2.1.1
-release=1
-source=(ftp://ftp.ruby-lang.org/pub/$name/2.1/$name-$version.tar.bz2)
+release=2
+source=(ftp://ftp.ruby-lang.org/pub/$name/2.1/$name-$version.tar.bz2
+        $name-$version-readline-6.3.patch)
 
 build () {
     cd $name-$version
+
+    patch -p0 -i $SRC/$name-$version-readline-6.3.patch 
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
