@@ -101,6 +101,11 @@ lrwxrwxrwx	root/root	usr/lib/libsvn_ra-1.so.0 -> libsvn_ra-1.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libsvn_ra_local-1.so -> libsvn_ra_local-1.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libsvn_ra_local-1.so.0 -> libsvn_ra_local-1.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libsvn_ra_local-1.so.0.0.0
+-rw-r--r--	root/root	usr/lib/libsvn_ra_serf-1.a
+-rwxr-xr-x	root/root	usr/lib/libsvn_ra_serf-1.la
+lrwxrwxrwx	root/root	usr/lib/libsvn_ra_serf-1.so -> libsvn_ra_serf-1.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libsvn_ra_serf-1.so.0 -> libsvn_ra_serf-1.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libsvn_ra_serf-1.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libsvn_ra_svn-1.a
 -rwxr-xr-x	root/root	usr/lib/libsvn_ra_svn-1.la
 lrwxrwxrwx	root/root	usr/lib/libsvn_ra_svn-1.so -> libsvn_ra_svn-1.so.0.0.0
