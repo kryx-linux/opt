@@ -5,16 +5,14 @@
 # Depends on: freetype, expat
 
 name=fontconfig
-version=2.11.0
+version=2.11.1
 release=1
 source=(http://fontconfig.org/release/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
 
-    sed -e 's|^confdir=.*|confdir=@baseconfigdir@|' -i $name.pc.in
-
-    ./configure --prefix=/usr \
+     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
                 --mandir=/usr/man \
                 --localstatedir=/var \
