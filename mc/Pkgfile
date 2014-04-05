@@ -4,15 +4,12 @@
 # Depends on:  ncurses glib
 
 name=mc
-version=4.8.11
+version=4.8.12
 release=1
-source=(http://ftp.osuosl.org/pub/midnightcommander/$name-$version.tar.xz
-        $name-$version-ncurses_build_fix.patch)
+source=(http://ftp.osuosl.org/pub/midnightcommander/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
-
-    patch -p0 -i $SRC/$name-$version-ncurses_build_fix.patch
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
