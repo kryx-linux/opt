@@ -5,9 +5,9 @@
 # Depends on: libdevmapper,  util-linux, libgcrypt, popt
 
 name=cryptsetup
-version=1.6.3
+version=1.6.4
 release=1
-source=(http://$name.googlecode.com/files/$name-$version.tar.bz2)
+source=(https://kernel.org/pub/linux/utils/$name/v1.6/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
