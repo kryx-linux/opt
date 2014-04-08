@@ -29,6 +29,11 @@ build() {
       --enable-restricted-r \
       --enable-cap
 
+    # fix a bug in recent glibc versions (2.16)
+    sed -e '/#include "attr.mdh"/d;/#include "attr.pro/d' \
+        -e 's|\(#include <sys/xattr.h>\)|\1\n#include "attr.mdh"\n#include "attr.pro"|g' \
+        -i Src/Modules/attr.c
+
     make
     make DESTDIR=$PKG install 
 
