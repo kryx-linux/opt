@@ -6,7 +6,7 @@
 name=mupdf
 version=1.4rc1
 release=1
-source=(https://mupdf.googlecode.com/files/$name-$version-source.tar.gz
+source=(http://mupdf.com/download/$name-$version-source.tar.gz
         $name-sys_curl.patch)
 
 build() {
