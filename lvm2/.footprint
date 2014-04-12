@@ -64,6 +64,8 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man5/
 -r--r--r--	root/root	usr/man/man5/lvm.conf.5.gz
+drwxr-xr-x	root/root	usr/man/man7/
+-r--r--r--	root/root	usr/man/man7/lvmthin.7.gz
 drwxr-xr-x	root/root	usr/man/man8/
 -r--r--r--	root/root	usr/man/man8/blkdeactivate.8.gz
 -r--r--r--	root/root	usr/man/man8/fsadm.8.gz
@@ -72,6 +74,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -r--r--r--	root/root	usr/man/man8/lvcreate.8.gz
 -r--r--r--	root/root	usr/man/man8/lvdisplay.8.gz
 -r--r--r--	root/root	usr/man/man8/lvextend.8.gz
+-r--r--r--	root/root	usr/man/man8/lvm-dumpconfig.8.gz
 -r--r--r--	root/root	usr/man/man8/lvm.8.gz
 -r--r--r--	root/root	usr/man/man8/lvmchange.8.gz
 -r--r--r--	root/root	usr/man/man8/lvmconf.8.gz
