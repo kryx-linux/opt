@@ -34,6 +34,7 @@ drwxr-xr-x	root/root	usr/lib/postfix/
 -rwxr-xr-x	root/root	usr/lib/postfix/bounce
 -rwxr-xr-x	root/root	usr/lib/postfix/cleanup
 -rwxr-xr-x	root/root	usr/lib/postfix/discard
+-rwxr-xr-x	root/root	usr/lib/postfix/dnsblog
 -rwxr-xr-x	root/root	usr/lib/postfix/error
 -rwxr-xr-x	root/root	usr/lib/postfix/flush
 -rwxr-xr-x	root/root	usr/lib/postfix/lmtp
@@ -50,6 +51,7 @@ drwxr-xr-x	root/root	usr/lib/postfix/
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-script
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-wrapper
 -rwxr-xr-x	root/root	usr/lib/postfix/postmulti-script
+-rwxr-xr-x	root/root	usr/lib/postfix/postscreen
 -rwxr-xr-x	root/root	usr/lib/postfix/proxymap
 -rwxr-xr-x	root/root	usr/lib/postfix/qmgr
 -rwxr-xr-x	root/root	usr/lib/postfix/qmqpd
@@ -59,6 +61,7 @@ drwxr-xr-x	root/root	usr/lib/postfix/
 -rwxr-xr-x	root/root	usr/lib/postfix/smtpd
 -rwxr-xr-x	root/root	usr/lib/postfix/spawn
 -rwxr-xr-x	root/root	usr/lib/postfix/tlsmgr
+-rwxr-xr-x	root/root	usr/lib/postfix/tlsproxy
 -rwxr-xr-x	root/root	usr/lib/postfix/trivial-rewrite
 -rwxr-xr-x	root/root	usr/lib/postfix/verify
 -rwxr-xr-x	root/root	usr/lib/postfix/virtual
@@ -98,6 +101,7 @@ drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/postfix-wrapper.5.gz
 -rw-r--r--	root/root	usr/man/man5/regexp_table.5.gz
 -rw-r--r--	root/root	usr/man/man5/relocated.5.gz
+-rw-r--r--	root/root	usr/man/man5/sqlite_table.5.gz
 -rw-r--r--	root/root	usr/man/man5/tcp_table.5.gz
 -rw-r--r--	root/root	usr/man/man5/transport.5.gz
 -rw-r--r--	root/root	usr/man/man5/virtual.5.gz
@@ -107,6 +111,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/cleanup.8.gz
 -rw-r--r--	root/root	usr/man/man8/defer.8.gz
 -rw-r--r--	root/root	usr/man/man8/discard.8.gz
+-rw-r--r--	root/root	usr/man/man8/dnsblog.8.gz
 -rw-r--r--	root/root	usr/man/man8/error.8.gz
 -rw-r--r--	root/root	usr/man/man8/flush.8.gz
 -rw-r--r--	root/root	usr/man/man8/lmtp.8.gz
@@ -115,6 +120,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/oqmgr.8.gz
 -rw-r--r--	root/root	usr/man/man8/pickup.8.gz
 -rw-r--r--	root/root	usr/man/man8/pipe.8.gz
+-rw-r--r--	root/root	usr/man/man8/postscreen.8.gz
 -rw-r--r--	root/root	usr/man/man8/proxymap.8.gz
 -rw-r--r--	root/root	usr/man/man8/qmgr.8.gz
 -rw-r--r--	root/root	usr/man/man8/qmqpd.8.gz
@@ -124,6 +130,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/smtpd.8.gz
 -rw-r--r--	root/root	usr/man/man8/spawn.8.gz
 -rw-r--r--	root/root	usr/man/man8/tlsmgr.8.gz
+-rw-r--r--	root/root	usr/man/man8/tlsproxy.8.gz
 -rw-r--r--	root/root	usr/man/man8/trace.8.gz
 -rw-r--r--	root/root	usr/man/man8/trivial-rewrite.8.gz
 -rw-r--r--	root/root	usr/man/man8/verify.8.gz
