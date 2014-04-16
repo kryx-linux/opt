@@ -7,11 +7,15 @@
  
 name=qemu
 version=1.7.1
-release=1
-source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
+release=2
+source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2 ide-smart.diff)
 
 build() {
+
   cd $name-$version
+
+  patch -p1 -i $SRC/ide-smart.diff
+
   ./configure --prefix=/usr \
       --cc="${CC:=gcc}" \
       --host-cc="${CC:=gcc}" \
