@@ -4,7 +4,7 @@
 # Depends on:  ncurses openssl readline zlib tdb talloc libcap acl libaio popt
 
 name=samba
-version=4.1.6
+version=4.1.7
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
@@ -15,12 +15,15 @@ build () {
     local JOBS=$(awk 'BEGIN{RS="-j|--jobs="} NR==2 {print $1}' <<< $MAKEFLAGS)
     test -n "$JOBS" && export JOBS="$JOBS"
 
+    eval $(perl -V:sitelib)
+
     ./configure --enable-fhs \
                 --prefix=/usr \
                 --localstatedir=/var \
                 --mandir=/usr/man \
                 --sysconfdir=/etc \
-                --with-privatedir=/etc/samba/private
+                --with-privatedir=/etc/samba/private \
+                --with-perl-vendor{arch,lib}="$sitelib"
 
     make
     make DESTDIR=$PKG install
