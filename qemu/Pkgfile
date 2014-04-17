@@ -6,15 +6,13 @@
 # Nice to have: libseccomp libiscsi libusb usbredir
  
 name=qemu
-version=1.7.1
-release=2
-source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2 ide-smart.diff)
+version=2.0.0
+release=1
+source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2) 
 
 build() {
 
   cd $name-$version
-
-  patch -p1 -i $SRC/ide-smart.diff
 
   ./configure --prefix=/usr \
       --cc="${CC:=gcc}" \
