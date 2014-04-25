@@ -6,7 +6,7 @@
 
 name=bluez
 version=4.101
-release=1
+release=2
 source=(http://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz bluetoothd)
 
 build() {
@@ -38,7 +38,7 @@ build() {
 	# install all available tools and test programs with man pages
 	shopt -s nullglob
 	for i in test/* tools/*; do
-		if [ -x $i ]; then
+		if [ -x $i -a ! -d $i -a ! -x $PKG/usr/bin/${i##*/} ]; then
 			install -D -m 755 $i $PKG/usr/bin/bluez-${i#*/}
 			for j in $i.[1-8]; do
 				install -D -m 644 $j $PKG/usr/man/man${j##*.}/bluez-${j##*/}
