@@ -70,6 +70,12 @@ drwxr-xr-x	root/root	lib/firmware/radeon/
 -rw-r--r--	root/root	lib/firmware/radeon/KAVERI_pfp.bin
 -rw-r--r--	root/root	lib/firmware/radeon/KAVERI_rlc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/KAVERI_sdma.bin
+-rw-r--r--	root/root	lib/firmware/radeon/MULLINS_ce.bin
+-rw-r--r--	root/root	lib/firmware/radeon/MULLINS_me.bin
+-rw-r--r--	root/root	lib/firmware/radeon/MULLINS_mec.bin
+-rw-r--r--	root/root	lib/firmware/radeon/MULLINS_pfp.bin
+-rw-r--r--	root/root	lib/firmware/radeon/MULLINS_rlc.bin
+-rw-r--r--	root/root	lib/firmware/radeon/MULLINS_sdma.bin
 -rw-r--r--	root/root	lib/firmware/radeon/OLAND_ce.bin
 -rw-r--r--	root/root	lib/firmware/radeon/OLAND_mc.bin
 -rw-r--r--	root/root	lib/firmware/radeon/OLAND_mc2.bin
