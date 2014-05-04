@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=squid
-version=3.4.4
+version=3.4.5
 release=1
 source=(http://www.squid-cache.org/Versions/v3/3.4/$name-$version.tar.xz
         squid)
@@ -31,7 +31,7 @@ build () {
     make all
     make DESTDIR=$PKG install
 
-    rm -r $PKG/{usr/include,var/run}
+    rm -r $PKG/var/run
     find $PKG/usr/share/squid/errors/* -prune ! -name templates | xargs rm -r
 
     install -d -m 0700 -o squid -g squid $PKG/var/{log/squid,squid}
