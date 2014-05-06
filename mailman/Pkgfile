@@ -2,10 +2,10 @@
 # URL: http://www.gnu.org/software/mailman/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Jose V Beneyto, sepen at crux dot nu
-# Depends on: python
+# Depends on: dnspython
 
 name=mailman
-version=2.1.16
+version=2.1.18
 release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tgz \
         $name.rc)

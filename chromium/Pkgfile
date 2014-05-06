@@ -5,13 +5,15 @@
 # Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm
 
 name=chromium
-version=33.0.1750.152
+version=34.0.1847.132
 release=1
 source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.xz \
 	$name.sh rungn.patch)
 
 build() {
   cd $name-$version
+
+  sed '/import find_depot_tools/d' -i build/gyp_chromium
 
   # patch for supplemental_includes
   patch -p0 -i $SRC/rungn.patch

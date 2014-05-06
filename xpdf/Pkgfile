@@ -6,7 +6,7 @@
 
 name=xpdf
 version=3.03
-release=1
+release=2
 source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz)
 
 build() {
@@ -27,4 +27,6 @@ build() {
 
     make
     make install DESTDIR=$PKG
+
+    find $PKG/usr/bin $PKG/usr/man/man1 -iname 'pdf*' -delete
 }

@@ -34,7 +34,7 @@ lrwxrwxrwx	root/root	usr/lib/jdk/bin/ControlPanel -> jcontrol
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jinfo
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jmap
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jmc
--rw-r--r--	root/root	usr/lib/jdk/bin/jmc.ini
+-rwxr-xr-x	root/root	usr/lib/jdk/bin/jmc.ini
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jps
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jrunscript
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jsadebugd
@@ -1168,7 +1168,7 @@ drwxr-xr-x	root/root	usr/lib/jdk/lib/missioncontrol/plugins/org.eclipse.equinox.
 -rw-r--r--	root/root	usr/lib/jdk/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/META-INF/MANIFEST.MF
 -rw-r--r--	root/root	usr/lib/jdk/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/META-INF/eclipse.inf
 -rw-r--r--	root/root	usr/lib/jdk/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/about.html
--rw-r--r--	root/root	usr/lib/jdk/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/eclipse_1502.so
+-rwxr-xr-x	root/root	usr/lib/jdk/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/eclipse_1502.so
 -rw-r--r--	root/root	usr/lib/jdk/lib/missioncontrol/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20120913-144807/launcher.gtk.linux.x86_64.properties
 -rw-r--r--	root/root	usr/lib/jdk/lib/missioncontrol/plugins/org.eclipse.equinox.launcher_1.3.0.v20120522-1813.jar
 -rw-r--r--	root/root	usr/lib/jdk/lib/missioncontrol/plugins/org.eclipse.equinox.p2.artifact.repository_1.1.200.v20120430-1959.jar
