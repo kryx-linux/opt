@@ -4,15 +4,12 @@
 # Depends on:  gdbm libgmp openssl readline zlib libffi libyaml
 
 name=ruby
-version=2.1.1
-release=2
-source=(ftp://ftp.ruby-lang.org/pub/$name/2.1/$name-$version.tar.bz2
-        $name-$version-readline-6.3.patch)
+version=2.1.2
+release=1
+source=(ftp://ftp.ruby-lang.org/pub/$name/2.1/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-
-    patch -p0 -i $SRC/$name-$version-readline-6.3.patch 
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
