@@ -257,6 +257,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/istream-seekable.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-sized.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-tee.h
+-rw-r--r--	root/root	usr/include/dovecot/istream-timeout.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-zlib.h
 -rw-r--r--	root/root	usr/include/dovecot/istream.h
 -rw-r--r--	root/root	usr/include/dovecot/json-parser.h
@@ -368,6 +369,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/message-id.h
 -rw-r--r--	root/root	usr/include/dovecot/message-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/message-part-serialize.h
+-rw-r--r--	root/root	usr/include/dovecot/message-part.h
 -rw-r--r--	root/root	usr/include/dovecot/message-search.h
 -rw-r--r--	root/root	usr/include/dovecot/message-size.h
 -rw-r--r--	root/root	usr/include/dovecot/mkdir-parents.h

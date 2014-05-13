@@ -23,5 +23,22 @@ CONFIGURATION
 
 	# grub-mkconfig > /boot/grub/grub.cfg
 
-	It can also be created manually. A sample grub.cfg file is included in the
-	port.
+	NOTE: For grub-mkconfig to work properly the following conditions should
+	      be met:
+
+	      1) The kernel is expected to be named one of these ways:
+	         /boot/vmlinuz-*
+	         /vmlinuz-*
+	         /boot/kernel-*
+
+	         If the kernel is located somewhere else grub-mkconfig will NOT
+	         find it! For example, '/boot/vmlinuz-3.10.28' is good and
+	         '/boot/linux-3.10.28' would not be found.
+
+	      2) When dual-booting with Linux installations on other partitions
+	         or drives, grub-mkconfig will not find them without the extra
+	         program 'os-prober' installed.
+
+	The configuration file can also be created manually. A sample grub.cfg
+	is included in the port.
+

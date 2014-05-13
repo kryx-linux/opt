@@ -1,6 +1,6 @@
-diff -Nru spectrwm-2.5.0.orig/linux/Makefile spectrwm-2.5.0/linux/Makefile
---- spectrwm-2.5.0.orig/linux/Makefile	2014-02-27 10:30:41.708091165 +0100
-+++ spectrwm-2.5.0/linux/Makefile	2014-02-27 10:32:12.751479280 +0100
+diff -Nru spectrwm-2.5.1.orig/linux/Makefile spectrwm-2.5.1/linux/Makefile
+--- spectrwm-2.5.1.orig/linux/Makefile	2014-05-09 10:02:47.399230659 +0200
++++ spectrwm-2.5.1/linux/Makefile	2014-05-09 10:03:07.311852348 +0200
 @@ -6,7 +6,7 @@
  LVERS= $(shell . ../lib/shlib_version; echo $$major.$$minor)
  
@@ -35,9 +35,9 @@ diff -Nru spectrwm-2.5.0.orig/linux/Makefile spectrwm-2.5.0/linux/Makefile
  
  clean:
  	rm -f spectrwm *.o *.so libswmhack.so.* spectrwm.c swm_hack.c version.h
-diff -Nru spectrwm-2.5.0.orig/spectrwm.c spectrwm-2.5.0/spectrwm.c
---- spectrwm-2.5.0.orig/spectrwm.c	2014-02-27 10:30:41.708091165 +0100
-+++ spectrwm-2.5.0/spectrwm.c	2014-02-27 10:31:08.557124812 +0100
+diff -Nru spectrwm-2.5.1.orig/spectrwm.c spectrwm-2.5.1/spectrwm.c
+--- spectrwm-2.5.1.orig/spectrwm.c	2014-05-09 10:02:47.399230659 +0200
++++ spectrwm-2.5.1/spectrwm.c	2014-05-09 10:03:07.311852348 +0200
 @@ -299,9 +299,9 @@
  #define SWM_CONF_DEFAULT	(0)
  #define SWM_CONF_KEYMAPPING	(1)
@@ -50,7 +50,7 @@ diff -Nru spectrwm-2.5.0.orig/spectrwm.c spectrwm-2.5.0/spectrwm.c
  
  char			**start_argv;
  xcb_atom_t		a_state;
-@@ -3317,7 +3317,7 @@
+@@ -3324,7 +3324,7 @@
  
  	close(xcb_get_file_descriptor(conn));
  
