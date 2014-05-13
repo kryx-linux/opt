@@ -10,23 +10,28 @@ release=1
 source=(http://llvm.org/releases/$version/{$name,cfe}-$version.src.tar.gz)
 
 build() {
-	mv cfe-$version.src $name-$version.src/tools/clang
+  mv cfe-$version.src $name-$version.src/tools/clang
 
-	cd $name-$version.src
+  cd $name-$version.src
 
-	# enable enable-shard and the R600 target for mesa3d
-	./configure --prefix=/usr --without-oprofile --enable-cxx11 \
-		--enable-targets=x86,x86_64 \
-		--enable-shared --enable-experimental-targets=R600 \
-		--mandir=/usr/man
+  # enable enable-shard and the R600 target for mesa3d
+  ./configure --prefix=/usr --without-oprofile --enable-cxx11 \
+    --enable-targets=x86,x86_64 \
+    --enable-shared --enable-experimental-targets=R600 \
+    --mandir=/usr/man
 
-	make $MAKEFLAGS
-	make DESTDIR=$PKG install
+  make $MAKEFLAGS
+  make DESTDIR=$PKG install
 
-	# Unfortunately, llvm's configure script seems to ignore --mandir.
-	mv $PKG/usr/share/man $PKG/usr
-	rmdir $PKG/usr/share
+  # Unfortunately, llvm's configure script seems to ignore --mandir.
+  mv $PKG/usr/share/man $PKG/usr
+  rmdir $PKG/usr/share
 
-	find $PKG -name .dir -delete
-	rm -rf $PKG/usr/docs
+  find $PKG -name .dir -delete
+  rm -rf $PKG/usr/docs
+
+  # fix symlink b0rkage
+  cd $PKG/usr/lib
+  ln -sf libLLVM-${version}.so libLLVM-${version%.*}.so
+
 }

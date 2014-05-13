@@ -1125,7 +1125,7 @@ drwxr-xr-x	root/root	usr/lib/clang/3.4.1/include/
 -rw-r--r--	root/root	usr/lib/clang/3.4.1/include/xmmintrin.h
 -rw-r--r--	root/root	usr/lib/clang/3.4.1/include/xopintrin.h
 -rwxr-xr-x	root/root	usr/lib/libLLVM-3.4.1.so
-lrwxrwxrwx	root/root	usr/lib/libLLVM-3.4.so -> /tmp/llvm-work/pkg/usr/lib/libLLVM-3.4.1.so
+lrwxrwxrwx	root/root	usr/lib/libLLVM-3.4.so -> libLLVM-3.4.1.so
 -rwxr-xr-x	root/root	usr/lib/libLLVMAnalysis.a
 -rwxr-xr-x	root/root	usr/lib/libLLVMAsmParser.a
 -rwxr-xr-x	root/root	usr/lib/libLLVMAsmPrinter.a
