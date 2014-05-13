@@ -20,7 +20,8 @@ build() {
 	# enable enable-shard and the R600 target for mesa3d
 	./configure --prefix=/usr --without-oprofile --enable-cxx11 \
 		--enable-targets=x86,x86_64 \
-		--enable-shared --enable-experimental-targets=R600
+		--enable-shared --enable-experimental-targets=R600 \
+    --mandir=/usr/man
 
 	make $MAKEFLAGS
 	make DESTDIR=$PKG install
