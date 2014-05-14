@@ -1,0 +1,25 @@
+# Description: John the Ripper is a fast password cracker
+# URL:         http://www.openwall.com/john/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Jose V Beneyto, sepen at crux dot nu
+
+name=john
+version=1.7.9-jumbo-7
+release=1
+source=(http://www.openwall.com/$name/g/$name-$version.tar.bz2)
+
+build() {
+
+  echo 'linux-x86-sse2           Linux, x86 with SSE2 (best)' > $SRC/systypes
+  sed -i 's|/usr/libexec|/usr/lib|g' $name-$version/src/params.h
+  
+  cd $name-$version/src
+  
+  make linux-x86-64
+  
+  install -d $PKG/usr/bin
+  install -d $PKG/usr/lib/$name
+  install -m 755 ../run/* $PKG/usr/lib/$name
+  echo -e '#!/bin/sh\n/usr/lib/john/john "$@"\n' > $PKG/usr/bin/john
+  chmod 755 $PKG/usr/bin/john
+}
