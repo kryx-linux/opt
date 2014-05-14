@@ -1,8 +1,8 @@
-# Description: LLVM
-# URL: http://llvm.org/
+# Description: LLVM compiler backend
+# URL:         http://llvm.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: python
+# Packager:    Tilman Sauerbeck, tilman at crux dot nu
+# Depends on:  python
 
 name=llvm
 version=3.4.1
@@ -11,11 +11,11 @@ source=(http://llvm.org/releases/$version/{$name,cfe}-$version.src.tar.gz \
         config.h llvm-config.h)
 
 build() {
-        mv cfe-$version.src $name-$version.src/tools/clang
+  mv cfe-$version.src $name-$version.src/tools/clang
 
-        cd $name-$version.src
+  cd $name-$version.src
 
-        rm -rf tools/clang
+  rm -rf tools/clang
 
   ./configure --prefix=/usr \
     --without-oprofile \

@@ -1126,7 +1126,7 @@ drwxr-xr-x	root/root	usr/lib/clang/3.4.1/include/
 -rw-r--r--	root/root	usr/lib/clang/3.4.1/include/xmmintrin.h
 -rw-r--r--	root/root	usr/lib/clang/3.4.1/include/xopintrin.h
 -rwxr-xr-x	root/root	usr/lib/libLLVM-3.4.1.so
-lrwxrwxrwx	root/root	usr/lib/libLLVM-3.4.so -> /tmp/llvm-work/pkg/usr/lib/libLLVM-3.4.1.so
+lrwxrwxrwx	root/root	usr/lib/libLLVM-3.4.so -> libLLVM-3.4.1.so
 -rwxr-xr-x	root/root	usr/lib/libLLVMAnalysis.a
 -rwxr-xr-x	root/root	usr/lib/libLLVMAsmParser.a
 -rwxr-xr-x	root/root	usr/lib/libLLVMAsmPrinter.a
@@ -1198,20 +1198,6 @@ lrwxrwxrwx	root/root	usr/lib/libLLVM-3.4.so -> /tmp/llvm-work/pkg/usr/lib/libLLV
 -rwxr-xr-x	root/root	usr/lib/libclangStaticAnalyzerCore.a
 -rwxr-xr-x	root/root	usr/lib/libclangStaticAnalyzerFrontend.a
 -rwxr-xr-x	root/root	usr/lib/libclangTooling.a
--rwxr-xr-x	root/root	usr/lib/libllvm.a
--rwxr-xr-x	root/root	usr/lib/libllvm_R600.a
--rwxr-xr-x	root/root	usr/lib/libllvm_X86.a
--rwxr-xr-x	root/root	usr/lib/libllvm_analysis.a
--rwxr-xr-x	root/root	usr/lib/libllvm_bitreader.a
--rwxr-xr-x	root/root	usr/lib/libllvm_bitwriter.a
--rwxr-xr-x	root/root	usr/lib/libllvm_executionengine.a
--rwxr-xr-x	root/root	usr/lib/libllvm_ipo.a
--rwxr-xr-x	root/root	usr/lib/libllvm_irreader.a
--rwxr-xr-x	root/root	usr/lib/libllvm_linker.a
--rwxr-xr-x	root/root	usr/lib/libllvm_passmgr_builder.a
--rwxr-xr-x	root/root	usr/lib/libllvm_scalar_opts.a
--rwxr-xr-x	root/root	usr/lib/libllvm_target.a
--rwxr-xr-x	root/root	usr/lib/libllvm_vectorize.a
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/clang.1.gz
