@@ -5,10 +5,13 @@
 
 name=wpa_supplicant
 version=2.1
-release=1
-source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz)
+release=2
+source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz \
+    revert-51e3eaf.patch)
 
 build () {
+    patch -d $name-$version -p1 -i $SRC/revert-51e3eaf.patch
+
     cd $name-$version/$name
 
     cp defconfig .config
