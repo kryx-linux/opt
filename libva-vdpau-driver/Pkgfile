@@ -6,7 +6,7 @@
 
 name=libva-vdpau-driver
 version=0.7.4
-release=2
+release=3
 source=(http://www.freedesktop.org/software/vaapi/releases/$name/$name-$version.tar.bz2
 	glx.patch libva.patch)
 
@@ -22,4 +22,7 @@ build() {
 
 	make
 	make DESTDIR=$PKG install
+
+	# required for nouveau driver
+	ln -s vdpau_drv_video.so $PKG/usr/lib/dri/nouveau_drv_video.so
 }
