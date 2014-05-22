@@ -103,6 +103,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/asynot.idl
 -rw-r--r--	root/root	usr/include/wine/windows/asysta.idl
 -rw-r--r--	root/root	usr/include/wine/windows/atlbase.h
+-rw-r--r--	root/root	usr/include/wine/windows/atlcom.h
 -rw-r--r--	root/root	usr/include/wine/windows/atliface.h
 -rw-r--r--	root/root	usr/include/wine/windows/atliface.idl
 -rw-r--r--	root/root	usr/include/wine/windows/atlwin.h
@@ -299,6 +300,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/dsound.h
 -rw-r--r--	root/root	usr/include/wine/windows/dsrole.h
 -rw-r--r--	root/root	usr/include/wine/windows/dvdmedia.h
+-rw-r--r--	root/root	usr/include/wine/windows/dvoice.h
 -rw-r--r--	root/root	usr/include/wine/windows/dwmapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/dwrite.h
 -rw-r--r--	root/root	usr/include/wine/windows/dwrite.idl
@@ -402,6 +404,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/ks.h
 -rw-r--r--	root/root	usr/include/wine/windows/ksguid.h
 -rw-r--r--	root/root	usr/include/wine/windows/ksmedia.h
+-rw-r--r--	root/root	usr/include/wine/windows/ksuuids.h
 -rw-r--r--	root/root	usr/include/wine/windows/lm.h
 -rw-r--r--	root/root	usr/include/wine/windows/lmaccess.h
 -rw-r--r--	root/root	usr/include/wine/windows/lmapibuf.h
@@ -1240,6 +1243,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/itss.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/joy.cpl
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/jscript.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/jsproxy.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/kernel32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ktmw32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/loadperf.dll
@@ -1564,6 +1568,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/itss.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/joy.cpl.so
 -rwxr-xr-x	root/root	usr/lib/wine/jscript.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/jsproxy.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/kernel32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ktmw32.dll.so
 -rw-r--r--	root/root	usr/lib/wine/libaclui.def
@@ -1635,6 +1640,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libimm32.def
 -rw-r--r--	root/root	usr/lib/wine/libinetcomm.def
 -rw-r--r--	root/root	usr/lib/wine/libiphlpapi.def
+-rw-r--r--	root/root	usr/lib/wine/libjsproxy.def
 -rw-r--r--	root/root	usr/lib/wine/libkernel32.def
 -rw-r--r--	root/root	usr/lib/wine/libloadperf.def
 -rw-r--r--	root/root	usr/lib/wine/liblz32.def
@@ -2487,6 +2493,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/itss.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/joy.cpl
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/jscript.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/jsproxy.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/kernel32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/keyboard.drv16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/krnl386.exe16
@@ -2865,6 +2872,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/itss.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/joy.cpl.so
 -rwxr-xr-x	root/root	usr/lib32/wine/jscript.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/jsproxy.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/kernel32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/keyboard.drv16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/krnl386.exe16.so
@@ -2938,6 +2946,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libimm32.def
 -rw-r--r--	root/root	usr/lib32/wine/libinetcomm.def
 -rw-r--r--	root/root	usr/lib32/wine/libiphlpapi.def
+-rw-r--r--	root/root	usr/lib32/wine/libjsproxy.def
 -rw-r--r--	root/root	usr/lib32/wine/libkernel.def
 -rw-r--r--	root/root	usr/lib32/wine/libkernel32.def
 -rw-r--r--	root/root	usr/lib32/wine/libloadperf.def
