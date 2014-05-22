@@ -6,13 +6,13 @@
 # Nice to have: alsa-lib, flac, libao, libid3tag, libmad, libmodplug, libmpcdec, libvorbis
 
 name=cmus
-version=2.5.0
+version=2.5.1
 release=1
-source=(http://downloads.sourceforge.net/project/cmus/cmus-v${version}.tar.bz2 \
+source=(https://github.com/cmus/cmus/archive/v${version}.tar.gz \
          ffmpeg.diff)
 
 build() {
-    cd $name-v${version}
+    cd $name-$version
 
     patch -i ../ffmpeg.diff -p1
 
