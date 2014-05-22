@@ -1,0 +1,45 @@
+# Description: LLVM + clang compiler
+# URL:         http://llvm.org/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Tilman Sauerbeck, tilman at crux dot nu
+# Depends on:  python, llvm
+
+name=clang
+version=3.4.1
+release=1
+source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.gz \
+  config.h llvm-config.h)
+
+build() {
+  mv cfe-$version.src llvm-$version.src/tools/clang
+
+  cd llvm-$version.src
+
+  ./configure --prefix=/usr \
+    --without-oprofile \
+    --enable-cxx11 \
+    --enable-targets=x86,x86_64,r600 \
+    --enable-shared \
+    --mandir=/usr/man
+
+  make $MAKEFLAGS
+  make DESTDIR=$PKG install
+
+  # Unfortunately, llvm's configure script seems to ignore --mandir.
+  mv $PKG/usr/share/man $PKG/usr
+  rmdir $PKG/usr/share
+
+  find $PKG -name .dir -delete
+  rm -rf $PKG/usr/docs
+
+  # multilib stubs
+  mv $PKG/usr/include/llvm/Config/config{,-64}.h
+  mv $PKG/usr/include/llvm/Config/llvm-config{,-64}.h
+  install -m 0644 $SRC/config.h $PKG/usr/include/llvm/Config/
+  install -m 0644 $SRC/llvm-config.h $PKG/usr/include/llvm/Config/
+
+  # only clang may be left, remove llvm
+  rm -r $PKG/usr/include/llvm{,-c}
+  rm $PKG/usr/bin/{bugpoint,ll*,macho-dump,opt}
+  rm $PKG/usr/lib/{LLVMHello.so,BugpointPasses.so,libLTO.*,libLLVM*}
+}
