@@ -4,18 +4,17 @@
 # Depends on:  acl tcp_wrappers libusb openssl zlib
 
 name=cups
-version=1.7.1
+version=1.7.3
 release=1
 source=(http://www.cups.org/software/$version/$name-$version-source.tar.bz2
-        cups-config.patch cups)
+        cups-config.patch cups
+        cups-dnssd.patch)
 
 build () {
     cd $name-$version
 
     patch -p1 -i $SRC/cups-config.patch
-
-    # Don' use clang to build
-    sed -i 's/clang / /g' configure
+    patch -p1 -i $SRC/cups-dnssd.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
@@ -34,7 +33,7 @@ build () {
                 --enable-tcp-wrappers \
                 --enable-acl \
                 --disable-pam \
-                --disable-dbus 
+                --disable-dbus
 
     make
     make BUILDROOT=$PKG install
