@@ -7,7 +7,7 @@
 name=netpbm
 version=10.61.00
 release=1
-source=(http://crux.ster.so/distfiles/$name/$name-$version.tar.xz
+source=(http://crux.ster.zone/distfiles/$name/$name-$version.tar.xz
 	config.mk netpbm-10.34-build.patch)
 
 build() {
