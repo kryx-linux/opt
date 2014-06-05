@@ -94,6 +94,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_4500ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_4520mfp-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_4520ps-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_d5800-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1100ps_24in-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1100ps_44in-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1120ps_24in-ps.ppd.gz
@@ -103,8 +104,10 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1500-postscript.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t2300_postscript-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t2500-postscript.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t3500-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t7100ps-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t7100ps_monochrome-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t7200-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t770_postscript-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t770ps_24in-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t790ps_24in-ps.ppd.gz
@@ -117,6 +120,8 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_z6100ps_60in_photo-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_z6200_42in_photo-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_z6200_60in_photo-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_z6600-postscript.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_z6800_photo-postscript.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_100_color_mfp_m175-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_1200-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_1200n-ps.ppd.gz
