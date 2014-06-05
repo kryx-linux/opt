@@ -42,7 +42,7 @@ build () {
     rm -r $PKG/usr/share/cups/{banners,data}
     
     # cleanup
-    rm -r $PKG/usr/share/icons
+    rm -rf $PKG/usr/share/icons
     chmod 0755 $PKG/var/{cache,spool}   
     chmod -R +w $PKG
 
