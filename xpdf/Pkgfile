@@ -5,8 +5,8 @@
 # Depends on: lesstif
 
 name=xpdf
-version=3.03
-release=2
+version=3.04
+release=1
 source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz)
 
 build() {
