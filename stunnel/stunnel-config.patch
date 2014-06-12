@@ -1,6 +1,6 @@
-diff -Nru stunnel-5.00.orig/src/Makefile.in stunnel-5.00/src/Makefile.in
---- stunnel-5.00.orig/src/Makefile.in	2014-03-07 10:30:11.982768737 +0100
-+++ stunnel-5.00/src/Makefile.in	2014-03-07 10:31:17.433779070 +0100
+diff -Nru stunnel-5.02.orig/src/Makefile.in stunnel-5.02/src/Makefile.in
+--- stunnel-5.02.orig/src/Makefile.in	2014-06-12 20:42:46.103102496 +0200
++++ stunnel-5.02/src/Makefile.in	2014-06-12 20:43:19.441948681 +0200
 @@ -310,7 +310,7 @@
  
  # Additional preprocesor definitions
@@ -10,14 +10,14 @@ diff -Nru stunnel-5.00.orig/src/Makefile.in stunnel-5.00/src/Makefile.in
  
  # Win32 executable
  EXTRA_DIST = make.bat makece.bat makew32.bat mingw.mak evc.mak vc.mak \
-diff -Nru stunnel-5.00.orig/tools/stunnel.conf-sample.in stunnel-5.00/tools/stunnel.conf-sample.in
---- stunnel-5.00.orig/tools/stunnel.conf-sample.in	2014-03-07 10:30:11.986101953 +0100
-+++ stunnel-5.00/tools/stunnel.conf-sample.in	2014-03-07 10:30:40.365094717 +0100
+diff -Nru stunnel-5.02.orig/tools/stunnel.conf-sample.in stunnel-5.02/tools/stunnel.conf-sample.in
+--- stunnel-5.02.orig/tools/stunnel.conf-sample.in	2014-06-12 20:42:46.106435713 +0200
++++ stunnel-5.02/tools/stunnel.conf-sample.in	2014-06-12 20:43:34.534759673 +0200
 @@ -9,25 +9,33 @@
  
  ; A copy of some devices and system files is needed within the chroot jail
  ; Chroot conflicts with configuration file reload and many other features
--chroot = @prefix@/var/lib/stunnel/
+-;chroot = @prefix@/var/lib/stunnel/
 +chroot = /var/run/stunnel/
  ; Chroot jail can be escaped if setuid option is not used
 -setuid = nobody
@@ -25,17 +25,18 @@ diff -Nru stunnel-5.00.orig/tools/stunnel.conf-sample.in stunnel-5.00/tools/stun
 +setuid = stunnel
 +setgid = stunnel
  
- ; PID is created inside the chroot jail
- pid = /stunnel.pid
+ ; PID file is created inside the chroot jail (if enabled)
+-;pid = @prefix@/var/run/stunnel.pid
++pid = /stunnel.pid
  
- ; Debugging stuff (may useful for troubleshooting)
+ ; Debugging stuff (may be useful for troubleshooting)
  ;debug = 7
 +; logfile is created inside the chroot jail
  ;output = stunnel.log
 +; without chroot
 +;output = /var/log/stunnel.log
 +; log via syslog
-+syslog = yes
++syslog =yes
 +
 +; Enable or disable the use of libwrap
 +libwrap = yes
@@ -47,8 +48,8 @@ diff -Nru stunnel-5.00.orig/tools/stunnel.conf-sample.in stunnel-5.00/tools/stun
  ; Certificate/key is needed in server mode and optional in client mode
 -cert = @prefix@/etc/stunnel/mail.pem
 -;key = @prefix@/etc/stunnel/mail.pem
-+cert = /etc/ssl/certs/stunnel.crt
-+key  = /etc/ssl/keys/stunnel.key
++cert = /etc/ssl/stunnel.crt
++key = /etc/ssl/stunnel.key
  
  ; Authentication stuff needs to be configured to prevent MITM attacks
  ; It is not enabled by default!
