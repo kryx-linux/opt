@@ -4,14 +4,15 @@
 # Packager: Han Boetes, han at mijncomputer dot dl
 
 name=boehm-gc
-version=7.4.0
+version=7.4.2
 release=1
-source=(http://www.hboehm.info/gc/gc_source/gc-${version}.tar.gz http://www.hboehm.info/gc/gc_source/libatomic_ops-$version.tar.gz)
+source=(http://www.hboehm.info/gc/gc_source/gc-${version}.tar.gz
+        https://github.com/ivmai/libatomic_ops/archive/libatomic_ops-${version//\./_}.tar.gz)
 
 build () {
     cd gc-$version
     
-    ln -s ../libatomic_ops-$version libatomic_ops
+    ln -s ../libatomic_ops-libatomic_ops-${version//\./_} libatomic_ops
 
     ./configure \
         --prefix=/usr \
