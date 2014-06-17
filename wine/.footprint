@@ -1270,6 +1270,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msacm32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msacm32.drv
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msadp32.acm
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/msasn1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mscat32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mscms.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mscoree.dll
@@ -1649,6 +1650,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libmpr.def
 -rw-r--r--	root/root	usr/lib/wine/libmprapi.def
 -rw-r--r--	root/root	usr/lib/wine/libmsacm32.def
+-rw-r--r--	root/root	usr/lib/wine/libmsasn1.def
 -rw-r--r--	root/root	usr/lib/wine/libmscms.def
 -rw-r--r--	root/root	usr/lib/wine/libmsdmo.def
 -rw-r--r--	root/root	usr/lib/wine/libmshtml.def
@@ -1770,6 +1772,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/msacm32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msacm32.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/msadp32.acm.so
+-rwxr-xr-x	root/root	usr/lib/wine/msasn1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mscat32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mscms.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mscoree.dll.so
@@ -2528,6 +2531,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msacm32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msacm32.drv
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msadp32.acm
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/msasn1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mscat32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mscms.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mscoree.dll
@@ -2956,6 +2960,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libmpr.def
 -rw-r--r--	root/root	usr/lib32/wine/libmprapi.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsacm32.def
+-rw-r--r--	root/root	usr/lib32/wine/libmsasn1.def
 -rw-r--r--	root/root	usr/lib32/wine/libmscms.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsdmo.def
 -rw-r--r--	root/root	usr/lib32/wine/libmshtml.def
@@ -3084,6 +3089,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/msacm32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msacm32.drv.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msadp32.acm.so
+-rwxr-xr-x	root/root	usr/lib32/wine/msasn1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mscat32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mscms.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mscoree.dll.so
