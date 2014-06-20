@@ -5,7 +5,7 @@
 # Depends on:
 
 name=u-boot-tools
-version=2014.01
+version=2014.04
 release=1
 source=(ftp://ftp.denx.de/pub/u-boot/u-boot-$version.tar.bz2)
 
@@ -13,8 +13,9 @@ build() {
   cd u-boot-$version
 
   # use custom compiler flags
-  sed -e "/^HOSTCFLAGS/ s/-O2/\$(CUSTOMCFLAGS)/" -i config.mk
+  sed -e "/^HOSTCFLAGS/ s/-O2/\$(CUSTOMCFLAGS)/" -i Makefile
 
+  make sandbox_config
   make V=1 tools CUSTOMCFLAGS="$CFLAGS" TOOLSUBDIRS=""
 
   install -d -m 0755 $PKG/usr/{bin,man/man1}

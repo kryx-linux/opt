@@ -5,8 +5,9 @@
 
 name=nvidia
 version=331.79
-release=1
-source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run)
+release=2
+source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run \
+    90-nvidia-uvm.rules)
 
 build() {
     sh NVIDIA-Linux-x86_64-$version-no-compat32.run --extract-only
@@ -29,19 +30,21 @@ build() {
     install -m 0755 libnvcuvid.so.$version         $PKG/usr/lib
     install -m 0755 tls/libnvidia-tls.so.$version  $PKG/usr/lib/tls
     install -m 0755 libvdpau_nvidia.so.$version    $PKG/usr/lib/vdpau
-    
+
     ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so.1
     ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so
 
     ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so.1
     ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so
 
+    ln -s libOpenCL.so.1.0.0 $PKG/usr/lib/libOpenCL.so
+
     # xorg driver/extensions
     install -d $PKG/usr/lib/xorg/modules/{drivers,extensions}
     install -m 0755 nvidia_drv.so                  $PKG/usr/lib/xorg/modules/drivers
     install -m 0755 libglx.so.$version             $PKG/usr/lib/xorg/modules/extensions
     install -m 0755 libnvidia-wfb.so.$version      $PKG/usr/lib/xorg/modules
-    
+
     # nvidia programs amd man-pages
     install -d $PKG/usr/{bin,man/man1}
     install -m 0755 nvidia-{debugdump,persistenced,settings,smi,xconfig} \
@@ -62,8 +65,17 @@ build() {
     # opencl icd file
     install -m 0644 -D nvidia.icd $PKG/etc/OpenCL/vendors/nvidia.icd
 
+    # nvidia-uvm module udev rule
+    install -d $PKG/lib/udev/rules.d
+    install -m 0644 $SRC/90-nvidia-uvm.rules $PKG/lib/udev/rules.d/90-nvidia-uvm.rules
+
     # kernel module
     cd kernel
     IGNORE_CC_MISMATCH=1 make module
     install -D -m 0644 nvidia.ko $PKG/lib/modules/`uname -r`/extra/nvidia.ko
+
+    # nvidia-uvm module
+    cd uvm
+    IGNORE_CC_MISMATCH=1 make module
+    install -D -m 0644 nvidia-uvm.ko $PKG/lib/modules/`uname -r`/extra/nvidia-uvm.ko
 }

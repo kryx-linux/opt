@@ -4,21 +4,18 @@
 # Depends on:  curl freetype libjpeg xorg-libxext
 
 name=mupdf
-version=1.4
+version=1.5
 release=1
-source=(http://mupdf.com/download/$name-$version-source.tar.gz
-        $name-sys_curl.patch)
+source=(http://mupdf.com/download/$name-$version-source.tar.gz)
 
 build() {
     cd $name-$version-source
     
-    patch -p1 -i $SRC/$name-sys_curl.patch
-
     rm -r thirdparty/{freetype*,jpeg*,zlib,curl}
     make build=release 
     make prefix=$PKG/usr mandir=$PKG/usr/man install
    
     ln -s mupdf-x11-curl $PKG/usr/bin/mupdf
     rm $PKG/usr/bin/mupdf-x11
-    rm -r $PKG/usr/{include,lib,share}
-}
+    rm -r $PKG/usr/share
+} 
