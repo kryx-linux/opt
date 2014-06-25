@@ -7,7 +7,7 @@
 name=babl
 version=0.1.10
 release=1
-source=(ftp://ftp.gtk.org/pub/babl/0.1/$name-$version.tar.bz2)
+source=(http://ftp.gtk.org/pub/babl/0.1/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
