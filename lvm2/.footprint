@@ -4,7 +4,9 @@ drwx------	root/root	etc/lvm/archive/
 drwx------	root/root	etc/lvm/backup/
 -rw-r--r--	root/root	etc/lvm/lvm.conf
 drwxr-xr-x	root/root	etc/lvm/profile/
--r--r--r--	root/root	etc/lvm/profile/default.profile
+-r--r--r--	root/root	etc/lvm/profile/command_profile_template.profile
+-r--r--r--	root/root	etc/lvm/profile/metadata_profile_template.profile
+-r--r--r--	root/root	etc/lvm/profile/thin-generic.profile
 -r--r--r--	root/root	etc/lvm/profile/thin-performance.profile
 drwxr-xr-x	root/root	lib/
 drwxr-xr-x	root/root	lib/udev/
