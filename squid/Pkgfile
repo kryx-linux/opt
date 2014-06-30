@@ -4,7 +4,7 @@
 
 name=squid
 version=3.4.6
-release=1
+release=2
 source=(http://www.squid-cache.org/Versions/v3/3.4/$name-$version.tar.xz
         squid)
 
@@ -23,6 +23,7 @@ build () {
                 --with-default-user=squid \
                 --enable-linux-netfilter \
                 --enable-storeio=ufs,aufs,diskd,rock \
+                --enable-removal-policies=lru,heap \
                 --with-large-files \
                 --with-pthreads \
                 --with-aufs-threads=16 \
