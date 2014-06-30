@@ -1357,6 +1357,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/olethk32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/oleview.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/opengl32.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/packager.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/pdh.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/photometadatahandler.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/pidgen.dll
@@ -1859,6 +1860,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/olethk32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/oleview.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/opengl32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/packager.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/pdh.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/photometadatahandler.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/pidgen.dll.so
@@ -2627,6 +2629,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/olethk32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/oleview.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/opengl32.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/packager.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/pdh.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/photometadatahandler.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/pidgen.dll
@@ -3185,6 +3188,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/olethk32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/oleview.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/opengl32.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/packager.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/pdh.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/photometadatahandler.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/pidgen.dll.so
