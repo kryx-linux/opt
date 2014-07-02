@@ -6,13 +6,12 @@
 # Nice to have: ffmpeg speex jack libsamplerate
 
 name=alsa-plugins
-version=1.0.27
-release=2
+version=1.0.28
+release=1
 source=(ftp://ftp.alsa-project.org/pub/plugins/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	sed -i 's/ && LIBAVCODEC_VERSION_MINOR >= 34//' a52/pcm_a52.c
 
 	./configure --prefix=/usr
 
