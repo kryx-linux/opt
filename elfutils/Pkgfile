@@ -5,7 +5,7 @@
 # Depends on: bzip2 xz zlib
 
 name=elfutils
-version=0.158
+version=0.159
 release=1
 source=(https://fedorahosted.org/releases/e/l/$name/$version/$name-$version.tar.bz2)
 
@@ -14,10 +14,9 @@ build() {
 
 	./configure \
 		--prefix=/usr \
-		--program-prefix=eu-
+		--program-prefix=eu- \
+		--disable-nls
 
 	make
 	make DESTDIR=$PKG install
-
-	rm -rf $PKG/usr/share
 }
