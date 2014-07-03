@@ -4,7 +4,7 @@
 # Depends on:  curl intltool gtk3 libevent
 
 name=transmission-gtk
-version=2.83
+version=2.84
 release=1
 source=(http://download.m0k.org/transmission/files/transmission-$version.tar.xz)
 
