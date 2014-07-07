@@ -1,32 +1,51 @@
+'\" t
 .\"     Title: zsh-lovers
-.\"    Author: 
-.\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 03/12/2009
-.\"    Manual: 
-.\"    Source: 
+.\"    Author: [see the "AUTHORS" section]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 04/03/2014
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
 .\"
-.TH "ZSH\-LOVERS" "1" "03/12/2009" "" ""
+.TH "ZSH\-LOVERS" "1" "04/03/2014" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
 .ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
 .SH "NAME"
 zsh-lovers \- tips, tricks and examples for the Z shell
 .SH "SYNOPSIS"
-Just read it\&. ;\-)
 .sp
+Just read it\&. ;\-)
 .SH "OVERVIEW"
-Whenever we look at the zsh manual we wonder why there are no examples or those simply things in (shell) life\&. The zsh contains many features, but there was no manpage with some examples (like procmailex(5))\&. That\'s why we wrote this manpage\&.
+.sp
+Whenever we look at the zsh manual we wonder why there are no examples or those simply things in (shell) life\&. The zsh contains many features, but there was no manpage with some examples (like procmailex(5))\&. That\(cqs why we wrote this manpage\&.
 .sp
 Most of the tricks and oneliner come from the mailinglists zsh\-users, zsh\-workers, google, newsgroups and from ourself\&. See section \fBLINKS\fR for details\&.
 .sp
-Note: This manpage (zsh\-lovers(1)) is \fBnot\fR an offical part of the Z shell! It\'s just a just for fun \- manpage ;) For comments, bugreports and feedback take a quick look at the section \fBBUGS\fR\&.
-.sp
+Note: This manpage (zsh\-lovers(1)) is \fBnot\fR an offical part of the Z shell! It\(cqs just a just for fun \- manpage ;) For comments, bugreports and feedback take a quick look at the section \fBBUGS\fR\&.
 .SH "SHELL-SCRIPTING"
-This section provides some examples for often needed shellscript\-stuff\&. Notice that you should not use otherwise most examples won\'t work\&. Parse options in shellscripts\&. Example taken from ZWS by Adam Chodorowski (http://www\&.chodorowski\&.com/projects/zws/):
 .sp
+This section provides some examples for often needed shellscript\-stuff\&. Notice that you should not use otherwise most examples won\(cqt work\&. Parse options in shellscripts\&. Example taken from ZWS by Adam Chodorowski (http://www\&.chodorowski\&.com/projects/zws/):
 .sp
+.if n \{\
 .RS 4
+.\}
 .nf
 parse_options()
 {
@@ -44,176 +63,232 @@ parse_options()
     root=$o_root[2]
     log=$o_log[2]
 
-    if [[ $root[1] != \'/\' ]]; then root="$PWD/$root"; fi
+    if [[ $root[1] != \*(Aq/\*(Aq ]]; then root="$PWD/$root"; fi
 }
 # now use the function:
 parse_options $*
 .fi
+.if n \{\
 .RE
+.\}
 .SH "EXAMPLES"
-Available subsections are \fBAliases\fR, \fBCompletion\fR, \fBUnsorted/Misc examples\fR, \fB(Recursive) Globbing \- Examples\fR, \fBModifiers usage\fR, \fBRedirection\-Examples\fR, \fBZMV\-Examples\fR and \fBModule\-Examples\fR\&.
 .sp
+Available subsections are \fBAliases\fR, \fBCompletion\fR, \fBUnsorted/Misc examples\fR, \fB(Recursive) Globbing \- Examples\fR, \fBModifiers usage\fR, \fBRedirection\-Examples\fR, \fBZMV\-Examples\fR and \fBModule\-Examples\fR\&.
 .SS "ALIASES"
+.sp
 Suffix aliases are supported in zsh since version 4\&.2\&.0\&. Some examples:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 alias \-s tex=vim
 alias \-s html=w3m
 alias \-s org=w3m
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Now pressing return\-key after entering \fIfoobar\&.tex\fR starts vim with foobar\&.tex\&. Calling a html\-file runs browser w3m\&. \fIwww\&.zsh\&.org\fR and pressing enter starts w3m with argument www\&.zsh\&.org\&. Global aliases can be used anywhere in the command line\&. Example:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-$ alias \-g C=\'| wc \-l\'
+$ alias \-g C=\*(Aq| wc \-l\*(Aq
 $ grep alias ~/\&.zsh/* C
 443
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Some more or less useful global aliases (choose whether they are useful or not for you on your own):
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-alias \-g \&.\&.\&.=\'\&.\&./\&.\&.\'
-alias \-g \&.\&.\&.\&.=\'\&.\&./\&.\&./\&.\&.\'
-alias \-g \&.\&.\&.\&.\&.=\'\&.\&./\&.\&./\&.\&./\&.\&.\'
+alias \-g \&.\&.\&.=\*(Aq\&.\&./\&.\&.\*(Aq
+alias \-g \&.\&.\&.\&.=\*(Aq\&.\&./\&.\&./\&.\&.\*(Aq
+alias \-g \&.\&.\&.\&.\&.=\*(Aq\&.\&./\&.\&./\&.\&./\&.\&.\*(Aq
 alias \-g CA="2>&1 | cat \-A"
-alias \-g C=\'| wc \-l\'
+alias \-g C=\*(Aq| wc \-l\*(Aq
 alias \-g D="DISPLAY=:0\&.0"
 alias \-g DN=/dev/null
 alias \-g ED="export DISPLAY=:0\&.0"
-alias \-g EG=\'|& egrep\'
-alias \-g EH=\'|& head\'
-alias \-g EL=\'|& less\'
-alias \-g ELS=\'|& less \-S\'
-alias \-g ETL=\'|& tail \-20\'
-alias \-g ET=\'|& tail\'
-alias \-g F=\' | fmt \-\'
-alias \-g G=\'| egrep\'
-alias \-g H=\'| head\'
-alias \-g HL=\'|& head \-20\'
+alias \-g EG=\*(Aq|& egrep\*(Aq
+alias \-g EH=\*(Aq|& head\*(Aq
+alias \-g EL=\*(Aq|& less\*(Aq
+alias \-g ELS=\*(Aq|& less \-S\*(Aq
+alias \-g ETL=\*(Aq|& tail \-20\*(Aq
+alias \-g ET=\*(Aq|& tail\*(Aq
+alias \-g F=\*(Aq | fmt \-\*(Aq
+alias \-g G=\*(Aq| egrep\*(Aq
+alias \-g H=\*(Aq| head\*(Aq
+alias \-g HL=\*(Aq|& head \-20\*(Aq
 alias \-g Sk="*~(*\&.bz2|*\&.gz|*\&.tgz|*\&.zip|*\&.z)"
 alias \-g LL="2>&1 | less"
 alias \-g L="| less"
-alias \-g LS=\'| less \-S\'
-alias \-g MM=\'| most\'
-alias \-g M=\'| more\'
+alias \-g LS=\*(Aq| less \-S\*(Aq
+alias \-g MM=\*(Aq| most\*(Aq
+alias \-g M=\*(Aq| more\*(Aq
 alias \-g NE="2> /dev/null"
-alias \-g NS=\'| sort \-n\'
+alias \-g NS=\*(Aq| sort \-n\*(Aq
 alias \-g NUL="> /dev/null 2>&1"
-alias \-g PIPE=\'|\'
-alias \-g R=\' > /c/aaa/tee\&.txt \'
-alias \-g RNS=\'| sort \-nr\'
-alias \-g S=\'| sort\'
-alias \-g TL=\'| tail \-20\'
-alias \-g T=\'| tail\'
-alias \-g US=\'| sort \-u\'
+alias \-g PIPE=\*(Aq|\*(Aq
+alias \-g R=\*(Aq > /c/aaa/tee\&.txt \*(Aq
+alias \-g RNS=\*(Aq| sort \-nr\*(Aq
+alias \-g S=\*(Aq| sort\*(Aq
+alias \-g TL=\*(Aq| tail \-20\*(Aq
+alias \-g T=\*(Aq| tail\*(Aq
+alias \-g US=\*(Aq| sort \-u\*(Aq
 alias \-g VM=/var/log/messages
-alias \-g X0G=\'| xargs \-0 egrep\'
-alias \-g X0=\'| xargs \-0\'
-alias \-g XG=\'| xargs egrep\'
-alias \-g X=\'| xargs\'
+alias \-g X0G=\*(Aq| xargs \-0 egrep\*(Aq
+alias \-g X0=\*(Aq| xargs \-0\*(Aq
+alias \-g XG=\*(Aq| xargs egrep\*(Aq
+alias \-g X=\*(Aq| xargs\*(Aq
 .fi
+.if n \{\
 .RE
+.\}
 .SS "COMPLETION"
+.sp
 See also man 1 zshcompctl zshcompsys zshcompwid\&. zshcompctl is the old style of zsh programmable completion, zshcompsys is the new completion system, zshcompwid are the zsh completion widgets\&.
 .sp
 Some functions, like _apt and _dpkg, are very slow\&. You can use a cache in order to proxy the list of results (like the list of available debian packages) Use a cache:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-zstyle \':completion:*\' use\-cache on
-zstyle \':completion:*\' cache\-path ~/\&.zsh/cache
+zstyle \*(Aq:completion:*\*(Aq use\-cache on
+zstyle \*(Aq:completion:*\*(Aq cache\-path ~/\&.zsh/cache
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Prevent CVS files/directories from being completed:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-zstyle \':completion:*:(all\-|)files\' ignored\-patterns \'(|*/)CVS\'
-zstyle \':completion:*:cd:*\' ignored\-patterns \'(*/)#CVS\'
+zstyle \*(Aq:completion:*:(all\-|)files\*(Aq ignored\-patterns \*(Aq(|*/)CVS\*(Aq
+zstyle \*(Aq:completion:*:cd:*\*(Aq ignored\-patterns \*(Aq(*/)#CVS\*(Aq
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Fuzzy matching of completions for when you mistype them:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-zstyle \':completion:*\' completer _complete _match _approximate
-zstyle \':completion:*:match:*\' original only
-zstyle \':completion:*:approximate:*\' max\-errors 1 numeric
+zstyle \*(Aq:completion:*\*(Aq completer _complete _match _approximate
+zstyle \*(Aq:completion:*:match:*\*(Aq original only
+zstyle \*(Aq:completion:*:approximate:*\*(Aq max\-errors 1 numeric
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 And if you want the number of errors allowed by _approximate to increase with the length of what you have typed so far:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-zstyle \-e \':completion:*:approximate:*\' \e
-        max\-errors \'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)\'
+zstyle \-e \*(Aq:completion:*:approximate:*\*(Aq \e
+        max\-errors \*(Aqreply=($((($#PREFIX+$#SUFFIX)/3))numeric)\*(Aq
 .fi
+.if n \{\
 .RE
-Ignore completion functions for commands you don\'t have:
+.\}
 .sp
+Ignore completion functions for commands you don\(cqt have:
 .sp
+.if n \{\
 .RS 4
+.\}
 .nf
-zstyle \':completion:*:functions\' ignored\-patterns \'_*\'
+zstyle \*(Aq:completion:*:functions\*(Aq ignored\-patterns \*(Aq_*\*(Aq
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 With helper functions like:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 xdvi() { command xdvi ${*:\-*\&.dvi(om[1])} }
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 you can avoid having to complete at all in many cases, but if you do, you might want to fall into menu selection immediately and to have the words sorted by time:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-zstyle \':completion:*:*:xdvi:*\' menu yes select
-zstyle \':completion:*:*:xdvi:*\' file\-sort time
+zstyle \*(Aq:completion:*:*:xdvi:*\*(Aq menu yes select
+zstyle \*(Aq:completion:*:*:xdvi:*\*(Aq file\-sort time
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Completing process IDs with menu selection:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-zstyle \':completion:*:*:kill:*\' menu yes select
-zstyle \':completion:*:kill:*\'   force\-list always
+zstyle \*(Aq:completion:*:*:kill:*\*(Aq menu yes select
+zstyle \*(Aq:completion:*:kill:*\*(Aq   force\-list always
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 If you end up using a directory as argument, this will remove the trailing slash (usefull in ln)
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-zstyle \':completion:*\' squeeze\-slashes true
+zstyle \*(Aq:completion:*\*(Aq squeeze\-slashes true
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 cd will never select the parent directory (e\&.g\&.: cd \&.\&./<TAB>):
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-zstyle \':completion:*:cd:*\' ignore\-parents parent pwd
+zstyle \*(Aq:completion:*:cd:*\*(Aq ignore\-parents parent pwd
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Another method for \fIquick change directories\fR\&. Add this to your ~/\&.zshrc, then just enter \(lqcd \&...\&./dir\(rq
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 rationalise\-dot() {
   if [[ $LBUFFER = *\&.\&. ]]; then
@@ -225,18 +300,22 @@ rationalise\-dot() {
 zle \-N rationalise\-dot
 bindkey \&. rationalise\-dot
 .fi
+.if n \{\
 .RE
+.\}
 .SS "UNSORTED/MISC examples"
+.sp
 Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 1 zshexpn | less \-p\(rq Qualifiers for details\&.
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-# Get the names of all files that *don\'t* match a pattern *anywhere* on the
-# file (and without ``\-L\'\' because its GNUish)
-  $ print \-rl \-\- *(\&.^e{\'grep \-q pattern $REPLY\'})
+# Get the names of all files that *don\*(Aqt* match a pattern *anywhere* on the
+# file (and without ``\-L\*(Aq\*(Aq because its GNUish)
+  $ print \-rl \-\- *(\&.^e{\*(Aqgrep \-q pattern $REPLY\*(Aq})
   # or
-  $ : *(\&.e{\'grep \-q pattern $REPLY || print \-r \-\- $REPLY\'})
+  $ : *(\&.e{\*(Aqgrep \-q pattern $REPLY || print \-r \-\- $REPLY\*(Aq})
 
 # random numbers
   $ echo $[${RANDOM}%1000]     # random between 0\-999
@@ -263,8 +342,8 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
          echo non\-numeric
     fi
 
-# Show me all the \&.c files for which there doesn\'t exist a \&.o file\&.
-  $ print *\&.c(e_\'[[ ! \-e $REPLY:r\&.o ]]\'_)
+# Show me all the \&.c files for which there doesn\*(Aqt exist a \&.o file\&.
+  $ print *\&.c(e_\*(Aq[[ ! \-e $REPLY:r\&.o ]]\*(Aq_)
 
 # All files in /var/ that are not owned by root
   $ ls \-ld /var/*(^u:root)
@@ -281,34 +360,34 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   $ print \-r \-\- $^X\&.$^Y
   A\&.+ A\&.\- B\&.+ B\&.\- C\&.+ C\&.\-
 
-# Fetch the newest file containing the string \'fgractg*\&.log\' in the
-# filename and contains the string \'ORA\-\' in it
+# Fetch the newest file containing the string \*(Aqfgractg*\&.log\*(Aq in the
+# filename and contains the string \*(AqORA\-\*(Aq in it
   $ file=(fgractg*\&.log(Nm0om[1]))
   $ (($#file)) && grep \-l ORA\- $file
   # without Zsh
-  $ files=$( find \&. \-name \&. \-o \-prune \-name \'fgractg*>log\' \-mtime 0 \-print )
+  $ files=$( find \&. \-name \&. \-o \-prune \-name \*(Aqfgractg*>log\*(Aq \-mtime 0 \-print )
   > if [ \-n "$files" ]; then
-  >    IFS=\'
-  > \'
+  >    IFS=\*(Aq
+  > \*(Aq
   > set \-f
   > file=$(ls \-td $files | head \-1)
   > grep \-l ORA\- "$file"
   > fi
 
 # keep specified number of child processes running until entire task finished
-  $ zsh \-c \'sleep 1 & sleep 3 & sleep 2& print \-rl \-\- $jobtexts\'
+  $ zsh \-c \*(Aqsleep 1 & sleep 3 & sleep 2& print \-rl \-\- $jobtexts\*(Aq
 
 # Remove zero length and \&.bak files in a directory
   $ rm \-i *(\&.L0) *\&.bak(\&.)
 
 # print out files that dont have extensions
-  $ printf \'%s\en\' ^?*\&.*
-  $ printf \'%s\en\' ^?*\&.[^\&.]*(D)
+  $ printf \*(Aq%s\en\*(Aq ^?*\&.*
+  $ printf \*(Aq%s\en\*(Aq ^?*\&.[^\&.]*(D)
   $ ls \-d \-\- ^?*\&.*(D)
 
 # Finding files which does not contain a specific string
-  $ print \-rl file* | comm \-2 \-3 \- <(grep \-l string file*)\'
-  $ for f (file*(N)) grep \-q string $f || print \-r $f\'
+  $ print \-rl file* | comm \-2 \-3 \- <(grep \-l string file*)\*(Aq
+  $ for f (file*(N)) grep \-q string $f || print \-r $f\*(Aq
 
 # Show/Check whether a option is set or not\&. It works both with $options as
 # with $builtins
@@ -319,42 +398,42 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
 
 # Count the number of directories on the stack
   $ print $((${${(z)${(f)"$(dirs \-v)"}[\-1]}[1]} + 1)) # or
-  $ dirs \-v | awk \'{n=$1}END{print n+1}\'
+  $ dirs \-v | awk \*(Aq{n=$1}END{print n+1}\*(Aq
 
 # Matching all files which do not have a dot in filename
   $ ls *~*\&.*(\&.)
 
-# Show only the ip\-address from ``ifconfig device\'\'
+# Show only the ip\-address from ``ifconfig device\*(Aq\*(Aq
   # ifconfig from net\-tools (Linux)
   $ print ${${$(LC_ALL=C /sbin/ifconfig eth0)[7]}:gs/addr://}
   # ifconfig from 4\&.2BSD {Free,Net,Open}BSD
   $ print ${$(/sbin/ifconfig tun0)[6]}
 
-# Ping all the IP addresses in a couple of class C\'s or all hosts
+# Ping all the IP addresses in a couple of class C\*(Aqs or all hosts
 # into /etc/hosts
   $ for i in {1\&.\&.254}; do ping \-c 1 192\&.168\&.13\&.$i; done
   or
   $ I=1
   $ while ( [[ $I \-le 255 ]] ) ; do ping \-1 2 150\&.150\&.150\&.$I; let I++; done
   or
-  $ for i in $(sed \'s/#\&.*//\' > /etc/hosts | awk \'{print $2}\')
+  $ for i in $(sed \*(Aqs/#\&.*//\*(Aq > /etc/hosts | awk \*(Aq{print $2}\*(Aq)
   : do
   :    echo "Trying $i \&.\&.\&. "
   :    ping \-c 1 $i ;
-  :    echo \'=============================\'
+  :    echo \*(Aq=============================\*(Aq
   : done
 
 # load all available modules at startup
   $ typeset \-U m
   $ m=()
-  $ for md ($module_path) m=($m $md/**/*(*e:\'REPLY=${REPLY#$md/}\'::r))
+  $ for md ($module_path) m=($m $md/**/*(*e:\*(AqREPLY=${REPLY#$md/}\*(Aq::r))
   $ zmodload \-i $m
 
 # Rename all files within a directory such that their names get a numeral
 # prefix in the default sort order\&.
   $ i=1; for j in *; do mv $j $i\&.$j; ((i++)); done
   $ i=1; for f in *; do mv $f $(echo $i | \e
-    awk \'{ printf("%03d", $0)}\')\&.$f; ((i++)); done
+    awk \*(Aq{ printf("%03d", $0)}\*(Aq)\&.$f; ((i++)); done
   $ integer i=0; for f in *; do mv $f $[i+=1]\&.$f; done
 
 # Find (and print) all symbolic links without a target within the current
@@ -364,24 +443,24 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   $ echo **/*(@\-^\&./=%p)
   $ print \-l **/*(\-@)
 
-# List all plain files that do not have extensions listed in `fignore\'
+# List all plain files that do not have extensions listed in `fignore\*(Aq
   $ ls **/*~*(${~${(j/|/)fignore}})(\&.)
   # see above, but now omit executables
   $ ls **/*~*(${~${(j/|/)fignore}})(\&.^*)
 
 # Print out files that dont have extensions (require *setopt extendedglob*
 # and *setopt dotglob*)
-  $ printf \'%s\en\' ^?*\&.*
+  $ printf \*(Aq%s\en\*(Aq ^?*\&.*
 
 # List files in reverse order sorted by name
   $ print \-rl \-\- *(On)
   or
   $ print \-rl \-\- *(^on)
 
-# Synonymic to ``ps ax | awk \'{print $1}\'\'\'
+# Synonymic to ``ps ax | awk \*(Aq{print $1}\*(Aq\*(Aq\*(Aq
   $ print \-l /proc/*/cwd(:h:t:s/self//)
 
-# Get the PID of a process (without ``ps\'\', ``sed\'\', ``pgrep\'\', \&.\&.
+# Get the PID of a process (without ``ps\*(Aq\*(Aq, ``sed\*(Aq\*(Aq, ``pgrep\*(Aq\*(Aq, \&.\&.
 # (under Linux)
   $ pid2 () {
   >   local i
@@ -391,14 +470,14 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   > done
   > }
 
-# for X in \'n\' \'o\' \'p\' \'q\' \'r\' \'s\' \'t\' \'u\' \'v\' \'w\' \'x\' \'y\'; do \&.\&.\&.
+# for X in \*(Aqn\*(Aq \*(Aqo\*(Aq \*(Aqp\*(Aq \*(Aqq\*(Aq \*(Aqr\*(Aq \*(Aqs\*(Aq \*(Aqt\*(Aq \*(Aqu\*(Aq \*(Aqv\*(Aq \*(Aqw\*(Aq \*(Aqx\*(Aq \*(Aqy\*(Aq; do \&.\&.\&.
   $ for (( i = 36#n; i <= 36#y; i++ )); do
   >   print ${$(([##36]i)):l}
   > done
-# or in combination with ``dc\'\'
+# or in combination with ``dc\*(Aq\*(Aq
   $ print {$((##n))\&.\&.$((##y))}P\e 10P | dc
-# or with ``eval\'\'
-  $ eval print \'${$(([##36]\'{$((36#n))\&.\&.$((36#y))}\')):l}\'
+# or with ``eval\*(Aq\*(Aq
+  $ eval print \*(Aq${$(([##36]\*(Aq{$((36#n))\&.\&.$((36#y))}\*(Aq)):l}\*(Aq
 
 # foreach in one line of shell
   $ for f (*) print \-r \-\- $f
@@ -409,9 +488,9 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   $ mkdir \-p \-\- $dirs
 # or without zsh
   $ find \&. \-type d \-exec env d="$dest_root" \e
-    sh \-c \' exec mkdir \-p \-\- "$d/$1"\' \'{}\' \'{}\' \e;
+    sh \-c \*(Aq exec mkdir \-p \-\- "$d/$1"\*(Aq \*(Aq{}\*(Aq \*(Aq{}\*(Aq \e;
 
-# If `foo=23\'\', then print with 10 digit with leading \'0\'\&.
+# If `foo=23\*(Aq\*(Aq, then print with 10 digit with leading \*(Aq0\*(Aq\&.
   $ foo=23
   $ print ${(r:10::0:)foo}
 
@@ -432,7 +511,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
 # Think of an easy way to have a "ls \-R" style output with
 # only files newer than 2 day old\&.
   $ for d (\&. \&./**/*(/)) {
-  >   print \-r \-\- $\'\en\'${d}:
+  >   print \-r \-\- $\*(Aq\en\*(Aq${d}:
   >   cd $d && {
   >       l=(*(Nm\-2))
   >       (($#l)) && ls \-ltd \-\- $l
@@ -442,7 +521,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
 # If you also want directories to be included even if their mtime
 # is more than 2 days old:
   $ for d (\&. \&./**/*(/)) {
-  >   print \-r \-\- $\'\en\'${d}:
+  >   print \-r \-\- $\*(Aq\en\*(Aq${d}:
   >   cd $d && {
   >      l=(*(N/,m\-2))
   >      (($#l)) && ls \-ltd \-\- $l
@@ -451,7 +530,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   > }
 # And if you want only the directories with mtime < 2 days to be listed:
   $ for d (\&. \&./**/*(N/m\-2)) {
-  >   print \-r \-\- $\'\en\'${d}:
+  >   print \-r \-\- $\*(Aq\en\*(Aq${d}:
   >   cd $d && {
   >      l=(*(Nm\-2))
   >      (($#l)) && ls \-ltd \-\- $l
@@ -459,9 +538,9 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   >   }
   > }
 
-# print 42 ``\-\'\'
+# print 42 ``\-\*(Aq\*(Aq
   $ echo ${(l:42::\-:)}
-# or use ``$COLUMS\'\'
+# or use ``$COLUMS\*(Aq\*(Aq
   $ echo ${(l:$COLUMNS::\-:)}
 # and now with colors (require autoload colors ;colors)
   $ echo "$bg[red]$fg[black]${(l:42::\-:)}"
@@ -501,7 +580,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
 
 # Move all files in dir1 and dir2 that have line counts greater than 10 to
 # another directory say "/more10"
-  $ mv dir[12]/**/*\&.cr(\-\&.e{\'((`wc \-l < $REPLY` > 10))\'}) /more10
+  $ mv dir[12]/**/*\&.cr(\-\&.e{\*(Aq((`wc \-l < $REPLY` > 10))\*(Aq}) /more10
 
 # Make with dpkg a master\-list of everyfile that it has installed
   $ diff <(find / | sort) <(cat /var/lib/dpkg/info/*\&.list | sort)
@@ -521,11 +600,11 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   > done
 
 # Rename files; i\&. e\&. FOO to foo and bar to BAR
-  $ for i in *(\&.); mv $i ${i:l} # `FOO\' to `foo\'
-  $ for i in *(\&.); mv $i ${i:u} # `bar to `BAR\'
+  $ for i in *(\&.); mv $i ${i:l} # `FOO\*(Aq to `foo\*(Aq
+  $ for i in *(\&.); mv $i ${i:u} # `bar to `BAR\*(Aq
 
 # Show all suid\-files in $PATH
-  $ ls \-latg ${(s\&.:\&.)PATH} | grep \'^\&.\&.\&.s\'
+  $ ls \-latg ${(s\&.:\&.)PATH} | grep \*(Aq^\&.\&.\&.s\*(Aq
 # or more complex ;)
   $ print \-l ${^path}/*(Ns,S)
 # or show only executables with a user given pattern
@@ -538,7 +617,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
 # unique line i\&. e\&. does not print lines that have been printed before
 # (this is similar to the unique command, but unique can only handle
 # adjacent lines)\&.
-  $ IFS=$\'\en\en\'; print \-rl \-\- ${(Oau)${(Oa)$(cat file;echo \&.)[1,\-2]}}
+  $ IFS=$\*(Aq\en\en\*(Aq; print \-rl \-\- ${(Oau)${(Oa)$(cat file;echo \&.)[1,\-2]}}
 
 # Lists every executable in PATH
   $ print \-l ${^path}/*(\-*N)
@@ -546,7 +625,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
 # Match all \&.c files in all subdirectories, _except_ any SCCS subdirectories?
   $ ls **/*\&.c~(*/)#SCCS/*
 
-# List all `README\' \- files case\-insensitive with max\&. one typo
+# List all `README\*(Aq \- files case\-insensitive with max\&. one typo
   $ ls **/*(#ia2)readme
 
 # case insensitive checking for variables
@@ -556,35 +635,43 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   >    echo "Not a Linux\&."
   > fi
 .fi
+.if n \{\
 .RE
+.\}
 .SS "(Recursive) Globbing \- Examples"
+.sp
 A list of valid glob Qualifiers can be found in zshexpn(1)\&. \fBNote:\fR **/ is equivalent to (*/)#! For example:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 $ print (*/)#zsh_us\&.ps
 zsh\-4\&.2\&.3/Doc/zsh_us\&.ps
 $ print **/zsh_us\&.ps
 zsh\-4\&.2\&.3/Doc/zsh_us\&.ps
 .fi
+.if n \{\
 .RE
+.\}
 .sp
+.if n \{\
 .RS 4
+.\}
 .nf
-# Search for `README\' in all Subdirectories
+# Search for `README\*(Aq in all Subdirectories
   $ ls \-l **/README
 
 # find directories that contain both "index\&.php" and "index\&.html", or in
 # general, directories that contain more than one file matching "index\&.*"
-  $ ls **/*(D/e:\'[[ \-e $REPLY/index\&.php && \-e $REPLY/index\&.html ]]\':)
+  $ ls **/*(D/e:\*(Aq[[ \-e $REPLY/index\&.php && \-e $REPLY/index\&.html ]]\*(Aq:)
   # or
-  $ ls **/*(D/e:\'l=($REPLY/index\&.*(N)); (( $#l >= 2 ))\':)
+  $ ls **/*(D/e:\*(Aql=($REPLY/index\&.*(N)); (( $#l >= 2 ))\*(Aq:)
 
 # Find command to search for directory name instead of basename
   $ print \-rl /**/*~^*/path(|/*)
   # or \- without Zsh
-  $ find / | grep \-e /path/ \-e \'/path$\'
+  $ find / | grep \-e /path/ \-e \*(Aq/path$\*(Aq
 
 # Print he path of the directories holding the ten biggest C regular files
 # in the current directory and subdirectories\&.
@@ -606,7 +693,7 @@ zsh\-4\&.2\&.3/Doc/zsh_us\&.ps
   $ list=(${1:[\&.\&.\&.]}/*(ND:t))
   $ (($#list)) && print \-rC2 \-\- ${(V)list}
 
-# Search all files in /home/*/*\-mail/ with a setting ``chmod \-s\'\' flag
+# Search all files in /home/*/*\-mail/ with a setting ``chmod \-s\*(Aq\*(Aq flag
 # (recursive, include  dotfiles) remove the setgid/setuid flag and print
 # a message
   $ chmod \-s /home/*/*\-mail(DNs,S) /home/*/*\-mail/**/*(DNs,S))
@@ -615,17 +702,17 @@ zsh\-4\&.2\&.3/Doc/zsh_us\&.ps
   >    print \-r \-\- $file
   >    chmod \-s $file && print \-r fixed $file
   > }
-# or use ``zargs\'\' (require autoload zargs) prevent the arg list too
+# or use ``zargs\*(Aq\*(Aq (require autoload zargs) prevent the arg list too
 # long error
   $ zargs /home/*/*\-mail(DNs,S) /home/*/*\-mail/**/*(DNs,S)) \-\- chmod \-s
 
-# List files beginning at `foo23\' upwards (foo23, foo24, foo25, \&.\&.)
+# List files beginning at `foo23\*(Aq upwards (foo23, foo24, foo25, \&.\&.)
   $ ls \-l foo<23\->
 
 # get all files that begin with the date strings from June 4 through
 # June 9 of 2004
   $ ls \-l 200406{04\&.\&.10}*(N)
-# or if they are of the form 200406XX (require ``setopt extended_glob\'\'
+# or if they are of the form 200406XX (require ``setopt extended_glob\*(Aq\*(Aq
   $ ls \-l 200306<4\-10>\&.*
 
 # remove spaces from filenames
@@ -634,12 +721,12 @@ zsh\-4\&.2\&.3/Doc/zsh_us\&.ps
 # Show only all *\&.c and *\&.h \- Files
   $ ls \-l *\&.(c|h)
 
-# Show only all *\&.c \- files and ignore `foo\&.c\'
+# Show only all *\&.c \- files and ignore `foo\&.c\*(Aq
   $ ls *\&.c~foo\&.c
 
 # show data to *really* binary format
-  $ zsh \-ec \'while {} {printf %\&.8x $n;repeat 8 \e
-  > {read \-ku0 a printf \e %\&.8d $(([##2]#a))};print;((n+=8))}\' < binary
+  $ zsh \-ec \*(Aqwhile {} {printf %\&.8x $n;repeat 8 \e
+  > {read \-ku0 a printf \e %\&.8d $(([##2]#a))};print;((n+=8))}\*(Aq < binary
 
 # Show only world\-readable files
   $ ls \-l *(R)
@@ -668,7 +755,7 @@ zsh\-4\&.2\&.3/Doc/zsh_us\&.ps
   or use the zargs function:
    $ autoload zargs ; zargs **/*(mh+6) \-\- rm \-f
 
-# A User\'s Guide to the Z\-Shell /5\&.9: Filename Generation and Pattern
+# A User\*(Aqs Guide to the Z\-Shell /5\&.9: Filename Generation and Pattern
 # Matching find all files in all subdirectories, searching recursively,
 # which have a given name, case insensitive, are at least 50 KB large,
 # no more than a week old and owned by the root user, and allowing up
@@ -685,20 +772,20 @@ zsh\-4\&.2\&.3/Doc/zsh_us\&.ps
 # delete only the oldest file in a directory
   $ rm \&./*filename*(Om[1])
 
-# Sort the output from `ls \-l\' by file size
+# Sort the output from `ls \-l\*(Aq by file size
   $ ls \-fld *(OL)
 
 # find most recent file in a directory
   $ setopt dotglob ; print directory/**/*(om[1])
 
-# Show only empty files which nor `group\' or `world writable\'
+# Show only empty files which nor `group\*(Aq or `world writable\*(Aq
   $ ls *(L0f\&.go\-w\&.)
 
 # Find \- and list \- the ten newest files in directories and subdirs\&.
 # (recursive)
   $ print \-rl \-\- **/*(Dom[1,10])
 
-# Print only 5 lines by "ls" command (like ``ls \-laS | head \-n 5\'\')\&.
+# Print only 5 lines by "ls" command (like ``ls \-laS | head \-n 5\*(Aq\*(Aq)\&.
   $ ls \-fl *(DOL[1,5])
 
 # Display the 5\-10 last modified files\&.
@@ -717,15 +804,19 @@ zsh\-4\&.2\&.3/Doc/zsh_us\&.ps
 # Remove empty directories afterwards\&.
   $ rmdir \&./**/*(/od) 2> /dev/null
 
-# Show only files which are owned by group `users\'\&.
+# Show only files which are owned by group `users\*(Aq\&.
   $ ls \-l *(G[users])
 .fi
+.if n \{\
 .RE
+.\}
 .SS "Modifiers usage"
+.sp
 Modifiers are a powerful mechanism that let you modify the results returned by parameter, filename and history expansion\&. See zshexpn(1) for details\&.
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 # NOTE: Zsh 4\&.3\&.4 needed!
   $ autoload \-U age
@@ -733,7 +824,7 @@ Modifiers are a powerful mechanism that let you modify the results returned by p
   $ print *(e:age today now:)
 # files modified since 5 pm
   $ print *(e\-age 17:00 now\-)
-# \&.\&.\&. since 5 o\'clock yesterda
+# \&.\&.\&. since 5 o\*(Aqclock yesterda
   $ print *(e\-age yesterday,17:00 now\-)
 # \&.\&.\&. from last Christmas before today
   $ print *(e\-age 2006/12/25 today\-)
@@ -747,12 +838,12 @@ Modifiers are a powerful mechanism that let you modify the results returned by p
   $ print *(e\-age 2006/10/04:10:15 2006/10/04:10:45\-)
 
 # Remove a trailing pathname component, leaving the head\&. This works like
-# `dirname\'\&.
+# `dirname\*(Aq\&.
   $ echo =ls(:h)
   /bin
 
 # Remove all leading pathname components, leaving the tail\&. This works
-# like `basename\'\&.
+# like `basename\*(Aq\&.
   $ echo =ls(:t)
   ls
 
@@ -763,7 +854,7 @@ Modifiers are a powerful mechanism that let you modify the results returned by p
    :r \-\-> rest (extension removed)
   $ for f (*\&.sh) mv $f $f:r
 
-# Remove a filename extension of the form `\&.xxx\', leaving the root name\&.
+# Remove a filename extension of the form `\&.xxx\*(Aq, leaving the root name\&.
   $ echo $PWD
   /usr/src/linux
   $ echo $PWD:t
@@ -784,11 +875,11 @@ Modifiers are a powerful mechanism that let you modify the results returned by p
   $ echo =ls(:h)
 
 # Quote the substituted words, escaping further substitutions\&.
-  $ bar="23\'42"
+  $ bar="23\*(Aq42"
   $ echo $bar
-  23\'42
+  23\*(Aq42
   $ echo $bar:q
-  23\e\'42
+  23\e\*(Aq42
 
 # Convert the words to all lowercase\&.
   $ bar=FOOBAR
@@ -809,19 +900,23 @@ Modifiers are a powerful mechanism that let you modify the results returned by p
   $ print \-r \-\- "${(C)foo}"
   One Two Three Four
 .fi
+.if n \{\
 .RE
+.\}
 .SS "Redirection\-Examples"
+.sp
 See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-# Append `exit 1\' at the end of all *\&.sh \- files
+# Append `exit 1\*(Aq at the end of all *\&.sh \- files
   $ echo "exit 1" >> *\&.sh
 
 # adding files to foobar\&.tar\&.gz
-  $ eval set =(gunzip < foobar\&.tar\&.gz) \'
-     tar rf $1 additional\&.txt &&gzip < $1 > foobar\&.tar\&.gz\'
+  $ eval set =(gunzip < foobar\&.tar\&.gz) \*(Aq
+     tar rf $1 additional\&.txt &&gzip < $1 > foobar\&.tar\&.gz\*(Aq
 
 # Redirect output to a file AND display on screen
   $ foobar >&1 > file1 > file2 > \&.\&.
@@ -831,11 +926,11 @@ See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))
       >> (bzip2 \-9 > file1\&.bz2) \e
       >> (acb \-\-best > file1\&.acb)
 
-# Append /etc/services at the end of file `foo\' and `bar\'
+# Append /etc/services at the end of file `foo\*(Aq and `bar\*(Aq
   $ cat /etc/services >> foo >> bar
 
 # Pipe STDERR
-  $ echo An error >&2 2>&1 | sed \-e \'s/A/I/\'
+  $ echo An error >&2 2>&1 | sed \-e \*(Aqs/A/I/\*(Aq
 
 # send standard output of one process to standard input of several processes
 # in the pipeline
@@ -862,85 +957,89 @@ See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))
 
 # More fun with STDERR ;)
   $ \&./my\-script\&.sh 2> >(grep \-v moron >error\&.log)|process\-output >output\&.log
-  $  echo "Thats STDOUT" >>(sed \'s/stdout/another example/\' > foobar)
+  $  echo "Thats STDOUT" >>(sed \*(Aqs/stdout/another example/\*(Aq > foobar)
 .fi
+.if n \{\
 .RE
+.\}
 .SS "ZMV\-Examples (require autoload zmv)"
+.sp
 \fBNote:\fR \fI\-n\fR means no execution (just print what would happen)\&. At
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 # Remove illegal characters in a fat32 file system\&. Illegal characters are
 #   / :  ;  *  ?  "  <  >  |
-# NOTE: ``\-Q\'\' and (D) is to include hidden files\&.
-  $ unwanted=\'[:;*?\e"<>|]\'
-  $ zmv \-Q "(**/)(*$~unwanted*)(D)" \'$1${2//$~unwanted/}\'
+# NOTE: ``\-Q\*(Aq\*(Aq and (D) is to include hidden files\&.
+  $ unwanted=\*(Aq[:;*?\e"<>|]\*(Aq
+  $ zmv \-Q "(**/)(*$~unwanted*)(D)" \*(Aq$1${2//$~unwanted/}\*(Aq
 
 # Changing part of a filename (i\&. e\&. "file\-hell\&.name" \-> "file\-heaven\&.name")
-  $ zmv \'(*)hell(*)\' \'${1}heaven${2}\'
+  $ zmv \*(Aq(*)hell(*)\*(Aq \*(Aq${1}heaven${2}\*(Aq
   # or
-  $ zmv \'*\' \'$f:s/hell/heaven/\'
+  $ zmv \*(Aq*\*(Aq \*(Aq$f:s/hell/heaven/\*(Aq
 
 # remove round bracket within filenames
 # i\&. e\&. foo\-(bar)\&.avi \-> foo\-bar\&.avi
-  $ zmv \'*\' \'${f//[()]/}\'
+  $ zmv \*(Aq*\*(Aq \*(Aq${f//[()]/}\*(Aq
 
 # serially all files (foo\&.foo > 1\&.foo, fnord\&.foo > 2\&.foo, \&.\&.)
   $ autoload zmv
   $ ls *
   1\&.c  asd\&.foo  bla\&.foo  fnord\&.foo  foo\&.fnord  foo\&.foo
-  $ c=1 zmv \'*\&.foo\' \'$((c++))\&.foo\'
+  $ c=1 zmv \*(Aq*\&.foo\*(Aq \*(Aq$((c++))\&.foo\*(Aq
   $ ls *
   1\&.c  1\&.foo  2\&.foo  3\&.foo  4\&.foo  foo\&.fnord
 
 # Rename "file\&.with\&.many\&.dots\&.txt" by substituting dots (exept for the last
 # one!) with a space
   $ touch {1\&.\&.20}\-file\&.with\&.many\&.dots\&.txt
-  $ zmv \'(*\&.*)(\&.*)\' \'${1//\&./ }$2\'
+  $ zmv \*(Aq(*\&.*)(\&.*)\*(Aq \*(Aq${1//\&./ }$2\*(Aq
 
 # Remove the first 4 chars from a filename
-  $ zmv \-n \'*\' \'$f[5,\-1]\' # NOTE: The "5" is NOT a mistake in writing!
+  $ zmv \-n \*(Aq*\*(Aq \*(Aq$f[5,\-1]\*(Aq # NOTE: The "5" is NOT a mistake in writing!
 
 # Rename names of all files under the current Dir to lower case, but keep
 # dirnames as\-is\&.
-  $ zmv \-Qv \'(**/)(*)(\&.D)\' \'$1${(L)2}\'
+  $ zmv \-Qv \*(Aq(**/)(*)(\&.D)\*(Aq \*(Aq$1${(L)2}\*(Aq
 
 # replace all 4th character, which is "1",  with "2" and so on
   $ autoload \-U zmv
-  $ zmv \'(???)1(???[1\-4]\&.txt)\' \'${1}2${2}\'
+  $ zmv \*(Aq(???)1(???[1\-4]\&.txt)\*(Aq \*(Aq${1}2${2}\*(Aq
 
 # Remove the first 15 characters from a string
   $ touch 111111111111111{a\-z}
   $ autoload zmv
-  $ zmv \'*\' \'$f[16,\-1]\'
+  $ zmv \*(Aq*\*(Aq \*(Aq$f[16,\-1]\*(Aq
 
 # Replace spaces (any number of them) with a single dash in file names
   $ autload zmv
-  $ zmv \-n \'(**/)(* *)\' \'$1${2//( #\-## #| ##)/\-}\'
+  $ zmv \-n \*(Aq(**/)(* *)\*(Aq \*(Aq$1${2//( #\-## #| ##)/\-}\*(Aq
   # or \- with Bash
-  $ find \&. \-depth \-name \'* *\' \-exec bash \-c \'
+  $ find \&. \-depth \-name \*(Aq* *\*(Aq \-exec bash \-c \*(Aq
   > shopt \-s extglob
   > file=$1
   > dir=${file%/*}
   > name=${file##*/}
   > newname=${name//*([ \-]) *([ \-])/\-}
-  > mv \-i \-\- "$file" "$Dir/$newname"\' {} {} \e;
+  > mv \-i \-\- "$file" "$Dir/$newname"\*(Aq {} {} \e;
 
 # Clean up file names and remove special characters
   $ autoload zmv
-  $ zmv \-n \'(**/)(*)\' \'$1${2//[^A\-Za\-z0\-9\&._]/_}\'
+  $ zmv \-n \*(Aq(**/)(*)\*(Aq \*(Aq$1${2//[^A\-Za\-z0\-9\&._]/_}\*(Aq
 
 # Add *\&.py to a bunch of python scripts in a directory (some of them end
 # in *\&.py and give them all a proper extension
   $ autoload zmv
-  $ zmv \-n \'(**/)(con*)(#qe,file $REPLY | grep "python script",)\' \'$1$2\&.py\'
+  $ zmv \-n \*(Aq(**/)(con*)(#qe,file $REPLY | grep "python script",)\*(Aq \*(Aq$1$2\&.py\*(Aq
 
 # lowercase all extensions (i\&. e\&. *\&.JPG) incl\&. subfolders
   $ autoload zmv
-  $ zmv \'(**/)(*)\&.(#i)jpg\' \'$1$2\&.jpg\'
+  $ zmv \*(Aq(**/)(*)\&.(#i)jpg\*(Aq \*(Aq$1$2\&.jpg\*(Aq
   # Or \- without Zsh
-  $ find Dir \-name \'*\&.[jJ][pP][gG]\' \-print | while read f
+  $ find Dir \-name \*(Aq*\&.[jJ][pP][gG]\*(Aq \-print | while read f
   > do
   >      case $f in
   >       *\&.jpg) ;
@@ -953,7 +1052,7 @@ See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))
   $ ls
   filename\&.001  filename\&.003  filename\&.005  filename\&.007  filename\&.009
   filename\&.002  filename\&.004  filename\&.006  filename\&.008  filename\&.010
-  $ zmv \'(filename\&.)0##(?*)\' \'$1$2\'
+  $ zmv \*(Aq(filename\&.)0##(?*)\*(Aq \*(Aq$1$2\*(Aq
   $ ls
   filename\&.1  filename\&.10  filename\&.2  filename\&.3  filename\&.4  filename\&.5 \&.\&.
 
@@ -961,127 +1060,142 @@ See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))
   $ autoload zmv
   $ ls *
   foo_10\&.jpg  foo_2\&.jpg  foo_3\&.jpg  foo_4\&.jpg  foo_5\&.jpg  foo_6\&.jpg \&.\&.
-  $ zmv \-fQ \'foo_(<0\->)\&.jpg(\&.nOn)\' \'foo_$(($1 + 1))\&.jpg\'
+  $ zmv \-fQ \*(Aqfoo_(<0\->)\&.jpg(\&.nOn)\*(Aq \*(Aqfoo_$(($1 + 1))\&.jpg\*(Aq
   $ ls *
   foo_10\&.jpg  foo_11\&.jpg  foo_3\&.jpg  foo_4\&.jpg  foo_5\&.jpg  \&.\&.\&.
 
 # adding leading zeros to a filename (1\&.jpg \-> 001\&.jpg, \&.\&.
   $ autoload zmv
-  $ zmv \'(<1\->)\&.jpg\' \'${(l:3::0:)1}\&.jpg\'
+  $ zmv \*(Aq(<1\->)\&.jpg\*(Aq \*(Aq${(l:3::0:)1}\&.jpg\*(Aq
 
 # See above, but now only files with a filename >= 30 chars
   $ autoload zmv
-  $ c=1 zmv "${(l:30\-4::?:)}*\&.foo" \'$((c++))\&.foo\'
+  $ c=1 zmv "${(l:30\-4::?:)}*\&.foo" \*(Aq$((c++))\&.foo\*(Aq
 
 # Replace spaces in filenames with a underline
   $ autoload zmv
-  $ zmv \'* *\' \'$f:gs/ /_\'
+  $ zmv \*(Aq* *\*(Aq \*(Aq$f:gs/ /_\*(Aq
 
 # Change the suffix from *\&.sh to *\&.pl
   $ autoload zmv
-  $ zmv \-W \'*\&.sh\' \'*\&.pl\'
+  $ zmv \-W \*(Aq*\&.sh\*(Aq \*(Aq*\&.pl\*(Aq
 
 # Add a ""\&.txt" extension to all the files within ${HOME}
-  # ``\-\&.\'\' is to only rename regular files or symlinks to regular files,
-  # ``D\'\' is to also rename hidden files (dotfiles))
+  # ``\-\&.\*(Aq\*(Aq is to only rename regular files or symlinks to regular files,
+  # ``D\*(Aq\*(Aq is to also rename hidden files (dotfiles))
   $ autoload zmv
-  $ zmv \-Q \'/home/**/*(D\-\&.)\' \'$f\&.txt\'
-  # Or to only rename files that don\'t have an extension:
-  $ zmv \-Q \'/home/**/^?*\&.*(D\-\&.)\' \'$f\&.txt\'
+  $ zmv \-Q \*(Aq/home/**/*(D\-\&.)\*(Aq \*(Aq$f\&.txt\*(Aq
+  # Or to only rename files that don\*(Aqt have an extension:
+  $ zmv \-Q \*(Aq/home/**/^?*\&.*(D\-\&.)\*(Aq \*(Aq$f\&.txt\*(Aq
 
 # Recursively change filenames with characters ? [ ] / = + < > ; : " , \- *
   $ autoload zmv
-  $ chars=\'[][?=+<>;",*\-]\'
-  $ zmv \'(**/)(*)\' \'$1${2//$~chars/%}\'
+  $ chars=\*(Aq[][?=+<>;",*\-]\*(Aq
+  $ zmv \*(Aq(**/)(*)\*(Aq \*(Aq$1${2//$~chars/%}\*(Aq
 
 # Removing single quote from filenames (recursively)
   $ autoload zmv
-  $ zmv \-Q "(**/)(*\'*)(D)" "\e$1\e${2//\'/}"
+  $ zmv \-Q "(**/)(*\*(Aq*)(D)" "\e$1\e${2//\*(Aq/}"
 
 # When a new file arrives (named file\&.txt) rename all files in order to
 # get (e\&. g\&. file119\&.txt becomes file120\&.txt, file118\&.txt becomes
 # file119\&.txt and so on ending with file\&.txt becoming file1\&.txt
   $ autoload zmv
-  $ zmv \-fQ \'file([0\-9]##)\&.txt(On)\' \'file$(($1 + 1))\&.txt\'
+  $ zmv \-fQ \*(Aqfile([0\-9]##)\&.txt(On)\*(Aq \*(Aqfile$(($1 + 1))\&.txt\*(Aq
 
 # lowercase/uppercase all files/directories
   $ autoload zmv
-  $ zmv \'(*)\' \'${(L)1}\' # lowercase
-  $ zmv \'(*)\' \'${(U)1}\' # uppercase
+  $ zmv \*(Aq(*)\*(Aq \*(Aq${(L)1}\*(Aq # lowercase
+  $ zmv \*(Aq(*)\*(Aq \*(Aq${(U)1}\*(Aq # uppercase
 
 # Remove the suffix *\&.c from all C\-Files
   $ autoload zmv
-  $ zmv \'(*)\&.c\' \'$1\'
+  $ zmv \*(Aq(*)\&.c\*(Aq \*(Aq$1\*(Aq
 
 # Uppercase only the first letter of all *\&.mp3 \- files
   $ autoload zmv
-  $ zmv \'([a\-z])(*)\&.mp3\' \'${(C)1}$2\&.mp3\'
+  $ zmv \*(Aq([a\-z])(*)\&.mp3\*(Aq \*(Aq${(C)1}$2\&.mp3\*(Aq
 
-# Copy the target `README\' in same directory as each `Makefile\'
+# Copy the target `README\*(Aq in same directory as each `Makefile\*(Aq
   $ autoload zmv
-  $ zmv \-C \'(**/)Makefile\' \'${1}README\'
+  $ zmv \-C \*(Aq(**/)Makefile\*(Aq \*(Aq${1}README\*(Aq
 
 # Removing single quote from filenames (recursively)
   $ autoload zmv
-  $ zmv \-Q "(**/)(*\'*)(D)" "\e$1\e${2//\'/}"
+  $ zmv \-Q "(**/)(*\*(Aq*)(D)" "\e$1\e${2//\*(Aq/}"
 
 # Rename pic1\&.jpg, pic2\&.jpg, \&.\&. to pic0001\&.jpg, pic0002\&.jpg, \&.\&.
   $ autoload zmv
-  $ zmv \'pic(*)\&.jpg\' \'pic${(l:4::0:)1}\&.jpg\'
-  $ zmv \'(**/)pic(*)\&.jpg\' \'$1/pic${(l:4::0:)2}\&.jpg\' # recursively
+  $ zmv \*(Aqpic(*)\&.jpg\*(Aq \*(Aqpic${(l:4::0:)1}\&.jpg\*(Aq
+  $ zmv \*(Aq(**/)pic(*)\&.jpg\*(Aq \*(Aq$1/pic${(l:4::0:)2}\&.jpg\*(Aq # recursively
 .fi
+.if n \{\
 .RE
+.\}
 .SS "Module\-Examples"
-Please read zshmodules(1) first!
 .sp
+Please read zshmodules(1) first!
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/pcre (require zmodload zsh/pcre)
-.RS
-.sp
+.ps +1
+\fBzsh/pcre (require zmodload zsh/pcre)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
 # Copy files of a certain period (date indicated in the filenames)
   $ zmodload zsh/pcre
-  $ ls \-d \-\- *(e:\'[[ $REPLY \-pcre\-match pcre\-regexp ]]\':)
+  $ ls \-d \-\- *(e:\*(Aq[[ $REPLY \-pcre\-match pcre\-regexp ]]\*(Aq:)
   # or
   $ m() { [[ $1 \-pcre\-match pcre\-regexp ]] }
   $ ls \-d \-\- *(+m)
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/clone (require zmodload zsh/clone)
-.RS
-.sp
+.ps +1
+\fBzsh/clone (require zmodload zsh/clone)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
 # Creates a forked instance of the current shell ($! is set to zero) and
-# execute ``command\'\' on /dev/tty8 (for this example)\&.
+# execute ``command\*(Aq\*(Aq on /dev/tty8 (for this example)\&.
   $ zmodload zsh/clone
   $ clone /dev/tty8 && (($! == 0)) && exec command
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/datetime (require zmodload zsh/datetime)
-.RS
-.sp
+.ps +1
+\fBzsh/datetime (require zmodload zsh/datetime)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
   $ zmodload zsh/datetime
-  $ alias datereplacement=\'strftime "%Y\-%m\-%d" $EPOCHSECONDS\'
+  $ alias datereplacement=\*(Aqstrftime "%Y\-%m\-%d" $EPOCHSECONDS\*(Aq
   $ export DATE=`datereplacement`
   $ echo $DATE
 
@@ -1090,7 +1204,7 @@ zsh/datetime (require zmodload zsh/datetime)
   $ setopt extendedglob
   $ touch aaa_bbb_20041212_c\&.dat eee_fff_20051019_g\&.dat
   $ strftime \-s pattern \e
-    \'???_???_<0\-%Y%m%d>_?\&.dat\' $((EPOCHSECONDS \- 365 * 24 * 60 * 60 / 2))
+    \*(Aq???_???_<0\-%Y%m%d>_?\&.dat\*(Aq $((EPOCHSECONDS \- 365 * 24 * 60 * 60 / 2))
   $ print \-rl \-\- $~pattern
   aaa_bbb_20041212_c\&.dat
   $ print \-rl \-\- $pattern
@@ -1104,17 +1218,22 @@ zsh/datetime (require zmodload zsh/datetime)
   $ (( $#files > 0 )) && print \-rl \-\- $files | \e
     mailx \-s "empty files"  foo@bar\&.tdl
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/stat (require zmodload zsh/stat)
-.RS
-.sp
+.ps +1
+\fBzsh/stat (require zmodload zsh/stat)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
 # test if a symbolic link links to a certain file
   $ zmodload \-i zsh/stat
@@ -1139,7 +1258,7 @@ zsh/stat (require zmodload zsh/stat)
   $ ls \-fld \&./**/*(d`stat +device \&.`OL[1,100])
 
 # Get only the user name and the file names from (like
-# ls \-l * | awk \'{print $3" " $8}\')
+# ls \-l * | awk \*(Aq{print $3" " $8}\*(Aq)
   $ zmodload zsh/stat
   $ for file; do
   >   stat \-sA user +uid \-\- "$file" &&
@@ -1151,10 +1270,10 @@ zsh/stat (require zmodload zsh/stat)
   $ print $(($(stat +block \-\- file) * 512 \- $(stat +size \-\- file)))
 
 # Find largest file
-# ``D\'\'  : to include dot files (d lowercase is for device)
-# ``O\'\'  : reverse Ordered (o lowercase for non\-reverse order)
-# ``L\'\'  : by file Length (l is for number of links)
-# ``[1]\'\': return only first one
+# ``D\*(Aq\*(Aq  : to include dot files (d lowercase is for device)
+# ``O\*(Aq\*(Aq  : reverse Ordered (o lowercase for non\-reverse order)
+# ``L\*(Aq\*(Aq  : by file Length (l is for number of links)
+# ``[1]\*(Aq\*(Aq: return only first one
   $ zmodload zsh/stat
   $ stat +size \&./*(DOL[1])
 
@@ -1163,21 +1282,21 @@ zsh/stat (require zmodload zsh/stat)
   $ stat \-L +size ~/\&.zshrc
   4707
 
-# Delete files in a directory that hasn\'t been accessed in the last ten days
-# and send ONE mail to the owner of the files informing him/her of the files\'
+# Delete files in a directory that hasn\*(Aqt been accessed in the last ten days
+# and send ONE mail to the owner of the files informing him/her of the files\*(Aq
 # deletion\&.
   $ zmodload zsh/stat zsh/files
   $ typeset \-A f; f=()
-  $ rm \-f /path/**/*(\&.a+10e{\'stat \-sA u +uidr $REPLY; f[$u]="$f[$u]$REPLY"\'})
+  $ rm \-f /path/**/*(\&.a+10e{\*(Aqstat \-sA u +uidr $REPLY; f[$u]="$f[$u]$REPLY"\*(Aq})
   $ for user (${(k)f}) {print \-rn $f[$user]|mailx \-s "\&.\&.\&." $user}
 
 # Get a "ls \-l" on all the files in the tree that are younger than a
 # specified age
   $ zmodload zsh/stat
   $ for d (\&. \&./**/*(N/m\-2))
-  >   print \-r \-\- $\'\en\'$d: && cd $d && {
+  >   print \-r \-\- $\*(Aq\en\*(Aq$d: && cd $d && {
   >      for f (*(Nm\-2om))
-  >   stat \-F \'%b %d %H:%M\' \-LsAs \-\- $f &&
+  >   stat \-F \*(Aq%b %d %H:%M\*(Aq \-LsAs \-\- $f &&
   >   print \-r \-\- $s[3] ${(l:4:)s[4]} ${(l:8:)s[5]} \e
   >   ${(l:8:)s[6]} ${(l:8:)s[8]} $s[10] $f ${s[14]:+\-> $s[14]}
   >   cd ~\-
@@ -1185,94 +1304,109 @@ zsh/stat (require zmodload zsh/stat)
 
 # get file creation date
   $ zmodload zsh/stat
-  $ stat \-F \'%d %m %Y\' +mtime ~/\&.zshrc
+  $ stat \-F \*(Aq%d %m %Y\*(Aq +mtime ~/\&.zshrc
   30 06 2004
-  $ stat \-F \'%D\' +mtime ~/\&.zshrc
+  $ stat \-F \*(Aq%D\*(Aq +mtime ~/\&.zshrc
   06/30/04
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/files (require zmodload zsh/files)
-.RS
-.sp
+.ps +1
+\fBzsh/files (require zmodload zsh/files)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
 # search a directory for files containing a certain string then copy those
 # files to another directory\&.
   $ zmodload zsh/files
-  $ IFS=$\'\e0\'
+  $ IFS=$\*(Aq\e0\*(Aq
   $ cp $(grep \-lZr foobar \&.) otherdirectory
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/mapfile (require zmodload zsh/mapfile)
-.RS
-.sp
+.ps +1
+\fBzsh/mapfile (require zmodload zsh/mapfile)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
 # grepping for two patterns
   $ zmodload zsh/mapfile
   $ pattern1="foo"
   $ pattern2="bar foo"
-  $ print \-l \&./**/*(DN\&.e{\'z=$mapfile[$REPLY] && [[ $z = *$pattern1* && \e
-    $z = *$pattern2* ]]\'})
+  $ print \-l \&./**/*(DN\&.e{\*(Aqz=$mapfile[$REPLY] && [[ $z = *$pattern1* && \e
+    $z = *$pattern2* ]]\*(Aq})
 # or a solution in combination with zsh/pcre
   $ zmodload \-i zsh/mapfile zsh/pcre
   $ pattern1="foo"
   $ pattern2="bar foo"
   $ pcre_compile "(?s)(?=\&.*?$pattern1)\&.*?$pattern2"
   $ pcre_study
-  $ print \-l \&./**/*(DN\&.e{\'pcre_match $mapfile[$REPLY]\'})
+  $ print \-l \&./**/*(DN\&.e{\*(Aqpcre_match $mapfile[$REPLY]\*(Aq})
 
-# equivalent for ``less /etc/passwd | grep \-v root\'\'
+# equivalent for ``less /etc/passwd | grep \-v root\*(Aq\*(Aq
   $ zmodload zsh/mapfile
-  $ IFS=$\'\en\en\'
+  $ IFS=$\*(Aq\en\en\*(Aq
   $ print \-rl \-\- ${${=mapfile[/etc/passwd]}:#*root*}
 # or \- for case insensitive
   $ setopt extendedglob
   $ print \-rl \-\- ${${=mapfile[/etc/passwd]}:#*(#i)root*}
 
-# If a XML\-file contains stuff like ``<TAGA/>\'\' and ``<TAGB/>\'\', number
-# this empty tags (ones ending in \'/>\') so if encountered in the same
-# order, the preceeding tags would become ``<TAGA/>1</TAGA>\'\' and
-# ``<TAGB/>2</TAGB>\'\'
+# If a XML\-file contains stuff like ``<TAGA/>\*(Aq\*(Aq and ``<TAGB/>\*(Aq\*(Aq, number
+# this empty tags (ones ending in \*(Aq/>\*(Aq) so if encountered in the same
+# order, the preceeding tags would become ``<TAGA/>1</TAGA>\*(Aq\*(Aq and
+# ``<TAGB/>2</TAGB>\*(Aq\*(Aq
   $ zmodload zsh/mapfile
   $ cnt=0
   $ apfile[data\&.xml\&.new]=${(S)mapfile[data\&.xml]//\e
   > (#im)<TAGA>*<\e/TAGA>/<TAGA>$((++cnt))<\e/TAGA>}
 
-# removing all files in users Maildir/new that contain ``filename="gone\&.src\'\'
+# removing all files in users Maildir/new that contain ``filename="gone\&.src\*(Aq\*(Aq
   $ zmodload zsh/{files,mapfile}
-  $ rm \-f /u1/??/*/Maildir/new/100*(\&.e{\'[[ $mapfile[$REPLY] == \e
-    *filename=\e"gone\&.scr\e"* ]]\'})
+  $ rm \-f /u1/??/*/Maildir/new/100*(\&.e{\*(Aq[[ $mapfile[$REPLY] == \e
+    *filename=\e"gone\&.scr\e"* ]]\*(Aq})
 
 # Grep out the Title from a postscript file and append that value to the
 # end of the filename
   $ autoload \-U zmv
   $ zmodload zsh/mapfile
-  $ zmv \'(*)\&.ps\' \'$1\-${${${mapfile[$f]##*%%Title: }%% *}//[^a\-zA\-Z0\-9_]/}\&.ps\'
+  $ zmv \*(Aq(*)\&.ps\*(Aq \*(Aq$1\-${${${mapfile[$f]##*%%Title: }%% *}//[^a\-zA\-Z0\-9_]/}\&.ps\*(Aq
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/mathfunc (require zmodload zsh/mathfunc)
-.RS
-.sp
+.ps +1
+\fBzsh/mathfunc (require zmodload zsh/mathfunc)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
 $ zmodload zsh/mathfunc
 $ echo $(( sin(1/4\&.0)**2 + cos(1/4\&.0)**2 \- 1 ))
@@ -1286,17 +1420,22 @@ $ print $((1e12 * rand48()))
 $ print $(( rand48(seed) ))
   0\&.01043488334700271
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/termcap (require zmodload zsh/termcap)
-.RS
-.sp
+.ps +1
+\fBzsh/termcap (require zmodload zsh/termcap)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
  $ zmodload \-ab zsh/termcap echotc
  $ GREEN=`echotc AF 2`
@@ -1305,27 +1444,32 @@ zsh/termcap (require zmodload zsh/termcap)
  $ BRIGHTRED=`echotc md ; echotc AF 1`
  $ print \-l ${GREEN}green ${YELLOW}yellow ${RED}red ${BRIGHTRED}brightred
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/zpty (require zmodload zsh/zpty)
-.RS
-.sp
+.ps +1
+\fBzsh/zpty (require zmodload zsh/zpty)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
   $ zmodload zsh/zpty
   $ zpty PW passwd $1
   $ zpty PW passwd $1
-# ``\-r\'\': read the output of the command name\&.
-# ``z\'\' : Parameter
-  $ zpty \-r PW z \'*password:\'
+# ``\-r\*(Aq\*(Aq: read the output of the command name\&.
+# ``z\*(Aq\*(Aq : Parameter
+  $ zpty \-r PW z \*(Aq*password:\*(Aq
 # send the to command name the given strings as input
   $ zpty \-w PW $2
-  $ zpty \-r PW z \'*password:\'
+  $ zpty \-r PW z \*(Aq*password:\*(Aq
   $ zpty \-w PW $2
 # The second form, with the \-d option, is used to delete commands
 # previously started, by supplying a list of their names\&. If no names
@@ -1333,43 +1477,53 @@ zsh/zpty (require zmodload zsh/zpty)
 # signal to be sent to the corresponding process\&.
   $ zpty \-d PW
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/net/socket (require zmodload zsh/net/socket)
-.RS
-.sp
+.ps +1
+\fBzsh/net/socket (require zmodload zsh/net/socket)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
-# ``\-l\'\': open a socket listening on filename
-# ``\-d\'\': argument will be taken as the target file descriptor for the
+# ``\-l\*(Aq\*(Aq: open a socket listening on filename
+# ``\-d\*(Aq\*(Aq: argument will be taken as the target file descriptor for the
 #         connection
-# ``3\'\' : file descriptor\&. See ``A User\'s Guide to the Z\-Shell\'\'
+# ``3\*(Aq\*(Aq : file descriptor\&. See ``A User\*(Aqs Guide to the Z\-Shell\*(Aq\*(Aq
 #         (3\&.7\&.2: File descriptors)
   $ zmodload zsh/net/socket
   $ zsocket \-l \-d 3
-# ``\-a\'\': accept an incoming connection to the socket
+# ``\-a\*(Aq\*(Aq: accept an incoming connection to the socket
   $ zsocket \-a \-d 4 3
   $ zsocket \-a \-d 5 3 # accept a connection
   $ echo foobar >&4
   $ echo barfoo >&5
   $ 4>&\- 5>&\- 3>&
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/zftp (require zmodload zsh/zftp)
-.RS
-.sp
+.ps +1
+\fBzsh/zftp (require zmodload zsh/zftp)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
  $ autoload \-U zfinit
  $ zfinit
@@ -1392,7 +1546,7 @@ zsh/zftp (require zmodload zsh/zftp)
   $ zftp get $file | bzip2 > ${file}\&.bz2
   $ zftp close
 
-# Recursice ``get\'\'
+# Recursice ``get\*(Aq\*(Aq
   $ autoload \-U zfinit ; zfinit
   $ zfanon cr\&.yp\&.to
   $ zfcd daemontools
@@ -1419,19 +1573,24 @@ zsh/zftp (require zmodload zsh/zftp)
   $ zfget ${(f)"$(cat list\&.txt)"}
   $ zfclose
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-zsh/zselect (require zmodload zsh/zselect)
-.RS
-.sp
+.ps +1
+\fBzsh/zselect (require zmodload zsh/zselect)\fR
 .RS 4
+.sp
+.if n \{\
+.RS 4
+.\}
 .nf
-# It\'s similar to
+# It\*(Aqs similar to
  ,\-\-\-\-
  | $ sg=$(stty \-g)
  | $ stty \-icanon min 0 time 50
@@ -1449,94 +1608,113 @@ $ if zselect \-t 500 \-r 0 && read yesno && [ yes = "$yesno" ]; then
 >    command1
 > fi
 .fi
+.if n \{\
 .RE
+.\}
 .RE
 .SH "OPTIONS"
 .SS "Navigation options"
-\fBauto_cd\fR (allow one to change to a directory by entering it as a command)\&. \fBauto_pushd\fR (automatically append dirs to the push/pop list) pushd_ignore_dups (and don\'t duplicate them)\&.
 .sp
+\fBauto_cd\fR (allow one to change to a directory by entering it as a command)\&. \fBauto_pushd\fR (automatically append dirs to the push/pop list) pushd_ignore_dups (and don\(cqt duplicate them)\&.
 .SS "Misc"
-\fBno_hup\fR (don\'t send HUP signal to background jobs when exiting ZSH)\&. \fBprint_exit_value\fR (show a message with the exit code when a command returns with a non\-zero exit code)
 .sp
+\fBno_hup\fR (don\(cqt send HUP signal to background jobs when exiting ZSH)\&. \fBprint_exit_value\fR (show a message with the exit code when a command returns with a non\-zero exit code)
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-History options
-.RS
+.ps +1
+\fBHistory options\fR
+.RS 4
+.sp
 \fBhist_verify\fR (let the user edit the command line after history expansion (e\&.g\&. !ls) instead of immediately running it) Use the same history file for all sessions : \fBsetopt SHARE_HISTORY\fR
-.sp
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-Privacy / Security
-.RS
+.ps +1
+\fBPrivacy / Security\fR
+.RS 4
+.sp
 \fBno_clobber\fR (or set \-C; prevent \fI>\fR redirection from truncating the given file if it already exists)
-.sp
 .RE
 .sp
 .it 1 an-trap
 .nr an-no-space-flag 1
 .nr an-break-flag 1
 .br
-Spelling correction
-.RS
-\fBcorrect\fR (automatically correct the spelling of commands)\&. \fBcorrect_all\fR (automatically correct the spelling of each word on the command line) \fBdvorak\fR (dvorak layout)
+.ps +1
+\fBSpelling correction\fR
+.RS 4
 .sp
+\fBcorrect\fR (automatically correct the spelling of commands)\&. \fBcorrect_all\fR (automatically correct the spelling of each word on the command line) \fBdvorak\fR (dvorak layout)
 .RE
 .SH "UNSORTED/MISC"
+.sp
 Mailpath: simple multiple mailpath:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-mailpath=($HOME/Mail/mbox\'?new mail in mbox\'
-          $HOME/Mail/tux\&.u\-strasbg\'?new mail in tux\'
-          $HOME/Mail/lilo\'?new mail in lilo\'
-          $HOME/Mail/ldap\-fr\'?new mail in ldap\-fr\')
+mailpath=($HOME/Mail/mbox\*(Aq?new mail in mbox\*(Aq
+          $HOME/Mail/tux\&.u\-strasbg\*(Aq?new mail in tux\*(Aq
+          $HOME/Mail/lilo\*(Aq?new mail in lilo\*(Aq
+          $HOME/Mail/ldap\-fr\*(Aq?new mail in ldap\-fr\*(Aq)
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Mailpath: dynamic mailpath:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 typeset \-a mailpath
 for i in ~/Mail/Lists/*(\&.); do
    mailpath[$#mailpath+1]="${i}?You have new mail in ${i:t}\&."
 done
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Avoid globbing on special commands:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 for com in alias expr find mattrib mcopy mdir mdel which;
 alias $com="noglob $com"
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 For migrating your bashprompt to zsh use the script bash2zshprompt located in the zsh source distribution under \fIMisc\fR\&.
 .sp
 For migration from (t)csh to zsh use the c2z tool that converts csh aliases and environment and shell variables to zsh\&. It does this by running csh, and having csh report on aliases and variables\&. The script then converts these to zsh startup files\&. It has some issues and usage information that are documented at the top of this script\&.
 .sp
 Here are functions to set the title and hardstatus of an \fBXTerm\fR or of \fBGNU Screen\fR to \fIzsh\fR and the current directory, respectively, when the prompt is displayed, and to the command name and rest of the command line, respectively, when a command is executed:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 function title {
       if [[ $TERM == "screen" ]]; then
         # Use these two for GNU Screen:
-        print \-nR $\' 33k\'$1$\' 33\'\e
-        print \-nR $\' 33]0;\'$2$\'\'
+        print \-nR $\*(Aq 33k\*(Aq$1$\*(Aq 33\*(Aq\e
+        print \-nR $\*(Aq 33]0;\*(Aq$2$\*(Aq\*(Aq
       elif [[ $TERM == "xterm" || $TERM == "rxvt" ]]; then
         # Use this one instead for XTerms:
-        print \-nR $\' 33]0;\'$*$\'\'
+        print \-nR $\*(Aq 33]0;\*(Aq$*$\*(Aq\*(Aq
       fi
 }
 function precmd { title zsh "$PWD" }
@@ -1546,160 +1724,156 @@ function preexec {
     title $cmd[1]:t "$cmd[2,\-1]"
 }
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Put the following line into your ~/\&.screenrc to see this fancy hardstatus:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 caption always "%3n %t%? (%u)%?%?: %h%?"
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Special variables which are assigned:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
 $LINENO $RANDOM $SECONDS $COLUMNS $HISTCHARS $UID
 $EUID $GID $EGID $USERNAME $fignore $mailpath $cdpath
 .fi
+.if n \{\
 .RE
+.\}
 .SH "LINKS"
 .PP
 Primary site
 .RS 4
-
 \fBhttp://www\&.zsh\&.org/\fR
 .RE
 .PP
 Project\-page
 .RS 4
-
 \fBhttp://sourceforge\&.net/projects/zsh/\fR
 .RE
 .PP
 Z shell page at sunsite\&.dk
 .RS 4
-
 \fBhttp://zsh\&.sunsite\&.dk/\fR
 .RE
 .PP
 From Bash to Z Shell: Conquering the Command Line \- the book
 .RS 4
-
 \fBhttp://www\&.bash2zsh\&.com/\fR
 .RE
 .PP
 "Zsh \- die magische Shell" (german book about Zsh) by Sven Guckes and Julius Plenz
 .RS 4
-
 \fBhttp://zshbuch\&.org/\fR
 .RE
 .PP
 Mailinglistarchive
 .RS 4
-
 \fBhttp://www\&.zsh\&.org/mla/\fR
 .RE
 .PP
 ZSH\-FAQ
 .RS 4
-
 \fBhttp://zsh\&.dotsrc\&.org/FAQ/\fR
 .RE
 .PP
 Userguide
 .RS 4
-
 \fBhttp://zsh\&.sunsite\&.dk/Guide/\fR
 .RE
 .PP
 ZSH\-Wiki
 .RS 4
-
 \fBhttp://zshwiki\&.org/home/\fR
 .RE
 .PP
 A short introduction from BYU
 .RS 4
-
 \fBhttp://docs\&.cs\&.byu\&.edu/linux/advanced/zsh\&.html\fR
 .RE
 .PP
 Mouse\-Support ;)
 .RS 4
-
 \fBhttp://stchaz\&.free\&.fr/mouse\&.zsh\fR
 .RE
 .PP
 Curtains up: introducing the Z shell
 .RS 4
-
 \fBhttp://www\-128\&.ibm\&.com/developerworks/linux/library/l\-z\&.html?dwzone=linux\fR
 .RE
 .PP
 ZSH\-Liebhaberseite (german)
 .RS 4
-
 \fBhttp://michael\-prokop\&.at/computer/tools_zsh_liebhaber\&.html\fR
 .RE
 .PP
 ZSH\-Seite von Michael Prokop (german)
 .RS 4
-
 \fBhttp://michael\-prokop\&.at/computer/tools_zsh\&.html\fR
 .RE
 .PP
 ZSH Prompt introduction
 .RS 4
-
 \fBhttp://aperiodic\&.net/phil/prompt/\fR
 .RE
 .PP
-Adam\'s ZSH page
+ft\(cqs zsh configuration
 .RS 4
-
+\fBhttp://ft\&.bewatermyfriend\&.org/comp/zsh\&.html\fR
+.RE
+.PP
+Adam\(cqs ZSH page
+.RS 4
 \fBhttp://www\&.adamspiers\&.org/computing/zsh/\fR
 .RE
 .PP
 Zzappers Best of ZSH Tips
 .RS 4
-
 \fBhttp://www\&.rayninfo\&.co\&.uk/tips/zshtips\&.html\fR
 .RE
 .PP
 Zsh Webpage by Christian Schneider
 .RS 4
-
 \fBhttp://www\&.strcat\&.de/zsh/\fR
 .RE
 .PP
 The zsh\-lovers webpage
 .RS 4
-
 \fBhttp://grml\&.org/zsh/\fR
 .RE
 .PP
 IRC channel
 .RS 4
-
 \fB#zsh at irc\&.freenode\&.org\fR
 .RE
 .PP
 The Z shell reference\-card (included in the zsh\-lovers debian\-package)
 .RS 4
-
 \fBhttp://www\&.bash2zsh\&.com/zsh_refcard/refcard\&.pdf\fR
 .RE
 .SH "AUTHORS"
+.sp
 This manpage was written by Michael Prokop, Christian \fIstrcat\fR Schneider and Matthias Kopfermann\&. But many ideas have been taken from zsh\-geeks e\&.g\&. from the zsh\-mailinglists (zsh\-users and zsh\-workers), google, newsgroups and the zsh\-Wiki\&. Thanks for your cool and incredible tips\&. We learned much from you!
 .sp
 In alphabetic order:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
-Andrew \'zefram\' Main  \- http://www\&.fysh\&.org/~zefram/
+Andrew \*(Aqzefram\*(Aq Main  \- http://www\&.fysh\&.org/~zefram/
 Barton E\&. Schaefer    \- http://www\&.well\&.com/user/barts/
 Matthias Kopfermann   \- http://www\&.infodrom\&.north\&.de/~matthi/
 Oliver Kiddle         \- http://people\&.freenet\&.de/opk/
@@ -1710,12 +1884,16 @@ Stephane Chazelas     \- http://stephane\&.chazelas\&.free\&.fr/
 Sven Guckes           \- http://www\&.guckes\&.net/
 Sven Wischnowsky      \- http://w9y\&.de/zsh/zshrc
 .fi
+.if n \{\
 .RE
+.\}
 .SH "SEE ALSO"
+.sp
 Manpages of zsh:
 .sp
-.sp
+.if n \{\
 .RS 4
+.\}
 .nf
        zsh          Zsh overview
        zshall       Tthe Z shell meta\-man page
@@ -1736,18 +1914,14 @@ Manpages of zsh:
        zshzftpsys   Zsh built\-in FTP client
        zshall       Meta\-man page containing all of the above
 .fi
+.if n \{\
 .RE
+.\}
+.sp
 Note: especially \fIman zshcontrib\fR covers very useful topics! Book: \fBFrom Bash to Z Shell\fR by Oliver Kiddle, Jerry Peck and Peter Stephenson\&. \fBISBN: 1590593766\fR\&. \- \fBbash2zsh\&.com\fR Also take a look at the section \fBLINKS\fR in this manpage\&.
-.sp
 .SH "BUGS"
+.sp
 Probably\&. This manpage might be never complete\&. So please report bugs, feedback and suggestions to <zsh\-lovers@michael\-prokop\&.at>\&. Thank you!
-.sp
 .SH "COPYRIGHT"
-Copyright (C) Michael Prokop, Christian Schneider and Matthias Kopfermann\&.
 .sp
-.SH "NOTES"
-.IP " 1." 4
-zsh-lovers@michael-prokop.at
-.RS 4
-\%mailto:zsh-lovers@michael-prokop.at
-.RE
+Copyright (C) Michael Prokop, Christian Schneider and Matthias Kopfermann\&.
