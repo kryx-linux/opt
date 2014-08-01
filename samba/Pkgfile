@@ -4,8 +4,8 @@
 # Depends on:  ncurses openssl readline zlib tdb talloc libcap acl libaio popt
 
 name=samba
-version=4.1.9
-release=2
+version=4.1.11
+release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-install_yapp_driver.patch
         samba)
@@ -15,9 +15,6 @@ build () {
 
     patch -d pidl/lib -p0 -i $SRC/samba-install_yapp_driver.patch
 
-    local JOBS=$(awk 'BEGIN{RS="-j|--jobs="} NR==2 {print $1}' <<< $MAKEFLAGS)
-    test -n "$JOBS" && export JOBS="$JOBS"
-
     ./configure --enable-fhs \
                 --prefix=/usr \
                 --localstatedir=/var \
@@ -26,7 +23,7 @@ build () {
                 --with-privatedir=/etc/samba/private
 
     make
-    make -j1 DESTDIR=$PKG install
+    make DESTDIR=$PKG install
 
     # man pages
     local p
