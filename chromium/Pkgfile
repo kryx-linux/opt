@@ -2,38 +2,32 @@
 # URL: http://chromium.org/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Tadeusz Sosnierz, tadzikes gmail com
-# Depends on: dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm
+# Depends on: ninja dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm libexif
 
 name=chromium
-version=34.0.1847.132
-release=2
+version=36.0.1985.125
+release=1
 source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.xz \
-	$name.sh rungn.patch)
+	$name.sh)
 
 build() {
   cd $name-$version
 
-  sed '/import find_depot_tools/d' -i build/gyp_chromium
-
-  # patch for supplemental_includes
-  patch -p0 -i $SRC/rungn.patch
-
-  # fix for speech-dispatcher >= 0.8
-  sed -e 's|<<(libspeechd_h_prefix)libspeechd.h>|<speech-dispatcher/libspeechd.h>|' \
-      -i build/linux/system.gyp
-
   export CFLAGS="$CFLAGS $(pkg-config --cflags nspr)"
   export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
 
-  build/gyp_chromium -f make build/all.gyp --depth=. \
+  build/gyp_chromium build/all.gyp --depth=. \
         -Dpython_ver="2.7" \
 	-Dno_strict_aliasing=1 \
 	-Dwerror= \
 	-Dlinux_sandbox_path=/usr/lib/chromium/chrome-sandbox \
 	-Dlinux_strip_binary=1 \
+        -Dlinux_use_gold_binary=0 \
+        -Dlinux_use_gold_flags=0 \
 	-Drelease_extra_cflags="$CFLAGS" \
 	-Dproprietary_codecs=1 \
         -Dffmpeg_branding=Chrome \
+        -Dlibspeechd_h_prefix=speech-dispatcher/ \
 	-Duse_system_libjpeg=1 \
 	-Duse_system_libxslt=1 \
 	-Duse_system_libxml=1 \
@@ -58,7 +52,7 @@ build() {
 	-Ddisable_nacl=1 \
         -Dicu_use_data_file_flag=0
 
-  make chrome chrome_sandbox BUILDTYPE=Release
+  ninja -C out/Release chrome chrome_sandbox
 
   install -m 0755 -D out/Release/chrome $PKG/usr/lib/chromium/chromium
   install -m 4755 -o root -g root -D out/Release/chrome_sandbox $PKG/usr/lib/chromium/chrome-sandbox
