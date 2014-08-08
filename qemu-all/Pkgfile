@@ -6,8 +6,8 @@
 # Nice to have: libseccomp libiscsi libusb usbredir
  
 name=qemu-all
-version=2.0.0
-release=2
+version=2.1.0
+release=1
 source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
 
 build() {
