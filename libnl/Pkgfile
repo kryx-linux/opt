@@ -3,12 +3,14 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=libnl
-version=3.2.24
+version=3.2.25
 release=1
 source=(http://www.infradead.org/~tgr/$name/files/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
+
+    sed -i 's|<linux/in6.h>|<netinet/in.h>|' lib/route/link/ip6tnl.c
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
