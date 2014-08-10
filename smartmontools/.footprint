@@ -2,6 +2,7 @@ drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/smartd
 -rw-r--r--	root/root	etc/smartd.conf
+drwxr-xr-x	root/root	etc/smartd_warning.d/
 -rwxr-xr-x	root/root	etc/smartd_warning.sh
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/man/
@@ -10,6 +11,7 @@ drwxr-xr-x	root/root	usr/man/man5/
 drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/smartctl.8.gz
 -rw-r--r--	root/root	usr/man/man8/smartd.8.gz
+-rw-r--r--	root/root	usr/man/man8/update-smart-drivedb.8.gz
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/smartctl
 -rwxr-xr-x	root/root	usr/sbin/smartd
