@@ -4,7 +4,7 @@
 # Depends on:  eudev libusb
 
 name=libpcap
-version=1.5.3
+version=1.6.1
 release=1
 source=(http://www.tcpdump.org/release/$name-$version.tar.gz)
 
