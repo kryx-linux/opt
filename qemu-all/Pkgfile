@@ -2,8 +2,8 @@
 # URL:         http://www.qemu.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Lucas Hazel, lucas at die dot net dot au
-# Depends on:  libsdl
-# Nice to have: glib libseccomp libiscsi libusb usbredir
+# Depends on:  libsdl glib
+# Nice to have: libseccomp libiscsi libusb usbredir
  
 name=qemu-all
 version=2.1.0
