@@ -18,16 +18,14 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/_markerlib/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/pkg_resources.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/pkg_resources.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/pkg_resources.pyo
-drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/
--rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/PKG-INFO
--rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/SOURCES.txt
--rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/dependency_links.txt
--rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/entry_points.txt
--rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/entry_points.txt.orig
--rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/requires.txt
--rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/requires.txt.orig
--rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/top_level.txt
--rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-2.1-py2.7.egg-info/zip-safe
+drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools-5.6-py2.7.egg-info/
+-rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-5.6-py2.7.egg-info/PKG-INFO
+-rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-5.6-py2.7.egg-info/SOURCES.txt
+-rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-5.6-py2.7.egg-info/dependency_links.txt
+-rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-5.6-py2.7.egg-info/entry_points.txt
+-rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-5.6-py2.7.egg-info/requires.txt
+-rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-5.6-py2.7.egg-info/top_level.txt
+-rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools-5.6-py2.7.egg-info/zip-safe
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/__init__.pyc
@@ -129,12 +127,8 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/command/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/sandbox.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/sandbox.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/sandbox.pyo
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template (dev).py
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template (dev).pyc
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template (dev).pyo
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template.py
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template.pyc
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/script template.pyo
+-rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools/script (dev).tmpl
+-rw-rw-r--	root/root	usr/lib/python2.7/site-packages/setuptools/script.tmpl
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/site-patch.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/site-patch.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/site-patch.pyo
@@ -148,9 +142,6 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/tests/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/__init__.pyo
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/doctest.py
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/doctest.pyc
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/doctest.pyo
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/environment.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/environment.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/environment.pyo
@@ -181,6 +172,12 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/tests/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_egg_info.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_egg_info.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_egg_info.pyo
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_find_packages.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_find_packages.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_find_packages.pyo
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_integration.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_integration.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_integration.pyo
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_markerlib.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_markerlib.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_markerlib.pyo
@@ -205,6 +202,9 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/setuptools/tests/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_upload_docs.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_upload_docs.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/tests/test_upload_docs.pyo
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/unicode_utils.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/unicode_utils.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/unicode_utils.pyo
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/version.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/version.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/setuptools/version.pyo

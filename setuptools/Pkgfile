@@ -5,8 +5,8 @@
 # Depends on: python
 
 name=setuptools
-version=2.1
-release=2
+version=5.6
+release=1
 source=(http://pypi.python.org/packages/source/s/$name/$name-$version.tar.gz)
 
 build() {
@@ -20,5 +20,5 @@ build() {
 		--optimize=1 \
 		--skip-build
 
-	chmod o-w -R $PKG/usr/lib/python2.7/site-packages/setuptools-*-py*.egg-info
+	find $PKG -type f -perm -o=w -exec chmod o-w {} +
 }
