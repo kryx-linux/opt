@@ -6,7 +6,7 @@
 
 name=cyrus-sasl
 version=2.1.26
-release=1
+release=2
 source=(ftp://ftp.cyrusimap.org/cyrus-sasl/cyrus-sasl-$version.tar.gz
         saslauthd fix-CVE-2013-4122.diff)
 
@@ -15,6 +15,7 @@ build(){
   cd $name-$version
 
   patch -i ../fix-CVE-2013-4122.diff -p1
+  sed -i '228i\#include <sys/types.h>' include/sasl.h
 
   ./configure \
       --prefix=/usr \
