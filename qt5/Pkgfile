@@ -22,17 +22,17 @@ build() {
     # Remove obsolete xorg path
     sed -i 's|X11R6/||g' qtbase/mkspecs/*/*.conf
 
-	 # Respect system CXXFLAGS
+    # Respect system CXXFLAGS
     sed -i "s|-O2|$CXXFLAGS|" qtbase/mkspecs/common/g++-unix.conf
     sed -i "s|-O2|${CXXFLAGS}|" qtbase/mkspecs/common/{g++,gcc}-base.conf
 
-	 # Respect system LDFLAGS
+    # Respect system LDFLAGS
     sed -i "/^QMAKE_LFLAGS\s/s|+=|+= ${LDFLAGS}|g" qtbase/mkspecs/common/gcc-base.conf
 
-	 # Don't use RPATH
+    # Don't use RPATH
     sed -i "/^QMAKE_LFLAGS_RPATH/s| -Wl,-rpath,||g" qtbase/mkspecs/common/gcc-base-unix.conf
 
-	 # Fix quoting bug
+    # Fix quoting bug
 	 sed -i 's|"$COMPILER" -c|$COMPILER -c|' qtbase/config.tests/unix/fvisibility.test
 
     ./configure -prefix /usr/share/qt5 \
@@ -57,7 +57,7 @@ build() {
     make
     make INSTALL_ROOT=$PKG install
     
-	 # Fix paths
+    # Fix paths
     find $PKG/usr/share/qt5/lib  -type f -name '*.prl' \
         -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \;
         
@@ -73,7 +73,7 @@ build() {
     rm -rf $PKG/usr/share/qt5/mkspecs/common/mac*
     rm -rf $PKG/usr/share/qt5/{phrasebooks,translations}
 
-	 # Install linker config
+    # Install linker config
     install -d $PKG/{etc/ld.so.conf.d,usr/{bin,lib,include}}
     echo "/usr/share/qt5/lib" > $PKG/etc/ld.so.conf.d/qt5.conf
 
@@ -81,15 +81,15 @@ build() {
     ln -s ../share/qt5/lib         $PKG/usr/lib/qt5
     ln -s linux-g++                $PKG/usr/share/qt5/mkspecs/default
 
-	 # Install pkg config
+    # Install pkg config
     mv $PKG/usr/share/qt5/lib/pkgconfig $PKG/usr/lib
 
-	 # Fix paths
+    # Fix paths
     sed -i -e "s|-L$SRC/qt-everywhere-opensource-src-$version/lib ||g" \
            -e "s|$SRC/qt-everywhere-opensource-src-$version/bin|/usr/share/qt5/bin|g" \
         $PKG/usr/lib/pkgconfig/*.pc
 
-	 # Install symlinks
+    # Install symlinks
     install -d $PKG/usr/bin
     for b in $PKG/usr/share/qt5/bin/*; do
         ln -s /usr/share/qt5/bin/$(basename $b) $PKG/usr/bin/$(basename $b)-qt5
