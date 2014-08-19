@@ -5,7 +5,7 @@
 # Depends on: openldap
 
 name=krb5
-version=1.11.3
+version=1.12.2
 release=1
 source=(http://web.mit.edu/kerberos/dist/$name/${version%.*}/$name-$version-signed.tar
 	mit-krb5-1.11_uninitialized.patch
@@ -16,11 +16,11 @@ build() {
 
     	cd $name-$version/src
 
-	patch -p2 -i $SRC/mit-krb5-1.11_uninitialized.patch
-	patch -p2 -i $SRC/mit-krb5_krb5-config_LDFLAGS.patch
-        sed -e '/KRB5ROOT=/ s/\/local//' -i util/ac_check_krb5.m4
+	#patch -p2 -i $SRC/mit-krb5-1.11_uninitialized.patch
+	#patch -p2 -i $SRC/mit-krb5_krb5-config_LDFLAGS.patch
+        #sed -e '/KRB5ROOT=/ s/\/local//' -i util/ac_check_krb5.m4
 
-	export CFLAGS="$CFLAGS -I/usr/include/et"
+	#export CFLAGS="$CFLAGS -I/usr/include/et"
 
 	./configure --prefix=/usr \
 		    --with-system-et \
