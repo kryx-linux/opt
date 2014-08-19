@@ -5,13 +5,14 @@
 # Depends on: xorg-libxpm libpng libjpeg-turbo freetype
 
 name=libgd
-version=2.0.35
-release=2
-source=(http://google-desktop-for-linux-mirror.googlecode.com/files/gd-$version.tar.gz)
+version=2.1.0
+release=1
+source=(https://bitbucket.org/libgd/gd-libgd/downloads/$name-$version.tar.xz)
 
 build () {
-	cd gd/$version
-	chmod a+x configure
-	./configure --prefix=/usr
-	make DESTDIR=$PKG install
+  cd $name-$version
+
+  ./configure --prefix=/usr
+
+  make DESTDIR=$PKG install
 }
