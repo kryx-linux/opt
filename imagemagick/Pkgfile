@@ -2,11 +2,11 @@
 # URL:         http://www.imagemagick.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Packager:    danm, maol, jaeger, sip
-# Depends on:  libtool freetype ghostscript lcms libxml2
+# Depends on:  util-linux lcms2 pango xorg-libxt
 
 name=imagemagick
 version=6.8.8-10
-release=1
+release=2
 source=(ftp://ftp.imagemagick.org/pub/ImageMagick/legacy/ImageMagick-$version.tar.xz)
 
 build () {
@@ -15,7 +15,8 @@ build () {
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
-                --with-perl
+                --with-perl=yes \
+                --with-lcms=no --with-lcms2=yes
 
     make
     make DESTDIR=$PKG install
