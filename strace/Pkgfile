@@ -1,10 +1,10 @@
 # Description: System call tracing utility (like trace, truss, etc)
 # URL:         http://sourceforge.net/projects/strace/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:  Tilman Sauerbeck, tilman at crux dot nu
+# Packager:    Tilman Sauerbeck, tilman at crux dot nu
 
 name=strace
-version=4.8
+version=4.9
 release=1
 source=(http://download.sourceforge.net/$name/$name-$version.tar.xz)
 
