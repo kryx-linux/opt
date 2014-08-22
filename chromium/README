@@ -15,6 +15,18 @@ NOTES
 	http://www.chromium.org/developers/how-tos/api-keys
 
 
+WARNING
+
+	To build chromium you need a functioning shared semaphore implementation on the
+	host operating system. For POSIX semaphores to work, you need r/w access to
+	shared memory (/dev/shm).
+
+        Be sure you enabled /dev/shm or you will get errors like:
+
+	sl = self._semlock = _multiprocessing.SemLock(kind, value, maxvalue)
+	OSError: [Errno 13] Permission denied
+
+
 POSTINSTALLATION
 
 	If you can't run chromium and you got a message like this:
@@ -24,4 +36,4 @@ POSTINSTALLATION
         Could not find any font: Fixed, sans
         Aborted
 
-	you could solve this by installing for example xorg/xorg-font-dejavu-ttf.
+	You can solve this by installing for example xorg/xorg-font-dejavu-ttf.
