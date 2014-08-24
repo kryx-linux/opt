@@ -10,12 +10,13 @@ release=1
 source=(http://$name.org/downloads/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	./configure --prefix=/usr --mandir=/usr/man --enable-gdb
-	make
-	make DESTDIR=$PKG install
+  sed -i 's/2.18/2.19/' configure
+  ./configure --prefix=/usr --mandir=/usr/man
+  make
+  make DESTDIR=$PKG install
 
-	rm -rf $PKG/usr/share/doc
-	rmdir $PKG/usr/share
+  rm -rf $PKG/usr/share/doc
+  rmdir $PKG/usr/share
 }
