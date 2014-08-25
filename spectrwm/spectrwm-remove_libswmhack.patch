@@ -1,44 +1,29 @@
-diff -Nru spectrwm-2.5.1.orig/linux/Makefile spectrwm-2.5.1/linux/Makefile
---- spectrwm-2.5.1.orig/linux/Makefile	2014-05-09 10:02:47.399230659 +0200
-+++ spectrwm-2.5.1/linux/Makefile	2014-05-09 10:03:07.311852348 +0200
-@@ -6,7 +6,7 @@
- LVERS= $(shell . ../lib/shlib_version; echo $$major.$$minor)
+diff -Nru spectrwm-2.6.0.orig/linux/Makefile spectrwm-2.6.0/linux/Makefile
+--- spectrwm-2.6.0.orig/linux/Makefile	2014-08-23 09:01:02.136856255 +0200
++++ spectrwm-2.6.0/linux/Makefile	2014-08-23 09:02:22.330669060 +0200
+@@ -10,7 +10,7 @@
+ LIBMAJORVERSION = $(shell .  $(CURDIR)/../lib/shlib_version; echo $$major)
  
- CFLAGS+= -std=c99 -Wmissing-prototypes -Wall -Wextra -Wshadow -Wno-uninitialized -g
--CFLAGS+= -D_GNU_SOURCE -I. -I/usr/include/freetype2 -DSWM_LIB=\"$(LIBDIR)/libswmhack.so.$(LVERS)\"
-+CFLAGS+= -D_GNU_SOURCE -I. -I/usr/include/freetype2 
- LDADD+= -lX11 -lX11-xcb -lxcb -lxcb-icccm -lxcb-randr -lxcb-keysyms -lxcb-util -lxcb-xtest -lXft -lXcursor
+ MAINT_CFLAGS   = -std=c99 -Wmissing-prototypes -Wall -Wextra -Wshadow -Wno-uninitialized -g
+-MAINT_CPPFLAGS = -D_GNU_SOURCE -I. -I/usr/include/freetype2 -DSWM_LIB=\"$(LIBDIR)/libswmhack.so.$(LIBVERSION)\"
++MAINT_CPPFLAGS = -D_GNU_SOURCE -I. -I/usr/include/freetype2 
+ MAINT_LDLIBS   = -lX11 -lX11-xcb -lxcb -lxcb-icccm -lxcb-randr -lxcb-keysyms -lxcb-util -lxcb-xtest -lXft -lXcursor
  
- CC?= cc
-@@ -16,7 +16,7 @@
- CFLAGS+= -DSPECTRWM_BUILDSTR=\"$(BUILDVERSION)\"
- endif
- 
--all: spectrwm libswmhack.so.$(LVERS)
-+all: spectrwm 
- 
- spectrwm.c:
- 	ln -sf ../spectrwm.c
-@@ -39,15 +39,12 @@
- 	install -m 755 -d $(DESTDIR)$(LIBDIR)
- 	install -m 755 -d $(DESTDIR)$(MANDIR)/man1
- 	install -m 755 spectrwm $(DESTDIR)$(BINDIR)
--	install -m 755 libswmhack.so.$(LVERS) $(DESTDIR)$(LIBDIR)
- 	install -m 644 ../spectrwm.1 $(DESTDIR)$(MANDIR)/man1/spectrwm.1
- 	install -m 644 ../spectrwm_es.1 $(DESTDIR)$(MANDIR)/man1/spectrwm_es.1
- 	install -m 644 ../spectrwm_it.1 $(DESTDIR)$(MANDIR)/man1/spectrwm_it.1
- 	install -m 644 ../spectrwm_pt.1 $(DESTDIR)$(MANDIR)/man1/spectrwm_pt.1
- 	install -m 644 ../spectrwm_ru.1 $(DESTDIR)$(MANDIR)/man1/spectrwm_ru.1
- 	ln -sf spectrwm $(DESTDIR)$(BINDIR)/scrotwm
--	ln -sf libswmhack.so.0.0 $(DESTDIR)$(LIBDIR)/libswmhack.so.0
--	ln -sf libswmhack.so.0.0 $(DESTDIR)$(LIBDIR)/libswmhack.so
- 
- clean:
- 	rm -f spectrwm *.o *.so libswmhack.so.* spectrwm.c swm_hack.c version.h
-diff -Nru spectrwm-2.5.1.orig/spectrwm.c spectrwm-2.5.1/spectrwm.c
---- spectrwm-2.5.1.orig/spectrwm.c	2014-05-09 10:02:47.399230659 +0200
-+++ spectrwm-2.5.1/spectrwm.c	2014-05-09 10:03:07.311852348 +0200
-@@ -299,9 +299,9 @@
+ ifneq ("${BUILDVERSION}", "")
+@@ -48,9 +48,6 @@
+ 	install -m 755 -d $(DESTDIR)$(XSESSIONSDIR)
+ 	install -m 755 spectrwm                    $(DESTDIR)$(BINDIR)
+ 	ln -sf spectrwm                            $(DESTDIR)$(BINDIR)/scrotwm
+-	install -m 644 libswmhack.so.$(LIBVERSION) $(DESTDIR)$(LIBDIR)
+-	ln -sf libswmhack.so.$(LIBVERSION)         $(DESTDIR)$(LIBDIR)/libswmhack.so.$(LIBMAJORVERSION)
+-	ln -sf libswmhack.so.$(LIBVERSION)         $(DESTDIR)$(LIBDIR)/libswmhack.so
+ 	install -m 644 ../spectrwm.1               $(DESTDIR)$(MANDIR)/man1/spectrwm.1
+ 	install -m 644 ../spectrwm_es.1            $(DESTDIR)$(MANDIR)/es/man1/spectrwm.1
+ 	install -m 644 ../spectrwm_it.1            $(DESTDIR)$(MANDIR)/it/man1/spectrwm.1
+diff -Nru spectrwm-2.6.0.orig/spectrwm.c spectrwm-2.6.0/spectrwm.c
+--- spectrwm-2.6.0.orig/spectrwm.c	2014-08-23 09:01:02.136856255 +0200
++++ spectrwm-2.6.0/spectrwm.c	2014-08-23 09:04:35.139391508 +0200
+@@ -300,9 +300,9 @@
  #define SWM_CONF_DEFAULT	(0)
  #define SWM_CONF_KEYMAPPING	(1)
  
@@ -50,7 +35,7 @@ diff -Nru spectrwm-2.5.1.orig/spectrwm.c spectrwm-2.5.1/spectrwm.c
  
  char			**start_argv;
  xcb_atom_t		a_state;
-@@ -3324,7 +3324,7 @@
+@@ -3349,7 +3349,7 @@
  
  	close(xcb_get_file_descriptor(conn));
  
