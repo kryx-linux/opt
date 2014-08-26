@@ -5,7 +5,7 @@
 
 name=poppler-qt4
 version=0.26.4
-release=1
+release=2
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz)
 
 build() {
@@ -16,7 +16,7 @@ build() {
                 --enable-{zlib,libjpeg,libpng} \
                 --enable-cms=lcms2 \
                 --disable-utils \
-                --disable-poppler-{glib,cpp}
+                --disable-poppler-{qt5,glib,cpp}
 
     make
     make DESTDIR=$PKG install
