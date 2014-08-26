@@ -5,7 +5,7 @@
 
 name=poppler-glib
 version=0.26.4
-release=1
+release=2
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz)
 
 build() {
@@ -17,7 +17,7 @@ build() {
                 --enable-cms=lcms2 \
                 --disable-utils \
                 --disable-gtk-test \
-                --disable-poppler-{qt4,cpp}
+                --disable-poppler-{qt4,qt5,cpp}
 
     make
     make DESTDIR=$PKG install
