@@ -1,7 +1,7 @@
 # Description: A Multiboot boot loader
 # URL: http://www.gnu.org/software/grub/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: libdevmapper, freetype
+# Depends on: libdevmapper freetype
 
 name=grub2
 version=2.00
@@ -13,9 +13,15 @@ source=(ftp://ftp.gnu.org/gnu/grub/grub-$version.tar.xz \
 build() {
 	export CFLAGS="${CFLAGS} -Wno-error"
 	cd grub-$version
+
 	# fix for glibc 'gets' removal
 	sed -i -e '/gets is a/d' grub-core/gnulib/stdio.in.h
+
+	# fix for ftsynth.h path
+	sed -i -e 's|freetype/ftsynth.h|freetype2/ftsynth.h|' util/grub-mkfont.c
+
 	patch -i $SRC/$name-10_linux.diff util/grub.d/10_linux.in
+
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--enable-device-mapper \
