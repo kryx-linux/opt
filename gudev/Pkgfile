@@ -5,7 +5,7 @@
 # Depends on: gobject-introspection gperf eudev
 
 name=gudev
-version=1.9
+version=1.10
 release=1
 source=(http://dev.gentoo.org/~blueness/eudev/eudev-$version.tar.gz)
 
