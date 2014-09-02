@@ -1,0 +1,13 @@
+diff -u -N -r a/gio/gsettingsschema.c b/gio/gsettingsschema.c
+--- a/gio/gsettingsschema.c	2014-02-12 21:08:36.000000000 +0100
++++ b/gio/gsettingsschema.c	2014-09-01 21:40:30.200058426 +0200
+@@ -343,6 +343,9 @@
+ 
+       if ((path = g_getenv ("GSETTINGS_SCHEMA_DIR")) != NULL)
+         try_prepend_dir (path);
++        
++      if (schema_sources == NULL)
++        g_error ("No schemas found. Please make sure they are compiled!");
+ 
+       g_once_init_leave (&initialised, TRUE);
+     }
