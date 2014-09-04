@@ -4,7 +4,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/cifsiostat
 -rwxr-xr-x	root/root	usr/bin/iostat
 -rwxr-xr-x	root/root	usr/bin/mpstat
--rwxr-xr-x	root/root	usr/bin/nfsiostat
+-rwxr-xr-x	root/root	usr/bin/nfsiostat-sysstat
 -rwxr-xr-x	root/root	usr/bin/pidstat
 -rwxr-xr-x	root/root	usr/bin/sadf
 -rwxr-xr-x	root/root	usr/bin/sar
@@ -18,7 +18,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/cifsiostat.1.gz
 -rw-r--r--	root/root	usr/man/man1/iostat.1.gz
 -rw-r--r--	root/root	usr/man/man1/mpstat.1.gz
--rw-r--r--	root/root	usr/man/man1/nfsiostat.1.gz
+-rw-r--r--	root/root	usr/man/man1/nfsiostat-sysstat.1.gz
 -rw-r--r--	root/root	usr/man/man1/pidstat.1.gz
 -rw-r--r--	root/root	usr/man/man1/sadf.1.gz
 -rw-r--r--	root/root	usr/man/man1/sar.1.gz

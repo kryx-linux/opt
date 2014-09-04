@@ -5,9 +5,9 @@
 # Depends on:
 
 name=sysstat
-version=10.2.1
+version=11.0.1
 release=1
-source=(http://perso.orange.fr/sebastien.godard/$name-$version.tar.gz)
+source=(http://perso.orange.fr/sebastien.godard/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
