@@ -1,0 +1,77 @@
+diff -u -N -r a/gio/gsettingsschema.c b/gio/gsettingsschema.c
+--- a/gio/gsettingsschema.c	2014-02-12 21:08:36.000000000 +0100
++++ b/gio/gsettingsschema.c	2014-09-04 20:50:16.923420403 +0200
+@@ -200,6 +200,9 @@
+ GSettingsSchemaSource *
+ g_settings_schema_source_ref (GSettingsSchemaSource *source)
+ {
++  if (source == NULL)
++    g_error ("g_settings_schema_source_ref() called with source == NULL!");
++
+   g_atomic_int_inc (&source->ref_count);
+ 
+   return source;
+@@ -216,6 +219,9 @@
+ void
+ g_settings_schema_source_unref (GSettingsSchemaSource *source)
+ {
++  if (source == NULL)
++    g_error ("g_settings_schema_source_unref() called with source == NULL!");
++
+   if (g_atomic_int_dec_and_test (&source->ref_count))
+     {
+       if (source == schema_sources)
+diff -u -N -r a/gio/gsettings-tool.c b/gio/gsettings-tool.c
+--- a/gio/gsettings-tool.c	2014-02-03 18:40:41.000000000 +0100
++++ b/gio/gsettings-tool.c	2014-09-04 21:09:40.306794238 +0200
+@@ -674,6 +674,8 @@
+   gchar *tmp;
+ #endif
+ 
++  GSettingsSchemaSource * schema_source;
++
+   setlocale (LC_ALL, "");
+   textdomain (GETTEXT_PACKAGE);
+ 
+@@ -692,7 +694,25 @@
+   if (argc < 2)
+     return gsettings_help (FALSE, NULL);
+ 
+-  global_schema_source = g_settings_schema_source_ref (g_settings_schema_source_get_default ());
++  if (strcmp (argv[1], "help") == 0)
++    if (argc == 2)
++      return gsettings_help (TRUE, NULL);
++    else
++      return gsettings_help (TRUE, argv[2]);
++
++  if (argc == 2 && strcmp (argv[1], "--version") == 0)
++    {
++      gsettings_print_version();
++      return 0;
++    }
++
++  schema_source = g_settings_schema_source_get_default ();
++  if (schema_source == NULL)
++    {
++      g_printerr (_("No global schema source found!\n"));
++      return 1;
++    }
++  global_schema_source = g_settings_schema_source_ref (schema_source);
+ 
+   if (argc > 3 && g_str_equal (argv[1], "--schemadir"))
+     {
+@@ -715,13 +735,7 @@
+       argc -= 2;
+     }
+ 
+-  if (strcmp (argv[1], "help") == 0)
+-    return gsettings_help (TRUE, argv[2]);
+-
+-  else if (argc == 2 && strcmp (argv[1], "--version") == 0)
+-    function = gsettings_print_version;
+-
+-  else if (argc == 2 && strcmp (argv[1], "list-schemas") == 0)
++  if (argc == 2 && strcmp (argv[1], "list-schemas") == 0)
+     function = gsettings_list_schemas;
+ 
+   else if (argc == 2 && strcmp (argv[1], "list-relocatable-schemas") == 0)
