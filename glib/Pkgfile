@@ -5,13 +5,11 @@
 
 name=glib
 version=2.40.0
-release=2
-source=(http://download.gnome.org/sources/$name/2.40/$name-$version.tar.xz \
-	no-schemas-segfault-fix.patch)
+release=1
+source=(http://download.gnome.org/sources/$name/2.40/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
-    patch -p1 -i $SRC/no-schemas-segfault-fix.patch
 
     ./configure --prefix=/usr \
                 --disable-man \
