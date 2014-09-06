@@ -1,17 +1,15 @@
 # Description: Mail Delivery Agent with filtering abilities
 # URL:         http://www.courier-mta.org/maildrop/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  gdbm libpcre
+# Depends on:  gdbm libpcre courier-unicode
 
 name=maildrop
-version=2.7.1
+version=2.7.2
 release=1
 source=(http://download.sourceforge.net/project/courier/$name/$version/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-
-    sed -i '/^MAILDROPMAN/s/=/= makedat.1/' Makefile.in
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
