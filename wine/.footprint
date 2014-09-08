@@ -984,6 +984,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dpnhpast.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpnlobby.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpnsvr.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/dpvoice.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpwsockx.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/drmclien.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dsound.dll.so
@@ -1184,6 +1185,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnhpast.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnlobby.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnsvr.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/dpvoice.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpwsockx.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/drmclien.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dsound.dll
@@ -1338,6 +1340,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/normaliz.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/notepad.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/npmshtml.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/npptools.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ntdll.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ntdsapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ntoskrnl.exe
@@ -1841,6 +1844,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/normaliz.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/notepad.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/npmshtml.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/npptools.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ntdll.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ntdsapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ntoskrnl.exe.so
@@ -2227,6 +2231,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnhpast.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnlobby.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnsvr.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/dpvoice.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpwsockx.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/drmclien.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dsound.dll.so
@@ -2436,6 +2441,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnhpast.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnlobby.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnsvr.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpvoice.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpwsockx.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/drmclien.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dsound.dll
@@ -2602,6 +2608,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/normaliz.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/notepad.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/npmshtml.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/npptools.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ntdll.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ntdsapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ntoskrnl.exe
@@ -3161,6 +3168,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/normaliz.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/notepad.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/npmshtml.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/npptools.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ntdll.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ntdsapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ntoskrnl.exe.so
