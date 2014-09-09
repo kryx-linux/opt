@@ -2,7 +2,7 @@
 # URL:         http://www.tug.org/tetex/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Danny Rawlins, monster dot romster at gmail dot com
-# Depends on:  icu libgd libsigsegv poppler t1lib util-linux xz clisp
+# Depends on:  clisp icu libgd poppler t1lib util-linux xorg-libxi
 
 name=texlive
 version=20140525
@@ -67,7 +67,6 @@ build() {
   # Fix some paths
   sed -i 's|TEXMFROOT = .*|TEXMFROOT = $SELFAUTODIR/share|g'  texmf-dist/web2c/texmf.cnf
   sed -i 's|TEXMFLOCAL = .*|TEXMFLOCAL = $TEXMFROOT/texmf-local|g'  texmf-dist/web2c/texmf.cnf
-
 
   install -d $PKG/usr/share
 
