@@ -5,7 +5,7 @@
 # Optional:	libsamplerate bluez openssl sbc lirc pyqt4
 
 name=pulseaudio
-version=4.0
+version=5.0
 release=2
 source=(http://freedesktop.org/software/pulseaudio/releases/pulseaudio-$version.tar.xz)
 
@@ -43,6 +43,7 @@ build() {
 	mv $PKG/etc/dbus-1 $PKG/usr/etc
 
 	rm -rf $PKG/etc/bash_completion.d
+	rm -f $PKG/usr/man/man1/start-pulseaudio-x11.1
 
 	# If proximity helper was installed, remove setuid bit
 	# To use capabilities instead of the setuid bit, run:
