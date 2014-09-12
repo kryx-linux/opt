@@ -6,15 +6,16 @@
 
 name=libva-vdpau-driver
 version=0.7.4
-release=3
+release=4
 source=(http://www.freedesktop.org/software/vaapi/releases/$name/$name-$version.tar.bz2
-	glx.patch libva.patch)
+	glx.patch libva.patch vdpau.patch)
 
 build() {
 	cd $name-$version
 
 	patch -p1 -i $SRC/glx.patch
 	patch -p1 -i $SRC/libva.patch
+	patch -p1 -i $SRC/vdpau.patch
 
 	./configure \
 		--prefix=/usr \
