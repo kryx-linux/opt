@@ -743,6 +743,7 @@ lrwxrwxrwx	root/root	usr/lib/samba/libasn1-samba4.so.8 -> libasn1-samba4.so.8.0.
 -rwxr-xr-x	root/root	usr/lib/samba/libdcerpc-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libdfs_server_ad.so
 -rwxr-xr-x	root/root	usr/lib/samba/libdlz_bind9_for_torture.so
+-rwxr-xr-x	root/root	usr/lib/samba/libdnsserver_common.so
 -rwxr-xr-x	root/root	usr/lib/samba/libdsdb-module.so
 -rwxr-xr-x	root/root	usr/lib/samba/liberrors.so
 -rwxr-xr-x	root/root	usr/lib/samba/libevents.so
