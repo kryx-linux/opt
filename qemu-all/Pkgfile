@@ -6,16 +6,13 @@
 # Nice to have: libseccomp libiscsi libusb usbredir
  
 name=qemu-all
-version=2.1.0
-release=2
-source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2 fix-trim-ide.patch)
+version=2.1.1
+release=1
+source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
 
 build() {
 
   cd qemu-$version
-  cd $name-$version
-  # fix TRIM passthrough for IDE devices
-  patch -p1 -i $SRC/fix-trim-ide.patch
 
   ./configure --prefix=/usr \
       --cc="${CC:=gcc}" \
