@@ -829,6 +829,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.1/system/CompositePublisher/
 drwxr-xr-x	root/root	usr/share/ri/2.1/system/ConditionVariable/
 -rw-r--r--	root/root	usr/share/ri/2.1/system/ConditionVariable/broadcast-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.1/system/ConditionVariable/cdesc-ConditionVariable.ri
+-rw-r--r--	root/root	usr/share/ri/2.1/system/ConditionVariable/marshal_dump-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.1/system/ConditionVariable/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.1/system/ConditionVariable/signal-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.1/system/ConditionVariable/wait-i.ri
@@ -8145,6 +8146,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.1/system/Queue/
 -rw-r--r--	root/root	usr/share/ri/2.1/system/Queue/empty%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.1/system/Queue/enq-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.1/system/Queue/length-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.1/system/Queue/marshal_dump-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.1/system/Queue/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.1/system/Queue/num_waiting-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.1/system/Queue/pop-i.ri
