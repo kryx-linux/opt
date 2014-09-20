@@ -25,6 +25,8 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/grub-script-check
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/grub/
+drwxr-xr-x	root/root	usr/lib/grub/fonts/
+-rw-r--r--	root/root	usr/lib/grub/fonts/unifont.pf2
 drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/acpi.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/acpi.module
@@ -487,4 +489,3 @@ drwxr-xr-x	root/root	usr/sbin/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/grub/
 -rw-r--r--	root/root	usr/share/grub/grub-mkconfig_lib
--rw-r--r--	root/root	usr/share/grub/unifont.pf2
