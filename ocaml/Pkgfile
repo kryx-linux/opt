@@ -6,12 +6,12 @@
 
 name=ocaml
 version=4.01.0
-release=1
+release=2
 source=(http://caml.inria.fr/pub/distrib/$name-4.01/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    ./configure -prefix /usr -with-pthread --no-tk 
+    ./configure -prefix /usr -with-pthread -no-{tk,graph,camlp4}
     make -j1 world.opt
     make PREFIX=$PKG/usr install
     local f
