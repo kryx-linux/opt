@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=dnsmasq
-version=2.71
+version=2.72
 release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.xz \
         $name-config.patch dnsmasq)
