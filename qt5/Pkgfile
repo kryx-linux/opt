@@ -5,93 +5,88 @@
 # Depends on: dbus gst-plugins-base gst-plugins-base-compat libmng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-wm xorg-xcb-util-keysyms
 
 name=qt5
-version=5.3.1
+version=5.3.2
 release=1
-source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
-       $name-$version.patch)
+source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz)
 
 build() {
-    cd qt-everywhere-opensource-src-$version
+	cd qt-everywhere-opensource-src-$version
 
-    patch -p1 -i $SRC/$name-$version.patch
+	# Respect system CXX
+	[ "$CXX" ] || CXX=g++
+	sed -i "/^QMAKE_CXX\s/s|=.*|= $CXX|"  qtbase/mkspecs/common/g++-base.conf
 
-    # Respect system CXX
-    [ "$CXX" ] || CXX=g++
-    sed -i "/^QMAKE_CXX\s/s|=.*|= $CXX|"  qtbase/mkspecs/common/g++-base.conf
+	# Remove obsolete xorg path
+	sed -i 's|X11R6/||g' qtbase/mkspecs/*/*.conf
 
-    # Remove obsolete xorg path
-    sed -i 's|X11R6/||g' qtbase/mkspecs/*/*.conf
+	# Respect system CXXFLAGS
+	sed -i "s|-O2|$CXXFLAGS|" qtbase/mkspecs/common/g++-unix.conf
+	sed -i "s|-O2|${CXXFLAGS}|" qtbase/mkspecs/common/{g++,gcc}-base.conf
 
-    # Respect system CXXFLAGS
-    sed -i "s|-O2|$CXXFLAGS|" qtbase/mkspecs/common/g++-unix.conf
-    sed -i "s|-O2|${CXXFLAGS}|" qtbase/mkspecs/common/{g++,gcc}-base.conf
+	# Respect system LDFLAGS
+	sed -i "/^QMAKE_LFLAGS\s/s|+=|+= ${LDFLAGS}|g" qtbase/mkspecs/common/gcc-base.conf
 
-    # Respect system LDFLAGS
-    sed -i "/^QMAKE_LFLAGS\s/s|+=|+= ${LDFLAGS}|g" qtbase/mkspecs/common/gcc-base.conf
+	# Fix quoting bug
+	sed -i 's|"$COMPILER" -c|$COMPILER -c|' qtbase/config.tests/unix/fvisibility.test
 
-    # Don't use RPATH
-    sed -i "/^QMAKE_LFLAGS_RPATH/s| -Wl,-rpath,||g" qtbase/mkspecs/common/gcc-base-unix.conf
+	export QTDIR="$PWD"
+	export LD_LIBRARY_PATH="$QTDIR/qtbase/lib:$QTDIR/qttools/lib:$LD_LIBRARY_PATH"
+	export QT_PLUGIN_PATH="$QTDIR/qtbase/plugins"
 
-    # Fix quoting bug
-	 sed -i 's|"$COMPILER" -c|$COMPILER -c|' qtbase/config.tests/unix/fvisibility.test
-
-    ./configure -prefix /usr/share/qt5 \
+	./configure  -prefix /usr/share/qt5 \
                 -bindir /usr/share/qt5/bin \
                 -headerdir /usr/share/qt5/include \
                 -libdir /usr/share/qt5/lib \
                 -libexecdir /usr/share/qt5/lib \
                 -plugindir /usr/share/qt5/plugins \
-                -platform linux-g++ -release -shared -sm \
-                -nis -verbose -system-zlib \
+                -sysconfdir /usr/etc/xdg \
                 -openssl-linked -dbus-linked \
-                -system-lib{png,jpeg} -system-sqlite \
+                -system-lib{png,jpeg} -system-{zlib,sqlite} \
                 -no-cups -optimized-qmake \
                 -x{cursor,inerama,kb,randr,render} \
                 -nomake examples \
-                -no-separate-debug-info -opensource -confirm-license
+                -no-separate-debug-info -no-strip -shared -no-rpath \
+                -opensource -confirm-license -release -reduce-relocations
 
-    export QTDIR="$PWD"
-    export LD_LIBRARY_PATH="$QTDIR/qtbase/lib:$QTDIR/qttools/lib:$LD_LIBRARY_PATH"
-    export QT_PLUGIN_PATH="$QTDIR/qtbase/plugins"
-
-    make
-    make INSTALL_ROOT=$PKG install
+	make
+	make INSTALL_ROOT=$PKG install
     
-    # Fix paths
-    find $PKG/usr/share/qt5/lib  -type f -name '*.prl' \
-        -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \;
+	# Fix paths
+	find $PKG/usr/share/qt5/lib  -type f -name '*.prl' \
+		-exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \;
         
-    sed -e "s|$PWD/qtbase|/usr/lib/qt5|g" \
-        -i $PKG/usr/share/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri 
+	sed -e "s|$PWD/qtbase|/usr/share/qt5/lib|g" \
+		-i $PKG/usr/share/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
 
-    # Remove unnecessary files
-    rm -rf `find $PKG/usr/share/qt5/mkspecs/* | \
-       grep -v linux-g++ | grep -v common | grep -v pri | grep -v features`
+	# Remove unnecessary files
+	rm -rf $(find $PKG/usr/share/qt5/mkspecs/* | \
+		egrep -v '(linux-g++|common|modules|pri|features)')
 
-    rm -f $PKG/usr/share/qt5/mkspecs/linux-g++/linux-g++
-    rm -rf $PKG/usr/share/qt5/mkspecs/features/{mac,win32}
-    rm -rf $PKG/usr/share/qt5/mkspecs/common/mac*
-    rm -rf $PKG/usr/share/qt5/{phrasebooks,translations}
+	rm -f $PKG/usr/share/qt5/mkspecs/linux-g++/linux-g++
+	rm -rf $PKG/usr/share/qt5/mkspecs/features/{mac,win32}
+	rm -rf $PKG/usr/share/qt5/mkspecs/common/mac*
+	rm -rf $PKG/usr/share/qt5/{phrasebooks,translations}
 
-    # Install linker config
-    install -d $PKG/{etc/ld.so.conf.d,usr/{bin,lib,include}}
-    echo "/usr/share/qt5/lib" > $PKG/etc/ld.so.conf.d/qt5.conf
+	# Install linker config
+	install -d $PKG/{etc/ld.so.conf.d,usr/{bin,lib,include}}
+	echo "/usr/share/qt5/lib" > $PKG/etc/ld.so.conf.d/qt5.conf
 
-    ln -s ../share/qt5/include     $PKG/usr/include/qt5
-    ln -s ../share/qt5/lib         $PKG/usr/lib/qt5
-    ln -s linux-g++                $PKG/usr/share/qt5/mkspecs/default
+	ln -s ../share/qt5/include     $PKG/usr/include/qt5
+	ln -s ../share/qt5/lib         $PKG/usr/lib/qt5
+	ln -s linux-g++                $PKG/usr/share/qt5/mkspecs/default
 
-    # Install pkg config
-    mv $PKG/usr/share/qt5/lib/pkgconfig $PKG/usr/lib
+	# Install pkg config
+	mv $PKG/usr/share/qt5/lib/pkgconfig $PKG/usr/lib
 
-    # Fix paths
-    sed -i -e "s|-L$SRC/qt-everywhere-opensource-src-$version/lib ||g" \
-           -e "s|$SRC/qt-everywhere-opensource-src-$version/bin|/usr/share/qt5/bin|g" \
-        $PKG/usr/lib/pkgconfig/*.pc
+	# Fix paths
+	sed \
+		-e "s|-L$SRC/qt-everywhere-opensource-src-$version/lib ||g" \
+		-e "s|$SRC/qt-everywhere-opensource-src-$version/bin|/usr/share/qt5/bin|g" \
+		-i $PKG/usr/lib/pkgconfig/*.pc
 
-    # Install symlinks
-    install -d $PKG/usr/bin
-    for b in $PKG/usr/share/qt5/bin/*; do
-        ln -s /usr/share/qt5/bin/$(basename $b) $PKG/usr/bin/$(basename $b)-qt5
-    done
+	# Install useful symlinks
+	install -d $PKG/usr/bin
+	for b in $PKG/usr/share/qt5/bin/*; do
+		ln -s /usr/share/qt5/bin/$(basename $b) $PKG/usr/bin/$(basename $b)-qt5
+	done
 }
