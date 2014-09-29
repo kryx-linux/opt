@@ -8,6 +8,7 @@ drwxr-xr-x	root/root	etc/rc.d/
 drwxr-xr-x	root/root	sbin/
 -r-s--x--x	root/root	sbin/mount.nfs
 lrwxrwxrwx	root/root	sbin/mount.nfs4 -> mount.nfs
+-rwxr-xr-x	root/root	sbin/nfsdcltrack
 -rwxr-xr-x	root/root	sbin/osd_login
 lrwxrwxrwx	root/root	sbin/umount.nfs -> mount.nfs
 lrwxrwxrwx	root/root	sbin/umount.nfs4 -> mount.nfs
@@ -44,7 +45,6 @@ drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/blkmapd
 -rwxr-xr-x	root/root	usr/sbin/exportfs
 -rwxr-xr-x	root/root	usr/sbin/mountstats
--rwxr-xr-x	root/root	usr/sbin/nfsdcltrack
 -rwxr-xr-x	root/root	usr/sbin/nfsidmap
 -rwxr-xr-x	root/root	usr/sbin/nfsiostat
 -rwxr-xr-x	root/root	usr/sbin/nfsstat
