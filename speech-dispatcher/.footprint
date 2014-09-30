@@ -20,6 +20,7 @@ drwxr-xr-x	root/root	usr/etc/speech-dispatcher/modules/
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/ibmtts.conf
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/ivona.conf
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/llia_phon-generic.conf
+-rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/pico-generic.conf
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/swift-generic.conf
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/speechd.conf
 drwxr-xr-x	root/root	usr/include/
@@ -68,5 +69,6 @@ drwxr-xr-x	root/root	usr/share/speech-dispatcher/conf/modules/
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/ibmtts.conf
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/ivona.conf
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/llia_phon-generic.conf
+-rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/pico-generic.conf
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/swift-generic.conf
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/speechd.conf
