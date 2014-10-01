@@ -4,9 +4,9 @@
 # Depends on: gtk gl-select
 
 name=nvidia
-version=340.32
+version=340.46
 release=1
-source=(ftp://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run \
+source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run \
     90-nvidia-uvm.rules)
 
 build() {
