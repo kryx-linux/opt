@@ -73,6 +73,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/auth.h
 -rw-r--r--	root/root	usr/include/dovecot/backtrace-string.h
 -rw-r--r--	root/root	usr/include/dovecot/base64.h
+-rw-r--r--	root/root	usr/include/dovecot/bits.h
 -rw-r--r--	root/root	usr/include/dovecot/bsearch-insert-pos.h
 -rw-r--r--	root/root	usr/include/dovecot/buffer.h
 -rw-r--r--	root/root	usr/include/dovecot/charset-utf8.h
@@ -107,6 +108,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/dict-transaction-memory.h
 -rw-r--r--	root/root	usr/include/dovecot/dict.h
 -rw-r--r--	root/root	usr/include/dovecot/dns-lookup.h
+-rw-r--r--	root/root	usr/include/dovecot/doveadm-dsync.h
 -rw-r--r--	root/root	usr/include/dovecot/doveadm-dump.h
 -rw-r--r--	root/root	usr/include/dovecot/doveadm-mail-iter.h
 -rw-r--r--	root/root	usr/include/dovecot/doveadm-mail.h
@@ -119,6 +121,8 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/dovecot-version.h
 -rw-r--r--	root/root	usr/include/dovecot/dsasl-client-private.h
 -rw-r--r--	root/root	usr/include/dovecot/dsasl-client.h
+-rw-r--r--	root/root	usr/include/dovecot/dsync-brain.h
+-rw-r--r--	root/root	usr/include/dovecot/dsync-ibc.h
 -rw-r--r--	root/root	usr/include/dovecot/duplicate.h
 -rw-r--r--	root/root	usr/include/dovecot/eacces-error.h
 -rw-r--r--	root/root	usr/include/dovecot/env-util.h
@@ -150,6 +154,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/hmac.h
 -rw-r--r--	root/root	usr/include/dovecot/home-expand.h
 -rw-r--r--	root/root	usr/include/dovecot/hostpid.h
+-rw-r--r--	root/root	usr/include/dovecot/http-auth.h
 -rw-r--r--	root/root	usr/include/dovecot/http-client-private.h
 -rw-r--r--	root/root	usr/include/dovecot/http-client.h
 -rw-r--r--	root/root	usr/include/dovecot/http-date.h
@@ -161,6 +166,8 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/http-request.h
 -rw-r--r--	root/root	usr/include/dovecot/http-response-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/http-response.h
+-rw-r--r--	root/root	usr/include/dovecot/http-server-private.h
+-rw-r--r--	root/root	usr/include/dovecot/http-server.h
 -rw-r--r--	root/root	usr/include/dovecot/http-transfer.h
 -rw-r--r--	root/root	usr/include/dovecot/http-url.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-arg.h
@@ -239,6 +246,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/istream-attachment-extractor.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-base64.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-binary-converter.h
+-rw-r--r--	root/root	usr/include/dovecot/istream-callback.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-chain.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-concat.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-crlf.h
@@ -414,6 +422,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/quota-private.h
 -rw-r--r--	root/root	usr/include/dovecot/quota.h
 -rw-r--r--	root/root	usr/include/dovecot/quoted-printable.h
+-rw-r--r--	root/root	usr/include/dovecot/rand.h
 -rw-r--r--	root/root	usr/include/dovecot/randgen.h
 -rw-r--r--	root/root	usr/include/dovecot/raw-storage.h
 -rw-r--r--	root/root	usr/include/dovecot/raw-sync.h
@@ -495,6 +504,11 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/deliver -> dovecot-lda
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-compression.so -> libdovecot-compression.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-compression.so.0 -> libdovecot-compression.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-compression.so.0.0.0
+-rw-r--r--	root/root	usr/lib/dovecot/libdovecot-dsync.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-dsync.la
+lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-dsync.so -> libdovecot-dsync.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-dsync.so.0 -> libdovecot-dsync.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-dsync.so.0.0.0
 -rw-r--r--	root/root	usr/lib/dovecot/libdovecot-lda.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-lda.la
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-lda.so -> libdovecot-lda.so.0.0.0
@@ -556,6 +570,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib10_last_login_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_last_login_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_last_login_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib10_mail_filter_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_mail_filter_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_mail_filter_plugin.so
@@ -627,8 +644,10 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/deliver.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-acl.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-altmove.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-auth.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-backup.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-batch.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-config.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-copy.1.gz
@@ -640,6 +659,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/doveadm-fetch.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-flags.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-force-resync.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-fts.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-help.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-import.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-index.1.gz
@@ -650,12 +670,15 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/doveadm-mount.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-move.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-penalty.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-proxy.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-purge.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-pw.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-quota.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-reload.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-replicator.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-search.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-stop.1.gz
+-rw-r--r--	root/root	usr/man/man1/doveadm-sync.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-user.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm-who.1.gz
 -rw-r--r--	root/root	usr/man/man1/doveadm.1.gz
