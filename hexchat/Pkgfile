@@ -2,11 +2,11 @@
 # URL: http://hexchat.github.io/
 # Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Danny Rawlins, monster dot romster at gmail dot com
-# Depends on: libnotify libsexy pciutils perl xorg-libxdamage xz
+# Depends on: intltool iso-codes libnotify libsexy pciutils xorg-libxdamage xz
 # Nice to have: enchant
 
 name=hexchat
-version=2.9.6.1
+version=2.10.1
 release=1
 source=(http://dl.hexchat.net/hexchat/$name-$version.tar.xz)
 
@@ -17,8 +17,6 @@ build() {
 		--prefix=/usr \
 		--mandir=/usr/man \
 		--enable-python=python2 \
-		--enable-shm \
-		--enable-spell=libsexy \
 		--enable-textfe
 		
 
