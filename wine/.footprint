@@ -1248,6 +1248,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/jscript.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/jsproxy.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/kernel32.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/ksuser.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ktmw32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/loadperf.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/localspl.dll
@@ -1437,6 +1438,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/svchost.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/svrapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sxs.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/systeminfo.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/t2embed.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/tapi32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/taskkill.exe
@@ -1576,6 +1578,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/jscript.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/jsproxy.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/kernel32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ksuser.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ktmw32.dll.so
 -rw-r--r--	root/root	usr/lib/wine/libaclui.def
 -rw-r--r--	root/root	usr/lib/wine/libactiveds.def
@@ -1941,6 +1944,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/svchost.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/svrapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/sxs.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/systeminfo.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/t2embed.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/tapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/taskkill.exe.so
@@ -2509,6 +2513,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/kernel32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/keyboard.drv16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/krnl386.exe16
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/ksuser.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ktmw32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/loadperf.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/localspl.dll
@@ -2721,6 +2726,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/svrapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/sxs.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/system.drv16
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/systeminfo.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/t2embed.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/tapi32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/taskkill.exe
@@ -2891,6 +2897,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/kernel32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/keyboard.drv16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/krnl386.exe16.so
+-rwxr-xr-x	root/root	usr/lib32/wine/ksuser.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ktmw32.dll.so
 -rw-r--r--	root/root	usr/lib32/wine/libaclui.def
 -rw-r--r--	root/root	usr/lib32/wine/libactiveds.def
@@ -3281,6 +3288,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/svrapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/sxs.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/system.drv16.so
+-rwxr-xr-x	root/root	usr/lib32/wine/systeminfo.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/t2embed.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/tapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/taskkill.exe.so
