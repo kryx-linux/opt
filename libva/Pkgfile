@@ -2,18 +2,25 @@
 # URL: http://freedesktop.org/wiki/Software/vaapi
 # Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: mesa3d wayland
+# Depends on: mesa3d
 
 name=libva
-version=1.4.0
-release=1
-source=(http://www.freedesktop.org/software/vaapi/releases/$name/$name-$version.tar.bz2)
+version=1.3.1
+release=2
+source=(http://www.freedesktop.org/software/vaapi/releases/$name/$name-$version.tar.bz2
+	0001-va-release-VADisplayContext-at-the-end-of-vaTerminat.patch)
 
 build() {
 	cd $name-$version
 
+	patch -p1 -i $SRC/0001-va-release-VADisplayContext-at-the-end-of-vaTerminat.patch
+
+	# --disable-wayland
+	sed -i -e '17547,17643d' configure
+
 	./configure \
 		--prefix=/usr \
+		--disable-wayland \
 		--disable-dependency-tracking
 
 	make
