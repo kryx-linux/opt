@@ -5,7 +5,7 @@
 
 name=jre
 version=1.7.0_72
-release=1
+release=2
 source=(file:///$name-7u${version#*_}-linux-x64.tar.gz)
 
 build(){
@@ -19,4 +19,5 @@ build(){
     ln -s ../lib/java/bin/java $PKG/usr/bin/java
     ln -s ../lib/java/bin/javaws $PKG/usr/bin/javaws
     ln -s ../lib/java/bin/keytool $PKG/usr/bin/keytool
+    ln -s ../lib/java/bin/jcontrol $PKG/usr/bin/jcontrol
 }
