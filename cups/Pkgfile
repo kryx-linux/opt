@@ -4,7 +4,7 @@
 # Depends on:  acl tcp_wrappers libusb openssl zlib
 
 name=cups
-version=1.7.5
+version=2.0.0
 release=1
 source=(http://www.cups.org/software/$version/$name-$version-source.tar.bz2
         cups-config.patch cups)
@@ -25,9 +25,9 @@ build () {
                 --with-cups-group=lp \
                 --with-languages="" \
                 --without-{java,perl,php,python} \
-                --without-{menu,rc}dir \
+                --without-rcdir \
                 --with-optim="$CFLAGS" \
-                --enable-{ssl,openssl} --disable-gnutls \
+                --enable-ssl --disable-gnutls \
                 --enable-tcp-wrappers \
                 --enable-acl \
                 --disable-pam \
@@ -40,7 +40,7 @@ build () {
     rm -r $PKG/usr/share/cups/{banners,data}
     
     # cleanup
-    rm -rf $PKG/usr/share/icons
+    rm -rf $PKG/usr/share/{applications,icons}
     chmod 0755 $PKG/var/{cache,spool}   
     chmod -R +w $PKG
 
