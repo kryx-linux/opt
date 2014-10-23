@@ -1,9 +1,11 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/gtk-encode-symbolic-svg
 -rwxr-xr-x	root/root	usr/bin/gtk-launch
 -rwxr-xr-x	root/root	usr/bin/gtk-query-immodules-3.0
 -rwxr-xr-x	root/root	usr/bin/gtk3-demo
 -rwxr-xr-x	root/root	usr/bin/gtk3-demo-application
+-rwxr-xr-x	root/root	usr/bin/gtk3-icon-browser
 -rwxr-xr-x	root/root	usr/bin/gtk3-widget-factory
 drwxr-xr-x	root/root	usr/etc/
 drwxr-xr-x	root/root	usr/etc/gtk-3.0/
@@ -16,10 +18,11 @@ drwxr-xr-x	root/root	usr/include/gail-3.0/libgail-util/
 -rw-r--r--	root/root	usr/include/gail-3.0/libgail-util/gailtextutil.h
 drwxr-xr-x	root/root	usr/include/gtk-3.0/
 drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/
+drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/deprecated/
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/deprecated/gdkcolor.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdk.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkapplaunchcontext.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkcairo.h
--rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkcolor.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkconfig.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkcursor.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkdevice.h
@@ -125,6 +128,8 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkaction.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkactiongroup.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkactivatable.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkalignment.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkarrow.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkcolorsel.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkcolorseldialog.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkfontsel.h
@@ -139,14 +144,18 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkhsv.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkiconfactory.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkimagemenuitem.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkmisc.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtknumerableicon.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkradioaction.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkrc.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkrecentaction.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkstatusicon.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkstock.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkstyle.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtksymboliccolor.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtktable.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtktearoffmenuitem.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkthemingengine.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtktoggleaction.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkuimanager.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkvbbox.h
@@ -165,14 +174,12 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkactionable.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkactionbar.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkadjustment.h
--rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkalignment.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkappchooser.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkappchooserbutton.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkappchooserdialog.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkappchooserwidget.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkapplication.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkapplicationwindow.h
--rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkarrow.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkaspectframe.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkassistant.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkbbox.h
@@ -222,6 +229,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkentrycompletion.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkenums.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkeventbox.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkeventcontroller.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkexpander.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkfilechooser.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkfilechooserbutton.h
@@ -235,6 +243,15 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkfontchooserdialog.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkfontchooserwidget.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkframe.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesture.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturedrag.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturelongpress.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturemultipress.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturepan.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturerotate.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturesingle.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgestureswipe.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturezoom.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgrid.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkheaderbar.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkicontheme.h
@@ -262,11 +279,9 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmenushell.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmenutoolbutton.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmessagedialog.h
--rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmisc.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmodules.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmountoperation.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtknotebook.h
--rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtknumerableicon.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkoffscreenwindow.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkorientable.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkoverlay.h
@@ -313,7 +328,6 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstack.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstackswitcher.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstatusbar.h
--rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstatusicon.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstylecontext.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstyleproperties.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstyleprovider.h
@@ -330,7 +344,6 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtktexttag.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtktexttagtable.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtktextview.h
--rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkthemingengine.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtktogglebutton.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtktoggletoolbutton.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtktoolbar.h
@@ -357,6 +370,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkwidget.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkwidgetpath.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkwindow.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkwindowgroup.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkx.h
 drwxr-xr-x	root/root	usr/include/gtk-3.0/unix-print/
 drwxr-xr-x	root/root	usr/include/gtk-3.0/unix-print/gtk/
@@ -405,13 +419,13 @@ lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so -> libgailutil-3.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so.0 -> libgailutil-3.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgailutil-3.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libgdk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.1200.2
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.1200.2
--rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.1200.2
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.1400.4
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.1400.4
+-rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.1400.4
 -rw-r--r--	root/root	usr/lib/libgtk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.1200.2
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.1200.2
--rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.1200.2
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.1400.4
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.1400.4
+-rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.1400.4
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gail-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gdk-3.0.pc
@@ -422,14 +436,19 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/broadwayd.1.gz
+-rw-r--r--	root/root	usr/man/man1/gtk-encode-symbolic-svg.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk-launch.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk-query-immodules-3.0.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk-update-icon-cache.1.gz
+-rw-r--r--	root/root	usr/man/man1/gtk3-demo.1.gz
+-rw-r--r--	root/root	usr/man/man1/gtk3-icon-browser.1.gz
+-rw-r--r--	root/root	usr/man/man1/gtk3-widget-factory.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/gtk-3.0.m4
 drwxr-xr-x	root/root	usr/share/applications/
 -rw-r--r--	root/root	usr/share/applications/gtk3-demo.desktop
+-rw-r--r--	root/root	usr/share/applications/gtk3-icon-browser.desktop
 -rw-r--r--	root/root	usr/share/applications/gtk3-widget-factory.desktop
 drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/Gdk-3.0.gir
@@ -439,6 +458,7 @@ drwxr-xr-x	root/root	usr/share/glib-2.0/
 drwxr-xr-x	root/root	usr/share/glib-2.0/schemas/
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Demo.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.ColorChooser.gschema.xml
+-rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.Debug.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.exampleapp.gschema.xml
 drwxr-xr-x	root/root	usr/share/icons/
