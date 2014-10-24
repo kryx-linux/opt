@@ -5,13 +5,13 @@
 # Depends on:  binutils gdbm
 
 name=ocaml
-version=4.01.0
-release=2
+version=4.02.1
+release=1
 source=(http://caml.inria.fr/pub/distrib/$name-4.01/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    ./configure -prefix /usr -with-pthread -no-{tk,graph,camlp4}
+    ./configure -prefix /usr -with-pthread -no-graph
     make -j1 world.opt
     make PREFIX=$PKG/usr install
     local f
