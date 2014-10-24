@@ -7,7 +7,7 @@
 name=ocaml
 version=4.02.1
 release=1
-source=(http://caml.inria.fr/pub/distrib/$name-4.01/$name-$version.tar.xz)
+source=(http://caml.inria.fr/pub/distrib/$name-4.02/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
