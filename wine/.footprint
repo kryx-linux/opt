@@ -1331,6 +1331,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msxml4.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msxml6.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/nddeapi.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/ndis.sys
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/net.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/netapi32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/netcfgx.dll
@@ -1371,6 +1372,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/powrprof.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/presentationfontcache.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/printui.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/prntvpt.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/progman.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/propsys.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/psapi.dll
@@ -1837,6 +1839,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/msxml4.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msxml6.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/nddeapi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ndis.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/net.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/netapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/netcfgx.dll.so
@@ -1877,6 +1880,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/powrprof.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/presentationfontcache.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/printui.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/prntvpt.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/progman.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/propsys.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/psapi.dll.so
@@ -2603,6 +2607,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msxml4.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msxml6.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/nddeapi.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/ndis.sys
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/net.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/netapi32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/netcfgx.dll
@@ -2651,6 +2656,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/powrprof.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/presentationfontcache.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/printui.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/prntvpt.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/progman.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/propsys.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/psapi.dll
@@ -3165,6 +3171,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/msxml4.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msxml6.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/nddeapi.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/ndis.sys.so
 -rwxr-xr-x	root/root	usr/lib32/wine/net.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/netapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/netcfgx.dll.so
@@ -3213,6 +3220,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/powrprof.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/presentationfontcache.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/printui.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/prntvpt.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/progman.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/propsys.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/psapi.dll.so
