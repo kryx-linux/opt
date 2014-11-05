@@ -1,6 +1,6 @@
-diff -Nru stunnel-5.02.orig/src/Makefile.in stunnel-5.02/src/Makefile.in
---- stunnel-5.02.orig/src/Makefile.in	2014-06-12 20:42:46.103102496 +0200
-+++ stunnel-5.02/src/Makefile.in	2014-06-12 20:43:19.441948681 +0200
+diff -Nru stunnel-5.07.orig/src/Makefile.in stunnel-5.07/src/Makefile.in
+--- stunnel-5.07.orig/src/Makefile.in	2014-11-02 13:28:56.464569838 +0100
++++ stunnel-5.07/src/Makefile.in	2014-11-02 13:29:17.703827231 +0100
 @@ -310,7 +310,7 @@
  
  # Additional preprocesor definitions
@@ -10,18 +10,18 @@ diff -Nru stunnel-5.02.orig/src/Makefile.in stunnel-5.02/src/Makefile.in
  
  # Win32 executable
  EXTRA_DIST = make.bat makece.bat makew32.bat mingw.mak evc.mak vc.mak \
-diff -Nru stunnel-5.02.orig/tools/stunnel.conf-sample.in stunnel-5.02/tools/stunnel.conf-sample.in
---- stunnel-5.02.orig/tools/stunnel.conf-sample.in	2014-06-12 20:42:46.106435713 +0200
-+++ stunnel-5.02/tools/stunnel.conf-sample.in	2014-06-12 20:43:34.534759673 +0200
-@@ -9,25 +9,33 @@
- 
+diff -Nru stunnel-5.07.orig/tools/stunnel.conf-sample.in stunnel-5.07/tools/stunnel.conf-sample.in
+--- stunnel-5.07.orig/tools/stunnel.conf-sample.in	2014-11-02 13:28:56.464569838 +0100
++++ stunnel-5.07/tools/stunnel.conf-sample.in	2014-11-02 13:34:24.086448235 +0100
+@@ -10,25 +10,34 @@
  ; A copy of some devices and system files is needed within the chroot jail
  ; Chroot conflicts with configuration file reload and many other features
+ ; Remember also to update the logrotate configuration.
 -;chroot = @prefix@/var/lib/stunnel/
 +chroot = /var/run/stunnel/
  ; Chroot jail can be escaped if setuid option is not used
--setuid = nobody
--setgid = @DEFAULT_GROUP@
+-;setuid = nobody
+-;setgid = @DEFAULT_GROUP@
 +setuid = stunnel
 +setgid = stunnel
  
@@ -40,6 +40,7 @@ diff -Nru stunnel-5.02.orig/tools/stunnel.conf-sample.in stunnel-5.02/tools/stun
 +
 +; Enable or disable the use of libwrap
 +libwrap = yes
++
  
  ; **************************************************************************
  ; * Service defaults may also be specified in individual service sections  *
