@@ -4,7 +4,7 @@
 # Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
-version=1.7.0_67
+version=1.7.0_71
 release=1
 source=(file:///$name-7u${version##*_}-linux-x64.tar.gz)
 
