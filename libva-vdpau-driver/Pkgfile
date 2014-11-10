@@ -1,7 +1,7 @@
 # Description: VDPAU back-end for NVIDIA and VIA chipsets.
 # URL: http://freedesktop.org/wiki/Software/vaapi
-# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
-# Packager: Danny Rawlins, monster dot romster at gmail dot com
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Packager: Danny Rawlins, crux at romster dot me
 # Depends on: libva libvdpau
 
 name=libva-vdpau-driver

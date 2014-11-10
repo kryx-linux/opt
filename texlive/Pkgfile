@@ -1,7 +1,7 @@
 # Description: TeX distribution for UNIX compatible systems.
 # URL:         http://www.tug.org/tetex/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Danny Rawlins, monster dot romster at gmail dot com
+# Packager:    Danny Rawlins, crux at romster dot me
 # Depends on:  clisp icu libgd poppler t1lib util-linux xorg-libxi
 
 name=texlive
