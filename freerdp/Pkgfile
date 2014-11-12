@@ -17,9 +17,8 @@ build() {
 	cmake ../$name-$version \
 		-DCMAKE_BUILD_TYPE=RELEASE \
 		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DKDE4_BUILD_TESTS=OFF \
 		-DCMAKE_SKIP_RPATH=ON \
-		-DWITH_PULSEAUDIO=ON \
+		-DWITH_PULSEAUDIO=$([ -f /usr/include/pulse/pulseaudio.h ] && echo "ON" || echo "OFF") \
 		-DWITH_SERVER=OFF \
 		-DWITH_CLIENT=ON
 	make
