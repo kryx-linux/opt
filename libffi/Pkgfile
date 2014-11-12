@@ -3,7 +3,7 @@
 # Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
 
 name=libffi
-version=3.2
+version=3.2.1
 release=1
 source=(ftp://sourceware.org/pub/libffi/$name-$version.tar.gz)
 
