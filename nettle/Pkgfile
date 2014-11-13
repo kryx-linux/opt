@@ -6,14 +6,15 @@
 
 name=nettle
 version=2.7.1
-release=1
+release=2
 source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
 
   ./configure --prefix=/usr \
-              --libdir=/usr/lib
+              --libdir=/usr/lib \
+              --disable-documentation
 
   make
   make DESTDIR=$PKG install
