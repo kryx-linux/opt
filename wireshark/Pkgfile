@@ -2,7 +2,7 @@
 # URL: http://www.wireshark.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Martin Opel, mo at obbl-net dot de
-# Depends on: gtk libpcap libpcre
+# Depends on: gtk3 libpcap libpcre
 
 name=wireshark
 version=1.12.1
@@ -10,26 +10,27 @@ release=1
 source=(http://www.$name.org/download/src/all-versions/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	./configure --prefix=/usr \
-	            --mandir=/usr/man \
-	            --with-plugins=/usr/lib/$name/plugins \
-	            --disable-nls \
-	            --enable-snmp \
-	            --enable-gtk2 \
-	            --disable-gcry \
-	            --without-krb5
+  ./configure --prefix=/usr \
+              --mandir=/usr/man \
+              --with-plugins=/usr/lib/$name/plugins \
+              --disable-nls \
+              --enable-snmp \
+              --disable-gcry \
+              --without-krb5 \
+              --with-qt4=no \
+              --with-gtk3=yes
 
-	make
-	make DESTDIR=$PKG install
+  make
+  make DESTDIR=$PKG install
 
-	# install some icons
-	install -d $PKG/usr/share/$name/pixmaps
-	install -m 644 \
-		image/{hi,lo}{16,32,48}-app-$name.png \
-		$PKG/usr/share/$name/pixmaps
+  # install some icons
+  install -d $PKG/usr/share/$name/pixmaps
+  install -m 644 \
+    image/{hi,lo}{16,32,48}-app-$name.png \
+    $PKG/usr/share/$name/pixmaps
 
-	# Don't remove these files, they are read by wireshark's about box.
-	#rm -f $PKG/usr/share/$name/{AUTHORS-SHORT,COPYING}
+  # Don't remove these files, they are read by wireshark's about box.
+  #rm -f $PKG/usr/share/$name/{AUTHORS-SHORT,COPYING}
 }

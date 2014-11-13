@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Add your users to the wireshark group and allow them to capture network data
+# as non-root users.
+#
+
+
+getent group wireshark >/dev/null || groupadd -r wireshark
+
+chgrp wireshark /usr/bin/dumpcap
+chmod 754 /usr/sbin/dumpcap
+setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
