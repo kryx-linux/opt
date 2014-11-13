@@ -5,7 +5,7 @@
 
 name=libgpg-error
 version=1.17
-release=2
+release=3
 source=(ftp://ftp.gnupg.org/gcrypt/libgpg-error/$name-$version.tar.bz2)
 
 build() {
@@ -16,4 +16,7 @@ build() {
               --enable-static
   make
   make DESTDIR=$PKG install
+
+  rm -r $PKG/usr/share/info/
+
 }
