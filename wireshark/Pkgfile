@@ -6,7 +6,7 @@
 
 name=wireshark
 version=1.12.1
-release=1
+release=2
 source=(http://www.$name.org/download/src/all-versions/$name-$version.tar.bz2)
 
 build() {
