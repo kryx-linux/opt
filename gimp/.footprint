@@ -343,7 +343,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pix
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-png
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pnm
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-ps
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-psd-load
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-psd-save
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-psp
@@ -482,7 +481,6 @@ drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/gimp-2.8.1.gz
 lrwxrwxrwx	root/root	usr/man/man1/gimp-console-2.8.1.gz -> gimp-2.8.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/gimp-console.1.gz -> gimp-console-2.8.1.gz
 lrwxrwxrwx	root/root	usr/man/man1/gimp.1.gz -> gimp-2.8.1.gz
 -rw-r--r--	root/root	usr/man/man1/gimptool-2.0.1.gz
 drwxr-xr-x	root/root	usr/man/man5/
