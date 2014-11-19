@@ -5,7 +5,7 @@
 
 name=openntpd
 version=3.9p1
-release=3
+release=4
 source=(ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz \
 	ntpd \
 	linux-adjtimex.patch )
