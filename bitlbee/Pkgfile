@@ -4,7 +4,7 @@
 # Depends on:
 
 name=bitlbee
-version=3.2.1
+version=3.2.2
 release=1
 source=(http://get.bitlbee.org/src/bitlbee-$version.tar.gz bitlbee \
         bitlbee.conf)
