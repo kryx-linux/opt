@@ -5,8 +5,8 @@
 # Depends on: gtk3 libpcap libpcre
 
 name=wireshark
-version=1.12.1
-release=2
+version=1.12.2
+release=1
 source=(http://www.$name.org/download/src/all-versions/$name-$version.tar.bz2)
 
 build() {
