@@ -79,6 +79,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-init
 -rwxr-xr-x	root/root	usr/lib/git-core/git-init-db
 -rwxr-xr-x	root/root	usr/lib/git-core/git-instaweb
+-rwxr-xr-x	root/root	usr/lib/git-core/git-interpret-trailers
 -rwxr-xr-x	root/root	usr/lib/git-core/git-log
 -rwxr-xr-x	root/root	usr/lib/git-core/git-ls-files
 -rwxr-xr-x	root/root	usr/lib/git-core/git-ls-remote
@@ -174,6 +175,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-write-tree
 drwxr-xr-x	root/root	usr/lib/git-core/mergetools/
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/araxis
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/bc
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/bc3
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/codecompare
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/deltawalker
@@ -287,6 +289,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-init-db.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-init.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-instaweb.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-interpret-trailers.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-log.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-ls-files.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-ls-remote.1.gz
@@ -395,6 +398,7 @@ drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/gitcredentials.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitcvs-migration.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitdiffcore.7.gz
+-rw-r--r--	root/root	usr/man/man7/giteveryday.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitglossary.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitnamespaces.7.gz
 -rw-r--r--	root/root	usr/man/man7/gitrevisions.7.gz
