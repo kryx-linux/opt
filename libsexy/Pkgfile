@@ -6,11 +6,16 @@
 
 name=libsexy
 version=0.1.11
-release=1
-source=(http://releases.chipx86.com/libsexy/libsexy/libsexy-$version.tar.gz)
+release=2
+source=(http://releases.chipx86.com/libsexy/libsexy/libsexy-$version.tar.gz
+	libsexy-0.1.11-fix-null-list.patch
+	libsexy-0.1.11-pkgconfig-pollution.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/libsexy-0.1.11-fix-null-list.patch
+	patch -p0 -i $SRC/libsexy-0.1.11-pkgconfig-pollution.patch
 
 	sed -i -e "/^SUBDIRS = /s/docs //" Makefile.in
 
