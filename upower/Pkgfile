@@ -17,7 +17,8 @@ build() {
 		--sysconfdir=/usr/etc \
 		--localstatedir=/var \
 		--libexecdir=/usr/lib/$name \
-		--disable-nls
+		--disable-nls \
+		--disable-man-pages
 
 	make
 	make DESTDIR=$PKG install
