@@ -5,7 +5,7 @@
 
 name=nvidia
 version=340.58
-release=1
+release=2
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run \
     90-nvidia-uvm.rules)
 
@@ -36,6 +36,9 @@ build() {
 
     ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so.1
     ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so
+
+    ln -s libnvidia-ml.so.$version $PKG/usr/lib/libnvidia-ml.so.1
+    ln -s libnvidia-ml.so.$version $PKG/usr/lib/libnvidia-ml.so
 
     ln -s libOpenCL.so.1.0.0 $PKG/usr/lib/libOpenCL.so
 
