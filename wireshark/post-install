@@ -9,4 +9,4 @@ getent group wireshark >/dev/null || groupadd -r wireshark
 
 chgrp wireshark /usr/bin/dumpcap
 chmod 754 /usr/bin/dumpcap
-setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
+/sbin/setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
