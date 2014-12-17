@@ -4,18 +4,19 @@
 # Packager: Juergen Daubert, jue at crux dot nu
 # Depends on: gtk3 p5-xml-parser intltool xorg-libxdamage
 
-name=vte
+name=vte-gtk3
 version=0.39.1
 release=1
-source=(ftp://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz \
-        $name-metamask.patch)
+source=(ftp://ftp.gnome.org/pub/gnome/sources/vte/${version%.*}/vte-$version.tar.xz \
+        vte-metamask.patch)
 
 build() {
-  cd $name-$version
+  cd vte-$version
 
-  patch -R -p1 -i $SRC/$name-metamask.patch
+  patch -R -p1 -i $SRC/vte-metamask.patch
+
   ./configure --prefix=/usr \
-              --libexecdir=/usr/lib/$name \
+              --libexecdir=/usr/lib/vte \
               --disable-static \
               --disable-debugging \
               --disable-python \
