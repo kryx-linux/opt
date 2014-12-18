@@ -6,12 +6,12 @@
 
 name=mailman
 version=2.1.18
-release=1
-source=(http://ftp.gnu.org/gnu/$name/$name-$version.tgz \
+release=2
+source=(http://ftp.gnu.org/gnu/$name/$name-${version}-1.tgz \
         $name.rc)
 
 build() {
-  cd $name-$version
+  cd $name-${version}-1
   patch -p1 -i contrib/redhat_fhs.patch
 
   rm -f configure
@@ -51,9 +51,8 @@ __EOF__
   # fix permissions
   chown -R root:$name $PKG/etc/$name $PKG/usr/lib/$name \
     $PKG/var/{lib,lock,log,run,spool}/$name
-  chmod 02775 $PKG/etc/$name $PKG/var/{lib,lock,log,run,spool}/$name
-  find $PKG/usr/lib/$name -type d -exec chmod 02775 {} \;
-  #chmod o+x $PKG/var/lib/$name/archives/private
+  find $PKG/usr/lib/$name -type d -exec chmod 0775 {} \;
+  chmod o+x $PKG/var/lib/$name/archives/private
 
   # fix configs
   ln -sf /usr/lib/$name/Mailman/mm_cfg.py $PKG/etc/$name
