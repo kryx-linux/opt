@@ -4,7 +4,7 @@
 # Depends on:  readline libpcre libxml2 curl db gdbm xz
 
 name=php
-version=5.5.19
+version=5.5.20
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
@@ -40,6 +40,7 @@ build () {
     make
     make -j1 INSTALL_ROOT=$PKG install
     rm $PKG/usr/lib/php/extensions/*.a
+    ln -sf phar.phar $PKG/usr/bin/phar
 
     sed -i '/^extension_dir/s|=.*$|= "/usr/lib/php/extensions"|' php.ini-*
     install -d $PKG/etc/php/conf.d
