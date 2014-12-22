@@ -82,7 +82,7 @@ doGLsymlinks() {
 
 doStatus() {
   # check which selection its being used
-  local file=$(file -h /usr/lib/libGL.so.1.2.0 | cut -d'`' -f2 | cut -d":" -f1 | sed "s|'||")
+  local file=$(file -h /usr/lib/libGL.so.1.2.0 | awk '{ if (/symbolic link/) print $5; else print $1; }' | sed 's|:||')
   case $file in
     *libGL.so.1.2.0) echo "* xorg gl/glx is selected" ;;
     *libGL_so_1_2_nvidia) echo "* nvidia gl/glx is selected" ;;

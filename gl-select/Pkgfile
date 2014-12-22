@@ -5,8 +5,8 @@
 # Depends on: xorg-server
 
 name=gl-select
-version=1.4
-release=2
+version=1.5
+release=1
 source=($name)
 
 build() {
