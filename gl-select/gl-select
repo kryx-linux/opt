@@ -115,7 +115,7 @@ doUse() {
       ;;
     "nvidia")
       # is an nvidia port installed?
-      checkInstalled nvidia nvidia-legacy-96xx nvidia-legacy-71xx
+      checkInstalled nvidia nvidia-sl nvidia-legacy-96xx nvidia-legacy-71xx
       # check for the existence of xorg backups
       local ebackups="$(getExistBackups)"
       [ ! -z "$ebackups" ] && infoRevert $ebackups
