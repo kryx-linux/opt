@@ -4,7 +4,7 @@
 # Depends on:  util-linux cmake
 
 name=task
-version=2.3.0
+version=2.4.0
 release=1
 source=(http://www.taskwarrior.org/download/$name-$version.tar.gz)
 
@@ -20,7 +20,6 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/share/task/i18n
-    rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,NEWS,README,INSTALL}
-    rm $PKG/usr/share/task/scripts/vim/README
+    rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,NEWS,README.md,INSTALL}
+    rm $PKG/usr/share/task/scripts/{vim,hooks}/README
 }
