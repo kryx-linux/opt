@@ -36,7 +36,6 @@ drwxr-xr-x	root/root	etc/openldap/schema/
 -rw-------	root/root	etc/openldap/slapd.ldif.default
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/slapd
--rwxr-xr-x	root/root	etc/rc.d/slurpd
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 lrwxrwxrwx	root/root	usr/bin/ldapadd -> ldapmodify
