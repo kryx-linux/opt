@@ -6,7 +6,7 @@
 
 name=krb5
 version=1.13
-release=1
+release=2
 source=(http://web.mit.edu/kerberos/dist/$name/$version/$name-$version-signed.tar \
         $name-config_LDFLAGS.patch)
 
@@ -19,10 +19,11 @@ build() {
 	cd $SRC/$name-$version/src
         sed -e '/KRB5ROOT=/ s/\/local//' -i util/ac_check_krb5.m4
 
-	export CFLAGS="$CFLAGS -I/usr/include/et"
+	export CFLAGS="${CFLAGS/-Os/-O2} -I/usr/include/et"
 
 	./configure --prefix=/usr \
                     --mandir=/usr/man \
+                    --localstatedir=/var \
                     --enable-shared \
                     --disable-rpath \
                     --without-tcl \
@@ -33,8 +34,8 @@ build() {
 
 	make
     	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/share
+	rm -rf $PKG/usr/share $PKG/usr/man/cat* $PKG/usr/man5/.*
 
-	# Comment this if you want kerberized versions of ftp and telnet
+	# comment this if you want kerberized versions of ftp and telnet
 	rm -rf $PKG/usr/bin/{ftp,telnet} $PKG/usr/man/man1/{ftp,telnet}.1
 }
