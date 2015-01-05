@@ -5,13 +5,16 @@
 # Depends on:  zlib libpcre
 
 name=swig
-version=3.0.2
+version=3.0.3
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man
+
     make
     make DESTDIR=$PKG install
 }
