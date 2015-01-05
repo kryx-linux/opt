@@ -5,25 +5,29 @@
 # Depends on: openldap
 
 name=krb5
-version=1.12.2
+version=1.13
 release=1
-source=(http://web.mit.edu/kerberos/dist/$name/${version%.*}/$name-$version-signed.tar
-	mit-krb5-1.11_uninitialized.patch
-	mit-krb5_krb5-config_LDFLAGS.patch)
+source=(http://web.mit.edu/kerberos/dist/$name/$version/$name-$version-signed.tar \
+        $name-config_LDFLAGS.patch)
 
 build() {
 	bsdtar -p -o -xf $SRC/$name-$version.tar.gz
 
-    	cd $name-$version/src
+	cd $name-$version/src/build-tools
+	patch -p1 -i $SRC/$name-config_LDFLAGS.patch
 
-	#patch -p2 -i $SRC/mit-krb5-1.11_uninitialized.patch
-	#patch -p2 -i $SRC/mit-krb5_krb5-config_LDFLAGS.patch
-        #sed -e '/KRB5ROOT=/ s/\/local//' -i util/ac_check_krb5.m4
+	cd $SRC/$name-$version/src
+        sed -e '/KRB5ROOT=/ s/\/local//' -i util/ac_check_krb5.m4
 
-	#export CFLAGS="$CFLAGS -I/usr/include/et"
+	export CFLAGS="$CFLAGS -I/usr/include/et"
 
 	./configure --prefix=/usr \
-		    --with-system-et \
+                    --mandir=/usr/man \
+                    --enable-shared \
+                    --disable-rpath \
+                    --without-tcl \
+                    --with-ldap \
+                    --with-system-et \
                     --with-system-ss \
                     --without-system-verto
 
