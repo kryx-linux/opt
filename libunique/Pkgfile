@@ -2,7 +2,7 @@
 # URL: http://live.gnome.org/LibUnique
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Jose V Beneyto, sepen at crux dot nu
-# Depends on: gtk xorg-libxdamage
+# Depends on: gtk3 xorg-libxdamage
 
 name=libunique
 version=3.0.2
