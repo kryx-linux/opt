@@ -2376,7 +2376,7 @@ drwxrwsr-x	root/mailman	var/lib/mailman/data/
 lrwxrwxrwx	root/root	var/lib/mailman/data/sitelist.cfg -> /etc/mailman/sitelist.cfg
 drwxrwsr-x	root/mailman	var/lib/mailman/lists/
 drwxrwsr-x	root/mailman	var/lib/mailman/spam/
-drwxr-xr-x	root/root	var/lock/
+drwxrwxrwt	root/root	var/lock/
 drwxrwxr-x	root/mailman	var/lock/mailman/
 drwxr-xr-x	root/root	var/log/
 drwxrwxr-x	root/mailman	var/log/mailman/

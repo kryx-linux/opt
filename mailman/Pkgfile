@@ -6,7 +6,7 @@
 
 name=mailman
 version=2.1.18
-release=2
+release=3
 source=(http://ftp.gnu.org/gnu/$name/$name-${version}-1.tgz \
         $name.rc)
 
@@ -51,6 +51,7 @@ __EOF__
   # fix permissions
   chown -R root:$name $PKG/etc/$name $PKG/usr/lib/$name \
     $PKG/var/{lib,lock,log,run,spool}/$name
+  chmod 1777 $PKG/var/lock
   find $PKG/usr/lib/$name -type d -exec chmod 0775 {} \;
   chmod o+x $PKG/var/lib/$name/archives/private
 
