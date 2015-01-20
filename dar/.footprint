@@ -70,13 +70,13 @@ drwxr-xr-x	root/root	usr/include/dar/
 -rw-r--r--	root/root	usr/include/dar/user_interaction.hpp
 -rw-r--r--	root/root	usr/include/dar/wrapperlib.hpp
 drwxr-xr-x	root/root	usr/lib/
--rw-r--r--	root/root	usr/lib/libdar.a
--rwxr-xr-x	root/root	usr/lib/libdar.la
-lrwxrwxrwx	root/root	usr/lib/libdar.so -> libdar.so.5000.6.2
-lrwxrwxrwx	root/root	usr/lib/libdar.so.5000 -> libdar.so.5000.6.2
--rwxr-xr-x	root/root	usr/lib/libdar.so.5000.6.2
+-rw-r--r--	root/root	usr/lib/libdar64.a
+-rwxr-xr-x	root/root	usr/lib/libdar64.la
+lrwxrwxrwx	root/root	usr/lib/libdar64.so -> libdar64.so.5000.6.3
+lrwxrwxrwx	root/root	usr/lib/libdar64.so.5000 -> libdar64.so.5000.6.3
+-rwxr-xr-x	root/root	usr/lib/libdar64.so.5000.6.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
--rw-r--r--	root/root	usr/lib/pkgconfig/libdar.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/libdar64.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/dar.1.gz
