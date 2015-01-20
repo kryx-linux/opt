@@ -8,8 +8,6 @@ drwxr-xr-x	root/root	etc/squid/
 -rw-r--r--	root/root	etc/squid/errorpage.css.default
 -rw-r--r--	root/root	etc/squid/mime.conf
 -rw-r--r--	root/root	etc/squid/mime.conf.default
--rw-r--r--	root/root	etc/squid/msntauth.conf
--rw-r--r--	root/root	etc/squid/msntauth.conf.default
 -rw-r--r--	root/root	etc/squid/squid.conf
 -rw-r--r--	root/root	etc/squid/squid.conf.default
 -rw-r--r--	root/root	etc/squid/squid.conf.documented
@@ -22,7 +20,6 @@ drwxr-xr-x	root/root	usr/lib/squid/
 -rwxr-xr-x	root/root	usr/lib/squid/basic_db_auth
 -rwxr-xr-x	root/root	usr/lib/squid/basic_fake_auth
 -rwxr-xr-x	root/root	usr/lib/squid/basic_getpwnam_auth
--rwxr-xr-x	root/root	usr/lib/squid/basic_msnt_auth
 -rwxr-xr-x	root/root	usr/lib/squid/basic_msnt_multi_domain_auth
 -rwxr-xr-x	root/root	usr/lib/squid/basic_ncsa_auth
 -rwxr-xr-x	root/root	usr/lib/squid/basic_nis_auth
@@ -30,9 +27,11 @@ drwxr-xr-x	root/root	usr/lib/squid/
 -rwxr-xr-x	root/root	usr/lib/squid/basic_radius_auth
 -rwxr-xr-x	root/root	usr/lib/squid/basic_smb_auth
 -rwxr-xr-x	root/root	usr/lib/squid/basic_smb_auth.sh
+-rwxr-xr-x	root/root	usr/lib/squid/basic_smb_lm_auth
 -rwxr-xr-x	root/root	usr/lib/squid/cachemgr.cgi
 -rwxr-xr-x	root/root	usr/lib/squid/digest_file_auth
 -rwxr-xr-x	root/root	usr/lib/squid/diskd
+-rwxr-xr-x	root/root	usr/lib/squid/ext_delayer_acl
 -rwxr-xr-x	root/root	usr/lib/squid/ext_file_userip_acl
 -rwxr-xr-x	root/root	usr/lib/squid/ext_session_acl
 -rwxr-xr-x	root/root	usr/lib/squid/ext_sql_session_acl
@@ -55,10 +54,13 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/basic_db_auth.8.gz
 -rw-r--r--	root/root	usr/man/man8/basic_getpwnam_auth.8.gz
+-rw-r--r--	root/root	usr/man/man8/basic_msnt_multi_domain_auth.8.gz
 -rw-r--r--	root/root	usr/man/man8/basic_ncsa_auth.8.gz
+-rw-r--r--	root/root	usr/man/man8/basic_pop3_auth.8.gz
 -rw-r--r--	root/root	usr/man/man8/basic_radius_auth.8.gz
 -rw-r--r--	root/root	usr/man/man8/cachemgr.cgi.8.gz
 -rw-r--r--	root/root	usr/man/man8/digest_file_auth.8.gz
+-rw-r--r--	root/root	usr/man/man8/ext_delayer_acl.8.gz
 -rw-r--r--	root/root	usr/man/man8/ext_file_userip_acl.8.gz
 -rw-r--r--	root/root	usr/man/man8/ext_session_acl.8.gz
 -rw-r--r--	root/root	usr/man/man8/ext_sql_session_acl.8.gz

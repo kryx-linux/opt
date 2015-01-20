@@ -9,9 +9,10 @@ PRE-INSTALL
    'passwd -l squid'
 
 POST-INSTALL
-1. add a cache_dir entry to /etc/squid/squid.conf:
+1. squid requires a mounted /dev/shm for shared memory access
+2. add a cache_dir entry to /etc/squid/squid.conf:
    cache_dir aufs /var/squid 2000 16 256
-2. run '/usr/sbin/squid -z' to build the cache structure
+3. run '/usr/sbin/squid -z' to build the cache structure
 
 PRECAUTION
 1. all directories used by squid must be chown to 

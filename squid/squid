@@ -6,7 +6,7 @@
 SQUID=/usr/sbin/squid
 
 wait_until_down() {
-	while [[ $(pidof $SQUID) ]]; do
+	while [ "$(pidof $SQUID)" ]; do
 		sleep 1
 	done
 }
