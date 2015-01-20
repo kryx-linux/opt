@@ -4,9 +4,9 @@
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
-version=1.7.0_72
-release=2
-source=(file:///$name-7u${version#*_}-linux-x64.tar.gz)
+version=1.8.0_25
+release=1
+source=(file:///$name-8u${version#*_}-linux-x64.tar.gz)
 
 build(){
     cd $name$version
