@@ -3,9 +3,9 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=maradns
-version=1.4.14
+version=1.4.15
 release=1
-source=(http://maradns.samiam.org/download/1.4/$name-$version.tar.gz \
+source=(http://maradns.samiam.org/download/1.4/$name-$version.tar.xz \
         mararc maradns db.localhost)
 
 build () {
