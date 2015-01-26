@@ -4,19 +4,19 @@
 # Depends on:  libjpeg-turbo, zlib
 
 name=libtiff
-version=4.0.3
-release=4
+version=4.0.4beta
+release=1
 source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz \
         gif2tiff-buffer-overflow.patch tiff2pdf_use-after-free.patch lzw-oob-write.patch \
 	tiff-4.0.3-CVE-2013-4243.patch tiff-4.0.3-CVE-2013-1960.patch )
 
 build() {
     cd tiff-$version
-    patch -d tools -p0 -i $SRC/tiff2pdf_use-after-free.patch
-    patch -d tools -p0 -i $SRC/gif2tiff-buffer-overflow.patch
-    patch -d tools -p0 -i $SRC/lzw-oob-write.patch
-    patch -p0 -i $SRC/tiff-4.0.3-CVE-2013-4243.patch
-    patch -p1 -i $SRC/tiff-4.0.3-CVE-2013-1960.patch
+    #patch -d tools -p0 -i $SRC/tiff2pdf_use-after-free.patch
+    #patch -d tools -p0 -i $SRC/gif2tiff-buffer-overflow.patch
+    #patch -d tools -p0 -i $SRC/lzw-oob-write.patch
+    #patch -p0 -i $SRC/tiff-4.0.3-CVE-2013-4243.patch
+    #patch -p1 -i $SRC/tiff-4.0.3-CVE-2013-1960.patch
 
     ./configure --prefix=/usr --mandir=/usr/man
     make
