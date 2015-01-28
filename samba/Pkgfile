@@ -2,7 +2,7 @@
 # URL:		http://www.samba.org
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
 # Packager:	Juergen Daubert, jue at crux dot nu
-# Depends on:	ncurses openssl readline zlib libcap acl libaio popt p5-parse-yapp krb5 ldb ntdb iniparser subunit py-subunit
+# Depends on:	iniparser krb5 ldb libaio libcap ntdb p5-parse-yapp py-subunit subunit
 # Optional:	cups
 
 name=samba
