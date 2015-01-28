@@ -1,7 +1,7 @@
 # Description:	Subunit is a streaming protocol for test results
 # URL:		https://launchpad.net/subunit
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:	check cppunit
+# Depends on:	python check cppunit
 
 name=subunit
 version=1.0.0
@@ -10,7 +10,10 @@ source=(https://launchpad.net/subunit/trunk/$version/+download/$name-$version.ta
 
 build () {
 	cd $name-$version
-	./configure --prefix=/usr
+
+	./configure \
+		--prefix=/usr
+
 	make
 	make DESTDIR=$PKG install
 
