@@ -12,5 +12,9 @@ PRECAUTION
     zsh needs to be available at boot before the directory containing
     libpcre.so is mounted. The same applies to gdbm.so.
 
+    To make the completion for prt-utils work, you have to update prt-get's
+    cache after port or package db oprertions (e.g. ports -u, prt-get install
+    xyz). The completion relies prt-utils' cache for performance reasons.
+
 MISC
     zsh-lovers.1 is taken from http://www.grml.org/zsh/zsh-lovers.1
