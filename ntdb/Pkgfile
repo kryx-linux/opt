@@ -1,8 +1,7 @@
 # Description:	Simple database library based on gdbm (replacement of tdb)
 # URL:		http://www.samba.org/ftp/tdb/
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:	
-# Optional:	python
+# Depends on:	python
 
 name=ntdb
 version=1.0
