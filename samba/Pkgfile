@@ -7,7 +7,7 @@
 
 name=samba
 version=4.1.16
-release=2
+release=3
 source=(
 http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz
 samba.rc
@@ -19,6 +19,9 @@ winbindd.rc
 build () {
 	cd $name-$version
 
+	# we should define vendorlib in our perl port
+	sed -ri 's/(vendor)(arch|lib|prefix)/site\2/' buildtools/wafsamba/samba_perl.py 
+
 	./configure \
 		--enable-fhs \
 		--prefix=/usr \
@@ -29,8 +32,6 @@ build () {
 		--bundled-libraries=NONE \
 		--with-system-mitkrb5
 
-	# we should define vendorlib in our perl port
-	sed -ri 's/(vendor)(arch|lib|prefix)/site\2/' buildtools/wafsamba/samba_perl.py 
 	make
 	make DESTDIR=$PKG install
 
