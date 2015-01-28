@@ -5,13 +5,14 @@
 
 name=ldb
 version=1.1.20
-release=1
+release=2
 source=(http://www.samba.org/ftp/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 	./configure \
-		--prefix=/usr
+		--prefix=/usr \
+		--mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
 }
