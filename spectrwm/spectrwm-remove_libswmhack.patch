@@ -1,6 +1,6 @@
-diff -Nru spectrwm-2.6.0.orig/linux/Makefile spectrwm-2.6.0/linux/Makefile
---- spectrwm-2.6.0.orig/linux/Makefile	2014-08-23 09:01:02.136856255 +0200
-+++ spectrwm-2.6.0/linux/Makefile	2014-08-23 09:02:22.330669060 +0200
+diff -Nru spectrwm-2.6.2.orig/linux/Makefile spectrwm-2.6.2/linux/Makefile
+--- spectrwm-2.6.2.orig/linux/Makefile	2015-01-28 10:05:22.673613660 +0100
++++ spectrwm-2.6.2/linux/Makefile	2015-01-28 10:05:39.922993318 +0100
 @@ -10,7 +10,7 @@
  LIBMAJORVERSION = $(shell .  $(CURDIR)/../lib/shlib_version; echo $$major)
  
@@ -20,10 +20,10 @@ diff -Nru spectrwm-2.6.0.orig/linux/Makefile spectrwm-2.6.0/linux/Makefile
  	install -m 644 ../spectrwm.1               $(DESTDIR)$(MANDIR)/man1/spectrwm.1
  	install -m 644 ../spectrwm_es.1            $(DESTDIR)$(MANDIR)/es/man1/spectrwm.1
  	install -m 644 ../spectrwm_it.1            $(DESTDIR)$(MANDIR)/it/man1/spectrwm.1
-diff -Nru spectrwm-2.6.0.orig/spectrwm.c spectrwm-2.6.0/spectrwm.c
---- spectrwm-2.6.0.orig/spectrwm.c	2014-08-23 09:01:02.136856255 +0200
-+++ spectrwm-2.6.0/spectrwm.c	2014-08-23 09:04:35.139391508 +0200
-@@ -300,9 +300,9 @@
+diff -Nru spectrwm-2.6.2.orig/spectrwm.c spectrwm-2.6.2/spectrwm.c
+--- spectrwm-2.6.2.orig/spectrwm.c	2015-01-28 10:05:22.676946874 +0100
++++ spectrwm-2.6.2/spectrwm.c	2015-01-28 10:05:39.922993318 +0100
+@@ -301,9 +301,9 @@
  #define SWM_CONF_DEFAULT	(0)
  #define SWM_CONF_KEYMAPPING	(1)
  
@@ -35,7 +35,7 @@ diff -Nru spectrwm-2.6.0.orig/spectrwm.c spectrwm-2.6.0/spectrwm.c
  
  char			**start_argv;
  xcb_atom_t		a_state;
-@@ -3349,7 +3349,7 @@
+@@ -3430,7 +3430,7 @@
  
  	close(xcb_get_file_descriptor(conn));
  
