@@ -5,7 +5,7 @@
 # Depends on: ncurses
 
 name=dialog
-version=1.2-20140911
+version=1.2-20150125
 release=1
 source=(ftp://dickey.his.com/$name/$name-$version.tgz)
 
