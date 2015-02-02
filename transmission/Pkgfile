@@ -6,7 +6,7 @@
 name=transmission
 version=2.84
 release=1
-source=(http://download.m0k.org/$name/files/$name-$version.tar.xz)
+source=(https://transmission.cachefly.net/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
