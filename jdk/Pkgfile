@@ -1,12 +1,12 @@
-# Description: Java 2 Software Development Kit
+# Description: Java 8 Software Development Kit
 # URL: http://java.sun.com
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
-version=1.7.0_72
+version=1.8.0_31
 release=1
-source=(file:///$name-7u${version##*_}-linux-x64.tar.gz)
+source=(file:///$name-8u${version##*_}-linux-x64.tar.gz)
 
 build(){
 	rm -rf $SRC/jdk*/{man/ja,jre/lib/{locale,deploy/messages_},db/lib/derbyLocale*}*
