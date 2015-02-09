@@ -358,6 +358,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/gdipluspixelformats.h
 -rw-r--r--	root/root	usr/include/wine/windows/gdiplustypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/guiddef.h
+-rw-r--r--	root/root	usr/include/wine/windows/hidusage.h
 -rw-r--r--	root/root	usr/include/wine/windows/highlevelmonitorconfigurationapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/hlguids.h
 -rw-r--r--	root/root	usr/include/wine/windows/hlink.h
@@ -522,6 +523,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/ntddndis.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntddscsi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntddstor.h
+-rw-r--r--	root/root	usr/include/wine/windows/ntdef.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntdsapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntquery.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntsecapi.h
@@ -1026,6 +1028,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dxgi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dxva2.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/eject.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/evr.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/expand.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/explorer.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/explorerframe.dll.so
@@ -1242,6 +1245,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dxgi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dxva2.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/eject.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/evr.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/expand.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/explorer.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/explorerframe.dll
@@ -2330,6 +2334,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/dxgi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dxva2.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/eject.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/evr.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/expand.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/explorer.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/explorerframe.dll.so
@@ -2555,6 +2560,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dxgi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dxva2.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/eject.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/evr.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/expand.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/explorer.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/explorerframe.dll
