@@ -1,10 +1,11 @@
-# Description: A compiler cache.
+# Description: A fast compiler cache.
 # URL: http://ccache.samba.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: zlib
 
 name=ccache
-version=3.2
+version=3.2.1
 release=1
 source=(http://samba.org/ftp/$name/$name-$version.tar.xz)
 
@@ -19,9 +20,12 @@ build() {
 	make DESTDIR=$PKG install
 
 	install -d $PKG/usr/lib/$name
-	for c in cc c++ gcc g++; do
-		cd $PKG/usr/lib/$name && ln -s ../../bin/ccache $c
+
+	if [ "$(prt-get isinst clang)" = 'package clang is installed' ]; then
+			local clang='clang clang++'
+	fi
+
+	for c in $clang cc gcc g++ cpp c++; do
+		ln -s /usr/bin/ccache $PKG/usr/lib/ccache/$c
 	done
-   
-	rm -rf $PKG/usr/info
 }
