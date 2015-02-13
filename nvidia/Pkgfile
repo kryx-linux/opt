@@ -5,13 +5,15 @@
 
 name=nvidia
 version=346.35
-release=1
+release=2
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run \
-    90-nvidia-uvm.rules)
+    90-nvidia-uvm.rules $name-3.18.patch)
 
 build() {
     sh NVIDIA-Linux-x86_64-$version-no-compat32.run --extract-only
     cd NVIDIA-Linux-x86_64-$version-no-compat32
+
+    patch -p1 -i $SRC/$name-3.18.patch
 
     # libraries
     install -d $PKG/usr/lib/{tls,vdpau}
