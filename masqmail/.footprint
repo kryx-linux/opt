@@ -36,9 +36,5 @@ drwxr-xr-x	root/root	var/log/
 drwxr-xr-x	mail/mail	var/log/masqmail/
 -rw-r--r--	mail/mail	var/log/masqmail/debug.log (EMPTY)
 -rw-r--r--	mail/mail	var/log/masqmail/masqmail.log (EMPTY)
-drwxr-xr-x	root/root	var/run/
-drwxr-xr-x	mail/mail	var/run/masqmail/
 drwxr-xr-x	root/root	var/spool/
 drwxr-xr-x	mail/mail	var/spool/masqmail/
-drwxr-xr-x	mail/mail	var/spool/masqmail/input/
-drwxr-xr-x	mail/mail	var/spool/masqmail/lock/
