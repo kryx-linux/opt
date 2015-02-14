@@ -8,6 +8,7 @@ drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/cups-browsed
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+lrwxrwxrwx	root/root	usr/bin/foomatic-rip -> /usr/lib/cups/filter/foomatic-rip
 -rwxr-xr-x	root/root	usr/bin/ttfread
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/cupsfilters/
