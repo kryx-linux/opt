@@ -5,7 +5,7 @@
 # Depends on: ninja dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm libexif clang
 
 name=chromium
-version=40.0.2214.94
+version=40.0.2214.111
 release=1
 source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.xz \
 	$name.sh)
