@@ -3,35 +3,39 @@
 # /etc/rc.d/squid: start/stop squid daemon
 #
 
-SQUID=/usr/sbin/squid
-
-wait_until_down() {
-	while [ "$(pidof $SQUID)" ]; do
-		sleep 1
-	done
-}
+SSD=/sbin/start-stop-daemon
+PROG=/usr/sbin/squid
+PID=/var/run/squid.pid
+OPTS="-Y"
 
 case $1 in
 start)
-	$SQUID -Y
+	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
 	;;
 stop)
-	$SQUID -k interrupt
+	$SSD --stop --retry 10 --pidfile $PID --signal INT
 	;;
 shutdown)
-	$SQUID -k shutdown
-	wait_until_down
-	;;
-reload)
-	$SQUID -k reconfigure
+	$SSD --stop --retry 60 --pidfile $PID --signal TERM
 	;;
 restart)
 	$0 stop
-	wait_until_down
 	$0 start
 	;;
+reload)
+	$SSD --stop --pidfile $PID --signal HUP
+	;;
+status)
+	$SSD --status --pidfile $PID
+	case $? in
+	0) echo "$PROG is running" ;;
+	1) echo "$PROG is not running but the pid file $PID exists" ;;
+	3) echo "$PROG is not running" ;;
+	4) echo "Unable to determine the program status" ;;
+	esac
+	;;
 *)
-	echo "usage: $0 [start|stop|shutdown|reload|restart]"
+	echo "usage: $0 [start|stop|shutdown|restart|reload|status]"
 	;;
 esac
 
