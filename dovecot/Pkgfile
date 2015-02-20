@@ -5,7 +5,7 @@
 
 name=dovecot
 version=2.2.15
-release=1
+release=2
 source=(http://dovecot.org/releases/2.2/$name-$version.tar.gz \
         dovecot-config.patch dovecot)
 
