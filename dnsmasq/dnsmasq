@@ -3,23 +3,35 @@
 # /etc/rc.d/dnsmasq: start/stop dnsmasq daemon
 #
 
+SSD=/sbin/start-stop-daemon
+PROG=/usr/sbin/dnsmasq
+PID=/var/run/dnsmasq.pid
+
 case $1 in
 start)
-	/usr/sbin/dnsmasq
+	$SSD --start --pidfile $PID --exec $PROG
 	;;
 stop)
-	killall -q /usr/sbin/dnsmasq
+	$SSD --stop --retry 10 --pidfile $PID
 	;;
 restart)
 	$0 stop
-	sleep 2
 	$0 start
 	;;
 reload)
-	kill -s HUP $(pidof dnsmasq)
+	$SSD --stop --signal HUP --pidfile $PID
+	;;
+status)
+	$SSD --status --pidfile $PID
+	case $? in
+	0) echo "$PROG is running" ;;
+	1) echo "$PROG is not running but the pid file $PID exists" ;;
+	3) echo "$PROG is not running" ;;
+	4) echo "Unable to determine the program status" ;;
+	esac
 	;;
 *)
-	echo "usage: $0 [start|stop|restart|reload]"
+	echo "usage: $0 [start|stop|restart|reload|status]"
 	;;
 esac
 
