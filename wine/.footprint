@@ -469,6 +469,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/msacm.h
 -rw-r--r--	root/root	usr/include/wine/windows/msacmdlg.h
 -rw-r--r--	root/root	usr/include/wine/windows/msacmdrv.h
+-rw-r--r--	root/root	usr/include/wine/windows/msasn1.h
 -rw-r--r--	root/root	usr/include/wine/windows/mscat.h
 -rw-r--r--	root/root	usr/include/wine/windows/mscoree.h
 -rw-r--r--	root/root	usr/include/wine/windows/mscoree.idl
@@ -921,6 +922,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/compstui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/comsvcs.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/conhost.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/connect.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/control.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/credui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/crtdll.dll.so
@@ -1138,6 +1140,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/compstui.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/comsvcs.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/conhost.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/connect.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/control.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/credui.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/crtdll.dll
@@ -1309,6 +1312,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mciqtz32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mciseq.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mciwave.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/mf.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mfplat.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mfreadwrite.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mgmtapi.dll
@@ -1579,8 +1583,12 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wuapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wuaueng.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wusa.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/x3daudio1_1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/x3daudio1_7.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xapofx1_1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/xapofx1_3.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/xapofx1_4.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/xapofx1_5.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xaudio2_7.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xcopy.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xinput1_1.dll
@@ -1827,6 +1835,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/mciqtz32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mciseq.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mciwave.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/mf.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mfplat.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mfreadwrite.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mgmtapi.dll.so
@@ -2097,8 +2106,12 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/wuapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wuaueng.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wusa.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/x3daudio1_1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x3daudio1_7.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xapofx1_1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/xapofx1_3.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/xapofx1_4.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/xapofx1_5.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xaudio2_7.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xcopy.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/xinput1_1.dll.so
@@ -2222,6 +2235,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/compstui.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/comsvcs.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/conhost.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/connect.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/control.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/credui.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/crtdll.dll.so
@@ -2448,6 +2462,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/compstui.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/comsvcs.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/conhost.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/connect.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/control.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/credui.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/crtdll.dll
@@ -2630,6 +2645,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mciqtz32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mciseq.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mciwave.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/mf.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mfplat.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mfreadwrite.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mgmtapi.dll
@@ -2948,8 +2964,12 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wuapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wuaueng.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wusa.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/x3daudio1_1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/x3daudio1_7.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xapofx1_1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/xapofx1_3.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/xapofx1_4.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/xapofx1_5.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xaudio2_7.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xcopy.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xinput1_1.dll
@@ -3204,6 +3224,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/mciqtz32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mciseq.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mciwave.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/mf.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mfplat.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mfreadwrite.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mgmtapi.dll.so
@@ -3522,8 +3543,12 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/wuapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wuaueng.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wusa.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/x3daudio1_1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/x3daudio1_7.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xapofx1_1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/xapofx1_3.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/xapofx1_4.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/xapofx1_5.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xaudio2_7.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xcopy.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xinput1_1.dll.so
