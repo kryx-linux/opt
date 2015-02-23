@@ -5,9 +5,9 @@
 # Depends on:  python, llvm
 
 name=clang
-version=3.4.2
+version=3.5.1
 release=1
-source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.gz \
+source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
   config.h llvm-config.h)
 
 build() {
@@ -27,7 +27,7 @@ build() {
 
   # Unfortunately, llvm's configure script seems to ignore --mandir.
   mv $PKG/usr/share/man $PKG/usr
-  rmdir $PKG/usr/share
+  rm -rf $PKG/usr/share
 
   find $PKG -name .dir -delete
   rm -rf $PKG/usr/docs
