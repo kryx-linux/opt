@@ -4,16 +4,17 @@
 # Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
  
 name=firefox
-version=35.0
+version=36.0
 release=1
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
-	firefox-install-dir.patch firefox.desktop)
+	firefox-install-dir.patch firefox.desktop bz680547.patch)
  
 build() {
     cd mozilla-release
  
-patch -p 1 -i $SRC/firefox-install-dir.patch
- 
+    patch -p1 -i $SRC/firefox-install-dir.patch
+    patch -p1 -i $SRC/bz680547.patch
+
 cat <<- EOF > .mozconfig
     mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
     mk_add_options MOZ_MAKE_FLAGS="$MAKEFLAGS -s"
@@ -29,7 +30,7 @@ cat <<- EOF > .mozconfig
     ac_add_options --enable-system-sqlite
     ac_add_options --enable-system-cairo
     ac_add_options --with-pthreads
-    ac_add_options --enable-optimize="$CFLAGS -mno-avx"
+    ac_add_options --enable-optimize="$CFLAGS"
     ac_add_options --enable-official-branding
     ac_add_options --enable-extensions=default,-gnomevfs
     ac_add_options --enable-shared
