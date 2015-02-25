@@ -6,7 +6,7 @@
 # Optional:	cups
 
 name=samba
-version=4.1.16
+version=4.1.17
 release=3
 source=(
 http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz
