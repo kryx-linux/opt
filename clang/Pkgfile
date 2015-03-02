@@ -40,6 +40,6 @@ build() {
 
   # only clang may be left, remove llvm
   rm -r $PKG/usr/include/llvm{,-c}
-  rm $PKG/usr/bin/{bugpoint,ll*,macho-dump,opt}
+  rm $PKG/usr/bin/{bugpoint,ll*,macho-dump,opt,FileCheck,count,not}
   rm $PKG/usr/lib/{LLVMHello.so,BugpointPasses.so,libLTO.*,libLLVM*}
 }
