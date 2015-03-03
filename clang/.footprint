@@ -1,17 +1,11 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/FileCheck
 -rwxr-xr-x	root/root	usr/bin/c-index-test
 -rwxr-xr-x	root/root	usr/bin/clang
 lrwxrwxrwx	root/root	usr/bin/clang++ -> clang
 -rwxr-xr-x	root/root	usr/bin/clang-check
 -rwxr-xr-x	root/root	usr/bin/clang-format
 -rwxr-xr-x	root/root	usr/bin/clang-tblgen
--rwxr-xr-x	root/root	usr/bin/count
--rwxr-xr-x	root/root	usr/bin/not
--rwxr-xr-x	root/root	usr/bin/obj2yaml
--rwxr-xr-x	root/root	usr/bin/verify-uselistorder
--rwxr-xr-x	root/root	usr/bin/yaml2obj
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/clang-c/
 -rw-r--r--	root/root	usr/include/clang-c/BuildSystem.h
