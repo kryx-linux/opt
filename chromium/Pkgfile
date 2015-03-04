@@ -2,7 +2,7 @@
 # URL: http://chromium.org/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Tadeusz Sosnierz, tadzikes gmail com
-# Depends on: ninja dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm libexif clang
+# Depends on: ninja dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm libexif clang pciutils desktop-file-utils
 
 name=chromium
 version=40.0.2214.115
