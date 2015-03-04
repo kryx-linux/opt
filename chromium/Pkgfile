@@ -5,10 +5,10 @@
 # Depends on: ninja dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm libexif clang
 
 name=chromium
-version=40.0.2214.111
+version=40.0.2214.115
 release=1
-source=(http://commondatastorage.googleapis.com/chromium-browser-official/$name-$version.tar.xz \
-	$name.sh)
+source=(http://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz \
+	$name.sh $name.desktop)
 
 build() {
   cd $name-$version
@@ -24,7 +24,7 @@ build() {
         -Dpython_ver="2.7" \
 	-Dno_strict_aliasing=1 \
 	-Dwerror= \
-	-Dlinux_sandbox_path=/usr/lib/chromium/chrome-sandbox \
+	-Dlinux_sandbox_path=/usr/lib/$name/chrome-sandbox \
 	-Dlinux_strip_binary=1 \
         -Dlinux_use_gold_binary=0 \
         -Dlinux_use_gold_flags=0 \
@@ -58,19 +58,22 @@ build() {
 
   ninja -C out/Release chrome chrome_sandbox
 
-  install -m 0755 -D out/Release/chrome $PKG/usr/lib/chromium/chromium
-  install -m 4755 -o root -g root -D out/Release/chrome_sandbox $PKG/usr/lib/chromium/chrome-sandbox
-  install -m 0644 -D out/Release/*.pak $PKG/usr/lib/chromium
-  install -m 0755 -D out/Release/libffmpegsumo.so $PKG/usr/lib/chromium
-  install -d $PKG/usr/lib/chromium/locales
-  install -m 0644 out/Release/locales/en-US.pak $PKG/usr/lib/chromium/locales
-  cp -a out/Release/resources $PKG/usr/lib/chromium
-  install -m 0644 -D out/Release/chrome.1 $PKG/usr/man/man1/chromium.1
+  install -m 0755 -D out/Release/chrome $PKG/usr/lib/$name/$name
+  install -m 4755 -o root -g root -D out/Release/chrome_sandbox $PKG/usr/lib/$name/chrome-sandbox
+  install -m 0644 -D out/Release/*.pak $PKG/usr/lib/$name
+  install -m 0755 -D out/Release/libffmpegsumo.so $PKG/usr/lib/$name
+  install -d $PKG/usr/lib/$name/locales
+  install -m 0644 out/Release/locales/en-US.pak $PKG/usr/lib/$name/locales
+  cp -a out/Release/resources $PKG/usr/lib/$name
+  install -m 0644 -D out/Release/chrome.1 $PKG/usr/man/man1/$name.1
 
   for size in 22 24 48 128 256; do
-    install -m 0644 -D chrome/app/theme/chromium/product_logo_${size}.png \
-      $PKG/usr/share/icons/hicolor/${size}x${size}/apps/chromium.png
+    install -m 0644 -D chrome/app/theme/$name/product_logo_${size}.png \
+      $PKG/usr/share/icons/hicolor/${size}x${size}/apps/$name.png
   done
 
-  install -m 0755 -D $SRC/chromium.sh $PKG/usr/bin/chromium
+  install -d $PKG/usr/share/pixmaps
+  ln -sf /usr/share/icons/hicolor/48x48/apps/$name.png $PKG/usr/share/pixmaps/$name.png
+  install -m 0644 -D $SRC/$name.desktop $PKG/usr/share/applications/$name.desktop
+  install -m 0755 -D $SRC/$name.sh $PKG/usr/bin/$name
 }

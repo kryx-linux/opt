@@ -119,6 +119,8 @@ drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/chromium.1.gz
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/applications/
+-rw-r--r--	root/root	usr/share/applications/chromium.desktop
 drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/128x128/
@@ -136,3 +138,5 @@ drwxr-xr-x	root/root	usr/share/icons/hicolor/256x256/apps/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/apps/
 -rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/chromium.png
+drwxr-xr-x	root/root	usr/share/pixmaps/
+lrwxrwxrwx	root/root	usr/share/pixmaps/chromium.png -> /usr/share/icons/hicolor/48x48/apps/chromium.png
