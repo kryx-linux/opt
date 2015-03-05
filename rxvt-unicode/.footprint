@@ -12,11 +12,10 @@ drwxr-xr-x	root/root	usr/lib/urxvt/perl/
 -rw-r--r--	root/root	usr/lib/urxvt/perl/clipboard-osc
 -rw-r--r--	root/root	usr/lib/urxvt/perl/confirm-paste
 -rw-r--r--	root/root	usr/lib/urxvt/perl/digital-clock
+-rw-r--r--	root/root	usr/lib/urxvt/perl/eval
 -rw-r--r--	root/root	usr/lib/urxvt/perl/example-refresh-hooks
 -rw-r--r--	root/root	usr/lib/urxvt/perl/keysym-list
 -rw-r--r--	root/root	usr/lib/urxvt/perl/kuake
--rw-r--r--	root/root	usr/lib/urxvt/perl/macosx-clipboard
--rw-r--r--	root/root	usr/lib/urxvt/perl/macosx-clipboard-native
 -rw-r--r--	root/root	usr/lib/urxvt/perl/matcher
 -rw-r--r--	root/root	usr/lib/urxvt/perl/option-popup
 -rw-r--r--	root/root	usr/lib/urxvt/perl/overlay-osc
@@ -40,12 +39,11 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/urxvt-clipboard-osc.1.gz
 -rw-r--r--	root/root	usr/man/man1/urxvt-confirm-paste.1.gz
 -rw-r--r--	root/root	usr/man/man1/urxvt-digital-clock.1.gz
+-rw-r--r--	root/root	usr/man/man1/urxvt-eval.1.gz
 -rw-r--r--	root/root	usr/man/man1/urxvt-example-refresh-hooks.1.gz
 -rw-r--r--	root/root	usr/man/man1/urxvt-extensions.1.gz
 -rw-r--r--	root/root	usr/man/man1/urxvt-keysym-list.1.gz
 -rw-r--r--	root/root	usr/man/man1/urxvt-kuake.1.gz
--rw-r--r--	root/root	usr/man/man1/urxvt-macosx-clipboard-native.1.gz
--rw-r--r--	root/root	usr/man/man1/urxvt-macosx-clipboard.1.gz
 -rw-r--r--	root/root	usr/man/man1/urxvt-matcher.1.gz
 -rw-r--r--	root/root	usr/man/man1/urxvt-option-popup.1.gz
 -rw-r--r--	root/root	usr/man/man1/urxvt-overlay-osc.1.gz
