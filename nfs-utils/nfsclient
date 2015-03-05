@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# /etc/rc.d/nfs: start/stop nfs client
+#
+
+case $1 in
+start)
+	/bin/mount -a -t nfs
+	;;
+stop)
+	/bin/umount -a -t nfs,nfs4
+	;;
+restart)
+	$0 stop
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file
