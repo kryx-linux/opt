@@ -1584,6 +1584,11 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wuaueng.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wusa.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/x3daudio1_1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/x3daudio1_2.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/x3daudio1_3.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/x3daudio1_4.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/x3daudio1_5.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/x3daudio1_6.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/x3daudio1_7.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xapofx1_1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/xapofx1_3.dll
@@ -2107,6 +2112,11 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/wuaueng.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wusa.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/x3daudio1_1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/x3daudio1_2.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/x3daudio1_3.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/x3daudio1_4.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/x3daudio1_5.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/x3daudio1_6.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x3daudio1_7.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xapofx1_1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xapofx1_3.dll.so
@@ -2965,6 +2975,11 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wuaueng.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wusa.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/x3daudio1_1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/x3daudio1_2.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/x3daudio1_3.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/x3daudio1_4.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/x3daudio1_5.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/x3daudio1_6.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/x3daudio1_7.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xapofx1_1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/xapofx1_3.dll
@@ -3544,6 +3559,11 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/wuaueng.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wusa.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/x3daudio1_1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/x3daudio1_2.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/x3daudio1_3.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/x3daudio1_4.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/x3daudio1_5.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/x3daudio1_6.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/x3daudio1_7.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xapofx1_1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/xapofx1_3.dll.so
