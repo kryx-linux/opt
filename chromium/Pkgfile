@@ -2,10 +2,10 @@
 # URL: http://chromium.org/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Tadeusz Sosnierz, tadzikes gmail com
-# Depends on: ninja dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm libexif clang pciutils desktop-file-utils
+# Depends on: ninja dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm libexif pciutils
 
 name=chromium
-version=40.0.2214.115
+version=41.0.2272.76
 release=1
 source=(http://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz \
 	$name.sh $name.desktop)
@@ -13,14 +13,11 @@ source=(http://commondatastorage.googleapis.com/$name-browser-official/$name-$ve
 build() {
   cd $name-$version
 
-  export CC="clang"
-  export CXX="clang++"
   export CFLAGS="$CFLAGS $(pkg-config --cflags nspr)"
   export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
 
   build/gyp_chromium build/all.gyp --depth=. \
-        -Dclang=1 \
-        -Dclang_use_chrome_plugins=0 \
+        -Dclang=0 \
         -Dpython_ver="2.7" \
 	-Dno_strict_aliasing=1 \
 	-Dwerror= \
