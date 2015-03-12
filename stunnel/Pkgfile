@@ -4,7 +4,7 @@
 # Depends on:  openssl tcp_wrappers zlib
 
 name=stunnel
-version=5.10
+version=5.11
 release=1
 source=(http://stunnel.cybermirror.org/archive/5.x/$name-$version.tar.gz \
         $name-config.patch $name)
