@@ -72,6 +72,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/auth-worker-server.h
 -rw-r--r--	root/root	usr/include/dovecot/auth.h
 -rw-r--r--	root/root	usr/include/dovecot/backtrace-string.h
+-rw-r--r--	root/root	usr/include/dovecot/base32.h
 -rw-r--r--	root/root	usr/include/dovecot/base64.h
 -rw-r--r--	root/root	usr/include/dovecot/bits.h
 -rw-r--r--	root/root	usr/include/dovecot/bsearch-insert-pos.h
@@ -108,6 +109,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/dict-transaction-memory.h
 -rw-r--r--	root/root	usr/include/dovecot/dict.h
 -rw-r--r--	root/root	usr/include/dovecot/dns-lookup.h
+-rw-r--r--	root/root	usr/include/dovecot/doveadm-cmd.h
 -rw-r--r--	root/root	usr/include/dovecot/doveadm-dsync.h
 -rw-r--r--	root/root	usr/include/dovecot/doveadm-dump.h
 -rw-r--r--	root/root	usr/include/dovecot/doveadm-mail-iter.h
@@ -142,6 +144,11 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/fs-api.h
 -rw-r--r--	root/root	usr/include/dovecot/fs-sis-common.h
 -rw-r--r--	root/root	usr/include/dovecot/fsync-mode.h
+-rw-r--r--	root/root	usr/include/dovecot/fts-api-private.h
+-rw-r--r--	root/root	usr/include/dovecot/fts-api.h
+-rw-r--r--	root/root	usr/include/dovecot/fts-expunge-log.h
+-rw-r--r--	root/root	usr/include/dovecot/fts-indexer.h
+-rw-r--r--	root/root	usr/include/dovecot/fts-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/guid.h
 -rw-r--r--	root/root	usr/include/dovecot/hash-decl.h
 -rw-r--r--	root/root	usr/include/dovecot/hash-format.h
@@ -211,6 +218,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/imapc-list.h
 -rw-r--r--	root/root	usr/include/dovecot/imapc-mail.h
 -rw-r--r--	root/root	usr/include/dovecot/imapc-msgmap.h
+-rw-r--r--	root/root	usr/include/dovecot/imapc-search.h
 -rw-r--r--	root/root	usr/include/dovecot/imapc-settings.h
 -rw-r--r--	root/root	usr/include/dovecot/imapc-storage.h
 -rw-r--r--	root/root	usr/include/dovecot/imapc-sync.h
@@ -284,6 +292,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/mail-copy.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-deliver.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-error.h
+-rw-r--r--	root/root	usr/include/dovecot/mail-html2text.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-index-alloc-cache.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-index-modseq.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-index-private.h
@@ -380,6 +389,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/message-part.h
 -rw-r--r--	root/root	usr/include/dovecot/message-search.h
 -rw-r--r--	root/root	usr/include/dovecot/message-size.h
+-rw-r--r--	root/root	usr/include/dovecot/message-snippet.h
 -rw-r--r--	root/root	usr/include/dovecot/mkdir-parents.h
 -rw-r--r--	root/root	usr/include/dovecot/mmap-util.h
 -rw-r--r--	root/root	usr/include/dovecot/module-context.h
@@ -393,6 +403,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/notify-plugin.h
 -rw-r--r--	root/root	usr/include/dovecot/numpack.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-cmp.h
+-rw-r--r--	root/root	usr/include/dovecot/ostream-dot.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-metawrap.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-private.h
@@ -451,8 +462,11 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/sql-api.h
 -rw-r--r--	root/root	usr/include/dovecot/sql-db-cache.h
 -rw-r--r--	root/root	usr/include/dovecot/ssl-proxy.h
+-rw-r--r--	root/root	usr/include/dovecot/stats-parser.h
+-rw-r--r--	root/root	usr/include/dovecot/stats.h
 -rw-r--r--	root/root	usr/include/dovecot/str-find.h
 -rw-r--r--	root/root	usr/include/dovecot/str-sanitize.h
+-rw-r--r--	root/root	usr/include/dovecot/str-table.h
 -rw-r--r--	root/root	usr/include/dovecot/str.h
 -rw-r--r--	root/root	usr/include/dovecot/strescape.h
 -rw-r--r--	root/root	usr/include/dovecot/strfuncs.h
@@ -630,6 +644,10 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/libssl_iostream_openssl.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/libssl_iostream_openssl.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/libssl_iostream_openssl.so
+drwxr-xr-x	root/root	usr/lib/dovecot/modules/stats/
+-rw-r--r--	root/root	usr/lib/dovecot/modules/stats/libstats_mail.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/stats/libstats_mail.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/stats/libstats_mail.so
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3-login
 -rwxr-xr-x	root/root	usr/lib/dovecot/quota-status
