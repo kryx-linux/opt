@@ -6,7 +6,7 @@
 
 name=chromium
 version=41.0.2272.76
-release=1
+release=2
 source=(http://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz \
 	$name.sh $name.desktop)
 
@@ -63,6 +63,9 @@ build() {
   install -m 0644 out/Release/locales/en-US.pak $PKG/usr/lib/$name/locales
   cp -a out/Release/resources $PKG/usr/lib/$name
   install -m 0644 -D out/Release/chrome.1 $PKG/usr/man/man1/$name.1
+
+  # fix v8 natives
+  cp -a out/Release/{natives,snapshot}_blob.bin $PKG/usr/lib/$name
 
   for size in 22 24 48 128 256; do
     install -m 0644 -D chrome/app/theme/$name/product_logo_${size}.png \

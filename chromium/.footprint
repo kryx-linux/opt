@@ -11,6 +11,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/
 -rwxr-xr-x	root/root	usr/lib/chromium/libffmpegsumo.so
 drwxr-xr-x	root/root	usr/lib/chromium/locales/
 -rw-r--r--	root/root	usr/lib/chromium/locales/en-US.pak
+-rw-r--r--	root/root	usr/lib/chromium/natives_blob.bin
 -rw-r--r--	root/root	usr/lib/chromium/resources.pak
 drwxr-xr-x	root/root	usr/lib/chromium/resources/
 drwxr-xr-x	root/root	usr/lib/chromium/resources/extension/
@@ -116,6 +117,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/toolbox.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/toolbox.html
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/toolbox.js
+-rw-r--r--	root/root	usr/lib/chromium/snapshot_blob.bin
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/chromium.1.gz
