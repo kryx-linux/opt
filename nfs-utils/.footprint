@@ -2,6 +2,7 @@ drwxr-xr-x	root/root	etc/
 -rw-r--r--	root/root	etc/exports
 drwxr-xr-x	root/root	etc/exports.d/
 -rw-r--r--	root/root	etc/idmapd.conf
+-rw-r--r--	root/root	etc/nfsmount.conf
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/nfs
 -rwxr-xr-x	root/root	etc/rc.d/nfsclient
