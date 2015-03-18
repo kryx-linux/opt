@@ -5,9 +5,9 @@
 # Depends on: openldap
 
 name=krb5
-version=1.13
-release=2
-source=(http://web.mit.edu/kerberos/dist/$name/$version/$name-$version-signed.tar \
+version=1.13.1
+release=1
+source=(http://web.mit.edu/kerberos/dist/$name/${version%.*}/$name-$version-signed.tar \
         $name-config_LDFLAGS.patch)
 
 build() {
