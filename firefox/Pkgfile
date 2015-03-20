@@ -4,7 +4,7 @@
 # Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
  
 name=firefox
-version=36.0.1
+version=36.0.3
 release=1
 source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
 	firefox-install-dir.patch firefox.desktop bz680547.patch)
@@ -65,9 +65,6 @@ EOF
     make -f client.mk build
     make -f client.mk DESTDIR=$PKG install
  
-    install -d $PKG/etc/ld.so.conf.d
-    echo "/usr/lib/firefox" > $PKG/etc/ld.so.conf.d/$name.conf
-
     mkdir -p $PKG/usr/share/pixmaps
     ln -s /usr/lib/firefox/browser/chrome/icons/default/default48.png $PKG/usr/share/pixmaps/firefox_default48.png
     install -D -m 0644 $SRC/firefox.desktop $PKG/usr/share/applications/firefox.desktop
