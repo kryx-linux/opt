@@ -419,13 +419,13 @@ lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so -> libgailutil-3.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so.0 -> libgailutil-3.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgailutil-3.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libgdk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.1400.9
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.1400.9
--rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.1400.9
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.1400.10
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.1400.10
+-rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.1400.10
 -rw-r--r--	root/root	usr/lib/libgtk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.1400.9
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.1400.9
--rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.1400.9
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.1400.10
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.1400.10
+-rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.1400.10
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gail-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gdk-3.0.pc
@@ -440,6 +440,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/gtk-launch.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk-query-immodules-3.0.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk-update-icon-cache.1.gz
+-rw-r--r--	root/root	usr/man/man1/gtk3-demo-application.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk3-demo.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk3-icon-browser.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk3-widget-factory.1.gz
