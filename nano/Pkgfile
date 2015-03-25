@@ -5,9 +5,9 @@
 # Depends on:  ncurses
 
 name=nano
-version=2.2.6
-release=2
-source=(http://www.nano-editor.org/dist/v2.2/$name-$version.tar.gz)
+version=2.4.0
+release=1
+source=(http://www.nano-editor.org/dist/v2.4/$name-$version.tar.gz)
 
 build(){
     cd $name-$version
@@ -15,5 +15,5 @@ build(){
     make
     make DESTDIR=$PKG install
     install -D -m 644 doc/nanorc.sample $PKG/usr/etc/nanorc
-    rm -r $PKG/usr/share/{info,nano/man-html}
+    rm -r $PKG/usr/share/doc
 }
