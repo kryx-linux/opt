@@ -2,10 +2,10 @@
 # URL: http://crux.nu/Wiki/PrtUtils
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Packager: Martin Opel, mo at obbl-net dot de
-# Depends on: elfutils libz
+# Depends on: elfutils
 
 name=prt-utils
-version=1.0
+version=1.0.1
 release=1
 source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.xz)
 
