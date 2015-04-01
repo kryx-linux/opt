@@ -1,0 +1,15 @@
+# Description: NCurses Disk Usage
+# URL:         http://dev.yorhel.nl/ncdu/
+# Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
+
+name=ncdu
+version=1.10
+release=1
+source=(http://dev.yorhel.nl/download/$name-$version.tar.gz)
+
+build() {
+  cd $name-$version
+  ./configure --prefix=/usr --mandir=/usr/man
+  make
+  make DESTDIR=$PKG install
+}
