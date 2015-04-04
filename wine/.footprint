@@ -446,6 +446,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/mediaobj.idl
 -rw-r--r--	root/root	usr/include/wine/windows/metahost.h
 -rw-r--r--	root/root	usr/include/wine/windows/metahost.idl
+-rw-r--r--	root/root	usr/include/wine/windows/mfapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/mferror.h
 -rw-r--r--	root/root	usr/include/wine/windows/midles.h
 -rw-r--r--	root/root	usr/include/wine/windows/mimeinfo.h
@@ -1735,6 +1736,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libmshtml.def
 -rw-r--r--	root/root	usr/lib/wine/libmsi.def
 -rw-r--r--	root/root	usr/lib/wine/libmsimg32.def
+-rw-r--r--	root/root	usr/lib/wine/libmspatcha.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcr100.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcr110.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcr120.def
@@ -3132,6 +3134,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libmshtml.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsi.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsimg32.def
+-rw-r--r--	root/root	usr/lib32/wine/libmspatcha.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcr100.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcr110.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcr120.def
