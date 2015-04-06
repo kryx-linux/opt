@@ -11,7 +11,7 @@ source=()
 build() {
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   ar -x google-chrome-stable_current_amd64.deb
-  tar --use-compress-program=lzma -xf data.tar.lzma
+  tar -xJf data.tar.xz
 
   install -D $SRC/opt/google/chrome/PepperFlash/libpepflashplayer.so \
           $PKG/usr/lib/PepperFlash/libpepflashplayer.so
