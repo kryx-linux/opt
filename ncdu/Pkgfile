@@ -3,7 +3,7 @@
 # Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
 
 name=ncdu
-version=1.10
+version=1.11
 release=1
 source=(http://dev.yorhel.nl/download/$name-$version.tar.gz)
 
