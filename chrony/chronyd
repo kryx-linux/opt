@@ -3,19 +3,23 @@
 # /etc/rc.d/chronyd: start/stop the chrony time server
 #
 
-KEY=`sed -n "s/^commandkey *//p" /etc/chrony.conf`
-PASSWD=`sed -n "s/^$KEY *//p" /etc/chrony.keys`
+SSD=/sbin/start-stop-daemon
+PROG=/usr/sbin/chronyd
+PID=/var/run/chronyd.pid
+OPTS="-s -r"
+
+KEY=$(sed -n "s/^commandkey *//p" /etc/chrony.conf)
+PASSWD=$(sed -n "s/^$KEY *//p" /etc/chrony.keys)
 
 case $1 in
 start)
-	/usr/sbin/chronyd -s -r
+	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
 	;;
 stop)
-	killall -q  /usr/sbin/chronyd
+	$SSD --stop --retry 10 --pidfile $PID
 	;;
 restart)
 	$0 stop
-	sleep 2
 	$0 start
 	;;
 online)
@@ -32,8 +36,17 @@ offline)
 	writertc
 EOF
 	;;
+status)
+	$SSD --status --pidfile $PID
+	case $? in
+	0) echo "$PROG is running with pid $(cat $PID)" ;;
+	1) echo "$PROG is not running but the pid file $PID exists" ;;
+	3) echo "$PROG is not running" ;;
+	4) echo "Unable to determine the program status" ;;
+	esac
+	;;
 *)
-	echo "usage: $0 [start|stop|restart|online|offline]"
+	echo "usage: $0 [start|stop|restart|online|offline|status]"
 	;;
 esac
 
