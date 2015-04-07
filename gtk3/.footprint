@@ -20,6 +20,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/
 drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/
 drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/deprecated/gdkcolor.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdk-autocleanup.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdk.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkapplaunchcontext.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkcairo.h
@@ -34,6 +35,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkevents.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkframeclock.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkframetimings.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkglcontext.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkkeys.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkkeysyms-compat.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkkeysyms.h
@@ -54,6 +56,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkwindow.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkx.h
 drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/x11/
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx-autocleanups.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11applaunchcontext.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11cursor.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11device-core.h
@@ -65,6 +68,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/x11/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11display.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11displaymanager.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11dnd.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11glcontext.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11keys.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11property.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11screen.h
@@ -74,6 +78,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/x11/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11window.h
 drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/
 drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/a11y/
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtk-a11y-autocleanups.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkarrowaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkbooleancellaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkbuttonaccessible.h
@@ -152,6 +157,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkstatusicon.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkstock.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkstyle.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkstyleproperties.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtksymboliccolor.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtktable.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtktearoffmenuitem.h
@@ -165,6 +171,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtk-a11y.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtk-autocleanups.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtk.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkaboutdialog.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkaccelgroup.h
@@ -252,6 +259,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturesingle.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgestureswipe.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturezoom.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkglarea.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgrid.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkheaderbar.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkicontheme.h
@@ -279,6 +287,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmenushell.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmenutoolbutton.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmessagedialog.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmodelbutton.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmodules.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkmountoperation.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtknotebook.h
@@ -291,6 +300,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkplacessidebar.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkplug.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkpopover.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkpopovermenu.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkprintcontext.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkprintoperation.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkprintoperationpreview.h
@@ -306,6 +316,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkrecentchooserwidget.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkrecentfilter.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkrecentmanager.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkrender.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkrevealer.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkscale.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkscalebutton.h
@@ -326,10 +337,10 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkspinbutton.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkspinner.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstack.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstacksidebar.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstackswitcher.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstatusbar.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstylecontext.h
--rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstyleproperties.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkstyleprovider.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkswitch.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtktestutils.h
@@ -371,6 +382,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkwidgetpath.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkwindow.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkwindowgroup.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkx-autocleanups.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkx.h
 drwxr-xr-x	root/root	usr/include/gtk-3.0/unix-print/
 drwxr-xr-x	root/root	usr/include/gtk-3.0/unix-print/gtk/
@@ -378,6 +390,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/unix-print/gtk/
 -rw-r--r--	root/root	usr/include/gtk-3.0/unix-print/gtk/gtkprinter.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/unix-print/gtk/gtkprintjob.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/unix-print/gtk/gtkprintunixdialog.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/unix-print/gtk/gtkunixprint-autocleanups.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/unix-print/gtk/gtkunixprint.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
@@ -419,13 +432,13 @@ lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so -> libgailutil-3.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so.0 -> libgailutil-3.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgailutil-3.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libgdk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.1400.11
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.1400.11
--rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.1400.11
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.1600.1
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.1600.1
+-rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.1600.1
 -rw-r--r--	root/root	usr/lib/libgtk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.1400.11
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.1400.11
--rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.1400.11
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.1600.1
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.1600.1
+-rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.1600.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gail-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gdk-3.0.pc
@@ -466,27 +479,39 @@ drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/16x16/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/16x16/apps/
+-rw-r--r--	root/root	usr/share/icons/hicolor/16x16/apps/gtk3-demo-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/16x16/apps/gtk3-demo.png
+-rw-r--r--	root/root	usr/share/icons/hicolor/16x16/apps/gtk3-widget-factory-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/16x16/apps/gtk3-widget-factory.png
 drwxr-xr-x	root/root	usr/share/icons/hicolor/22x22/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/22x22/apps/
+-rw-r--r--	root/root	usr/share/icons/hicolor/22x22/apps/gtk3-demo-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/22x22/apps/gtk3-demo.png
+-rw-r--r--	root/root	usr/share/icons/hicolor/22x22/apps/gtk3-widget-factory-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/22x22/apps/gtk3-widget-factory.png
 drwxr-xr-x	root/root	usr/share/icons/hicolor/24x24/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/24x24/apps/
+-rw-r--r--	root/root	usr/share/icons/hicolor/24x24/apps/gtk3-demo-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/24x24/apps/gtk3-demo.png
+-rw-r--r--	root/root	usr/share/icons/hicolor/24x24/apps/gtk3-widget-factory-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/24x24/apps/gtk3-widget-factory.png
 drwxr-xr-x	root/root	usr/share/icons/hicolor/256x256/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/256x256/apps/
+-rw-r--r--	root/root	usr/share/icons/hicolor/256x256/apps/gtk3-demo-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/256x256/apps/gtk3-demo.png
+-rw-r--r--	root/root	usr/share/icons/hicolor/256x256/apps/gtk3-widget-factory-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/256x256/apps/gtk3-widget-factory.png
 drwxr-xr-x	root/root	usr/share/icons/hicolor/32x32/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/32x32/apps/
+-rw-r--r--	root/root	usr/share/icons/hicolor/32x32/apps/gtk3-demo-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/32x32/apps/gtk3-demo.png
+-rw-r--r--	root/root	usr/share/icons/hicolor/32x32/apps/gtk3-widget-factory-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/32x32/apps/gtk3-widget-factory.png
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/apps/
+-rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/gtk3-demo-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/gtk3-demo.png
+-rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/gtk3-widget-factory-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/gtk3-widget-factory.png
 drwxr-xr-x	root/root	usr/share/themes/
 drwxr-xr-x	root/root	usr/share/themes/Default/
