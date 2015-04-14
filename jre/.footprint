@@ -27,10 +27,12 @@ drwxr-xr-x	root/root	usr/lib/jre/lib/amd64/
 drwxr-xr-x	root/root	usr/lib/jre/lib/amd64/jli/
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/jli/libjli.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/jvm.cfg
--rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libavplugin.so
+-rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libavplugin-53.so
+-rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libavplugin-54.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libawt.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libawt_headless.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libawt_xawt.so
+-rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libbci.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libdcpr.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libdecora_sse.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libdeploy.so
@@ -73,6 +75,7 @@ drwxr-xr-x	root/root	usr/lib/jre/lib/amd64/jli/
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libprism_common.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libprism_es2.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libprism_sw.so
+-rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libresource.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libsctp.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libsplashscreen.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libsunec.so
@@ -117,6 +120,7 @@ drwxr-xr-x	root/root	usr/lib/jre/lib/deploy/
 -rw-r--r--	root/root	usr/lib/jre/lib/deploy/messages_zh_TW.properties
 -rw-r--r--	root/root	usr/lib/jre/lib/deploy/mixcode_s.png
 -rw-r--r--	root/root	usr/lib/jre/lib/deploy/splash.gif
+-rw-r--r--	root/root	usr/lib/jre/lib/deploy/splash@2x.gif
 drwxr-xr-x	root/root	usr/lib/jre/lib/desktop/
 drwxr-xr-x	root/root	usr/lib/jre/lib/desktop/applications/
 -rw-r--r--	root/root	usr/lib/jre/lib/desktop/applications/sun-java.desktop
