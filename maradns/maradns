@@ -1,23 +1,35 @@
 #!/bin/sh
 #
-# /etc/rc.d/maradns: start/stop mara DNS server
+# /etc/rc.d/deadwood: start/stop deadwood DNS resolver
 #
+
+SSD=/sbin/start-stop-daemon
+PROG=/usr/sbin/maradns
+PID=/var/run/maradns.pid
+LOG=/var/log/maradns.log
 
 case $1 in
 start)
-	setsid /usr/sbin/maradns >> /var/log/maradns.log &
+	$SSD --start -bmC --pidfile $PID --exec $PROG >> $LOG 2>&1
 	;;
 stop)
-	killall -q /usr/sbin/maradns
+	$SSD --stop --remove-pidfile --retry 10 --pidfile $PID
 	;;
 restart)
 	$0 stop
-	sleep 2
 	$0 start
 	;;
+status)
+	$SSD --status --pidfile $PID
+	case $? in
+	0) echo "$PROG is running with pid $(cat $PID)" ;;
+	1) echo "$PROG is not running but the pid file $PID exists" ;;
+	3) echo "$PROG is not running" ;;
+	4) echo "Unable to determine the program status" ;;
+	esac
+	;;
 *)
-	echo "usage: $0 [start|stop|restart]"
+	echo "usage: $0 [start|stop|restart|status]"
 	;;
 esac
-
 # End of file
