@@ -20,7 +20,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/extension/demo/
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-rw-r--	root/root	usr/lib/chromium/resources/inspector/Images/applicationCache.png
--rw-rw-r--	root/root	usr/lib/chromium/resources/inspector/Images/back.png
 -rw-rw-r--	root/root	usr/lib/chromium/resources/inspector/Images/breakpoint.png
 -rw-rw-r--	root/root	usr/lib/chromium/resources/inspector/Images/breakpointConditional.png
 -rw-rw-r--	root/root	usr/lib/chromium/resources/inspector/Images/breakpointConditional_2x.png
@@ -92,6 +91,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/InspectorBackendCommands.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/SupportedCSSProperties.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits_module.js
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/components_lazy_module.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/console_module.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devices_module.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devtools.css
@@ -117,6 +117,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/toolbox.css
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/toolbox.html
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/toolbox.js
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/ui_lazy_module.js
 -rw-r--r--	root/root	usr/lib/chromium/snapshot_blob.bin
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
