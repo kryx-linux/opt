@@ -6,6 +6,7 @@
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/stunnel
 PID=/var/run/stunnel/stunnel.pid
+CFG=/etc/stunnel.conf
 
 CRT=/etc/ssl/certs/stunnel.crt
 KEY=/etc/ssl/keys/stunnel.key
@@ -15,7 +16,7 @@ start)
 	if [ ! -s $KEY -o ! -s $CRT ]; then 
 		/usr/bin/mksslcert $KEY $CRT
 	fi
-	$SSD --start --pidfile $PID --exec $PROG
+	$SSD --start --pidfile $PID --exec $PROG -- $CFG
 	;;
 stop)
 	$SSD --stop --retry 10 --pidfile $PID
