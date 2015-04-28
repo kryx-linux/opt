@@ -1,12 +1,12 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
--rw-r--r--	root/root	usr/include/unicode.h
+-rw-r--r--	root/root	usr/include/courier-unicode.h
 drwxr-xr-x	root/root	usr/lib/
--rw-r--r--	root/root	usr/lib/libunicode.a
--rwxr-xr-x	root/root	usr/lib/libunicode.la
-lrwxrwxrwx	root/root	usr/lib/libunicode.so -> libunicode.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libunicode.so.1 -> libunicode.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libunicode.so.1.0.0
+-rw-r--r--	root/root	usr/lib/libcourier-unicode.a
+-rwxr-xr-x	root/root	usr/lib/libcourier-unicode.la
+lrwxrwxrwx	root/root	usr/lib/libcourier-unicode.so -> libcourier-unicode.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libcourier-unicode.so.1 -> libcourier-unicode.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib/libcourier-unicode.so.1.0.0
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/unicode::iconvert::convert.3.gz
@@ -53,6 +53,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/unicode_lbc_next_cnt.3.gz
 -rw-r--r--	root/root	usr/man/man3/unicode_lbc_set_opts.3.gz
 -rw-r--r--	root/root	usr/man/man3/unicode_lc.3.gz
+-rw-r--r--	root/root	usr/man/man3/unicode_script.3.gz
 -rw-r--r--	root/root	usr/man/man3/unicode_tc.3.gz
 -rw-r--r--	root/root	usr/man/man3/unicode_u_ucs2_native.3.gz
 -rw-r--r--	root/root	usr/man/man3/unicode_u_ucs4_native.3.gz
