@@ -4,7 +4,7 @@
 # Depends on:  openssl readline
 
 name=mailx
-version=14.7.11
+version=14.8.0
 release=1
 source=(http://downloads.sourceforge.net/project/s-nail/s-nail-${version//./_}.tar.xz)
 
@@ -20,6 +20,8 @@ build() {
          MAILSPOOL=/var/spool/mail \
          DESTDIR=$PKG \
          WANT_READLINE=1
+
+    chmod -R u+w $PKG
 
     ln -s mailx   $PKG/usr/bin/Mail
     ln -s mailx   $PKG/usr/bin/mail
