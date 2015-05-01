@@ -1,5 +1,7 @@
 e19e48b72077085b3e91b40382ccf4fa  nmbd.rc
-8fed0f23a672e6a8d0716d96aca88671  samba-4.1.17.tar.gz
+1a33242498a7494e2b8128b27eece764  samba-4.2.1-krb5.patch
+614b4c7b9bbc70cff4cb56956f565741  samba-4.2.1.tar.gz
 84266d28273c12045e18ea34c504c296  samba.rc
 14f80643ec7508794f5dfc5598daa667  smbd.rc
+c3ee08e140a10ba919833cb120fa8c5f  v2-0001-s4-lib-tls-use-gnutls_priority_set_direct.patch
 3449060f819db4be400399ca5d0708f5  winbindd.rc
