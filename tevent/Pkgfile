@@ -5,7 +5,7 @@
 # Optional:	python
 
 name=tevent
-version=0.9.22
+version=0.9.24
 release=1
 source=(http://www.samba.org/ftp/$name/$name-$version.tar.gz)
 
