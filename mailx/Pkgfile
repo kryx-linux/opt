@@ -5,7 +5,7 @@
 
 name=mailx
 version=14.8.0
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/s-nail/s-nail-${version//./_}.tar.xz)
 
 build() {
@@ -13,13 +13,12 @@ build() {
 
     make install \
          NAIL=mailx \
-         SID='' \
-         CFLAGS="$CFLAGS" \
+         SID= \
          PREFIX=/usr \
          SYSCONFRC=/usr/etc/mailx.rc \
-         MAILSPOOL=/var/spool/mail \
          DESTDIR=$PKG \
-         WANT_READLINE=1
+         WANT_AUTOCC=no \
+         WANT_READLINE=yes
 
     chmod -R u+w $PKG
 
