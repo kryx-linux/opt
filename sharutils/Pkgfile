@@ -5,7 +5,7 @@
 # Depends on: 
 
 name=sharutils
-version=4.15
+version=4.15.1
 release=1
 source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 
