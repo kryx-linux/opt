@@ -5,18 +5,36 @@
 # Depends on: gobject-introspection gperf eudev
 
 name=gudev
-version=1.10
+version=3.0
 release=1
-source=(http://dev.gentoo.org/~blueness/eudev/eudev-$version.tar.gz)
+source=(http://dev.gentoo.org/~blueness/eudev/eudev-$version.tar.gz
+	eudev-remove_gperf_dep.patch
+	keyboard-keys.tar.xz)
 
 build() {
 	cd eudev-$version
 
+	# See https://github.com/gentoo/eudev/issues/75
+	# remove build-time dependency to gperf for now
+	cp $SRC/keyboard-keys-{from,to}-name.h src/udev
+	patch -p1 -i $SRC/eudev-remove_gperf_dep.patch
+
+	# needed for static linking, e.g. dmsetup.static
 	sed -i '/^Libs:/s/-ludev/-ludev -lrt/' src/libudev/libudev.pc.in
+
+	autoreconf --force --install
 
 	./configure \
 		--prefix=/usr \
-		--disable-manpages
+		--sbindir=/sbin \
+		--bindir=/sbin \
+		--sysconfdir=/etc \
+		--with-rootprefix= \
+		--with-rootlibdir=/lib \
+		--libexecdir=/lib \
+		--mandir=/usr/man \
+		--disable-manpages \
+		--enable-split-usr
 
 	make CFLAGS="$CFLAGS -D_GNU_SOURCE"
 	make install DESTDIR=$SRC/tmp
