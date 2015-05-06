@@ -1,11 +1,11 @@
 # Description: Perl Uniform Resource Identifiers Library.
-# URL: http://www.cpan.org/modules/by-module/URI/GAAS/
+# URL: http://search.cpan.org/dist/URI/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Han Boetes han at mijncomputer dot nl
 # Depends on: perl
 
 name=p5-uri
-version=1.64
+version=1.67
 release=1
 source=(http://search.cpan.org/CPAN/authors/id/E/ET/ETHER/URI-$version.tar.gz)
 
@@ -15,6 +15,7 @@ build() {
    perl Makefile.PL
    make
    make install DESTDIR=$PKG
+
    # Remove perlcrap
    find $PKG \
       -name .packlist -or \
