@@ -3,12 +3,12 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=json-c
-version=0.12-20140410
+version=0.12
 release=1
-source=(https://github.com/json-c/json-c/archive/$name-$version.tar.gz)
+source=(https://s3.amazonaws.com/json-c_releases/releases/$name-$version.tar.gz)
 
 build() {
-    cd $name-$name-$version
+    cd $name-$version
     sed -i '/^AM_CFLAGS/s/$/ -Wno-error=unused-but-set-variable/' Makefile.am.inc
     autoreconf -i
     ./configure --prefix=/usr 
