@@ -7,7 +7,7 @@
 name=gkrellm
 version=2.3.5
 release=2
-source=(http://crux.ster.zone/distfiles/$name/$name-$version.tar.bz2)
+source=(http://crux.ster.zone/downloads/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
