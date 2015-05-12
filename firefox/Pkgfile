@@ -4,16 +4,15 @@
 # Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
  
 name=firefox
-version=37.0.2
+version=38.0
 release=1
-source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
-	firefox-install-dir.patch firefox.desktop bz680547.patch)
+source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
+	firefox-install-dir.patch firefox.desktop)
  
 build() {
     cd mozilla-release
  
     patch -p1 -i $SRC/firefox-install-dir.patch
-    patch -p1 -i $SRC/bz680547.patch
  
 cat <<- EOF > .mozconfig
     mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
