@@ -149,6 +149,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/fts-expunge-log.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-indexer.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-parser.h
+-rw-r--r--	root/root	usr/include/dovecot/fts-user.h
 -rw-r--r--	root/root	usr/include/dovecot/guid.h
 -rw-r--r--	root/root	usr/include/dovecot/hash-decl.h
 -rw-r--r--	root/root	usr/include/dovecot/hash-format.h
@@ -189,6 +190,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/imap-expunge.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-fetch.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-id.h
+-rw-r--r--	root/root	usr/include/dovecot/imap-keepalive.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-list.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-match.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-metadata.h
@@ -259,6 +261,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/istream-concat.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-crlf.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-dot.h
+-rw-r--r--	root/root	usr/include/dovecot/istream-file-private.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-fs-file.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-header-filter.h
@@ -274,9 +277,11 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/istream-sized.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-tee.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-timeout.h
+-rw-r--r--	root/root	usr/include/dovecot/istream-unix.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-zlib.h
 -rw-r--r--	root/root	usr/include/dovecot/istream.h
 -rw-r--r--	root/root	usr/include/dovecot/json-parser.h
+-rw-r--r--	root/root	usr/include/dovecot/json-tree.h
 -rw-r--r--	root/root	usr/include/dovecot/lda-settings.h
 -rw-r--r--	root/root	usr/include/dovecot/lib-signals.h
 -rw-r--r--	root/root	usr/include/dovecot/lib.h
@@ -321,6 +326,8 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/mail-types.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-user-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/mail-user.h
+-rw-r--r--	root/root	usr/include/dovecot/mailbox-attribute-private.h
+-rw-r--r--	root/root	usr/include/dovecot/mailbox-attribute.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-guid-cache.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-delete.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-fs.h
@@ -428,6 +435,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/printf-format-fix.h
 -rw-r--r--	root/root	usr/include/dovecot/priorityq.h
 -rw-r--r--	root/root	usr/include/dovecot/process-title.h
+-rw-r--r--	root/root	usr/include/dovecot/qp-decoder.h
 -rw-r--r--	root/root	usr/include/dovecot/quota-fs.h
 -rw-r--r--	root/root	usr/include/dovecot/quota-plugin.h
 -rw-r--r--	root/root	usr/include/dovecot/quota-private.h
@@ -620,6 +628,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_mailbox_alias_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mailbox_alias_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mailbox_alias_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_quota_clone_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_quota_clone_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_quota_clone_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.so
@@ -641,6 +652,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib95_imap_stats_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib95_imap_stats_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib95_imap_stats_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/libfs_compress.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/libfs_compress.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/libfs_compress.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/libssl_iostream_openssl.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/libssl_iostream_openssl.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/libssl_iostream_openssl.so
@@ -711,6 +725,11 @@ drwxr-xr-x	root/root	usr/sbin/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/dovecot.m4
+drwxr-xr-x	root/root	usr/share/dovecot/
+drwxr-xr-x	root/root	usr/share/dovecot/stopwords/
+-rw-r--r--	root/root	usr/share/dovecot/stopwords/stopwords_en.txt
+-rw-r--r--	root/root	usr/share/dovecot/stopwords/stopwords_fi.txt
+-rw-r--r--	root/root	usr/share/dovecot/stopwords/stopwords_fr.txt
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
 drwxr-x---	root/root	var/lib/dovecot/
