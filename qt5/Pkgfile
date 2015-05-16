@@ -6,11 +6,45 @@
 
 name=qt5
 version=5.4.1
-release=1
-source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz)
+release=2
+source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
+	0001-Revert-Rotate-images-according-to-Exif-orientation.patch
+	0001-Require-fPIC-instead-of-just-fPIE-for-reduce-relocat.patch
+	glib-2.43.patch
+	qlockfile-deadlock.patch
+	qnam-corruption.patch
+	keypad-shortcuts.patch
+	CVE-2015-0295.patch
+	CVE-2015-1858_1859.patch
+	CVE-2015-1860.patch)
 
 build() {
 	cd qt-everywhere-opensource-src-$version
+
+	# https://bugreports.qt.io/browse/QTBUG-37946
+	patch -d qtbase -p1 -i $SRC/0001-Revert-Rotate-images-according-to-Exif-orientation.patch
+
+	# https://bugreports.qt.io/browse/QTBUG-45755
+	patch -d qtbase -p1 -i $SRC/0001-Require-fPIC-instead-of-just-fPIE-for-reduce-relocat.patch
+
+	# for glib 2.43+ https://bugreports.qt.io/browse/QTBUG-44714
+	patch -d qtwebkit -p1 -i $SRC/glib-2.43.patch
+
+	# https://bugs.kde.org/show_bug.cgi?id=345901
+	patch -d qtbase -p1 -i $SRC/qlockfile-deadlock.patch
+
+	# https://codereview.qt-project.org/#/c/110150/
+	patch -d qtbase -p1 -i $SRC/qnam-corruption.patch
+
+	# https://bugs.archlinux.org/task/44676
+	patch -d qtbase -p1 -i $SRC/keypad-shortcuts.patch
+
+	# http://lists.qt-project.org/pipermail/announce/2015-February/000059.html
+	patch -d qtbase -p1 -i $SRC/CVE-2015-0295.patch
+
+	# http://lists.qt-project.org/pipermail/announce/2015-April/000067.html
+	patch -d qtbase -p1 -i $SRC/CVE-2015-1858_1859.patch
+	patch -d qtbase -p1 -i $SRC/CVE-2015-1860.patch
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
@@ -20,11 +54,13 @@ build() {
 	sed -i 's|X11R6/||g' qtbase/mkspecs/*/*.conf
 
 	# Respect system CXXFLAGS
-	sed -i "s|-O2|$CXXFLAGS|" qtbase/mkspecs/common/g++-unix.conf
-	sed -i "s|-O2|${CXXFLAGS}|" qtbase/mkspecs/common/{g++,gcc}-base.conf
+	sed -i "s|^\(QMAKE_CFLAGS_RELEASE.*\)|\1 ${CXXFLAGS}|" qtbase/mkspecs/common/gcc-base.conf
+	#sed -i "s|-O2|$CXXFLAGS|" qtbase/mkspecs/common/g++-unix.conf
+	#sed -i "s|-O2|${CXXFLAGS}|" qtbase/mkspecs/common/{g++,gcc}-base.conf
 
 	# Respect system LDFLAGS
-	sed -i "/^QMAKE_LFLAGS\s/s|+=|+= ${LDFLAGS}|g" qtbase/mkspecs/common/gcc-base.conf
+	sed -i "s|^\(QMAKE_LFLAGS_RELEASE.*\)|\1 ${LDFLAGS}|" qtbase/mkspecs/common/g++-unix.conf
+	#sed -i "/^QMAKE_LFLAGS\s/s|+=|+= ${LDFLAGS}|g" qtbase/mkspecs/common/gcc-base.conf
 
 	# Fix quoting bug
 	sed -i 's|"$COMPILER" -c|$COMPILER -c|' qtbase/config.tests/unix/fvisibility.test
