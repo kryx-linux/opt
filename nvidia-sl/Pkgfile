@@ -4,7 +4,7 @@
 # Depends on: gtk gl-select
 
 name=nvidia-sl
-version=343.36
+version=349.16
 release=1
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run \
     90-nvidia-uvm.rules)
@@ -23,6 +23,8 @@ build() {
     install -m 0755 libnvidia-encode.so.$version   $PKG/usr/lib
     install -m 0755 libnvidia-fbc.so.$version      $PKG/usr/lib
     install -m 0755 libnvidia-glcore.so.$version   $PKG/usr/lib
+    install -m 0755 libnvidia-gtk2.so.$version     $PKG/usr/lib
+    install -m 0755 libnvidia-gtk3.so.$version     $PKG/usr/lib
     install -m 0755 libnvidia-ifr.so.$version      $PKG/usr/lib
     install -m 0755 libnvidia-ml.so.$version       $PKG/usr/lib
     install -m 0755 libnvidia-opencl.so.$version   $PKG/usr/lib
