@@ -6,7 +6,7 @@
 name=cifs-utils
 version=6.4
 release=1
-source=(ftp://ftp.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2
+source=(https://download.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2
         cifs)
 
 build () {
