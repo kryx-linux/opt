@@ -4,7 +4,7 @@
 # Depends on:  xorg-libxrender fontconfig xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=spectrwm
-version=2.6.2
+version=2.7.1
 release=1
 source=(https://opensource.conformal.com/snapshots/$name/$name-$version.tgz
         $name-remove_libswmhack.patch)
