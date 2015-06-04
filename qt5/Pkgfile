@@ -1,50 +1,28 @@
 # Description: Qt Free Edition, version 5.x
-# URL: http://www.trolltech.com
+# URL: http://qt-project.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: predrag ivanovic, predivan at open dot telekom dot rs
 # Depends on: dbus gst-plugins-base gst-plugins-base-compat libmng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-wm xorg-xcb-util-keysyms
 
 name=qt5
-version=5.4.1
-release=2
-source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
-	0001-Revert-Rotate-images-according-to-Exif-orientation.patch
-	0001-Require-fPIC-instead-of-just-fPIE-for-reduce-relocat.patch
-	glib-2.43.patch
-	qlockfile-deadlock.patch
-	qnam-corruption.patch
+version=5.4.2
+release=1
+source=(http://download.qt.io/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
 	keypad-shortcuts.patch
-	CVE-2015-0295.patch
-	CVE-2015-1858_1859.patch
-	CVE-2015-1860.patch)
+	avoid-calling-potentially-pure-virtual-method.patch
+	ibus-get-display-number-when-screen-number-is-omitted.patch)
 
 build() {
 	cd qt-everywhere-opensource-src-$version
 
-	# https://bugreports.qt.io/browse/QTBUG-37946
-	patch -d qtbase -p1 -i $SRC/0001-Revert-Rotate-images-according-to-Exif-orientation.patch
-
-	# https://bugreports.qt.io/browse/QTBUG-45755
-	patch -d qtbase -p1 -i $SRC/0001-Require-fPIC-instead-of-just-fPIE-for-reduce-relocat.patch
-
-	# for glib 2.43+ https://bugreports.qt.io/browse/QTBUG-44714
-	patch -d qtwebkit -p1 -i $SRC/glib-2.43.patch
-
-	# https://bugs.kde.org/show_bug.cgi?id=345901
-	patch -d qtbase -p1 -i $SRC/qlockfile-deadlock.patch
-
-	# https://codereview.qt-project.org/#/c/110150/
-	patch -d qtbase -p1 -i $SRC/qnam-corruption.patch
-
 	# https://bugs.archlinux.org/task/44676
 	patch -d qtbase -p1 -i $SRC/keypad-shortcuts.patch
 
-	# http://lists.qt-project.org/pipermail/announce/2015-February/000059.html
-	patch -d qtbase -p1 -i $SRC/CVE-2015-0295.patch
+	# https://bugs.archlinux.org/task/43986
+	patch -d qtdeclarative -p1 -i $SRC/avoid-calling-potentially-pure-virtual-method.patch
 
-	# http://lists.qt-project.org/pipermail/announce/2015-April/000067.html
-	patch -d qtbase -p1 -i $SRC/CVE-2015-1858_1859.patch
-	patch -d qtbase -p1 -i $SRC/CVE-2015-1860.patch
+	# https://bugs.archlinux.org/task/45180
+	patch -d qtbase -p1 -i $SRC/ibus-get-display-number-when-screen-number-is-omitted.patch
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
