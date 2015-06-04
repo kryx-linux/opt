@@ -5,7 +5,7 @@
 # Depends on: dbus-glib gudev intltool libusb polkit
 
 name=upower
-version=0.9.23
+version=0.99.3
 release=1
 source=(http://$name.freedesktop.org/releases/$name-$version.tar.xz)
 
