@@ -1,10 +1,10 @@
 # Description: CUPS - Common UNIX Printing System
 # URL:         http://www.cups.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  acl tcp_wrappers libusb openssl zlib
+# Depends on:  acl tcp_wrappers libusb zlib
 
 name=cups
-version=2.0.2
+version=2.0.3
 release=2
 source=(http://www.cups.org/software/$version/$name-$version-source.tar.bz2
         cups-busy-loop.patch cups)
@@ -14,7 +14,7 @@ build () {
 
     # https://crux.nu/bugs/index.php?do=details&task_id=1143
     # http://pkgs.fedoraproject.org/cgit/cups.git/commit/?id=746dd9cf56e9522ca51c4cc669fc65b46e2d4866
-    patch -p1 -i $SRC/cups-busy-loop.patch
+    #patch -p1 -i $SRC/cups-busy-loop.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
