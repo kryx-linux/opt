@@ -5,7 +5,7 @@
  
 name=firefox
 version=38.0.5
-release=1
+release=2
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
 	firefox-install-dir.patch firefox.desktop)
  
@@ -42,6 +42,7 @@ cat <<- EOF > .mozconfig
     ac_add_options --enable-places_bookmarks
     ac_add_options --enable-image-encoder=all
     ac_add_options --enable-xft
+    ac_add_options --enable-tree-freetype
     ac_add_options --disable-static
     ac_add_options --disable-tests
     ac_add_options --disable-mochitest
