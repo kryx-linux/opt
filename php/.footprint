@@ -126,6 +126,7 @@ drwxr-xr-x	root/root	usr/include/php/ext/iconv/
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_have_libiconv.h
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_iconv.h
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_iconv_aliased_libiconv.h
+-rw-r--r--	root/root	usr/include/php/ext/iconv/php_iconv_broken_ignore.h
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_iconv_supports_errno.h
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_php_iconv_h_path.h
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_php_iconv_impl.h
