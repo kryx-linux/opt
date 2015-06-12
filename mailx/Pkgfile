@@ -4,8 +4,8 @@
 # Depends on:  openssl readline
 
 name=mailx
-version=14.8.0
-release=2
+version=14.8.1
+release=1
 source=(http://downloads.sourceforge.net/project/s-nail/s-nail-${version//./_}.tar.xz)
 
 build() {
