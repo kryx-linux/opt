@@ -19,6 +19,7 @@ build () {
                 --with-chroot-dir=/etc/unbound \
                 --with-rootkey-file=/etc/unbound/anchor/root.key \
                 --disable-shared \
+                --disable-flto \
                 --with-username=unbound 
 
     make
