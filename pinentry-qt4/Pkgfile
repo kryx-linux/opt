@@ -5,16 +5,18 @@
 # Depends on:  pinentry qt4
 
 name=pinentry-qt4
-version=0.8.1
+version=0.9.4
 release=1
-source=(ftp://ftp.gnupg.org/gcrypt/pinentry/pinentry-$version.tar.gz)
+source=(ftp://ftp.gnupg.org/gcrypt/pinentry/pinentry-$version.tar.bz2)
 
 build() {
     cd pinentry-$version
 
+    sed -i 's|<ncursesw/|<|g' pinentry/pinentry-curses.c
+
     ./configure \
       --prefix=/usr \
-      --disable-pinentry-{curses,gtk,gtk2,qt} \
+      --disable-pinentry-{curses,gtk2} \
       --enable-pinentry-qt4 
 
     make -j1
