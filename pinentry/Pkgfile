@@ -6,16 +6,18 @@
 # Nice to have: pinentry-gtk2 pinentry-qt4
 
 name=pinentry
-version=0.9.1
+version=0.9.4
 release=1
 source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2 pinentry)
 
 build() {
     cd $name-$version
 
+    sed -i 's|<ncursesw/|<|g' pinentry/pinentry-curses.c
+
     ./configure \
       --prefix=/usr \
-      --disable-pinentry-{gtk,gtk2,qt,qt4} \
+      --disable-pinentry-{gtk2,qt4} \
       --enable-pinentry-curses
     make
     make DESTDIR=$PKG install
