@@ -46,7 +46,7 @@ diff -Nru vsftpd-3.0.0.orig/builddefs.h vsftpd-3.0.0/builddefs.h
 -#undef VSF_BUILD_TCPWRAPPERS
 -#define VSF_BUILD_PAM
 -#undef VSF_BUILD_SSL
-+#define VSF_BUILD_TCPWRAPPERS
++#undef VSF_BUILD_TCPWRAPPERS
 +#undef VSF_BUILD_PAM
 +#define VSF_BUILD_SSL
  

@@ -1,11 +1,11 @@
 # Description: Probably the most secure and fastest FTP server
 # URL:         http://vsftpd.beasts.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  openssl libcap tcp_wrappers
+# Depends on:  openssl libcap
 
 name=vsftpd
 version=3.0.2
-release=1
+release=2
 source=(https://security.appspot.com/downloads/$name-$version.tar.gz \
         $name-config.patch vsftpd)
 
