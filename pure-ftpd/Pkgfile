@@ -4,13 +4,15 @@
 # Depends on:  openssl
 
 name=pure-ftpd
-version=1.0.40
+version=1.0.41
 release=1
 source=(http://download.pureftpd.org/$name/releases/$name-$version.tar.bz2 \
         pure-ftpd pure-ftpd.conf)
 
 build () {
     cd $name-$version
+
+    sed -i 's/TLS_CERTIFICATE_FILE/DEFAULT_CERT_FILE/' configure
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
