@@ -1,11 +1,11 @@
 # Description: IMAP and POP3 server with ssl/ipv6 support, written with security primarily in mind
 # URL:         http://dovecot.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  zlib bzip2 openssl tcp_wrappers libcap
+# Depends on:  zlib bzip2 openssl libcap
 
 name=dovecot
 version=2.2.18
-release=1
+release=2
 source=(http://dovecot.org/releases/2.2/$name-$version.tar.gz \
         dovecot-config.patch dovecot)
 
@@ -21,7 +21,7 @@ build () {
                 --mandir=/usr/man \
                 --with-moduledir=/usr/lib/dovecot/modules \
                 --with-ssl=openssl \
-                --with-libwrap
+                --without-libwrap
 
     make
     make DESTDIR=$PKG install
