@@ -1,11 +1,11 @@
 # Description: CUPS - Common UNIX Printing System
 # URL:         http://www.cups.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  acl tcp_wrappers libusb zlib
+# Depends on:  acl libusb zlib
 
 name=cups
 version=2.0.3
-release=2
+release=3
 source=(http://www.cups.org/software/$version/$name-$version-source.tar.bz2
         cups-busy-loop.patch cups)
 
@@ -29,7 +29,7 @@ build () {
                 --without-{java,perl,php,python} \
                 --without-rcdir \
                 --with-optim="$CFLAGS" \
-                --enable-tcp-wrappers \
+                --disable-tcp-wrappers \
                 --enable-acl \
                 --disable-{pam,dbus,avahi,systemd}
 
