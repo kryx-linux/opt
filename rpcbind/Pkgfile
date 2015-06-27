@@ -1,11 +1,11 @@
 # Description: Server that converts RPC program numbers into universal addresses
 # URL:         http://sourceforge.net/projects/rpcbind/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libtirpc tcp_wrappers
+# Depends on:  libtirpc
 
 name=rpcbind
 version=0.2.3
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2 \
         rpcbind)
 
@@ -14,7 +14,7 @@ build() {
     ./configure --prefix=/usr \
                 --bindir=/sbin \
                 --mandir=/usr/man \
-                --enable-libwrap \
+                --disable-libwrap \
                 --with-rpcuser=root \
                 --without-systemdsystemunitdir
     make
