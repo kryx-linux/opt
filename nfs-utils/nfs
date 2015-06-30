@@ -21,8 +21,12 @@ restart)
 	$0 stop
 	$0 start
 	;;
+status)
+	/etc/rc.d/rpc.idmapd status
+	/etc/rc.d/rpc.statd status
+	;;
 *)
-	echo "usage: $0 [start|stop|restart]"
+	echo "usage: $0 [start|stop|restart|status]"
 	;;
 esac
 
