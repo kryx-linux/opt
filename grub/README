@@ -27,7 +27,7 @@ POST-INSTALL
 
 	After installation you need to copy the stage files to /boot/grub/:
 
-	# cp /usr/share/grub/i386-pc/* /boot/grub/
+	# cp /usr/share/grub/*/*stage* /boot/grub/
 
 	(Of course, you can choose another location as described above but this guide
 	assumes that you use /boot/grub. Normally you need only the files stage1 and
