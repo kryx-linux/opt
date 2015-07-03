@@ -4,7 +4,7 @@
 # Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
  
 name=firefox
-version=38.0.5
+version=39.0
 release=2
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
 	firefox-install-dir.patch firefox.desktop)
@@ -60,6 +60,7 @@ cat <<- EOF > .mozconfig
     ac_add_options --disable-libnotify
     ac_add_options --disable-gstreamer
     ac_add_options --disable-pulseaudio
+    ac_add_options --enable-pic
 EOF
 
     make -f client.mk build
