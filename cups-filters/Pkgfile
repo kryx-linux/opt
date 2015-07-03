@@ -4,8 +4,8 @@
 # Depends on:  cups ghostscript poppler qpdf
 
 name=cups-filters
-version=1.0.70
-release=2
+version=1.0.71
+release=1
 source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz
         cups-browsed)
 
