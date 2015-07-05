@@ -4,7 +4,7 @@
 # Depends on:  openssl readline
 
 name=mailx
-version=14.8.2
+version=14.8.3
 release=1
 source=(http://downloads.sourceforge.net/project/s-nail/s-nail-${version//./_}.tar.xz)
 
@@ -15,6 +15,7 @@ build() {
          NAIL=mailx \
          SID= \
          PREFIX=/usr \
+         LIBEXECDIR=/usr/lib/mailx \
          MANDIR=/usr/man \
          SYSCONFRC=/usr/etc/mailx.rc \
          DESTDIR=$PKG \
