@@ -4,11 +4,11 @@
 # Depends on:  ruby
 
 name=ruby-doc
-version=2.1.6
+version=2.2.2
 release=1
-source=(ftp://ftp.ruby-lang.org/pub/ruby/2.1/ruby-$version.tar.xz)
+source=(http://cache.ruby-lang.org/pub/$name/${version%.*}/$name-$version.tar.xz)
 
 build () {
     cd ruby-$version
-    rdoc --encoding=UTF-8 --all --ri --op $PKG/usr/share/ri/2.1/system .
+    rdoc --encoding=UTF-8 --all --ri --op $PKG/usr/share/ri/${version%.*}/system .
 }
