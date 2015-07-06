@@ -237,6 +237,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/compstui.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/csq.h
+-rw-r--r--	root/root	usr/include/wine/windows/ddk/hidclass.h
+-rw-r--r--	root/root	usr/include/wine/windows/ddk/hidpi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/hidsdi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/imm.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/mountmgr.h
@@ -973,6 +975,8 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/d3dcompiler_41.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dcompiler_42.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dcompiler_43.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/d3dcompiler_46.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/d3dcompiler_47.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dim.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3drm.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dx10_33.dll.so
@@ -1204,6 +1208,8 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dcompiler_41.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dcompiler_42.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dcompiler_43.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dcompiler_46.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dcompiler_47.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dim.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3drm.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx10_33.dll
@@ -1386,6 +1392,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msnet32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mspatcha.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msrle32.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/msscript.ocx
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mssign32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mssip32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mstask.dll
@@ -1916,6 +1923,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/msnet32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mspatcha.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msrle32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/msscript.ocx.so
 -rwxr-xr-x	root/root	usr/lib/wine/mssign32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mssip32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mstask.dll.so
@@ -2327,6 +2335,8 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dcompiler_41.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dcompiler_42.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dcompiler_43.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/d3dcompiler_46.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/d3dcompiler_47.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dim.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3drm.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dx10_33.dll.so
@@ -2567,6 +2577,8 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dcompiler_41.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dcompiler_42.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dcompiler_43.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dcompiler_46.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dcompiler_47.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dim.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3drm.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx10_33.dll
@@ -2763,6 +2775,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msnet32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mspatcha.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msrle32.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/msscript.ocx
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mssign32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mssip32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mstask.dll
@@ -3349,6 +3362,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/msnet32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mspatcha.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msrle32.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/msscript.ocx.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mssign32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mssip32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mstask.dll.so
