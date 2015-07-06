@@ -1,18 +1,17 @@
 # Description: Ruby module for accessing the ncurses library
-# URL:         http://ncurses-ruby.berlios.de
+# URL:         https://github.com/eclubb/ncurses-ruby
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  ruby 
 
 name=ncurses-ruby
-version=1.3.1
-release=2
-source=(http://downloads.sourceforge.net/project/ncurses-ruby.berlios/$name-$version.tar.bz2
-        http://pkgs.fedoraproject.org/cgit/ruby-ncurses.git/plain/0001-STR2CSTR-deprecated.patch)
+version=20140731
+release=1
+source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
 
 build () {
-    cd $name-$version
-    patch -p1 -i $SRC/0001-STR2CSTR-deprecated.patch
-    sed -i '72i#include <sys/time.h>\n' ncurses_wrap.c
+    cd $name-$version/ext/ncurses
+    mkdir lib
+    cp $SRC/$name-$version/lib/ncurses.rb lib
     ruby extconf.rb --vendor
     make
     make DESTDIR=$PKG install
