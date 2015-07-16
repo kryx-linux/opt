@@ -239,7 +239,9 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/csq.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/hidclass.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/hidpi.h
+-rw-r--r--	root/root	usr/include/wine/windows/ddk/hidport.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/hidsdi.h
+-rw-r--r--	root/root	usr/include/wine/windows/ddk/hidtypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/imm.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/mountmgr.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/ntddcdvd.h
@@ -1013,6 +1015,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/d3dx9_42.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dx9_43.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dxof.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/davclnt.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dbgeng.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dbghelp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dciman32.dll.so
@@ -1246,6 +1249,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx9_42.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dx9_43.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dxof.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/davclnt.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dbgeng.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dbghelp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dciman32.dll
@@ -1310,6 +1314,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/hh.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/hhctrl.ocx
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/hid.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/hidclass.sys
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/hlink.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/hnetcfg.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/hostname.exe
@@ -1663,6 +1668,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/hh.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/hhctrl.ocx.so
 -rwxr-xr-x	root/root	usr/lib/wine/hid.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/hidclass.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/hlink.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/hnetcfg.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/hostname.exe.so
@@ -1754,6 +1760,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libgdiplus.def
 -rw-r--r--	root/root	usr/lib/wine/libglu32.def
 -rw-r--r--	root/root	usr/lib/wine/libhid.def
+-rw-r--r--	root/root	usr/lib/wine/libhidclass.def
 -rw-r--r--	root/root	usr/lib/wine/libhlink.def
 -rw-r--r--	root/root	usr/lib/wine/libhtmlhelp.def
 -rw-r--r--	root/root	usr/lib/wine/libieframe.def
@@ -2373,6 +2380,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dx9_42.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dx9_43.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dxof.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/davclnt.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dbgeng.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dbghelp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dciman32.dll.so
@@ -2615,6 +2623,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx9_42.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dx9_43.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dxof.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/davclnt.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dbgeng.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dbghelp.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dciman32.dll
@@ -2683,6 +2692,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/hh.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/hhctrl.ocx
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/hid.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/hidclass.sys
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/hlink.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/hnetcfg.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/hostname.exe
@@ -3090,6 +3100,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/hh.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/hhctrl.ocx.so
 -rwxr-xr-x	root/root	usr/lib32/wine/hid.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/hidclass.sys.so
 -rwxr-xr-x	root/root	usr/lib32/wine/hlink.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/hnetcfg.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/hostname.exe.so
@@ -3185,6 +3196,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libgdiplus.def
 -rw-r--r--	root/root	usr/lib32/wine/libglu32.def
 -rw-r--r--	root/root	usr/lib32/wine/libhid.def
+-rw-r--r--	root/root	usr/lib32/wine/libhidclass.def
 -rw-r--r--	root/root	usr/lib32/wine/libhlink.def
 -rw-r--r--	root/root	usr/lib32/wine/libhtmlhelp.def
 -rw-r--r--	root/root	usr/lib32/wine/libieframe.def
