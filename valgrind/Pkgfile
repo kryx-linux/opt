@@ -12,6 +12,10 @@ source=(http://$name.org/downloads/$name-$version.tar.bz2)
 build() {
   cd $name-$version
 
+  # suppot 4.x kernels, too
+  sed -i 's/2.6\.\*|3\.\*/&|4.*/1' configure.ac
+  autoconf
+
   sed -i 's/2.18/2.19/' configure
   ./configure --prefix=/usr --mandir=/usr/man
   make
