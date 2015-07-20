@@ -1,11 +1,11 @@
 # Description: The Mozilla Firefox browser
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
+# Depends on: nss, libidl, gtk, python, alsa-lib, xorg-libxt, yasm, mesa3d, gst-plugins-base
  
 name=firefox
 version=39.0
-release=1
+release=2
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
 	firefox-install-dir.patch firefox.desktop)
  
@@ -31,6 +31,7 @@ cat <<- EOF > .mozconfig
     ac_add_options --with-pthreads
     ac_add_options --enable-optimize="$CFLAGS"
     ac_add_options --enable-official-branding
+    ac_add_options --with-distribution-id=nu.crux
     ac_add_options --enable-extensions=default,-gnomevfs
     ac_add_options --enable-shared
     ac_add_options --enable-svg
@@ -42,7 +43,8 @@ cat <<- EOF > .mozconfig
     ac_add_options --enable-places_bookmarks
     ac_add_options --enable-image-encoder=all
     ac_add_options --enable-xft
-    ac_add_options --disable-static
+    ac_add_options --enable-gstreamer=1.0
+    ac_add_options --enable-pic
     ac_add_options --disable-tests
     ac_add_options --disable-mochitest
     ac_add_options --disable-dbus
@@ -57,9 +59,7 @@ cat <<- EOF > .mozconfig
     ac_add_options --disable-crashreporter
     ac_add_options --disable-necko-wifi
     ac_add_options --disable-libnotify
-    ac_add_options --disable-gstreamer
     ac_add_options --disable-pulseaudio
-    ac_add_options --enable-pic
 EOF
 
     make -f client.mk build
