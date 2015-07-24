@@ -5,12 +5,15 @@
 
 name=cups-filters
 version=1.0.71
-release=1
+release=2
 source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz
-        cups-browsed)
+        cups-browsed
+        poppler-034.patch)
 
 build () {
     cd $name-$version
+
+    patch -p0 -i $SRC/poppler-034.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
