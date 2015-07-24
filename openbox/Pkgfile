@@ -5,7 +5,7 @@
 # Depends on: xorg-libxinerama, xorg-libxrandr, xorg-libsm, glib, libxml2, pango
 
 name=openbox
-version=3.5.2
+version=3.6.1
 release=1
 source=(http://openbox.org/dist/openbox/openbox-$version.tar.gz)
 
