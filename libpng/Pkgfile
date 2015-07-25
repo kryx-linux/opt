@@ -5,14 +5,14 @@
 
 name=libpng
 version=1.6.17
-release=1
+release=2
 source=(http://download.sourceforge.net/$name/$name-$version.tar.xz \
         http://downloads.sourceforge.net/project/libpng-apng/libpng16/$version/$name-$version-apng.patch.gz)
 
 build() {
     cd $name-$version
     zcat $SRC/$name-$version-apng.patch.gz | patch -p1
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
 
     make
     make DESTDIR=$PKG install
