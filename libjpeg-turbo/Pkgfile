@@ -4,13 +4,13 @@
 
 name=libjpeg-turbo
 version=1.4.1
-release=2
+release=3
 source=(http://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr --mandir=/usr/man --with-jpeg8
+	./configure --prefix=/usr --with-jpeg8 --mandir=/usr/share/man
 	make
 	make DESTDIR=$PKG install
-	rm -r $PKG/usr/share
+	rm -r $PKG/usr/share/doc
 }
