@@ -5,7 +5,7 @@
 
 name=glib
 version=2.44.0
-release=1
+release=2
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build () {
@@ -17,8 +17,8 @@ build () {
     make
     make -j1 DESTDIR=$PKG install
 
-    install -d $PKG/usr/man/man1
-    find docs -name '*.1' -exec install -m 0644 {} $PKG/usr/man/man1 \;
+    install -d $PKG/usr/share/man/man1
+    find docs -name '*.1' -exec install -m 0644 {} $PKG/usr/share/man/man1 \;
 
     rm -rf $PKG/usr/share/{gtk-doc,locale}
     rm -r $PKG/usr/share/bash-completion
