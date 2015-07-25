@@ -4,8 +4,8 @@
 # Depends on:  openssl libcap
 
 name=vsftpd
-version=3.0.2
-release=2
+version=3.0.3
+release=1
 source=(https://security.appspot.com/downloads/$name-$version.tar.gz \
         $name-config.patch vsftpd)
 

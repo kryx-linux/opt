@@ -1,6 +1,6 @@
-diff -Nru vsftpd-3.0.2.orig/Makefile vsftpd-3.0.2/Makefile
---- vsftpd-3.0.2.orig/Makefile	2015-07-23 14:57:31.840167675 +0200
-+++ vsftpd-3.0.2/Makefile	2015-07-23 14:57:51.082841044 +0200
+diff -Nru vsftpd-3.0.3.orig/Makefile vsftpd-3.0.3/Makefile
+--- vsftpd-3.0.3.orig/Makefile	2015-07-25 10:46:48.976048527 +0200
++++ vsftpd-3.0.3/Makefile	2015-07-25 10:47:10.025301281 +0200
 @@ -3,7 +3,7 @@
  INSTALL	=	install
  IFLAGS  = -idirafter dummyinc
@@ -36,9 +36,9 @@ diff -Nru vsftpd-3.0.2.orig/Makefile vsftpd-3.0.2/Makefile
  
  clean:
  	rm -f *.o *.swp vsftpd
-diff -Nru vsftpd-3.0.2.orig/builddefs.h vsftpd-3.0.2/builddefs.h
---- vsftpd-3.0.2.orig/builddefs.h	2015-07-23 14:57:31.843500895 +0200
-+++ vsftpd-3.0.2/builddefs.h	2015-07-23 14:57:51.082841044 +0200
+diff -Nru vsftpd-3.0.3.orig/builddefs.h vsftpd-3.0.3/builddefs.h
+--- vsftpd-3.0.3.orig/builddefs.h	2015-07-25 10:46:48.976048527 +0200
++++ vsftpd-3.0.3/builddefs.h	2015-07-25 10:51:14.686615834 +0200
 @@ -2,8 +2,8 @@
  #define VSF_BUILDDEFS_H
  
@@ -50,9 +50,9 @@ diff -Nru vsftpd-3.0.2.orig/builddefs.h vsftpd-3.0.2/builddefs.h
  
  #endif /* VSF_BUILDDEFS_H */
  
-diff -Nru vsftpd-3.0.2.orig/tunables.c vsftpd-3.0.2/tunables.c
---- vsftpd-3.0.2.orig/tunables.c	2015-07-23 14:57:31.840167675 +0200
-+++ vsftpd-3.0.2/tunables.c	2015-07-23 14:57:51.082841044 +0200
+diff -Nru vsftpd-3.0.3.orig/tunables.c vsftpd-3.0.3/tunables.c
+--- vsftpd-3.0.3.orig/tunables.c	2015-07-25 10:46:48.976048527 +0200
++++ vsftpd-3.0.3/tunables.c	2015-07-25 10:48:46.175221304 +0200
 @@ -254,7 +254,7 @@
    /* -rw------- */
    tunable_chown_upload_mode = 0600;
@@ -62,28 +62,27 @@ diff -Nru vsftpd-3.0.2.orig/tunables.c vsftpd-3.0.2/tunables.c
    install_str_setting("ftp", &tunable_ftp_username);
    install_str_setting("root", &tunable_chown_username);
    install_str_setting("/var/log/xferlog", &tunable_xferlog_file);
-@@ -281,11 +281,11 @@
+@@ -281,11 +281,10 @@
    install_str_setting(0, &tunable_user_sub_token);
    install_str_setting("/etc/vsftpd.email_passwords",
                        &tunable_email_password_file);
 -  install_str_setting("/usr/share/ssl/certs/vsftpd.pem",
-+  install_str_setting("/etc/ssl/certs/vsftpd.crt",
-                       &tunable_rsa_cert_file);
+-                      &tunable_rsa_cert_file);
++  install_str_setting("/etc/ssl/certs/vsftpd.crt", &tunable_rsa_cert_file);
    install_str_setting(0, &tunable_dsa_cert_file);
-   install_str_setting("AES128-SHA:DES-CBC3-SHA", &tunable_ssl_ciphers);
+   install_str_setting("ECDHE-RSA-AES256-GCM-SHA384", &tunable_ssl_ciphers);
 -  install_str_setting(0, &tunable_rsa_private_key_file);
 +  install_str_setting("/etc/ssl/keys/vsftpd.key", &tunable_rsa_private_key_file);
    install_str_setting(0, &tunable_dsa_private_key_file);
    install_str_setting(0, &tunable_ca_certs_file);
  }
-diff -Nru vsftpd-3.0.2.orig/vsftpd.conf vsftpd-3.0.2/vsftpd.conf
---- vsftpd-3.0.2.orig/vsftpd.conf	2015-07-23 14:57:31.840167675 +0200
-+++ vsftpd-3.0.2/vsftpd.conf	2015-07-23 15:03:41.640840187 +0200
-@@ -8,11 +8,19 @@
+diff -Nru vsftpd-3.0.3.orig/vsftpd.conf vsftpd-3.0.3/vsftpd.conf
+--- vsftpd-3.0.3.orig/vsftpd.conf	2015-07-25 10:46:48.976048527 +0200
++++ vsftpd-3.0.3/vsftpd.conf	2015-07-25 10:50:10.758885261 +0200
+@@ -8,11 +8,18 @@
  # Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's
  # capabilities.
  #
-+#
 +#
 +# Enable SSL support
 +#ssl_enable=YES
@@ -99,7 +98,7 @@ diff -Nru vsftpd-3.0.2.orig/vsftpd.conf vsftpd-3.0.2/vsftpd.conf
  #
  # Uncomment this to enable any form of FTP write command.
  #write_enable=YES
-@@ -110,6 +118,7 @@
+@@ -110,6 +117,7 @@
  # listens on IPv4 sockets. This directive cannot be used in conjunction
  # with the listen_ipv6 directive.
  listen=YES
@@ -107,9 +106,9 @@ diff -Nru vsftpd-3.0.2.orig/vsftpd.conf vsftpd-3.0.2/vsftpd.conf
  #
  # This directive enables listening on IPv6 sockets. To listen on IPv4 and IPv6
  # sockets, you must run two copies of vsftpd with two configuration files.
-diff -Nru vsftpd-3.0.2.orig/vsftpd.conf.5 vsftpd-3.0.2/vsftpd.conf.5
---- vsftpd-3.0.2.orig/vsftpd.conf.5	2015-07-23 14:57:31.840167675 +0200
-+++ vsftpd-3.0.2/vsftpd.conf.5	2015-07-23 14:57:51.082841044 +0200
+diff -Nru vsftpd-3.0.3.orig/vsftpd.conf.5 vsftpd-3.0.3/vsftpd.conf.5
+--- vsftpd-3.0.3.orig/vsftpd.conf.5	2015-07-25 10:46:48.976048527 +0200
++++ vsftpd-3.0.3/vsftpd.conf.5	2015-07-25 10:47:10.025301281 +0200
 @@ -955,21 +955,21 @@
  This option specifies the location of the RSA certificate to use for SSL
  encrypted connections.

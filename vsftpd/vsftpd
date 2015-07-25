@@ -28,8 +28,7 @@ restart)
 status)
 	$SSD --status --exec $PROG
 	case $? in
-	0) echo "$PROG is running with pid $(pidof $PROG)" ;;
-	1) echo "$PROG is not running but the pid file $PID exists" ;;
+	0) echo "$PROG is running with pid $(pgrep -o -x vsftpd )" ;;
 	3) echo "$PROG is not running" ;;
 	4) echo "Unable to determine the program status" ;;
 	esac
