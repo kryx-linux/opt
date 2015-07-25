@@ -5,12 +5,12 @@
 
 name=libmng
 version=2.0.3
-release=1
+release=2
 source=(http://downloads.sourceforge.net/$name/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
 }
