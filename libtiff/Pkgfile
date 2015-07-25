@@ -5,14 +5,14 @@
 
 name=libtiff
 version=4.0.4
-release=1
+release=2
 source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz) 
 
 build() {
     cd tiff-$version
 
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/{bin,share,man/man1}
+    rm -r $PKG/usr/{bin,share/{doc,man/man1}}
 }
