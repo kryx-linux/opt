@@ -6,7 +6,7 @@
 
 name=dvd+rw-tools
 version=7.1
-release=3
+release=4
 source=(http://fy.chalmers.se/~appro/linux/DVD+RW/tools/$name-$version.tar.gz \
 	$name.patch $name-gcc43.patch)
 
@@ -18,7 +18,7 @@ build() {
 
     make
 
-    mkdir -p $PKG/usr/bin $PKG/usr/man/man1
+    mkdir -p $PKG/usr/bin $PKG/usr/share/man/man1
     for exec in \
 	dvd+rw-booktype \
 	dvd+rw-format \
@@ -28,5 +28,5 @@ build() {
     do
 	install -m 755 $exec $PKG/usr/bin/
     done
-    install -m 644 growisofs.1 $PKG/usr/man/man1/
+    install -m 644 growisofs.1 $PKG/usr/share/man/man1/
 }
