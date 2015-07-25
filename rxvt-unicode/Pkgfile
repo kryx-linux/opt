@@ -5,14 +5,13 @@
 
 name=rxvt-unicode
 version=9.21
-release=2
+release=3
 source=(http://dist.schmorp.de/$name/Attic/$name-$version.tar.bz2)
 
 build() {
    cd $name-$version
 
    ./configure --prefix=/usr \
-               --mandir=/usr/man \
                --enable-utmp \
                --enable-wtmp \
                --enable-transparency \
