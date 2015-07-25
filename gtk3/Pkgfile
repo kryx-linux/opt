@@ -5,13 +5,13 @@
 
 name=gtk3
 version=3.16.6
-release=1
+release=2
 source=(http://download.gnome.org/sources/gtk+/${version:0:4}/gtk+-$version.tar.xz)
 
 build () {
     cd gtk+-$version
 
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
     rm -r $PKG/usr/share/{gtk-doc,locale,gtk-3.0}

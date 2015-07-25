@@ -4,12 +4,12 @@
 
 name=libffi
 version=3.2.1
-release=1
+release=2
 source=(ftp://sourceware.org/pub/libffi/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
     rm -r $PKG/usr/share
