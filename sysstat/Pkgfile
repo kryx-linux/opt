@@ -6,12 +6,12 @@
 
 name=sysstat
 version=11.0.5
-release=1
+release=2
 source=(http://perso.orange.fr/sebastien.godard/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
-  ./configure --prefix=/usr --mandir=/usr/man --disable-nls
+  ./configure --prefix=/usr --disable-nls
   sed -i "/^SA_LIB_DIR/s/lib64/lib/" Makefile
 
   make
