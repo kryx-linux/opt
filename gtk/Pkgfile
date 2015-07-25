@@ -12,7 +12,7 @@ source=(http://download.gnome.org/sources/gtk+/2.24/${name}+-$version.tar.xz \
 build () {
     cd gtk+-$version
 
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
     mkdir -p $PKG/usr/etc/gtk-2.0
