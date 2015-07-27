@@ -176,6 +176,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-verify-tag
 -rwxr-xr-x	root/root	usr/lib/git-core/git-web--browse
 -rwxr-xr-x	root/root	usr/lib/git-core/git-whatchanged
+-rwxr-xr-x	root/root	usr/lib/git-core/git-worktree
 -rwxr-xr-x	root/root	usr/lib/git-core/git-write-tree
 drwxr-xr-x	root/root	usr/lib/git-core/mergetools/
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/araxis
@@ -200,6 +201,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/mergetools/
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/vimdiff
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/vimdiff2
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/vimdiff3
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/winmerge
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/xxdiff
 drwxr-xr-x	root/root	usr/lib/perl5/
 drwxr-xr-x	root/root	usr/lib/perl5/5.18/
@@ -374,6 +376,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-verify-tag.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-web--browse.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-whatchanged.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-worktree.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-write-tree.1.gz
 -rw-r--r--	root/root	usr/man/man1/git.1.gz
 -rw-r--r--	root/root	usr/man/man1/gitk.1.gz
