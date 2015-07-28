@@ -5,15 +5,14 @@
 # Depends on:  util-linux lcms2 pango xorg-libxt
 
 name=imagemagick
-version=6.9.0-10
-release=2
+version=6.9.1-10
+release=1
 source=(ftp://ftp.imagemagick.org/pub/ImageMagick/releases/ImageMagick-$version.tar.xz)
 
 build () {
     cd ImageMagick-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --enable-shared \
                 --with-perl=yes \
                 --with-lcms=no --with-lcms2=yes
