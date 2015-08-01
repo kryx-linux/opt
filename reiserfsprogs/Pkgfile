@@ -1,0 +1,16 @@
+# Description: Filesystem utilities for ReiserFS
+# URL:         http://en.wikipedia.org/wiki/ReiserFS
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  util-linux
+
+name=reiserfsprogs
+version=3.6.24
+release=3
+source=(https://www.kernel.org/pub/linux/kernel/people/jeffm/$name/v$version/$name-$version.tar.xz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/ --mandir=/usr/share/man
+    make CFLAGS="$CFLAGS -std=gnu90"
+    make DESTDIR=$PKG install
+}

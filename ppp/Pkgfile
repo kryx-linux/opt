@@ -1,0 +1,19 @@
+# Description: A daemon which implements the PPP protocol for internetworking over dialup lines
+# URL:         http://www.samba.org/ppp/
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  zlib, openssl
+
+name=ppp
+version=2.4.7
+release=2
+source=(http://ppp.samba.org/ftp/ppp/$name-$version.tar.gz \
+        $name-nofilter.patch)
+
+build () {
+    cd $name-$version
+    patch -p1 -i $SRC/$name-nofilter.patch
+    ./configure --prefix=/usr --sysconfdir=/etc
+    make
+    make -j1 INSTROOT=$PKG install install-etcppp
+    chmod +w -R $PKG
+}
