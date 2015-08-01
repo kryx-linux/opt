@@ -4,8 +4,8 @@
 # Depends on:  zlib
 
 name=libpng
-version=1.6.17
-release=2
+version=1.6.18
+release=1
 source=(http://download.sourceforge.net/$name/$name-$version.tar.xz \
         http://downloads.sourceforge.net/project/libpng-apng/libpng16/$version/$name-$version-apng.patch.gz)
 

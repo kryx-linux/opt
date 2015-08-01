@@ -220,6 +220,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx9shape.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx9tex.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx9xof.h
+-rw-r--r--	root/root	usr/include/wine/windows/davclnt.h
 -rw-r--r--	root/root	usr/include/wine/windows/dbccmd.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dbcses.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dbdsad.idl
@@ -409,6 +410,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/inputscope.idl
 -rw-r--r--	root/root	usr/include/wine/windows/inseng.h
 -rw-r--r--	root/root	usr/include/wine/windows/inseng.idl
+-rw-r--r--	root/root	usr/include/wine/windows/inspectable.h
+-rw-r--r--	root/root	usr/include/wine/windows/inspectable.idl
 -rw-r--r--	root/root	usr/include/wine/windows/intshcut.h
 -rw-r--r--	root/root	usr/include/wine/windows/ipexport.h
 -rw-r--r--	root/root	usr/include/wine/windows/iphlpapi.h
@@ -526,6 +529,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/netcon.idl
 -rw-r--r--	root/root	usr/include/wine/windows/netfw.h
 -rw-r--r--	root/root	usr/include/wine/windows/netfw.idl
+-rw-r--r--	root/root	usr/include/wine/windows/netioapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/netlistmgr.h
 -rw-r--r--	root/root	usr/include/wine/windows/netlistmgr.idl
 -rw-r--r--	root/root	usr/include/wine/windows/nldef.h
@@ -735,6 +739,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wbemdisp.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wbemprov.h
 -rw-r--r--	root/root	usr/include/wine/windows/wbemprov.idl
+-rw-r--r--	root/root	usr/include/wine/windows/webservices.h
 -rw-r--r--	root/root	usr/include/wine/windows/werapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/wfext.h
 -rw-r--r--	root/root	usr/include/wine/windows/wia.h

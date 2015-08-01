@@ -5,12 +5,12 @@
 # Depends on: python
 
 name=ninja
-version=1.5.1
+version=1.6.0
 release=1
 source=(https://github.com/martine/$name/archive/v$version.tar.gz)
 
 build() {
   cd $name-$version
-  ./bootstrap.py --verbose
+  ./configure.py --bootstrap
   install -D -m 0755 $name $PKG/usr/bin/$name
 }

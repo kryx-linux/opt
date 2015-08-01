@@ -1,0 +1,36 @@
+# Description: Outline and bitmap font editor.
+# URL: http://fontforge.sourceforge.net
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Antti Nykanen, aon at iki dot fi
+# Depends on: giflib git libtiff pango
+
+name=fontforge
+version=20150612
+release=1
+source=(https://github.com/fontforge/fontforge/archive/$version.tar.gz
+	http://fontforge.org/cidmaps.tgz)
+
+build() {
+	cd $name-$version
+
+	./bootstrap --force
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--enable-python-extension
+
+	make
+	make install DESTDIR=$PKG
+
+	install -d $PKG/usr/share/fontforge
+	install -m 0644 -t $PKG/usr/share/fontforge $SRC/Adobe-*
+
+	install -d $PKG/usr/share/icons
+	cp -a desktop/icons $PKG/usr/share/icons/hicolor
+	rm -fr $PKG/usr/share/icons/hicolor/src
+
+	install -m 0644 -D desktop/fontforge.desktop \
+		$PKG/usr/share/applications/fontforge.desktop
+
+	rm -r $PKG/usr/share/{doc,locale}
+}
