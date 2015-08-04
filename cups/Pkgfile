@@ -4,17 +4,13 @@
 # Depends on:  acl tcp_wrappers libusb zlib
 
 name=cups
-version=2.0.3
-release=2
+version=2.0.4
+release=1
 source=(http://www.cups.org/software/$version/$name-$version-source.tar.bz2
-        cups-busy-loop.patch cups)
+        cups)
 
 build () {
     cd $name-$version
-
-    # https://crux.nu/bugs/index.php?do=details&task_id=1143
-    # http://pkgs.fedoraproject.org/cgit/cups.git/commit/?id=746dd9cf56e9522ca51c4cc669fc65b46e2d4866
-    #patch -p1 -i $SRC/cups-busy-loop.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \

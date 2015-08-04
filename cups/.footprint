@@ -120,6 +120,7 @@ drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/client.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/cups-files.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/cups-snmp.conf.5.gz
+-rw-r--r--	root/root	usr/man/man5/cupsd-logs.5.gz
 -rw-r--r--	root/root	usr/man/man5/cupsd.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/ipptoolfile.5.gz
 -rw-r--r--	root/root	usr/man/man5/mailto.conf.5.gz
@@ -143,7 +144,6 @@ lrwxrwxrwx	root/root	usr/man/man8/cups-exec.8.gz -> cupsd-helper.8.gz
 -rw-r--r--	root/root	usr/man/man8/cupsaddsmb.8.gz
 -rw-r--r--	root/root	usr/man/man8/cupsctl.8.gz
 -rw-r--r--	root/root	usr/man/man8/cupsd-helper.8.gz
--rw-r--r--	root/root	usr/man/man8/cupsd-logs.8.gz
 -rw-r--r--	root/root	usr/man/man8/cupsd.8.gz
 lrwxrwxrwx	root/root	usr/man/man8/cupsdisable.8.gz -> cupsenable.8.gz
 -rw-r--r--	root/root	usr/man/man8/cupsenable.8.gz
