@@ -1,7 +1,7 @@
 # Description: The Mozilla Firefox browser
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: nss, libidl, gtk, python, alsa-lib, xorg-libxt, yasm, mesa3d, gst-plugins-base
+# Depends on: nss, zip, libidl, gtk, python, alsa-lib, xorg-libxt, yasm, mesa3d, gst-plugins-base
  
 name=firefox
 version=39.0
