@@ -4,17 +4,19 @@
 # Depends on:	
 
 name=libsrtp
-version=1.4.4-git20140715
+version=1.5.2
 release=1
-source=(http://www.mizrahi.com.ve/crux/dist/srtp-$version.tar.xz)
-#source=(http://prdownloads.sf.net/srtp/srtp-$version.tgz)
+source=(https://github.com/cisco/$name/archive/v$version.tar.gz)
 
 build() {
-	cd srtp
-	autoconf
+	cd $name-$version
 	./configure \
 		--prefix=/usr \
 		--disable-debug
-	make
+	make shared_library libsrtp.a
 	make DESTDIR=$PKG install
+
+	# make syumbolic link
+	rm $PKG/usr/lib/libsrtp.so
+	ln -s libsrtp.so.1 $PKG/usr/lib/libsrtp.so
 }
