@@ -5,7 +5,7 @@
 # Depends on: bash-completion subversion 
 
 name=subversion-bashcompletion
-version=1.8.10
+version=1.9.0
 release=1
 source=(http://svn.apache.org/repos/asf/subversion/tags/$version/tools/client-side/bash_completion)
 
