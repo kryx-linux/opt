@@ -4,7 +4,7 @@
 # Depends on:  readline libpcre libxml2 curl db gdbm xz
 
 name=php
-version=5.5.27
+version=5.5.28
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
