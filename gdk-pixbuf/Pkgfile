@@ -7,10 +7,11 @@ name=gdk-pixbuf
 version=2.30.8
 release=3
 source=(http://download.gnome.org/sources/$name/2.30/$name-$version.tar.xz \
-        gdk-pixbuf.loaders gdk-pixbuf-register.sh)
+        gdk-pixbuf.loaders gdk-pixbuf-register.sh CVE-2015-4491.patch)
 
 build () {
     cd $name-$version
+    patch -p1 -i $SRC/CVE-2015-4491.patch
 
     ./configure --prefix=/usr \
                 --disable-nls \
