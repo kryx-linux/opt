@@ -6,7 +6,7 @@
 
 name=zsh
 version=5.0.8
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/zsh/zsh/$version/zsh-$version.tar.bz2 \
         _prt-get zsh-lovers.1)
 
