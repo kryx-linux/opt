@@ -5,7 +5,7 @@
 # Depends on:  python, llvm
 
 name=clang
-version=3.6.1
+version=3.6.2
 release=1
 source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
   config.h llvm-config.h)
@@ -22,8 +22,8 @@ build() {
     --enable-shared \
     --mandir=/usr/man
 
-  make $MAKEFLAGS
-  make DESTDIR=$PKG install
+  make DISABLE_ASSERTIONS=1 $MAKEFLAGS
+  make DISABLE_ASSERTIONS=1 DESTDIR=$PKG install
 
   # Unfortunately, llvm's configure script seems to ignore --mandir.
   mv $PKG/usr/share/man $PKG/usr

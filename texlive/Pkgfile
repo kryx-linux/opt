@@ -5,13 +5,14 @@
 # Depends on:  clisp icu libgd poppler t1lib util-linux xorg-libxi
 
 name=texlive
-version=20140525
+version=20150523
 release=1
-source=(ftp://tug.org/historic/systems/texlive/2014/$name-$version-{texmf,source}.tar.xz
+source=(ftp://tug.org/historic/systems/texlive/${version:0:4}/$name-$version-texmf.tar.xz
+        ftp://tug.org/historic/systems/texlive/${version:0:4}/$name-20150521-source.tar.xz
         http://download.savannah.gnu.org/releases/texi2html/texi2html-5.0.tar.bz2)
 
 build() {
-  cd $name-$version-source
+  cd $name-20150521-source
 
   chmod -R a-s $SRC
 
@@ -44,19 +45,30 @@ build() {
     --with-x \
     --without-etex \
     --disable-xindy \
+    --disable-luatex \
+    --disable-luajittex \
     --with-clisp-runtime=system \
     --with-system-poppler \
+    --with-system-cairo \
+    --with-system-pixman \
     --with-system-xpdf \
     --with-system-ncurses \
     --with-system-zlib \
     --with-system-libpng \
     --with-system-t1lib \
     --with-system-gd \
-    --with-system-freetype2
+    --with-system-freetype2 \
+    --with-system-gmp \
+    --with-system-mpfr \
+    --with-system-icu
 
   make
   make DESTDIR=$PKG install
+
   cd ..
+
+  install -d $PKG/usr/lib/perl5/site_perl/5.18/TeXLive
+  install texk/tests/TeXLive/TL{Config,Utils}.pm $PKG/usr/lib/perl5/site_perl/5.18/TeXLive
 
   # Create symlinks
   PATH="$PKG/usr/bin:$PATH" LD_LIBRARY_PATH+=$PKG/usr/lib \
