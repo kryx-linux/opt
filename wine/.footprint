@@ -395,6 +395,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/iextag.idl
 -rw-r--r--	root/root	usr/include/wine/windows/ifdef.h
 -rw-r--r--	root/root	usr/include/wine/windows/ifmib.h
+-rw-r--r--	root/root	usr/include/wine/windows/iimgctx.h
+-rw-r--r--	root/root	usr/include/wine/windows/iimgctx.idl
 -rw-r--r--	root/root	usr/include/wine/windows/imagehlp.h
 -rw-r--r--	root/root	usr/include/wine/windows/imm.h
 -rw-r--r--	root/root	usr/include/wine/windows/imnact.h
@@ -687,6 +689,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/taskschd.h
 -rw-r--r--	root/root	usr/include/wine/windows/taskschd.idl
 -rw-r--r--	root/root	usr/include/wine/windows/tchar.h
+-rw-r--r--	root/root	usr/include/wine/windows/tcpestats.h
 -rw-r--r--	root/root	usr/include/wine/windows/tcpmib.h
 -rw-r--r--	root/root	usr/include/wine/windows/textserv.h
 -rw-r--r--	root/root	usr/include/wine/windows/textstor.h
@@ -1741,6 +1744,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libd3d10.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d10_1.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d10core.def
+-rw-r--r--	root/root	usr/lib/wine/libd3d11.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d8.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d9.def
 -rw-r--r--	root/root	usr/lib/wine/libd3dcompiler.def
@@ -3181,6 +3185,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libd3d10.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d10_1.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d10core.def
+-rw-r--r--	root/root	usr/lib32/wine/libd3d11.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d8.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d9.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3dcompiler.def
