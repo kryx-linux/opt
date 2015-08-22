@@ -3,9 +3,9 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=deadwood
-version=3.2.07
+version=3.2.08
 release=1
-source=(http://maradns.samiam.org/deadwood/stable/$name-$version.tar.bz2 \
+source=(http://maradns.samiam.org/deadwood/stable/$name-$version.tar.xz \
         dwood3rc deadwood)
 
 build () {
