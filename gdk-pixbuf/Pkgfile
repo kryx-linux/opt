@@ -4,7 +4,7 @@
 # Depends on: gobject-introspection libpng libtiff xorg-libx11
 
 name=gdk-pixbuf
-version=2.31.6
+version=2.31.7
 release=1
 source=(http://download.gnome.org/sources/$name/2.31/$name-$version.tar.xz \
         gdk-pixbuf.loaders gdk-pixbuf-register.sh)
