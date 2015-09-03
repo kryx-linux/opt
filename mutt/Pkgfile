@@ -4,15 +4,12 @@
 # Depends on:  gdbm ncurses openssl zlib
 
 name=mutt
-version=1.5.23
-release=2
-source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz
-        CVE-2014-9116.patch)
+version=1.5.24
+release=1
+source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-
-    patch -p1 -i $SRC/CVE-2014-9116.patch
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
