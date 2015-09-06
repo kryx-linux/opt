@@ -9,7 +9,7 @@ release=1
 source=(
 http://downloads.sourceforge.net/wordlist/hunspell-en_US-$version-0.zip
 http://downloads.sourceforge.net/wordlist/hunspell-en_CA-$version-0.zip
-http://en-gb.pyxidium.co.uk/dictionary/en_GB.zip
+http://crux.ster.zone/downloads/en_GB.zip/md5/218909136738f4564b81ecd145ade6ee/en_GB.zip
 )
 
 build() {
