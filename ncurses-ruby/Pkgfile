@@ -5,7 +5,7 @@
 
 name=ncurses-ruby
 version=20140731
-release=1
+release=2
 source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
 
 build () {
