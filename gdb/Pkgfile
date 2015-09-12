@@ -6,7 +6,7 @@
 
 name=gdb
 version=7.9.1
-release=1
+release=2
 source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 
 build() {
@@ -18,5 +18,5 @@ build() {
     sed -i 's/^exit $st/exit 0/g' missing
 
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/{info,share,lib,include}
+    rm -rf $PKG/usr/{lib,include,share/info,share/locale}
 }
