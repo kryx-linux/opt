@@ -5,8 +5,9 @@
 
 name=wpa_supplicant
 version=2.4
-release=1
-source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz)
+release=2
+source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz
+        wlan)
 
 build () {
     cd $name-$version/$name
@@ -28,4 +29,7 @@ build () {
     
     # symlink for compatibility with older releases
     ln -s wpa_supplicant.conf $PKG/etc/wpa.conf
+
+    # rc script
+    install -D -m 0755 $SRC/wlan $PKG/etc/rc.d/wlan
 }
