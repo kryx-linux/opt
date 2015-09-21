@@ -4,16 +4,13 @@
 # Depends on:  cups ghostscript poppler qpdf
 
 name=cups-filters
-version=1.0.75
-release=2
+version=1.0.76
+release=1
 source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz
-        cups-browsed
-        $name-$version-browsed_without_dbus.patch)
+        cups-browsed)
 
 build () {
     cd $name-$version
-
-    patch -p0 -i $SRC/$name-$version-browsed_without_dbus.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
