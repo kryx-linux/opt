@@ -1,11 +1,11 @@
 # Description: Filesystem utilities for btrfs
 # URL:         http://btrfs.wiki.kernel.org
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
 # Depends on:  util-linux e2fsprogs lzo zlib
 
 name=btrfs-progs
-version=4.1.2
-release=2
+version=4.2.1
+release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz \
         $name-man-v$version.tar.xz)
 
