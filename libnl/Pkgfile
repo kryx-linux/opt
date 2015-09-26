@@ -3,9 +3,9 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=libnl
-version=3.2.25
+version=3.2.26
 release=1
-source=(http://www.infradead.org/~tgr/$name/files/$name-$version.tar.gz)
+source=(https://github.com/thom311/libnl/releases/download/libnl${version//./_}/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
