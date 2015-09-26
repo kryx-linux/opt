@@ -5,7 +5,7 @@
 # Depends on: libdevmapper,  util-linux, libgcrypt, popt
 
 name=cryptsetup
-version=1.6.5
+version=1.6.8
 release=1
 source=(https://kernel.org/pub/linux/utils/$name/v1.6/$name-$version.tar.xz)
 
