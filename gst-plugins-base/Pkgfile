@@ -6,7 +6,7 @@
 # Optional: cdparanoia libtheora libvisual orc
 
 name=gst-plugins-base
-version=1.4.5
+version=1.6.0
 release=1
 source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 

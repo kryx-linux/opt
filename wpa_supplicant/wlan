@@ -28,12 +28,14 @@ print_status() {
 
 case $1 in
 	start)
-		$SSD --start --pidfile $PID_WIFI --exec $PROG_WIFI -- $OPTS_WIFI
+		$SSD --start --pidfile $PID_WIFI --exec $PROG_WIFI -- $OPTS_WIFI && \
 		$SSD --start --pidfile $PID_DHCP --exec $PROG_DHCP -- $OPTS_DHCP
+		RETVAL=$?
 		;;
 	stop)
-		$SSD --stop --retry 10 --pidfile $PID_DHCP
-		$SSD --stop --retry 10 --pidfile $PID_WIFI
+		( $SSD --stop --retry 10 --pidfile $PID_DHCP 
+		  $SSD --stop --retry 10 --pidfile $PID_WIFI )
+		RETVAL=$?
 		;;
 	restart)
 		$0 stop
@@ -47,6 +49,8 @@ case $1 in
 		echo "Usage: $0 [start|stop|restart|status]"
 		;;
 esac
+
+exit $RETVAL
 
 # End of file
 

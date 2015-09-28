@@ -11,9 +11,11 @@ LOG=/var/log/maradns.log
 case $1 in
 start)
 	$SSD --start -bmC --pidfile $PID --exec $PROG >> $LOG 2>&1
+	RETVAL=$?
 	;;
 stop)
 	$SSD --stop --remove-pidfile --retry 10 --pidfile $PID
+	RETVAL=$?
 	;;
 restart)
 	$0 stop
@@ -32,4 +34,7 @@ status)
 	echo "usage: $0 [start|stop|restart|status]"
 	;;
 esac
+
+exit $RETVAL
+
 # End of file

@@ -4,8 +4,8 @@
 # Depends on:  openssl ncurses readline libnl
 
 name=wpa_supplicant
-version=2.4
-release=2
+version=2.5
+release=1
 source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz
         wlan)
 
