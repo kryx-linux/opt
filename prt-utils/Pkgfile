@@ -5,11 +5,11 @@
 # Depends on: elfutils
 
 name=prt-utils
-version=1.0.1
+version=1.0.2
 release=1
 source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    make DESTDIR=$PKG install
+    make DESTDIR=$PKG MANDIR=/usr/man install
 }
