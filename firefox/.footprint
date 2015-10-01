@@ -2421,6 +2421,7 @@ drwxr-xr-x	root/root	usr/include/firefox/mozilla/ipc/
 -rw-r--r--	root/root	usr/include/firefox/mozilla/ipc/InputStreamUtils.h
 -rw-r--r--	root/root	usr/include/firefox/mozilla/ipc/MessageChannel.h
 -rw-r--r--	root/root	usr/include/firefox/mozilla/ipc/MessageLink.h
+-rw-r--r--	root/root	usr/include/firefox/mozilla/ipc/Neutering.h
 -rw-r--r--	root/root	usr/include/firefox/mozilla/ipc/ProcessChild.h
 -rw-r--r--	root/root	usr/include/firefox/mozilla/ipc/ProtocolUtils.h
 -rw-r--r--	root/root	usr/include/firefox/mozilla/ipc/ScopedXREEmbed.h
