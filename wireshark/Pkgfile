@@ -2,7 +2,7 @@
 # URL: http://www.wireshark.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Martin Opel, mo at obbl-net dot de
-# Depends on: gtk3 libpcap libpcre
+# Depends on: gtk3 libpcap libpcre hicolor-icon-theme
 
 name=wireshark
 version=1.12.6
@@ -15,12 +15,9 @@ build() {
   ./configure --prefix=/usr \
               --mandir=/usr/man \
               --with-plugins=/usr/lib/$name/plugins \
-              --disable-nls \
-              --enable-snmp \
-              --disable-gcry \
               --without-krb5 \
-              --with-qt4=no \
-              --with-gtk3=yes
+              --with-gtk3=yes \
+              --with-qt=no
 
   make
   make DESTDIR=$PKG install
