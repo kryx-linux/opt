@@ -12,7 +12,7 @@ case $1 in
 start)
 	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
 	RETVAL=$?
-	if [ $RETVAL -eq 0 && ! -f /var/spool/fcron/systab ]; then
+	if [ $RETVAL -eq 0 -a ! -f /var/spool/fcron/systab ]; then
 		/usr/bin/fcrontab -u systab -z
 	fi
 	;;
