@@ -11,12 +11,14 @@ OPTS="--background"
 case $1 in
 start)
 	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
-	if [ ! -f /var/spool/fcron/systab ]; then
-	   /usr/bin/fcrontab -u systab -z
+	RETVAL=$?
+	if [ $RETVAL -eq 0 -a ! -f /var/spool/fcron/systab ]; then
+		/usr/bin/fcrontab -u systab -z
 	fi
 	;;
 stop)
 	$SSD --stop --retry 10 --pidfile $PID
+	RETVAL=$?
 	;;
 restart)
 	$0 stop
@@ -24,6 +26,7 @@ restart)
 	;;
 reload)
 	$SSD --stop --signal USR1 --pidfile $PID
+	RETVAL=$?
 	;;
 status)
 	$SSD --status --pidfile $PID
@@ -38,5 +41,7 @@ status)
 	echo "usage: $0 [start|stop|restart|reload|status]"
 	;;
 esac
+
+exit $RETVAL
 
 # End of file

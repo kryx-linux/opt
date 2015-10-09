@@ -4,7 +4,7 @@
 # Depends on:  openssl tcp_wrappers zlib
 
 name=stunnel
-version=5.23
+version=5.24
 release=1
 source=(https://www.stunnel.org/downloads/$name-$version.tar.gz \
         $name.conf $name)
