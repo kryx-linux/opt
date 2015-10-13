@@ -6,6 +6,7 @@ drwxr-xr-x	root/root	usr/include/gtksourceview-3.0/gtksourceview/completion-prov
 drwxr-xr-x	root/root	usr/include/gtksourceview-3.0/gtksourceview/completion-providers/words/
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksource.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceautocleanups.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcebuffer.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcecompletion.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcecompletioncontext.h
@@ -23,6 +24,7 @@ drwxr-xr-x	root/root	usr/include/gtksourceview-3.0/gtksourceview/completion-prov
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcegutterrenderertext.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcelanguage.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcelanguagemanager.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcemap.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcemark.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcemarkattributes.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceprintcompositor.h
@@ -30,6 +32,9 @@ drwxr-xr-x	root/root	usr/include/gtksourceview-3.0/gtksourceview/completion-prov
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcesearchsettings.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyle.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestylescheme.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyleschemechooser.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyleschemechooserbutton.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyleschemechooserwidget.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyleschememanager.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcetypes.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceundomanager.h
@@ -40,9 +45,9 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GtkSource-3.0.typelib
 -rwxr-xr-x	root/root	usr/lib/libgtksourceview-3.0.la
-lrwxrwxrwx	root/root	usr/lib/libgtksourceview-3.0.so -> libgtksourceview-3.0.so.1.3.0
-lrwxrwxrwx	root/root	usr/lib/libgtksourceview-3.0.so.1 -> libgtksourceview-3.0.so.1.3.0
--rwxr-xr-x	root/root	usr/lib/libgtksourceview-3.0.so.1.3.0
+lrwxrwxrwx	root/root	usr/lib/libgtksourceview-3.0.so -> libgtksourceview-3.0.so.1.5.0
+lrwxrwxrwx	root/root	usr/lib/libgtksourceview-3.0.so.1 -> libgtksourceview-3.0.so.1.5.0
+-rwxr-xr-x	root/root	usr/lib/libgtksourceview-3.0.so.1.5.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gtksourceview-3.0.pc
 drwxr-xr-x	root/root	usr/share/
@@ -68,8 +73,10 @@ drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/cmake.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/cobol.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/cpp.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/cpphdr.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/csharp.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/css.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/csv.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/cuda.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/d.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/def.lang
@@ -88,6 +95,7 @@ drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/fsharp.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/gap.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/gdb-log.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/genie.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/glsl.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/go.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/gtk-doc.lang
@@ -101,6 +109,7 @@ drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/imagej.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/ini.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/j.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/jade.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/java.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/javascript.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/json.lang
@@ -119,6 +128,7 @@ drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/markdown.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/matlab.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/mediawiki.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/meson.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/modelica.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/mxml.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/nemerle.lang
@@ -135,6 +145,7 @@ drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/pascal.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/perl.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/php.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/pig.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/pkgconfig.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/po.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/prolog.lang
@@ -145,6 +156,7 @@ drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/rpmspec.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/rst.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/ruby.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/rust.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/scala.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/scheme.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/scilab.lang
@@ -157,6 +169,7 @@ drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/t2t.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/tcl.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/texinfo.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/thrift.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/vala.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/vbnet.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/verilog.lang
