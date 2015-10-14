@@ -4,9 +4,9 @@
 # Depends on:	atk, at-spi2-core
 
 name=at-spi2-atk
-version=2.12.1
-release=2
-source=(http://ftp.gnome.org/pub/gnome/sources/at-spi2-atk/2.12/at-spi2-atk-$version.tar.xz)
+version=2.18.1
+release=1
+source=(http://ftp.gnome.org/pub/gnome/sources/at-spi2-atk/${version:0:4}/at-spi2-atk-$version.tar.xz)
 
 build() {
 	cd $name-$version
