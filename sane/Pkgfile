@@ -4,9 +4,9 @@
 # Depends on:  libusb libtiff
 
 name=sane
-version=1.0.24
+version=1.0.25
 release=1
-source=(http://ftp.uni-erlangen.de/pub/mirrors/gentoo/distfiles/$name-backends-$version.tar.gz)
+source=(https://alioth.debian.org/frs/download.php/file/4146/$name-backends-$version.tar.gz)
 
 build () {
     cd $name-backends-$version
