@@ -5,7 +5,7 @@
 # Depends on: zlib libpng
 
 name=freetype
-version=2.6
+version=2.6.1
 release=1
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.bz2)
 
@@ -14,8 +14,7 @@ build() {
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
-                --with-zlib \
-                --disable-nls
+                --with-zlib
 
     make
     make DESTDIR=$PKG install
