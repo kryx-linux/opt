@@ -7,12 +7,12 @@ name=firefox
 version=41.0.2
 release=2
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
-	firefox-install-dir.patch firefox.desktop freetype.patch)
+	firefox-install-dir.patch firefox.desktop)
  
 build() {
     cd mozilla-release
 
-    patch -p1 -i $SRC/freetype.patch
+    sed -i '/^ftfntfmt.h/ i freetype/ftfntfmt.h' config/system-headers
     patch -p1 -i $SRC/firefox-install-dir.patch
  
 cat <<- EOF > .mozconfig
