@@ -8,9 +8,6 @@ PROG=/usr/sbin/chronyd
 PID=/var/run/chronyd.pid
 OPTS="-s -r"
 
-KEY=$(sed -n "s/^commandkey *//p" /etc/chrony.conf)
-PASSWD=$(sed -n "s/^$KEY *//p" /etc/chrony.keys)
-
 case $1 in
 start)
 	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
@@ -23,14 +20,10 @@ restart)
 	$0 start
 	;;
 online)
-	/usr/bin/chronyc << EOF > /dev/null
-	password $PASSWD
-	online
-EOF
+	/usr/bin/chronyc online
 	;;
 offline)
 	/usr/bin/chronyc << EOF > /dev/null
-	password $PASSWD
 	offline
 	dump
 	writertc
