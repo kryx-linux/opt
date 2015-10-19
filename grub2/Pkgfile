@@ -17,9 +17,6 @@ build() {
 	# fix for glibc 'gets' removal
 	sed -i -e '/gets is a/d' grub-core/gnulib/stdio.in.h
 
-	# fix for ftsynth.h path
-	sed -i -e 's|freetype/ftsynth.h|freetype2/ftsynth.h|' util/grub-mkfont.c
-
 	patch -i $SRC/$name-00_header.diff util/grub.d/00_header.in
 	patch -i $SRC/$name-10_linux.diff util/grub.d/10_linux.in
 
