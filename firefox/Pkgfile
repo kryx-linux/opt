@@ -1,17 +1,17 @@
 # Description: The Mozilla Firefox browser
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: nss, unzip, zip, libidl, gtk, python, alsa-lib, xorg-libxt, yasm, mesa3d, gst-plugins-base
+# Depends on: nss, unzip, zip, libidl, gtk3, python, alsa-lib, xorg-libxt, yasm, mesa3d, gst-plugins-base
  
 name=firefox
-version=41.0.2
-release=2
+version=42.0b7
+release=1
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox-install-dir.patch firefox.desktop)
  
 build() {
-    cd mozilla-release
-
+    cd $name-$version
+    
     sed -i '/^ftfntfmt.h/ i freetype/ftfntfmt.h' config/system-headers
     patch -p1 -i $SRC/firefox-install-dir.patch
  
@@ -19,6 +19,7 @@ cat <<- EOF > .mozconfig
     mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
     mk_add_options MOZ_MAKE_FLAGS="$MAKEFLAGS -s"
     ac_add_options --prefix=/usr
+    #ac_add_options --enable-default-toolkit=cairo-gtk2
     ac_add_options --with-system-jpeg
     ac_add_options --with-system-zlib
     ac_add_options --with-system-mng
@@ -28,7 +29,6 @@ cat <<- EOF > .mozconfig
     ac_add_options --enable-system-ffi
     ac_add_options --enable-system-pixman
     ac_add_options --enable-system-sqlite
-    #currently broken:
     #ac_add_options --enable-system-cairo
     ac_add_options --with-pthreads
     ac_add_options --enable-optimize="$CFLAGS"
@@ -37,16 +37,12 @@ cat <<- EOF > .mozconfig
     ac_add_options --enable-extensions=default,-gnomevfs
     ac_add_options --enable-shared
     ac_add_options --enable-svg
-    ac_add_options --enable-canvas
     ac_add_options --enable-crypto
-    ac_add_options --enable-single-profile
-    ac_add_options --enable-places
-    ac_add_options --enable-storage
-    ac_add_options --enable-places_bookmarks
-    ac_add_options --enable-image-encoder=all
     ac_add_options --enable-xft
     ac_add_options --enable-gstreamer=1.0
     ac_add_options --enable-pic
+    ac_add_options --enable-eme
+    ac_add_options --enable-eme=adobe
     ac_add_options --disable-tests
     ac_add_options --disable-mochitest
     ac_add_options --disable-dbus
