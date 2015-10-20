@@ -1,12 +1,12 @@
 # Description: Terminal multiplexer like screen
-# URL:         http://sourceforge.net/projects/tmux 
+# URL:         http://tmux.github.io/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  ncurses libevent
 
 name=tmux
-version=2.0
+version=2.1
 release=1
-source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
+source=(https://github.com/tmux/tmux/releases/download/$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version

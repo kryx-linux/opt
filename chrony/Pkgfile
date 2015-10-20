@@ -4,22 +4,20 @@
 # Depends on:  readline libcap
 
 name=chrony
-version=2.1.1
+version=2.2
 release=1
 source=(http://download.tuxfamily.org/$name/$name-$version.tar.gz
-        chronyd chrony.conf chrony.keys)
+        chronyd chrony.conf)
 
 build () {
     cd $name-$version
-    
+
     ./configure --prefix=/usr --mandir=/usr/man
     make
-    touch chrony.txt
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/share
-
     install -d $PKG/var/{lib,log}/chrony
+    install -d -m 0750 $PKG/var/run/chrony
     install -D -m 755 $SRC/chronyd $PKG/etc/rc.d/chronyd
     install -m 600 $SRC/chrony.* $PKG/etc
 }
