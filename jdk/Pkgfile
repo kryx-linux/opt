@@ -4,7 +4,7 @@
 # Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
-version=1.8.0_60
+version=1.8.0_66
 release=1
 source=(file:///$name-8u${version##*_}-linux-x64.tar.gz)
 
