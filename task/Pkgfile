@@ -4,7 +4,7 @@
 # Depends on:  util-linux cmake
 
 name=task
-version=2.4.4
+version=2.5.0
 release=1
 source=(http://www.taskwarrior.org/download/$name-$version.tar.gz)
 
@@ -15,7 +15,8 @@ build () {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DTASK_MAN1DIR=man/man1 \
         -DTASK_MAN5DIR=man/man5 \
-        -DTASK_DOCDIR=share/task
+        -DTASK_DOCDIR=share/task \
+        -DENABLE_SYNC=OFF
     
     make
     make DESTDIR=$PKG install
