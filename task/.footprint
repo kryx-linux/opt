@@ -36,6 +36,8 @@ drwxr-xr-x	root/root	usr/share/task/rc/
 -rw-r--r--	root/root	usr/share/task/rc/holidays.en-NZ.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.en-US.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.en-ZA.rc
+-rw-r--r--	root/root	usr/share/task/rc/holidays.es-CO.rc
+-rw-r--r--	root/root	usr/share/task/rc/holidays.es-EC.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.es-ES.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.es-MX.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.es-US.rc
@@ -69,22 +71,9 @@ lrwxrwxrwx	root/root	usr/share/task/rc/holidays.por-PRT.rc -> holidays.pt-PT.rc
 -rw-r--r--	root/root	usr/share/task/rc/solarized-light-256.theme
 drwxr-xr-x	root/root	usr/share/task/scripts/
 drwxr-xr-x	root/root	usr/share/task/scripts/add-ons/
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-csv.pl
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-html.pl
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-ical.pl
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-sql.py
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-tsv.pl
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-xml.pl
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-xml.py
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-xml.rb
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-yad.pl
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/export-yaml.pl
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/import-todo.sh.pl
--rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/import-yaml.pl
+-rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/README
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/update-holidays.pl
 drwxr-xr-x	root/root	usr/share/task/scripts/bash/
--rw-r--r--	root/root	usr/share/task/scripts/bash/context
-lrwxrwxrwx	root/root	usr/share/task/scripts/bash/focus -> context
 -rw-r--r--	root/root	usr/share/task/scripts/bash/task.sh
 -rw-r--r--	root/root	usr/share/task/scripts/bash/task_functions.sh
 drwxr-xr-x	root/root	usr/share/task/scripts/fish/
