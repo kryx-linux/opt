@@ -3065,6 +3065,7 @@ drwxr-xr-x	root/root	usr/include/firefox/nestegg/
 -rw-r--r--	root/root	usr/include/firefox/nsIApplicationCacheChannel.h
 -rw-r--r--	root/root	usr/include/firefox/nsIApplicationCacheContainer.h
 -rw-r--r--	root/root	usr/include/firefox/nsIApplicationCacheService.h
+-rw-r--r--	root/root	usr/include/firefox/nsIApplicationChooser.h
 -rw-r--r--	root/root	usr/include/firefox/nsIApplicationReputation.h
 -rw-r--r--	root/root	usr/include/firefox/nsIAppsService.h
 -rw-r--r--	root/root	usr/include/firefox/nsIArray.h
@@ -4599,7 +4600,10 @@ drwxr-xr-x	root/root	usr/lib/firefox/gmp-clearkey/
 drwxr-xr-x	root/root	usr/lib/firefox/gmp-clearkey/0.1/
 -rw-r--r--	root/root	usr/lib/firefox/gmp-clearkey/0.1/clearkey.info
 -rwxr-xr-x	root/root	usr/lib/firefox/gmp-clearkey/0.1/libclearkey.so
+drwxr-xr-x	root/root	usr/lib/firefox/gtk2/
+-rwxr-xr-x	root/root	usr/lib/firefox/gtk2/libmozgtk.so
 -rwxr-xr-x	root/root	usr/lib/firefox/liblgpllibs.so
+-rwxr-xr-x	root/root	usr/lib/firefox/libmozgtk.so
 -rwxr-xr-x	root/root	usr/lib/firefox/libxul.so
 -rw-r--r--	root/root	usr/lib/firefox/omni.ja
 -rw-r--r--	root/root	usr/lib/firefox/platform.ini
@@ -4728,6 +4732,7 @@ drwxr-xr-x	root/root	usr/share/idl/firefox/
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIApplicationCacheChannel.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIApplicationCacheContainer.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIApplicationCacheService.idl
+-rw-r--r--	root/root	usr/share/idl/firefox/nsIApplicationChooser.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIApplicationReputation.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIAppsService.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIArray.idl
