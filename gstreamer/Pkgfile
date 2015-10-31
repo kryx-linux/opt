@@ -5,7 +5,7 @@
 # Depends on: gobject-introspection libxml2
 
 name=gstreamer
-version=1.6.0
+version=1.6.1
 release=1
 source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
