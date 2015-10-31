@@ -5,24 +5,12 @@
 # Depends on: dbus gst-plugins-base gst-plugins-base-compat libmng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-wm xorg-xcb-util-keysyms
 
 name=qt5
-version=5.4.2
+version=5.5.1
 release=1
-source=(http://download.qt.io/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
-	keypad-shortcuts.patch
-	avoid-calling-potentially-pure-virtual-method.patch
-	ibus-get-display-number-when-screen-number-is-omitted.patch)
+source=(http://download.qt.io/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz)
 
 build() {
 	cd qt-everywhere-opensource-src-$version
-
-	# https://bugs.archlinux.org/task/44676
-	patch -d qtbase -p1 -i $SRC/keypad-shortcuts.patch
-
-	# https://bugs.archlinux.org/task/43986
-	patch -d qtdeclarative -p1 -i $SRC/avoid-calling-potentially-pure-virtual-method.patch
-
-	# https://bugs.archlinux.org/task/45180
-	patch -d qtbase -p1 -i $SRC/ibus-get-display-number-when-screen-number-is-omitted.patch
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
