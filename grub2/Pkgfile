@@ -5,7 +5,7 @@
 
 name=grub2
 version=2.00
-release=6
+release=7
 source=(ftp://ftp.gnu.org/gnu/grub/grub-$version.tar.xz \
 	http://unifoundry.com/unifont-5.1.20080820.pcf.gz \
 	$name-00_header.diff $name-10_linux.diff grub.cfg.sample)
