@@ -4,7 +4,7 @@
 # Depends on: nss, unzip, zip, libidl, gtk, gtk3, python, alsa-lib, xorg-libxt, yasm, mesa3d, gst-plugins-base
  
 name=firefox
-version=42.0b9
+version=42.0
 release=1
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox-install-dir.patch firefox.desktop)
