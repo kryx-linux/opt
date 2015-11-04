@@ -4,7 +4,7 @@
 # Packager: Younes Hafri, ycrux at club-internet dot fr
 
 name=icu
-version=55.1
+version=56.1
 release=1
 source=(http://download.icu-project.org/files/icu4c/$version/icu4c-${version//./_}-src.tgz)
 
@@ -13,7 +13,6 @@ build() {
 
 	./configure \
 		--prefix=/usr \
-		--mandir=/usr/man \
 		--disable-samples \
 		--disable-tests
 
