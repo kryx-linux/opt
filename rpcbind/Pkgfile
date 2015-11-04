@@ -7,17 +7,22 @@ name=rpcbind
 version=0.2.3
 release=2
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2 \
-        rpcbind)
+        $name-$version.patch rpcbind)
 
 build() {
     cd $name-$version
+
+    patch -p1 -i $SRC/$name-$version.patch
+
     ./configure --prefix=/usr \
                 --bindir=/sbin \
                 --mandir=/usr/man \
                 --disable-libwrap \
                 --with-rpcuser=root \
                 --without-systemdsystemunitdir
+
     make
     make DESTDIR=$PKG install
+
     install -D -m 755 $SRC/rpcbind $PKG/etc/rc.d/rpcbind
 }

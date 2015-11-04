@@ -3,17 +3,13 @@
 # URL:         http://nfsv4.bullopensource.org/doc/tirpc_rpcbind.php
 
 name=libtirpc
-version=0.3.2
-release=2
-source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2
-        rpc_get_default_domain.patch)
+version=1.0.1
+release=1
+source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
 
-    patch -p1 -i $SRC/rpc_get_default_domain.patch
-
-    autoreconf
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
                 --mandir=/usr/man \
