@@ -15,7 +15,6 @@ build() {
 
 	./configure \
 		--prefix=/usr \
-		--mandir=/usr/man \
 		--enable-python=python2 \
 		--enable-textfe
 		

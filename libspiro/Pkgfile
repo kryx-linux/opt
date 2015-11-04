@@ -14,9 +14,7 @@ build() {
 	autoreconf -i
 	automake --foreign -Wall
 
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/man
+	./configure --prefix=/usr
 
 	make
 	make install DESTDIR=$PKG

@@ -15,7 +15,6 @@ build() {
 
 	./configure \
 		--prefix=/usr \
-		--mandir=/usr/man \
 		--disable-debug \
 		--disable-nls \
 		--disable-dependency-tracking \

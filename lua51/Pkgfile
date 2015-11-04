@@ -29,7 +29,7 @@ build() {
 
 	make MYCFLAGS="$CFLAGS" MYLDFLAGS="$LDFLAGS" linux
 
-	install -d $PKG/usr/include/lua5.1 $PKG/usr/man/man1 $PKG/usr/lib
+	install -d $PKG/usr/include/lua5.1 $PKG/usr/share/man/man1 $PKG/usr/lib
 
 	make \
 		TO_BIN="lua5.1 luac5.1" \
@@ -37,7 +37,7 @@ build() {
 		INSTALL_DATA='cp -d' \
 		INSTALL_TOP="$PKG/usr" \
 		INSTALL_INC="$PKG/usr/include/lua5.1" \
-		INSTALL_MAN="$PKG/usr/man/man1" \
+		INSTALL_MAN="$PKG/usr/share/man/man1" \
 		install
 
 	install -m 0644 -D etc/lua.pc $PKG/usr/lib/pkgconfig/lua5.1.pc
@@ -45,7 +45,7 @@ build() {
 	# fixups
 	ln -s liblua5.1.so $PKG/usr/lib/liblua.so.5.1
 	ln -s liblua5.1.so $PKG/usr/lib/liblua.so.$version
-	cd $PKG/usr/man/man1
+	cd $PKG/usr/share/man/man1
 	mv lua.1 lua5.1.1
 	mv luac.1 luac5.1.1
 }

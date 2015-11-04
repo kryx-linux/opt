@@ -196,11 +196,6 @@ lrwxrwxrwx	root/root	usr/lib/libgirepository-1.0.so.1 -> libgirepository-1.0.so.
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gobject-introspection-1.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gobject-introspection-no-export-1.0.pc
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/g-ir-compiler.1.gz
--rw-r--r--	root/root	usr/man/man1/g-ir-generate.1.gz
--rw-r--r--	root/root	usr/man/man1/g-ir-scanner.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/introspection.m4
@@ -243,3 +238,8 @@ drwxr-xr-x	root/root	usr/share/gobject-introspection-1.0/tests/
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/utility.h
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/warnlib.c
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/warnlib.h
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/g-ir-compiler.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/g-ir-generate.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/g-ir-scanner.1.gz

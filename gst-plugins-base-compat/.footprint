@@ -250,9 +250,6 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-sdp-0.10.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-tag-0.10.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-video-0.10.pc
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/gst-visualise-0.10.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/GstApp-0.10.gir
@@ -269,3 +266,6 @@ drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/GstVideo-0.10.gir
 drwxr-xr-x	root/root	usr/share/gst-plugins-base/
 -rw-r--r--	root/root	usr/share/gst-plugins-base/license-translations.dict
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/gst-visualise-0.10.1.gz

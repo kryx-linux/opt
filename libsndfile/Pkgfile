@@ -12,13 +12,10 @@ source=(http://www.mega-nerd.com/$name/files/$name-$version.tar.gz)
 build() {
 	cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/man \
-		--disable-static
+	./configure --prefix=/usr
 
 	make
 	make DESTDIR=$PKG install
+
 	rm -r $PKG/usr/share/doc
-	rmdir $PKG/usr/share
 }

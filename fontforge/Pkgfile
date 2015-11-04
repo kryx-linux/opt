@@ -16,7 +16,6 @@ build() {
 	./bootstrap --force
 	./configure \
 		--prefix=/usr \
-		--mandir=/usr/man \
 		--enable-python-extension
 
 	make

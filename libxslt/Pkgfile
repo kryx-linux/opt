@@ -14,18 +14,18 @@ build() {
 
 	./configure \
 		--prefix=/usr \
-		--mandir=/usr/man \
 		--without-python \
 		--without-crypto
 
 	make
 	make DESTDIR=$PKG install
+
 	rm -r $PKG/usr/share/doc
 
 	# move manpages
-	if [ -e $PKG/usr/man/man4/libxslt.4 ]; then
-		(cd $PKG/usr/man
-		mkdir man3
+	if [ -e $PKG/usr/share/man/man4/libxslt.4 ]; then
+		(cd $PKG/usr/share/man
+		install -d man3
 		mv man4/libxslt.4 man3/libxslt.3)
 	fi
 }

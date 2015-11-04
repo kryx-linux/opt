@@ -32,7 +32,6 @@ build() {
 		--with-rootprefix= \
 		--with-rootlibdir=/lib \
 		--libexecdir=/lib \
-		--mandir=/usr/man \
 		--disable-manpages \
 		--enable-split-usr
 
