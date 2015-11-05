@@ -5,8 +5,8 @@
 # Depends on: readline
 
 name=lua
-version=5.2.3
-release=2
+version=5.3.1
+release=1
 source=(http://www.lua.org/ftp/$name-$version.tar.gz
 	liblua.so.patch lua.pc)
 
@@ -14,18 +14,18 @@ build() {
 	cd $name-$version
 
 	patch -p 1 -i $SRC/liblua.so.patch
-	export CFLAGS="$CFLAGS -fPIC"
+	export CFLAGS="$CFLAGS -fPIC -DLUA_COMPAT_5_2 -DLUA_COMPAT_5_1"
 
 	make MYCFLAGS="$CFLAGS" MYLDFLAGS="$LDFLAGS" linux
 
 	make \
-		TO_LIB="liblua.a liblua.so.$version" \
+		TO_LIB="liblua.a liblua.so.${version:0:3} liblua.so.$version" \
 		INSTALL_TOP=$PKG/usr install
 
-	ln -sf liblua.so.$version $PKG/usr/lib/liblua.so.${version:0:3}
-	ln -sf liblua.so.${version:0:3} $PKG/usr/lib/liblua.so
+	ln -sf /usr/bin/lua $PKG/usr/bin/lua${version:0:3}
+	ln -sf /usr/bin/luac $PKG/usr/bin/luac${version:0:3}
 
 	#make pc > lua.pc
-	sed "s/%VER%/${version%.*}/g;s/%REL%/$version/g" $SRC/lua.pc > lua.pc
+	sed "s/%VER%/${version:0:3}/g;s/%REL%/$version/g" $SRC/lua.pc > lua.pc
 	install -m 0644 -D lua.pc $PKG/usr/lib/pkgconfig/lua.pc
 }
