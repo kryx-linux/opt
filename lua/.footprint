@@ -12,7 +12,8 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/lualib.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/liblua.a
--rw-r--r--	root/root	usr/lib/liblua.so.5.3
+lrwxrwxrwx	root/root	usr/lib/liblua.so -> liblua.so.5.3
+lrwxrwxrwx	root/root	usr/lib/liblua.so.5.3 -> liblua.so.5.3.1
 -rw-r--r--	root/root	usr/lib/liblua.so.5.3.1
 drwxr-xr-x	root/root	usr/lib/lua/
 drwxr-xr-x	root/root	usr/lib/lua/5.3/
