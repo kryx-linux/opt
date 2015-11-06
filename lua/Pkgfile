@@ -6,7 +6,7 @@
 
 name=lua
 version=5.3.1
-release=1
+release=2
 source=(http://www.lua.org/ftp/$name-$version.tar.gz
 	liblua.so.patch lua.pc)
 
@@ -19,9 +19,11 @@ build() {
 	make MYCFLAGS="$CFLAGS" MYLDFLAGS="$LDFLAGS" linux
 
 	make \
-		TO_LIB="liblua.a liblua.so.${version:0:3} liblua.so.$version" \
+		TO_LIB="liblua.a liblua.so.$version" \
 		INSTALL_TOP=$PKG/usr install
 
+	ln -sf liblua.so.$version $PKG/usr/lib/liblua.so.${version:0:3}
+	ln -sf liblua.so.${version:0:3} $PKG/usr/lib/liblua.so
 	ln -sf /usr/bin/lua $PKG/usr/bin/lua${version:0:3}
 	ln -sf /usr/bin/luac $PKG/usr/bin/luac${version:0:3}
 
