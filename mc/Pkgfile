@@ -4,7 +4,7 @@
 # Depends on:  util-linux ncurses glib
 
 name=mc
-version=4.8.14
+version=4.8.15
 release=1
 source=(http://ftp.osuosl.org/pub/midnightcommander/$name-$version.tar.xz)
 

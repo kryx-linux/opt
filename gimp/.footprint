@@ -265,10 +265,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-gamma.so
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-high-contrast.la
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-high-contrast.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-lcms.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-lcms.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-proof.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-proof.so
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/alien-map
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/align-layers
@@ -336,7 +332,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-html-table
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-ico
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-jpeg
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-mng
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pat
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pcx
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pdf-save
@@ -376,7 +371,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/imagemap
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/iwarp
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/jigsaw
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lcms
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens-apply
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens-distortion
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens-flare
@@ -385,7 +379,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/map-object
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/max-rgb
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/maze
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/metadata
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/mosaic
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/newsprint
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/nl-filter
@@ -481,6 +474,7 @@ drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/gimp-2.8.1.gz
 lrwxrwxrwx	root/root	usr/man/man1/gimp-console-2.8.1.gz -> gimp-2.8.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/gimp-console.1.gz -> gimp-console-2.8.1.gz
 lrwxrwxrwx	root/root	usr/man/man1/gimp.1.gz -> gimp-2.8.1.gz
 -rw-r--r--	root/root	usr/man/man1/gimptool-2.0.1.gz
 drwxr-xr-x	root/root	usr/man/man5/
