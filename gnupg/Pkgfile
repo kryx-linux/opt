@@ -5,7 +5,7 @@
 # Depends on:  libgcrypt, libassuan, libksba, pinentry, libpth
 
 name=gnupg
-version=2.0.28
+version=2.0.29
 release=1
 source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2)
         
