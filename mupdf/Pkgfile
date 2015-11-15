@@ -4,7 +4,7 @@
 # Depends on:  curl freetype libjpeg-turbo xorg-libxext
 
 name=mupdf
-version=1.7a
+version=1.8
 release=1
 source=(http://mupdf.com/download/$name-$version-source.tar.gz)
 
@@ -16,6 +16,5 @@ build() {
     make prefix=$PKG/usr mandir=$PKG/usr/man install
    
     ln -s mupdf-x11-curl $PKG/usr/bin/mupdf
-    rm $PKG/usr/bin/mupdf-x11
     rm -r $PKG/usr/share
 } 
