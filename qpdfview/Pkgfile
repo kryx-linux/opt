@@ -4,7 +4,7 @@
 # Depends on:  poppler-qt4
 
 name=qpdfview
-version=0.4.15
+version=0.4.16
 release=1
 source=(https://launchpad.net/qpdfview/trunk/$version/+download/$name-$version.tar.gz)
 
