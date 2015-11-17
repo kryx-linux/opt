@@ -5,7 +5,7 @@
 
 name=elinks
 version=20150225
-release=2
+release=3
 source=(http://crux.nu/files/distfiles/$name-$version.tar.xz)
 
 build () {
@@ -14,7 +14,6 @@ build () {
     autoreconf -i
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --sysconfdir=/usr/etc \
                 --enable-256-colors \
                 --enable-html-highlight \
@@ -22,7 +21,7 @@ build () {
                 --with-zlib \
                 --without-{x,bzlib,lua}
 
-    make
+    make CFLAGS="$CFLAGS -Wno-all"
     make DESTDIR=$PKG install
 
     ln -s elinks $PKG/usr/bin/links
