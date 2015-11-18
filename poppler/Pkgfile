@@ -13,7 +13,6 @@ build() {
     cd $name-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --enable-{zlib,libjpeg,libpng} \
                 --enable-cms=lcms2 \
                 --enable-libopenjpeg=none \
