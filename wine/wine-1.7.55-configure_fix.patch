@@ -1,0 +1,120 @@
+https://github.com/wine-mirror/wine/commit/480e95ae97f298d2e894a3a943617f88703676fd?diff=unified
+makefiles: Generate makefiles and po rules only for disabled dlls.
+Signed-off-by: Alexandre Julliard <julliard@winehq.org>
+diff -pruN wine-1.7.55.orig/aclocal.m4 wine-1.7.55/aclocal.m4
+--- wine-1.7.55.orig/aclocal.m4	2015-11-17 23:54:27.000000000 +0000
++++ wine-1.7.55/aclocal.m4	2015-11-17 23:54:51.000000000 +0000
+@@ -330,9 +330,11 @@ wine_fn_disabled_rules ()
+     ac_extraclean="$ac_dir/Makefile"
+     test "$srcdir" = . && ac_extraclean="$ac_extraclean $ac_dir/.gitignore"
+ 
+-    wine_fn_depend_rules
+-    wine_fn_clean_rules $ac_clean
+-    wine_fn_pot_rules
++    wine_fn_append_rule \
++"__clean__: $ac_dir/clean
++.PHONY: $ac_dir/clean
++$ac_dir/clean: dummy
++	\$(RM) \$(CLEAN_FILES:%=$ac_dir/%) $ac_clean $ac_extraclean"
+ }
+ 
+ wine_fn_config_makefile ()
+@@ -397,7 +399,7 @@ wine_fn_config_dll ()
+ 
+     AS_VAR_IF([$ac_enable],[no],
+               dnl enable_win16 is special in that it disables import libs too
+-              [if wine_fn_has_flag implib && test "$ac_enable" != enable_win16
++              [if test "$ac_enable" != enable_win16
+                then
+                    wine_fn_depend_rules
+                    wine_fn_clean_rules $ac_clean
+diff -pruN wine-1.7.55.orig/configure wine-1.7.55/configure
+--- wine-1.7.55.orig/configure	2015-11-17 23:54:27.000000000 +0000
++++ wine-1.7.55/configure	2015-11-17 23:55:40.000000000 +0000
+@@ -7520,9 +7520,11 @@ wine_fn_disabled_rules ()
+     ac_extraclean="$ac_dir/Makefile"
+     test "$srcdir" = . && ac_extraclean="$ac_extraclean $ac_dir/.gitignore"
+ 
+-    wine_fn_depend_rules
+-    wine_fn_clean_rules $ac_clean
+-    wine_fn_pot_rules
++    wine_fn_append_rule \
++"__clean__: $ac_dir/clean
++.PHONY: $ac_dir/clean
++$ac_dir/clean: dummy
++	\$(RM) \$(CLEAN_FILES:%=$ac_dir/%) $ac_clean $ac_extraclean"
+ }
+ 
+ wine_fn_config_makefile ()
+@@ -7596,7 +7598,7 @@ fi
+     test -n "$DLLEXT" || ac_clean="$ac_clean $ac_dir/$ac_dll"
+ 
+     if eval test \"x\$"$ac_enable"\" = x"no"; then :
+-                if wine_fn_has_flag implib && test "$ac_enable" != enable_win16
++                if test "$ac_enable" != enable_win16
+                then
+                    wine_fn_depend_rules
+                    wine_fn_clean_rules $ac_clean
+@@ -8241,7 +8243,6 @@ fi
+ 
+   linux-android*)
+     DLLFLAGS="$DLLFLAGS -fPIC"
+-    dlldir="\${libdir}"
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the compiler supports -fPIC -Wl,--export-dynamic" >&5
+ $as_echo_n "checking whether the compiler supports -fPIC -Wl,--export-dynamic... " >&6; }
+ if ${ac_cv_cflags__fPIC__Wl___export_dynamic+:} false; then :
+@@ -8350,36 +8351,31 @@ $as_echo "$ac_cv_cflags__Wl___enable_new
+ if test "x$ac_cv_cflags__Wl___enable_new_dtags" = xyes; then :
+   LDRPATH_INSTALL="$LDRPATH_INSTALL -Wl,--enable-new-dtags"
+ fi
+-
+-    case $host_cpu in
+-      *i[3456789]86* | x86_64)
+-        { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the compiler supports -Wl,--section-start,.interp=0x7bf00400" >&5
+-$as_echo_n "checking whether the compiler supports -Wl,--section-start,.interp=0x7bf00400... " >&6; }
+-if ${ac_cv_cflags__Wl___section_start__interp_0x7bf00400+:} false; then :
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the compiler supports -Wl,-pie" >&5
++$as_echo_n "checking whether the compiler supports -Wl,-pie... " >&6; }
++if ${ac_cv_cflags__Wl__pie+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_wine_try_cflags_saved=$CFLAGS
+-CFLAGS="$CFLAGS -Wl,--section-start,.interp=0x7bf00400"
++CFLAGS="$CFLAGS -Wl,-pie"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ int main(int argc, char **argv) { return 0; }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+-  ac_cv_cflags__Wl___section_start__interp_0x7bf00400=yes
++  ac_cv_cflags__Wl__pie=yes
+ else
+-  ac_cv_cflags__Wl___section_start__interp_0x7bf00400=no
++  ac_cv_cflags__Wl__pie=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ CFLAGS=$ac_wine_try_cflags_saved
+ fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_cflags__Wl___section_start__interp_0x7bf00400" >&5
+-$as_echo "$ac_cv_cflags__Wl___section_start__interp_0x7bf00400" >&6; }
+-if test "x$ac_cv_cflags__Wl___section_start__interp_0x7bf00400" = xyes; then :
+-  LDEXECFLAGS="$LDEXECFLAGS -Wl,--section-start,.interp=0x7bf00400"
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_cflags__Wl__pie" >&5
++$as_echo "$ac_cv_cflags__Wl__pie" >&6; }
++if test "x$ac_cv_cflags__Wl__pie" = xyes; then :
++  LDRPATH_INSTALL="$LDRPATH_INSTALL -Wl,-pie"
+ fi
+-        ;;
+-    esac
+ 
+     LIBWINE_SHAREDLIB="libwine.so"
+ 
+@@ -14943,6 +14939,7 @@ case $build_os in
+ esac
+ 
+ case $host_os in
++  linux-android*) ;;
+   linux*)
+     case $host_cpu in
+       *i[3456789]86*|x86_64*)

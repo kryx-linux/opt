@@ -209,6 +209,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3drmwin.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dtypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dvec.inl
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx10.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10core.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10core.idl
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx9.h
@@ -850,7 +851,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/xmllite.idl
 -rw-r--r--	root/root	usr/include/wine/windows/zmouse.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libwine.so -> libwine.so.1.0
+lrwxrwxrwx	root/root	usr/lib/libwine.so -> libwine.so.1
 lrwxrwxrwx	root/root	usr/lib/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib/libwine.so.1.0
 drwxr-xr-x	root/root	usr/lib/wine/
@@ -968,7 +969,9 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/avifil32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/avrt.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/bcrypt.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/bluetoothapis.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/browseui.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/bthprops.cpl.so
 -rwxr-xr-x	root/root	usr/lib/wine/cabarc.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/cabinet.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/cacls.exe.so
@@ -1218,7 +1221,9 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/avifil32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/avrt.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/bcrypt.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/bluetoothapis.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/browseui.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/bthprops.cpl
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/cabarc.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/cabinet.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/cacls.exe
@@ -1679,6 +1684,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wmic.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wmiutils.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wmp.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/wmplayer.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wmvcore.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wnaspi32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wordpad.exe
@@ -2230,6 +2236,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/wmic.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/wmiutils.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wmp.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/wmplayer.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/wmvcore.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wnaspi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wordpad.exe.so
@@ -2275,7 +2282,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/xpsprint.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xpssvcs.dll.so
 drwxr-xr-x	root/root	usr/lib32/
-lrwxrwxrwx	root/root	usr/lib32/libwine.so -> libwine.so.1.0
+lrwxrwxrwx	root/root	usr/lib32/libwine.so -> libwine.so.1
 lrwxrwxrwx	root/root	usr/lib32/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib32/libwine.so.1.0
 drwxr-xr-x	root/root	usr/lib32/wine/
@@ -2394,7 +2401,9 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/avifile.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/avrt.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/bcrypt.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/bluetoothapis.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/browseui.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/bthprops.cpl.so
 -rwxr-xr-x	root/root	usr/lib32/wine/cabarc.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/cabinet.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/cacls.exe.so
@@ -2653,7 +2662,9 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/avifile.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/avrt.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/bcrypt.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/bluetoothapis.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/browseui.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/bthprops.cpl
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/cabarc.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/cabinet.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/cacls.exe
@@ -3175,6 +3186,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wmic.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wmiutils.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wmp.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/wmplayer.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wmvcore.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wnaspi32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wordpad.exe
@@ -3782,6 +3794,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/wmic.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wmiutils.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wmp.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/wmplayer.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wmvcore.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wnaspi32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wordpad.exe.so
