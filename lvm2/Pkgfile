@@ -4,7 +4,7 @@
 # Depends on:  libdevmapper
 
 name=lvm2
-version=2.02.133
+version=2.02.134
 release=1
 source=(http://mirrors.kernel.org/sources.redhat.com/lvm2/releases/LVM2.$version.tgz)
 
@@ -19,7 +19,8 @@ build() {
 
     ./configure --prefix=/usr \
 		--exec-prefix= \
-		--datarootdir=/usr \
+		--mandir=/usr/share/man \
+        --datarootdir=/usr \
 		--with-udev-prefix= \
 		--disable-readline \
 		--enable-pkgconfig \
