@@ -13,6 +13,7 @@ build() {
     cd $name-$version
     ./configure --prefix=/usr \
         --mandir=/usr/man \
+        --disable-bat \
         --disable-nls \
         --disable-xmlto
 
