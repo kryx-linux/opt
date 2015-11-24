@@ -1,10 +1,10 @@
 # Description: ALSA utils
 # URL: http://www.alsa-project.org/
-# Maintainer: Matt Housh, jaeger at crux dot nu
+# Maintainer: Matt Housh, jaeger at crux dot ninja
 # Depends on: gettext, alsa-lib, dialog
 
 name=alsa-utils
-version=1.0.29
+version=1.1.0
 release=1
 source=(http://crux.nu/files/distfiles/$name-$version.tar.bz2 \
     rc.alsa)
