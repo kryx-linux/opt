@@ -16,6 +16,7 @@ lrwxrwxrwx	root/root	usr/lib/libaoss.so.0 -> libaoss.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libaoss.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libossredir.a
 -rwxr-xr-x	root/root	usr/lib/libossredir.la
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/aoss.1.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/aoss.1.gz
