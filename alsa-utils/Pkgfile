@@ -5,14 +5,13 @@
 
 name=alsa-utils
 version=1.1.0
-release=1
+release=2
 source=(http://crux.nu/files/distfiles/$name-$version.tar.bz2 \
     rc.alsa)
 
 build() {
     cd $name-$version
     ./configure --prefix=/usr \
-        --mandir=/usr/man \
         --disable-bat \
         --disable-nls \
         --disable-xmlto
@@ -22,7 +21,7 @@ build() {
 
     make
     make DESTDIR=$PKG install
-    rm -r $PKG/usr/man/{fr,man7}
+    rm -r $PKG/usr/share/man/{fr,man7}
 
     install -D -m 0755 $SRC/rc.alsa $PKG/etc/rc.d/alsa
 }
