@@ -5916,7 +5916,6 @@ drwxr-xr-x	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QAlsaPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderServicePlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServicePlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerPlayerServicePlugin.cmake
@@ -6613,8 +6612,6 @@ drwxr-xr-x	root/root	usr/share/qt5/mkspecs/modules/
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/qfeatures.pri
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/qmodule.pri
 drwxr-xr-x	root/root	usr/share/qt5/plugins/
-drwxr-xr-x	root/root	usr/share/qt5/plugins/audio/
--rwxr-xr-x	root/root	usr/share/qt5/plugins/audio/libqtaudio_alsa.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/bearer/
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/bearer/libqconnmanbearer.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/bearer/libqgenericbearer.so
