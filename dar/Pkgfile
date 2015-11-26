@@ -4,7 +4,7 @@
 # Depends on:  attr, lzo, zlib, bzip2, xz, libgcrypt
 
 name=dar
-version=2.5.1
+version=2.5.2
 release=1
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz \
         darrc)
@@ -13,7 +13,6 @@ build () {
     cd $name-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --disable-nls \
                 --enable-mode=64 \
                 --disable-build-html
@@ -21,6 +20,6 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/share
+    rm -r $PKG/usr/share/dar
     install -D -m 644 $SRC/darrc $PKG/etc/darrc
 }
