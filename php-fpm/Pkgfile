@@ -4,7 +4,7 @@
 # Depends on:  xz libpcre libxml2
 
 name=php-fpm
-version=5.6.15
+version=5.6.16
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz
         php-fpm)
@@ -34,10 +34,10 @@ build () {
 
     make
 
-    install -d $PKG/{usr/{sbin,man/man8},etc/{rc.d,php}}
+    install -d $PKG/{usr/{sbin,share/man/man8},etc/{rc.d,php}}
     install -m 755 sapi/fpm/php-fpm $PKG/usr/sbin/
     install -m 644 sapi/fpm/php-fpm.conf $PKG/etc/php/
-    install -m 644 sapi/fpm/php-fpm.8 $PKG/usr/man/man8/
+    install -m 644 sapi/fpm/php-fpm.8 $PKG/usr/share/man/man8/
     install -m 755 $SRC/php-fpm $PKG/etc/rc.d/
 
     sed -i '/;pid =/s/;//' $PKG/etc/php/php-fpm.conf
