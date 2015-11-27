@@ -4,7 +4,7 @@
 # Depends on:  readline libpcre libxml2 curl db gdbm xz
 
 name=php
-version=5.6.15
+version=5.6.16
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
@@ -12,7 +12,7 @@ build () {
     cd php-$version
 
     local PHP_CONFIG="
-    --prefix=/usr --mandir=/usr/man \
+    --prefix=/usr \
     --with-config-file-path=/etc/php \
     --with-config-file-scan-dir=/etc/php/conf.d \
     --with-zlib \
