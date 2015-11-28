@@ -6,7 +6,7 @@
 
 name=qt5
 version=5.5.1
-release=1
+release=2
 source=(http://download.qt.io/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz)
 
 build() {
@@ -91,4 +91,11 @@ build() {
 	for b in $PKG/usr/share/qt5/bin/*; do
 		ln -s /usr/share/qt5/bin/$(basename $b) $PKG/usr/bin/$(basename $b)-qt5
 	done
+
+	# cmake
+	install -d $PKG/usr/lib/cmake
+        for b in $PKG/usr/share/qt5/lib/cmake/*; do
+                ln -s /usr/share/qt5/lib/cmake/$(basename $b) $PKG/usr/lib/cmake/$(basename $b)
+        done
+
 }

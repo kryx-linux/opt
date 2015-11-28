@@ -43,6 +43,53 @@ lrwxrwxrwx	root/root	usr/bin/xmlpatternsvalidator-qt5 -> /usr/share/qt5/bin/xmlp
 drwxr-xr-x	root/root	usr/include/
 lrwxrwxrwx	root/root	usr/include/qt5 -> ../share/qt5/include
 drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/cmake/
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5 -> /usr/share/qt5/lib/cmake/Qt5
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt53DCollision -> /usr/share/qt5/lib/cmake/Qt53DCollision
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt53DCore -> /usr/share/qt5/lib/cmake/Qt53DCore
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt53DInput -> /usr/share/qt5/lib/cmake/Qt53DInput
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt53DLogic -> /usr/share/qt5/lib/cmake/Qt53DLogic
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt53DQuick -> /usr/share/qt5/lib/cmake/Qt53DQuick
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt53DQuickRenderer -> /usr/share/qt5/lib/cmake/Qt53DQuickRenderer
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt53DRenderer -> /usr/share/qt5/lib/cmake/Qt53DRenderer
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Bluetooth -> /usr/share/qt5/lib/cmake/Qt5Bluetooth
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Concurrent -> /usr/share/qt5/lib/cmake/Qt5Concurrent
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Core -> /usr/share/qt5/lib/cmake/Qt5Core
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5DBus -> /usr/share/qt5/lib/cmake/Qt5DBus
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Declarative -> /usr/share/qt5/lib/cmake/Qt5Declarative
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Designer -> /usr/share/qt5/lib/cmake/Qt5Designer
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Enginio -> /usr/share/qt5/lib/cmake/Qt5Enginio
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Gui -> /usr/share/qt5/lib/cmake/Qt5Gui
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Help -> /usr/share/qt5/lib/cmake/Qt5Help
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5LinguistTools -> /usr/share/qt5/lib/cmake/Qt5LinguistTools
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Location -> /usr/share/qt5/lib/cmake/Qt5Location
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Multimedia -> /usr/share/qt5/lib/cmake/Qt5Multimedia
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5MultimediaWidgets -> /usr/share/qt5/lib/cmake/Qt5MultimediaWidgets
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Network -> /usr/share/qt5/lib/cmake/Qt5Network
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Nfc -> /usr/share/qt5/lib/cmake/Qt5Nfc
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5OpenGL -> /usr/share/qt5/lib/cmake/Qt5OpenGL
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5OpenGLExtensions -> /usr/share/qt5/lib/cmake/Qt5OpenGLExtensions
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Positioning -> /usr/share/qt5/lib/cmake/Qt5Positioning
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5PrintSupport -> /usr/share/qt5/lib/cmake/Qt5PrintSupport
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Qml -> /usr/share/qt5/lib/cmake/Qt5Qml
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Quick -> /usr/share/qt5/lib/cmake/Qt5Quick
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5QuickTest -> /usr/share/qt5/lib/cmake/Qt5QuickTest
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5QuickWidgets -> /usr/share/qt5/lib/cmake/Qt5QuickWidgets
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Script -> /usr/share/qt5/lib/cmake/Qt5Script
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5ScriptTools -> /usr/share/qt5/lib/cmake/Qt5ScriptTools
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Sensors -> /usr/share/qt5/lib/cmake/Qt5Sensors
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5SerialPort -> /usr/share/qt5/lib/cmake/Qt5SerialPort
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Sql -> /usr/share/qt5/lib/cmake/Qt5Sql
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Svg -> /usr/share/qt5/lib/cmake/Qt5Svg
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Test -> /usr/share/qt5/lib/cmake/Qt5Test
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5UiPlugin -> /usr/share/qt5/lib/cmake/Qt5UiPlugin
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5UiTools -> /usr/share/qt5/lib/cmake/Qt5UiTools
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5WebChannel -> /usr/share/qt5/lib/cmake/Qt5WebChannel
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5WebSockets -> /usr/share/qt5/lib/cmake/Qt5WebSockets
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Widgets -> /usr/share/qt5/lib/cmake/Qt5Widgets
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5X11Extras -> /usr/share/qt5/lib/cmake/Qt5X11Extras
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5Xml -> /usr/share/qt5/lib/cmake/Qt5Xml
+lrwxrwxrwx	root/root	usr/lib/cmake/Qt5XmlPatterns -> /usr/share/qt5/lib/cmake/Qt5XmlPatterns
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/Enginio.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt53DCollision.pc
