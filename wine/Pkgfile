@@ -5,18 +5,15 @@
 # Depends on:fontconfig-32 freeglut-32 xorg-libxcomposite-32 xorg-libxcursor-32 xorg-libxinerama-32 xorg-libxrandr-32 xorg-libxxf86dga-32 alsa-lib-32 libpng-32 libjpeg-turbo-32 prelink gnutls-32
 
 name=wine
-version=1.7.55
+version=1.8-rc2
 release=1
 source=(http://downloads.sourceforge.net/wine/$name-$version.tar.bz2
 	http://downloads.sourceforge.net/wine/wine_gecko-2.40-x86.msi
 	http://downloads.sourceforge.net/wine/wine_gecko-2.40-x86_64.msi
-	http://downloads.sourceforge.net/wine/wine-mono-4.5.6.msi
-	wine-1.7.55-configure_fix.patch)
+	http://downloads.sourceforge.net/wine/wine-mono-4.5.6.msi)
 
 build() {
 	install -d wine32 wine64
-
-	patch -d $name-$version -p1 -i $SRC/wine-1.7.55-configure_fix.patch
 
 	cd wine64
 
