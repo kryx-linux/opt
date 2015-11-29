@@ -11,7 +11,6 @@ source=(http://www.rarlab.com/rar/${name}src-$version.tar.gz)
 
 build() {
     cd $name
-    sed -i "s/^CXXFLAGS=.*/CXXFLAGS=$CXXFLAGS/" makefile
-    make
+    make CXXFLAGS="$CXXFLAGS" STRIP=:
     make install DESTDIR=$PKG/usr
 }
