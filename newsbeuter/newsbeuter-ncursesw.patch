@@ -1,0 +1,18 @@
+commit 02f08698f74bb5bba6f036292b1d26fd22255c7f
+Author: Jan Pobrislo <ccx@webprojekty.cz>
+Date:   Thu Aug 27 12:32:18 2015 +0200
+
+    Use pkg-config to search for ncursesw.
+
+diff --git a/config.sh b/config.sh
+index a9f0081..4f8afe4 100755
+--- a/config.sh
++++ b/config.sh
+@@ -110,6 +110,7 @@ check_pkg "stfl" || fail "stfl"
+ if [ `uname -s` = "Darwin" ]; then
+ 	check_custom "ncurses5.4" "ncurses5.4-config" || fail "ncurses5.4"
+ elif [ `uname -s` != "OpenBSD" ]; then
++	check_pkg "ncursesw" || \
+ 	check_custom "ncursesw5" "ncursesw5-config" ||  fail "ncursesw"
+ fi
+ check_ssl_implementation

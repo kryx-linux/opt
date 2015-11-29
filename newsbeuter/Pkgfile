@@ -5,14 +5,16 @@
 
 name=newsbeuter
 version=2.9
-release=1
-source=(http://www.newsbeuter.org/downloads/$name-$version.tar.gz)
+release=2
+source=(http://www.newsbeuter.org/downloads/$name-$version.tar.gz \
+        $name-ncursesw.patch)
 
 build () {
     cd $name-$version
-    export prefix=/usr mandir=/usr/man
+    export prefix=/usr
+    patch -p1 -i $SRC/$name-ncursesw.patch
     ./config.sh
     make
     make DESTDIR=$PKG install
-    rm -r $PKG/usr/share
+    rm -r $PKG/usr/share/{doc,locale}
 }

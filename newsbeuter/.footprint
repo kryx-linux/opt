@@ -2,7 +2,8 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/newsbeuter
 -rwxr-xr-x	root/root	usr/bin/podbeuter
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rwxr-xr-x	root/root	usr/man/man1/newsbeuter.1.gz
--rwxr-xr-x	root/root	usr/man/man1/podbeuter.1.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rwxr-xr-x	root/root	usr/share/man/man1/newsbeuter.1.gz
+-rwxr-xr-x	root/root	usr/share/man/man1/podbeuter.1.gz
