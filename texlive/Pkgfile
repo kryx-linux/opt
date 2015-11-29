@@ -67,8 +67,8 @@ build() {
 
   cd ..
 
-  install -d $PKG/usr/lib/perl5/site_perl/5.18/TeXLive
-  install texk/tests/TeXLive/TL{Config,Utils}.pm $PKG/usr/lib/perl5/site_perl/5.18/TeXLive
+  install -d $PKG/usr/lib/perl5/site_perl/5.22/TeXLive
+  install texk/tests/TeXLive/TL{Config,Utils}.pm $PKG/usr/lib/perl5/site_perl/5.22/TeXLive
 
   # Create symlinks
   PATH="$PKG/usr/bin:$PATH" LD_LIBRARY_PATH+=$PKG/usr/lib \

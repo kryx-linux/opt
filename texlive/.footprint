@@ -450,10 +450,10 @@ lrwxrwxrwx	root/root	usr/lib/libsynctex.so.1 -> libsynctex.so.1.17.0
 -rwxr-xr-x	root/root	usr/lib/libsynctex.so.1.17.0
 drwxr-xr-x	root/root	usr/lib/perl5/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.18/
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.18/TeXLive/
--rwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.18/TeXLive/TLConfig.pm
--rwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.18/TeXLive/TLUtils.pm
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/TeXLive/
+-rwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/TeXLive/TLConfig.pm
+-rwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/TeXLive/TLUtils.pm
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/kpathsea.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/ptexenc.pc
