@@ -39,4 +39,7 @@ build() {
   rm -r $PKG/usr/include/llvm{,-c}
   rm $PKG/usr/bin/{bugpoint,ll*,macho-dump,opt,FileCheck,count,not,obj2yaml,verify-uselistorder,yaml2obj}
   rm $PKG/usr/lib/{LLVMHello.so,BugpointPasses.so,libLTO.*,libLLVM*}
+  # avoid conflicts with opt/llvm
+  rm -r $PKG/usr/share/llvm
+
 }
