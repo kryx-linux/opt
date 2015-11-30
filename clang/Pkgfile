@@ -5,7 +5,7 @@
 # Depends on:  python, llvm
 
 name=clang
-version=3.6.2
+version=3.7.0
 release=1
 source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
   config.h llvm-config.h)
@@ -14,20 +14,17 @@ build() {
   mv cfe-$version.src llvm-$version.src/tools/clang
 
   cd llvm-$version.src
+  mkdir build
+  cd build
 
-  ./configure --prefix=/usr \
+  ../configure --prefix=/usr \
     --without-oprofile \
     --enable-cxx11 \
     --enable-targets=x86,x86_64,r600 \
-    --enable-shared \
-    --mandir=/usr/man
+    --enable-shared
 
   make DISABLE_ASSERTIONS=1 $MAKEFLAGS
   make DISABLE_ASSERTIONS=1 DESTDIR=$PKG install
-
-  # Unfortunately, llvm's configure script seems to ignore --mandir.
-  mv $PKG/usr/share/man $PKG/usr
-  rm -rf $PKG/usr/share
 
   find $PKG -name .dir -delete
   rm -rf $PKG/usr/docs
