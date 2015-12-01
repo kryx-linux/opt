@@ -2,6 +2,7 @@ drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/lvm/
 drwx------	root/root	etc/lvm/archive/
 drwx------	root/root	etc/lvm/backup/
+drwx------	root/root	etc/lvm/cache/
 -rw-r--r--	root/root	etc/lvm/lvm.conf
 -rw-r--r--	root/root	etc/lvm/lvmlocal.conf
 drwxr-xr-x	root/root	etc/lvm/profile/
