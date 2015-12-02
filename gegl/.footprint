@@ -237,8 +237,6 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.3/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/invert-gamma.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/invert-linear.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/invert-linear.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.3/jp2-load.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.3/jp2-load.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/jpg-load.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/jpg-load.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/jpg-save.la
@@ -247,8 +245,6 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.3/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/json.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/layer.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/layer.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.3/lcms-from-profile.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.3/lcms-from-profile.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/lens-distortion.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/lens-distortion.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/lens-flare.la
@@ -377,8 +373,6 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.3/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/save.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/screen.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/screen.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.3/sdl-display.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.3/sdl-display.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/seamless-clone-compose.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/seamless-clone-compose.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/seamless-clone.la
@@ -415,8 +409,6 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.3/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/supernova.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/svg-huerotate.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/svg-huerotate.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.3/svg-load.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.3/svg-load.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/svg-luminancetoalpha.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/svg-luminancetoalpha.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.3/svg-matrix.la
@@ -489,7 +481,3 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/Gegl-0.3.gir
-drwxr-xr-x	root/root	usr/share/vala/
-drwxr-xr-x	root/root	usr/share/vala/vapi/
--rw-r--r--	root/root	usr/share/vala/vapi/gegl-0.3.deps (EMPTY)
--rw-r--r--	root/root	usr/share/vala/vapi/gegl-0.3.vapi
