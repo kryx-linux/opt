@@ -5,19 +5,19 @@
 
 name=chrony
 version=2.2
-release=1
+release=2
 source=(http://download.tuxfamily.org/$name/$name-$version.tar.gz
-        chronyd chrony.conf)
+        chronyd)
 
 build () {
     cd $name-$version
 
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
 
     install -d $PKG/var/{lib,log}/chrony
     install -d -m 0750 $PKG/var/run/chrony
-    install -D -m 755 $SRC/chronyd $PKG/etc/rc.d/chronyd
-    install -m 600 $SRC/chrony.* $PKG/etc
+    install -D -m 0755 $SRC/chronyd $PKG/etc/rc.d/chronyd
+    install examples/chrony.conf.example1 $PKG/etc/chrony.conf
 }

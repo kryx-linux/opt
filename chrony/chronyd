@@ -6,7 +6,7 @@
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/chronyd
 PID=/var/run/chronyd.pid
-OPTS="-s -r"
+OPTS="-r"
 
 case $1 in
 start)
