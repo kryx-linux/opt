@@ -5,8 +5,8 @@
 # Depends on: perl, openssl, cyrus-sasl
 
 name=openldap
-version=2.4.40
-release=2
+version=2.4.43
+release=1
 source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/$name-$version.tgz \
 	$name-config.patch slapd)
 
@@ -37,7 +37,6 @@ build() {
 		--enable-dnssrv \
 		--enable-null \
 		--enable-perl \
-		--enable-wrappers \
 		--enable-aci \
 		--enable-shared
 
