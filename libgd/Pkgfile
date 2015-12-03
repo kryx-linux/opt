@@ -5,12 +5,15 @@
 # Depends on: xorg-libxpm libpng libjpeg-turbo freetype
 
 name=libgd
-version=2.1.0
+version=2.1.1
 release=1
-source=(https://bitbucket.org/libgd/gd-libgd/downloads/$name-$version.tar.xz)
+source=(https://bitbucket.org/libgd/gd-libgd/downloads/$name-$version.tar.xz \
+	libvpx-1.5.0-compatibility.patch)
 
 build () {
   cd $name-$version
+
+  patch -p0 -i $SRC/libvpx-1.5.0-compatibility.patch
 
   ./configure --prefix=/usr
 
