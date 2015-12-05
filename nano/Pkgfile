@@ -2,16 +2,16 @@
 # URL:         http://www.nano-editor.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Packager:    Simone Rota, sip at crux dot nu
-# Depends on:  ncurses
+# Depends on:  file ncurses
 
 name=nano
 version=2.4.3
-release=1
+release=2
 source=(http://www.nano-editor.org/dist/v2.4/$name-$version.tar.gz)
 
 build(){
     cd $name-$version
-    ./configure --prefix=/usr --disable-nls --mandir=/usr/man
+    ./configure --prefix=/usr --disable-nls
     make
     make DESTDIR=$PKG install
     install -D -m 644 doc/nanorc.sample $PKG/usr/etc/nanorc
