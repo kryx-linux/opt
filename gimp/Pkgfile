@@ -7,7 +7,7 @@
 
 name=gimp
 version=2.8.14
-release=1
+release=2
 source=(http://ftp.gimp.org/pub/gimp/v2.8/gimp-$version.tar.bz2 cve-2013-1913)
 
 build() {
@@ -21,7 +21,8 @@ build() {
     --disable-static \
     --disable-python \
     --disable-nls \
-    --without-webkit
+    --without-webkit LIBS="-lm"
+
   make
   make DESTDIR=$PKG install
   rm -rf $PKG/usr/share/{gtk-doc,locale}
