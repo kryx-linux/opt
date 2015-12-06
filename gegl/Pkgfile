@@ -2,21 +2,19 @@
 # URL: http://gegl.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: babl, gtk, intltool, json-glib
+# Depends on: babl, gtk, intltool
 # Nice to have: libsdl
 
 name=gegl
-version=0.3.4
+version=0.2.0
 release=1
-source=(http://ftp.gimp.org/pub/$name/${version%.*}/$name-$version.tar.bz2)
+source=(http://ftp.gimp.org/pub/$name/0.2/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
-
   ./configure --prefix=/usr --disable-docs
-
   make
   make DESTDIR=$PKG install
   rm -r $PKG/usr/share/locale
-  #rmdir $PKG/usr/share
+  rmdir $PKG/usr/share
 }
