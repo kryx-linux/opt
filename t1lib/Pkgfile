@@ -1,16 +1,27 @@
-# Description: Library for generating character- and string-glyphs from Adobe Type 1 fonts.
-# URL: http://www.foolabs.com/xpdf/
+# Description: A Type 1 Font Rasterizer Library for UNIX/X11.
+# URL: ftp://metalab.unc.edu/pub/Linux/libs/graphics/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Robert McMeekin, viper at mcmeekin dot info
 # Depends on: xorg-libxaw
 
 name=t1lib
 version=5.1.2
-release=1
-source=(ftp://sunsite.unc.edu/pub/Linux/libs/graphics/$name-$version.tar.gz)
+release=2
+source=(http://www.ibiblio.org/pub/Linux/libs/graphics/$name-$version.tar.gz
+	lib-cleanup.diff
+	format-security.diff
+	CVE-2011-0764.diff
+	CVE-2011-1552_1553_1554.patch
+	CVE-2010-2642.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/lib-cleanup.diff
+	patch -p1 -i $SRC/format-security.diff
+	patch -p1 -i $SRC/CVE-2011-0764.diff
+	patch -p1 -i $SRC/CVE-2011-1552_1553_1554.patch
+	patch -p1 -i $SRC/CVE-2010-2642.patch
 
 	./configure \
 		--prefix=/usr \
