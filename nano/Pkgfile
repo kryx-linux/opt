@@ -5,9 +5,9 @@
 # Depends on:  file ncurses
 
 name=nano
-version=2.4.3
-release=2
-source=(http://www.nano-editor.org/dist/v2.4/$name-$version.tar.gz)
+version=2.5.0
+release=1
+source=(http://www.nano-editor.org/dist/v2.5/$name-$version.tar.gz)
 
 build(){
     cd $name-$version
