@@ -4,7 +4,7 @@
 # Depends on:  openssl expat
 
 name=unbound
-version=1.5.6
+version=1.5.7
 release=1
 source=(http://www.unbound.net/downloads/$name-$version.tar.gz
         unbound)
@@ -13,7 +13,6 @@ build () {
     cd $name-$version
     
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --sysconfdir=/etc \
                 --with-pidfile=/var/run/unbound.pid \
                 --with-chroot-dir=/etc/unbound \
@@ -25,7 +24,7 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/{lib,include,man/man3}
+    rm -r $PKG/usr/{lib,include,share/man/man3}
 
     install -d -o unbound -g unbound $PKG/etc/unbound/anchor
     install -D -m 755 $SRC/unbound $PKG/etc/rc.d/unbound
