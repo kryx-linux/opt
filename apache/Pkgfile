@@ -5,8 +5,8 @@
 # Group:       apache
 
 name=apache
-version=2.4.17
-release=2
+version=2.4.18
+release=1
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
         crux.layout apache)
 
