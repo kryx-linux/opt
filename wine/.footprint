@@ -1815,6 +1815,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libd3dcompiler.def
 -rw-r--r--	root/root	usr/lib/wine/libd3dim.def
 -rw-r--r--	root/root	usr/lib/wine/libd3drm.def
+-rw-r--r--	root/root	usr/lib/wine/libd3dx10.def
 -rw-r--r--	root/root	usr/lib/wine/libd3dx9.def
 -rw-r--r--	root/root	usr/lib/wine/libd3dxof.def
 -rw-r--r--	root/root	usr/lib/wine/libdbgeng.def
@@ -3323,6 +3324,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libd3dcompiler.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3dim.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3drm.def
+-rw-r--r--	root/root	usr/lib32/wine/libd3dx10.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3dx9.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3dxof.def
 -rw-r--r--	root/root	usr/lib32/wine/libdbgeng.def

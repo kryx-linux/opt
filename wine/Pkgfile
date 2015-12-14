@@ -5,7 +5,7 @@
 # Depends on:fontconfig-32 freeglut-32 xorg-libxcomposite-32 xorg-libxcursor-32 xorg-libxinerama-32 xorg-libxrandr-32 xorg-libxxf86dga-32 alsa-lib-32 libpng-32 libjpeg-turbo-32 prelink gnutls-32
 
 name=wine
-version=1.8-rc3
+version=1.8-rc4
 release=1
 source=(http://downloads.sourceforge.net/wine/$name-$version.tar.bz2
 	http://downloads.sourceforge.net/wine/wine_gecko-2.40-x86.msi
