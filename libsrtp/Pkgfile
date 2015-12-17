@@ -1,22 +1,18 @@
 # Description:	Secure Realtime transport protocol library
-# URL:		http://srtp.sourceforge.net/srtp.html
+# URL:		git://git.linphone.org/srtp.git
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
 # Depends on:	
 
 name=libsrtp
-version=1.5.2
+version=git20150922
 release=1
-source=(https://github.com/cisco/$name/archive/v$version.tar.gz)
+source=(http://www.mizrahi.com.ve/crux/dist/srtp-$version.tar.gz)
 
 build() {
-	cd $name-$version
+	cd srtp
 	./configure \
 		--prefix=/usr \
 		--disable-debug
-	make shared_library libsrtp.a
+	make
 	make DESTDIR=$PKG install
-
-	# make syumbolic link
-	rm $PKG/usr/lib/libsrtp.so
-	ln -s libsrtp.so.1 $PKG/usr/lib/libsrtp.so
 }

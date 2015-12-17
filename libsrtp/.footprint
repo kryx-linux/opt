@@ -1,12 +1,9 @@
 drwxr-xr-x	root/root	usr/
-drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/srtp/
 -rw-r--r--	root/root	usr/include/srtp/aes.h
 -rw-r--r--	root/root	usr/include/srtp/aes_cbc.h
--rw-r--r--	root/root	usr/include/srtp/aes_gcm_ossl.h
 -rw-r--r--	root/root	usr/include/srtp/aes_icm.h
--rw-r--r--	root/root	usr/include/srtp/aes_icm_ossl.h
 -rw-r--r--	root/root	usr/include/srtp/alloc.h
 -rw-r--r--	root/root	usr/include/srtp/auth.h
 -rw-r--r--	root/root	usr/include/srtp/cipher.h
@@ -41,7 +38,5 @@ drwxr-xr-x	root/root	usr/include/srtp/
 -rw-r--r--	root/root	usr/include/srtp/xfm.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libsrtp.a
-lrwxrwxrwx	root/root	usr/lib/libsrtp.so -> libsrtp.so.1
--rwxr-xr-x	root/root	usr/lib/libsrtp.so.1
-drwxr-xr-x	root/root	usr/lib/pkgconfig/
--rw-r--r--	root/root	usr/lib/pkgconfig/libsrtp.pc
+lrwxrwxrwx	root/root	usr/lib/libsrtp.so -> libsrtp.so.1.4.5
+-rwxr-xr-x	root/root	usr/lib/libsrtp.so.1.4.5
