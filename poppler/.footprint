@@ -157,9 +157,9 @@ lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so.0 -> libpoppler-cpp.so.0.2.1
 -rwxr-xr-x	root/root	usr/lib/libpoppler-cpp.so.0.2.1
 -rw-r--r--	root/root	usr/lib/libpoppler.a
 -rwxr-xr-x	root/root	usr/lib/libpoppler.la
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.57.0.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so.57 -> libpoppler.so.57.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler.so.57.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.58.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so.58 -> libpoppler.so.58.0.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler.so.58.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cairo.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cpp.pc
