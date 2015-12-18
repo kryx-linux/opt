@@ -4,15 +4,12 @@
 # Depends on:  libdevmapper
 
 name=lvm2
-version=2.02.137
+version=2.02.138
 release=1
 source=(http://mirrors.kernel.org/sources.redhat.com/lvm2/releases/LVM2.$version.tgz)
 
 build() {
     cd LVM2.$version
-
-    # needed for static linking with eudev
-    export UDEV_LIBS="$(pkg-config --libs --static libudev)"
 
     # needed for static linking
     export LIBS="-lpthread -luuid -lm"
