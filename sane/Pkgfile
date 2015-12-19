@@ -5,7 +5,7 @@
 
 name=sane
 version=1.0.25
-release=2
+release=3
 source=(https://alioth.debian.org/frs/download.php/file/4146/$name-backends-$version.tar.gz)
 
 build () {
@@ -16,6 +16,7 @@ build () {
                 --sysconfdir=/etc \
                 --disable-translations \
                 --disable-locking \
+                --disable-latex \
                 --with-group=scanner \
                 --enable-libusb_1_0
     
