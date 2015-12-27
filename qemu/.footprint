@@ -1,11 +1,11 @@
 drwxr-xr-x	root/root	etc/
-drwxr-xr-x	root/root	etc/qemu/
--rw-r--r--	root/root	etc/qemu/target-x86_64.conf (EMPTY)
 drwxr-xr-x	root/root	etc/udev/
 drwxr-xr-x	root/root	etc/udev/rules.d/
 -rw-r--r--	root/root	etc/udev/rules.d/60-kvm.rules
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/ivshmem-client
+-rwxr-xr-x	root/root	usr/bin/ivshmem-server
 -rwxr-xr-x	root/root	usr/bin/qemu-ga
 -rwxr-xr-x	root/root	usr/bin/qemu-i386
 -rwxr-xr-x	root/root	usr/bin/qemu-img
@@ -18,13 +18,12 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/qemu/
 -rwxr-xr-x	root/root	usr/lib/qemu/qemu-bridge-helper
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/qemu-img.1.gz
--rw-r--r--	root/root	usr/man/man1/qemu.1.gz
-drwxr-xr-x	root/root	usr/man/man8/
--rw-r--r--	root/root	usr/man/man8/qemu-nbd.8.gz
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man1/
+-rw-r--r--	root/root	usr/share/man1/qemu-img.1
+-rw-r--r--	root/root	usr/share/man1/qemu.1
+drwxr-xr-x	root/root	usr/share/man8/
+-rw-r--r--	root/root	usr/share/man8/qemu-nbd.8
 drwxr-xr-x	root/root	usr/share/qemu/
 -rw-r--r--	root/root	usr/share/qemu/QEMU,cgthree.bin
 -rw-r--r--	root/root	usr/share/qemu/QEMU,tcx.bin
@@ -105,6 +104,7 @@ drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/vgabios-cirrus.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-qxl.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-stdvga.bin
+-rw-r--r--	root/root	usr/share/qemu/vgabios-virtio.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-vmware.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios.bin
 drwxr-xr-x	root/root	var/
