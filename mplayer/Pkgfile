@@ -6,7 +6,7 @@
 # Nice to have: libsdl, libjpeg-turbo, libpng, lame, zlib, libogg, libvorbis, cdparanoia, win32-essential-codecs, faac, x264, libdvdnav, libdca
 
 name=mplayer
-version=2015-08-18
+version=2015-12-29
 release=1
 source=(http://crux.nu/~tek/mplayer-$version.tar.xz
   http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 mplayer.conf)
