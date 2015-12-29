@@ -897,6 +897,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-misc-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-namedpipe-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-namedpipe-l1-2-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-path-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-processenvironment-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-processenvironment-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-processthreads-l1-1-0.dll.so
@@ -951,6 +952,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-ntuser-dc-access-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-base-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-base-l1-2-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsalookup-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-sddl-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-service-core-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-service-management-l1-1-0.dll.so
@@ -1149,6 +1151,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-misc-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-namedpipe-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-namedpipe-l1-2-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-path-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-processenvironment-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-processenvironment-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-processthreads-l1-1-0.dll
@@ -1203,6 +1206,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-ntuser-dc-access-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-base-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-base-l1-2-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-sddl-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-service-core-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-service-management-l1-1-0.dll
@@ -1614,6 +1618,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/tasklist.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/taskmgr.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/taskschd.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/tdi.sys
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/termsv.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/traffic.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/twain_32.dll
@@ -2167,6 +2172,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/tasklist.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/taskmgr.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/taskschd.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/tdi.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/termsv.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/traffic.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/twain_32.dll.so
@@ -2329,6 +2335,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-misc-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-namedpipe-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-namedpipe-l1-2-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-path-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-processenvironment-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-processenvironment-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-processthreads-l1-1-0.dll.so
@@ -2383,6 +2390,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-ntuser-dc-access-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-base-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-base-l1-2-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsalookup-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-sddl-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-service-core-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-service-management-l1-1-0.dll.so
@@ -2590,6 +2598,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-misc-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-namedpipe-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-namedpipe-l1-2-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-path-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-processenvironment-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-processenvironment-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-processthreads-l1-1-0.dll
@@ -2644,6 +2653,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-ntuser-dc-access-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-base-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-base-l1-2-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-sddl-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-service-core-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-service-management-l1-1-0.dll
@@ -3092,6 +3102,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/tasklist.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/taskmgr.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/taskschd.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/tdi.sys
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/termsv.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/toolhelp.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/traffic.dll
@@ -3701,6 +3712,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/tasklist.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/taskmgr.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/taskschd.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/tdi.sys.so
 -rwxr-xr-x	root/root	usr/lib32/wine/termsv.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/toolhelp.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/traffic.dll.so
