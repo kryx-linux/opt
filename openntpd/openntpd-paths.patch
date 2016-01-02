@@ -1,0 +1,56 @@
+diff -ru openntpd-5.7p4.orig/src/ntpctl.8 openntpd-5.7p4/src/ntpctl.8
+--- openntpd-5.7p4.orig/src/ntpctl.8	2016-01-01 21:37:56.105451771 +0900
++++ openntpd-5.7p4/src/ntpctl.8	2016-01-01 22:07:10.772159485 +0900
+@@ -63,8 +63,8 @@
+ When the median constraint is set, the offset to the local time is displayed.
+ .El
+ .Sh FILES
+-.Bl -tag -width "/var/run/ntpd.sockXXX" -compact
+-.It Pa /var/run/ntpd.sock
++.Bl -tag -width "/var/run/openntpd/ntpd.sockXXX" -compact
++.It Pa /var/run/openntpd/ntpd.sock
+ Socket file for communication with
+ .Xr ntpd 8 .
+ .El
+diff -ru openntpd-5.7p4.orig/src/ntpd.8 openntpd-5.7p4/src/ntpd.8
+--- openntpd-5.7p4.orig/src/ntpd.8	2016-01-01 21:37:56.105451771 +0900
++++ openntpd-5.7p4/src/ntpd.8	2016-01-01 22:06:42.479471373 +0900
+@@ -122,7 +122,7 @@
+ typically
+ .Xr ntpd.conf 5 ,
+ and its initial clock drift from
+-.Pa /var/db/ntpd.drift .
++.Pa /var/lib/ntp/ntp.drift .
+ Clock drift is periodically written to the drift file thereafter.
+ .Pp
+ When
+@@ -137,12 +137,12 @@
+ it writes its peer and sensor status to
+ .Xr syslog 3 .
+ .Sh FILES
+-.Bl -tag -width "/var/db/ntpd.driftXXX" -compact
++.Bl -tag -width "/var/run/openntpd/ntpd.sockXXX" -compact
+ .It Pa /etc/ntpd.conf
+ Default configuration file.
+-.It Pa /var/db/ntpd.drift
++.It Pa /var/lib/ntp/ntp.drift
+ Drift file.
+-.It Pa /var/run/ntpd.sock
++.It Pa /var/run/openntpd/ntpd.sock
+ Socket file for communication with
+ .Xr ntpctl 8 .
+ .El
+diff -ru openntpd-5.7p4.orig/src/ntpd.h openntpd-5.7p4/src/ntpd.h
+--- openntpd-5.7p4.orig/src/ntpd.h	2016-01-01 21:37:56.106451771 +0900
++++ openntpd-5.7p4/src/ntpd.h	2016-01-01 22:06:42.479471373 +0900
+@@ -48,8 +48,8 @@
+ #ifndef	LOCALSTATEDIR
+ #define	LOCALSTATEDIR	"/var"
+ #endif
+-#define	DRIFTFILE	LOCALSTATEDIR "/db/ntpd.drift"
+-#define	CTLSOCKET	LOCALSTATEDIR "/run/ntpd.sock"
++#define	DRIFTFILE	LOCALSTATEDIR "/lib/ntp/ntp.drift"
++#define	CTLSOCKET	LOCALSTATEDIR "/run/openntpd/ntpd.sock"
+ 
+ #if defined(SO_SETFIB)
+ #define	SO_RTABLE	SO_SETFIB

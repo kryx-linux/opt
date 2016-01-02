@@ -4,23 +4,32 @@
 # Packager:	Matt Housh, jaeger at morpheus dot net
 
 name=openntpd
-version=3.9p1
+version=5.7p4
 release=4
-source=(ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz \
-	ntpd \
-	linux-adjtimex.patch )
+source=(
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz
+ntpd
+openntpd-paths.patch
+)
 
 build() {
 	cd $name-$version
-	patch -p1 -i $SRC/linux-adjtimex.patch
+
+	# change drift file and control socket locations
+	patch -p1 -i $SRC/openntpd-paths.patch
 
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
+		--localstatedir=/var \
 		--with-privsep-user=ntp \
-		--with-adjtimex
+		--with-cacert=/etc/ssl/cert.pem
 	make
 	make DESTDIR=$PKG install
 	
+	rmdir $PKG/var/db $PKG/var/run
 	install -D -m 0755 $SRC/ntpd $PKG/etc/rc.d/ntpd
+
+	# drift file will be created here
+	mkdir -p $PKG/var/lib/ntp
 }

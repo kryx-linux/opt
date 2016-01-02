@@ -3,9 +3,9 @@
 NAME=ntpd
 USER=root
 CONFIG=
-RUNDIR=/var/run
-PIDFILE=
-STARTCMD="/usr/sbin/ntpd -s"
+RUNDIR="/var/run/openntpd"
+PIDFILE="$RUNDIR/openntpd.pid"
+STARTCMD="/usr/sbin/ntpd -s -p $PIDFILE"
 STOPCMD=
 STOPTIMEOUT=120
 
