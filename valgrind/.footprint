@@ -28,6 +28,7 @@ drwxr-xr-x	root/root	usr/include/valgrind/
 -rw-r--r--	root/root	usr/include/valgrind/libvex_guest_ppc32.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_guest_ppc64.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_guest_s390x.h
+-rw-r--r--	root/root	usr/include/valgrind/libvex_guest_tilegx.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_guest_x86.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_ir.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_s390x_common.h
@@ -45,6 +46,7 @@ drwxr-xr-x	root/root	usr/include/valgrind/
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_errormgr.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_execontext.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_gdbserver.h
+-rw-r--r--	root/root	usr/include/valgrind/pub_tool_guest.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_hashtable.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_libcassert.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_libcbase.h
@@ -67,6 +69,7 @@ drwxr-xr-x	root/root	usr/include/valgrind/
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_stacktrace.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_threadstate.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_tooliface.h
+-rw-r--r--	root/root	usr/include/valgrind/pub_tool_transtab.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_vki.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_vkiscnums.h
 -rw-r--r--	root/root	usr/include/valgrind/pub_tool_vkiscnums_asm.h
@@ -103,7 +106,10 @@ drwxr-xr-x	root/root	usr/include/valgrind/vki/
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-scnums-ppc32-linux.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-scnums-ppc64-linux.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-scnums-s390x-linux.h
+-rw-r--r--	root/root	usr/include/valgrind/vki/vki-scnums-solaris.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-scnums-x86-linux.h
+-rw-r--r--	root/root	usr/include/valgrind/vki/vki-solaris-repcache.h
+-rw-r--r--	root/root	usr/include/valgrind/vki/vki-solaris.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-x86-linux.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-domctl.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-evtchn.h
@@ -111,10 +117,13 @@ drwxr-xr-x	root/root	usr/include/valgrind/vki/
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-hvm.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-memory.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-mmuext.h
+-rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-physdev.h
+-rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-schedop.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-sysctl.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-tmem.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-version.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-x86.h
+-rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen-xsm.h
 -rw-r--r--	root/root	usr/include/valgrind/vki/vki-xen.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
@@ -182,6 +191,8 @@ drwxr-xr-x	root/root	usr/lib/valgrind/
 -rw-r--r--	root/root	usr/lib/valgrind/libreplacemalloc_toolpreload-x86-linux.a
 -rw-r--r--	root/root	usr/lib/valgrind/libvex-amd64-linux.a
 -rw-r--r--	root/root	usr/lib/valgrind/libvex-x86-linux.a
+-rw-r--r--	root/root	usr/lib/valgrind/libvexmultiarch-amd64-linux.a
+-rw-r--r--	root/root	usr/lib/valgrind/libvexmultiarch-x86-linux.a
 -rwxr-xr-x	root/root	usr/lib/valgrind/massif-amd64-linux
 -rwxr-xr-x	root/root	usr/lib/valgrind/massif-x86-linux
 -rwxr-xr-x	root/root	usr/lib/valgrind/memcheck-amd64-linux
