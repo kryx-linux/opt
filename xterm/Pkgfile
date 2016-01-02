@@ -15,7 +15,6 @@ build() {
     [ -z "$BASH_VERSION" ] && patch -p0 -i $SRC/configure.diff
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --disable-nls \
                 --enable-256-color \
                 --enable-wide-chars
