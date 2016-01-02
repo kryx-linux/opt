@@ -2,12 +2,9 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/ccache-swig
 -rwxr-xr-x	root/root	usr/bin/swig
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/ccache-swig.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/swig/
-lrwxrwxrwx	root/root	usr/share/swig/3.0.5 -> 3.0
+lrwxrwxrwx	root/root	usr/share/swig/3.0.8 -> 3.0
 drwxr-xr-x	root/root	usr/share/swig/3.0/
 drwxr-xr-x	root/root	usr/share/swig/3.0/allegrocl/
 -rw-r--r--	root/root	usr/share/swig/3.0/allegrocl/allegrocl.swg
@@ -92,6 +89,7 @@ drwxr-xr-x	root/root	usr/share/swig/3.0/d/
 -rw-r--r--	root/root	usr/share/swig/3.0/d/stl.i
 -rw-r--r--	root/root	usr/share/swig/3.0/d/typemaps.i
 -rw-r--r--	root/root	usr/share/swig/3.0/d/wrapperloader.swg
+-rw-r--r--	root/root	usr/share/swig/3.0/director_common.swg
 -rw-r--r--	root/root	usr/share/swig/3.0/exception.i
 drwxr-xr-x	root/root	usr/share/swig/3.0/gcj/
 -rw-r--r--	root/root	usr/share/swig/3.0/gcj/cni.i
@@ -103,6 +101,7 @@ drwxr-xr-x	root/root	usr/share/swig/3.0/go/
 -rw-r--r--	root/root	usr/share/swig/3.0/go/go.swg
 -rw-r--r--	root/root	usr/share/swig/3.0/go/gokw.swg
 -rw-r--r--	root/root	usr/share/swig/3.0/go/goruntime.swg
+-rw-r--r--	root/root	usr/share/swig/3.0/go/gostring.swg
 -rw-r--r--	root/root	usr/share/swig/3.0/go/std_common.i
 -rw-r--r--	root/root	usr/share/swig/3.0/go/std_deque.i
 -rw-r--r--	root/root	usr/share/swig/3.0/go/std_except.i
@@ -435,6 +434,7 @@ drwxr-xr-x	root/root	usr/share/swig/3.0/python/
 -rw-r--r--	root/root	usr/share/swig/3.0/python/pyuserdir.swg
 -rw-r--r--	root/root	usr/share/swig/3.0/python/pywstrings.swg
 -rw-r--r--	root/root	usr/share/swig/3.0/python/std_alloc.i
+-rw-r--r--	root/root	usr/share/swig/3.0/python/std_array.i
 -rw-r--r--	root/root	usr/share/swig/3.0/python/std_auto_ptr.i
 -rw-r--r--	root/root	usr/share/swig/3.0/python/std_basic_string.i
 -rw-r--r--	root/root	usr/share/swig/3.0/python/std_carray.i
@@ -499,6 +499,7 @@ drwxr-xr-x	root/root	usr/share/swig/3.0/ruby/
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/Makefile.swig
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/argcargv.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/attribute.i
+-rw-r--r--	root/root	usr/share/swig/3.0/ruby/boost_shared_ptr.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/carrays.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/cdata.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/cmalloc.i
@@ -541,6 +542,7 @@ drwxr-xr-x	root/root	usr/share/swig/3.0/ruby/
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/rubyuserdir.swg
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/rubywstrings.swg
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_alloc.i
+-rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_array.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_basic_string.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_char_traits.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_common.i
@@ -558,6 +560,7 @@ drwxr-xr-x	root/root	usr/share/swig/3.0/ruby/
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_pair.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_queue.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_set.i
+-rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_shared_ptr.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_sstream.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_stack.i
 -rw-r--r--	root/root	usr/share/swig/3.0/ruby/std_streambuf.i
@@ -635,6 +638,7 @@ drwxr-xr-x	root/root	usr/share/swig/3.0/scilab/
 drwxr-xr-x	root/root	usr/share/swig/3.0/std/
 -rw-r--r--	root/root	usr/share/swig/3.0/std/_std_deque.i
 -rw-r--r--	root/root	usr/share/swig/3.0/std/std_alloc.i
+-rw-r--r--	root/root	usr/share/swig/3.0/std/std_array.i
 -rw-r--r--	root/root	usr/share/swig/3.0/std/std_basic_string.i
 -rw-r--r--	root/root	usr/share/swig/3.0/std/std_carray.swg
 -rw-r--r--	root/root	usr/share/swig/3.0/std/std_char_traits.i
