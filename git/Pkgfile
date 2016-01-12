@@ -6,7 +6,7 @@
 # Nice to have: tk
 
 name=git
-version=2.6.4
+version=2.7.0
 release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
 				git)
@@ -19,13 +19,13 @@ build() {
 	sed -i -e '47d' -e '49d' perl/Makefile.PL
 
 	make CFLAGS="$CFLAGS" prefix=/usr gitexecdir=/usr/lib/git-core \
-	     INSTALLSITEMAN3DIR=/usr/man/man3 DESTDIR=$PKG install
+	     INSTALLSITEMAN3DIR=/usr/share/man3 DESTDIR=$PKG install
 
 	cd $SRC
 
 	for i in man*; do
-		install -d $PKG/usr/man/$i
-		install -m 644 $i/* $PKG/usr/man/$i;
+		install -d $PKG/usr/share/man/$i
+		install -m 644 $i/* $PKG/usr/share/man/$i;
 	done
 
 	find $PKG \( -name perllocal.pod -o -name .packlist \) -delete
