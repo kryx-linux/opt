@@ -5,13 +5,13 @@
 # Depends on:  ncurses
 
 name=gdb
-version=7.9.1
-release=2
+version=7.10.1
+release=1
 source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make
 
     # ...
