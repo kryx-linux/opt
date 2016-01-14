@@ -2,10 +2,10 @@
 # URL: http://www.trolltech.com
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Johannes Winkelmann, jw at smts dot ch
-# Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus gst-plugins-base-compat
+# Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus
 
 name=qt4
-version=4.8.6
+version=4.8.7
 release=1
 source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/qt-everywhere-opensource-src-$version.tar.gz)
 
