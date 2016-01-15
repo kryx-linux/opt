@@ -5,7 +5,7 @@
 
 name=sqlite3
 version=3.10.1
-release=1
+release=2
 _version=$(printf "%i%.2i%.2i%.2i" ${version//./ })
 
 source=(http://www.sqlite.org/2016/sqlite-autoconf-${_version}.tar.gz)
@@ -16,8 +16,8 @@ build () {
     CFLAGS="-DSQLITE_SECURE_DELETE=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 \
             -DSQLITE_ENABLE_UNLOCK_NOTIFY=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 \
              $CFLAGS" \
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     
-    make -j1
+    make 
     make DESTDIR=$PKG install
 }
