@@ -5,7 +5,7 @@
 # Depends on: ncurses
 
 name=dialog
-version=1.2-20150225
+version=1.2-20150920
 release=1
 source=(ftp://dickey.his.com/$name/$name-$version.tgz)
 
@@ -13,7 +13,6 @@ build () {
   cd $name-$version
 
   ./configure --prefix=/usr \
-              --mandir=/usr/man \
               --with-ncursesw
 
   make
