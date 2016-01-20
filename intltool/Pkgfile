@@ -4,16 +4,16 @@
 # Depends on: p5-xml-parser
 
 name=intltool
-version=0.50.2
+version=0.51.0
 release=1
 source=(http://edge.launchpad.net/$name/trunk/$version/+download/$name-$version.tar.gz)
 
 
 build() {
 	cd $name-$version
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/man
+
+	./configure --prefix=/usr
+
 	make
 	make DESTDIR=$PKG install
 }
