@@ -5,14 +5,12 @@
 # Depends on: openldap e2fsprogs
 
 name=krb5
-version=1.13.1
+version=1.14
 release=1
-source=(http://web.mit.edu/kerberos/dist/$name/${version%.*}/$name-$version-signed.tar \
+source=(http://web.mit.edu/kerberos/dist/$name/$version/$name-$version.tar.gz \
         $name-config_LDFLAGS.patch)
 
 build() {
-	bsdtar -p -o -xf $SRC/$name-$version.tar.gz
-
 	cd $name-$version/src/build-tools
 	patch -p1 -i $SRC/$name-config_LDFLAGS.patch
 
@@ -22,7 +20,6 @@ build() {
 	export CFLAGS="${CFLAGS/-Os/-O2} -I/usr/include/et"
 
 	./configure --prefix=/usr \
-                    --mandir=/usr/man \
                     --localstatedir=/var \
                     --enable-shared \
                     --disable-rpath \
