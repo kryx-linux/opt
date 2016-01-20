@@ -6,7 +6,7 @@
 
 name=openldap
 version=2.4.43
-release=1
+release=2
 source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/$name-$version.tgz \
 	$name-config.patch slapd)
 
@@ -15,7 +15,6 @@ build() {
 	patch -p0 -i $SRC/$name-config.patch
 
 	./configure --prefix=/usr \
-                --mandir=/usr/man \
 		--sysconfdir=/etc \
 		--libexecdir=/usr/sbin \
 		--localstatedir=/var/openldap \
