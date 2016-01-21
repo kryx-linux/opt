@@ -28,10 +28,10 @@ lrwxrwxrwx	root/root	usr/lib/librsvg-2.so.2 -> librsvg-2.so.2.39.0
 -rwxr-xr-x	root/root	usr/lib/librsvg-2.so.2.39.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/librsvg-2.0.pc
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/rsvg-convert.1.gz
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/rsvg-convert.1.gz
 drwxr-xr-x	root/root	usr/share/themes/
 drwxr-xr-x	root/root	usr/share/themes/bubble/
 drwxr-xr-x	root/root	usr/share/themes/bubble/gtk-2.0/
