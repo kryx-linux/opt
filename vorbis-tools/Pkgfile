@@ -6,17 +6,20 @@
 
 name=vorbis-tools
 version=1.4.0
-release=1
+release=2
 source=(http://downloads.xiph.org/releases/vorbis/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr --mandir=/usr/man --disable-nls --enable-vcut
+	./configure --prefix=/usr \
+                    --disable-nls \
+                    --enable-vcut
+
 	make
 	make DESTDIR=$PKG install
 
 	mkdir $PKG/usr/etc
 	mv $PKG/usr/share/doc/$name-$version/ogg123rc-example $PKG/usr/etc
-	rm -rf $PKG/usr/share
+	rm -rf $PKG/usr/share/doc
 }
