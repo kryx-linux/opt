@@ -5,15 +5,14 @@
 
 name=libsdl2
 version=2.0.4
-release=1
+release=2
 source=(http://www.libsdl.org/release/SDL2-$version.tar.gz)
 
 build () {
   cd SDL2-$version
 
   ./configure --prefix=/usr \
-              --enable-alsa \
-              --mandir=/usr/man
+              --enable-alsa
 
   make
   make DESTDIR=$PKG install
