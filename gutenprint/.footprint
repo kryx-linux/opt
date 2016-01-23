@@ -44,19 +44,11 @@ drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/rastertogutenprint.5.2
 -rw-r--r--	root/root	usr/lib/libgutenprint.a
 -rwxr-xr-x	root/root	usr/lib/libgutenprint.la
-lrwxrwxrwx	root/root	usr/lib/libgutenprint.so -> libgutenprint.so.2.3.0
-lrwxrwxrwx	root/root	usr/lib/libgutenprint.so.2 -> libgutenprint.so.2.3.0
--rwxr-xr-x	root/root	usr/lib/libgutenprint.so.2.3.0
+lrwxrwxrwx	root/root	usr/lib/libgutenprint.so -> libgutenprint.so.2.4.0
+lrwxrwxrwx	root/root	usr/lib/libgutenprint.so.2 -> libgutenprint.so.2.4.0
+-rwxr-xr-x	root/root	usr/lib/libgutenprint.so.2.4.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gutenprint.pc
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/escputil.1.gz
--rw-r--r--	root/root	usr/man/man1/ijsgutenprint.1.gz
-drwxr-xr-x	root/root	usr/man/man8/
--rw-r--r--	root/root	usr/man/man8/cups-calibrate.8.gz
--rw-r--r--	root/root	usr/man/man8/cups-genppd.8.gz
--rw-r--r--	root/root	usr/man/man8/cups-genppdupdate.8.gz
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/cups-genppd.5.2
 -rwxr-xr-x	root/root	usr/sbin/cups-genppdupdate
@@ -211,6 +203,7 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/model/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_12.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_120.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_121.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_122.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_13.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_14.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_15.xml
@@ -320,3 +313,11 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/weaves/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/weaves/standard.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/papers.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/printers.xml
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/escputil.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/ijsgutenprint.1.gz
+drwxr-xr-x	root/root	usr/share/man/man8/
+-rw-r--r--	root/root	usr/share/man/man8/cups-calibrate.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/cups-genppd.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/cups-genppdupdate.8.gz
