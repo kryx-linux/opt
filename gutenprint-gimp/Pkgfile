@@ -4,7 +4,7 @@
 # Depends on:  gimp gutenprint
 
 name=gutenprint-gimp
-version=5.2.10
+version=5.2.11
 release=1
 source=(http://downloads.sourceforge.net/project/gimp-print/gutenprint-5.2/$version/gutenprint-$version.tar.bz2)
 
@@ -12,7 +12,6 @@ build () {
     cd gutenprint-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --disable-{nls,samples,escputil} \
                 --without-{cups,foomatic,ghostscript,doc} \
                 --enable-libgutenprintui2 \
