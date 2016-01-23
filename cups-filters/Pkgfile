@@ -4,7 +4,7 @@
 # Depends on:  cups ghostscript poppler qpdf
 
 name=cups-filters
-version=1.7.0
+version=1.8.1
 release=1
 source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz
         cups-browsed)
@@ -17,6 +17,7 @@ build () {
                 --without-php \
                 --disable-avahi \
                 --disable-dbus \
+                --disable-braille \
                 --without-rcdir \
                 --with-browseremoteprotocols=cups 
 
