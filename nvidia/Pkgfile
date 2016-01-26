@@ -4,8 +4,8 @@
 # Depends on: gtk gl-select
 
 name=nvidia
-version=352.63
-release=2
+version=352.79
+release=1
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run \
     90-nvidia-uvm.rules $name-3.18.patch)
 
