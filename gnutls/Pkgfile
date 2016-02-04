@@ -5,8 +5,8 @@
 # Depends on: nettle libidn
 
 name=gnutls
-version=3.4.8
-release=2
+version=3.4.9
+release=1
 source=(ftp://ftp.gnutls.org/gcrypt/$name/v${version%.*}/$name-${version}.tar.xz)
 
 build() {
