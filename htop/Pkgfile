@@ -11,10 +11,10 @@ source=(http://hisham.hm/htop/releases/$version/htop-$version.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --disable-nls --mandir=/usr/man
+    ./configure --prefix=/usr --disable-nls --mandir=/usr/share/man
     make
     make DESTDIR=$PKG install
    
     rm -rf $PKG/usr/{include,lib}
-    rm -rf $PKG/usr/share/{applications,pixmaps,}
+    rm -rf $PKG/usr/share/{applications,pixmaps}
 }
