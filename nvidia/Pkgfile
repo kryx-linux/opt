@@ -4,16 +4,14 @@
 # Depends on: gtk gl-select
 
 name=nvidia
-version=352.79
+version=361.28
 release=1
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run \
-    90-nvidia-uvm.rules $name-3.18.patch)
+    90-nvidia-uvm.rules)
 
 build() {
     sh NVIDIA-Linux-x86_64-$version-no-compat32.run --extract-only
     cd NVIDIA-Linux-x86_64-$version-no-compat32
-
-    patch -p1 -i $SRC/$name-3.18.patch
 
     # libraries
     install -d $PKG/usr/lib/{tls,vdpau}
@@ -80,13 +78,10 @@ build() {
     install -D -m 0644 nvidia-application-profiles-$version-key-documentation \
         $PKG/usr/share/nvidia/nvidia-application-profiles-$version-key-documentation
 
-    # kernel module
+    # kernel modules
     cd kernel
     IGNORE_CC_MISMATCH=1 make module
-    install -D -m 0644 nvidia.ko $PKG/lib/modules/`uname -r`/extra/nvidia.ko
-
-    # nvidia-uvm module
-    cd uvm
-    IGNORE_CC_MISMATCH=1 make module
-    install -D -m 0644 nvidia-uvm.ko $PKG/lib/modules/`uname -r`/extra/nvidia-uvm.ko
+    install -D -m 0644 nvidia.ko $PKG/lib/modules/`uname -r`/kernel/drivers/video/nvidia.ko
+    install -D -m 0644 nvidia-modeset.ko $PKG/lib/modules/`uname -r`/kernel/drivers/video/nvidia-modeset.ko
+    install -D -m 0644 nvidia-uvm.ko $PKG/lib/modules/`uname -r`/kernel/drivers/video/nvidia-uvm.ko
 }
