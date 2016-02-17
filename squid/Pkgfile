@@ -3,9 +3,9 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=squid
-version=3.5.13
+version=3.5.14
 release=1
-source=(http://www.squid-cache.org/Versions/v3/3.5/$name-$version.tar.bz2
+source=(http://www.squid-cache.org/Versions/v3/3.5/$name-$version.tar.xz
         squid)
 
 build () {
