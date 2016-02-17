@@ -4,8 +4,8 @@
 # Depends on:  ncurses, readline
 
 name=sqlite3
-version=3.10.2
-release=2
+version=3.11.0
+release=1
 _version=$(printf "%i%.2i%.2i%.2i" ${version//./ })
 
 source=(http://www.sqlite.org/2016/sqlite-autoconf-${_version}.tar.gz)
