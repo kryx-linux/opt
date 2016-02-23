@@ -5,17 +5,17 @@
 # Depends on:  libgd pango
 
 name=gnuplot
-version=5.0.1
+version=5.0.3
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --libexecdir=/usr/lib \
                 --with-x 
     make
     make DESTDIR=$PKG install
+    rm $PKG/usr/share/man/man1/gnuplot-ja.1
     rm -rf $PKG/usr/share/info
 }
