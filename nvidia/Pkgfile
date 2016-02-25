@@ -81,7 +81,7 @@ build() {
     # kernel modules
     cd kernel
     IGNORE_CC_MISMATCH=1 make module
-    install -D -m 0644 nvidia.ko $PKG/lib/modules/`uname -r`/kernel/drivers/video/nvidia.ko
-    install -D -m 0644 nvidia-modeset.ko $PKG/lib/modules/`uname -r`/kernel/drivers/video/nvidia-modeset.ko
-    install -D -m 0644 nvidia-uvm.ko $PKG/lib/modules/`uname -r`/kernel/drivers/video/nvidia-uvm.ko
+    install -D -m 0644 nvidia.ko $PKG/lib/modules/`uname -r`/extra/nvidia.ko
+    install -D -m 0644 nvidia-modeset.ko $PKG/lib/modules/`uname -r`/extra/nvidia-modeset.ko
+    install -D -m 0644 nvidia-uvm.ko $PKG/lib/modules/`uname -r`/extra/nvidia-uvm.ko
 }
