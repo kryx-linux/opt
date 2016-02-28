@@ -5,7 +5,7 @@
 # Depends on:  file ncurses
 
 name=nano
-version=2.5.2
+version=2.5.3
 release=1
 source=(http://www.nano-editor.org/dist/v2.5/$name-$version.tar.gz)
 
