@@ -2,11 +2,10 @@
 # URL: http://gstreamer.freedesktop.org/modules/gst-plugins-base.html
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: alsa-lib gstreamer pango util-linux xorg-libxv
-# Optional: cdparanoia libtheora libvisual orc
+# Depends on: alsa-lib cdparanoia gstreamer libtheora libvisual orc pango util-linux xorg-libxv
 
 name=gst-plugins-base
-version=1.6.2
+version=1.6.3
 release=1
 source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
