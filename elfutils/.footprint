@@ -3,6 +3,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/eu-addr2line
 -rwxr-xr-x	root/root	usr/bin/eu-ar
 -rwxr-xr-x	root/root	usr/bin/eu-elfcmp
+-rwxr-xr-x	root/root	usr/bin/eu-elfcompress
 -rwxr-xr-x	root/root	usr/bin/eu-elflint
 -rwxr-xr-x	root/root	usr/bin/eu-findtextrel
 -rwxr-xr-x	root/root	usr/bin/eu-ld
@@ -32,40 +33,43 @@ drwxr-xr-x	root/root	usr/include/elfutils/
 -rw-r--r--	root/root	usr/include/nlist.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/elfutils/
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_aarch64-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_aarch64.so -> libebl_aarch64-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_alpha-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_alpha.so -> libebl_alpha-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_arm-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_arm.so -> libebl_arm-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_i386-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_i386.so -> libebl_i386-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_ia64-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_ia64.so -> libebl_ia64-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_ppc-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_ppc.so -> libebl_ppc-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_ppc64-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_ppc64.so -> libebl_ppc64-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_s390-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_s390.so -> libebl_s390-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_sh-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_sh.so -> libebl_sh-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_sparc-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_sparc.so -> libebl_sparc-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_tilegx-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_tilegx.so -> libebl_tilegx-0.164.so
--rwxr-xr-x	root/root	usr/lib/elfutils/libebl_x86_64-0.164.so
-lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_x86_64.so -> libebl_x86_64-0.164.so
--rwxr-xr-x	root/root	usr/lib/libasm-0.164.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_aarch64-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_aarch64.so -> libebl_aarch64-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_alpha-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_alpha.so -> libebl_alpha-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_arm-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_arm.so -> libebl_arm-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_i386-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_i386.so -> libebl_i386-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_ia64-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_ia64.so -> libebl_ia64-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_ppc-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_ppc.so -> libebl_ppc-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_ppc64-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_ppc64.so -> libebl_ppc64-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_s390-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_s390.so -> libebl_s390-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_sh-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_sh.so -> libebl_sh-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_sparc-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_sparc.so -> libebl_sparc-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_tilegx-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_tilegx.so -> libebl_tilegx-0.165.so
+-rwxr-xr-x	root/root	usr/lib/elfutils/libebl_x86_64-0.165.so
+lrwxrwxrwx	root/root	usr/lib/elfutils/libebl_x86_64.so -> libebl_x86_64-0.165.so
+-rwxr-xr-x	root/root	usr/lib/libasm-0.165.so
 -rw-r--r--	root/root	usr/lib/libasm.a
 lrwxrwxrwx	root/root	usr/lib/libasm.so -> libasm.so.1
-lrwxrwxrwx	root/root	usr/lib/libasm.so.1 -> libasm-0.164.so
--rwxr-xr-x	root/root	usr/lib/libdw-0.164.so
+lrwxrwxrwx	root/root	usr/lib/libasm.so.1 -> libasm-0.165.so
+-rwxr-xr-x	root/root	usr/lib/libdw-0.165.so
 -rw-r--r--	root/root	usr/lib/libdw.a
 lrwxrwxrwx	root/root	usr/lib/libdw.so -> libdw.so.1
-lrwxrwxrwx	root/root	usr/lib/libdw.so.1 -> libdw-0.164.so
+lrwxrwxrwx	root/root	usr/lib/libdw.so.1 -> libdw-0.165.so
 -rw-r--r--	root/root	usr/lib/libebl.a
--rwxr-xr-x	root/root	usr/lib/libelf-0.164.so
+-rwxr-xr-x	root/root	usr/lib/libelf-0.165.so
 -rw-r--r--	root/root	usr/lib/libelf.a
 lrwxrwxrwx	root/root	usr/lib/libelf.so -> libelf.so.1
-lrwxrwxrwx	root/root	usr/lib/libelf.so.1 -> libelf-0.164.so
+lrwxrwxrwx	root/root	usr/lib/libelf.so.1 -> libelf-0.165.so
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/libdw.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/libelf.pc
