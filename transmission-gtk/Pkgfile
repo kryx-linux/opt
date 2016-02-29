@@ -4,7 +4,7 @@
 # Depends on:  curl intltool gtk3 libevent
 
 name=transmission-gtk
-version=2.84
+version=2.90
 release=1
 source=(https://transmission.cachefly.net/transmission-$version.tar.xz)
 
@@ -12,7 +12,6 @@ build() {
     cd transmission-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --with-gtk \
                 --disable-cli \
                 --disable-daemon
@@ -20,6 +19,6 @@ build() {
     make DESTDIR=$PKG install
 
     sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/transmission-gtk.desktop
-    rm $PKG/usr/{bin,man/man1}/transmission-{create,edit,show}*
+    rm $PKG/usr/{bin,share/man/man1}/transmission-{create,edit,show}*
     rm -r $PKG/usr/share/{locale,transmission}
 }
