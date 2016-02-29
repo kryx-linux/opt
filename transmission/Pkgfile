@@ -4,7 +4,7 @@
 # Depends on:  curl libevent
 
 name=transmission
-version=2.84
+version=2.90
 release=1
 source=(https://transmission.cachefly.net/$name-$version.tar.xz)
 
@@ -12,7 +12,6 @@ build() {
     cd $name-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --disable-nls \
                 --enable-cli \
                 --enable-daemon \
