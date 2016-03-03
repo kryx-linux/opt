@@ -6,11 +6,14 @@
 
 name=elfutils
 version=0.165
-release=1
-source=(https://fedorahosted.org/releases/e/l/$name/$version/$name-$version.tar.bz2)
+release=2
+source=(https://fedorahosted.org/releases/e/l/$name/$version/$name-$version.tar.bz2
+	glibc_2.21.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/glibc_2.21.patch
 
 	./configure \
 		--prefix=/usr \
