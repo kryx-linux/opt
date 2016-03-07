@@ -16,7 +16,7 @@ build() {
 
     patch -i ../ffmpeg.diff -p1
 
-    ./configure prefix=/usr mandir=/usr/man CONFIG_ARTS=n
+    ./configure prefix=/usr CONFIG_ARTS=n
     make
     make DESTDIR=$PKG install install-man
     rm -rf $PKG/usr/share/{doc,cmus/*.theme}
