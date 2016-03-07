@@ -14,7 +14,6 @@ build () {
 
     ./configure \
       --prefix=/usr \
-      --mandir=/usr/man \
       --enable-ipv6 \
       --with-proxy \
       --with-perl-lib=site

@@ -29,9 +29,6 @@ drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/linux-thread-multi/auto/Irssi/
 -r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/linux-thread-multi/auto/Irssi/TextUI/TextUI.so
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/linux-thread-multi/auto/Irssi/UI/
 -r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/linux-thread-multi/auto/Irssi/UI/UI.so
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/irssi.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/irssi/
 drwxr-xr-x	root/root	usr/share/irssi/help/
@@ -164,3 +161,6 @@ drwxr-xr-x	root/root	usr/share/irssi/scripts/
 drwxr-xr-x	root/root	usr/share/irssi/themes/
 -rw-r--r--	root/root	usr/share/irssi/themes/colorless.theme
 -rw-r--r--	root/root	usr/share/irssi/themes/default.theme
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/irssi.1.gz
