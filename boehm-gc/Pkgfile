@@ -1,5 +1,5 @@
 # Description: Garbage collection and memory leak detection for C and C++
-# URL: http://www.hpl.hp.com/personal/Hans_Boehm/gc/
+# URL: http://hboehm.info/gc/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Han Boetes, han at mijncomputer dot dl
 
@@ -22,7 +22,8 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    install -D -m 644 doc/gc.man $PKG/usr/man/man3/gc.3
-
     rm -rf $PKG/usr/share
+
+    install -D -m 644 doc/gc.man $PKG/usr/share/man/man3/gc.3
+
 }

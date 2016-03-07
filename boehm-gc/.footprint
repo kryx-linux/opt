@@ -31,6 +31,7 @@ lrwxrwxrwx	root/root	usr/lib/libgc.so.1 -> libgc.so.1.0.3
 -rwxr-xr-x	root/root	usr/lib/libgc.so.1.0.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/bdw-gc.pc
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man3/
--rw-r--r--	root/root	usr/man/man3/gc.3.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man3/
+-rw-r--r--	root/root	usr/share/man/man3/gc.3.gz
