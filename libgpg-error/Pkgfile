@@ -11,8 +11,8 @@ source=(ftp://ftp.gnupg.org/gcrypt/libgpg-error/$name-$version.tar.bz2)
 build() {
   cd $name-$version
 
-  ./configure --prefix=/usr --disable-nls \
-              --mandir=/usr/man \
+  ./configure --prefix=/usr \
+              --disable-nls \
               --enable-static
   make
   make DESTDIR=$PKG install
