@@ -14,7 +14,6 @@ build() {
 
     LIBS="-lpthread" ./configure \
       --prefix=/usr \
-      --mandir=/usr/man \
       --disable-nls \
       --enable-static-cryptsetup
     make
