@@ -14,7 +14,6 @@ build() {
 
     ./configure \
       --prefix=/usr \
-      --mandir=/usr/man \
       --enable-etcdir=/etc/zsh \
       --enable-zshrc=/etc/zsh/zshrc \
       --enable-zlogin=/etc/zsh/zshlogin \
@@ -35,10 +34,10 @@ build() {
     make
     make DESTDIR=$PKG install 
 
-    install -m 644 $SRC/zsh-lovers.1 $PKG/usr/man/man1/
+    install -m 644 $SRC/zsh-lovers.1 $PKG/usr/share/man/man1/
 
-    rm $PKG/usr/man/man1/zshall.1
-    cat $PKG/usr/man/man1/* > $PKG/usr/man/man1/zshall.1
+    rm $PKG/usr/share/man/man1/zshall.1
+    cat $PKG/usr/share/man/man1/* > $PKG/usr/share/man/man1/zshall.1
 
     install -d $PKG/bin
     ln -s /usr/bin/zsh $PKG/bin
