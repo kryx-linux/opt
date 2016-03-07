@@ -5,7 +5,7 @@
 # Depends on: ninja dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm libexif pciutils
 
 name=chromium
-version=48.0.2564.116
+version=49.0.2623.75
 release=1
 source=(http://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz \
 	$name.sh $name.desktop)
@@ -19,6 +19,7 @@ build() {
   export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
 
   build/gyp_chromium build/all.gyp --depth=. \
+        -Duse_sysroot=0 \
         -Dclang=0 \
         -Dpython_ver="2.7" \
 	-Dno_strict_aliasing=1 \
