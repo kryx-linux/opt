@@ -5,8 +5,8 @@
 # Depends on: zlib libpng
 
 name=freetype
-version=2.6.2
-release=2
+version=2.6.3
+release=1
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.bz2)
 
 build() {
