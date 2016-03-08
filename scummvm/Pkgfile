@@ -5,9 +5,9 @@
 # Depends on:  libmad libmpeg2 flac
 
 name=scummvm
-version=1.7.0
+version=1.8.0
 release=1
-source=(http://download.sourceforge.net/$name/$name-$version.tar.bz2)
+source=(http://www.scummvm.org/frs/${name}/${version}/${name}-${version}.tar.xz)
 
 build() {
   cd $name-$version
