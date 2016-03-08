@@ -2,7 +2,7 @@
 # URL: http://xmlsoft.org/XSLT/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: libxml2
+# Depends on: libxml2 zlib xz
 
 name=libxslt
 version=1.1.28
