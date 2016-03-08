@@ -5,7 +5,7 @@
 # Depends on: gtk3 libpcap libpcre hicolor-icon-theme
 
 name=wireshark
-version=2.0.1
+version=2.0.2
 release=1
 source=(http://www.$name.org/download/src/all-versions/$name-$version.tar.bz2)
 
@@ -13,7 +13,6 @@ build() {
   cd $name-$version
 
   ./configure --prefix=/usr \
-              --mandir=/usr/man \
               --with-plugins=/usr/lib/$name/plugins \
               --without-krb5 \
               --with-gtk3=yes \
