@@ -4,7 +4,7 @@
 # Depends on: nss, unzip, zip, libidl, gtk, gtk3, python, alsa-lib, xorg-libxt, yasm, mesa3d
  
 name=firefox
-version=44.0.2
+version=45.0
 release=1
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox-install-dir.patch firefox.desktop)
@@ -12,9 +12,6 @@ source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$ver
 build() {
     cd $name-$version
     
-    # Workaround for unidentified crashes; build with -Os
-    export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-Os/')"
-
     sed -i '/^ftfntfmt.h/ i freetype/ftfntfmt.h' config/system-headers
     patch -p1 -i $SRC/firefox-install-dir.patch
  
@@ -32,21 +29,18 @@ cat <<- EOF > .mozconfig
     ac_add_options --enable-system-ffi
     ac_add_options --enable-system-pixman
     ac_add_options --enable-system-sqlite
-    # Disable the use of system upstream cairo for now since it will cause crashes.
+    # Here be dragons!
     #ac_add_options --enable-system-cairo
+    #ac_add_options --enable-optimize="$CFLAGS"
     ac_add_options --with-pthreads
-    ac_add_options --enable-optimize="$CFLAGS"
     ac_add_options --enable-official-branding
     ac_add_options --with-distribution-id=nu.crux
     ac_add_options --enable-extensions=default,-gnomevfs
     ac_add_options --enable-shared
     ac_add_options --enable-svg
     ac_add_options --enable-crypto
-    ac_add_options --enable-xft
+    ac_add_options --enable-elf-hack
     ac_add_options --disable-gstreamer
-    ac_add_options --enable-pic
-    ac_add_options --enable-eme
-    ac_add_options --enable-eme=adobe
     ac_add_options --disable-tests
     ac_add_options --disable-mochitest
     ac_add_options --disable-dbus
