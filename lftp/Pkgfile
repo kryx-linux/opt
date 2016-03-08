@@ -1,11 +1,11 @@
 # Description: Sophisticated command line based FTP client
-# URL: http://lftp.yar.ru/
+# URL:         http://lftp.yar.ru/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: openssl
+# Packager:    Tilman Sauerbeck, tilman at crux dot nu
+# Depends on:  openssl
 
 name=lftp
-version=4.6.4
+version=4.6.5
 release=1
 source=(http://lftp.yar.ru/ftp/lftp-$version.tar.xz)
 
@@ -14,7 +14,6 @@ build() {
 
   ./configure --prefix=/usr \
               --disable-nls --with-openssl=/usr \
-              --mandir=/usr/man \
               --sysconfdir=/usr/etc \
               --disable-dependency-tracking # speed up things a little
 
