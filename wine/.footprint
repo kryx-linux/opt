@@ -1626,6 +1626,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/shell32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/shfolder.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/shlwapi.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/shutdown.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/slbcsp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/slc.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/snmpapi.dll
@@ -2162,6 +2163,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/shell32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/shfolder.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/shlwapi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/shutdown.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/slbcsp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/slc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/snmpapi.dll.so
@@ -3090,6 +3092,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/shell32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/shfolder.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/shlwapi.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/shutdown.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/slbcsp.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/slc.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/snmpapi.dll
@@ -3682,6 +3685,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/shell32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/shfolder.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/shlwapi.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/shutdown.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/slbcsp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/slc.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/snmpapi.dll.so
@@ -3917,5 +3921,5 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-2.44-x86_64.msi
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.5.6.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.6.0.msi
 -rw-r--r--	root/root	usr/share/wine/wine.inf
