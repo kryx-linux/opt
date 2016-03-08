@@ -4,13 +4,13 @@
 # Packager:    Tilman Sauerbeck, tilman at crux dot nu
 
 name=strace
-version=4.10
+version=4.11
 release=1
 source=(http://download.sourceforge.net/$name/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
 }
