@@ -2,7 +2,7 @@
 # URL: http://chromium.org/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Tadeusz Sosnierz, tadzikes gmail com
-# Depends on: ninja dbus-glib gtk libevent nss xorg-libxscrnsaver xorg-libxtst libgcrypt xorg-libxdamage yasm xorg-libxt gperf speech-dispatcher libdrm libexif pciutils
+# Depends on: dbus-glib gperf gtk libevent libexif libgcrypt mesa3d ninja nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt xorg-libxtst yasm
 
 name=chromium
 version=49.0.2623.75
