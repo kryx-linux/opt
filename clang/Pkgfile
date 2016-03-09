@@ -5,7 +5,7 @@
 # Depends on:  python, llvm
 
 name=clang
-version=3.7.0
+version=3.8.0
 release=1
 source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
   config.h llvm-config.h)
@@ -37,7 +37,7 @@ build() {
 
   # only clang may be left, remove llvm
   rm -r $PKG/usr/include/llvm{,-c}
-  rm $PKG/usr/bin/{bugpoint,ll*,macho-dump,opt,FileCheck,count,not,obj2yaml,verify-uselistorder,yaml2obj}
+  rm $PKG/usr/bin/{bugpoint,ll*,opt,FileCheck,count,not,obj2yaml,sancov,verify-uselistorder,yaml2obj}
   rm $PKG/usr/lib/{LLVMHello.so,BugpointPasses.so,libLTO.*,libLLVM*}
   # avoid conflicts with opt/llvm
   rm -r $PKG/usr/share/llvm
