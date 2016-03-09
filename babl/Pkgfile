@@ -12,7 +12,7 @@ source=(http://ftp.gtk.org/pub/babl/0.1/$name-$version.tar.bz2)
 build() {
   cd $name-$version
 
-  ./configure --prefix=/usr
+  ./configure --prefix=/usr --disable-docs
   make
   make DESTDIR=$PKG install
 }
