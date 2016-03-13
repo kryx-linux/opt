@@ -4,7 +4,7 @@
 # Depends on:  util-linux ncurses glib
 
 name=mc
-version=4.8.15
+version=4.8.16
 release=1
 source=(http://ftp.osuosl.org/pub/midnightcommander/$name-$version.tar.xz)
 
@@ -12,7 +12,6 @@ build () {
     cd $name-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --libexecdir=/usr/lib \
                 --disable-nls \
                 --with-screen=ncurses
