@@ -3,13 +3,13 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=expat
-version=2.1.0
+version=2.1.1
 release=1
-source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
+source=(http://download.sourceforge.net/$name/$name-$version.tar.bz2)
 
 build() { 
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
 }
