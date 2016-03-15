@@ -4,8 +4,8 @@
 # Depends on:  openssl zlib expat
 
 name=elinks
-version=20150225
-release=3
+version=20160207
+release=1
 source=(http://crux.nu/files/distfiles/$name-$version.tar.xz)
 
 build () {
