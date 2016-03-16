@@ -71,10 +71,12 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/auth-penalty.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-postfix-connection.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-request-handler.h
+-rw-r--r--	root/root	usr/include/dovecot/auth-request-stats.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-request-var-expand.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-request.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-server-connection.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-settings.h
+-rw-r--r--	root/root	usr/include/dovecot/auth-stats.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-token.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-worker-client.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-worker-server.h
@@ -165,6 +167,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/fts-library.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-storage.h
+-rw-r--r--	root/root	usr/include/dovecot/fts-tokenizer-common.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-tokenizer-generic-private.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-tokenizer-private.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-tokenizer.h
@@ -211,6 +214,9 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/imap-id.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-keepalive.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-list.h
+-rw-r--r--	root/root	usr/include/dovecot/imap-login-client.h
+-rw-r--r--	root/root	usr/include/dovecot/imap-login-commands.h
+-rw-r--r--	root/root	usr/include/dovecot/imap-login-settings.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-master-client.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-match.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-metadata.h
@@ -418,6 +424,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/message-decoder.h
 -rw-r--r--	root/root	usr/include/dovecot/message-header-decode.h
 -rw-r--r--	root/root	usr/include/dovecot/message-header-encode.h
+-rw-r--r--	root/root	usr/include/dovecot/message-header-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/message-header-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/message-id.h
 -rw-r--r--	root/root	usr/include/dovecot/message-parser.h
@@ -440,6 +447,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/numpack.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-cmp.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-dot.h
+-rw-r--r--	root/root	usr/include/dovecot/ostream-escaped.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-failure-at.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-metawrap.h
@@ -521,6 +529,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/sql-api.h
 -rw-r--r--	root/root	usr/include/dovecot/sql-db-cache.h
 -rw-r--r--	root/root	usr/include/dovecot/ssl-proxy.h
+-rw-r--r--	root/root	usr/include/dovecot/stats-connection.h
 -rw-r--r--	root/root	usr/include/dovecot/stats-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/stats.h
 -rw-r--r--	root/root	usr/include/dovecot/str-find.h
@@ -584,6 +593,11 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-compression.so.0 -> libdovecot-c
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-dsync.so -> libdovecot-dsync.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-dsync.so.0 -> libdovecot-dsync.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-dsync.so.0.0.0
+-rw-r--r--	root/root	usr/lib/dovecot/libdovecot-fts.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-fts.la
+lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-fts.so -> libdovecot-fts.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-fts.so.0 -> libdovecot-fts.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-fts.so.0.0.0
 -rw-r--r--	root/root	usr/lib/dovecot/libdovecot-lda.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/libdovecot-lda.la
 lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot-lda.so -> libdovecot-lda.so.0.0.0
@@ -715,6 +729,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/libssl_iostream_openssl.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/libssl_iostream_openssl.so
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/stats/
+-rw-r--r--	root/root	usr/lib/dovecot/modules/stats/libstats_auth.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/stats/libstats_auth.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/stats/libstats_auth.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/stats/libstats_mail.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/stats/libstats_mail.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/stats/libstats_mail.so
@@ -776,6 +793,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/doveadm-reload.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/doveadm-replicator.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/doveadm-search.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/doveadm-stats.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/doveadm-stop.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/doveadm-sync.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/doveadm-user.1.gz
