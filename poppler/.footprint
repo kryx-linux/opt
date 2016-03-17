@@ -5,6 +5,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/pdfimages
 -rwxr-xr-x	root/root	usr/bin/pdfinfo
 -rwxr-xr-x	root/root	usr/bin/pdfseparate
+-rwxr-xr-x	root/root	usr/bin/pdfsig
 -rwxr-xr-x	root/root	usr/bin/pdftocairo
 -rwxr-xr-x	root/root	usr/bin/pdftohtml
 -rwxr-xr-x	root/root	usr/bin/pdftoppm
@@ -67,6 +68,8 @@ drwxr-xr-x	root/root	usr/include/poppler/
 -rw-r--r--	root/root	usr/include/poppler/ProfileData.h
 -rw-r--r--	root/root	usr/include/poppler/Rendition.h
 -rw-r--r--	root/root	usr/include/poppler/SecurityHandler.h
+-rw-r--r--	root/root	usr/include/poppler/SignatureHandler.h
+-rw-r--r--	root/root	usr/include/poppler/SignatureInfo.h
 -rw-r--r--	root/root	usr/include/poppler/Sound.h
 -rw-r--r--	root/root	usr/include/poppler/SplashOutputDev.h
 -rw-r--r--	root/root	usr/include/poppler/StdinCachedFile.h
@@ -157,9 +160,9 @@ lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so.0 -> libpoppler-cpp.so.0.2.1
 -rwxr-xr-x	root/root	usr/lib/libpoppler-cpp.so.0.2.1
 -rw-r--r--	root/root	usr/lib/libpoppler.a
 -rwxr-xr-x	root/root	usr/lib/libpoppler.la
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.58.0.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so.58 -> libpoppler.so.58.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler.so.58.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.59.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so.59 -> libpoppler.so.59.0.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler.so.59.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cairo.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cpp.pc
