@@ -6,11 +6,11 @@
 name=cups
 version=2.1.3
 release=1
-source=(http://www.cups.org/software/$version/$name-$version-source.tar.bz2
+source=(http://crux.s3.amazonaws.com/dist/$name-release-$version.tar.gz
         cups)
 
 build () {
-    cd $name-$version
+    cd $name-release-$version
 
     CC=cc CXX=c++ \
     ./configure --prefix=/usr \
