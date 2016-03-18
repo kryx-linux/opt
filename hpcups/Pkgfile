@@ -4,7 +4,7 @@
 # Depends on:  cups
 
 name=hpcups
-version=3.16.2
+version=3.16.3
 release=1
 source=(http://downloads.sourceforge.net/project/hplip/hplip/$version/hplip-$version.tar.gz)
 
