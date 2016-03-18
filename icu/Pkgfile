@@ -11,6 +11,10 @@ source=(http://download.icu-project.org/files/icu4c/$version/icu4c-${version//./
 build() {
 	cd icu/source
 
+	# icu tries to use clang by default
+	[ "$CC" ] || export CC=gcc
+	[ "$CXX" ] || export CXX=g++
+
 	./configure \
 		--prefix=/usr \
 		--disable-samples \
