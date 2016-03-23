@@ -20,6 +20,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/color-select-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/contact-new.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/document-edit-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/document-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/document-new.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/document-open-recent-symbolic.symbolic.png
@@ -234,6 +235,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/tab-new.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/tools-check-spelling-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/tools-check-spelling.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/view-app-grid-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/view-continuous-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/view-dual-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/view-fullscreen-symbolic.symbolic.png
@@ -537,6 +539,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-certificate-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-certificate.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-rss+xml-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-x-addon-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-x-addon.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-x-appliance-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-x-executable-symbolic.symbolic.png
@@ -1244,6 +1247,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/color-select-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/contact-new.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/document-edit-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/document-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/document-new.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/document-open-recent-symbolic.symbolic.png
@@ -1452,6 +1456,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/tab-new.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/tools-check-spelling-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/tools-check-spelling.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/view-app-grid-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/view-continuous-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/view-dual-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/view-fullscreen-symbolic.symbolic.png
@@ -1751,6 +1756,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-certificate-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-certificate.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-rss+xml-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-x-addon-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-x-addon.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-x-appliance-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-x-executable-symbolic.symbolic.png
@@ -2306,6 +2312,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/color-select-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/contact-new.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/document-edit-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/document-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/document-new.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/document-open-recent-symbolic.symbolic.png
@@ -2519,6 +2526,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/tab-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/tools-check-spelling-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/tools-check-spelling.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/view-app-grid-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/view-continuous-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/view-dual-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/view-fullscreen-symbolic.symbolic.png
@@ -2822,6 +2830,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-certificate-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-certificate.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-rss+xml-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-x-addon-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-x-addon.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-x-appliance-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-x-executable-symbolic.symbolic.png
@@ -3139,6 +3148,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/color-select-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/contact-new.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/document-edit-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/document-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/document-new.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/document-open-recent-symbolic.symbolic.png
@@ -3352,6 +3362,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/tab-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/tools-check-spelling-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/tools-check-spelling.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/view-app-grid-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/view-continuous-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/view-dual-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/view-fullscreen-symbolic.symbolic.png
@@ -3656,6 +3667,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-certificate-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-certificate.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-rss+xml-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-x-addon-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-x-addon.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-x-appliance-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-x-executable-symbolic.symbolic.png
@@ -3966,6 +3978,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/call-stop-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/color-select-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/contact-new-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/document-edit-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/document-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/document-open-recent-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/document-open-symbolic.symbolic.png
@@ -4078,6 +4091,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/system-shutdown-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/tab-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/tools-check-spelling-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/view-app-grid-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/view-continuous-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/view-dual-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/view-fullscreen-symbolic.symbolic.png
@@ -4240,6 +4254,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/emotes/
 drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/mimetypes/application-certificate-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/mimetypes/application-rss+xml-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/mimetypes/application-x-addon-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/mimetypes/application-x-appliance-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/mimetypes/application-x-executable-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/mimetypes/audio-x-generic-symbolic.symbolic.png
@@ -4434,6 +4449,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/call-stop-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/color-select-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/contact-new-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/document-edit-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/document-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/document-open-recent-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/document-open-symbolic.symbolic.png
@@ -4546,6 +4562,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/system-shutdown-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/tab-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/tools-check-spelling-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/view-app-grid-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/view-continuous-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/view-dual-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/view-fullscreen-symbolic.symbolic.png
@@ -4708,6 +4725,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/emotes/
 drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/mimetypes/application-certificate-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/mimetypes/application-rss+xml-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/mimetypes/application-x-addon-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/mimetypes/application-x-appliance-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/mimetypes/application-x-executable-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/mimetypes/audio-x-generic-symbolic.symbolic.png
@@ -4941,7 +4959,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/grab -> hand1
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/grabbing
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/h_double_arrow -> sb_h_double_arrow
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/hand -> hand2
--rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/hand1
+lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/hand1 -> hand2
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/hand2
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/help -> question_arrow
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/icon -> dotbox
@@ -4981,11 +4999,11 @@ lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/s-resize -> bottom_side
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/sb_up_arrow
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/sb_v_double_arrow
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/se-resize -> bottom_right_corner
--rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/size_all
--rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/size_bdiag
--rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/size_fdiag
--rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/size_hor
--rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/size_ver
+lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/size_all -> fleur
+lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/size_bdiag -> fd_double_arrow
+lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/size_fdiag -> bd_double_arrow
+lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/size_hor -> h_double_arrow
+lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/size_ver -> v_double_arrow
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/sw-resize -> bottom_left_corner
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/target -> dotbox
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/tcross
@@ -5020,6 +5038,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/scalable/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/call-stop-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/color-select-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/contact-new-symbolic.svg
+-rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/document-edit-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/document-new-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/document-open-recent-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/document-open-symbolic.svg
@@ -5132,6 +5151,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/scalable/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/system-shutdown-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/tab-new-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/tools-check-spelling-symbolic.svg
+-rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/view-app-grid-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/view-continuous-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/view-dual-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/actions/view-fullscreen-symbolic.svg
@@ -5294,6 +5314,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/scalable/emotes/
 drwxr-xr-x	root/root	usr/share/icons/Adwaita/scalable/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/mimetypes/application-certificate-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/mimetypes/application-rss+xml-symbolic.svg
+-rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/mimetypes/application-x-addon-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/mimetypes/application-x-appliance-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/mimetypes/application-x-executable-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/mimetypes/audio-x-generic-symbolic.svg
