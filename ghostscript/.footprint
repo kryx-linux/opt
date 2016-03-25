@@ -50,32 +50,6 @@ lrwxrwxrwx	root/root	usr/lib/libgs.so.9 -> libgs.so.9.19
 lrwxrwxrwx	root/root	usr/lib/libijs.so -> libijs-0.35.so
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ijs.pc
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/dvipdf.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/eps2eps.1.gz -> ps2ps.1.gz
--rw-r--r--	root/root	usr/man/man1/font2c.1.gz
--rw-r--r--	root/root	usr/man/man1/gs.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/gsbj.1.gz -> gslp.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/gsdj.1.gz -> gslp.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/gsdj500.1.gz -> gslp.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/gslj.1.gz -> gslp.1.gz
--rw-r--r--	root/root	usr/man/man1/gslp.1.gz
--rw-r--r--	root/root	usr/man/man1/gsnd.1.gz
--rw-r--r--	root/root	usr/man/man1/pdf2dsc.1.gz
--rw-r--r--	root/root	usr/man/man1/pdf2ps.1.gz
--rw-r--r--	root/root	usr/man/man1/pf2afm.1.gz
--rw-r--r--	root/root	usr/man/man1/pfbtopfa.1.gz
--rw-r--r--	root/root	usr/man/man1/printafm.1.gz
--rw-r--r--	root/root	usr/man/man1/ps2ascii.1.gz
--rw-r--r--	root/root	usr/man/man1/ps2epsi.1.gz
--rw-r--r--	root/root	usr/man/man1/ps2pdf.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/ps2pdf12.1.gz -> ps2pdf.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/ps2pdf13.1.gz -> ps2pdf.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/ps2pdf14.1.gz -> ps2pdf.1.gz
--rw-r--r--	root/root	usr/man/man1/ps2pdfwr.1.gz
--rw-r--r--	root/root	usr/man/man1/ps2ps.1.gz
--rw-r--r--	root/root	usr/man/man1/wftopfa.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/ghostscript/
 drwxr-xr-x	root/root	usr/share/ghostscript/9.19/
@@ -350,3 +324,29 @@ drwxr-xr-x	root/root	usr/share/ghostscript/fonts/
 -rw-r--r--	root/root	usr/share/ghostscript/fonts/z003034l.afm
 -rw-r--r--	root/root	usr/share/ghostscript/fonts/z003034l.pfb
 -rw-r--r--	root/root	usr/share/ghostscript/fonts/z003034l.pfm
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/dvipdf.1.gz
+lrwxrwxrwx	root/root	usr/share/man/man1/eps2eps.1.gz -> ps2ps.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/font2c.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/gs.1.gz
+lrwxrwxrwx	root/root	usr/share/man/man1/gsbj.1.gz -> gslp.1.gz
+lrwxrwxrwx	root/root	usr/share/man/man1/gsdj.1.gz -> gslp.1.gz
+lrwxrwxrwx	root/root	usr/share/man/man1/gsdj500.1.gz -> gslp.1.gz
+lrwxrwxrwx	root/root	usr/share/man/man1/gslj.1.gz -> gslp.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/gslp.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/gsnd.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/pdf2dsc.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/pdf2ps.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/pf2afm.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/pfbtopfa.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/printafm.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/ps2ascii.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/ps2epsi.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/ps2pdf.1.gz
+lrwxrwxrwx	root/root	usr/share/man/man1/ps2pdf12.1.gz -> ps2pdf.1.gz
+lrwxrwxrwx	root/root	usr/share/man/man1/ps2pdf13.1.gz -> ps2pdf.1.gz
+lrwxrwxrwx	root/root	usr/share/man/man1/ps2pdf14.1.gz -> ps2pdf.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/ps2pdfwr.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/ps2ps.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/wftopfa.1.gz
