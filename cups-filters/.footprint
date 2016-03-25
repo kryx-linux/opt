@@ -100,6 +100,7 @@ drwxr-xr-x	root/root	usr/share/cups/data/
 drwxr-xr-x	root/root	usr/share/cups/drv/
 -rw-r--r--	root/root	usr/share/cups/drv/cupsfilters.drv
 drwxr-xr-x	root/root	usr/share/cups/mime/
+-rw-r--r--	root/root	usr/share/cups/mime/cupsfilters-ghostscript.convs
 -rw-r--r--	root/root	usr/share/cups/mime/cupsfilters.convs
 -rw-r--r--	root/root	usr/share/cups/mime/cupsfilters.types
 drwxr-xr-x	root/root	usr/share/cups/ppdc/
