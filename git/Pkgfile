@@ -1,13 +1,13 @@
 # Description: Directory content manager
-# URL: http://www.kernel.org/pub/software/scm/git/docs
+# URL:         http://www.kernel.org/pub/software/scm/git/docs
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: expat, curl, python
+# Packager:    Tilman Sauerbeck, tilman at crux dot nu
+# Depends on:  expat, curl, python
 # Nice to have: tk
 
 name=git
 version=2.8.0
-release=1
+release=2
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
 				git)
 
