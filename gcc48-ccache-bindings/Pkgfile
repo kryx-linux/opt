@@ -1,0 +1,16 @@
+# Description: Masquerade directory to use ccache with gcc48.
+# URL: http://gcc.gnu.org/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Packager: Danny Rawlins, crux at romster dot me
+# Depends on: gcc48 ccache
+
+name=gcc48-ccache-bindings
+version=1
+release=1
+source=()
+
+build() {
+	install -d $PKG/usr/lib/ccache
+	ln -s ../../bin/ccache $PKG/usr/lib/ccache/gcc-4.8
+	ln -s ../../bin/ccache $PKG/usr/lib/ccache/g++-4.8
+}
