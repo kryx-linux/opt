@@ -3,6 +3,7 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Daniel Walpole, daniel at walpole dot id dot au
 # Depends on:fontconfig-32 freeglut-32 xorg-libxcomposite-32 xorg-libxcursor-32 xorg-libxinerama-32 xorg-libxrandr-32 xorg-libxxf86dga-32 alsa-lib-32 libpng-32 libjpeg-turbo-32 prelink gnutls-32 gcc48
+# Optional: gcc48-ccache-bindings
 
 name=wine
 version=1.9.7
