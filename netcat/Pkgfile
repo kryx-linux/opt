@@ -6,14 +6,17 @@
 
 name=netcat
 version=0.7.1
-release=2
+release=3
 
 source=(http://download.sourceforge.net/netcat/netcat-0.7.1.tar.bz2)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr
+
+	./configure --prefix=/usr \
+                    --mandir=/usr/share/man
+
 	make
 	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/{share,info}
+	rm -rf $PKG/usr/{share/locale,info}
 }
