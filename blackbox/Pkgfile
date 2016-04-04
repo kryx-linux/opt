@@ -6,15 +6,19 @@
 
 name=blackbox
 version=0.70.1
-release=2
+release=3
 source=(http://download.sourceforge.net/blackboxwm/$name-$version.tar.bz2
-        blackbox-0.70.1-include-fix.diff)
+        $name-$version-include-fix.diff)
  
 
 build () {
     cd $name-$version
     patch -p1 -i $SRC/blackbox-0.70.1-include-fix.diff
-    ./configure --prefix=/usr --disable-nls
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/share/man \
+                --disable-nls
+
     make
     make DESTDIR=$PKG install
 }
