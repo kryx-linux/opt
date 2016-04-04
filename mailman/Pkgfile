@@ -5,13 +5,16 @@
 # Depends on: dnspython
 
 name=mailman
-version=2.1.18
-release=3
-source=(http://ftp.gnu.org/gnu/$name/$name-${version}-1.tgz \
+version=2.1.21
+release=1
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tgz \
         $name.rc)
 
 build() {
-  cd $name-${version}-1
+  cd $name-$version
+
+  # update patch from 2.1.5 to 2.1.21
+  sed 's|# pidfile: .*|# pidfile: @VAR_PREFIX@/data/master-qrunner.pid|' -i contrib/redhat_fhs.patch
   patch -p1 -i contrib/redhat_fhs.patch
 
   rm -f configure
@@ -49,8 +52,8 @@ build() {
 __EOF__
 
   # fix permissions
-  chown -R root:$name $PKG/etc/$name $PKG/usr/lib/$name \
-    $PKG/var/{lib,lock,log,run,spool}/$name
+  chown -R root:$name $PKG/etc/$name $PKG/usr/lib/$name $PKG/var/{lib,lock,log,run,spool}/$name
+  chmod 0775 $PKG/var/log/$name
   chmod 1777 $PKG/var/lock
   find $PKG/usr/lib/$name -type d -exec chmod 0775 {} \;
   chmod o+x $PKG/var/lib/$name/archives/private

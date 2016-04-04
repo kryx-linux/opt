@@ -7,6 +7,14 @@ PRE-INSTALL
   Execute the pre-install script to add a new mailman user/group
 
 
+POST-INSTALL
+
+  Mailman required the creation of a list on the server called 'mailman'.
+  You should create it manually to avoid this message:
+  'Site list is missing: mailman'
+  Follow NOTES section in this README file for more information.
+
+
 NOTES
 
   Configure options:
@@ -27,7 +35,7 @@ NOTES
 
   To create a new list:
 
-    $ sudo /usr/lib/mailman/bin/newlist
+    $ sudo /usr/lib/mailman/bin/newlist <list_name>
 
   To check perimissions:
 
@@ -61,8 +69,6 @@ NOTES
     RedirectMatch ^/mailman[/]*$ http://www.example.com/mailman/listinfo
     [...]
 
-
-  
 
   IMPORTANT: If archives/private is not o+x, then the owner of archives/private
   must be the web server user whatever that is - i.e. the web server user must be

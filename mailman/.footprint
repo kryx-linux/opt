@@ -531,6 +531,7 @@ drwxrwxr-x	root/mailman	usr/lib/mailman/messages/sr/
 drwxrwsr-x	root/mailman	usr/lib/mailman/messages/sr/LC_MESSAGES/
 -rw-r--r--	root/mailman	usr/lib/mailman/messages/sr/LC_MESSAGES/mailman.mo
 -rw-r--r--	root/mailman	usr/lib/mailman/messages/sr/LC_MESSAGES/mailman.po
+-rw-r--r--	root/mailman	usr/lib/mailman/messages/sr/README.sr
 drwxrwxr-x	root/mailman	usr/lib/mailman/messages/sv/
 drwxrwsr-x	root/mailman	usr/lib/mailman/messages/sv/LC_MESSAGES/
 -rw-r--r--	root/mailman	usr/lib/mailman/messages/sv/LC_MESSAGES/mailman.mo
@@ -796,6 +797,7 @@ drwxrwxr-x	root/mailman	usr/lib/mailman/templates/da/
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/da/userpass.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/da/verify.txt
 drwxrwxr-x	root/mailman	usr/lib/mailman/templates/de/
+-rw-r--r--	root/mailman	usr/lib/mailman/templates/de/adminaddrchgack.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/de/admindbdetails.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/de/admindbpreamble.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/de/admindbsummary.html
@@ -886,6 +888,7 @@ drwxrwxr-x	root/mailman	usr/lib/mailman/templates/el/
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/el/userpass.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/el/verify.txt
 drwxrwxr-x	root/mailman	usr/lib/mailman/templates/en/
+-rw-r--r--	root/mailman	usr/lib/mailman/templates/en/adminaddrchgack.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/en/admindbdetails.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/en/admindbpreamble.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/en/admindbsummary.html
@@ -1348,6 +1351,7 @@ drwxrwxr-x	root/mailman	usr/lib/mailman/templates/hu/
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/hu/userpass.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/hu/verify.txt
 drwxrwxr-x	root/mailman	usr/lib/mailman/templates/ia/
+-rw-r--r--	root/mailman	usr/lib/mailman/templates/ia/adminaddrchgack.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ia/admindbdetails.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ia/admindbpreamble.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ia/admindbsummary.html
@@ -1438,6 +1442,7 @@ drwxrwxr-x	root/mailman	usr/lib/mailman/templates/it/
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/it/userpass.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/it/verify.txt
 drwxrwxr-x	root/mailman	usr/lib/mailman/templates/ja/
+-rw-r--r--	root/mailman	usr/lib/mailman/templates/ja/adminaddrchgack.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ja/admindbdetails.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ja/admindbpreamble.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ja/admindbsummary.html
@@ -1648,9 +1653,6 @@ drwxrwxr-x	root/mailman	usr/lib/mailman/templates/no/
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/no/userpass.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/no/verify.txt
 drwxrwxr-x	root/mailman	usr/lib/mailman/templates/pl/
--rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/admindbdetails.html
--rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/admindbpreamble.html
--rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/admindbsummary.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/adminsubscribeack.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/adminunsubscribeack.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/admlogin.html
@@ -1666,11 +1668,9 @@ drwxrwxr-x	root/mailman	usr/lib/mailman/templates/pl/
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/article.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/bounce.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/checkdbs.txt
--rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/convert.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/cronpass.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/disabled.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/emptyarchive.html
--rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/headfoot.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/help.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/invite.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/pl/listinfo.html
@@ -1821,6 +1821,7 @@ drwxrwxr-x	root/mailman	usr/lib/mailman/templates/ro/
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ro/userpass.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ro/verify.txt
 drwxrwxr-x	root/mailman	usr/lib/mailman/templates/ru/
+-rw-r--r--	root/mailman	usr/lib/mailman/templates/ru/adminaddrchgack.txt
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ru/admindbdetails.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ru/admindbpreamble.html
 -rw-r--r--	root/mailman	usr/lib/mailman/templates/ru/admindbsummary.html
