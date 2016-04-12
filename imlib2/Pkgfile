@@ -5,12 +5,15 @@
 # Depends on: freetype, libid3tag, libpng, libtiff, giflib, xorg-libsm, xorg-libxext
 
 name=imlib2
-version=1.4.7
+version=1.4.8
 release=1
-source=(http://download.sourceforge.net/enlightenment/$name-$version.tar.bz2)
+source=(http://download.sourceforge.net/enlightenment/$name-$version.tar.bz2 \
+        https://gitweb.gentoo.org/repo/gentoo.git/plain/media-libs/$name/files/$name-$version-gif-oob.patch)
 
 build() {
   cd $name-$version
+
+  patch -p1 -i $SRC/$name-$version-gif-oob.patch
 
   ./configure --prefix=/usr
 
