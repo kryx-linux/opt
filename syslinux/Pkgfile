@@ -6,7 +6,7 @@
 
 name=syslinux
 version=6.03
-release=2
+release=3
 source=(http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.xz \
         $name-Makefile.patch)
 
@@ -16,6 +16,6 @@ build() {
   patch -p0 -i $SRC/$name-Makefile.patch
 
   make OPTFLAGS="$CFLAGS" installer
-  make -j1 OPTFLAGS="$CFLAGS" INSTALLROOT="$PKG" install
+  make -j1 OPTFLAGS="$CFLAGS" INSTALLROOT=$PKG MANDIR=/usr/share/man install
 
 }
