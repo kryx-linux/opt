@@ -5,7 +5,7 @@
 
 name=thunderbird
 version=38.7.2
-release=1
+release=2
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/source/$name-$version.source.tar.bz2
     	$name.desktop thunderbird-install-dir.patch)
  
@@ -28,7 +28,7 @@ cat <<- EOF > .mozconfig
     ac_add_options --with-system-nss
     ac_add_options --enable-system-ffi
     ac_add_options --enable-system-pixman
-    ac_add_options --enable-system-sqlite
+    #ac_add_options --enable-system-sqlite
     ac_add_options --enable-system-cairo
     ac_add_options --with-pthreads
     ac_add_options --enable-optimize="$CFLAGS"
