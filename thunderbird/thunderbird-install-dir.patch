@@ -1,6 +1,6 @@
-diff -rupN comm-beta.orig/mozilla/config/baseconfig.mk comm-beta/mozilla/config/baseconfig.mk
---- comm-beta.orig/mozilla/config/baseconfig.mk	2015-04-23 17:38:36.328509738 +0200
-+++ comm-beta/mozilla/config/baseconfig.mk	2015-04-23 17:39:42.753800397 +0200
+diff -rupN thunderbird-45.0.orig/mozilla/config/baseconfig.mk thunderbird-45.0/mozilla/config/baseconfig.mk
+--- thunderbird-45.0.orig/mozilla/config/baseconfig.mk	2016-04-14 20:21:45.871195170 +0200
++++ thunderbird-45.0/mozilla/config/baseconfig.mk	2016-04-14 20:24:13.356390677 +0200
 @@ -2,10 +2,10 @@
  # directly in python/mozbuild/mozbuild/base.py for gmake validation.
  # We thus use INCLUDED_AUTOCONF_MK to enable/disable some parts depending
@@ -13,6 +13,6 @@ diff -rupN comm-beta.orig/mozilla/config/baseconfig.mk comm-beta/mozilla/config/
 +idldir = $(datadir)/idl/$(MOZ_APP_NAME)
 +installdir = $(libdir)/$(MOZ_APP_NAME)
 +sdkdir = $(libdir)/$(MOZ_APP_NAME)-devel
- ifndef TOP_DIST
- TOP_DIST = dist
- endif
+ ifeq (.,$(DEPTH))
+ DIST = dist
+ else
