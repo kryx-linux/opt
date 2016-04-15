@@ -5,7 +5,7 @@
 
 name=thunderbird
 version=45.0
-release=1
+release=2
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/source/$name-$version.source.tar.xz
     	$name.desktop thunderbird-install-dir.patch)
  
@@ -50,6 +50,7 @@ cat <<- EOF > .mozconfig
     ac_add_options --disable-libnotify
     ac_add_options --disable-pulseaudio
     ac_add_options --with-distribution-id=nu.crux
+    ac_add_options --disable-gconf
 EOF
     make -f client.mk build
     make -f client.mk DESTDIR=$PKG install
