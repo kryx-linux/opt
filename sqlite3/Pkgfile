@@ -4,7 +4,7 @@
 # Depends on:  ncurses, readline
 
 name=sqlite3
-version=3.12.1
+version=3.12.2
 release=1
 _version=$(printf "%i%.2i%.2i%.2i" ${version//./ })
 
