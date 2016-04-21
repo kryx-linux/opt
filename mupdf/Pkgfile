@@ -5,7 +5,7 @@
 
 name=mupdf
 version=1.9
-release=1
+release=2
 source=(http://mupdf.com/downloads/$name-$version-source.tar.gz)
 
 build() {
@@ -13,8 +13,8 @@ build() {
     
     rm -r thirdparty/{freetype*,jpeg*,zlib,curl}
     make build=release 
-    make prefix=$PKG/usr mandir=$PKG/usr/man install
+    make prefix=$PKG/usr mandir=$PKG/usr/share/man install
    
     ln -s mupdf-x11-curl $PKG/usr/bin/mupdf
-    rm -r $PKG/usr/share
+    rm -r $PKG/usr/share/doc
 } 
