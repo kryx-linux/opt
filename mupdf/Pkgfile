@@ -4,8 +4,8 @@
 # Depends on:  curl freetype libjpeg-turbo xorg-libxext
 
 name=mupdf
-version=1.9
-release=2
+version=1.9a
+release=1
 source=(http://mupdf.com/downloads/$name-$version-source.tar.gz)
 
 build() {
