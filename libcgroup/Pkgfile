@@ -1,7 +1,6 @@
-# Description:
-# URL:
-# Maintainer:
-# Packager:
+# Description: Library that abstracts the control group file system in Linux
+# URL:         http://libcg.sourceforge.net/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
 # Depends on:
 
 name=libcgroup
