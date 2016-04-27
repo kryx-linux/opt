@@ -154,6 +154,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/fs-api-private.h
 -rw-r--r--	root/root	usr/include/dovecot/fs-api.h
 -rw-r--r--	root/root	usr/include/dovecot/fs-sis-common.h
+-rw-r--r--	root/root	usr/include/dovecot/fs-test.h
 -rw-r--r--	root/root	usr/include/dovecot/fsync-mode.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-api-private.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-api.h
@@ -451,6 +452,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ostream-failure-at.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-metawrap.h
+-rw-r--r--	root/root	usr/include/dovecot/ostream-null.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-private.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-rawlog.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-zlib.h
