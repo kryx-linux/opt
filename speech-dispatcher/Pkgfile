@@ -2,7 +2,7 @@
 # URL: http://devel.freebsoft.org/speechd/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Jose V Beneyto, sepen at crux dot nu
-# Depends on: libsndfile intltool glib libxml2 dotconf
+# Depends on: libsndfile intltool glib libxml2 dotconf libao
 
 name=speech-dispatcher
 version=0.8.4
