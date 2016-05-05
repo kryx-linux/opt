@@ -13,8 +13,6 @@ build () {
     cd $name-$version/linux
     patch -p 1 -d .. -i $SRC/$name-remove_libswmhack.patch
     make PREFIX=/usr
-    #rm -r $PKG/usr/{man/??/,share}
-    #ln -sf spectrwm $PKG/usr/bin/scrotwm
     install -d $PKG/usr/{bin,share/man/man1}
     install spectrwm $PKG/usr/bin
     install ../spectrwm.1 $PKG/usr/share/man/man1
