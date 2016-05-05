@@ -5,9 +5,9 @@
 # Depends on:  util-linux lcms2 pango xorg-libxt
 
 name=imagemagick
-version=6.9.2-10
-release=2
-source=(ftp://ftp.imagemagick.org/pub/ImageMagick/releases/ImageMagick-$version.tar.xz)
+version=6.9.3-10
+release=1
+source=(ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-$version.tar.xz)
 
 build () {
     cd ImageMagick-$version
