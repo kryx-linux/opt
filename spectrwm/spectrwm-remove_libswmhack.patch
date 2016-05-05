@@ -1,6 +1,6 @@
-diff -Nru spectrwm-2.7.2.orig/linux/Makefile spectrwm-2.7.2/linux/Makefile
---- spectrwm-2.7.2.orig/linux/Makefile	2015-05-28 19:03:31.640514721 +0200
-+++ spectrwm-2.7.2/linux/Makefile	2015-05-28 19:03:51.140395900 +0200
+diff -Nru spectrwm-3.0.0.orig/linux/Makefile spectrwm-3.0.0/linux/Makefile
+--- spectrwm-3.0.0.orig/linux/Makefile	2016-05-05 12:01:59.903766554 +0200
++++ spectrwm-3.0.0/linux/Makefile	2016-05-05 12:02:13.257073357 +0200
 @@ -10,7 +10,7 @@
  LIBMAJORVERSION = $(shell .  $(CURDIR)/../lib/shlib_version; echo $$major)
  
@@ -10,20 +10,10 @@ diff -Nru spectrwm-2.7.2.orig/linux/Makefile spectrwm-2.7.2/linux/Makefile
  MAINT_LDLIBS   = -lX11 -lX11-xcb -lxcb -lxcb-icccm -lxcb-randr -lxcb-keysyms -lxcb-util -lxcb-xtest -lXft -lXcursor
  
  ifneq ("${BUILDVERSION}", "")
-@@ -48,9 +48,6 @@
- 	install -m 755 -d $(DESTDIR)$(XSESSIONSDIR)
- 	install -m 755 spectrwm                    $(DESTDIR)$(BINDIR)
- 	ln -sf spectrwm                            $(DESTDIR)$(BINDIR)/scrotwm
--	install -m 644 libswmhack.so.$(LIBVERSION) $(DESTDIR)$(LIBDIR)
--	ln -sf libswmhack.so.$(LIBVERSION)         $(DESTDIR)$(LIBDIR)/libswmhack.so.$(LIBMAJORVERSION)
--	ln -sf libswmhack.so.$(LIBVERSION)         $(DESTDIR)$(LIBDIR)/libswmhack.so
- 	install -m 644 ../spectrwm.1               $(DESTDIR)$(MANDIR)/man1/spectrwm.1
- 	install -m 644 ../spectrwm_es.1            $(DESTDIR)$(MANDIR)/es/man1/spectrwm.1
- 	install -m 644 ../spectrwm_it.1            $(DESTDIR)$(MANDIR)/it/man1/spectrwm.1
-diff -Nru spectrwm-2.7.2.orig/spectrwm.c spectrwm-2.7.2/spectrwm.c
---- spectrwm-2.7.2.orig/spectrwm.c	2015-05-28 19:03:31.640514721 +0200
-+++ spectrwm-2.7.2/spectrwm.c	2015-05-28 19:03:51.143729213 +0200
-@@ -310,9 +310,9 @@
+diff -Nru spectrwm-3.0.0.orig/spectrwm.c spectrwm-3.0.0/spectrwm.c
+--- spectrwm-3.0.0.orig/spectrwm.c	2016-05-05 12:01:59.903766554 +0200
++++ spectrwm-3.0.0/spectrwm.c	2016-05-05 12:02:13.260406683 +0200
+@@ -273,9 +273,9 @@
  #define SWM_CONF_DEFAULT	(0)
  #define SWM_CONF_KEYMAPPING	(1)
  
@@ -35,7 +25,7 @@ diff -Nru spectrwm-2.7.2.orig/spectrwm.c spectrwm-2.7.2/spectrwm.c
  
  char			**start_argv;
  xcb_atom_t		a_state;
-@@ -3493,7 +3493,7 @@
+@@ -3712,7 +3712,7 @@
  
  	close(xcb_get_file_descriptor(conn));
  
