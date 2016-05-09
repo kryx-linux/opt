@@ -7,7 +7,7 @@
 name=imagemagick
 version=6.9.3-10
 release=1
-source=(ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-$version.tar.xz)
+source=(ftp://ftp.imagemagick.org/pub/ImageMagick/releases/ImageMagick-$version.tar.xz)
 
 build () {
     cd ImageMagick-$version
