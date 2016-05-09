@@ -4,7 +4,7 @@
 # Packager: Juergen Daubert, jue at crux dot nu
 
 name=smartmontools
-version=6.4
+version=6.5
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz \
         smartd)
@@ -13,13 +13,11 @@ build () {
     cd $name-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --sysconfdir=/etc \
                 --with-initscriptdir=/etc/rc.d \
                 --localstatedir=/var \
-                --enable-drivedb \
-                --enable-savestates \
-                --enable-attributelog
+                --with-savestates \
+                --with-attributelog
 
     make
     make DESTDIR=$PKG install
