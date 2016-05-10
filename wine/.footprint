@@ -212,6 +212,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3drmobj.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3drmwin.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dtypes.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3dukmdt.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dvec.inl
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10async.h
@@ -247,6 +248,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/compstui.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/csq.h
+-rw-r--r--	root/root	usr/include/wine/windows/ddk/d3dkmthk.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/hidclass.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/hidpi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/hidport.h
@@ -771,6 +773,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wia_xp.h
 -rw-r--r--	root/root	usr/include/wine/windows/wia_xp.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wiadef.h
+-rw-r--r--	root/root	usr/include/wine/windows/wimgapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/winbase.h
 -rw-r--r--	root/root	usr/include/wine/windows/wincodec.h
 -rw-r--r--	root/root	usr/include/wine/windows/wincodec.idl
@@ -1409,6 +1412,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/fltmgr.sys
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/fntcache.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/fontsub.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/fsutil.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/fusion.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/fwpuclnt.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/gameux.dll
@@ -1766,6 +1770,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/fltmgr.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/fntcache.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/fontsub.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/fsutil.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/fusion.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/fwpuclnt.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/gameux.dll.so
@@ -2863,6 +2868,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/fltmgr.sys
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/fntcache.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/fontsub.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/fsutil.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/fusion.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/fwpuclnt.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/gameux.dll
@@ -3274,6 +3280,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/fltmgr.sys.so
 -rwxr-xr-x	root/root	usr/lib32/wine/fntcache.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/fontsub.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/fsutil.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/fusion.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/fwpuclnt.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/gameux.dll.so
@@ -3952,5 +3959,5 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-2.44-x86_64.msi
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.6.0.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.6.2.msi
 -rw-r--r--	root/root	usr/share/wine/wine.inf
