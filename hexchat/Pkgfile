@@ -3,7 +3,7 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Danny Rawlins, crux at romster dot me
 # Depends on: intltool iso-codes libnotify libsexy pciutils xorg-libxdamage xz
-# Nice to have: enchant
+# Optional: enchant libcanberra
 
 name=hexchat
 version=2.12.0
