@@ -6,7 +6,7 @@
 # Nice to have: libseccomp libiscsi libusb usbredir spice
  
 name=qemu
-version=2.5.0
+version=2.5.1.1
 release=1
 source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
 
