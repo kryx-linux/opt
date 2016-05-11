@@ -17,7 +17,9 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/asftag.h
 -rw-r--r--	root/root	usr/include/taglib/attachedpictureframe.h
 -rw-r--r--	root/root	usr/include/taglib/audioproperties.h
+-rw-r--r--	root/root	usr/include/taglib/chapterframe.h
 -rw-r--r--	root/root	usr/include/taglib/commentsframe.h
+-rw-r--r--	root/root	usr/include/taglib/eventtimingcodesframe.h
 -rw-r--r--	root/root	usr/include/taglib/fileref.h
 -rw-r--r--	root/root	usr/include/taglib/flacfile.h
 -rw-r--r--	root/root	usr/include/taglib/flacmetadatablock.h
@@ -58,6 +60,7 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/opusfile.h
 -rw-r--r--	root/root	usr/include/taglib/opusproperties.h
 -rw-r--r--	root/root	usr/include/taglib/ownershipframe.h
+-rw-r--r--	root/root	usr/include/taglib/podcastframe.h
 -rw-r--r--	root/root	usr/include/taglib/popularimeterframe.h
 -rw-r--r--	root/root	usr/include/taglib/privateframe.h
 -rw-r--r--	root/root	usr/include/taglib/relativevolumeframe.h
@@ -66,6 +69,8 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/s3mproperties.h
 -rw-r--r--	root/root	usr/include/taglib/speexfile.h
 -rw-r--r--	root/root	usr/include/taglib/speexproperties.h
+-rw-r--r--	root/root	usr/include/taglib/synchronizedlyricsframe.h
+-rw-r--r--	root/root	usr/include/taglib/tableofcontentsframe.h
 -rw-r--r--	root/root	usr/include/taglib/tag.h
 -rw-r--r--	root/root	usr/include/taglib/tag_c.h
 -rw-r--r--	root/root	usr/include/taglib/taglib.h
@@ -105,8 +110,8 @@ drwxr-xr-x	root/root	usr/include/taglib/
 -rw-r--r--	root/root	usr/include/taglib/xmproperties.h
 drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libtag.so -> libtag.so.1
-lrwxrwxrwx	root/root	usr/lib/libtag.so.1 -> libtag.so.1.14.0
--rwxr-xr-x	root/root	usr/lib/libtag.so.1.14.0
+lrwxrwxrwx	root/root	usr/lib/libtag.so.1 -> libtag.so.1.16.0
+-rwxr-xr-x	root/root	usr/lib/libtag.so.1.16.0
 lrwxrwxrwx	root/root	usr/lib/libtag_c.so -> libtag_c.so.0
 lrwxrwxrwx	root/root	usr/lib/libtag_c.so.0 -> libtag_c.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libtag_c.so.0.0.0
