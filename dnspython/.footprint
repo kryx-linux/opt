@@ -5,6 +5,8 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/dns/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/__init__.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/_compat.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/_compat.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/dnssec.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/dnssec.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/e164.py
@@ -53,6 +55,12 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/AFSDB.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/AFSDB.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/CAA.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/CAA.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/CDNSKEY.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/CDNSKEY.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/CDS.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/CDS.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/CERT.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/CERT.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/CNAME.py
@@ -65,6 +73,10 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/DNSKEY.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/DS.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/DS.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/EUI48.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/EUI48.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/EUI64.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/EUI64.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/GPOS.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/GPOS.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/HINFO.py
@@ -103,6 +115,8 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/TLSA.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/TXT.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/TXT.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/URI.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/URI.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/X25.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/X25.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/ANY/__init__.py
@@ -136,8 +150,12 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/IN/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/IN/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/__init__.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/dnskeybase.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/dnskeybase.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/dsbase.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/dsbase.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/euibase.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/euibase.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/mxbase.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/mxbase.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/nsbase.py
@@ -170,4 +188,8 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/dns/rdtypes/IN/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/wiredata.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/zone.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/dns/zone.pyc
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/dnspython-1.12.0-py2.7.egg-info
+drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/dnspython-1.13.0-py2.7.egg-info/
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dnspython-1.13.0-py2.7.egg-info/PKG-INFO
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dnspython-1.13.0-py2.7.egg-info/SOURCES.txt
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dnspython-1.13.0-py2.7.egg-info/dependency_links.txt
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/dnspython-1.13.0-py2.7.egg-info/top_level.txt
