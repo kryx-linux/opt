@@ -29,4 +29,5 @@ build() {
   install scripts/qemu-guest-agent/fsfreeze-hook $PKG/etc/qemu
   cp -a scripts/qemu-guest-agent/fsfreeze-hook.d $PKG/etc/qemu
   install -D -m 755 $SRC/qemu-agent $PKG/etc/rc.d/qemu-agent
+  install -d -m 755 $PKG/var/run/qemu-ga
 }

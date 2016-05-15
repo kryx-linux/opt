@@ -1,27 +1,34 @@
 #!/bin/sh
 #
-# /etc/rc.d/qemu-agent: start/stop qemu guest agent
+# /etc/rc.d/sshd: start/stop qemu-ga daemon
 #
+
+SSD=/sbin/start-stop-daemon
+PROG=/usr/bin/qemu-ga
+PID=/var/run/qemu-ga.pid
 
 case $1 in
 start)
-	/usr/bin/qemu-ga
+	$SSD --start --pidfile $PID --exec $PROG -- -t /var/run/qemu-ga
 	;;
 stop)
-	if [ -f /var/run/sshd.pid ]; then
-		kill $(< /var/run/sshd.pid)
-		rm -f /var/run/sshd.pid
-	else
-		killall -q /usr/sbin/sshd
-	fi
+	$SSD --stop --retry 10 --pidfile $PID
 	;;
 restart)
 	$0 stop
-	sleep 2
 	$0 start
 	;;
+status)
+	$SSD --status --pidfile $PID
+	case $? in
+	0) echo "$PROG is running with pid $(cat $PID)" ;;
+	1) echo "$PROG is not running but the pid file $PID exists" ;;
+	3) echo "$PROG is not running" ;;
+	4) echo "Unable to determine the program status" ;;
+	esac
+	;;
 *)
-	echo "usage: $0 [start|stop|restart]"
+	echo "usage: $0 [start|stop|restart|status]"
 	;;
 esac
 
