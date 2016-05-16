@@ -1,6 +1,6 @@
-diff -Nru spectrwm-3.0.0.orig/linux/Makefile spectrwm-3.0.0/linux/Makefile
---- spectrwm-3.0.0.orig/linux/Makefile	2016-05-05 12:01:59.903766554 +0200
-+++ spectrwm-3.0.0/linux/Makefile	2016-05-05 12:02:13.257073357 +0200
+diff -Nru spectrwm-3.0.1.orig/linux/Makefile spectrwm-3.0.1/linux/Makefile
+--- spectrwm-3.0.1.orig/linux/Makefile	2016-05-16 15:22:06.375506421 +0200
++++ spectrwm-3.0.1/linux/Makefile	2016-05-16 15:27:15.595398541 +0200
 @@ -10,7 +10,7 @@
  LIBMAJORVERSION = $(shell .  $(CURDIR)/../lib/shlib_version; echo $$major)
  
@@ -10,9 +10,9 @@ diff -Nru spectrwm-3.0.0.orig/linux/Makefile spectrwm-3.0.0/linux/Makefile
  MAINT_LDLIBS   = -lX11 -lX11-xcb -lxcb -lxcb-icccm -lxcb-randr -lxcb-keysyms -lxcb-util -lxcb-xtest -lXft -lXcursor
  
  ifneq ("${BUILDVERSION}", "")
-diff -Nru spectrwm-3.0.0.orig/spectrwm.c spectrwm-3.0.0/spectrwm.c
---- spectrwm-3.0.0.orig/spectrwm.c	2016-05-05 12:01:59.903766554 +0200
-+++ spectrwm-3.0.0/spectrwm.c	2016-05-05 12:02:13.260406683 +0200
+diff -Nru spectrwm-3.0.1.orig/spectrwm.c spectrwm-3.0.1/spectrwm.c
+--- spectrwm-3.0.1.orig/spectrwm.c	2016-05-16 15:22:06.378839754 +0200
++++ spectrwm-3.0.1/spectrwm.c	2016-05-16 15:30:08.021987775 +0200
 @@ -273,9 +273,9 @@
  #define SWM_CONF_DEFAULT	(0)
  #define SWM_CONF_KEYMAPPING	(1)
@@ -25,12 +25,19 @@ diff -Nru spectrwm-3.0.0.orig/spectrwm.c spectrwm-3.0.0/spectrwm.c
  
  char			**start_argv;
  xcb_atom_t		a_state;
-@@ -3712,7 +3712,7 @@
+@@ -3712,6 +3712,7 @@
  
  	close(xcb_get_file_descriptor(conn));
  
--	setenv("LD_PRELOAD", SWM_LIB, 1);
-+	/* setenv("LD_PRELOAD", SWM_LIB, 1); */
++	/*
+ 	if ((ret = getenv("LD_PRELOAD"))) {
+ 		if (asprintf(&ret, "%s:%s", SWM_LIB, ret) == -1) {
+ 			warn("spawn: asprintf LD_PRELOAD");
+@@ -3722,6 +3723,7 @@
+ 	} else {
+ 		setenv("LD_PRELOAD", SWM_LIB, 1);
+ 	}
++	*/
  
  	if (asprintf(&ret, "%d", ws_idx) == -1) {
  		warn("spawn: asprintf SWM_WS");

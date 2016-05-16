@@ -4,14 +4,14 @@
 # Depends on:  xorg-libxrender fontconfig xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=spectrwm
-version=3.0.0
+version=3.0.1
 release=1
-source=(https://opensource.conformal.com/snapshots/$name/$name-$version.tgz
+source=(https://github.com/conformal/spectrwm/archive/SPECTRWM_${version//./_}.tar.gz
         $name-remove_libswmhack.patch)
 
 build () {
-    cd $name-$version/linux
-    patch -p 1 -d .. -i $SRC/$name-remove_libswmhack.patch
+    cd $name-SPECTRWM_${version//./_}/linux
+    patch -p1 -d.. -i $SRC/$name-remove_libswmhack.patch
     make PREFIX=/usr
     install -d $PKG/usr/{bin,share/man/man1}
     install spectrwm $PKG/usr/bin
