@@ -5,8 +5,8 @@
 # Depends on: dbus gst-plugins-base gst-plugins-base-compat libmng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-wm xorg-xcb-util-keysyms
 
 name=qt5
-version=5.5.1
-release=2
+version=5.6.0
+release=1
 source=(http://download.qt.io/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz)
 
 build() {
