@@ -1,12 +1,7 @@
-diff -Nru dnsmasq-2.74.orig/Makefile dnsmasq-2.74/Makefile
---- dnsmasq-2.74.orig/Makefile	2015-07-29 09:24:06.524601095 +0200
-+++ dnsmasq-2.74/Makefile	2015-07-29 09:24:43.299930250 +0200
-@@ -20,11 +20,11 @@
- 
- PREFIX        = /usr/local
- BINDIR        = $(PREFIX)/sbin
--MANDIR        = $(PREFIX)/share/man
-+MANDIR        = $(PREFIX)/man
+diff -Nru dnsmasq-2.76.orig/Makefile dnsmasq-2.76/Makefile
+--- dnsmasq-2.76.orig/Makefile	2016-05-19 19:10:26.729305866 +0200
++++ dnsmasq-2.76/Makefile	2016-05-19 19:11:06.601200120 +0200
+@@ -24,7 +24,7 @@
  LOCALEDIR     = $(PREFIX)/share/locale
  BUILDDIR      = $(SRC)
  DESTDIR       = 
@@ -15,9 +10,9 @@ diff -Nru dnsmasq-2.74.orig/Makefile dnsmasq-2.74/Makefile
  LDFLAGS       = 
  COPTS         = 
  RPM_OPT_FLAGS = 
-diff -Nru dnsmasq-2.74.orig/dnsmasq.conf.example dnsmasq-2.74/dnsmasq.conf.example
---- dnsmasq-2.74.orig/dnsmasq.conf.example	2015-07-29 09:24:06.524601095 +0200
-+++ dnsmasq-2.74/dnsmasq.conf.example	2015-07-29 09:24:43.299930250 +0200
+diff -Nru dnsmasq-2.76.orig/dnsmasq.conf.example dnsmasq-2.76/dnsmasq.conf.example
+--- dnsmasq-2.76.orig/dnsmasq.conf.example	2016-05-19 19:10:26.732639080 +0200
++++ dnsmasq-2.76/dnsmasq.conf.example	2016-05-19 19:10:39.865498646 +0200
 @@ -96,8 +96,8 @@
  
  # If you want dnsmasq to change uid and gid to something other
@@ -38,10 +33,10 @@ diff -Nru dnsmasq-2.74.orig/dnsmasq.conf.example dnsmasq-2.74/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.74.orig/src/config.h dnsmasq-2.74/src/config.h
---- dnsmasq-2.74.orig/src/config.h	2015-07-29 09:24:06.521267883 +0200
-+++ dnsmasq-2.74/src/config.h	2015-07-29 09:24:43.299930250 +0200
-@@ -40,7 +40,7 @@
+diff -Nru dnsmasq-2.76.orig/src/config.h dnsmasq-2.76/src/config.h
+--- dnsmasq-2.76.orig/src/config.h	2016-05-19 19:10:26.732639080 +0200
++++ dnsmasq-2.76/src/config.h	2016-05-19 19:10:39.865498646 +0200
+@@ -41,7 +41,7 @@
  #define ETHERSFILE "/etc/ethers"
  #define DEFLEASE 3600 /* default lease time, 1 hour */
  #define CHUSER "nobody"
@@ -50,7 +45,7 @@ diff -Nru dnsmasq-2.74.orig/src/config.h dnsmasq-2.74/src/config.h
  #define TFTP_MAX_CONNECTIONS 50 /* max simultaneous connections */
  #define LOG_MAX 5 /* log-queue length */
  #define RANDFILE "/dev/urandom"
-@@ -186,7 +186,7 @@
+@@ -187,7 +187,7 @@
  #   elif defined(__ANDROID__)
  #      define LEASEFILE "/data/misc/dhcp/dnsmasq.leases"
  #   else
