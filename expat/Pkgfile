@@ -4,11 +4,16 @@
 
 name=expat
 version=2.1.1
-release=1
-source=(http://download.sourceforge.net/$name/$name-$version.tar.bz2)
+release=2
+source=(http://download.sourceforge.net/$name/$name-$version.tar.bz2
+        CVE-2015-1283.patch CVE-2016-0718.patch)
 
 build() { 
     cd $name-$version
+
+    patch -p2 -i $SRC/CVE-2015-1283.patch
+    patch -p2 -i $SRC/CVE-2016-0718.patch
+    
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
