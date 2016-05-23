@@ -1,18 +1,26 @@
 # Description: Gtk+ based image viewer
-# URL:         http://geeqie.sourceforge.net/
+# URL:         http://geeqie.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-onlione dot de
 # Depends on:  gtk intltool
 
 name=geeqie
-version=1.0
+version=1.2.3
 release=1
-source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
+source=(http://geeqie.org/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man 
+
+    ./autogen.sh
+
+    export CFLAGS="$CFLAGS $(pkg-config --cflags gtk+-2.0)"
+    export LDFLAGS="$LDFLAGS $(pkg-config --libs gtk+-2.0)"
+
+    ./configure --prefix=/usr --disable-gtk3
+
     make
     make DESTDIR=$PKG install
+
     sed -ri '/\[.+\]=/d' $PKG/usr/share/{geeqie/,}applications/*.desktop
     rm -r $PKG/usr/share/{doc,locale}
 }
