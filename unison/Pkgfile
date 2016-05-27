@@ -5,14 +5,12 @@
 # Depends on:  ocaml
 
 name=unison
-version=2.48.3
-release=2
-source=(http://www.cis.upenn.edu/~bcpierce/unison/download/releases/$name-$version/$name-$version.tar.gz
-        ocaml-4.03.patch)
+version=2.48.4
+release=1
+source=(http://www.cis.upenn.edu/~bcpierce/unison/download/releases/$name-$version/$name-$version.tar.gz)
 
 build() {
-    cd $name-$version
-    patch -p2 -i $SRC/ocaml-4.03.patch
+    cd src
     unset CFLAGS CXXFLAGS
     make -j1 UISTYLE=text THREADS=true NATIVE=true unison unison-fsmonitor
     install -d $PKG/usr/bin
