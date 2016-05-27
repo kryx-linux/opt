@@ -1,7 +1,7 @@
-diff -Nru spectrwm-3.0.1.orig/linux/Makefile spectrwm-3.0.1/linux/Makefile
---- spectrwm-3.0.1.orig/linux/Makefile	2016-05-16 15:22:06.375506421 +0200
-+++ spectrwm-3.0.1/linux/Makefile	2016-05-16 15:27:15.595398541 +0200
-@@ -10,7 +10,7 @@
+diff -Nru spectrwm-3.0.2.orig/linux/Makefile spectrwm-3.0.2/linux/Makefile
+--- spectrwm-3.0.2.orig/linux/Makefile	2016-05-24 11:53:05.831647479 +0200
++++ spectrwm-3.0.2/linux/Makefile	2016-05-24 11:57:34.912071921 +0200
+@@ -10,14 +10,14 @@
  LIBMAJORVERSION = $(shell .  $(CURDIR)/../lib/shlib_version; echo $$major)
  
  MAINT_CFLAGS   = -std=c99 -Wmissing-prototypes -Wall -Wextra -Wshadow -Wno-uninitialized -g
@@ -10,9 +10,17 @@ diff -Nru spectrwm-3.0.1.orig/linux/Makefile spectrwm-3.0.1/linux/Makefile
  MAINT_LDLIBS   = -lX11 -lX11-xcb -lxcb -lxcb-icccm -lxcb-randr -lxcb-keysyms -lxcb-util -lxcb-xtest -lXft -lXcursor
  
  ifneq ("${BUILDVERSION}", "")
-diff -Nru spectrwm-3.0.1.orig/spectrwm.c spectrwm-3.0.1/spectrwm.c
---- spectrwm-3.0.1.orig/spectrwm.c	2016-05-16 15:22:06.378839754 +0200
-+++ spectrwm-3.0.1/spectrwm.c	2016-05-16 15:30:08.021987775 +0200
+ MAINT_CPPFLAGS += -DSPECTRWM_BUILDSTR=\"$(BUILDVERSION)\"
+ endif
+ 
+-all: spectrwm libswmhack.so.$(LIBVERSION)
++all: spectrwm
+ 
+ spectrwm: spectrwm.o linux.o
+ 	$(CC) $(MAINT_LDFLAGS) $(LDFLAGS) -o $@ $+ $(MAINT_LDLIBS) $(LDLIBS)
+diff -Nru spectrwm-3.0.2.orig/spectrwm.c spectrwm-3.0.2/spectrwm.c
+--- spectrwm-3.0.2.orig/spectrwm.c	2016-05-24 11:53:05.831647479 +0200
++++ spectrwm-3.0.2/spectrwm.c	2016-05-24 11:57:03.713195913 +0200
 @@ -273,9 +273,9 @@
  #define SWM_CONF_DEFAULT	(0)
  #define SWM_CONF_KEYMAPPING	(1)
