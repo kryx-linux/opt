@@ -6,13 +6,15 @@
 # Nice to have: libseccomp libiscsi libusb usbredir spice
  
 name=qemu-all
-version=2.5.1.1
-release=1
-source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2)
+version=2.6.0
+release=2
+source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2 cve-2016-4020-4439-4441.diff)
 
 build() {
 
   cd qemu-$version
+
+  patch -p1 -i $SRC/cve-2016-4020-4439-4441.diff
   
   ./configure --prefix=/usr \
       --cc="${CC:=gcc}" \
