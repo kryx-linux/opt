@@ -2,10 +2,10 @@
 # URL: http://gstreamer.freedesktop.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: gobject-introspection libxml2
+# Depends on: gobject-introspection libcap
 
 name=gstreamer
-version=1.8.0
+version=1.8.1
 release=1
 source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
@@ -20,6 +20,9 @@ build() {
 		--disable-dependency-tracking \
 		--disable-valgrind \
 		--disable-examples
+
+	# fight unused direct deps
+	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
   
 	make
 	make DESTDIR=$PKG install
