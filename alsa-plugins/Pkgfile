@@ -3,10 +3,10 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Vitaly Sinilin, vs at kp4 dot ru
 # Depends on: alsa-lib
-# Nice to have: ffmpeg speex jack libsamplerate
+# Optional: ffmpeg speex jack libsamplerate
 
 name=alsa-plugins
-version=1.1.0
+version=1.1.1
 release=1
 source=(ftp://ftp.alsa-project.org/pub/plugins/$name-$version.tar.bz2)
 
