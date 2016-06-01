@@ -5,23 +5,21 @@
 # Depends on:  pinentry qt4
 
 name=pinentry-qt4
-version=0.9.5
+version=0.9.7
 release=1
 source=(ftp://ftp.gnupg.org/gcrypt/pinentry/pinentry-$version.tar.bz2)
 
 build() {
     cd pinentry-$version
 
-    sed -i 's|<ncursesw/|<|g' pinentry/pinentry-curses.c
-
     ./configure \
       --prefix=/usr \
-      --disable-pinentry-{curses,gtk2} \
-      --enable-pinentry-qt4 
+      --disable-pinentry-{curses,gtk2,qt5} \
+      --enable-pinentry-qt
 
     make -j1
     make DESTDIR=$PKG install
 
     rm -rf $PKG/usr/share
-    rm $PKG/usr/bin/pinentry{,-emacs}
+    rm $PKG/usr/bin/pinentry
 }
