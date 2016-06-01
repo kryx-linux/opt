@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# /etc/rc.d/sshd: start/stop qemu-ga daemon
+# /etc/rc.d/qemu-agent: start/stop qemu-ga daemon
 #
 
 SSD=/sbin/start-stop-daemon
