@@ -6,11 +6,34 @@
 
 name=qt5
 version=5.6.0
-release=1
-source=(http://download.qt.io/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz)
+release=2
+source=(http://download.qt.io/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
+	qt5-alsa1.11.patch
+	qtbug-51648.patch
+	qtbug-51649.patch
+	qtbug-51676.patch
+	qtbug-45812.patch
+	qtbug-44964.patch
+	qtbug-53071.patch
+	qtbug-53071b.patch)
 
 build() {
 	cd qt-everywhere-opensource-src-$version
+
+	# Backport fixes for QtDBus deadlocks
+	patch -p1 -d qtbase -i $SRC/qtbug-51648.patch
+	patch -p1 -d qtbase -i $SRC/qtbug-51649.patch
+	patch -p1 -d qtbase -i $SRC/qtbug-51676.patch
+
+	# Fix drag and drop from some applications
+	patch -p1 -d qtbase -i $SRC/qtbug-45812.patch
+
+	# Fix parsing of tzfile(5) POSIX rule zone names with bracket quotes
+	patch -p1 -d qtbase -i $SRC/qtbug-53071.patch
+	patch -p1 -d qtbase -i $SRC/qtbug-53071b.patch
+
+	# Don't compress tablet motion events
+	patch -p1 -d qtbase -i $SRC/qtbug-44964.patch
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
