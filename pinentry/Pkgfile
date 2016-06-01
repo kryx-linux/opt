@@ -7,22 +7,21 @@
 
 name=pinentry
 version=0.9.7
-release=1
+release=2
 source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2 pinentry)
 
 build() {
     cd $name-$version
 
-    sed -i 's|<ncursesw/|<|g' pinentry/pinentry-curses.c
-
     ./configure \
       --prefix=/usr \
-      --disable-pinentry-{gtk2,qt4} \
+      --disable-pinentry-{gtk2,qt,qt5} \
       --enable-pinentry-curses
+
     make
     make DESTDIR=$PKG install
 
     rm -rf $PKG/usr/share
     rm $PKG/usr/bin/pinentry
-    install -m 755 ../pinentry $PKG/usr/bin/pinentry
+    install -m 755 $SRC/pinentry $PKG/usr/bin/pinentry
 }
