@@ -1,26 +1,24 @@
 # Description: A Multiboot boot loader
 # URL: http://www.gnu.org/software/grub/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Matt Housh, jaeger at crux dot ninja
 # Depends on: libdevmapper freetype
 
 name=grub2
-version=2.02-beta2
+version=2.02-beta3
 release=1
-source=(http://alpha.gnu.org/gnu/grub/grub-2.02~beta2.tar.xz \
+source=(http://alpha.gnu.org/gnu/grub/grub-2.02~beta3.tar.xz \
 	http://unifoundry.com/unifont-5.1.20080820.pcf.gz \
-	$name-00_header.diff $name-10_linux.diff grub.cfg.sample \
-	$name-cve-2015-8370.patch)
+	$name-00_header.diff $name-10_linux.diff grub.cfg.sample)
 
 build() {
 	export CFLAGS="${CFLAGS} -Wno-error"
-	cd grub-2.02~beta2
+	cd grub-2.02~beta3
 
 	# fix for glibc 'gets' removal
 	sed -i -e '/gets is a/d' grub-core/gnulib/stdio.in.h
 
 	patch -i $SRC/$name-00_header.diff util/grub.d/00_header.in
 	patch -i $SRC/$name-10_linux.diff util/grub.d/10_linux.in
-	patch -p1 -i $SRC/$name-cve-2015-8370.patch
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \

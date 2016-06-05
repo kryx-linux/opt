@@ -73,6 +73,8 @@ drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/boot_hybrid.img
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/bsd.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/bsd.module
+-rw-r--r--	root/root	usr/lib/grub/i386-pc/bswap_test.mod
+-rwxr-xr-x	root/root	usr/lib/grub/i386-pc/bswap_test.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/btrfs.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/btrfs.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/bufio.mod
@@ -101,6 +103,8 @@ drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/cmostest.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/cmp.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/cmp.module
+-rw-r--r--	root/root	usr/lib/grub/i386-pc/cmp_test.mod
+-rwxr-xr-x	root/root	usr/lib/grub/i386-pc/cmp_test.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/command.lst
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/config.h
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/configfile.mod
@@ -120,6 +124,8 @@ drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/cryptodisk.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/cs5536.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/cs5536.module
+-rw-r--r--	root/root	usr/lib/grub/i386-pc/ctz_test.mod
+-rwxr-xr-x	root/root	usr/lib/grub/i386-pc/ctz_test.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/date.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/date.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/datehook.mod
@@ -132,6 +138,8 @@ drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/diskboot.img
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/diskfilter.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/diskfilter.module
+-rw-r--r--	root/root	usr/lib/grub/i386-pc/div.mod
+-rwxr-xr-x	root/root	usr/lib/grub/i386-pc/div.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/div_test.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/div_test.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/dm_nv.mod
@@ -215,7 +223,7 @@ drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/gcry_whirlpool.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/gdb.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/gdb.module
--rwxr-xr-x	root/root	usr/lib/grub/i386-pc/gdb_grub
+-rw-r--r--	root/root	usr/lib/grub/i386-pc/gdb_grub
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/geli.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/geli.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/gettext.mod
@@ -228,7 +236,7 @@ drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/gfxterm_background.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/gfxterm_menu.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/gfxterm_menu.module
--rwxr-xr-x	root/root	usr/lib/grub/i386-pc/gmodule.pl
+-rw-r--r--	root/root	usr/lib/grub/i386-pc/gmodule.pl
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/gptsync.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/gptsync.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/gzio.mod
@@ -341,6 +349,8 @@ drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/mpi.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/msdospart.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/msdospart.module
+-rw-r--r--	root/root	usr/lib/grub/i386-pc/mul_test.mod
+-rwxr-xr-x	root/root	usr/lib/grub/i386-pc/mul_test.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/multiboot.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/multiboot.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/multiboot2.mod
@@ -431,6 +441,8 @@ drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/raid5rec.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/raid6rec.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/raid6rec.module
+-rw-r--r--	root/root	usr/lib/grub/i386-pc/random.mod
+-rwxr-xr-x	root/root	usr/lib/grub/i386-pc/random.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/read.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/read.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/reboot.mod
@@ -465,6 +477,8 @@ drwxr-xr-x	root/root	usr/lib/grub/i386-pc/
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/setpci.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/sfs.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/sfs.module
+-rw-r--r--	root/root	usr/lib/grub/i386-pc/shift_test.mod
+-rwxr-xr-x	root/root	usr/lib/grub/i386-pc/shift_test.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/signature_test.mod
 -rwxr-xr-x	root/root	usr/lib/grub/i386-pc/signature_test.module
 -rw-r--r--	root/root	usr/lib/grub/i386-pc/sleep.mod
