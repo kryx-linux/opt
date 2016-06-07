@@ -4,9 +4,9 @@
 # Depends on:  attr, lzo, zlib, bzip2, xz, libgcrypt
 
 name=dar
-version=2.5.4
+version=2.5.5
 release=1
-source=(http://downloads.sourceforge.net/project/dar/dar/v$version/$name-$version.tar.gz \
+source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz \
         darrc)
 
 build () {
