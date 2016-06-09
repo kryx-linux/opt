@@ -1,12 +1,12 @@
 # Description:	Bluetooth libraries and utilities
 # URL:		http://www.bluez.org/
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:	dbus alsa-lib gstreamer libusb-compat
-# Optional:	pygobject dbus-python sox
+# Depends on:	dbus alsa-lib libusb-compat
+# Optional:	pygobject dbus-python sox gst-plugins-base-compat
 
 name=bluez
 version=4.101
-release=3
+release=4
 source=(http://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz bluetoothd)
 
 build() {
@@ -17,9 +17,8 @@ build() {
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--libexecdir=/lib \
-		--mandir=/usr/man \
+		--mandir=/usr/share/man \
 		--enable-audio \
-		--enable-gstreamer \
 		--enable-usb \
 		--enable-tools \
 		--enable-test \
@@ -46,7 +45,7 @@ build() {
 			fi
 
 			for j in $i.[1-8]; do
-				install -D -m 644 $j $PKG/usr/man/man${j##*.}/bluez-${j##*/}
+				install -D -m 644 $j $PKG/usr/share/man/man${j##*.}/bluez-${j##*/}
 			done
 		fi
 	done
