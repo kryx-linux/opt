@@ -1,11 +1,11 @@
 # Description:	PulseAudio is a cross-platform, networked sound server
 # URL:		http://pulseaudio.org/
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:	libsndfile speex json-c orc tdb dbus intltool
-# Optional:	libsamplerate bluez sbc lirc pyqt4
+# Depends on:	libsndfile speex json-c dbus
+# Optional:	libsamplerate bluez avahi sbc orc lirc pyqt4
 
 name=pulseaudio
-version=5.0
+version=8.0
 release=3
 source=(http://freedesktop.org/software/pulseaudio/releases/pulseaudio-$version.tar.xz)
 
@@ -27,15 +27,14 @@ build() {
 		--disable-ipv6 \
 		--disable-legacy-database-entry-format \
 		--disable-hal-compat \
-		--disable-systemd \
-		--with-database=tdb \
+		--with-database=gdbm \
 		--disable-tests
 
 	# fight unused direct deps
 	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
 	make
-	make -j 1 DESTDIR="$PKG" install
+	make DESTDIR="$PKG" install
 
 	# Workaround the /usr/etc CRUX oddity
 	mkdir $PKG/usr/etc
@@ -52,4 +51,10 @@ build() {
 	if [ -x $PKG/usr/lib/pulseaudio/libexec/pulse/proximity-helper ]; then
 		 chmod -s $PKG/usr/lib/pulseaudio/libexec/pulse/proximity-helper
 	fi
+
+	# remove zsh completion functions
+	rm -rf $PKG/usr/share/zsh
+
+	# remove bash completion files
+	rm -rf $PKG/usr/share/bash-completion
 }
