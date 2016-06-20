@@ -4,16 +4,14 @@
 # Depends on:  ncurses
 
 name=screen
-version=4.3.1
+version=4.4.0
 release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
 
-    ./configure --prefix=/usr \
-                --mandir=/usr/man \
-                --enable-colors256
+    ./configure --prefix=/usr --enable-colors256
     
     make
     make DESTDIR=$PKG install
