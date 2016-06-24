@@ -4,7 +4,7 @@
 # Depends on:  util-linux e2fsprogs lzo zlib
 
 name=btrfs-progs
-version=4.5.3
+version=4.6.1
 release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz \
         $name-man-v$version.tar.xz)
@@ -14,4 +14,6 @@ build() {
     ./configure --prefix=/usr --bindir=/sbin
     make
     make DESTDIR=$PKG install
+    # We already supply udev rules for btrfs
+    rm -r $PKG/lib
 }
