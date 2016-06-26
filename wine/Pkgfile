@@ -8,8 +8,8 @@ name=wine
 version=1.9.13
 release=1
 source=(http://dl.winehq.org/wine/source/1.9/$name-$version.tar.bz2
-	http://dl.winehq.org/wine/wine-gecko/2.44/wine_gecko-2.44-x86.msi
-	http://dl.winehq.org/wine/wine-gecko/2.44/wine_gecko-2.44-x86_64.msi
+	http://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86.msi
+	http://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86_64.msi
 	http://dl.winehq.org/wine/wine-mono/4.6.3/wine-mono-4.6.3.msi)
 
 build() {
@@ -50,8 +50,8 @@ build() {
 	install -d $PKG/usr/share/wine/mono
 
 	install -t $PKG/usr/share/wine/gecko/ \
-		$SRC/wine_gecko-2.44-x86.msi \
-		$SRC/wine_gecko-2.44-x86_64.msi
+		$SRC/wine_gecko-2.47-x86.msi \
+		$SRC/wine_gecko-2.47-x86_64.msi
 
 	install $SRC/wine-mono-4.6.3.msi $PKG/usr/share/wine/mono/
 
