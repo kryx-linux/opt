@@ -221,6 +221,11 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10core.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10core.idl
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10tex.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx11.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx11async.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx11core.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx11core.idl
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx11tex.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx9.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx9anim.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx9core.h
@@ -1855,6 +1860,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libd3dcompiler.def
 -rw-r--r--	root/root	usr/lib/wine/libd3drm.def
 -rw-r--r--	root/root	usr/lib/wine/libd3dx10.def
+-rw-r--r--	root/root	usr/lib/wine/libd3dx11.def
 -rw-r--r--	root/root	usr/lib/wine/libd3dx9.def
 -rw-r--r--	root/root	usr/lib/wine/libd3dxof.def
 -rw-r--r--	root/root	usr/lib/wine/libdbgeng.def
@@ -1919,7 +1925,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libnormaliz.def
 -rw-r--r--	root/root	usr/lib/wine/libntdll.def
 -rw-r--r--	root/root	usr/lib/wine/libntdsapi.def
--rw-r--r--	root/root	usr/lib/wine/libntoskrnl.exe.def
+-rw-r--r--	root/root	usr/lib/wine/libntoskrnl.def
 -rw-r--r--	root/root	usr/lib/wine/libodbc32.def
 -rw-r--r--	root/root	usr/lib/wine/libodbccp32.def
 -rw-r--r--	root/root	usr/lib/wine/libole32.def
@@ -1963,7 +1969,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libunicows.def
 -rw-r--r--	root/root	usr/lib/wine/liburl.def
 -rw-r--r--	root/root	usr/lib/wine/liburlmon.def
--rw-r--r--	root/root	usr/lib/wine/libusbd.sys.def
+-rw-r--r--	root/root	usr/lib/wine/libusbd.def
 -rw-r--r--	root/root	usr/lib/wine/libuser32.def
 -rw-r--r--	root/root	usr/lib/wine/libuserenv.def
 -rw-r--r--	root/root	usr/lib/wine/libusp10.def
@@ -3364,6 +3370,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libd3dcompiler.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3drm.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3dx10.def
+-rw-r--r--	root/root	usr/lib32/wine/libd3dx11.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3dx9.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3dxof.def
 -rw-r--r--	root/root	usr/lib32/wine/libdbgeng.def
@@ -3429,7 +3436,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libnormaliz.def
 -rw-r--r--	root/root	usr/lib32/wine/libntdll.def
 -rw-r--r--	root/root	usr/lib32/wine/libntdsapi.def
--rw-r--r--	root/root	usr/lib32/wine/libntoskrnl.exe.def
+-rw-r--r--	root/root	usr/lib32/wine/libntoskrnl.def
 -rw-r--r--	root/root	usr/lib32/wine/libodbc32.def
 -rw-r--r--	root/root	usr/lib32/wine/libodbccp32.def
 -rw-r--r--	root/root	usr/lib32/wine/libole32.def
@@ -3473,7 +3480,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libunicows.def
 -rw-r--r--	root/root	usr/lib32/wine/liburl.def
 -rw-r--r--	root/root	usr/lib32/wine/liburlmon.def
--rw-r--r--	root/root	usr/lib32/wine/libusbd.sys.def
+-rw-r--r--	root/root	usr/lib32/wine/libusbd.def
 -rw-r--r--	root/root	usr/lib32/wine/libuser32.def
 -rw-r--r--	root/root	usr/lib32/wine/libuserenv.def
 -rw-r--r--	root/root	usr/lib32/wine/libusp10.def
