@@ -6,7 +6,7 @@
 
 name=poppler
 version=0.45.0
-release=1
+release=2
 source=(http://poppler.freedesktop.org/$name-$version.tar.xz)
 
 build() {
@@ -17,6 +17,7 @@ build() {
                 --enable-cms=lcms2 \
                 --enable-libopenjpeg=none \
                 --enable-xpdf-headers \
+                --disable-libnss \
                 --disable-poppler-{glib,qt4,qt5}
 
     make

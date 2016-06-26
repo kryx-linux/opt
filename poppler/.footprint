@@ -5,7 +5,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/pdfimages
 -rwxr-xr-x	root/root	usr/bin/pdfinfo
 -rwxr-xr-x	root/root	usr/bin/pdfseparate
--rwxr-xr-x	root/root	usr/bin/pdfsig
 -rwxr-xr-x	root/root	usr/bin/pdftocairo
 -rwxr-xr-x	root/root	usr/bin/pdftohtml
 -rwxr-xr-x	root/root	usr/bin/pdftoppm
@@ -68,7 +67,6 @@ drwxr-xr-x	root/root	usr/include/poppler/
 -rw-r--r--	root/root	usr/include/poppler/ProfileData.h
 -rw-r--r--	root/root	usr/include/poppler/Rendition.h
 -rw-r--r--	root/root	usr/include/poppler/SecurityHandler.h
--rw-r--r--	root/root	usr/include/poppler/SignatureHandler.h
 -rw-r--r--	root/root	usr/include/poppler/SignatureInfo.h
 -rw-r--r--	root/root	usr/include/poppler/Sound.h
 -rw-r--r--	root/root	usr/include/poppler/SplashOutputDev.h
@@ -176,7 +174,6 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/pdfimages.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pdfinfo.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pdfseparate.1.gz
--rw-r--r--	root/root	usr/share/man/man1/pdfsig.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pdftocairo.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pdftohtml.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pdftoppm.1.gz
