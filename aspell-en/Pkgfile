@@ -4,7 +4,7 @@
 # Depends on:  aspell
 
 name=aspell-en
-version=2016.01.19-0
+version=2016.06.26-0
 release=1
 source=(http://ftp.gnu.org/gnu/aspell/dict/en/aspell6-en-$version.tar.bz2)
 
