@@ -4,8 +4,8 @@
 # Depends on:  readline
 
 name=fcron
-version=3.2.0
-release=4
+version=3.2.1
+release=1
 source=(http://fcron.free.fr/archives/$name-$version.src.tar.gz
         fcron systab.orig)
 
@@ -15,7 +15,7 @@ build () {
     ./configure --prefix=/usr \
                 --sysconfdir=/etc/fcron \
                 --localstatedir=/var \
-                --mandir=/usr/man \
+                --mandir=/usr/share/man \
                 --with-spooldir=/var/spool/fcron \
                 --with-boot-install=no \
                 --with-username=fcron \
@@ -28,7 +28,7 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/{usr/{share,man/{fr,man3}},var/run}
+    rm -r $PKG/{usr/share/{doc,man/{fr,man3}},var/run}
 
     install -D -m 755 $SRC/fcron $PKG/etc/rc.d/fcron
     install -m 600 -o root -g fcron $SRC/systab.orig $PKG/var/spool/fcron
