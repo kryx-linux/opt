@@ -5,11 +5,14 @@
 
 name=wvdial
 version=1.61
-release=5
+release=6
 source=(https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/wvstreams/$name-$version.tar.gz \
         https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/wvstreams/wvstreams-4.6.1.tar.gz \
-        $name-$version.patch wvstreams-4.6.1-openssl.patch \
-        wvstreams-4.6.1-include_stat.patch wvstreams-4.6.1-gcc47.patch)
+        $name-$version.patch \
+        wvstreams-4.6.1-openssl.patch \
+        wvstreams-4.6.1-include_stat.patch \
+        wvstreams-4.6.1-gcc47.patch \
+        wvstreams-4.6.1-use-explicit-cast.patch)
 
 build() {
 
@@ -17,12 +20,16 @@ build() {
 
     cd wvstreams-4.6.1
 
+    patch -p1 -i $SRC/wvstreams-4.6.1-use-explicit-cast.patch
     patch -p1 -i $SRC/wvstreams-4.6.1-openssl.patch
     patch -p1 -i $SRC/wvstreams-4.6.1-include_stat.patch
     patch -p1 -i $SRC/wvstreams-4.6.1-gcc47.patch
 
     ./configure --prefix=/usr --without-{pam,tcl,qt,dbus}
-    make -j1 CXXOPTS='-fno-tree-dce -fno-optimize-sibling-calls -fPIC -DPIC' COPTS='-O2 -fPIC -DPIC'
+
+    CXXOPTS='-fno-tree-dce -fno-optimize-sibling-calls -fPIC -DPIC -w' \
+    COPTS='-O2 -fPIC -DPIC' \
+    make -j1
 
     cd $SRC/$name-$version
 
