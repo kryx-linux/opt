@@ -57,7 +57,7 @@ lrwxrwxrwx	root/root	sbin/vgdisplay -> lvm
 lrwxrwxrwx	root/root	sbin/vgexport -> lvm
 lrwxrwxrwx	root/root	sbin/vgextend -> lvm
 lrwxrwxrwx	root/root	sbin/vgimport -> lvm
--r-xr-xr-x	root/root	sbin/vgimportclone
+lrwxrwxrwx	root/root	sbin/vgimportclone -> lvm
 lrwxrwxrwx	root/root	sbin/vgmerge -> lvm
 lrwxrwxrwx	root/root	sbin/vgmknodes -> lvm
 lrwxrwxrwx	root/root	sbin/vgreduce -> lvm
