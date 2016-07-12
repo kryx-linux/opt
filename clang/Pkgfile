@@ -5,7 +5,7 @@
 # Depends on:  python, llvm
 
 name=clang
-version=3.8.0
+version=3.8.1
 release=1
 source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
   config.h llvm-config.h)
