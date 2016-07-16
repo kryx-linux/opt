@@ -35,6 +35,7 @@ drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/commandtoescpx
 -rwxr-xr-x	root/root	usr/lib/cups/filter/commandtopclx
 -rwxr-xr-x	root/root	usr/lib/cups/filter/foomatic-rip
+-rwxr-xr-x	root/root	usr/lib/cups/filter/gstopdf
 -rwxr-xr-x	root/root	usr/lib/cups/filter/gstopxl
 -rwxr-xr-x	root/root	usr/lib/cups/filter/gstoraster
 -rwxr-xr-x	root/root	usr/lib/cups/filter/imagetopdf
@@ -45,14 +46,14 @@ drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pdftopdf
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pdftops
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pdftoraster
--rwxr-xr-x	root/root	usr/lib/cups/filter/pstopdf
 -rwxr-xr-x	root/root	usr/lib/cups/filter/rastertoescpx
 -rwxr-xr-x	root/root	usr/lib/cups/filter/rastertopclx
 -rwxr-xr-x	root/root	usr/lib/cups/filter/rastertopdf
+-rwxr-xr-x	root/root	usr/lib/cups/filter/rastertops
 -rwxr-xr-x	root/root	usr/lib/cups/filter/sys5ippprinter
--rwxr-xr-x	root/root	usr/lib/cups/filter/textonly
 -rwxr-xr-x	root/root	usr/lib/cups/filter/texttopdf
 -rwxr-xr-x	root/root	usr/lib/cups/filter/texttops
+-rwxr-xr-x	root/root	usr/lib/cups/filter/texttotext
 -rwxr-xr-x	root/root	usr/lib/cups/filter/urftopdf
 -rw-r--r--	root/root	usr/lib/libcupsfilters.a
 -rwxr-xr-x	root/root	usr/lib/libcupsfilters.la
@@ -122,4 +123,3 @@ drwxr-xr-x	root/root	usr/share/ppd/cupsfilters/
 -rw-r--r--	root/root	usr/share/ppd/cupsfilters/Ricoh-PDF_Printer-PDF.ppd
 -rw-r--r--	root/root	usr/share/ppd/cupsfilters/pxlcolor.ppd
 -rw-r--r--	root/root	usr/share/ppd/cupsfilters/pxlmono.ppd
--rw-r--r--	root/root	usr/share/ppd/cupsfilters/textonly.ppd
