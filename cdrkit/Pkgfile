@@ -1,7 +1,6 @@
 # Description: A suite of programs for recording CDs and DVDs
 # URL: http://cdrkit.org/
-# Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Packager: Antti Nykanen, aon at iki dot fi
+# Maintainer: Fredrik Rinnestam, fredrik at rinnestam dot se
 # Depends on: file, cmake, libcap
 
 name=cdrkit
@@ -13,7 +12,6 @@ source=(http://pkgs.fedoraproject.org/repo/pkgs/cdrkit/cdrkit-1.1.11.tar.gz/efe0
 build () {
     cd cdrkit-$version
     patch -p1 -i $SRC/cdrkit-1.1.9-efi-boot.patch
-    sed -i 's:share/man:${MANSUBDIR}:' 3rd-party/dirsplit/CMakeLists.txt
     cmake -Wno-dev -DCMAKE_INSTALL_PREFIX=$PKG/usr -DMANSUBDIR=man
     make install
 }
