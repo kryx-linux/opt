@@ -5,40 +5,22 @@
 # Depends on: dbus gst-plugins-base gst-plugins-base-compat libmng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-wm xorg-xcb-util-keysyms
 
 name=qt5
-version=5.6.0
-release=3
+version=5.7.0
+release=1
 source=(http://download.qt.io/official_releases/qt/${version%.*}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
-	qt5-alsa1.11.patch
-	qtbug-51648.patch
-	qtbug-51649.patch
-	qtbug-51676.patch
-	qtbug-45812.patch
-	qtbug-44964.patch
 	qtbug-53071.patch
 	qtbug-53071b.patch
-	qt5-webengine-nss.patch)
+	qtbug-53237.patch)
 
 build() {
 	cd qt-everywhere-opensource-src-$version
-
-	# Backport fixes for QtDBus deadlocks
-	patch -p1 -d qtbase -i $SRC/qtbug-51648.patch
-	patch -p1 -d qtbase -i $SRC/qtbug-51649.patch
-	patch -p1 -d qtbase -i $SRC/qtbug-51676.patch
-
-	# Fix drag and drop from some applications
-	patch -p1 -d qtbase -i $SRC/qtbug-45812.patch
 
 	# Fix parsing of tzfile(5) POSIX rule zone names with bracket quotes
 	patch -p1 -d qtbase -i $SRC/qtbug-53071.patch
 	patch -p1 -d qtbase -i $SRC/qtbug-53071b.patch
 
-	# Don't compress tablet motion events
-	patch -p1 -d qtbase -i $SRC/qtbug-44964.patch
-
-	# Broken SSL for some sites #1870
-	# https://github.com/QupZilla/qupzilla/issues/1870
-	patch -p1 -d qtwebengine -i $SRC/qt5-webengine-nss.patch
+	# Fix UNSIGNED values in QMYSQL
+	patch -p1 -d qtbase -i $SRC/qtbug-53237.patch
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
@@ -63,7 +45,8 @@ build() {
 	export LD_LIBRARY_PATH="$QTDIR/qtbase/lib:$QTDIR/qttools/lib:$LD_LIBRARY_PATH"
 	export QT_PLUGIN_PATH="$QTDIR/qtbase/plugins"
 
-	./configure  -prefix /usr/share/qt5 \
+	./configure \
+		-prefix /usr/share/qt5 \
                 -bindir /usr/share/qt5/bin \
                 -headerdir /usr/share/qt5/include \
                 -libdir /usr/share/qt5/lib \
@@ -71,9 +54,9 @@ build() {
                 -plugindir /usr/share/qt5/plugins \
                 -sysconfdir /usr/etc/xdg \
                 -openssl-linked -dbus-linked \
-                -system-lib{png,jpeg} -system-{zlib,sqlite} \
+                -system-lib{png,jpeg} -system-{harfbuzz,zlib,sqlite} \
                 -no-cups -optimized-qmake \
-                -x{cursor,inerama,kb,randr,render} \
+                -x{cursor,kb,randr,render} \
                 -nomake examples \
                 -no-separate-debug-info -no-strip -shared -no-rpath \
                 -opensource -confirm-license -release -reduce-relocations
