@@ -3,7 +3,7 @@
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 
 name=npth
-version=1.1
+version=1.2
 release=1
 source=(ftp://ftp.gnupg.org/gcrypt/npth/npth-$version.tar.bz2)
 
