@@ -549,6 +549,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/msxml6did.h
 -rw-r--r--	root/root	usr/include/wine/windows/msxmldid.h
 -rw-r--r--	root/root	usr/include/wine/windows/nb30.h
+-rw-r--r--	root/root	usr/include/wine/windows/ncrypt.h
 -rw-r--r--	root/root	usr/include/wine/windows/ndrtypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/netcfgx.h
 -rw-r--r--	root/root	usr/include/wine/windows/netcfgx.idl
@@ -1662,6 +1663,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/softpub.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/spoolss.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/spoolsv.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/sspicli.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/start.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/stdole2.tlb
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/stdole32.tlb
@@ -2196,6 +2198,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/softpub.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/spoolss.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/spoolsv.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/sspicli.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/start.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/stdole2.tlb.so
 -rwxr-xr-x	root/root	usr/lib/wine/stdole32.tlb.so
@@ -3138,6 +3141,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/sound.drv16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/spoolss.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/spoolsv.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/sspicli.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/start.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/stdole2.tlb
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/stdole32.tlb
@@ -3728,6 +3732,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/sound.drv16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/spoolss.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/spoolsv.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/sspicli.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/start.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/stdole2.tlb.so
 -rwxr-xr-x	root/root	usr/lib32/wine/stdole32.tlb.so
