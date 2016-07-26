@@ -5,9 +5,9 @@
 # Depends on:  fuse, glib
 
 name=sshfs-fuse
-version=2.7
+version=2.8
 release=1
-source=(https://github.com/libfuse/sshfs/releases/download/sshfs-$version/sshfs-$version.tar.gz)
+source=(https://github.com/libfuse/sshfs/releases/download/sshfs_$version/sshfs-$version.tar.gz)
 
 build() {
     cd sshfs-$version
