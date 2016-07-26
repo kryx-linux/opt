@@ -5,8 +5,8 @@
 # Depends on:  libgd pango
 
 name=gnuplot
-version=5.0.3
-release=2
+version=5.0.4
+release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
 build() {
