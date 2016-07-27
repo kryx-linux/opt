@@ -4,19 +4,21 @@
 # Packager:    Jose V Beneyto, sepen at crux dot nu
 
 name=john
-version=1.7.9-jumbo-7
+version=1.8.0-jumbo-1
 release=1
-source=(http://www.openwall.com/$name/g/$name-$version.tar.bz2)
+source=(http://www.openwall.com/$name/j/$name-$version.tar.xz)
 
 build() {
 
-  echo 'linux-x86-sse2           Linux, x86 with SSE2 (best)' > $SRC/systypes
   sed -i 's|/usr/libexec|/usr/lib|g' $name-$version/src/params.h
   
   cd $name-$version/src
   
-  make linux-x86-64
+  # fix compilation with gcc 5.x
+  ./configure CFLAGS=-std=gnu89
   
+  make
+
   install -d $PKG/usr/bin
   install -d $PKG/usr/lib/$name
   install -m 755 ../run/* $PKG/usr/lib/$name
