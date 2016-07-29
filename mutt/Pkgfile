@@ -11,6 +11,8 @@ source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 build () {
     cd $name-$version
 
+    sed -ri '/^makedoc-all/s/manual\.(html|txt)//g' doc/Makefile.am
+
     ./configure --prefix=/usr \
                 --with-docdir=/usr/share/mutt \
                 --with-mailpath=/var/spool/mail \
