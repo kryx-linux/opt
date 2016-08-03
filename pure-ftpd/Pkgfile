@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=pure-ftpd
-version=1.0.42
+version=1.0.43
 release=1
 source=(http://download.pureftpd.org/$name/releases/$name-$version.tar.bz2 \
         pure-ftpd pure-ftpd.conf)
@@ -13,7 +13,6 @@ build () {
     cd $name-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --with-certfile=/etc/ssl/certs/pure-ftpd.pem \
                 --with-everything \
                 --with-tls \
