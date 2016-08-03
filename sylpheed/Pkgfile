@@ -4,7 +4,7 @@
 # Depends on:  gtk, openssl
 
 name=sylpheed
-version=3.5.0
+version=3.5.1
 release=1
 source=(http://sylpheed.sraoss.jp/sylpheed/v3.5/$name-$version.tar.bz2)
 
