@@ -19,5 +19,5 @@ build() {
     ./configure prefix=/usr CONFIG_ARTS=n
     make
     make DESTDIR=$PKG install install-man
-    rm -rf $PKG/usr/share/{doc,cmus/*.theme}
+    rm -rf $PKG/usr/share/doc
 }
