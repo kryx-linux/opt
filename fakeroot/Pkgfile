@@ -4,11 +4,16 @@
 
 name=fakeroot
 version=1.21
-release=1
-source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.orig.tar.gz)
+release=2
+source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.orig.tar.gz
+        silence-dlerror.patch)
 
 build () {
     cd $name-$version
+    
+    # https://sourceware.org/bugzilla/show_bug.cgi?id=19509
+    patch -p1 -i $SRC/silence-dlerror.patch
+    
     sed -i '/^SUBDIRS/d' doc/Makefile.am
     ./bootstrap
     ./configure --prefix=/usr
