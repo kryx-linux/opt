@@ -220,6 +220,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10async.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10core.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10core.idl
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx10math.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx10tex.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx11.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx11async.h
@@ -1533,6 +1534,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp110.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp120.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp120_app.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp140.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp60.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp70.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp71.dll
@@ -1969,6 +1971,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libsxs.def
 -rw-r--r--	root/root	usr/lib/wine/libt2embed.def
 -rw-r--r--	root/root	usr/lib/wine/libtapi32.def
+-rw-r--r--	root/root	usr/lib/wine/libucrtbase.def
 -rw-r--r--	root/root	usr/lib/wine/libunicows.def
 -rw-r--r--	root/root	usr/lib/wine/liburl.def
 -rw-r--r--	root/root	usr/lib/wine/liburlmon.def
@@ -2068,6 +2071,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp110.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp120.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp120_app.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/msvcp140.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp60.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp70.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp71.dll.so
@@ -2997,6 +3001,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp110.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp120.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp120_app.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp140.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp60.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp70.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp71.dll
@@ -3482,6 +3487,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libsxs.def
 -rw-r--r--	root/root	usr/lib32/wine/libt2embed.def
 -rw-r--r--	root/root	usr/lib32/wine/libtapi32.def
+-rw-r--r--	root/root	usr/lib32/wine/libucrtbase.def
 -rw-r--r--	root/root	usr/lib32/wine/libunicows.def
 -rw-r--r--	root/root	usr/lib32/wine/liburl.def
 -rw-r--r--	root/root	usr/lib32/wine/liburlmon.def
@@ -3588,6 +3594,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp110.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp120.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp120_app.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/msvcp140.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp60.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp70.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp71.dll.so
