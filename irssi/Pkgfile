@@ -5,7 +5,7 @@
 # Depends on: glib
 
 name=irssi
-version=0.8.18
+version=0.8.19
 release=1
 source=(https://github.com/irssi-import/irssi/releases/download/$version/$name-$version.tar.xz)
 
