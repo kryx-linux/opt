@@ -4,10 +4,10 @@
 # Packager:	Matt Housh, jaeger at morpheus dot net
 
 name=openntpd
-version=5.7p4
+version=6.0p1
 release=4
 source=(
-ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz
+http://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz
 ntpd
 openntpd-paths.patch
 )
@@ -23,7 +23,7 @@ build() {
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--with-privsep-user=ntp \
-		--with-cacert=/etc/ssl/cert.pem
+		--disable-https-constraint
 	make
 	make DESTDIR=$PKG install
 	
