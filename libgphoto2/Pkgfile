@@ -6,18 +6,20 @@
 
 name=libgphoto2
 version=2.5.10
-release=1
-source=(http://downloads.sourceforge.net/project/gphoto/libgphoto/$version/$name-$version.tar.bz2)
+release=2
+source=(http://downloads.sourceforge.net/project/gphoto/libgphoto/$version/$name-$version.tar.bz2
+    jpeg-1.5.0.patch)
 
 build () {
     cd $name-$version
+    patch -p1 -i $SRC/jpeg-1.5.0.patch
 
     udevscriptdir=/lib/udev \
     ./configure --prefix=/usr --disable-nls
 
     make
     make DESTDIR=$PKG install
-    
+
     rm -r $PKG/usr/share/doc
     rm $PKG/usr/lib/libgphoto2*/*/*.la
 }
