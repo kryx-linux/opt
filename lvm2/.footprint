@@ -9,6 +9,7 @@ drwxr-xr-x	root/root	etc/lvm/profile/
 -r--r--r--	root/root	etc/lvm/profile/cache-mq.profile
 -r--r--r--	root/root	etc/lvm/profile/cache-smq.profile
 -r--r--r--	root/root	etc/lvm/profile/command_profile_template.profile
+-r--r--r--	root/root	etc/lvm/profile/lvmdbusd.profile
 -r--r--r--	root/root	etc/lvm/profile/metadata_profile_template.profile
 -r--r--r--	root/root	etc/lvm/profile/thin-generic.profile
 -r--r--r--	root/root	etc/lvm/profile/thin-performance.profile
@@ -84,6 +85,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -r--r--r--	root/root	usr/share/man/man8/lvextend.8.gz
 -r--r--r--	root/root	usr/share/man/man8/lvm-config.8.gz
 -r--r--r--	root/root	usr/share/man/man8/lvm-dumpconfig.8.gz
+-r--r--r--	root/root	usr/share/man/man8/lvm-fullreport.8.gz
 -r--r--r--	root/root	usr/share/man/man8/lvm-lvpoll.8.gz
 -r--r--r--	root/root	usr/share/man/man8/lvm.8.gz
 -r--r--r--	root/root	usr/share/man/man8/lvmchange.8.gz
