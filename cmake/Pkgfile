@@ -6,7 +6,7 @@
 
 name=cmake
 version=3.6.1
-release=1
+release=2
 source=(http://www.cmake.org/files/v${version%.*}/$name-$version.tar.gz)
 
 build() {
@@ -15,6 +15,10 @@ build() {
         # fix installation path
         sed -i Source/CMakeInstallDestinations.cmake \
             -e 's|share/cmake-${CMake_VERSION_MAJOR}.${CMake_VERSION_MINOR}|share/cmake|'
+
+        if pkginfo -i | grep -q ^qt5; then
+            export CMAKE_PREFIX_PATH=/usr/share/qt5
+        fi
 
 	./bootstrap \
 		--prefix=/usr \
