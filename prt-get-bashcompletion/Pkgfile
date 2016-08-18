@@ -5,9 +5,9 @@
 # Depends on: bash-completion
 
 name=prt-get-bashcompletion
-version=5.18
-release=2
-source=(http://jw.tks6.net/files/crux/prt-get-$version.tar.gz)
+version=5.19
+release=1
+source=(http://crux.nu/files/prt-get-$version.tar.gz)
 
 build() {
     sed -i prt-get-$version/misc/prt-get_complete \

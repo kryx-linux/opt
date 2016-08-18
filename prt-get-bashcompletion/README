@@ -1,4 +1,9 @@
+
 README for prt-get
 
+
 POST-INSTALL
-execute prt-get cache to get package name completion
+
+To get package name completion execute this command:
+
+  # prt-get cache
