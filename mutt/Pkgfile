@@ -4,7 +4,7 @@
 # Depends on:  gdbm ncurses openssl zlib
 
 name=mutt
-version=1.6.2
+version=1.7.0
 release=1
 source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 
@@ -21,6 +21,7 @@ build () {
                 --with-ssl \
                 --enable-hcache \
                 --disable-nls \
+                --enable-sidebar \
                 # --enable-gpgme \
                 # --enable-smtp --with-sasl
 
