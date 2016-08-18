@@ -41,6 +41,7 @@ drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/imagetopdf
 -rwxr-xr-x	root/root	usr/lib/cups/filter/imagetops
 -rwxr-xr-x	root/root	usr/lib/cups/filter/imagetoraster
+-rwxr-xr-x	root/root	usr/lib/cups/filter/mupdftoraster
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pdftoijs
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pdftoopvp
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pdftopdf
@@ -102,6 +103,8 @@ drwxr-xr-x	root/root	usr/share/cups/drv/
 -rw-r--r--	root/root	usr/share/cups/drv/cupsfilters.drv
 drwxr-xr-x	root/root	usr/share/cups/mime/
 -rw-r--r--	root/root	usr/share/cups/mime/cupsfilters-ghostscript.convs
+-rw-r--r--	root/root	usr/share/cups/mime/cupsfilters-mupdf.convs
+-rw-r--r--	root/root	usr/share/cups/mime/cupsfilters-poppler.convs
 -rw-r--r--	root/root	usr/share/cups/mime/cupsfilters.convs
 -rw-r--r--	root/root	usr/share/cups/mime/cupsfilters.types
 drwxr-xr-x	root/root	usr/share/cups/ppdc/
