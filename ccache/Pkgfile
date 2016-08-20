@@ -3,6 +3,7 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: zlib
+# Optional: clang
 
 name=ccache
 version=3.2.7
@@ -18,10 +19,7 @@ build() {
 	make DESTDIR=$PKG install
 
 	install -d $PKG/usr/lib/$name
-
-	if [ "$(prt-get isinst clang)" = 'package clang is installed' ]; then
-			local clang='clang clang++'
-	fi
+	prt-get isinst clang >/dev/null && local clang='clang clang++'
 
 	for c in $clang cc gcc g++ cpp c++; do
 		ln -s /usr/bin/ccache $PKG/usr/lib/ccache/$c
