@@ -891,6 +891,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-com-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-com-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-console-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-console-l2-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-datetime-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-datetime-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-debug-l1-1-0.dll.so
@@ -1029,6 +1030,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/comdlg32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/compstui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/comsvcs.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/concrt140.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/conhost.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/connect.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/control.exe.so
@@ -1159,6 +1161,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-com-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-com-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-console-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-console-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-datetime-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-datetime-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-debug-l1-1-0.dll
@@ -1297,6 +1300,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/comdlg32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/compstui.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/comsvcs.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/concrt140.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/conhost.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/connect.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/control.exe
@@ -1701,6 +1705,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vcomp100.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vcomp110.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vcomp120.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/vcomp140.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vcomp90.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vcruntime140.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vdmdbg.dll
@@ -2238,6 +2243,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/vcomp100.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vcomp110.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vcomp120.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/vcomp140.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vcomp90.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vcruntime140.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vdmdbg.dll.so
@@ -2329,6 +2335,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-com-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-com-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-console-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-console-l2-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-datetime-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-datetime-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-debug-l1-1-0.dll.so
@@ -2471,6 +2478,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/compobj.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/compstui.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/comsvcs.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/concrt140.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/conhost.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/connect.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/control.exe.so
@@ -2606,6 +2614,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-com-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-com-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-console-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-console-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-datetime-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-datetime-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-debug-l1-1-0.dll
@@ -2748,6 +2757,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/compobj.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/compstui.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/comsvcs.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/concrt140.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/conhost.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/connect.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/control.exe
@@ -3189,6 +3199,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcomp100.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcomp110.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcomp120.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcomp140.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcomp90.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcruntime140.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vdhcp.vxd
@@ -3782,6 +3793,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/vcomp100.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vcomp110.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vcomp120.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/vcomp140.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vcomp90.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vcruntime140.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vdhcp.vxd.so
