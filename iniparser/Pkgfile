@@ -4,12 +4,12 @@
 # Depends on:	
 
 name=iniparser
-version=3.1
+version=3.2
 release=1
-source=(http://ndevilla.free.fr/$name/$name-$version.tar.gz)
+source=(https://github.com/ndevilla/iniparser/archive/v$version.zip)
 
-build () {
-	cd $name
+build() {
+	cd $name-$version
 	make
 	install -D -m 644 src/dictionary.h $PKG/usr/include/dictionary.h
 	install -D -m 644 src/iniparser.h $PKG/usr/include/iniparser.h
