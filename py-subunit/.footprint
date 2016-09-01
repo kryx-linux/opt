@@ -23,6 +23,9 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/subunit/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/_output.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/_output.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/_output.pyo
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/_to_disk.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/_to_disk.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/_to_disk.pyo
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/chunked.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/chunked.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/chunked.pyo
@@ -60,6 +63,9 @@ drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/subunit/tests/
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/tests/test_details.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/tests/test_details.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/tests/test_details.pyo
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/tests/test_filter_to_disk.py
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/tests/test_filter_to_disk.pyc
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/tests/test_filter_to_disk.pyo
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/tests/test_filters.py
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/tests/test_filters.pyc
 -rw-r--r--	root/root	usr/lib/python2.7/site-packages/subunit/tests/test_filters.pyo

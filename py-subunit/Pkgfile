@@ -4,7 +4,7 @@
 # Depends on:	python
 
 name=py-subunit
-version=1.1.0
+version=1.2.0
 release=1
 source=(https://pypi.python.org/packages/source/p/python-${name#*-}/python-${name#*-}-$version.tar.gz)
 
