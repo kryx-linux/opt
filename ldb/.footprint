@@ -16,28 +16,19 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/ldb/
 -rwxr-xr-x	root/root	usr/lib/ldb/libldb-cmdline.so
-lrwxrwxrwx	root/root	usr/lib/libldb.so -> libldb.so.1.1.20
-lrwxrwxrwx	root/root	usr/lib/libldb.so.1 -> libldb.so.1.1.20
--rwxr-xr-x	root/root	usr/lib/libldb.so.1.1.20
-lrwxrwxrwx	root/root	usr/lib/libpyldb-util.so -> libpyldb-util.so.1.1.20
-lrwxrwxrwx	root/root	usr/lib/libpyldb-util.so.1 -> libpyldb-util.so.1.1.20
--rwxr-xr-x	root/root	usr/lib/libpyldb-util.so.1.1.20
+lrwxrwxrwx	root/root	usr/lib/libldb.so -> libldb.so.1.1.27
+lrwxrwxrwx	root/root	usr/lib/libldb.so.1 -> libldb.so.1.1.27
+-rwxr-xr-x	root/root	usr/lib/libldb.so.1.1.27
+lrwxrwxrwx	root/root	usr/lib/libpyldb-util.so -> libpyldb-util.so.1.1.27
+lrwxrwxrwx	root/root	usr/lib/libpyldb-util.so.1 -> libpyldb-util.so.1.1.27
+-rwxr-xr-x	root/root	usr/lib/libpyldb-util.so.1.1.27
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ldb.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/pyldb-util.pc
 drwxr-xr-x	root/root	usr/lib/python2.7/
 drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/
+-rw-r--r--	root/root	usr/lib/python2.7/site-packages/_ldb_text.py
 -rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/ldb.so
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/ldbadd.1.gz
--rw-r--r--	root/root	usr/man/man1/ldbdel.1.gz
--rw-r--r--	root/root	usr/man/man1/ldbedit.1.gz
--rw-r--r--	root/root	usr/man/man1/ldbmodify.1.gz
--rw-r--r--	root/root	usr/man/man1/ldbrename.1.gz
--rw-r--r--	root/root	usr/man/man1/ldbsearch.1.gz
-drwxr-xr-x	root/root	usr/man/man3/
--rw-r--r--	root/root	usr/man/man3/ldb.3.gz
 drwxr-xr-x	root/root	usr/modules/
 drwxr-xr-x	root/root	usr/modules/ldb/
 -rwxr-xr-x	root/root	usr/modules/ldb/asq.so
