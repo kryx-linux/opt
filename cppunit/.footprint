@@ -100,9 +100,9 @@ lrwxrwxrwx	root/root	usr/lib/libcppunit-1.12.so.1 -> libcppunit-1.12.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libcppunit.so -> libcppunit-1.12.so.1.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/cppunit.pc
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/cppunit-config.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/cppunit.m4
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/cppunit-config.1.gz
