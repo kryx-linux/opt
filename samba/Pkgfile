@@ -6,11 +6,10 @@
 # Optional:	cups
 
 name=samba
-version=4.2.1
+version=4.2.14
 release=4
 source=(
 http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz
-v2-0001-s4-lib-tls-use-gnutls_priority_set_direct.patch
 samba-4.2.1-krb5.patch
 samba.rc
 nmbd.rc
@@ -25,18 +24,13 @@ build () {
 	# https://bugzilla.samba.org/show_bug.cgi?id=11165
 	patch -p1 -i $SRC/samba-4.2.1-krb5.patch
 
-	# fix for gnutls-3.4.0 removal of gnutls_certificate_type_set_priority()
-	# https://bugzilla.samba.org/show_bug.cgi?id=8780
-	patch -p1 -i $SRC/v2-0001-s4-lib-tls-use-gnutls_priority_set_direct.patch
-
 	# we should define vendorlib in our perl port
-	sed -ri 's/(vendor)(arch|lib|prefix)/site\2/' buildtools/wafsamba/samba_perl.py 
+	sed -ri 's:(vendor)(arch|lib|prefix):site\2:' buildtools/wafsamba/samba_perl.py 
 
 	./configure \
 		--enable-fhs \
 		--prefix=/usr \
 		--localstatedir=/var \
-		--mandir=/usr/man \
 		--sysconfdir=/etc \
 		--with-privatedir=/etc/samba/private \
 		--bundled-libraries=NONE \
@@ -47,7 +41,7 @@ build () {
 
 	# man pages
 	for i in docs/manpages/*; do 
-		install -D -m 644 $i $PKG/usr/man/man${i##*.}/${i##*/}
+		install -D -m 644 $i $PKG/usr/share/man/man${i##*.}/${i##*/}
 	done
     
 	# cleanup
