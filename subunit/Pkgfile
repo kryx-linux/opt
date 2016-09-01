@@ -1,12 +1,12 @@
-# Description:	Subunit is a streaming protocol for test results
+# Description:	Python unit testing library
 # URL:		https://launchpad.net/subunit
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
 # Depends on:	python check cppunit
 
 name=subunit
-version=1.0.0
+version=1.2.0
 release=1
-source=(https://launchpad.net/subunit/trunk/$version/+download/$name-$version.tar.gz)
+source=(https://launchpad.net/subunit/trunk/${version%.*}/+download/$name-$version.tar.gz)
 
 build () {
 	cd $name-$version
