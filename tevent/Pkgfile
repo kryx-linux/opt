@@ -5,13 +5,14 @@
 # Optional:	python
 
 name=tevent
-version=0.9.24
+version=0.9.29
 release=1
-source=(http://www.samba.org/ftp/$name/$name-$version.tar.gz)
+source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 	./configure \
+		--bundled-libraries=NONE \
 		--prefix=/usr
 	make
 	make DESTDIR=$PKG install
