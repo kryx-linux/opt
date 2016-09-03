@@ -4,7 +4,7 @@
 # Depends on:  cups
 
 name=hpcups
-version=3.16.7
+version=3.16.8
 release=1
 source=(http://downloads.sourceforge.net/project/hplip/hplip/$version/hplip-$version.tar.gz)
 
@@ -20,5 +20,5 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/share/{hplip,doc} $PKG/usr/bin
+    rm -r $PKG/usr/share/doc
 }
