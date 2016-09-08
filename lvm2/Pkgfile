@@ -4,7 +4,7 @@
 # Depends on:  libdevmapper
 
 name=lvm2
-version=2.02.164
+version=2.02.165
 release=1
 source=(http://mirrors.kernel.org/sources.redhat.com/lvm2/releases/LVM2.$version.tgz)
 
