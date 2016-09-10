@@ -6483,9 +6483,6 @@ drwxr-xr-x	root/root	usr/share/qt5/lib/cmake/Qt5Gui/
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QDDSPlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake
@@ -6496,9 +6493,7 @@ drwxr-xr-x	root/root	usr/share/qt5/lib/cmake/Qt5Gui/
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake
@@ -6506,7 +6501,6 @@ drwxr-xr-x	root/root	usr/share/qt5/lib/cmake/Qt5Gui/
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake
 drwxr-xr-x	root/root	usr/share/qt5/lib/cmake/Qt5Help/
@@ -6526,11 +6520,7 @@ drwxr-xr-x	root/root	usr/share/qt5/lib/cmake/Qt5Location/
 drwxr-xr-x	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QAlsaPlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderServicePlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServicePlugin.cmake
--rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerPlayerServicePlugin.cmake
+-rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_AudioCaptureServicePlugin.cmake
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QM3uPlaylistPlugin.cmake
 drwxr-xr-x	root/root	usr/share/qt5/lib/cmake/Qt5MultimediaWidgets/
 -rw-r--r--	root/root	usr/share/qt5/lib/cmake/Qt5MultimediaWidgets/Qt5MultimediaWidgetsConfig.cmake
@@ -6761,18 +6751,6 @@ lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5DesignerComponents.so -> libQt5Desi
 lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5DesignerComponents.so.5 -> libQt5DesignerComponents.so.5.7.0
 lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5DesignerComponents.so.5.7 -> libQt5DesignerComponents.so.5.7.0
 -rwxr-xr-x	root/root	usr/share/qt5/lib/libQt5DesignerComponents.so.5.7.0
--rw-r--r--	root/root	usr/share/qt5/lib/libQt5EglDeviceIntegration.la
--rw-r--r--	root/root	usr/share/qt5/lib/libQt5EglDeviceIntegration.prl
-lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5EglDeviceIntegration.so -> libQt5EglDeviceIntegration.so.5.7.0
-lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5EglDeviceIntegration.so.5 -> libQt5EglDeviceIntegration.so.5.7.0
-lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5EglDeviceIntegration.so.5.7 -> libQt5EglDeviceIntegration.so.5.7.0
--rwxr-xr-x	root/root	usr/share/qt5/lib/libQt5EglDeviceIntegration.so.5.7.0
--rw-r--r--	root/root	usr/share/qt5/lib/libQt5EglFsKmsSupport.la
--rw-r--r--	root/root	usr/share/qt5/lib/libQt5EglFsKmsSupport.prl
-lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5EglFsKmsSupport.so -> libQt5EglFsKmsSupport.so.5.7.0
-lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5EglFsKmsSupport.so.5 -> libQt5EglFsKmsSupport.so.5.7.0
-lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5EglFsKmsSupport.so.5.7 -> libQt5EglFsKmsSupport.so.5.7.0
--rwxr-xr-x	root/root	usr/share/qt5/lib/libQt5EglFsKmsSupport.so.5.7.0
 -rw-r--r--	root/root	usr/share/qt5/lib/libQt5Gamepad.la
 -rw-r--r--	root/root	usr/share/qt5/lib/libQt5Gamepad.prl
 lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5Gamepad.so -> libQt5Gamepad.so.5.7.0
@@ -7007,11 +6985,8 @@ lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5XmlPatterns.so -> libQt5XmlPatterns
 lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5XmlPatterns.so.5 -> libQt5XmlPatterns.so.5.7.0
 lrwxrwxrwx	root/root	usr/share/qt5/lib/libQt5XmlPatterns.so.5.7 -> libQt5XmlPatterns.so.5.7.0
 -rwxr-xr-x	root/root	usr/share/qt5/lib/libQt5XmlPatterns.so.5.7.0
--rw-r--r--	root/root	usr/share/qt5/lib/libqgsttools_p.prl
-lrwxrwxrwx	root/root	usr/share/qt5/lib/libqgsttools_p.so -> libqgsttools_p.so.1.0.0
-lrwxrwxrwx	root/root	usr/share/qt5/lib/libqgsttools_p.so.1 -> libqgsttools_p.so.1.0.0
-lrwxrwxrwx	root/root	usr/share/qt5/lib/libqgsttools_p.so.1.0 -> libqgsttools_p.so.1.0.0
--rwxr-xr-x	root/root	usr/share/qt5/lib/libqgsttools_p.so.1.0.0
+-rw-r--r--	root/root	usr/share/qt5/lib/libqtfreetype.a
+-rw-r--r--	root/root	usr/share/qt5/lib/libqtfreetype.prl
 drwxr-xr-x	root/root	usr/share/qt5/mkspecs/
 drwxr-xr-x	root/root	usr/share/qt5/mkspecs/common/
 drwxr-xr-x	root/root	usr/share/qt5/mkspecs/common/aix/
@@ -7257,8 +7232,6 @@ drwxr-xr-x	root/root	usr/share/qt5/mkspecs/modules/
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/modules/qt_lib_designer.pri
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/modules/qt_lib_designer_private.pri
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/modules/qt_lib_designercomponents_private.pri
--rw-r--r--	root/root	usr/share/qt5/mkspecs/modules/qt_lib_eglfs_device_lib_private.pri
--rw-r--r--	root/root	usr/share/qt5/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/modules/qt_lib_gamepad.pri
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/modules/qt_lib_gamepad_private.pri
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/modules/qt_lib_gui.pri
@@ -7342,8 +7315,6 @@ drwxr-xr-x	root/root	usr/share/qt5/mkspecs/modules/
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/qhost.pri (EMPTY)
 -rw-r--r--	root/root	usr/share/qt5/mkspecs/qmodule.pri
 drwxr-xr-x	root/root	usr/share/qt5/plugins/
-drwxr-xr-x	root/root	usr/share/qt5/plugins/audio/
--rwxr-xr-x	root/root	usr/share/qt5/plugins/audio/libqtaudio_alsa.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/bearer/
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/bearer/libqconnmanbearer.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/bearer/libqgenericbearer.so
@@ -7354,9 +7325,6 @@ drwxr-xr-x	root/root	usr/share/qt5/plugins/canbus/
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/canbus/libqttinycanbus.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/designer/
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/designer/libqquickwidget.so
-drwxr-xr-x	root/root	usr/share/qt5/plugins/egldeviceintegrations/
--rwxr-xr-x	root/root	usr/share/qt5/plugins/egldeviceintegrations/libqeglfs-kms-integration.so
--rwxr-xr-x	root/root	usr/share/qt5/plugins/egldeviceintegrations/libqeglfs-x11-integration.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/gamepads/
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/gamepads/libevdevgamepad.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/generic/
@@ -7377,26 +7345,20 @@ drwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/libqicns.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/libqico.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/libqjpeg.so
--rwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/libqmng.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/libqsvg.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/libqtga.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/libqtiff.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/libqwbmp.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/imageformats/libqwebp.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/mediaservice/
--rwxr-xr-x	root/root	usr/share/qt5/plugins/mediaservice/libgstaudiodecoder.so
--rwxr-xr-x	root/root	usr/share/qt5/plugins/mediaservice/libgstcamerabin.so
--rwxr-xr-x	root/root	usr/share/qt5/plugins/mediaservice/libgstmediacapture.so
--rwxr-xr-x	root/root	usr/share/qt5/plugins/mediaservice/libgstmediaplayer.so
+-rwxr-xr-x	root/root	usr/share/qt5/plugins/mediaservice/libqtmedia_audioengine.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/platforminputcontexts/
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/platforminputcontexts/libqtvirtualkeyboardplugin.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/platforms/
--rwxr-xr-x	root/root	usr/share/qt5/plugins/platforms/libqeglfs.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/platforms/libqlinuxfb.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/platforms/libqminimal.so
--rwxr-xr-x	root/root	usr/share/qt5/plugins/platforms/libqminimalegl.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/platforms/libqoffscreen.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/platforms/libqxcb.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/playlistformats/
@@ -7426,7 +7388,6 @@ drwxr-xr-x	root/root	usr/share/qt5/plugins/sensors/
 drwxr-xr-x	root/root	usr/share/qt5/plugins/sqldrivers/
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/sqldrivers/libqsqlite.so
 drwxr-xr-x	root/root	usr/share/qt5/plugins/xcbglintegrations/
--rwxr-xr-x	root/root	usr/share/qt5/plugins/xcbglintegrations/libqxcb-egl-integration.so
 -rwxr-xr-x	root/root	usr/share/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so
 drwxr-xr-x	root/root	usr/share/qt5/qml/
 drwxr-xr-x	root/root	usr/share/qt5/qml/Qt/
