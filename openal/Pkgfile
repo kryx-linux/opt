@@ -15,8 +15,8 @@ build() {
 	cmake ../ \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DOSS=OFF \
-		-DEXAMPLES=OFF \
-		-DCMAKE_BUILD_TYPE=Release #-DCMAKE_VERBOSE_MAKEFILE=true
+		-DALSOFT_EXAMPLES=OFF \
+		-DCMAKE_BUILD_TYPE=Release #-DCMAKE_VERBOSE_MAKEFILE:BOOL="on"
 
 	make
 	make DESTDIR=$PKG install
