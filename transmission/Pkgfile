@@ -6,7 +6,7 @@
 name=transmission
 version=2.92
 release=1
-source=(https://download.transmissionbt.com/files/$name-$version.tar.xz)
+source=(https://github.com/transmission/transmission-releases/raw/master/transmission-$version.tar.xz)
 
 build() {
     cd $name-$version
