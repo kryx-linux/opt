@@ -4,13 +4,13 @@
 # Depends on: efivar
 
 name=efibootmgr
-version=0.12.1
+version=13
 release=1
-source=(https://crux.nu/~tek/${name}-${version}.tar.xz)
+source=(https://github.com/rhinstaller/$name/releases/download/$version/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
   make
   install -D src/efibootmgr $PKG/usr/sbin/efibootmgr
-  install -D src/efibootmgr.8 $PKG/usr/man/man8/efibootmgr.8
+  install -D src/efibootmgr.8 $PKG/usr/share/man/man8/efibootmgr.8
 }
