@@ -5,17 +5,22 @@
 
 name=tcsh
 version=6.19.00
-release=1
+release=2
 source=(ftp://ftp.astron.com/pub/tcsh/$name-$version.tar.gz \
-        csh.login csh.logout csh.cshrc)
+        csh.login csh.logout csh.cshrc
+        $name-$version.patch)
 
 build() {
     cd $name-$version
-    
-    ./configure --prefix= --disable-nls
+
+    # several fixes from git, https://github.com/tcsh-org/tcsh
+    # fix to remove compiler warning
+    patch -p1 -i $SRC/$name-$version.patch
+
+    ./configure --prefix=/usr --bindir=/bin --disable-nls
     make
-    make DESTDIR=$PKG mandir=/usr/man install
-    
+    make DESTDIR=$PKG install
+
     install -d $PKG/etc
     install -m 644 $SRC/csh.* $PKG/etc
 }
