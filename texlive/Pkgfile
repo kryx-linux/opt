@@ -5,14 +5,14 @@
 # Depends on:  clisp icu libgd poppler t1lib util-linux xorg-libxi
 
 name=texlive
-version=20150523
+version=20160523b
 release=1
 source=(ftp://tug.org/historic/systems/texlive/${version:0:4}/$name-$version-texmf.tar.xz
-        ftp://tug.org/historic/systems/texlive/${version:0:4}/$name-20150521-source.tar.xz
+        ftp://tug.org/historic/systems/texlive/${version:0:4}/$name-$version-source.tar.xz
         http://download.savannah.gnu.org/releases/texi2html/texi2html-5.0.tar.bz2)
 
 build() {
-  cd $name-20150521-source
+  cd $name-20160523-source
 
   chmod -R a-s $SRC
 
@@ -74,7 +74,7 @@ build() {
   PATH="$PKG/usr/bin:$PATH" LD_LIBRARY_PATH+=$PKG/usr/lib \
     texlinks -f $PKG/usr/share/texmf-dist/web2c/fmtutil.cnf $PKG/usr/bin
 
-  cd $SRC/$name-$version-texmf
+  cd $SRC/$name-20160523-texmf
 
   # Fix some paths
   sed -i 's|TEXMFROOT = .*|TEXMFROOT = $SELFAUTODIR/share|g'  texmf-dist/web2c/texmf.cnf
