@@ -1,4 +1,5 @@
 drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cups/
 drwxr-xr-x	root/root	usr/lib/cups/filter/
@@ -276,13 +277,19 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-officejet_pro_8000_enterprise_a811a-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-officejet_pro_8210-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-officejet_pro_8730-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-officejet_pro_8732-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-officejet_pro_8740-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_352_printer-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_377_mfp-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_556-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_e55650-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_flow_mfp_586-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_mfp_586-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_mfp_e58650-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_mfp_p57750-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_p55250-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_pro_452_printer-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_pro_477_mfp-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_pro_552_printer-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_pro_577_mfp-ps.ppd.gz
+drwxr-xr-x	root/root	usr/share/hplip/
