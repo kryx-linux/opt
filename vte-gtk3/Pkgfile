@@ -5,7 +5,7 @@
 # Depends on: gtk3 p5-xml-parser intltool xorg-libxdamage gnutls libpcre2
 
 name=vte-gtk3
-version=0.43.2
+version=0.46.0
 release=1
 source=(ftp://ftp.gnome.org/pub/gnome/sources/vte/${version%.*}/vte-$version.tar.xz \
         vte-metamask.patch)
