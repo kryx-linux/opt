@@ -1,0 +1,25 @@
+# Description: QtWebEngine for qt5.
+# URL: http://www.qt.io/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Packager: Danny Rawlins, crux at romster dot me
+# Depends on: qt5 xorg-libxss xorg-libxtst nss
+
+name=qtwebengine
+version=5.7.0
+release=1
+source=(http://download.qt.io/official_releases/qt/${version::3}/$version/submodules/$name-opensource-src-$version.tar.xz)
+
+build() {
+	cd $name-opensource-src-$version
+
+	install -d build
+	cd build
+
+	qmake-qt5 WEBENGINE_CONFIG+=use_proprietary_codecs ..
+	make
+	make INSTALL_ROOT=$PKG install
+
+	find "$PKG/usr/lib" -type f -name '*.prl' \
+		-exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' {} \;
+
+}
