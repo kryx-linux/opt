@@ -5,7 +5,7 @@
 # Depends on: setuptools
 
 name=dnspython
-version=1.13.0
+version=1.15.0
 release=1
 source=(http://www.dnspython.org/kits/$version/$name-$version.tar.gz)
 
