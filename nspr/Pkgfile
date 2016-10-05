@@ -3,9 +3,9 @@
 # Maintainer:  Fredrik Rinnestam, fredrik at rinnestam dot se
 
 name=nspr
-version=4.12
+version=4.13
 release=1
-source=(http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v$version/src/$name-$version.tar.gz
+source=(http://ftp.mozilla.org/pub/nspr/releases/v$version/src/$name-$version.tar.gz
         $name.pc.in)
 
 build() {
