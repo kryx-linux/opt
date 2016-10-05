@@ -7,8 +7,7 @@
 name=xorg-font-msttcorefonts
 version=1.4
 release=2
-source=(http://downloads.sourceforge.net/project/corefonts/the%20fonts/final/webdin32.exe
-	http://downloads.sourceforge.net/project/corefonts/the%20fonts/final/andale32.exe
+source=(http://downloads.sourceforge.net/project/corefonts/the%20fonts/final/andale32.exe
 	http://downloads.sourceforge.net/project/corefonts/the%20fonts/final/arial32.exe
 	http://downloads.sourceforge.net/project/corefonts/the%20fonts/final/arialb32.exe
 	http://downloads.sourceforge.net/project/corefonts/the%20fonts/final/comic32.exe
