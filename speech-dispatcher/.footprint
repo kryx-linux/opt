@@ -13,6 +13,7 @@ drwxr-xr-x	root/root	usr/etc/speech-dispatcher/modules/
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/epos-generic.conf
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/espeak-generic.conf
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/espeak-mbrola-generic.conf
+-rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/espeak-ng.conf
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/espeak.conf
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/festival.conf
 -rw-r--r--	root/root	usr/etc/speech-dispatcher/modules/flite.conf
@@ -62,16 +63,7 @@ drwxr-xr-x	root/root	usr/share/speech-dispatcher/conf/clients/
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/clients/emacs.conf
 drwxr-xr-x	root/root	usr/share/speech-dispatcher/conf/modules/
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/cicero.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/dtk-generic.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/epos-generic.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/espeak-generic.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/espeak-mbrola-generic.conf
+-rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/espeak-ng.conf
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/espeak.conf
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/festival.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/flite.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/ibmtts.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/ivona.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/llia_phon-generic.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/pico-generic.conf
--rw-r--r--	root/root	usr/share/speech-dispatcher/conf/modules/swift-generic.conf
 -rw-r--r--	root/root	usr/share/speech-dispatcher/conf/speechd.conf
