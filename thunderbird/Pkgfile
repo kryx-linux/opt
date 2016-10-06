@@ -1,7 +1,7 @@
 # Description: email client from the Mozilla project
 # URL:         http://www.mozillamessaging.com/en-US/thunderbird/
 # Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on:  python,gtk,alsa-lib,xorg-libxt,libidl,nss,yasm,mesa3d,libjpeg-turbo
+# Depends on:  python,unzip,zip,gtk,alsa-lib,xorg-libxt,libidl,nss,yasm,mesa3d,libjpeg-turbo
 
 name=thunderbird
 version=45.4.0
