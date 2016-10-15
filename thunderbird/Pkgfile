@@ -1,66 +1,68 @@
 # Description: email client from the Mozilla project
-# URL:         http://www.mozillamessaging.com/en-US/thunderbird/
+# URL:			http://www.mozillamessaging.com/en-US/thunderbird/
 # Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
 # Depends on:  python,unzip,zip,gtk,alsa-lib,xorg-libxt,libidl,nss,yasm,mesa3d,libjpeg-turbo
 
 name=thunderbird
 version=45.4.0
-release=1
+release=2
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/source/$name-$version.source.tar.xz
-    	$name.desktop thunderbird-install-dir.patch thunderbird-gcc6.patch)
+	$name.desktop thunderbird-install-dir.patch thunderbird-gcc6.patch)
  
 build() {
-    cd $name-$version
-    sed -i '/^ftglyph.h/ i freetype/ftfntfmt.h' mozilla/config/system-headers
-    patch -p1 -i $SRC/thunderbird-install-dir.patch
-    patch -p1 -i $SRC/thunderbird-gcc6.patch
-    export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/lib/$name"
+	cd $name-$version
+	sed -i '/^ftglyph.h/ i freetype/ftfntfmt.h' mozilla/config/system-headers
+	patch -p1 -i $SRC/thunderbird-install-dir.patch
+	patch -p1 -i $SRC/thunderbird-gcc6.patch
+	export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/lib/$name"
+	export CFLAGS="$CFLAGS -fno-delete-null-pointer-checks -fno-lifetime-dse -fno-schedule-insns2"
+	export CXXFLAGS="$CXXFLAGS -fno-delete-null-pointer-checks -fno-lifetime-dse -fno-schedule-insns2"
 
 cat <<- EOF > .mozconfig
-    mk_add_options MOZ_MAKE_FLAGS="$MAKEFLAGS -s"
-    ac_add_options --prefix=/usr
-    ac_add_options --enable-application=mail
-    ac_add_options --with-system-jpeg
-    ac_add_options --with-system-zlib
-    ac_add_options --with-system-bz2
-    ac_add_options --with-system-mng
-    ac_add_options --with-system-png
-    ac_add_options --with-system-nspr
-    ac_add_options --with-system-nss
-    ac_add_options --enable-system-ffi
-    ac_add_options --enable-system-pixman
-    #ac_add_options --enable-system-sqlite
-    ac_add_options --enable-system-cairo
-    ac_add_options --with-pthreads
-    ac_add_options --enable-optimize="$CFLAGS"
-    ac_add_options --enable-official-branding
-    ac_add_options --enable-shared
-    ac_add_options --enable-single-profile
-    ac_add_options --enable-calendar
-    ac_add_options --enable-pie
-    ac_add_options --disable-gstreamer
-    ac_add_options --disable-tests
-    ac_add_options --disable-mochitest
-    ac_add_options --disable-dbus
-    ac_add_options --disable-debug
-    ac_add_options --disable-installer
-    ac_add_options --disable-updater
-    ac_add_options --disable-profilesharing
-    ac_add_options --disable-crashreporter
-    ac_add_options --disable-necko-wifi
-    ac_add_options --disable-libnotify
-    ac_add_options --disable-pulseaudio
-    ac_add_options --with-distribution-id=nu.crux
-    ac_add_options --disable-gconf
-    ac_add_options --disable-elf-hack
+	mk_add_options MOZ_MAKE_FLAGS="$MAKEFLAGS -s"
+	ac_add_options --prefix=/usr
+	ac_add_options --enable-application=mail
+	ac_add_options --with-system-jpeg
+	ac_add_options --with-system-zlib
+	ac_add_options --with-system-bz2
+	ac_add_options --with-system-mng
+	ac_add_options --with-system-png
+	ac_add_options --with-system-nspr
+	ac_add_options --with-system-nss
+	ac_add_options --enable-system-ffi
+	ac_add_options --enable-system-pixman
+	#ac_add_options --enable-system-sqlite
+	ac_add_options --enable-system-cairo
+	ac_add_options --with-pthreads
+	ac_add_options --enable-optimize="$CFLAGS"
+	ac_add_options --enable-official-branding
+	ac_add_options --enable-shared
+	ac_add_options --enable-single-profile
+	ac_add_options --enable-calendar
+	ac_add_options --enable-pie
+	ac_add_options --disable-gstreamer
+	ac_add_options --disable-tests
+	ac_add_options --disable-mochitest
+	ac_add_options --disable-dbus
+	ac_add_options --disable-debug
+	ac_add_options --disable-installer
+	ac_add_options --disable-updater
+	ac_add_options --disable-profilesharing
+	ac_add_options --disable-crashreporter
+	ac_add_options --disable-necko-wifi
+	ac_add_options --disable-libnotify
+	ac_add_options --disable-pulseaudio
+	ac_add_options --with-distribution-id=nu.crux
+	ac_add_options --disable-gconf
+	ac_add_options --disable-elf-hack
 EOF
-    make -f client.mk build
-    make -f client.mk DESTDIR=$PKG install
+	make -f client.mk build
+	make -f client.mk DESTDIR=$PKG install
 
-    mkdir -p $PKG/usr/share/pixmaps
-    ln -s /usr/lib/thunderbird/chrome/icons/default/default48.png $PKG/usr/share/pixmaps/thunderbird_default48.png
-    install -D -m 0644 $SRC/$name.desktop $PKG/usr/share/applications/$name.desktop
+	mkdir -p $PKG/usr/share/pixmaps
+	ln -s /usr/lib/thunderbird/chrome/icons/default/default48.png $PKG/usr/share/pixmaps/thunderbird_default48.png
+	install -D -m 0644 $SRC/$name.desktop $PKG/usr/share/applications/$name.desktop
 
-    find $PKG -iname '*README*' -delete
-    rm -r $PKG/usr/{include,lib/thunderbird-devel,share/idl}
+	find $PKG -iname '*README*' -delete
+	rm -r $PKG/usr/{include,lib/thunderbird-devel,share/idl}
 }
