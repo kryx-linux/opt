@@ -4,7 +4,7 @@
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
-version=1.8.0_102
+version=1.8.0_112
 release=1
 source=(file:///$name-8u${version#*_}-linux-x64.tar.gz)
 
