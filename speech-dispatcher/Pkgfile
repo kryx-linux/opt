@@ -1,13 +1,13 @@
 # Description: Common interface to speech synthesis
-# URL: http://devel.freebsoft.org/speechd/
+# URL: https://devel.freebsoft.org/speechd/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Jose V Beneyto, sepen at crux dot nu
 # Depends on: libsndfile intltool glib libxml2 dotconf libao
 
 name=speech-dispatcher
-version=0.8.4
+version=0.8.5
 release=1
-source=(http://devel.freebsoft.org/pub/projects/speechd/$name-$version.tar.gz)
+source=(https://devel.freebsoft.org/pub/projects/speechd/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
