@@ -113,7 +113,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/dbox-mail.h
 -rw-r--r--	root/root	usr/include/dovecot/dbox-save.h
 -rw-r--r--	root/root	usr/include/dovecot/dbox-storage.h
--rw-r--r--	root/root	usr/include/dovecot/dcrypt-iostream-private.h
+-rw-r--r--	root/root	usr/include/dovecot/dcrypt-iostream.h
 -rw-r--r--	root/root	usr/include/dovecot/dcrypt-private.h
 -rw-r--r--	root/root	usr/include/dovecot/dcrypt.h
 -rw-r--r--	root/root	usr/include/dovecot/dict-client.h
@@ -159,11 +159,13 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/fs-api.h
 -rw-r--r--	root/root	usr/include/dovecot/fs-sis-common.h
 -rw-r--r--	root/root	usr/include/dovecot/fs-test.h
+-rw-r--r--	root/root	usr/include/dovecot/fs-wrapper.h
 -rw-r--r--	root/root	usr/include/dovecot/fsync-mode.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-api-private.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-api.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-common.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-expunge-log.h
+-rw-r--r--	root/root	usr/include/dovecot/fts-filter-common.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-filter-private.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-filter.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-icu.h
@@ -325,6 +327,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/lib.h
 -rw-r--r--	root/root	usr/include/dovecot/llist.h
 -rw-r--r--	root/root	usr/include/dovecot/lmtp-client.h
+-rw-r--r--	root/root	usr/include/dovecot/log-throttle.h
 -rw-r--r--	root/root	usr/include/dovecot/login-common.h
 -rw-r--r--	root/root	usr/include/dovecot/login-proxy-state.h
 -rw-r--r--	root/root	usr/include/dovecot/login-proxy.h
@@ -457,6 +460,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ostream-encrypt.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-escaped.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-failure-at.h
+-rw-r--r--	root/root	usr/include/dovecot/ostream-file-private.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-metawrap.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-null.h
@@ -483,6 +487,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/printf-format-fix.h
 -rw-r--r--	root/root	usr/include/dovecot/priorityq.h
 -rw-r--r--	root/root	usr/include/dovecot/process-title.h
+-rw-r--r--	root/root	usr/include/dovecot/program-client.h
 -rw-r--r--	root/root	usr/include/dovecot/push-notification-drivers.h
 -rw-r--r--	root/root	usr/include/dovecot/push-notification-event-flagsclear.h
 -rw-r--r--	root/root	usr/include/dovecot/push-notification-event-flagsset.h
