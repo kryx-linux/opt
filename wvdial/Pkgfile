@@ -5,7 +5,7 @@
 
 name=wvdial
 version=1.61
-release=6
+release=7
 source=(https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/wvstreams/$name-$version.tar.gz \
         https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/wvstreams/wvstreams-4.6.1.tar.gz \
         $name-$version.patch \

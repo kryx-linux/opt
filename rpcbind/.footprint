@@ -5,7 +5,8 @@ drwxr-xr-x	root/root	sbin/
 -rwxr-xr-x	root/root	sbin/rpcbind
 -rwxr-xr-x	root/root	sbin/rpcinfo
 drwxr-xr-x	root/root	usr/
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man8/
--rw-r--r--	root/root	usr/man/man8/rpcbind.8.gz
--rw-r--r--	root/root	usr/man/man8/rpcinfo.8.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man8/
+-rw-r--r--	root/root	usr/share/man/man8/rpcbind.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/rpcinfo.8.gz

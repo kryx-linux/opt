@@ -1,6 +1,6 @@
 diff -Nru wvdial-1.61.orig/Makefile.in wvdial-1.61/Makefile.in
---- wvdial-1.61.orig/Makefile.in	2009-09-30 09:28:10.000000000 +0200
-+++ wvdial-1.61/Makefile.in	2009-09-30 09:31:22.000000000 +0200
+--- wvdial-1.61.orig/Makefile.in	2016-10-29 12:11:27.722154180 +0200
++++ wvdial-1.61/Makefile.in	2016-10-29 12:12:31.096513061 +0200
 @@ -3,27 +3,19 @@
  WVPACKAGE_TARNAME=@PACKAGE_TARNAME@
  WVPACKAGE_VERSION=@PACKAGE_VERSION@
@@ -28,9 +28,8 @@ diff -Nru wvdial-1.61.orig/Makefile.in wvdial-1.61/Makefile.in
 +LIBS = $(WVS)/libwvstatic.a -lstdc++ -lcrypto -lssl
  
  BINDIR=${prefix}/bin
--MANDIR=${prefix}/share/man
+ MANDIR=${prefix}/share/man
 -PPPDIR=/etc/ppp/peers
-+MANDIR=${prefix}/man
 +PPPDIR=$(DESTDIR)/etc/ppp/peers
 +
 +VERBOSE=1
@@ -48,8 +47,8 @@ diff -Nru wvdial-1.61.orig/Makefile.in wvdial-1.61/Makefile.in
  
  install-bin: all
 diff -Nru wvdial-1.61.orig/config.defaults.mk wvdial-1.61/config.defaults.mk
---- wvdial-1.61.orig/config.defaults.mk	2009-09-30 09:28:10.000000000 +0200
-+++ wvdial-1.61/config.defaults.mk	2009-09-30 10:06:24.000000000 +0200
+--- wvdial-1.61.orig/config.defaults.mk	2016-10-29 12:11:27.722154180 +0200
++++ wvdial-1.61/config.defaults.mk	2016-10-29 12:11:55.997788968 +0200
 @@ -13,7 +13,6 @@
  LIBS_PAM=-lpam
  LIBS_TCL=
