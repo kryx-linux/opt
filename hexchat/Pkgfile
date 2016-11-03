@@ -6,7 +6,7 @@
 # Optional: enchant libcanberra lua
 
 name=hexchat
-version=2.12.2
+version=2.12.3
 release=1
 source=(http://dl.hexchat.net/hexchat/$name-$version.tar.xz)
 

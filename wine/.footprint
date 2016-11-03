@@ -957,6 +957,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-processthreads-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-profile-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-psapi-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-psapi-obsolete-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-realtime-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-registry-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-registryuserspecific-l1-1-0.dll.so
@@ -1191,8 +1192,12 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/expand.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/explorer.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/explorerframe.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-gdi-dc-create-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-gdi-devcaps-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-kernel32-package-current-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-ntuser-message-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-ntuser-uicontext-ext-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-rtcore-ntuser-dpi-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/extrac32.exe.so
 drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/acledit.dll
@@ -1270,6 +1275,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-processthreads-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-profile-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-psapi-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-psapi-obsolete-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-realtime-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-registry-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-registryuserspecific-l1-1-0.dll
@@ -1504,8 +1510,12 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/expand.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/explorer.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/explorerframe.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-gdi-dc-create-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-gdi-devcaps-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-kernel32-package-current-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-ntuser-message-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-ntuser-uicontext-ext-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-rtcore-ntuser-dpi-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/extrac32.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/faultrep.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/findstr.exe
@@ -2551,6 +2561,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-processthreads-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-profile-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-psapi-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-psapi-obsolete-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-realtime-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-registry-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-registryuserspecific-l1-1-0.dll.so
@@ -2794,8 +2805,12 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/expand.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/explorer.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/explorerframe.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-gdi-dc-create-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-gdi-devcaps-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-kernel32-package-current-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-ntuser-message-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-ntuser-uicontext-ext-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-rtcore-ntuser-dpi-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/extrac32.exe.so
 drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/acledit.dll
@@ -2873,6 +2888,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-processthreads-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-profile-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-psapi-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-psapi-obsolete-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-realtime-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-registry-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-registryuserspecific-l1-1-0.dll
@@ -3116,8 +3132,12 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/expand.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/explorer.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/explorerframe.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-gdi-dc-create-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-gdi-devcaps-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-kernel32-package-current-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-ntuser-message-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-ntuser-uicontext-ext-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-rtcore-ntuser-dpi-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/extrac32.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/faultrep.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/findstr.exe
