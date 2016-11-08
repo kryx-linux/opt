@@ -7,7 +7,7 @@
 name=wireshark
 version=2.2.1
 release=1
-source=(http://www.$name.org/download/src/all-versions/$name-$version.tar.bz2)
+source=(https://www.$name.org/download/src/all-versions/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
