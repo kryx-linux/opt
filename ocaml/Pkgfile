@@ -2,18 +2,16 @@
 # URL:         http://caml.inria.fr/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Packager:    Erlend Bergsas Mikkelsen, howl at online dot no
-# Depends on:  binutils gdbm
+# Depends on:  binutils ncurses zlib
 
 name=ocaml
-version=4.03.0
+version=4.04.0
 release=1
 source=(http://caml.inria.fr/pub/distrib/$name-${version%.*}/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    ./configure -prefix /usr -mandir /usr/share/man -with-pthread -no-graph
-    make -j1 world.opt
+    ./configure -prefix /usr -mandir /usr/share/man -no-graph
+    make world.opt
     make DESTDIR=$PKG install
-    local f
-    for f in $PKG/usr/bin/*.opt; do mv $f ${f%%.opt}; done
 }

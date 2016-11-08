@@ -1,6 +1,5 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/androiddump
 -rwxr-xr-x	root/root	usr/bin/capinfos
 -rwxr-xr-x	root/root	usr/bin/captype
 -rwxr-xr-x	root/root	usr/bin/dftest
@@ -16,18 +15,27 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/wireshark-gtk
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libwireshark.la
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.6.1.4
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so.6 -> libwireshark.so.6.1.4
--rwxr-xr-x	root/root	usr/lib/libwireshark.so.6.1.4
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.8.0.1
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so.8 -> libwireshark.so.8.0.1
+-rwxr-xr-x	root/root	usr/lib/libwireshark.so.8.0.1
 -rwxr-xr-x	root/root	usr/lib/libwiretap.la
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.5.0.4
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so.5 -> libwiretap.so.5.0.4
--rwxr-xr-x	root/root	usr/lib/libwiretap.so.5.0.4
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.6.0.1
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so.6 -> libwiretap.so.6.0.1
+-rwxr-xr-x	root/root	usr/lib/libwiretap.so.6.0.1
+-rwxr-xr-x	root/root	usr/lib/libwscodecs.la
+lrwxrwxrwx	root/root	usr/lib/libwscodecs.so -> libwscodecs.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libwscodecs.so.1 -> libwscodecs.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib/libwscodecs.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libwsutil.la
-lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.6.0.0
-lrwxrwxrwx	root/root	usr/lib/libwsutil.so.6 -> libwsutil.so.6.0.0
--rwxr-xr-x	root/root	usr/lib/libwsutil.so.6.0.0
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.7.0.0
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so.7 -> libwsutil.so.7.0.0
+-rwxr-xr-x	root/root	usr/lib/libwsutil.so.7.0.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/wireshark.pc
 drwxr-xr-x	root/root	usr/lib/wireshark/
+drwxr-xr-x	root/root	usr/lib/wireshark/extcap/
+-rwxr-xr-x	root/root	usr/lib/wireshark/extcap/androiddump
+-rwxr-xr-x	root/root	usr/lib/wireshark/extcap/randpktdump
 drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/docsis.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/docsis.so
@@ -110,12 +118,14 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/editcap.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mergecap.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/randpkt.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/randpktdump.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/rawshark.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/reordercap.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/text2pcap.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/tshark.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/wireshark.1.gz
 drwxr-xr-x	root/root	usr/share/man/man4/
+-rw-r--r--	root/root	usr/share/man/man4/extcap.4.gz
 -rw-r--r--	root/root	usr/share/man/man4/wireshark-filter.4.gz
 drwxr-xr-x	root/root	usr/share/mime/
 drwxr-xr-x	root/root	usr/share/mime/packages/
@@ -126,12 +136,14 @@ drwxr-xr-x	root/root	usr/share/wireshark/
 -rw-r--r--	root/root	usr/share/wireshark/androiddump.html
 -rw-r--r--	root/root	usr/share/wireshark/capinfos.html
 -rw-r--r--	root/root	usr/share/wireshark/cfilters
+-rw-r--r--	root/root	usr/share/wireshark/ciscodump.html
 -rw-r--r--	root/root	usr/share/wireshark/colorfilters
 -rw-r--r--	root/root	usr/share/wireshark/dfilters
 -rw-r--r--	root/root	usr/share/wireshark/dftest.html
 drwxr-xr-x	root/root	usr/share/wireshark/diameter/
 -rw-r--r--	root/root	usr/share/wireshark/diameter/AlcatelLucent.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/Cisco.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/CiscoSystems.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/Custom.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/Ericsson.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/HP.xml
@@ -167,6 +179,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/dtds/
 -rw-r--r--	root/root	usr/share/wireshark/dtds/xcap-error.dtd
 -rw-r--r--	root/root	usr/share/wireshark/dumpcap.html
 -rw-r--r--	root/root	usr/share/wireshark/editcap.html
+-rw-r--r--	root/root	usr/share/wireshark/extcap.html
 drwxr-xr-x	root/root	usr/share/wireshark/help/
 -rw-r--r--	root/root	usr/share/wireshark/help/capture_filters.txt
 -rw-r--r--	root/root	usr/share/wireshark/help/capturing.txt
@@ -352,6 +365,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.roaringpenguin
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.ruckus
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.ruggedcom
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.sangoma
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.sg
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.shasta
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.shiva
@@ -392,10 +406,12 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.zte
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.zyxel
 -rw-r--r--	root/root	usr/share/wireshark/randpkt.html
+-rw-r--r--	root/root	usr/share/wireshark/randpktdump.html
 -rw-r--r--	root/root	usr/share/wireshark/rawshark.html
 -rw-r--r--	root/root	usr/share/wireshark/reordercap.html
 -rw-r--r--	root/root	usr/share/wireshark/services
 -rw-r--r--	root/root	usr/share/wireshark/smi_modules
+-rw-r--r--	root/root	usr/share/wireshark/sshdump.html
 -rw-r--r--	root/root	usr/share/wireshark/text2pcap.html
 drwxr-xr-x	root/root	usr/share/wireshark/tpncp/
 -rw-r--r--	root/root	usr/share/wireshark/tpncp/tpncp.dat
