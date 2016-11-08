@@ -35,7 +35,8 @@ build() {
 
   # only clang may be left, remove llvm
   rm -r $PKG/usr/include/llvm{,-c}
-  rm $PKG/usr/bin/{bugpoint,ll*,opt,obj2yaml,sancov,verify-uselistorder,yaml2obj}
+  rm -r $PKG/usr/lib/cmake/llvm
+  rm $PKG/usr/bin/{bugpoint,ll*,opt,obj2yaml,sancov,sanstats,verify-uselistorder,yaml2obj}
   rm $PKG/usr/lib/{LLVMHello.so,BugpointPasses.so,libLTO.*,libLLVM*}
 
 }

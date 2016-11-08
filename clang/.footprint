@@ -8,7 +8,6 @@ lrwxrwxrwx	root/root	usr/bin/clang++ -> clang
 lrwxrwxrwx	root/root	usr/bin/clang-cl -> clang
 -rwxr-xr-x	root/root	usr/bin/clang-format
 -rwxr-xr-x	root/root	usr/bin/git-clang-format
--rwxr-xr-x	root/root	usr/bin/sanstats
 -rwxr-xr-x	root/root	usr/bin/scan-build
 -rwxr-xr-x	root/root	usr/bin/scan-view
 drwxr-xr-x	root/root	usr/include/
@@ -604,31 +603,6 @@ drwxr-xr-x	root/root	usr/lib/cmake/clang/
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangConfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangTargets.cmake
-drwxr-xr-x	root/root	usr/lib/cmake/llvm/
--rw-r--r--	root/root	usr/lib/cmake/llvm/AddLLVM.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/AddLLVMDefinitions.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/AddOCaml.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/AddSphinxTarget.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/CheckCompilerVersion.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/ChooseMSVCCRT.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/CrossCompile.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/DetermineGCCCompatible.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/FindOCaml.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/FindSphinx.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/GenerateVersionFromCVS.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/GetSVN.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/HandleLLVMOptions.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/HandleLLVMStdlib.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/LLVM-Config.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/LLVMConfig.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/LLVMConfigVersion.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/LLVMExports-release.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/LLVMExports.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/LLVMExternalProjectUtils.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/LLVMInstallSymlink.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/LLVMProcessSources.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/TableGen.cmake
--rw-r--r--	root/root	usr/lib/cmake/llvm/VersionFromVCS.cmake
 lrwxrwxrwx	root/root	usr/lib/libclang.so -> libclang.so.3.9
 -rwxr-xr-x	root/root	usr/lib/libclang.so.3.9
 -rwxr-xr-x	root/root	usr/lib/libclangARCMigrate.so
