@@ -2,13 +2,13 @@
 # URL:         http://llvm.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Tilman Sauerbeck, tilman at crux dot nu
-# Depends on:  python, llvm
+# Depends on:  python llvm cmake
 
 name=clang
-version=3.8.1
+version=3.9.0
 release=1
 source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
-  config.h llvm-config.h)
+  llvm-config.h)
 
 build() {
   mv cfe-$version.src llvm-$version.src/tools/clang
@@ -17,29 +17,26 @@ build() {
   mkdir build
   cd build
 
-  ../configure --prefix=/usr \
-    --without-oprofile \
-    --enable-cxx11 \
-    --enable-targets=x86,x86_64,r600 \
-    --enable-shared
+  cmake -DLLVM_ENABLE_CXX1Y=1 \
+    -DLLVM_INCLUDE_EXAMPLES=0 \
+    -DLLVM_INCLUDE_TESTS=0 \
+    -DLLVM_TARGETS_TO_BUILD='X86;AMDGPU' \
+    -DBUILD_SHARED_LIBS=1 \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr ..
 
-  make DISABLE_ASSERTIONS=1 $MAKEFLAGS
-  make DISABLE_ASSERTIONS=1 DESTDIR=$PKG install
+  MAKEFLAGS="$MAKEFLAGS" make
+  make DESTDIR=$PKG install
 
-  find $PKG -name .dir -delete
-  rm -rf $PKG/usr/docs
 
-  # multilib stubs
-  mv $PKG/usr/include/llvm/Config/config{,-64}.h
+  # multilib stub
   mv $PKG/usr/include/llvm/Config/llvm-config{,-64}.h
-  install -m 0644 $SRC/config.h $PKG/usr/include/llvm/Config/
   install -m 0644 $SRC/llvm-config.h $PKG/usr/include/llvm/Config/
 
   # only clang may be left, remove llvm
   rm -r $PKG/usr/include/llvm{,-c}
-  rm $PKG/usr/bin/{bugpoint,ll*,opt,FileCheck,count,not,obj2yaml,sancov,verify-uselistorder,yaml2obj}
+  rm -r $PKG/usr/lib/cmake/llvm
+  rm $PKG/usr/bin/{bugpoint,ll*,opt,obj2yaml,sancov,sanstats,verify-uselistorder,yaml2obj}
   rm $PKG/usr/lib/{LLVMHello.so,BugpointPasses.so,libLTO.*,libLLVM*}
-  # avoid conflicts with opt/llvm
-  rm -r $PKG/usr/share/llvm
 
 }
