@@ -30,9 +30,12 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkcursor.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkdevice.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkdevicemanager.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkdevicepad.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkdevicetool.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkdisplay.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkdisplaymanager.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkdnd.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkdrawingcontext.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkenumtypes.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkevents.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkframeclock.h
@@ -42,6 +45,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkkeysyms-compat.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkkeysyms.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkmain.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkmonitor.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkpango.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkpixbuf.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/gdkprivate.h
@@ -73,6 +77,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gdk/x11/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11dnd.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11glcontext.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11keys.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11monitor.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11property.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11screen.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gdk/x11/gdkx11selection.h
@@ -123,6 +128,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/a11y/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkscrolledwindowaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkspinbuttonaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkspinneraccessible.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkstackaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkstatusbaraccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkswitchaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtktextcellaccessible.h
@@ -232,6 +238,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkdebug.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkdialog.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkdnd.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkdragdest.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkdragsource.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkdrawingarea.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkeditable.h
@@ -300,6 +307,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkoffscreenwindow.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkorientable.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkoverlay.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkpadcontroller.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkpagesetup.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkpaned.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkpapersize.h
@@ -336,6 +344,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkseparatormenuitem.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkseparatortoolitem.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtksettings.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkshortcutlabel.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkshortcutsgroup.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkshortcutssection.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkshortcutsshortcut.h
@@ -442,13 +451,13 @@ lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so -> libgailutil-3.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so.0 -> libgailutil-3.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgailutil-3.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libgdk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.2000.9
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.2000.9
--rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.2000.9
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.2200.3
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.2200.3
+-rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.2200.3
 -rw-r--r--	root/root	usr/lib/libgtk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.2000.9
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.2000.9
--rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.2000.9
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.2200.3
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.2200.3
+-rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.2200.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gail-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gdk-3.0.pc
