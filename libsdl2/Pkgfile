@@ -4,8 +4,8 @@
 # Depends on: alsa-lib mesa3d
 
 name=libsdl2
-version=2.0.4
-release=2
+version=2.0.5
+release=1
 source=(http://www.libsdl.org/release/SDL2-$version.tar.gz)
 
 build () {
