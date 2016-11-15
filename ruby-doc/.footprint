@@ -2427,7 +2427,6 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/Commands/YankCommand/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Commands/YankCommand/get_platform_from_requirements-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Commands/YankCommand/get_version_from_requirements-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Commands/YankCommand/new-c.ri
--rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Commands/YankCommand/unyank_gem-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Commands/YankCommand/yank_api_request-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Commands/YankCommand/yank_gem-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Commands/cdesc-Commands.ri
@@ -2723,6 +2722,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/InvalidSpecificationException/
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/Licenses/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Licenses/cdesc-Licenses.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Licenses/match%3f-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Licenses/suggestions-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/List/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/List/cdesc-List.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/List/each-i.ri
@@ -2930,6 +2930,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/PackageTask/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/PackageTask/new-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/PathSupport/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/PathSupport/cdesc-PathSupport.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/PathSupport/default_path-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/PathSupport/home-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/PathSupport/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/PathSupport/path%3d-i.ri
@@ -3080,6 +3081,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/RequestSet/Lockfile/Tokenizer/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/RequestSet/resolve_current-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/RequestSet/soft_missing-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/RequestSet/sorted_requests-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/RequestSet/source_set-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/RequestSet/specs-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/RequestSet/specs_in-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/Requirement/
@@ -3203,6 +3205,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/Resolver/LockSpecification/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/LockSpecification/cdesc-LockSpecification.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/LockSpecification/install-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/LockSpecification/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/LockSpecification/sources-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/LockSpecification/spec-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/Resolver/Molinillo/
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/Resolver/Molinillo/CircularDependencyError/
@@ -3349,6 +3352,11 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/Resolver/Set/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/Set/prefetch-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/Set/prerelease-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/Set/remote-i.ri
+drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/Resolver/SourceSet/
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/SourceSet/add_source_gem-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/SourceSet/cdesc-SourceSet.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/SourceSet/get_set-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/SourceSet/new-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/Resolver/SpecSpecification/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/SpecSpecification/cdesc-SpecSpecification.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/Resolver/SpecSpecification/dependencies-i.ri
@@ -3831,6 +3839,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/Gem/TestCase/StaticSet/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/TestCase/refute_path_exists-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/TestCase/req-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/TestCase/rubybin-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/TestCase/save_gemspec-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/TestCase/save_loaded_features-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/TestCase/scan_make_command_lines-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Gem/TestCase/setup-i.ri
@@ -6416,6 +6425,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/OpenSSL/BN/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/BN/eql%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/BN/gcd-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/BN/generate_prime-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/BN/hash-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/BN/lshift%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/BN/mod_add-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/BN/mod_exp-i.ri
@@ -7036,7 +7046,6 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/OpenSSL/X509/ExtensionError/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/X509/ExtensionError/cdesc-ExtensionError.ri
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/OpenSSL/X509/ExtensionFactory/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/X509/ExtensionFactory/cdesc-ExtensionFactory.ri
--rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/X509/ExtensionFactory/config%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/X509/ExtensionFactory/config-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/X509/ExtensionFactory/create_ext-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/OpenSSL/X509/ExtensionFactory/create_ext_from_array-i.ri
@@ -7625,8 +7634,11 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/Prime/TrialDivisionGenerator/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Prime/prime%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Prime/prime_division-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Proc/
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/%3d%3d%3d-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/%5b%5d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/arity-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/binding-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/call-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/cdesc-Proc.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/curry-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/hash-i.ri
@@ -7637,6 +7649,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.3/system/Proc/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/source_location-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/to_proc-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/to_s-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.3/system/Proc/yield-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Process/
 drwxr-xr-x	root/root	usr/share/ri/2.3/system/Process/GID/
 -rw-r--r--	root/root	usr/share/ri/2.3/system/Process/GID/cdesc-GID.ri

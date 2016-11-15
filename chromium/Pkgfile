@@ -5,57 +5,48 @@
 # Depends on: dbus-glib gperf gtk libevent libexif libgcrypt mesa3d ninja nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt xorg-libxtst yasm
 
 name=chromium
-version=53.0.2785.143
+version=54.0.2840.100
 release=1
 source=(http://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz \
-        $name.sh $name.desktop)
+        last-commit-position.patch $name.sh $name.desktop)
 
 build() {
   cd $name-$version
 
-  touch chrome/test/data/webui/i18n_process_css_test.html
-
   export CFLAGS="$CFLAGS $(pkg-config --cflags nspr)"
   export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
 
-  build/gyp_chromium build/all.gyp --depth=. \
-        -Duse_sysroot=0 \
-        -Dclang=0 \
-        -Dpython_ver="2.7" \
-        -Dno_strict_aliasing=1 \
-        -Dwerror= \
-        -Dlinux_sandbox_path=/usr/lib/$name/chrome-sandbox \
-        -Dlinux_strip_binary=1 \
-        -Dlinux_use_gold_binary=0 \
-        -Dlinux_use_gold_flags=0 \
-        -Drelease_extra_cflags="$CFLAGS" \
-        -Dproprietary_codecs=1 \
-        -Dffmpeg_branding=Chrome \
-        -Dlibspeechd_h_prefix=speech-dispatcher/ \
-        -Duse_system_libjpeg=1 \
-        -Duse_system_libxslt=1 \
-        -Duse_system_libxml=1 \
-        -Duse_system_bzip2=1 \
-        -Duse_system_zlib=0 \
-        -Duse_system_libpng=0 \
-        -Duse_system_ffmpeg=0 \
-        -Duse_system_yasm=1 \
-        -Duse_system_libevent=1 \
-        -Duse_system_sqlite=0 \
-        -Duse_system_ssl=0 \
-        -Duse_system_icu=0 \
-        -Dremove_webcore_debug_symbols=1 \
-        -Duse_gconf=0 \
-        -Duse_cups=0 \
-        -Duse_gnome_keyring=0 \
-        -Duse_kerberos=0 \
-        -Duse_pulseaudio=0 \
-        -Dlinux_link_gnome_keyring=0 \
-        -Dlinux_link_libpci=1 \
-        -Dlinux_link_libspeechd=1 \
-        -Denable_webrtc=1 \
-        -Ddisable_nacl=1 \
-        -Dicu_use_data_file_flag=1
+  # we don't use git sources
+  patch -p1 -i $SRC/last-commit-position.patch
+
+  _gn_args=(
+    'blink_gc_plugin=false'
+    'clang_use_chrome_plugins=false'
+    'enable_hangout_services_extension=true'
+    'enable_nacl=false'
+    'enable_nacl_nonsfi=false'
+    'fatal_linker_warnings=false'
+    'ffmpeg_branding="Chrome"'
+    'is_clang=false'
+    'is_debug=false'
+    'linux_use_bundled_binutils=false'
+    'proprietary_codecs=true'
+    'remove_webcore_debug_symbols=true'
+    'symbol_level=0'
+    'treat_warnings_as_errors=false'
+    'use_allocator="none"'
+    'use_cups=false'
+    'use_gconf=false'
+    'use_gnome_keyring=false'
+    'use_gold=false'
+    'use_kerberos=false'
+    'use_pulseaudio=false'
+    'use_sysroot=false'
+    'use_system_libjpeg=true'
+  )
+
+  python2 tools/gn/bootstrap/bootstrap.py --gn-gen-args="${_gn_args[*]}"
+  out/Release/gn gen out/Release --args="${_gn_args[*]}" --script-executable=/usr/bin/python2
 
   ninja -C out/Release chrome chrome_sandbox
 
