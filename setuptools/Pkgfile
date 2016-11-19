@@ -5,10 +5,10 @@
 # Depends on: python
 
 name=setuptools
-version=25.1.1
+version=28.8.0
 release=1
 #source=(http://pypi.python.org/packages/source/s/$name/$name-$version.tar.gz)
-source=(https://pypi.python.org/packages/9c/25/fa63da717a694ecf3bdb27f438450f535cdcabd77a955b5b05113f1abd11/setuptools-25.1.1.tar.gz)
+source=(https://pypi.python.org/packages/25/4e/1b16cfe90856235a13872a6641278c862e4143887d11a12ac4905081197f/setuptools-28.8.0.tar.gz)
 
 build() {
 	cd $name-$version
