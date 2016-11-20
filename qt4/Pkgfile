@@ -6,8 +6,9 @@
 
 name=qt4
 version=4.8.7
-release=1
-source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/qt-everywhere-opensource-src-$version.tar.gz)
+release=2
+source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/qt-everywhere-opensource-src-$version.tar.gz \
+	qt-everywhere-opensource-src-4.8.7-gcc6.patch)
 
 build () {
     cd qt-everywhere-opensource-src-$version
@@ -17,6 +18,9 @@ build () {
     sed -i "s|-O2|$CXXFLAGS|" mkspecs/common/g++-unix.conf
     sed -i "s|INSTALLS += translations||" projects.pro
     sed -i 's|"$COMPILER" -c|$COMPILER -c|' config.tests/unix/fvisibility.test
+
+    patch -p1 -i $SRC/qt-everywhere-opensource-src-4.8.7-gcc6.patch
+    export CXXFLAGS="$CXXFLAGS -std=gnu++98 -Wno-deprecated"
 
     ./configure -prefix /usr/share/qt4 \
                 -bindir /usr/share/qt4/bin \
