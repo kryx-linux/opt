@@ -486,10 +486,10 @@ lrwxrwxrwx	root/root	usr/lib/libtexluajit.so.2 -> libtexluajit.so.2.1.0
 -rwxr-xr-x	root/root	usr/lib/libtexluajit.so.2.1.0
 drwxr-xr-x	root/root	usr/lib/perl5/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/TeXLive/
--rwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/TeXLive/TLConfig.pm
--rwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.22/TeXLive/TLUtils.pm
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.24/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.24/TeXLive/
+-rwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.24/TeXLive/TLConfig.pm
+-rwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.24/TeXLive/TLUtils.pm
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/kpathsea.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/ptexenc.pc
