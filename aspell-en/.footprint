@@ -6,6 +6,11 @@ drwxr-xr-x	root/root	usr/lib/aspell-0.60/
 -rw-r--r--	root/root	usr/lib/aspell-0.60/american-w_accents.alias
 -rw-r--r--	root/root	usr/lib/aspell-0.60/american-wo_accents.alias
 -rw-r--r--	root/root	usr/lib/aspell-0.60/american.alias
+-rw-r--r--	root/root	usr/lib/aspell-0.60/australian-variant_0.alias
+-rw-r--r--	root/root	usr/lib/aspell-0.60/australian-variant_1.alias
+-rw-r--r--	root/root	usr/lib/aspell-0.60/australian-w_accents.alias
+-rw-r--r--	root/root	usr/lib/aspell-0.60/australian-wo_accents.alias
+-rw-r--r--	root/root	usr/lib/aspell-0.60/australian.alias
 -rw-r--r--	root/root	usr/lib/aspell-0.60/british-ise-w_accents.alias
 -rw-r--r--	root/root	usr/lib/aspell-0.60/british-ise-wo_accents.alias
 -rw-r--r--	root/root	usr/lib/aspell-0.60/british-ise.alias
@@ -35,6 +40,15 @@ drwxr-xr-x	root/root	usr/lib/aspell-0.60/
 -rw-r--r--	root/root	usr/lib/aspell-0.60/en-wo_accents.multi
 -rw-r--r--	root/root	usr/lib/aspell-0.60/en.dat
 -rw-r--r--	root/root	usr/lib/aspell-0.60/en.multi
+-rw-r--r--	root/root	usr/lib/aspell-0.60/en_AU-variant_0.multi
+-rw-r--r--	root/root	usr/lib/aspell-0.60/en_AU-variant_0.rws
+-rw-r--r--	root/root	usr/lib/aspell-0.60/en_AU-variant_1.multi
+-rw-r--r--	root/root	usr/lib/aspell-0.60/en_AU-variant_1.rws
+-rw-r--r--	root/root	usr/lib/aspell-0.60/en_AU-w_accents-only.rws
+-rw-r--r--	root/root	usr/lib/aspell-0.60/en_AU-w_accents.multi
+-rw-r--r--	root/root	usr/lib/aspell-0.60/en_AU-wo_accents-only.rws
+-rw-r--r--	root/root	usr/lib/aspell-0.60/en_AU-wo_accents.multi
+-rw-r--r--	root/root	usr/lib/aspell-0.60/en_AU.multi
 -rw-r--r--	root/root	usr/lib/aspell-0.60/en_CA-variant_0.multi
 -rw-r--r--	root/root	usr/lib/aspell-0.60/en_CA-variant_0.rws
 -rw-r--r--	root/root	usr/lib/aspell-0.60/en_CA-variant_1.multi
