@@ -6,13 +6,14 @@
 
 name=qt5
 version=5.7.0
-release=3
+release=4
 source=(http://download.qt.io/official_releases/qt/${version::3}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
 	qt5-logo.png
 	qtbug-53071.patch
 	qtbug-53071b.patch
 	qtbug-53237.patch
-	qtbug-49452.patch)
+	qtbug-49452.patch
+	qtbase-memory-leak.patch)
 
 build() {
 	cd qt-everywhere-opensource-src-$version
@@ -26,6 +27,9 @@ build() {
 
 	# Fix freetype engine performance
 	patch -p1 -d qtbase -i $SRC/qtbug-49452.patch
+
+	# Fix memory leak
+	patch -p1 -d qtbase -i $SRC/qtbase-memory-leak.patch
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
