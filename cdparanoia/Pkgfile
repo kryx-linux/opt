@@ -13,5 +13,5 @@ build () {
     patch -p0 -i $SRC/$name-$version-gcc43.patch
     ./configure --prefix=/usr
     make -j1
-    make prefix=$PKG/usr install
+    make prefix=$PKG/usr MANDIR=$PKG/usr/share/man install
 }
