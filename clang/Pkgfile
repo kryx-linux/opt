@@ -6,7 +6,7 @@
 
 name=clang
 version=3.9.0
-release=1
+release=2
 source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
   llvm-config.h)
 
@@ -20,8 +20,7 @@ build() {
   cmake -DLLVM_ENABLE_CXX1Y=1 \
     -DLLVM_INCLUDE_EXAMPLES=0 \
     -DLLVM_INCLUDE_TESTS=0 \
-    -DLLVM_TARGETS_TO_BUILD='X86;AMDGPU' \
-    -DBUILD_SHARED_LIBS=1 \
+    -DLLVM_TARGETS_TO_BUILD='X86;AMDGPU;BPF' \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr ..
 
