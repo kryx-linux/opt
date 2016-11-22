@@ -4,7 +4,7 @@
 
 name=deadwood
 version=3.2.09
-release=1
+release=2
 source=(http://maradns.samiam.org/deadwood/stable/$name-$version.tar.xz \
         dwood3rc deadwood)
 
@@ -13,10 +13,10 @@ build () {
 
     make -C src FLAGS="$CFLAGS"
 
-    install -d $PKG/{usr/sbin,usr/man/man1,etc/rc.d,var/lib/deadwood}
+    install -d $PKG/{usr/sbin,usr/share/man/man1,etc/rc.d,var/lib/deadwood}
     install -d -m 700 -o nobody $PKG/var/lib/deadwood/cache
     install -m 755 src/Deadwood $PKG/usr/sbin
-    install -m 644 doc/Deadwood.1 $PKG/usr/man/man1/deadwood.1
+    install -m 644 doc/Deadwood.1 $PKG/usr/share/man/man1/deadwood.1
     install -m 644 $SRC/dwood3rc $PKG/etc
     install -m 755 $SRC/deadwood $PKG/etc/rc.d
 }
