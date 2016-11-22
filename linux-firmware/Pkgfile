@@ -4,7 +4,7 @@
 # Packager:    James Mills, prologic at shortcircuit dot net dot au
 
 name=linux-firmware
-version=20160514
+version=20161122
 release=1
 source=(http://distfiles.serverop.de/$name-$version.tar.xz)
 
@@ -15,5 +15,5 @@ build() {
     make DESTDIR=$PKG FIRMWAREDIR=/lib/firmware install
 
     # Cleanup
-    rm $PKG/lib/firmware/{Makefile,README,configure,GPL-3}
+    rm $PKG/lib/firmware/{Makefile,README,configure,GPL-{2,3}}
 }
