@@ -1,7 +1,7 @@
 # Description: Lightweight PDF and XPS viewer
 # URL:         http://www.mupdf.com/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  curl freetype libjpeg-turbo xorg-libxext
+# Depends on:  freetype libjpeg-turbo mesa3d xorg-libxcursor xorg-libxinerama xorg-libxrandr
 
 name=mupdf
 version=1.10

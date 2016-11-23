@@ -4,7 +4,7 @@
 # Depends on:  vim, gtk, xorg-libxt
 
 name=gvim
-version=8.0.0008
+version=8.0.0095
 release=1
 source=(http://crux.nu/files/distfiles/vim-$version.tar.xz)
 
