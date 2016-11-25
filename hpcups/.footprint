@@ -1,4 +1,5 @@
 drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cups/
 drwxr-xr-x	root/root	usr/lib/cups/filter/
@@ -254,6 +255,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_p3010_series-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_p4010_series-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_m201_m202-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_m203_m206-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_m402_m403-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_m402_m403d-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_m501dn-ps.ppd.gz
@@ -261,6 +263,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_m701-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_m706-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_mfp_m225_m226-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_mfp_m227-m231-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_pro_mfp_m435-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-lj_300_400_color_m351_m451-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-lj_300_400_color_mfp_m375_m475-ps.ppd.gz
@@ -291,3 +294,4 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_pro_477_mfp-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_pro_552_printer-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_pro_577_mfp-ps.ppd.gz
+drwxr-xr-x	root/root	usr/share/hplip/
