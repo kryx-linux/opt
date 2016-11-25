@@ -4,18 +4,16 @@
 # Depends on:  ncurses
 
 name=tcsh
-version=6.19.00
-release=2
+version=6.20.00
+release=1
 source=(ftp://ftp.astron.com/pub/tcsh/$name-$version.tar.gz \
-        csh.login csh.logout csh.cshrc
-        $name-$version.patch)
+        csh.login csh.logout csh.cshrc)
 
 build() {
     cd $name-$version
 
-    # several fixes from git, https://github.com/tcsh-org/tcsh
-    # fix to remove compiler warning
-    patch -p1 -i $SRC/$name-$version.patch
+    # fix compiler warnings
+    sed -ri 's/(_BSD|_SVID)_SOURCE/_DEFAULT_SOURCE/' config/linux
 
     ./configure --prefix=/usr --bindir=/bin --disable-nls
     make
