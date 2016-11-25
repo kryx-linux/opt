@@ -17,8 +17,8 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/chronyd.8.gz
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
-drwxr-xr-x	root/root	var/lib/chrony/
+drwxr-x---	chrony/chrony	var/lib/chrony/
 drwxr-xr-x	root/root	var/log/
-drwxr-xr-x	root/root	var/log/chrony/
+drwxr-x---	chrony/chrony	var/log/chrony/
 drwxr-xr-x	root/root	var/run/
-drwxr-x---	root/root	var/run/chrony/
+drwxr-x---	chrony/chrony	var/run/chrony/
