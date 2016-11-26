@@ -598,6 +598,8 @@ drwxr-xr-x	root/root	usr/lib/clang/3.9.0/include/
 -rw-r--r--	root/root	usr/lib/clang/3.9.0/include/xsaveoptintrin.h
 -rw-r--r--	root/root	usr/lib/clang/3.9.0/include/xsavesintrin.h
 -rw-r--r--	root/root	usr/lib/clang/3.9.0/include/xtestintrin.h
+-rwxr-xr-x	root/root	usr/lib/clang/c++-analyzer
+-rwxr-xr-x	root/root	usr/lib/clang/ccc-analyzer
 drwxr-xr-x	root/root	usr/lib/cmake/
 drwxr-xr-x	root/root	usr/lib/cmake/clang/
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangConfig.cmake
@@ -629,9 +631,6 @@ lrwxrwxrwx	root/root	usr/lib/libclang.so -> libclang.so.3.9
 -rw-r--r--	root/root	usr/lib/libclangStaticAnalyzerFrontend.a
 -rw-r--r--	root/root	usr/lib/libclangTooling.a
 -rw-r--r--	root/root	usr/lib/libclangToolingCore.a
-drwxr-xr-x	root/root	usr/libexec/
--rwxr-xr-x	root/root	usr/libexec/c++-analyzer
--rwxr-xr-x	root/root	usr/libexec/ccc-analyzer
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/clang/
 -rwxr-xr-x	root/root	usr/share/clang/clang-format-bbedit.applescript
