@@ -4,7 +4,7 @@
 # Depends on:  freetype libjpeg-turbo mesa3d xorg-libxcursor xorg-libxinerama xorg-libxrandr
 
 name=mupdf
-version=1.10
+version=1.10a
 release=1
 source=(http://mupdf.com/downloads/$name-$version-source.tar.gz)
 
