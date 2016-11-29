@@ -13,7 +13,7 @@ start)
 	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
 	;;
 stop)
-	$SSD --stop --retry 10 --pidfile $PID
+	$SSD --stop --remove-pidfile --retry 10 --pidfile $PID
 	;;
 restart)
 	$0 stop
