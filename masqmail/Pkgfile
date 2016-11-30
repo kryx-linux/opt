@@ -5,7 +5,7 @@
 
 name=masqmail
 version=0.3.5
-release=3
+release=4
 source=(http://marmaro.de/prog/masqmail/files/$name-$version.tar.gz
         masqmail)
 
@@ -13,7 +13,6 @@ build () {
     cd $name-$version
 
     ./configure --prefix=/usr \
-                --mandir=/usr/man \
                 --with-user=mail \
                 --with-group=mail
     make
