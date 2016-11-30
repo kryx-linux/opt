@@ -4,15 +4,15 @@
 
 name=msntp
 version=1.6
-release=2
+release=3
 source=(http://distcache.freebsd.org/ports-distfiles/$name-$version.tar.gz \
         $name-$version.patch)
 
 build () {
     cd $name-$version
-    patch -p1 < ../$name-$version.patch
+    patch -p1 -i $SRC/$name-$version.patch
     make
-    mkdir -p $PKG/usr/{sbin,man/man1}
-    cp msntp $PKG/usr/sbin
-    cp msntp.1 $PKG/usr/man/man1
+    install -d $PKG/usr/{sbin,share/man/man1}
+    install msntp $PKG/usr/sbin
+    install -m 0644 msntp.1 $PKG/usr/share/man/man1
 }
