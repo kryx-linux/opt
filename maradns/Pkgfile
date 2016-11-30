@@ -4,14 +4,14 @@
 
 name=maradns
 version=2.0.13
-release=1
+release=2
 source=(http://maradns.samiam.org/download/2.0/$version/$name-$version.tar.bz2 \
         mararc maradns db.localhost)
 
 build () {
     cd maradns-$version
 
-    install -d  $PKG/usr/{bin,sbin,man/man{1,5,8}}
+    install -d  $PKG/usr/{bin,sbin,man/man{1,5,8},share}
     install -d  $PKG/etc/{rc.d,maradns}
 
     sed -i "/^FLAGS/s/-O2/$CFLAGS/" build/Makefile.linux
@@ -28,6 +28,9 @@ build () {
     # remove duende
     rm $PKG/usr/bin/duende
     rm $PKG/usr/man/man8/duende.8
+
+    # move man-pages 
+    mv $PKG/usr/man/ $PKG/usr/share/man
 
     rm -r $PKG/usr/doc
     mv $PKG/etc/mararc $PKG/etc/mararc.sample
