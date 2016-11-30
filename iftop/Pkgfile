@@ -5,12 +5,12 @@
 
 name=iftop
 version=1.0pre4
-release=1
+release=2
 source=(http://www.ex-parrot.com/~pdw/iftop/download/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr
     make iftop
     make DESTDIR=$PKG install
 }
