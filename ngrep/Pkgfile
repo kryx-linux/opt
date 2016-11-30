@@ -5,12 +5,12 @@
 
 name=ngrep
 version=1.46.1
-release=1
+release=2
 source=(http://crux.s3.amazonaws.com/dist/$name-${version//./_}.tar.gz)
 
 build () {
     cd $name-${version//./_}
     ./configure --prefix=/usr --enable-ipv6
     make
-    make DESTDIR=$PKG mandir=/usr/man install
+    make DESTDIR=$PKG install
 }
