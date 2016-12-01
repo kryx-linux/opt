@@ -5,7 +5,7 @@
 # Depends on:  pinentry, gtk
 
 name=pinentry-gtk2
-version=0.9.7
+version=1.0.0
 release=1
 source=(ftp://ftp.gnupg.org/gcrypt/pinentry/pinentry-$version.tar.bz2)
 
