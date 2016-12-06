@@ -6,7 +6,7 @@
 SSD=/sbin/start-stop-daemon
 PROG=/sbin/rpcbind
 PID=/var/run/rpcbind.pid
-OPTS="-f"
+OPTS="-f -s"
 
 case $1 in
 start)

@@ -4,20 +4,17 @@
 # Depends on:  libtirpc
 
 name=rpcbind
-version=0.2.3
-release=3
+version=0.2.4
+release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2 \
-        $name-$version.patch rpcbind)
+        rpcbind)
 
 build() {
     cd $name-$version
 
-    patch -p1 -i $SRC/$name-$version.patch
-
     ./configure --prefix=/usr \
                 --bindir=/sbin \
                 --disable-libwrap \
-                --with-rpcuser=root \
                 --without-systemdsystemunitdir
 
     make
