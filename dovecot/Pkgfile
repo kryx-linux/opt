@@ -4,9 +4,9 @@
 # Depends on:  zlib bzip2 openssl libcap
 
 name=dovecot
-version=2.2.26.0
+version=2.2.27
 release=1
-source=(http://dovecot.org/releases/2.2/$name-$version.tar.gz \
+source=(https://dovecot.org/releases/2.2/$name-$version.tar.gz \
         dovecot-config.patch dovecot)
 
 build () {
