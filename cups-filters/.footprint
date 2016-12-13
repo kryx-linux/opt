@@ -29,6 +29,7 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cups/
 drwxr-xr-x	root/root	usr/lib/cups/backend/
 -rwxr-xr-x	root/root	usr/lib/cups/backend/beh
+lrwxrwxrwx	root/root	usr/lib/cups/backend/driverless -> /usr/lib/cups/driver/driverless
 -rwxr-xr-x	root/root	usr/lib/cups/backend/implicitclass
 -rwxr-xr-x	root/root	usr/lib/cups/backend/parallel
 -rwxr-xr-x	root/root	usr/lib/cups/backend/serial
@@ -59,7 +60,6 @@ drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/texttopdf
 -rwxr-xr-x	root/root	usr/lib/cups/filter/texttops
 -rwxr-xr-x	root/root	usr/lib/cups/filter/texttotext
--rwxr-xr-x	root/root	usr/lib/cups/filter/urftopdf
 -rw-r--r--	root/root	usr/lib/libcupsfilters.a
 -rwxr-xr-x	root/root	usr/lib/libcupsfilters.la
 lrwxrwxrwx	root/root	usr/lib/libcupsfilters.so -> libcupsfilters.so.1.0.0
