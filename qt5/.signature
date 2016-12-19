@@ -1,11 +1,8 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/Zq8DNRTYnah45T0jk+/lwiid6AcOhWqjPcwSA3jaco4OjUGn6OvRMtFsOlT//95OPSflYK/a9zf8yYv4+j0tQU=
-SHA256 (Pkgfile) = 54cac036ae930d90bfc30b2c1a6c08e8f6448dedfa825e2b5e78f73c35ce5a74
-SHA256 (.footprint) = 94e157a05d678c8beb1278aedae36cdb2733853f41a6f11f54b50d979c53b5cc
-SHA256 (qt-everywhere-opensource-src-5.7.0.tar.xz) = a6a2632de7e44bbb790bc3b563f143702c610464a7f537d02036749041fd1800
+RWSE3ohX2g5d/fAU3shP+N+aPYMyHKjjvcTzghAhNn/m1qdI39ugtF3QndQA4FK2qN8VaZPlMrErA4J1ZGS/hy3qOpjjFQfXXw4=
+SHA256 (Pkgfile) = 5d0870c8a5839d7ae5aff2944bd8d22be0037cedaea33dd38b7b856d9a82ab79
+SHA256 (.footprint) = 4b7dcff81791d475c6211db6491027946ee2abab8b1f3a763f0e501b5aa09667
+SHA256 (qt-everywhere-opensource-src-5.7.1.tar.xz) = 46ebca977deb629c5e69c2545bc5fe13f7e40012e5e2e451695c583bd33502fa
 SHA256 (qt5-logo.png) = ae1335ecd1cd2d17032184895ab298a636cdfa8121b0ed71307c4f2b23ec928e
-SHA256 (qtbug-53071.patch) = 33952e83f86afe0eb4bc5b25461c70ea3b8365b43633cd201094186b800c4c82
-SHA256 (qtbug-53071b.patch) = d4916b3ba871e7aa2ad45822494b0f3538689befce24d5391089d27734987c8f
-SHA256 (qtbug-53237.patch) = d7e1b09552713ea82b5b2a8c668f40d8bdb0879fe1d0e91c0dc435efabcbad7c
-SHA256 (qtbug-49452.patch) = e618b8d10082034d091b60981f13ff2a02b463861538b239c7243bec938ed135
-SHA256 (qtbase-memory-leak.patch) = c7952a6d611aa3599163ab63d481c5b4dbdae2fb70b0a638f241e03237820a96
+SHA256 (qtbug-49061.patch) = f05e742532f8cda144292804e30d2e0b442d8f22961ab71801ce2abd086a6b57
+SHA256 (qtbug-55583.patch) = ac8db775f6b6a5f925f4e8a2de276fe8e13f286f86ea301bc0854e03018a1033
