@@ -1,0 +1,14 @@
+# Description: programmable bash completion for git
+# URL:         https://git-scm.com
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Depends on:  bash-completion git
+
+name=git-bashcompletion
+version=2.11.0
+release=1
+source=(http://repo.or.cz/git.git/blob_plain/refs/tags/v${version}:/contrib/completion/git-completion.bash)
+
+build() {
+  install -D -m 644 git-completion.bash \
+  $PKG/usr/share/bash-completion/completions/git
+}
