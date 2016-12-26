@@ -6,10 +6,14 @@
 name=spidermonkey
 version=1.8.5
 release=2
-source=(http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz)
+source=(http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz js-1.8.5-c++11.patch)
 
 build() {
 	cd js-$version/js/src
+
+	# Fix build with gcc-6
+	# https://bugs.gentoo.org/show_bug.cgi?id=582478
+	patch -p3 -i $SRC/js-1.8.5-c++11.patch
 
 	./configure \
 		--prefix=/usr
