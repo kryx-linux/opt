@@ -5,7 +5,7 @@
 # Depends on: qt5 ruby icu
 
 name=qtwebkit
-version=5.7.0
+version=5.7.1
 release=1
 source=(https://download.qt.io/community_releases/${version::3}/$version/$name-opensource-src-$version.tar.xz)
 
