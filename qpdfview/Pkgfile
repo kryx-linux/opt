@@ -1,17 +1,17 @@
 # Description: PDF viewer
 # URL:         https://launchpad.net/qpdfview
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  poppler-qt4
+# Depends on:  poppler-qt5
 
 name=qpdfview
-version=0.4.16
+version=0.4.17beta1
 release=1
 source=(https://launchpad.net/qpdfview/trunk/$version/+download/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
 
-    qmake qpdfview.pro \
+    qmake-qt5 qpdfview.pro \
         MANUAL_INSTALL_PATH=/usr/share/man/man1 \
         CONFIG+="without_ps without_djvu"
 
