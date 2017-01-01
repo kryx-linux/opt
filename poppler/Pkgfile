@@ -1,24 +1,37 @@
 # Description: PDF rendering library based on xpdf 3.0
 # URL:         http://poppler.freedesktop.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Packager:    Matt Housh, jaeger at crux dot nu
-# Depends on:  cairo lcms2
+# Depends on:  cmake cairo lcms2
 
 name=poppler
 version=0.50.0
-release=1
-source=(http://poppler.freedesktop.org/$name-$version.tar.xz)
+release=2
+source=(http://poppler.freedesktop.org/poppler-$version.tar.xz
+        poppler-cmake.patch)
 
 build() {
-    cd $name-$version
+    cd poppler-$version
 
-    ./configure --prefix=/usr \
-                --enable-{zlib,libjpeg,libpng} \
-                --enable-cms=lcms2 \
-                --enable-libopenjpeg=none \
-                --enable-xpdf-headers \
-                --disable-libnss \
-                --disable-poppler-{glib,qt4,qt5}
+    patch -p0 -i $SRC/poppler-cmake.patch
+
+    cmake . \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DENABLE_XPDF_HEADERS=ON \
+        -DENABLE_UTILS=ON \
+        -DENABLE_SPLASH=ON \
+        -DENABLE_CAIRO=ON \
+        -DENABLE_CPP=ON \
+        -DENABLE_GLIB=OFF \
+        -DENABLE_QT4=OFF \
+        -DENABLE_QT5=OFF \
+        -DENABLE_ZLIB=ON \
+        -DENABLE_CMS=lcms2 \
+        -DENABLE_LIBOPENJPEG=OFF \
+        -DENABLE_NSS3=OFF \
+        -DBUILD_GTK_TESTS=OFF \
+        -DBUILD_QT4_TESTS=OFF \
+        -DBUILD_QT5_TESTS=OFF \
+        -DBUILD_CPP_TESTS=OFF \
 
     make
     make DESTDIR=$PKG install
