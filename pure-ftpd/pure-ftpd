@@ -8,9 +8,7 @@ PROG=/usr/sbin/pure-ftpd
 PID=/var/run/pure-ftpd.pid
 CRT=/etc/ssl/certs/pure-ftpd.pem
 
-CONF=/etc/pure-ftpd.conf
-ARGS=$(sed -e '/^\s*$/d' -e '/^#/d' $CONF)
-
+OPTS="/etc/pure-ftpd.conf"
 
 case $1 in
 start)
@@ -18,7 +16,7 @@ start)
 		/usr/bin/mksslcert $CRT $CRT
 	fi
 
-	$SSD --start --pidfile $PID --exec $PROG -- $ARGS
+	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
 	;;
 stop)
 	$SSD --stop --retry 10 --pidfile $PID
