@@ -299,8 +299,8 @@ Index: png.c
  #else
  #  ifdef __STDC__
     return PNG_STRING_NEWLINE \
--      "libpng version 1.6.26 - October 20, 2016" PNG_STRING_NEWLINE \
-+      "libpng version 1.6.26+apng - October 20, 2016" PNG_STRING_NEWLINE \
+-      "libpng version 1.6.27 - December 29, 2016" PNG_STRING_NEWLINE \
++      "libpng version 1.6.27+apng - December 29, 2016" PNG_STRING_NEWLINE \
        "Copyright (c) 1998-2002,2004,2006-2016 Glenn Randers-Pehrson" \
        PNG_STRING_NEWLINE \
        "Copyright (c) 1996-1997 Andreas Dilger" PNG_STRING_NEWLINE \
@@ -310,8 +310,8 @@ Index: png.c
 +      "Portions Copyright (c) 2006-2007 Andrew Smith" PNG_STRING_NEWLINE \
 +      "Portions Copyright (c) 2008-2016 Max Stepin" PNG_STRING_NEWLINE ;
  #  else
--   return "libpng version 1.6.26 - October 20, 2016\
-+   return "libpng version 1.6.26+apng - October 20, 2016\
+-   return "libpng version 1.6.27 - December 29, 2016\
++   return "libpng version 1.6.27+apng - December 29, 2016\
        Copyright (c) 1998-2002,2004,2006-2016 Glenn Randers-Pehrson\
        Copyright (c) 1996-1997 Andreas Dilger\
 -      Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.";
@@ -342,11 +342,11 @@ Index: png.h
   */
  
  /* Version information for png.h - this should match the version in png.c */
--#define PNG_LIBPNG_VER_STRING "1.6.26"
--#define PNG_HEADER_VERSION_STRING " libpng version 1.6.26 - October 20, 2016\n"
-+#define PNG_LIBPNG_VER_STRING "1.6.26+apng"
+-#define PNG_LIBPNG_VER_STRING "1.6.27"
+-#define PNG_HEADER_VERSION_STRING " libpng version 1.6.27 - December 29, 2016\n"
++#define PNG_LIBPNG_VER_STRING "1.6.27+apng"
 +#define PNG_HEADER_VERSION_STRING \
-+     " libpng version 1.6.26+apng - October 20, 2016\n"
++     " libpng version 1.6.27+apng - December 29, 2016\n"
  
  #define PNG_LIBPNG_VER_SONUM   16
  #define PNG_LIBPNG_VER_DLLNUM  16
