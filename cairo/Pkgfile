@@ -4,9 +4,9 @@
 # Depends on: fontconfig, libpng, xorg-libxext, xorg-libxrender, xorg-libpixman, xorg-xcb-util, glib
 
 name=cairo
-version=1.15.2
+version=1.15.4
 release=1
-source=(http://cairographics.org/snapshots/cairo-$version.tar.xz)
+source=(https://cairographics.org/snapshots/cairo-$version.tar.xz)
 
 build() {
         cd $name-$version
