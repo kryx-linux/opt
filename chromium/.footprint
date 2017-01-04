@@ -45,8 +45,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/Images/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/fileSystem.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/forward.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/frame.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/graphLabelCalloutLeft.png
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/graphLabelCalloutRight.png
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/ic_info_black_18dp.svg
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/ic_warning_black_18dp.svg
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/Images/navigationControls.png
@@ -99,6 +97,8 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/animation/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/animation/animation_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits/audits_module.js
+drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits2/
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits2/audits2_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/cm_modes/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/cm_modes/cm_modes_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/components_lazy/
@@ -107,7 +107,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/console/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/console/console_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/devices/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devices/devices_module.js
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devtools.js
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devtools_compatibility.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/devtools_extension_api.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/diff/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/diff/diff_module.js
@@ -173,8 +173,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/screencast/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/screencast/screencast_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/security/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/security/security_module.js
-drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/services/
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/services/services_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/settings/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/settings/settings_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/snippets/
@@ -183,7 +181,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/source_frame/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/source_frame/source_frame_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/sources/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/sources/sources_module.js
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/temp_storage_shared_worker.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/terminal/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/terminal/terminal_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/text_editor/
@@ -196,6 +193,7 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/timeline_model/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/toolbox.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/ui_lazy/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/ui_lazy/ui_lazy_module.js
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/utility_shared_worker.js
 -rw-r--r--	root/root	usr/lib/chromium/snapshot_blob.bin
 -rw-r--r--	root/root	usr/lib/chromium/views_mus_resources.pak
 drwxr-xr-x	root/root	usr/share/
