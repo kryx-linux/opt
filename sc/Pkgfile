@@ -5,7 +5,7 @@
 
 name=sc
 version=7.16
-release=5
+release=6
 source=(http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16.orig.tar.gz \
         http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16-4.debian.tar.xz)
 
@@ -21,10 +21,10 @@ build () {
         -e "/^LIBDIR=/s|doc/||" \
         -e "/^LIB=/s/ncurses/ncursesw/" -i Makefile
 
-    install -d $PKG/usr/{bin,man/man1,share/sc}
+    install -d $PKG/usr/{bin,share/man/man1,share/sc}
 
     make
-    make prefix=$PKG/usr install
+    make prefix=$PKG/usr MANDIR=$PKG/usr/share/man/man1 install
     
-    sed -i "s|$PKG||g" $PKG/usr/man/man1/sc.1
+    sed -i "s|$PKG||g" $PKG/usr/share/man/man1/sc.1
 }
