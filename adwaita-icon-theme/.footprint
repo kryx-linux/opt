@@ -221,7 +221,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/selection-end-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/selection-start-symbolic-rtl.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/selection-start-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/send-to-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/star-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/system-lock-screen.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/actions/system-log-out.png
@@ -1442,7 +1441,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/selection-end-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/selection-start-symbolic-rtl.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/selection-start-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/send-to-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/star-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/system-lock-screen.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/actions/system-log-out.png
@@ -2513,7 +2511,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/selection-end-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/selection-start-symbolic-rtl.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/selection-start-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/send-to-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/star-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/system-lock-screen.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/actions/system-log-out.png
@@ -3349,7 +3346,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/selection-end-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/selection-start-symbolic-rtl.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/selection-start-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/send-to-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/star-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/system-lock-screen.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/actions/system-log-out.png
@@ -3967,6 +3963,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/weather-snow.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/weather-storm-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/weather-storm.png
+drwxr-xr-x	root/root	usr/share/icons/Adwaita/512x512/
+drwxr-xr-x	root/root	usr/share/icons/Adwaita/512x512/apps/
+-rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/apps/accessories-calculator.png
 drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/
 drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/action-unavailable-symbolic.symbolic.png
@@ -4084,7 +4083,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/selection-end-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/selection-start-symbolic-rtl.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/selection-start-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/send-to-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/star-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/system-run-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/actions/system-search-symbolic.symbolic.png
@@ -4555,7 +4553,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/actions/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/selection-end-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/selection-start-symbolic-rtl.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/selection-start-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/send-to-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/star-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/system-run-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/actions/system-search-symbolic.symbolic.png
@@ -4930,6 +4927,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/c7088f0f3e6c8088236ef8e1e3e
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/cell
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/circle
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/col-resize -> sb_h_double_arrow
+-rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/context-menu
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/copy -> dnd-copy
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/cross
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/cross_reverse -> cross
@@ -4942,6 +4940,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/diamond_cross -> cross
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/dnd-copy
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/dnd-link
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/dnd-move
+-rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/dnd-no-drop
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/dnd-none
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/dot_box_mask -> dotbox
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/dotbox
@@ -4959,7 +4958,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/grab -> hand1
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/grabbing
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/h_double_arrow -> sb_h_double_arrow
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/hand -> hand2
-lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/hand1 -> hand2
+-rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/hand1
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/hand2
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/help -> question_arrow
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/icon -> dotbox
@@ -4975,7 +4974,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/left_ptr_help -> question_a
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/n-resize -> top_side
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/ne-resize -> top_right_corner
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/nesw-resize -> fd_double_arrow
-lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/no-drop -> dnd-none
+lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/no-drop -> dnd-no-drop
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/not-allowed -> crossed_circle
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/ns-resize -> sb_v_double_arrow
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/nw-resize -> top_left_corner
