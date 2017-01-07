@@ -5,12 +5,13 @@
 # Depends on: python
 
 name=scons
-version=2.5.0
+version=2.5.1
 release=1
 source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
-	/usr/bin/python setup.py install --prefix=/usr --root=$PKG
+	/usr/bin/python setup.py build
+	/usr/bin/python setup.py install --root=$PKG --optimize=1
 }
