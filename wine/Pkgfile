@@ -6,16 +6,21 @@
 
 name=wine
 version=2.0-rc3
-release=1
+release=2
 source=(http://dl.winehq.org/wine/source/2.0/$name-$version.tar.bz2
 	http://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86.msi
 	http://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86_64.msi
-	http://dl.winehq.org/wine/wine-mono/4.6.4/wine-mono-4.6.4.msi)
+	http://dl.winehq.org/wine/wine-mono/4.6.4/wine-mono-4.6.4.msi
+	winhlp32-macro-flex-2.6.3-flex.patch)
 
 build() {
 	install -d wine32 wine64
 
 	export CPPFLAGS="${CPPFLAGS/-D_FORTIFY_SOURCE=2/} -D_FORTIFY_SOURCE=0"
+
+	# undefined reference yywrap in winhlp32/macro.lex.yy.c
+	# when building with flex-2.6.3
+	patch -d $name-$version -p1 -i $SRC/winhlp32-macro-flex-2.6.3-flex.patch
 
 	cd wine64
 
