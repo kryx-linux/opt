@@ -4,7 +4,7 @@
 # Depends on:  python,unzip,zip,gtk,alsa-lib,xorg-libxt,libidl,nss,yasm,mesa3d,libjpeg-turbo
 
 name=thunderbird
-version=45.5.1
+version=45.6.0
 release=1
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/source/$name-$version.source.tar.xz
 	$name.desktop thunderbird-install-dir.patch thunderbird-gcc6.patch)
