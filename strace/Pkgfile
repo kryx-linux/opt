@@ -4,7 +4,7 @@
 # Packager:    Tilman Sauerbeck, tilman at crux dot nu
 
 name=strace
-version=4.13
+version=4.15
 release=1
 source=(http://download.sourceforge.net/$name/$name-$version.tar.xz)
 
