@@ -4,7 +4,7 @@
 # Depends on:  gdbm libpcre courier-unicode
 
 name=maildrop
-version=2.8.4
+version=2.8.5
 release=1
 source=(http://download.sourceforge.net/project/courier/$name/$version/$name-$version.tar.bz2)
 
