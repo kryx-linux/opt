@@ -4,8 +4,8 @@
 # Depends on:  readline libcap
 
 name=chrony
-version=2.4.1
-release=2
+version=3.0
+release=1
 source=(http://download.tuxfamily.org/$name/$name-$version.tar.gz
         chronyd)
 
