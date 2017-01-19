@@ -4,8 +4,8 @@
 # Depends on:  qt4 poppler 
 
 name=poppler-qt4
-version=0.50.0
-release=2
+version=0.51.0
+release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz
         poppler-cmake.patch)
 
