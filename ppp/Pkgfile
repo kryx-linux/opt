@@ -5,13 +5,19 @@
 
 name=ppp
 version=2.4.7
-release=2
+release=3
 source=(http://ppp.samba.org/ftp/ppp/$name-$version.tar.gz \
-        $name-nofilter.patch)
+        $name-nofilter.patch \
+        0029-pppoe-include-netinet-in.h-before-linux-in.h.patch)
 
 build () {
     cd $name-$version
+
     patch -p1 -i $SRC/$name-nofilter.patch
+
+    # http://pkgs.fedoraproject.org/cgit/rpms/ppp.git/tree/
+    patch -p1 -i $SRC/0029-pppoe-include-netinet-in.h-before-linux-in.h.patch
+
     ./configure --prefix=/usr --sysconfdir=/etc
     make
     make -j1 INSTROOT=$PKG install install-etcppp
