@@ -4,7 +4,7 @@
 # Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, python, alsa-lib, xorg-libxt, yasm, mesa3d
  
 name=firefox
-version=50.1.0
+version=51.0
 release=1
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox-install-dir.patch firefox.desktop)
@@ -16,7 +16,7 @@ build() {
 	# stupid workaround
 	sed -i '2,7d' js/src/configure
 	patch -p1 -i $SRC/firefox-install-dir.patch
- 
+
 cat <<- EOF > .mozconfig
 	mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
 	mk_add_options MOZ_MAKE_FLAGS="$MAKEFLAGS -s"
@@ -35,7 +35,6 @@ cat <<- EOF > .mozconfig
 	ac_add_options --enable-official-branding
 	ac_add_options --with-distribution-id=nu.crux
 	ac_add_options --enable-extensions=default,-gnomevfs
-	ac_add_options --enable-elf-hack
 	ac_add_options --disable-tests
 	ac_add_options --disable-dbus
 	ac_add_options --disable-debug
