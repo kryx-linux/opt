@@ -5,8 +5,8 @@
 # Depends on:  python llvm cmake
 
 name=clang
-version=3.9.0
-release=2
+version=3.9.1
+release=1
 source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
   llvm-config.h)
 
