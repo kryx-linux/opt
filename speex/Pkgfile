@@ -5,7 +5,7 @@
 # Depends on: libogg
 
 name=speex
-version=1.2rc2
+version=1.2.0
 release=1
 source=(http://downloads.us.xiph.org/releases/$name/$name-$version.tar.gz)
 
@@ -14,9 +14,10 @@ build() {
 
 	./configure \
 		--prefix=/usr \
-		--enable-epic-48k
+		--enable-epic-48k \
+		--enable-binaries
 
 	sed -i -e "/^SUBDIRS = /s/doc //" Makefile
 	make
-	make prefix=$PKG/usr install
+	make DESTDIR=$PKG install
 }
