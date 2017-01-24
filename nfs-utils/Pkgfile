@@ -4,7 +4,7 @@
 # Depends on:  util-linux eudev libcap rpcbind libnfsidmap libevent keyutils sqlite3
 
 name=nfs-utils
-version=1.3.4
+version=2.1.1
 release=1
 source=(http://downloads.sourceforge.net/project/nfs/$name/$version/$name-$version.tar.bz2
         exports idmapd.conf
@@ -29,7 +29,7 @@ build () {
     install -m 644 $SRC/{exports,idmapd.conf} $PKG/etc/
 
     install -m 644 utils/mount/nfsmount.conf $PKG/etc/
-    sed -i '/Defaultvers=/s/^# *//' $PKG/etc/nfsmount.conf
+    install -m 644 nfs.conf $PKG/etc/
 
     install -d $PKG/var/lib/nfs/{rpc_pipefs,v4recovery,nfsdcltrack}
     install -d $PKG/etc/exports.d
