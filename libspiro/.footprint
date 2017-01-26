@@ -7,8 +7,8 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libspiro.a
 -rwxr-xr-x	root/root	usr/lib/libspiro.la
-lrwxrwxrwx	root/root	usr/lib/libspiro.so -> libspiro.so.0.0.3
-lrwxrwxrwx	root/root	usr/lib/libspiro.so.0 -> libspiro.so.0.0.3
--rwxr-xr-x	root/root	usr/lib/libspiro.so.0.0.3
+lrwxrwxrwx	root/root	usr/lib/libspiro.so -> libspiro.so.0.0.5
+lrwxrwxrwx	root/root	usr/lib/libspiro.so.0 -> libspiro.so.0.0.5
+-rwxr-xr-x	root/root	usr/lib/libspiro.so.0.0.5
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libspiro.pc
