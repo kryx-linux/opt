@@ -1,0 +1,17 @@
+# Description: A collection of freely re-usable Autoconf macros.
+# URL: http://www.gnu.org/software/autoconf-archive/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Packager: Danny Rawlins, crux at romster dot me
+
+name=autoconf-archive
+version=2016.09.16
+release=1
+source=(http://ftpmirror.gnu.org/$name/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr		
+	make
+	make DESTDIR=$PKG install
+}
