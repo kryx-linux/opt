@@ -1,13 +1,13 @@
 # Description: user-friendly dm-crypt/LUKS interface
-# URL: http://code.google.com/p/cryptsetup/
+# URL: https://gitlab.com/cryptsetup/cryptsetup
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: libdevmapper,  util-linux, libgcrypt, popt
 
 name=cryptsetup
-version=1.6.8
+version=1.7.3
 release=1
-source=(https://kernel.org/pub/linux/utils/$name/v1.6/$name-$version.tar.xz)
+source=(https://kernel.org/pub/linux/utils/$name/v1.7/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
