@@ -5,19 +5,20 @@
 # Depends on: glu xorg-libxi
 
 name=freeglut
-version=2.8.1
+version=3.0.0
 release=1
 source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
-	sed -i -e 's/^SUBDIRS = src include progs doc/SUBDIRS = src include doc/' Makefile.in
+	install -d build
+	cd build
 
-	./configure \
-		--prefix=/usr \
-		--disable-warnings \
-		--disable-dependency-tracking
+	cmake .. \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
+		-DCMAKE_BUILD_TYPE=Release
 
 	make
 	make DESTDIR=$PKG install
