@@ -42,29 +42,29 @@ drwxr-xr-x	root/root	usr/lib/dri/
 -rwxr-xr-x	root/root	usr/lib/dri/dummy_drv_video.la
 -rwxr-xr-x	root/root	usr/lib/dri/dummy_drv_video.so
 -rwxr-xr-x	root/root	usr/lib/libva-drm.la
-lrwxrwxrwx	root/root	usr/lib/libva-drm.so -> libva-drm.so.1.3903.0
-lrwxrwxrwx	root/root	usr/lib/libva-drm.so.1 -> libva-drm.so.1.3903.0
--rwxr-xr-x	root/root	usr/lib/libva-drm.so.1.3903.0
+lrwxrwxrwx	root/root	usr/lib/libva-drm.so -> libva-drm.so.1.3904.0
+lrwxrwxrwx	root/root	usr/lib/libva-drm.so.1 -> libva-drm.so.1.3904.0
+-rwxr-xr-x	root/root	usr/lib/libva-drm.so.1.3904.0
 -rwxr-xr-x	root/root	usr/lib/libva-egl.la
-lrwxrwxrwx	root/root	usr/lib/libva-egl.so -> libva-egl.so.1.3903.0
-lrwxrwxrwx	root/root	usr/lib/libva-egl.so.1 -> libva-egl.so.1.3903.0
--rwxr-xr-x	root/root	usr/lib/libva-egl.so.1.3903.0
+lrwxrwxrwx	root/root	usr/lib/libva-egl.so -> libva-egl.so.1.3904.0
+lrwxrwxrwx	root/root	usr/lib/libva-egl.so.1 -> libva-egl.so.1.3904.0
+-rwxr-xr-x	root/root	usr/lib/libva-egl.so.1.3904.0
 -rwxr-xr-x	root/root	usr/lib/libva-glx.la
-lrwxrwxrwx	root/root	usr/lib/libva-glx.so -> libva-glx.so.1.3903.0
-lrwxrwxrwx	root/root	usr/lib/libva-glx.so.1 -> libva-glx.so.1.3903.0
--rwxr-xr-x	root/root	usr/lib/libva-glx.so.1.3903.0
+lrwxrwxrwx	root/root	usr/lib/libva-glx.so -> libva-glx.so.1.3904.0
+lrwxrwxrwx	root/root	usr/lib/libva-glx.so.1 -> libva-glx.so.1.3904.0
+-rwxr-xr-x	root/root	usr/lib/libva-glx.so.1.3904.0
 -rwxr-xr-x	root/root	usr/lib/libva-tpi.la
-lrwxrwxrwx	root/root	usr/lib/libva-tpi.so -> libva-tpi.so.1.3903.0
-lrwxrwxrwx	root/root	usr/lib/libva-tpi.so.1 -> libva-tpi.so.1.3903.0
--rwxr-xr-x	root/root	usr/lib/libva-tpi.so.1.3903.0
+lrwxrwxrwx	root/root	usr/lib/libva-tpi.so -> libva-tpi.so.1.3904.0
+lrwxrwxrwx	root/root	usr/lib/libva-tpi.so.1 -> libva-tpi.so.1.3904.0
+-rwxr-xr-x	root/root	usr/lib/libva-tpi.so.1.3904.0
 -rwxr-xr-x	root/root	usr/lib/libva-x11.la
-lrwxrwxrwx	root/root	usr/lib/libva-x11.so -> libva-x11.so.1.3903.0
-lrwxrwxrwx	root/root	usr/lib/libva-x11.so.1 -> libva-x11.so.1.3903.0
--rwxr-xr-x	root/root	usr/lib/libva-x11.so.1.3903.0
+lrwxrwxrwx	root/root	usr/lib/libva-x11.so -> libva-x11.so.1.3904.0
+lrwxrwxrwx	root/root	usr/lib/libva-x11.so.1 -> libva-x11.so.1.3904.0
+-rwxr-xr-x	root/root	usr/lib/libva-x11.so.1.3904.0
 -rwxr-xr-x	root/root	usr/lib/libva.la
-lrwxrwxrwx	root/root	usr/lib/libva.so -> libva.so.1.3903.0
-lrwxrwxrwx	root/root	usr/lib/libva.so.1 -> libva.so.1.3903.0
--rwxr-xr-x	root/root	usr/lib/libva.so.1.3903.0
+lrwxrwxrwx	root/root	usr/lib/libva.so -> libva.so.1.3904.0
+lrwxrwxrwx	root/root	usr/lib/libva.so.1 -> libva.so.1.3904.0
+-rwxr-xr-x	root/root	usr/lib/libva.so.1.3904.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libva-drm.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libva-egl.pc
