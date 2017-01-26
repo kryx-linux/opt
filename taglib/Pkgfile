@@ -6,7 +6,7 @@
 # Optional: boost
 
 name=taglib
-version=1.11
+version=1.11.1
 release=1
 source=(http://taglib.github.io/releases/$name-$version.tar.gz)
 

@@ -20,4 +20,7 @@ cd /usr/lib/postfix
   create-missing
 
 /usr/sbin/postalias /etc/postfix/aliases
-/usr/sbin/postmap hash:/etc/postfix/{virtual,relocated,access,transport}
+
+for hashfile in virtual relocated access transport; do
+  /usr/sbin/postmap hash:/etc/postfix/"$hashfile"
+done

@@ -1,14 +1,14 @@
 # Description: Outline and bitmap font editor.
-# URL: http://fontforge.sourceforge.net
+# URL: https://fontforge.github.io/
 # Maintainer: Danny Rawlins, monster dot romster at gmail dot com
 # Packager: Antti Nykanen, aon at iki dot fi
 # Depends on: giflib git libspiro libtiff pango
 
 name=fontforge
-version=20150824
+version=20161012
 release=1
 source=(https://github.com/fontforge/fontforge/archive/$version.tar.gz
-	http://fontforge.org/cidmaps.tgz)
+	https://fontforge.github.io/cidmaps.tgz)
 
 build() {
 	cd $name-$version
