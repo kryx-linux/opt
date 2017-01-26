@@ -1,14 +1,14 @@
 # Description: A fast compiler cache.
-# URL: http://ccache.samba.org/
+# URL: https://ccache.samba.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: zlib
 # Optional: clang
 
 name=ccache
-version=3.2.7
+version=3.3.3
 release=1
-source=(http://samba.org/ftp/$name/$name-$version.tar.xz)
+source=(https://samba.org/ftp/$name/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
