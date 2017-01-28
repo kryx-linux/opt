@@ -1,13 +1,13 @@
 # Description: Network Authentication Protocol
-# URL: http://web.mit.edu/kerberos
+# URL: https://web.mit.edu/kerberos
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on: openldap e2fsprogs
+# Depends on: e2fsprogs openldap
 
 name=krb5
-version=1.14
+version=1.15
 release=1
-source=(http://web.mit.edu/kerberos/dist/$name/$version/$name-$version.tar.gz \
+source=(https://web.mit.edu/kerberos/dist/$name/$version/$name-$version.tar.gz \
         $name-config_LDFLAGS.patch)
 
 build() {
