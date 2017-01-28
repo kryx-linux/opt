@@ -86,13 +86,13 @@ lrwxrwxrwx	root/root	usr/lib/libk5crypto.so -> libk5crypto.so.3.1
 lrwxrwxrwx	root/root	usr/lib/libk5crypto.so.3 -> libk5crypto.so.3.1
 -rw-r--r--	root/root	usr/lib/libk5crypto.so.3.1
 lrwxrwxrwx	root/root	usr/lib/libkadm5clnt.so -> libkadm5clnt_mit.so
-lrwxrwxrwx	root/root	usr/lib/libkadm5clnt_mit.so -> libkadm5clnt_mit.so.10.0
-lrwxrwxrwx	root/root	usr/lib/libkadm5clnt_mit.so.10 -> libkadm5clnt_mit.so.10.0
--rw-r--r--	root/root	usr/lib/libkadm5clnt_mit.so.10.0
+lrwxrwxrwx	root/root	usr/lib/libkadm5clnt_mit.so -> libkadm5clnt_mit.so.11.0
+lrwxrwxrwx	root/root	usr/lib/libkadm5clnt_mit.so.11 -> libkadm5clnt_mit.so.11.0
+-rw-r--r--	root/root	usr/lib/libkadm5clnt_mit.so.11.0
 lrwxrwxrwx	root/root	usr/lib/libkadm5srv.so -> libkadm5srv_mit.so
-lrwxrwxrwx	root/root	usr/lib/libkadm5srv_mit.so -> libkadm5srv_mit.so.10.0
-lrwxrwxrwx	root/root	usr/lib/libkadm5srv_mit.so.10 -> libkadm5srv_mit.so.10.0
--rw-r--r--	root/root	usr/lib/libkadm5srv_mit.so.10.0
+lrwxrwxrwx	root/root	usr/lib/libkadm5srv_mit.so -> libkadm5srv_mit.so.11.0
+lrwxrwxrwx	root/root	usr/lib/libkadm5srv_mit.so.11 -> libkadm5srv_mit.so.11.0
+-rw-r--r--	root/root	usr/lib/libkadm5srv_mit.so.11.0
 lrwxrwxrwx	root/root	usr/lib/libkdb5.so -> libkdb5.so.8.0
 lrwxrwxrwx	root/root	usr/lib/libkdb5.so.8 -> libkdb5.so.8.0
 -rw-r--r--	root/root	usr/lib/libkdb5.so.8.0

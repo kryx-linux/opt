@@ -1,12 +1,12 @@
 # Description: Trivial DataBase similar to gdbm
-# URL:         http://tdb.samba.org/
+# URL:         https://tdb.samba.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  attr python
 
 name=tdb
 version=1.3.12
 release=1
-source=(http://www.samba.org/ftp/$name/$name-$version.tar.gz
+source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz
         $name-man-pages.tar.xz)
 
 build() {
