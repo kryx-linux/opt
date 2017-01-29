@@ -5,7 +5,7 @@
 
 name=sqlite3
 version=3.16.2
-release=1
+release=2
 _version=$(printf "%i%.2i%.2i%.2i" ${version//./ })
 
 source=(http://www.sqlite.org/2017/sqlite-autoconf-${_version}.tar.gz)
@@ -16,7 +16,7 @@ build () {
     CONFIG_SHELL=/bin/bash \
     CFLAGS="-DSQLITE_SECURE_DELETE=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 \
             -DSQLITE_ENABLE_UNLOCK_NOTIFY=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 \
-             $CFLAGS" \
+            -DSQLITE_ENABLE_FTS3=1  $CFLAGS" \
     ./configure --prefix=/usr --enable-readline
     
     make 
