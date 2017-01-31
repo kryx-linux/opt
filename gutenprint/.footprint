@@ -5,7 +5,6 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/cups-calibrate
 -rwxr-xr-x	root/root	usr/bin/escputil
--rwxr-xr-x	root/root	usr/bin/ijsgutenprint.5.2
 -rwxr-xr-x	root/root	usr/bin/testpattern
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/gutenprint/
@@ -44,9 +43,9 @@ drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/rastertogutenprint.5.2
 -rw-r--r--	root/root	usr/lib/libgutenprint.a
 -rwxr-xr-x	root/root	usr/lib/libgutenprint.la
-lrwxrwxrwx	root/root	usr/lib/libgutenprint.so -> libgutenprint.so.2.4.0
-lrwxrwxrwx	root/root	usr/lib/libgutenprint.so.2 -> libgutenprint.so.2.4.0
--rwxr-xr-x	root/root	usr/lib/libgutenprint.so.2.4.0
+lrwxrwxrwx	root/root	usr/lib/libgutenprint.so -> libgutenprint.so.2.5.0
+lrwxrwxrwx	root/root	usr/lib/libgutenprint.so.2 -> libgutenprint.so.2.5.0
+-rwxr-xr-x	root/root	usr/lib/libgutenprint.so.2.5.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gutenprint.pc
 drwxr-xr-x	root/root	usr/sbin/
@@ -102,6 +101,8 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/pro_ultrachrome_k34.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/pro_ultrachrome_k3v.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/pro_ultrachrome_k3v10.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/pro_ultrachrome_k3v10a.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/pro_ultrachrome_k3v10b.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/pro_ultrachrome_k3v4.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/standard.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/standard_gen0.xml
@@ -110,6 +111,7 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/wf40.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/wf500.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/x80.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/xp100.xml
 drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/artisan.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/b500.xml
@@ -167,6 +169,8 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/media/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/pro_ultrachrome_k3.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/pro_ultrachrome_k3v.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/pro_ultrachrome_k3v10.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/pro_ultrachrome_k3v10a.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/pro_ultrachrome_k3v10b.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/r800.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/standard.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/standard_gen0.xml
@@ -204,6 +208,12 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/model/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_120.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_121.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_122.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_123.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_124.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_125.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_126.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_127.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_128.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_13.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_14.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_15.xml
@@ -316,7 +326,6 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/weaves/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/escputil.1.gz
--rw-r--r--	root/root	usr/share/man/man1/ijsgutenprint.1.gz
 drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/cups-calibrate.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/cups-genppd.8.gz
