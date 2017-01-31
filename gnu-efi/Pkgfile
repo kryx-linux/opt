@@ -3,12 +3,12 @@
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 
 name=gnu-efi
-version=3.0u.orig
+version=3.0.5
 release=1
-source=(http://download.sourceforge.net/${name}/${name}_${version}.tar.gz)
+source=(http://download.sourceforge.net/${name}/${name}-${version}.tar.bz2)
 
 build() {
-  cd $name-3.0
+  cd $name-$version
   sed -i "s|/usr/local|$PKG/usr|g" Make.defaults
   make
   make install
