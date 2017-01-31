@@ -5,6 +5,7 @@ drwxr-xr-x	root/root	usr/include/efi/
 -rw-r--r--	root/root	usr/include/efi/efi_nii.h
 -rw-r--r--	root/root	usr/include/efi/efi_pxe.h
 -rw-r--r--	root/root	usr/include/efi/efiapi.h
+-rw-r--r--	root/root	usr/include/efi/eficompiler.h
 -rw-r--r--	root/root	usr/include/efi/eficon.h
 -rw-r--r--	root/root	usr/include/efi/efidebug.h
 -rw-r--r--	root/root	usr/include/efi/efidef.h
@@ -18,10 +19,14 @@ drwxr-xr-x	root/root	usr/include/efi/
 -rw-r--r--	root/root	usr/include/efi/efinet.h
 -rw-r--r--	root/root	usr/include/efi/efipart.h
 -rw-r--r--	root/root	usr/include/efi/efipciio.h
+-rw-r--r--	root/root	usr/include/efi/efipoint.h
 -rw-r--r--	root/root	usr/include/efi/efiprot.h
 -rw-r--r--	root/root	usr/include/efi/efipxebc.h
 -rw-r--r--	root/root	usr/include/efi/efirtlib.h
 -rw-r--r--	root/root	usr/include/efi/efiser.h
+-rw-r--r--	root/root	usr/include/efi/efisetjmp.h
+-rw-r--r--	root/root	usr/include/efi/efishellintf.h
+-rw-r--r--	root/root	usr/include/efi/efishellparm.h
 -rw-r--r--	root/root	usr/include/efi/efistdarg.h
 -rw-r--r--	root/root	usr/include/efi/efitcp.h
 -rw-r--r--	root/root	usr/include/efi/efiudp.h
@@ -41,6 +46,7 @@ drwxr-xr-x	root/root	usr/include/efi/protocol/
 drwxr-xr-x	root/root	usr/include/efi/x86_64/
 -rw-r--r--	root/root	usr/include/efi/x86_64/efibind.h
 -rw-r--r--	root/root	usr/include/efi/x86_64/efilibplat.h
+-rw-r--r--	root/root	usr/include/efi/x86_64/efisetjmp_arch.h
 -rw-r--r--	root/root	usr/include/efi/x86_64/pe.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/crt0-efi-x86_64.o
