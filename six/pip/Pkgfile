@@ -2,14 +2,31 @@
 # URL:          http://www.pip-installer.org/
 # Maintainer:   Thomas Penteker, tek at serverop dot de
 # Packager:     James Mills, prologic at shortcircuit dot net dot au
-# Depends on:   setuptools
+# Depends on:   python
 
 name=pip
 version=9.0.1
-release=1
-source=(https://pypi.io/packages/source/p/pip/pip-${version}.tar.gz)
+release=2
+source=(https://pypi.io/packages/source/p/pip/pip-${version}.tar.gz
+	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
-    cd $name-$version
-    /usr/bin/python setup.py install --prefix=/usr --root=$PKG
+	cd $name-$version
+
+	if [ -z "$(pkginfo -i | egrep '^setuptools ')" ]; then
+		install -d build
+		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
+
+		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+			/usr/bin/python setup.py build
+
+		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+			/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	else
+		/usr/bin/python setup.py build
+
+		/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	fi
 }
