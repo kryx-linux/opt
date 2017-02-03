@@ -1,0 +1,15 @@
+# Description:  A tool for installing and managing Python packages
+# URL:          http://www.pip-installer.org/
+# Maintainer:   Thomas Penteker, tek at serverop dot de
+# Packager:     James Mills, prologic at shortcircuit dot net dot au
+# Depends on:   setuptools
+
+name=pip
+version=9.0.1
+release=1
+source=(https://pypi.io/packages/source/p/pip/pip-${version}.tar.gz)
+
+build() {
+    cd $name-$version
+    /usr/bin/python setup.py install --prefix=/usr --root=$PKG
+}
