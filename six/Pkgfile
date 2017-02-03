@@ -1,15 +1,32 @@
 # Description: Python compatibility utilities.
-# URL: http://pypi.python.org/pypi/six/
+# URL: https://pypi.python.org/pypi/six/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Danny Rawlins, crux at romster dot me
-# Depends on: setuptools
+# Depends on: python
 
 name=six
 version=1.10.0
-release=1
-source=(http://pypi.python.org/packages/source/s/$name/$name-$version.tar.gz)
+release=2
+source=(https://pypi.python.org/packages/b3/b2/238e2590826bfdd113244a40d9d3eb26918bd798fc187e2360a8367068db/six-$version.tar.gz
+	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
 	cd $name-$version
-	/usr/bin/python setup.py install --root=$PKG --optimize=1
+
+	if [ -z "$(pkginfo -i | egrep '^setuptools ')" ]; then
+		install -d build
+		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
+
+		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+			/usr/bin/python setup.py build
+
+		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+			/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	else
+		/usr/bin/python setup.py build
+
+		/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	fi
 }
