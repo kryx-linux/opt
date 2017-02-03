@@ -1,0 +1,33 @@
+# Description: A Python module for determining appropriate platform-specific dirs.
+# URL: https://pypi.python.org/pypi/packaging/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Packager: Danny Rawlins, crux at romster dot me
+# Depends on: python
+
+name=appdirs
+version=1.4.0
+release=1
+source=(https://pypi.python.org/packages/bd/66/0a7f48a0f3fb1d3a4072bceb5bbd78b1a6de4d801fb7135578e7c7b1f563/appdirs-$version.tar.gz
+	https://bootstrap.pypa.io/get-pip.py)
+
+build() {
+	cd $name-$version
+
+	if [ -z "$(pkginfo -i | egrep '^setuptools ')" ]; then
+		install -d build
+		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
+
+		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+			/usr/bin/python setup.py build
+
+		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+			/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	else
+
+		/usr/bin/python setup.py build
+
+		/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	fi
+}
