@@ -2,25 +2,39 @@
 # URL: http://pypi.python.org/pypi/setuptools
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Danny Rawlins, crux at romster dot me
-# Depends on: python
+# Depends on: appdirs packaging pip
 
 name=setuptools
-version=32.0.0
+version=34.1.0
 release=1
 #source=(https://github.com/pypa/setuptools/archive/v$version.tar.gz)
-source=(https://pypi.python.org/packages/dc/37/f01d823fd312ba8ea6c3aea906d2d6ac9e9e8bf9e7853e34f296e94b0d0d/setuptools-32.0.0.tar.gz)
+source=(https://pypi.python.org/packages/64/88/d434873ba1ce02c0ed669f574afeabaeaaeec207929a41b5c1ed947270fc/setuptools-$version.zip
+	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
 	cd $name-$version
 
 	export SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES=0
 
-	/usr/bin/python bootstrap.py
-	/usr/bin/python setup.py build
+	if [ -z "$(pkginfo -i | egrep '^setuptools ')" ]; then
+		install -d build
+		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 
-	/usr/bin/python setup.py install \
-		--prefix=/usr \
-		--root=$PKG \
-		--optimize=1 \
-		--skip-build
+		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+			/usr/bin/python bootstrap.py
+
+		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+			/usr/bin/python setup.py build
+
+		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+			/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	else
+
+		/usr/bin/python bootstrap.py 
+		/usr/bin/python setup.py build
+
+		/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	fi
 }
