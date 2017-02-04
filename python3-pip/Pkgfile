@@ -1,0 +1,35 @@
+# Description: A tool for installing and managing Python packages.
+# URL: https://www.pip-installer.org/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: python3
+
+name=python3-pip
+version=9.0.1
+release=1
+source=(https://pypi.io/packages/source/p/pip/pip-$version.tar.gz
+	https://bootstrap.pypa.io/get-pip.py)
+
+build() {
+	cd ${name#*-}-$version
+
+	if [ "$(pkginfo -i | egrep -c '^python3-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
+		install -d build
+		/usr/bin/python3 $SRC/get-pip.py --root=$SRC/build
+
+		local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+
+		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
+			/usr/bin/python3 setup.py build
+
+		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
+			/usr/bin/python3 setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	else
+		/usr/bin/python3 setup.py build
+
+		/usr/bin/python3 setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	fi
+
+	rm $PKG/usr/bin/pip
+}
