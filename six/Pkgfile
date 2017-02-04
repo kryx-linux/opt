@@ -1,7 +1,6 @@
-# Description: Python compatibility utilities.
+# Description: Python 2 and 3 compatibility utilities.
 # URL: https://pypi.python.org/pypi/six/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Packager: Danny Rawlins, crux at romster dot me
 # Depends on: python
 
 name=six
@@ -13,7 +12,7 @@ source=(https://pypi.python.org/packages/b3/b2/238e2590826bfdd113244a40d9d3eb269
 build() {
 	cd $name-$version
 
-	if [ -z "$(pkginfo -i | egrep '^setuptools ')" ]; then
+	if [ "$(pkginfo -i | egrep -c '^(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 

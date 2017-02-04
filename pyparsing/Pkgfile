@@ -1,7 +1,7 @@
-# Description: Python parsing module
-# URL:         https://pypi.python.org/pypi/pyparsing
-# Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  python
+# Description: Python parsing module.
+# URL: https://pypi.python.org/pypi/pyparsing/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: python
 
 name=pyparsing
 version=2.1.10
@@ -12,7 +12,7 @@ source=(https://pypi.python.org/packages/38/bb/bf325351dd8ab6eb3c3b7c07c3978f38b
 build() {
 	cd $name-$version
 
-	if [ -z "$(pkginfo -i | egrep '^setuptools ')" ]; then
+	if [ "$(pkginfo -i | egrep -c '^(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 

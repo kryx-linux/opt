@@ -1,7 +1,6 @@
 # Description: Core utilities for Python packages.
 # URL: https://pypi.python.org/pypi/packaging/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Packager: Danny Rawlins, crux at romster dot me
 # Depends on: pyparsing six
 
 name=packaging
@@ -13,7 +12,7 @@ source=(https://pypi.python.org/packages/c6/70/bb32913de251017e266c5114d0a645f26
 build() {
 	cd $name-$version
 
-	if [ -z "$(pkginfo -i | egrep '^setuptools ')" ]; then
+	if [ "$(pkginfo -i | egrep -c '^(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 

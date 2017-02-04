@@ -1,7 +1,6 @@
 # Description: Easily download, build, install, upgrade, and uninstall Python packages.
-# URL: http://pypi.python.org/pypi/setuptools
+# URL: https://pypi.python.org/pypi/setuptools
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Packager: Danny Rawlins, crux at romster dot me
 # Depends on: appdirs packaging pip
 
 name=setuptools
@@ -16,7 +15,7 @@ build() {
 
 	export SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES=0
 
-	if [ -z "$(pkginfo -i | egrep '^setuptools ')" ]; then
+	if [ "$(pkginfo -i | egrep -c '^(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 

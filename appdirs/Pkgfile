@@ -1,7 +1,6 @@
 # Description: A Python module for determining appropriate platform-specific dirs.
 # URL: https://pypi.python.org/pypi/packaging/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Packager: Danny Rawlins, crux at romster dot me
 # Depends on: python
 
 name=appdirs
@@ -13,7 +12,7 @@ source=(https://pypi.python.org/packages/bd/66/0a7f48a0f3fb1d3a4072bceb5bbd78b1a
 build() {
 	cd $name-$version
 
-	if [ -z "$(pkginfo -i | egrep '^setuptools ')" ]; then
+	if [ "$(pkginfo -i | egrep -c '^(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 
