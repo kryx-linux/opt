@@ -4,10 +4,10 @@
 # Depends on: appdirs packaging pip
 
 name=setuptools
-version=34.1.0
+version=34.1.1
 release=1
 #source=(https://github.com/pypa/setuptools/archive/v$version.tar.gz)
-source=(https://pypi.python.org/packages/64/88/d434873ba1ce02c0ed669f574afeabaeaaeec207929a41b5c1ed947270fc/setuptools-$version.zip
+source=(https://pypi.python.org/packages/e2/51/3ea582a6d64dcd36858a10de31d43ca8ea0a3be5386dd0caf6503167cdfb/setuptools-$version.zip
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
