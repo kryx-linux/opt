@@ -1,0 +1,33 @@
+# Description: Python 2 and 3 compatibility utilities.
+# URL: https://pypi.python.org/pypi/six/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: python3
+
+name=python3-six
+version=1.10.0
+release=1
+source=(https://pypi.python.org/packages/b3/b2/238e2590826bfdd113244a40d9d3eb26918bd798fc187e2360a8367068db/six-$version.tar.gz
+	https://bootstrap.pypa.io/get-pip.py)
+
+build() {
+	cd ${name#*-}-$version
+
+	if [ "$(pkginfo -i | egrep -c '^python3-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
+		install -d build
+		/usr/bin/python3 $SRC/get-pip.py --root=$SRC/build
+
+		local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+
+		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
+			/usr/bin/python3 setup.py build
+
+		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
+			/usr/bin/python3 setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	else
+		/usr/bin/python3 setup.py build
+
+		/usr/bin/python3 setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	fi
+}
