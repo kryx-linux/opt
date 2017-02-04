@@ -19,13 +19,15 @@ build() {
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 
-		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+		local PYTHONVERSION=$(/usr/bin/python -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+
+		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
 			/usr/bin/python bootstrap.py
 
-		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
 			/usr/bin/python setup.py build
 
-		PYTHONPATH=$SRC/build/usr/lib/python2.7/site-packages \
+		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
 			/usr/bin/python setup.py install \
 			--prefix=/usr --root=$PKG --optimize=1
 	else
@@ -36,4 +38,6 @@ build() {
 		/usr/bin/python setup.py install \
 			--prefix=/usr --root=$PKG --optimize=1
 	fi
+
+	unset SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES
 }
