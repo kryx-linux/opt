@@ -3,16 +3,16 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: python
 
-name=six
+name=python-six
 version=1.10.0
 release=2
 source=(https://pypi.python.org/packages/b3/b2/238e2590826bfdd113244a40d9d3eb26918bd798fc187e2360a8367068db/six-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
-	cd $name-$version
+	cd ${name#*-}-$version
 
-	if [ "$(pkginfo -i | egrep -c '^(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
+	if [ "$(pkginfo -i | egrep -c '^python-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 
