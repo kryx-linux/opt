@@ -1,5 +1,5 @@
 # Description:	SMB server and client for unix
-# URL:		http://www.samba.org
+# URL:		https://www.samba.org
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
 # Packager:	Juergen Daubert, jue at crux dot nu
 # Depends on:	iniparser krb5 ldb libaio libcap ntdb p5-parse-yapp py-subunit subunit nss_wrapper socket_wrapper uid_wrapper
@@ -9,7 +9,7 @@ name=samba
 version=4.2.14
 release=4
 source=(
-http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz
+https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz
 samba-4.2.1-krb5.patch
 samba.rc
 nmbd.rc

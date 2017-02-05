@@ -1,5 +1,5 @@
 # Description:	Hierarchical, reference counted memory pool system with destructors
-# URL:		http://talloc.samba.org/
+# URL:		https://talloc.samba.org/
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
 # Packager:	Tilman Sauerbeck, tilman at crux dot nu
 # Depends on:	python
@@ -8,7 +8,7 @@ name=talloc
 version=2.1.8
 release=1
 source=(
-http://samba.org/ftp/$name/$name-$version.tar.gz
+https://samba.org/ftp/$name/$name-$version.tar.gz
 $name-$version-man-pages.tar.xz
 )
 

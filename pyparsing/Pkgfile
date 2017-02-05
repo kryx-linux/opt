@@ -1,0 +1,33 @@
+# Description: Python parsing module.
+# URL: https://pypi.python.org/pypi/pyparsing/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: python
+
+name=pyparsing
+version=2.1.10
+release=1
+source=(https://pypi.python.org/packages/38/bb/bf325351dd8ab6eb3c3b7c07c3978f38b2103e2ab48d59726916907cd6fb/pyparsing-$version.tar.gz
+	https://bootstrap.pypa.io/get-pip.py)
+
+build() {
+	cd $name-$version
+
+	if [ "$(pkginfo -i | egrep -c '^(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
+		install -d build
+		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
+
+		local PYTHONVERSION=$(/usr/bin/python -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+
+		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
+			/usr/bin/python setup.py build
+
+		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
+			/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	else
+		/usr/bin/python setup.py build
+
+		/usr/bin/python setup.py install \
+			--prefix=/usr --root=$PKG --optimize=1
+	fi
+}
