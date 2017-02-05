@@ -3,16 +3,16 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: python
 
-name=pip
+name=python-pip
 version=9.0.1
 release=2
 source=(https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
-	cd $name-$version
+	cd ${name#*-}-$version
 
-	if [ "$(pkginfo -i | egrep -c '^(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
+	if [ "$(pkginfo -i | egrep -c '^python-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 
