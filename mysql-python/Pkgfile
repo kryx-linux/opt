@@ -1,7 +1,7 @@
 # Description: MySQL interface for Python
 # URL:         http://sourceforge.net/projects/mysql-python/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  setuptools mysql
+# Depends on:  python-setuptools mysql
 
 name=mysql-python
 version=1.2.5

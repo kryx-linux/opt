@@ -2,7 +2,7 @@
 # URL:         http://python-xlib.sourceforge.net
 # Maintainer:  Jose V Beneyto, sepen at crux dot nu
 # Packager:    Johannes Winkelmann, jw at tks6 dot net
-# Depends on:  xorg-libx11 setuptools
+# Depends on:  xorg-libx11 python-setuptools
 
 name=python-xlib
 version=0.14
