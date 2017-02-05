@@ -3,16 +3,16 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: python
 
-name=appdirs
+name=python-appdirs
 version=1.4.0
 release=1
 source=(https://pypi.python.org/packages/bd/66/0a7f48a0f3fb1d3a4072bceb5bbd78b1a6de4d801fb7135578e7c7b1f563/appdirs-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
-	cd $name-$version
+	cd ${name#*-}-$version
 
-	if [ "$(pkginfo -i | egrep -c '^(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
+	if [ "$(pkginfo -i | egrep -c '^python-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 
