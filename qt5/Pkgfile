@@ -5,21 +5,21 @@
 # Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng mtdev xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=qt5
-version=5.7.1
+version=5.8.0
 release=1
 source=(http://download.qt.io/official_releases/qt/${version::3}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
 	qt5-logo.png
-	qtbug-49061.patch
-	qtbug-55583.patch)
+	plasma-crash-1.patch
+	plasma-crash-2.patch
+	plasma-crash-3.patch)
 
 build() {
 	cd qt-everywhere-opensource-src-$version
 
-	# Don't unload plugins in QPluginLoader https://bugreports.qt.io/browse/QTBUG-49061
-	patch -p1 -d qtbase -i $SRC/qtbug-49061.patch
-
-	# Fix file chooser segfault on gnome/wayland https://bugreports.qt.io/browse/QTBUG-55583
-	patch -p1 -d qtbase -i $SRC/qtbug-55583.patch
+	# Fix some Plasma taskbar crashes https://bugs.kde.org/show_bug.cgi?id=342763
+	patch -p1 -d qtbase -i $SRC/plasma-crash-1.patch
+	patch -p1 -d qtbase -i $SRC/plasma-crash-2.patch
+	patch -p1 -d qtbase -i $SRC/plasma-crash-3.patch
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
@@ -35,10 +35,6 @@ build() {
 	# Respect system LDFLAGS
 	sed -i "s|^\(QMAKE_LFLAGS_RELEASE.*\)|\1 ${LDFLAGS}|" \
 		qtbase/mkspecs/common/g++-unix.conf
-
-	# Fix quoting bug
-	sed -i 's|"$COMPILER" -c|$COMPILER -c|' \
-		qtbase/config.tests/unix/fvisibility.test
 
 	export QTDIR="$PWD"
 	export LD_LIBRARY_PATH="$QTDIR/qtbase/lib:$QTDIR/qttools/lib:$LD_LIBRARY_PATH"

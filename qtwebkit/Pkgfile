@@ -1,13 +1,13 @@
 # Description: QtWebKit for qt5.
-# URL: http://www.qt.io/
+# URL: https://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Tsaop, leeroy at cock dot li
 # Depends on: qt5 ruby icu
 
 name=qtwebkit
-version=5.7.1
+version=5.8.0
 release=1
-source=(https://download.qt.io/community_releases/${version::3}/$version/$name-opensource-src-$version.tar.xz)
+source=(https://download.qt.io/community_releases/${version::3}/$version-final/$name-opensource-src-$version.tar.xz)
 
 build() {
 	cd $name-opensource-src-$version
