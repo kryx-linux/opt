@@ -5,7 +5,7 @@
 # Depends on: qt5 xorg-libxscrnsaver xorg-libxtst nss
 
 name=qtwebengine
-version=5.7.1
+version=5.8.0
 release=1
 source=(http://download.qt.io/official_releases/qt/${version::3}/$version/submodules/$name-opensource-src-$version.tar.xz)
 
