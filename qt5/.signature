@@ -1,8 +1,9 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/fAU3shP+N+aPYMyHKjjvcTzghAhNn/m1qdI39ugtF3QndQA4FK2qN8VaZPlMrErA4J1ZGS/hy3qOpjjFQfXXw4=
-SHA256 (Pkgfile) = 5d0870c8a5839d7ae5aff2944bd8d22be0037cedaea33dd38b7b856d9a82ab79
-SHA256 (.footprint) = 4b7dcff81791d475c6211db6491027946ee2abab8b1f3a763f0e501b5aa09667
-SHA256 (qt-everywhere-opensource-src-5.7.1.tar.xz) = 46ebca977deb629c5e69c2545bc5fe13f7e40012e5e2e451695c583bd33502fa
+RWSE3ohX2g5d/VAvnVReMOdvmK8bqQ6KG2RXwAHR0QwMyJgj+Zi3i/9aMeN2nrSNw10zvt//lci0h+rNnEhgHC+oRzSA9X95AgQ=
+SHA256 (Pkgfile) = 401fa431eac5660de9162e72df673f18b2f019f239dd9bf3e75d61757b0b8e6d
+SHA256 (.footprint) = ac1d75b7fa2a8df6206a2cbf3178fe962fa5fdf3e11b6384b55d6cbf8eb323f2
+SHA256 (qt-everywhere-opensource-src-5.8.0.tar.xz) = 0f4c54386d3dbac0606a936a7145cebb7b94b0ca2d29bc001ea49642984824b6
 SHA256 (qt5-logo.png) = ae1335ecd1cd2d17032184895ab298a636cdfa8121b0ed71307c4f2b23ec928e
-SHA256 (qtbug-49061.patch) = f05e742532f8cda144292804e30d2e0b442d8f22961ab71801ce2abd086a6b57
-SHA256 (qtbug-55583.patch) = ac8db775f6b6a5f925f4e8a2de276fe8e13f286f86ea301bc0854e03018a1033
+SHA256 (plasma-crash-1.patch) = 3f1f2d87a527579e89e2e18ff309065b34d0b477b80d6c29ccdec78564100204
+SHA256 (plasma-crash-2.patch) = 8c0c44a06425e68968fd7370c4b4c143daddc29150a100d7536d6ec620b86ad8
+SHA256 (plasma-crash-3.patch) = 460dcfeb126c0331a979b92ecfaed343ac79bcf1eb6c7d9b7a2ec3b4260feaeb
