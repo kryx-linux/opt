@@ -6,7 +6,7 @@
 name=python-packaging
 version=16.8
 release=1
-source=(https://pypi.python.org/packages/c6/70/bb32913de251017e266c5114d0a645f262fb10ebc9bf6de894966d124e35/packaging-$version.tar.gz
+source=(https://files.pythonhosted.org/packages/source/${name:0:1}/$name/$name-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {

@@ -7,7 +7,7 @@ name=python-setuptools
 version=34.1.1
 release=1
 #source=(https://github.com/pypa/setuptools/archive/v$version.tar.gz)
-source=(https://pypi.python.org/packages/e2/51/3ea582a6d64dcd36858a10de31d43ca8ea0a3be5386dd0caf6503167cdfb/setuptools-$version.zip
+source=(https://files.pythonhosted.org/packages/source/${name:0:1}/$name/$name-$version.zip
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
