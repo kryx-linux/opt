@@ -6,7 +6,7 @@
 name=pyparsing
 version=2.1.10
 release=1
-source=(https://pypi.python.org/packages/38/bb/bf325351dd8ab6eb3c3b7c07c3978f38b2103e2ab48d59726916907cd6fb/pyparsing-$version.tar.gz
+source=(https://files.pythonhosted.org/packages/source/${name:0:1}/$name/$name-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
