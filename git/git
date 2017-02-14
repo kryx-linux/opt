@@ -23,10 +23,15 @@ if [ -z "$BRANCH" ]; then
 	exit 2
 fi
 
+REPOSITORY="$PORTS_DIR/$NAME"
+if [ -n "$LOCAL_REPOSITORY" ]; then
+	REPOSITORY="$LOCAL_REPOSITORY"
+fi
+
 echo "Fetching updates from $URL"
 echo "Updating collection $NAME"
 
-cd "$PORTS_DIR/$NAME" 2> "/dev/null"
+cd "$REPOSITORY" 2> "/dev/null"
 
 if [ $? -lt 1 ]; then
 	git checkout -q "$BRANCH"
@@ -35,8 +40,8 @@ if [ $? -lt 1 ]; then
 	git clean -q -f
 	git reset -q --hard origin/"$BRANCH"
 else
-	git clone -q -b "$BRANCH" "$URL" "$PORTS_DIR/$NAME"
-	ls /usr/ports/$NAME | sed "s/^/ Checkout /g"
+	git clone -q -b "$BRANCH" "$URL" "$REPOSITORY"
+	ls -1 $REPOSITORY | sed "s/^/ Checkout /"
 fi
 
 echo "Finished successfully"
