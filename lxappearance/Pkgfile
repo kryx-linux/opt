@@ -4,12 +4,14 @@
 # Depends on: gtk
 
 name=lxappearance
-version=0.6.2
+version=0.6.3
 release=1
 source=(http://downloads.sourceforge.net/sourceforge/lxde/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
+
+	export LINGUAS=" "
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
@@ -17,5 +19,4 @@ build() {
 
 	make
 	make DESTDIR=$PKG install
-	rm -r $PKG/usr/share/locale
 }
