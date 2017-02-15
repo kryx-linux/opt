@@ -1,13 +1,13 @@
 # Description: Gstreamer is a library that allows the construction of graphs of media-handling components.
-# URL: http://gstreamer.freedesktop.org/
+# URL: https://gstreamer.freedesktop.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: gobject-introspection libcap
 
 name=gstreamer
-version=1.10.2
+version=1.10.3
 release=1
-source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
+source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
