@@ -4,7 +4,7 @@
 # Depends on:  gobject-introspection poppler 
 
 name=poppler-glib
-version=0.51.0
+version=0.52.0
 release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz
         poppler-cmake.patch)

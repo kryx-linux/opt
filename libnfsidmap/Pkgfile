@@ -3,7 +3,7 @@
 # URL:         http://www.citi.umich.edu/projects/nfsv4/linux/
 
 name=libnfsidmap
-version=0.26
+version=0.27
 release=1
 source=(https://fedorapeople.org/~steved/$name/$version/$name-$version.tar.bz2)
 

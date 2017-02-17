@@ -5,8 +5,8 @@
 
 name=python-pyparsing
 version=2.1.10
-release=1
-source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.tar.gz
+release=2
+source=(https://files.pythonhosted.org/packages/source/${name:0:1}/$name/$name-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
@@ -30,4 +30,6 @@ build() {
 		/usr/bin/python setup.py install \
 			--prefix=/usr --root=$PKG --optimize=1
 	fi
+
+	find $PKG/usr/lib/python$PYTHONVERSION/site-packages -type f -exec chmod go-w {} +
 }
