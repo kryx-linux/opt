@@ -1,3 +1,19 @@
+drwxr-xr-x	root/root	include/
+drwxr-xr-x	root/root	include/reiserfs/
+-rw-r--r--	root/root	include/reiserfs/io.h
+-rw-r--r--	root/root	include/reiserfs/misc.h
+-rw-r--r--	root/root	include/reiserfs/reiserfs_err.h
+-rw-r--r--	root/root	include/reiserfs/reiserfs_fs.h
+-rw-r--r--	root/root	include/reiserfs/reiserfs_lib.h
+-rw-r--r--	root/root	include/reiserfs/swab.h
+drwxr-xr-x	root/root	lib/
+-rw-r--r--	root/root	lib/libreiserfscore.a
+-rwxr-xr-x	root/root	lib/libreiserfscore.la
+lrwxrwxrwx	root/root	lib/libreiserfscore.so -> libreiserfscore.so.0.0.0
+lrwxrwxrwx	root/root	lib/libreiserfscore.so.0 -> libreiserfscore.so.0.0.0
+-rwxr-xr-x	root/root	lib/libreiserfscore.so.0.0.0
+drwxr-xr-x	root/root	lib/pkgconfig/
+-rw-r--r--	root/root	lib/pkgconfig/reiserfscore.pc
 drwxr-xr-x	root/root	sbin/
 lrwxrwxrwx	root/root	sbin/debugfs.reiserfs -> debugreiserfs
 -rwxr-xr-x	root/root	sbin/debugreiserfs

@@ -4,8 +4,8 @@
 # Depends on:  util-linux
 
 name=reiserfsprogs
-version=3.6.24
-release=3
+version=3.6.25
+release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/jeffm/$name/v$version/$name-$version.tar.xz)
 
 build () {
