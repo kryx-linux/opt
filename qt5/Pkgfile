@@ -52,7 +52,6 @@ build() {
 		-sysconfdir /usr/etc/xdg \
 		-confirm-license \
 		-dbus-linked \
-		-no-cups \
 		-no-egl \
 		-nomake examples \
 		-no-pch \
