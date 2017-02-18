@@ -5,18 +5,19 @@
 
 name=python-pyparsing
 version=2.1.10
-release=2
-source=(https://files.pythonhosted.org/packages/source/${name:0:1}/$name/$name-$version.tar.gz
+release=3
+source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
 	cd ${name#*-}-$version
 
+	local PYTHONVERSION=$(/usr/bin/python -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+
 	if [ "$(pkginfo -i | egrep -c '^python-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
+
 		install -d build
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
-
-		local PYTHONVERSION=$(/usr/bin/python -c 'import sys; print("%s.%s" % sys.version_info[:2])')
 
 		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
 			/usr/bin/python setup.py build
