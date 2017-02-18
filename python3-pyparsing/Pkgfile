@@ -5,18 +5,18 @@
 
 name=python3-pyparsing
 version=2.1.10
-release=2
+release=3
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
 	cd ${name#*-}-$version
 
+	local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+
 	if [ "$(pkginfo -i | egrep -c '^python3-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
 		/usr/bin/python3 $SRC/get-pip.py --root=$SRC/build
-
-		local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
 
 		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
 			/usr/bin/python3 setup.py build
