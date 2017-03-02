@@ -159,6 +159,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/commoncontrols.h
 -rw-r--r--	root/root	usr/include/wine/windows/commoncontrols.idl
 -rw-r--r--	root/root	usr/include/wine/windows/compobj.h
+-rw-r--r--	root/root	usr/include/wine/windows/comsvcs.h
+-rw-r--r--	root/root	usr/include/wine/windows/comsvcs.idl
 -rw-r--r--	root/root	usr/include/wine/windows/control.h
 -rw-r--r--	root/root	usr/include/wine/windows/control.idl
 -rw-r--r--	root/root	usr/include/wine/windows/cor.h
@@ -1859,6 +1861,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vdmdbg.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/version.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/view.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/virtdisk.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vssapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wbemdisp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wbemprox.dll
@@ -2433,6 +2436,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/vdmdbg.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/version.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/view.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/virtdisk.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vssapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wbemdisp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wbemprox.dll.so
@@ -3564,6 +3568,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ver.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/version.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/view.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/virtdisk.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vmm.vxd
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vnbt.vxd
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vnetbios.vxd
@@ -4194,6 +4199,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/ver.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/version.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/view.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/virtdisk.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vmm.vxd.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vnbt.vxd.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vnetbios.vxd.so
