@@ -12,11 +12,12 @@ source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${
 build() {
 	cd ${name#*-}-$version
 
-	local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
-
 	if [ "$(pkginfo -i | egrep -c '^python3-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
+		sed -i 's/"--upgrade"/"--upgrade", "--upgrade-strategy", "only-if-needed"/' $SRC/get-pip.py
 		/usr/bin/python3 $SRC/get-pip.py --root=$SRC/build
+
+		local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
 
 		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
 			/usr/bin/python3 setup.py build
@@ -31,5 +32,6 @@ build() {
 			--prefix=/usr --root=$PKG --optimize=1
 	fi
 
+	local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
 	find $PKG/usr/lib/python$PYTHONVERSION/site-packages -type f -exec chmod go-w {} +
 }

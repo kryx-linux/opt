@@ -14,6 +14,7 @@ build() {
 
 	if [ "$(pkginfo -i | egrep -c '^python-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
+		sed -i 's/"--upgrade"/"--upgrade", "--upgrade-strategy", "only-if-needed"/' $SRC/get-pip.py
 		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
 
 		local PYTHONVERSION=$(/usr/bin/python -c 'import sys; print("%s.%s" % sys.version_info[:2])')
