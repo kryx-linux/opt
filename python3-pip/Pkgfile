@@ -5,12 +5,18 @@
 
 name=python3-pip
 version=9.0.1
-release=1
+release=2
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
 
 build() {
 	cd ${name#*-}-$version
+
+	if [ "$(pkginfo -i | egrep -c '^python3-(setuptools|appdirs|pyparsing|six|packaging) ')" != 5 ]; then
+		printf "\e[031mWarning: $name now requires python3-setuptools to function and can not be added,
+as a dependency to $name as this will cause a cyclic dependency loop.
+Please prt-get depinst python3-setuptools to use $name.\033[0m\n"
+	fi
 
 	if [ "$(pkginfo -i | egrep -c '^python3-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
 		install -d build
