@@ -4,13 +4,14 @@
 # Depends on:  samba keyutils
 
 name=cifs-utils
-version=6.6
+version=6.7
 release=1
 source=(https://download.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2
         cifs)
 
 build () {
     cd $name-$version
+    autoreconf -i
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
