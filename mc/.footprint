@@ -125,7 +125,13 @@ drwxr-xr-x	root/root	usr/share/mc/skins/
 -rw-r--r--	root/root	usr/share/mc/skins/modarin256root.ini
 -rw-r--r--	root/root	usr/share/mc/skins/nicedark.ini
 -rw-r--r--	root/root	usr/share/mc/skins/sand256.ini
+-rw-r--r--	root/root	usr/share/mc/skins/seasons-autumn16M.ini
+-rw-r--r--	root/root	usr/share/mc/skins/seasons-spring16M.ini
+-rw-r--r--	root/root	usr/share/mc/skins/seasons-summer16M.ini
+-rw-r--r--	root/root	usr/share/mc/skins/seasons-winter16M.ini
 -rw-r--r--	root/root	usr/share/mc/skins/xoria256.ini
+-rw-r--r--	root/root	usr/share/mc/skins/yadt256-defbg.ini
+-rw-r--r--	root/root	usr/share/mc/skins/yadt256.ini
 drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/PKGBUILD.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/Syntax
@@ -180,6 +186,8 @@ drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/nemerle.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/nroff.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/octave.syntax
+-rw-r--r--	root/root	usr/share/mc/syntax/opencl.syntax
+-rw-r--r--	root/root	usr/share/mc/syntax/osl.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/pascal.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/perl.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/php.syntax
@@ -189,6 +197,7 @@ drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/properties.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/puppet.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/python.syntax
+-rw-r--r--	root/root	usr/share/mc/syntax/r.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/ruby.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/sh.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/slang.syntax
@@ -205,5 +214,6 @@ drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/verilog.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/vhdl.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/xml.syntax
+-rw-r--r--	root/root	usr/share/mc/syntax/yaml.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/yum-repo.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/yxx.syntax
