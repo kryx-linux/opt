@@ -1,7 +1,7 @@
 # Description:	Bluetooth libraries and utilities
 # URL:		http://www.bluez.org/
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:	dbus alsa-lib libusb-compat
+# Depends on:	dbus alsa-lib libusb-compat glib
 # Optional:	pygobject dbus-python sox gst-plugins-base-compat
 
 name=bluez
