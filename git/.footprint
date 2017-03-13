@@ -126,7 +126,6 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rw-r--r--	root/root	usr/lib/git-core/git-rebase--merge
 -rwxr-xr-x	root/root	usr/lib/git-core/git-receive-pack
 -rwxr-xr-x	root/root	usr/lib/git-core/git-reflog
--rwxr-xr-x	root/root	usr/lib/git-core/git-relink
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-ext
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-fd
@@ -416,7 +415,6 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/git-rebase.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-receive-pack.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-reflog.1.gz
--rw-r--r--	root/root	usr/share/man/man1/git-relink.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-remote-ext.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-remote-fd.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-remote-testgit.1.gz
