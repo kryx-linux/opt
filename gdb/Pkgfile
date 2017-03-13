@@ -1,13 +1,13 @@
 # Description: The GNU Debugger (GDB)
-# URL:         http://sources.redhat.com/gdb/
+# URL:         https://sources.redhat.com/gdb/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Tilman Sauerbeck, tilman at crux dot nu
 # Depends on:  ncurses
 
 name=gdb
-version=7.12
+version=7.12.1
 release=1
-source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
+source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
