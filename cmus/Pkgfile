@@ -1,8 +1,8 @@
 # Description: Small and fast music player using the ncurses library
-# URL: http://cmus.sf.net/
+# URL: https://cmus.github.io/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
-# Depends on: 
+# Depends on:
 # Nice to have: alsa-lib, flac, libao, libid3tag, libmad, libmodplug, libmpcdec, libvorbis
 
 name=cmus
