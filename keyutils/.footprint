@@ -4,8 +4,8 @@ drwxr-xr-x	root/root	etc/
 -rw-r--r--	root/root	etc/request-key.conf
 drwxr-xr-x	root/root	etc/request-key.d/
 drwxr-xr-x	root/root	lib/
-lrwxrwxrwx	root/root	lib/libkeyutils.so.1 -> libkeyutils.so.1.5
--rwxr-xr-x	root/root	lib/libkeyutils.so.1.5
+lrwxrwxrwx	root/root	lib/libkeyutils.so.1 -> libkeyutils.so.1.6
+-rwxr-xr-x	root/root	lib/libkeyutils.so.1.6
 drwxr-xr-x	root/root	sbin/
 -rwxr-xr-x	root/root	sbin/key.dns_resolver
 -rwxr-xr-x	root/root	sbin/request-key
@@ -29,6 +29,8 @@ lrwxrwxrwx	root/root	usr/share/man/man3/keyctl_assume_authority.3.gz -> keyctl_i
 -rw-r--r--	root/root	usr/share/man/man3/keyctl_clear.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/keyctl_describe.3.gz
 lrwxrwxrwx	root/root	usr/share/man/man3/keyctl_describe_alloc.3.gz -> keyctl_describe.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/keyctl_dh_compute.3.gz
+lrwxrwxrwx	root/root	usr/share/man/man3/keyctl_dh_compute_alloc.3.gz -> keyctl_dh_compute.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/keyctl_get_keyring_ID.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/keyctl_get_persistent.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/keyctl_get_security.3.gz
