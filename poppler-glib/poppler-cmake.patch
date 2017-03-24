@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2016-12-17 14:42:45.869315608 +0100
-+++ CMakeLists.txt	2016-12-17 18:17:13.215529642 +0100
-@@ -33,8 +33,14 @@
+--- CMakeLists.txt.orig	2017-03-24 14:01:29.290030602 +0100
++++ CMakeLists.txt	2017-03-24 14:04:03.207864095 +0100
+@@ -35,8 +35,14 @@
  option(BUILD_QT5_TESTS "Whether compile the Qt5 test programs." ON)
  option(BUILD_CPP_TESTS "Whether compile the CPP test programs." ON)
  option(ENABLE_SPLASH "Build the Splash graphics backend." ON)
@@ -15,7 +15,7 @@
  set(ENABLE_LIBOPENJPEG "auto" CACHE STRING "Use libopenjpeg for JPX streams. Possible values: auto, openjpeg1, openjpeg2. 'auto' prefers openjpeg1 over openjpeg2 if both are available. Unset to not use openjpeg.")
  set(ENABLE_CMS "auto" CACHE STRING "Use color management system. Possible values: auto, lcms1, lcms2. 'auto' prefers lcms2 over lcms1 if both are available. Unset to disable color management system.")
  option(ENABLE_LIBCURL "Build libcurl based HTTP support." OFF)
-@@ -111,43 +117,46 @@
+@@ -113,43 +119,46 @@
    set(ENABLE_LIBJPEG ${JPEG_FOUND})
  endif(JPEG_FOUND)
  macro_optional_find_package(Qt4)
@@ -98,7 +98,7 @@
  if(ENABLE_CPP)
    macro_optional_find_package(Iconv)
    set(ENABLE_CPP ${ICONV_FOUND})
-@@ -241,10 +250,10 @@
+@@ -243,10 +252,10 @@
    include_directories(${ZLIB_INCLUDE_DIR})
  endif(ENABLE_ZLIB)
  
@@ -111,7 +111,7 @@
  if(JPEG_FOUND)
    include_directories(${JPEG_INCLUDE_DIR})
    set(ENABLE_LIBJPEG ON)
-@@ -681,12 +690,12 @@
+@@ -683,12 +692,12 @@
    add_subdirectory(glib)
  endif(ENABLE_GLIB)
  add_subdirectory(test)
@@ -128,7 +128,7 @@
  if(ENABLE_CPP)
    add_subdirectory(cpp)
  endif(ENABLE_CPP)
-@@ -708,12 +717,12 @@
+@@ -710,12 +719,12 @@
  if(ENABLE_SPLASH)
    poppler_create_install_pkgconfig(poppler-splash.pc lib${LIB_SUFFIX}/pkgconfig)
  endif(ENABLE_SPLASH)
@@ -145,7 +145,7 @@
  if(ENABLE_GLIB)
    poppler_create_install_pkgconfig(poppler-glib.pc lib${LIB_SUFFIX}/pkgconfig)
  endif(ENABLE_GLIB)
-@@ -732,8 +741,8 @@
+@@ -734,8 +743,8 @@
    message("      with CMYK support")
  endif()
  show_end_message_yesno("cairo output" CAIRO_FOUND)
