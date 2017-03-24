@@ -4,7 +4,7 @@
 # Depends on:  qt5 poppler 
 
 name=poppler-qt5
-version=0.52.0
+version=0.53.0
 release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz
         poppler-cmake.patch)
@@ -13,6 +13,7 @@ build() {
     cd poppler-$version
 
     patch -p0 -i $SRC/poppler-cmake.patch
+    sed -i '/demos/d' qt5/CMakeLists.txt
 
     cmake . \
         -DCMAKE_INSTALL_PREFIX=/usr \
@@ -31,7 +32,7 @@ build() {
         -DBUILD_GTK_TESTS=OFF \
         -DBUILD_QT4_TESTS=OFF \
         -DBUILD_QT5_TESTS=OFF \
-        -DBUILD_CPP_TESTS=OFF \
+        -DBUILD_CPP_TESTS=OFF
 
     make
     make DESTDIR=$PKG install
