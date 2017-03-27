@@ -5,14 +5,14 @@
 # Optional:	ffmpeg alsa-lib cups directfb neon pulseaudio
 
 name=freerdp
-version=git-20170324-aa0e29372a2a
+version=1.0.0-9378-gaa0e293
 release=2
-source=(https://github.com/FreeRDP/FreeRDP/archive/${version##*-}.zip)
+source=(https://github.com/FreeRDP/FreeRDP/archive/$version.zip)
 
 build() {
 	mkdir build; cd build
 
-	cmake ../FreeRDP-${version##*-}* \
+	cmake ../FreeRDP-${version##*g}* \
 		-DCMAKE_BUILD_TYPE=RELEASE \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_SKIP_RPATH=ON \
