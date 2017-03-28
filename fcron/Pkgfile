@@ -18,6 +18,7 @@ build () {
                 --mandir=/usr/share/man \
                 --with-spooldir=/var/spool/fcron \
                 --with-boot-install=no \
+                --with-answer-all=no \
                 --with-username=fcron \
                 --with-groupname=fcron \
                 --with-db2man=no \
