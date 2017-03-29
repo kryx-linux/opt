@@ -5,12 +5,19 @@
 
 name=reiserfsprogs
 version=3.6.25
-release=1
+release=2
 source=(https://www.kernel.org/pub/linux/kernel/people/jeffm/$name/v$version/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/ --mandir=/usr/share/man
-    make CFLAGS="$CFLAGS -std=gnu90"
+
+    ./configure --prefix=/usr \
+                --sbindir=/sbin
+
+    make
     make DESTDIR=$PKG install
+
+    install -d $PKG/lib
+    mv $PKG/usr/lib/libreiserfscore.so.* $PKG/lib
+    ln -sf ../../lib/$(readlink $PKG/usr/lib/libreiserfscore.so) $PKG/usr/lib/libreiserfscore.so
 }
