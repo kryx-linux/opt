@@ -11,7 +11,8 @@ source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 build () {
     cd $name-$version
 
-    sed -ri '/^makedoc-all/s/manual\.(html|txt)//g' doc/Makefile.am
+    sed -re '/^makedoc-all/s/manual\.(html|txt)//g' \
+        -re '/^makedoc-all/s/stamp-doc-chunked//g' -i doc/Makefile.in
 
     ./configure --prefix=/usr \
                 --with-docdir=/usr/share/mutt \
