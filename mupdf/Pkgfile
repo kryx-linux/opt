@@ -4,14 +4,14 @@
 # Depends on:  freetype libjpeg-turbo mesa3d xorg-libxcursor xorg-libxinerama xorg-libxrandr
 
 name=mupdf
-version=1.10a
-release=2
+version=1.11
+release=1
 source=(http://mupdf.com/downloads/$name-$version-source.tar.gz)
 
 build() {
     cd $name-$version-source
 
-    rm -r thirdparty/{freetype*,jpeg*,zlib,curl}
+    rm -r thirdparty/{freetype,libjpeg,zlib,curl,harfbuzz}
 
     make XCFLAGS="-fpic" build=release
     make prefix=$PKG/usr mandir=$PKG/usr/share/man install
