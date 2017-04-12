@@ -28,26 +28,31 @@ drwxr-xr-x	root/root	usr/include/gtksourceview-3.0/gtksourceview/completion-prov
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcemark.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcemarkattributes.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceprintcompositor.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceregion.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcesearchcontext.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcesearchsettings.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcespacedrawer.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyle.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestylescheme.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyleschemechooser.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyleschemechooserbutton.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyleschemechooserwidget.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcestyleschememanager.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcetag.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourcetypes.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceundomanager.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceutils.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceversion.h
+-rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceview-enumtypes.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceview-typebuiltins.h
 -rw-r--r--	root/root	usr/include/gtksourceview-3.0/gtksourceview/gtksourceview.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GtkSource-3.0.typelib
 -rwxr-xr-x	root/root	usr/lib/libgtksourceview-3.0.la
-lrwxrwxrwx	root/root	usr/lib/libgtksourceview-3.0.so -> libgtksourceview-3.0.so.1.5.0
-lrwxrwxrwx	root/root	usr/lib/libgtksourceview-3.0.so.1 -> libgtksourceview-3.0.so.1.5.0
--rwxr-xr-x	root/root	usr/lib/libgtksourceview-3.0.so.1.5.0
+lrwxrwxrwx	root/root	usr/lib/libgtksourceview-3.0.so -> libgtksourceview-3.0.so.1.8.0
+lrwxrwxrwx	root/root	usr/lib/libgtksourceview-3.0.so.1 -> libgtksourceview-3.0.so.1.8.0
+-rwxr-xr-x	root/root	usr/lib/libgtksourceview-3.0.so.1.8.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gtksourceview-3.0.pc
 drwxr-xr-x	root/root	usr/share/
@@ -56,6 +61,7 @@ drwxr-xr-x	root/root	usr/share/gir-1.0/
 drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/
 drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/R.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/abnf.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/actionscript.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/ada.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/ansforth94.lang
@@ -87,6 +93,7 @@ drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/dot.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/dpatch.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/dtd.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/dtl.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/eiffel.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/erlang.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/fcl.lang
@@ -103,6 +110,7 @@ drwxr-xr-x	root/root	usr/share/gtksourceview-3.0/language-specs/
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/haddock.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/haskell-literate.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/haskell.lang
+-rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/haxe.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/html.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/idl-exelis.lang
 -rw-r--r--	root/root	usr/share/gtksourceview-3.0/language-specs/idl.lang

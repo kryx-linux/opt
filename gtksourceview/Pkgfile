@@ -6,9 +6,9 @@
 # Optional: glade vala
 
 name=gtksourceview
-version=3.18.1
+version=3.24.1
 release=1
-source=(http://ftp.gnome.org/pub/gnome/sources/$name/${version:0:4}/$name-$version.tar.xz)
+source=(https://ftp.gnome.org/pub/gnome/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
