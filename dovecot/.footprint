@@ -192,6 +192,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/hmac-cram-md5.h
 -rw-r--r--	root/root	usr/include/dovecot/hmac.h
 -rw-r--r--	root/root	usr/include/dovecot/home-expand.h
+-rw-r--r--	root/root	usr/include/dovecot/hook-build.h
 -rw-r--r--	root/root	usr/include/dovecot/hostpid.h
 -rw-r--r--	root/root	usr/include/dovecot/http-auth.h
 -rw-r--r--	root/root	usr/include/dovecot/http-client-private.h
@@ -580,6 +581,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/userdb.h
 -rw-r--r--	root/root	usr/include/dovecot/utc-mktime.h
 -rw-r--r--	root/root	usr/include/dovecot/utc-offset.h
+-rw-r--r--	root/root	usr/include/dovecot/var-expand-private.h
 -rw-r--r--	root/root	usr/include/dovecot/var-expand.h
 -rw-r--r--	root/root	usr/include/dovecot/wildcard-match.h
 -rw-r--r--	root/root	usr/include/dovecot/write-full.h
@@ -656,6 +658,9 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/libdovecot.so.0 -> libdovecot.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/dovecot/maildirlock
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/auth/
+-rw-r--r--	root/root	usr/lib/dovecot/modules/auth/lib20_auth_var_expand_crypt.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/auth/lib20_auth_var_expand_crypt.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/auth/lib20_auth_var_expand_crypt.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/auth/libauthdb_imap.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/auth/libauthdb_imap.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/auth/libauthdb_imap.so
@@ -741,6 +746,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_replication_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_var_expand_crypt.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_var_expand_crypt.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_var_expand_crypt.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_virtual_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_virtual_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_virtual_plugin.so
