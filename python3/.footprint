@@ -2756,9 +2756,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/
 -rwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.0.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.1.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.0.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.1.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__main__.py
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/__pycache__/
@@ -3460,9 +3460,15 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mock_socket.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mock_socket.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mock_socket.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mod_generics_cache.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mod_generics_cache.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mod_generics_cache.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mp_fork_bomb.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mp_fork_bomb.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mp_fork_bomb.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mp_preload.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mp_preload.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/mp_preload.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/multibytecodec_support.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/multibytecodec_support.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/multibytecodec_support.cpython-36.pyc
@@ -5097,7 +5103,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/memory_watchdog.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/mime.types
 -rw-r--r--	root/root	usr/lib/python3.6/test/mock_socket.py
+-rw-r--r--	root/root	usr/lib/python3.6/test/mod_generics_cache.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/mp_fork_bomb.py
+-rw-r--r--	root/root	usr/lib/python3.6/test/mp_preload.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/multibytecodec_support.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/nokia.pem
 -rw-r--r--	root/root	usr/lib/python3.6/test/nullbytecert.pem
@@ -5116,7 +5124,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/randv2_64.pck
 -rw-r--r--	root/root	usr/lib/python3.6/test/randv3.pck
 -rwxr-xr-x	root/root	usr/lib/python3.6/test/re_tests.py
--rw-r--r--	root/root	usr/lib/python3.6/test/regrtest.py
+-rwxr-xr-x	root/root	usr/lib/python3.6/test/regrtest.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/relimport.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/reperf.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/revocation.crl
@@ -6277,7 +6285,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/xmltestdata/
 -rw-r--r--	root/root	usr/lib/python3.6/textwrap.py
 -rw-r--r--	root/root	usr/lib/python3.6/this.py
 -rw-r--r--	root/root	usr/lib/python3.6/threading.py
--rw-r--r--	root/root	usr/lib/python3.6/timeit.py
+-rwxr-xr-x	root/root	usr/lib/python3.6/timeit.py
 drwxr-xr-x	root/root	usr/lib/python3.6/tkinter/
 -rw-r--r--	root/root	usr/lib/python3.6/tkinter/__init__.py
 -rw-r--r--	root/root	usr/lib/python3.6/tkinter/__main__.py
@@ -6707,8 +6715,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/venv/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/venv/__pycache__/__main__.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/venv/__pycache__/__main__.cpython-36.pyc
 drwxr-xr-x	root/root	usr/lib/python3.6/venv/scripts/
+drwxr-xr-x	root/root	usr/lib/python3.6/venv/scripts/common/
+-rw-r--r--	root/root	usr/lib/python3.6/venv/scripts/common/activate
 drwxr-xr-x	root/root	usr/lib/python3.6/venv/scripts/posix/
--rw-r--r--	root/root	usr/lib/python3.6/venv/scripts/posix/activate
 -rw-r--r--	root/root	usr/lib/python3.6/venv/scripts/posix/activate.csh
 -rw-r--r--	root/root	usr/lib/python3.6/venv/scripts/posix/activate.fish
 -rw-r--r--	root/root	usr/lib/python3.6/warnings.py
