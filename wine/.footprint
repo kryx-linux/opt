@@ -557,6 +557,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/msxml6.idl
 -rw-r--r--	root/root	usr/include/wine/windows/msxml6did.h
 -rw-r--r--	root/root	usr/include/wine/windows/msxmldid.h
+-rw-r--r--	root/root	usr/include/wine/windows/mtxdm.h
 -rw-r--r--	root/root	usr/include/wine/windows/nb30.h
 -rw-r--r--	root/root	usr/include/wine/windows/ncrypt.h
 -rw-r--r--	root/root	usr/include/wine/windows/ndrtypes.h
@@ -858,6 +859,15 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/ws2ipdef.h
 -rw-r--r--	root/root	usr/include/wine/windows/ws2spi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ws2tcpip.h
+-rw-r--r--	root/root	usr/include/wine/windows/wsdapi.h
+-rw-r--r--	root/root	usr/include/wine/windows/wsdbase.h
+-rw-r--r--	root/root	usr/include/wine/windows/wsdbase.idl
+-rw-r--r--	root/root	usr/include/wine/windows/wsddisco.h
+-rw-r--r--	root/root	usr/include/wine/windows/wsddisco.idl
+-rw-r--r--	root/root	usr/include/wine/windows/wsdtypes.h
+-rw-r--r--	root/root	usr/include/wine/windows/wsdxml.h
+-rw-r--r--	root/root	usr/include/wine/windows/wsdxml.idl
+-rw-r--r--	root/root	usr/include/wine/windows/wsdxmldom.h
 -rw-r--r--	root/root	usr/include/wine/windows/wshisotp.h
 -rw-r--r--	root/root	usr/include/wine/windows/wsipx.h
 -rw-r--r--	root/root	usr/include/wine/windows/wsnwlink.h
@@ -1730,6 +1740,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msxml3.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msxml4.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msxml6.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/mtxdm.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ncrypt.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/nddeapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ndis.sys
@@ -1941,6 +1952,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/write.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ws2_32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wscript.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/wsdapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wshom.ocx
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wsnmp32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wsock32.dll
@@ -2204,8 +2216,10 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libwintrust.def
 -rw-r--r--	root/root	usr/lib/wine/libwlanapi.def
 -rw-r--r--	root/root	usr/lib/wine/libwldap32.def
+-rw-r--r--	root/root	usr/lib/wine/libwmvcore.def
 -rw-r--r--	root/root	usr/lib/wine/libwnaspi32.def
 -rw-r--r--	root/root	usr/lib/wine/libws2_32.def
+-rw-r--r--	root/root	usr/lib/wine/libwsdapi.def
 -rw-r--r--	root/root	usr/lib/wine/libwsnmp32.def
 -rw-r--r--	root/root	usr/lib/wine/libwsock32.def
 -rw-r--r--	root/root	usr/lib/wine/libwtsapi32.def
@@ -2306,6 +2320,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/msxml3.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msxml4.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msxml6.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/mtxdm.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ncrypt.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/nddeapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ndis.sys.so
@@ -2517,6 +2532,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/write.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/ws2_32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wscript.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/wsdapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wshom.ocx.so
 -rwxr-xr-x	root/root	usr/lib/wine/wsnmp32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wsock32.dll.so
@@ -3433,6 +3449,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msxml3.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msxml4.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msxml6.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/mtxdm.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ncrypt.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/nddeapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ndis.sys
@@ -3686,6 +3703,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/write.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ws2_32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wscript.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/wsdapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wshom.ocx
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wsnmp32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wsock32.dll
@@ -3955,9 +3973,11 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libwintrust.def
 -rw-r--r--	root/root	usr/lib32/wine/libwlanapi.def
 -rw-r--r--	root/root	usr/lib32/wine/libwldap32.def
+-rw-r--r--	root/root	usr/lib32/wine/libwmvcore.def
 -rw-r--r--	root/root	usr/lib32/wine/libwnaspi32.def
 -rw-r--r--	root/root	usr/lib32/wine/libwow32.def
 -rw-r--r--	root/root	usr/lib32/wine/libws2_32.def
+-rw-r--r--	root/root	usr/lib32/wine/libwsdapi.def
 -rw-r--r--	root/root	usr/lib32/wine/libwsnmp32.def
 -rw-r--r--	root/root	usr/lib32/wine/libwsock32.def
 -rw-r--r--	root/root	usr/lib32/wine/libwtsapi32.def
@@ -4065,6 +4085,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/msxml3.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msxml4.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msxml6.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/mtxdm.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ncrypt.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/nddeapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ndis.sys.so
@@ -4318,6 +4339,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/write.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ws2_32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wscript.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/wsdapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wshom.ocx.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wsnmp32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wsock32.dll.so
