@@ -2,11 +2,11 @@
 # URL: http://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: predrag ivanovic, predivan at open dot telekom dot rs
-# Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng mtdev xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
+# Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon mtdev xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=qt5
 version=5.8.0
-release=1
+release=2
 source=(http://download.qt.io/official_releases/qt/${version::3}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
 	qt5-logo.png
 	plasma-crash-1.patch
@@ -62,7 +62,6 @@ build() {
 		-opensource \
 		-openssl-linked \
 		-optimized-qmake \
-		-qt-xkbcommon-x11 \
 		-reduce-relocations \
 		-release \
 		-shared \
