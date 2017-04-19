@@ -5,7 +5,7 @@
 # Depends on:
 
 name=flash-player-plugin
-version=25.0.0.127
+version=25.0.0.148
 release=1
 source=(https://fpdownload.adobe.com/pub/flashplayer/pdc/$version/flash-player-npapi-$version-release.x86_64.rpm)
 
