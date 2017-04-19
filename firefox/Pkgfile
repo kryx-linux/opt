@@ -1,12 +1,12 @@
 # Description: The Mozilla Firefox browser
-# URL: http://www.mozilla.com/firefox/
+# URL: https://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
 # Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, python, alsa-lib, xorg-libxt, yasm, mesa3d
  
 name=firefox
-version=52.0.2
+version=53.0
 release=1
-source=(http://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
+source=(https://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox-install-dir.patch firefox.desktop)
  
 build() {
@@ -45,6 +45,7 @@ cat <<- EOF > .mozconfig
 	ac_add_options --disable-necko-wifi
 	ac_add_options --disable-pulseaudio
 	ac_add_options --disable-gconf
+	ac_add_options --disable-rust
 EOF
 
 	make -f client.mk build
