@@ -1,14 +1,13 @@
 # Description: Fast CPU emulator and virtualizer for all supported platforms
-# URL:         http://www.qemu.org
+# URL:         http://www.qemu-project.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Lucas Hazel, lucas at die dot net dot au
 # Depends on:  libsdl glib
-# Nice to have: libseccomp libiscsi libusb usbredir spice
+# Optional:    libseccomp libiscsi libusb usbredir spice
  
 name=qemu-all
 version=2.8.0
 release=1
-source=(http://wiki.qemu.org/download/qemu-$version.tar.bz2) 
+source=(http://www.qemu-project.org//download/qemu-$version.tar.bz2)
 
 build() {
 
