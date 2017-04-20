@@ -1,15 +1,16 @@
 # Description: ELILO EFI boot loader
-# URL:         http://elilo.sf.net/
+# URL:         https://sourceforge.net/projects/elilo/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Depends on:  gnu-efi
 
 name=elilo
 version=3.16
 release=1
-source=(http://download.sourceforge.net/${name}/${name}-${version}-all.tar.gz)
+source=(https://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version-all.tar.gz)
+
 build() {
   tar xzf elilo-$version-source.tar.gz
-  cd "${SRC}/elilo-${version}-source/"
+  cd elilo-$version-source
   #sed -i 's|-fno-stack-protector|-DGNU_EFI_USE_MS_ABI -fno-stack-protector|g' Make.defaults
   #sed -i 's|DEBUGFLAGS = -Wall|DEBUGFLAGS = -Wall -Wno-error|g' Make.defaults
   sed -i 's|dpkg-architecture -qDEB_BUILD_ARCH|uname -m|g' Make.defaults
