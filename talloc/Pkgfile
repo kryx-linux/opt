@@ -5,12 +5,10 @@
 # Depends on:	python
 
 name=talloc
-version=2.1.8
+version=2.1.9
 release=1
-source=(
-https://samba.org/ftp/$name/$name-$version.tar.gz
-$name-$version-man-pages.tar.xz
-)
+source=(https://samba.org/ftp/$name/$name-$version.tar.gz
+        $name-man-pages.tar.xz)
 
 build() {
 	cd $name-$version
