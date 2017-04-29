@@ -233,9 +233,14 @@ drwxr-xr-x	root/root	usr/lib/valgrind/
 -rw-r--r--	root/root	usr/lib/valgrind/power-linux-valgrind-s1.xml
 -rw-r--r--	root/root	usr/lib/valgrind/power-linux-valgrind-s2.xml
 -rw-r--r--	root/root	usr/lib/valgrind/power-linux.xml
+-rw-r--r--	root/root	usr/lib/valgrind/power-vsx-valgrind-s1.xml
+-rw-r--r--	root/root	usr/lib/valgrind/power-vsx-valgrind-s2.xml
+-rw-r--r--	root/root	usr/lib/valgrind/power-vsx.xml
 -rw-r--r--	root/root	usr/lib/valgrind/power64-core-valgrind-s1.xml
 -rw-r--r--	root/root	usr/lib/valgrind/power64-core-valgrind-s2.xml
 -rw-r--r--	root/root	usr/lib/valgrind/power64-core.xml
+-rw-r--r--	root/root	usr/lib/valgrind/power64-core2-valgrind-s1.xml
+-rw-r--r--	root/root	usr/lib/valgrind/power64-core2-valgrind-s2.xml
 -rw-r--r--	root/root	usr/lib/valgrind/power64-linux-valgrind-s1.xml
 -rw-r--r--	root/root	usr/lib/valgrind/power64-linux-valgrind-s2.xml
 -rw-r--r--	root/root	usr/lib/valgrind/power64-linux.xml
