@@ -5,12 +5,12 @@
 # Depends on: libpcre
 
 name=zsh
-version=5.3
+version=5.3.1
 release=1
 source=(http://distfiles.serverop.de/zsh-5.3.tar.xz _prt-get zsh-lovers.1)
 
 build() {
-    cd $name-$version
+    cd $name-${version%.*}
 
     ./configure \
       --prefix=/usr \
