@@ -3,50 +3,50 @@ lrwxrwxrwx	root/root	bin/zsh -> /usr/bin/zsh
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/zsh
--rwxr-xr-x	root/root	usr/bin/zsh-5.3
+-rwxr-xr-x	root/root	usr/bin/zsh-5.3.1
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/zsh/
-drwxr-xr-x	root/root	usr/lib/zsh/5.3/
-drwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/attr.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/cap.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/clone.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/compctl.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/complete.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/complist.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/computil.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/curses.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/datetime.so
-drwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/db/
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/db/gdbm.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/deltochar.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/example.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/files.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/langinfo.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/mapfile.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/mathfunc.so
-drwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/net/
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/net/socket.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/net/tcp.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/newuser.so
-drwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/param/
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/param/private.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/parameter.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/pcre.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/regex.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/rlimits.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/sched.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/stat.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/system.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/termcap.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/terminfo.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/zftp.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/zle.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/zleparameter.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/zprof.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/zpty.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/zselect.so
--rwxr-xr-x	root/root	usr/lib/zsh/5.3/zsh/zutil.so
+drwxr-xr-x	root/root	usr/lib/zsh/5.3.1/
+drwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/attr.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/cap.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/clone.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/compctl.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/complete.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/complist.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/computil.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/curses.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/datetime.so
+drwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/db/
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/db/gdbm.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/deltochar.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/example.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/files.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/langinfo.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/mapfile.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/mathfunc.so
+drwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/net/
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/net/socket.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/net/tcp.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/newuser.so
+drwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/param/
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/param/private.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/parameter.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/pcre.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/regex.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/rlimits.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/sched.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/stat.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/system.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/termcap.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/terminfo.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/zftp.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/zle.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/zleparameter.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/zprof.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/zpty.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/zselect.so
+-rwxr-xr-x	root/root	usr/lib/zsh/5.3.1/zsh/zutil.so
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
@@ -1121,117 +1121,116 @@ drwxr-xr-x	root/root	usr/share/zsh/5.3.1/functions/Zle/
 -rw-r--r--	root/root	usr/share/zsh/5.3.1/functions/Zle/which-command
 -rw-r--r--	root/root	usr/share/zsh/5.3.1/functions/Zle/zcalc-auto-insert
 -rw-r--r--	root/root	usr/share/zsh/5.3.1/functions/Zle/zed-set-file-name
-drwxr-xr-x	root/root	usr/share/zsh/5.3/
-drwxr-xr-x	root/root	usr/share/zsh/5.3/help/
--rw-r--r--	root/root	usr/share/zsh/5.3/help/alias
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/autoload -> functions
--rw-r--r--	root/root	usr/share/zsh/5.3/help/bg
--rw-r--r--	root/root	usr/share/zsh/5.3/help/bindkey
--rw-r--r--	root/root	usr/share/zsh/5.3/help/break
--rw-r--r--	root/root	usr/share/zsh/5.3/help/builtin
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/bye -> exit
--rw-r--r--	root/root	usr/share/zsh/5.3/help/cap
--rw-r--r--	root/root	usr/share/zsh/5.3/help/cd
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/chdir -> cd
--rw-r--r--	root/root	usr/share/zsh/5.3/help/clone
--rw-r--r--	root/root	usr/share/zsh/5.3/help/colon
--rw-r--r--	root/root	usr/share/zsh/5.3/help/command
--rw-r--r--	root/root	usr/share/zsh/5.3/help/comparguments
--rw-r--r--	root/root	usr/share/zsh/5.3/help/compcall
--rw-r--r--	root/root	usr/share/zsh/5.3/help/compctl
--rw-r--r--	root/root	usr/share/zsh/5.3/help/compdescribe
--rw-r--r--	root/root	usr/share/zsh/5.3/help/compfiles
--rw-r--r--	root/root	usr/share/zsh/5.3/help/compgroups
--rw-r--r--	root/root	usr/share/zsh/5.3/help/compquote
--rw-r--r--	root/root	usr/share/zsh/5.3/help/comptags
--rw-r--r--	root/root	usr/share/zsh/5.3/help/comptry
--rw-r--r--	root/root	usr/share/zsh/5.3/help/compvalues
--rw-r--r--	root/root	usr/share/zsh/5.3/help/continue
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/declare -> typeset
--rw-r--r--	root/root	usr/share/zsh/5.3/help/dirs
--rw-r--r--	root/root	usr/share/zsh/5.3/help/disable
--rw-r--r--	root/root	usr/share/zsh/5.3/help/disown
--rw-r--r--	root/root	usr/share/zsh/5.3/help/dot
--rw-r--r--	root/root	usr/share/zsh/5.3/help/echo
--rw-r--r--	root/root	usr/share/zsh/5.3/help/echotc
--rw-r--r--	root/root	usr/share/zsh/5.3/help/echoti
--rw-r--r--	root/root	usr/share/zsh/5.3/help/emulate
--rw-r--r--	root/root	usr/share/zsh/5.3/help/enable
--rw-r--r--	root/root	usr/share/zsh/5.3/help/eval
--rw-r--r--	root/root	usr/share/zsh/5.3/help/exec
--rw-r--r--	root/root	usr/share/zsh/5.3/help/exit
--rw-r--r--	root/root	usr/share/zsh/5.3/help/export
--rw-r--r--	root/root	usr/share/zsh/5.3/help/false
--rw-r--r--	root/root	usr/share/zsh/5.3/help/fc
--rw-r--r--	root/root	usr/share/zsh/5.3/help/fg
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/float -> typeset
--rw-r--r--	root/root	usr/share/zsh/5.3/help/functions
--rw-r--r--	root/root	usr/share/zsh/5.3/help/getcap
--rw-r--r--	root/root	usr/share/zsh/5.3/help/getln
--rw-r--r--	root/root	usr/share/zsh/5.3/help/getopts
--rw-r--r--	root/root	usr/share/zsh/5.3/help/hash
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/history -> fc
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/integer -> typeset
--rw-r--r--	root/root	usr/share/zsh/5.3/help/jobs
--rw-r--r--	root/root	usr/share/zsh/5.3/help/kill
--rw-r--r--	root/root	usr/share/zsh/5.3/help/let
--rw-r--r--	root/root	usr/share/zsh/5.3/help/limit
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/local -> typeset
--rw-r--r--	root/root	usr/share/zsh/5.3/help/log
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/logout -> exit
--rw-r--r--	root/root	usr/share/zsh/5.3/help/noglob
--rw-r--r--	root/root	usr/share/zsh/5.3/help/popd
--rw-r--r--	root/root	usr/share/zsh/5.3/help/print
--rw-r--r--	root/root	usr/share/zsh/5.3/help/printf
--rw-r--r--	root/root	usr/share/zsh/5.3/help/pushd
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/pushln -> print
--rw-r--r--	root/root	usr/share/zsh/5.3/help/pwd
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/r -> fc
--rw-r--r--	root/root	usr/share/zsh/5.3/help/read
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/readonly -> typeset
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/rehash -> hash
--rw-r--r--	root/root	usr/share/zsh/5.3/help/return
--rw-r--r--	root/root	usr/share/zsh/5.3/help/sched
--rw-r--r--	root/root	usr/share/zsh/5.3/help/set
--rw-r--r--	root/root	usr/share/zsh/5.3/help/setcap
--rw-r--r--	root/root	usr/share/zsh/5.3/help/setopt
--rw-r--r--	root/root	usr/share/zsh/5.3/help/shift
--rw-r--r--	root/root	usr/share/zsh/5.3/help/source
--rw-r--r--	root/root	usr/share/zsh/5.3/help/stat
--rw-r--r--	root/root	usr/share/zsh/5.3/help/suspend
--rw-r--r--	root/root	usr/share/zsh/5.3/help/test
--rw-r--r--	root/root	usr/share/zsh/5.3/help/times
--rw-r--r--	root/root	usr/share/zsh/5.3/help/trap
--rw-r--r--	root/root	usr/share/zsh/5.3/help/true
--rw-r--r--	root/root	usr/share/zsh/5.3/help/ttyctl
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/type -> whence
--rw-r--r--	root/root	usr/share/zsh/5.3/help/typeset
--rw-r--r--	root/root	usr/share/zsh/5.3/help/ulimit
--rw-r--r--	root/root	usr/share/zsh/5.3/help/umask
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/unalias -> unhash
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/unfunction -> unhash
--rw-r--r--	root/root	usr/share/zsh/5.3/help/unhash
--rw-r--r--	root/root	usr/share/zsh/5.3/help/unlimit
--rw-r--r--	root/root	usr/share/zsh/5.3/help/unset
--rw-r--r--	root/root	usr/share/zsh/5.3/help/unsetopt
--rw-r--r--	root/root	usr/share/zsh/5.3/help/vared
--rw-r--r--	root/root	usr/share/zsh/5.3/help/wait
--rw-r--r--	root/root	usr/share/zsh/5.3/help/whence
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/where -> whence
-lrwxrwxrwx	root/root	usr/share/zsh/5.3/help/which -> whence
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zcompile
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zformat
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zftp
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zle
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zmodload
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zparseopts
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zprof
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zpty
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zregexparse
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zsocket
--rw-r--r--	root/root	usr/share/zsh/5.3/help/zstyle
--rw-r--r--	root/root	usr/share/zsh/5.3/help/ztcp
-drwxr-xr-x	root/root	usr/share/zsh/5.3/scripts/
--rw-r--r--	root/root	usr/share/zsh/5.3/scripts/newuser
+drwxr-xr-x	root/root	usr/share/zsh/5.3.1/help/
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/alias
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/autoload -> functions
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/bg
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/bindkey
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/break
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/builtin
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/bye -> exit
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/cap
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/cd
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/chdir -> cd
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/clone
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/colon
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/command
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/comparguments
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/compcall
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/compctl
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/compdescribe
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/compfiles
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/compgroups
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/compquote
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/comptags
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/comptry
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/compvalues
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/continue
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/declare -> typeset
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/dirs
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/disable
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/disown
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/dot
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/echo
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/echotc
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/echoti
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/emulate
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/enable
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/eval
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/exec
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/exit
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/export
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/false
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/fc
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/fg
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/float -> typeset
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/functions
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/getcap
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/getln
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/getopts
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/hash
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/history -> fc
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/integer -> typeset
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/jobs
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/kill
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/let
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/limit
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/local -> typeset
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/log
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/logout -> exit
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/noglob
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/popd
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/print
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/printf
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/pushd
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/pushln -> print
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/pwd
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/r -> fc
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/read
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/readonly -> typeset
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/rehash -> hash
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/return
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/sched
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/set
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/setcap
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/setopt
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/shift
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/source
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/stat
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/suspend
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/test
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/times
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/trap
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/true
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/ttyctl
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/type -> whence
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/typeset
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/ulimit
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/umask
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/unalias -> unhash
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/unfunction -> unhash
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/unhash
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/unlimit
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/unset
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/unsetopt
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/vared
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/wait
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/whence
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/where -> whence
+lrwxrwxrwx	root/root	usr/share/zsh/5.3.1/help/which -> whence
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zcompile
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zformat
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zftp
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zle
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zmodload
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zparseopts
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zprof
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zpty
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zregexparse
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zsocket
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/zstyle
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/help/ztcp
+drwxr-xr-x	root/root	usr/share/zsh/5.3.1/scripts/
+-rw-r--r--	root/root	usr/share/zsh/5.3.1/scripts/newuser
 drwxr-xr-x	root/root	usr/share/zsh/site-functions/
 -rw-r--r--	root/root	usr/share/zsh/site-functions/_prt-get
