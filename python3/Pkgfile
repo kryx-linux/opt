@@ -5,7 +5,7 @@
 
 name=python3
 version=3.6.1
-release=1
+release=2
 source=(https://www.python.org/ftp/python/$version/Python-$version.tar.xz)
 
 build() {
@@ -35,7 +35,7 @@ build() {
     make -j1 DESTDIR=$PKG altinstall
 
     ln -s python${version%.*}        $PKG/usr/bin/python3
-    ln -s python${version%.*}-config $PKG/usr/bin/python3-config
+    ln -s python${version%.*}m-config $PKG/usr/bin/python3-config
     ln -s idle${version%.*}          $PKG/usr/bin/idle3
     ln -s pydoc${version%.*}         $PKG/usr/bin/pydoc3
     ln -s python${version%.*}.1      $PKG/usr/share/man/man1/python3.1
