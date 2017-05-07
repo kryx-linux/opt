@@ -22,9 +22,9 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Json-1.0.typelib
 -rwxr-xr-x	root/root	usr/lib/libjson-glib-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libjson-glib-1.0.so -> libjson-glib-1.0.so.0.200.2
-lrwxrwxrwx	root/root	usr/lib/libjson-glib-1.0.so.0 -> libjson-glib-1.0.so.0.200.2
--rwxr-xr-x	root/root	usr/lib/libjson-glib-1.0.so.0.200.2
+lrwxrwxrwx	root/root	usr/lib/libjson-glib-1.0.so -> libjson-glib-1.0.so.0.200.8
+lrwxrwxrwx	root/root	usr/lib/libjson-glib-1.0.so.0 -> libjson-glib-1.0.so.0.200.8
+-rwxr-xr-x	root/root	usr/lib/libjson-glib-1.0.so.0.200.8
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/json-glib-1.0.pc
 drwxr-xr-x	root/root	usr/share/
