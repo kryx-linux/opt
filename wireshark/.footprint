@@ -15,13 +15,13 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/wireshark-gtk
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libwireshark.la
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.8.1.5
-lrwxrwxrwx	root/root	usr/lib/libwireshark.so.8 -> libwireshark.so.8.1.5
--rwxr-xr-x	root/root	usr/lib/libwireshark.so.8.1.5
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.8.1.6
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so.8 -> libwireshark.so.8.1.6
+-rwxr-xr-x	root/root	usr/lib/libwireshark.so.8.1.6
 -rwxr-xr-x	root/root	usr/lib/libwiretap.la
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.6.0.5
-lrwxrwxrwx	root/root	usr/lib/libwiretap.so.6 -> libwiretap.so.6.0.5
--rwxr-xr-x	root/root	usr/lib/libwiretap.so.6.0.5
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.6.0.6
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so.6 -> libwiretap.so.6.0.6
+-rwxr-xr-x	root/root	usr/lib/libwiretap.so.6.0.6
 -rwxr-xr-x	root/root	usr/lib/libwscodecs.la
 lrwxrwxrwx	root/root	usr/lib/libwscodecs.so -> libwscodecs.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libwscodecs.so.1 -> libwscodecs.so.1.0.0
@@ -35,7 +35,9 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 drwxr-xr-x	root/root	usr/lib/wireshark/
 drwxr-xr-x	root/root	usr/lib/wireshark/extcap/
 -rwxr-xr-x	root/root	usr/lib/wireshark/extcap/androiddump
+-rwxr-xr-x	root/root	usr/lib/wireshark/extcap/ciscodump
 -rwxr-xr-x	root/root	usr/lib/wireshark/extcap/randpktdump
+-rwxr-xr-x	root/root	usr/lib/wireshark/extcap/sshdump
 drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/docsis.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/docsis.so
@@ -121,6 +123,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/randpktdump.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/rawshark.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/reordercap.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/sshdump.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/text2pcap.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/tshark.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/wireshark.1.gz
