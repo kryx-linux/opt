@@ -32,11 +32,13 @@ drwxr-xr-x	root/root	usr/include/gstreamer-1.0/gst/check/
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/check/gsttestclock.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/check/internal-check.h
 drwxr-xr-x	root/root	usr/include/gstreamer-1.0/gst/controller/
+-rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/controller/controller-enumtypes.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/controller/controller.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/controller/gstargbcontrolbinding.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/controller/gstdirectcontrolbinding.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/controller/gstinterpolationcontrolsource.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/controller/gstlfocontrolsource.h
+-rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/controller/gstproxycontrolbinding.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/controller/gsttimedvaluecontrolsource.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/controller/gsttriggercontrolsource.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/glib-compat.h
@@ -63,6 +65,7 @@ drwxr-xr-x	root/root	usr/include/gstreamer-1.0/gst/controller/
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gstdevicemonitor.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gstdeviceprovider.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h
+-rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gstdynamictypefactory.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gstelement.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gstelementfactory.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gstelementmetadata.h
@@ -130,6 +133,7 @@ drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GstController-1.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GstNet-1.0.typelib
 drwxr-xr-x	root/root	usr/lib/gstreamer-1.0/
+-rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/gst-completion-helper
 -rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/gst-plugin-scanner
 -rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/gst-ptp-helper
 -rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/libgstcoreelements.la
@@ -137,25 +141,25 @@ drwxr-xr-x	root/root	usr/lib/gstreamer-1.0/
 -rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/libgstcoretracers.la
 -rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/libgstcoretracers.so
 -rwxr-xr-x	root/root	usr/lib/libgstbase-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libgstbase-1.0.so -> libgstbase-1.0.so.0.1003.0
-lrwxrwxrwx	root/root	usr/lib/libgstbase-1.0.so.0 -> libgstbase-1.0.so.0.1003.0
--rwxr-xr-x	root/root	usr/lib/libgstbase-1.0.so.0.1003.0
+lrwxrwxrwx	root/root	usr/lib/libgstbase-1.0.so -> libgstbase-1.0.so.0.1200.0
+lrwxrwxrwx	root/root	usr/lib/libgstbase-1.0.so.0 -> libgstbase-1.0.so.0.1200.0
+-rwxr-xr-x	root/root	usr/lib/libgstbase-1.0.so.0.1200.0
 -rwxr-xr-x	root/root	usr/lib/libgstcheck-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libgstcheck-1.0.so -> libgstcheck-1.0.so.0.1003.0
-lrwxrwxrwx	root/root	usr/lib/libgstcheck-1.0.so.0 -> libgstcheck-1.0.so.0.1003.0
--rwxr-xr-x	root/root	usr/lib/libgstcheck-1.0.so.0.1003.0
+lrwxrwxrwx	root/root	usr/lib/libgstcheck-1.0.so -> libgstcheck-1.0.so.0.1200.0
+lrwxrwxrwx	root/root	usr/lib/libgstcheck-1.0.so.0 -> libgstcheck-1.0.so.0.1200.0
+-rwxr-xr-x	root/root	usr/lib/libgstcheck-1.0.so.0.1200.0
 -rwxr-xr-x	root/root	usr/lib/libgstcontroller-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libgstcontroller-1.0.so -> libgstcontroller-1.0.so.0.1003.0
-lrwxrwxrwx	root/root	usr/lib/libgstcontroller-1.0.so.0 -> libgstcontroller-1.0.so.0.1003.0
--rwxr-xr-x	root/root	usr/lib/libgstcontroller-1.0.so.0.1003.0
+lrwxrwxrwx	root/root	usr/lib/libgstcontroller-1.0.so -> libgstcontroller-1.0.so.0.1200.0
+lrwxrwxrwx	root/root	usr/lib/libgstcontroller-1.0.so.0 -> libgstcontroller-1.0.so.0.1200.0
+-rwxr-xr-x	root/root	usr/lib/libgstcontroller-1.0.so.0.1200.0
 -rwxr-xr-x	root/root	usr/lib/libgstnet-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libgstnet-1.0.so -> libgstnet-1.0.so.0.1003.0
-lrwxrwxrwx	root/root	usr/lib/libgstnet-1.0.so.0 -> libgstnet-1.0.so.0.1003.0
--rwxr-xr-x	root/root	usr/lib/libgstnet-1.0.so.0.1003.0
+lrwxrwxrwx	root/root	usr/lib/libgstnet-1.0.so -> libgstnet-1.0.so.0.1200.0
+lrwxrwxrwx	root/root	usr/lib/libgstnet-1.0.so.0 -> libgstnet-1.0.so.0.1200.0
+-rwxr-xr-x	root/root	usr/lib/libgstnet-1.0.so.0.1200.0
 -rwxr-xr-x	root/root	usr/lib/libgstreamer-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libgstreamer-1.0.so -> libgstreamer-1.0.so.0.1003.0
-lrwxrwxrwx	root/root	usr/lib/libgstreamer-1.0.so.0 -> libgstreamer-1.0.so.0.1003.0
--rwxr-xr-x	root/root	usr/lib/libgstreamer-1.0.so.0.1003.0
+lrwxrwxrwx	root/root	usr/lib/libgstreamer-1.0.so -> libgstreamer-1.0.so.0.1200.0
+lrwxrwxrwx	root/root	usr/lib/libgstreamer-1.0.so.0 -> libgstreamer-1.0.so.0.1200.0
+-rwxr-xr-x	root/root	usr/lib/libgstreamer-1.0.so.0.1200.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-1.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-base-1.0.pc
@@ -171,7 +175,6 @@ drwxr-xr-x	root/root	usr/share/bash-completion/completions/
 -rw-r--r--	root/root	usr/share/bash-completion/completions/gst-launch-1.0
 drwxr-xr-x	root/root	usr/share/bash-completion/helpers/
 -rw-r--r--	root/root	usr/share/bash-completion/helpers/gst
--rwxr-xr-x	root/root	usr/share/bash-completion/helpers/gst-completion-helper-1.0
 drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/Gst-1.0.gir
 -rw-r--r--	root/root	usr/share/gir-1.0/GstBase-1.0.gir
