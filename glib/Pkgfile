@@ -4,7 +4,7 @@
 # Depends on:  libpcre libffi python
 
 name=glib
-version=2.52.1
+version=2.52.2
 release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
 	gschemas.compiled)
