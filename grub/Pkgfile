@@ -6,14 +6,17 @@
 
 name=grub
 version=0.97
-release=7
-source=(ftp://alpha.gnu.org/gnu/grub/$name-$version.tar.gz \
-	http://crux.nu/files/grub/0.97/$name-$version-patches-2.tar.bz2 \
-	ext4.patch \
-	automake.patch \
-	http://crux.nu/files/grub/common/crux02.xpm.gz \
-	http://crux.nu/files/grub/common/crux03.xpm.gz \
-	menu.lst.sample)
+release=8
+source=(
+ftp://alpha.gnu.org/gnu/grub/$name-$version.tar.gz
+http://crux.nu/files/grub/0.97/$name-$version-patches-2.tar.bz2
+automake.patch
+ext4.patch
+grub-qemu.patch
+http://crux.nu/files/grub/common/crux02.xpm.gz
+http://crux.nu/files/grub/common/crux03.xpm.gz
+menu.lst.sample
+)
 
 build () {
 	cd $name-$version
@@ -33,7 +36,7 @@ build () {
 
 	./configure --prefix=/usr \
 		--libdir=/usr/share \
-		--mandir=/usr/man \
+		--mandir=/usr/share/man \
 		--sbindir=/sbin \
 		--disable-nls \
 		--disable-auto-linux-mem-opt 
