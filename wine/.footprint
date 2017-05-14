@@ -331,6 +331,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/dplobby.h
 -rw-r--r--	root/root	usr/include/wine/windows/dplobby8.h
 -rw-r--r--	root/root	usr/include/wine/windows/dpnathlp.h
+-rw-r--r--	root/root	usr/include/wine/windows/drmexternals.h
+-rw-r--r--	root/root	usr/include/wine/windows/drmexternals.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dsconf.h
 -rw-r--r--	root/root	usr/include/wine/windows/dsgetdc.h
 -rw-r--r--	root/root	usr/include/wine/windows/dshow.h
@@ -843,6 +845,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/winuser.rh
 -rw-r--r--	root/root	usr/include/wine/windows/winver.h
 -rw-r--r--	root/root	usr/include/wine/windows/wlanapi.h
+-rw-r--r--	root/root	usr/include/wine/windows/wmdrmsdk.h
+-rw-r--r--	root/root	usr/include/wine/windows/wmdrmsdk.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wmistr.h
 -rw-r--r--	root/root	usr/include/wine/windows/wmium.h
 -rw-r--r--	root/root	usr/include/wine/windows/wmiutils.h
@@ -867,6 +871,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wsddisco.h
 -rw-r--r--	root/root	usr/include/wine/windows/wsddisco.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wsdtypes.h
+-rw-r--r--	root/root	usr/include/wine/windows/wsdutil.h
 -rw-r--r--	root/root	usr/include/wine/windows/wsdxml.h
 -rw-r--r--	root/root	usr/include/wine/windows/wsdxml.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wsdxmldom.h
@@ -1229,6 +1234,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/expand.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/explorer.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/explorerframe.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-authz-context-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-domainjoin-netjoin-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-gdi-dc-create-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-gdi-dc-l1-2-0.dll.so
@@ -1576,6 +1582,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/expand.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/explorer.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/explorerframe.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-authz-context-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-domainjoin-netjoin-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-gdi-dc-create-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-gdi-dc-l1-2-0.dll
@@ -2121,6 +2128,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libloadperf.def
 -rw-r--r--	root/root	usr/lib/wine/liblz32.def
 -rw-r--r--	root/root	usr/lib/wine/libmapi32.def
+-rw-r--r--	root/root	usr/lib/wine/libmfplat.def
 -rw-r--r--	root/root	usr/lib/wine/libmlang.def
 -rw-r--r--	root/root	usr/lib/wine/libmpr.def
 -rw-r--r--	root/root	usr/lib/wine/libmprapi.def
@@ -2917,6 +2925,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/expand.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/explorer.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/explorerframe.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-authz-context-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-domainjoin-netjoin-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-gdi-dc-create-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-gdi-dc-l1-2-0.dll.so
@@ -3273,6 +3282,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/expand.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/explorer.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/explorerframe.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-authz-context-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-domainjoin-netjoin-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-gdi-dc-create-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-gdi-dc-l1-2-0.dll
@@ -3878,6 +3888,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libloadperf.def
 -rw-r--r--	root/root	usr/lib32/wine/liblz32.def
 -rw-r--r--	root/root	usr/lib32/wine/libmapi32.def
+-rw-r--r--	root/root	usr/lib32/wine/libmfplat.def
 -rw-r--r--	root/root	usr/lib32/wine/libmlang.def
 -rw-r--r--	root/root	usr/lib32/wine/libmpr.def
 -rw-r--r--	root/root	usr/lib32/wine/libmprapi.def
