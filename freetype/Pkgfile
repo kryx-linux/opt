@@ -1,11 +1,10 @@
 # Description: A free and portable TrueType font rendering engine
 # URL: http://www.freetype.org
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: zlib libpng
 
 name=freetype
-version=2.7.1
+version=2.8
 release=1
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.bz2)
 
