@@ -87,6 +87,7 @@ drwxr-xr-x	root/root	usr/share/alsa/cards/
 -rw-r--r--	root/root	usr/share/alsa/cards/FireWave.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/GUS.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/HDA-Intel.conf
+-rw-r--r--	root/root	usr/share/alsa/cards/HdmiLpeAudio.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/ICE1712.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/ICE1724.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/ICH-MODEM.conf
@@ -118,6 +119,8 @@ drwxr-xr-x	root/root	usr/share/alsa/cards/SI7018/
 -rw-r--r--	root/root	usr/share/alsa/cards/YMF744.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/aliases.alisp
 -rw-r--r--	root/root	usr/share/alsa/cards/aliases.conf
+-rw-r--r--	root/root	usr/share/alsa/cards/pistachio-card.conf
+-rw-r--r--	root/root	usr/share/alsa/cards/vc4-hdmi.conf
 drwxr-xr-x	root/root	usr/share/alsa/pcm/
 -rw-r--r--	root/root	usr/share/alsa/pcm/center_lfe.conf
 -rw-r--r--	root/root	usr/share/alsa/pcm/default.conf
@@ -189,6 +192,11 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm/VEYRON-I2S/
 drwxr-xr-x	root/root	usr/share/alsa/ucm/broadwell-rt286/
 -rw-r--r--	root/root	usr/share/alsa/ucm/broadwell-rt286/HiFi
 -rw-r--r--	root/root	usr/share/alsa/ucm/broadwell-rt286/broadwell-rt286.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm/broxton-rt298/
+-rw-r--r--	root/root	usr/share/alsa/ucm/broxton-rt298/Hdmi1
+-rw-r--r--	root/root	usr/share/alsa/ucm/broxton-rt298/Hdmi2
+-rw-r--r--	root/root	usr/share/alsa/ucm/broxton-rt298/HiFi
+-rw-r--r--	root/root	usr/share/alsa/ucm/broxton-rt298/broxton-rt298.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm/chtrt5645/
 -rw-r--r--	root/root	usr/share/alsa/ucm/chtrt5645/HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm/chtrt5645/chtrt5645.conf
