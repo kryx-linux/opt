@@ -1,5 +1,5 @@
---- CMakeLists.txt.orig	2017-03-24 14:01:29.290030602 +0100
-+++ CMakeLists.txt	2017-03-24 14:04:03.207864095 +0100
+--- CMakeLists.txt.orig	2017-05-21 23:01:39.000000000 +0200
++++ CMakeLists.txt	2017-05-22 14:12:44.635191266 +0200
 @@ -35,8 +35,14 @@
  option(BUILD_QT5_TESTS "Whether compile the Qt5 test programs." ON)
  option(BUILD_CPP_TESTS "Whether compile the CPP test programs." ON)
@@ -12,12 +12,12 @@
 +option(ENABLE_QT5 "Compile poppler QT5 wrapper." ON)
 +option(ENABLE_NSS3 "Build with NSS3 support." OFF)
 +
- set(ENABLE_LIBOPENJPEG "auto" CACHE STRING "Use libopenjpeg for JPX streams. Possible values: auto, openjpeg1, openjpeg2. 'auto' prefers openjpeg1 over openjpeg2 if both are available. Unset to not use openjpeg.")
+ set(ENABLE_LIBOPENJPEG "auto" CACHE STRING "Use libopenjpeg for JPX streams. Possible values: auto, openjpeg1, openjpeg2, unmaintained, none. 'auto' prefers openjpeg2 over openjpeg1 if both are available. 'unmaintained' gives you the internal unmaintained decoder. Use at your own risk. 'none' compiles no JPX decoder at all. Default: auto")
  set(ENABLE_CMS "auto" CACHE STRING "Use color management system. Possible values: auto, lcms1, lcms2. 'auto' prefers lcms2 over lcms1 if both are available. Unset to disable color management system.")
- option(ENABLE_LIBCURL "Build libcurl based HTTP support." OFF)
-@@ -113,43 +119,46 @@
-   set(ENABLE_LIBJPEG ${JPEG_FOUND})
- endif(JPEG_FOUND)
+ set(ENABLE_DCTDECODER "libjpeg" CACHE STRING "Use libjpeg for DCT streams. Possible values: libjpeg, unmaintained, none. will use libjpeg if available or fail if not. 'unmaintained' gives you the internal unmaintained decoder. Use at your own risk. 'none' compiles no DCT decoder at all. Default: libjpeg")
+@@ -127,43 +133,46 @@
+   message(FATAL_ERROR "Invalid ENABLE_DCTDECODER value.")
+ endif()
  macro_optional_find_package(Qt4)
 -if(${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}.${CMAKE_PATCH_VERSION} VERSION_GREATER 2.8.7)
 -  find_package(Qt5Core)
@@ -98,7 +98,7 @@
  if(ENABLE_CPP)
    macro_optional_find_package(Iconv)
    set(ENABLE_CPP ${ICONV_FOUND})
-@@ -243,10 +252,10 @@
+@@ -277,10 +286,10 @@
    include_directories(${ZLIB_INCLUDE_DIR})
  endif(ENABLE_ZLIB)
  
@@ -110,8 +110,8 @@
 +endif(ENABLE_NSS3 AND NSS3_FOUND)
  if(JPEG_FOUND)
    include_directories(${JPEG_INCLUDE_DIR})
-   set(ENABLE_LIBJPEG ON)
-@@ -683,12 +692,12 @@
+ endif(JPEG_FOUND)
+@@ -716,12 +725,12 @@
    add_subdirectory(glib)
  endif(ENABLE_GLIB)
  add_subdirectory(test)
@@ -128,7 +128,7 @@
  if(ENABLE_CPP)
    add_subdirectory(cpp)
  endif(ENABLE_CPP)
-@@ -710,12 +719,12 @@
+@@ -743,12 +752,12 @@
  if(ENABLE_SPLASH)
    poppler_create_install_pkgconfig(poppler-splash.pc lib${LIB_SUFFIX}/pkgconfig)
  endif(ENABLE_SPLASH)
@@ -145,7 +145,7 @@
  if(ENABLE_GLIB)
    poppler_create_install_pkgconfig(poppler-glib.pc lib${LIB_SUFFIX}/pkgconfig)
  endif(ENABLE_GLIB)
-@@ -734,8 +743,8 @@
+@@ -767,8 +776,8 @@
    message("      with CMYK support")
  endif()
  show_end_message_yesno("cairo output" CAIRO_FOUND)
