@@ -4,7 +4,7 @@
 # Depends on:  gobject-introspection poppler 
 
 name=poppler-glib
-version=0.54.0
+version=0.55.0
 release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz
         poppler-cmake.patch)
@@ -26,7 +26,7 @@ build() {
         -DENABLE_QT5=OFF \
         -DENABLE_ZLIB=ON \
         -DENABLE_CMS=lcms2 \
-        -DENABLE_LIBOPENJPEG=OFF \
+        -DENABLE_LIBOPENJPEG=none \
         -DENABLE_NSS3=OFF \
         -DBUILD_GTK_TESTS=OFF \
         -DBUILD_QT4_TESTS=OFF \
