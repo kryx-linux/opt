@@ -2,11 +2,11 @@
 # URL:		https://www.samba.org
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
 # Packager:	Juergen Daubert, jue at crux dot nu
-# Depends on:	iniparser krb5 ldb libaio libcap ntdb p5-parse-yapp py-subunit subunit nss_wrapper socket_wrapper uid_wrapper
+# Depends on:	iniparser krb5 ldb libaio libcap ntdb p5-parse-yapp py-subunit subunit nss_wrapper socket_wrapper uid_wrapper cmocka
 # Optional:	cups
 
 name=samba
-version=4.2.14
+version=4.6.3
 release=4
 source=(
 https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz
@@ -20,10 +20,6 @@ winbindd.rc
 build () {
 	cd $name-$version
 
-	# fix for configuring with krb5 installed
-	# https://bugzilla.samba.org/show_bug.cgi?id=11165
-	patch -p1 -i $SRC/samba-4.2.1-krb5.patch
-
 	# we should define vendorlib in our perl port
 	sed -ri 's:(vendor)(arch|lib|prefix):site\2:' buildtools/wafsamba/samba_perl.py 
 
@@ -33,8 +29,11 @@ build () {
 		--localstatedir=/var \
 		--sysconfdir=/etc \
 		--with-privatedir=/etc/samba/private \
-		--bundled-libraries=NONE \
-		--with-system-mitkrb5
+		--bundled-libraries=heimdal
+
+# samba > 4.2 with mit krb5 is broken, heimdal needed for dc
+#		--with-system-mitkrb5 \
+#		--bundled-libraries=NONE
 
 	make
 	make DESTDIR=$PKG install
