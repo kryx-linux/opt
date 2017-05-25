@@ -10,7 +10,6 @@ version=4.6.3
 release=4
 source=(
 https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz
-samba-4.2.1-krb5.patch
 samba.rc
 nmbd.rc
 smbd.rc
