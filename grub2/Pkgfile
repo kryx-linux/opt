@@ -4,21 +4,23 @@
 # Depends on: libdevmapper freetype
 
 name=grub2
-version=2.02-beta3
+version=2.02
 release=1
-source=(http://alpha.gnu.org/gnu/grub/grub-2.02~beta3.tar.xz \
-	http://unifoundry.com/unifont-5.1.20080820.pcf.gz \
-	$name-00_header.diff $name-10_linux.diff grub.cfg.sample)
+source=(http://ftp.gnu.org/gnu/grub/grub-$version.tar.xz \
+	http://unifoundry.com/pub/unifont-9.0.06/font-builds/unifont-9.0.06.pcf.gz \
+	$name-00_header.diff $name-10_linux.diff grub.cfg.sample \
+	$name-intel-ucode.diff)
 
 build() {
 	export CFLAGS="${CFLAGS} -Wno-error"
-	cd grub-2.02~beta3
+	cd grub-$version
 
 	# fix for glibc 'gets' removal
 	sed -i -e '/gets is a/d' grub-core/gnulib/stdio.in.h
 
 	patch -i $SRC/$name-00_header.diff util/grub.d/00_header.in
 	patch -i $SRC/$name-10_linux.diff util/grub.d/10_linux.in
+	patch -i $SRC/$name-intel-ucode.diff util/grub.d/10_linux.in
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
@@ -28,8 +30,8 @@ build() {
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/{info,locale,grub/themes}
-	gzip -d $SRC/unifont-5.1.20080820.pcf.gz
+	gzip -d $SRC/unifont-9.0.06.pcf.gz
 	install -d $PKG/usr/lib/grub/fonts
 	./grub-mkfont -o $PKG/usr/lib/grub/fonts/unifont.pf2 \
-		$SRC/unifont-5.1.20080820.pcf
+		$SRC/unifont-9.0.06.pcf
 }
