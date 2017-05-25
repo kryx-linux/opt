@@ -4,15 +4,15 @@
 # Depends on: grub2
 
 name=grub2-efi
-version=2.02-beta3
+version=2.02
 release=1
-source=(http://alpha.gnu.org/gnu/grub/grub-2.02~beta3.tar.xz)
+source=(http://ftp.gnu.org/gnu/grub/grub-$version.tar.xz)
 
 build() {
     export CFLAGS="${CFLAGS} -Wno-error"
 
     # fix for glibc 'gets' removal
-    sed -i -e '/gets is a/d' grub-2.02~beta3/grub-core/gnulib/stdio.in.h
+    sed -i -e '/gets is a/d' grub-$version/grub-core/gnulib/stdio.in.h
 
     MODLIST="boot chain configfile fat ext2 linux normal ntfs part_gpt part_msdos"
 
@@ -20,7 +20,7 @@ build() {
     do
         mkdir $ARCH
         cd $ARCH
-        ../grub-2.02~beta3/configure --prefix=/usr \
+        ../grub-$version/configure --prefix=/usr \
             --with-platform=efi --target=$ARCH \
             --program-prefix=""
         make
