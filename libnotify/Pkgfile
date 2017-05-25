@@ -2,23 +2,20 @@
 # URL: https://developer.gnome.org/libnotify/
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Depends on: gtk
+# Depends on: gdk-pixbuf
 
 name=libnotify
-version=0.7.6
-release=2
+version=0.7.7
+release=1
 source=(http://ftp.gnome.org/pub/GNOME/sources/$name/${version%.*}/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-
-    export TESTS_CFLAGS=`pkg-config --cflags gtk+-2.0`
-    export TESTS_LIBS=`pkg-config --libs gtk+-2.0`
 
     ./configure --prefix=/usr
 
     make
     make DESTDIR=$PKG install
 
-    rm -rf $PKG/usr/share
+    rm -r $PKG/usr/share/gtk-doc
 }
