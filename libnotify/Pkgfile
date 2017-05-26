@@ -1,8 +1,7 @@
 # Description: Desktop notification library
 # URL: https://developer.gnome.org/libnotify/
-# Packager: Matt Housh, jaeger at morpheus dot net
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Depends on: gdk-pixbuf
+# Depends on: gtk3
 
 name=libnotify
 version=0.7.7
