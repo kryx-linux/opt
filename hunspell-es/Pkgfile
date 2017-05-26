@@ -1,44 +1,31 @@
 # Description:	Hunspell dictionary for Spanish
-# URL:		https://forja.rediris.es/projects/rla-es/
+# URL:		https://github.com/sbosio/rla-es/
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
 # Depends on:	hunspell
 
 name=hunspell-es
-version=0.7
+version=2.2
 release=1
-source=(
-http://forja.rediris.es/frs/download.php/2933/es_ANY.oxt
-http://forja.rediris.es/frs/download.php/2953/es_AR.oxt
-http://forja.rediris.es/frs/download.php/2952/es_BO.oxt 
-http://forja.rediris.es/frs/download.php/2951/es_CL.oxt 
-http://forja.rediris.es/frs/download.php/2950/es_CO.oxt
-http://forja.rediris.es/frs/download.php/2949/es_CR.oxt
-http://forja.rediris.es/frs/download.php/2948/es_CU.oxt
-http://forja.rediris.es/frs/download.php/2947/es_DO.oxt
-http://forja.rediris.es/frs/download.php/2946/es_EC.oxt
-http://forja.rediris.es/frs/download.php/2945/es_ES.oxt
-http://forja.rediris.es/frs/download.php/2944/es_GT.oxt
-http://forja.rediris.es/frs/download.php/2943/es_HN.oxt
-http://forja.rediris.es/frs/download.php/2942/es_MX.oxt
-http://forja.rediris.es/frs/download.php/2941/es_NI.oxt
-http://forja.rediris.es/frs/download.php/2940/es_PA.oxt
-http://forja.rediris.es/frs/download.php/2939/es_PE.oxt
-http://forja.rediris.es/frs/download.php/2938/es_PR.oxt
-http://forja.rediris.es/frs/download.php/2937/es_PY.oxt
-http://forja.rediris.es/frs/download.php/2936/es_SV.oxt
-http://forja.rediris.es/frs/download.php/2935/es_UY.oxt
-http://forja.rediris.es/frs/download.php/2934/es_VE.oxt 
-)
+source=(https://github.com/sbosio/rla-es/archive/v$version.zip)
 
 build() {
-	mkdir -p $PKG/usr/share/hunspell
+	cd rla-es-$version
 
+	# Generate .oxt files
+	dicts="$(for i in $(find . -type d -name l10n); do ls $i; done |grep ^es_ |sort |uniq)"
+	cd $SRC/rla-es-$version/ortograf/herramientas
+	for dict in $dicts; do
+		./make_dict.sh -c -l=$dict
+	done
+
+	# Install .aff and .dic files
+	mkdir -p $PKG/usr/share/hunspell
 	for i in *.oxt; do 
 		unzip -q -n $i '*.dic' '*.aff' -d $PKG/usr/share/hunspell
 	done
 
 	# Replace duplicate files with symbolic links
-	pushd $PKG/usr/share/hunspell
+	cd $PKG/usr/share/hunspell
 	(md5sum * | sort | uniq --repeated -w 32 --all-repeated=separate; echo) | \
 	while read sum name; do
 		if [ -n "$name" ]; then
@@ -51,6 +38,5 @@ build() {
 			unset dups
 		fi
 	done
-	popd
 
 }
