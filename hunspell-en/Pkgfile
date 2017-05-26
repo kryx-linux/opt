@@ -4,17 +4,18 @@
 # Depends on:	hunspell
 
 name=hunspell-en
-version=7.1
+version=2017.01.22
 release=1
 source=(
-http://downloads.sourceforge.net/wordlist/hunspell-en_US-$version-0.zip
-http://downloads.sourceforge.net/wordlist/hunspell-en_CA-$version-0.zip
-http://crux.ster.zone/downloads/en_GB.zip/md5/218909136738f4564b81ecd145ade6ee/en_GB.zip
+http://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_AU-$version.zip
+http://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_US-$version.zip
+http://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_CA-$version.zip
+http://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_GB-ise-$version.zip
 )
 
 build() {
 	declare -A missing
-	missing[en_GB]="en_AG en_AU en_BS en_BW en_BZ en_DK en_GH en_HK en_IE en_IN en_JM en_NA en_NG en_NZ en_SG en_TT en_ZA en_ZW"
+	missing[en_GB]="en_AG en_BS en_BW en_BZ en_DK en_GH en_HK en_IE en_IN en_JM en_NA en_NG en_NZ en_SG en_TT en_ZA en_ZW"
 	missing[en_US]="en_PH"
 
 	mkdir -p $PKG/usr/share/hunspell
