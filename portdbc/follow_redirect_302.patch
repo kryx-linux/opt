@@ -1,0 +1,13 @@
+diff -u portdbc-1.1.orig/portdbc.c portdbc-1.1.new/portdbc.c
+--- portdbc-1.1.orig/portdbc.c	2011-07-13 19:04:19.000000000 +0300
++++ portdbc-1.1.new/portdbc.c	2017-05-04 20:06:34.753471227 +0300
+@@ -44,6 +44,9 @@
+     /* send all data to this function  */
+     curl_easy_setopt(curl_handle, CURLOPT_WRITEFUNCTION, writeCallback);
+ 
++    /* 302 http -> https  */
++    curl_easy_setopt(curl_handle, CURLOPT_FOLLOWLOCATION, 1L);
++
+     /* get it! */
+     curl_easy_perform(curl_handle);
+ 
