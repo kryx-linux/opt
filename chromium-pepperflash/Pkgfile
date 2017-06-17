@@ -1,20 +1,15 @@
-# Description: PDF plugin for the chromium browser
+# Description: Adobe Flash plugin for the chromium browser
 # URL:         http://chromium.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Depends on:  chromium
 
 name=chromium-pepperflash
-version=47.0.2526.80
+version=26.0.0.131
 release=1
-source=()
+source=(https://fpdownload.adobe.com/get/flashplayer/pdc/$version/flash_player_ppapi_linux.x86_64.tar.gz)
 
 build() {
-  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  ar -x google-chrome-stable_current_amd64.deb
-  tar -xJf data.tar.xz
 
-  install -D $SRC/opt/google/chrome/PepperFlash/libpepflashplayer.so \
-          $PKG/usr/lib/PepperFlash/libpepflashplayer.so
-
+    install -Dm644 manifest.json libpepflashplayer.so -t $PKG/usr/lib/PepperFlash/
 
 }
