@@ -1,8 +1,10 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/WTb6sHK7IS0hXVWN4+scHio/zWvkG39mLdwnZRshMoJhseCzHU+cRVyximAR1WEqqL0mM1xMnShhPXrj2DG7g8=
-SHA256 (Pkgfile) = 54d113f2bf8e16f75f0bcc57702b6d3bb8b08f10d481c6cefc90b88974dec73f
-SHA256 (.footprint) = a6f23dd938646bcab0cde20bab53a8ee34ae3f4e7224c3cb438b714a61d8d990
-SHA256 (chromium-56.0.2924.28.tar.xz) = 11041cbcaed253d9ce71ace30d24dbd7785c4b3fe952a6d5e943ca592048b802
+RWSE3ohX2g5d/Sd/u8JKRTy2kh/SZe9qwNZZZLelRdTKezwqc5Fr9jx8sDuuKQUdgWMr30fOsDSHf3qnN1xY+WqumBj5dJjwfg8=
+SHA256 (Pkgfile) = 319d1323b951c220d006280272b9e8a0625e87195db91ab8a9c5cb338502aecd
+SHA256 (.footprint) = ecc99206edaf6df789ab643b4e401d05dd4c35a733789bb6a7b21ff6c40664b9
+SHA256 (chromium-59.0.3071.104.tar.xz) = a949fa166cdcdbd8419fbdb4583804613d9845130f0c851e4c647d79a4c300d0
 SHA256 (last-commit-position.patch) = d3dc397956a26ec045e76c25c57a1fac5fc0acff94306b2a670daee7ba15709e
 SHA256 (chromium.sh) = 7b182d0ae1e9ef841f8cd0b403a304babd548bf60b5e3808b2144bebdbb7c154
 SHA256 (chromium.desktop) = caf015652ac7ce9403a5cb6c7bec3dc597222b20c5842059ee15674e2c9209cc
+SHA256 (0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch) = 9c081c84a4f85dbef82a9edf34cf0b1e8377c563874fd9c1b4efddf1476748f9
+SHA256 (0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch) = 42eb6ada30d5d507f2bda2d2caece37e397e7086bc0d430db776fad143562fb6

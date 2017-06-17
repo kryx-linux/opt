@@ -2,13 +2,15 @@
 # URL: http://chromium.org/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Tadeusz Sosnierz, tadzikes gmail com
-# Depends on: dbus-glib gperf gtk gtk3 libevent libexif libgcrypt ninja nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt yasm
+# Depends on: dbus-glib gperf gtk gtk3 libevent libexif libgcrypt ninja nodejs nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt yasm
 
 name=chromium
-version=56.0.2924.28
+version=59.0.3071.104
 release=1
 source=(http://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz \
-        last-commit-position.patch $name.sh $name.desktop)
+        last-commit-position.patch $name.sh $name.desktop
+	0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch
+	0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch)
 
 build() {
   cd $name-$version
@@ -18,6 +20,17 @@ build() {
 
   # we don't use git sources
   patch -p1 -i $SRC/last-commit-position.patch
+
+  # https://bugs.chromium.org/p/chromium/issues/detail?id=707604
+  patch -p1 -i $SRC/0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch
+  patch -p1 -i $SRC/0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch
+
+  mkdir -p third_party/node/linux/node-linux-x64/bin
+  ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
+
+  # Fix a build issue with GCC-6
+  sed 's/^config("compiler") {/&\ncflags_cc = [ "-fno-delete-null-pointer-checks" ]/' \
+    -i build/config/linux/BUILD.gn
 
   _gn_args=(
     'blink_gc_plugin=false'
@@ -48,7 +61,11 @@ build() {
   python2 tools/gn/bootstrap/bootstrap.py --gn-gen-args="${_gn_args[*]}"
   out/Release/gn gen out/Release --args="${_gn_args[*]}" --script-executable=/usr/bin/python2
 
-  ninja -C out/Release chrome chrome_sandbox
+  # Ninja, by default, sets the number of jobs to the number of availalble threads
+  local JOBS=$(awk 'BEGIN{RS="-j|--jobs="} NR==2 {print $1}' <<< $MAKEFLAGS)
+  test -n "$JOBS" && export JOBS="-j $JOBS"
+
+  ninja $JOBS -C out/Release chrome chrome_sandbox
 
   install -m 0755 -D out/Release/chrome $PKG/usr/lib/$name/$name
   install -m 4755 -o root -g root -D out/Release/chrome_sandbox $PKG/usr/lib/$name/chrome-sandbox
