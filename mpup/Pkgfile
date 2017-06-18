@@ -7,7 +7,8 @@
 name=mpup
 version=2.0
 release=2
-source=(http://sepen.mooo.com/releases/$name-$version.tar.xz)
+#source=(http://sepen.mooo.com/releases/$name-$version.tar.xz)
+source=(http://crux.ster.zone/downloads/$name/$name-$version.tar.xz)
 
 build() {
 
