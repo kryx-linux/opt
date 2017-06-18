@@ -4,7 +4,7 @@
 # Packager: Matt Housh, jaeger at crux dot nu
 
 name=flash-player-plugin
-version=26.0.0.126
+version=26.0.0.131
 release=1
 source=(https://fpdownload.adobe.com/pub/flashplayer/pdc/$version/flash-player-npapi-$version-release.x86_64.rpm)
 
