@@ -4,10 +4,10 @@
 # Depends on:  util-linux, expat, db, gdbm
 
 name=apr
-version=1.5.2
+version=1.6.2
 release=1
 source=(http://www.apache.org/dist/$name/$name-$version.tar.bz2 \
-        http://www.apache.org/dist/$name/$name-util-1.5.4.tar.bz2)
+        http://www.apache.org/dist/$name/$name-util-1.6.0.tar.bz2)
 
 build(){
     cd $name-$version
@@ -16,7 +16,7 @@ build(){
     make 
     make -j1 DESTDIR=$PKG install
 
-    cd $SRC/$name-util-1.5.4
+    cd $SRC/$name-util-1.6.0
     ./configure --prefix=/usr \
                 --with-apr=$SRC/$name-$version \
                 --with-expat=/usr \
