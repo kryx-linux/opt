@@ -1,18 +1,18 @@
 # Description: Filesystem utilities for ReiserFS
 # URL:         http://en.wikipedia.org/wiki/ReiserFS
 # Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  util-linux
+# Depends on:  util-linux e2fsprogs
 
 name=reiserfsprogs
-version=3.6.25
-release=2
+version=3.6.26
+release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/jeffm/$name/v$version/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
 
-    ./configure --prefix=/usr \
-                --sbindir=/sbin
+    autoreconf -i
+    ./configure --prefix=/usr --sbindir=/sbin
 
     make
     make DESTDIR=$PKG install
