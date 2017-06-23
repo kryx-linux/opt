@@ -4,7 +4,7 @@
 # Depends on:  ncurses
 
 name=clex
-version=4.6.patch6
+version=4.6.patch7
 release=1
 source=(http://www.clex.sk/download/$name-$version.tar.gz)
 
