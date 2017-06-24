@@ -576,6 +576,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/netlistmgr.idl
 -rw-r--r--	root/root	usr/include/wine/windows/nldef.h
 -rw-r--r--	root/root	usr/include/wine/windows/npapi.h
+-rw-r--r--	root/root	usr/include/wine/windows/nserror.h
 -rw-r--r--	root/root	usr/include/wine/windows/nspapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntddcdrm.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntddndis.h
@@ -856,6 +857,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wmp.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wmsbuffer.h
 -rw-r--r--	root/root	usr/include/wine/windows/wmsbuffer.idl
+-rw-r--r--	root/root	usr/include/wine/windows/wmsdk.h
 -rw-r--r--	root/root	usr/include/wine/windows/wmsdkidl.h
 -rw-r--r--	root/root	usr/include/wine/windows/wmsdkidl.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wnaspi32.h
@@ -927,6 +929,8 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-com-private-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-console-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-console-l2-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-crt-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-crt-l2-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-datetime-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-datetime-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-debug-l1-1-0.dll.so
@@ -1070,6 +1074,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-base-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-base-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-base-private-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-credentials-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-grouppolicy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsalookup-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsalookup-l1-1-1.dll.so
@@ -1277,6 +1282,8 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-com-private-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-console-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-console-l2-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-crt-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-crt-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-datetime-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-datetime-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-debug-l1-1-0.dll
@@ -1420,6 +1427,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-base-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-base-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-base-private-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-credentials-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-grouppolicy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-1.dll
@@ -2616,6 +2624,8 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-com-private-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-console-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-console-l2-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-crt-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-crt-l2-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-datetime-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-datetime-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-debug-l1-1-0.dll.so
@@ -2759,6 +2769,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-base-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-base-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-base-private-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-credentials-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-grouppolicy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsalookup-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsalookup-l1-1-1.dll.so
@@ -2975,6 +2986,8 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-com-private-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-console-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-console-l2-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-crt-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-crt-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-datetime-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-datetime-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-debug-l1-1-0.dll
@@ -3118,6 +3131,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-base-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-base-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-base-private-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-credentials-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-grouppolicy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-1.dll
