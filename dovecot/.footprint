@@ -384,6 +384,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-index-storage.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-index-sync.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-index.h
+-rw-r--r--	root/root	usr/include/dovecot/mailbox-list-iter-private.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-iter.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-maildir.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-notify-tree.h
@@ -476,6 +477,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ostream-null.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-private.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-rawlog.h
+-rw-r--r--	root/root	usr/include/dovecot/ostream-unix.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-zlib.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream.h
 -rw-r--r--	root/root	usr/include/dovecot/passdb-blocking.h
@@ -519,6 +521,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/push-notification-txn-mbox.h
 -rw-r--r--	root/root	usr/include/dovecot/push-notification-txn-msg.h
 -rw-r--r--	root/root	usr/include/dovecot/qp-decoder.h
+-rw-r--r--	root/root	usr/include/dovecot/qp-encoder.h
 -rw-r--r--	root/root	usr/include/dovecot/quota-fs.h
 -rw-r--r--	root/root	usr/include/dovecot/quota-plugin.h
 -rw-r--r--	root/root	usr/include/dovecot/quota-private.h
