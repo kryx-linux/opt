@@ -14,7 +14,7 @@ Index: LICENSE
 +
  This code is released under the libpng license.
  
- libpng versions 1.0.7, July 1, 2000 through 1.6.29, March 16, 2017 are
+ libpng versions 1.0.7, July 1, 2000 through 1.6.30, June 28, 2017 are
 Index: pngread.c
 ===================================================================
 --- pngread.c
@@ -299,8 +299,8 @@ Index: png.c
  #else
  #  ifdef __STDC__
     return PNG_STRING_NEWLINE \
--      "libpng version 1.6.29 - March 16, 2017" PNG_STRING_NEWLINE \
-+      "libpng version 1.6.29+apng - March 16, 2017" PNG_STRING_NEWLINE \
+-      "libpng version 1.6.30 - June 28, 2017" PNG_STRING_NEWLINE \
++      "libpng version 1.6.30+apng - June 28, 2017" PNG_STRING_NEWLINE \
        "Copyright (c) 1998-2002,2004,2006-2017 Glenn Randers-Pehrson" \
        PNG_STRING_NEWLINE \
        "Copyright (c) 1996-1997 Andreas Dilger" PNG_STRING_NEWLINE \
@@ -310,8 +310,8 @@ Index: png.c
 +      "Portions Copyright (c) 2006-2007 Andrew Smith" PNG_STRING_NEWLINE \
 +      "Portions Copyright (c) 2008-2017 Max Stepin" PNG_STRING_NEWLINE ;
  #  else
--   return "libpng version 1.6.29 - March 16, 2017\
-+   return "libpng version 1.6.29+apng - March 16, 2017\
+-   return "libpng version 1.6.30 - June 28, 2017\
++   return "libpng version 1.6.30+apng - June 28, 2017\
        Copyright (c) 1998-2002,2004,2006-2017 Glenn Randers-Pehrson\
        Copyright (c) 1996-1997 Andreas Dilger\
 -      Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.";
@@ -337,16 +337,16 @@ Index: png.h
 + *
   * This code is released under the libpng license.
   *
-  * libpng versions 1.0.7, July 1, 2000 through 1.6.29, March 16, 2017 are
+  * libpng versions 1.0.7, July 1, 2000 through 1.6.30, June 28, 2017 are
 @@ -309,8 +315,9 @@
   */
  
  /* Version information for png.h - this should match the version in png.c */
--#define PNG_LIBPNG_VER_STRING "1.6.29"
--#define PNG_HEADER_VERSION_STRING " libpng version 1.6.29 - March 16, 2017\n"
-+#define PNG_LIBPNG_VER_STRING "1.6.29+apng"
+-#define PNG_LIBPNG_VER_STRING "1.6.30"
+-#define PNG_HEADER_VERSION_STRING " libpng version 1.6.30 - June 28, 2017\n"
++#define PNG_LIBPNG_VER_STRING "1.6.30+apng"
 +#define PNG_HEADER_VERSION_STRING \
-+     " libpng version 1.6.29+apng - March 16, 2017\n"
++     " libpng version 1.6.30+apng - June 28, 2017\n"
  
  #define PNG_LIBPNG_VER_SONUM   16
  #define PNG_LIBPNG_VER_DLLNUM  16
@@ -493,7 +493,7 @@ Index: pngpriv.h
 ===================================================================
 --- pngpriv.h
 +++ pngpriv.h
-@@ -616,6 +616,10 @@
+@@ -625,6 +625,10 @@
  #define PNG_HAVE_CHUNK_AFTER_IDAT 0x2000U /* Have another chunk after IDAT */
                     /*             0x4000U (unused) */
  #define PNG_IS_READ_STRUCT        0x8000U /* Else is a write struct */
@@ -504,7 +504,7 @@ Index: pngpriv.h
  
  /* Flags for the transformations the PNG library does on the image data */
  #define PNG_BGR                 0x0001U
-@@ -851,6 +855,16 @@
+@@ -860,6 +864,16 @@
  #define png_tRNS PNG_U32(116,  82,  78,  83)
  #define png_zTXt PNG_U32(122,  84,  88, 116)
  
@@ -521,7 +521,7 @@ Index: pngpriv.h
  /* The following will work on (signed char*) strings, whereas the get_uint_32
   * macro will fail on top-bit-set values because of the sign extension.
   */
-@@ -1589,6 +1603,49 @@
+@@ -1598,6 +1612,49 @@
  
  #endif /* PROGRESSIVE_READ */
  
@@ -946,7 +946,7 @@ Index: pngset.c
  }
  
  #ifdef PNG_oFFs_SUPPORTED
-@@ -1110,6 +1115,146 @@
+@@ -1111,6 +1116,146 @@
  }
  #endif /* sPLT */
  
@@ -1109,7 +1109,7 @@ Index: pngrutil.c
     /* Set internal variables */
     png_ptr->width = width;
     png_ptr->height = height;
-@@ -2761,6 +2766,180 @@
+@@ -2764,6 +2769,180 @@
  }
  #endif
  
@@ -1290,7 +1290,7 @@ Index: pngrutil.c
  #ifdef PNG_READ_UNKNOWN_CHUNKS_SUPPORTED
  /* Utility function for png_handle_unknown; set up png_ptr::unknown_chunk */
  static int
-@@ -4023,6 +4202,38 @@
+@@ -4032,6 +4211,38 @@
           uInt avail_in;
           png_bytep buffer;
  
@@ -1329,7 +1329,7 @@ Index: pngrutil.c
           while (png_ptr->idat_size == 0)
           {
              png_crc_finish(png_ptr, 0);
-@@ -4034,6 +4245,7 @@
+@@ -4043,6 +4254,7 @@
              if (png_ptr->chunk_name != png_IDAT)
                 png_error(png_ptr, "Not enough image data");
           }
@@ -1337,7 +1337,7 @@ Index: pngrutil.c
  
           avail_in = png_ptr->IDAT_read_size;
  
-@@ -4097,6 +4309,9 @@
+@@ -4106,6 +4318,9 @@
  
           png_ptr->mode |= PNG_AFTER_IDAT;
           png_ptr->flags |= PNG_FLAG_ZSTREAM_ENDED;
@@ -1347,7 +1347,7 @@ Index: pngrutil.c
  
           if (png_ptr->zstream.avail_in > 0 || png_ptr->idat_size > 0)
              png_chunk_benign_error(png_ptr, "Extra compressed data");
-@@ -4535,4 +4750,80 @@
+@@ -4544,4 +4759,80 @@
  
     png_ptr->flags |= PNG_FLAG_ROW_INIT;
  }
@@ -1444,39 +1444,43 @@ Index: pngwutil.c
     if ((png_ptr->do_filter) == PNG_NO_FILTERS)
     {
        if (png_ptr->color_type == PNG_COLOR_TYPE_PALETTE ||
-@@ -1003,7 +1008,15 @@
-                optimize_cmf(data, png_image_size(png_ptr));
+@@ -1004,7 +1009,17 @@
  #endif
  
+          if (size > 0)
 +#ifdef PNG_WRITE_APNG_SUPPORTED
-+         if (png_ptr->num_frames_written == 0)
++         {
++            if (png_ptr->num_frames_written == 0)
 +#endif
-          png_write_complete_chunk(png_ptr, png_IDAT, data, size);
+             png_write_complete_chunk(png_ptr, png_IDAT, data, size);
 +#ifdef PNG_WRITE_APNG_SUPPORTED
-+         else
-+            png_write_fdAT(png_ptr, data, size);
++            else
++               png_write_fdAT(png_ptr, data, size);
++         }
 +#endif /* WRITE_APNG */
 +
           png_ptr->mode |= PNG_HAVE_IDAT;
  
           png_ptr->zstream.next_out = data;
-@@ -1049,7 +1062,15 @@
-             optimize_cmf(data, png_image_size(png_ptr));
+@@ -1051,7 +1066,17 @@
  #endif
  
+          if (size > 0)
 +#ifdef PNG_WRITE_APNG_SUPPORTED
-+         if (png_ptr->num_frames_written == 0)
++         {
++            if (png_ptr->num_frames_written == 0)
 +#endif
-          png_write_complete_chunk(png_ptr, png_IDAT, data, size);
+             png_write_complete_chunk(png_ptr, png_IDAT, data, size);
 +#ifdef PNG_WRITE_APNG_SUPPORTED
-+         else
-+            png_write_fdAT(png_ptr, data, size);
++            else
++               png_write_fdAT(png_ptr, data, size);
++         }
 +#endif /* WRITE_APNG */
 +
           png_ptr->zstream.avail_out = 0;
           png_ptr->zstream.next_out = NULL;
           png_ptr->mode |= PNG_HAVE_IDAT | PNG_AFTER_IDAT;
-@@ -1863,6 +1884,82 @@
+@@ -1865,6 +1890,82 @@
  }
  #endif
  
@@ -1559,7 +1563,7 @@ Index: pngwutil.c
  /* Initializes the row writing capability of libpng */
  void /* PRIVATE */
  png_write_start_row(png_structrp png_ptr)
-@@ -2757,4 +2854,39 @@
+@@ -2759,4 +2860,39 @@
     }
  #endif /* WRITE_FLUSH */
  }
