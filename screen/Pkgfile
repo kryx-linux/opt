@@ -4,18 +4,18 @@
 # Depends on:  ncurses
 
 name=screen
-version=4.5.1
+version=4.6.0
 release=1
-source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
+source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
 
     ./configure --prefix=/usr --enable-colors256
-    
+
     make
     make DESTDIR=$PKG install
-    
+
     rm -r $PKG/usr/share/info
     chmod -s $PKG/usr/bin/$name-$version
 }
