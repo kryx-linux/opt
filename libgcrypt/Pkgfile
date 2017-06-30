@@ -1,11 +1,10 @@
 # Description: A general purpose cryptographic library based on GnuPG
 # URL:         http://www.gnupg.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Matt Housh, jaeger at morpheus dot net
 # Depends on:  libgpg-error
 
 name=libgcrypt
-version=1.7.7
+version=1.7.8
 release=1
 source=(ftp://ftp.gnupg.org/gcrypt/libgcrypt/$name-$version.tar.bz2)
 
