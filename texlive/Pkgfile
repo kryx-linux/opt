@@ -1,7 +1,6 @@
 # Description: TeX distribution for UNIX compatible systems.
 # URL:         http://www.tug.org/tetex/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Danny Rawlins, crux at romster dot me
 # Depends on:  clisp icu libgd poppler t1lib util-linux xorg-libxi
 
 name=texlive
@@ -34,7 +33,6 @@ build() {
 
   ../configure \
     --prefix=/usr \
-    --mandir=/usr/man \
     --with-banner-add=" $(crux)" \
     --disable-native-texlive-build \
     --enable-largefile \
@@ -62,7 +60,7 @@ build() {
     --with-system-mpfr \
     --with-system-icu
 
-  make
+  make -j4
   make DESTDIR=$PKG install
 
   cd ..
@@ -80,8 +78,6 @@ build() {
   sed -i 's|TEXMFROOT = .*|TEXMFROOT = $SELFAUTODIR/share|g'  texmf-dist/web2c/texmf.cnf
   sed -i 's|TEXMFLOCAL = .*|TEXMFLOCAL = $TEXMFROOT/texmf-local|g'  texmf-dist/web2c/texmf.cnf
 
-  install -d $PKG/usr/share
-
   mv $PKG/usr/share/texmf-dist $PKG/usr/share/texmf-dist.tmp
   mv texmf-dist $PKG/usr/share
 
@@ -91,9 +87,7 @@ build() {
 
   cd $SRC/texi2html-*
 
-  ./configure \
-    --prefix=/usr \
-    --mandir=/usr/man
+  ./configure --prefix=/usr
 
   make
   make install DESTDIR=$PKG
