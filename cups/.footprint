@@ -117,15 +117,11 @@ drwxr-xr-x	root/root	usr/share/cups/doc/
 drwxr-xr-x	root/root	usr/share/cups/doc/help/
 -rw-r--r--	root/root	usr/share/cups/doc/help/accounting.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/api-admin.html
--rw-r--r--	root/root	usr/share/cups/doc/help/api-array.html
--rw-r--r--	root/root	usr/share/cups/doc/help/api-cups.html
--rw-r--r--	root/root	usr/share/cups/doc/help/api-filedir.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/api-filter.html
--rw-r--r--	root/root	usr/share/cups/doc/help/api-httpipp.html
--rw-r--r--	root/root	usr/share/cups/doc/help/api-overview.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/api-ppd.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/api-raster.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/cgi.html
+-rw-r--r--	root/root	usr/share/cups/doc/help/cupspm.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/encryption.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/glossary.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/kerberos.html
