@@ -4,14 +4,13 @@
 # Depends on:  libtool, alsa-lib
 
 name=mpg123
-version=1.25.0
+version=1.25.1
 release=1
 source=(http://www.mpg123.de/download/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
     ./configure --prefix=/usr \
-                --with-module-suffix=.so \
                 --with-audio=alsa,oss,dummy \
                 --with-default-audio=alsa
     make
