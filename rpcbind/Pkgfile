@@ -5,12 +5,16 @@
 
 name=rpcbind
 version=0.2.4
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2 \
-        rpcbind)
+        rpcbind-CVE-2017-8779.patch rpcbind)
 
 build() {
     cd $name-$version
+
+    # security fix, see 
+    #http://openwall.com/lists/oss-security/2017/05/03/12
+    patch -p1 -i $SRC/rpcbind-CVE-2017-8779.patch
 
     ./configure --prefix=/usr \
                 --bindir=/sbin \
