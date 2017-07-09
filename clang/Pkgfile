@@ -1,13 +1,12 @@
 # Description: LLVM + clang compiler
 # URL:         http://llvm.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Tilman Sauerbeck, tilman at crux dot nu
-# Depends on:  python llvm cmake
+# Depends on:  llvm
 
 name=clang
-version=4.0.0
+version=4.0.1
 release=1
-source=(http://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
+source=(https://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
   llvm-config.h)
 
 build() {
@@ -20,13 +19,14 @@ build() {
   cmake -DLLVM_ENABLE_CXX1Y=1 \
     -DLLVM_INCLUDE_EXAMPLES=0 \
     -DLLVM_INCLUDE_TESTS=0 \
+    -DLLVM_ENABLE_FFI=1 \
     -DLLVM_TARGETS_TO_BUILD='X86;AMDGPU;BPF' \
     -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr ..
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -Wno-dev ..
 
   MAKEFLAGS="$MAKEFLAGS" make
   make DESTDIR=$PKG install
-
 
   # multilib stub
   mv $PKG/usr/include/llvm/Config/llvm-config{,-64}.h
@@ -39,6 +39,5 @@ build() {
   rm $PKG/usr/lib/{LLVMHello.so,BugpointPasses.so,libLTO.*,libLLVM*}
 
   mv $PKG/usr/libexec/{c++-analyzer,ccc-analyzer} $PKG/usr/lib/clang
-  rm -r $PKG/usr/libexec
-
+  rmdir $PKG/usr/libexec
 }
