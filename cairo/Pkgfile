@@ -7,10 +7,10 @@ name=cairo
 version=1.15.6
 release=2
 source=(https://cairographics.org/snapshots/cairo-$version.tar.xz
-    cairo-xlib-endianness.patch
-    cairo-get_bitmap_surface-bsc1036789-CVE-2017-7475.diff
-    cairo-fix-off-by-one-check.patch
-    0001-image-prevent-invalid-ptr-access-for-4GB-images.patch)
+	cairo-xlib-endianness.patch
+	cairo-get_bitmap_surface-bsc1036789-CVE-2017-7475.diff
+	cairo-fix-off-by-one-check.patch
+	0001-image-prevent-invalid-ptr-access-for-4GB-images.patch)
 
 build() {
         cd $name-$version
