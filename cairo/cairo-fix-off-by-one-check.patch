@@ -1,0 +1,23 @@
+From 57b40507dda3f58dfc8635548d606b86dc7bcf51 Mon Sep 17 00:00:00 2001
+From: Adrian Johnson <ajohnson@redneon.com>
+Date: Thu, 15 Jun 2017 20:53:29 +0930
+Subject: Fix off by one check in cairo-image-info.c
+
+https://bugs.freedesktop.org/show_bug.cgi?id=101427
+
+diff --git a/src/cairo-image-info.c b/src/cairo-image-info.c
+index 2ecce95..3b4cf6e 100644
+--- a/src/cairo-image-info.c
++++ b/src/cairo-image-info.c
+@@ -154,7 +154,7 @@ _cairo_image_info_get_jpeg_info (cairo_image_info_t	*info,
+ 		break;
+ 	    }
+ 
+-	    if (p + 2 > data + length)
++	    if (p + 3 > data + length)
+ 		return CAIRO_INT_STATUS_UNSUPPORTED;
+ 
+ 	    p = _jpeg_skip_segment (p);
+-- 
+cgit v0.10.2
+

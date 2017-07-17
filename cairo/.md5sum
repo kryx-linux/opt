@@ -1,1 +1,5 @@
+a3d7abd8e20b780f76300a76a4a4d963  0001-image-prevent-invalid-ptr-access-for-4GB-images.patch
 3f7fad1ce2f2564f1726cda7ae7fad18  cairo-1.15.6.tar.xz
+ef74467172b3a8703c5d7da943f5bbfb  cairo-fix-off-by-one-check.patch
+bff33916d8b44e9c3f0f3e6644e61bfc  cairo-get_bitmap_surface-bsc1036789-CVE-2017-7475.diff
+d602f595c5800bf470c33cd1af7541d1  cairo-xlib-endianness.patch
