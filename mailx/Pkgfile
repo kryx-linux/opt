@@ -1,24 +1,24 @@
 # Description: Replacement for Berkeley Mail and System V mailx command
-# URL:         http://sourceforge.net/projects/s-nail/
+# URL:         http://www.sdaoden.eu/code.html
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  openssl readline
+# Depends on:  openssl ncurses
 
 name=mailx
-version=14.8.16
+version=14.9.0
 release=1
 source=(https://www.sdaoden.eu/downloads/s-nail-$version.tar.xz)
 
 build() {
     cd s-nail-$version
 
-    make install \
-         NAIL=mailx \
-         SID= \
-         PREFIX=/usr \
-         LIBEXECDIR=/usr/lib/mailx \
-         DESTDIR=$PKG \
-         WANT_AUTOCC=no \
-         WANT_READLINE=yes
+    make config \
+         VAL_SID= \
+         VAL_MAILX=mailx \
+         VAL_PREFIX=/usr \
+         VAL_LIBEXECDIR=/usr/lib/mailx \
+         OPT_AUTOCC=no
+
+    make DESTDIR=$PKG install
 
     chmod -R u+w $PKG
 
