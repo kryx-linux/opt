@@ -4,11 +4,12 @@
 # Depends on:  bash-completion git
 
 name=git-bashcompletion
-version=2.12.2
+version=2.13.3
 release=1
-source=(http://repo.or.cz/git.git/blob_plain/refs/tags/v${version}:/contrib/completion/git-completion.bash)
+source=()
 
 build() {
+  wget http://repo.or.cz/git.git/blob_plain/refs/tags/v${version}:/contrib/completion/git-completion.bash
   install -D -m 644 git-completion.bash \
   $PKG/usr/share/bash-completion/completions/git
 }
