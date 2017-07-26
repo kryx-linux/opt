@@ -1,7 +1,6 @@
 # Description: Postfix Mail Transport Agent (MTA)
 # URL: http://www.postfix.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager: Victor, victord at users dot berlios dot de
 # Depends on: cyrus-sasl
 
 name=postfix
