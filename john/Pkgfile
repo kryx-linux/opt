@@ -6,7 +6,7 @@
 name=john
 version=1.8.0-jumbo-1
 release=2
-source=(https://www.openwall.com/$name/j/$name-$version.tar.xz
+source=(http://www.openwall.com/$name/j/$name-$version.tar.xz
 	gcc5.patch)
 
 build() {
