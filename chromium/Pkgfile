@@ -5,12 +5,14 @@
 # Depends on: dbus-glib gperf gtk gtk3 libevent libexif libgcrypt ninja nodejs nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt yasm
 
 name=chromium
-version=59.0.3071.109
+version=60.0.3112.78
 release=1
-source=(http://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz \
+source=(https://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz
         last-commit-position.patch $name.sh $name.desktop
-	0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch
-	0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch)
+	0001-Clip-FreeType-glyph-bitmap-to-mask.patch
+	chromium-blink-gcc7.patch
+	chromium-v8-gcc7.patch
+	chromium-gn-bootstrap-r8.patch)
 
 build() {
   cd $name-$version
@@ -21,23 +23,27 @@ build() {
   # we don't use git sources
   patch -p1 -i $SRC/last-commit-position.patch
 
-  # https://bugs.chromium.org/p/chromium/issues/detail?id=707604
-  patch -p1 -i $SRC/0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch
-  patch -p1 -i $SRC/0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch
+  # https://bugs.chromium.org/p/skia/issues/detail?id=6663
+  patch -p1 -d third_party/skia -i $SRC/0001-Clip-FreeType-glyph-bitmap-to-mask.patch
+
+  # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=853347
+  patch -p1 -i $SRC/chromium-blink-gcc7.patch
+
+  # https://bugs.chromium.org/p/chromium/issues/detail?id=614289
+  patch -p1 -i $SRC/chromium-v8-gcc7.patch
+
+  # Fixes from Gentoo
+  patch -p1 -i $SRC/chromium-gn-bootstrap-r8.patch
 
   mkdir -p third_party/node/linux/node-linux-x64/bin
   ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
-
-  # Fix a build issue with GCC-6
-  sed 's/^config("compiler") {/&\ncflags_cc = [ "-fno-delete-null-pointer-checks" ]/' \
-    -i build/config/linux/BUILD.gn
 
   _gn_args=(
     'blink_gc_plugin=false'
     'clang_use_chrome_plugins=false'
     'enable_hangout_services_extension=true'
     'enable_nacl=false'
-    'enable_nacl_nonsfi=false'
+    'enable_swiftshader=false'
     'fatal_linker_warnings=false'
     'ffmpeg_branding="Chrome"'
     'is_clang=false'

@@ -1,6 +1,8 @@
-7ad48853453a431b689c1ff97378840a  0001-ClientNativePixmapFactoryDmabuf-uses-ioctl-instead-o.patch
-de9345fb5cd756ed43c4ea7b9223e5ee  0001-Fix-kernel-version-condition-for-including-dma-buf.h.patch
-81885367434a85aecdb7b5a8d666590d  chromium-59.0.3071.109.tar.xz
+c8b274991cdd5064aed600add48a0bf6  0001-Clip-FreeType-glyph-bitmap-to-mask.patch
+e5f1c85bec4a50df09da6d4b17249826  chromium-60.0.3112.78.tar.xz
+034bc28a6988f3d6d1e7f291ec95365c  chromium-blink-gcc7.patch
+3d379c46c547a21d6f20fc1c1761bff1  chromium-gn-bootstrap-r8.patch
+c2f283eee77d4123a0952d9ee277ec3c  chromium-v8-gcc7.patch
 b527005e021b14869a669e42c46b661d  chromium.desktop
 64968626706b07721983ac59fb3babbf  chromium.sh
 3354997dd0bfde3443499133a6e16a85  last-commit-position.patch
