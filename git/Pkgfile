@@ -9,30 +9,32 @@ name=git
 version=2.13.3
 release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
-				git)
+        git gitd.rc)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	# install Error.pm. this pretty much sucks, but i'm too lazy to
-	# investigate whether there's a better way.
-	sed -i -e '47d' -e '49d' perl/Makefile.PL
+  # install Error.pm. this pretty much sucks, but i'm too lazy to
+  # investigate whether there's a better way.
+  sed -i -e '47d' -e '49d' perl/Makefile.PL
 
-	make CFLAGS="$CFLAGS" prefix=/usr gitexecdir=/usr/lib/git-core \
-	     INSTALLSITEMAN3DIR=/usr/share/man/man3 DESTDIR=$PKG install
+  make CFLAGS="$CFLAGS" prefix=/usr gitexecdir=/usr/lib/git-core \
+       INSTALLSITEMAN3DIR=/usr/share/man/man3 DESTDIR=$PKG install
 
-	cd $SRC
+  cd $SRC
 
-	for i in man*; do
-		install -d $PKG/usr/share/man/$i
-		install -m 644 $i/* $PKG/usr/share/man/$i;
-	done
+  for i in man*; do
+    install -d $PKG/usr/share/man/$i
+    install -m 644 $i/* $PKG/usr/share/man/$i;
+  done
 
-	find $PKG \( -name perllocal.pod -o -name .packlist \) -delete
-	rm -rf $PKG/usr/share/{locale,gitk}
+  find $PKG \( -name perllocal.pod -o -name .packlist \) -delete
+  rm -rf $PKG/usr/share/{locale,gitk}
 
-	# install the git ports driver
-	install -m 755 -d $PKG/etc/ports/drivers
-	install -m 755 $SRC/git $PKG/etc/ports/drivers/git
+  # install the git ports driver
+  install -d $PKG/etc/ports/drivers
+  install $SRC/git $PKG/etc/ports/drivers/git
+
+  install -D $SRC/gitd.rc $PKG/etc/rc.d/gitd
 
 }
