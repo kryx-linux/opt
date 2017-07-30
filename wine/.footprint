@@ -990,6 +990,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-processthreads-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-processthreads-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-profile-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-psapi-ansi-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-psapi-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-psapi-obsolete-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-quirks-l1-1-0.dll.so
@@ -1067,6 +1068,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-eventlog-legacy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-mm-misc-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-mm-mme-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-mm-time-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-ntuser-dc-access-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-power-base-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-power-setting-l1-1-0.dll.so
@@ -1082,6 +1084,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsalookup-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsalookup-l2-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsapolicy-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-provider-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-sddl-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-systemfunctions-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-service-core-l1-1-0.dll.so
@@ -1348,6 +1351,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-processthreads-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-processthreads-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-profile-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-psapi-ansi-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-psapi-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-psapi-obsolete-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-quirks-l1-1-0.dll
@@ -1425,6 +1429,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-eventlog-legacy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-mm-misc-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-mm-mme-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-mm-time-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-ntuser-dc-access-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-power-base-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-power-setting-l1-1-0.dll
@@ -1440,6 +1445,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsalookup-l2-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsapolicy-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-provider-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-sddl-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-systemfunctions-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-service-core-l1-1-0.dll
@@ -1816,6 +1822,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/pidgen.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ping.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/plugplay.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/powershell.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/powrprof.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/presentationfontcache.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/printui.dll
@@ -2399,6 +2406,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/pidgen.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ping.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/plugplay.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/powershell.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/powrprof.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/presentationfontcache.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/printui.dll.so
@@ -2695,6 +2703,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-processthreads-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-processthreads-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-profile-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-psapi-ansi-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-psapi-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-psapi-obsolete-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-quirks-l1-1-0.dll.so
@@ -2772,6 +2781,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-eventlog-legacy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-mm-misc-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-mm-mme-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-mm-time-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-ntuser-dc-access-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-power-base-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-power-setting-l1-1-0.dll.so
@@ -2787,6 +2797,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsalookup-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsalookup-l2-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsapolicy-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-provider-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-sddl-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-systemfunctions-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-service-core-l1-1-0.dll.so
@@ -3062,6 +3073,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-processthreads-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-processthreads-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-profile-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-psapi-ansi-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-psapi-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-psapi-obsolete-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-quirks-l1-1-0.dll
@@ -3139,6 +3151,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-eventlog-legacy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-mm-misc-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-mm-mme-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-mm-time-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-ntuser-dc-access-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-power-base-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-power-setting-l1-1-0.dll
@@ -3154,6 +3167,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsalookup-l2-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsapolicy-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-provider-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-sddl-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-systemfunctions-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-service-core-l1-1-0.dll
@@ -3559,6 +3573,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/pidgen.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ping.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/plugplay.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/powershell.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/powrprof.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/presentationfontcache.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/printui.dll
@@ -4198,6 +4213,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/pidgen.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ping.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/plugplay.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/powershell.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/powrprof.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/presentationfontcache.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/printui.dll.so
