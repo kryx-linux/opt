@@ -5,13 +5,13 @@
 # Depends on:  binutils ncurses zlib
 
 name=ocaml
-version=4.04.2
-release=2
+version=4.05.0
+release=1
 source=(http://caml.inria.fr/pub/distrib/$name-${version%.*}/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
     ./configure -prefix /usr -mandir /usr/share/man -no-graph
-    make world.opt
+    make -j1 world.opt
     make DESTDIR=$PKG install
 }
