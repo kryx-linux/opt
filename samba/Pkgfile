@@ -1,60 +1,50 @@
-# Description:	SMB server and client for unix
-# URL:		https://www.samba.org
-# Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Packager:	Juergen Daubert, jue at crux dot nu
-# Depends on:	iniparser krb5 ldb libaio libcap ntdb p5-parse-yapp py-subunit subunit nss_wrapper socket_wrapper uid_wrapper cmocka gnutls
-# Optional:	cups
+# Description: SMB server and client for unix
+# URL:         http://www.samba.org
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  e2fsprogs libarchive tdb talloc tevent libcap libaio popt
 
 name=samba
-version=4.6.4
-release=4
-source=(
-https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz
-samba.rc
-nmbd.rc
-smbd.rc
-winbindd.rc
-)
+version=4.6.6
+release=2
+source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
+        samba)
 
 build () {
-	cd $name-$version
+    cd $name-$version
 
-	# we should define vendorlib in our perl port
-	sed -ri 's:(vendor)(arch|lib|prefix):site\2:' buildtools/wafsamba/samba_perl.py 
+    ./configure --enable-fhs \
+                --prefix=/usr \
+                --libexecdir=/usr/lib \
+                --localstatedir=/var \
+                --sysconfdir=/etc \
+                --with-privatedir=/etc/samba/private \
+                --bundled-libraries=!tdb,!talloc,!tevent,!popt \
+                --without-{ad-dc,ads,ldap,pam}
 
-	./configure \
-		--enable-fhs \
-		--prefix=/usr \
-		--localstatedir=/var \
-		--sysconfdir=/etc \
-		--with-privatedir=/etc/samba/private \
-		--bundled-libraries=heimdal
+    local JOBS=
+    [[ $MAKEFLAGS =~ (-j|-j *|--jobs=)([[:digit:]]+) ]] && JOBS="-j ${BASH_REMATCH[2]}"
+    python ./buildtools/bin/waf build $JOBS
+    python ./buildtools/bin/waf install --destdir=$PKG
 
-# samba > 4.2 with mit krb5 is broken, heimdal needed for dc
-#		--with-system-mitkrb5 \
-#		--bundled-libraries=NONE
+    # man pages
+    local p
+    for p in docs/manpages/*; do 
+        install -D -m 644 $p $PKG/usr/share/man/man${p##*.}/${p##*/}
+    done
 
-	make
-	make DESTDIR=$PKG install
+    # cleanup
+    chmod 1777 $PKG/var/lock
 
-	# man pages
-	for i in docs/manpages/*; do 
-		install -D -m 644 $i $PKG/usr/share/man/man${i##*.}/${i##*/}
-	done
-    
-	# cleanup
-	chmod 1777 $PKG/var/lock
-    
-	# config-file and start-script
-	install -d $PKG/etc/{samba,rc.d}
-	install -m 0600 packaging/LSB/smb.conf $PKG/etc/samba/smb.conf.default
+    # remove pidl
+    find $PKG -iname '*pidl*' -type f -delete
+    find $PKG -depth -name perl5 -type d -exec rm -r {} \;
 
-	# startup scripts
-	for i in samba nmbd smbd winbindd; do
-		install -m 0755 $SRC/$i.rc $PKG/etc/rc.d/$i
-	done
+    # config-file and start-script
+    install -d $PKG/etc/{samba,rc.d}
+    install -m 0600 packaging/LSB/smb.conf $PKG/etc/samba/smb.conf.default
+    install -m 0755 $SRC/samba $PKG/etc/rc.d
 
-	# revdep
-	mkdir -p $PKG/etc/revdep.d
-	echo /usr/lib/samba > $PKG/etc/revdep.d/$name
+    # revdep
+    install -d $PKG/etc/revdep.d
+    echo '/usr/lib/samba' > $PKG/etc/revdep.d/samba
 }
