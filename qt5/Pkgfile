@@ -1,25 +1,16 @@
 # Description: Qt Free Edition, version 5.x.
 # URL: http://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Packager: predrag ivanovic, predivan at open dot telekom dot rs
 # Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon mtdev xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=qt5
-version=5.8.0
-release=2
-source=(http://download.qt.io/official_releases/qt/${version::3}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
-	qt5-logo.png
-	plasma-crash-1.patch
-	plasma-crash-2.patch
-	plasma-crash-3.patch)
+version=5.9.1
+release=1
+source=(https://download.qt.io/official_releases/qt/${version::3}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
+	qt5-logo.png)
 
 build() {
 	cd qt-everywhere-opensource-src-$version
-
-	# Fix some Plasma taskbar crashes https://bugs.kde.org/show_bug.cgi?id=342763
-	patch -p1 -d qtbase -i $SRC/plasma-crash-1.patch
-	patch -p1 -d qtbase -i $SRC/plasma-crash-2.patch
-	patch -p1 -d qtbase -i $SRC/plasma-crash-3.patch
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
