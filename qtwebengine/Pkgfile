@@ -1,21 +1,29 @@
-# Description: QtWebEngine for qt5.
+# Description: Provides support for web applications using the Chromium browser project.
 # URL: http://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Danny Rawlins, crux at romster dot me
-# Depends on: qt5 xorg-libxscrnsaver xorg-libxtst nss
+# Depends on: qt5 xorg-libxscrnsaver xorg-libxtst nss ninja
 
 name=qtwebengine
-version=5.8.0
+version=5.9.1
 release=1
-source=(http://download.qt.io/official_releases/qt/${version::3}/$version/submodules/$name-opensource-src-$version.tar.xz)
+source=(http://download.qt.io/official_releases/qt/${version::3}/$version/submodules/$name-opensource-src-$version.tar.xz
+	last-commit-position.patch)
 
 build() {
 	cd $name-opensource-src-$version
 
+	# we don't use git sources
+	patch -p1 -i $SRC/last-commit-position.patch
+
+	# Ninja, by default, sets the number of jobs to the number of availalble threads
+	local JOBS=$(awk 'BEGIN{RS="-j|--jobs="} NR==2 {print $1}' <<< $MAKEFLAGS)
+	test -n "$JOBS" && export NINJAFLAGS+=" -j $JOBS"
+
 	install -d build
 	cd build
 
-	qmake-qt5 WEBENGINE_CONFIG+=use_proprietary_codecs ..
+	qmake-qt5 WEBENGINE_CONFIG+="use_proprietary_codecs" ..
 	make
 	make INSTALL_ROOT=$PKG install
 
