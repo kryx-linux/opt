@@ -2,10 +2,10 @@
 # URL:         https://github.com/libfuse/sshfs 
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
-# Depends on:  fuse, glib
+# Depends on:  fuse3 glib
 
 name=sshfs-fuse
-version=2.9
+version=3.2.0
 release=1
 source=(https://github.com/libfuse/sshfs/releases/download/sshfs-$version/sshfs-$version.tar.gz)
 
