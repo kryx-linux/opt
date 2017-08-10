@@ -7,7 +7,7 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/cmake.m4
-lrwxrwxrwx	root/root	usr/share/cmake-3.8 -> cmake
+lrwxrwxrwx	root/root	usr/share/cmake-3.9 -> cmake
 drwxr-xr-x	root/root	usr/share/cmake/
 drwxr-xr-x	root/root	usr/share/cmake/Help/
 drwxr-xr-x	root/root	usr/share/cmake/Help/command/
@@ -209,6 +209,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/module/
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CMakePushCheckState.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CMakeVerifyManifest.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CPack.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/module/CPackArchive.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CPackBundle.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CPackComponent.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CPackCygwin.rst
@@ -237,6 +238,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/module/
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CheckFortranFunctionExists.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CheckFortranSourceCompiles.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CheckFunctionExists.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/module/CheckIPOSupported.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CheckIncludeFile.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CheckIncludeFileCXX.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/CheckIncludeFiles.rst
@@ -405,6 +407,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/module/
 -rw-r--r--	root/root	usr/share/cmake/Help/module/GNUInstallDirs.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/GenerateExportHeader.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/GetPrerequisites.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/module/GoogleTest.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/InstallRequiredSystemLibraries.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/MacroAddFileDependencies.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/module/ProcessorCount.rst
@@ -495,6 +498,8 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/policy/
 -rw-r--r--	root/root	usr/share/cmake/Help/policy/CMP0065.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/policy/CMP0066.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/policy/CMP0067.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/policy/CMP0068.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/policy/CMP0069.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/policy/DEPRECATED.txt
 -rw-r--r--	root/root	usr/share/cmake/Help/policy/DISALLOWED_COMMAND.txt
 drwxr-xr-x	root/root	usr/share/cmake/Help/prop_cache/
@@ -537,8 +542,11 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/prop_dir/
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_dir/VS_STARTUP_PROJECT.rst
 drwxr-xr-x	root/root	usr/share/cmake/Help/prop_gbl/
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/ALLOW_DUPLICATE_CUSTOM_TARGETS.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/AUTOGEN_SOURCE_GROUP.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/AUTOGEN_TARGETS_FOLDER.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/AUTOMOC_SOURCE_GROUP.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/AUTOMOC_TARGETS_FOLDER.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/AUTORCC_SOURCE_GROUP.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/CMAKE_CXX_KNOWN_FEATURES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/CMAKE_C_KNOWN_FEATURES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/DEBUG_CONFIGURATIONS.rst
@@ -548,7 +556,9 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/prop_gbl/
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/ENABLED_LANGUAGES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/FIND_LIBRARY_USE_LIB32_PATHS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/FIND_LIBRARY_USE_LIB64_PATHS.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/FIND_LIBRARY_USE_LIBX32_PATHS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/FIND_LIBRARY_USE_OPENBSD_VERSIONING.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/GENERATOR_IS_MULTI_CONFIG.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/GLOBAL_DEPENDS_DEBUG_MODE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/GLOBAL_DEPENDS_NO_CYCLES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_gbl/IN_TRY_COMPILE.rst
@@ -617,6 +627,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/prop_test/
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_test/ATTACHED_FILES_ON_FAIL.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_test/COST.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_test/DEPENDS.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_test/DISABLED.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_test/ENVIRONMENT.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_test/FAIL_REGULAR_EXPRESSION.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_test/FIXTURES_CLEANUP.rst
@@ -657,15 +668,19 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/prop_tgt/
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/ARCHIVE_OUTPUT_DIRECTORY_CONFIG.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/ARCHIVE_OUTPUT_NAME.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/ARCHIVE_OUTPUT_NAME_CONFIG.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTOGEN_BUILD_DIR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTOGEN_TARGET_DEPENDS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTOMOC.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTOMOC_DEPEND_FILTERS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTOMOC_MOC_OPTIONS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTORCC.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTORCC_OPTIONS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTOUIC.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTOUIC_OPTIONS.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/AUTOUIC_SEARCH_PATHS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/BINARY_DIR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/BUILD_RPATH.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/BUILD_WITH_INSTALL_NAME_DIR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/BUILD_WITH_INSTALL_RPATH.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/BUNDLE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/BUNDLE_EXTENSION.rst
@@ -687,6 +702,8 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/prop_tgt/
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/CONFIG_POSTFIX.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/CROSSCOMPILING_EMULATOR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/CUDA_EXTENSIONS.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/CUDA_PTX_COMPILATION.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/CUDA_RESOLVE_DEVICE_SYMBOLS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/CUDA_SEPARABLE_COMPILATION.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/CUDA_STANDARD.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/CUDA_STANDARD_REQUIRED.rst
@@ -732,6 +749,8 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/prop_tgt/
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/IMPORTED_LOCATION_CONFIG.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/IMPORTED_NO_SONAME.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/IMPORTED_NO_SONAME_CONFIG.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/IMPORTED_OBJECTS.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/IMPORTED_OBJECTS_CONFIG.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/IMPORTED_SONAME.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/IMPORTED_SONAME_CONFIG.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/prop_tgt/IMPORT_PREFIX.rst
@@ -866,6 +885,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/release/
 -rw-r--r--	root/root	usr/share/cmake/Help/release/3.6.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/release/3.7.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/release/3.8.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/release/3.9.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/release/dev.txt
 -rw-r--r--	root/root	usr/share/cmake/Help/release/index.rst
 drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
@@ -889,6 +909,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_ANDROID_NATIVE_LIB_DEPENDENCIES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_ANDROID_NATIVE_LIB_DIRECTORIES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_ANDROID_NDK.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_ANDROID_NDK_DEPRECATED_HEADERS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_ANDROID_NDK_TOOLCHAIN_HOST_TAG.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_ANDROID_PROCESS_MAX.rst
@@ -905,17 +926,20 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_ARGC.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_ARGV0.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_AUTOMOC.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_AUTOMOC_DEPEND_FILTERS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_AUTOMOC_MOC_OPTIONS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_AUTOMOC_RELAXED_MODE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_AUTORCC.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_AUTORCC_OPTIONS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_AUTOUIC.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_AUTOUIC_OPTIONS.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_AUTOUIC_SEARCH_PATHS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_BACKWARDS_COMPATIBILITY.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_BINARY_DIR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_BUILD_RPATH.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_BUILD_TOOL.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_BUILD_TYPE.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_BUILD_WITH_INSTALL_NAME_DIR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_BUILD_WITH_INSTALL_RPATH.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_CACHEFILE_DIR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_CACHE_MAJOR_VERSION.rst
@@ -978,6 +1002,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_EXTRA_SHARED_LIBRARY_SUFFIXES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_FIND_APPBUNDLE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_FIND_FRAMEWORK.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_FIND_LIBRARY_CUSTOM_LIB_SUFFIX.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_FIND_LIBRARY_PREFIXES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_FIND_LIBRARY_SUFFIXES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_FIND_NO_INSTALL_PREFIX.rst
@@ -1028,6 +1053,8 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_INSTALL_RPATH.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_INSTALL_RPATH_USE_LINK_PATH.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_INTERNAL_PLATFORM_ABI.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_INTERPROCEDURAL_OPTIMIZATION.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_INTERPROCEDURAL_OPTIMIZATION_CONFIG.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_IOS_INSTALL_COMBINED.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_JOB_POOL_COMPILE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_JOB_POOL_LINK.rst
@@ -1040,10 +1067,12 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_CLANG_TIDY.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER_ABI.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER_AR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER_EXTERNAL_TOOLCHAIN.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER_ID.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER_LAUNCHER.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER_LOADED.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER_RANLIB.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER_TARGET.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILER_VERSION.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_LANG_COMPILE_OBJECT.rst
@@ -1105,6 +1134,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_MAKE_PROGRAM.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_MAP_IMPORTED_CONFIG_CONFIG.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_MATCH_COUNT.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_MATCH_n.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_MFC_FLAG.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_MINIMUM_REQUIRED_VERSION.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_MINOR_VERSION.rst
@@ -1131,6 +1161,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_POSITION_INDEPENDENT_CODE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_PREFIX_PATH.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_PROGRAM_PATH.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_PROJECT_DESCRIPTION.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_PROJECT_NAME.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_PROJECT_PROJECT-NAME_INCLUDE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_RANLIB.rst
@@ -1163,6 +1194,8 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_SUBLIME_TEXT_2_ENV_SETTINGS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_SUBLIME_TEXT_2_EXCLUDE_BUILD_TREE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_SYSROOT.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_SYSROOT_COMPILE.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_SYSROOT_LINK.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_SYSTEM.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_SYSTEM_APPBUNDLE_PATH.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_SYSTEM_FRAMEWORK_PATH.rst
@@ -1194,6 +1227,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_VS_NsightTegra_VERSION.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_VS_PLATFORM_NAME.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_VS_PLATFORM_TOOLSET.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_VS_PLATFORM_TOOLSET_CUDA.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_WARN_DEPRECATED.rst
@@ -1201,6 +1235,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_WIN32_EXECUTABLE.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_XCODE_ATTRIBUTE_an-attribute.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_XCODE_GENERATE_SCHEME.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CMAKE_XCODE_PLATFORM_TOOLSET.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CPACK_ABSOLUTE_DESTINATION_FILES.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/CPACK_COMPONENT_INCLUDE_TOPLEVEL_DIRECTORY.rst
@@ -1305,6 +1340,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT-NAME_VERSION_PATCH.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT-NAME_VERSION_TWEAK.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT_BINARY_DIR.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT_DESCRIPTION.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT_NAME.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT_SOURCE_DIR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT_VERSION.rst
@@ -1444,7 +1480,6 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/CMakeAddFortranSubdirectory/
 -rw-r--r--	root/root	usr/share/cmake/Modules/CMakeTestRCCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CMakeTestSwiftCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CMakeUnixFindMake.cmake
--rw-r--r--	root/root	usr/share/cmake/Modules/CMakeVS7BackwardCompatibility.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CMakeVerifyManifest.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CPack.DS_Store.in
 -rw-r--r--	root/root	usr/share/cmake/Modules/CPack.Description.plist.in
@@ -1459,6 +1494,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/CMakeAddFortranSubdirectory/
 -rw-r--r--	root/root	usr/share/cmake/Modules/CPack.background.png.in
 -rw-r--r--	root/root	usr/share/cmake/Modules/CPack.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CPack.distribution.dist.in
+-rw-r--r--	root/root	usr/share/cmake/Modules/CPackArchive.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CPackBundle.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CPackComponent.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CPackCygwin.cmake
@@ -1491,6 +1527,17 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/CMakeAddFortranSubdirectory/
 -rw-r--r--	root/root	usr/share/cmake/Modules/CheckFortranSourceCompiles.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CheckFunctionExists.c
 -rw-r--r--	root/root	usr/share/cmake/Modules/CheckFunctionExists.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported.cmake
+drwxr-xr-x	root/root	usr/share/cmake/Modules/CheckIPOSupported/
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported/CMakeLists-C.txt.in
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported/CMakeLists-CXX.txt.in
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported/CMakeLists-Fortran.txt.in
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported/foo.c
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported/foo.cpp
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported/foo.f
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported/main.c
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported/main.cpp
+-rw-r--r--	root/root	usr/share/cmake/Modules/CheckIPOSupported/main.f
 -rw-r--r--	root/root	usr/share/cmake/Modules/CheckIncludeFile.c.in
 -rw-r--r--	root/root	usr/share/cmake/Modules/CheckIncludeFile.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/CheckIncludeFile.cxx.in
@@ -1527,6 +1574,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Bruce-C.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/CCur-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Clang-ASM.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Clang-C-FeatureTests.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Clang-C.cmake
@@ -1535,6 +1583,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Clang-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Clang.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake
@@ -1543,6 +1592,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Cray-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Cray-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/Cray.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/CrayPrgEnv-C.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/CrayPrgEnv-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/CrayPrgEnv-Cray-C.cmake
@@ -1573,6 +1623,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/GNU-CXX-FeatureTests.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/GNU-CXX.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/GNU-Fortran.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/GNU.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/HP-ASM.cmake
@@ -1627,11 +1678,13 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SunPro-ASM.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SunPro-C-FeatureTests.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SunPro-C.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SunPro-CXX-FeatureTests.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SunPro-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SunPro-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/SunPro.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/TI-ASM.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/TI-C.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/TI-CXX.cmake
@@ -1659,8 +1712,6 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/CompilerId/
 -rw-r--r--	root/root	usr/share/cmake/Modules/CompilerId/VS-7.vcproj.in
 -rw-r--r--	root/root	usr/share/cmake/Modules/CompilerId/VS-Intel.vfproj.in
 -rw-r--r--	root/root	usr/share/cmake/Modules/CompilerId/VS-NsightTegra.vcxproj.in
--rw-r--r--	root/root	usr/share/cmake/Modules/CompilerId/Xcode-1.pbxproj.in
--rw-r--r--	root/root	usr/share/cmake/Modules/CompilerId/Xcode-2.pbxproj.in
 -rw-r--r--	root/root	usr/share/cmake/Modules/CompilerId/Xcode-3.pbxproj.in
 -rw-r--r--	root/root	usr/share/cmake/Modules/CompilerId/main.swift.in
 -rw-r--r--	root/root	usr/share/cmake/Modules/Dart.cmake
@@ -1832,6 +1883,8 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/FortranCInterface/
 -rw-r--r--	root/root	usr/share/cmake/Modules/FortranCInterface/CMakeLists.txt
 -rw-r--r--	root/root	usr/share/cmake/Modules/FortranCInterface/Detect.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/FortranCInterface/Input.cmake.in
+-rw-r--r--	root/root	usr/share/cmake/Modules/FortranCInterface/MYMODULE.c
+-rw-r--r--	root/root	usr/share/cmake/Modules/FortranCInterface/MY_MODULE.c
 -rw-r--r--	root/root	usr/share/cmake/Modules/FortranCInterface/Macro.h.in
 -rw-r--r--	root/root	usr/share/cmake/Modules/FortranCInterface/Output.cmake.in
 drwxr-xr-x	root/root	usr/share/cmake/Modules/FortranCInterface/Verify/
@@ -1853,6 +1906,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/FortranCInterface/Verify/
 -rw-r--r--	root/root	usr/share/cmake/Modules/GNUInstallDirs.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/GenerateExportHeader.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/GetPrerequisites.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/GoogleTest.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/ITKCompatibility.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/InstallRequiredSystemLibraries.cmake
 drwxr-xr-x	root/root	usr/share/cmake/Modules/IntelVSImplicitPath/
@@ -2122,6 +2176,9 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/Platform/Android/
 -rw-r--r--	root/root	usr/share/cmake/Modules/Platform/Windows-OpenWatcom-C.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Platform/Windows-OpenWatcom-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Platform/Windows-OpenWatcom.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/Platform/Windows-PGI-C.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/Platform/Windows-PGI-Fortran.cmake
+-rw-r--r--	root/root	usr/share/cmake/Modules/Platform/Windows-PGI.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Platform/Windows-Watcom-C.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Platform/Windows-Watcom-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Platform/Windows-df.cmake
@@ -2193,6 +2250,10 @@ drwxr-xr-x	root/root	usr/share/cmake/Templates/
 -rw-r--r--	root/root	usr/share/cmake/Templates/CPack.GenericWelcome.txt
 -rw-r--r--	root/root	usr/share/cmake/Templates/CPackConfig.cmake.in
 -rw-r--r--	root/root	usr/share/cmake/Templates/CTestScript.cmake.in
+drwxr-xr-x	root/root	usr/share/cmake/Templates/MSBuild/
+-rw-r--r--	root/root	usr/share/cmake/Templates/MSBuild/nasm.props.in
+-rw-r--r--	root/root	usr/share/cmake/Templates/MSBuild/nasm.targets
+-rw-r--r--	root/root	usr/share/cmake/Templates/MSBuild/nasm.xml
 -rw-r--r--	root/root	usr/share/cmake/Templates/TestDriver.cxx.in
 drwxr-xr-x	root/root	usr/share/cmake/Templates/Windows/
 -rw-r--r--	root/root	usr/share/cmake/Templates/Windows/ApplicationIcon.png
