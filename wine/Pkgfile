@@ -10,7 +10,7 @@ release=1
 source=(https://dl.winehq.org/wine/source/2.x/$name-$version.tar.xz
 	https://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86.msi
 	https://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86_64.msi
-	https://dl.winehq.org/wine/wine-mono/4.7.0/wine-mono-4.7.0.msi)
+	https://dl.winehq.org/wine/wine-mono/4.7.1/wine-mono-4.7.1.msi)
 
 build() {
 	install -d wine32 wine64
@@ -53,7 +53,7 @@ build() {
 		$SRC/wine_gecko-2.47-x86.msi \
 		$SRC/wine_gecko-2.47-x86_64.msi
 
-	install $SRC/wine-mono-4.7.0.msi $PKG/usr/share/wine/mono/
+	install $SRC/wine-mono-4.7.1.msi $PKG/usr/share/wine/mono/
 
 	rm -r $PKG/usr/share/man/??.UTF-8
 }
