@@ -1,8 +1,7 @@
 # Description: SVG rendering library with cairo backend
 # URL: https://wiki.gnome.org/LibRsvg
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on: gobject-introspection libcroco gdk-pixbuf
+# Maintainer: UNMAINTAINED
+# Depends on: gobject-introspection gtk3 libcroco gdk-pixbuf
 
 name=librsvg
 version=2.40.18
