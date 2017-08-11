@@ -4,7 +4,7 @@
 # Depends on: python
 
 name=nodejs
-version=8.1.2
+version=8.3.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
 
