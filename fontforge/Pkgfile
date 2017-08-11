@@ -5,7 +5,7 @@
 # Depends on: giflib git libspiro libtiff pango
 
 name=fontforge
-version=20161012
+version=20170731
 release=1
 source=(https://github.com/fontforge/fontforge/archive/$version.tar.gz
 	https://fontforge.github.io/cidmaps.tgz)
