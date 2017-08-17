@@ -5,11 +5,21 @@
 
 name=qpdf
 version=6.0.0
-release=2
-source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
+release=3
+source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz
+    qpdf-6.0.0-detect-recursions.patch
+    qpdf-6.0.0-CVE-2017-9208.patch
+    qpdf-6.0.0-CVE-2017-9209.patch
+    qpdf-6.0.0-CVE-2017-9210.patch)
 
 build() {
     cd $name-$version
+
+    patch -p1 -i $SRC/qpdf-6.0.0-detect-recursions.patch
+    patch -p1 -i $SRC/qpdf-6.0.0-CVE-2017-9208.patch
+    patch -p1 -i $SRC/qpdf-6.0.0-CVE-2017-9209.patch
+    patch -p1 -i $SRC/qpdf-6.0.0-CVE-2017-9210.patch
+
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
