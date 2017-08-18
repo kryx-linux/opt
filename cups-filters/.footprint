@@ -8,8 +8,8 @@ drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/cups-browsed
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
-lrwxrwxrwx	root/root	usr/bin/driverless -> /usr/lib/cups/driver/driverless
-lrwxrwxrwx	root/root	usr/bin/foomatic-rip -> /usr/lib/cups/filter/foomatic-rip
+lrwxrwxrwx	root/root	usr/bin/driverless -> ../lib/cups/driver/driverless
+lrwxrwxrwx	root/root	usr/bin/foomatic-rip -> ../lib/cups/filter/foomatic-rip
 -rwxr-xr-x	root/root	usr/bin/ttfread
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/cupsfilters/
@@ -29,7 +29,7 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cups/
 drwxr-xr-x	root/root	usr/lib/cups/backend/
 -rwxr-xr-x	root/root	usr/lib/cups/backend/beh
-lrwxrwxrwx	root/root	usr/lib/cups/backend/driverless -> /usr/lib/cups/driver/driverless
+lrwxrwxrwx	root/root	usr/lib/cups/backend/driverless -> ../driver/driverless
 -rwxr-xr-x	root/root	usr/lib/cups/backend/implicitclass
 -rwxr-xr-x	root/root	usr/lib/cups/backend/parallel
 -rwxr-xr-x	root/root	usr/lib/cups/backend/serial
@@ -67,9 +67,9 @@ lrwxrwxrwx	root/root	usr/lib/libcupsfilters.so.1 -> libcupsfilters.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libcupsfilters.so.1.0.0
 -rw-r--r--	root/root	usr/lib/libfontembed.a
 -rwxr-xr-x	root/root	usr/lib/libfontembed.la
-lrwxrwxrwx	root/root	usr/lib/libfontembed.so -> libfontembed.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libfontembed.so.1 -> libfontembed.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libfontembed.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libfontembed.so -> libfontembed.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libfontembed.so.2 -> libfontembed.so.2.0.0
+-rwxr-xr-x	root/root	usr/lib/libfontembed.so.2.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libcupsfilters.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libfontembed.pc
