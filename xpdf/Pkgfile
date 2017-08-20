@@ -18,9 +18,11 @@ build() {
 
     cmake -DCMAKE_BUILD_TYPE=Release \
           -DCMAKE_INSTALL_PREFIX=/usr \
-          -DA4_PAPER=ON ..
+          -DA4_PAPER=ON -LAH .. 
 
     cd xpdf-qt
+
+    sed -i 's|man/man1|share/man1|g' cmake_install.cmake
 
     make
     make install DESTDIR=$PKG
