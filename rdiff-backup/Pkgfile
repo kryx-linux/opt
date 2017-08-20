@@ -12,10 +12,8 @@ source=(http://savannah.nongnu.org/download/${name}/${name}-${version}.tar.gz)
 build() {
     cd $name-$version
     
-    sed -i 's|share/man/|man/|g' setup.py
-
     python setup.py build
     python setup.py install --prefix=/usr --root=$PKG
 
-    rm -r $PKG/usr/share
+    rm -r $PKG/usr/share/doc
 }
