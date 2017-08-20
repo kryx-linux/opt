@@ -30,8 +30,7 @@ build(){
       --enable-login \
       --enable-cram \
       --enable-digest \
-      --enable-shared \
-      --mandir=/usr/man
+      --enable-shared
 
   make -j1
   make DESTDIR=$PKG install
