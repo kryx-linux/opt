@@ -16,11 +16,13 @@ build() {
     patch -p1 < $SRC/librsync.patch
 
     ./configure \
-  --prefix=/usr \
-  --enable-shared
+      --prefix=/usr \
+      --enable-shared \
+      --mandir=/usr/share/man
+
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/man/man1
+    rm -r $PKG/usr/share/man/man1
     rm -r $PKG/usr/bin
 }
