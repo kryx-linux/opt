@@ -10,7 +10,9 @@ source=(http://sg.danny.cz/scsi/lsscsi-$version.tgz)
 
 build() {
 	cd $name-$version
-  ./configure --prefix=/usr --mandir=/usr/man
+
+  ./configure --prefix=/usr
+
   make
   make install DESTDIR=$PKG
 }
