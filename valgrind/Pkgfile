@@ -5,22 +5,19 @@
 # Nice to have: gdb
 
 name=valgrind
-version=3.12.0
+version=3.13.0
 release=1
-source=(http://$name.org/downloads/$name-$version.tar.bz2)
+source=(ftp://sourceware.org/pub/valgrind/valgrind-${version}.tar.bz2)
 
 build() {
   cd $name-$version
 
-  # suppot 4.x kernels, too
-  sed -i 's/2.6\.\*|3\.\*/&|4.*/1' configure.ac
   autoconf
 
   sed -i 's/2.18/2.19/' configure
-  ./configure --prefix=/usr --mandir=/usr/man
+  ./configure --prefix=/usr
   make
   make DESTDIR=$PKG install
 
   rm -rf $PKG/usr/share/doc
-  rmdir $PKG/usr/share
 }
