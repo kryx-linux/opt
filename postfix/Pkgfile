@@ -28,7 +28,7 @@ build() {
     mail_owner=mail \
     setgid_group=postdrop \
     config_directory=/etc/postfix \
-    manpage_directory=/usr/man \
+    manpage_directory=/usr/share \
     daemon_directory=/usr/lib/postfix \
     data_directory=/var/lib/postfix \
     command_directory=/usr/sbin \
@@ -51,14 +51,7 @@ build() {
     ( cd $PKG/var/lib
       chown mail postfix )
 
-    #
-    # Add .gz extensions to manpages (pkgmk compresses them)
-    # *LICENSE files will be removed
-    #
-    ( cd $PKG/usr/lib/postfix
-      cp postfix-files temp-files
-      grep -v LICENSE temp-files | sed 's#\(/man[0-9]/[a-zA-Z0-9_-]\+\.[0-9]\):#\1\.gz:#' > postfix-files
-      rm -f temp-files $PKG/etc/postfix/*LICENSE )
+    rm -f $PKG/etc/postfix/*LICENSE
 
     install -D -m 00644 ../aliases    $PKG/etc/postfix/aliases
     install -D -m 00755 ../postfix.rc $PKG/etc/rc.d/postfix
