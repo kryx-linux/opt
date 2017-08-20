@@ -4,14 +4,19 @@
 # Depends on:  util-linux e2fsprogs lzo zlib
 
 name=btrfs-progs
-version=4.11.1
+version=4.12
 release=1
-source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz \
-        $name-man-v$version.tar.xz)
+source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz)
 
 build() {
-    cd $name-v$version
-    ./configure --prefix=/usr --bindir=/sbin
-    make
-    make DESTDIR=$PKG install
+	cd $name-v$version
+	./configure --prefix=/usr \
+		--bindir=/sbin \
+		--disable-documentation
+	make
+	make DESTDIR=$PKG install
+
+	mkdir -p $PKG/usr/share/man/{man5,man8}
+	install -m644 Documentation/*.5.gz $PKG/usr/share/man/man5/
+	install -m644 Documentation/*.8.gz $PKG/usr/share/man/man8/
 }
