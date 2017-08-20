@@ -26,7 +26,7 @@ POST-INSTALL
    cd /etc/postfix
 
    sh post-install \
-       manpage_directory=/usr/man \
+       manpage_directory=/usr/share/man \
        command_directory=/usr/sbin \
        config_directory=/etc/postfix \
        setgid_group=postdrop \

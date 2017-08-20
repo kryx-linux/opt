@@ -28,7 +28,7 @@ build() {
     mail_owner=mail \
     setgid_group=postdrop \
     config_directory=/etc/postfix \
-    manpage_directory=/usr/share \
+    manpage_directory=/usr/share/man \
     daemon_directory=/usr/lib/postfix \
     data_directory=/var/lib/postfix \
     command_directory=/usr/sbin \

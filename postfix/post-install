@@ -4,7 +4,7 @@ cd /usr/lib/postfix
 
 /bin/sh post-install \
   daemon_directory=/usr/lib/postfix \
-  manpage_directory=/usr/man \
+  manpage_directory=/usr/share/man \
   command_directory=/usr/sbin \
   config_directory=/etc/postfix \
   setgid_group=postdrop \
