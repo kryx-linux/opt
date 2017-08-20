@@ -9,9 +9,8 @@ release=1
 source=(http://spice-space.org/download/usbredir/usbredir-$version.tar.bz2)
 
 build() {
-	cd $name-$version
-  ./configure --prefix=/usr \
-              --mandir=/usr/man
+  cd $name-$version
+  ./configure --prefix=/usr
 
   make
   make install DESTDIR=$PKG
