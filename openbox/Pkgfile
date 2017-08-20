@@ -13,7 +13,6 @@ build() {
 	cd $name-$version
 
 	./configure --prefix=/usr \
-              --mandir=/usr/man \
               --disable-nls \
               --libexecdir=/usr/lib/openbox
 
