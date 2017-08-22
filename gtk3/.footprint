@@ -451,13 +451,13 @@ lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so -> libgailutil-3.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so.0 -> libgailutil-3.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgailutil-3.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libgdk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.2200.18
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.2200.18
--rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.2200.18
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.2200.19
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.2200.19
+-rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.2200.19
 -rw-r--r--	root/root	usr/lib/libgtk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.2200.18
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.2200.18
--rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.2200.18
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.2200.19
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.2200.19
+-rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.2200.19
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gail-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gdk-3.0.pc
@@ -485,6 +485,7 @@ drwxr-xr-x	root/root	usr/share/glib-2.0/schemas/
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Demo.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.ColorChooser.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.Debug.gschema.xml
+-rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.EmojiChooser.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.exampleapp.gschema.xml
 drwxr-xr-x	root/root	usr/share/icons/
