@@ -3,12 +3,13 @@
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
 
 name=hicolor-icon-theme
-version=0.15
+version=0.16
 release=1
 source=(http://icon-theme.freedesktop.org/releases/$name-$version.tar.xz)
 
 build() {
-    cd $name-$version
-    ./configure --prefix=/usr
-    make DESTDIR=$PKG install
+	cd $name-$version
+	./configure --prefix=/usr
+
+	make DESTDIR=$PKG install
 }
