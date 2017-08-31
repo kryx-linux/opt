@@ -5,15 +5,25 @@
 # Depends on: flac alsa-lib libvorbis
 
 name=libsndfile
-version=1.0.27
+version=1.0.28
 release=1
-source=(http://www.mega-nerd.com/$name/files/$name-$version.tar.gz)
+source=(http://www.mega-nerd.com/$name/files/$name-$version.tar.gz
+    0001-FLAC-Fix-a-buffer-read-overrun.patch
+    0002-src-flac.c-Fix-a-buffer-read-overflow.patch
+    0010-src-aiff.c-Fix-a-buffer-read-overflow.patch
+    0020-src-common.c-Fix-heap-buffer-overflows-when-writing-.patch)
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr
+	patch -p1 -i $SRC/0001-FLAC-Fix-a-buffer-read-overrun.patch
+	patch -p1 -i $SRC/0002-src-flac.c-Fix-a-buffer-read-overflow.patch
+	patch -p1 -i $SRC/0010-src-aiff.c-Fix-a-buffer-read-overflow.patch
+	patch -p1 -i $SRC/0020-src-common.c-Fix-heap-buffer-overflows-when-writing-.patch
 
+	./configure --prefix=/usr \
+		--disable-static \
+		--with-pic
 	make
 	make DESTDIR=$PKG install
 
