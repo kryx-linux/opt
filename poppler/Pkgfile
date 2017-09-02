@@ -4,7 +4,7 @@
 # Depends on:  cmake cairo lcms2
 
 name=poppler
-version=0.57.0
+version=0.58.0
 release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz
         poppler-cmake.patch)
