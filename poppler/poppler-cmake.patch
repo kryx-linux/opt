@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2017-09-01 20:11:09.000000000 +0200
-+++ CMakeLists.txt	2017-09-02 11:01:59.451918361 +0200
-@@ -36,8 +36,14 @@
+--- CMakeLists.txt.orig	2017-05-21 23:01:39.000000000 +0200
++++ CMakeLists.txt	2017-05-22 14:12:44.635191266 +0200
+@@ -35,8 +35,14 @@
  option(BUILD_QT5_TESTS "Whether compile the Qt5 test programs." ON)
  option(BUILD_CPP_TESTS "Whether compile the CPP test programs." ON)
  option(ENABLE_SPLASH "Build the Splash graphics backend." ON)
@@ -15,7 +15,7 @@
  set(ENABLE_LIBOPENJPEG "auto" CACHE STRING "Use libopenjpeg for JPX streams. Possible values: auto, openjpeg1, openjpeg2, unmaintained, none. 'auto' prefers openjpeg2 over openjpeg1 if both are available. 'unmaintained' gives you the internal unmaintained decoder. Use at your own risk. 'none' compiles no JPX decoder at all. Default: auto")
  set(ENABLE_CMS "auto" CACHE STRING "Use color management system. Possible values: auto, lcms1, lcms2. 'auto' prefers lcms2 over lcms1 if both are available. Unset to disable color management system.")
  set(ENABLE_DCTDECODER "libjpeg" CACHE STRING "Use libjpeg for DCT streams. Possible values: libjpeg, unmaintained, none. will use libjpeg if available or fail if not. 'unmaintained' gives you the internal unmaintained decoder. Use at your own risk. 'none' compiles no DCT decoder at all. Default: libjpeg")
-@@ -130,43 +136,46 @@
+@@ -127,43 +133,46 @@
    message(FATAL_ERROR "Invalid ENABLE_DCTDECODER value.")
  endif()
  macro_optional_find_package(Qt4)
@@ -98,7 +98,7 @@
  if(ENABLE_CPP)
    macro_optional_find_package(Iconv)
    set(ENABLE_CPP ${ICONV_FOUND})
-@@ -280,10 +289,10 @@
+@@ -277,10 +286,10 @@
    include_directories(${ZLIB_INCLUDE_DIR})
  endif(ENABLE_ZLIB)
  
@@ -111,7 +111,7 @@
  if(JPEG_FOUND)
    include_directories(${JPEG_INCLUDE_DIR})
  endif(JPEG_FOUND)
-@@ -721,12 +730,12 @@
+@@ -716,12 +725,12 @@
    add_subdirectory(glib)
  endif(ENABLE_GLIB)
  add_subdirectory(test)
@@ -128,7 +128,7 @@
  if(ENABLE_CPP)
    add_subdirectory(cpp)
  endif(ENABLE_CPP)
-@@ -748,12 +757,12 @@
+@@ -743,12 +752,12 @@
  if(ENABLE_SPLASH)
    poppler_create_install_pkgconfig(poppler-splash.pc lib${LIB_SUFFIX}/pkgconfig)
  endif(ENABLE_SPLASH)
@@ -145,7 +145,7 @@
  if(ENABLE_GLIB)
    poppler_create_install_pkgconfig(poppler-glib.pc lib${LIB_SUFFIX}/pkgconfig)
  endif(ENABLE_GLIB)
-@@ -772,8 +781,8 @@
+@@ -767,8 +776,8 @@
    message("      with CMYK support")
  endif()
  show_end_message_yesno("cairo output" CAIRO_FOUND)
