@@ -14,6 +14,7 @@ build() {
   /usr/bin/python configure.py --bootstrap
   install -D -m 0755 $name $PKG/usr/bin/$name
 
-  install -D -m 0644 misc/ninja.vim \
-    $PKG/usr/share/vim/syntax/ninja.vim
+  # core/vim provides this file
+# install -D -m 0644 misc/ninja.vim \
+#   $PKG/usr/share/vim/syntax/ninja.vim
 }
