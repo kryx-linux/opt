@@ -5,12 +5,15 @@
 # Depends on: python
 
 name=ninja
-version=1.7.2
+version=1.8.1
 release=1
-source=(https://crux.s3.amazonaws.com/dist/$name-$version.tar.gz)
+source=(https://github.com/$name-build/$name/archive/v$version/$name-v$version.tar.gz)
 
 build() {
   cd $name-$version
-  ./configure.py --bootstrap
+  /usr/bin/python configure.py --bootstrap
   install -D -m 0755 $name $PKG/usr/bin/$name
+
+  install -D -m 0644 misc/ninja.vim \
+    $PKG/usr/share/vim/syntax/ninja.vim
 }
