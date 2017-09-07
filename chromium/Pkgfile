@@ -28,12 +28,12 @@ build() {
   patch -p1 -i $SRC/chromium-blink-gcc7.patch
 
   # Fix build with glibc 2.26
-  patch -p1 -i ../breakpad-use-ucontext_t.patch
+  patch -p1 -i $SRC/breakpad-use-ucontext_t.patch
 
   # Fixes from Gentoo
-  patch -p1 -i ../chromium-gcc-r1.patch
-  patch -p1 -i ../chromium-gn-bootstrap-r14.patch
-  patch -p1 -i ../chromium-atk-r1.patch
+  patch -p1 -i $SRC/chromium-gcc-r1.patch
+  patch -p1 -i $SRC/chromium-gn-bootstrap-r14.patch
+  patch -p1 -i $SRC/chromium-atk-r1.patch
 
   mkdir -p third_party/node/linux/node-linux-x64/bin
   ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
