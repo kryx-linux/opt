@@ -32,13 +32,12 @@ build() {
 		--without-ensurepip
 
     make 
-    make -j1 DESTDIR=$PKG altinstall
+    make -j1 DESTDIR=$PKG altinstall maninstall
 
     ln -s python${version%.*}        $PKG/usr/bin/python3
     ln -s python${version%.*}m-config $PKG/usr/bin/python3-config
     ln -s idle${version%.*}          $PKG/usr/bin/idle3
     ln -s pydoc${version%.*}         $PKG/usr/bin/pydoc3
-    ln -s python${version%.*}.1      $PKG/usr/share/man/man1/python3.1
     ln -s python${version%.*}        $PKG/usr/lib/$name
 
     rm $PKG/usr/lib/python${version%.*}/ctypes/macholib/README.ctypes
