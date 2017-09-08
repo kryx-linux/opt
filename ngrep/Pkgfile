@@ -4,9 +4,9 @@
 # Depends on:  libpcap
 
 name=ngrep
-version=1.46.1
-release=2
-source=(http://crux.s3.amazonaws.com/dist/$name-${version//./_}.tar.gz)
+version=1.47
+release=1
+source=(https://github.com/jpr5/ngrep/archive/V${version//./_}/$name-$version.tar.gz)
 
 build () {
     cd $name-${version//./_}
