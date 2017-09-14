@@ -6,7 +6,7 @@
 
 name=syslinux
 version=6.03
-release=3
+release=4
 source=(http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.xz \
         $name-Makefile.patch)
 
@@ -18,4 +18,8 @@ build() {
   make OPTFLAGS="$CFLAGS" installer
   make -j1 OPTFLAGS="$CFLAGS" INSTALLROOT=$PKG MANDIR=/usr/share/man install
 
+  # revdep
+  install -d $PKG/etc/revdep.d
+  echo '/usr/share/syslinux'       > $PKG/etc/revdep.d/syslinux
+  echo '/usr/share/syslinux/efi64' > $PKG/etc/revdep.d/syslinux
 }
