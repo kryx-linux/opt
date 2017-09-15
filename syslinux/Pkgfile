@@ -6,7 +6,7 @@
 
 name=syslinux
 version=6.03
-release=4
+release=5
 source=(http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.xz \
         $name-Makefile.patch)
 
@@ -21,5 +21,5 @@ build() {
   # revdep
   install -d $PKG/etc/revdep.d
   echo '/usr/share/syslinux'       > $PKG/etc/revdep.d/syslinux
-  echo '/usr/share/syslinux/efi64' > $PKG/etc/revdep.d/syslinux
+  echo '/usr/share/syslinux/efi64' >> $PKG/etc/revdep.d/syslinux
 }
