@@ -4,7 +4,7 @@
 # Depends on: python-appdirs python-packaging python-pip
 
 name=python-setuptools
-version=36.2.7
+version=36.5.0
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.zip
 	https://bootstrap.pypa.io/get-pip.py)
