@@ -15,8 +15,10 @@ drwxr-xr-x	root/root	usr/include/qpdf/
 -rw-r--r--	root/root	usr/include/qpdf/Pl_Buffer.hh
 -rw-r--r--	root/root	usr/include/qpdf/Pl_Concatenate.hh
 -rw-r--r--	root/root	usr/include/qpdf/Pl_Count.hh
+-rw-r--r--	root/root	usr/include/qpdf/Pl_DCT.hh
 -rw-r--r--	root/root	usr/include/qpdf/Pl_Discard.hh
 -rw-r--r--	root/root	usr/include/qpdf/Pl_Flate.hh
+-rw-r--r--	root/root	usr/include/qpdf/Pl_RunLength.hh
 -rw-r--r--	root/root	usr/include/qpdf/Pl_StdioFile.hh
 -rw-r--r--	root/root	usr/include/qpdf/PointerHolder.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDF.hh
@@ -35,9 +37,9 @@ drwxr-xr-x	root/root	usr/include/qpdf/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libqpdf.a
 -rwxr-xr-x	root/root	usr/lib/libqpdf.la
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.17.0.0
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so.17 -> libqpdf.so.17.0.0
--rwxr-xr-x	root/root	usr/lib/libqpdf.so.17.0.0
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.18.1.0
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so.18 -> libqpdf.so.18.1.0
+-rwxr-xr-x	root/root	usr/lib/libqpdf.so.18.1.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libqpdf.pc
 drwxr-xr-x	root/root	usr/share/
