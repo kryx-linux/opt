@@ -1,7 +1,7 @@
 # Description: Utility that does structural, content-preserving transformations on PDF files
 # URL:         http://qpdf.sourceforge.net/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libpcre zlib
+# Depends on:  zlib libjpeg-turbo
 
 name=qpdf
 version=7.0.0
