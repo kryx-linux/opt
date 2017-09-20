@@ -4,7 +4,7 @@
 # Depends on:  e2fsprogs libarchive tdb talloc tevent libcap libaio popt
 
 name=samba
-version=4.6.7
+version=4.6.8
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
