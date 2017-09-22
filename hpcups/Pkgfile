@@ -1,7 +1,7 @@
 # Description: Ghostscript add-on for HP inkjet/laserjet printers
-# URL:         http://hpinkjet.sourceforge.net/
+# URL:         https://sourceforge.net/projects/hplip/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  cups
+# Depends on:  cups libjpeg-turbo
 
 name=hpcups
 version=3.17.9
