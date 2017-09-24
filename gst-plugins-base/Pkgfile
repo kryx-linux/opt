@@ -5,7 +5,7 @@
 # Depends on: alsa-lib cdparanoia gstreamer libtheora libvisual orc pango util-linux xorg-libxv
 
 name=gst-plugins-base
-version=1.12.2
+version=1.12.3
 release=1
 source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
