@@ -5,9 +5,9 @@
 # Depends on: gtk3 libpcap libpcre hicolor-icon-theme
 
 name=wireshark
-version=2.2.7
+version=2.4.1
 release=1
-source=(https://www.$name.org/download/src/all-versions/$name-$version.tar.bz2)
+source=(https://1.eu.dl.wireshark.org/src/wireshark-$version.tar.xz)
 
 build() {
   cd $name-$version
@@ -15,7 +15,8 @@ build() {
   ./configure --prefix=/usr \
               --with-plugins=/usr/lib/$name/plugins \
               --without-krb5 \
-              --with-qt=no
+              --with-qt=no \
+              --with-gtk=yes
 
   make
   make DESTDIR=$PKG install
