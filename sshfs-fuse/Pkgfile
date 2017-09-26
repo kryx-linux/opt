@@ -5,13 +5,23 @@
 # Depends on:  fuse3 glib
 
 name=sshfs-fuse
-version=3.2.0
+version=3.3.0
 release=1
-source=(https://github.com/libfuse/sshfs/releases/download/sshfs-$version/sshfs-$version.tar.gz)
+source=(https://github.com/libfuse/sshfs/releases/download/sshfs-$version/sshfs-$version.tar.xz
+        sshfs.1)
 
 build() {
     cd sshfs-$version
-    ./configure --prefix=/usr
-    make
-    make DESTDIR=$PKG install
+   
+    # fix man-dir location (only used if python-docutils is installed)
+    sed -i '/mandir/s/1/man1/' meson.build
+
+    local JOBS= 
+    [[ $MAKEFLAGS =~ (-j|-j *|--jobs=)([[:digit:]]+) ]] && JOBS="-j ${BASH_REMATCH[2]}"
+
+    mkdir build ; cd build
+    meson .. --prefix /usr
+    DESTDIR=$PKG ninja $JOBS install
+
+    install -D $SRC/sshfs.1 $PKG/usr/share/man/man1/sshfs.1
 }
