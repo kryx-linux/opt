@@ -1,17 +1,23 @@
 # Description: Interface for userspace filesystems
 # URL:         https://github.com/libfuse/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  meson ninja
 
 name=fuse3
-version=3.1.1
+version=3.2.0
 release=1
-source=(https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.gz)
+source=(https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.xz)
 
 build() {
     cd fuse-$version
-    ./configure --prefix=/usr
-    make
-    make DESTDIR=$PKG install
-    rm -r $PKG/{dev,usr/etc,usr/lib/udev}
-    mv $PKG/usr/share/man/man8/mount.{fuse.8,fuse3.8}
+
+    local JOBS= 
+    [[ $MAKEFLAGS =~ (-j|-j *|--jobs=)([[:digit:]]+) ]] && JOBS="-j ${BASH_REMATCH[2]}"
+
+    mkdir build ; cd build
+    meson .. --prefix /usr
+    DESTDIR=$PKG ninja $JOBS install
+
+    rm -r $PKG/{dev,etc,lib}
+    mv $PKG/usr/share/man/man8/mount.{fuse.8.gz,fuse3.8.gz}
 }
