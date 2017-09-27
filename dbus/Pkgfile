@@ -1,10 +1,10 @@
 # Description: A message bus system
-# URL: http://freedesktop.org/wiki/Software/dbus
+# URL: https://freedesktop.org/wiki/Software/dbus
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
 # Depends on: expat
 
 name=dbus
-version=1.10.22
+version=1.10.24
 release=1
 source=(http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
         rc.dbus 30-dbus.launch)
