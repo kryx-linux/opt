@@ -6,7 +6,7 @@
 name=hunspell
 version=1.6.1
 release=2
-source=(https://github.com/hunspell/$name/archive/v$version.tar.gz)
+source=(https://github.com/hunspell/$name/archive/v$version/$name-v$version.tar.gz)
 
 build() {
 	cd $name-$version
