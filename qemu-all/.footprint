@@ -12,6 +12,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-armeb
 -rwxr-xr-x	root/root	usr/bin/qemu-cris
 -rwxr-xr-x	root/root	usr/bin/qemu-ga
+-rwxr-xr-x	root/root	usr/bin/qemu-hppa
 -rwxr-xr-x	root/root	usr/bin/qemu-i386
 -rwxr-xr-x	root/root	usr/bin/qemu-img
 -rwxr-xr-x	root/root	usr/bin/qemu-io
@@ -25,7 +26,8 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-mipsn32
 -rwxr-xr-x	root/root	usr/bin/qemu-mipsn32el
 -rwxr-xr-x	root/root	usr/bin/qemu-nbd
--rwxr-xr-x	root/root	usr/bin/qemu-or32
+-rwxr-xr-x	root/root	usr/bin/qemu-nios2
+-rwxr-xr-x	root/root	usr/bin/qemu-or1k
 -rwxr-xr-x	root/root	usr/bin/qemu-ppc
 -rwxr-xr-x	root/root	usr/bin/qemu-ppc64
 -rwxr-xr-x	root/root	usr/bin/qemu-ppc64abi32
@@ -50,7 +52,8 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-system-mips64el
 -rwxr-xr-x	root/root	usr/bin/qemu-system-mipsel
 -rwxr-xr-x	root/root	usr/bin/qemu-system-moxie
--rwxr-xr-x	root/root	usr/bin/qemu-system-or32
+-rwxr-xr-x	root/root	usr/bin/qemu-system-nios2
+-rwxr-xr-x	root/root	usr/bin/qemu-system-or1k
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppc
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppc64
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppcemb
@@ -149,7 +152,9 @@ drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/pxe-virtio.rom
 -rw-r--r--	root/root	usr/share/qemu/qemu-icon.bmp
 -rw-r--r--	root/root	usr/share/qemu/qemu_logo_no_text.svg
+-rw-r--r--	root/root	usr/share/qemu/qemu_vga.ndrv
 -rw-r--r--	root/root	usr/share/qemu/s390-ccw.img
+-rw-r--r--	root/root	usr/share/qemu/s390-netboot.img
 -rw-r--r--	root/root	usr/share/qemu/sgabios.bin
 -rw-r--r--	root/root	usr/share/qemu/skiboot.lid
 -rw-r--r--	root/root	usr/share/qemu/slof.bin
