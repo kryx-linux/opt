@@ -4,7 +4,7 @@
 # Depends on:  xorg-libxcursor xorg-libxft xorg-xcb-util-keysyms xorg-xcb-util-wm 
 
 name=spectrwm
-version=3.0.2
+version=3.1.0
 release=1
 source=(https://github.com/conformal/spectrwm/archive/SPECTRWM_${version//./_}.tar.gz
         $name-remove_libswmhack.patch)
