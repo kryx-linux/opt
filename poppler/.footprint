@@ -5,6 +5,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/pdfimages
 -rwxr-xr-x	root/root	usr/bin/pdfinfo
 -rwxr-xr-x	root/root	usr/bin/pdfseparate
+-rwxr-xr-x	root/root	usr/bin/pdfsig
 -rwxr-xr-x	root/root	usr/bin/pdftocairo
 -rwxr-xr-x	root/root	usr/bin/pdftohtml
 -rwxr-xr-x	root/root	usr/bin/pdftoppm
@@ -23,6 +24,8 @@ drwxr-xr-x	root/root	usr/include/poppler/
 -rw-r--r--	root/root	usr/include/poppler/CharCodeToUnicode.h
 -rw-r--r--	root/root	usr/include/poppler/CharTypes.h
 -rw-r--r--	root/root	usr/include/poppler/CompactFontTables.h
+-rw-r--r--	root/root	usr/include/poppler/CurlCachedFile.h
+-rw-r--r--	root/root	usr/include/poppler/CurlPDFDocBuilder.h
 -rw-r--r--	root/root	usr/include/poppler/DateInfo.h
 -rw-r--r--	root/root	usr/include/poppler/Decrypt.h
 -rw-r--r--	root/root	usr/include/poppler/Dict.h
