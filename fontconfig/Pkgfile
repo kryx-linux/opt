@@ -5,7 +5,7 @@
 
 name=fontconfig
 version=2.12.6
-release=1
+release=2
 source=(https://fontconfig.org/release/$name-$version.tar.bz2)
 
 build() {
@@ -26,5 +26,5 @@ build() {
     popd
 
     rm -f $PKG/etc/fonts/conf.d/README
-    rm -r $PKG/usr/share
+    rm -r $PKG/usr/share/doc
 }
