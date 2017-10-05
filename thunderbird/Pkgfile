@@ -5,14 +5,15 @@
 
 name=thunderbird
 version=52.3.0
-release=1
+release=2
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/source/$name-$version.source.tar.xz
-	$name.desktop thunderbird-install-dir.patch)
+	$name.desktop thunderbird-install-dir.patch freetype-2.8.1.patch)
  
 build() {
 	cd $name-$version
 	sed -i '/^ftglyph.h/ i freetype/ftfntfmt.h' mozilla/config/system-headers
 	patch -p1 -i $SRC/thunderbird-install-dir.patch
+	patch -p1 -i $SRC/freetype-2.8.1.patch
 	export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/lib/$name"
 	export CFLAGS="$CFLAGS -fno-delete-null-pointer-checks -fno-lifetime-dse -fno-schedule-insns2"
 	export CXXFLAGS="$CXXFLAGS -fno-delete-null-pointer-checks -fno-lifetime-dse -fno-schedule-insns2"
