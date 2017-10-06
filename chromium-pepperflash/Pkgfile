@@ -4,7 +4,7 @@
 # Depends on:  chromium
 
 name=chromium-pepperflash
-version=26.0.0.131
+version=27.0.0.130
 release=1
 source=(https://fpdownload.adobe.com/get/flashplayer/pdc/$version/flash_player_ppapi_linux.x86_64.tar.gz)
 
