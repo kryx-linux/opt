@@ -4,14 +4,13 @@
 # Depends on:  util-linux e2fsprogs
 
 name=reiserfsprogs
-version=3.6.26
+version=3.6.27
 release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/jeffm/$name/v$version/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
 
-    autoreconf -i
     ./configure --prefix=/usr --sbindir=/sbin
 
     make
