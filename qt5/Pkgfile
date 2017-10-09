@@ -4,28 +4,38 @@
 # Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon mtdev xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=qt5
-version=5.9.1
+version=5.9.2
 release=1
 source=(https://download.qt.io/official_releases/qt/${version::3}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
-	qt5-logo.png)
+	qt5-logo.png
+	harmony-fix.patch)
 
 build() {
 	cd qt-everywhere-opensource-src-$version
 
+	# Freetype 2.8.1
+	patch -d qtbase -p1 -i $SRC/harmony-fix.patch
+
+	# Fix missing private includes
+	# https://bugreports.qt.io/browse/QTBUG-37417
+	sed -e '/CMAKE_NO_PRIVATE_INCLUDES\ \=\ true/d' \
+		-i qtbase/mkspecs/features/create_cmake.prf
+
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
-	sed -i "/^QMAKE_CXX\s/s|=.*|= $CXX|" qtbase/mkspecs/common/g++-base.conf
+	sed -e "/^QMAKE_CXX\s/s|=.*|= $CXX|" \
+		-i qtbase/mkspecs/common/g++-base.conf
 
 	# Remove obsolete xorg path
-	sed -i 's|X11R6/||g' qtbase/mkspecs/*/*.conf
+	sed -e 's|X11R6/||g' -i qtbase/mkspecs/*/*.conf
 
 	# Respect system CXXFLAGS
-	sed -i "s|^\(QMAKE_CFLAGS_RELEASE.*\)|\1 ${CXXFLAGS}|" \
-		qtbase/mkspecs/common/gcc-base.conf
+	sed -e "s|^\(QMAKE_CFLAGS_RELEASE.*\)|\1 ${CXXFLAGS}|" \
+		-i qtbase/mkspecs/common/gcc-base.conf
 
 	# Respect system LDFLAGS
-	sed -i "s|^\(QMAKE_LFLAGS_RELEASE.*\)|\1 ${LDFLAGS}|" \
-		qtbase/mkspecs/common/g++-unix.conf
+	sed -e "s|^\(QMAKE_LFLAGS_RELEASE.*\)|\1 ${LDFLAGS}|" \
+		-i qtbase/mkspecs/common/g++-unix.conf
 
 	export QTDIR="$PWD"
 	export LD_LIBRARY_PATH="$QTDIR/qtbase/lib:$QTDIR/qttools/lib:$LD_LIBRARY_PATH"
