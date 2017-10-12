@@ -313,6 +313,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/istream-jsonstr.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-mail.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-metawrap.h
+-rw-r--r--	root/root	usr/include/dovecot/istream-multiplex.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-nonuls.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-private.h
 -rw-r--r--	root/root	usr/include/dovecot/istream-qp.h
@@ -475,6 +476,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ostream-file-private.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-metawrap.h
+-rw-r--r--	root/root	usr/include/dovecot/ostream-multiplex.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-null.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-private.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-rawlog.h
@@ -742,6 +744,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_mailbox_alias_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mailbox_alias_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mailbox_alias_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_notify_status_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_notify_status_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_notify_status_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_push_notification_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_push_notification_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_push_notification_plugin.so
