@@ -1,0 +1,9 @@
+untrusted comment: verify with /etc/ports/opt.pub
+RWSE3ohX2g5d/U+XchlInKCJBIRfEqEM6MYACOvef9wrzlFf1Wk9ByfBJ93H1Wu3DeH4sutriIsOh+G+p2yE/AKWEuI/Vhdc2Qk=
+SHA256 (Pkgfile) = 705aba6a51b5e5f1535326f09f408c2e69ce45a9f0e02bf77b427bfc90add703
+SHA256 (.footprint) = 8083127db455edb4ab9719000b7e2fdf4e3691f177ee2ef30e46951277e2a02a
+SHA256 (libsndfile-1.0.28.tar.gz) = 1ff33929f042fa333aed1e8923aa628c3ee9e1eb85512686c55092d1e5a9dfa9
+SHA256 (0001-FLAC-Fix-a-buffer-read-overrun.patch) = 256eda5665ccad5a38030594f83a16ae9b271f8d0dd31f4d3b650bafaf93aef0
+SHA256 (0002-src-flac.c-Fix-a-buffer-read-overflow.patch) = 9d86583733521602e6b5ca52730bfe0727b9beef513db82552930477bf3c99e2
+SHA256 (0010-src-aiff.c-Fix-a-buffer-read-overflow.patch) = 3635a53dae48f02123872c9c0234ca55b38bc260dc37a5813b7211da85ba73f3
+SHA256 (0020-src-common.c-Fix-heap-buffer-overflows-when-writing.patch) = 7a2a37bcae3f4c48a79b06127964d34fbaf66011a31060680516434848800aad

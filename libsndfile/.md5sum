@@ -1,5 +1,5 @@
 85a957da91be0931bf9d24db80aa4591  0001-FLAC-Fix-a-buffer-read-overrun.patch
 d7e8a433d8444f1933bb754405a41f4e  0002-src-flac.c-Fix-a-buffer-read-overflow.patch
 b115673b05dcdd4b326b2dfb0c85cbcb  0010-src-aiff.c-Fix-a-buffer-read-overflow.patch
-70d26bd4996881764d806ecbf98dd847  0020-src-common.c-Fix-heap-buffer-overflows-when-writing-.patch
+70d26bd4996881764d806ecbf98dd847  0020-src-common.c-Fix-heap-buffer-overflows-when-writing.patch
 646b5f98ce89ac60cdb060fcd398247c  libsndfile-1.0.28.tar.gz
