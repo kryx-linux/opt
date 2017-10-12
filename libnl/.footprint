@@ -92,6 +92,7 @@ drwxr-xr-x	root/root	usr/include/libnl3/netlink/route/link/
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/vxlan.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/neighbour.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/neightbl.h
+-rw-r--r--	root/root	usr/include/libnl3/netlink/route/netconf.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/nexthop.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/pktloc.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/qdisc.h
@@ -127,34 +128,34 @@ drwxr-xr-x	root/root	usr/include/libnl3/netlink/xfrm/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libnl-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-3.so -> libnl-3.so.200.25.0
-lrwxrwxrwx	root/root	usr/lib/libnl-3.so.200 -> libnl-3.so.200.25.0
--rwxr-xr-x	root/root	usr/lib/libnl-3.so.200.25.0
+lrwxrwxrwx	root/root	usr/lib/libnl-3.so -> libnl-3.so.200.26.0
+lrwxrwxrwx	root/root	usr/lib/libnl-3.so.200 -> libnl-3.so.200.26.0
+-rwxr-xr-x	root/root	usr/lib/libnl-3.so.200.26.0
 -rw-r--r--	root/root	usr/lib/libnl-genl-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-genl-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-genl-3.so -> libnl-genl-3.so.200.25.0
-lrwxrwxrwx	root/root	usr/lib/libnl-genl-3.so.200 -> libnl-genl-3.so.200.25.0
--rwxr-xr-x	root/root	usr/lib/libnl-genl-3.so.200.25.0
+lrwxrwxrwx	root/root	usr/lib/libnl-genl-3.so -> libnl-genl-3.so.200.26.0
+lrwxrwxrwx	root/root	usr/lib/libnl-genl-3.so.200 -> libnl-genl-3.so.200.26.0
+-rwxr-xr-x	root/root	usr/lib/libnl-genl-3.so.200.26.0
 -rw-r--r--	root/root	usr/lib/libnl-idiag-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-idiag-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-idiag-3.so -> libnl-idiag-3.so.200.25.0
-lrwxrwxrwx	root/root	usr/lib/libnl-idiag-3.so.200 -> libnl-idiag-3.so.200.25.0
--rwxr-xr-x	root/root	usr/lib/libnl-idiag-3.so.200.25.0
+lrwxrwxrwx	root/root	usr/lib/libnl-idiag-3.so -> libnl-idiag-3.so.200.26.0
+lrwxrwxrwx	root/root	usr/lib/libnl-idiag-3.so.200 -> libnl-idiag-3.so.200.26.0
+-rwxr-xr-x	root/root	usr/lib/libnl-idiag-3.so.200.26.0
 -rw-r--r--	root/root	usr/lib/libnl-nf-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-nf-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-nf-3.so -> libnl-nf-3.so.200.25.0
-lrwxrwxrwx	root/root	usr/lib/libnl-nf-3.so.200 -> libnl-nf-3.so.200.25.0
--rwxr-xr-x	root/root	usr/lib/libnl-nf-3.so.200.25.0
+lrwxrwxrwx	root/root	usr/lib/libnl-nf-3.so -> libnl-nf-3.so.200.26.0
+lrwxrwxrwx	root/root	usr/lib/libnl-nf-3.so.200 -> libnl-nf-3.so.200.26.0
+-rwxr-xr-x	root/root	usr/lib/libnl-nf-3.so.200.26.0
 -rw-r--r--	root/root	usr/lib/libnl-route-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-route-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-route-3.so -> libnl-route-3.so.200.25.0
-lrwxrwxrwx	root/root	usr/lib/libnl-route-3.so.200 -> libnl-route-3.so.200.25.0
--rwxr-xr-x	root/root	usr/lib/libnl-route-3.so.200.25.0
+lrwxrwxrwx	root/root	usr/lib/libnl-route-3.so -> libnl-route-3.so.200.26.0
+lrwxrwxrwx	root/root	usr/lib/libnl-route-3.so.200 -> libnl-route-3.so.200.26.0
+-rwxr-xr-x	root/root	usr/lib/libnl-route-3.so.200.26.0
 -rw-r--r--	root/root	usr/lib/libnl-xfrm-3.a
 -rwxr-xr-x	root/root	usr/lib/libnl-xfrm-3.la
-lrwxrwxrwx	root/root	usr/lib/libnl-xfrm-3.so -> libnl-xfrm-3.so.200.25.0
-lrwxrwxrwx	root/root	usr/lib/libnl-xfrm-3.so.200 -> libnl-xfrm-3.so.200.25.0
--rwxr-xr-x	root/root	usr/lib/libnl-xfrm-3.so.200.25.0
+lrwxrwxrwx	root/root	usr/lib/libnl-xfrm-3.so -> libnl-xfrm-3.so.200.26.0
+lrwxrwxrwx	root/root	usr/lib/libnl-xfrm-3.so.200 -> libnl-xfrm-3.so.200.26.0
+-rwxr-xr-x	root/root	usr/lib/libnl-xfrm-3.so.200.26.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libnl-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libnl-genl-3.0.pc
