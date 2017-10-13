@@ -1,21 +1,24 @@
 # Description: core database of common types
 # URL: http://freedesktop.org/Software/shared-mime-info
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Tilman Sauerbeck, tilman at crux dot nu
+# Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: glib libxml2 intltool
 
 name=shared-mime-info
-version=1.5
+version=1.9
 release=1
-source=(http://freedesktop.org/~hadess/$name-$version.tar.xz)
+source=(https://freedesktop.org/~hadess/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
+	# https://bugs.freedesktop.org/show_bug.cgi?id=70366
+	export ac_cv_func_fdatasync=no
+
+	CONFIG_SHELL=/bin/bash \
 	./configure --prefix=/usr
 
-	make -j2
-	make -j2 DESTDIR=$PKG install
+	make
+	make DESTDIR=$PKG install
 
-	rm -rf $PKG/usr/share/locale
+	rm -r $PKG/usr/share/locale
 }
