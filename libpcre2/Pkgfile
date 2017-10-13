@@ -5,7 +5,7 @@
 # Depends on:
 
 name=libpcre2
-version=10.23
+version=10.30
 release=1
 source=(ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre2-$version.tar.bz2)
 
