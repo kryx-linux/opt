@@ -99,6 +99,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/amvideo.idl
 -rw-r--r--	root/root	usr/include/wine/windows/appcompatapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/appmgmt.h
+-rw-r--r--	root/root	usr/include/wine/windows/appmodel.h
 -rw-r--r--	root/root	usr/include/wine/windows/asptlb.h
 -rw-r--r--	root/root	usr/include/wine/windows/asptlb.idl
 -rw-r--r--	root/root	usr/include/wine/windows/asynot.idl
@@ -958,6 +959,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/amstream.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-appmodel-identity-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-appmodel-runtime-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-appmodel-runtime-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-apiquery-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-appcompat-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-appinit-l1-1-0.dll.so
@@ -1333,6 +1335,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/amstream.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-appmodel-identity-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-appmodel-runtime-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-appmodel-runtime-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-apiquery-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-appcompat-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-appinit-l1-1-0.dll
@@ -1751,6 +1754,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/kernelbase.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ksuser.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ktmw32.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/l3codeca.acm
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/loadperf.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/localspl.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/localui.dll
@@ -2029,7 +2033,6 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winemapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winemenubuilder.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winemine.exe
--rw-r--r--	root/root	usr/lib/wine/fakedlls/winemp3.acm
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winemsibuilder.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winepath.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wineps.drv
@@ -2158,6 +2161,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/kernelbase.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ksuser.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ktmw32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/l3codeca.acm.so
 -rw-r--r--	root/root	usr/lib/wine/libaclui.def
 -rw-r--r--	root/root	usr/lib/wine/libactiveds.def
 -rw-r--r--	root/root	usr/lib/wine/libadsiid.a
@@ -2618,7 +2622,6 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/winemapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winemenubuilder.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winemine.exe.so
--rwxr-xr-x	root/root	usr/lib/wine/winemp3.acm.so
 -rwxr-xr-x	root/root	usr/lib/wine/winemsibuilder.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winepath.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/wineps.drv.so
@@ -2708,6 +2711,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/amstream.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-appmodel-identity-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-appmodel-runtime-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-appmodel-runtime-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-apiquery-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-appcompat-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-appinit-l1-1-0.dll.so
@@ -3092,6 +3096,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/amstream.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-appmodel-identity-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-appmodel-runtime-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-appmodel-runtime-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-apiquery-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-appcompat-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-appinit-l1-1-0.dll
@@ -3524,6 +3529,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/krnl386.exe16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ksuser.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ktmw32.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/l3codeca.acm
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/loadperf.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/localspl.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/localui.dll
@@ -3842,7 +3848,6 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winemapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winemenubuilder.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winemine.exe
--rw-r--r--	root/root	usr/lib32/wine/fakedlls/winemp3.acm
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winemsibuilder.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winepath.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wineps.drv
@@ -3985,6 +3990,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/krnl386.exe16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ksuser.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ktmw32.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/l3codeca.acm.so
 -rw-r--r--	root/root	usr/lib32/wine/libaclui.def
 -rw-r--r--	root/root	usr/lib32/wine/libactiveds.def
 -rw-r--r--	root/root	usr/lib32/wine/libadsiid.a
@@ -4487,7 +4493,6 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/winemapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/winemenubuilder.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/winemine.exe.so
--rwxr-xr-x	root/root	usr/lib32/wine/winemp3.acm.so
 -rwxr-xr-x	root/root	usr/lib32/wine/winemsibuilder.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/winepath.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wineps.drv.so
