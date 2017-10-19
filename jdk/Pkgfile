@@ -1,10 +1,9 @@
 # Description: Java 8 Software Development Kit
 # URL: http://java.sun.com
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Simone Rota, sip at crux dot nu
+# Maintainer: CRUX System Team, core-ports at crux dot nu
 
 name=jdk
-version=1.8.0_144
+version=1.8.0_152
 release=1
 source=(file:///$name-8u${version##*_}-linux-x64.tar.gz)
 
