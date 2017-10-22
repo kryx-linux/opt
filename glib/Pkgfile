@@ -5,7 +5,7 @@
 
 name=glib
 version=2.54.1
-release=1
+release=2
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
 	gschemas.compiled)
 
