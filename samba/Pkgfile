@@ -4,7 +4,7 @@
 # Depends on:  e2fsprogs libarchive tdb talloc tevent libcap libaio popt
 
 name=samba
-version=4.6.8
+version=4.6.9
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
@@ -21,9 +21,7 @@ build () {
                 --bundled-libraries=!tdb,!talloc,!tevent,!popt \
                 --without-{ad-dc,ads,ldap,pam}
 
-    local JOBS=
-    [[ $MAKEFLAGS =~ (-j|-j *|--jobs=)([[:digit:]]+) ]] && JOBS="-j ${BASH_REMATCH[2]}"
-    python ./buildtools/bin/waf build $JOBS
+    python ./buildtools/bin/waf build --jobs=${JOBS:-1}
     python ./buildtools/bin/waf install --destdir=$PKG
 
     # man pages
