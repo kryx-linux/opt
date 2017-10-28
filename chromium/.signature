@@ -1,13 +1,11 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/RQRkJbyYop1l0pcRSBGUEJrsmX731/zrvoFci4Ho5GE/b1aMeTSZRj44wiPdgJrWYjN1njrxBJ5RU+FXoik8Ao=
-SHA256 (Pkgfile) = 37895397e0d9835bd6ce869e234b267ccc624dbd553f7892b57aaac8e9d16bc8
-SHA256 (.footprint) = 2c9b42f63b18b1aa993b3ff732bea8f1451848f7702ec1219fb2dd2550bab7a5
-SHA256 (chromium-61.0.3163.100.tar.xz) = 4135968cac6623c1d2b224494600cd274098cce41c298f8c3908b354a34c281b
+RWSE3ohX2g5d/WBzzRvF+yy/gQuxC+HU0XwO61a9CuyKiuSN+Co1nYXON+kLKPDdbVbg/P1J+W99Sv1SX51bFmUz2jVAKrhgNQk=
+SHA256 (Pkgfile) = 61f827e6bf70970b9c8da29ad34a47df6c87e246fb8aa4fe7203eca8d29760bd
+SHA256 (.footprint) = b706fe319357b624c6652ab38bdaaa96a6e0070e2be5802f4c38a5bceafa8374
+SHA256 (chromium-62.0.3202.75.tar.xz) = 49cdfe457bcb941b56c13a75bbe2ff394fcb5baa8a49c9b470835fad60dd904c
 SHA256 (last-commit-position.patch) = d3dc397956a26ec045e76c25c57a1fac5fc0acff94306b2a670daee7ba15709e
 SHA256 (chromium.sh) = 7b182d0ae1e9ef841f8cd0b403a304babd548bf60b5e3808b2144bebdbb7c154
 SHA256 (chromium.desktop) = caf015652ac7ce9403a5cb6c7bec3dc597222b20c5842059ee15674e2c9209cc
 SHA256 (breakpad-use-ucontext_t.patch) = 6e9a345f810d36068ee74ebba4708c70ab30421dad3571b6be5e9db635078ea8
-SHA256 (chromium-gcc-r1.patch) = 11cffe305dd49027c91638261463871e9ecb0ecc6ecc02bfa37b203c5960ab58
-SHA256 (chromium-gn-bootstrap-r14.patch) = 98784c4a0a793ecf34987bc8f91ae360d78596a4a59dd47651411381f752a080
-SHA256 (chromium-atk-r1.patch) = fc0e9abb77b6f8e21a7601ff53f267a854736d711b530be5bbd80d976678e98d
-SHA256 (chromium-blink-gcc7.patch) = f94310a7ba9b8b777adfb4442bcc0a8f0a3d549b2cf4a156066f8e2e28e2f323
+SHA256 (chromium-gn-bootstrap-r17.patch) = d81319f168dad0e411c8e810f73daa2f56ff579578771bd9c9bb1aa2d7c09a8b
+SHA256 (crc32c-string-view-check.patch) = 35435e8dae76737baafecdc76d74a1c97281c4179e416556e033a06a31468e6d
