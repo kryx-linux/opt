@@ -4,7 +4,7 @@
 # Depends on:  xz apache libxml2
 
 name=mod_php
-version=5.6.31
+version=5.6.32
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
