@@ -1,5 +1,3 @@
-drwxr-xr-x	root/root	etc/
--rw-r--r--	root/root	etc/darrc
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/dar
@@ -97,9 +95,9 @@ drwxr-xr-x	root/root	usr/include/dar/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdar64.a
 -rwxr-xr-x	root/root	usr/lib/libdar64.la
-lrwxrwxrwx	root/root	usr/lib/libdar64.so -> libdar64.so.5000.11.1
-lrwxrwxrwx	root/root	usr/lib/libdar64.so.5000 -> libdar64.so.5000.11.1
--rwxr-xr-x	root/root	usr/lib/libdar64.so.5000.11.1
+lrwxrwxrwx	root/root	usr/lib/libdar64.so -> libdar64.so.5000.12.0
+lrwxrwxrwx	root/root	usr/lib/libdar64.so.5000 -> libdar64.so.5000.12.0
+-rwxr-xr-x	root/root	usr/lib/libdar64.so.5000.12.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libdar64.pc
 drwxr-xr-x	root/root	usr/share/
