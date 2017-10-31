@@ -2,7 +2,7 @@
 # URL: http://freedesktop.org/wiki/Software/startup-notification
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: xorg-libsm, xorg-libx11, xorg-libxt, xorg-xcb-util
+# Depends on: xorg-libxt, xorg-xcb-util
 
 name=startup-notification
 version=0.12

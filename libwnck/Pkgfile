@@ -2,7 +2,7 @@
 # URL: https://developer.gnome.org/libwnck/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: gtk startup-notification intltool
+# Depends on: gtk startup-notification
 
 name=libwnck
 version=2.31.0

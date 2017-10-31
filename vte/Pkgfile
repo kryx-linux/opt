@@ -2,7 +2,7 @@
 # URL: http://developer.gnome.org/arch/gnome/widgets/vte.html
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Juergen Daubert, jue at crux dot nu
-# Depends on: gtk p5-xml-parser intltool xorg-libxdamage
+# Depends on: gtk xorg-libxdamage
 
 name=vte
 version=0.28.2
