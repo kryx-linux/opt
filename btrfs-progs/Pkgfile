@@ -1,7 +1,7 @@
 # Description: Filesystem utilities for btrfs
 # URL:         http://btrfs.wiki.kernel.org
 # Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on:  util-linux e2fsprogs lzo zlib
+# Depends on:  e2fsprogs lzo
 
 name=btrfs-progs
 version=4.13.3

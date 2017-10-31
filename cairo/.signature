@@ -1,9 +1,0 @@
-untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/XKipZQj1gyflJw5BHlH3wsZD2v6Eb4sMsl3tURktimjh8GH00ottgpKu96UXFFHw5WoV2l75lvB+qzklMmqcgc=
-SHA256 (Pkgfile) = 8dba46a4bd52fe03e2cf1e9291c420383ae97a7e37121faad76a4e5f559b192b
-SHA256 (.footprint) = 01f56a1c4513bb142b94d81c220f5838103a12f0101cadf878525f486d03ef72
-SHA256 (cairo-1.15.6.tar.xz) = 5228e0a1f8fd14317f30f08f3dd72971bca432f8cdd2281d421fdcc2279de58c
-SHA256 (cairo-xlib-endianness.patch) = 58d39311edee6d8ddf76deac1d2e3526b4c02d4aa1f35a6ca16ff50c8e65429f
-SHA256 (cairo-get_bitmap_surface-bsc1036789-CVE-2017-7475.diff) = 4c8b8095a41f244ddfbc9b24e2f73a6fd8d697f43903617e0519b95b27b30726
-SHA256 (cairo-fix-off-by-one-check.patch) = e4f3239497d2c6d248745a2c398715fef54c62cdf60380ea5173c4c62d1c4c33
-SHA256 (0001-image-prevent-invalid-ptr-access-for-4GB-images.patch) = 79cb7b65d1079efb36ee62ec5ddf6e930dc24e0fd3ac4d914aadf98afb15c8f8

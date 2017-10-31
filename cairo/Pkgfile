@@ -1,7 +1,7 @@
 # Description: A 2D graphics library with support for multiple output devices
 # URL: http://www.cairographics.org/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: fontconfig, libpng, xorg-libxext, xorg-libxrender, xorg-libpixman, xorg-xcb-util, glib
+# Depends on: fontconfig, xorg-libxext, xorg-libxrender, xorg-libpixman, xorg-xcb-util, glib
 
 name=cairo
 version=1.15.6
