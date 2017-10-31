@@ -1,7 +1,7 @@
 # Description: PHP interpreter, extension modules and support stuff
 # URL:         http://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  readline libpcre libxml2 curl db gdbm xz
+# Depends on:  libpcre libxml2 curl db gdbm
 
 name=php
 version=5.6.32

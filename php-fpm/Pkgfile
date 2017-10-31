@@ -1,7 +1,7 @@
 # Description: FastCGI Process Manager for PHP
 # URL:         http://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  xz libpcre libxml2
+# Depends on:  libpcre libxml2
 
 name=php-fpm
 version=5.6.32

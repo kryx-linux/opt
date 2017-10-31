@@ -1,7 +1,7 @@
 # Description: Packet capture library
 # URL:         http://www.tcpdump.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  eudev libusb
+# Depends on:  libusb
 
 name=libpcap
 version=1.8.1

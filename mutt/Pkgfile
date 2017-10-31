@@ -1,7 +1,7 @@
 # Description: Text-based email client that sucks less
 # URL:         http://www.mutt.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  gdbm ncurses openssl zlib
+# Depends on:  gdbm openssl zlib
 
 name=mutt
 version=1.9.1

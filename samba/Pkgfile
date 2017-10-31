@@ -1,7 +1,7 @@
 # Description: SMB server and client for unix
 # URL:         http://www.samba.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  e2fsprogs libarchive tdb talloc tevent libcap libaio popt
+# Depends on:  e2fsprogs libarchive tdb tevent libcap libaio popt
 
 name=samba
 version=4.6.9

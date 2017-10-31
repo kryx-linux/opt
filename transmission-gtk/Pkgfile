@@ -1,7 +1,7 @@
 # Description: BitTorrent client with gtk user interface
 # URL:         http://transmission.m0k.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  curl intltool gtk3 libevent
+# Depends on:  gtk3 libevent
 
 name=transmission-gtk
 version=2.92

@@ -1,7 +1,7 @@
 # Description: Light-weight system monitor
 # URL:         http://conky.sourceforge.net/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  curl, glib, xorg-libxdamage, xorg-libxext, xorg-libxft
+# Depends on:  curl, xorg-libxdamage, xorg-libxft
 
 name=conky
 version=1.9.0

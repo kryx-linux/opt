@@ -1,7 +1,7 @@
 # Description: Backends and filters for CUPS
 # URL:         http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  cups ghostscript poppler qpdf mupdf
+# Depends on:  ghostscript poppler qpdf mupdf
 
 name=cups-filters
 version=1.17.9
