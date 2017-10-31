@@ -1,7 +1,7 @@
 # Description: SQL database engine
 # URL:         http://www.sqlite.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  ncurses, readline
+# Depends on:  readline
 
 name=sqlite3
 version=3.21.0
