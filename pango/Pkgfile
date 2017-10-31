@@ -5,15 +5,18 @@
 
 name=pango
 version=1.40.13
-release=1
+release=2
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
-        pango.modules)
+        pango.modules pango-view.patch)
 
 build () {
         cd $name-$version
+	patch -p1 -i $SRC/pango-view.patch
         ./configure --prefix=/usr
+
         make
         make DESTDIR=$PKG install
+
         install -D -m 644 $SRC/pango.modules $PKG/usr/etc/pango/pango.modules
         rm -r $PKG/usr/share/gtk-doc
 }
