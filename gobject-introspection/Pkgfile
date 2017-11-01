@@ -2,7 +2,7 @@
 # URL: https://live.gnome.org/GObjectIntrospection
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: python glib
+# Depends on: glib
 
 name=gobject-introspection
 version=1.52.1

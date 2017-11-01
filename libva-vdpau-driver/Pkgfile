@@ -2,7 +2,7 @@
 # URL: http://freedesktop.org/wiki/Software/vaapi
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Packager: Danny Rawlins, crux at romster dot me
-# Depends on: libva libvdpau
+# Depends on: libva
 
 name=libva-vdpau-driver
 version=0.7.4
