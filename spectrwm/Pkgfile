@@ -1,7 +1,7 @@
 # Description: Minimalistic tiling window manager
 # URL:         https://opensource.conformal.com/wiki/spectrwm
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  xorg-libxcursor xorg-libxft xorg-xcb-util-keysyms xorg-xcb-util-wm 
+# Depends on:  xorg-libxcursor xorg-libxft xorg-xcb-util-keysyms xorg-xcb-util-wm xorg-libxrandr
 
 name=spectrwm
 version=3.1.0
