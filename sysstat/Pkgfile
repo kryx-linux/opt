@@ -4,18 +4,18 @@
 # Depends on:
 
 name=sysstat
-version=11.4.6
+version=11.4.7
 release=1
 source=(http://perso.orange.fr/sebastien.godard/$name-$version.tar.xz)
 
 build() {
-  cd $name-$version
-  ./configure --prefix=/usr --disable-nls
-  sed -i "/^SA_LIB_DIR/s/lib64/lib/" Makefile
+	cd $name-$version
+	./configure --prefix=/usr --disable-nls
+	sed -i "/^SA_LIB_DIR/s/lib64/lib/" Makefile
 
-  make
-  make DESTDIR=$PKG install
+	make
+	make DESTDIR=$PKG install
 
-  rm -rf $PKG/etc/sysconfig
-  rm -rf $PKG/usr/{doc,share/doc}
+	rm -rf $PKG/etc/sysconfig
+	rm -rf $PKG/usr/{doc,share/doc}
 }
