@@ -4,7 +4,7 @@
 # Depends on:  e2fsprogs libarchive tdb tevent libcap libaio popt
 
 name=samba
-version=4.6.9
+version=4.7.1
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
@@ -39,7 +39,7 @@ build () {
 
     # config-file and start-script
     install -d $PKG/etc/{samba,rc.d}
-    install -m 0600 packaging/LSB/smb.conf $PKG/etc/samba/smb.conf.default
+    install -m 0600 examples/smb.conf.default $PKG/etc/samba
     install -m 0755 $SRC/samba $PKG/etc/rc.d
 
     # revdep
