@@ -2,7 +2,7 @@
 # URL: http://pypanel.sourceforge.net
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Johannes Winkelmann, jw at tks6 dot net
-# Depends on: python-xlib imlib2
+# Depends on: python-xlib imlib2 xorg-libxft
 
 name=pypanel
 version=2.4
