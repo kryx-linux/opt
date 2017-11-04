@@ -16,4 +16,8 @@ build() {
 
 	/usr/bin/python3 setup.py install \
 		--prefix=/usr --root=$PKG --optimize=1
+
+	# remove sdist metadata, as wheel metadata will be used with python3-setuptools
+	# force remove as this file will not exist with pyhton3-setuptools installed
+	rm -f $PKG/usr/lib/python*/site-packages/meson-$version-py*.egg-info
 }
