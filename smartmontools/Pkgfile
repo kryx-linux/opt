@@ -4,7 +4,7 @@
 # Packager: Juergen Daubert, jue at crux dot nu
 
 name=smartmontools
-version=6.5
+version=6.6
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz \
         smartd)
