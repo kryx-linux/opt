@@ -2,7 +2,7 @@
 # URL:         http://www.gnupg.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Daniel Mueller, daniel at danm dot de
-# Depends on:  libgcrypt, libassuan, libksba, pinentry, npth
+# Depends on:  libgcrypt, libksba, pinentry, npth
 
 name=gnupg
 version=2.2.0
