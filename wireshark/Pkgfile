@@ -2,10 +2,10 @@
 # URL: http://www.wireshark.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Martin Opel, mo at obbl-net dot de
-# Depends on: gtk3 libpcap libpcre hicolor-icon-theme
+# Depends on: gtk3 libpcap libpcre hicolor-icon-theme libgcrypt
 
 name=wireshark
-version=2.4.1
+version=2.4.2
 release=1
 source=(https://1.eu.dl.wireshark.org/src/wireshark-$version.tar.xz)
 
