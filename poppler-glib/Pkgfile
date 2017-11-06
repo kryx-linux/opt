@@ -4,7 +4,7 @@
 # Depends on:  gobject-introspection poppler 
 
 name=poppler-glib
-version=0.60.1
+version=0.61.0
 release=1
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz)
 
@@ -13,6 +13,8 @@ build() {
     
     cmake . \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+        -DCMAKE_INSTALL_INCLUDEDIR=/usr/include \
         -DENABLE_XPDF_HEADERS=OFF \
         -DENABLE_UTILS=OFF \
         -DENABLE_SPLASH=ON \
