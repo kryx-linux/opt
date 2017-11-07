@@ -1,8 +1,12 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/FileCheck
 -rwxr-xr-x	root/root	usr/bin/bugpoint
+-rwxr-xr-x	root/root	usr/bin/count
 -rwxr-xr-x	root/root	usr/bin/llc
 -rwxr-xr-x	root/root	usr/bin/lli
+-rwxr-xr-x	root/root	usr/bin/lli-child-target
+-rwxr-xr-x	root/root	usr/bin/llvm-PerfectShuffle
 -rwxr-xr-x	root/root	usr/bin/llvm-ar
 -rwxr-xr-x	root/root	usr/bin/llvm-as
 -rwxr-xr-x	root/root	usr/bin/llvm-bcanalyzer
@@ -44,11 +48,13 @@ lrwxrwxrwx	root/root	usr/bin/llvm-readelf -> llvm-readobj
 -rwxr-xr-x	root/root	usr/bin/llvm-symbolizer
 -rwxr-xr-x	root/root	usr/bin/llvm-tblgen
 -rwxr-xr-x	root/root	usr/bin/llvm-xray
+-rwxr-xr-x	root/root	usr/bin/not
 -rwxr-xr-x	root/root	usr/bin/obj2yaml
 -rwxr-xr-x	root/root	usr/bin/opt
 -rwxr-xr-x	root/root	usr/bin/sancov
 -rwxr-xr-x	root/root	usr/bin/sanstats
 -rwxr-xr-x	root/root	usr/bin/verify-uselistorder
+-rwxr-xr-x	root/root	usr/bin/yaml-bench
 -rwxr-xr-x	root/root	usr/bin/yaml2obj
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/llvm-c/
