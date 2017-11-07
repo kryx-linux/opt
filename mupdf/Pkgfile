@@ -5,11 +5,17 @@
 
 name=mupdf
 version=1.11
-release=1
-source=(http://mupdf.com/downloads/$name-$version-source.tar.gz)
+release=2
+source=(http://mupdf.com/downloads/$name-$version-source.tar.gz
+        CVE-2017-{14685,14686,14687,15587}.patch)
 
 build() {
     cd $name-$version-source
+
+    patch -p1 -i $SRC/CVE-2017-14685.patch
+    patch -p1 -i $SRC/CVE-2017-14686.patch
+    patch -p1 -i $SRC/CVE-2017-14687.patch
+    patch -p1 -i $SRC/CVE-2017-15587.patch
 
     rm -r thirdparty/{freetype,libjpeg,zlib,curl,harfbuzz}
 
