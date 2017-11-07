@@ -5,7 +5,7 @@
 
 name=samba
 version=4.7.1
-release=1
+release=2
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
 
@@ -19,7 +19,8 @@ build () {
                 --sysconfdir=/etc \
                 --with-privatedir=/etc/samba/private \
                 --bundled-libraries=!tdb,!talloc,!tevent,!popt \
-                --without-{ad-dc,ads,ldap,pam}
+                --without-{ad-dc,ads,ldap,pam} \
+                --disable-python
 
     python ./buildtools/bin/waf build --jobs=${JOBS:-1}
     python ./buildtools/bin/waf install --destdir=$PKG
@@ -36,6 +37,9 @@ build () {
     # remove pidl
     find $PKG -iname '*pidl*' -type f -delete
     find $PKG -depth -name perl5 -type d -exec rm -r {} \;
+
+    # remove third party python stuff
+    rm -r $PKG/usr/lib/python?.?
 
     # config-file and start-script
     install -d $PKG/etc/{samba,rc.d}
