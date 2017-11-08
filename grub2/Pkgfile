@@ -7,7 +7,7 @@ name=grub2
 version=2.02
 release=1
 source=(http://ftp.gnu.org/gnu/grub/grub-$version.tar.xz \
-	http://unifoundry.com/pub/unifont-9.0.06/font-builds/unifont-9.0.06.pcf.gz \
+	http://jaeger.morpheus.net/linux/crux/files/unifont-9.0.06.pcf.gz \
 	$name-00_header.diff $name-10_linux.diff grub.cfg.sample \
 	$name-intel-ucode.diff)
 
