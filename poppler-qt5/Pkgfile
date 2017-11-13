@@ -4,19 +4,16 @@
 # Depends on:  qt5 poppler 
 
 name=poppler-qt5
-version=0.61.0
+version=0.61.1
 release=1
-source=(http://poppler.freedesktop.org/poppler-$version.tar.xz)
+source=(https://poppler.freedesktop.org/poppler-$version.tar.xz)
 
 build() {
     cd poppler-$version
 
-    sed -i '/^libdir/s/=/=@/' poppler-qt5.pc.cmake
-
     cmake . \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=/usr/lib \
-        -DCMAKE_INSTALL_INCLUDEDIR=/usr/include \
         -DENABLE_XPDF_HEADERS=OFF \
         -DENABLE_UTILS=OFF \
         -DENABLE_SPLASH=ON \
