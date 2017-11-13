@@ -4,9 +4,9 @@
 # Depends on:  cmake cairo lcms2
 
 name=poppler
-version=0.61.0
+version=0.61.1
 release=1
-source=(http://poppler.freedesktop.org/poppler-$version.tar.xz)
+source=(https://poppler.freedesktop.org/poppler-$version.tar.xz)
 
 build() {
     cd poppler-$version
@@ -14,7 +14,6 @@ build() {
     cmake . \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=/usr/lib \
-        -DCMAKE_INSTALL_INCLUDEDIR=/usr/include \
         -DENABLE_XPDF_HEADERS=ON \
         -DENABLE_UTILS=ON \
         -DENABLE_SPLASH=ON \
