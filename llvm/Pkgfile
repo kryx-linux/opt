@@ -28,6 +28,7 @@ build() {
     -DLLVM_INSTALL_UTILS=1 \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
+    -DLLVM_APPEND_VC_REV=0 \
     -Wno-dev ..
 
   MAKEFLAGS="$MAKEFLAGS" make
