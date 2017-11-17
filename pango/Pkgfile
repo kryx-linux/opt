@@ -4,14 +4,13 @@
 # Depends on: xorg-libsm, xorg-libxft, gobject-introspection
 
 name=pango
-version=1.40.13
-release=2
+version=1.40.14
+release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
-        pango.modules pango-view.patch)
+        pango.modules)
 
 build () {
         cd $name-$version
-	patch -p1 -i $SRC/pango-view.patch
         ./configure --prefix=/usr
 
         make
