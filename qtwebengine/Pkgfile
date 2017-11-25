@@ -1,11 +1,10 @@
 # Description: Provides support for web applications using the Chromium browser project.
 # URL: http://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Packager: Danny Rawlins, crux at romster dot me
 # Depends on: qt5 xorg-libxscrnsaver xorg-libxtst nss ninja
 
 name=qtwebengine
-version=5.9.2
+version=5.9.3
 release=1
 source=(http://download.qt.io/official_releases/qt/${version::3}/$version/submodules/$name-opensource-src-$version.tar.xz
 	last-commit-position.patch
