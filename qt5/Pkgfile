@@ -4,7 +4,7 @@
 # Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon mtdev xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=qt5
-version=5.9.2
+version=5.9.3
 release=1
 source=(https://download.qt.io/official_releases/qt/${version::3}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
 	qt5-logo.png
@@ -63,9 +63,12 @@ build() {
 		-opensource \
 		-openssl-linked \
 		-optimized-qmake \
+		-qt-xkbcommon-x11 \
 		-reduce-relocations \
 		-release \
 		-shared \
+		-plugin-sql-sqlite \
+		-system-sqlite \
 		-skip qtwebengine
 
 	make
