@@ -1,30 +1,26 @@
 # Description: Perl Uniform Resource Identifiers Library.
 # URL: http://search.cpan.org/dist/URI/
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Han Boetes han at mijncomputer dot nl
-# Depends on: perl
+# Maintainer: Danny Rawlins, crux at romster dot me
 
 name=p5-uri
-version=1.71
+version=1.72
 release=1
 source=(http://search.cpan.org/CPAN/authors/id/E/ET/ETHER/URI-$version.tar.gz)
 
 build() {
-   cd URI-$version
+	cd URI-$version
 
-   perl Makefile.PL
-   make
-   make install DESTDIR=$PKG
+	perl Makefile.PL
+	make
+	make install DESTDIR=$PKG
 
-   # Remove perlcrap
-   find $PKG \
-      -name .packlist -or \
-      -name '*.bs' -or \
-      -name autosplit.ix -or \
-      -name perllocal.pod | xargs rm
+	# Remove perlcrap
+	find $PKG -type f \( \
+		-name '.packlist' -or \
+		-name '*.bs' -or \
+		-name 'autosplit.ix' -or \
+		-name 'perllocal.pod' \) -delete
 
-   # Remove empty directories
-   find $PKG -depth -empty -exec rm -rf {} \;
-
-   chown -R root:root $PKG
+	# Remove empty directories
+	find $PKG -depth -empty -exec rm -rf {} \;
 }
