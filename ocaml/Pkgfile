@@ -5,7 +5,7 @@
 # Depends on:  binutils ncurses
 
 name=ocaml
-version=4.05.0
+version=4.06.0
 release=1
 source=(http://caml.inria.fr/pub/distrib/$name-${version%.*}/$name-$version.tar.xz)
 
