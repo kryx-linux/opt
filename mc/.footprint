@@ -166,6 +166,7 @@ drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/glsl.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/go.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/haskell.syntax
+-rw-r--r--	root/root	usr/share/mc/syntax/hive.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/html.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/idl.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/ini.syntax
@@ -181,6 +182,7 @@ drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/m4.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/mail.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/makefile.syntax
+-rw-r--r--	root/root	usr/share/mc/syntax/markdown.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/ml.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/named.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/nemerle.syntax
@@ -195,6 +197,7 @@ drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/povray.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/procmail.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/properties.syntax
+-rw-r--r--	root/root	usr/share/mc/syntax/protobuf.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/puppet.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/python.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/r.syntax
@@ -209,6 +212,7 @@ drwxr-xr-x	root/root	usr/share/mc/syntax/
 -rw-r--r--	root/root	usr/share/mc/syntax/syntax.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/tcl.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/texinfo.syntax
+-rw-r--r--	root/root	usr/share/mc/syntax/ts.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/tt.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/unknown.syntax
 -rw-r--r--	root/root	usr/share/mc/syntax/verilog.syntax
