@@ -4,13 +4,14 @@
 # Depends on:  ncurses
 
 name=ncdu
-version=1.11
-release=2
+version=1.12
+release=1
 source=(http://dev.yorhel.nl/download/$name-$version.tar.gz)
 
 build() {
-  cd $name-$version
-  ./configure --prefix=/usr
-  make
-  make DESTDIR=$PKG install
+	cd $name-$version
+	./configure --prefix=/usr
+
+	make
+	make DESTDIR=$PKG install
 }
