@@ -80,11 +80,11 @@ drwxr-xr-x	root/root	usr/include/poppler/
 -rw-r--r--	root/root	usr/include/poppler/StructTreeRoot.h
 -rw-r--r--	root/root	usr/include/poppler/TextOutputDev.h
 -rw-r--r--	root/root	usr/include/poppler/UTF.h
--rw-r--r--	root/root	usr/include/poppler/UTF8.h
 -rw-r--r--	root/root	usr/include/poppler/UnicodeCClassTables.h
 -rw-r--r--	root/root	usr/include/poppler/UnicodeCompTables.h
 -rw-r--r--	root/root	usr/include/poppler/UnicodeDecompTables.h
 -rw-r--r--	root/root	usr/include/poppler/UnicodeMap.h
+-rw-r--r--	root/root	usr/include/poppler/UnicodeMapFuncs.h
 -rw-r--r--	root/root	usr/include/poppler/UnicodeMapTables.h
 -rw-r--r--	root/root	usr/include/poppler/UnicodeTypeTable.h
 -rw-r--r--	root/root	usr/include/poppler/ViewerPreferences.h
@@ -152,9 +152,9 @@ drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so -> libpoppler-cpp.so.0
 lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so.0 -> libpoppler-cpp.so.0.3.0
 -rwxr-xr-x	root/root	usr/lib/libpoppler-cpp.so.0.3.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.72
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so.72 -> libpoppler.so.72.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler.so.72.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.73
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so.73 -> libpoppler.so.73.0.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler.so.73.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cairo.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cpp.pc

@@ -4,7 +4,7 @@
 # Depends on:  cmake cairo lcms2
 
 name=poppler
-version=0.61.1
+version=0.62.0
 release=1
 source=(https://poppler.freedesktop.org/poppler-$version.tar.xz)
 
@@ -19,7 +19,6 @@ build() {
         -DENABLE_SPLASH=ON \
         -DENABLE_CPP=ON \
         -DENABLE_GLIB=OFF \
-        -DENABLE_QT4=OFF \
         -DENABLE_QT5=OFF \
         -DENABLE_ZLIB=ON \
         -DENABLE_CMS=lcms2 \
