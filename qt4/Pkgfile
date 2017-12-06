@@ -1,12 +1,11 @@
 # Description: Qt Free Edition
 # URL: http://www.trolltech.com
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Johannes Winkelmann, jw at smts dot ch
+# Maintainer: Orphaned port
 # Depends on: fontconfig glib libmng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-libsm dbus
 
 name=qt4
 version=4.8.7
-release=2
+release=3
 source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/qt-everywhere-opensource-src-$version.tar.gz \
 	qt-everywhere-opensource-src-4.8.7-gcc6.patch)
 
@@ -30,7 +29,7 @@ build () {
                 -platform linux-g++ -release -shared -sm \
                 -nis -verbose -system-zlib \
                 -system-lib{png,jpeg} -xmlpatterns \
-                -no-{cups,fast,nas-sound,phonon} \
+                -no-{cups,fast,nas-sound,phonon,icu} \
                 -x{cursor,inerama,kb,randr,render} \
                 -nomake demos -nomake examples -nomake docs \
                 -no-separate-debug-info -opensource -confirm-license
