@@ -156,6 +156,8 @@ drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycach
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycache__/pkgconfig.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycache__/python3.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycache__/python3.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycache__/qt.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycache__/qt.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycache__/qt4.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycache__/qt4.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycache__/qt5.cpython-36.opt-1.pyc
@@ -171,6 +173,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/__pycach
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/modtest.py
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/pkgconfig.py
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/python3.py
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/qt.py
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/qt4.py
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/qt5.py
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/modules/rpm.py
