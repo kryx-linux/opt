@@ -305,6 +305,9 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/devpkey.h
 -rw-r--r--	root/root	usr/include/wine/windows/devpropdef.h
 -rw-r--r--	root/root	usr/include/wine/windows/dhcpcsdk.h
+-rw-r--r--	root/root	usr/include/wine/windows/dhtmldid.h
+-rw-r--r--	root/root	usr/include/wine/windows/dhtmled.h
+-rw-r--r--	root/root	usr/include/wine/windows/dhtmled.idl
 -rw-r--r--	root/root	usr/include/wine/windows/difxapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/digitalv.h
 -rw-r--r--	root/root	usr/include/wine/windows/dimm.h
@@ -2023,6 +2026,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vssapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wbemdisp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wbemprox.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/wdscore.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/webservices.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wer.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wevtapi.dll
@@ -2239,6 +2243,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libhidclass.def
 -rw-r--r--	root/root	usr/lib/wine/libhlink.def
 -rw-r--r--	root/root	usr/lib/wine/libhtmlhelp.def
+-rw-r--r--	root/root	usr/lib/wine/libhttpapi.def
 -rw-r--r--	root/root	usr/lib/wine/libieframe.def
 -rw-r--r--	root/root	usr/lib/wine/libimagehlp.def
 -rw-r--r--	root/root	usr/lib/wine/libimm32.def
@@ -2613,6 +2618,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/vssapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wbemdisp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wbemprox.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/wdscore.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/webservices.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wer.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wevtapi.dll.so
@@ -3844,6 +3850,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/w32sys.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wbemdisp.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wbemprox.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/wdscore.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/webservices.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wer.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wevtapi.dll
@@ -4078,6 +4085,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libhidclass.def
 -rw-r--r--	root/root	usr/lib32/wine/libhlink.def
 -rw-r--r--	root/root	usr/lib32/wine/libhtmlhelp.def
+-rw-r--r--	root/root	usr/lib32/wine/libhttpapi.def
 -rw-r--r--	root/root	usr/lib32/wine/libieframe.def
 -rw-r--r--	root/root	usr/lib32/wine/libimagehlp.def
 -rw-r--r--	root/root	usr/lib32/wine/libimm32.def
@@ -4490,6 +4498,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/w32sys.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wbemdisp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wbemprox.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/wdscore.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/webservices.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wer.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wevtapi.dll.so
