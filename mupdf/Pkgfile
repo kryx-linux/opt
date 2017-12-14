@@ -4,19 +4,15 @@
 # Depends on:  harfbuzz libjpeg-turbo mesa3d xorg-libxcursor xorg-libxinerama xorg-libxrandr
 
 name=mupdf
-version=1.11
-release=2
-source=(http://mupdf.com/downloads/$name-$version-source.tar.gz
-        CVE-2017-{14685,14686,14687,15587}.patch)
+version=1.12.0
+release=1
+source=(https://mupdf.com/downloads/$name-$version-source.tar.xz)
 
 build() {
     cd $name-$version-source
 
-    patch -p1 -i $SRC/CVE-2017-14685.patch
-    patch -p1 -i $SRC/CVE-2017-14686.patch
-    patch -p1 -i $SRC/CVE-2017-14687.patch
-    patch -p1 -i $SRC/CVE-2017-15587.patch
-
+    # System lcms2 doesn't work, see
+    # http://git.ghostscript.com/?p=mupdf.git;a=commit;h=74a8100804c8f18e1e2a71435b1e191df49e81fd
     rm -r thirdparty/{freetype,libjpeg,zlib,curl,harfbuzz}
 
     make XCFLAGS="-fpic" build=release

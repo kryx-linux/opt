@@ -1,5 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/mjsgen
 -rwxr-xr-x	root/root	usr/bin/mujstest
 lrwxrwxrwx	root/root	usr/bin/mupdf -> mupdf-x11-curl
 -rwxr-xr-x	root/root	usr/bin/mupdf-gl
@@ -17,7 +18,9 @@ drwxr-xr-x	root/root	usr/include/mupdf/fitz/
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/bidi.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/bitmap.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/buffer.h
+-rwxr-xr-x	root/root	usr/include/mupdf/fitz/color-management.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/colorspace.h
+-rwxr-xr-x	root/root	usr/include/mupdf/fitz/compress.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/compressed-buffer.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/config.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/context.h
@@ -27,7 +30,6 @@ drwxr-xr-x	root/root	usr/include/mupdf/fitz/
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/document.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/filter.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/font.h
--rwxr-xr-x	root/root	usr/include/mupdf/fitz/function.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/geometry.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/getopt.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/glyph-cache.h
@@ -37,9 +39,11 @@ drwxr-xr-x	root/root	usr/include/mupdf/fitz/
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/link.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/outline.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/output-pcl.h
+-rwxr-xr-x	root/root	usr/include/mupdf/fitz/output-pclm.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/output-png.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/output-pnm.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/output-ps.h
+-rwxr-xr-x	root/root	usr/include/mupdf/fitz/output-psd.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/output-pwg.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/output-svg.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/output-tga.h
@@ -58,12 +62,10 @@ drwxr-xr-x	root/root	usr/include/mupdf/fitz/
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/track-usage.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/transition.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/tree.h
--rwxr-xr-x	root/root	usr/include/mupdf/fitz/ucdn.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/util.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/version.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/writer.h
 -rwxr-xr-x	root/root	usr/include/mupdf/fitz/xml.h
--rwxr-xr-x	root/root	usr/include/mupdf/html.h
 -rwxr-xr-x	root/root	usr/include/mupdf/memento.h
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf-tools.h
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf.h
@@ -87,7 +89,7 @@ drwxr-xr-x	root/root	usr/include/mupdf/pdf/
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf/resource.h
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf/widget.h
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf/xref.h
--rwxr-xr-x	root/root	usr/include/mupdf/svg.h
+-rwxr-xr-x	root/root	usr/include/mupdf/ucdn.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libmupdf.a
 -rwxr-xr-x	root/root	usr/lib/libmupdfthird.a
