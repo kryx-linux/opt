@@ -97,6 +97,8 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits/audits_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits2/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits2/audits2_module.js
+drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits2_test_runner/
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits2_test_runner/audits2_test_runner_module.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits2_worker.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits2_worker/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits2_worker/audits2_worker_module.js
@@ -232,6 +234,8 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/sass_test_runner/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/sass_test_runner/sass_test_runner_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/screencast/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/screencast/screencast_module.js
+drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/sdk_test_runner/
+-rw-r--r--	root/root	usr/lib/chromium/resources/inspector/sdk_test_runner/sdk_test_runner_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/security/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/security/security_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/security_test_runner/
@@ -256,8 +260,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/timeline_model/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/timeline_model/timeline_model_module.js
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/toolbox.html
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/toolbox.js
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/unit_test_runner.html
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/unit_test_runner.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/workspace_diff/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/workspace_diff/workspace_diff_module.js
 -rw-r--r--	root/root	usr/lib/chromium/snapshot_blob.bin
@@ -282,8 +284,9 @@ drwxr-xr-x	root/root	usr/share/icons/hicolor/256x256/apps/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/apps/
 -rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/chromium.png
+drwxr-xr-x	root/root	usr/share/icons/hicolor/64x64/
+drwxr-xr-x	root/root	usr/share/icons/hicolor/64x64/apps/
+-rw-r--r--	root/root	usr/share/icons/hicolor/64x64/apps/chromium.png
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/chromium.1.gz
-drwxr-xr-x	root/root	usr/share/pixmaps/
-lrwxrwxrwx	root/root	usr/share/pixmaps/chromium.png -> /usr/share/icons/hicolor/48x48/apps/chromium.png
