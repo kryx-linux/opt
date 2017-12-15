@@ -3521,6 +3521,10 @@ drwxr-xr-x	root/root	usr/share/ri/2.4/system/Gem/Resolver/VendorSpecification/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Resolver/stats-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.4/system/Gem/RubyVersionMismatch/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/RubyVersionMismatch/cdesc-RubyVersionMismatch.ri
+drwxr-xr-x	root/root	usr/share/ri/2.4/system/Gem/SafeYAML/
+-rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/SafeYAML/cdesc-SafeYAML.ri
+-rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/SafeYAML/load-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/SafeYAML/safe_load-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.4/system/Gem/Security/
 drwxr-xr-x	root/root	usr/share/ri/2.4/system/Gem/Security/Exception/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Security/Exception/cdesc-Exception.ri
