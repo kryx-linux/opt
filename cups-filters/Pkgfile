@@ -4,9 +4,9 @@
 # Depends on:  ghostscript poppler qpdf mupdf
 
 name=cups-filters
-version=1.17.9
+version=1.18.0
 release=1
-source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz
+source=(https://www.openprinting.org/download/$name/$name-$version.tar.xz
         cups-browsed)
 
 build () {

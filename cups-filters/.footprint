@@ -1,9 +1,6 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/cups/
 -rw-r--r--	root/root	etc/cups/cups-browsed.conf
-drwxr-xr-x	root/root	etc/fonts/
-drwxr-xr-x	root/root	etc/fonts/conf.d/
--rw-r--r--	root/root	etc/fonts/conf.d/99pdftoopvp.conf
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/cups-browsed
 drwxr-xr-x	root/root	usr/
@@ -47,8 +44,6 @@ drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/imagetops
 -rwxr-xr-x	root/root	usr/lib/cups/filter/imagetoraster
 -rwxr-xr-x	root/root	usr/lib/cups/filter/mupdftoraster
--rwxr-xr-x	root/root	usr/lib/cups/filter/pdftoijs
--rwxr-xr-x	root/root	usr/lib/cups/filter/pdftoopvp
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pdftopdf
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pdftops
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pdftoraster
@@ -128,7 +123,6 @@ drwxr-xr-x	root/root	usr/share/ppd/cupsfilters/
 -rw-r--r--	root/root	usr/share/ppd/cupsfilters/Fuji_Xerox-DocuPrint_CM305_df-PDF.ppd
 -rw-r--r--	root/root	usr/share/ppd/cupsfilters/Generic-PDF_Printer-PDF.ppd
 -rw-r--r--	root/root	usr/share/ppd/cupsfilters/HP-Color_LaserJet_CM3530_MFP-PDF.ppd
--rw-r--r--	root/root	usr/share/ppd/cupsfilters/HP-PhotoSmart_Pro_B8300-hpijs-pdftoijs.ppd
 -rw-r--r--	root/root	usr/share/ppd/cupsfilters/Ricoh-PDF_Printer-PDF.ppd
 -rw-r--r--	root/root	usr/share/ppd/cupsfilters/pxlcolor.ppd
 -rw-r--r--	root/root	usr/share/ppd/cupsfilters/pxlmono.ppd
