@@ -49,9 +49,12 @@ drwxr-xr-x	root/root	usr/include/kadm5/
 -rw-r--r--	root/root	usr/include/krb5.h
 drwxr-xr-x	root/root	usr/include/krb5/
 -rw-r--r--	root/root	usr/include/krb5/ccselect_plugin.h
+-rw-r--r--	root/root	usr/include/krb5/certauth_plugin.h
 -rw-r--r--	root/root	usr/include/krb5/clpreauth_plugin.h
 -rw-r--r--	root/root	usr/include/krb5/hostrealm_plugin.h
+-rw-r--r--	root/root	usr/include/krb5/kadm5_auth_plugin.h
 -rw-r--r--	root/root	usr/include/krb5/kadm5_hook_plugin.h
+-rw-r--r--	root/root	usr/include/krb5/kdcpolicy_plugin.h
 -rw-r--r--	root/root	usr/include/krb5/kdcpreauth_plugin.h
 -rw-r--r--	root/root	usr/include/krb5/krb5.h
 -rw-r--r--	root/root	usr/include/krb5/localauth_plugin.h
@@ -93,9 +96,9 @@ lrwxrwxrwx	root/root	usr/lib/libkadm5srv.so -> libkadm5srv_mit.so
 lrwxrwxrwx	root/root	usr/lib/libkadm5srv_mit.so -> libkadm5srv_mit.so.11.0
 lrwxrwxrwx	root/root	usr/lib/libkadm5srv_mit.so.11 -> libkadm5srv_mit.so.11.0
 -rw-r--r--	root/root	usr/lib/libkadm5srv_mit.so.11.0
-lrwxrwxrwx	root/root	usr/lib/libkdb5.so -> libkdb5.so.8.0
-lrwxrwxrwx	root/root	usr/lib/libkdb5.so.8 -> libkdb5.so.8.0
--rw-r--r--	root/root	usr/lib/libkdb5.so.8.0
+lrwxrwxrwx	root/root	usr/lib/libkdb5.so -> libkdb5.so.9.0
+lrwxrwxrwx	root/root	usr/lib/libkdb5.so.9 -> libkdb5.so.9.0
+-rw-r--r--	root/root	usr/lib/libkdb5.so.9.0
 lrwxrwxrwx	root/root	usr/lib/libkdb_ldap.so -> libkdb_ldap.so.1.0
 lrwxrwxrwx	root/root	usr/lib/libkdb_ldap.so.1 -> libkdb_ldap.so.1.0
 -rw-r--r--	root/root	usr/lib/libkdb_ldap.so.1.0
