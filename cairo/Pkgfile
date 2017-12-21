@@ -4,7 +4,7 @@
 # Depends on: fontconfig, xorg-libxext, xorg-libxrender, xorg-libpixman, xorg-xcb-util, glib
 
 name=cairo
-version=1.15.8
+version=1.15.10
 release=1
 source=(https://cairographics.org/snapshots/cairo-$version.tar.xz
 	cairo-xlib-endianness.patch
@@ -15,7 +15,7 @@ build() {
         cd $name-$version
         patch -p1 -i $SRC/cairo-xlib-endianness.patch
         patch -p1 -i $SRC/cairo-get_bitmap_surface-bsc1036789-CVE-2017-7475.diff
-        patch -p1 -i $SRC/0001-image-prevent-invalid-ptr-access-for-4GB-images.patch
+        #patch -p1 -i $SRC/0001-image-prevent-invalid-ptr-access-for-4GB-images.patch
 
         ./configure --prefix=/usr \
                 --enable-xcb=yes \
