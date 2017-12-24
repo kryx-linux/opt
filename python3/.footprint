@@ -2410,6 +2410,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/zoomheight.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/zoomheight.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/zoomheight.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/zzdummy.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/zzdummy.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/zzdummy.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/autocomplete.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/autocomplete_w.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/autoexpand.py
@@ -2512,6 +2515,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_macosx.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_macosx.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_macosx.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_outwin.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_outwin.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_outwin.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_paragraph.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_paragraph.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_paragraph.cpython-36.pyc
@@ -2584,6 +2590,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_hyperparser.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_iomenu.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_macosx.py
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_outwin.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_paragraph.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_parenmatch.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_pathbrowser.py
@@ -2632,6 +2639,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/undo.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/windows.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/zoomheight.py
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/zzdummy.py
 -rw-r--r--	root/root	usr/lib/python3.6/imaplib.py
 -rw-r--r--	root/root	usr/lib/python3.6/imghdr.py
 -rw-r--r--	root/root	usr/lib/python3.6/imp.py
@@ -2756,9 +2764,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/
 -rwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.2.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.3.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.2.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.3.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__main__.py
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/__pycache__/
@@ -3393,6 +3401,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/autotest.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/autotest.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/autotest.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/bisect.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/bisect.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/bisect.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/bytecode_helper.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/bytecode_helper.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/bytecode_helper.cpython-36.pyc
@@ -3492,6 +3503,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/pystone.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/pystone.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/pystone.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/pythoninfo.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/pythoninfo.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/pythoninfo.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/re_tests.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/re_tests.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/re_tests.cpython-36.pyc
@@ -4781,6 +4795,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/audiodata/
 -rw-r--r--	root/root	usr/lib/python3.6/test/badsyntax_future8.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/badsyntax_future9.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/badsyntax_pep3120.py
+-rwxr-xr-x	root/root	usr/lib/python3.6/test/bisect.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/bytecode_helper.py
 drwxr-xr-x	root/root	usr/lib/python3.6/test/capath/
 -rw-r--r--	root/root	usr/lib/python3.6/test/capath/4e1295a3.0
@@ -5119,6 +5134,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/pydoc_mod.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/pydocfodder.py
 -rwxr-xr-x	root/root	usr/lib/python3.6/test/pystone.py
+-rw-r--r--	root/root	usr/lib/python3.6/test/pythoninfo.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/randv2_32.pck
 -rw-r--r--	root/root	usr/lib/python3.6/test/randv2_64.pck
 -rw-r--r--	root/root	usr/lib/python3.6/test/randv3.pck
@@ -5133,7 +5149,6 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/selfsigned_pythontestdotnet.pem
 -rw-r--r--	root/root	usr/lib/python3.6/test/seq_tests.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/sgml_input.html
--rw-r--r--	root/root	usr/lib/python3.6/test/sha256.pem
 -rw-r--r--	root/root	usr/lib/python3.6/test/signalinterproctester.py
 drwxr-xr-x	root/root	usr/lib/python3.6/test/sndhdrdata/
 -rw-r--r--	root/root	usr/lib/python3.6/test/sndhdrdata/sndhdr.8svx
@@ -5617,6 +5632,26 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/test_import/data/circular_imports/su
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/circular_imports/subpkg/subpackage2.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/circular_imports/subpkg/util.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/circular_imports/util.py
+drwxr-xr-x	root/root	usr/lib/python3.6/test/test_import/data/package/
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package/__init__.py
+drwxr-xr-x	root/root	usr/lib/python3.6/test/test_import/data/package/__pycache__/
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package/__pycache__/__init__.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package/__pycache__/__init__.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package/__pycache__/__init__.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package/__pycache__/submodule.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package/__pycache__/submodule.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package/__pycache__/submodule.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package/submodule.py (EMPTY)
+drwxr-xr-x	root/root	usr/lib/python3.6/test/test_import/data/package2/
+drwxr-xr-x	root/root	usr/lib/python3.6/test/test_import/data/package2/__pycache__/
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package2/__pycache__/submodule1.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package2/__pycache__/submodule1.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package2/__pycache__/submodule1.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package2/__pycache__/submodule2.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package2/__pycache__/submodule2.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package2/__pycache__/submodule2.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package2/submodule1.py
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_import/data/package2/submodule2.py (EMPTY)
 drwxr-xr-x	root/root	usr/lib/python3.6/test/test_importlib/
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_importlib/__init__.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_importlib/__main__.py
