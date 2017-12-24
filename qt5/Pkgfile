@@ -4,17 +4,13 @@
 # Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon mtdev xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=qt5
-version=5.9.3
+version=5.10.0
 release=1
-source=(https://download.qt.io/official_releases/qt/${version::3}/$version/single/qt-everywhere-opensource-src-$version.tar.xz
-	qt5-logo.png
-	harmony-fix.patch)
+source=(https://download.qt.io/official_releases/qt/${version::4}/$version/single/qt-everywhere-src-$version.tar.xz
+	qt5-logo.png)
 
 build() {
-	cd qt-everywhere-opensource-src-$version
-
-	# Freetype 2.8.1
-	patch -d qtbase -p1 -i $SRC/harmony-fix.patch
+	cd qt-everywhere-src-$version
 
 	# Fix missing private includes
 	# https://bugreports.qt.io/browse/QTBUG-37417
