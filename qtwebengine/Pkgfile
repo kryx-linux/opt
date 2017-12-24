@@ -4,23 +4,18 @@
 # Depends on: qt5 xorg-libxscrnsaver xorg-libxtst nss ninja
 
 name=qtwebengine
-version=5.9.3
+version=5.10.0
 release=1
-source=(http://download.qt.io/official_releases/qt/${version::3}/$version/submodules/$name-opensource-src-$version.tar.xz
-	last-commit-position.patch
-	harmony-fix.patch)
+source=(http://download.qt.io/official_releases/qt/${version::4}/$version/submodules/$name-everywhere-src-$version.tar.xz
+	last-commit-position.patch)
 
 build() {
-	cd $name-opensource-src-$version
+	cd $name-everywhere-src-$version
 
 	# we don't use git sources
 	patch -p1 -i $SRC/last-commit-position.patch
 
-	# FreeType 2.8.1
-	patch -p1 -i $SRC/harmony-fix.patch
-
 	# Ninja, by default, sets the number of jobs to the number of availalble threads
-	local JOBS=$(awk 'BEGIN{RS="-j|--jobs="} NR==2 {print $1}' <<< $MAKEFLAGS)
 	test -n "$JOBS" && export NINJAFLAGS+=" -j $JOBS"
 
 	install -d build
