@@ -2242,6 +2242,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/__main__.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/__main__.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/__main__.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/_pyclbr.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/_pyclbr.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/_pyclbr.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/autocomplete.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/autocomplete.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/autocomplete.cpython-36.pyc
@@ -2389,9 +2392,6 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/statusbar.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/statusbar.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/statusbar.cpython-36.pyc
--rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/tabbedpages.cpython-36.opt-1.pyc
--rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/tabbedpages.cpython-36.opt-2.pyc
--rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/tabbedpages.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/textview.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/textview.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/textview.cpython-36.pyc
@@ -2413,6 +2413,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/zzdummy.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/zzdummy.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/__pycache__/zzdummy.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/_pyclbr.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/autocomplete.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/autocomplete_w.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/autoexpand.py
@@ -2467,6 +2468,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_autoexpand.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_autoexpand.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_autoexpand.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_browser.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_browser.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_browser.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_calltips.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_calltips.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_calltips.cpython-36.pyc
@@ -2542,6 +2546,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_rstrip.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_rstrip.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_rstrip.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_run.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_run.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_run.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_scrolledlist.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_scrolledlist.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_scrolledlist.cpython-36.pyc
@@ -2574,6 +2581,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/mock_tk.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_autocomplete.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_autoexpand.py
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_browser.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_calltips.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_colorizer.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_config.py
@@ -2599,6 +2607,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_redirector.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_replace.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_rstrip.py
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_run.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_scrolledlist.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_search.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_searchbase.py
@@ -2632,7 +2641,6 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/searchengine.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/stackviewer.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/statusbar.py
--rw-r--r--	root/root	usr/lib/python3.6/idlelib/tabbedpages.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/textview.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/tooltip.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/tree.py
@@ -2764,9 +2772,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/
 -rwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.3.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.4.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.3.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.4.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__main__.py
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/__pycache__/
@@ -4337,6 +4345,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_regrtest.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_regrtest.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_regrtest.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_repl.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_repl.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_repl.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_reprlib.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_reprlib.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_reprlib.cpython-36.pyc
@@ -6086,6 +6097,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/test_json/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_re.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_readline.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_regrtest.py
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_repl.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_reprlib.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_resource.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_richcmp.py
@@ -6309,6 +6321,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/tracedmodules/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/win_console_handler.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/wrongcert.pem
 drwxr-xr-x	root/root	usr/lib/python3.6/test/xmltestdata/
+-rw-r--r--	root/root	usr/lib/python3.6/test/xmltestdata/expat224_utf8_bug.xml
 -rw-r--r--	root/root	usr/lib/python3.6/test/xmltestdata/simple-ns.xml
 -rw-r--r--	root/root	usr/lib/python3.6/test/xmltestdata/simple.xml
 -rw-r--r--	root/root	usr/lib/python3.6/test/xmltestdata/test.xml
