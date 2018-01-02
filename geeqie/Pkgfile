@@ -4,24 +4,25 @@
 # Depends on:  gtk
 
 name=geeqie
-version=1.3
-release=2
+version=1.4
+release=1
 source=(http://geeqie.org/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
 
-    ./autogen.sh
+    sed -e '/HAVE_MARKDOWN/,/endif/d' -e '/^.PHONY:/,$d' -i Makefile.am
 
+    export LINGUAS=" "
     export CFLAGS="$CFLAGS $(pkg-config --cflags gtk+-2.0)"
     export LDFLAGS="$LDFLAGS $(pkg-config --libs gtk+-2.0)"
     export CXXFLAGS="$CXXFLAGS $CFLAGS"
 
+    ./autogen.sh
     ./configure --prefix=/usr --disable-gtk3
 
     make
     make DESTDIR=$PKG install
 
     sed -ri '/\[.+\]=/d' $PKG/usr/share/{geeqie/,}applications/*.desktop
-    rm -r $PKG/usr/share/{doc,locale}
 }
