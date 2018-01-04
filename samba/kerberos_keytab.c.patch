@@ -1,0 +1,19 @@
+X-Git-Url: https://git.samba.org/samba.git/?p=samba.git;a=blobdiff_plain;f=source3%2Flibads%2Fkerberos_keytab.c;h=ffd100c5636b273b0a76e059dc76f1d93133f290;hp=ff12ec04af689b3f27de563138045824a64ca0f4;hb=aba1e9199ddb18c229bf0def46a7caf333d2d618;hpb=73d3e642f8c71177bc8f42afb6724a7f93ef5472
+
+diff --git a/source3/libads/kerberos_keytab.c b/source3/libads/kerberos_keytab.c
+index ff12ec0..ffd100c 100644
+--- a/source3/libads/kerberos_keytab.c
++++ b/source3/libads/kerberos_keytab.c
+@@ -639,7 +639,11 @@ int ads_keytab_list(const char *keytab_name)
+ 		return ret;
+ 	}
+ 
+-	ret = smb_krb5_kt_open(context, keytab_name, False, &keytab);
++	if (keytab_name == NULL) {
++		ret = ads_keytab_open(context, &keytab);
++	} else {
++		ret = smb_krb5_kt_open(context, keytab_name, False, &keytab);
++	}
+ 	if (ret) {
+ 		DEBUG(1, ("smb_krb5_kt_open failed (%s)\n",
+ 			  error_message(ret)));

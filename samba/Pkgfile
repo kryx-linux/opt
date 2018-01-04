@@ -4,13 +4,16 @@
 # Depends on:  e2fsprogs libarchive tdb tevent libcap libaio popt
 
 name=samba
-version=4.7.3
+version=4.7.4
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
-        samba)
+        kerberos_keytab.c.patch samba)
 
 build () {
     cd $name-$version
+
+    # revert patch because it breaks build without ads
+    patch -p1 -R -i $SRC/kerberos_keytab.c.patch
 
     ./configure --enable-fhs \
                 --prefix=/usr \

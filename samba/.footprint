@@ -285,8 +285,8 @@ lrwxrwxrwx	root/root	usr/lib/samba/libkrb5-samba4.so.26 -> libkrb5-samba4.so.26.
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5-samba4.so.26.0.0
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5samba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libldb-cmdline-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.2.2
--rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.2.2
+lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.2.3
+-rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.2.3
 -rwxr-xr-x	root/root	usr/lib/samba/libldbsamba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli-lsa3-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli-netlogon3-samba4.so
