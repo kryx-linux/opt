@@ -1,11 +1,10 @@
 # Description: Terminal based IRC client for UNIX systems
 # URL: http://www.irssi.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager: Daniel K. Gebhart, dkg at con-fuse dot org
 # Depends on: glib
 
 name=irssi
-version=1.0.5
+version=1.0.6
 release=1
 source=(https://github.com/irssi-import/irssi/releases/download/$version/$name-$version.tar.xz)
 
