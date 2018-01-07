@@ -13,108 +13,108 @@ source=(https://commondatastorage.googleapis.com/$name-browser-official/$name-$v
 	chromium-webrtc-r0.patch)
 
 build() {
-  cd $name-$version
+	cd $name-$version
 
-  if [ -n "$(pkginfo -i | grep '^ccache ')" ]; then
-    # Avoid falling back to preprocessor mode when sources contain time macros
-    export CCACHE_SLOPPINESS=time_macros
-  fi
+	if [ -n "$(pkginfo -i | grep '^ccache ')" ]; then
+		# Avoid falling back to preprocessor mode when sources contain time macros
+		export CCACHE_SLOPPINESS=time_macros
+	fi
 
-  export CFLAGS="$CFLAGS $(pkg-config --cflags nspr)"
-  export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
+	export CFLAGS="$CFLAGS $(pkg-config --cflags nspr)"
+	export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
 
-  # we don't use git sources
-  patch -p1 -i $SRC/last-commit-position.patch
+	# we don't use git sources
+	patch -p1 -i $SRC/last-commit-position.patch
 
-  # https://chromium-review.googlesource.com/c/chromium/src/+/71257
-  patch -p1 -i $SRC/chromium-exclude_unwind_tables.patch
+	# https://chromium-review.googlesource.com/c/chromium/src/+/71257
+	patch -p1 -i $SRC/chromium-exclude_unwind_tables.patch
 
-  # Fixes from Gentoo
-  patch -p1 -i $SRC/chromium-clang-r1.patch
-  patch -p1 -i $SRC/chromium-webrtc-r0.patch
+	# Fixes from Gentoo
+	patch -p1 -i $SRC/chromium-clang-r1.patch
+	patch -p1 -i $SRC/chromium-webrtc-r0.patch
 
-  mkdir -p third_party/node/linux/node-linux-x64/bin
-  ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
+	mkdir -p third_party/node/linux/node-linux-x64/bin
+	ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
 
 #  for LIB in ffmpeg flac harfbuzz-ng libjpeg \
-#    libjpeg_turbo libpng libwebp libxslt yasm; do
-#    find -type f -path "*third_party/$LIB/*"   \
-#      \! -path "*third_party/$LIB/chromium/*"  \
-#      \! -path "*third_party/$LIB/google/*"    \
-#      \! -path "*base/third_party/icu/*"       \
-#      \! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
-#      -delete
+#		 libjpeg_turbo libpng libwebp libxslt yasm; do
+#		 find -type f -path "*third_party/$LIB/*"		\
+#			 \! -path "*third_party/$LIB/chromium/*"	\
+#			 \! -path "*third_party/$LIB/google/*"		\
+#			 \! -path "*base/third_party/icu/*"				\
+#			 \! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
+#			 -delete
 #  done
 
 #  /usr/bin/python2 build/linux/unbundle/replace_gn_files.py \
-#    --system-libraries ffmpeg flac harfbuzz-ng libjpeg libxml libevent \
-#                       libpng libwebp libxslt opus yasm freetype
+#		 --system-libraries ffmpeg flac harfbuzz-ng libjpeg libxml libevent \
+#												libpng libwebp libxslt opus yasm freetype
 #  /usr/bin/python2 third_party/libaddressinput/chromium/tools/update-strings.py
 
-  _gn_args=(
-    'blink_gc_plugin=false'
-    'clang_use_chrome_plugins=false'
-    'enable_hangout_services_extension=true'
-    'enable_nacl=false'
-    'enable_swiftshader=false'
-    'fatal_linker_warnings=false'
-    'ffmpeg_branding="Chrome"'
-    'is_clang=false'
-    'is_debug=false'
-    'linux_use_bundled_binutils=false'
-    'use_custom_libcxx=false'
-    'proprietary_codecs=true'
-    'remove_webcore_debug_symbols=true'
-    'symbol_level=0'
-    'treat_warnings_as_errors=false'
-    'use_allocator="none"'
-    'use_cups=false'
-    'use_gconf=false'
-    'use_gnome_keyring=false'
-    'use_gold=false'
-    'use_gtk3=true'
-    'use_kerberos=false'
-    'use_pulseaudio=false'
-    'use_sysroot=false'
-  )
+	_gn_args=(
+		'blink_gc_plugin=false'
+		'clang_use_chrome_plugins=false'
+		'enable_hangout_services_extension=true'
+		'enable_nacl=false'
+		'enable_swiftshader=false'
+		'fatal_linker_warnings=false'
+		'ffmpeg_branding="Chrome"'
+		'is_clang=false'
+		'is_debug=false'
+		'linux_use_bundled_binutils=false'
+		'use_custom_libcxx=false'
+		'proprietary_codecs=true'
+		'remove_webcore_debug_symbols=true'
+		'symbol_level=0'
+		'treat_warnings_as_errors=false'
+		'use_allocator="none"'
+		'use_cups=false'
+		'use_gconf=false'
+		'use_gnome_keyring=false'
+		'use_gold=false'
+		'use_gtk3=true'
+		'use_kerberos=false'
+		'use_pulseaudio=false'
+		'use_sysroot=false'
+	)
 
-  /usr/bin/python2 tools/gn/bootstrap/bootstrap.py --gn-gen-args="${_gn_args[*]}"
-  out/Release/gn gen out/Release --args="${_gn_args[*]}" --script-executable=/usr/bin/python2
+	/usr/bin/python2 tools/gn/bootstrap/bootstrap.py --gn-gen-args="${_gn_args[*]}"
+	out/Release/gn gen out/Release --args="${_gn_args[*]}" --script-executable=/usr/bin/python2
 
-  ninja -j ${JOBS-1} -C out/Release chrome chrome_sandbox
+	ninja -j ${JOBS-1} -C out/Release chrome chrome_sandbox
 
-  install -m 0755 -D out/Release/chrome $PKG/usr/lib/$name/$name
-  install -m 4755 -o root -g root -D out/Release/chrome_sandbox $PKG/usr/lib/$name/chrome-sandbox
-  install -m 0644 -D out/Release/*.pak $PKG/usr/lib/$name
-  install -d $PKG/usr/lib/$name/locales
-  install -m 0644 out/Release/locales/en-US.pak $PKG/usr/lib/$name/locales
-  cp -a out/Release/resources $PKG/usr/lib/$name
+	install -m 0755 -D out/Release/chrome $PKG/usr/lib/$name/$name
+	install -m 4755 -o root -g root -D out/Release/chrome_sandbox $PKG/usr/lib/$name/chrome-sandbox
+	install -m 0644 -D out/Release/*.pak $PKG/usr/lib/$name
+	install -d $PKG/usr/lib/$name/locales
+	install -m 0644 out/Release/locales/en-US.pak $PKG/usr/lib/$name/locales
+	cp -a out/Release/resources $PKG/usr/lib/$name
 
-  install -m 0644 -D chrome/installer/linux/common/desktop.template $PKG/usr/share/applications/$name.desktop
-  install -m 0644 -D chrome/app/resources/manpage.1.in $PKG/usr/share/man/man1/$name.1
+	install -m 0644 -D chrome/installer/linux/common/desktop.template $PKG/usr/share/applications/$name.desktop
+	install -m 0644 -D chrome/app/resources/manpage.1.in $PKG/usr/share/man/man1/$name.1
 
-  sed -i \
-    -e "s/@@MENUNAME@@/Chromium/g" \
-    -e "s/@@PACKAGE@@/chromium/g" \
-    -e "s/@@USR_BIN_SYMLINK_NAME@@/chromium/g" \
-    $PKG/usr/share/applications/$name.desktop \
-    $PKG/usr/share/man/man1/$name.1
+	sed -i \
+		-e "s/@@MENUNAME@@/Chromium/g" \
+		-e "s/@@PACKAGE@@/chromium/g" \
+		-e "s/@@USR_BIN_SYMLINK_NAME@@/chromium/g" \
+		$PKG/usr/share/applications/$name.desktop \
+		$PKG/usr/share/man/man1/$name.1
 
-  # fix v8 natives
-  cp -a out/Release/{natives,snapshot}_blob.bin $PKG/usr/lib/$name
+	# fix v8 natives
+	cp -a out/Release/{natives,snapshot}_blob.bin $PKG/usr/lib/$name
 
-  for size in 16 32; do
-    install -m 0644 -D chrome/app/theme/default_100_percent/$name/product_logo_${size}.png \
-    /usr/share/icons/hicolor/${size}x${size}/apps/$name.png
-  done
+	for size in 16 32; do
+		install -m 0644 -D chrome/app/theme/default_100_percent/$name/product_logo_${size}.png \
+		$PKG/usr/share/icons/hicolor/${size}x${size}/apps/$name.png
+	done
 
-  for size in 22 24 48 64 128 256; do
-      install -m 0644 -D chrome/app/theme/$name/product_logo_${size}.png \
-      $PKG/usr/share/icons/hicolor/${size}x${size}/apps/$name.png
-  done
+	for size in 22 24 48 64 128 256; do
+			install -m 0644 -D chrome/app/theme/$name/product_logo_${size}.png \
+			$PKG/usr/share/icons/hicolor/${size}x${size}/apps/$name.png
+	done
 
-  # fix icu installation
-  install -m 0644 -D out/Release/icudtl.dat $PKG/usr/lib/$name/icudtl.dat
+	# fix icu installation
+	install -m 0644 -D out/Release/icudtl.dat $PKG/usr/lib/$name/icudtl.dat
 
-  install -m 0755 -D $SRC/$name.sh $PKG/usr/bin/$name
+	install -m 0755 -D $SRC/$name.sh $PKG/usr/bin/$name
 }
