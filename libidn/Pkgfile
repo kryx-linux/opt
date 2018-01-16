@@ -5,12 +5,17 @@
 
 name=libidn
 version=1.33
-release=1
-source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
+release=2
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
+        CVE-2017-14062.patch)
 
 build() {
 	cd $name-$version
 
+	patch -p1 -i $SRC/CVE-2017-14062.patch
+	sed -i '/^SUBDIRS/s/doc//' Makefile.am
+
+	autoreconf
 	./configure \
 		--prefix=/usr \
 		--disable-nls \
@@ -18,5 +23,9 @@ build() {
 
 	make
 	make DESTDIR=$PKG install
-	rm -r $PKG/usr/share/info
+
+	install -d $PKG/usr/share/man/man{1,3}
+	install -m 0644 doc/*.1 $PKG/usr/share/man/man1
+	install -m 0644 doc/man/*.3 $PKG/usr/share/man/man3
+
 }
