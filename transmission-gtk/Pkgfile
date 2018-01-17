@@ -5,11 +5,16 @@
 
 name=transmission-gtk
 version=2.92
-release=1
-source=(https://github.com/transmission/transmission-releases/raw/master/transmission-$version.tar.xz)
+release=2
+source=(https://github.com/transmission/transmission-releases/raw/master/transmission-$version.tar.xz
+        CVE-2018-5702.patch)
 
 build() {
     cd transmission-$version
+
+    patch -p1 -i $SRC/CVE-2018-5702.patch
+
+    export LINGUAS=" "
 
     ./configure --prefix=/usr \
                 --with-gtk \
@@ -20,5 +25,5 @@ build() {
 
     sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/transmission-gtk.desktop
     rm $PKG/usr/{bin,share/man/man1}/transmission-{create,edit,show}*
-    rm -r $PKG/usr/share/{locale,transmission}
+    rm -r $PKG/usr/share/transmission
 }
