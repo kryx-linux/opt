@@ -3,7 +3,7 @@
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 
 name=jdk
-version=1.8.0_152
+version=1.8.0_162
 release=1
 source=(file:///$name-8u${version##*_}-linux-x64.tar.gz)
 
