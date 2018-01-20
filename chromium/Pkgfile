@@ -4,7 +4,7 @@
 # Depends on: dbus-glib gperf gtk gtk3 libevent libexif libgcrypt ninja nodejs nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt yasm
 
 name=chromium
-version=63.0.3239.108
+version=63.0.3239.132
 release=1
 source=(https://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz
 	last-commit-position.patch $name.sh
@@ -36,20 +36,19 @@ build() {
 	mkdir -p third_party/node/linux/node-linux-x64/bin
 	ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
 
-#  for LIB in ffmpeg flac harfbuzz-ng libjpeg \
-#		 libjpeg_turbo libpng libwebp libxslt yasm; do
-#		 find -type f -path "*third_party/$LIB/*"		\
-#			 \! -path "*third_party/$LIB/chromium/*"	\
-#			 \! -path "*third_party/$LIB/google/*"		\
-#			 \! -path "*base/third_party/icu/*"				\
-#			 \! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
-#			 -delete
-#  done
+#	for LIB in ffmpeg flac harfbuzz-ng libjpeg libjpeg_turbo libpng libwebp libxslt yasm; do
+#		find -type f -path "*third_party/$LIB/*" \
+#		 \! -path "*third_party/$LIB/chromium/*" \
+#		 \! -path "*third_party/$LIB/google/*" \
+#		 \! -path "*base/third_party/icu/*" \
+#		 \! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
+#		 -delete
+#	done
 
-#  /usr/bin/python2 build/linux/unbundle/replace_gn_files.py \
-#		 --system-libraries ffmpeg flac harfbuzz-ng libjpeg libxml libevent \
-#												libpng libwebp libxslt opus yasm freetype
-#  /usr/bin/python2 third_party/libaddressinput/chromium/tools/update-strings.py
+#	/usr/bin/python2 build/linux/unbundle/replace_gn_files.py \
+#		--system-libraries ffmpeg flac harfbuzz-ng libjpeg libxml libevent \
+#		libpng libwebp libxslt opus yasm freetype
+#	/usr/bin/python2 third_party/libaddressinput/chromium/tools/update-strings.py
 
 	_gn_args=(
 		'blink_gc_plugin=false'
@@ -109,8 +108,8 @@ build() {
 	done
 
 	for size in 22 24 48 64 128 256; do
-			install -m 0644 -D chrome/app/theme/$name/product_logo_${size}.png \
-			$PKG/usr/share/icons/hicolor/${size}x${size}/apps/$name.png
+		install -m 0644 -D chrome/app/theme/$name/product_logo_${size}.png \
+		$PKG/usr/share/icons/hicolor/${size}x${size}/apps/$name.png
 	done
 
 	# fix icu installation
