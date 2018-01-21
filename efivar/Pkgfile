@@ -4,7 +4,7 @@
 # Depends on: popt
 
 name=efivar
-version=26
+version=31
 release=1
 source=(https://github.com/rhinstaller/$name/releases/download/$version/$name-$version.tar.bz2)
 
