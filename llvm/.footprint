@@ -1269,7 +1269,7 @@ drwxr-xr-x	root/root	usr/lib/cmake/llvm/
 -rw-r--r--	root/root	usr/lib/cmake/llvm/LLVMProcessSources.cmake
 -rw-r--r--	root/root	usr/lib/cmake/llvm/TableGen.cmake
 -rw-r--r--	root/root	usr/lib/cmake/llvm/VersionFromVCS.cmake
-lrwxrwxrwx	root/root	usr/lib/libLLVM-5.0.0.so -> libLLVM-5.0.so
+lrwxrwxrwx	root/root	usr/lib/libLLVM-5.0.1.so -> libLLVM-5.0.so
 -rwxr-xr-x	root/root	usr/lib/libLLVM-5.0.so
 lrwxrwxrwx	root/root	usr/lib/libLLVM.so -> libLLVM-5.0.so
 -rw-r--r--	root/root	usr/lib/libLLVMAMDGPUAsmParser.a
@@ -1341,8 +1341,8 @@ lrwxrwxrwx	root/root	usr/lib/libLLVM.so -> libLLVM-5.0.so
 -rw-r--r--	root/root	usr/lib/libLLVMXRay.a
 -rw-r--r--	root/root	usr/lib/libLLVMipo.a
 lrwxrwxrwx	root/root	usr/lib/libLTO.so -> libLTO.so.5
-lrwxrwxrwx	root/root	usr/lib/libLTO.so.5 -> libLTO.so.5.0.0
--rwxr-xr-x	root/root	usr/lib/libLTO.so.5.0.0
+lrwxrwxrwx	root/root	usr/lib/libLTO.so.5 -> libLTO.so.5.0.1
+-rwxr-xr-x	root/root	usr/lib/libLTO.so.5.0.1
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/opt-viewer/
 -rwxr-xr-x	root/root	usr/share/opt-viewer/opt-diff.py
