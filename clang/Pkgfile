@@ -4,7 +4,7 @@
 # Depends on:  llvm
 
 name=clang
-version=5.0.0
+version=5.0.1
 release=1
 source=(https://llvm.org/releases/$version/{llvm,cfe}-$version.src.tar.xz \
   llvm-config.h)
