@@ -4,12 +4,12 @@
 
 name=mdadm
 version=4.0
-release=1
+release=2
 source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    make CXFLAGS="$CFLAGS" all mdadm.static
+    make CXFLAGS="$CFLAGS -Wno-error" all mdadm.static
     make DESTDIR=$PKG install
     install -m755 mdadm.static $PKG/sbin
 }
