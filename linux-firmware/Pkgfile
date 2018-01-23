@@ -4,9 +4,9 @@
 # Packager:    James Mills, prologic at shortcircuit dot net dot au
 
 name=linux-firmware
-version=20161122
+version=20180123
 release=1
-source=(http://distfiles.serverop.de/$name-$version.tar.xz)
+source=(http://crux.nu/files/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
