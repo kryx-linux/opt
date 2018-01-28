@@ -4,15 +4,12 @@
 # Depends on:  gdbm openssl zlib
 
 name=mutt
-version=1.9.2
+version=1.9.3
 release=1
 source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-
-    sed -re '/^makedoc-all/s/manual\.(html|txt)//g' \
-        -re '/^makedoc-all/s/stamp-doc-chunked//g' -i doc/Makefile.in
 
     ./configure --prefix=/usr \
                 --with-docdir=/usr/share/mutt \
@@ -31,7 +28,5 @@ build () {
 
     find $PKG/usr/share/mutt/* ! -name manual.txt -delete
     rm $PKG/usr/etc/{Muttrc,mime.types}.dist 
-    rm $PKG/usr/bin/{flea,muttbug}
-    rm $PKG/usr/share/man/man1/{flea.1,muttbug.1}
     rm $PKG/usr/share/man/man5/{mmdf.5,mbox.5}
 }
