@@ -5,13 +5,15 @@
 
 name=dovecot
 version=2.3.0
-release=1
-source=(https://dovecot.org/releases/2.3/$name-$version.tar.gz \
+release=2
+source=(https://dovecot.org/releases/2.3/$name-$version.tar.gz
+        CVE-2017-15132.patch
         dovecot-config.patch dovecot)
 
 build () {
     cd $name-ce-$version
 
+    patch -p1 -i $SRC/CVE-2017-15132.patch
     patch -p1 -i $SRC/$name-config.patch
 
     ./configure --prefix=/usr \
