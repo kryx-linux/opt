@@ -4,13 +4,18 @@
 # Depends on: dbus-glib gperf gtk gtk3 libevent libexif libgcrypt ninja nodejs nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt yasm
 
 name=chromium
-version=63.0.3239.132
+version=64.0.3282.119
 release=1
 source=(https://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz
 	last-commit-position.patch $name.sh
+	chromium-64.0.3282.119-constexpr-1.patch
 	chromium-exclude_unwind_tables.patch
-	chromium-clang-r1.patch
-	chromium-webrtc-r0.patch)
+	chromium-use-fromUTF8-for-UnicodeString-construction.patch
+	chromium-omnibox-unescape-fragment.patch
+	chromium-skia-harmony.patch
+	chromium-memcpy-r0.patch
+	chromium-clang-r2.patch
+	chromium-cups-r0.patch)
 
 build() {
 	cd $name-$version
@@ -26,12 +31,35 @@ build() {
 	# we don't use git sources
 	patch -p1 -i $SRC/last-commit-position.patch
 
-	# https://chromium-review.googlesource.com/c/chromium/src/+/71257
+	# Corrects error call to non-constexpr function
+	patch -p1 -i $SRC/chromium-64.0.3282.119-constexpr-1.patch
+
+	wget https://chromium.googlesource.com/chromium/src.git/+/$version?format=TEXT -O ../chromium-$version.txt
+	# https://crbug.com/710701
+	local _chrome_build_hash=$(base64 -d ../chromium-$version.txt |
+		grep -Po '^parent \K[0-9a-f]{40}$')
+	if [[ -z $_chrome_build_hash ]]; then
+		error "Unable to find Chrome build hash."
+		return 1
+	fi
+	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
+
+	# https://chromium-review.googlesource.com/c/chromium/src/+/712575
 	patch -p1 -i $SRC/chromium-exclude_unwind_tables.patch
 
+	# https://crbug.com/772655
+	patch -p1 -i $SRC/chromium-use-fromUTF8-for-UnicodeString-construction.patch
+
+	# https://crbug.com/789163
+	patch -p1 -i $SRC/chromium-omnibox-unescape-fragment.patch
+
+	# https://crbug.com/skia/6663#c10
+	patch -p4 -i $SRC/chromium-skia-harmony.patch
+
 	# Fixes from Gentoo
-	patch -p1 -i $SRC/chromium-clang-r1.patch
-	patch -p1 -i $SRC/chromium-webrtc-r0.patch
+	patch -p1 -i $SRC/chromium-memcpy-r0.patch
+	patch -p1 -i $SRC/chromium-clang-r2.patch
+	patch -p1 -i $SRC/chromium-cups-r0.patch
 
 	mkdir -p third_party/node/linux/node-linux-x64/bin
 	ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
