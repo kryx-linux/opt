@@ -32,4 +32,5 @@ build() {
 		$PKG/usr/share/applications/fontforge.desktop
 
 	rm -r $PKG/usr/share/{doc,locale}
+	rm $PKG/usr/share/fontforge/python/gdraw/README
 }
