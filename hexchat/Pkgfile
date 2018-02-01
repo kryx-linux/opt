@@ -7,11 +7,14 @@
 
 name=hexchat
 version=2.12.4
-release=1
-source=(http://dl.hexchat.net/hexchat/$name-$version.tar.xz)
+release=2
+source=(http://dl.hexchat.net/hexchat/$name-$version.tar.xz
+	hexchat-enchant2.0.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/hexchat-enchant2.0.patch
 
 	local LUA
 	if [ "$(pkginfo -i | grep '^lua ')" ]; then
