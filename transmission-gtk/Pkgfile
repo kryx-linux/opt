@@ -4,15 +4,12 @@
 # Depends on:  gtk3 libevent
 
 name=transmission-gtk
-version=2.92
-release=2
-source=(https://github.com/transmission/transmission-releases/raw/master/transmission-$version.tar.xz
-        CVE-2018-5702.patch)
+version=2.93
+release=1
+source=(https://github.com/transmission/transmission-releases/raw/master/transmission-$version.tar.xz)
 
 build() {
     cd transmission-$version
-
-    patch -p1 -i $SRC/CVE-2018-5702.patch
 
     export LINGUAS=" "
 
