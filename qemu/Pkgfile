@@ -7,11 +7,14 @@
 name=qemu
 version=2.10.1
 release=1
-source=(http://wiki.qemu-project.org/download/qemu-$version.tar.bz2)
+source=(http://wiki.qemu-project.org/download/qemu-$version.tar.bz2 \
+	memfd.patch)
 
 build() {
 
   cd $name-$version
+
+  patch -p1 -i $SRC/memfd.patch
 
   ./configure --prefix=/usr \
       --cc="${CC:=gcc}" \

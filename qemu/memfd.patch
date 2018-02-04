@@ -1,0 +1,26 @@
+diff -rupN qemu-2.10.1-orig/configure qemu-2.10.1/configure
+--- qemu-2.10.1-orig/configure	2018-02-03 20:31:28.775201548 +0100
++++ qemu-2.10.1/configure	2018-02-03 20:49:55.690456630 +0100
+@@ -3855,7 +3855,7 @@ fi
+ # check if memfd is supported
+ memfd=no
+ cat > $TMPC << EOF
+-#include <sys/memfd.h>
++#include <sys/mman.h>
+ 
+ int main(void)
+ {
+diff -rupN qemu-2.10.1-orig/util/memfd.c qemu-2.10.1/util/memfd.c
+--- qemu-2.10.1-orig/util/memfd.c	2018-02-03 20:31:29.058197629 +0100
++++ qemu-2.10.1/util/memfd.c	2018-02-03 20:50:33.589907638 +0100
+@@ -31,9 +31,7 @@
+ 
+ #include "qemu/memfd.h"
+ 
+-#ifdef CONFIG_MEMFD
+-#include <sys/memfd.h>
+-#elif defined CONFIG_LINUX
++#if defined CONFIG_LINUX && !defined CONFIG_MEMFD
+ #include <sys/syscall.h>
+ #include <asm/unistd.h>
+ 
