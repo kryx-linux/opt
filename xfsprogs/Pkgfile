@@ -6,10 +6,13 @@
 name=xfsprogs
 version=4.14.0
 release=1
-source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz)
+source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz \
+	copy_file_range.patch)
 
 build() {
     cd $name-$version
+
+    patch -p1 -i $SRC/copy_file_range.patch
 
     make configure
 
