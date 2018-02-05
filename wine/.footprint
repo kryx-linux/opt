@@ -83,6 +83,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/access.idl
 -rw-r--r--	root/root	usr/include/wine/windows/aclapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/aclui.h
+-rw-r--r--	root/root	usr/include/wine/windows/activation.h
+-rw-r--r--	root/root	usr/include/wine/windows/activation.idl
 -rw-r--r--	root/root	usr/include/wine/windows/activaut.h
 -rw-r--r--	root/root	usr/include/wine/windows/activaut.idl
 -rw-r--r--	root/root	usr/include/wine/windows/activdbg.h
@@ -184,6 +186,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/cvconst.h
 -rw-r--r--	root/root	usr/include/wine/windows/d2d1.h
 -rw-r--r--	root/root	usr/include/wine/windows/d2d1.idl
+-rw-r--r--	root/root	usr/include/wine/windows/d2d1_1.h
+-rw-r--r--	root/root	usr/include/wine/windows/d2d1_1.idl
 -rw-r--r--	root/root	usr/include/wine/windows/d2dbasetypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/d2derr.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d.h
@@ -736,6 +740,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/shdeprecated.idl
 -rw-r--r--	root/root	usr/include/wine/windows/shdispid.h
 -rw-r--r--	root/root	usr/include/wine/windows/shellapi.h
+-rw-r--r--	root/root	usr/include/wine/windows/shellscalingapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/shimgdata.h
 -rw-r--r--	root/root	usr/include/wine/windows/shimgdata.idl
 -rw-r--r--	root/root	usr/include/wine/windows/shldisp.h
@@ -1056,6 +1061,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-shlwapi-legacy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-shlwapi-obsolete-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-shlwapi-obsolete-l1-2-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-shutdown-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-sidebyside-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-string-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-string-l2-1-0.dll.so
@@ -1143,6 +1149,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-grouppolicy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsalookup-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsalookup-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsalookup-l2-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsalookup-l2-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-lsapolicy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-security-provider-l1-1-0.dll.so
@@ -1270,6 +1277,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/ddrawex.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/devenum.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dhcpcsvc.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dhtmled.ocx.so
 -rwxr-xr-x	root/root	usr/lib/wine/difxapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dinput.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dinput8.dll.so
@@ -1436,6 +1444,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-shlwapi-legacy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-shlwapi-obsolete-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-shlwapi-obsolete-l1-2-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-shutdown-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-sidebyside-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-string-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-string-l2-1-0.dll
@@ -1523,6 +1532,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-grouppolicy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsalookup-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsalookup-l2-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-lsapolicy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-security-provider-l1-1-0.dll
@@ -1650,6 +1660,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ddrawex.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/devenum.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dhcpcsvc.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/dhtmled.ocx
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/difxapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dinput.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dinput8.dll
@@ -1964,6 +1975,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/setupapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sfc.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sfc_os.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/shcore.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/shdoclc.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/shdocvw.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/shell32.dll
@@ -2556,6 +2568,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/setupapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/sfc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/sfc_os.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/shcore.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/shdoclc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/shdocvw.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/shell32.dll.so
@@ -2821,6 +2834,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-shlwapi-legacy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-shlwapi-obsolete-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-shlwapi-obsolete-l1-2-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-shutdown-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-sidebyside-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-string-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-string-l2-1-0.dll.so
@@ -2908,6 +2922,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-grouppolicy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsalookup-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsalookup-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsalookup-l2-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsalookup-l2-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-lsapolicy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-security-provider-l1-1-0.dll.so
@@ -3042,6 +3057,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/ddrawex.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/devenum.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dhcpcsvc.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/dhtmled.ocx.so
 -rwxr-xr-x	root/root	usr/lib32/wine/difxapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dinput.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dinput8.dll.so
@@ -3210,6 +3226,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-shlwapi-legacy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-shlwapi-obsolete-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-shlwapi-obsolete-l1-2-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-shutdown-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-sidebyside-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-string-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-string-l2-1-0.dll
@@ -3297,6 +3314,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-grouppolicy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsalookup-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsalookup-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsalookup-l2-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-lsapolicy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-security-provider-l1-1-0.dll
@@ -3431,6 +3449,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ddrawex.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/devenum.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dhcpcsvc.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/dhtmled.ocx
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/difxapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dinput.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dinput8.dll
@@ -3770,6 +3789,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/setupx.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/sfc.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/sfc_os.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/shcore.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/shdoclc.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/shdocvw.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/shell.dll16
@@ -4418,6 +4438,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/setupx.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/sfc.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/sfc_os.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/shcore.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/shdoclc.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/shdocvw.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/shell.dll16.so
