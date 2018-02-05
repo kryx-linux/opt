@@ -4,12 +4,11 @@
 # Depends on: dbus-glib gperf gtk gtk3 libevent libexif libgcrypt ninja nodejs nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt yasm
 
 name=chromium
-version=64.0.3282.119
+version=64.0.3282.140
 release=1
 source=(https://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz
 	last-commit-position.patch $name.sh
 	chromium-64.0.3282.119-constexpr-1.patch
-	chromium-exclude_unwind_tables.patch
 	chromium-use-fromUTF8-for-UnicodeString-construction.patch
 	chromium-omnibox-unescape-fragment.patch
 	chromium-skia-harmony.patch
@@ -45,7 +44,10 @@ build() {
 	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
 
 	# https://chromium-review.googlesource.com/c/chromium/src/+/712575
-	patch -p1 -i $SRC/chromium-exclude_unwind_tables.patch
+	# _flags+=('exclude_unwind_tables=true')
+	CFLAGS+='   -fno-unwind-tables -fno-asynchronous-unwind-tables'
+	CXXFLAGS+=' -fno-unwind-tables -fno-asynchronous-unwind-tables'
+	CPPFLAGS+=' -DNO_UNWIND_TABLES'
 
 	# https://crbug.com/772655
 	patch -p1 -i $SRC/chromium-use-fromUTF8-for-UnicodeString-construction.patch
@@ -64,19 +66,22 @@ build() {
 	mkdir -p third_party/node/linux/node-linux-x64/bin
 	ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
 
-#	for LIB in ffmpeg flac harfbuzz-ng libjpeg libjpeg_turbo libpng libwebp libxslt yasm; do
-#		find -type f -path "*third_party/$LIB/*" \
-#		 \! -path "*third_party/$LIB/chromium/*" \
-#		 \! -path "*third_party/$LIB/google/*" \
-#		 \! -path "*base/third_party/icu/*" \
-#		 \! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
-#		 -delete
-#	done
+	local LIB
+	for LIB in libjpeg libjpeg_turbo yasm; do
+		find -type f -path "*third_party/$LIB/*" \
+			\! -path "*third_party/$LIB/chromium/*" \
+			\! -path "*third_party/$LIB/google/*" \
+			\! -path './base/third_party/icu/*' \
+			\! -path './third_party/yasm/run_yasm.py' \
+                        \! -regex '.*\.\(gn\|gni\|isolate\)' \
+			\! -path './third_party/freetype/src/src/psnames/pstables.h' \
+			-delete
+	done
 
-#	/usr/bin/python2 build/linux/unbundle/replace_gn_files.py \
-#		--system-libraries ffmpeg flac harfbuzz-ng libjpeg libxml libevent \
-#		libpng libwebp libxslt opus yasm freetype
-#	/usr/bin/python2 third_party/libaddressinput/chromium/tools/update-strings.py
+	/usr/bin/python2 build/linux/unbundle/replace_gn_files.py \
+		--system-libraries libjpeg libxml libevent yasm
+
+	/usr/bin/python2 third_party/libaddressinput/chromium/tools/update-strings.py
 
 	_gn_args=(
 		'blink_gc_plugin=false'
@@ -99,7 +104,6 @@ build() {
 		'use_gconf=false'
 		'use_gnome_keyring=false'
 		'use_gold=false'
-		'use_gtk3=true'
 		'use_kerberos=false'
 		'use_pulseaudio=false'
 		'use_sysroot=false'
