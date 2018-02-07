@@ -4,7 +4,7 @@
 # Depends on:  e2fsprogs libarchive tdb tevent libcap libaio popt
 
 name=samba
-version=4.7.4
+version=4.7.5
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         kerberos_keytab.c.patch samba)
