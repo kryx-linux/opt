@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=maradns
-version=2.0.14
+version=2.0.15
 release=1
 source=(http://maradns.samiam.org/download/2.0/$version/$name-$version.tar.bz2 \
         mararc maradns db.localhost)
