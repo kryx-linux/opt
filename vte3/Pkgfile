@@ -1,10 +1,9 @@
-# Description: Virtual Terminal Emulator
-# URL: http://developer.gnome.org/arch/gnome/widgets/vte.html
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Juergen Daubert, jue at crux dot nu
+# Description: Virtual Terminal Emulator widget for use with GTK3
+# URL: https://wiki.gnome.org/action/show/Apps/Terminal/VTE
+# Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: gtk3 gnutls libpcre2
 
-name=vte-gtk3
+name=vte3
 version=0.48.2
 release=1
 source=(ftp://ftp.gnome.org/pub/gnome/sources/vte/${version%.*}/vte-$version.tar.xz \
