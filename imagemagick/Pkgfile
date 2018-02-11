@@ -6,7 +6,7 @@
 
 name=imagemagick
 version=7.0.7-22
-release=1
+release=2
 source=(ftp://ftp.imagemagick.org/pub/ImageMagick/releases/ImageMagick-$version.tar.xz)
 
 build () {
@@ -16,9 +16,15 @@ build () {
                 --enable-shared \
                 --with-modules \
                 --with-perl=yes \
-                --with-lcms=no --with-lcms2=yes
+                --with-lcms=yes
 
     make
+    make DESTDIR=$PKG install
+
+    # rebuild perl binding .so files to remove bogus workdir rpath
+    cd PerlMagick
+    find . -name '*.so' -delete
+    sed -i 's,LD_RUN_PATH="$(LD_RUN_PATH)" ,,' quantum/Makefile
     make DESTDIR=$PKG install
 
     rm -r $PKG/usr/share/doc
