@@ -1,8 +1,7 @@
 # Description: Tools for monitoring system health (temperatures, voltages, fan speed, etc)
 # URL: https://github.com/groeck/lm-sensors
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Maintainer: Fredrik Rinnestam, fredrik at crux dot guru
 # Depends on: perl
-# Nice to have: i2c-tools
 
 name=lm_sensors
 version=3.4.0
