@@ -8,7 +8,7 @@
 name=xpdf
 version=4.00
 release=1
-source=(http://www.xpdfreader.com/dl/xpdf-${version}.tar.gz)
+source=(https://xpdfreader-dl.s3.amazonaws.com/xpdf-${version}.tar.gz)
 
 build() {
     cd $name-$version
