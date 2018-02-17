@@ -64,6 +64,7 @@ drwxr-xr-x	root/root	usr/include/SDL2/
 -rw-r--r--	root/root	usr/include/SDL2/SDL_test_images.h
 -rw-r--r--	root/root	usr/include/SDL2/SDL_test_log.h
 -rw-r--r--	root/root	usr/include/SDL2/SDL_test_md5.h
+-rw-r--r--	root/root	usr/include/SDL2/SDL_test_memory.h
 -rw-r--r--	root/root	usr/include/SDL2/SDL_test_random.h
 -rw-r--r--	root/root	usr/include/SDL2/SDL_thread.h
 -rw-r--r--	root/root	usr/include/SDL2/SDL_timer.h
@@ -71,19 +72,22 @@ drwxr-xr-x	root/root	usr/include/SDL2/
 -rw-r--r--	root/root	usr/include/SDL2/SDL_types.h
 -rw-r--r--	root/root	usr/include/SDL2/SDL_version.h
 -rw-r--r--	root/root	usr/include/SDL2/SDL_video.h
+-rw-r--r--	root/root	usr/include/SDL2/SDL_vulkan.h
 -rw-r--r--	root/root	usr/include/SDL2/begin_code.h
 -rw-r--r--	root/root	usr/include/SDL2/close_code.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cmake/
 drwxr-xr-x	root/root	usr/lib/cmake/SDL2/
 -rw-r--r--	root/root	usr/lib/cmake/SDL2/sdl2-config.cmake
-lrwxrwxrwx	root/root	usr/lib/libSDL2-2.0.so.0 -> libSDL2-2.0.so.0.4.1
--rwxr-xr-x	root/root	usr/lib/libSDL2-2.0.so.0.4.1
+lrwxrwxrwx	root/root	usr/lib/libSDL2-2.0.so.0 -> libSDL2-2.0.so.0.7.0
+-rwxr-xr-x	root/root	usr/lib/libSDL2-2.0.so.0.7.0
 -rw-r--r--	root/root	usr/lib/libSDL2.a
 -rwxr-xr-x	root/root	usr/lib/libSDL2.la
-lrwxrwxrwx	root/root	usr/lib/libSDL2.so -> libSDL2-2.0.so.0.4.1
+lrwxrwxrwx	root/root	usr/lib/libSDL2.so -> libSDL2-2.0.so.0.7.0
 -rw-r--r--	root/root	usr/lib/libSDL2_test.a
+-rwxr-xr-x	root/root	usr/lib/libSDL2_test.la
 -rw-r--r--	root/root	usr/lib/libSDL2main.a
+-rwxr-xr-x	root/root	usr/lib/libSDL2main.la
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/sdl2.pc
 drwxr-xr-x	root/root	usr/share/

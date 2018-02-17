@@ -4,7 +4,7 @@
 # Depends on:  libsdl glib
  
 name=qemu-agent
-version=2.10.1
+version=2.11.0
 release=1
 source=(http://wiki.qemu-project.org/download/qemu-$version.tar.bz2 qemu-agent)
 
