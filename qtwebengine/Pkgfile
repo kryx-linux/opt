@@ -4,7 +4,7 @@
 # Depends on: qt5 xorg-libxscrnsaver xorg-libxtst nss ninja
 
 name=qtwebengine
-version=5.10.0
+version=5.10.1
 release=1
 source=(http://download.qt.io/official_releases/qt/${version::4}/$version/submodules/$name-everywhere-src-$version.tar.xz
 	last-commit-position.patch)
