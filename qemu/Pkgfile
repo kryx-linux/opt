@@ -1,11 +1,11 @@
 # Description: Fast CPU emulator and virtualizer for the x86 platform
 # URL:         http://www.qemu-project.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  libsdl glib
+# Depends on:  libsdl glib xorg-libpixman
 # Optional:    libseccomp libiscsi libusb usbredir spice
  
 name=qemu
-version=2.11.0
+version=2.11.1
 release=1
 source=(http://wiki.qemu-project.org/download/qemu-$version.tar.bz2)
 
