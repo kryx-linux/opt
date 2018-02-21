@@ -1,8 +1,7 @@
 # Description: MPEG1/MPEG2 decoder (includes libmpeg2)
 # URL:         http://libmpeg2.sourceforge.net/
-# Packager:    acrux, acrux at linuxmail dot org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on: libsdl
+# Depends on:  libsdl
 
 name=libmpeg2
 version=0.5.1
@@ -11,7 +10,7 @@ source=(http://$name.sourceforge.net/files/$name-$version.tar.gz)
 
 build () {
   cd $name-$version
-  ./configure --prefix=/usr --mandir=/usr/man \
+  ./configure --prefix=/usr \
   --with-gnu-ld --enable-shared \
   --disable-nls
   make
