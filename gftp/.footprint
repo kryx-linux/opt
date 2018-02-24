@@ -3,9 +3,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/gftp
 -rwxr-xr-x	root/root	usr/bin/gftp-gtk
 -rwxr-xr-x	root/root	usr/bin/gftp-text
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/gftp.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/applications/
 -rw-r--r--	root/root	usr/share/applications/gftp.desktop
@@ -42,5 +39,8 @@ drwxr-xr-x	root/root	usr/share/gftp/
 -rw-r--r--	root/root	usr/share/gftp/txt.xpm
 -rw-r--r--	root/root	usr/share/gftp/up.xpm
 -rw-r--r--	root/root	usr/share/gftp/world.xpm
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/gftp.1.gz
 drwxr-xr-x	root/root	usr/share/pixmaps/
 -rw-r--r--	root/root	usr/share/pixmaps/gftp.png

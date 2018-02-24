@@ -4,15 +4,12 @@
 # Depends on:  util-linux
 
 name=xfsprogs
-version=4.14.0
+version=4.15.0
 release=1
-source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz \
-	copy_file_range.patch)
+source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-
-    patch -p1 -i $SRC/copy_file_range.patch
 
     make configure
 
@@ -28,4 +25,5 @@ build() {
     ln -sf ../../lib/$(readlink $PKG/lib/libhandle.so.1) $PKG/usr/lib/libhandle.so
 
     rm -r $PKG/usr/share/doc
+    rm $PKG/usr/lib/xfsprogs/xfs_scrub_all.cron
 }

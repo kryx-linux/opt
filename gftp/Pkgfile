@@ -1,17 +1,16 @@
 # Description: Multithreaded FTP client with GTK+2 user interface
-# URL:         http://gftp.seul.org/
+# URL:         https://www.gftp.org/
 # Maintainer:  Jose V Beneyto, sepen at crux dot nu
-# Packager:    Juergen Daubert, jue at crux dot nu
-# Depends on:  gtk
+# Depends on:  gtk util-linux
 
 name=gftp
 version=2.0.19
 release=1
-source=(http://gftp.seul.org/$name-$version.tar.gz)
+source=(https://www.gftp.org/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man --disable-nls
+    ./configure --prefix=/usr --disable-nls
     make
     make DESTDIR=$PKG install
     sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
