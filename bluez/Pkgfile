@@ -7,15 +7,15 @@
 name=bluez
 version=4.101
 release=5
-source=(http://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz bluetoothd
-http://git.kernel.org/cgit/bluetooth/bluez.git/patch/lib/bluetooth.h?id=cf52a40302d0d20ccca22a7a1f53e46ef8abfca8
-)
+source=(http://www.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
+	bluetoothd bluetooth.h)
 
 build() {
 	cd $name-$version
 
 	# Fix bluetooth.h to compile in strict C
-	patch -p1 -i $SRC/'bluetooth.h?id=cf52a40302d0d20ccca22a7a1f53e46ef8abfca8'
+	# http://git.kernel.org/cgit/bluetooth/bluez.git/patch/lib/bluetooth.h?id=cf52a40302d0d20ccca22a7a1f53e46ef8abfca8
+	patch -p1 -i $SRC/bluetooth.h
 
 	./configure \
 		--prefix=/usr \
