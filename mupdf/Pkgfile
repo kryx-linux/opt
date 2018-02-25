@@ -1,7 +1,7 @@
 # Description: Lightweight PDF and XPS viewer
 # URL:         http://www.mupdf.com/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  harfbuzz libjpeg-turbo mesa3d xorg-libxcursor xorg-libxinerama xorg-libxrandr
+# Depends on:  glu harfbuzz libjpeg-turbo xorg-libxi xorg-libxrandr
 
 name=mupdf
 version=1.12.0
