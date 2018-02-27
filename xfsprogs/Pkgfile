@@ -4,7 +4,7 @@
 # Depends on:  util-linux
 
 name=xfsprogs
-version=4.15.0
+version=4.15.1
 release=1
 source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz)
 
