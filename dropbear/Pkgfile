@@ -4,7 +4,7 @@
 # Depends on:  zlib
 
 name=dropbear
-version=2017.75
+version=2018.76
 release=1
 source=(http://matt.ucc.asn.au/$name/releases/$name-$version.tar.bz2 \
         $name)
@@ -12,7 +12,7 @@ source=(http://matt.ucc.asn.au/$name/releases/$name-$version.tar.bz2 \
 build () {
     cd $name-$version
 
-    sed -i 's|libexec|lib/ssh|; s|bin/X11|bin|' options.h
+    echo '#define SFTPSERVER_PATH "/usr/lib/ssh/sftp-server"' > localoptions.h
 
     ./configure --prefix=/usr
     make

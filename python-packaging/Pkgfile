@@ -4,7 +4,7 @@
 # Depends on: python-pyparsing python-six
 
 name=python-packaging
-version=16.8
+version=17.1
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.tar.gz
 	https://bootstrap.pypa.io/get-pip.py)
