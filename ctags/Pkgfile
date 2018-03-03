@@ -5,7 +5,7 @@
 name=ctags
 version=5.8
 release=1
-source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz \
+source=(http://distfiles.serverop.de/$name-$version.tar.gz \
         $name.diff)
 
 build() {
