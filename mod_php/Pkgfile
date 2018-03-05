@@ -4,7 +4,7 @@
 # Depends on:  apache
 
 name=mod_php
-version=5.6.33
+version=5.6.34
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
