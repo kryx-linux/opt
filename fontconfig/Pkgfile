@@ -4,8 +4,8 @@
 # Depends on:  freetype expat
 
 name=fontconfig
-version=2.12.6
-release=2
+version=2.13.0
+release=1
 source=(https://fontconfig.org/release/$name-$version.tar.bz2)
 
 build() {
@@ -27,4 +27,5 @@ build() {
 
     rm -f $PKG/etc/fonts/conf.d/README
     rm -r $PKG/usr/share/doc
+    rm -r $PKG/usr/share/locale
 }

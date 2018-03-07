@@ -19,8 +19,8 @@ drwxr-xr-x	root/root	usr/include/json-c/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libjson-c.a
 -rwxr-xr-x	root/root	usr/lib/libjson-c.la
-lrwxrwxrwx	root/root	usr/lib/libjson-c.so -> libjson-c.so.3.0.1
-lrwxrwxrwx	root/root	usr/lib/libjson-c.so.3 -> libjson-c.so.3.0.1
--rwxr-xr-x	root/root	usr/lib/libjson-c.so.3.0.1
+lrwxrwxrwx	root/root	usr/lib/libjson-c.so -> libjson-c.so.4.0.0
+lrwxrwxrwx	root/root	usr/lib/libjson-c.so.4 -> libjson-c.so.4.0.0
+-rwxr-xr-x	root/root	usr/lib/libjson-c.so.4.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/json-c.pc
