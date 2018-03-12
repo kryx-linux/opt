@@ -5,14 +5,12 @@
 
 name=mpg123
 version=1.25.10
-release=1
+release=2
 source=(http://www.mpg123.de/download/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr \
-                --with-audio=alsa,oss,dummy \
-                --with-default-audio=alsa
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
 }
