@@ -1,7 +1,7 @@
 # Description:	Interface for atk
 # URL:		http://developer.gnome.org/libatspi/
 # Maintainer:	Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on:	dbus gobject-introspection intltool xorg-libxtst meson
+# Depends on:	dbus gobject-introspection intltool xorg-libxtst meson ninja
 
 name=at-spi2-core
 version=2.26.2
