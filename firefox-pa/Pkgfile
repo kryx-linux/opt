@@ -4,17 +4,13 @@
 # Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, python, xorg-libxt, yasm, mesa3d, rust, pulseaudio 
  
 name=firefox-pa
-version=58.0.2
+version=59.0
 release=1
-source=(https://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
-	firefox-install-dir.patch firefox.desktop)
+source=(https://hg.mozilla.org/releases/mozilla-release/archive/c61f5f5ead48c78a80c80db5c489bdc7cfaf8175.tar.bz2
+	firefox.desktop)
  
 build() {
-	cd firefox-$version
-
-	# stupid workaround
-	sed -i '2,7d' js/src/configure
-	patch -p1 -i $SRC/firefox-install-dir.patch
+	cd mozilla-release-c61f5f5ead48c78a80c80db5c489bdc7cfaf8175
 
 cat <<- EOF > .mozconfig
 	mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
@@ -25,7 +21,8 @@ cat <<- EOF > .mozconfig
 	ac_add_options --with-system-png
 	ac_add_options --with-system-nspr
 	ac_add_options --with-system-nss
-	ac_add_options --with-system-cairo
+	#Broken in 59.0
+	#ac_add_options --with-system-cairo
 	ac_add_options --enable-system-ffi
 	ac_add_options --enable-system-pixman
 	ac_add_options --enable-system-sqlite
@@ -39,6 +36,7 @@ cat <<- EOF > .mozconfig
 	ac_add_options --disable-updater
 	ac_add_options --disable-crashreporter
 	ac_add_options --disable-necko-wifi
+	#This port uses pulse
 	#ac_add_options --disable-pulseaudio
 	ac_add_options --disable-gconf
 	ac_add_options --disable-stylo
