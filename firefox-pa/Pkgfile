@@ -53,5 +53,5 @@ EOF
 	rm $PKG/usr/lib/firefox/removed-files
 
 	mkdir -p $PKG/etc/revdep.d
-	echo "/usr/lib/firefox" > $PKG/etc/revdep.d/firefox
+	echo "/usr/lib/firefox" > $PKG/etc/revdep.d/firefox-pa
 }
