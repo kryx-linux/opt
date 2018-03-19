@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=libaio
-version=0.3.110
+version=0.3.111
 release=1
 source=(http://http.debian.net/debian/pool/main/liba/$name/${name}_${version}.orig.tar.gz)
 

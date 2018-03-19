@@ -4,19 +4,15 @@
 # Depends on: libogg
 
 name=libvorbis
-version=1.3.5
-release=2
+version=1.3.6
+release=1
 source=(https://downloads.xiph.org/releases/vorbis/$name-$version.tar.xz
-	CVE-2017-14633.patch
-	CVE-2017-14632.patch
 	CVE-2017-14160.patch)
 
 build() {
 	cd $name-$version
 
 	# https://security-tracker.debian.org/tracker/source-package/libvorbis
-	patch -p1 -i $SRC/CVE-2017-14633.patch
-	patch -p1 -i $SRC/CVE-2017-14632.patch
 	patch -p1 -i $SRC/CVE-2017-14160.patch
 
 	./configure --prefix=/usr
