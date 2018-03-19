@@ -4,16 +4,13 @@
 # Depends on:  db libcap libtool
 
 name=squid
-version=3.5.27
-release=2
-source=(http://www.squid-cache.org/Versions/v3/3.5/$name-$version.tar.xz
-        SQUID-2018_1.patch SQUID-2018_2.patch squid)
+version=4.0.24
+release=1
+source=(http://www.squid-cache.org/Versions/v4/$name-$version.tar.xz
+        squid)
 
 build () {
     cd $name-$version
-
-    patch -p1 -i $SRC/SQUID-2018_1.patch
-    patch -p1 -i $SRC/SQUID-2018_2.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc/squid \
