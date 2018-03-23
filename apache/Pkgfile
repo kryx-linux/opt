@@ -5,7 +5,7 @@
 # Group:       apache
 
 name=apache
-version=2.4.29
+version=2.4.33
 release=1
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
         crux.layout apache)
@@ -31,4 +31,6 @@ build(){
 
    rm -r $PKG/var/www/htdocs/*
    rm $PKG/var/www/{error,icons}/README*
+
+   chmod -R g-s $PKG/var/www/
 }
