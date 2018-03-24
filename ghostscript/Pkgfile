@@ -4,7 +4,7 @@
 # Depends on:  util-linux, cups, fontconfig, xorg-libxt, xorg-libxext
 
 name=ghostscript
-version=9.22
+version=9.23
 release=1
 source=(https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${version/./}/$name-$version.tar.xz
         http://downloads.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz)
@@ -32,7 +32,8 @@ build () {
 
     cp -r $SRC/fonts $PKG/usr/share/ghostscript
 
-    rm -r $PKG/usr/share/{ghostscript/$version/{examples,doc},man/de}
+    rm -r $PKG/usr/share/ghostscript/$version/doc
+    rm -r $PKG/usr/share/{doc,man/de}
     rm $PKG/usr/share/ghostscript/fonts/[CRT]*
     rm $PKG/usr/bin/ijs_{client,server}_example
 }
