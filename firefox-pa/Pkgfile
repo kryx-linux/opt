@@ -4,13 +4,13 @@
 # Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, python, xorg-libxt, yasm, mesa3d, rust, pulseaudio 
  
 name=firefox-pa
-version=59.0.1
+version=59.0.2
 release=1
-source=(https://hg.mozilla.org/releases/mozilla-release/archive/3db9e3d52b17563efca181ccbb50deb8660c59ae.tar.bz2
+source=(https://hg.mozilla.org/releases/mozilla-release/archive/239e434d6d2b8e1e2b697c3416d1e96d48fe98e5.tar.bz2
 	firefox.desktop)
  
 build() {
-	cd mozilla-release-3db9e3d52b17563efca181ccbb50deb8660c59ae
+	cd mozilla-release-239e434d6d2b8e1e2b697c3416d1e96d48fe98e5
 
 cat <<- EOF > .mozconfig
 	mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
