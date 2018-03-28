@@ -198,6 +198,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/http-auth.h
 -rw-r--r--	root/root	usr/include/dovecot/http-client-private.h
 -rw-r--r--	root/root	usr/include/dovecot/http-client.h
+-rw-r--r--	root/root	usr/include/dovecot/http-common.h
 -rw-r--r--	root/root	usr/include/dovecot/http-date.h
 -rw-r--r--	root/root	usr/include/dovecot/http-header-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/http-header.h
@@ -477,7 +478,6 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ostream-cmp.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-dot.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-encrypt.h
--rw-r--r--	root/root	usr/include/dovecot/ostream-escaped.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-failure-at.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-file-private.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-hash.h
@@ -586,6 +586,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/sql-db-cache.h
 -rw-r--r--	root/root	usr/include/dovecot/stats-client.h
 -rw-r--r--	root/root	usr/include/dovecot/stats-connection.h
+-rw-r--r--	root/root	usr/include/dovecot/stats-dist.h
 -rw-r--r--	root/root	usr/include/dovecot/stats-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/stats.h
 -rw-r--r--	root/root	usr/include/dovecot/str-find.h
@@ -599,7 +600,6 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/syslog-util.h
 -rw-r--r--	root/root	usr/include/dovecot/test-common.h
 -rw-r--r--	root/root	usr/include/dovecot/time-util.h
--rw-r--r--	root/root	usr/include/dovecot/timing.h
 -rw-r--r--	root/root	usr/include/dovecot/unichar.h
 -rw-r--r--	root/root	usr/include/dovecot/unix-socket-create.h
 -rw-r--r--	root/root	usr/include/dovecot/unlink-directory.h
@@ -752,6 +752,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_autocreate_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_autocreate_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_autocreate_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_charset_alias_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_charset_alias_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_charset_alias_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_expire_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_expire_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_expire_plugin.so
