@@ -4,7 +4,7 @@
 # Depends on:  cmake libffi python
 
 name=llvm
-version=5.0.1
+version=6.0.0
 release=1
 source=(https://llvm.org/releases/$version/$name-$version.src.tar.xz \
   llvm-config.h)
