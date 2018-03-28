@@ -5,7 +5,7 @@
 
 name=squid
 version=4.0.24
-release=2
+release=3
 source=(http://www.squid-cache.org/Versions/v4/$name-$version.tar.xz
         squid)
 
@@ -27,7 +27,8 @@ build () {
                 --with-large-files \
                 --with-pthreads \
                 --with-aufs-threads=16 \
-                --disable-auto-locale
+                --disable-auto-locale \
+                --disable-arch-native
 
     make all
     make DESTDIR=$PKG install
