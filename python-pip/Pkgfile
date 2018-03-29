@@ -4,8 +4,8 @@
 # Depends on: python
 
 name=python-pip
-version=9.0.1
-release=3
+version=9.0.3
+release=1
 source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.tar.gz
 	https://crux.ster.zone/downloads/get-pip.py
 #	https://bootstrap.pypa.io/get-pip.py
