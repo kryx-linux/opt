@@ -7,7 +7,9 @@ name=python3-packaging
 version=17.1
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
-	https://bootstrap.pypa.io/get-pip.py)
+	https://crux.ster.zone/downloads/get-pip.py
+#	https://bootstrap.pypa.io/get-pip.py
+)
 
 build() {
 	cd ${name#*-}-$version

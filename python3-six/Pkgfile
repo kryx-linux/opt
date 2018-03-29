@@ -7,7 +7,9 @@ name=python3-six
 version=1.11.0
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
-	https://bootstrap.pypa.io/get-pip.py)
+	https://crux.ster.zone/downloads/get-pip.py
+#	https://bootstrap.pypa.io/get-pip.py
+)
 
 build() {
 	cd ${name#*-}-$version

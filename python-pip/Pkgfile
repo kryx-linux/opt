@@ -7,7 +7,9 @@ name=python-pip
 version=9.0.1
 release=3
 source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.tar.gz
-	https://bootstrap.pypa.io/get-pip.py)
+	https://crux.ster.zone/downloads/get-pip.py
+#	https://bootstrap.pypa.io/get-pip.py
+)
 
 build() {
 	cd ${name#*-}-$version
