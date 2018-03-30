@@ -1,7 +1,7 @@
 # Description: Guest agent for qemu virtual guests
 # URL:         http://www.qemu-project.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  libsdl glib
+# Depends on:  libsdl glib xorg-libpixman
  
 name=qemu-agent
 version=2.11.1
