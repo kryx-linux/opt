@@ -2,16 +2,16 @@
 # Maintainer:   Thomas Penteker, tek at serverop dot de
 # Description:  an interactive process viewer
 # URL:          http://hisham.hm/htop
-# Depends on:   ncurses
+# Depends on:   python
 
 name=htop
-version=2.0.1
+version=2.1.0
 release=1
-source=(http://hisham.hm/htop/releases/$version/htop-$version.tar.gz)
+source=(https://hisham.hm/htop/releases/$version/htop-$version.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --disable-nls --mandir=/usr/share/man
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
    
