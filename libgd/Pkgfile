@@ -1,21 +1,16 @@
-# Description: gd libraries
-# URL: http://www.libgd.org
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Antti Nykanen, aon at iki dot fi
-# Depends on: xorg-libxpm libjpeg-turbo freetype
+# Description: Library for the dynamic creation of images
+# URL:         https://libgd.github.io/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  xorg-libxpm libjpeg-turbo freetype
 
 name=libgd
-version=2.1.1
+version=2.2.5
 release=1
-source=(https://bitbucket.org/libgd/gd-libgd/downloads/$name-$version.tar.xz \
-	libvpx-1.5.0-compatibility.patch)
+source=(https://github.com/libgd/libgd/releases/download/gd-$version/$name-$version.tar.xz)
 
 build () {
-  cd $name-$version
+    cd $name-$version
 
-  patch -p0 -i $SRC/libvpx-1.5.0-compatibility.patch
-
-  ./configure --prefix=/usr
-
-  make DESTDIR=$PKG install
+    ./configure --prefix=/usr
+    make DESTDIR=$PKG install
 }
