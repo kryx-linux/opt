@@ -4,7 +4,7 @@
 # Depends on:  libpcre libxml2
 
 name=php-fpm
-version=5.6.34
+version=7.2.4
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz
         php-fpm)
@@ -34,11 +34,14 @@ build () {
 
     make
 
-    install -d $PKG/{usr/{sbin,share/man/man8},etc/{rc.d,php}}
+    install -d $PKG/usr/{sbin,share/man/man8}
+    install -d $PKG/etc/{rc.d,php/php-fpm.d}
+    
     install -m 755 sapi/fpm/php-fpm $PKG/usr/sbin/
     install -m 644 sapi/fpm/php-fpm.conf $PKG/etc/php/
+    install -m 644 sapi/fpm/www.conf $PKG/etc/php/php-fpm.d/
     install -m 644 sapi/fpm/php-fpm.8 $PKG/usr/share/man/man8/
     install -m 755 $SRC/php-fpm $PKG/etc/rc.d/
 
-    sed -i '/;pid =/s/;//' $PKG/etc/php/php-fpm.conf
+    sed '/;pid =/s/;//' -i $PKG/etc/php/php-fpm.conf
 }
