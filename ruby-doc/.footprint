@@ -1561,6 +1561,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.5/system/Exception/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Exception/set_backtrace-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Exception/to_json-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Exception/to_s-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.5/system/Exception/to_tty%3f-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.5/system/Exception2MessageMapper/
 drwxr-xr-x	root/root	usr/share/ri/2.5/system/Exception2MessageMapper/E2MM/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Exception2MessageMapper/E2MM/cdesc-E2MM.ri
@@ -2887,6 +2888,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.5/system/Gem/Package/TarHeader/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/TarHeader/header-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/TarHeader/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/TarHeader/oct-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/TarHeader/strict_oct-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/TarHeader/update_checksum-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.5/system/Gem/Package/TarInvalidError/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/TarInvalidError/cdesc-TarInvalidError.ri
@@ -2971,8 +2973,10 @@ drwxr-xr-x	root/root	usr/share/ri/2.5/system/Gem/Package/TooLongFileName/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/files-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/gzip_to-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/initialize-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/mkdir_p_safe-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/read_checksums-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/realpath-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/security_policy-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/setup_signer-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Package/spec-i.ri
@@ -13988,8 +13992,11 @@ drwxr-xr-x	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/%5b%5d-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/ChunkedWrapper/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/ChunkedWrapper/cdesc-ChunkedWrapper.ri
+drwxr-xr-x	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/InvalidHeader/
+-rw-r--r--	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/InvalidHeader/cdesc-InvalidHeader.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/body-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/cdesc-HTTPResponse.ri
+-rw-r--r--	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/check_header-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/chunked%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/chunked%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/WEBrick/HTTPResponse/config-i.ri
