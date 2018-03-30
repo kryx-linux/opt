@@ -1,20 +1,17 @@
 # Description: Open source version of Google Chrome web browser.
 # URL: http://chromium.org/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: dbus-glib gperf gtk gtk3 libevent libexif libgcrypt ninja nodejs nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt yasm
+# Depends on: clang dbus-glib gperf gtk gtk3 libexif libgcrypt libvpx libwebp nodejs nss pciutils speech-dispatcher xorg-libxscrnsaver xorg-libxt
 
 name=chromium
-version=64.0.3282.186
+version=65.0.3325.181
 release=1
 source=(https://commondatastorage.googleapis.com/$name-browser-official/$name-$version.tar.xz
 	last-commit-position.patch $name.sh
-	chromium-64.0.3282.119-constexpr-1.patch
-	chromium-use-fromUTF8-for-UnicodeString-construction.patch
-	chromium-omnibox-unescape-fragment.patch
 	chromium-skia-harmony.patch
-	chromium-memcpy-r0.patch
 	chromium-clang-r2.patch
-	chromium-cups-r0.patch)
+	chromium-math.h-r0.patch
+	chromium-stdint.patch)
 
 build() {
 	cd $name-$version
@@ -27,11 +24,13 @@ build() {
 	export CFLAGS="$CFLAGS $(pkg-config --cflags nspr)"
 	export LDFLAGS="$LDFLAGS $(pkg-config --libs nspr)"
 
+	export CC=clang
+	export CXX=clang++
+	export AR=ar
+	export NM=nm
+
 	# we don't use git sources
 	patch -p1 -i $SRC/last-commit-position.patch
-
-	# Corrects error call to non-constexpr function
-	patch -p1 -i $SRC/chromium-64.0.3282.119-constexpr-1.patch
 
 	wget https://chromium.googlesource.com/chromium/src.git/+/$version?format=TEXT -O ../chromium-$version.txt
 	# https://crbug.com/710701
@@ -43,73 +42,90 @@ build() {
 	fi
 	echo "LASTCHANGE=$_chrome_build_hash-" >build/util/LASTCHANGE
 
-	# https://chromium-review.googlesource.com/c/chromium/src/+/712575
-	# _flags+=('exclude_unwind_tables=true')
-	CFLAGS+='   -fno-unwind-tables -fno-asynchronous-unwind-tables'
-	CXXFLAGS+=' -fno-unwind-tables -fno-asynchronous-unwind-tables'
+	CFLAGS+='   -fno-unwind-tables -fno-asynchronous-unwind-tables -Wno-parentheses-equality -Wno-unused-command-line-argument'
+	CXXFLAGS+=' -fno-unwind-tables -fno-asynchronous-unwind-tables -Wno-parentheses-equality -Wno-unused-command-line-argument'
 	CPPFLAGS+=' -DNO_UNWIND_TABLES'
-
-	# https://crbug.com/772655
-	patch -p1 -i $SRC/chromium-use-fromUTF8-for-UnicodeString-construction.patch
-
-	# https://crbug.com/789163
-	patch -p1 -i $SRC/chromium-omnibox-unescape-fragment.patch
 
 	# https://crbug.com/skia/6663#c10
 	patch -p4 -i $SRC/chromium-skia-harmony.patch
 
 	# Fixes from Gentoo
-	patch -p1 -i $SRC/chromium-memcpy-r0.patch
 	patch -p1 -i $SRC/chromium-clang-r2.patch
-	patch -p1 -i $SRC/chromium-cups-r0.patch
+	patch -p1 -i $SRC/chromium-math.h-r0.patch
+	patch -p1 -i $SRC/chromium-stdint.patch
+
+	# Remove compiler flags not supported by our system clang
+	sed -i \
+		-e '/"-Wno-enum-compare-switch"/d' \
+		-e '/"-Wno-null-pointer-arithmetic"/d' \
+		-e '/"-Wno-tautological-unsigned-zero-compare"/d' \
+		-e '/"-Wno-tautological-constant-compare"/d' \
+		-e '/"-fno-delete-null-pointer-checks"/d' \
+		-e '/"-Wno-maybe-uninitialized"/d' \
+		build/config/compiler/BUILD.gn
 
 	mkdir -p third_party/node/linux/node-linux-x64/bin
 	ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
 
-	local LIB
-	for LIB in libjpeg libjpeg_turbo yasm; do
-		find -type f -path "*third_party/$LIB/*" \
-			\! -path "*third_party/$LIB/chromium/*" \
-			\! -path "*third_party/$LIB/google/*" \
-			\! -path './base/third_party/icu/*' \
-			\! -path './third_party/yasm/run_yasm.py' \
-                        \! -regex '.*\.\(gn\|gni\|isolate\)' \
-			\! -path './third_party/freetype/src/src/psnames/pstables.h' \
-			-delete
+	local gn_system_libraries=(
+		#libdrm
+		#libjpeg
+		#libpng
+		libvpx
+		libwebp
+		# libxml
+		yasm
+		# zlib
+		# bzip2
+        )
+
+	local ULIB
+	for ULIB in ${gn_system_libraries[@]}; do
+		find -type f -path "*third_party/$ULIB/*" \
+		\! -path "*third_party/$ULIB/chromium/*" \
+		\! -path "*third_party/$ULIB/google/*" \
+		\! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
+		-delete
 	done
 
 	/usr/bin/python2 build/linux/unbundle/replace_gn_files.py \
-		--system-libraries libjpeg libxml libevent yasm
+		--system-libraries ${gn_system_libraries[@]}
 
+	# Chromium issue #386097
 	/usr/bin/python2 third_party/libaddressinput/chromium/tools/update-strings.py
 
-	_gn_args=(
-		'blink_gc_plugin=false'
+	local _gn_args=(
+		'custom_toolchain="//build/toolchain/linux/unbundle:default"'
+		'host_toolchain="//build/toolchain/linux/unbundle:default"'
+		'is_clang=false'
 		'clang_use_chrome_plugins=false'
+		'is_debug=false'
+		'fatal_linker_warnings=false'
+		'treat_warnings_as_errors=false'
+		'fieldtrial_testing_like_official_build=true'
+		'remove_webcore_debug_symbols=true'
+		'ffmpeg_branding="Chrome"'
+		'proprietary_codecs=true'
+		'link_pulseaudio=false'
+		'use_gnome_keyring=false'
+		'use_gold=false'
+		'use_lld=false'
+		'use_sysroot=false'
+		'use_bundled_fontconfig=false'
+		'linux_use_bundled_binutils=false'
+		'use_custom_libcxx=true'
 		'enable_hangout_services_extension=true'
+		'enable_widevine=false'
 		'enable_nacl=false'
 		'enable_swiftshader=false'
-		'fatal_linker_warnings=false'
-		'ffmpeg_branding="Chrome"'
-		'is_clang=false'
-		'is_debug=false'
-		'linux_use_bundled_binutils=false'
-		'use_custom_libcxx=false'
-		'proprietary_codecs=true'
-		'remove_webcore_debug_symbols=true'
-		'symbol_level=0'
-		'treat_warnings_as_errors=false'
-		'use_allocator="none"'
 		'use_cups=false'
 		'use_gconf=false'
 		'use_gnome_keyring=false'
-		'use_gold=false'
 		'use_kerberos=false'
 		'use_pulseaudio=false'
-		'use_sysroot=false'
 	)
 
-	/usr/bin/python2 tools/gn/bootstrap/bootstrap.py --gn-gen-args="${_gn_args[*]}"
+	/usr/bin/python2 tools/gn/bootstrap/bootstrap.py -s -v --no-clean
 	out/Release/gn gen out/Release --args="${_gn_args[*]}" --script-executable=/usr/bin/python2
 
 	ninja -j ${JOBS-1} -C out/Release chrome chrome_sandbox

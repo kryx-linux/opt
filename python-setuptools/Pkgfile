@@ -4,10 +4,12 @@
 # Depends on: python-appdirs python-packaging python-pip
 
 name=python-setuptools
-version=38.5.2
+version=39.0.1
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.zip
-	https://bootstrap.pypa.io/get-pip.py)
+	https://crux.ster.zone/downloads/get-pip.py
+#	https://bootstrap.pypa.io/get-pip.py
+)
 
 build() {
 	cd ${name#*-}-$version

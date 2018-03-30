@@ -93,8 +93,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/animation/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/animation/animation_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/application_test_runner/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/application_test_runner/application_test_runner_module.js
-drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits/
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits/audits_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits2/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits2/audits2_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits2_test_runner/
@@ -102,8 +100,6 @@ drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits2_test_runner/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits2_worker.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits2_worker/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits2_worker/audits2_worker_module.js
-drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/audits_test_runner/
--rw-r--r--	root/root	usr/lib/chromium/resources/inspector/audits_test_runner/audits_test_runner_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/bindings_test_runner/
 -rw-r--r--	root/root	usr/lib/chromium/resources/inspector/bindings_test_runner/bindings_test_runner_module.js
 drwxr-xr-x	root/root	usr/lib/chromium/resources/inspector/changes/

@@ -8,7 +8,8 @@ version=20170524
 release=1
 source=(ftp://tug.org/historic/systems/texlive/${version:0:4}/$name-$version-texmf.tar.xz
         ftp://tug.org/historic/systems/texlive/${version:0:4}/$name-$version-source.tar.xz
-        http://download.savannah.gnu.org/releases/texi2html/texi2html-5.0.tar.bz2)
+        http://download.savannah.gnu.org/releases/texi2html/texi2html-5.0.tar.bz2
+	texlive-poppler-0.59.patch)
 
 build() {
   cd $name-$version-source
@@ -20,6 +21,9 @@ build() {
     -exec chmod 755 {} \; -o \
     \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
     -exec chmod 644 {} \;
+
+  # Fix build with poppler 0.59.0 (thanks to Archlinux)
+  patch -Np1 < $SRC/texlive-poppler-0.59.patch
 
   # Fix some paths
   sed -i 's|TEXMFROOT = .*|TEXMFROOT = $SELFAUTODIR/share|g' texk/kpathsea/texmf.cnf

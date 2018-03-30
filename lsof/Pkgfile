@@ -4,7 +4,7 @@
 # Packager:    sten, nick dot steeves at shaw dot ca
 
 name=lsof
-version=4.89
+version=4.91
 release=1
 source=(ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/lsof_$version.tar.bz2)
 
@@ -16,5 +16,5 @@ build() {
     sed -i -e "s/-DLINUXV/${CFLAGS} -DLINUXV/" Makefile
     make
     install -D -m 755 lsof $PKG/usr/sbin/lsof
-    install -D -m 644 lsof.8 $PKG/usr/share/man8/lsof.8
+    install -D -m 644 lsof.8 $PKG/usr/share/man/man8/lsof.8
 }
