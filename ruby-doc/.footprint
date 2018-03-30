@@ -2847,6 +2847,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.4/system/Gem/Package/TarHeader/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/TarHeader/header-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/TarHeader/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/TarHeader/oct-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/TarHeader/strict_oct-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/TarHeader/update_checksum-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.4/system/Gem/Package/TarInvalidError/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/TarInvalidError/cdesc-TarInvalidError.ri
@@ -2931,8 +2932,10 @@ drwxr-xr-x	root/root	usr/share/ri/2.4/system/Gem/Package/TooLongFileName/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/files-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/gzip_to-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/initialize-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/mkdir_p_safe-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/read_checksums-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/realpath-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/security_policy-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/setup_signer-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/Gem/Package/spec-i.ri
@@ -7335,6 +7338,8 @@ drwxr-xr-x	root/root	usr/share/ri/2.4/system/OpenSSL/X509/StoreError/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenSSL/debug-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenSSL/errors-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenSSL/fips_mode%3d-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.4/system/OpenSSL/mem_check_start-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.4/system/OpenSSL/print_mem_leaks-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.4/system/OpenStruct/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/%3d%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/%5b%5d%3d-i.ri
@@ -7347,13 +7352,11 @@ drwxr-xr-x	root/root	usr/share/ri/2.4/system/OpenStruct/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/eql%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/freeze-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/hash-i.ri
--rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/initialize_copy-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/json_create-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/marshal_dump-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/marshal_load-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/new-c.ri
--rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/respond_to_missing%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/to_h-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/to_json-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/OpenStruct/to_s-i.ri
@@ -13768,8 +13771,13 @@ drwxr-xr-x	root/root	usr/share/ri/2.4/system/WEBrick/HTTPRequest/
 drwxr-xr-x	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/
 -rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/%5b%5d%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/%5b%5d-i.ri
+drwxr-xr-x	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/ChunkedWrapper/
+-rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/ChunkedWrapper/cdesc-ChunkedWrapper.ri
+drwxr-xr-x	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/InvalidHeader/
+-rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/InvalidHeader/cdesc-InvalidHeader.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/body-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/cdesc-HTTPResponse.ri
+-rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/check_header-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/chunked%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/chunked%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.4/system/WEBrick/HTTPResponse/config-i.ri
