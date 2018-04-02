@@ -1,23 +1,23 @@
 # Description: Network-related giomodules for glib.
 # URL: http://git.gnome.org/browse/glib-networking/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Packager: Danny Rawlins, crux at romster dot me
-# Depends on: gnutls intltool libgcrypt glib
+# Depends on: gnutls gsettings-desktop-schemas meson ninja
 
 name=glib-networking
-version=2.50.0
+version=2.56.0
 release=1
-source=(http://ftp.gnome.org/pub/GNOME/sources/$name/${version%.*}/$name-$version.tar.xz)
+source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--with-gnutls \
-		--with-ca-certificates=/etc/ssl/cert.pem \
-		--disable-nls
+	meson build \
+		--prefix /usr \
+		-Dlibproxy_support=false \
+		-Dca_certificates_path=/etc/ssl/cert.pem
 
-	make
-	make DESTDIR=$PKG install
+        ninja -C build -j ${JOBS:-1}
+        DESTDIR="$PKG" ninja -C build install
+
+	rm -r $PKG/usr/share/{locale,installed-tests}
 }
