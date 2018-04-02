@@ -4,7 +4,7 @@
 # Depends on: libtasn1 libffi
 
 name=p11-kit
-version=0.23.9
+version=0.23.10
 release=1
 source=(https://github.com/p11-glue/$name/releases/download/$version/$name-$version.tar.gz)
 
@@ -14,6 +14,9 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--with-module-path=/usr/lib/pkcs11 \
 		--with-trust-paths=/etc/ssl
 
 	make
