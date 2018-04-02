@@ -2017,6 +2017,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/samlib.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sane.ds
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sapi.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/sas.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sc.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/scarddlg.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sccbase.dll
@@ -2055,6 +2056,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/stdole2.tlb
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/stdole32.tlb
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/sti.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/strmdll.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/subst.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/svchost.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/svrapi.dll
@@ -2098,6 +2100,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/view.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/virtdisk.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vssapi.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/vulkan-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wbemdisp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wbemprox.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wdscore.dll
@@ -2420,6 +2423,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libwindowscodecsext.def
 -rw-r--r--	root/root	usr/lib/wine/libwinecrt0.a
 -rw-r--r--	root/root	usr/lib/wine/libwined3d.def
+-rw-r--r--	root/root	usr/lib/wine/libwinevulkan.def
 -rw-r--r--	root/root	usr/lib/wine/libwinhttp.def
 -rw-r--r--	root/root	usr/lib/wine/libwininet.def
 -rw-r--r--	root/root	usr/lib/wine/libwinmm.def
@@ -2613,6 +2617,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/samlib.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/sane.ds.so
 -rwxr-xr-x	root/root	usr/lib/wine/sapi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/sas.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/sc.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/scarddlg.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/sccbase.dll.so
@@ -2651,6 +2656,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/stdole2.tlb.so
 -rwxr-xr-x	root/root	usr/lib/wine/stdole32.tlb.so
 -rwxr-xr-x	root/root	usr/lib/wine/sti.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/strmdll.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/subst.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/svchost.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/svrapi.dll.so
@@ -2694,6 +2700,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/view.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/virtdisk.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vssapi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/vulkan-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wbemdisp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wbemprox.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wdscore.dll.so
@@ -3893,6 +3900,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/samlib.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/sane.ds
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/sapi.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/sas.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/sc.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/scarddlg.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/sccbase.dll
@@ -3936,6 +3944,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/sti.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/storage.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/stress.dll16
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/strmdll.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/subst.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/svchost.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/svrapi.dll
@@ -3990,6 +3999,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vnetbios.vxd
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vssapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vtdapi.vxd
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/vulkan-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vwin32.vxd
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/w32skrnl.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/w32sys.dll16
@@ -4334,6 +4344,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libwindowscodecsext.def
 -rw-r--r--	root/root	usr/lib32/wine/libwinecrt0.a
 -rw-r--r--	root/root	usr/lib32/wine/libwined3d.def
+-rw-r--r--	root/root	usr/lib32/wine/libwinevulkan.def
 -rw-r--r--	root/root	usr/lib32/wine/libwinhttp.def
 -rw-r--r--	root/root	usr/lib32/wine/libwininet.def
 -rw-r--r--	root/root	usr/lib32/wine/libwinmm.def
@@ -4545,6 +4556,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/samlib.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/sane.ds.so
 -rwxr-xr-x	root/root	usr/lib32/wine/sapi.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/sas.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/sc.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/scarddlg.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/sccbase.dll.so
@@ -4588,6 +4600,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/sti.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/storage.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/stress.dll16.so
+-rwxr-xr-x	root/root	usr/lib32/wine/strmdll.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/subst.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/svchost.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/svrapi.dll.so
@@ -4642,6 +4655,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/vnetbios.vxd.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vssapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vtdapi.vxd.so
+-rwxr-xr-x	root/root	usr/lib32/wine/vulkan-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vwin32.vxd.so
 -rwxr-xr-x	root/root	usr/lib32/wine/w32skrnl.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/w32sys.dll16.so
