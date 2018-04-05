@@ -3,7 +3,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/aserver
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/alsa/
--rw-r--r--	root/root	usr/include/alsa/alisp.h
 -rw-r--r--	root/root	usr/include/alsa/asoundef.h
 -rw-r--r--	root/root	usr/include/alsa/asoundlib.h
 -rw-r--r--	root/root	usr/include/alsa/conf.h
@@ -104,9 +103,6 @@ drwxr-xr-x	root/root	usr/share/alsa/cards/
 -rw-r--r--	root/root	usr/share/alsa/cards/RME9652.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/SB-XFi.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/SI7018.conf
-drwxr-xr-x	root/root	usr/share/alsa/cards/SI7018/
--rw-r--r--	root/root	usr/share/alsa/cards/SI7018/sndoc-mixer.alisp
--rw-r--r--	root/root	usr/share/alsa/cards/SI7018/sndop-mixer.alisp
 -rw-r--r--	root/root	usr/share/alsa/cards/TRID4DWAVENX.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/USB-Audio.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/VIA686A.conf
@@ -117,7 +113,6 @@ drwxr-xr-x	root/root	usr/share/alsa/cards/SI7018/
 -rw-r--r--	root/root	usr/share/alsa/cards/VXPocket.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/VXPocket440.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/YMF744.conf
--rw-r--r--	root/root	usr/share/alsa/cards/aliases.alisp
 -rw-r--r--	root/root	usr/share/alsa/cards/aliases.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/pistachio-card.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/vc4-hdmi.conf
@@ -139,7 +134,6 @@ drwxr-xr-x	root/root	usr/share/alsa/pcm/
 -rw-r--r--	root/root	usr/share/alsa/pcm/surround50.conf
 -rw-r--r--	root/root	usr/share/alsa/pcm/surround51.conf
 -rw-r--r--	root/root	usr/share/alsa/pcm/surround71.conf
--rw-r--r--	root/root	usr/share/alsa/sndo-mixer.alisp
 drwxr-xr-x	root/root	usr/share/alsa/topology/
 drwxr-xr-x	root/root	usr/share/alsa/topology/broadwell/
 -rw-r--r--	root/root	usr/share/alsa/topology/broadwell/broadwell.conf
@@ -158,6 +152,12 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm/DB410c/
 drwxr-xr-x	root/root	usr/share/alsa/ucm/GoogleNyan/
 -rw-r--r--	root/root	usr/share/alsa/ucm/GoogleNyan/GoogleNyan.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm/GoogleNyan/HiFi.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm/HDAudio-Gigabyte-ALC1220DualCodecs/
+-rw-r--r--	root/root	usr/share/alsa/ucm/HDAudio-Gigabyte-ALC1220DualCodecs/HDAudio-Gigabyte-ALC1220DualCodecs.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm/HDAudio-Gigabyte-ALC1220DualCodecs/HiFi.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm/HDAudio-Lenovo-DualCodecs/
+-rw-r--r--	root/root	usr/share/alsa/ucm/HDAudio-Lenovo-DualCodecs/HDAudio-Lenovo-DualCodecs.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm/HDAudio-Lenovo-DualCodecs/HiFi.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm/PAZ00/
 -rw-r--r--	root/root	usr/share/alsa/ucm/PAZ00/HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm/PAZ00/PAZ00.conf
@@ -186,6 +186,8 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm/SDP4430/
 -rw-r--r--	root/root	usr/share/alsa/ucm/SDP4430/record
 -rw-r--r--	root/root	usr/share/alsa/ucm/SDP4430/voice
 -rw-r--r--	root/root	usr/share/alsa/ucm/SDP4430/voiceCall
+drwxr-xr-x	root/root	usr/share/alsa/ucm/TECLAST-X80Pro-Defaultstring-CherryTrailCR/
+-rw-r--r--	root/root	usr/share/alsa/ucm/TECLAST-X80Pro-Defaultstring-CherryTrailCR/TECLAST-X80Pro-Defaultstring-CherryTrailCR.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm/VEYRON-I2S/
 -rw-r--r--	root/root	usr/share/alsa/ucm/VEYRON-I2S/HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm/VEYRON-I2S/VEYRON-I2S.conf
@@ -200,9 +202,14 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm/broxton-rt298/
 drwxr-xr-x	root/root	usr/share/alsa/ucm/bytcr-rt5651/
 -rw-r--r--	root/root	usr/share/alsa/ucm/bytcr-rt5651/HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm/bytcr-rt5651/bytcr-rt5651.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm/chtrt5645-mono-speaker-analog-mic/
+-rw-r--r--	root/root	usr/share/alsa/ucm/chtrt5645-mono-speaker-analog-mic/HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm/chtrt5645-mono-speaker-analog-mic/chtrt5645-mono-speaker-analog-mic.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm/chtrt5645/
 -rw-r--r--	root/root	usr/share/alsa/ucm/chtrt5645/HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm/chtrt5645/chtrt5645.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm/gpd-win-pocket-rt5645/
+-rw-r--r--	root/root	usr/share/alsa/ucm/gpd-win-pocket-rt5645/gpd-win-pocket-rt5645.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm/skylake-rt286/
 -rw-r--r--	root/root	usr/share/alsa/ucm/skylake-rt286/Hdmi1
 -rw-r--r--	root/root	usr/share/alsa/ucm/skylake-rt286/Hdmi2
