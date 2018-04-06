@@ -24,6 +24,8 @@ build() {
 		LUA='--disable-lua'
 	fi
 
+	autoreconf -vi
+
 	./configure \
 		--prefix=/usr \
 		--enable-python=python2 \
