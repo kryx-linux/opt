@@ -2159,8 +2159,8 @@ drwxr-xr-x	root/root	usr/lib/python3.6/ensurepip/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/ensurepip/__pycache__/_uninstall.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/ensurepip/__pycache__/_uninstall.cpython-36.pyc
 drwxr-xr-x	root/root	usr/lib/python3.6/ensurepip/_bundled/
--rw-r--r--	root/root	usr/lib/python3.6/ensurepip/_bundled/pip-9.0.1-py2.py3-none-any.whl
--rw-r--r--	root/root	usr/lib/python3.6/ensurepip/_bundled/setuptools-28.8.0-py2.py3-none-any.whl
+-rw-r--r--	root/root	usr/lib/python3.6/ensurepip/_bundled/pip-9.0.3-py2.py3-none-any.whl
+-rw-r--r--	root/root	usr/lib/python3.6/ensurepip/_bundled/setuptools-39.0.1-py2.py3-none-any.whl
 -rw-r--r--	root/root	usr/lib/python3.6/ensurepip/_uninstall.py
 -rw-r--r--	root/root	usr/lib/python3.6/enum.py
 -rw-r--r--	root/root	usr/lib/python3.6/filecmp.py
@@ -2534,6 +2534,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_percolator.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_percolator.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_percolator.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_pyparse.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_pyparse.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_pyparse.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_query.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_query.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_query.cpython-36.pyc
@@ -2603,6 +2606,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_parenmatch.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_pathbrowser.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_percolator.py
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_pyparse.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_query.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_redirector.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_replace.py
@@ -2772,9 +2776,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/
 -rwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.4.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.5.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.4.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.5.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__main__.py
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/__pycache__/
