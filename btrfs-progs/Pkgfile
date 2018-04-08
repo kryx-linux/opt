@@ -4,8 +4,8 @@
 # Depends on:  lzo zstd
 
 name=btrfs-progs
-version=4.15.1
-release=2
+version=4.16
+release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz)
 
 build() {
@@ -13,7 +13,7 @@ build() {
 	./configure --prefix=/usr \
 		--bindir=/sbin \
 		--disable-documentation \
-		--disable-convert
+		--disable-convert --disable-python
 	make
 	make DESTDIR=$PKG install
 
