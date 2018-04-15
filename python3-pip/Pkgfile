@@ -5,7 +5,7 @@
 
 name=python3-pip
 version=10.0.0
-release=1
+release=2
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
 	https://crux.ster.zone/downloads/get-pip.py
 #	https://bootstrap.pypa.io/get-pip.py
@@ -41,4 +41,5 @@ Please prt-get depinst python3-setuptools to use $name.\033[0m\n"
 	fi
 
 	rm $PKG/usr/bin/pip
+	chmod -R og-w $PKG
 }
