@@ -1,11 +1,11 @@
 # Description: An image loading library for GTK+
 # URL: http://www.gtk.org/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: gobject-introspection shared-mime-info libpng xorg-libx11
+# Depends on: gobject-introspection shared-mime-info libjpeg-turbo libpng xorg-libx11
 
 name=gdk-pixbuf
 version=2.36.12
-release=2
+release=3
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
         gdk-pixbuf.loaders gdk-pixbuf-register.sh)
 
@@ -15,7 +15,7 @@ build () {
     ./configure --prefix=/usr \
                 --disable-nls \
                 --without-libjasper \
-		--without-libtiff \
+                --without-libtiff \
                 --with-x11
     make
     make DESTDIR=$PKG install
@@ -25,4 +25,7 @@ build () {
     install -m 755 $SRC/gdk-pixbuf-register.sh \
             $PKG/usr/bin/gdk-pixbuf-register
     rm -r $PKG/usr/share/gtk-doc
+
+    # remove blank man pages if not generated with gtk-doc
+    find $PKG/usr/share/man -type f -size -256 -delete
 }
