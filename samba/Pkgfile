@@ -4,16 +4,17 @@
 # Depends on:  e2fsprogs libarchive tdb tevent libcap libaio popt
 
 name=samba
-version=4.7.6
+version=4.7.7
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
-        kerberos_keytab.c.patch samba)
+        fix-build-without-ads.patch \
+        samba)
 
 build () {
     cd $name-$version
 
-    # revert patch because it breaks build without ads
-    patch -p1 -R -i $SRC/kerberos_keytab.c.patch
+    # https://bugzilla.samba.org/show_bug.cgi?id=13273
+    patch -p1 -i $SRC/fix-build-without-ads.patch
 
     ./configure --enable-fhs \
                 --prefix=/usr \
