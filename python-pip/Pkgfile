@@ -5,7 +5,7 @@
 
 name=python-pip
 version=10.0.0
-release=1
+release=2
 source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.tar.gz
 	https://crux.ster.zone/downloads/get-pip.py
 #	https://bootstrap.pypa.io/get-pip.py
@@ -39,4 +39,6 @@ Please prt-get depinst python-setuptools to use $name.\033[0m\n"
 		/usr/bin/python setup.py install \
 			--prefix=/usr --root=$PKG --optimize=1
 	fi
+
+	chmod -R og-w $PKG
 }
