@@ -24,4 +24,8 @@ build () {
     install -m 755 $SRC/gdk-pixbuf-register.sh \
             $PKG/usr/bin/gdk-pixbuf-register
     rm -r $PKG/usr/share/gtk-doc
+
+    # remove blank man pages if not generated with gtk-doc
+    find $PKG/usr/share/man -type f -size -256 -delete
+    find $PKG -type d -empty -delete
 }
