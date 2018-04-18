@@ -1,7 +1,7 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/b9evrZxZriAzIQJV7t37RPJB0N0Q9YXckS3pNZtkAdHJ5GWNT/zBPf8dZyeoiuhZWNnLgl3oqUXEJG0o8LSwgM=
-SHA256 (Pkgfile) = 6dd6e260dd6fc679dc1a6d6fa05bc18a0ac3c585e0dd2e478eec79d82f02c294
+RWSE3ohX2g5d/bHYO2+7XT5oJKunccFeg1Y1BMmJouvb/UdjBG2Qt0n7j9MXbH3mPSsCrH2X1blSRePTsH0pHPl4pEkFN3Mc3go=
+SHA256 (Pkgfile) = 2af8bfb8e0938768a91137339bfbd53a186265795661c843557110560f91e892
 SHA256 (.footprint) = 3021111df1970c6210fbef3eab58f15d222c1f2c3affaae8122b958dc144ad5e
-SHA256 (samba-4.7.6.tar.gz) = 1eede30fc8ef6504e24602fb72b00baa0a7b73b59f16d25cb0771dc8c7c57d6e
-SHA256 (kerberos_keytab.c.patch) = 39cb889128d1e6ee07af4c75da765957893e7d1f151376308b3005cb85266a75
+SHA256 (samba-4.7.7.tar.gz) = 29fad16fa70c1342c300d28d1b474b04c01a2a650149e94cace36fcbace80131
+SHA256 (fix-build-without-ads.patch) = ad64ac4119ef3caa06313730428b60f15ea2d413803a2ea9a1929b0c5dd9b2d3
 SHA256 (samba) = 75bccea892422b5aebe8d2f9ce9b9c42ddc3cbdeccfd16f3161c07c1eb3feff0
