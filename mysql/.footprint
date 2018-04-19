@@ -159,8 +159,8 @@ drwxr-xr-x	root/root	usr/include/mysql/mysql/psi/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libmysqlclient.a
 lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so -> libmysqlclient.so.20
-lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so.20 -> libmysqlclient.so.20.3.8
--rwxr-xr-x	root/root	usr/lib/libmysqlclient.so.20.3.8
+lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so.20 -> libmysqlclient.so.20.3.9
+-rwxr-xr-x	root/root	usr/lib/libmysqlclient.so.20.3.9
 -rw-r--r--	root/root	usr/lib/libmysqld.a
 -rw-r--r--	root/root	usr/lib/libmysqlservices.a
 drwxr-xr-x	root/root	usr/lib/mysql/
@@ -231,12 +231,8 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/myisamchk.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/myisamlog.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/myisampack.1.gz
--rw-r--r--	root/root	usr/share/man/man1/mysql-stress-test.pl.1.gz
--rw-r--r--	root/root	usr/share/man/man1/mysql-test-run.pl.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mysql.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mysql.server.1.gz
--rw-r--r--	root/root	usr/share/man/man1/mysql_client_test.1.gz
--rw-r--r--	root/root	usr/share/man/man1/mysql_client_test_embedded.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mysql_config.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mysql_config_editor.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mysql_install_db.1.gz
@@ -257,8 +253,6 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/mysqlpump.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mysqlshow.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mysqlslap.1.gz
--rw-r--r--	root/root	usr/share/man/man1/mysqltest.1.gz
--rw-r--r--	root/root	usr/share/man/man1/mysqltest_embedded.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/perror.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/replace.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/resolve_stack_dump.1.gz
