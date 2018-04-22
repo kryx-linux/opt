@@ -1,51 +1,31 @@
-# Description: A safe, concurrent, practical language by Mozilla.
+# Description: The Rust language with Cargo included.
 # URL: http://www.rust-lang.org/
 # Depends on: llvm
 
 name=rust
-version=1.24.1
+version=1.25.0
 release=1
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.gz \
-	https://static.rust-lang.org/dist/2018-01-04/rust-std-1.23.0-x86_64-unknown-linux-gnu.tar.gz \
-	https://static.rust-lang.org/dist/2018-01-04/rustc-1.23.0-x86_64-unknown-linux-gnu.tar.gz \
-	https://static.rust-lang.org/dist/2018-01-04/cargo-0.24.0-x86_64-unknown-linux-gnu.tar.gz
-	)
+	https://static.rust-lang.org/dist/2018-02-15/rust-std-1.24.0-x86_64-unknown-linux-gnu.tar.gz \
+	https://static.rust-lang.org/dist/2018-02-15/rustc-1.24.0-x86_64-unknown-linux-gnu.tar.gz \
+	https://static.rust-lang.org/dist/2018-02-15/cargo-0.25.0-x86_64-unknown-linux-gnu.tar.gz)
  
 build() {
 	cd ${name}c-$version-src
 
-	mkdir -p build/cache/2018-01-04
-	cp $PKGMK_SOURCE_DIR/rust-std-1.23.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-01-04/
-	cp $PKGMK_SOURCE_DIR/rustc-1.23.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-01-04/
-	cp $PKGMK_SOURCE_DIR/cargo-0.24.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-01-04/
+	mkdir -p build/cache/2018-02-15
+	cp $PKGMK_SOURCE_DIR/rust-std-1.24.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-02-15/
+	cp $PKGMK_SOURCE_DIR/rustc-1.24.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-02-15/
+	cp $PKGMK_SOURCE_DIR/cargo-0.25.0-x86_64-unknown-linux-gnu.tar.gz build/cache/2018-02-15/
 
-	/usr/bin/python ./x.py build -j ${JOBS-1} --stage 1 src/libtest
+	./configure --prefix=/usr --enable-extended --disable-docs
 
-cat <<- EOF > config.toml
-	[build]
-	cargo = "build/x86_64-unknown-linux-gnu/stage0/bin/cargo"
-	rustc = "build/x86_64-unknown-linux-gnu/stage0/bin/rustc"
-	python = "python2.7"
-	extended = true
-	# Verbosity level: 0 == not verbose, 1 == verbose, 2 == very verbose
-	verbose = 0
-
-	[install]
-	prefix = "/usr"
-
-	[rust]
-	codegen-units = 0
-	debuginfo = true
-
-	channel = "stable"
-EOF
-
-	/usr/bin/python ./x.py build -j ${JOBS-1}
+	/usr/bin/python ./x.py build
 	DESTDIR=$PKG /usr/bin/python ./x.py install
 
+	#cleanup
 	rm -r $PKG/usr/share/doc
-
-	cd $PKG/usr/lib
-	rm rustlib/{components,manifest-rustc,rust-installer-version}
-	ln -sf rustlib/x86_64-unknown-linux-gnu/lib/*.so .
+	rm -r $PKG/usr/share/zsh
+	rm -r $PKG/etc
+	rm $PKG/usr/lib/rustlib/{components,manifest-rustc,rust-installer-version,uninstall.sh}
 }
