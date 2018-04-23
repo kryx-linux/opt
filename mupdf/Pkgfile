@@ -4,7 +4,7 @@
 # Depends on:  glu harfbuzz libjpeg-turbo xorg-libxi xorg-libxrandr
 
 name=mupdf
-version=1.12.0
+version=1.13.0
 release=1
 source=(https://mupdf.com/downloads/$name-$version-source.tar.xz)
 
@@ -18,6 +18,6 @@ build() {
     make XCFLAGS="-fpic" build=release
     make prefix=$PKG/usr mandir=$PKG/usr/share/man install
 
-    ln -s mupdf-x11-curl $PKG/usr/bin/mupdf
+    ln -s mupdf-gl $PKG/usr/bin/mupdf
     rm -r $PKG/usr/share/doc
 } 
