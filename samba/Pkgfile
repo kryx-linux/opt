@@ -1,20 +1,16 @@
 # Description: SMB server and client for unix
 # URL:         http://www.samba.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  e2fsprogs libarchive tdb tevent libcap libaio popt
+# Depends on:  libarchive libcap popt tdb tevent
 
 name=samba
-version=4.7.7
+version=4.8.1
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
-        fix-build-without-ads.patch \
         samba)
 
 build () {
     cd $name-$version
-
-    # https://bugzilla.samba.org/show_bug.cgi?id=13273
-    patch -p1 -i $SRC/fix-build-without-ads.patch
 
     ./configure --enable-fhs \
                 --prefix=/usr \
