@@ -5,14 +5,14 @@
 
 name=freetype
 version=2.9.1
-release=1
+release=2
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.bz2)
 
 build() {
     cd freetype-$version
 
     ./configure --prefix=/usr \
-                --with-zlib
+                --with-zlib --enable-freetype-config # w/o breaks grub2
 
     make
     make DESTDIR=$PKG install
