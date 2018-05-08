@@ -4,13 +4,13 @@
 # Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, python, alsa-lib, xorg-libxt, yasm, mesa3d, rust 
  
 name=firefox
-version=59.0.2
+version=60.0
 release=1
-source=(https://hg.mozilla.org/releases/mozilla-release/archive/239e434d6d2b8e1e2b697c3416d1e96d48fe98e5.tar.bz2
+source=(https://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox.desktop)
  
 build() {
-	cd mozilla-release-239e434d6d2b8e1e2b697c3416d1e96d48fe98e5
+	cd firefox-${version:0:4}
 
 cat <<- EOF > .mozconfig
 	mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
