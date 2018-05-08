@@ -2,8 +2,8 @@
 # URL: http://gegl.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: babl, gtk
-# Nice to have: libsdl
+# Depends on: babl gtk
+# Optional: libsdl ffmpeg3
 
 name=gegl
 version=0.2.0
@@ -12,7 +12,9 @@ source=(http://ftp.gimp.org/pub/$name/0.2/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
-  ./configure --prefix=/usr --disable-docs
+  [ -e '/usr/lib/ffmpeg3/pkgconfig/libavformat.pc' ] || PKGMK_GEGL+=' --without-libavformat'
+  PKG_CONFIG_PATH="/usr/lib/ffmpeg3/pkgconfig:$PKG_CONFIG_PATH" \
+  ./configure $PKGMK_GEGL --prefix=/usr --disable-docs
   make
   make DESTDIR=$PKG install
   rm -r $PKG/usr/share/locale
