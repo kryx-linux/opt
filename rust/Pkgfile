@@ -1,6 +1,7 @@
-# Description: The Rust language with Cargo included.
-# URL: http://www.rust-lang.org/
-# Depends on: llvm
+# Description:	The Rust language with Cargo included.
+# URL:		http://www.rust-lang.org/
+# Maintainer:	Fredrik Rinnestam, fredrik at crux dot guru
+# Depends on:	llvm
 
 name=rust
 version=1.26.0
