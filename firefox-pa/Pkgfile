@@ -1,16 +1,16 @@
-# Description: The Mozilla Firefox browser with Alsa support
+# Description: The Mozilla Firefox browser with PulseAudio support
 # URL: https://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, python, alsa-lib, xorg-libxt, yasm, mesa3d, rust 
+# Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, python, alsa-lib, xorg-libxt, yasm, mesa3d, rust, pulseaudio
  
 name=firefox-pa
-version=60.0
+version=60.0.1
 release=1
 source=(https://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox.desktop)
  
 build() {
-	cd firefox-${version:0:4}
+	cd firefox-$version
 
 cat <<- EOF > .mozconfig
 	mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-shared
@@ -21,8 +21,6 @@ cat <<- EOF > .mozconfig
 	ac_add_options --with-system-png
 	ac_add_options --with-system-nspr
 	ac_add_options --with-system-nss
-	#Broken in 59.0
-	#ac_add_options --with-system-cairo
 	ac_add_options --enable-system-ffi
 	ac_add_options --enable-system-pixman
 	ac_add_options --enable-system-sqlite
