@@ -4,7 +4,7 @@
 # Depends on:	nss,autoconf-2.13,unzip,zip,libidl,gtk,gtk3,alsa-lib,xorg-libxt,yasm
 
 name=thunderbird
-version=52.7.0
+version=52.8.0
 release=1
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/source/$name-$version.source.tar.xz
 	$name.desktop thunderbird-install-dir.patch)
