@@ -1,5 +1,5 @@
 # Description: Postscript Utilities
-# URL:         http://gershwin.ens.fr/vdaniel/Doc-Locale/Outils-Gnu-Linux/PsUtils/
+# URL:         http://knackered.org/angus/psutils/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Packager:    Martin Opel, mo at obbl-net dot de
 # Depends on:  ghostscript
@@ -7,7 +7,7 @@
 name=psutils
 version=1.17
 release=2
-source=(ftp://ftp.uni-frankfurt.de/pub/gentoo.org/distfiles/$name-$version.tar.gz)
+source=(https://gentoo.osuosl.org/distfiles/$name-$version.tar.gz)
 
 build() {
 	cd $name
