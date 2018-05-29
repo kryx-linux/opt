@@ -6,7 +6,7 @@
 # Nice to have: tk
 
 name=git
-version=2.15.1
+version=2.17.1
 release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
         git gitd.rc)
@@ -14,12 +14,12 @@ source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar
 build() {
   cd $name-$version
 
-  # install Error.pm. this pretty much sucks, but i'm too lazy to
-  # investigate whether there's a better way.
-  sed -i -e '47d' -e '49d' perl/Makefile.PL
-
-  make CFLAGS="$CFLAGS" prefix=/usr gitexecdir=/usr/lib/git-core \
-       INSTALLSITEMAN3DIR=/usr/share/man/man3 DESTDIR=$PKG install
+  make CFLAGS="$CFLAGS" \
+       prefix=/usr \
+       gitexecdir=/usr/lib/git-core \
+       INSTALLSITEMAN3DIR=/usr/share/man/man3 \
+       perllibdir=/usr/lib/perl5/site_perl/5.26 \
+       DESTDIR=$PKG install
 
   cd $SRC
 
