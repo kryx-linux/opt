@@ -173,6 +173,8 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_e67550_e67560-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_flow_mfp_m680-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_flow_mfp_m880-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m153-m154-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m253-m254-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m452-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m452d-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m552-ps.ppd.gz
@@ -181,7 +183,9 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m652_m653-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m750-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m855-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m178-m181-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m274-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m278-m281-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m577-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m680-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m681_m682-ps.ppd.gz
@@ -208,6 +212,8 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1200_postscript-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1300_postscript-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1500-postscript.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1700_postscript-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1700dr_postscript-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t2300_postscript-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t2500-postscript.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t3500-ps.ppd.gz
@@ -969,8 +975,10 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-officejet_v45.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_352_printer-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_377_mfp-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_P77440_P77940-60-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_556-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_765-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_P75250-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_e55650-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_e75160-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-pagewide_color_e77650-e77660-ps.ppd.gz
