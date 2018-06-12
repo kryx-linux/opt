@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=nsd
-version=4.1.21
+version=4.1.22
 release=1
 source=(http://www.nlnetlabs.nl/downloads/nsd/$name-$version.tar.gz
         README pre-install)
@@ -21,7 +21,7 @@ build () {
                 --without-libevent \
                 --with-user=nsd
     
-    make CFLAGS="$CFLAGS -Wall -Wno-cpp" all nsd-mem
+    make all nsd-mem
     make DESTDIR=$PKG install
 
     install -m 0755 nsd-mem $PKG/usr/sbin
