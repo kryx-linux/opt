@@ -5,7 +5,7 @@
 # Depends on:  util-linux lcms2 pango xorg-libxt
 
 name=imagemagick
-version=7.0.7-38
+version=7.0.7-39
 release=1
 source=(https://www.imagemagick.org/download/ImageMagick-$version.tar.xz)
 
