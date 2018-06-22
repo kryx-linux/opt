@@ -4,9 +4,9 @@
 # Depends on:  libdevmapper libaio
 
 name=lvm2
-version=2.02.178
+version=2.02.179
 release=1
-source=(https://mirrors.kernel.org/sourceware/lvm2/releases/LVM2.$version.tgz)
+source=(https://mirrors.kernel.org/sourceware/lvm2/LVM2.$version.tgz)
 
 build() {
     cd LVM2.$version
