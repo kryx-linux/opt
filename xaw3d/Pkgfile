@@ -4,7 +4,7 @@
 # Depends on:  xorg-libxpm, xorg-libxmu, xorg-imake
 
 name=xaw3d
-version=1.6.2
+version=1.6.3
 release=1
 source=(http://xorg.freedesktop.org/archive/individual/lib/libXaw3d-$version.tar.bz2)
 
