@@ -7,6 +7,7 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/qpdf/
 -rw-r--r--	root/root	usr/include/qpdf/Buffer.hh
 -rw-r--r--	root/root	usr/include/qpdf/BufferInputSource.hh
+-rw-r--r--	root/root	usr/include/qpdf/ClosedFileInputSource.hh
 -rw-r--r--	root/root	usr/include/qpdf/Constants.h
 -rw-r--r--	root/root	usr/include/qpdf/DLL.h
 -rw-r--r--	root/root	usr/include/qpdf/FileInputSource.hh
@@ -23,10 +24,17 @@ drwxr-xr-x	root/root	usr/include/qpdf/
 -rw-r--r--	root/root	usr/include/qpdf/Pl_StdioFile.hh
 -rw-r--r--	root/root	usr/include/qpdf/PointerHolder.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDF.hh
+-rw-r--r--	root/root	usr/include/qpdf/QPDFAcroFormDocumentHelper.hh
+-rw-r--r--	root/root	usr/include/qpdf/QPDFAnnotationObjectHelper.hh
+-rw-r--r--	root/root	usr/include/qpdf/QPDFDocumentHelper.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFExc.hh
+-rw-r--r--	root/root	usr/include/qpdf/QPDFFormFieldObjectHelper.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFObjGen.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFObject.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFObjectHandle.hh
+-rw-r--r--	root/root	usr/include/qpdf/QPDFObjectHelper.hh
+-rw-r--r--	root/root	usr/include/qpdf/QPDFPageDocumentHelper.hh
+-rw-r--r--	root/root	usr/include/qpdf/QPDFPageObjectHelper.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFTokenizer.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFWriter.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFXRefEntry.hh
@@ -38,9 +46,9 @@ drwxr-xr-x	root/root	usr/include/qpdf/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libqpdf.a
 -rwxr-xr-x	root/root	usr/lib/libqpdf.la
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.21.0.2
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so.21 -> libqpdf.so.21.0.2
--rwxr-xr-x	root/root	usr/lib/libqpdf.so.21.0.2
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.21.1.0
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so.21 -> libqpdf.so.21.1.0
+-rwxr-xr-x	root/root	usr/lib/libqpdf.so.21.1.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libqpdf.pc
 drwxr-xr-x	root/root	usr/share/
