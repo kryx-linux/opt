@@ -1,45 +1,21 @@
 # Description: Easily download, build, install, upgrade, and uninstall Python packages.
 # URL: https://pypi.python.org/pypi/setuptools
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: python-appdirs python-packaging python-pip
+# Depends on: python
 
 name=python-setuptools
 version=39.2.0
-release=1
-source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.zip
-	https://crux.ster.zone/downloads/get-pip.py
-#	https://bootstrap.pypa.io/get-pip.py
-)
+release=2
+source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.zip)
 
 build() {
 	cd ${name#*-}-$version
 
 	export SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES=0
 
-	if [ "$(pkginfo -i | egrep -c '^python-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
-		install -d build
-		sed -i 's/"--upgrade"/"--upgrade", "--upgrade-strategy", "only-if-needed"/' $SRC/get-pip.py
-		/usr/bin/python $SRC/get-pip.py --root=$SRC/build
+	/usr/bin/python bootstrap.py
+	/usr/bin/python setup.py build
 
-		local PYTHONVERSION=$(/usr/bin/python -c 'import sys; print("%s.%s" % sys.version_info[:2])')
-
-		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
-			/usr/bin/python bootstrap.py
-
-		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
-			/usr/bin/python setup.py build
-
-		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
-			/usr/bin/python setup.py install \
-			--prefix=/usr --root=$PKG --optimize=1
-	else
-
-		/usr/bin/python bootstrap.py 
-		/usr/bin/python setup.py build
-
-		/usr/bin/python setup.py install \
-			--prefix=/usr --root=$PKG --optimize=1
-	fi
-
-	unset SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES
+	/usr/bin/python setup.py install \
+		--prefix=/usr --root=$PKG --optimize=1
 }
