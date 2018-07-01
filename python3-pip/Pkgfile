@@ -1,44 +1,20 @@
 # Description: A tool for installing and managing Python packages.
 # URL: https://pypi.python.org/pypi/pip/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: python3
+# Depends on: python3-setuptools
 
 name=python3-pip
 version=10.0.1
-release=1
-source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
-	https://crux.ster.zone/downloads/get-pip.py
-#	https://bootstrap.pypa.io/get-pip.py
-)
+release=2
+source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
 
 build() {
 	cd ${name#*-}-$version
 
-	if [ "$(pkginfo -i | egrep -c '^python3-(setuptools|appdirs|pyparsing|six|packaging) ')" != 5 ]; then
-		printf "\e[031mWarning: $name now requires python3-setuptools to function and can not be added,
-as a dependency to $name as this will cause a cyclic dependency loop.
-Please prt-get depinst python3-setuptools to use $name.\033[0m\n"
-	fi
+	/usr/bin/python3 setup.py build
 
-	if [ "$(pkginfo -i | egrep -c '^python3-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
-		install -d build
-		sed -i 's/"--upgrade"/"--upgrade", "--upgrade-strategy", "only-if-needed"/' $SRC/get-pip.py
-		/usr/bin/python3 $SRC/get-pip.py --root=$SRC/build
-
-		local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
-
-		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
-			/usr/bin/python3 setup.py build
-
-		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
-			/usr/bin/python3 setup.py install \
-			--prefix=/usr --root=$PKG --optimize=1
-	else
-		/usr/bin/python3 setup.py build
-
-		/usr/bin/python3 setup.py install \
-			--prefix=/usr --root=$PKG --optimize=1
-	fi
+	/usr/bin/python3 setup.py install \
+		--prefix=/usr --root=$PKG --optimize=1
 
 	rm $PKG/usr/bin/pip
 	chmod -R og-w $PKG
