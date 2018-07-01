@@ -1,17 +1,15 @@
 # Description: Shared GSettings schemas for the desktop
 # URL: http://live.gnome.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: glib intltool
+# Depends on: gobject-introspection intltool
 
 name=gsettings-desktop-schemas
 version=3.28.0
-release=1
+release=2
 source=(https://ftp.gnome.org/pub/gnome/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
-
-	sed -i -r 's:"(/system):"/org/gnome\1:g' schemas/*.in
 
 	./configure \
 		--prefix=/usr
