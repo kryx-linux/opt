@@ -5,35 +5,20 @@
 
 name=python3-pyparsing
 version=2.2.0
-release=1
-source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
-	https://crux.ster.zone/downloads/get-pip.py
-#	https://bootstrap.pypa.io/get-pip.py
-)
+release=2
+source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
 
 build() {
 	cd ${name#*-}-$version
 
-	if [ "$(pkginfo -i | egrep -c '^python3-(setuptools|appdirs|pyparsing|six|pip|packaging) ')" != 6 ]; then
-		install -d build
-		sed -i 's/"--upgrade"/"--upgrade", "--upgrade-strategy", "only-if-needed"/' $SRC/get-pip.py
-		/usr/bin/python3 $SRC/get-pip.py --root=$SRC/build
+	/usr/bin/python3 setup.py build
 
-		local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+	/usr/bin/python3 setup.py install \
+		--prefix=/usr --root=$PKG --optimize=1
 
-		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
-			/usr/bin/python3 setup.py build
+	find $PKG/usr/lib/python*/site-packages -type f -exec chmod go-w {} +
 
-		PYTHONPATH=$SRC/build/usr/lib/python$PYTHONVERSION/site-packages \
-			/usr/bin/python3 setup.py install \
-			--prefix=/usr --root=$PKG --optimize=1
-	else
-		/usr/bin/python3 setup.py build
-
-		/usr/bin/python3 setup.py install \
-			--prefix=/usr --root=$PKG --optimize=1
-	fi
-
-	local PYTHONVERSION=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
-	find $PKG/usr/lib/python$PYTHONVERSION/site-packages -type f -exec chmod go-w {} +
+	# remove sdist metadata, as wheel metadata will be used with python3-pip
+	find $PKG/usr/lib/python*/site-packages/ -maxdepth 1 -type f \
+		-name "${name#*-}-$version-py*.egg-info" -delete
 }
