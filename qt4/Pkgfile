@@ -6,12 +6,12 @@
 name=qt4
 version=4.8.7
 release=4
-source=(http://download.qt-project.org/official_releases/qt/${version%.*}/$version/qt-everywhere-opensource-src-$version.tar.gz \
-	qt-everywhere-opensource-src-4.8.7-gcc6.patch
-        0001-Fix-exclusion-of-anonymous-ciphers.patch
-        fix_assistant_segfault_QTBUG-25324.patch
-        fix-moc-parsing-with-glibc-2.25.patch
-        fix-medium-font.diff)
+source=(https://download.qt.io/archive/qt/${version:0:3}/$version/qt-everywhere-opensource-src-$version.tar.gz
+    qt-everywhere-opensource-src-4.8.7-gcc6.patch
+    0001-Fix-exclusion-of-anonymous-ciphers.patch
+    fix_assistant_segfault_QTBUG-25324.patch
+    fix-moc-parsing-with-glibc-2.25.patch
+    fix-medium-font.diff)
 
 build () {
     cd qt-everywhere-opensource-src-$version
