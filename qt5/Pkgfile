@@ -1,21 +1,16 @@
 # Description: Qt Free Edition, version 5.x.
 # URL: http://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon mtdev xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
+# Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=qt5
 version=5.11.1
-release=1
+release=2
 source=(https://download.qt.io/official_releases/qt/${version::4}/$version/single/qt-everywhere-src-$version.tar.xz
 	qt5-logo.png)
 
 build() {
 	cd qt-everywhere-src-$version
-
-	# Fix missing private includes
-	# https://bugreports.qt.io/browse/QTBUG-37417
-	sed -e '/CMAKE_NO_PRIVATE_INCLUDES\ \=\ true/d' \
-		-i qtbase/mkspecs/features/create_cmake.prf
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
@@ -41,9 +36,12 @@ build() {
 		-prefix /usr/ \
 		-archdatadir /usr/lib/qt5 \
 		-bindir /usr/lib/qt5/bin \
+		-plugindir /usr/lib/qt5/plugins \
+		-importdir /usr/lib/qt5/imports \
 		-datadir /usr/share/qt5 \
-		-docdir /usr/share/doc/qt5-$version \
-		-examplesdir /usr/share/doc/qt5-$version/examples \
+		-docdir /usr/share/doc/qt5 \
+		-translationdir /usr/share/qt5/translations \
+		-examplesdir /usr/share/doc/qt5/examples \
 		-headerdir /usr/include/qt5 \
 		-libdir /usr/lib \
 		-sysconfdir /usr/etc/xdg \
@@ -65,6 +63,7 @@ build() {
 		-shared \
 		-plugin-sql-sqlite \
 		-system-sqlite \
+		-system-harfbuzz \
 		-skip qtwebengine
 
 	make
