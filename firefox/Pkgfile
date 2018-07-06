@@ -1,10 +1,10 @@
 # Description: The Mozilla Firefox browser with Alsa support
 # URL: https://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, python, alsa-lib, xorg-libxt, yasm, mesa3d, rust, clang
+# Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, alsa-lib, xorg-libxt, yasm, rust, clang
  
 name=firefox
-version=61.0
+version=61.0.1
 release=1
 source=(https://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox.desktop)
