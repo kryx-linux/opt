@@ -481,6 +481,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/inseng.idl
 -rw-r--r--	root/root	usr/include/wine/windows/inspectable.h
 -rw-r--r--	root/root	usr/include/wine/windows/inspectable.idl
+-rw-r--r--	root/root	usr/include/wine/windows/interactioncontext.h
 -rw-r--r--	root/root	usr/include/wine/windows/intshcut.h
 -rw-r--r--	root/root	usr/include/wine/windows/ipexport.h
 -rw-r--r--	root/root	usr/include/wine/windows/iphlpapi.h
@@ -2378,6 +2379,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libnddeapi.def
 -rw-r--r--	root/root	usr/lib/wine/libnetapi32.def
 -rw-r--r--	root/root	usr/lib/wine/libnewdev.def
+-rw-r--r--	root/root	usr/lib/wine/libninput.def
 -rw-r--r--	root/root	usr/lib/wine/libnormaliz.def
 -rw-r--r--	root/root	usr/lib/wine/libntdll.def
 -rw-r--r--	root/root	usr/lib/wine/libntdsapi.def
@@ -2434,6 +2436,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libuxtheme.def
 -rw-r--r--	root/root	usr/lib/wine/libvdmdbg.def
 -rw-r--r--	root/root	usr/lib/wine/libversion.def
+-rw-r--r--	root/root	usr/lib/wine/libvulkan-1.def
 -rw-r--r--	root/root	usr/lib/wine/libwebservices.def
 -rw-r--r--	root/root	usr/lib/wine/libwer.def
 -rw-r--r--	root/root	usr/lib/wine/libwindowscodecs.def
@@ -4316,6 +4319,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libnddeapi.def
 -rw-r--r--	root/root	usr/lib32/wine/libnetapi32.def
 -rw-r--r--	root/root	usr/lib32/wine/libnewdev.def
+-rw-r--r--	root/root	usr/lib32/wine/libninput.def
 -rw-r--r--	root/root	usr/lib32/wine/libnormaliz.def
 -rw-r--r--	root/root	usr/lib32/wine/libntdll.def
 -rw-r--r--	root/root	usr/lib32/wine/libntdsapi.def
@@ -4372,6 +4376,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libuxtheme.def
 -rw-r--r--	root/root	usr/lib32/wine/libvdmdbg.def
 -rw-r--r--	root/root	usr/lib32/wine/libversion.def
+-rw-r--r--	root/root	usr/lib32/wine/libvulkan-1.def
 -rw-r--r--	root/root	usr/lib32/wine/libwebservices.def
 -rw-r--r--	root/root	usr/lib32/wine/libwer.def
 -rw-r--r--	root/root	usr/lib32/wine/libwindowscodecs.def
@@ -4900,5 +4905,5 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-2.47-x86_64.msi
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.7.1.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.7.2.msi
 -rw-r--r--	root/root	usr/share/wine/wine.inf
