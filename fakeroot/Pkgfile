@@ -3,9 +3,9 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=fakeroot
-version=1.22
+version=1.23
 release=1
-source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.orig.tar.bz2
+source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.orig.tar.xz
         silence-dlerror.patch)
 
 build () {
