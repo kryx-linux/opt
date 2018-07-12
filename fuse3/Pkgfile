@@ -4,7 +4,7 @@
 # Depends on:  meson ninja
 
 name=fuse3
-version=3.2.3
+version=3.2.4
 release=1
 source=(https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.xz)
 
@@ -15,5 +15,5 @@ build() {
     DESTDIR=$PKG ninja -C build -j ${JOBS:-1} install
 
     rm -r $PKG/{dev,etc,lib}
-    mv $PKG/usr/share/man/man8/mount.{fuse.8.gz,fuse3.8.gz}
+    chmod -R g-w $PKG
 }
