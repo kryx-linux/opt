@@ -4,13 +4,14 @@
 # Depends on: dbus glib xorg-libsm xorg-libxtst libsndfile intltool consolekit
 
 name=pulseaudio
-version=12.0
+version=12.1
 release=1
-source=(http://freedesktop.org/software/$name/releases/$name-$version.tar.xz) 
+source=(https://freedesktop.org/software/$name/releases/$name-$version.tar.xz) 
 
 build() {
 	cd $name-$version
 
+	./bootstrap.sh
 	./configure --prefix=/usr \
 		--libexecdir=/usr/lib/$name \
 		--disable-bluez4 --disable-bluez5 \
