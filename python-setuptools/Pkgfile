@@ -4,8 +4,8 @@
 # Depends on: python
 
 name=python-setuptools
-version=39.2.0
-release=2
+version=40.0.0
+release=1
 source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.zip)
 
 build() {
