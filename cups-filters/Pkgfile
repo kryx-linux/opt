@@ -5,12 +5,14 @@
 
 name=cups-filters
 version=1.20.4
-release=1
+release=2
 source=(https://www.openprinting.org/download/$name/$name-$version.tar.xz
-        cups-browsed)
+        poppler-0.67.0.patch cups-browsed)
 
 build () {
     cd $name-$version
+
+    patch -p1 -i $SRC/poppler-0.67.0.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
@@ -21,7 +23,7 @@ build () {
                 --without-rcdir \
                 --with-browseremoteprotocols=cups 
 
-    make
+    make -j1
     make DESTDIR=$PKG install
     
     install -D -m 0755 $SRC/cups-browsed $PKG/etc/rc.d/cups-browsed
