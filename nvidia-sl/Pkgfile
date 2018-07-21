@@ -4,14 +4,14 @@
 # Depends on: gtk gl-select
 
 name=nvidia-sl
-version=396.24
+version=396.45
 release=1
-source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-no-compat32.run \
+source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
     90-nvidia-uvm.rules)
 
 build() {
-    sh NVIDIA-Linux-x86_64-$version-no-compat32.run --extract-only
-    cd NVIDIA-Linux-x86_64-$version-no-compat32
+    sh NVIDIA-Linux-x86_64-$version.run --extract-only
+    cd NVIDIA-Linux-x86_64-$version
 
     # libraries
     install -d $PKG/usr/lib/{tls,vdpau}
@@ -83,8 +83,6 @@ build() {
     # kernel modules
     cd kernel
     IGNORE_CC_MISMATCH=1 make module
-    install -D -m 0644 nvidia.ko $PKG/lib/modules/`uname -r`/extra/nvidia.ko
-    install -D -m 0644 nvidia-uvm.ko $PKG/lib/modules/`uname -r`/extra/nvidia-uvm.ko
-    install -D -m 0644 nvidia-modeset.ko $PKG/lib/modules/`uname -r`/extra/nvidia-modeset.ko
-    install -D -m 0644 nvidia-drm.ko $PKG/lib/modules/`uname -r`/extra/nvidia-drm.ko
+    install -d -m 0755 $PKG/lib/modules/`uname -r`/extra
+    install -m 0644 *.ko $PKG/lib/modules/`uname -r`/extra/
 }
