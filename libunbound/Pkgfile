@@ -1,7 +1,7 @@
 # Description: Validating resolver library
 # URL:         http://unbound.net/index.html
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  openssl
+# Depends on:  expat openssl
 
 name=libunbound
 version=1.7.1
