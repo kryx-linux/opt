@@ -1,11 +1,6 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/WL0fEZIW4z61IYSRa7y7dR9+E5+D1ccJt41PT+/ZocXRId3bPsNSrtIjUmWas4bMpDgTP2qiVRnvMWQZyNwuA8=
-SHA256 (Pkgfile) = d4f00216738b2451638834b3d4e00904b5447f3a632f97ab3d000c5a1e7d522a
-SHA256 (.footprint) = 9e55f99cca4f9100bfb4789d94b97878241f6c63560e17a390389d2b245d62c7
-SHA256 (llvm-6.0.0.src.tar.xz) = 1ff53c915b4e761ef400b803f07261ade637b0c269d99569f18040f3dcee4408
+RWSE3ohX2g5d/RZgLq90jT5yaKORp95CkjfjF4S6nVV3nfYiy3fJs7JwoePRUbB+FlhfrAT0ub06fo0vRpWJFo/BTccsmDeClQM=
+SHA256 (Pkgfile) = 9346bf4998e788d03be834736170acfbf81175c6216e53b66d70bc0d1ad36766
+SHA256 (.footprint) = 7cc05e5e2e4b60e5bf0129a77399eb826582865d14df8eb80cb1465eb55fd2c5
+SHA256 (llvm-6.0.1.src.tar.xz) = b6d6c324f9c71494c0ccaf3dac1f16236d970002b42bb24a6c9e1634f7d0f4e2
 SHA256 (llvm-config.h) = 2227b83b904348e5530f3475c978e11cb0f05a85024781dcb49ac86b65582707
-SHA256 (PR35947-export-LLVMInitializeInstCombine-as-extern-C.patch) = 7d0082d1c641873c1d45c2f076b9533fbc43002d605336afa92198b8830a5bcb
-SHA256 (PR36417-DebugInfo-discard-invalid-DBG_VALUE-instructions.patch) = 5a90833c15c4981e7accd405290491d7930f991d30943d7ae9e4e338149731ff
-SHA256 (PR36417-fixup-for-rL326769-RegState-Debug-is-being-truncated.patch) = da80b59c9abe9fe864ff8dc42132c5aa135a79d342fd147ae6f54e2621e009fa
-SHA256 (D44391-export-LLVM_DYLIB_COMPONENTS-in-LLVMConfig.cmake.patch) = 96e2f3ca8b7d1bdbe2606a1eebb12c57b39838d1bcc15e40388e8d59649a9f4a
-SHA256 (D44420-cmake-fix-a-typo-in-llvm_config-macro.patch) = 5cc114fd711e6ea836a6270b2f713e2e751c49e8b5ffa6c6812127ca801acef3
