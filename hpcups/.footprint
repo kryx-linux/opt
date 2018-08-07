@@ -204,6 +204,12 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_4500ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_4520mfp-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_4520ps-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_Z6_24in-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_Z6_44in-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_Z6dr_44in-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_Z9_24in-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_Z9_44in-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_Z9dr_44in-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_d5800-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1100ps_24in-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-designjet_t1100ps_44in-ps.ppd.gz
@@ -451,6 +457,9 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-envy_photo_6200_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-envy_photo_7100_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-envy_photo_7800_series.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-ink_tank_110_series.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-ink_tank_310_series.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-ink_tank_wireless_410_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_1000.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_1005_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_100_color_mfp_m175-ps.ppd.gz
@@ -1153,6 +1162,8 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_950.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_950vr.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_950xi.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-smart_tank_350_series.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-smart_tank_wireless_450_series.ppd.gz
 drwxr-xr-x	root/root	usr/share/hplip/
 -rwxr-xr-x	root/root	usr/share/hplip/dat2drv
 -rwxr-xr-x	root/root	usr/share/hplip/locatedriver
