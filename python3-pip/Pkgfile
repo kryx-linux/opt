@@ -4,8 +4,8 @@
 # Depends on: python3-setuptools
 
 name=python3-pip
-version=10.0.1
-release=2
+version=18.0
+release=1
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
 
 build() {
@@ -17,5 +17,4 @@ build() {
 		--prefix=/usr --root=$PKG --optimize=1
 
 	rm $PKG/usr/bin/pip
-	chmod -R og-w $PKG
 }
