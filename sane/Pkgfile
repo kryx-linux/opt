@@ -6,10 +6,10 @@
 name=sane
 version=1.0.27
 release=1
-source=(https://alioth.debian.org/frs/download.php/file/4224/$name-backends-$version.tar.gz)
+source=(https://salsa.debian.org/debian/sane-backends/-/archive/upstream/$version/$name-backends-upstream-$version.tar.gz)
 
 build () {
-    cd $name-backends-$version
+    cd $name-backends-upstream-$version
 
     ./configure --prefix=/usr \
                 --localstatedir=/var \
