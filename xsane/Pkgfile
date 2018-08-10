@@ -1,12 +1,12 @@
 # Description: Scanner frontend and GIMP plugin for sane
-# URL:         http://www.xsane.org
+# URL:         http://www.sane-project.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  gimp, sane
 
 name=xsane
 version=0.999
 release=1
-source=(http://www.xsane.org/download/$name-$version.tar.gz)
+source=(https://fossies.org/linux/misc/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
