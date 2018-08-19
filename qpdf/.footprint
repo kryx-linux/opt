@@ -35,6 +35,7 @@ drwxr-xr-x	root/root	usr/include/qpdf/
 -rw-r--r--	root/root	usr/include/qpdf/QPDFObjectHelper.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFPageDocumentHelper.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFPageObjectHelper.hh
+-rw-r--r--	root/root	usr/include/qpdf/QPDFSystemError.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFTokenizer.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFWriter.hh
 -rw-r--r--	root/root	usr/include/qpdf/QPDFXRefEntry.hh
@@ -46,9 +47,9 @@ drwxr-xr-x	root/root	usr/include/qpdf/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libqpdf.a
 -rwxr-xr-x	root/root	usr/lib/libqpdf.la
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.21.1.0
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so.21 -> libqpdf.so.21.1.0
--rwxr-xr-x	root/root	usr/lib/libqpdf.so.21.1.0
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.21.2.1
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so.21 -> libqpdf.so.21.2.1
+-rwxr-xr-x	root/root	usr/lib/libqpdf.so.21.2.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libqpdf.pc
 drwxr-xr-x	root/root	usr/share/
