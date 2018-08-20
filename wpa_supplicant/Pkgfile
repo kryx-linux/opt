@@ -5,7 +5,7 @@
 
 name=wpa_supplicant
 version=2.6
-release=3
+release=4
 source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz
         rebased-v2.6-0001-hostapd-Avoid-key-reinstallation-in-FT-handshake.patch
         rebased-v2.6-0002-Prevent-reinstallation-of-an-already-in-use-group-ke.patch
@@ -15,6 +15,7 @@ source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz
         rebased-v2.6-0006-TDLS-Reject-TPK-TK-reconfiguration.patch
         rebased-v2.6-0007-WNM-Ignore-WNM-Sleep-Mode-Response-without-pending-r.patch
         rebased-v2.6-0008-FT-Do-not-allow-multiple-Reassociation-Response-fram.patch
+        rebased-v2.6-0001-WPA-Ignore-unauthenticated-encrypted-EAPOL-Key-data.patch
         wlan)
 
 build () {
@@ -28,6 +29,7 @@ build () {
     patch -d.. -p1 -i $SRC/rebased-v2.6-0006-TDLS-Reject-TPK-TK-reconfiguration.patch
     patch -d.. -p1 -i $SRC/rebased-v2.6-0007-WNM-Ignore-WNM-Sleep-Mode-Response-without-pending-r.patch
     patch -d.. -p1 -i $SRC/rebased-v2.6-0008-FT-Do-not-allow-multiple-Reassociation-Response-fram.patch
+    patch -d.. -p1 -i $SRC/rebased-v2.6-0001-WPA-Ignore-unauthenticated-encrypted-EAPOL-Key-data.patch
 
     cp defconfig .config
     echo "CONFIG_READLINE=y

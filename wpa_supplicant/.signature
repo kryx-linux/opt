@@ -1,6 +1,6 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/RQg80Uz1Uy8/Bmifa5WGQsdDvlhpP0B/f7QXNBbntGkSjOBRzIvuuCD5bHTgtmDSqyR5n964zy4w19JVo4Seg0=
-SHA256 (Pkgfile) = 4b52b01a677225157876b502c8de725da63c7a5b1ff55469905f502783b73da3
+RWSE3ohX2g5d/fb0pwxIzrpCLcq+WA+NjAfAFaG0XqredE1sAUGZ3W8EWJ4i2/a+WihNbsX4ee8bigW1Ei1vwAi3lYeQZ4+EUQY=
+SHA256 (Pkgfile) = fb42fc05015785f706392ac8a2a89b6cf042113af596bc62c330780e1452f8f1
 SHA256 (.footprint) = d3b2e0c4068fe789ca0c18c2c81faf906efdbd970fa00641c3e5381dcbc474a5
 SHA256 (wpa_supplicant-2.6.tar.gz) = b4936d34c4e6cdd44954beba74296d964bc2c9668ecaa5255e499636fe2b1450
 SHA256 (rebased-v2.6-0001-hostapd-Avoid-key-reinstallation-in-FT-handshake.patch) = 529113cc81256c6178f3c1cf25dd8d3f33e6d770e4a180bd31c6ab7e4917f40b
@@ -11,4 +11,5 @@ SHA256 (rebased-v2.6-0005-Fix-PTK-rekeying-to-generate-a-new-ANonce.patch) = 147
 SHA256 (rebased-v2.6-0006-TDLS-Reject-TPK-TK-reconfiguration.patch) = 596d4d3b63ea859ed7ea9791b3a21cb11b6173b04c0a14a2afa47edf1666afa6
 SHA256 (rebased-v2.6-0007-WNM-Ignore-WNM-Sleep-Mode-Response-without-pending-r.patch) = c5a17af84aec2d88c56ce0da2d6945be398fe7cab5c0c340deb30973900c2736
 SHA256 (rebased-v2.6-0008-FT-Do-not-allow-multiple-Reassociation-Response-fram.patch) = c8840d857b9432f3b488113c85c1ff5d4a4b8d81078b7033388dae1e990843b1
+SHA256 (rebased-v2.6-0001-WPA-Ignore-unauthenticated-encrypted-EAPOL-Key-data.patch) = 960c3cf2a514479b0b4cf09665186a1a9f5d28e8b05dec23db75c6cc13eb1f7c
 SHA256 (wlan) = 62f4c0bf8d5fedcf5b6ad79278f4be16f29841099f385acc4fc91e2d52ca1927
