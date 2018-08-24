@@ -215,6 +215,8 @@ drwxr-xr-x	root/root	usr/lib/samba/idmap/
 -rwxr-xr-x	root/root	usr/lib/samba/idmap/rid.so
 -rwxr-xr-x	root/root	usr/lib/samba/idmap/script.so
 -rwxr-xr-x	root/root	usr/lib/samba/idmap/tdb2.so
+drwxr-xr-x	root/root	usr/lib/samba/krb5/
+-rwxr-xr-x	root/root	usr/lib/samba/krb5/winbind_krb5_locator.so
 drwxr-xr-x	root/root	usr/lib/samba/ldb/
 -rwxr-xr-x	root/root	usr/lib/samba/ldb/asq.so
 -rwxr-xr-x	root/root	usr/lib/samba/ldb/ildap.so
@@ -285,8 +287,8 @@ lrwxrwxrwx	root/root	usr/lib/samba/libkrb5-samba4.so.26 -> libkrb5-samba4.so.26.
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5-samba4.so.26.0.0
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5samba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libldb-cmdline-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.3.5
--rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.3.5
+lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.3.6
+-rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.3.6
 -rwxr-xr-x	root/root	usr/lib/samba/libldbsamba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli-lsa3-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli-netlogon3-samba4.so
@@ -381,7 +383,6 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/virusfilter.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/worm.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/xattr_tdb.so
--rwxr-xr-x	root/root	usr/lib/winbind_krb5_locator.so
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/nmbd
 -rwxr-xr-x	root/root	usr/sbin/samba_gpoupdate
@@ -422,7 +423,6 @@ drwxr-xr-x	root/root	usr/share/man/man7/
 -rw-r--r--	root/root	usr/share/man/man7/samba.7.gz
 -rw-r--r--	root/root	usr/share/man/man7/traffic_learner.7.gz
 -rw-r--r--	root/root	usr/share/man/man7/traffic_replay.7.gz
--rw-r--r--	root/root	usr/share/man/man7/winbind_krb5_locator.7.gz
 drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/cifsdd.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/eventlogadm.8.gz
@@ -492,6 +492,8 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/vfs_worm.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_xattr_tdb.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_zfsacl.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/winbind_krb5_localauth.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/winbind_krb5_locator.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/winbindd.8.gz
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/cache/
