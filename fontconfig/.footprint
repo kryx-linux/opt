@@ -74,9 +74,9 @@ drwxr-xr-x	root/root	usr/include/fontconfig/
 -rw-r--r--	root/root	usr/include/fontconfig/fontconfig.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libfontconfig.la
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.11.1
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.11.1
--rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.11.1
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.12.0
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.12.0
+-rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.12.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/fontconfig.pc
 drwxr-xr-x	root/root	usr/share/
@@ -167,6 +167,7 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/FcDefaultSubstitute.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcDirCacheClean.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcDirCacheCreateUUID.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcDirCacheDeleteUUID.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcDirCacheLoad.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcDirCacheLoadFile.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcDirCacheRead.3.gz
@@ -253,11 +254,20 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternEqual.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternEqualSubset.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternFilter.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcPatternFindIter.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternFormat.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternGet-Type.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternGet.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternGetWithBinding.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternHash.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcPatternIterEqual.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcPatternIterGetObject.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcPatternIterGetValue.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcPatternIterIsValid.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcPatternIterNext.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcPatternIterStart.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcPatternIterValueCount.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/FcPatternObjectCount.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternPrint.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternReference.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/FcPatternRemove.3.gz

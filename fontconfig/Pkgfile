@@ -4,7 +4,7 @@
 # Depends on:  freetype expat
 
 name=fontconfig
-version=2.13.0
+version=2.13.1
 release=1
 source=(https://fontconfig.org/release/$name-$version.tar.bz2)
 
