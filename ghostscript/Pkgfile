@@ -4,41 +4,14 @@
 # Depends on:  util-linux, cups, fontconfig, xorg-libxt, xorg-libxext
 
 name=ghostscript
-version=9.23
-release=2
+version=9.24
+release=1
 source=(https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${version/./}/$name-$version.tar.xz
-        http://downloads.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz
-        ghostpdl.git-0b6cd191.patch
-        ghostpdl.git-b575e1ec.patch
-        ghostpdl.git-8e9ce501.patch
-        ghostpdl.git-241d9111.patch
-        ghostpdl.git-c432131c.patch
-        ghostpdl.git-e01e77a3.patch
-        ghostpdl.git-0edd3d6c.patch
-        ghostpdl.git-a054156d.patch
-        ghostpdl.git-0d390118.patch
-        ghostpdl.git-c3476dde.patch
-        ghostpdl.git-b326a716.patch
-        ghostpdl.git-78911a01.patch
-        ghostpdl.git-5516c614.patch)
+        http://downloads.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz)
 
 build () {
     cd $name-$version
  
-    patch -p1 -i $SRC/ghostpdl.git-0b6cd191.patch
-    patch -p1 -i $SRC/ghostpdl.git-b575e1ec.patch
-    patch -p1 -i $SRC/ghostpdl.git-8e9ce501.patch
-    patch -p1 -i $SRC/ghostpdl.git-241d9111.patch
-    patch -p1 -i $SRC/ghostpdl.git-c432131c.patch
-    patch -p1 -i $SRC/ghostpdl.git-e01e77a3.patch
-    patch -p1 -i $SRC/ghostpdl.git-0edd3d6c.patch
-    patch -p1 -i $SRC/ghostpdl.git-a054156d.patch
-    patch -p1 -i $SRC/ghostpdl.git-0d390118.patch
-    patch -p1 -i $SRC/ghostpdl.git-c3476dde.patch
-    patch -p1 -i $SRC/ghostpdl.git-b326a716.patch
-    patch -p1 -i $SRC/ghostpdl.git-78911a01.patch
-    patch -p1 -i $SRC/ghostpdl.git-5516c614.patch
-
     ./configure --prefix=/usr \
                 --enable-cups \
                 --disable-gtk \
@@ -59,7 +32,6 @@ build () {
 
     cp -r $SRC/fonts $PKG/usr/share/ghostscript
 
-    rm -r $PKG/usr/share/ghostscript/$version/doc
     rm -r $PKG/usr/share/{doc,man/de}
     rm $PKG/usr/share/ghostscript/fonts/[CRT]*
     rm $PKG/usr/bin/ijs_{client,server}_example
