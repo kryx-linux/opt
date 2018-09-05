@@ -18,21 +18,12 @@ drwxr-xr-x	root/root	usr/lib/firefox/browser/chrome/icons/default/
 -rw-r--r--	root/root	usr/lib/firefox/browser/chrome/icons/default/default32.png
 -rw-r--r--	root/root	usr/lib/firefox/browser/chrome/icons/default/default48.png
 -rw-r--r--	root/root	usr/lib/firefox/browser/chrome/icons/default/default64.png
-drwxr-xr-x	root/root	usr/lib/firefox/browser/features/
--rw-r--r--	root/root	usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi
--rw-r--r--	root/root	usr/lib/firefox/browser/features/followonsearch@mozilla.com.xpi
--rw-r--r--	root/root	usr/lib/firefox/browser/features/formautofill@mozilla.org.xpi
--rw-r--r--	root/root	usr/lib/firefox/browser/features/onboarding@mozilla.org.xpi
--rw-r--r--	root/root	usr/lib/firefox/browser/features/webcompat-reporter@mozilla.org.xpi
 -rw-r--r--	root/root	usr/lib/firefox/browser/omni.ja
 -rw-r--r--	root/root	usr/lib/firefox/chrome.manifest (EMPTY)
 drwxr-xr-x	root/root	usr/lib/firefox/defaults/
 drwxr-xr-x	root/root	usr/lib/firefox/defaults/pref/
 -rw-r--r--	root/root	usr/lib/firefox/defaults/pref/channel-prefs.js
 -rw-r--r--	root/root	usr/lib/firefox/dependentlibs.list
-drwxr-xr-x	root/root	usr/lib/firefox/dictionaries/
--rw-r--r--	root/root	usr/lib/firefox/dictionaries/en-US.aff
--rw-r--r--	root/root	usr/lib/firefox/dictionaries/en-US.dic
 -rwxr-xr-x	root/root	usr/lib/firefox/firefox
 -rwxr-xr-x	root/root	usr/lib/firefox/firefox-bin
 drwxr-xr-x	root/root	usr/lib/firefox/fonts/
