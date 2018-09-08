@@ -4,12 +4,12 @@
 # Depends on:  clisp icu libgd poppler t1lib util-linux xorg-libxi
 
 name=texlive
-version=20170524
+version=20180414
 release=1
 source=(ftp://tug.org/historic/systems/texlive/${version:0:4}/$name-$version-texmf.tar.xz
         ftp://tug.org/historic/systems/texlive/${version:0:4}/$name-$version-source.tar.xz
         http://download.savannah.gnu.org/releases/texi2html/texi2html-5.0.tar.bz2
-	texlive-poppler-0.59.patch)
+        texlive-poppler-0.64.patch)
 
 build() {
   cd $name-$version-source
@@ -22,8 +22,13 @@ build() {
     \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
     -exec chmod 644 {} \;
 
-  # Fix build with poppler 0.59.0 (thanks to Archlinux)
-  patch -Np1 < $SRC/texlive-poppler-0.59.patch
+  # Fix build with poppler 0.64 (thanks to BLFS)
+  patch -Np1 < $SRC/texlive-poppler-0.64.patch
+  (
+    cd texk/web2c/pdftexdir \
+    && mv -v pdftoepdf{-newpoppler,}.cc \
+    && mv -v pdftosrc{-newpoppler,}.cc
+  )
 
   # Fix some paths
   sed -i 's|TEXMFROOT = .*|TEXMFROOT = $SELFAUTODIR/share|g' texk/kpathsea/texmf.cnf
@@ -35,20 +40,22 @@ build() {
   mkdir build
   cd build
 
+  CONFIG_SHELL=/bin/bash \
   ../configure \
     --prefix=/usr \
     --with-banner-add=" $(crux)" \
     --disable-native-texlive-build \
-    --enable-largefile \
+    --disable-multiplatform \
+    --disable-debug \
     --disable-missing \
-    --with-xdvi-x-toolkit=xaw \
-    --enable-shared \
     --disable-static \
+    --enable-shared \
+    --enable-largefile \
     --with-x \
-    --without-etex \
+    --with-xdvi-x-toolkit=xaw \
     --disable-xindy \
-    --disable-luatex \
-    --disable-luajittex \
+    --disable-xindy-docs \
+    --disable-xindy-rules \
     --with-clisp-runtime=system \
     --with-system-poppler \
     --with-system-cairo \
@@ -64,16 +71,17 @@ build() {
     --with-system-mpfr \
     --with-system-icu
 
-  make -j4
+  make
   make DESTDIR=$PKG install
 
   cd ..
 
-  install -d $PKG/usr/lib/perl5/site_perl/5.24/TeXLive
-  install texk/tests/TeXLive/TL{Config,Utils}.pm $PKG/usr/lib/perl5/site_perl/5.24/TeXLive
+  PERLVER="$(perl -v |sed -nre '2{s/^.*\(v(5\.[0-9]+).*\).*$/\1/;p}')"
+  install -d $PKG/usr/lib/perl5/site_perl/${PERLVER}/TeXLive
+  install texk/tests/TeXLive/TL{Config,Utils}.pm $PKG/usr/lib/perl5/site_perl/${PERLVER}/TeXLive
 
   # Create symlinks
-  PATH="$PKG/usr/bin:$PATH" LD_LIBRARY_PATH+=$PKG/usr/lib \
+  PATH="$PKG/usr/bin:$PATH" LD_LIBRARY_PATH="$PKG/usr/lib:$LD_LIBRARY_PATH" \
     texlinks -f $PKG/usr/share/texmf-dist/web2c/fmtutil.cnf $PKG/usr/bin
 
   cd $SRC/$name-$version-texmf
@@ -94,7 +102,7 @@ build() {
   ./configure --prefix=/usr
 
   make
-  make install DESTDIR=$PKG
+  make DESTDIR=$PKG install
 
   rm -r $PKG/usr/share/{info,locale}
   rm -r $PKG/usr/share/texmf-dist/doc
