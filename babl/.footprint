@@ -9,20 +9,20 @@ drwxr-xr-x	root/root	usr/include/babl-0.1/babl/
 -rw-r--r--	root/root	usr/include/babl-0.1/babl/babl.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/babl-0.1/
--rwxr-xr-x	root/root	usr/lib/babl-0.1/16bit.la
--rwxr-xr-x	root/root	usr/lib/babl-0.1/16bit.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/CIE.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/CIE.so
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/HCY.la
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/HCY.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/HSL.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/HSL.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/HSV.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/HSV.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/cairo.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/cairo.so
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/double.la
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/double.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/fast-float.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/fast-float.so
--rwxr-xr-x	root/root	usr/lib/babl-0.1/float-half.la
--rwxr-xr-x	root/root	usr/lib/babl-0.1/float-half.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/float.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/float.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/gegl-fixups.la
@@ -39,6 +39,8 @@ drwxr-xr-x	root/root	usr/lib/babl-0.1/
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/gimp-8bit.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/grey.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/grey.so
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/half.la
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/half.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/naive-CMYK.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/naive-CMYK.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/simple.la
@@ -55,11 +57,15 @@ drwxr-xr-x	root/root	usr/lib/babl-0.1/
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/sse4-int8.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/two-table.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/two-table.so
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/u16.la
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/u16.so
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/u32.la
+-rwxr-xr-x	root/root	usr/lib/babl-0.1/u32.so
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/ycbcr.la
 -rwxr-xr-x	root/root	usr/lib/babl-0.1/ycbcr.so
 -rwxr-xr-x	root/root	usr/lib/libbabl-0.1.la
-lrwxrwxrwx	root/root	usr/lib/libbabl-0.1.so -> libbabl-0.1.so.0.123.1
-lrwxrwxrwx	root/root	usr/lib/libbabl-0.1.so.0 -> libbabl-0.1.so.0.123.1
--rwxr-xr-x	root/root	usr/lib/libbabl-0.1.so.0.123.1
+lrwxrwxrwx	root/root	usr/lib/libbabl-0.1.so -> libbabl-0.1.so.0.155.1
+lrwxrwxrwx	root/root	usr/lib/libbabl-0.1.so.0 -> libbabl-0.1.so.0.155.1
+-rwxr-xr-x	root/root	usr/lib/libbabl-0.1.so.0.155.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/babl.pc
