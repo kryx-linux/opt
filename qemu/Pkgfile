@@ -5,16 +5,13 @@
 # Optional:    libseccomp libiscsi libusb usbredir spice
  
 name=qemu
-version=2.11.1
+version=3.0.0
 release=1
-source=(http://wiki.qemu-project.org/download/qemu-$version.tar.bz2 \
-	memfd.patch)
+source=(http://wiki.qemu-project.org/download/qemu-$version.tar.bz2)
 
 build() {
 
   cd $name-$version
-
-  patch -p1 -i $SRC/memfd.patch
 
   ./configure --prefix=/usr \
       --cc="${CC:=gcc}" \
