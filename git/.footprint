@@ -42,6 +42,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-clone
 -rwxr-xr-x	root/root	usr/lib/git-core/git-column
 -rwxr-xr-x	root/root	usr/lib/git-core/git-commit
+-rwxr-xr-x	root/root	usr/lib/git-core/git-commit-graph
 -rwxr-xr-x	root/root	usr/lib/git-core/git-commit-tree
 -rwxr-xr-x	root/root	usr/lib/git-core/git-config
 -rwxr-xr-x	root/root	usr/lib/git-core/git-count-objects
@@ -148,6 +149,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-rm
 -rwxr-xr-x	root/root	usr/lib/git-core/git-send-email
 -rwxr-xr-x	root/root	usr/lib/git-core/git-send-pack
+-rwxr-xr-x	root/root	usr/lib/git-core/git-serve
 -rw-r--r--	root/root	usr/lib/git-core/git-sh-i18n
 -rwxr-xr-x	root/root	usr/lib/git-core/git-sh-i18n--envsubst
 -rw-r--r--	root/root	usr/lib/git-core/git-sh-setup
@@ -192,6 +194,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/mergetools/
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/ecmerge
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/emerge
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/examdiff
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/guiffy
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/gvimdiff
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/gvimdiff2
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/gvimdiff3
@@ -346,6 +349,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/git-clean.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-clone.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-column.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/git-commit-graph.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-commit-tree.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-commit.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-config.1.gz
