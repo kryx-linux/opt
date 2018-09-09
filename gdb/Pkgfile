@@ -1,11 +1,11 @@
 # Description: The GNU Debugger (GDB)
-# URL:         https://sources.redhat.com/gdb/
+# URL:         https://www.gnu.org/software/gdb
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Tilman Sauerbeck, tilman at crux dot nu
 # Depends on:  ncurses
 
 name=gdb
-version=8.0.1
+version=8.2
 release=1
 source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 
