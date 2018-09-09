@@ -4,7 +4,7 @@
 # Depends on: efivar
 
 name=efibootmgr
-version=15
+version=16
 release=1
 source=(https://github.com/rhinstaller/$name/releases/download/$version/$name-$version.tar.bz2)
 
