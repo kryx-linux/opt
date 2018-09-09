@@ -2,11 +2,11 @@
 # URL:         http://www.gimp.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Simone Rota, sip at crux dot nu
-# Depends on:  libart_lgpl, xorg-libxmu, xorg-libxpm, gegl
-# Nice to have: gimp-print, libsdl, ghostscript, librsvg, libmng
+# Depends on:  libart_lgpl, xorg-libxmu, xorg-libxpm, gegl, librsvg, gexiv2, libmypaint, mypaint-brushes, poppler-glib, poppler-data
+# Nice to have: gimp-print, libsdl, ghostscript, libmng
 
 name=gimp
-version=2.8.20
+version=2.10.6
 release=1
 source=(http://ftp.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2 cve-2013-1913)
 
@@ -20,6 +20,7 @@ build() {
     --disable-static \
     --disable-python \
     --disable-nls \
+    --without-gexiv2 \
     --without-webkit LIBS="-lm"
 
   make
