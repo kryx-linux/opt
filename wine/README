@@ -20,6 +20,6 @@ runscripts yes
 
 To speed up building wine multiple times also:
 
-prt-get depinst gcc48-ccache-bindings
+prt-get depinst ccache
 
 And configure ccache https://crux.nu/Wiki/HowToSpeedUpBuildingPackages#ccache
