@@ -3,16 +3,14 @@
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 
 name=linux-firmware
-version=20180408
+version=20180916
 release=1
 source=(http://crux.nu/files/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
 
-    # Build/Package
     make DESTDIR=$PKG FIRMWAREDIR=/lib/firmware install
 
-    # Cleanup
     rm $PKG/lib/firmware/{Makefile,README,configure,GPL-{2,3}}
 }
