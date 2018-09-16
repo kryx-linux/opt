@@ -6,7 +6,8 @@
 name=mypaint-brushes
 version=1.3.0
 release=1
-source=(https://github.com/Jehan/mypaint-brushes/archive/v${version}.zip)
+source=(https://github.com/Jehan/mypaint-brushes/archive/v${version}/$name-$version.zip)
+
 
 build() {
   cd $name-$version
