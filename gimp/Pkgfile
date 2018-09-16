@@ -20,7 +20,6 @@ build() {
     --disable-static \
     --disable-python \
     --disable-nls \
-    --without-gexiv2 \
     --without-webkit LIBS="-lm"
 
   make
