@@ -5,15 +5,14 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/chronyd
-PID=/var/run/chronyd.pid
 OPTS="-r"
 
 case $1 in
 start)
-	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
+	$SSD --start --exec $PROG -- $OPTS
 	;;
 stop)
-	$SSD --stop --remove-pidfile --retry 10 --pidfile $PID
+	$SSD --stop --retry 10 --exec $PROG
 	;;
 restart)
 	$0 stop
@@ -30,12 +29,11 @@ offline)
 EOF
 	;;
 status)
-	$SSD --status --pidfile $PID
+	$SSD --status --exec $PROG
 	case $? in
-	0) echo "$PROG is running with pid $(cat $PID)" ;;
-	1) echo "$PROG is not running but the pid file $PID exists" ;;
-	3) echo "$PROG is not running" ;;
-	4) echo "Unable to determine the program status" ;;
+	0)   echo "$PROG is running with pid $(pidof $PROG)" ;;
+	1|3) echo "$PROG is not running" ;;
+	4)   echo "Unable to determine the program status" ;;
 	esac
 	;;
 *)
