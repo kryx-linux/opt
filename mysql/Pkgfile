@@ -6,7 +6,7 @@
 name=mysql
 version=5.7.23
 release=1
-source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.7/$name-boost-$version.tar.gz \
+source=(https://ftp.gwdg.de/pub/misc/mysql/Downloads/MySQL-5.7/$name-boost-$version.tar.gz \
         my.cnf mysqld)
 
 build () {
