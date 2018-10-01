@@ -1,10 +1,10 @@
 # Description: A full-featured web proxy cache
 # URL:         http://www.squid-cache.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  db libcap libtool
+# Depends on:  db libcap libtool expat libxml2
 
 name=squid
-version=4.2
+version=4.3
 release=1
 source=(http://www.squid-cache.org/Versions/v4/$name-$version.tar.xz
         squid)
@@ -28,7 +28,9 @@ build () {
                 --with-pthreads \
                 --with-aufs-threads=16 \
                 --disable-auto-locale \
-                --disable-arch-native
+                --disable-arch-native \
+                --without-{mit,heimdal}-krb5 \
+                --without-{nettle,gnutls}
 
     make all
     make DESTDIR=$PKG install
