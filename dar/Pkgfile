@@ -4,12 +4,15 @@
 # Depends on:  attr, lzo, zlib, bzip2, xz, libgcrypt
 
 name=dar
-version=2.5.16
+version=2.5.17
 release=1
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
+
+    sed -e 's/_BSD_SOURCE/_DEFAULT_SOURCE/' -i configure
+    export CXXFLAGS="$CFLAGS -Wno-deprecated"
 
     ./configure --prefix=/usr \
                 --disable-nls \
@@ -17,7 +20,7 @@ build () {
                 --disable-gpgme-linking \
                 --disable-build-html
 
-    make
+    make V=0
     make DESTDIR=$PKG install
 
     rm -r $PKG/usr/share/dar
