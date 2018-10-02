@@ -148,6 +148,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/event-log.h
 -rw-r--r--	root/root	usr/include/dovecot/execv-const.h
 -rw-r--r--	root/root	usr/include/dovecot/fail-mail-storage.h
+-rw-r--r--	root/root	usr/include/dovecot/failures-private.h
 -rw-r--r--	root/root	usr/include/dovecot/failures.h
 -rw-r--r--	root/root	usr/include/dovecot/fd-util.h
 -rw-r--r--	root/root	usr/include/dovecot/fdatasync-path.h
