@@ -4,6 +4,7 @@ lrwxrwxrwx	root/root	usr/bin/gimp -> gimp-2.10
 -rwxr-xr-x	root/root	usr/bin/gimp-2.10
 lrwxrwxrwx	root/root	usr/bin/gimp-console -> gimp-console-2.10
 -rwxr-xr-x	root/root	usr/bin/gimp-console-2.10
+-rwxr-xr-x	root/root	usr/bin/gimp-debug-tool-2.0
 -rwxr-xr-x	root/root	usr/bin/gimp-test-clipboard-2.0
 -rwxr-xr-x	root/root	usr/bin/gimptool-2.0
 drwxr-xr-x	root/root	usr/etc/
@@ -378,8 +379,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-ico/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-ico/file-ico
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-jpeg/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-jpeg/file-jpeg
-drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-mng/
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-mng/file-mng
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pat/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pat/file-pat
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pcx/
@@ -414,8 +413,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tga/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tga/file-tga
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tiff/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tiff/file-tiff
-drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-webp/
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-webp/file-webp
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-xbm/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-xbm/file-xbm
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-xmc/
@@ -560,8 +557,6 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimp-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimpthumb-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimpui-2.0.pc
-drwxr-xr-x	root/root	usr/libexec/
--rwxr-xr-x	root/root	usr/libexec/gimp-debug-tool-2.0
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/gimp-2.0.m4
@@ -3604,7 +3599,6 @@ drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/gimp-2.10.1.gz
 lrwxrwxrwx	root/root	usr/share/man/man1/gimp-console-2.10.1.gz -> gimp-2.10.1.gz
-lrwxrwxrwx	root/root	usr/share/man/man1/gimp-console.1.gz -> gimp-console-2.10.1.gz
 lrwxrwxrwx	root/root	usr/share/man/man1/gimp.1.gz -> gimp-2.10.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/gimptool-2.0.1.gz
 drwxr-xr-x	root/root	usr/share/man/man5/
