@@ -84,10 +84,6 @@ drwxr-xr-x	root/root	usr/include/gegl-0.4/sc/
 -rw-r--r--	root/root	usr/include/gegl-0.4/sc/sc-sample.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/gegl-0.4/
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/ff-load.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/ff-load.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/ff-save.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/ff-save.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/gegl-common-gpl3.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/gegl-common-gpl3.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/gegl-common.la
@@ -101,8 +97,6 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.4/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/jpg-load.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/jpg-save.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/jpg-save.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/lcms-from-profile.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/lcms-from-profile.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/npd.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/npd.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/npy-save.la
@@ -125,8 +119,6 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.4/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/rgbe-save.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/save-pixbuf.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/save-pixbuf.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/sdl-display.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/sdl-display.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/seamless-clone-compose.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/seamless-clone-compose.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/seamless-clone.la
@@ -143,10 +135,6 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.4/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/vector-fill.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/vector-stroke.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/vector-stroke.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/webp-load.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/webp-load.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/webp-save.la
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/webp-save.so
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Gegl-0.4.typelib
 -rwxr-xr-x	root/root	usr/lib/libgegl-0.4.la
