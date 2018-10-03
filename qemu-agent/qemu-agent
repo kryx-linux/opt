@@ -9,7 +9,7 @@ PID=/var/run/qemu-ga.pid
 
 case $1 in
 start)
-	$SSD --start --pidfile $PID --exec $PROG -- -t /var/run/qemu-ga
+	$SSD --start --pidfile $PID --background --exec $PROG -- -t /var/run/qemu-ga
 	;;
 stop)
 	$SSD --stop --retry 10 --pidfile $PID
