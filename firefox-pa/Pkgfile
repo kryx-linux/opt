@@ -4,7 +4,7 @@
 # Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, xorg-libxt, yasm, rust, pulseaudio, clang
  
 name=firefox-pa
-version=62.0.2
+version=62.0.3
 release=1
 source=(https://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox.desktop)
