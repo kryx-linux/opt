@@ -4,7 +4,7 @@
 # Depends on:	nss,autoconf-2.13,unzip,zip,libidl,gtk,gtk3,alsa-lib,xorg-libxt,yasm,rust
 
 name=thunderbird
-version=60.0
+version=60.2.1
 release=1
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/source/$name-$version.source.tar.xz
 	$name.desktop)
