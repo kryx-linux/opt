@@ -4,7 +4,7 @@
 # Depends on: fontconfig, xorg-libxext, xorg-libxrender, xorg-libpixman, xorg-xcb-util, glib
 
 name=cairo
-version=1.15.12
+version=1.15.14
 release=1
 source=(https://cairographics.org/snapshots/cairo-$version.tar.xz
 	cairo-xlib-endianness.patch
