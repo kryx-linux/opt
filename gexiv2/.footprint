@@ -11,8 +11,6 @@ drwxr-xr-x	root/root	usr/include/gexiv2/
 -rw-r--r--	root/root	usr/include/gexiv2/gexiv2-version.h
 -rw-r--r--	root/root	usr/include/gexiv2/gexiv2.h
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/girepository-1.0/
--rw-r--r--	root/root	usr/lib/girepository-1.0/GExiv2-0.10.typelib
 -rwxr-xr-x	root/root	usr/lib/libgexiv2.la
 lrwxrwxrwx	root/root	usr/lib/libgexiv2.so -> libgexiv2.so.2.0.0
 lrwxrwxrwx	root/root	usr/lib/libgexiv2.so.2 -> libgexiv2.so.2.0.0
@@ -20,8 +18,6 @@ lrwxrwxrwx	root/root	usr/lib/libgexiv2.so.2 -> libgexiv2.so.2.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gexiv2.pc
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/gir-1.0/
--rw-r--r--	root/root	usr/share/gir-1.0/GExiv2-0.10.gir
 drwxr-xr-x	root/root	usr/share/gtk-doc/
 drwxr-xr-x	root/root	usr/share/gtk-doc/html/
 drwxr-xr-x	root/root	usr/share/gtk-doc/html/gexiv2/
