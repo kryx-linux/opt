@@ -1,7 +1,7 @@
 # Description: Lightweight PDF and XPS viewer
 # URL:         http://www.mupdf.com/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libglvnd xorg-libxrandr
+# Depends on:  glu xorg-libxrandr xorg-libxi
 
 name=mupdf
 version=1.14.0
