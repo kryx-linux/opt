@@ -67,7 +67,6 @@ drwxr-xr-x	root/root	usr/include/mupdf/fitz/
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf.h
 drwxr-xr-x	root/root	usr/include/mupdf/pdf/
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf/annot.h
--rwxr-xr-x	root/root	usr/include/mupdf/pdf/appearance.h
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf/clean.h
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf/cmap.h
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf/crypt.h
@@ -87,8 +86,8 @@ drwxr-xr-x	root/root	usr/include/mupdf/pdf/
 -rwxr-xr-x	root/root	usr/include/mupdf/pdf/xref.h
 -rwxr-xr-x	root/root	usr/include/mupdf/ucdn.h
 drwxr-xr-x	root/root	usr/lib/
+-rwxr-xr-x	root/root	usr/lib/libmupdf-third.a
 -rwxr-xr-x	root/root	usr/lib/libmupdf.a
--rwxr-xr-x	root/root	usr/lib/libmupdfthird.a
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/

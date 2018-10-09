@@ -1,23 +1,21 @@
 # Description: Lightweight PDF and XPS viewer
 # URL:         http://www.mupdf.com/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  glu harfbuzz libjpeg-turbo xorg-libxi xorg-libxrandr
+# Depends on:  libglvnd xorg-libxrandr
 
 name=mupdf
-version=1.13.0
+version=1.14.0
 release=1
-source=(https://mupdf.com/downloads/$name-$version-source.tar.xz)
+source=(https://mupdf.com/downloads/archive/$name-$version-source.tar.xz)
 
 build() {
     cd $name-$version-source
 
-    # System lcms2 doesn't work, see
-    # http://git.ghostscript.com/?p=mupdf.git;a=commit;h=74a8100804c8f18e1e2a71435b1e191df49e81fd
-    rm -r thirdparty/{freetype,libjpeg,zlib,curl,harfbuzz}
+    export USE_SYSTEM_LIBS='no'
 
-    make XCFLAGS="-fpic" build=release
+    make XCFLAGS="-fpic"
     make prefix=$PKG/usr mandir=$PKG/usr/share/man install
 
     ln -s mupdf-gl $PKG/usr/bin/mupdf
     rm -r $PKG/usr/share/doc
-} 
+}
