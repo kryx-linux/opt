@@ -4,7 +4,7 @@
 # Depends on: gettext, alsa-lib, dialog
 
 name=alsa-utils
-version=1.1.6
+version=1.1.7
 release=1
 source=(ftp://ftp.alsa-project.org/pub/utils/$name-$version.tar.bz2 \
     rc.alsa)
@@ -15,9 +15,6 @@ build() {
         --disable-bat \
         --disable-nls \
         --disable-xmlto
-
-    # alsactl_init.7 is generated using xmlto, which we don't have
-    #touch alsactl/alsactl_init.7
 
     make
     make DESTDIR=$PKG install
