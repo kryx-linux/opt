@@ -41,9 +41,9 @@ drwxr-xr-x	root/root	usr/include/ruby-2.5/x86_64-linux/
 drwxr-xr-x	root/root	usr/include/ruby-2.5/x86_64-linux/ruby/
 -rw-r--r--	root/root	usr/include/ruby-2.5/x86_64-linux/ruby/config.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.2.5.2
-lrwxrwxrwx	root/root	usr/lib/libruby.so.2.5 -> libruby.so.2.5.2
--rwxr-xr-x	root/root	usr/lib/libruby.so.2.5.2
+lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.2.5.3
+lrwxrwxrwx	root/root	usr/lib/libruby.so.2.5 -> libruby.so.2.5.3
+-rwxr-xr-x	root/root	usr/lib/libruby.so.2.5.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ruby-2.5.pc
 drwxr-xr-x	root/root	usr/lib/ruby/
@@ -990,6 +990,13 @@ drwxr-xr-x	root/root	usr/lib/ruby/gems/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.5/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.5/build_info/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.5/cache/
+-r--r--r--	root/root	usr/lib/ruby/gems/2.5/cache/did_you_mean-1.2.0.gem
+-r--r--r--	root/root	usr/lib/ruby/gems/2.5/cache/minitest-5.10.3.gem
+-r--r--r--	root/root	usr/lib/ruby/gems/2.5/cache/net-telnet-0.1.1.gem
+-r--r--r--	root/root	usr/lib/ruby/gems/2.5/cache/power_assert-1.1.1.gem
+-r--r--r--	root/root	usr/lib/ruby/gems/2.5/cache/rake-12.3.0.gem
+-r--r--r--	root/root	usr/lib/ruby/gems/2.5/cache/test-unit-3.2.7.gem
+-r--r--r--	root/root	usr/lib/ruby/gems/2.5/cache/xmlrpc-0.3.0.gem
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.5/doc/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.5/extensions/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.5/gems/
