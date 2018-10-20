@@ -13,9 +13,9 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/zstd_errors.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libzstd.a
-lrwxrwxrwx	root/root	usr/lib/libzstd.so -> libzstd.so.1.3.6
-lrwxrwxrwx	root/root	usr/lib/libzstd.so.1 -> libzstd.so.1.3.6
--rwxr-xr-x	root/root	usr/lib/libzstd.so.1.3.6
+lrwxrwxrwx	root/root	usr/lib/libzstd.so -> libzstd.so.1.3.7
+lrwxrwxrwx	root/root	usr/lib/libzstd.so.1 -> libzstd.so.1.3.7
+-rwxr-xr-x	root/root	usr/lib/libzstd.so.1.3.7
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libzstd.pc
 drwxr-xr-x	root/root	usr/share/
@@ -24,3 +24,5 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 lrwxrwxrwx	root/root	usr/share/man/man1/unzstd.1.gz -> zstd.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/zstd.1.gz
 lrwxrwxrwx	root/root	usr/share/man/man1/zstdcat.1.gz -> zstd.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/zstdgrep.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/zstdless.1.gz
