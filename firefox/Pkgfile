@@ -4,7 +4,7 @@
 # Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, alsa-lib, xorg-libxt, yasm, rust, clang
  
 name=firefox
-version=62.0.3
+version=63.0
 release=1
 source=(https://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
 	firefox.desktop)
@@ -37,6 +37,7 @@ cat <<- EOF > .mozconfig
 	ac_add_options --disable-crashreporter
 	ac_add_options --disable-necko-wifi
 	ac_add_options --disable-gconf
+	ac_add_options --disable-nodejs
 EOF
 
 	./mach build
