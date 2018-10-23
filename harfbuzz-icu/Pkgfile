@@ -4,7 +4,7 @@
 # Depends on: harfbuzz icu
 
 name=harfbuzz-icu
-version=1.8.7
+version=2.0.2
 release=1
 source=(https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-$version.tar.bz2)
 
@@ -35,6 +35,7 @@ build() {
 		$PKG/usr/include/harfbuzz/hb-ot-font.h \
 		$PKG/usr/include/harfbuzz/hb-ot-layout.h \
 		$PKG/usr/include/harfbuzz/hb-ot-math.h \
+		$PKG/usr/include/harfbuzz/hb-ot-name.h \
 		$PKG/usr/include/harfbuzz/hb-ot-shape.h \
 		$PKG/usr/include/harfbuzz/hb-ot-tag.h \
 		$PKG/usr/include/harfbuzz/hb-ot-var.h \
@@ -42,9 +43,6 @@ build() {
 		$PKG/usr/include/harfbuzz/hb-set.h \
 		$PKG/usr/include/harfbuzz/hb-shape-plan.h \
 		$PKG/usr/include/harfbuzz/hb-shape.h \
-		$PKG/usr/include/harfbuzz/hb-subset-glyf.hh \
-		$PKG/usr/include/harfbuzz/hb-subset-plan.hh \
-		$PKG/usr/include/harfbuzz/hb-subset-private.hh \
 		$PKG/usr/include/harfbuzz/hb-subset.h \
 		$PKG/usr/include/harfbuzz/hb-unicode.h \
 		$PKG/usr/include/harfbuzz/hb-version.h \
