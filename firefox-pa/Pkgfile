@@ -1,7 +1,7 @@
 # Description: The Mozilla Firefox browser with Pulse-Audio support
 # URL: https://www.mozilla.com/firefox/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, xorg-libxt, yasm, rust, pulseaudio, clang
+# Depends on: nss, autoconf-2.13, unzip, zip, libidl, gtk, gtk3, xorg-libxt, yasm, cbindgen, pulseaudio, clang
  
 name=firefox-pa
 version=63.0
