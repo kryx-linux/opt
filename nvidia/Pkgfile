@@ -5,7 +5,7 @@
 
 name=nvidia
 version=410.73
-release=1
+release=2
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf)
 
@@ -38,7 +38,7 @@ build() {
 	install -m 0755 libGLX_nvidia.so.$version $PKG/usr/lib/
 	ln -s libGLX_nvidia.so.$version $PKG/usr/lib/libGLX_nvidia.so.0
 	install -m 0755 libEGL_nvidia.so.$version $PKG/usr/lib/
-	ln -s libEGL_nvidia.so.$verison $PKG/usr/lib/libEGL_nvidia.so.0
+	ln -s libEGL_nvidia.so.$version $PKG/usr/lib/libEGL_nvidia.so.0
 
 	# vulkan ICD config
 	install -d $PKG/etc/vulkan/icd.d
