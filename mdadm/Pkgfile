@@ -3,13 +3,13 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=mdadm
-version=4.0
-release=2
+version=4.1
+release=1
 source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    make CXFLAGS="$CFLAGS -Wno-error" all mdadm.static
+    make all mdadm.static
     make DESTDIR=$PKG install
     install -m755 mdadm.static $PKG/sbin
 }
