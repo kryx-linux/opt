@@ -188,6 +188,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d2d1.idl
 -rw-r--r--	root/root	usr/include/wine/windows/d2d1_1.h
 -rw-r--r--	root/root	usr/include/wine/windows/d2d1_1.idl
+-rw-r--r--	root/root	usr/include/wine/windows/d2d1_2.h
+-rw-r--r--	root/root	usr/include/wine/windows/d2d1_2.idl
 -rw-r--r--	root/root	usr/include/wine/windows/d2dbasetypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/d2derr.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d.h
@@ -607,6 +609,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/msxmldid.h
 -rw-r--r--	root/root	usr/include/wine/windows/mtxdm.h
 -rw-r--r--	root/root	usr/include/wine/windows/multimon.h
+-rw-r--r--	root/root	usr/include/wine/windows/natupnp.h
+-rw-r--r--	root/root	usr/include/wine/windows/natupnp.idl
 -rw-r--r--	root/root	usr/include/wine/windows/nb30.h
 -rw-r--r--	root/root	usr/include/wine/windows/ncrypt.h
 -rw-r--r--	root/root	usr/include/wine/windows/ndrtypes.h
@@ -788,6 +792,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/structuredquerycondition.h
 -rw-r--r--	root/root	usr/include/wine/windows/structuredquerycondition.idl
 -rw-r--r--	root/root	usr/include/wine/windows/svrapi.h
+-rw-r--r--	root/root	usr/include/wine/windows/synchapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/t2embapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/tapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/taskschd.h
