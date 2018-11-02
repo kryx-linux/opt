@@ -1,11 +1,10 @@
 # Description: High productivity build system.
 # URL: http://mesonbuild.com/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: python3
-# Optional: python3-setuptools
+# Depends on: python3-setuptools
 
 name=meson
-version=0.47.2
+version=0.48.1
 release=1
 source=(https://github.com/mesonbuild/meson/releases/download/$version/$name-$version.tar.gz)
 
@@ -16,10 +15,4 @@ build() {
 
 	/usr/bin/python3 setup.py install \
 		--prefix=/usr --root=$PKG --optimize=1
-
-	# remove sdist metadata, as wheel metadata
-	# will be used with python3-setuptools
-	local pyv="$(/usr/bin/python3 -c "import sys; print(sys.version_info[0], sys.version_info[1], sep='.');")"
-	find $PKG/usr/lib/python$pyv/site-packages/ -maxdepth 1 -type f \
-		-name "$name-$version-py$pyv.egg-info" -delete
 }
