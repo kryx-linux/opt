@@ -2159,7 +2159,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/ensurepip/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/ensurepip/__pycache__/_uninstall.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/ensurepip/__pycache__/_uninstall.cpython-36.pyc
 drwxr-xr-x	root/root	usr/lib/python3.6/ensurepip/_bundled/
--rw-r--r--	root/root	usr/lib/python3.6/ensurepip/_bundled/pip-9.0.3-py2.py3-none-any.whl
+-rw-r--r--	root/root	usr/lib/python3.6/ensurepip/_bundled/pip-10.0.1-py2.py3-none-any.whl
 -rw-r--r--	root/root	usr/lib/python3.6/ensurepip/_bundled/setuptools-39.0.1-py2.py3-none-any.whl
 -rw-r--r--	root/root	usr/lib/python3.6/ensurepip/_uninstall.py
 -rw-r--r--	root/root	usr/lib/python3.6/enum.py
@@ -2474,6 +2474,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_calltips.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_calltips.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_calltips.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_codecontext.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_codecontext.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_codecontext.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_colorizer.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_colorizer.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/test_colorizer.cpython-36.pyc
@@ -2586,6 +2589,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_autoexpand.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_browser.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_calltips.py
+-rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_codecontext.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_colorizer.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_config.py
 -rw-r--r--	root/root	usr/lib/python3.6/idlelib/idle_test/test_config_key.py
@@ -2776,9 +2780,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/
 -rwxr-xr-x	root/root	usr/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.5.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/Grammar3.6.6.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.5.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python3.6/lib2to3/PatternGrammar3.6.6.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python3.6/lib2to3/__main__.py
 drwxr-xr-x	root/root	usr/lib/python3.6/lib2to3/__pycache__/
@@ -3617,6 +3621,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_baseexception.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_baseexception.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_baseexception.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_bdb.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_bdb.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_bdb.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_bigaddrspace.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_bigaddrspace.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/__pycache__/test_bigaddrspace.cpython-36.pyc
@@ -5116,6 +5123,9 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/setup.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/setup.cpython-36.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/setup.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/utils.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/utils.cpython-36.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/utils.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/cmdline.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/main.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/refleak.py
@@ -5123,6 +5133,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/libregrtest/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/runtest_mp.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/save_env.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/setup.py
+-rw-r--r--	root/root	usr/lib/python3.6/test/libregrtest/utils.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/list_tests.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/lock_tests.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/mailcap.txt
@@ -5323,6 +5334,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/test/test_asyncio/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_augassign.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_base64.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_baseexception.py
+-rw-r--r--	root/root	usr/lib/python3.6/test/test_bdb.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_bigaddrspace.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_bigmem.py
 -rw-r--r--	root/root	usr/lib/python3.6/test/test_binascii.py
