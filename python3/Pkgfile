@@ -17,20 +17,21 @@ build() {
     rm -r Modules/_ctypes/{darwin,libffi}*
     rm -r Modules/_decimal/libmpdec
 
-    # PGO should be done with -O3
-    CFLAGS="${CFLAGS/-O2/-O3}"
+    if [ -n "${PKGMK_PGO}" ]; then
+        # PGO should be done with -O3
+        CFLAGS="${CFLAGS/-O2/-O3}"
 
-    # Speed up LTO
-    sed -i -e "s|-flto |-flto=4 |g" configure configure.ac
+        # Speed up LTO
+        sed -i -e "s|-flto |-flto=4 |g" configure configure.ac
+	PKGMK_PYTHON3='--with-lto --enable-optimizations '
+    fi
 
-    ./configure --prefix=/usr \
+    ./configure ${PKGMK_PYTHON3} --prefix=/usr \
 		--enable-shared \
                 --enable-ipv6 \
 		--enable-loadable-sqlite-extensions \
-		--enable-optimizations \
 		--with-computed-gotos \
 		--with-threads \
-		--with-lto \
 		--with-system-expat \
 		--with-system-ffi \
 		--with-system-libmpdec \
