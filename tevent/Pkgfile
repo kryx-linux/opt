@@ -1,8 +1,7 @@
-# Description:	Event library based on talloc
-# URL:		http://tevent.samba.org/
-# Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:	talloc
-# Optional:	python
+# Description: Event library based on talloc
+# URL:         http://tevent.samba.org/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  talloc
 
 name=tevent
 version=0.9.37
