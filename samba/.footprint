@@ -10,7 +10,6 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/cifsdd
 -rwxr-xr-x	root/root	usr/bin/dbwrap_tool
--rwxr-xr-x	root/root	usr/bin/eventlogadm
 -rwxr-xr-x	root/root	usr/bin/findsmb
 -rwxr-xr-x	root/root	usr/bin/gentest
 -rwxr-xr-x	root/root	usr/bin/ldbadd
@@ -172,18 +171,18 @@ lrwxrwxrwx	root/root	usr/lib/libsamba-errors.so -> libsamba-errors.so.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-hostconfig.so -> libsamba-hostconfig.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-hostconfig.so.0 -> libsamba-hostconfig.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libsamba-hostconfig.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so -> libsamba-passdb.so.0.27.0
-lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so.0 -> libsamba-passdb.so.0.27.0
--rwxr-xr-x	root/root	usr/lib/libsamba-passdb.so.0.27.0
+lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so -> libsamba-passdb.so.0.27.1
+lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so.0 -> libsamba-passdb.so.0.27.1
+-rwxr-xr-x	root/root	usr/lib/libsamba-passdb.so.0.27.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-util.so -> libsamba-util.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-util.so.0 -> libsamba-util.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libsamba-util.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsamdb.so -> libsamdb.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsamdb.so.0 -> libsamdb.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libsamdb.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> libsmbclient.so.0.3.1
-lrwxrwxrwx	root/root	usr/lib/libsmbclient.so.0 -> libsmbclient.so.0.3.1
--rwxr-xr-x	root/root	usr/lib/libsmbclient.so.0.3.1
+lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> libsmbclient.so.0.4.0
+lrwxrwxrwx	root/root	usr/lib/libsmbclient.so.0 -> libsmbclient.so.0.4.0
+-rwxr-xr-x	root/root	usr/lib/libsmbclient.so.0.4.0
 lrwxrwxrwx	root/root	usr/lib/libsmbconf.so -> libsmbconf.so.0
 -rwxr-xr-x	root/root	usr/lib/libsmbconf.so.0
 lrwxrwxrwx	root/root	usr/lib/libtevent-util.so -> libtevent-util.so.0.0.1
@@ -220,6 +219,7 @@ drwxr-xr-x	root/root	usr/lib/samba/krb5/
 drwxr-xr-x	root/root	usr/lib/samba/ldb/
 -rwxr-xr-x	root/root	usr/lib/samba/ldb/asq.so
 -rwxr-xr-x	root/root	usr/lib/samba/ldb/ildap.so
+-rwxr-xr-x	root/root	usr/lib/samba/ldb/ldb.so
 -rwxr-xr-x	root/root	usr/lib/samba/ldb/ldbsamba_extensions.so
 -rwxr-xr-x	root/root	usr/lib/samba/ldb/paged_results.so
 -rwxr-xr-x	root/root	usr/lib/samba/ldb/paged_searches.so
@@ -249,6 +249,7 @@ lrwxrwxrwx	root/root	usr/lib/samba/libasn1-samba4.so.8 -> libasn1-samba4.so.8.0.
 -rwxr-xr-x	root/root	usr/lib/samba/libcli-spoolss-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libcliauth-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libcluster-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libcmdline-contexts-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libcmdline-credentials-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libcmocka-samba4.so
 lrwxrwxrwx	root/root	usr/lib/samba/libcom_err-samba4.so.0 -> libcom_err-samba4.so.0.25
@@ -257,7 +258,6 @@ lrwxrwxrwx	root/root	usr/lib/samba/libcom_err-samba4.so.0 -> libcom_err-samba4.s
 -rwxr-xr-x	root/root	usr/lib/samba/libdbwrap-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libdcerpc-samba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libdcerpc-samba4.so
--rwxr-xr-x	root/root	usr/lib/samba/libdsdb-garbage-collect-tombstones-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libdsdb-module-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libevents-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libflag-mapping-samba4.so
@@ -287,8 +287,9 @@ lrwxrwxrwx	root/root	usr/lib/samba/libkrb5-samba4.so.26 -> libkrb5-samba4.so.26.
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5-samba4.so.26.0.0
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5samba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libldb-cmdline-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.3.6
--rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.3.6
+-rwxr-xr-x	root/root	usr/lib/samba/libldb-key-value-samba4.so
+lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.4.3
+-rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.4.3
 -rwxr-xr-x	root/root	usr/lib/samba/libldbsamba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli-lsa3-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli-netlogon3-samba4.so
@@ -304,6 +305,7 @@ lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.3.6
 -rwxr-xr-x	root/root	usr/lib/samba/libnon-posix-acls-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnpa-tstream-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnss-info-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libpopt-samba3-cmdline-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libpopt-samba3-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libposix-eadb-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libprinting-migrate-samba4.so
@@ -384,8 +386,9 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/worm.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/xattr_tdb.so
 drwxr-xr-x	root/root	usr/sbin/
+-rwxr-xr-x	root/root	usr/sbin/eventlogadm
 -rwxr-xr-x	root/root	usr/sbin/nmbd
--rwxr-xr-x	root/root	usr/sbin/samba_gpoupdate
+-rwxr-xr-x	root/root	usr/sbin/samba-gpupdate
 -rwxr-xr-x	root/root	usr/sbin/smbd
 -rwxr-xr-x	root/root	usr/sbin/winbindd
 drwxr-xr-x	root/root	usr/share/
