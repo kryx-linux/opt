@@ -85,14 +85,8 @@ drwxr-xr-x	root/root	usr/lib/cups/notifier/
 -rwxr-xr-x	root/root	usr/lib/cups/notifier/rss
 lrwxrwxrwx	root/root	usr/lib/libcups.so -> libcups.so.2
 -rwxr-xr-x	root/root	usr/lib/libcups.so.2
-lrwxrwxrwx	root/root	usr/lib/libcupscgi.so -> libcupscgi.so.1
--rwxr-xr-x	root/root	usr/lib/libcupscgi.so.1
 lrwxrwxrwx	root/root	usr/lib/libcupsimage.so -> libcupsimage.so.2
 -rwxr-xr-x	root/root	usr/lib/libcupsimage.so.2
-lrwxrwxrwx	root/root	usr/lib/libcupsmime.so -> libcupsmime.so.1
--rwxr-xr-x	root/root	usr/lib/libcupsmime.so.1
-lrwxrwxrwx	root/root	usr/lib/libcupsppdc.so -> libcupsppdc.so.1
--rwxr-xr-x	root/root	usr/lib/libcupsppdc.so.1
 drwxr-xr-x	root/root	usr/sbin/
 lrwxrwxrwx	root/root	usr/sbin/accept -> cupsaccept
 -rwxr-xr-x	root/root	usr/sbin/cupsaccept

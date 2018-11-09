@@ -4,7 +4,7 @@
 # Depends on:  acl libusb zlib
 
 name=cups
-version=2.2.6
+version=2.2.9
 release=1
 source=(https://github.com/apple/cups/releases/download/v$version/$name-$version-source.tar.gz
         cups)
@@ -25,9 +25,9 @@ build () {
                 --without-{java,perl,php,python} \
                 --without-rcdir \
                 --with-optim="$CFLAGS" \
-                --disable-tcp-wrappers \
                 --enable-acl \
-                --disable-{pam,dbus,avahi,systemd}
+                --disable-{pam,dbus,avahi,systemd} \
+                --disable-{gnutls,gssapi}
 
     make
     make BUILDROOT=$PKG install
