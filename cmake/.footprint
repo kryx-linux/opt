@@ -159,6 +159,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/envvar/
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/FFLAGS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/LDFLAGS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/MACOSX_DEPLOYMENT_TARGET.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/envvar/PackageName_ROOT.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/RC.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/RCFLAGS.rst
 drwxr-xr-x	root/root	usr/share/cmake/Help/generator/
@@ -1466,6 +1467,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/variable/
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT_VERSION_MINOR.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT_VERSION_PATCH.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/PROJECT_VERSION_TWEAK.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/variable/PackageName_ROOT.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/UNIX.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/WIN32.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/variable/WINCE.rst
