@@ -4,8 +4,8 @@
 # Depends on: python
 
 name=python-packaging
-version=17.1
-release=2
+version=18.0
+release=1
 source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.tar.gz)
 
 build() {
