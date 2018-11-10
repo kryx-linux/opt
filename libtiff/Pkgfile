@@ -4,15 +4,15 @@
 # Depends on:  libjpeg-turbo, zlib
 
 name=libtiff
-version=4.0.9
+version=4.0.10
 release=1
 source=(http://download.osgeo.org/libtiff/tiff-$version.tar.gz) 
 
 build() {
-    cd tiff-$version
+	cd tiff-$version
 
-    ./configure --prefix=/usr
-    make
-    make DESTDIR=$PKG install
-    rm -r $PKG/usr/{bin,share/{doc,man/man1}}
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -r $PKG/usr/{bin,share/{doc,man/man1}}
 }
