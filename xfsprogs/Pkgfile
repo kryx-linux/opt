@@ -1,10 +1,10 @@
 # Description: Filesystem utilities for XFS
 # URL:         http://www.xfs.org
 # Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  util-linux
+# Depends on:  util-linux readline
 
 name=xfsprogs
-version=4.18.0
+version=4.19.0
 release=1
 source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz)
 
@@ -17,7 +17,9 @@ build() {
     export OPTIMIZER=$CFLAGS
 
     ./configure --prefix=/usr \
-                --disable-gettext
+                --enable-readline  \
+                --disable-gettext \
+                --disable-libicu
     make
     make -j1 DIST_ROOT=$PKG install install-dev
 
