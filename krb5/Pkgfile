@@ -4,7 +4,7 @@
 # Depends on:  e2fsprogs openssl
 
 name=krb5
-version=1.16.1
+version=1.16.2
 release=1
 source=(https://kerberos.org/dist/krb5/1.16/krb5-$version.tar.gz
         krb5)
@@ -15,7 +15,8 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--localstatedir=/var \
-		--enable-shared \
+		--runstatedir=/var/run \
+        --enable-shared \
 		--disable-rpath \
 		--disable-nls \
 		--without-tcl \
