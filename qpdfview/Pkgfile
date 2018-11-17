@@ -4,8 +4,8 @@
 # Depends on:  poppler-qt5
 
 name=qpdfview
-version=0.4.17beta1
-release=2
+version=0.4.18beta1
+release=1
 source=(https://launchpad.net/qpdfview/trunk/$version/+download/$name-$version.tar.gz)
 
 build () {
