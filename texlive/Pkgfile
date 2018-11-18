@@ -1,7 +1,7 @@
 # Description: TeX distribution for UNIX compatible systems.
 # URL:         http://www.tug.org/tetex/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  clisp icu libgd poppler t1lib util-linux xorg-libxi
+# Depends on:  clisp icu libgd poppler t1lib util-linux xorg-libxi ghostscript
 
 name=texlive
 version=20180414
