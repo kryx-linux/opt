@@ -4,8 +4,8 @@
 # Packager:	Matt Housh, jaeger at morpheus dot net
 
 name=openntpd
-version=6.0p1
-release=4
+version=6.2p3
+release=1
 source=(
 http://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz
 ntpd
