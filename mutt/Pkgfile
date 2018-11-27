@@ -4,7 +4,7 @@
 # Depends on:  gdbm openssl zlib
 
 name=mutt
-version=1.10.1
+version=1.11.0
 release=1
 source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 
@@ -28,5 +28,6 @@ build () {
 
     find $PKG/usr/share/mutt/* ! -name manual.txt -delete
     rm $PKG/usr/etc/{Muttrc,mime.types}.dist 
+    rm -r $PKG/usr/share/info
     rm $PKG/usr/share/man/man5/{mmdf.5,mbox.5}
 }
