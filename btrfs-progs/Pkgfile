@@ -4,7 +4,7 @@
 # Depends on:  lzo zstd
 
 name=btrfs-progs
-version=4.17.1
+version=4.19
 release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz)
 
@@ -18,9 +18,9 @@ build() {
 	make DESTDIR=$PKG install
 
 	mkdir -p $PKG/usr/share/man/{man5,man8}
-	install -m644 Documentation/*.5.gz $PKG/usr/share/man/man5/
-	install -m644 Documentation/*.8.gz $PKG/usr/share/man/man8/
+	install -m644 Documentation/*.5 $PKG/usr/share/man/man5/
+	install -m644 Documentation/*.8 $PKG/usr/share/man/man8/
 
 	#btrfs-convert disabled
-	rm $PKG/usr/share/man/man8/btrfs-convert.8.gz
+	rm $PKG/usr/share/man/man8/btrfs-convert.8
 }
