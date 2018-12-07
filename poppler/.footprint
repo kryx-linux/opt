@@ -89,7 +89,6 @@ drwxr-xr-x	root/root	usr/include/poppler/
 -rw-r--r--	root/root	usr/include/poppler/UnicodeTypeTable.h
 -rw-r--r--	root/root	usr/include/poppler/ViewerPreferences.h
 -rw-r--r--	root/root	usr/include/poppler/XRef.h
--rw-r--r--	root/root	usr/include/poppler/XpdfPluginAPI.h
 drwxr-xr-x	root/root	usr/include/poppler/cpp/
 -rw-r--r--	root/root	usr/include/poppler/cpp/poppler-document.h
 -rw-r--r--	root/root	usr/include/poppler/cpp/poppler-embedded-file.h
@@ -111,15 +110,16 @@ drwxr-xr-x	root/root	usr/include/poppler/fofi/
 -rw-r--r--	root/root	usr/include/poppler/fofi/FoFiType1C.h
 drwxr-xr-x	root/root	usr/include/poppler/goo/
 -rw-r--r--	root/root	usr/include/poppler/goo/FixedPoint.h
+-rw-r--r--	root/root	usr/include/poppler/goo/GooCheckedOps.h
 -rw-r--r--	root/root	usr/include/poppler/goo/GooLikely.h
 -rw-r--r--	root/root	usr/include/poppler/goo/GooList.h
--rw-r--r--	root/root	usr/include/poppler/goo/GooMutex.h
 -rw-r--r--	root/root	usr/include/poppler/goo/GooString.h
 -rw-r--r--	root/root	usr/include/poppler/goo/GooTimer.h
 -rw-r--r--	root/root	usr/include/poppler/goo/ImgWriter.h
 -rw-r--r--	root/root	usr/include/poppler/goo/JpegWriter.h
 -rw-r--r--	root/root	usr/include/poppler/goo/PNGWriter.h
 -rw-r--r--	root/root	usr/include/poppler/goo/TiffWriter.h
+-rw-r--r--	root/root	usr/include/poppler/goo/gdir.h
 -rw-r--r--	root/root	usr/include/poppler/goo/gfile.h
 -rw-r--r--	root/root	usr/include/poppler/goo/gmem.h
 -rw-r--r--	root/root	usr/include/poppler/goo/grandom.h
@@ -151,9 +151,9 @@ drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so -> libpoppler-cpp.so.0
 lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so.0 -> libpoppler-cpp.so.0.5.0
 -rwxr-xr-x	root/root	usr/lib/libpoppler-cpp.so.0.5.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.79
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so.79 -> libpoppler.so.79.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler.so.79.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.83
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so.83 -> libpoppler.so.83.0.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler.so.83.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cairo.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cpp.pc
