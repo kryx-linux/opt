@@ -631,6 +631,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/ntddndis.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntddscsi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntddstor.h
+-rw-r--r--	root/root	usr/include/wine/windows/ntddvdeo.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntdef.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntdsapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ntlsa.h
@@ -1379,6 +1380,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-ntuser-gui-l1-3-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-ntuser-keyboard-l1-3-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-ntuser-message-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-ntuser-misc-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-ntuser-misc-l1-5-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-ntuser-mouse-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ext-ms-win-ntuser-private-l1-1-1.dll.so
@@ -1800,6 +1802,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-ntuser-gui-l1-3-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-ntuser-keyboard-l1-3-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-ntuser-message-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-ntuser-misc-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-ntuser-misc-l1-5-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-ntuser-mouse-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ext-ms-win-ntuser-private-l1-1-1.dll
@@ -2118,6 +2121,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/termsv.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/traffic.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/twain_32.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/tzres.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ucrtbase.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/uiautomationcore.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/uiribbon.dll
@@ -2729,6 +2733,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/termsv.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/traffic.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/twain_32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/tzres.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ucrtbase.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/uiautomationcore.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/uiribbon.dll.so
@@ -3268,6 +3273,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-ntuser-gui-l1-3-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-ntuser-keyboard-l1-3-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-ntuser-message-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-ntuser-misc-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-ntuser-misc-l1-5-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-ntuser-mouse-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ext-ms-win-ntuser-private-l1-1-1.dll.so
@@ -3698,6 +3704,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-ntuser-gui-l1-3-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-ntuser-keyboard-l1-3-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-ntuser-message-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-ntuser-misc-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-ntuser-misc-l1-5-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-ntuser-mouse-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ext-ms-win-ntuser-private-l1-1-1.dll
@@ -4047,6 +4054,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/twain.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/twain_32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/typelib.dll16
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/tzres.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ucrtbase.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/uiautomationcore.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/uiribbon.dll
@@ -4714,6 +4722,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/twain.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/twain_32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/typelib.dll16.so
+-rwxr-xr-x	root/root	usr/lib32/wine/tzres.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ucrtbase.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/uiautomationcore.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/uiribbon.dll.so
