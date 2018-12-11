@@ -4,14 +4,13 @@
 # Depends on:  attr, lzo, zlib, bzip2, xz, libgcrypt
 
 name=dar
-version=2.5.17
+version=2.5.18
 release=1
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
 
-    sed -e 's/_BSD_SOURCE/_DEFAULT_SOURCE/' -i configure
     export CXXFLAGS="$CFLAGS -Wno-deprecated"
 
     ./configure --prefix=/usr \
