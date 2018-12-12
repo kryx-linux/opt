@@ -5,7 +5,7 @@
 
 name=llvm
 version=7.0.0
-release=1
+release=2
 source=(https://llvm.org/releases/$version/$name-$version.src.tar.xz
   llvm-config.h)
 
@@ -27,6 +27,7 @@ build() {
     -DLLVM_ENABLE_OCAMLDOC=0 \
     -DLLVM_TARGETS_TO_BUILD='X86;AMDGPU;BPF' \
     -DLLVM_BUILD_LLVM_DYLIB=1 \
+    -DLLVM_LINK_LLVM_DYLIB=1 \
     -DLLVM_INSTALL_UTILS=1 \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
