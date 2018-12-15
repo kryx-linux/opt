@@ -1,7 +1,7 @@
 # Description: Firefox binary
 # URL: http://www.mozilla.com
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot guru
-# Depends on: gtk3
+# Depends on: gtk3 dbus-glib
 
 name=firefox-bin
 version=64.0
@@ -17,8 +17,8 @@ build() {
 	mkdir -p $PKG/usr/lib/firefox/lib
 	find $PKG/usr/lib/firefox -name '*.so' -exec cp '{}' lib/ \;
 
-        mkdir -p $PKG/etc/revdep.d
-        echo "/usr/lib/firefox/lib" > $PKG/etc/revdep.d/firefox-bin
+	mkdir -p $PKG/etc/revdep.d
+	echo "/usr/lib/firefox" > $PKG/etc/revdep.d/firefox-bin
 
 	#We don't want these 'features'
 	rm -r $PKG/usr/lib/firefox/browser/features
