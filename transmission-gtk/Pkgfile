@@ -4,7 +4,7 @@
 # Depends on:  gtk3 libevent
 
 name=transmission-gtk
-version=2.93
+version=2.94
 release=1
 source=(https://github.com/transmission/transmission-releases/raw/master/transmission-$version.tar.xz)
 
