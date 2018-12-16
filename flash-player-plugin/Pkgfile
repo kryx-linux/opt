@@ -1,6 +1,7 @@
 # Description: Macromedia Flash Plugin for Firefox
 # URL:         http://www.adobe.com/products/flashplayer/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  util-linux gtk nss libglvnd xorg-libxdamage xorg-libxt
 
 name=flash-player-plugin
 version=32.0.0.101
