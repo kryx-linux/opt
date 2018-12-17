@@ -6,7 +6,7 @@
 # Nice to have: gimp-print, libsdl, ghostscript, libmng
 
 name=gimp
-version=2.10.6
+version=2.10.8
 release=1
 source=(https://download.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2 cve-2013-1913)
 

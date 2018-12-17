@@ -518,41 +518,41 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/wavelet-decompose/
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/web-browser/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/web-browser/web-browser
 -rwxr-xr-x	root/root	usr/lib/libgimp-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so -> libgimp-2.0.so.0.1000.6
-lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so.0 -> libgimp-2.0.so.0.1000.6
--rwxr-xr-x	root/root	usr/lib/libgimp-2.0.so.0.1000.6
+lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so -> libgimp-2.0.so.0.1000.8
+lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so.0 -> libgimp-2.0.so.0.1000.8
+-rwxr-xr-x	root/root	usr/lib/libgimp-2.0.so.0.1000.8
 -rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so -> libgimpbase-2.0.so.0.1000.6
-lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so.0 -> libgimpbase-2.0.so.0.1000.6
--rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.so.0.1000.6
+lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so -> libgimpbase-2.0.so.0.1000.8
+lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so.0 -> libgimpbase-2.0.so.0.1000.8
+-rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.so.0.1000.8
 -rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so -> libgimpcolor-2.0.so.0.1000.6
-lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so.0 -> libgimpcolor-2.0.so.0.1000.6
--rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.so.0.1000.6
+lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so -> libgimpcolor-2.0.so.0.1000.8
+lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so.0 -> libgimpcolor-2.0.so.0.1000.8
+-rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.so.0.1000.8
 -rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so -> libgimpconfig-2.0.so.0.1000.6
-lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so.0 -> libgimpconfig-2.0.so.0.1000.6
--rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.so.0.1000.6
+lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so -> libgimpconfig-2.0.so.0.1000.8
+lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so.0 -> libgimpconfig-2.0.so.0.1000.8
+-rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.so.0.1000.8
 -rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so -> libgimpmath-2.0.so.0.1000.6
-lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so.0 -> libgimpmath-2.0.so.0.1000.6
--rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.so.0.1000.6
+lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so -> libgimpmath-2.0.so.0.1000.8
+lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so.0 -> libgimpmath-2.0.so.0.1000.8
+-rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.so.0.1000.8
 -rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so -> libgimpmodule-2.0.so.0.1000.6
-lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so.0 -> libgimpmodule-2.0.so.0.1000.6
--rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.so.0.1000.6
+lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so -> libgimpmodule-2.0.so.0.1000.8
+lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so.0 -> libgimpmodule-2.0.so.0.1000.8
+-rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.so.0.1000.8
 -rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so -> libgimpthumb-2.0.so.0.1000.6
-lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so.0 -> libgimpthumb-2.0.so.0.1000.6
--rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.so.0.1000.6
+lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so -> libgimpthumb-2.0.so.0.1000.8
+lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so.0 -> libgimpthumb-2.0.so.0.1000.8
+-rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.so.0.1000.8
 -rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so -> libgimpui-2.0.so.0.1000.6
-lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so.0 -> libgimpui-2.0.so.0.1000.6
--rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.so.0.1000.6
+lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so -> libgimpui-2.0.so.0.1000.8
+lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so.0 -> libgimpui-2.0.so.0.1000.8
+-rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.so.0.1000.8
 -rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so -> libgimpwidgets-2.0.so.0.1000.6
-lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so.0 -> libgimpwidgets-2.0.so.0.1000.6
--rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.so.0.1000.6
+lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so -> libgimpwidgets-2.0.so.0.1000.8
+lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so.0 -> libgimpwidgets-2.0.so.0.1000.8
+-rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.so.0.1000.8
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimp-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimpthumb-2.0.pc
@@ -1238,6 +1238,7 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/gimp-line-spacing.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/gimp-linked.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/gimp-list.svg
+-rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/gimp-marker.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/gimp-menu-left.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/gimp-menu-right.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/gimp-merge-down.svg
@@ -1424,6 +1425,7 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/media-optical.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/media-playback-pause.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/media-playback-start.svg
+-rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/media-record.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/media-seek-backward.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/media-skip-backward.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Color/scalable/apps/media-skip-forward.svg
@@ -2221,6 +2223,7 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-line-spacing.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-linked.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-list.svg
+-rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-marker.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-menu-left.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-menu-right.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/gimp-merge-down.svg
@@ -2407,6 +2410,7 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-optical.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-playback-pause.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-playback-start.svg
+-rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-record.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-seek-backward.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-skip-backward.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic-Inverted/scalable/apps/media-skip-forward.svg
@@ -2729,6 +2733,7 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-line-spacing.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-linked.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-list.svg
+-rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-marker.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-menu-left.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-menu-right.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-merge-down.svg
@@ -2915,6 +2920,7 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/media-optical.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/media-playback-pause.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/media-playback-start.svg
+-rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/media-record.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/media-seek-backward.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/media-skip-backward.svg
 -rw-r--r--	root/root	usr/share/gimp/2.0/icons/Symbolic/scalable/apps/media-skip-forward.svg
@@ -3599,6 +3605,7 @@ drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/gimp-2.10.1.gz
 lrwxrwxrwx	root/root	usr/share/man/man1/gimp-console-2.10.1.gz -> gimp-2.10.1.gz
+lrwxrwxrwx	root/root	usr/share/man/man1/gimp-console.1.gz -> gimp-console-2.10.1.gz
 lrwxrwxrwx	root/root	usr/share/man/man1/gimp.1.gz -> gimp-2.10.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/gimptool-2.0.1.gz
 drwxr-xr-x	root/root	usr/share/man/man5/
