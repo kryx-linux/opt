@@ -6,7 +6,7 @@
 # Optional: libsdl ffmpeg3
 
 name=gegl
-version=0.4.8
+version=0.4.12
 release=1
 source=(http://ftp.gimp.org/pub/$name/${version%.*}/$name-$version.tar.bz2)
 
