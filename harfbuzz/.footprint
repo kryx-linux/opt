@@ -6,6 +6,8 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/hb-view
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/harfbuzz/
+-rw-r--r--	root/root	usr/include/harfbuzz/hb-aat-layout.h
+-rw-r--r--	root/root	usr/include/harfbuzz/hb-aat.h
 -rw-r--r--	root/root	usr/include/harfbuzz/hb-blob.h
 -rw-r--r--	root/root	usr/include/harfbuzz/hb-buffer.h
 -rw-r--r--	root/root	usr/include/harfbuzz/hb-common.h
@@ -16,6 +18,7 @@ drwxr-xr-x	root/root	usr/include/harfbuzz/
 -rw-r--r--	root/root	usr/include/harfbuzz/hb-glib.h
 -rw-r--r--	root/root	usr/include/harfbuzz/hb-map.h
 -rw-r--r--	root/root	usr/include/harfbuzz/hb-ot-color.h
+-rw-r--r--	root/root	usr/include/harfbuzz/hb-ot-deprecated.h
 -rw-r--r--	root/root	usr/include/harfbuzz/hb-ot-font.h
 -rw-r--r--	root/root	usr/include/harfbuzz/hb-ot-layout.h
 -rw-r--r--	root/root	usr/include/harfbuzz/hb-ot-math.h
@@ -35,13 +38,13 @@ drwxr-xr-x	root/root	usr/lib/cmake/
 drwxr-xr-x	root/root	usr/lib/cmake/harfbuzz/
 -rw-r--r--	root/root	usr/lib/cmake/harfbuzz/harfbuzz-config.cmake
 -rwxr-xr-x	root/root	usr/lib/libharfbuzz-subset.la
-lrwxrwxrwx	root/root	usr/lib/libharfbuzz-subset.so -> libharfbuzz-subset.so.0.20103.0
-lrwxrwxrwx	root/root	usr/lib/libharfbuzz-subset.so.0 -> libharfbuzz-subset.so.0.20103.0
--rwxr-xr-x	root/root	usr/lib/libharfbuzz-subset.so.0.20103.0
+lrwxrwxrwx	root/root	usr/lib/libharfbuzz-subset.so -> libharfbuzz-subset.so.0.20300.0
+lrwxrwxrwx	root/root	usr/lib/libharfbuzz-subset.so.0 -> libharfbuzz-subset.so.0.20300.0
+-rwxr-xr-x	root/root	usr/lib/libharfbuzz-subset.so.0.20300.0
 -rwxr-xr-x	root/root	usr/lib/libharfbuzz.la
-lrwxrwxrwx	root/root	usr/lib/libharfbuzz.so -> libharfbuzz.so.0.20103.0
-lrwxrwxrwx	root/root	usr/lib/libharfbuzz.so.0 -> libharfbuzz.so.0.20103.0
--rwxr-xr-x	root/root	usr/lib/libharfbuzz.so.0.20103.0
+lrwxrwxrwx	root/root	usr/lib/libharfbuzz.so -> libharfbuzz.so.0.20300.0
+lrwxrwxrwx	root/root	usr/lib/libharfbuzz.so.0 -> libharfbuzz.so.0.20300.0
+-rwxr-xr-x	root/root	usr/lib/libharfbuzz.so.0.20300.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/harfbuzz-subset.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/harfbuzz.pc
