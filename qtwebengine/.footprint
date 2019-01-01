@@ -2,28 +2,30 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/qt5/
 drwxr-xr-x	root/root	usr/include/qt5/QtWebEngine/
-drwxr-xr-x	root/root	usr/include/qt5/QtWebEngine/5.11.2/
-drwxr-xr-x	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/
-drwxr-xr-x	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginecertificateerror_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginecontextmenurequest_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginedialogrequests_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginedownloaditem_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginedownloaditem_p_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginefaviconprovider_p_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginehistory_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginehistory_p_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebengineloadrequest_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginenavigationrequest_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginenewviewrequest_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebengineprofile_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginescript_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginesettings_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginesingleton_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebenginetestsupport_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebengineview_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qquickwebengineview_p_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/qtwebengineglobal_p.h
+drwxr-xr-x	root/root	usr/include/qt5/QtWebEngine/5.12.0/
+drwxr-xr-x	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/
+drwxr-xr-x	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebengineaction_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebengineaction_p_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginecertificateerror_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginecontextmenurequest_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginedialogrequests_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginedownloaditem_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginedownloaditem_p_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginefaviconprovider_p_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginehistory_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginehistory_p_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebengineloadrequest_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginenavigationrequest_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginenewviewrequest_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebengineprofile_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginescript_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginesettings_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginesingleton_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebenginetestsupport_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebengineview_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qquickwebengineview_p_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/5.12.0/QtWebEngine/private/qtwebengineglobal_p.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/QQuickWebEngineProfile
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/QQuickWebEngineScript
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/QtWebEngine
@@ -34,14 +36,14 @@ drwxr-xr-x	root/root	usr/include/qt5/QtWebEngine/5.11.2/QtWebEngine/private/
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/qtwebengineglobal.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngine/qtwebengineversion.h
 drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineCore/
-drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/
-drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/QtWebEngineCore/
-drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/QtWebEngineCore/private/
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/QtWebEngineCore/private/qtwebenginecoreglobal_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/QtWebEngineCore/private/qwebenginebrowsercontext_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/QtWebEngineCore/private/qwebenginecallback_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/QtWebEngineCore/private/qwebenginecookiestore_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/QtWebEngineCore/private/qwebengineurlrequestinfo_p.h
+drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineCore/5.12.0/
+drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineCore/5.12.0/QtWebEngineCore/
+drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineCore/5.12.0/QtWebEngineCore/private/
+-rw-r--r--	root/root	usr/include/qt5/QtWebEngineCore/5.12.0/QtWebEngineCore/private/qtwebenginecore-config_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/5.12.0/QtWebEngineCore/private/qtwebenginecoreglobal_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/5.12.0/QtWebEngineCore/private/qwebenginecallback_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/5.12.0/QtWebEngineCore/private/qwebenginecookiestore_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/5.12.0/QtWebEngineCore/private/qwebengineurlrequestinfo_p.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QWebEngineCallback
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QWebEngineCookieStore
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QWebEngineHttpRequest
@@ -50,10 +52,12 @@ drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/QtWebEngineCore/priv
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QWebEngineUrlRequestInfo
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QWebEngineUrlRequestInterceptor
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QWebEngineUrlRequestJob
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QWebEngineUrlScheme
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QWebEngineUrlSchemeHandler
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QtWebEngineCore
 -rw-r--r--	root/root	usr/include/qt5/QtWebEngineCore/QtWebEngineCoreDepends
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/QtWebEngineCoreVersion
+-rw-r--r--	root/root	usr/include/qt5/QtWebEngineCore/qtwebenginecore-config.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/qtwebenginecoreglobal.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/qtwebenginecoreversion.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/qwebenginecallback.h
@@ -64,18 +68,20 @@ drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineCore/5.11.2/QtWebEngineCore/priv
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/qwebengineurlrequestinfo.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/qwebengineurlrequestinterceptor.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/qwebengineurlrequestjob.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/qwebengineurlscheme.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineCore/qwebengineurlschemehandler.h
 drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineWidgets/
-drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/
-drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/QtWebEngineWidgets/
-drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/QtWebEngineWidgets/private/
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/QtWebEngineWidgets/private/qwebenginedownloaditem_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/QtWebEngineWidgets/private/qwebenginehistory_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/QtWebEngineWidgets/private/qwebenginepage_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/QtWebEngineWidgets/private/qwebengineprofile_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/QtWebEngineWidgets/private/qwebenginescriptcollection_p.h
--rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/QtWebEngineWidgets/private/qwebengineview_p.h
+drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineWidgets/5.12.0/
+drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineWidgets/5.12.0/QtWebEngineWidgets/
+drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineWidgets/5.12.0/QtWebEngineWidgets/private/
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.12.0/QtWebEngineWidgets/private/qwebenginedownloaditem_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.12.0/QtWebEngineWidgets/private/qwebenginehistory_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.12.0/QtWebEngineWidgets/private/qwebenginepage_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.12.0/QtWebEngineWidgets/private/qwebengineprofile_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.12.0/QtWebEngineWidgets/private/qwebenginescriptcollection_p.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/5.12.0/QtWebEngineWidgets/private/qwebengineview_p.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/QWebEngineCertificateError
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/QWebEngineClientCertificateSelection
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/QWebEngineContextMenuData
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/QWebEngineDownloadItem
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/QWebEngineFullScreenRequest
@@ -93,6 +99,7 @@ drwxr-xr-x	root/root	usr/include/qt5/QtWebEngineWidgets/5.11.2/QtWebEngineWidget
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/qtwebenginewidgetsglobal.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/qtwebenginewidgetsversion.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/qwebenginecertificateerror.h
+-rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/qwebengineclientcertificateselection.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/qwebenginecontextmenudata.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/qwebenginedownloaditem.h
 -rw-rw-r--	root/root	usr/include/qt5/QtWebEngineWidgets/qwebenginefullscreenrequest.h
@@ -118,22 +125,22 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt5WebEngineWidgets/
 -rw-r--r--	root/root	usr/lib/cmake/Qt5WebEngineWidgets/Qt5WebEngineWidgetsConfigVersion.cmake
 -rw-r--r--	root/root	usr/lib/libQt5WebEngine.la
 -rw-r--r--	root/root	usr/lib/libQt5WebEngine.prl
-lrwxrwxrwx	root/root	usr/lib/libQt5WebEngine.so -> libQt5WebEngine.so.5.11.2
-lrwxrwxrwx	root/root	usr/lib/libQt5WebEngine.so.5 -> libQt5WebEngine.so.5.11.2
-lrwxrwxrwx	root/root	usr/lib/libQt5WebEngine.so.5.11 -> libQt5WebEngine.so.5.11.2
--rwxr-xr-x	root/root	usr/lib/libQt5WebEngine.so.5.11.2
+lrwxrwxrwx	root/root	usr/lib/libQt5WebEngine.so -> libQt5WebEngine.so.5.12.0
+lrwxrwxrwx	root/root	usr/lib/libQt5WebEngine.so.5 -> libQt5WebEngine.so.5.12.0
+lrwxrwxrwx	root/root	usr/lib/libQt5WebEngine.so.5.12 -> libQt5WebEngine.so.5.12.0
+-rwxr-xr-x	root/root	usr/lib/libQt5WebEngine.so.5.12.0
 -rw-r--r--	root/root	usr/lib/libQt5WebEngineCore.la
 -rw-r--r--	root/root	usr/lib/libQt5WebEngineCore.prl
-lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineCore.so -> libQt5WebEngineCore.so.5.11.2
-lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineCore.so.5 -> libQt5WebEngineCore.so.5.11.2
-lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineCore.so.5.11 -> libQt5WebEngineCore.so.5.11.2
--rwxr-xr-x	root/root	usr/lib/libQt5WebEngineCore.so.5.11.2
+lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineCore.so -> libQt5WebEngineCore.so.5.12.0
+lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineCore.so.5 -> libQt5WebEngineCore.so.5.12.0
+lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineCore.so.5.12 -> libQt5WebEngineCore.so.5.12.0
+-rwxr-xr-x	root/root	usr/lib/libQt5WebEngineCore.so.5.12.0
 -rw-r--r--	root/root	usr/lib/libQt5WebEngineWidgets.la
 -rw-r--r--	root/root	usr/lib/libQt5WebEngineWidgets.prl
-lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineWidgets.so -> libQt5WebEngineWidgets.so.5.11.2
-lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineWidgets.so.5 -> libQt5WebEngineWidgets.so.5.11.2
-lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineWidgets.so.5.11 -> libQt5WebEngineWidgets.so.5.11.2
--rwxr-xr-x	root/root	usr/lib/libQt5WebEngineWidgets.so.5.11.2
+lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineWidgets.so -> libQt5WebEngineWidgets.so.5.12.0
+lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineWidgets.so.5 -> libQt5WebEngineWidgets.so.5.12.0
+lrwxrwxrwx	root/root	usr/lib/libQt5WebEngineWidgets.so.5.12 -> libQt5WebEngineWidgets.so.5.12.0
+-rwxr-xr-x	root/root	usr/lib/libQt5WebEngineWidgets.so.5.12.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt5WebEngine.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt5WebEngineCore.pc
