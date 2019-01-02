@@ -4,7 +4,7 @@
 # Depends on:  util-linux glib
 
 name=mc
-version=4.8.21
+version=4.8.22
 release=1
 source=(http://ftp.osuosl.org/pub/midnightcommander/$name-$version.tar.xz)
 
