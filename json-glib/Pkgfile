@@ -1,7 +1,7 @@
 # Description: serialization and deserialization of JSON objects
 # URL:         https://wiki.gnome.org/action/show/Projects/JsonGlib
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  glib meson ninja
+# Depends on:  glib meson ninja gobject-introspection
 
 name=json-glib
 version=1.4.4
