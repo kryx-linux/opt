@@ -1,7 +1,7 @@
-diff -Nru libxml2-2.9.2.orig/python/Makefile.in libxml2-2.9.2/python/Makefile.in
---- libxml2-2.9.2.orig/python/Makefile.in	2014-10-17 12:04:08.614853413 +0200
-+++ libxml2-2.9.2/python/Makefile.in	2014-10-17 12:04:25.037581668 +0200
-@@ -495,7 +495,7 @@
+diff -Nru libxml2-2.9.9.orig/python/Makefile.in libxml2-2.9.9/python/Makefile.in
+--- libxml2-2.9.9.orig/python/Makefile.in	2019-01-05 14:23:07.779691060 +0100
++++ libxml2-2.9.9/python/Makefile.in	2019-01-05 14:23:44.768849605 +0100
+@@ -510,7 +510,7 @@
  @WITH_PYTHON_TRUE@python_LTLIBRARIES = libxml2mod.la
  @WITH_PYTHON_TRUE@libxml2mod_la_SOURCES = libxml.c libxml_wrap.h libxml2-py.h libxml2-py.c types.c
  @WITH_PYTHON_TRUE@libxml2mod_la_LDFLAGS = $(CYGWIN_EXTRA_LDFLAGS) $(WIN32_EXTRA_LDFLAGS) -module -avoid-version \
