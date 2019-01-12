@@ -5,29 +5,17 @@
 # Depends on: php
 
 name=pear
-version=1.9.4
+version=1.10.7
 release=1
-source=(http://pear.php.net/get/PEAR-$version.tgz \
-	http://pear.php.net/get/Archive_Tar-1.3.11.tgz \
-	http://pear.php.net/get/Console_Getopt-1.3.1.tgz \
-        http://pear.php.net/get/Structures_Graph-1.0.4.tgz \
-        http://pear.php.net/get/XML_Util-1.2.1.tgz \
-	$name.conf $name-$version-registry.tar.xz)
+source=(https://pear.php.net/install-pear-nozlib.phar)
 
 build() {
-	cd PEAR-$version
-	mkdir -p $PKG/usr/{bin,etc,share/pear/php}
-	cp -r {PEAR{,5}.php,System.php,PEAR,OS} $PKG/usr/share/pear/php
-	cp -r ../Archive*/Archive $PKG/usr/share/pear/php
-	cp -r ../Console*/Console $PKG/usr/share/pear/php
-	cp -r ../Structures*/Structures $PKG/usr/share/pear/php
-	cp -r ../XML*/Util.php $PKG/usr/share/pear/php
-	install -m 644 scripts/*.php $PKG/usr/share/pear/php
-	sed -i 's|@php_bin@|/usr/bin/php|g' scripts/{pear.sh,pecl.sh}
-	sed -i 's|@php_dir@|/usr/share/pear/php|g' scripts/{pear.sh,pecl.sh}
-	install -m 755 scripts/pear.sh $PKG/usr/bin/pear
-	install -m 755 scripts/pecl.sh $PKG/usr/bin/pecl
-	install -m 644 ../$name.conf $PKG/usr/etc
-	cp -r ../.registry $PKG/usr/share/pear/php
 
+    export PHP_PEAR_SYSCONF_DIR=/etc/php
+    export INSTALL_ROOT=$PKG
+
+    php -n $SRC/install-pear-nozlib.phar
+
+    rm -r $PKG/.{filemap,lock,depdb*,channels,registry}
+    rm -r $PKG/usr/lib/php/pear/{docs,tests}
 }
