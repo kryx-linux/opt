@@ -248,6 +248,9 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkenums.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkeventbox.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkeventcontroller.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkeventcontrollerkey.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkeventcontrollermotion.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkeventcontrollerscroll.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkexpander.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkfilechooser.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkfilechooserbutton.h
@@ -269,6 +272,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturepan.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturerotate.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturesingle.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturestylus.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgestureswipe.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkgesturezoom.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/gtkglarea.h
@@ -451,13 +455,13 @@ lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so -> libgailutil-3.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so.0 -> libgailutil-3.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgailutil-3.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libgdk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.2200.30
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.2200.30
--rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.2200.30
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.2403.0
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.2403.0
+-rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.2403.0
 -rw-r--r--	root/root	usr/lib/libgtk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.2200.30
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.2200.30
--rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.2200.30
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.2403.0
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.2403.0
+-rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.2403.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gail-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gdk-3.0.pc
