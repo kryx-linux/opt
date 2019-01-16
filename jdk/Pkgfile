@@ -1,9 +1,10 @@
 # Description: Java 8 Software Development Kit
 # URL: http://java.sun.com
 # Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: util-linux gtk3 gtk alsa-lib
 
 name=jdk
-version=1.8.0_192
+version=1.8.0_202
 release=1
 source=(file:///$name-8u${version##*_}-linux-x64.tar.gz)
 
