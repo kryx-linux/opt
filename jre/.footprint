@@ -41,6 +41,8 @@ drwxr-xr-x	root/root	usr/lib/jre/lib/amd64/jli/
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libfontmanager.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libfxplugins.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libglass.so
+-rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libglassgtk2.so
+-rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libglassgtk3.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libglib-lite.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libgstreamer-lite.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libhprof.so
@@ -66,7 +68,6 @@ drwxr-xr-x	root/root	usr/lib/jre/lib/amd64/jli/
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libjsig.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libjsound.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libjsoundalsa.so
--rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libkcms.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/liblcms.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libmanagement.so
 -rwxr-xr-x	root/root	usr/lib/jre/lib/amd64/libmlib_image.so
