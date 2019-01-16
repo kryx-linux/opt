@@ -12,6 +12,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-arm
 -rwxr-xr-x	root/root	usr/bin/qemu-armeb
 -rwxr-xr-x	root/root	usr/bin/qemu-cris
+-rwxr-xr-x	root/root	usr/bin/qemu-edid
 -rwxr-xr-x	root/root	usr/bin/qemu-ga
 -rwxr-xr-x	root/root	usr/bin/qemu-hppa
 -rwxr-xr-x	root/root	usr/bin/qemu-i386
@@ -61,7 +62,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-system-or1k
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppc
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppc64
--rwxr-xr-x	root/root	usr/bin/qemu-system-ppcemb
 -rwxr-xr-x	root/root	usr/bin/qemu-system-riscv32
 -rwxr-xr-x	root/root	usr/bin/qemu-system-riscv64
 -rwxr-xr-x	root/root	usr/bin/qemu-system-s390x
@@ -172,8 +172,10 @@ drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/trace-events-all
 -rw-r--r--	root/root	usr/share/qemu/u-boot-sam460-20100605.bin
 -rw-r--r--	root/root	usr/share/qemu/u-boot.e500
+-rw-r--r--	root/root	usr/share/qemu/vgabios-bochs-display.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-cirrus.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-qxl.bin
+-rw-r--r--	root/root	usr/share/qemu/vgabios-ramfb.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-stdvga.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-virtio.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-vmware.bin
