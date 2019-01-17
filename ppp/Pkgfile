@@ -5,10 +5,11 @@
 
 name=ppp
 version=2.4.7
-release=3
+release=4
 source=(https://ppp.samba.org/ftp/ppp/$name-$version.tar.gz \
         $name-nofilter.patch \
-        0029-pppoe-include-netinet-in.h-before-linux-in.h.patch)
+        0029-pppoe-include-netinet-in.h-before-linux-in.h.patch \
+        glibc-2.28.patch)
 
 build () {
     cd $name-$version
@@ -17,6 +18,9 @@ build () {
 
     # http://pkgs.fedoraproject.org/cgit/rpms/ppp.git/tree/
     patch -p1 -i $SRC/0029-pppoe-include-netinet-in.h-before-linux-in.h.patch
+
+    # from https://dev.gentoo.org/~polynomial-c/ppp-2.4.7-patches-7.tar.xz
+    patch -p1 -i $SRC/glibc-2.28.patch
 
     ./configure --prefix=/usr --sysconfdir=/etc
     make
