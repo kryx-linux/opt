@@ -1,12 +1,12 @@
 # Description: Program to fetch mail and deliver it in various ways
 # URL:         https://github.com/nicm/fdm
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  tdb
+# Depends on:  tdb openssl
 
 name=fdm
-version=1.9
+version=1.9.32
 release=1
-source=(https://github.com/nicm/fdm/releases/download/$version/$name-$version.tar.gz)
+source=(https://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
 
 build () {
     cd $name-$version
