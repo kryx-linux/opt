@@ -54,6 +54,7 @@ drwxr-xr-x	root/root	usr/lib/firefox/lib/
 -rwxr-xr-x	root/root	usr/lib/firefox/lib/libmozgtk.so
 -rwxr-xr-x	root/root	usr/lib/firefox/lib/libmozsandbox.so
 -rwxr-xr-x	root/root	usr/lib/firefox/lib/libmozsqlite3.so
+-rwxr-xr-x	root/root	usr/lib/firefox/lib/libmozwayland.so
 -rwxr-xr-x	root/root	usr/lib/firefox/lib/libnspr4.so
 -rwxr-xr-x	root/root	usr/lib/firefox/lib/libnss3.so
 -rwxr-xr-x	root/root	usr/lib/firefox/lib/libnssckbi.so
@@ -73,6 +74,7 @@ drwxr-xr-x	root/root	usr/lib/firefox/lib/
 -rwxr-xr-x	root/root	usr/lib/firefox/libmozgtk.so
 -rwxr-xr-x	root/root	usr/lib/firefox/libmozsandbox.so
 -rwxr-xr-x	root/root	usr/lib/firefox/libmozsqlite3.so
+-rwxr-xr-x	root/root	usr/lib/firefox/libmozwayland.so
 -rwxr-xr-x	root/root	usr/lib/firefox/libnspr4.so
 -rwxr-xr-x	root/root	usr/lib/firefox/libnss3.so
 -rwxr-xr-x	root/root	usr/lib/firefox/libnssckbi.so
@@ -98,3 +100,8 @@ drwxr-xr-x	root/root	usr/lib/firefox/lib/
 -rw-r--r--	root/root	usr/lib/firefox/update-settings.ini
 -rwxr-xr-x	root/root	usr/lib/firefox/updater
 -rw-r--r--	root/root	usr/lib/firefox/updater.ini
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/applications/
+-rw-r--r--	root/root	usr/share/applications/firefox.desktop
+drwxr-xr-x	root/root	usr/share/pixmaps/
+lrwxrwxrwx	root/root	usr/share/pixmaps/firefox.png -> /usr/lib/firefox/browser/chrome/icons/default/default32.png
