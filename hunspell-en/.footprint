@@ -15,8 +15,8 @@ lrwxrwxrwx	root/root	usr/share/hunspell/en_CA.aff -> en_AU.aff
 -rw-r--r--	root/root	usr/share/hunspell/en_CA.dic
 lrwxrwxrwx	root/root	usr/share/hunspell/en_DK.aff -> en_GB.aff
 lrwxrwxrwx	root/root	usr/share/hunspell/en_DK.dic -> en_GB.dic
-lrwxrwxrwx	root/root	usr/share/hunspell/en_GB-ise.aff -> en_AU.aff
--rw-r--r--	root/root	usr/share/hunspell/en_GB-ise.dic
+lrwxrwxrwx	root/root	usr/share/hunspell/en_GB.aff -> en_AU.aff
+-rw-r--r--	root/root	usr/share/hunspell/en_GB.dic
 lrwxrwxrwx	root/root	usr/share/hunspell/en_GH.aff -> en_GB.aff
 lrwxrwxrwx	root/root	usr/share/hunspell/en_GH.dic -> en_GB.dic
 lrwxrwxrwx	root/root	usr/share/hunspell/en_HK.aff -> en_GB.aff
