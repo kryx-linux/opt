@@ -29,6 +29,7 @@ drwxr-xr-x	root/root	usr/include/valgrind/
 -rw-r--r--	root/root	usr/include/valgrind/libvex_guest_ppc64.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_guest_s390x.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_guest_x86.h
+-rw-r--r--	root/root	usr/include/valgrind/libvex_inner.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_ir.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_s390x_common.h
 -rw-r--r--	root/root	usr/include/valgrind/libvex_trc_values.h
