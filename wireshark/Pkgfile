@@ -5,7 +5,7 @@
 # Depends on: gtk3 libpcap libpcre hicolor-icon-theme libgcrypt
 
 name=wireshark
-version=2.6.3
+version=2.6.6
 release=1
 source=(https://1.na.dl.wireshark.org/src/wireshark-$version.tar.xz)
 
