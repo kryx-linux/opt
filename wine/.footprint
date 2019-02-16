@@ -849,11 +849,14 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/vmr9.h
 -rw-r--r--	root/root	usr/include/wine/windows/vmr9.idl
 -rw-r--r--	root/root	usr/include/wine/windows/vmrender.idl
+-rw-r--r--	root/root	usr/include/wine/windows/vsbackup.h
+-rw-r--r--	root/root	usr/include/wine/windows/vsbackup.idl
 -rw-r--r--	root/root	usr/include/wine/windows/vss.h
 -rw-r--r--	root/root	usr/include/wine/windows/vss.idl
 -rw-r--r--	root/root	usr/include/wine/windows/vsstyle.h
 -rw-r--r--	root/root	usr/include/wine/windows/vssym32.h
 -rw-r--r--	root/root	usr/include/wine/windows/vswriter.h
+-rw-r--r--	root/root	usr/include/wine/windows/vswriter.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wbemcli.h
 -rw-r--r--	root/root	usr/include/wine/windows/wbemcli.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wbemdisp.h
@@ -2371,6 +2374,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libgdi32.def
 -rw-r--r--	root/root	usr/lib/wine/libgdiplus.def
 -rw-r--r--	root/root	usr/lib/wine/libglu32.def
+-rw-r--r--	root/root	usr/lib/wine/libhal.def
 -rw-r--r--	root/root	usr/lib/wine/libhid.def
 -rw-r--r--	root/root	usr/lib/wine/libhidclass.def
 -rw-r--r--	root/root	usr/lib/wine/libhlink.def
@@ -2388,6 +2392,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libmapi32.def
 -rw-r--r--	root/root	usr/lib/wine/libmf.def
 -rw-r--r--	root/root	usr/lib/wine/libmfplat.def
+-rw-r--r--	root/root	usr/lib/wine/libmfreadwrite.def
 -rw-r--r--	root/root	usr/lib/wine/libmfuuid.a
 -rw-r--r--	root/root	usr/lib/wine/libmlang.def
 -rw-r--r--	root/root	usr/lib/wine/libmpr.def
@@ -2460,6 +2465,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libt2embed.def
 -rw-r--r--	root/root	usr/lib/wine/libtapi32.def
 -rw-r--r--	root/root	usr/lib/wine/libucrtbase.def
+-rw-r--r--	root/root	usr/lib/wine/libuiautomationcore.def
 -rw-r--r--	root/root	usr/lib/wine/libunicows.def
 -rw-r--r--	root/root	usr/lib/wine/liburl.def
 -rw-r--r--	root/root	usr/lib/wine/liburlmon.def
@@ -4332,6 +4338,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libgdi32.def
 -rw-r--r--	root/root	usr/lib32/wine/libgdiplus.def
 -rw-r--r--	root/root	usr/lib32/wine/libglu32.def
+-rw-r--r--	root/root	usr/lib32/wine/libhal.def
 -rw-r--r--	root/root	usr/lib32/wine/libhid.def
 -rw-r--r--	root/root	usr/lib32/wine/libhidclass.def
 -rw-r--r--	root/root	usr/lib32/wine/libhlink.def
@@ -4350,6 +4357,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libmapi32.def
 -rw-r--r--	root/root	usr/lib32/wine/libmf.def
 -rw-r--r--	root/root	usr/lib32/wine/libmfplat.def
+-rw-r--r--	root/root	usr/lib32/wine/libmfreadwrite.def
 -rw-r--r--	root/root	usr/lib32/wine/libmfuuid.a
 -rw-r--r--	root/root	usr/lib32/wine/libmlang.def
 -rw-r--r--	root/root	usr/lib32/wine/libmpr.def
@@ -4422,6 +4430,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libt2embed.def
 -rw-r--r--	root/root	usr/lib32/wine/libtapi32.def
 -rw-r--r--	root/root	usr/lib32/wine/libucrtbase.def
+-rw-r--r--	root/root	usr/lib32/wine/libuiautomationcore.def
 -rw-r--r--	root/root	usr/lib32/wine/libunicows.def
 -rw-r--r--	root/root	usr/lib32/wine/liburl.def
 -rw-r--r--	root/root	usr/lib32/wine/liburlmon.def
@@ -4965,5 +4974,5 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-2.47-x86_64.msi
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.7.3.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.7.5.msi
 -rw-r--r--	root/root	usr/share/wine/wine.inf
