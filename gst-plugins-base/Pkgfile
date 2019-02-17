@@ -4,7 +4,7 @@
 # Depends on: alsa-lib cdparanoia gstreamer libgudev libjpeg-turbo libtheora libvisual mesa3d opus orc pango util-linux
 
 name=gst-plugins-base
-version=1.14.3
+version=1.14.4
 release=1
 source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
