@@ -12,9 +12,13 @@ drwxr-xr-x	root/root	etc/postfix/
 -rw-r--r--	root/root	etc/postfix/header_checks
 -rw-r--r--	root/root	etc/postfix/main.cf
 -rw-r--r--	root/root	etc/postfix/main.cf.default
+-rw-r--r--	root/root	etc/postfix/main.cf.proto
 -rw-r--r--	root/root	etc/postfix/makedefs.out
 -rw-r--r--	root/root	etc/postfix/master.cf
+-rw-r--r--	root/root	etc/postfix/master.cf.proto
 -rw-r--r--	root/root	etc/postfix/mime_header_checks (EMPTY)
+-rw-r--r--	root/root	etc/postfix/postfix-files
+drwxr-xr-x	root/root	etc/postfix/postfix-files.d/
 -rw-r--r--	root/root	etc/postfix/relay_domains (EMPTY)
 -rw-r--r--	root/root	etc/postfix/relocated
 -rw-r--r--	root/root	etc/postfix/relocated.db (EMPTY)
@@ -39,15 +43,12 @@ drwxr-xr-x	root/root	usr/lib/postfix/
 -rwxr-xr-x	root/root	usr/lib/postfix/flush
 -rwxr-xr-x	root/root	usr/lib/postfix/lmtp
 -rwxr-xr-x	root/root	usr/lib/postfix/local
--rw-r--r--	root/root	usr/lib/postfix/main.cf
 -rwxr-xr-x	root/root	usr/lib/postfix/master
--rw-r--r--	root/root	usr/lib/postfix/master.cf
 -rwxr-xr-x	root/root	usr/lib/postfix/nqmgr
 -rwxr-xr-x	root/root	usr/lib/postfix/oqmgr
 -rwxr-xr-x	root/root	usr/lib/postfix/pickup
 -rwxr-xr-x	root/root	usr/lib/postfix/pipe
 -rwxr-xr-x	root/root	usr/lib/postfix/post-install
--rw-r--r--	root/root	usr/lib/postfix/postfix-files
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-script
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-wrapper
 -rwxr-xr-x	root/root	usr/lib/postfix/postmulti-script
