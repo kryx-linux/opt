@@ -5,11 +5,11 @@
 # Optional: sccache
 
 name=rust
-version=1.29.2
+version=1.32.0
 ##cat src/stage0.txt
-_date=2018-08-02
-_rustc=1.28.0
-_cargo=0.29.0
+_date=2018-12-20
+_rustc=1.31.1
+_cargo=0.32.0
 ##
 
 release=1
@@ -34,8 +34,10 @@ build() {
 
 cat <<- EOF > $SRC/config.toml
 	[llvm]
+	ninja = true
 	targets = "X86"
-	link-shared = true
+	experimental-targets = ""
+#	link-shared = true
 
 	[install]
 	prefix = "/usr"
@@ -44,11 +46,13 @@ cat <<- EOF > $SRC/config.toml
 	channel = "stable"
 	rpath = false
 	codegen-tests = false
+	backtrace-on-ice = true
 
-	[target.x86_64-unknown-linux-gnu]
-	llvm-config = "/usr/bin/llvm-config"
+#	[target.x86_64-unknown-linux-gnu]
+#	llvm-config = "/usr/bin/llvm-config"
 
 	[build]
+	docs = false
 	extended = true
 	python = "python3"
 EOF
@@ -66,8 +70,11 @@ EOF
 	export CARGO_HOME="$PKGMK_SOURCE_DIR"
 
 	export RUSTFLAGS="$RUSTFLAGS -C link-args=-lffi"
-	/usr/bin/python3 ./x.py build --config="${SRC}"/config.toml -j ${JOBS-1}
+	/usr/bin/python3 ./x.py build --config="${SRC}"/config.toml --exclude src/tools/miri -j ${JOBS-1}
+
+	export LIBSSH2_SYS_USE_PKG_CONFIG=1
 	DESTDIR=$PKG /usr/bin/python3 ./x.py --config="${SRC}"/config.toml install
+	unset LIBSSH2_SYS_USE_PKG_CONFIG
 
 	#cleanup
 	rm -r $PKG/usr/share/doc
