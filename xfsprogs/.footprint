@@ -5,8 +5,6 @@ drwxr-xr-x	root/root	sbin/
 -rwxr-xr-x	root/root	sbin/fsck.xfs
 -rwxr-xr-x	root/root	sbin/mkfs.xfs
 -rwxr-xr-x	root/root	sbin/xfs_repair
--rwxr-xr-x	root/root	sbin/xfs_scrub
--rwxr-xr-x	root/root	sbin/xfs_scrub_all
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/xfs/
@@ -43,6 +41,8 @@ drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/xfs_ncheck
 -rwxr-xr-x	root/root	usr/sbin/xfs_quota
 -rwxr-xr-x	root/root	usr/sbin/xfs_rtcp
+-rwxr-xr-x	root/root	usr/sbin/xfs_scrub
+-rwxr-xr-x	root/root	usr/sbin/xfs_scrub_all
 -rwxr-xr-x	root/root	usr/sbin/xfs_spaceman
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
