@@ -1,6 +1,6 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/YhN32DfpemzZbt0aouooLKFFpTn7DZwNyhK8yHTxCuqEmCpdO1wQqupU+tcu8kCZ+5QagbbYdw/mH6kx+DcTAI=
-SHA256 (Pkgfile) = cb7a11d83303262e313fdfd1038ea68ad4aa714678561ecbfb41eabd61cc5548
+RWSE3ohX2g5d/UWKOQrKTNsHck5Ts7XhI4Eq+ubYSxUtu4iIy7pv9QBc8LlVXBauiqi+fsREwZmiFwPJgU9kI9Uk+KVXTC8RIgw=
+SHA256 (Pkgfile) = 7c13f9e0d49a97e8c75eb74dfda34566bed4d160c9fd8e849472f41d0a1682c3
 SHA256 (.footprint) = b592950a75c1fb931e49e42b9f2b27c5eb2e23d5c4a2c24d27a80d1ccdcac054
 SHA256 (grub-2.02.tar.xz) = 810b3798d316394f94096ec2797909dbf23c858e48f7b3830826b8daa06b7b0f
 SHA256 (unifont-9.0.06.pcf.gz) = 6d23e82ea3fd3d79849d675c0c30129b62a3973a83b4cdc05f9994efef773b86
@@ -8,3 +8,4 @@ SHA256 (grub2-00_header.diff) = e4b30c60aa0fa37d48cad2c4e5a53278f1cd5f4ae2df075f
 SHA256 (grub2-10_linux.diff) = 5621b312a199647909a09e94e710bb4fca1a2be687d61e2ce7a3cf529f09d1ef
 SHA256 (grub.cfg.sample) = c2e72228c1dd150f727e8d611d6f14956080ce078651b03eb14fcf65b0917dda
 SHA256 (grub2-intel-ucode.diff) = c20d9f0d207e30c930815bee5b833757da771535ea13436dd94274360f601f0f
+SHA256 (grub2-xfs.patch) = fcd5a626d4af33665d041ce42df813f1f198d8230ea186481b155a5b676f3b87
