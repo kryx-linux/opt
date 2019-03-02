@@ -13,7 +13,7 @@ build() {
     export CFLAGS="${CFLAGS} -Wno-error"
 
     patch -d grub-$version -p1 -i $SRC/grub2-relocation.patch
-	patch -d grub-$version -p1 -i $SRC/grub2-xfs.patch
+    patch -d grub-$version -p1 -i $SRC/grub2-xfs.patch
 
     # fix for glibc 'gets' removal
     sed -i -e '/gets is a/d' grub-$version/grub-core/gnulib/stdio.in.h
