@@ -1,7 +1,7 @@
 # Description: Ruby bindings for SQLite3
-# URL:         http://sqlitebrowser.org
+# URL:         https://github.com/sparklemotion/sqlite3-ruby
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  ruby
+# Depends on:  ruby sqlite3
 
 name=ruby-sqlite3
 version=1.4.0
