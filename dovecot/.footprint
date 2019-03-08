@@ -223,6 +223,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/imap-date.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-envelope.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-expunge.h
+-rw-r--r--	root/root	usr/include/dovecot/imap-feature.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-fetch.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-id.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-keepalive.h
@@ -291,6 +292,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/iostream-rawlog-private.h
 -rw-r--r--	root/root	usr/include/dovecot/iostream-rawlog.h
 -rw-r--r--	root/root	usr/include/dovecot/iostream-ssl-private.h
+-rw-r--r--	root/root	usr/include/dovecot/iostream-ssl-test.h
 -rw-r--r--	root/root	usr/include/dovecot/iostream-ssl.h
 -rw-r--r--	root/root	usr/include/dovecot/iostream-temp.h
 -rw-r--r--	root/root	usr/include/dovecot/iostream.h
@@ -597,6 +599,13 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/strescape.h
 -rw-r--r--	root/root	usr/include/dovecot/strfuncs.h
 -rw-r--r--	root/root	usr/include/dovecot/strnum.h
+-rw-r--r--	root/root	usr/include/dovecot/submission-backend-relay.h
+-rw-r--r--	root/root	usr/include/dovecot/submission-backend.h
+-rw-r--r--	root/root	usr/include/dovecot/submission-client.h
+-rw-r--r--	root/root	usr/include/dovecot/submission-commands.h
+-rw-r--r--	root/root	usr/include/dovecot/submission-common.h
+-rw-r--r--	root/root	usr/include/dovecot/submission-recipient.h
+-rw-r--r--	root/root	usr/include/dovecot/submission-settings.h
 -rw-r--r--	root/root	usr/include/dovecot/subscription-file.h
 -rw-r--r--	root/root	usr/include/dovecot/syslog-util.h
 -rw-r--r--	root/root	usr/include/dovecot/test-common.h
