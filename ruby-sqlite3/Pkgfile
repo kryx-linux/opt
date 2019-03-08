@@ -1,0 +1,19 @@
+# Description: Ruby bindings for SQLite3
+# URL:         http://sqlitebrowser.org
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  ruby
+
+name=ruby-sqlite3
+version=1.4.0
+release=1
+source=(https://github.com/sparklemotion/sqlite3-ruby/archive/v$version/$name-$version.tar.gz)
+
+build () {
+    cd sqlite3-ruby-$version
+    
+    gem install sqlite3 \
+        --ignore-dependencies \
+        --no-user-install \
+        --no-document \
+        --build-root $PKG
+}
