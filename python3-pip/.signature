@@ -1,5 +1,11 @@
 untrusted comment: verify with /etc/ports/opt.pub
+<<<<<<< HEAD
 RWSE3ohX2g5d/YPk5ehw/uOKgxQBg3wjPczC7zuMsct2FcylodE+qgBS9pE8bSPym2yMIgewm+OqhawNDfxwtVlmoiGU5K4j9wc=
 SHA256 (Pkgfile) = 84689b5449b929dae95bbeb2ea0245223877004e481936ec02453ffcd4bf053f
 SHA256 (.footprint) = 5812deaffccff9e79f7d2050a2124aeda38f68243b2830bf430441b41609276b
+=======
+RWSE3ohX2g5d/SrVeUDSpiGOCPf+niocxNUq1APawqSMo3Ms+EFVbA2H7zeYUy+NZml+RrLoDJK4eUstLVkAG6W30OzJqo1ISQk=
+SHA256 (Pkgfile) = 84689b5449b929dae95bbeb2ea0245223877004e481936ec02453ffcd4bf053f
+SHA256 (.footprint) = 8a2548f2c0427177830ec9792eee2c108005ebc197f39aadeed32f816c3bf907
+>>>>>>> python3-pip: footprint update new python
 SHA256 (pip-19.0.3.tar.gz) = 6e6f197a1abfb45118dbb878b5c859a0edbdd33fd250100bc015b67fded4b9f2
