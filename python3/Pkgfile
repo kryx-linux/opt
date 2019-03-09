@@ -4,7 +4,7 @@
 # Depends on: bzip2 expat gdbm libffi libtirpc mpdecimal sqlite3 xz
 
 name=python3
-version=3.6.7
+version=3.7.2
 release=1
 source=(https://www.python.org/ftp/python/$version/Python-$version.tar.xz)
 
@@ -13,7 +13,6 @@ build() {
 
     # Ensure that we are using the system copy of various libraries
     rm -r Modules/expat
-    rm -r Modules/zlib
     rm -r Modules/_ctypes/{darwin,libffi}*
     rm -r Modules/_decimal/libmpdec
 
