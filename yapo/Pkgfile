@@ -1,7 +1,7 @@
 # Description: yapo - Yet Another Ports Overview
 # URL:         http://jue.li/crux/yapo
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  prt-get, ncurses-ruby
+# Depends on:  prt-get ruby-ncurses
 
 name=yapo
 version=0.3.2
