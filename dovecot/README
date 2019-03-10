@@ -3,12 +3,12 @@ README for dovecot 2.x
 REQUIREMENTS
 
 PRE-INSTALL
-   Create two users dovecot/dovenull and one group dovecot with a 
-   unused id < 99:
+   Create two system users dovecot/dovenull and one system group
+   dovecot with unused id < 99:
 
-   'groupadd -g 26 dovecot'
-   'useradd -g dovecot -u 26 -d /var/run/dovecot -s /bin/false dovecot'
-   'useradd -g dovecot -u 27 -d /var/run/dovecot -s /bin/false dovenull'
+   'groupadd -r dovecot'
+   'useradd -r -g dovecot -d /var/run/dovecot -s /bin/false dovecot'
+   'useradd -r -g dovecot -d /var/run/dovecot -s /bin/false dovenull'
    'passwd -l dovecot'
    'passwd -l dovenull'
 

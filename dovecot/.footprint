@@ -31,13 +31,15 @@ drwxr-xr-x	root/root	etc/dovecot/conf.d/
 -rw-r--r--	root/root	etc/dovecot/dovecot-ldap.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-sql.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot.conf
+drwxr-xr-x	root/root	etc/pam.d/
+-rw-r--r--	root/root	etc/pam.d/dovecot
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/dovecot
 drwxr-xr-x	root/root	etc/ssl/
 drwxr-xr-x	root/root	etc/ssl/certs/
--rw-------	root/root	etc/ssl/certs/dovecot.crt (EMPTY)
-drwxr-xr-x	root/root	etc/ssl/keys/
--rw-------	root/root	etc/ssl/keys/dovecot.key (EMPTY)
+-rw-------	root/root	etc/ssl/certs/dovecot.pem (EMPTY)
+drwxr-xr-x	root/root	etc/ssl/private/
+-rw-------	root/root	etc/ssl/private/dovecot.pem (EMPTY)
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/doveadm
