@@ -24,8 +24,6 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/compiler/csharp/
 drwxr-xr-x	root/root	usr/include/google/protobuf/compiler/java/
 -rw-r--r--	root/root	usr/include/google/protobuf/compiler/java/java_generator.h
 -rw-r--r--	root/root	usr/include/google/protobuf/compiler/java/java_names.h
-drwxr-xr-x	root/root	usr/include/google/protobuf/compiler/javanano/
--rw-r--r--	root/root	usr/include/google/protobuf/compiler/javanano/javanano_generator.h
 drwxr-xr-x	root/root	usr/include/google/protobuf/compiler/js/
 -rw-r--r--	root/root	usr/include/google/protobuf/compiler/js/js_generator.h
 -rw-r--r--	root/root	usr/include/google/protobuf/compiler/js/well_known_types_embed.h
@@ -52,6 +50,7 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/compiler/ruby/
 -rw-r--r--	root/root	usr/include/google/protobuf/empty.pb.h
 -rw-r--r--	root/root	usr/include/google/protobuf/empty.proto
 -rw-r--r--	root/root	usr/include/google/protobuf/extension_set.h
+-rw-r--r--	root/root	usr/include/google/protobuf/extension_set_inl.h
 -rw-r--r--	root/root	usr/include/google/protobuf/field_mask.pb.h
 -rw-r--r--	root/root	usr/include/google/protobuf/field_mask.proto
 -rw-r--r--	root/root	usr/include/google/protobuf/generated_enum_reflection.h
@@ -60,6 +59,8 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/compiler/ruby/
 -rw-r--r--	root/root	usr/include/google/protobuf/generated_message_table_driven.h
 -rw-r--r--	root/root	usr/include/google/protobuf/generated_message_util.h
 -rw-r--r--	root/root	usr/include/google/protobuf/has_bits.h
+-rw-r--r--	root/root	usr/include/google/protobuf/implicit_weak_message.h
+-rw-r--r--	root/root	usr/include/google/protobuf/inlined_string_field.h
 drwxr-xr-x	root/root	usr/include/google/protobuf/io/
 -rw-r--r--	root/root	usr/include/google/protobuf/io/coded_stream.h
 -rw-r--r--	root/root	usr/include/google/protobuf/io/gzip_stream.h
@@ -80,6 +81,10 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/io/
 -rw-r--r--	root/root	usr/include/google/protobuf/message_lite.h
 -rw-r--r--	root/root	usr/include/google/protobuf/metadata.h
 -rw-r--r--	root/root	usr/include/google/protobuf/metadata_lite.h
+-rw-r--r--	root/root	usr/include/google/protobuf/parse_context.h
+-rw-r--r--	root/root	usr/include/google/protobuf/port.h
+-rw-r--r--	root/root	usr/include/google/protobuf/port_def.inc
+-rw-r--r--	root/root	usr/include/google/protobuf/port_undef.inc
 -rw-r--r--	root/root	usr/include/google/protobuf/reflection.h
 -rw-r--r--	root/root	usr/include/google/protobuf/reflection_ops.h
 -rw-r--r--	root/root	usr/include/google/protobuf/repeated_field.h
@@ -89,21 +94,6 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/io/
 -rw-r--r--	root/root	usr/include/google/protobuf/struct.pb.h
 -rw-r--r--	root/root	usr/include/google/protobuf/struct.proto
 drwxr-xr-x	root/root	usr/include/google/protobuf/stubs/
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomic_sequence_num.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_arm64_gcc.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_arm_gcc.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_arm_qnx.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_atomicword_compat.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_generic_c11_atomic.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_generic_gcc.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_mips_gcc.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_power.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_ppc_gcc.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_solaris.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_tsan.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/atomicops_internals_x86_msvc.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/bytestream.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/callback.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/casts.h
@@ -116,14 +106,11 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/stubs/
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/once.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/platform_macros.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/port.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/scoped_ptr.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/shared_ptr.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/singleton.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/status.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/stl_util.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/stringpiece.h
+-rw-r--r--	root/root	usr/include/google/protobuf/stubs/strutil.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/template_util.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/type_traits.h
 -rw-r--r--	root/root	usr/include/google/protobuf/text_format.h
 -rw-r--r--	root/root	usr/include/google/protobuf/timestamp.pb.h
 -rw-r--r--	root/root	usr/include/google/protobuf/timestamp.proto
@@ -147,19 +134,19 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/util/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libprotobuf-lite.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.14.0.0
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.14 -> libprotobuf-lite.so.14.0.0
--rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.14.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.18.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.18 -> libprotobuf-lite.so.18.0.0
+-rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.18.0.0
 -rw-r--r--	root/root	usr/lib/libprotobuf.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.14.0.0
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.14 -> libprotobuf.so.14.0.0
--rwxr-xr-x	root/root	usr/lib/libprotobuf.so.14.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.18.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.18 -> libprotobuf.so.18.0.0
+-rwxr-xr-x	root/root	usr/lib/libprotobuf.so.18.0.0
 -rw-r--r--	root/root	usr/lib/libprotoc.a
 -rwxr-xr-x	root/root	usr/lib/libprotoc.la
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.14.0.0
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so.14 -> libprotoc.so.14.0.0
--rwxr-xr-x	root/root	usr/lib/libprotoc.so.14.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.18.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so.18 -> libprotoc.so.18.0.0
+-rwxr-xr-x	root/root	usr/lib/libprotoc.so.18.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf-lite.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf.pc
