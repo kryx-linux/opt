@@ -7,7 +7,7 @@ name=pure-ftpd
 version=1.0.47
 release=1
 source=(http://download.pureftpd.org/$name/releases/$name-$version.tar.bz2 \
-        pure-ftpd pure-ftpd.conf)
+        pure-ftpd.rc pure-ftpd.pam)
 
 build () {
     cd $name-$version
@@ -16,15 +16,16 @@ build () {
                 --with-certfile=/etc/ssl/certs/pure-ftpd.pem \
                 --with-everything \
                 --with-tls \
-                --without-pam
+                --with-pam
     make
     make DESTDIR=$PKG install
 
-    install -d $PKG/{var/log,etc/{rc.d,ssl/certs}}
-    touch $PKG/var/log/pure-ftpd.log
+    install -d $PKG/etc/ssl/certs
     touch $PKG/etc/ssl/certs/pure-ftpd.pem
     chmod 0600 $PKG/etc/ssl/certs/pure-ftpd.pem
 
-    install -m 755 $SRC/pure-ftpd $PKG/etc/rc.d
-    install -m 644 $SRC/pure-ftpd.conf $PKG/etc
+    install -D -m 755 $SRC/pure-ftpd.rc $PKG/etc/rc.d/pure-ftpd
+    install -D -m 644 $SRC/pure-ftpd.pam $PKG/etc/pam.d/pure-ftpd
+    install -m 644 pam/ftpusers $PKG/etc/
+    install -m 644 pure-ftpd.conf $PKG/etc/
 }

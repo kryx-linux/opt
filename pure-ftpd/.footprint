@@ -1,4 +1,7 @@
 drwxr-xr-x	root/root	etc/
+-rw-r--r--	root/root	etc/ftpusers
+drwxr-xr-x	root/root	etc/pam.d/
+-rw-r--r--	root/root	etc/pam.d/pure-ftpd
 -rw-r--r--	root/root	etc/pure-ftpd.conf
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/pure-ftpd
@@ -29,6 +32,3 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/pure-quotacheck.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/pure-statsdecode.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/pure-uploadscript.8.gz
-drwxr-xr-x	root/root	var/
-drwxr-xr-x	root/root	var/log/
--rw-r--r--	root/root	var/log/pure-ftpd.log (EMPTY)
