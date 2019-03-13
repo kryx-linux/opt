@@ -1,25 +1,29 @@
 # Description: Small and secure SSH2 server and client
 # URL:         http://matt.ucc.asn.au/dropbear/dropbear.html
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  zlib
+# Depends on:  zlib linux-pam
 
 name=dropbear
 version=2018.76
-release=2
+release=3
 source=(http://matt.ucc.asn.au/$name/releases/$name-$version.tar.bz2 \
-        $name CVE-2018-15599.diff)
+        dropbear.rc dropbear.pam CVE-2018-15599.diff)
 
 build () {
     cd $name-$version
 
     patch -p1 -i $SRC/CVE-2018-15599.diff
 
+    sed '/pam_start/s/sshd/dropbear/' -i svr-authpam.c
     echo '#define SFTPSERVER_PATH "/usr/lib/ssh/sftp-server"' > localoptions.h
+    echo '#define DROPBEAR_SVR_PASSWORD_AUTH 0' >> localoptions.h
+    echo '#define DROPBEAR_SVR_PAM_AUTH 1' >> localoptions.h
 
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --enable-pam
     make
     make DESTDIR=$PKG install
 
-    install -d $PKG/etc/{rc.d,dropbear}/
-    install -D -m 755 $SRC/dropbear $PKG/etc/rc.d/
+    install -d $PKG/etc/{rc.d,pam.d,dropbear}
+    install -m 755 $SRC/dropbear.rc $PKG/etc/rc.d/dropbear
+    install -m 644 $SRC/dropbear.pam $PKG/etc/pam.d/dropbear
 }
