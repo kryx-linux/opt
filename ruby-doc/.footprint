@@ -2197,7 +2197,6 @@ drwxr-xr-x	root/root	usr/share/ri/2.5/system/Gem/BundlerVersionFinder/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/BundlerVersionFinder/lockfile_contents-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/BundlerVersionFinder/lockfile_version-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/BundlerVersionFinder/missing_version_message-c.ri
--rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/BundlerVersionFinder/without_filtering-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.5/system/Gem/Command/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Command/add_common_option-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Command/add_extra_args-i.ri
@@ -2752,7 +2751,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.5/system/Gem/Installer/FakePackage/
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Installer/spec-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Installer/spec_file-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Installer/unpack-i.ri
--rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Installer/verify_spec_name-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Installer/verify_spec-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Installer/windows_stub_script-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Installer/wrappers-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.5/system/Gem/Installer/write_build_info_file-i.ri
