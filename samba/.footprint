@@ -288,8 +288,8 @@ lrwxrwxrwx	root/root	usr/lib/samba/libkrb5-samba4.so.26 -> libkrb5-samba4.so.26.
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5samba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libldb-cmdline-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libldb-key-value-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.4.3
--rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.4.3
+lrwxrwxrwx	root/root	usr/lib/samba/libldb.so.1 -> libldb.so.1.4.6
+-rwxr-xr-x	root/root	usr/lib/samba/libldb.so.1.4.6
 -rwxr-xr-x	root/root	usr/lib/samba/libldbsamba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli-lsa3-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli-netlogon3-samba4.so
@@ -366,6 +366,7 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/fileid.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/fruit.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/full_audit.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/glusterfs_fuse.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/linux_xfs_sgid.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/media_harmony.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/netatalk.so
@@ -470,6 +471,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/vfs_fruit.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_full_audit.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_glusterfs.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/vfs_glusterfs_fuse.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_gpfs.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_linux_xfs_sgid.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_media_harmony.8.gz
