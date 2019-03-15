@@ -18,6 +18,7 @@ drwxr-xr-x	root/root	usr/include/webkitgtk-4.0/jsc/
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/jsc/JSCContext.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/jsc/JSCDefines.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/jsc/JSCException.h
+-rw-r--r--	root/root	usr/include/webkitgtk-4.0/jsc/JSCOptions.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/jsc/JSCValue.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/jsc/JSCVersion.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/jsc/JSCVirtualMachine.h
@@ -38,6 +39,7 @@ drwxr-xr-x	root/root	usr/include/webkitgtk-4.0/webkit2/
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitCookieManager.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitCredential.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitDefines.h
+-rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitDeviceInfoPermissionRequest.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitDownload.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitEditingCommands.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitEditorState.h
@@ -75,7 +77,9 @@ drwxr-xr-x	root/root	usr/include/webkitgtk-4.0/webkit2/
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitURIRequest.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitURIResponse.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitURISchemeRequest.h
+-rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitURIUtilities.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitUserContent.h
+-rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitUserContentFilterStore.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitUserContentManager.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitUserMediaPermissionRequest.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitVersion.h
@@ -216,11 +220,11 @@ drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/WebKit2-4.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lrwxrwxrwx	root/root	usr/lib/libjavascriptcoregtk-4.0.so -> libjavascriptcoregtk-4.0.so.18
-lrwxrwxrwx	root/root	usr/lib/libjavascriptcoregtk-4.0.so.18 -> libjavascriptcoregtk-4.0.so.18.11.8
--rwxr-xr-x	root/root	usr/lib/libjavascriptcoregtk-4.0.so.18.11.8
+lrwxrwxrwx	root/root	usr/lib/libjavascriptcoregtk-4.0.so.18 -> libjavascriptcoregtk-4.0.so.18.13.3
+-rwxr-xr-x	root/root	usr/lib/libjavascriptcoregtk-4.0.so.18.13.3
 lrwxrwxrwx	root/root	usr/lib/libwebkit2gtk-4.0.so -> libwebkit2gtk-4.0.so.37
-lrwxrwxrwx	root/root	usr/lib/libwebkit2gtk-4.0.so.37 -> libwebkit2gtk-4.0.so.37.33.8
--rwxr-xr-x	root/root	usr/lib/libwebkit2gtk-4.0.so.37.33.8
+lrwxrwxrwx	root/root	usr/lib/libwebkit2gtk-4.0.so.37 -> libwebkit2gtk-4.0.so.37.37.2
+-rwxr-xr-x	root/root	usr/lib/libwebkit2gtk-4.0.so.37.37.2
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/javascriptcoregtk-4.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/webkit2gtk-4.0.pc
@@ -230,7 +234,6 @@ drwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/WebKitNetworkProcess
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/WebKitPluginProcess
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/WebKitPluginProcess2
--rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/WebKitStorageProcess
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/WebKitWebProcess
 drwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/injected-bundle/
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
