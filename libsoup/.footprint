@@ -64,14 +64,10 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Soup-2.4.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/SoupGNOME-2.4.typelib
--rw-r--r--	root/root	usr/lib/libsoup-2.4.a
--rwxr-xr-x	root/root	usr/lib/libsoup-2.4.la
-lrwxrwxrwx	root/root	usr/lib/libsoup-2.4.so -> libsoup-2.4.so.1.8.0
+lrwxrwxrwx	root/root	usr/lib/libsoup-2.4.so -> libsoup-2.4.so.1
 lrwxrwxrwx	root/root	usr/lib/libsoup-2.4.so.1 -> libsoup-2.4.so.1.8.0
 -rwxr-xr-x	root/root	usr/lib/libsoup-2.4.so.1.8.0
--rw-r--r--	root/root	usr/lib/libsoup-gnome-2.4.a
--rwxr-xr-x	root/root	usr/lib/libsoup-gnome-2.4.la
-lrwxrwxrwx	root/root	usr/lib/libsoup-gnome-2.4.so -> libsoup-gnome-2.4.so.1.8.0
+lrwxrwxrwx	root/root	usr/lib/libsoup-gnome-2.4.so -> libsoup-gnome-2.4.so.1
 lrwxrwxrwx	root/root	usr/lib/libsoup-gnome-2.4.so.1 -> libsoup-gnome-2.4.so.1.8.0
 -rwxr-xr-x	root/root	usr/lib/libsoup-gnome-2.4.so.1.8.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
