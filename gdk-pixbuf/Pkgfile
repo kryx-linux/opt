@@ -1,31 +1,25 @@
 # Description: An image loading library for GTK+
 # URL: http://www.gtk.org/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: gobject-introspection shared-mime-info libpng libtiff xorg-libx11
+# Depends on: gobject-introspection shared-mime-info libpng libtiff xorg-libx11 meson ninja
 
 name=gdk-pixbuf
-version=2.36.12
+version=2.38.1
 release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
         gdk-pixbuf.loaders gdk-pixbuf-register.sh)
 
 build () {
-    cd $name-$version
+	cd $name-$version
 
-    ./configure --prefix=/usr \
-                --disable-nls \
-                --without-libjasper \
-                --with-x11
-    make
-    make DESTDIR=$PKG install
+        meson build --prefix=/usr \
+		-Dinstalled_tests=false
 
-    install -m 644 $SRC/gdk-pixbuf.loaders \
-            $PKG/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
-    install -m 755 $SRC/gdk-pixbuf-register.sh \
-            $PKG/usr/bin/gdk-pixbuf-register
-    rm -r $PKG/usr/share/gtk-doc
+        DESTDIR=$PKG ninja -C build -j ${JOBS:-1} install
 
-    # remove blank man pages if not generated with gtk-doc
-    find $PKG/usr/share/man -type f -size -256 -delete
-    find $PKG -type d -empty -delete
+	install -m 644 $SRC/gdk-pixbuf.loaders \
+		$PKG/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+	install -m 755 $SRC/gdk-pixbuf-register.sh \
+		$PKG/usr/bin/gdk-pixbuf-register
+	rm -r $PKG/usr/share/locale
 }
