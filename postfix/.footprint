@@ -50,6 +50,7 @@ drwxr-xr-x	root/root	usr/lib/postfix/
 -rwxr-xr-x	root/root	usr/lib/postfix/pipe
 -rwxr-xr-x	root/root	usr/lib/postfix/post-install
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-script
+-rwxr-xr-x	root/root	usr/lib/postfix/postfix-tls-script
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-wrapper
 -rwxr-xr-x	root/root	usr/lib/postfix/postmulti-script
 -rwxr-xr-x	root/root	usr/lib/postfix/postscreen
@@ -89,6 +90,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/postcat.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postconf.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postdrop.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/postfix-tls.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postfix.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postkick.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postlock.1.gz
