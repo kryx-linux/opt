@@ -1,6 +1,7 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/function_grep.pl
+-rwxr-xr-x	root/root	usr/bin/msidb
 -rwxr-xr-x	root/root	usr/bin/msiexec
 -rwxr-xr-x	root/root	usr/bin/notepad
 -rwxr-xr-x	root/root	usr/bin/regedit
@@ -95,6 +96,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/advpub.h
 -rw-r--r--	root/root	usr/include/wine/windows/af_irda.h
 -rw-r--r--	root/root	usr/include/wine/windows/amaudio.h
+-rw-r--r--	root/root	usr/include/wine/windows/amsi.h
+-rw-r--r--	root/root	usr/include/wine/windows/amsi.idl
 -rw-r--r--	root/root	usr/include/wine/windows/amstream.h
 -rw-r--r--	root/root	usr/include/wine/windows/amstream.idl
 -rw-r--r--	root/root	usr/include/wine/windows/amvideo.h
@@ -997,6 +1000,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/adsldpc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/advapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/advpack.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/amsi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/amstream.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-appmodel-identity-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-appmodel-runtime-l1-1-1.dll.so
@@ -1430,6 +1434,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/adsldpc.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/advapi32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/advpack.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/amsi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/amstream.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-appmodel-identity-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-appmodel-runtime-l1-1-1.dll
@@ -1960,6 +1965,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mshtml.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mshtml.tlb
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msi.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/msidb.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msident.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msiexec.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msimg32.dll
@@ -2554,6 +2560,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/mshtml.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mshtml.tlb.so
 -rwxr-xr-x	root/root	usr/lib/wine/msi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/msidb.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/msident.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msiexec.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/msimg32.dll.so
@@ -2863,6 +2870,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/adsldpc.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/advapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/advpack.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/amsi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/amstream.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-appmodel-identity-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-appmodel-runtime-l1-1-1.dll.so
@@ -3305,6 +3313,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/adsldpc.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/advapi32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/advpack.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/amsi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/amstream.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-appmodel-identity-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-appmodel-runtime-l1-1-1.dll
@@ -3855,6 +3864,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mshtml.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mshtml.tlb
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msi.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/msidb.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msident.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msiexec.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msimg32.dll
@@ -4505,6 +4515,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/mshtml.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mshtml.tlb.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msi.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/msidb.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msident.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msiexec.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msimg32.dll.so
