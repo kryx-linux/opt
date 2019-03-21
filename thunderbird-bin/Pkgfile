@@ -5,7 +5,7 @@
 
 name=thunderbird-bin
 version=60.6.0
-release=1
+release=2
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-x86_64/en-US/thunderbird-$version.tar.bz2)
 
 build() {
@@ -16,6 +16,6 @@ build() {
 	ln -s /usr/lib/thunderbird/thunderbird $PKG/usr/bin/thunderbird
 
         mkdir -p $PKG/etc/revdep.d
-        echo "/usr/lib/thunderbird/lib" > $PKG/etc/revdep.d/thunderbird-bin
+        echo "/usr/lib/thunderbird" > $PKG/etc/revdep.d/thunderbird-bin
 
 }
