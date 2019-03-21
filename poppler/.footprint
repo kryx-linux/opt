@@ -1,5 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/pdfattach
 -rwxr-xr-x	root/root	usr/bin/pdfdetach
 -rwxr-xr-x	root/root	usr/bin/pdffonts
 -rwxr-xr-x	root/root	usr/bin/pdfimages
@@ -152,9 +153,9 @@ drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so -> libpoppler-cpp.so.0
 lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so.0 -> libpoppler-cpp.so.0.7.0
 -rwxr-xr-x	root/root	usr/lib/libpoppler-cpp.so.0.7.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.85
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so.85 -> libpoppler.so.85.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler.so.85.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.86
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so.86 -> libpoppler.so.86.0.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler.so.86.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cairo.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cpp.pc
@@ -163,6 +164,7 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/pdfattach.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pdfdetach.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pdffonts.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pdfimages.1.gz
