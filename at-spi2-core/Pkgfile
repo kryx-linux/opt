@@ -5,11 +5,14 @@
 
 name=at-spi2-core
 version=2.32.0
-release=1
-source=(http://ftp.gnome.org/pub/gnome/sources/at-spi2-core/${version:0:4}/at-spi2-core-$version.tar.xz)
+release=2
+source=(http://ftp.gnome.org/pub/gnome/sources/at-spi2-core/${version:0:4}/at-spi2-core-$version.tar.xz \
+	at-spi2-core-meson.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/at-spi2-core-meson.patch
 
 	meson build --prefix /usr --sysconfdir=/usr/etc --libexecdir=/usr/lib/at-spi2
 
