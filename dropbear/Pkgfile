@@ -4,15 +4,15 @@
 # Depends on:  zlib linux-pam
 
 name=dropbear
-version=2018.76
-release=3
+version=2019.77
+release=2
 source=(http://matt.ucc.asn.au/$name/releases/$name-$version.tar.bz2 \
-        dropbear.rc dropbear.pam CVE-2018-15599.diff)
+        dropbear.rc reset-tty-modes.patch dropbear.pam)
 
 build () {
     cd $name-$version
 
-    patch -p1 -i $SRC/CVE-2018-15599.diff
+    patch -p1 -i $SRC/reset-tty-modes.patch
 
     sed '/pam_start/s/sshd/dropbear/' -i svr-authpam.c
     echo '#define SFTPSERVER_PATH "/usr/lib/ssh/sftp-server"' > localoptions.h
