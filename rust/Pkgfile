@@ -5,11 +5,11 @@
 # Optional: sccache
 
 name=rust
-version=1.32.0
+version=1.33.0
 ##cat src/stage0.txt
-_date=2018-12-20
-_rustc=1.31.1
-_cargo=0.32.0
+_date=2019-01-17
+_rustc=1.32.0
+_cargo=0.33.0
 ##
 
 release=1
