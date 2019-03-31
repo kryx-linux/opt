@@ -1932,6 +1932,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mciwave.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mf.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mf3216.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/mferror.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mfplat.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mfplay.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mfreadwrite.dll
@@ -2420,7 +2421,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libmsvcr71.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcr80.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvcr90.def
--rw-r--r--	root/root	usr/lib/wine/libmsvcrt.def
+-rw-r--r--	root/root	usr/lib/wine/libmsvcrt.a
 -rw-r--r--	root/root	usr/lib/wine/libmsvcrtd.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvfw32.def
 -rw-r--r--	root/root	usr/lib/wine/libmswsock.def
@@ -2527,6 +2528,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/mciwave.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mf.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mf3216.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/mferror.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mfplat.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mfplay.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mfreadwrite.dll.so
@@ -3826,6 +3828,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mciwave.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mf.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mf3216.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/mferror.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mfplat.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mfplay.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mfreadwrite.dll
@@ -4368,7 +4371,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcr71.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcr80.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcr90.def
--rw-r--r--	root/root	usr/lib32/wine/libmsvcrt.def
+-rw-r--r--	root/root	usr/lib32/wine/libmsvcrt.a
 -rw-r--r--	root/root	usr/lib32/wine/libmsvcrtd.def
 -rw-r--r--	root/root	usr/lib32/wine/libmsvfw32.def
 -rw-r--r--	root/root	usr/lib32/wine/libmswsock.def
@@ -4477,6 +4480,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/mciwave.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mf.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mf3216.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/mferror.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mfplat.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mfplay.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mfreadwrite.dll.so

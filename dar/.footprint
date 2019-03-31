@@ -38,6 +38,7 @@ drwxr-xr-x	root/root	usr/include/dar/
 -rw-r--r--	root/root	usr/include/dar/database_options.hpp
 -rw-r--r--	root/root	usr/include/dar/datetime.hpp
 -rw-r--r--	root/root	usr/include/dar/deci.hpp
+-rw-r--r--	root/root	usr/include/dar/delta_sig_block_size.hpp
 -rw-r--r--	root/root	usr/include/dar/ea.hpp
 -rw-r--r--	root/root	usr/include/dar/entree_stats.hpp
 -rw-r--r--	root/root	usr/include/dar/entrepot.hpp
@@ -92,9 +93,9 @@ drwxr-xr-x	root/root	usr/include/dar/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdar64.a
 -rwxr-xr-x	root/root	usr/lib/libdar64.la
-lrwxrwxrwx	root/root	usr/lib/libdar64.so -> libdar64.so.6000.0.2
-lrwxrwxrwx	root/root	usr/lib/libdar64.so.6000 -> libdar64.so.6000.0.2
--rwxr-xr-x	root/root	usr/lib/libdar64.so.6000.0.2
+lrwxrwxrwx	root/root	usr/lib/libdar64.so -> libdar64.so.6000.1.0
+lrwxrwxrwx	root/root	usr/lib/libdar64.so.6000 -> libdar64.so.6000.1.0
+-rwxr-xr-x	root/root	usr/lib/libdar64.so.6000.1.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libdar64.pc
 drwxr-xr-x	root/root	usr/share/
