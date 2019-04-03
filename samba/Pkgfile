@@ -1,10 +1,10 @@
 # Description: SMB server and client for unix
 # URL:         http://www.samba.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libarchive libcap popt tdb tevent
+# Depends on:  linux-pam libarchive libcap popt tdb tevent ldb python3
 
 name=samba
-version=4.9.5
+version=4.10.1
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
@@ -18,10 +18,9 @@ build () {
                 --localstatedir=/var \
                 --sysconfdir=/etc \
                 --with-privatedir=/etc/samba/private \
-                --bundled-libraries=!tdb,!talloc,!tevent,!popt \
-                --without-{ad-dc,ads,ldap,pam} \
-                --without-json-audit \
-                --disable-{python,gnutls}
+                --bundled-libraries=!tdb,!talloc,!tevent,!popt,!ldb \
+                --without-{ad-dc,ads,ldap} \
+                --without-json
 
     python ./buildtools/bin/waf build --jobs=${JOBS:-1}
     python ./buildtools/bin/waf install --destdir=$PKG
