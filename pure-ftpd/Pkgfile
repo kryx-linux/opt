@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=pure-ftpd
-version=1.0.48
+version=1.0.49
 release=1
 source=(http://download.pureftpd.org/$name/releases/$name-$version.tar.bz2 \
         pure-ftpd.rc pure-ftpd.pam)

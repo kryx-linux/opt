@@ -26,8 +26,7 @@ build () {
                 --without-rcdir \
                 --with-optim="$CFLAGS" \
                 --enable-acl \
-                --disable-{pam,dbus,avahi,systemd} \
-                --disable-{gnutls,gssapi}
+                --disable-{gnutls,gssapi,systemd}
 
     make
     make BUILDROOT=$PKG install
