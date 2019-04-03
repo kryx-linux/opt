@@ -20,26 +20,27 @@ drwxr-xr-x	root/root	usr/lib/ldb/
 -rwxr-xr-x	root/root	usr/lib/ldb/libcmocka-ldb.so
 -rwxr-xr-x	root/root	usr/lib/ldb/libldb-cmdline.so
 -rwxr-xr-x	root/root	usr/lib/ldb/libldb-key-value.so
--rwxr-xr-x	root/root	usr/lib/ldb/paged_results.so
+-rwxr-xr-x	root/root	usr/lib/ldb/libldb-tdb-err-map.so
+-rwxr-xr-x	root/root	usr/lib/ldb/libldb-tdb-int.so
 -rwxr-xr-x	root/root	usr/lib/ldb/paged_searches.so
 -rwxr-xr-x	root/root	usr/lib/ldb/rdn_name.so
 -rwxr-xr-x	root/root	usr/lib/ldb/sample.so
 -rwxr-xr-x	root/root	usr/lib/ldb/server_sort.so
 -rwxr-xr-x	root/root	usr/lib/ldb/skel.so
 -rwxr-xr-x	root/root	usr/lib/ldb/tdb.so
-lrwxrwxrwx	root/root	usr/lib/libldb.so -> libldb.so.1.4.3
-lrwxrwxrwx	root/root	usr/lib/libldb.so.1 -> libldb.so.1.4.3
--rwxr-xr-x	root/root	usr/lib/libldb.so.1.4.3
-lrwxrwxrwx	root/root	usr/lib/libpyldb-util.so -> libpyldb-util.so.1.4.3
-lrwxrwxrwx	root/root	usr/lib/libpyldb-util.so.1 -> libpyldb-util.so.1.4.3
--rwxr-xr-x	root/root	usr/lib/libpyldb-util.so.1.4.3
+lrwxrwxrwx	root/root	usr/lib/libldb.so -> libldb.so.1.5.4
+lrwxrwxrwx	root/root	usr/lib/libldb.so.1 -> libldb.so.1.5.4
+-rwxr-xr-x	root/root	usr/lib/libldb.so.1.5.4
+lrwxrwxrwx	root/root	usr/lib/libpyldb-util.cpython-37m-x86-64-linux-gnu.so -> libpyldb-util.cpython-37m-x86-64-linux-gnu.so.1.5.4
+lrwxrwxrwx	root/root	usr/lib/libpyldb-util.cpython-37m-x86-64-linux-gnu.so.1 -> libpyldb-util.cpython-37m-x86-64-linux-gnu.so.1.5.4
+-rwxr-xr-x	root/root	usr/lib/libpyldb-util.cpython-37m-x86-64-linux-gnu.so.1.5.4
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ldb.pc
--rw-r--r--	root/root	usr/lib/pkgconfig/pyldb-util.pc
-drwxr-xr-x	root/root	usr/lib/python2.7/
-drwxr-xr-x	root/root	usr/lib/python2.7/site-packages/
--rw-r--r--	root/root	usr/lib/python2.7/site-packages/_ldb_text.py
--rwxr-xr-x	root/root	usr/lib/python2.7/site-packages/ldb.so
+-rw-r--r--	root/root	usr/lib/pkgconfig/pyldb-util.cpython-37m-x86_64-linux-gnu.pc
+drwxr-xr-x	root/root	usr/lib/python3.7/
+drwxr-xr-x	root/root	usr/lib/python3.7/site-packages/
+-rw-r--r--	root/root	usr/lib/python3.7/site-packages/_ldb_text.py
+-rwxr-xr-x	root/root	usr/lib/python3.7/site-packages/ldb.cpython-37m-x86_64-linux-gnu.so
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
