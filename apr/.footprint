@@ -16,6 +16,7 @@ drwxr-xr-x	root/root	usr/include/apr-1/
 -rw-r--r--	root/root	usr/include/apr-1/apr_dbd.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_dbm.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_dso.h
+-rw-r--r--	root/root	usr/include/apr-1/apr_encode.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_env.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_errno.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_escape.h
@@ -82,9 +83,9 @@ drwxr-xr-x	root/root	usr/include/apr-1/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libapr-1.a
 -rwxr-xr-x	root/root	usr/lib/libapr-1.la
-lrwxrwxrwx	root/root	usr/lib/libapr-1.so -> libapr-1.so.0.6.5
-lrwxrwxrwx	root/root	usr/lib/libapr-1.so.0 -> libapr-1.so.0.6.5
--rwxr-xr-x	root/root	usr/lib/libapr-1.so.0.6.5
+lrwxrwxrwx	root/root	usr/lib/libapr-1.so -> libapr-1.so.0.7.0
+lrwxrwxrwx	root/root	usr/lib/libapr-1.so.0 -> libapr-1.so.0.7.0
+-rwxr-xr-x	root/root	usr/lib/libapr-1.so.0.7.0
 -rw-r--r--	root/root	usr/lib/libaprutil-1.a
 -rwxr-xr-x	root/root	usr/lib/libaprutil-1.la
 lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so -> libaprutil-1.so.0.6.1
@@ -95,9 +96,7 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/apr-util-1.pc
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/apr-1/
--rw-r--r--	root/root	usr/share/apr-1/apr_common.m4
 -rw-r--r--	root/root	usr/share/apr-1/apr_rules.mk
--rw-r--r--	root/root	usr/share/apr-1/find_apr.m4
 -rwxr-xr-x	root/root	usr/share/apr-1/libtool
 -rw-r--r--	root/root	usr/share/apr-1/make_exports.awk
 -rw-r--r--	root/root	usr/share/apr-1/make_var_export.awk
