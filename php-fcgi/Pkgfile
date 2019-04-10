@@ -4,7 +4,7 @@
 # Depends on:  libpcre libxml2
 
 name=php-fcgi
-version=7.2.17
+version=7.3.4
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz
         php-fcgi)
@@ -20,6 +20,7 @@ build () {
     --with-pcre-regex=/usr \
     --disable-static --disable-debug \
     --without-sqlite3 --without-pdo-sqlite \
+    --without-libzip \
     --without-pear"
 
     EXTENSION_DIR=/usr/lib/php/extensions \

@@ -1,10 +1,10 @@
 # Description: PHP interpreter, extension modules and support stuff
 # URL:         http://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libpcre libxml2 curl db gdbm
+# Depends on:  libpcre2 libxml2 curl db gdbm
 
 name=php
-version=7.2.17
+version=7.3.4
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
@@ -21,6 +21,7 @@ build () {
     --with-pcre-regex=/usr \
     --disable-static --disable-debug \
     --without-sqlite3 --without-pdo-sqlite \
+    --without-libzip \
     --without-pear"
 
     local PHP_SHARED="

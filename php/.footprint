@@ -38,6 +38,7 @@ drwxr-xr-x	root/root	usr/include/php/Zend/
 -rw-r--r--	root/root	usr/include/php/Zend/zend_config.nw.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_config.w32.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_constants.h
+-rw-r--r--	root/root	usr/include/php/Zend/zend_cpuinfo.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_dtrace.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_errors.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_exceptions.h
@@ -93,7 +94,10 @@ drwxr-xr-x	root/root	usr/include/php/Zend/
 -rw-r--r--	root/root	usr/include/php/Zend/zend_vm.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_vm_def.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_vm_execute.h
+-rw-r--r--	root/root	usr/include/php/Zend/zend_vm_handlers.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_vm_opcodes.h
+-rw-r--r--	root/root	usr/include/php/Zend/zend_vm_trace_handlers.h
+-rw-r--r--	root/root	usr/include/php/Zend/zend_vm_trace_map.h
 drwxr-xr-x	root/root	usr/include/php/ext/
 drwxr-xr-x	root/root	usr/include/php/ext/date/
 drwxr-xr-x	root/root	usr/include/php/ext/date/lib/
@@ -206,6 +210,7 @@ drwxr-xr-x	root/root	usr/include/php/ext/standard/
 -rw-r--r--	root/root	usr/include/php/ext/standard/flock_compat.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/fsock.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/head.h
+-rw-r--r--	root/root	usr/include/php/ext/standard/hrtime.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/html.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/html_tables.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/info.h
@@ -234,6 +239,7 @@ drwxr-xr-x	root/root	usr/include/php/ext/standard/
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_math.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_metaphone.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_mt_rand.h
+-rw-r--r--	root/root	usr/include/php/ext/standard/php_net.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_password.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_rand.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_random.h
@@ -305,6 +311,7 @@ drwxr-xr-x	root/root	usr/lib/php/build/
 -rw-r--r--	root/root	usr/lib/php/build/Makefile.global
 -rw-r--r--	root/root	usr/lib/php/build/acinclude.m4
 -rw-r--r--	root/root	usr/lib/php/build/ax_check_compile_flag.m4
+-rw-r--r--	root/root	usr/lib/php/build/ax_gcc_func_attribute.m4
 -rwxr-xr-x	root/root	usr/lib/php/build/config.guess
 -rwxr-xr-x	root/root	usr/lib/php/build/config.sub
 -rw-r--r--	root/root	usr/lib/php/build/libtool.m4
