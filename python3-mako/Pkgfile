@@ -4,8 +4,8 @@
 # Depends on: python3-markupsafe
 
 name=python3-mako
-version=1.0.7
-release=2
+version=1.0.8
+release=1
 source=(https://files.pythonhosted.org/packages/source/M/Mako/Mako-$version.tar.gz)
 
 build() {

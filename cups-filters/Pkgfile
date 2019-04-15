@@ -5,7 +5,7 @@
 
 name=cups-filters
 version=1.22.5
-release=1
+release=2
 source=(https://www.openprinting.org/download/$name/$name-$version.tar.xz
         cups-browsed)
 
@@ -21,7 +21,7 @@ build () {
                 --without-rcdir \
                 --with-browseremoteprotocols=cups 
 
-    make "CFLAGS=$CFLAGS -Wno-deprecated-declarations"
+    make -j1
     make DESTDIR=$PKG install
 
     install -D -m 0755 $SRC/cups-browsed $PKG/etc/rc.d/cups-browsed

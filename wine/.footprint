@@ -78,7 +78,6 @@ drwxr-xr-x	root/root	usr/include/wine/msvcrt/sys/
 -rw-r--r--	root/root	usr/include/wine/msvcrt/wctype.h
 -rw-r--r--	root/root	usr/include/wine/svcctl.h
 -rw-r--r--	root/root	usr/include/wine/svcctl.idl
--rw-r--r--	root/root	usr/include/wine/unicode.h
 drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/accctrl.h
 -rw-r--r--	root/root	usr/include/wine/windows/access.idl
@@ -268,6 +267,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/dbccmd.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dbcses.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dbdsad.idl
+-rw-r--r--	root/root	usr/include/wine/windows/dbgeng.h
 -rw-r--r--	root/root	usr/include/wine/windows/dbghelp.h
 -rw-r--r--	root/root	usr/include/wine/windows/dbinit.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dbprop.idl
@@ -1915,6 +1915,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/kerberos.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/kernel32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/kernelbase.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/ksecdd.sys
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ksuser.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ktmw32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/l3codeca.acm
@@ -2157,6 +2158,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/twain_32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/tzres.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ucrtbase.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/uianimation.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/uiautomationcore.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/uiribbon.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/unicows.dll
@@ -2319,6 +2321,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/kerberos.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/kernel32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/kernelbase.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ksecdd.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/ksuser.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ktmw32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/l3codeca.acm.so
@@ -2753,6 +2756,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/twain_32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/tzres.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ucrtbase.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/uianimation.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/uiautomationcore.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/uiribbon.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/unicows.dll.so
@@ -3810,6 +3814,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/kernelbase.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/keyboard.drv16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/krnl386.exe16
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/ksecdd.sys
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ksuser.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ktmw32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/l3codeca.acm
@@ -4078,6 +4083,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/typelib.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/tzres.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ucrtbase.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/uianimation.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/uiautomationcore.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/uiribbon.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/unicows.dll
@@ -4268,6 +4274,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/kernelbase.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/keyboard.drv16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/krnl386.exe16.so
+-rwxr-xr-x	root/root	usr/lib32/wine/ksecdd.sys.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ksuser.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ktmw32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/l3codeca.acm.so
@@ -4730,6 +4737,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/typelib.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/tzres.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ucrtbase.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/uianimation.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/uiautomationcore.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/uiribbon.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/unicows.dll.so
@@ -4948,5 +4956,5 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-2.47-x86_64.msi
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.8.0.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.8.1.msi
 -rw-r--r--	root/root	usr/share/wine/wine.inf
