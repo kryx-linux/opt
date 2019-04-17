@@ -4,12 +4,12 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/python3.6/
 drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/
-drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/meson-0.50.0-py3.6.egg-info/
--rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.0-py3.6.egg-info/PKG-INFO
--rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.0-py3.6.egg-info/SOURCES.txt
--rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.0-py3.6.egg-info/dependency_links.txt
--rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.0-py3.6.egg-info/entry_points.txt
--rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.0-py3.6.egg-info/top_level.txt
+drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/meson-0.50.1-py3.6.egg-info/
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.1-py3.6.egg-info/PKG-INFO
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.1-py3.6.egg-info/SOURCES.txt
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.1-py3.6.egg-info/dependency_links.txt
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.1-py3.6.egg-info/entry_points.txt
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/meson-0.50.1-py3.6.egg-info/top_level.txt
 drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/mesonbuild/
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/__init__.py (EMPTY)
 drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/mesonbuild/__pycache__/
@@ -92,6 +92,8 @@ drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/__pycach
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/__pycache__/vs2015backend.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/__pycache__/vs2017backend.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/__pycache__/vs2017backend.cpython-36.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/__pycache__/vs2019backend.cpython-36.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/__pycache__/vs2019backend.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/__pycache__/xcodebackend.cpython-36.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/__pycache__/xcodebackend.cpython-36.pyc
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/backends.py
@@ -99,6 +101,7 @@ drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/__pycach
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/vs2010backend.py
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/vs2015backend.py
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/vs2017backend.py
+-rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/vs2019backend.py
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/backend/xcodebackend.py
 -rw-r--r--	root/root	usr/lib/python3.6/site-packages/mesonbuild/build.py
 drwxr-xr-x	root/root	usr/lib/python3.6/site-packages/mesonbuild/compilers/
