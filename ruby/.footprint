@@ -42,13 +42,13 @@ drwxr-xr-x	root/root	usr/include/ruby-2.6/ruby/backward/
 -rw-r--r--	root/root	usr/include/ruby-2.6/ruby/version.h
 -rw-r--r--	root/root	usr/include/ruby-2.6/ruby/vm.h
 drwxr-xr-x	root/root	usr/include/ruby-2.6/x86_64-linux/
--rw-r--r--	root/root	usr/include/ruby-2.6/x86_64-linux/rb_mjit_min_header-2.6.2.h
+-rw-r--r--	root/root	usr/include/ruby-2.6/x86_64-linux/rb_mjit_min_header-2.6.3.h
 drwxr-xr-x	root/root	usr/include/ruby-2.6/x86_64-linux/ruby/
 -rw-r--r--	root/root	usr/include/ruby-2.6/x86_64-linux/ruby/config.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.2.6.2
-lrwxrwxrwx	root/root	usr/lib/libruby.so.2.6 -> libruby.so.2.6.2
--rwxr-xr-x	root/root	usr/lib/libruby.so.2.6.2
+lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.2.6.3
+lrwxrwxrwx	root/root	usr/lib/libruby.so.2.6 -> libruby.so.2.6.3
+-rwxr-xr-x	root/root	usr/lib/libruby.so.2.6.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ruby-2.6.pc
 drwxr-xr-x	root/root	usr/lib/ruby/
@@ -346,6 +346,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/2.6/csv/
 drwxr-xr-x	root/root	usr/lib/ruby/2.6/csv/core_ext/
 -rw-r--r--	root/root	usr/lib/ruby/2.6/csv/core_ext/array.rb
 -rw-r--r--	root/root	usr/lib/ruby/2.6/csv/core_ext/string.rb
+-rw-r--r--	root/root	usr/lib/ruby/2.6/csv/delete_suffix.rb
 -rw-r--r--	root/root	usr/lib/ruby/2.6/csv/fields_converter.rb
 -rw-r--r--	root/root	usr/lib/ruby/2.6/csv/match_p.rb
 -rw-r--r--	root/root	usr/lib/ruby/2.6/csv/parser.rb
@@ -1676,7 +1677,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/gems/2.6/specifications/default/
 -rw-r--r--	root/root	usr/lib/ruby/gems/2.6/specifications/default/bigdecimal-1.4.1.gemspec
 -rw-r--r--	root/root	usr/lib/ruby/gems/2.6/specifications/default/bundler-1.17.2.gemspec
 -rw-r--r--	root/root	usr/lib/ruby/gems/2.6/specifications/default/cmath-1.0.0.gemspec
--rw-r--r--	root/root	usr/lib/ruby/gems/2.6/specifications/default/csv-3.0.4.gemspec
+-rw-r--r--	root/root	usr/lib/ruby/gems/2.6/specifications/default/csv-3.0.9.gemspec
 -rw-r--r--	root/root	usr/lib/ruby/gems/2.6/specifications/default/date-2.0.0.gemspec
 -rw-r--r--	root/root	usr/lib/ruby/gems/2.6/specifications/default/dbm-1.0.0.gemspec
 -rw-r--r--	root/root	usr/lib/ruby/gems/2.6/specifications/default/e2mmap-0.1.0.gemspec
