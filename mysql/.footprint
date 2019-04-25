@@ -159,8 +159,8 @@ drwxr-xr-x	root/root	usr/include/mysql/mysql/psi/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libmysqlclient.a
 lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so -> libmysqlclient.so.20
-lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so.20 -> libmysqlclient.so.20.3.12
--rwxr-xr-x	root/root	usr/lib/libmysqlclient.so.20.3.12
+lrwxrwxrwx	root/root	usr/lib/libmysqlclient.so.20 -> libmysqlclient.so.20.3.13
+-rwxr-xr-x	root/root	usr/lib/libmysqlclient.so.20.3.13
 -rw-r--r--	root/root	usr/lib/libmysqld.a
 -rw-r--r--	root/root	usr/lib/libmysqlservices.a
 drwxr-xr-x	root/root	usr/lib/mysql/
@@ -212,6 +212,7 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/debug/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/semisync_slave.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/test_security_context.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/test_udf_services.so
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/udf_example.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/validate_password.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/version_token.so
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
