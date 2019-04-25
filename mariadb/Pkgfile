@@ -1,11 +1,11 @@
 # Description: SQL database server, drop-in replacement für MySQL
 # URL:         http://mariadb.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu 
-# Depends on:  ncurses zlib openssl cmake libaio
+# Depends on:  ncurses zlib openssl cmake libaio linux-pam
 
 name=mariadb
-version=10.3.13
-release=2
+version=10.3.14
+release=1
 source=(https://downloads.mariadb.org/interstitial/$name-$version/source/$name-$version.tar.gz 
         mariadb)
 
