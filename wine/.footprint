@@ -62,6 +62,7 @@ drwxr-xr-x	root/root	usr/include/wine/msvcrt/
 -rw-r--r--	root/root	usr/include/wine/msvcrt/share.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/signal.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/stddef.h
+-rw-r--r--	root/root	usr/include/wine/msvcrt/stdint.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/stdio.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/stdlib.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/string.h
@@ -544,6 +545,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/mfidl.idl
 -rw-r--r--	root/root	usr/include/wine/windows/mfobjects.h
 -rw-r--r--	root/root	usr/include/wine/windows/mfobjects.idl
+-rw-r--r--	root/root	usr/include/wine/windows/mfplay.h
+-rw-r--r--	root/root	usr/include/wine/windows/mfplay.idl
 -rw-r--r--	root/root	usr/include/wine/windows/mfreadwrite.h
 -rw-r--r--	root/root	usr/include/wine/windows/mfreadwrite.idl
 -rw-r--r--	root/root	usr/include/wine/windows/mftransform.h
@@ -1273,6 +1276,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/d3d10_1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3d10core.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3d11.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/d3d12.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3d8.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3d9.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/d3dcompiler_33.dll.so
@@ -1707,6 +1711,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d10_1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d10core.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d11.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d12.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d8.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3d9.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/d3dcompiler_33.dll
@@ -2357,6 +2362,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libd3d10_1.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d10core.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d11.def
+-rw-r--r--	root/root	usr/lib/wine/libd3d12.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d8.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d9.def
 -rw-r--r--	root/root	usr/lib/wine/libd3dcompiler.def
@@ -2451,6 +2457,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libpropsys.def
 -rw-r--r--	root/root	usr/lib/wine/libpsapi.def
 -rw-r--r--	root/root	usr/lib/wine/libquartz.def
+-rw-r--r--	root/root	usr/lib/wine/libqwave.def
 -rw-r--r--	root/root	usr/lib/wine/librasapi32.def
 -rw-r--r--	root/root	usr/lib/wine/librasdlg.def
 -rw-r--r--	root/root	usr/lib/wine/libresutils.def
@@ -3155,6 +3162,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/d3d10_1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3d10core.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3d11.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/d3d12.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3d8.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3d9.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/d3dcompiler_33.dll.so
@@ -3598,6 +3606,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d10_1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d10core.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d11.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d12.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d8.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3d9.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/d3dcompiler_33.dll
@@ -4310,6 +4319,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libd3d10_1.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d10core.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d11.def
+-rw-r--r--	root/root	usr/lib32/wine/libd3d12.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d8.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3d9.def
 -rw-r--r--	root/root	usr/lib32/wine/libd3dcompiler.def
@@ -4405,6 +4415,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libpropsys.def
 -rw-r--r--	root/root	usr/lib32/wine/libpsapi.def
 -rw-r--r--	root/root	usr/lib32/wine/libquartz.def
+-rw-r--r--	root/root	usr/lib32/wine/libqwave.def
 -rw-r--r--	root/root	usr/lib32/wine/librasapi32.def
 -rw-r--r--	root/root	usr/lib32/wine/librasdlg.def
 -rw-r--r--	root/root	usr/lib32/wine/libresutils.def
@@ -4956,5 +4967,5 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-2.47-x86_64.msi
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.8.1.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.8.3.msi
 -rw-r--r--	root/root	usr/share/wine/wine.inf
