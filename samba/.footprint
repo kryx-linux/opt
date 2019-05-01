@@ -171,9 +171,9 @@ lrwxrwxrwx	root/root	usr/lib/libsamba-errors.so -> libsamba-errors.so.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-hostconfig.so -> libsamba-hostconfig.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-hostconfig.so.0 -> libsamba-hostconfig.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libsamba-hostconfig.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so -> libsamba-passdb.so.0.27.1
-lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so.0 -> libsamba-passdb.so.0.27.1
--rwxr-xr-x	root/root	usr/lib/libsamba-passdb.so.0.27.1
+lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so -> libsamba-passdb.so.0.27.2
+lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so.0 -> libsamba-passdb.so.0.27.2
+-rwxr-xr-x	root/root	usr/lib/libsamba-passdb.so.0.27.2
 lrwxrwxrwx	root/root	usr/lib/libsamba-util.so -> libsamba-util.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-util.so.0 -> libsamba-util.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libsamba-util.so.0.0.1
