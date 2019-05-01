@@ -5,6 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/dnsmasq
+NAME=dnsmasq
 PID=/var/run/dnsmasq.pid
 
 case $1 in
@@ -12,7 +13,7 @@ start)
 	$SSD --start --pidfile $PID --exec $PROG
 	;;
 stop)
-	$SSD --stop --remove-pidfile --retry 10 --pidfile $PID
+	$SSD --stop --remove-pidfile --retry 10 --pidfile $PID --name $NAME
 	;;
 restart)
 	$0 stop
@@ -22,7 +23,7 @@ reload)
 	$SSD --stop --signal HUP --pidfile $PID
 	;;
 status)
-	$SSD --status --pidfile $PID
+	$SSD --status --pidfile $PID --name $NAME
 	case $? in
 	0) echo "$PROG is running with pid $(cat $PID)" ;;
 	1) echo "$PROG is not running but the pid file $PID exists" ;;
