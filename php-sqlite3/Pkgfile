@@ -4,7 +4,7 @@
 # Depends on:  sqlite3
 
 name=php-sqlite3
-version=7.2.17
+version=7.2.18
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
