@@ -4,7 +4,7 @@
 # Depends on: cmake
 
 name=vulkan-headers
-version=1.1.101.0
+version=1.1.106.0
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-Headers/archive/sdk-$version/Vulkan-Headers-sdk-$version.tar.gz)
 
