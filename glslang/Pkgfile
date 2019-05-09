@@ -4,10 +4,9 @@
 # Depends on: spirv-tools
 
 name=glslang
-version=7.11.3113
-release=2
+version=7.11.3188
+release=1
 source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz)
-#source=(https://bitbucket.org/predivan/distfiles/downloads/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
