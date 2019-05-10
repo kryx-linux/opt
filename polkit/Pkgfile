@@ -1,7 +1,7 @@
 # Description: Application development toolkit for controlling system-wide privileges
 # URL:         http://www.freedesktop.org/wiki/Software/PolicyKit
 # Maintainer:  Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:  glib util-linux nspr spidermonkey
+# Depends on:  glib util-linux nspr spidermonkey intltool
 
 name=polkit
 version=0.116
