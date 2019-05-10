@@ -1,28 +1,30 @@
-# Description:	Javascript engine library
-# URL:		http://www.mozilla.org/js/spidermonkey/
-# Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:	python zip
+# Description: Javascript engine library
+# URL:         http://www.mozilla.org/js/spidermonkey/
+# Maintainer:  Alan Mizrahi, alan at mizrahi dot com dot ve
+# Depends on:  autoconf-2.13 readline zlib nspr
 
 name=spidermonkey
-version=1.8.5
-release=2
-source=(http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz js-1.8.5-c++11.patch)
+version=60.6.1
+release=1
+source=(https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz)
 
 build() {
-	cd js-$version/js/src
+	cd firefox-$version
 
-	# Fix build with gcc-6
-	# https://bugs.gentoo.org/show_bug.cgi?id=582478
-	patch -p3 -i $SRC/js-1.8.5-c++11.patch
+	mkdir obj ; cd obj
 
-	./configure \
-		--prefix=/usr
+	../js/src/configure \
+		--prefix=/usr \
+		--disable-jemalloc \
+		--disable-optimize \
+		--enable-readline \
+		--with-intl-api \
+		--with-system-nspr \
+		--with-system-zlib
 
 	make
 	make DESTDIR=$PKG install
 
-	# symlinks are not relative, fix that
-	rm -f $PKG/usr/lib/libmozjs185.so{,.1.0}
-	ln -s libmozjs185.so.1.0.0 $PKG/usr/lib/libmozjs185.so
-	ln -s libmozjs185.so.1.0.0 $PKG/usr/lib/libmozjs185.so.1.0
+	rm $PKG/usr/lib/libjs_static.ajs
+	chmod -x $PKG/usr/lib/pkgconfig/*
 }
