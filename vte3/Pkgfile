@@ -5,19 +5,18 @@
 # Optional: vala
 
 name=vte3
-version=0.54.3
+version=0.56.3
 release=1
 source=(https://download.gnome.org/sources/vte/${version%.*}/vte-$version.tar.xz)
 
 build() {
 	cd vte-$version
 
-[ -e '/usr/bin/vala' ] || PKGMK_VTE+=' --enable-vala=no'
+	prt-get isinst vala || PKGMK_VTE+=' --enable-vala=no'
 
 	./configure ${PKGMK_VTE} \
 		--prefix=/usr \
 		--libexecdir=/usr/lib/vte \
-		--disable-static \
 		--disable-gtk-doc
 
 	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
