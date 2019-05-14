@@ -1,19 +1,14 @@
 # Description: API and commands for processing SPIR-V modules
 # URL: https://www.khronos.org/vulkan/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cmake python3
+# Depends on: python3 spirv-headers
 
 name=spirv-tools
 version=2019.2
-_commit=2434b89345a50c018c84f42a310b0fad4f3fd94f
-release=1
-source=(
-    https://github.com/KhronosGroup/SPIRV-Tools/archive//v$version/SPIRV-Tools-v$version.tar.gz
-    https://github.com/KhronosGroup/SPIRV-Headers/archive/$_commit.tar.gz
-)
+release=2
+source=(https://github.com/KhronosGroup/SPIRV-Tools/archive//v$version/SPIRV-Tools-v$version.tar.gz)
 
 build() {
-    mv SPIRV-Headers-$_commit SPIRV-Headers
     cd SPIRV-Tools-$version
 
     mkdir build
@@ -24,7 +19,7 @@ build() {
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DSPIRV_WERROR=Off \
-        -DSPIRV-Headers_SOURCE_DIR=${SRC}/SPIRV-Headers
+        -DSPIRV-Headers_SOURCE_DIR=/usr
 
     make
     make DESTDIR=$PKG install
