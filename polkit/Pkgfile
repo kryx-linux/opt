@@ -18,7 +18,6 @@ build() {
 		--localstatedir=/var \
 		--disable-tests \
 		--disable-nls \
-		--disable-static \
 		--enable-libelogind=no \
 		--enable-libsystemd-login=no \
 		--with-authfw=pam \

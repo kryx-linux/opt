@@ -50,10 +50,12 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Polkit-1.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/PolkitAgent-1.0.typelib
+-rw-r--r--	root/root	usr/lib/libpolkit-agent-1.a
 -rwxr-xr-x	root/root	usr/lib/libpolkit-agent-1.la
 lrwxrwxrwx	root/root	usr/lib/libpolkit-agent-1.so -> libpolkit-agent-1.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libpolkit-agent-1.so.0 -> libpolkit-agent-1.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libpolkit-agent-1.so.0.0.0
+-rw-r--r--	root/root	usr/lib/libpolkit-gobject-1.a
 -rwxr-xr-x	root/root	usr/lib/libpolkit-gobject-1.la
 lrwxrwxrwx	root/root	usr/lib/libpolkit-gobject-1.so -> libpolkit-gobject-1.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libpolkit-gobject-1.so.0 -> libpolkit-gobject-1.so.0.0.0
