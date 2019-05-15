@@ -7,6 +7,7 @@ drwxr-xr-x	root/root	etc/exports.d/
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/nfs
 -rwxr-xr-x	root/root	etc/rc.d/nfsclient
+-rwxr-xr-x	root/root	etc/rc.d/nfsdcld
 -rwxr-xr-x	root/root	etc/rc.d/nfsserver
 -rwxr-xr-x	root/root	etc/rc.d/rpc.idmapd
 -rwxr-xr-x	root/root	etc/rc.d/rpc.mountd
@@ -15,8 +16,8 @@ drwxr-xr-x	root/root	etc/rc.d/
 drwxr-xr-x	root/root	sbin/
 -r-s--x--x	root/root	sbin/mount.nfs
 lrwxrwxrwx	root/root	sbin/mount.nfs4 -> mount.nfs
+-rwxr-xr-x	root/root	sbin/nfsdcld
 -rwxr-xr-x	root/root	sbin/nfsdcltrack
--rwxr-xr-x	root/root	sbin/osd_login
 lrwxrwxrwx	root/root	sbin/umount.nfs -> mount.nfs
 lrwxrwxrwx	root/root	sbin/umount.nfs4 -> mount.nfs
 drwxr-xr-x	root/root	usr/
@@ -76,6 +77,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/mountstats.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsconf.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsd.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/nfsdcld.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsdcltrack.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsidmap.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsiostat.8.gz
@@ -94,6 +96,7 @@ drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
 drwxr-xr-x	nobody/root	var/lib/nfs/
 -rw-r--r--	root/root	var/lib/nfs/etab (EMPTY)
+drwxr-xr-x	root/root	var/lib/nfs/nfsdcld/
 drwxr-xr-x	root/root	var/lib/nfs/nfsdcltrack/
 -rw-r--r--	root/root	var/lib/nfs/rmtab (EMPTY)
 drwxr-xr-x	root/root	var/lib/nfs/rpc_pipefs/
