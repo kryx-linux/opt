@@ -41,6 +41,7 @@ drwxr-xr-x	root/root	usr/include/alsa/sound/
 -rw-r--r--	root/root	usr/include/alsa/topology.h
 -rw-r--r--	root/root	usr/include/alsa/use-case.h
 -rw-r--r--	root/root	usr/include/alsa/version.h
+-rw-r--r--	root/root	usr/include/asoundlib.h
 drwxr-xr-x	root/root	usr/include/sys/
 -rw-r--r--	root/root	usr/include/sys/asoundlib.h
 drwxr-xr-x	root/root	usr/lib/
@@ -151,6 +152,10 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm/DB410c/
 -rw-r--r--	root/root	usr/share/alsa/ucm/DB410c/DB410c.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm/DB410c/HDMI
 -rw-r--r--	root/root	usr/share/alsa/ucm/DB410c/HiFi
+drwxr-xr-x	root/root	usr/share/alsa/ucm/DB820c/
+-rw-r--r--	root/root	usr/share/alsa/ucm/DB820c/DB820c.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm/DB820c/HDMI
+-rw-r--r--	root/root	usr/share/alsa/ucm/DB820c/HiFi
 drwxr-xr-x	root/root	usr/share/alsa/ucm/Dell-WD15-Dock/
 -rw-r--r--	root/root	usr/share/alsa/ucm/Dell-WD15-Dock/Dell-WD15-Dock.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm/Dell-WD15-Dock/HiFi.conf
