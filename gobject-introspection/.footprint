@@ -26,6 +26,7 @@ drwxr-xr-x	root/root	usr/include/gobject-introspection-1.0/
 -rw-r--r--	root/root	usr/include/gobject-introspection-1.0/gitypelib.h
 -rw-r--r--	root/root	usr/include/gobject-introspection-1.0/gitypes.h
 -rw-r--r--	root/root	usr/include/gobject-introspection-1.0/giunioninfo.h
+-rw-r--r--	root/root	usr/include/gobject-introspection-1.0/giversion.h
 -rw-r--r--	root/root	usr/include/gobject-introspection-1.0/giversionmacros.h
 -rw-r--r--	root/root	usr/include/gobject-introspection-1.0/givfuncinfo.h
 drwxr-xr-x	root/root	usr/lib/
@@ -50,7 +51,7 @@ drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 drwxr-xr-x	root/root	usr/lib/gobject-introspection/
 drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/__init__.py
--rwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/_giscanner.cpython-36m-x86_64-linux-gnu.so
+-rwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/_giscanner.cpython-37m-x86_64-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/_version.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/annotationmain.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/annotationparser.py
@@ -77,6 +78,7 @@ drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdoc
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdocs/Gjs/enum.tmpl
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdocs/Gjs/function.tmpl
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdocs/Gjs/interface.tmpl
+-rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdocs/Gjs/method.tmpl
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/devdocs/Gjs/namespace.tmpl
 drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/
 drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallard/C/
@@ -135,6 +137,7 @@ drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallar
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/introspectablepass.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/libtoolimporter.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/maintransformer.py
+-rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/mdextensions.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/message.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/msvccompiler.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/pkgconfig.py
@@ -145,7 +148,7 @@ drwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/doctemplates/mallar
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/testcodegen.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/transformer.py
 -rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/utils.py
--rwxr-xr-x	root/root	usr/lib/gobject-introspection/giscanner/xmlwriter.py
+-rw-r--r--	root/root	usr/lib/gobject-introspection/giscanner/xmlwriter.py
 lrwxrwxrwx	root/root	usr/lib/libgirepository-1.0.so -> libgirepository-1.0.so.1
 lrwxrwxrwx	root/root	usr/lib/libgirepository-1.0.so.1 -> libgirepository-1.0.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libgirepository-1.0.so.1.0.0
@@ -178,11 +181,21 @@ drwxr-xr-x	root/root	usr/share/gobject-introspection-1.0/
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/Makefile.introspection
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/gdump.c
 drwxr-xr-x	root/root	usr/share/gobject-introspection-1.0/tests/
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/annotation.c
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/annotation.h
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/drawable.c
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/drawable.h
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/everything.c
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/everything.h
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/foo.c
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/foo.h
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/gimarshallingtests.c
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/gimarshallingtests.h
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/gitestmacros.h
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/regress.c
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/regress.h
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/utility.c
+-rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/utility.h
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/warnlib.c
 -rw-r--r--	root/root	usr/share/gobject-introspection-1.0/tests/warnlib.h
 drwxr-xr-x	root/root	usr/share/man/
