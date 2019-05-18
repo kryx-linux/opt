@@ -5,15 +5,9 @@
 # Optional: sccache
 
 name=rust-bin
-<<<<<<< HEAD
-version=1.34.1
-release=2
-source=(https://crux.ster.zone/downloads/rust/rust-$version-crux-3.5-bin.tar.xz)
-=======
 version=1.34.2
 release=1
-source=(https://crux.ster.zone/downloads/rust/rust-$version-bin.tar.xz)
->>>>>>> c99a8bf7d9228ba38997f5bbe37fe50e9fe04e43
+source=(https://crux.ster.zone/downloads/rust/rust-$version-crux-3.5-bin.tar.xz)
 
 build() {
 	cp -a $SRC/usr $PKG/
