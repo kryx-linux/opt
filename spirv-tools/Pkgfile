@@ -5,22 +5,31 @@
 
 name=spirv-tools
 version=2019.2
-release=2
+release=3
 source=(https://github.com/KhronosGroup/SPIRV-Tools/archive//v$version/SPIRV-Tools-v$version.tar.gz)
 
 build() {
-    cd SPIRV-Tools-$version
+	cd SPIRV-Tools-$version
 
-    mkdir build
-    cd build
+	mkdir build-{shared,static}
 
-    cmake .. \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=lib \
-        -DCMAKE_BUILD_TYPE=Release \
-        -DSPIRV_WERROR=Off \
-        -DSPIRV-Headers_SOURCE_DIR=/usr
+	local config="
+-DCMAKE_INSTALL_PREFIX=/usr \
+-DCMAKE_INSTALL_LIBDIR=lib \
+-DCMAKE_BUILD_TYPE=Release \
+-DSPIRV_WERROR=Off \
+-DSPIRV-Headers_SOURCE_DIR=/usr"
 
-    make
-    make DESTDIR=$PKG install
+	(cd build-static
+	cmake .. $config -DBUILD_SHARED_LIBS=OFF
+	make
+	)
+
+	(cd build-shared
+	cmake .. $config -DBUILD_SHARED_LIBS=ON
+	make
+	)
+
+	make -C build-static DESTDIR=$PKG install
+	make -C build-shared DESTDIR=$PKG install
 }
