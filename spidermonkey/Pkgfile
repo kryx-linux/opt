@@ -1,7 +1,7 @@
 # Description: Javascript engine library
 # URL:         http://www.mozilla.org/js/spidermonkey/
 # Maintainer:  Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:  autoconf-2.13 readline zlib nspr
+# Depends on:  autoconf-2.13 readline zlib nspr python
 
 name=spidermonkey
 version=60.6.1
