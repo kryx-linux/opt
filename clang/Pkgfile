@@ -5,7 +5,7 @@
 
 name=clang
 version=8.0.0
-release=1
+release=2
 source=(https://releases.llvm.org/$version/{llvm,cfe}-$version.src.tar.xz)
 
 build() {
@@ -36,7 +36,7 @@ build() {
   rm -r $PKG/usr/lib/cmake/llvm
   rm -r $PKG/usr/share/opt-viewer
   rm $PKG/usr/bin/{bugpoint,ll*,opt,obj2yaml,sancov,sanstats,verify-uselistorder,yaml2obj,dsymutil}
-  rm $PKG/usr/lib/{libLTO.*,libLLVM*}
+  rm $PKG/usr/lib/{libLTO.*,libOptRemarks.*,libLLVM*}
 
 
   mv $PKG/usr/libexec/{c++-analyzer,ccc-analyzer} $PKG/usr/lib/clang

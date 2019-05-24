@@ -753,8 +753,6 @@ drwxr-xr-x	root/root	usr/lib/cmake/clang/
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangConfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangTargets.cmake
-lrwxrwxrwx	root/root	usr/lib/libOptRemarks.so -> libOptRemarks.so.8
--rwxr-xr-x	root/root	usr/lib/libOptRemarks.so.8
 lrwxrwxrwx	root/root	usr/lib/libclang.so -> libclang.so.8
 -rwxr-xr-x	root/root	usr/lib/libclang.so.8
 -rw-r--r--	root/root	usr/lib/libclangARCMigrate.a
