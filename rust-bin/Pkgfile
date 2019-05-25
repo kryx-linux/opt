@@ -6,8 +6,8 @@
 
 name=rust-bin
 version=1.34.2
-release=1
-source=(https://crux.ster.zone/downloads/rust/rust-$version-crux-3.5-bin.tar.xz)
+release=2
+source=(https://crux.ster.zone/downloads/rust/rust-$version.r$release-crux-3.5-bin.tar.xz)
 
 build() {
 	cp -a $SRC/usr $PKG/
