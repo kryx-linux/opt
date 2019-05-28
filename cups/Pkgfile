@@ -1,7 +1,7 @@
 # Description: CUPS - Common UNIX Printing System
 # URL:         http://www.cups.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  acl libusb zlib
+# Depends on:  acl libusb zlib linux-pam
 
 name=cups
 version=2.2.11
