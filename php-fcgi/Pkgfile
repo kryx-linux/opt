@@ -1,10 +1,10 @@
 # Description: CGI/FastCGI version of the PHP interpreter
 # URL:         http://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libpcre libxml2
+# Depends on:  libpcre2 libxml2
 
 name=php-fcgi
-version=7.3.5
+version=7.3.6
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz
         php-fcgi)
