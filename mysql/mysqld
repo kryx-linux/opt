@@ -6,6 +6,7 @@
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/mysqld
 MYSQL_CFG=/etc/my.cnf
+NAME=mysqld
 PID=/var/run/mysql/mysqld.pid
 LOG=/var/log/mysqld.log
 OPTS="--pid-file=$PID"
@@ -15,14 +16,14 @@ start)
 	$SSD --start -bC --pidfile $PID --exec $PROG -- $OPTS >> $LOG 2>&1
 	;;
 stop)
-	$SSD --stop --remove-pidfile --retry 10 --pidfile $PID
+	$SSD --stop --remove-pidfile --retry 10 --name=$NAME --pidfile $PID
 	;;
 restart)
 	$0 stop
 	$0 start
 	;;
 status)
-	$SSD --status --pidfile $PID
+	$SSD --status --name=$NAME --pidfile $PID
 	case $? in
 	0) echo "$PROG is running with pid $(cat $PID)" ;;
 	1) echo "$PROG is not running but the pid file $PID exists" ;;
