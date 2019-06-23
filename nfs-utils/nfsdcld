@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# /etc/rc.d/rpc.statd: start/stop statd daemon
+# /etc/rc.d/rpc.statd: start/stop NFSv4 Client Tracking Daemon
 #
 
 SSD=/sbin/start-stop-daemon
