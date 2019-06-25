@@ -1,10 +1,10 @@
 # Description: GTK version of the vim editor
 # URL:         http://www.vim.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  vim, gtk, xorg-libxt
+# Depends on:  vim gtk3 xorg-libxt
 
 name=gvim
-version=8.1.1390
+version=8.1.1592
 release=1
 source=(https://github.com/vim/vim/archive/v${version}/vim-$version.tar.gz)
 
@@ -16,7 +16,7 @@ build () {
     ./configure --prefix=/usr \
                 --with-vim-name=gvim \
                 --with-x=yes \
-                --enable-gui=gtk2 \
+                --enable-gui=gtk3 \
                 --enable-multibyte \
                 --enable-cscope \
                 --disable-gpm \
