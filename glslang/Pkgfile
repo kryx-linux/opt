@@ -4,7 +4,7 @@
 # Depends on: spirv-tools
 
 name=glslang
-version=7.11.3188
+version=7.11.3214
 release=1
 source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz)
 
