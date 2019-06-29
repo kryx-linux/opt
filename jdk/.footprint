@@ -70,9 +70,6 @@ drwxr-xr-x	root/root	usr/lib/jdk/include/linux/
 -rw-r--r--	root/root	usr/lib/jdk/include/linux/jni_md.h
 -rw-r--r--	root/root	usr/lib/jdk/javafx-src.zip
 drwxr-xr-x	root/root	usr/lib/jdk/jre/
--r--r--r--	root/root	usr/lib/jdk/jre/ASSEMBLY_EXCEPTION
--r--r--r--	root/root	usr/lib/jdk/jre/LICENSE
--r--r--r--	root/root	usr/lib/jdk/jre/THIRD_PARTY_README
 drwxr-xr-x	root/root	usr/lib/jdk/jre/bin/
 -rwxr-xr-x	root/root	usr/lib/jdk/jre/bin/clhsdb
 -rwxr-xr-x	root/root	usr/lib/jdk/jre/bin/hsdb
@@ -138,7 +135,7 @@ drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/jli/
 -rwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/libzip.so
 drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/server/
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/amd64/server/Xusage.txt
--rwxrwxrwx	root/root	usr/lib/jdk/jre/lib/amd64/server/libjsig.so
+-rwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/server/libjsig.so
 -rwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/server/libjvm.so
 drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/applet/
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/calendars.properties

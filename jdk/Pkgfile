@@ -4,16 +4,19 @@
 # Depends on:  util-linux gtk alsa-lib
 
 name=jdk
-version=8.212.04.1
+version=8.212.04.2
 release=1
-source=(https://d3pxv6yz143wms.cloudfront.net/$version/java-1.8.0-amazon-corretto-devel-1.8.0_212.b04-1.x86_64.rpm)
+source=(https://d3pxv6yz143wms.cloudfront.net/$version/java-1.8.0-amazon-corretto-devel-1.8.0_212.b04-2.x86_64.rpm)
 
 build(){
     cd $SRC/usr/lib/jvm/java-1.8.0-amazon-corretto
 
-    install -d $PKG/usr/{bin,lib/jdk,share/man}
+    # cleanup
+    rm {.,jre}/{ASSEMBLY_EXCEPTION,LICENSE,THIRD_PARTY_README}
+    chmod -R o-w,g-w .
 
-    rm ASSEMBLY_EXCEPTION LICENSE THIRD_PARTY_README
+    # install
+    install -d $PKG/usr/{bin,lib/jdk,share/man}
     mv man $PKG/usr/share/
     mv *   $PKG/usr/lib/jdk/
 
