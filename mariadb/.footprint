@@ -410,6 +410,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_tvc.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_int.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_real.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_udf.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_union.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_update.h
@@ -438,6 +439,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/violite.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/waiting_threads.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/welcome_copyright_notice.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/win_tzname_data.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/winservice.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wqueue.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep.h
