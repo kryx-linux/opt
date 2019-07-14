@@ -4,7 +4,7 @@
 # Depends on: harfbuzz icu
 
 name=harfbuzz-icu
-version=2.5.1
+version=2.5.3
 release=1
 source=(https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-$version.tar.xz)
 
@@ -13,7 +13,8 @@ build() {
 	
 	./configure \
 		--prefix=/usr \
-		--with-icu=yes
+		--with-icu=yes \
+		--with-graphite2=auto
 
 	make
 	make DESTDIR=$PKG install
