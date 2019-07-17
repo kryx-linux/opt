@@ -16,7 +16,38 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/aria_read_log
 -rwxr-xr-x	root/root	usr/bin/innochecksum
 -rwxr-xr-x	root/root	usr/bin/mariabackup
+lrwxrwxrwx	root/root	usr/bin/mariadb -> mysql
+lrwxrwxrwx	root/root	usr/bin/mariadb-access -> mysqlaccess
+lrwxrwxrwx	root/root	usr/bin/mariadb-admin -> mysqladmin
+lrwxrwxrwx	root/root	usr/bin/mariadb-backup -> mariabackup
+lrwxrwxrwx	root/root	usr/bin/mariadb-binlog -> mysqlbinlog
+lrwxrwxrwx	root/root	usr/bin/mariadb-check -> mysqlcheck
+lrwxrwxrwx	root/root	usr/bin/mariadb-client-test -> mysql_client_test
+lrwxrwxrwx	root/root	usr/bin/mariadb-client-test-embedded -> mysql_client_test_embedded
+lrwxrwxrwx	root/root	usr/bin/mariadb-convert-table-format -> mysql_convert_table_format
+lrwxrwxrwx	root/root	usr/bin/mariadb-dump -> mysqldump
+lrwxrwxrwx	root/root	usr/bin/mariadb-dumpslow -> mysqldumpslow
+lrwxrwxrwx	root/root	usr/bin/mariadb-embedded -> mysql_embedded
+lrwxrwxrwx	root/root	usr/bin/mariadb-find-rows -> mysql_find_rows
+lrwxrwxrwx	root/root	usr/bin/mariadb-fix-extensions -> mysql_fix_extensions
+lrwxrwxrwx	root/root	usr/bin/mariadb-hotcopy -> mysqlhotcopy
+lrwxrwxrwx	root/root	usr/bin/mariadb-import -> mysqlimport
+lrwxrwxrwx	root/root	usr/bin/mariadb-install-db -> mysql_install_db
+lrwxrwxrwx	root/root	usr/bin/mariadb-ldb -> mysql_ldb
+lrwxrwxrwx	root/root	usr/bin/mariadb-plugin -> mysql_plugin
+lrwxrwxrwx	root/root	usr/bin/mariadb-secure-installation -> mysql_secure_installation
+lrwxrwxrwx	root/root	usr/bin/mariadb-setpermission -> mysql_setpermission
+lrwxrwxrwx	root/root	usr/bin/mariadb-show -> mysqlshow
+lrwxrwxrwx	root/root	usr/bin/mariadb-slap -> mysqlslap
+lrwxrwxrwx	root/root	usr/bin/mariadb-test -> mysqltest
+lrwxrwxrwx	root/root	usr/bin/mariadb-test-embedded -> mysqltest_embedded
+lrwxrwxrwx	root/root	usr/bin/mariadb-tzinfo-to-sql -> mysql_tzinfo_to_sql
+lrwxrwxrwx	root/root	usr/bin/mariadb-upgrade -> mysql_upgrade
+lrwxrwxrwx	root/root	usr/bin/mariadb-waitpid -> mysql_waitpid
 -rwxr-xr-x	root/root	usr/bin/mariadb_config
+lrwxrwxrwx	root/root	usr/bin/mariadbd-multi -> mysqld_multi
+lrwxrwxrwx	root/root	usr/bin/mariadbd-safe -> mysqld_safe
+lrwxrwxrwx	root/root	usr/bin/mariadbd-safe-helper -> mysqld_safe_helper
 -rwxr-xr-x	root/root	usr/bin/mbstream
 -rwxr-xr-x	root/root	usr/bin/msql2mysql
 -rwxr-xr-x	root/root	usr/bin/my_print_defaults
@@ -81,6 +112,7 @@ drwxr-xr-x	root/root	usr/include/mysql/mariadb/
 -rw-r--r--	root/root	usr/include/mysql/mariadb_com.h
 -rw-r--r--	root/root	usr/include/mysql/mariadb_ctype.h
 -rw-r--r--	root/root	usr/include/mysql/mariadb_dyncol.h
+-rw-r--r--	root/root	usr/include/mysql/mariadb_rpl.h
 -rw-r--r--	root/root	usr/include/mysql/mariadb_stmt.h
 -rw-r--r--	root/root	usr/include/mysql/mariadb_version.h
 -rw-r--r--	root/root	usr/include/mysql/my_config.h
@@ -154,6 +186,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/mysql/psi/
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_debug_sync.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_encryption.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_encryption_scheme.h
+-rw-r--r--	root/root	usr/include/mysql/server/mysql/service_json.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_kill_statement.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_logger.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_md5.h
@@ -181,12 +214,14 @@ drwxr-xr-x	root/root	usr/include/mysql/server/mysql/psi/
 -rw-r--r--	root/root	usr/include/mysql/server/mysqld_error.h
 -rw-r--r--	root/root	usr/include/mysql/server/pack.h
 drwxr-xr-x	root/root	usr/include/mysql/server/private/
+-rw-r--r--	root/root	usr/include/mysql/server/private/aria_backup.h
 drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/atomic/gcc_builtins.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/atomic/gcc_sync.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/atomic/generic-msvc.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/atomic/solaris.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/authors.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/backup.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/bounded_queue.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/client_settings.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/compat56.h
@@ -196,6 +231,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/custom_conf.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/datadict.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/debug_sync.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/derived_handler.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/derror.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/des_key_file.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/discover.h
@@ -218,6 +254,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/gstream.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/ha_partition.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/ha_sequence.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/handle_connections_win.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/handler.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/hash.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/hash_filo.h
@@ -266,6 +303,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_check_opt.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_compare.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_context.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/my_counter.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_cpu.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_crypt.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_decimal.h
@@ -295,6 +333,8 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/nt_servc.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_range.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_subselect.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/opt_trace.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/opt_trace_context.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/parse_file.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/partition_element.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/partition_info.h
@@ -310,6 +350,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/repl_failsafe.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/replication.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/rijndael.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/rowid_filter.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/rpl_constants.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/rpl_filter.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/rpl_gtid.h
@@ -323,6 +364,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/rpl_tblmap.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/rpl_utility.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/scheduler.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/select_handler.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/semisync.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/semisync_master.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/semisync_master_ack_receiver.h
@@ -410,6 +452,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_tvc.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_int.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_json.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_real.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_udf.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_union.h
@@ -445,14 +488,26 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_applier.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_binlog.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_client_service.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_client_state.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_condition_variable.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_high_priority_service.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_mutex.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_mysqld.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_mysqld_c.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_priv.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_schema.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_server_service.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_server_state.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_sst.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_storage_service.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_thd.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_trans_observer.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_types.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_utils.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_var.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_xid.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/xa.h
 -rw-r--r--	root/root	usr/include/mysql/server/sql_common.h
 -rw-r--r--	root/root	usr/include/mysql/server/sql_state.h
 -rw-r--r--	root/root	usr/include/mysql/server/sslopt-case.h
@@ -479,7 +534,9 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_0x0100.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_ed25519.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam.so
--rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_socket.so
+drwx------	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/
+-rwsr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_v1.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_test_plugin.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/caching_sha2_password.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/client_ed25519.so
@@ -522,6 +579,7 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libmariadb.pc
 drwxr-xr-x	root/root	usr/sbin/
+lrwxrwxrwx	root/root	usr/sbin/mariadbd -> mysqld
 -rwxr-xr-x	root/root	usr/sbin/mysqld
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
@@ -537,7 +595,38 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/galera_recovery.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/innochecksum.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mariabackup.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-access.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-admin.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-backup.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-binlog.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-check.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-client-test-embedded.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-client-test.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-convert-table-format.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-dump.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-dumpslow.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-embedded.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-find-rows.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-fix-extensions.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-hotcopy.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-import.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-install-db.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-ldb.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-plugin.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-secure-installation.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mariadb-service-convert.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-setpermission.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-show.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-slap.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-test-embedded.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-test.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-tzinfo-to-sql.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-upgrade.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb-waitpid.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadb.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadbd-multi.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadbd-safe-helper.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/mariadbd-safe.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/mbstream.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/msql2mysql.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/my_print_defaults.1.gz
@@ -591,6 +680,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/wsrep_sst_rsync.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/wsrep_sst_rsync_wan.1.gz
 drwxr-xr-x	root/root	usr/share/man/man8/
+-rw-r--r--	root/root	usr/share/man/man8/mariadbd.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/mysqld.8.gz
 drwxr-xr-x	root/root	usr/share/mysql/
 -rwxr-xr-x	root/root	usr/share/mysql/binary-configure
