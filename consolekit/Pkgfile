@@ -6,12 +6,15 @@
 
 name=consolekit
 version=1.2.1
-release=1
+release=2
 source=(https://github.com/ConsoleKit2/ConsoleKit2/releases/download/$version/ConsoleKit2-$version.tar.bz2
-	system-session pam-foreground-compat.ck)
+	system-session pam-foreground-compat.ck
+	warning-to-debug.patch)
 
 build() {
 	cd ConsoleKit2-$version
+
+	patch -p1 -i $SRC/warning-to-debug.patch
 
 	./configure \
 		--prefix=/usr \
