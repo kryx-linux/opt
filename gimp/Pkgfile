@@ -8,12 +8,10 @@
 name=gimp
 version=2.10.12
 release=1
-source=(https://download.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2 cve-2013-1913)
+source=(https://download.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2)
 
 build() {
   cd gimp-$version
-  
-  patch -p1 -i ../cve-2013-1913
 
   sed -i -e '/$(helpbrowser)/d' plug-ins/Makefile.in
   ./configure --prefix=/usr \
@@ -21,9 +19,11 @@ build() {
     --disable-static \
     --disable-python \
     --disable-nls \
-    --without-webkit LIBS="-lm"
+    --without-webkit
 
   make
   make DESTDIR=$PKG install
-  rm -rf $PKG/usr/share/{gtk-doc,locale}
+
+  mv $PKG/usr/share/man/man1/gimp-console{-${version%.*}.1,.1}
+  rm -r $PKG/usr/share/{gtk-doc,locale}
 }
