@@ -2,11 +2,11 @@
 # URL:         http://www.gimp.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Simone Rota, sip at crux dot nu
-# Depends on: gexiv2 libart_lgpl libmypaint librsvg mypaint-brushes poppler-data poppler-glib xorg-libxmu xorg-libxpm glib-networking
+# Depends on: gegl glib-networking gtk libart_lgpl mypaint-brushes poppler-data poppler-glib xorg-libxmu xorg-libxpm
 # Optional: gimp-print libsdl ghostscript libmng
 
 name=gimp
-version=2.10.8
+version=2.10.12
 release=1
 source=(https://download.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2 cve-2013-1913)
 
