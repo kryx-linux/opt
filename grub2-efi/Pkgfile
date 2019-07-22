@@ -4,19 +4,12 @@
 # Depends on: grub2
 
 name=grub2-efi
-version=2.02
-release=2
-source=(http://ftp.gnu.org/gnu/grub/grub-$version.tar.xz \
-    grub2-relocation.patch grub2-xfs.patch)
+version=2.04
+release=1
+source=(http://ftp.gnu.org/gnu/grub/grub-$version.tar.xz)
 
 build() {
     export CFLAGS="${CFLAGS} -Wno-error"
-
-    patch -d grub-$version -p1 -i $SRC/grub2-relocation.patch
-    patch -d grub-$version -p1 -i $SRC/grub2-xfs.patch
-
-    # fix for glibc 'gets' removal
-    sed -i -e '/gets is a/d' grub-$version/grub-core/gnulib/stdio.in.h
 
     MODLIST="boot chain configfile fat ext2 linux normal ntfs part_gpt part_msdos"
 
