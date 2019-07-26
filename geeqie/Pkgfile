@@ -5,12 +5,14 @@
 
 name=geeqie
 version=1.4
-release=1
-source=(http://geeqie.org/$name-$version.tar.xz)
+release=2
+source=(http://geeqie.org/$name-$version.tar.xz
+        $name-exiv2-0.27.patch)
 
 build() {
     cd $name-$version
 
+    patch -p1 -i $SRC/$name-exiv2-0.27.patch
     sed -e '/HAVE_MARKDOWN/,/endif/d' -e '/^.PHONY:/,$d' -i Makefile.am
 
     export LINGUAS=" "
@@ -18,7 +20,7 @@ build() {
     export LDFLAGS="$LDFLAGS $(pkg-config --libs gtk+-2.0)"
     export CXXFLAGS="$CXXFLAGS $CFLAGS"
 
-    ./autogen.sh
+    NOCONFIGURE=1 ./autogen.sh
     ./configure --prefix=/usr --disable-gtk3
 
     make
