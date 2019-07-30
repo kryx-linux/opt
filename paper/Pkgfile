@@ -1,0 +1,18 @@
+# Description: Utility to set the default paper size
+# URL:         https://github.com/rrthomas/paper/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+
+name=paper
+version=2.0
+release=1
+source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --sysconfdir=/etc \
+                --libexecdir=/usr/lib/paper
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/share/doc
+}
