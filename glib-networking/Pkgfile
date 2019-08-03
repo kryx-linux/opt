@@ -1,10 +1,10 @@
 # Description: Network-related giomodules for glib.
 # URL: http://git.gnome.org/browse/glib-networking/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: gnutls gsettings-desktop-schemas meson ninja
+# Depends on: gnutls gsettings-desktop-schemas
 
 name=glib-networking
-version=2.56.1
+version=2.60.3
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
