@@ -422,6 +422,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/fci.h
 -rw-r--r--	root/root	usr/include/wine/windows/fdi.h
 -rw-r--r--	root/root	usr/include/wine/windows/fileapi.h
+-rw-r--r--	root/root	usr/include/wine/windows/filter.h
+-rw-r--r--	root/root	usr/include/wine/windows/filter.idl
 -rw-r--r--	root/root	usr/include/wine/windows/fltdefs.h
 -rw-r--r--	root/root	usr/include/wine/windows/fontsub.h
 -rw-r--r--	root/root	usr/include/wine/windows/fusion.h
@@ -801,6 +803,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/storage.h
 -rw-r--r--	root/root	usr/include/wine/windows/strmif.h
 -rw-r--r--	root/root	usr/include/wine/windows/strmif.idl
+-rw-r--r--	root/root	usr/include/wine/windows/strongname.h
 -rw-r--r--	root/root	usr/include/wine/windows/strsafe.h
 -rw-r--r--	root/root	usr/include/wine/windows/structuredquerycondition.h
 -rw-r--r--	root/root	usr/include/wine/windows/structuredquerycondition.idl
@@ -816,6 +819,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/textserv.h
 -rw-r--r--	root/root	usr/include/wine/windows/textstor.h
 -rw-r--r--	root/root	usr/include/wine/windows/textstor.idl
+-rw-r--r--	root/root	usr/include/wine/windows/thumbcache.h
+-rw-r--r--	root/root	usr/include/wine/windows/thumbcache.idl
 -rw-r--r--	root/root	usr/include/wine/windows/timezoneapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/tlhelp32.h
 -rw-r--r--	root/root	usr/include/wine/windows/tlogstg.h
@@ -1970,6 +1975,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mscat32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mscms.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/mscoree.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/mscorwks.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msctf.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msctfp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msdaps.dll
@@ -2571,6 +2577,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/mscat32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mscms.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/mscoree.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/mscorwks.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msctf.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msctfp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msdaps.dll.so
@@ -3886,6 +3893,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mscat32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mscms.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/mscoree.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/mscorwks.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msctf.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msctfp.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msdaps.dll
@@ -4543,6 +4551,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/mscat32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mscms.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/mscoree.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/mscorwks.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msctf.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msctfp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msdaps.dll.so
@@ -4986,6 +4995,6 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine_gecko-2.47-x86_64.msi
 -rw-r--r--	root/root	usr/share/wine/l_intl.nls
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.9.0.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.9.2.msi
 -rw-r--r--	root/root	usr/share/wine/wine.inf
 -rw-r--r--	root/root	usr/share/wine/winehid.inf
