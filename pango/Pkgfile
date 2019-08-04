@@ -1,10 +1,10 @@
 # Description: A library for layout and rendering of text
 # URL: http://www.gtk.org/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: xorg-libsm, xorg-libxft, meson, ninja, fribidi, harfbuzz
+# Depends on: xorg-libsm, xorg-libxft, gobject-introspection, fribidi, harfbuzz
 
 name=pango
-version=1.44.2
+version=1.44.3
 release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
