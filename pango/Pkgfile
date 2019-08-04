@@ -4,7 +4,7 @@
 # Depends on: xorg-libsm, xorg-libxft, meson, ninja, fribidi, harfbuzz
 
 name=pango
-version=1.44.0
+version=1.44.2
 release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
