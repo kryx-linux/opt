@@ -5,7 +5,7 @@
 
 name=python3
 version=3.7.3
-release=1
+release=2
 source=(https://www.python.org/ftp/python/$version/Python-$version.tar.xz)
 
 build() {
@@ -37,6 +37,7 @@ build() {
     ln -s pydoc${version%.*}         $PKG/usr/bin/pydoc3
     ln -s python${version%.*}        $PKG/usr/lib/$name
     ln -s python-${version%.*}.pc    $PKG/usr/lib/pkgconfig/python3.pc
+    ln -s python${version%.*}m       $PKG/usr/include/python${version%.*}
 
     rm $PKG/usr/lib/python${version%.*}/ctypes/macholib/README.ctypes
     rm $PKG/usr/lib/python${version%.*}/distutils/README

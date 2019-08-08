@@ -13,6 +13,7 @@ lrwxrwxrwx	root/root	usr/bin/python3.7-config -> python3.7m-config
 -rwxr-xr-x	root/root	usr/bin/python3.7m-config
 -rwxr-xr-x	root/root	usr/bin/pyvenv-3.7
 drwxr-xr-x	root/root	usr/include/
+lrwxrwxrwx	root/root	usr/include/python3.7 -> python3.7m
 drwxr-xr-x	root/root	usr/include/python3.7m/
 -rw-r--r--	root/root	usr/include/python3.7m/Python-ast.h
 -rw-r--r--	root/root	usr/include/python3.7m/Python.h
