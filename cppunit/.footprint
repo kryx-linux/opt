@@ -1,7 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/DllPlugInTester
--rwxr-xr-x	root/root	usr/bin/cppunit-config
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/cppunit/
 -rw-r--r--	root/root	usr/include/cppunit/AdditionalMessage.h
@@ -69,40 +68,24 @@ drwxr-xr-x	root/root	usr/include/cppunit/plugin/
 -rw-r--r--	root/root	usr/include/cppunit/plugin/TestPlugIn.h
 -rw-r--r--	root/root	usr/include/cppunit/plugin/TestPlugInDefaultImpl.h
 drwxr-xr-x	root/root	usr/include/cppunit/portability/
--rw-r--r--	root/root	usr/include/cppunit/portability/CppUnitDeque.h
--rw-r--r--	root/root	usr/include/cppunit/portability/CppUnitMap.h
--rw-r--r--	root/root	usr/include/cppunit/portability/CppUnitSet.h
--rw-r--r--	root/root	usr/include/cppunit/portability/CppUnitStack.h
--rw-r--r--	root/root	usr/include/cppunit/portability/CppUnitVector.h
 -rw-r--r--	root/root	usr/include/cppunit/portability/FloatingPoint.h
 -rw-r--r--	root/root	usr/include/cppunit/portability/Stream.h
 drwxr-xr-x	root/root	usr/include/cppunit/tools/
 -rw-r--r--	root/root	usr/include/cppunit/tools/Algorithm.h
+-rw-r--r--	root/root	usr/include/cppunit/tools/StringHelper.h
 -rw-r--r--	root/root	usr/include/cppunit/tools/StringTools.h
 -rw-r--r--	root/root	usr/include/cppunit/tools/XmlDocument.h
 -rw-r--r--	root/root	usr/include/cppunit/tools/XmlElement.h
 drwxr-xr-x	root/root	usr/include/cppunit/ui/
-drwxr-xr-x	root/root	usr/include/cppunit/ui/mfc/
--rw-r--r--	root/root	usr/include/cppunit/ui/mfc/MfcTestRunner.h
--rw-r--r--	root/root	usr/include/cppunit/ui/mfc/TestRunner.h
-drwxr-xr-x	root/root	usr/include/cppunit/ui/qt/
--rw-r--r--	root/root	usr/include/cppunit/ui/qt/Config.h
--rw-r--r--	root/root	usr/include/cppunit/ui/qt/QtTestRunner.h
--rw-r--r--	root/root	usr/include/cppunit/ui/qt/TestRunner.h
 drwxr-xr-x	root/root	usr/include/cppunit/ui/text/
 -rw-r--r--	root/root	usr/include/cppunit/ui/text/TestRunner.h
 -rw-r--r--	root/root	usr/include/cppunit/ui/text/TextTestRunner.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libcppunit-1.12.so.1 -> libcppunit-1.12.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libcppunit-1.12.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libcppunit-1.14.so.0 -> libcppunit-1.14.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libcppunit-1.14.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libcppunit.a
 -rwxr-xr-x	root/root	usr/lib/libcppunit.la
-lrwxrwxrwx	root/root	usr/lib/libcppunit.so -> libcppunit-1.12.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libcppunit.so -> libcppunit-1.14.so.0.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/cppunit.pc
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/aclocal/
--rw-r--r--	root/root	usr/share/aclocal/cppunit.m4
-drwxr-xr-x	root/root	usr/share/man/
-drwxr-xr-x	root/root	usr/share/man/man1/
--rw-r--r--	root/root	usr/share/man/man1/cppunit-config.1.gz
