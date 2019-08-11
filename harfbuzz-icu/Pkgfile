@@ -2,6 +2,7 @@
 # URL: https://www.freedesktop.org/wiki/Software/HarfBuzz
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: harfbuzz icu
+# Optional: graphite2
 
 name=harfbuzz-icu
 version=2.5.3
@@ -64,4 +65,7 @@ build() {
 		$PKG/usr/lib/pkgconfig/harfbuzz-subset.pc
 
 	rm -r $PKG/usr/share/gtk-doc
+
+	# if graphite2 is installed
+	rm -f $PKG/usr/include/harfbuzz/hb-graphite2.h
 }
