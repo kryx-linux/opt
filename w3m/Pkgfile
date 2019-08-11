@@ -1,20 +1,19 @@
 # Description: Pager that can also be used as a text-based web browser
 # URL:         http://w3m.sourceforge.net/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Han Boetes, han at mijncomputer dot dl
 # Depends on:  boehm-gc
 
 name=w3m
-version=0.5.3
-release=2
-source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
+version=0.5.3-37
+release=1
+source=(https://github.com/tats/w3m/archive/debian/$version/$name-$version.tar.gz)
 
 build() {
-    cd $name-$version
+    cd $name-debian-$version
 
-    sed -i s/showaudio/mplayer/ config.h.in
-    sed -i '836d' main.c # function type is void
-    sed -i 's/file_handle/file_foo/' istream.{c,h}
+    patch -p1 -i debian/patches/010_upstream.patch
+    patch -p1 -i debian/patches/020_debian.patch
+    rm -r doc/CVS
 
     ./configure \
         --prefix=/usr \
@@ -22,7 +21,6 @@ build() {
         --disable-image \
         --disable-gopher \
         --disable-japanese \
-        --disable-kanjisymbols \
         --disable-m17n \
         --disable-messagel10n \
         --disable-nls \
@@ -49,6 +47,7 @@ build() {
     make
     make DESTDIR=$PKG install 
 
-    rm -rf $PKG/usr/share/man/ja*
-    rm -rf $PKG/usr/share/locale/
+    rm -r $PKG/usr/share/man/{de,ja}
+    rm $PKG/usr/share/w3m/w3mhelp-funcdesc.{de,ja}.pl
+    rm -rf $PKG/usr/share/locale
 }
