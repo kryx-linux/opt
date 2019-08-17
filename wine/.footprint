@@ -37,6 +37,7 @@ drwxr-xr-x	root/root	usr/include/wine/
 drwxr-xr-x	root/root	usr/include/wine/msvcrt/
 -rw-r--r--	root/root	usr/include/wine/msvcrt/assert.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/conio.h
+-rw-r--r--	root/root	usr/include/wine/msvcrt/corecrt.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/crtdbg.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/crtdefs.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/ctype.h
@@ -828,6 +829,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/tmschema.h
 -rw-r--r--	root/root	usr/include/wine/windows/tom.h
 -rw-r--r--	root/root	usr/include/wine/windows/tom.idl
+-rw-r--r--	root/root	usr/include/wine/windows/tpcshrd.h
 -rw-r--r--	root/root	usr/include/wine/windows/traffic.h
 -rw-r--r--	root/root	usr/include/wine/windows/transact.h
 -rw-r--r--	root/root	usr/include/wine/windows/transact.idl
@@ -2193,6 +2195,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/user32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/userenv.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/usp10.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/utildll.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/uxtheme.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vbscript.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vcomp.dll
@@ -2254,6 +2257,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winusb.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winver.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wlanapi.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/wlanui.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wldap32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wmasf.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wmi.dll
@@ -2795,6 +2799,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/user32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/userenv.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/usp10.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/utildll.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/uxtheme.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vbscript.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vcomp.dll.so
@@ -2856,6 +2861,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/winusb.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winver.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/wlanapi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/wlanui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wldap32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wmasf.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wmi.dll.so
@@ -4132,6 +4138,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/user32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/userenv.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/usp10.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/utildll.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/uxtheme.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vbscript.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcomp.dll
@@ -4214,6 +4221,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winusb.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winver.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wlanapi.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/wlanui.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wldap32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wmasf.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wmi.dll
@@ -4790,6 +4798,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/user32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/userenv.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/usp10.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/utildll.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/uxtheme.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vbscript.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vcomp.dll.so
@@ -4872,6 +4881,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/winusb.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/winver.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wlanapi.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/wlanui.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wldap32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wmasf.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wmi.dll.so
