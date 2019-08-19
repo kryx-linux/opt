@@ -1,11 +1,10 @@
 # Description: Image manipulation wizard
 # URL:         http://www.imagemagick.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Packager:    danm, maol, jaeger, sip
-# Depends on:  util-linux lcms2 pango xorg-libxt
+# Depends on:  util-linux lcms2 pango xorg-libxt chrpath
 
 name=imagemagick
-version=7.0.8-60
+version=7.0.8-61
 release=1
 source=(https://www.imagemagick.org/download/releases/ImageMagick-$version.tar.xz)
 
@@ -21,12 +20,10 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    # rebuild perl binding .so files to remove bogus workdir rpath
-    cd PerlMagick
-    find . -name '*.so' -delete
-    sed -i 's,LD_RUN_PATH="$(LD_RUN_PATH)" ,,' quantum/Makefile
-    make DESTDIR=$PKG install
+    # remove bogus workdir rpath from perl modules
+    find $PKG/usr/lib/perl5 -name '*.so' -exec chrpath -d {} +
 
+    # cleanup
     rm -r $PKG/usr/share/doc
     find $PKG -regex '.*\(ChangeLog\|LICENSE\|NEWS\.txt\)$' -delete 
     find $PKG -regex '.*\(\.packlist\|perllocal.pod\|\.bs\)$' -delete
