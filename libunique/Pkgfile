@@ -1,32 +1,28 @@
 # Description: Unique is a library for writing single instance application
-# URL: https://wiki.gnome.org/Attic/LibUnique
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Jose V Beneyto, sepen at crux dot nu
-# Depends on: gtk xorg-libxdamage
+# URL:         http://live.gnome.org/LibUnique
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  gtk3 xorg-libxdamage
 
 name=libunique
 version=1.1.6
-release=4
+release=5
 source=(http://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.bz2 \
-        G_CONST_RETURN.patch)
+        http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-upstream_fixes-1.patch)
 
 build() {
-  cd $name-$version
+	cd $name-$version
 
-  patch -p1 -i $SRC/G_CONST_RETURN.patch
+	patch -p1 -i $SRC/$name-$version-upstream_fixes-1.patch
 
-  ./configure --prefix=/usr \
-              --disable-dbus \
-              --disable-static \
-              --disable-debug \
-              --with-x
+	autoreconf -fi
+	./configure \
+		--prefix=/usr \
+		--disable-dbus \
+		--disable-debug \
+		--with-x
 
-  sed -i $(find . -type f -name Makefile) \
-      -e 's|aclocal-1.11|aclocal|g' \
-      -e 's|automake-1.11|automake|g'
+	make
+	make DESTDIR=$PKG install
 
-  make
-  make DESTDIR=$PKG install
-
-  rm -rf $PKG/usr/share/gtk-doc
+	rm -r $PKG/usr/share/gtk-doc
 }
