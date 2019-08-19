@@ -4,8 +4,8 @@
 # Depends on:  acl libusb zlib linux-pam
 
 name=cups
-version=2.2.11
-release=2
+version=2.2.12
+release=1
 source=(https://github.com/apple/cups/releases/download/v$version/$name-$version-source.tar.gz
         cups)
 
