@@ -217,7 +217,6 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/
 -rw-r--r--	root/root	usr/include/mysql/server/private/aria_backup.h
 drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/atomic/gcc_builtins.h
--rw-r--r--	root/root	usr/include/mysql/server/private/atomic/gcc_sync.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/atomic/generic-msvc.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/atomic/solaris.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/authors.h
