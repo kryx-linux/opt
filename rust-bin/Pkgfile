@@ -6,9 +6,10 @@
 
 name=rust-bin
 version=1.37.0
-release=1
-source=(https://crux.ster.zone/downloads/rust/rust-$version-crux-3.5-bin.tar.xz)
+release=2
+source=(https://crux.ster.zone/downloads/rust/rust-$version-$release-crux-3.5-bin.tar.xz)
 
 build() {
 	cp -a $SRC/usr $PKG/
+	find $PKG -name 'README.md' -exec rm '{}' \+
 }
