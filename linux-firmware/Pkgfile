@@ -3,14 +3,12 @@
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 
 name=linux-firmware
-version=20190514
+version=20190815
 release=1
-source=(http://crux.nu/files/$name-$version.tar.xz)
+source=(https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-
     make DESTDIR=$PKG FIRMWAREDIR=/lib/firmware install
-
-    rm $PKG/lib/firmware/{Makefile,README,configure,GPL-{2,3}}
+    find $PKG \( -name 'ChangeLog' -or -name 'README' \) -delete
 }
