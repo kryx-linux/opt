@@ -4,17 +4,12 @@
 # Depends on: libxml2
 
 name=libxslt
-version=1.1.30
+version=1.1.33
 release=1
-source=(http://xmlsoft.org/sources/$name-$version.tar.gz
-	libxslt-1.1.30-glibc226.patch)
+source=(http://xmlsoft.org/sources/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-
-	# https://github.com/GNOME/libxslt/commit/8b4babb8f742a1a189df4c4569e68eda308df68f
-	patch -p1 -i $SRC/libxslt-1.1.30-glibc226.patch
-	autoreconf
 
 	./configure \
 		--prefix=/usr \
