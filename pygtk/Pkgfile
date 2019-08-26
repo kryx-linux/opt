@@ -1,11 +1,11 @@
 # Description: set of bindings for the GTK widget set
 # URL: http://www.pygtk.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: libglade python-cairo python-gobject-compat
+# Depends on: libglade-compat python-cairo python-gobject-compat
 
 name=pygtk
 version=2.24.0
-release=3
+release=4
 source=(https://download.gnome.org/sources/$name/${version::4}/$name-$version.tar.bz2
 	python27.patch
 	fix-leaks-of-pango-objects.patch)
@@ -19,7 +19,7 @@ build() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=660216
 	patch -p1 -i $SRC/fix-leaks-of-pango-objects.patch
 
-	PKG_CONFIG_PATH+="/usr/lib/pango-compat/pkgconfig" \
+	PKG_CONFIG_PATH+="/usr/lib/pango-compat/pkgconfig:/usr/lib/libcairo-compat/pkgconfig" \
 	./configure --prefix=/usr
 
 	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
