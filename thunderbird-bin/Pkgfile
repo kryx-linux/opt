@@ -1,10 +1,10 @@
 # Description: Thunderbird binary
-# URL: http://www.mozilla.com
+# URL: https://www.thunderbird.net/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
 # Depends on: gtk3, dbus-glib
 
 name=thunderbird-bin
-version=60.8.0
+version=68.0
 release=1
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-x86_64/en-US/thunderbird-$version.tar.bz2)
 
