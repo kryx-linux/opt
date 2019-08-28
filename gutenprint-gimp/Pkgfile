@@ -4,13 +4,14 @@
 # Depends on:  gimp gutenprint
 
 name=gutenprint-gimp
-version=5.3.1
+version=5.3.3
 release=1
 source=(http://downloads.sourceforge.net/project/gimp-print/gutenprint-5.3/$version/gutenprint-$version.tar.xz)
 
 build () {
     cd gutenprint-$version
 
+    CONFIG_SHELL=/bin/bash \
     ./configure --prefix=/usr \
                 --disable-{nls,samples,escputil} \
                 --without-{foomatic,ghostscript,doc} \
@@ -22,6 +23,7 @@ build () {
     rm $PKG/usr/lib/libgutenprint.*
     rm $PKG/usr/lib/pkgconfig/gutenprint.pc
     rm -r $PKG/usr/include/gutenprint
+    rm -r $PKG/usr/lib/gutenprint
     rm -r $PKG/usr/lib/cups
     rm -r $PKG/usr/{bin,sbin,share} $PKG/etc
 }
