@@ -28,6 +28,6 @@ build() {
 		-DBUILD_ICD=OFF \
 		-GNinja
 
-	ninja
+	ninja -j ${JOBS:-1}
 	DESTDIR=$PKG ninja install
 }
