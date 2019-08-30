@@ -28,6 +28,6 @@ build() {
 		-DBUILD_WSI_WAYLAND_SUPPORT=OFF \
 		-GNinja
 
-	ninja
+	ninja -j ${JOBS:-1}
 	DESTDIR=$PKG ninja install
 }
