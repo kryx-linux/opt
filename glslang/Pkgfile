@@ -1,36 +1,44 @@
-# Description: Khronos reference front-end for GLSL and ESSL, and sample SPIR-V generator
+# Description: OpenGL and OpenGL ES shader front end and validator
 # URL: https://www.khronos.org/opengles/sdk/tools/Reference-Compiler
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: spirv-tools
 
 name=glslang
-version=7.11.3214
+version=7.12.3352
 release=1
-source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz)
+source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
+	0001-pkg-config-compatibility.patch)
 
 build() {
 	cd $name-$version
+
+	# Patch to build against system spirv-tools
+	patch -p1 -i $SRC/0001-pkg-config-compatibility.patch
 
 	mkdir -p build-{shared,static}
 
 	(cd build-shared
 	cmake .. \
 		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_BUILD_TYPE=Release \
+		-GNinja \
 		-DBUILD_SHARED_LIBS=ON
-	make
+	ninja
 	)
 
 	(cd build-static
 	cmake .. \
 		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_BUILD_TYPE=Release \
+		-GNinja \
 		-DBUILD_SHARED_LIBS=OFF
-	make
+	ninja
 	)
 
-	make -C build-shared DESTDIR=$PKG install
-	make -C build-static DESTDIR=$PKG install
+	DESTDIR=$PKG ninja -C build-shared install
+	DESTDIR=$PKG ninja -C build-static install
 
 	cd $PKG/usr/lib
 		for lib in *.so; do

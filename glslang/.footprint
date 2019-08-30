@@ -73,3 +73,6 @@ lrwxrwxrwx	root/root	usr/lib/libglslang-default-resource-limits.so.0 -> libglsla
 -rw-r--r--	root/root	usr/lib/libglslang.a
 -rwxr-xr-x	root/root	usr/lib/libglslang.so
 lrwxrwxrwx	root/root	usr/lib/libglslang.so.0 -> libglslang.so
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/glslang.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/spirv.pc
