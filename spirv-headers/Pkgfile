@@ -1,7 +1,7 @@
 # Description: SPIR-V Headers
 # URL: https://www.khronos.org/registry/spir-v/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cmake
+# Depends on: cmake ninja
 
 name=spirv-headers
 version=1.4.2
@@ -26,8 +26,9 @@ build() {
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_BUILD_TYPE=Release \
-		-DSPIRV_HEADERS_SKIP_EXAMPLES=ON
+		-DSPIRV_HEADERS_SKIP_EXAMPLES=ON \
+		-GNinja
 
-	make
-	make DESTDIR=$PKG install
+	ninja -j ${JOBS:-1}
+	DESTDIR=$PKG ninja install
 }
