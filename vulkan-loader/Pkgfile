@@ -23,8 +23,9 @@ build() {
 		-DBUILD_LOADER=True \
 		-DBUILD_WSI_XCB_SUPPORT=True \
 		-DBUILD_WSI_XLIB_SUPPORT=True \
-		-DBUILD_WSI_WAYLAND_SUPPORT=OFF
+		-DBUILD_WSI_WAYLAND_SUPPORT=OFF \
+		-GNinja
 
-	make
-	make DESTDIR=$PKG install
+	ninja -j ${JOBS:-1}
+	DESTDIR=$PKG ninja install
 }
