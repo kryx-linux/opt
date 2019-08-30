@@ -4,7 +4,7 @@
 # Depends on: glslang vulkan-loader
 
 name=vulkan-tools
-version=1.1.108.0
+version=1.1.114.0
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/sdk-$version/Vulkan-Tools-sdk-$version.tar.gz)
 
@@ -19,9 +19,15 @@ build() {
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DGLSLANG_INSTALL_DIR=/usr \
+		-DBUILD_CUBE=True \
+		-DBUILD_VULKANINFO=True \
+		-DCUBE_WSI_SELECTION='XCB' \
+		-DBUILD_WSI_XCB_SUPPORT=True \
+		-DBUILD_WSI_XLIB_SUPPORT=True \
 		-DBUILD_WSI_WAYLAND_SUPPORT=OFF \
-		-DBUILD_ICD=OFF
+		-DBUILD_ICD=OFF \
+		-GNinja
 
-	make
-	make DESTDIR=$PKG install
+	ninja
+	DESTDIR=$PKG ninja install
 }
