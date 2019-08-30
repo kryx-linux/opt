@@ -17,24 +17,20 @@ build() {
 
 	mkdir -p build-{shared,static}
 
+	local config="
+-DCMAKE_INSTALL_PREFIX=/usr \
+-DCMAKE_INSTALL_LIBDIR=lib \
+-DCMAKE_BUILD_TYPE=Release \
+-GNinja"
+
 	(cd build-shared
-	cmake .. \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-GNinja \
-		-DBUILD_SHARED_LIBS=ON
-	ninja
+	cmake .. $config -DBUILD_SHARED_LIBS=ON
+	ninja -j ${JOBS:-1}
 	)
 
 	(cd build-static
-	cmake .. \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-GNinja \
-		-DBUILD_SHARED_LIBS=OFF
-	ninja
+	cmake .. $config -DBUILD_SHARED_LIBS=OFF
+	ninja -j ${JOBS:-1}
 	)
 
 	DESTDIR=$PKG ninja -C build-shared install
