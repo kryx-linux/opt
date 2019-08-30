@@ -4,8 +4,8 @@
 # Depends on: glslang vulkan-loader
 
 name=vulkan-validation-layers
-version=1.1.108.0
-release=2
+version=1.1.114.0
+release=1
 source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/sdk-$version/Vulkan-ValidationLayers-sdk-$version.tar.gz)
 
 build() {
@@ -17,16 +17,17 @@ build() {
 	cmake .. \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_DATADIR=/share \
-		-DCMAKE_INSTALL_SYSCONFDIR=/etc \
 		-DCMAKE_BUILD_TYPE=Release \
-		-DGLSLANG_INSTALL_DIR=/usr \
 		-DCMAKE_SKIP_RPATH=True \
-		-DBUILD_TESTS=Off \
-		-DBUILD_WSI_XCB_SUPPORT=On \
-		-DBUILD_WSI_XLIB_SUPPORT=On \
-		-DBUILD_WSI_WAYLAND_SUPPORT=Off
+		-DBUILD_TESTS=False \
+		-DGLSLANG_INSTALL_DIR=/usr \
+		-DCMAKE_INSTALL_INCLUDEDIR=/usr/include/vulkan/ \
+		-DBUILD_LAYER_SUPPORT_FILES=ON \
+		-DBUILD_WSI_XCB_SUPPORT=ON \
+		-DBUILD_WSI_XLIB_SUPPORT=ON \
+		-DBUILD_WSI_WAYLAND_SUPPORT=OFF \
+		-GNinja
 
-	make
-	make DESTDIR=$PKG install
+	ninja
+	DESTDIR=$PKG ninja install
 }
