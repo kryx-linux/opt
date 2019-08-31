@@ -1,9 +1,0 @@
-compatable pango version 1.34
-
-add:
-
-PKG_CONFIG_PATH+="/usr/lib/pango-compat/pkgconfig" \
-    ./configure ...
-
-
-To any affected ports.
