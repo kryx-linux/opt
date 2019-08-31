@@ -1,16 +1,16 @@
 # Description: Perl Uniform Resource Identifiers Library.
-# URL: http://search.cpan.org/dist/URI/
+# URL: https://metacpan.org/release/URI
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=p5-uri
-version=1.72
-release=2
-source=(http://search.cpan.org/CPAN/authors/id/E/ET/ETHER/URI-$version.tar.gz)
+version=1.76
+release=1
+source=(https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-$version.tar.gz)
 
 build() {
 	cd URI-$version
 
-	perl Makefile.PL
+	perl Makefile.PL INSTALLDIRS=vendor
 	make
 	make install DESTDIR=$PKG
 
