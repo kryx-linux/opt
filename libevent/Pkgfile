@@ -5,11 +5,16 @@
 
 name=libevent
 version=2.1.11
-release=1
-source=(https://github.com/libevent/libevent/releases/download/release-$version-stable/$name-$version-stable.tar.gz)
+release=2
+source=(https://github.com/libevent/libevent/releases/download/release-$version-stable/$name-$version-stable.tar.gz
+        warn-if-forked-from-the-event-loop.patch)
 
 build() {
     cd $name-$version-stable
+
+    # https://archives.seul.org/libevent/users/Aug-2019/msg00009.html
+    patch -p1 -R -i $SRC/warn-if-forked-from-the-event-loop.patch
+    
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
