@@ -1,15 +1,15 @@
 # Description: Data tables useful in parsing HTML.
-# URL: http://search.cpan.org/dist/HTML-Tagset
+# URL: https://metacpan.org/release/HTML-Tagset
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=p5-html-tagset
 version=3.20
 release=2
-source=(http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/HTML-Tagset-$version.tar.gz)
+source=(https://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/HTML-Tagset-$version.tar.gz)
 
 build() {
 	cd HTML-Tagset-$version
-	perl Makefile.PL
+	perl Makefile.PL INSTALLDIRS=vendor
 	make OPTIMIZE="$CFLAGS"
 	make DESTDIR=$PKG install
 
