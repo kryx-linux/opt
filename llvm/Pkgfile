@@ -1,12 +1,12 @@
 # Description: LLVM compiler backend
 # URL:         http://llvm.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on: cmake libffi libxml2 ninja
+# Depends on:  cmake libffi libxml2 ninja
 
 name=llvm
-version=8.0.0
+version=8.0.1
 release=1
-source=(https://releases.llvm.org/$version/$name-$version.src.tar.xz
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-$version.src.tar.xz
   llvm-config.h)
 
 build() {

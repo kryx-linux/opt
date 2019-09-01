@@ -1496,7 +1496,7 @@ drwxr-xr-x	root/root	usr/lib/cmake/llvm/
 -rw-r--r--	root/root	usr/lib/cmake/llvm/LLVMProcessSources.cmake
 -rw-r--r--	root/root	usr/lib/cmake/llvm/TableGen.cmake
 -rw-r--r--	root/root	usr/lib/cmake/llvm/VersionFromVCS.cmake
-lrwxrwxrwx	root/root	usr/lib/libLLVM-8.0.0.so -> libLLVM-8.so
+lrwxrwxrwx	root/root	usr/lib/libLLVM-8.0.1.so -> libLLVM-8.so
 -rwxr-xr-x	root/root	usr/lib/libLLVM-8.so
 lrwxrwxrwx	root/root	usr/lib/libLLVM.so -> libLLVM-8.so
 -rw-r--r--	root/root	usr/lib/libLLVMAMDGPUAsmParser.a
