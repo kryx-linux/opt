@@ -50,6 +50,7 @@ drwxr-xr-x	root/root	usr/include/libnl3/netlink/route/act/
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/act/gact.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/act/mirred.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/act/skbedit.h
+-rw-r--r--	root/root	usr/include/libnl3/netlink/route/act/vlan.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/action.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/addr.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/class.h
@@ -64,6 +65,7 @@ drwxr-xr-x	root/root	usr/include/libnl3/netlink/route/cls/ematch/
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/cls/ematch/nbyte.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/cls/ematch/text.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/cls/fw.h
+-rw-r--r--	root/root	usr/include/libnl3/netlink/route/cls/matchall.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/cls/police.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/cls/u32.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link.h
@@ -72,6 +74,7 @@ drwxr-xr-x	root/root	usr/include/libnl3/netlink/route/link/
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/bonding.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/bridge.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/can.h
+-rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/geneve.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/inet.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/inet6.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/info-api.h
@@ -90,6 +93,7 @@ drwxr-xr-x	root/root	usr/include/libnl3/netlink/route/link/
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/vlan.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/vrf.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/vxlan.h
+-rw-r--r--	root/root	usr/include/libnl3/netlink/route/link/xfrmi.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/neighbour.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/neightbl.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/netconf.h
@@ -103,6 +107,7 @@ drwxr-xr-x	root/root	usr/include/libnl3/netlink/route/qdisc/
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/qdisc/fq_codel.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/qdisc/hfsc.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/qdisc/htb.h
+-rw-r--r--	root/root	usr/include/libnl3/netlink/route/qdisc/mqprio.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/qdisc/netem.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/qdisc/plug.h
 -rw-r--r--	root/root	usr/include/libnl3/netlink/route/qdisc/prio.h
