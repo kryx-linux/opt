@@ -4,7 +4,7 @@
 # Depends on:  bzip2 xz zlib openssl libevent
 
 name=links
-version=2.20
+version=2.20.1
 release=1
 source=(http://links.twibright.com/download/links-$version.tar.bz2)
 
