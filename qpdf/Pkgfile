@@ -4,7 +4,7 @@
 # Depends on:  zlib libjpeg-turbo
 
 name=qpdf
-version=8.4.2
+version=9.0.0
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
