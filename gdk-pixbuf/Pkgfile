@@ -4,8 +4,8 @@
 # Depends on: gobject-introspection shared-mime-info libpng libtiff xorg-libx11 meson ninja
 
 name=gdk-pixbuf
-version=2.38.1
-release=2
+version=2.38.2
+release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
         gdk-pixbuf.loaders gdk-pixbuf-register.sh)
 
