@@ -5,8 +5,9 @@
 
 name=thunderbird-bin
 version=68.1.0
-release=1
-source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-x86_64/en-US/thunderbird-$version.tar.bz2)
+release=2
+source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-x86_64/en-US/thunderbird-$version.tar.bz2 \
+	policies.json)
 
 build() {
 	cd thunderbird
@@ -14,6 +15,9 @@ build() {
 	install -d $PKG/usr/{lib,bin}
 	mv $SRC/thunderbird $PKG/usr/lib/thunderbird
 	ln -s /usr/lib/thunderbird/thunderbird $PKG/usr/bin/thunderbird
+
+        # Disable autoupdate
+        install -m644 $SRC/policies.json $PKG/usr/lib/thunderbird/distribution/
 
         mkdir -p $PKG/etc/revdep.d
         echo "/usr/lib/thunderbird" > $PKG/etc/revdep.d/thunderbird-bin
