@@ -4,8 +4,8 @@
 # Depends on: dbus glib xorg-libsm xorg-libxtst libsndfile intltool consolekit
 
 name=pulseaudio
-version=12.2
-release=2
+version=13.0
+release=1
 source=(https://freedesktop.org/software/$name/releases/$name-$version.tar.xz) 
 
 build() {
