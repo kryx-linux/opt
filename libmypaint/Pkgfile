@@ -1,17 +1,17 @@
 # Description: libmypaint is a library for making brushstrokes
 # URL:         https://github.com/mypaint/libmypaint
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on: gobject-introspection json-c intltool
+# Depends on:  gobject-introspection json-c intltool
 
 name=libmypaint
-version=1.3.0
-release=2
+version=1.4.0
+release=1
 source=(https://github.com/mypaint/$name/archive/v$version/$name-$version.tar.gz
   libmypaint-1d5d822-stable.patch.xz)
 
 build() {
   cd $name-$version
-  xzcat $SRC/libmypaint-1d5d822-stable.patch.xz | patch -p1
+
   ./autogen.sh
 
   ./configure --prefix=/usr \
