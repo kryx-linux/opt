@@ -30,6 +30,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/opgprof.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ophelp.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/opimport.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/opjitconv.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/opreport.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/oprofile.1.gz
 drwxr-xr-x	root/root	usr/share/oprofile/
@@ -117,6 +118,9 @@ drwxr-xr-x	root/root	usr/share/oprofile/i386/core_i7/
 drwxr-xr-x	root/root	usr/share/oprofile/i386/goldmont/
 -rw-r--r--	root/root	usr/share/oprofile/i386/goldmont/events
 -rw-r--r--	root/root	usr/share/oprofile/i386/goldmont/unit_masks
+drwxr-xr-x	root/root	usr/share/oprofile/i386/goldmontplus/
+-rw-r--r--	root/root	usr/share/oprofile/i386/goldmontplus/events
+-rw-r--r--	root/root	usr/share/oprofile/i386/goldmontplus/unit_masks
 drwxr-xr-x	root/root	usr/share/oprofile/i386/haswell/
 -rw-r--r--	root/root	usr/share/oprofile/i386/haswell/events
 -rw-r--r--	root/root	usr/share/oprofile/i386/haswell/unit_masks
