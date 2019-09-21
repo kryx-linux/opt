@@ -54,9 +54,9 @@ drwxr-xr-x	root/root	usr/include/qpdf/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libqpdf.a
 -rwxr-xr-x	root/root	usr/lib/libqpdf.la
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.26.0.0
-lrwxrwxrwx	root/root	usr/lib/libqpdf.so.26 -> libqpdf.so.26.0.0
--rwxr-xr-x	root/root	usr/lib/libqpdf.so.26.0.0
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so -> libqpdf.so.26.0.1
+lrwxrwxrwx	root/root	usr/lib/libqpdf.so.26 -> libqpdf.so.26.0.1
+-rwxr-xr-x	root/root	usr/lib/libqpdf.so.26.0.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libqpdf.pc
 drwxr-xr-x	root/root	usr/share/
