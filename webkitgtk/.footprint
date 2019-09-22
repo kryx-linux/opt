@@ -51,6 +51,7 @@ drwxr-xr-x	root/root	usr/include/webkitgtk-4.0/webkit2/
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitFormSubmissionRequest.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitForwardDeclarations.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitFrame.h
+-rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitGeolocationManager.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitGeolocationPermissionRequest.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitHitTestResult.h
 -rw-r--r--	root/root	usr/include/webkitgtk-4.0/webkit2/WebKitInstallMissingMediaPluginsPermissionRequest.h
@@ -220,11 +221,11 @@ drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/WebKit2-4.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lrwxrwxrwx	root/root	usr/lib/libjavascriptcoregtk-4.0.so -> libjavascriptcoregtk-4.0.so.18
-lrwxrwxrwx	root/root	usr/lib/libjavascriptcoregtk-4.0.so.18 -> libjavascriptcoregtk-4.0.so.18.13.6
--rwxr-xr-x	root/root	usr/lib/libjavascriptcoregtk-4.0.so.18.13.6
+lrwxrwxrwx	root/root	usr/lib/libjavascriptcoregtk-4.0.so.18 -> libjavascriptcoregtk-4.0.so.18.14.5
+-rwxr-xr-x	root/root	usr/lib/libjavascriptcoregtk-4.0.so.18.14.5
 lrwxrwxrwx	root/root	usr/lib/libwebkit2gtk-4.0.so -> libwebkit2gtk-4.0.so.37
-lrwxrwxrwx	root/root	usr/lib/libwebkit2gtk-4.0.so.37 -> libwebkit2gtk-4.0.so.37.37.5
--rwxr-xr-x	root/root	usr/lib/libwebkit2gtk-4.0.so.37.37.5
+lrwxrwxrwx	root/root	usr/lib/libwebkit2gtk-4.0.so.37 -> libwebkit2gtk-4.0.so.37.39.1
+-rwxr-xr-x	root/root	usr/lib/libwebkit2gtk-4.0.so.37.39.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/javascriptcoregtk-4.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/webkit2gtk-4.0.pc
@@ -233,7 +234,6 @@ drwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/MiniBrowser
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/WebKitNetworkProcess
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/WebKitPluginProcess
--rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/WebKitPluginProcess2
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/WebKitWebProcess
 drwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/injected-bundle/
 -rwxr-xr-x	root/root	usr/lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
