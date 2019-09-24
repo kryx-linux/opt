@@ -1,5 +1,8 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/Sq3sL/V+rvS5XsybIZlVoTOZHExWsiI0Bn68UFsnsSAD+Uo3ImBwxJ7Y0MuwKDjKTRulP9Pu30XCz1ZmIeevQE=
-SHA256 (Pkgfile) = 8eb14596fceaab62a1d6d08853eda6240038786bb0b523f8a23194b2cae02a0d
+RWSE3ohX2g5d/UPlaCotfV4MCo/F8qfKEcYd05kRjGrQBLBTO5hxtIcTgC/yczRKCcfbxbR5Rw6rWxglD4n7oOT5jyncr6+YWgM=
+SHA256 (Pkgfile) = 6a24c771a563292d30ded44aaed208c15656c5addb705632dec3728fce7099ef
 SHA256 (.footprint) = b04fc4d3a62e3311e32f9350e044e905495c74101132621641fe2088f7248bdc
-SHA256 (xpdf-4.00.tar.gz) = ff3d92c42166e35b1ba6aec9b5f0adffb5fc05a3eb95dc49505b6e344e4216d6
+SHA256 (xpdf-4.01.01.tar.gz) = ba550c7d3e4f73b1833cfcdcd9dbe39849dd0cd459b6774c4ecdfeca993204a4
+SHA256 (xpdf-automagic.patch) = 3cf7b618a90e39891b140978c9147e7b8edfd39666f11c9eb11bfe8727241cd9
+SHA256 (xpdf-visibility.patch) = 4dfde83375f344c724cb51cf7d2e0fef726ef7617be36d4a0570980917f68ead
+SHA256 (xpdf-shared-libs.patch) = e48d08c44dffb9367ec2cfe31823a44549cbd4ff00b10317c14a8d5225cde82f
