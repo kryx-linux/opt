@@ -422,6 +422,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_load.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_locale.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_manager.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/sql_mode.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_parse.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_partition.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_partition_admin.h
