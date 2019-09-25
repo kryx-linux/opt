@@ -4,9 +4,9 @@
 # Depends on:  util-linux gtk alsa-lib
 
 name=jdk
-version=8.212.04.2
+version=8.222.10.1
 release=1
-source=(https://d3pxv6yz143wms.cloudfront.net/$version/java-1.8.0-amazon-corretto-devel-1.8.0_212.b04-2.x86_64.rpm)
+source=(https://d3pxv6yz143wms.cloudfront.net/$version/java-1.8.0-amazon-corretto-devel-1.8.0_222.b10-1.x86_64.rpm)
 
 build(){
     cd $SRC/usr/lib/jvm/java-1.8.0-amazon-corretto

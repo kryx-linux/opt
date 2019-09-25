@@ -135,7 +135,7 @@ drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/jli/
 -rwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/libzip.so
 drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/server/
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/amd64/server/Xusage.txt
--rwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/server/libjsig.so
+lrwxrwxrwx	root/root	usr/lib/jdk/jre/lib/amd64/server/libjsig.so -> ../libjsig.so
 -rwxr-xr-x	root/root	usr/lib/jdk/jre/lib/amd64/server/libjvm.so
 drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/applet/
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/calendars.properties
