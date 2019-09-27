@@ -5,15 +5,20 @@
 
 name=qtwebengine
 version=5.13.1
-release=1
+release=2
 source=(https://download.qt.io/official_releases/qt/${version::4}/$version/submodules/$name-everywhere-src-$version.tar.xz
-	qtbug-77037.patch)
+	qtbug-77037.patch qtbug-77209.patch)
 
 build() {
 	cd $name-everywhere-src-$version
 
+	# https://bugreports.qt.io/browse/QTBUG-77209
+	# https://code.qt.io/cgit/qt/qtwebengine.git/patch/?id=1c33a4a6
+	patch -p1 -i $SRC/qtbug-77209.patch # Fix QWebEnginePage visibility state
+
 	# https://bugreports.qt.io/browse/QTBUG-77037
-	patch -p1 -i $SRC/qtbug-77037.patch
+	# https://code.qt.io/cgit/qt/qtwebengine-chromium.git/patch/?id=0b57f159
+	patch -p1 -d src/3rdparty -i $SRC/qtbug-77037.patch # Fix build with pulseaudio 13
 
 	# Ninja, by default, sets the number of jobs to the number of availalble threads
 	test -n "$JOBS" && export NINJAFLAGS+=" -j $JOBS"
