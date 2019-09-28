@@ -4,24 +4,18 @@
 # Depends on:  openssl
 
 name=fetchmail
-version=6.3.26
-release=3
-source=(http://downloads.sourceforge.net/project/$name/branch_6.3/$name-$version.tar.xz
-        disable-sslv3.patch)
+version=6.4.1
+release=1
+source=(http://downloads.sourceforge.net/project/$name/branch_6.4/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
 
-    # fix build with openssl 1.1.1
-    patch -p1 -i $SRC/disable-sslv3.patch
-
     # don't build python stuff
-    sed -i '19,21s/^/#/' Makefile.am
+    sed -i '22,24s/^/#/' Makefile.am
     autoreconf -vi
 
-    ./configure --prefix=/usr \
-                --with-ssl=/usr \
-                --disable-nls
+    ./configure --prefix=/usr --disable-nls
     make
     make DESTDIR=$PKG install
 }
