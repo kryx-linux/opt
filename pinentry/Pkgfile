@@ -1,14 +1,13 @@
 # Description: Secure PinEntry Dialog
-# URL:         http://www.gnupg.org
+# URL:         https://gnupg.org/related_software/pinentry/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:  libassuan
-# Nice to have: pinentry-gtk2 pinentry-qt4
+# Depends on:  libassuan libcap libsecret util-linux
+# Optional:    pinentry-gtk2 pinentry-qt4
 
 name=pinentry
 version=1.1.0
 release=1
-source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2 pinentry)
+source=(https://www.gnupg.org/ftp/gcrypt/$name//$name-$version.tar.bz2 pinentry)
 
 build() {
     cd $name-$version
