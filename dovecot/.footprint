@@ -570,6 +570,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/sha2.h
 -rw-r--r--	root/root	usr/include/dovecot/sha3.h
 -rw-r--r--	root/root	usr/include/dovecot/shared-storage.h
+-rw-r--r--	root/root	usr/include/dovecot/sleep.h
 -rw-r--r--	root/root	usr/include/dovecot/smtp-address.h
 -rw-r--r--	root/root	usr/include/dovecot/smtp-client-command.h
 -rw-r--r--	root/root	usr/include/dovecot/smtp-client-connection.h
@@ -646,6 +647,7 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/deliver -> dovecot-lda
 -rw-r--r--	root/root	usr/lib/dovecot/dovecot-config
 -rwxr-xr-x	root/root	usr/lib/dovecot/dovecot-lda
 -rwxr-xr-x	root/root	usr/lib/dovecot/gdbhelper
+-rwxr-xr-x	root/root	usr/lib/dovecot/health-check.sh
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap-hibernate
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap-login
