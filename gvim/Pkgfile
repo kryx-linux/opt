@@ -4,7 +4,7 @@
 # Depends on:  vim gtk3 xorg-libxt
 
 name=gvim
-version=8.1.1896
+version=8.1.2122
 release=1
 source=(https://github.com/vim/vim/archive/v${version}/vim-$version.tar.gz)
 
