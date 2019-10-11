@@ -5,11 +5,11 @@
 # Optional: sccache llvm-32
 
 name=rust
-version=1.37.0
+version=1.38.0
 ##cat src/stage0.txt
-_date=2019-07-04
-_rustc=1.36.0
-_cargo=0.37.0
+_date=2019-08-15
+_rustc=1.37.0
+_cargo=0.38.0
 ##
 
 release=1
@@ -22,6 +22,25 @@ source=(
  
 build() {
 	cd "${name}c-$version-src"
+
+	local ERROR
+	local DATE="$(awk '/^date: / { print $2 }' src/stage0.txt)"
+	local RUSTC="$(awk '/^rustc: / { print $2 }' src/stage0.txt)"
+	local CARGO="$(awk '/^cargo: / { print $2 }' src/stage0.txt)"
+	if [ "$DATE" != "$_date" ]; then
+		printf "\e[031mError: _date $_date != $DATE\033[0m\n"
+		ERROR=1
+	fi
+	if [ "$RUSTC" != "$_rustc" ]; then
+		printf "\e[031mError: _rustc $_rustc != $RUSTC\033[0m\n"
+		ERROR=1
+	fi
+	if [ "$CARGO" != "$_cargo" ]; then
+		printf "\e[031mError: _cargo $_cargo != $CARGO\033[0m\n"
+		ERROR=1
+	fi
+	[ $ERROR ] && exit 1
+	unset DATE RUSTC CARGO ERROR
 
 	mkdir -p build/cache/$_date
 	cp $PKGMK_SOURCE_DIR/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.gz build/cache/$_date/
@@ -59,7 +78,7 @@ cat <<- EOF >> $SRC/config.toml
 	rustc = "/usr/bin/rustc"
 EOF
 		else
-			echo 'llvm broken symlink detected, not using system rust to bootstrap'
+			printf "\e[031mllvm broken symlink detected, not using system rust to bootstrap\033[0m\n"
 		fi
         fi
 
