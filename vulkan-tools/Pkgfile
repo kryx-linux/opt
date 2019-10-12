@@ -4,7 +4,7 @@
 # Depends on: glslang vulkan-loader
 
 name=vulkan-tools
-version=1.1.114.0
+version=1.1.121.0
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/sdk-$version/Vulkan-Tools-sdk-$version.tar.gz)
 
