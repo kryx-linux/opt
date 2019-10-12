@@ -5,8 +5,8 @@
 
 name=spirv-headers
 version=1.4.2
-commit=45c2cc37276d69e5b257507d97fd90d2a5684ccc
-release=1
+commit=e4322e3be589e1ddd44afb20ea842a977c1319b8
+release=2
 source=(
 	#https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz
 	https://codeload.github.com/KhronosGroup/SPIRV-Headers/zip/$commit
