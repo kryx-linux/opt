@@ -4,8 +4,8 @@
 # Depends on: gnutls gsettings-desktop-schemas
 
 name=glib-networking
-version=2.60.3
-release=2
+version=2.62.1
+release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
