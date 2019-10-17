@@ -4,7 +4,7 @@
 # Depends on:  linux-pam libarchive libcap popt tdb tevent ldb python3
 
 name=samba
-version=4.10.8
+version=4.10.9
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
@@ -22,8 +22,8 @@ build () {
                 --without-{ad-dc,ads,ldap} \
                 --without-json
 
-    python ./buildtools/bin/waf build --jobs=${JOBS:-1}
-    python ./buildtools/bin/waf install --destdir=$PKG
+    python3 ./buildtools/bin/waf build --jobs=${JOBS:-1}
+    python3 ./buildtools/bin/waf install --destdir=$PKG
 
     # man pages
     local p
