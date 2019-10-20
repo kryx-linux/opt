@@ -10,6 +10,7 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/cifsdd
 -rwxr-xr-x	root/root	usr/bin/dbwrap_tool
+-rwxr-xr-x	root/root	usr/bin/dumpmscat
 -rwxr-xr-x	root/root	usr/bin/findsmb
 -rwxr-xr-x	root/root	usr/bin/gentest
 -rwxr-xr-x	root/root	usr/bin/locktest
@@ -165,9 +166,9 @@ lrwxrwxrwx	root/root	usr/lib/libsamba-errors.so -> libsamba-errors.so.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-hostconfig.so -> libsamba-hostconfig.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-hostconfig.so.0 -> libsamba-hostconfig.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libsamba-hostconfig.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so -> libsamba-passdb.so.0.27.2
-lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so.0 -> libsamba-passdb.so.0.27.2
--rwxr-xr-x	root/root	usr/lib/libsamba-passdb.so.0.27.2
+lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so -> libsamba-passdb.so.0.28.0
+lrwxrwxrwx	root/root	usr/lib/libsamba-passdb.so.0 -> libsamba-passdb.so.0.28.0
+-rwxr-xr-x	root/root	usr/lib/libsamba-passdb.so.0.28.0
 lrwxrwxrwx	root/root	usr/lib/libsamba-policy.cpython-37m-x86-64-linux-gnu.so -> libsamba-policy.cpython-37m-x86-64-linux-gnu.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-policy.cpython-37m-x86-64-linux-gnu.so.0 -> libsamba-policy.cpython-37m-x86-64-linux-gnu.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libsamba-policy.cpython-37m-x86-64-linux-gnu.so.0.0.1
@@ -254,6 +255,7 @@ lrwxrwxrwx	root/root	usr/lib/samba/libcom_err-samba4.so.0 -> libcom_err-samba4.s
 -rwxr-xr-x	root/root	usr/lib/samba/libgenrand-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libgensec-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libgpext-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libgpo-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libgse-samba4.so
 lrwxrwxrwx	root/root	usr/lib/samba/libgssapi-samba4.so.2 -> libgssapi-samba4.so.2.0.0
 -rwxr-xr-x	root/root	usr/lib/samba/libgssapi-samba4.so.2.0.0
@@ -282,18 +284,19 @@ lrwxrwxrwx	root/root	usr/lib/samba/libkrb5-samba4.so.26 -> libkrb5-samba4.so.26.
 -rwxr-xr-x	root/root	usr/lib/samba/liblibsmb-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libmessages-dgm-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libmessages-util-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libmscat-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libmsghdr-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libmsrpc3-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libndr-samba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libndr-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnet-keytab-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnetif-samba4.so
--rwxr-xr-x	root/root	usr/lib/samba/libnon-posix-acls-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnpa-tstream-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libnss-info-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libpopt-samba3-cmdline-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libpopt-samba3-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libposix-eadb-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libprinter-driver-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libprinting-migrate-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libregistry-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libreplace-samba4.so
@@ -355,6 +358,7 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/fruit.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/full_audit.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/glusterfs_fuse.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/gpfs.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/linux_xfs_sgid.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/media_harmony.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/netatalk.so
@@ -405,7 +409,6 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/testparm.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/vfstest.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/wbinfo.1.gz
-drwxr-xr-x	root/root	usr/share/man/man3/
 drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/lmhosts.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/pam_winbind.conf.5.gz
@@ -437,6 +440,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/samba-regedit.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/samba-tool.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/samba.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/samba_downgrade_db.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/smbd.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/smbpasswd.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/smbspool.8.gz
@@ -451,6 +455,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/vfs_cap.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_catia.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_ceph.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/vfs_ceph_snapshots.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_commit.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_crossrename.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_default_quota.8.gz
