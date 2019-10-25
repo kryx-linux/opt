@@ -4,17 +4,18 @@
 # Depends on: xkeyboard-config
 
 name=libxkbcommon
-version=0.8.4
+version=0.9.1
 release=1
-source=(https://xkbcommon.org/download/$name-$version.tar.xz)
+source=(https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-$version.tar.gz)
 
 build() {
-	cd $name-$version
+	cd libxkbcommon-xkbcommon-$version
 
-	./configure \
+	meson build \
 		--prefix=/usr \
-		--disable-docs
+		-Denable-wayland=false \
+		-Denable-docs=false
 
-	make
-	make DESTDIR=$PKG install
+	ninja -C build -j ${JOBS:-1}
+	DESTDIR=$PKG ninja -C build install
 }
