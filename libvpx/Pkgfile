@@ -4,7 +4,7 @@
 # Depends on: yasm
 
 name=libvpx
-version=1.7.0
+version=1.8.1
 release=1
 source=(https://github.com/webmproject/$name/archive/v$version/$name-v$version.tar.gz)
 
@@ -16,14 +16,12 @@ build() {
 		--enable-vp8 \
 		--enable-vp9 \
 		--enable-vp9-highbitdepth \
-		--enable-runtime-cpu-detect \
+		--enable-vp9-temporal-denoising \
 		--enable-shared \
 		--enable-postproc \
 		--enable-pic \
 		--disable-install-docs \
-		--disable-install-srcs \
-		--enable-experimental \
-		--enable-spatial-svc
+		--disable-install-srcs
 
 	make
 	make DIST_DIR="$PKG/usr" install
