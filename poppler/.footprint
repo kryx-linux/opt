@@ -20,6 +20,9 @@ drwxr-xr-x	root/root	usr/include/poppler/
 -rw-r--r--	root/root	usr/include/poppler/BuiltinFontTables.h
 -rw-r--r--	root/root	usr/include/poppler/CMap.h
 -rw-r--r--	root/root	usr/include/poppler/CachedFile.h
+-rw-r--r--	root/root	usr/include/poppler/CairoFontEngine.h
+-rw-r--r--	root/root	usr/include/poppler/CairoOutputDev.h
+-rw-r--r--	root/root	usr/include/poppler/CairoRescaleBox.h
 -rw-r--r--	root/root	usr/include/poppler/Catalog.h
 -rw-r--r--	root/root	usr/include/poppler/CertificateInfo.h
 -rw-r--r--	root/root	usr/include/poppler/CharCodeToUnicode.h
@@ -151,9 +154,9 @@ drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so -> libpoppler-cpp.so.0
 lrwxrwxrwx	root/root	usr/lib/libpoppler-cpp.so.0 -> libpoppler-cpp.so.0.7.0
 -rwxr-xr-x	root/root	usr/lib/libpoppler-cpp.so.0.7.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.91
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so.91 -> libpoppler.so.91.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler.so.91.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.92
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so.92 -> libpoppler.so.92.0.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler.so.92.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cairo.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cpp.pc
