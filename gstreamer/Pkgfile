@@ -5,7 +5,7 @@
 
 name=gstreamer
 version=1.16.1
-release=1
+release=2
 source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
 build() {
@@ -15,7 +15,6 @@ build() {
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
 		-D buildtype=release \
-		-D gst_debug=false \
 		-D gtk_doc=disabled \
 		-D nls=disabled \
 		-D package-name="GStreamer (CRUX Linux)" \
