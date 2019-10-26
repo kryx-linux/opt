@@ -4,7 +4,7 @@
 # Depends on: libxkbcommon mesa3d
 
 name=libwpe
-version=1.4.0
+version=1.4.0.1
 release=1
 source=(https://wpewebkit.org/releases/$name-$version.tar.xz)
 
