@@ -1,13 +1,12 @@
-# Description: a free alternative to the OpenGL Utility Toolkit (GLUT) library.
+# Description: A free alternative to the OpenGL Utility Toolkit (GLUT) library.
 # URL: http://freeglut.sourceforge.net/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: glu xorg-libxi
 
 name=freeglut
-version=3.0.0
+version=3.2.1
 release=1
-source=(http://download.sourceforge.net/$name/$name-$version.tar.gz)
+source=(https://downloads.sourceforge.net/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
@@ -22,4 +21,6 @@ build() {
 
 	make
 	make DESTDIR=$PKG install
+
+	ln -s glut.pc $PKG/usr/lib/pkgconfig/freeglut.pc
 }
