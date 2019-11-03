@@ -173,8 +173,10 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_e67550_e67560-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_e67650_e67660-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_e75245-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_e85055-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_flow_mfp_m680-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_flow_mfp_m880-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_flowmfp_m776-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m153-m154-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m253-m254-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m452-ps.ppd.gz
@@ -186,6 +188,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m750-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m751-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m855-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_m856-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_e77422-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_e77428-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m178-m181-ps.ppd.gz
@@ -194,6 +197,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m577-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m680-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m681_m682-ps.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_mfp_m776-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_pro_m252-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_pro_m453-4-ps.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_pro_m478f-9f-ps.ppd.gz
@@ -295,6 +299,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_3420.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_3425.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_3450.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_350.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_3500.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_3510_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_3520_series.ppd.gz
@@ -319,6 +324,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_3940.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_400.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_400l.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_450.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_4510_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_4530_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_460.ppd.gz
@@ -453,8 +459,6 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_ink_adv_2060_k110.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_ink_advant_k109a-z.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_ink_advant_k209a-z.ppd.gz
--rw-r--r--	root/root	usr/share/cups/model/HP/hp-dj350.ppd.gz
--rw-r--r--	root/root	usr/share/cups/model/HP/hp-dj450.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-envy_100_d410_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-envy_110_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-envy_120_series.ppd.gz
@@ -1171,7 +1175,6 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_1358_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_1400_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_1500_series.ppd.gz
--rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_1510_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_1600_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_2100_series.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-psc_2150_series.ppd.gz
