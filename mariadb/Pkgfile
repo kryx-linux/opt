@@ -4,9 +4,9 @@
 # Depends on:  ncurses zlib openssl cmake libaio linux-pam
 
 name=mariadb
-version=10.4.8
+version=10.4.10
 release=1
-source=(https://downloads.mariadb.org/interstitial/$name-$version/source/$name-$version.tar.gz 
+source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz 
         mariadb
         pre-install)
 
