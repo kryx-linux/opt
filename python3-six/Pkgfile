@@ -4,8 +4,8 @@
 # Depends on: python3
 
 name=python3-six
-version=1.12.0
-release=2
+version=1.13.0
+release=1
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
 
 build() {
