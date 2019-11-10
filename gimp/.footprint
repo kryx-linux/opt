@@ -318,8 +318,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/colormap-remap/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/colormap-remap/colormap-remap
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/compose/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/compose/compose
-drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/contrast-normalize/
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/contrast-normalize/contrast-normalize
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/contrast-retinex/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/contrast-retinex/contrast-retinex
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/crop-zealous/
@@ -336,8 +334,6 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/destripe/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/destripe/destripe
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge-dog/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge-dog/edge-dog
-drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge-neon/
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge-neon/edge-neon
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/emboss/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/emboss/emboss
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-bmp/
@@ -470,12 +466,8 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/metadata-editor/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/metadata-editor/metadata-editor
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/metadata-viewer/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/metadata-viewer/metadata-viewer
-drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/newsprint/
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/newsprint/newsprint
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/nl-filter/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/nl-filter/nl-filter
-drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/oilify/
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/oilify/oilify
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/pagecurl/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/pagecurl/pagecurl
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/photocopy/
@@ -521,41 +513,41 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/wavelet-decompose/
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/web-browser/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/web-browser/web-browser
 -rwxr-xr-x	root/root	usr/lib/libgimp-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so -> libgimp-2.0.so.0.1000.12
-lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so.0 -> libgimp-2.0.so.0.1000.12
--rwxr-xr-x	root/root	usr/lib/libgimp-2.0.so.0.1000.12
+lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so -> libgimp-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so.0 -> libgimp-2.0.so.0.1000.14
+-rwxr-xr-x	root/root	usr/lib/libgimp-2.0.so.0.1000.14
 -rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so -> libgimpbase-2.0.so.0.1000.12
-lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so.0 -> libgimpbase-2.0.so.0.1000.12
--rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.so.0.1000.12
+lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so -> libgimpbase-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so.0 -> libgimpbase-2.0.so.0.1000.14
+-rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.so.0.1000.14
 -rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so -> libgimpcolor-2.0.so.0.1000.12
-lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so.0 -> libgimpcolor-2.0.so.0.1000.12
--rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.so.0.1000.12
+lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so -> libgimpcolor-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so.0 -> libgimpcolor-2.0.so.0.1000.14
+-rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.so.0.1000.14
 -rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so -> libgimpconfig-2.0.so.0.1000.12
-lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so.0 -> libgimpconfig-2.0.so.0.1000.12
--rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.so.0.1000.12
+lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so -> libgimpconfig-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so.0 -> libgimpconfig-2.0.so.0.1000.14
+-rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.so.0.1000.14
 -rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so -> libgimpmath-2.0.so.0.1000.12
-lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so.0 -> libgimpmath-2.0.so.0.1000.12
--rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.so.0.1000.12
+lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so -> libgimpmath-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so.0 -> libgimpmath-2.0.so.0.1000.14
+-rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.so.0.1000.14
 -rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so -> libgimpmodule-2.0.so.0.1000.12
-lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so.0 -> libgimpmodule-2.0.so.0.1000.12
--rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.so.0.1000.12
+lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so -> libgimpmodule-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so.0 -> libgimpmodule-2.0.so.0.1000.14
+-rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.so.0.1000.14
 -rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so -> libgimpthumb-2.0.so.0.1000.12
-lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so.0 -> libgimpthumb-2.0.so.0.1000.12
--rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.so.0.1000.12
+lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so -> libgimpthumb-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so.0 -> libgimpthumb-2.0.so.0.1000.14
+-rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.so.0.1000.14
 -rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so -> libgimpui-2.0.so.0.1000.12
-lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so.0 -> libgimpui-2.0.so.0.1000.12
--rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.so.0.1000.12
+lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so -> libgimpui-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so.0 -> libgimpui-2.0.so.0.1000.14
+-rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.so.0.1000.14
 -rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so -> libgimpwidgets-2.0.so.0.1000.12
-lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so.0 -> libgimpwidgets-2.0.so.0.1000.12
--rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.so.0.1000.12
+lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so -> libgimpwidgets-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so.0 -> libgimpwidgets-2.0.so.0.1000.14
+-rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.so.0.1000.14
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimp-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimpthumb-2.0.pc

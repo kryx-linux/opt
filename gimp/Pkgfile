@@ -1,12 +1,11 @@
 # Description: The GIMP
 # URL:         http://www.gimp.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Simone Rota, sip at crux dot nu
 # Depends on: gegl glib-networking gtk libart_lgpl mypaint-brushes poppler-data poppler-glib xorg-libxmu xorg-libxpm
 # Optional: gimp-print libsdl ghostscript libmng
 
 name=gimp
-version=2.10.12
+version=2.10.14
 release=1
 source=(https://download.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2)
 
@@ -20,6 +19,8 @@ build() {
     --disable-python \
     --disable-nls \
     --without-webkit
+
+  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
   make
   make DESTDIR=$PKG install
