@@ -1,8 +1,7 @@
 # Description: Dynamic, any to any, pixel format translation library
 # URL: http://gegl.org/babl
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager: Simone Rota, sip at crux dot nu
-# Depends on: meson ninja gobject-introspection
+# Depends on: gobject-introspection lcms2
 
 name=babl
 version=0.1.72
