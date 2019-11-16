@@ -1382,6 +1382,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dpvoice.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpwsockx.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/drmclien.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dsdmo.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dsound.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dsquery.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dssenh.dll.so
@@ -1820,6 +1821,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpvoice.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpwsockx.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/drmclien.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/dsdmo.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dsound.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dsquery.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dssenh.dll
@@ -3293,6 +3295,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/dpvoice.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpwsockx.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/drmclien.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/dsdmo.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dsound.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dsquery.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dssenh.dll.so
@@ -3740,6 +3743,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpvoice.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpwsockx.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/drmclien.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/dsdmo.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dsound.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dsquery.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dssenh.dll
@@ -5033,4 +5037,5 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 drwxr-xr-x	root/root	usr/share/wine/mono/
 -rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-4.9.4.msi
 -rw-r--r--	root/root	usr/share/wine/wine.inf
+-rw-r--r--	root/root	usr/share/wine/winebus.inf
 -rw-r--r--	root/root	usr/share/wine/winehid.inf
