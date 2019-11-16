@@ -1,0 +1,20 @@
+# Description: An autotool- and libtoolized port of the NetBSD Editline library.
+# URL: http://thrysoee.dk/editline/
+# Packager: Oleksiy Khilkevich, grim at asu dot ntu-kpi dot kiev dot ua
+# Maintainer: Danny Rawlins, crux at romster dot me
+
+name=libedit
+version=20141030-3.1
+release=1
+source=(http://thrysoee.dk/editline/$name-$version.tar.gz)
+
+build() {
+	cd $name-20141029-3.1
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man
+
+	make
+	make DESTDIR=$PKG install
+}
