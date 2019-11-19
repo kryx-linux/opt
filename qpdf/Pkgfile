@@ -2,9 +2,10 @@
 # URL:         http://qpdf.sourceforge.net/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  zlib libjpeg-turbo
+# Optional:    gnutls
 
 name=qpdf
-version=9.0.2
+version=9.1.0
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
