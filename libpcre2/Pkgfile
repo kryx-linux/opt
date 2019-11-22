@@ -4,7 +4,7 @@
 # Depends on:
 
 name=libpcre2
-version=10.33
+version=10.34
 release=1
 source=(https://ftp.pcre.org/pub/pcre/pcre2-$version.tar.bz2)
 
