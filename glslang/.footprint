@@ -3,23 +3,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/glslangValidator
 -rwxr-xr-x	root/root	usr/bin/spirv-remap
 drwxr-xr-x	root/root	usr/include/
-drwxr-xr-x	root/root	usr/include/SPIRV/
--rw-r--r--	root/root	usr/include/SPIRV/GLSL.ext.AMD.h
--rw-r--r--	root/root	usr/include/SPIRV/GLSL.ext.EXT.h
--rw-r--r--	root/root	usr/include/SPIRV/GLSL.ext.KHR.h
--rw-r--r--	root/root	usr/include/SPIRV/GLSL.ext.NV.h
--rw-r--r--	root/root	usr/include/SPIRV/GLSL.std.450.h
--rw-r--r--	root/root	usr/include/SPIRV/GlslangToSpv.h
--rw-r--r--	root/root	usr/include/SPIRV/Logger.h
--rw-r--r--	root/root	usr/include/SPIRV/SPVRemapper.h
--rw-r--r--	root/root	usr/include/SPIRV/SpvBuilder.h
--rw-r--r--	root/root	usr/include/SPIRV/SpvTools.h
--rw-r--r--	root/root	usr/include/SPIRV/bitutils.h
--rw-r--r--	root/root	usr/include/SPIRV/disassemble.h
--rw-r--r--	root/root	usr/include/SPIRV/doc.h
--rw-r--r--	root/root	usr/include/SPIRV/hex_float.h
--rw-r--r--	root/root	usr/include/SPIRV/spirv.hpp
--rw-r--r--	root/root	usr/include/SPIRV/spvIR.h
 drwxr-xr-x	root/root	usr/include/glslang/
 drwxr-xr-x	root/root	usr/include/glslang/Include/
 -rw-r--r--	root/root	usr/include/glslang/Include/BaseTypes.h
@@ -56,7 +39,43 @@ drwxr-xr-x	root/root	usr/include/glslang/MachineIndependent/preprocessor/
 -rw-r--r--	root/root	usr/include/glslang/MachineIndependent/reflection.h
 drwxr-xr-x	root/root	usr/include/glslang/Public/
 -rw-r--r--	root/root	usr/include/glslang/Public/ShaderLang.h
+drwxr-xr-x	root/root	usr/include/glslang/SPIRV/
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/GLSL.ext.AMD.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/GLSL.ext.EXT.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/GLSL.ext.KHR.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/GLSL.ext.NV.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/GLSL.std.450.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/GlslangToSpv.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/Logger.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/SPVRemapper.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/SpvBuilder.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/SpvTools.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/bitutils.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/disassemble.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/doc.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/hex_float.h
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/spirv.hpp
+-rw-r--r--	root/root	usr/include/glslang/SPIRV/spvIR.h
 drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/cmake/
+-rw-r--r--	root/root	usr/lib/cmake/HLSLTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/HLSLTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/OGLCompilerTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/OGLCompilerTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/OSDependentTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/OSDependentTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/SPIRVTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/SPIRVTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/SPVRemapperTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/SPVRemapperTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/glslang-default-resource-limitsTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/glslang-default-resource-limitsTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/glslangTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/glslangTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/glslangValidatorTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/glslangValidatorTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/spirv-remapTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/spirv-remapTargets.cmake
 -rw-r--r--	root/root	usr/lib/libHLSL.a
 -rwxr-xr-x	root/root	usr/lib/libHLSL.so
 lrwxrwxrwx	root/root	usr/lib/libHLSL.so.0 -> libHLSL.so
@@ -68,8 +87,7 @@ lrwxrwxrwx	root/root	usr/lib/libSPIRV.so.0 -> libSPIRV.so
 -rw-r--r--	root/root	usr/lib/libSPVRemapper.a
 -rwxr-xr-x	root/root	usr/lib/libSPVRemapper.so
 lrwxrwxrwx	root/root	usr/lib/libSPVRemapper.so.0 -> libSPVRemapper.so
--rwxr-xr-x	root/root	usr/lib/libglslang-default-resource-limits.so
-lrwxrwxrwx	root/root	usr/lib/libglslang-default-resource-limits.so.0 -> libglslang-default-resource-limits.so
+-rw-r--r--	root/root	usr/lib/libglslang-default-resource-limits.a
 -rw-r--r--	root/root	usr/lib/libglslang.a
 -rwxr-xr-x	root/root	usr/lib/libglslang.so
 lrwxrwxrwx	root/root	usr/lib/libglslang.so.0 -> libglslang.so
