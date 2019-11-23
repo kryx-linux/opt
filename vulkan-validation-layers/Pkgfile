@@ -4,12 +4,15 @@
 # Depends on: glslang vulkan-loader
 
 name=vulkan-validation-layers
-version=1.1.121.0
+version=1.1.126.0
 release=1
-source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/sdk-$version/Vulkan-ValidationLayers-sdk-$version.tar.gz)
+source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/sdk-$version/Vulkan-ValidationLayers-sdk-$version.tar.gz
+	fix_shared.patch)
 
 build() {
 	cd Vulkan-ValidationLayers-sdk-$version
+
+	patch -p1 -i $SRC/fix_shared.patch
 
 	mkdir build
 	cd build
