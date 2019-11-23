@@ -1,21 +1,18 @@
-# Description: SPIR-V Headers
+# Description: Header files from the SPIR-V registry
 # URL: https://www.khronos.org/registry/spir-v/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: cmake ninja
 
 name=spirv-headers
-version=1.4.2
-commit=e4322e3be589e1ddd44afb20ea842a977c1319b8
-release=2
+version=1.5.1
+commit=af64a9e826bf5bb5fcd2434dd71be1e41e922563
+release=1
 source=(
 	#https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz
-	https://codeload.github.com/KhronosGroup/SPIRV-Headers/zip/$commit
+	https://github.com/KhronosGroup/SPIRV-Headers/archive/$commit.tar.gz#/$name-$commit.tar.gz
 )
 
 build() {
-	mv $commit SPIRV-Headers-$commit.zip
-	bsdtar -xf SPIRV-Headers-$commit.zip
-
 #	cd SPIRV-Headers-$version
 	cd SPIRV-Headers-$commit
 
