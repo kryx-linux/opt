@@ -1,10 +1,10 @@
-# Description: Vulkan Installable Client Driver (ICD) Loader
+# Description: Vulkan ICD desktop loader
 # URL: https://www.khronos.org/vulkan/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: vulkan-headers xorg-libxrandr
 
 name=vulkan-loader
-version=1.1.121.0
+version=1.1.126.0
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-Loader/archive/sdk-$version/Vulkan-Loader-sdk-$version.tar.gz)
 
