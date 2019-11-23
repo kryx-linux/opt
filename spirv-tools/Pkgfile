@@ -5,19 +5,19 @@
 
 name=spirv-tools
 version=2019.4
-commit=06407250a169c6a03b3765e86619075af1a8c187
-release=2
+commit=3e4abc9ac382b6fc7a88316a700652404b6fb9f7
+release=3
 source=(
 	#https://github.com/KhronosGroup/SPIRV-Tools/archive/v$version/SPIRV-Tools-v$version.tar.gz
-	https://codeload.github.com/KhronosGroup/SPIRV-Tools/zip/$commit
+	https://github.com/KhronosGroup/SPIRV-Tools/archive/$commit.tar.gz#/$name-$commit.tar.gz
+	fix-cmake-install.patch
 )
 
 build() {
-	mv $commit SPIRV-Tools-$commit.zip
-	bsdtar -xf SPIRV-Tools-$commit.zip
-
 #	cd SPIRV-Tools-$version
 	cd SPIRV-Tools-$commit
+
+	patch -p1 -i $SRC/fix-cmake-install.patch
 
 	mkdir build-{shared,static}
 
