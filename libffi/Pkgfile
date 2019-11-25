@@ -3,8 +3,8 @@
 # Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
 
 name=libffi
-version=3.2.1
-release=3
+version=3.3
+release=1
 source=(https://sourceware.org/pub/$name/$name-$version.tar.gz)
 
 build() {
