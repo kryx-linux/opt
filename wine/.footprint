@@ -163,6 +163,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/cmnquery.h
 -rw-r--r--	root/root	usr/include/wine/windows/cmnquery.idl
 -rw-r--r--	root/root	usr/include/wine/windows/colinf.idl
+-rw-r--r--	root/root	usr/include/wine/windows/colordlg.h
 -rw-r--r--	root/root	usr/include/wine/windows/comcat.h
 -rw-r--r--	root/root	usr/include/wine/windows/comcat.idl
 -rw-r--r--	root/root	usr/include/wine/windows/commctrl.h
@@ -2411,6 +2412,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libdbghelp.def
 -rw-r--r--	root/root	usr/lib/wine/libdciman32.def
 -rw-r--r--	root/root	usr/lib/wine/libddraw.def
+-rw-r--r--	root/root	usr/lib/wine/libdhcpcsvc.def
 -rw-r--r--	root/root	usr/lib/wine/libdinput.a
 -rw-r--r--	root/root	usr/lib/wine/libdinput8.a
 -rw-r--r--	root/root	usr/lib/wine/libdmoguids.a
@@ -4392,6 +4394,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libdbghelp.def
 -rw-r--r--	root/root	usr/lib32/wine/libdciman32.def
 -rw-r--r--	root/root	usr/lib32/wine/libddraw.def
+-rw-r--r--	root/root	usr/lib32/wine/libdhcpcsvc.def
 -rw-r--r--	root/root	usr/lib32/wine/libdinput.a
 -rw-r--r--	root/root	usr/lib32/wine/libdinput8.a
 -rw-r--r--	root/root	usr/lib32/wine/libdmoguids.a
