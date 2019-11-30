@@ -4,7 +4,7 @@
 # Depends on:  ghostscript poppler qpdf mupdf
 
 name=cups-filters
-version=1.25.12
+version=1.25.13
 release=1
 source=(https://www.openprinting.org/download/$name/$name-$version.tar.xz
         cups-browsed)
@@ -21,7 +21,7 @@ build () {
                 --without-rcdir \
                 --with-browseremoteprotocols=cups 
 
-    make
+    make CFLAGS+="-w" CPPFLAGS+="-w"
     make DESTDIR=$PKG install
 
     install -D -m 0755 $SRC/cups-browsed $PKG/etc/rc.d/cups-browsed
