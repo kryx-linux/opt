@@ -1,8 +1,9 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/QLlhAuukp7tLTpJ+I0EvN41ktsooVirif6a6+Xg7I76jyz0TclpB6FsxrjiV5/Lh8itd8Hv0CLylOm8jhK40gI=
-SHA256 (Pkgfile) = 98a0bd7ba0420990cdc80178aa9d9b75545d64604ec82c5d534bda0aeb71c1a3
+RWSE3ohX2g5d/Wl4yOBeuZLcrkeqGse0s+C9tXDgSP5B2SGK8yCbXxgnumxicHhthITipqYJQ//WEfXz4MPIisIXoKxnbaKl0QM=
+SHA256 (Pkgfile) = d874f9a7bf9103dace28c86de50040eebdab965b888222b1975224ba8ccf419c
 SHA256 (.footprint) = 1c4f2f5e13c17a3df141b874e8ded6a7ec4c3aed19413ccd65adb87d7e5dc250
 SHA256 (glslang-7.13.3496.tar.gz) = 170d1538a670af4cae300e875d7cda9744b1acee1ab7252ecf7c4004186bb922
 SHA256 (glslang-default-resource-limits_staticlib.patch) = 1aa1538d9ef5f57153530df8c0f37d471c119e14c6d4ed1efe1bfec80d6b1b83
 SHA256 (glslang-lib-install.patch) = 0eacb3ab34de86f324384b5723ebb8854c213604ad5ac7859368562fdb2fe9bc
 SHA256 (0001-pkg-config-compatibility.patch) = 735e14abb5a6fd6acf9315ed173c901f67785de7862f5d0d491ef2016d2b6f58
+SHA256 (glslang-7.12.3353_pre20191027-fix-relative-includes.patch) = 8af4205a290890d6b30718a947800cf72082c0008193acd77f50123fe9a2c89b
