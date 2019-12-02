@@ -6,17 +6,21 @@
 name=qtwebkit
 version=5.212.0.a3
 _version=${version/.a/-alpha}
-release=1
-source=(https://github.com/annulen/webkit/releases/download/$name-$_version/$name-$_version.tar.xz)
+release=2
+source=(https://github.com/annulen/webkit/releases/download/$name-$_version/$name-$_version.tar.xz
+	icu65.patch)
 
 build() {
 	cd $name-$_version
+
+	patch -p1 -i $SRC/icu65.patch
 
 	install -d build
 	cd build
 
 	cmake .. \
 		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_CXX_FLAGS="${CXXFLAGS} -DNDEBUG" \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DPORT=Qt \
 		-DENABLE_TOOLS=OFF
