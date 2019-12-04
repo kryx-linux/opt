@@ -71,7 +71,6 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/auth-master.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-penalty.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-policy.h
--rw-r--r--	root/root	usr/include/dovecot/auth-postfix-connection.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-request-handler.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-request-stats.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-request-var-expand.h
@@ -86,7 +85,6 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/base32.h
 -rw-r--r--	root/root	usr/include/dovecot/base64.h
 -rw-r--r--	root/root	usr/include/dovecot/bits.h
--rw-r--r--	root/root	usr/include/dovecot/bloomfilter.h
 -rw-r--r--	root/root	usr/include/dovecot/bsearch-insert-pos.h
 -rw-r--r--	root/root	usr/include/dovecot/buffer.h
 -rw-r--r--	root/root	usr/include/dovecot/byteorder.h
@@ -475,7 +473,6 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/module-context.h
 -rw-r--r--	root/root	usr/include/dovecot/module-dir.h
 -rw-r--r--	root/root	usr/include/dovecot/mountpoint.h
--rw-r--r--	root/root	usr/include/dovecot/murmurhash3.h
 -rw-r--r--	root/root	usr/include/dovecot/mycrypt.h
 -rw-r--r--	root/root	usr/include/dovecot/net.h
 -rw-r--r--	root/root	usr/include/dovecot/nfs-workarounds.h
