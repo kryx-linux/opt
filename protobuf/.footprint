@@ -64,6 +64,7 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/compiler/ruby/
 drwxr-xr-x	root/root	usr/include/google/protobuf/io/
 -rw-r--r--	root/root	usr/include/google/protobuf/io/coded_stream.h
 -rw-r--r--	root/root	usr/include/google/protobuf/io/gzip_stream.h
+-rw-r--r--	root/root	usr/include/google/protobuf/io/io_win32.h
 -rw-r--r--	root/root	usr/include/google/protobuf/io/printer.h
 -rw-r--r--	root/root	usr/include/google/protobuf/io/strtod.h
 -rw-r--r--	root/root	usr/include/google/protobuf/io/tokenizer.h
@@ -102,6 +103,7 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/stubs/
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/hash.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/logging.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/macros.h
+-rw-r--r--	root/root	usr/include/google/protobuf/stubs/map_util.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/mutex.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/once.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/platform_macros.h
@@ -128,25 +130,24 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/util/
 -rw-r--r--	root/root	usr/include/google/protobuf/util/type_resolver_util.h
 -rw-r--r--	root/root	usr/include/google/protobuf/wire_format.h
 -rw-r--r--	root/root	usr/include/google/protobuf/wire_format_lite.h
--rw-r--r--	root/root	usr/include/google/protobuf/wire_format_lite_inl.h
 -rw-r--r--	root/root	usr/include/google/protobuf/wrappers.pb.h
 -rw-r--r--	root/root	usr/include/google/protobuf/wrappers.proto
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libprotobuf-lite.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.18.0.0
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.18 -> libprotobuf-lite.so.18.0.0
--rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.18.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.22.0.1
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.22 -> libprotobuf-lite.so.22.0.1
+-rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.22.0.1
 -rw-r--r--	root/root	usr/lib/libprotobuf.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.18.0.0
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.18 -> libprotobuf.so.18.0.0
--rwxr-xr-x	root/root	usr/lib/libprotobuf.so.18.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.22.0.1
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.22 -> libprotobuf.so.22.0.1
+-rwxr-xr-x	root/root	usr/lib/libprotobuf.so.22.0.1
 -rw-r--r--	root/root	usr/lib/libprotoc.a
 -rwxr-xr-x	root/root	usr/lib/libprotoc.la
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.18.0.0
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so.18 -> libprotoc.so.18.0.0
--rwxr-xr-x	root/root	usr/lib/libprotoc.so.18.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.22.0.1
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so.22 -> libprotoc.so.22.0.1
+-rwxr-xr-x	root/root	usr/lib/libprotoc.so.22.0.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf-lite.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf.pc
