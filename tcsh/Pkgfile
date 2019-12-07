@@ -4,7 +4,7 @@
 # Depends on:  ncurses
 
 name=tcsh
-version=6.22.00
+version=6.22.02
 release=1
 source=(ftp://ftp.astron.com/pub/tcsh/$name-$version.tar.gz \
         csh.login csh.logout csh.cshrc)
