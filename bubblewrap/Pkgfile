@@ -13,9 +13,14 @@ source=(https://github.com/projectatomic/bubblewrap/releases/download/v$version/
 build() {
 	cd $name-$version
 
-	prt-get isinst docbook-xsl || install -Dm644 $SRC/bwrap.1 $PKG/usr/share/man/man1/bwrap.1
+	if [ ! -e '/usr/share/xml/docbook/xsl-stylesheets' ]; then
+		# build will fail if libxslt is installed witout docbook-xsl
+		PKGMK_BUBBLEWRAP+=' --disable-man'
 
-	./configure \
+		install -Dm644 $SRC/bwrap.1 $PKG/usr/share/man/man1/bwrap.1
+	fi
+
+	./configure ${PKGMK_BUBBLEWRAP} \
 		--prefix=/usr \
 		--with-priv-mode=setuid
 
