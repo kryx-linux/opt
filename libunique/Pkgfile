@@ -1,7 +1,7 @@
 # Description: Unique is a library for writing single instance application
 # URL:         http://live.gnome.org/LibUnique
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  gtk3 xorg-libxdamage
+# Depends on:  gtk xorg-libxdamage
 
 name=libunique
 version=1.1.6
