@@ -4,9 +4,9 @@
 # Depends on:  glib
 
 name=bitlbee
-version=3.5.1
+version=3.6
 release=1
-source=(http://get.bitlbee.org/src/bitlbee-$version.tar.gz bitlbee \
+source=(https://get.bitlbee.org/src/bitlbee-$version.tar.gz bitlbee \
         bitlbee.conf)
 
 build() {
