@@ -1,7 +1,7 @@
 # Description: PHP DSO module for apache 
 # URL:         http://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  apache
+# Depends on:  apache libpcre2
 
 name=mod_php
 version=7.3.12
