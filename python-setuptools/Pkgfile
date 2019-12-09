@@ -4,7 +4,7 @@
 # Depends on: python
 
 name=python-setuptools
-version=42.0.1
+version=42.0.2
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:7:1}/${name#*-}/${name#*-}-$version.zip)
 
