@@ -1,18 +1,33 @@
 # Description: Public Suffix List library.
 # URL: https://github.com/rockdaboot/libpsl
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: libidn2 python
+# Depends on: libidn2 publicsuffix-list python3
 
 name=libpsl
 version=0.21.0
-release=1
-source=(https://github.com/rockdaboot/$name/releases/download/$name-$version/$name-$version.tar.gz)
+release=2
+source=(https://github.com/rockdaboot/$name/releases/download/$name-$version/$name-$version.tar.gz
+	libpsl-gtk-doc-1.30-fix.patch
+	libpsl-0.21.0-build-fix.patch)
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr
+	patch -p1 -i $SRC/libpsl-gtk-doc-1.30-fix.patch
+	patch -p1 -i $SRC/libpsl-0.21.0-build-fix.patch
+	rm -frv list
+	autoreconf -fiv
 
-	make
+	sed -e 's|^#!/usr/bin/env python$|#!/usr/bin/env python3|' \
+		-i src/psl-make-dafsa
+
+	./configure \
+		--prefix=/usr \
+		--with-psl-file=/usr/share/publicsuffix/effective_tld_names.dat \
+		--with-psl-testfile=/usr/share/publicsuffix/test_psl.txt
+
+	LC_CTYPE=en_US.UTF-8 make
 	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/gtk-doc
 }
