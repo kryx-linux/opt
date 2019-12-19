@@ -4,7 +4,7 @@
 # Depends on:  ruby sqlite3
 
 name=ruby-sqlite3
-version=1.4.1
+version=1.4.2
 release=1
 source=(https://github.com/sparklemotion/sqlite3-ruby/archive/v$version/$name-$version.tar.gz)
 
