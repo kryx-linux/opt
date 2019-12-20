@@ -1,7 +1,7 @@
-diff -Nru spectrwm-SPECTRWM_3_2_0.orig/linux/Makefile spectrwm-SPECTRWM_3_2_0/linux/Makefile
---- spectrwm-SPECTRWM_3_2_0.orig/linux/Makefile	2018-09-09 13:19:53.214649480 +0200
-+++ spectrwm-SPECTRWM_3_2_0/linux/Makefile	2018-09-09 13:20:23.310647277 +0200
-@@ -11,7 +11,7 @@
+diff -Nru spectrwm-SPECTRWM_3_3_0.orig/linux/Makefile spectrwm-SPECTRWM_3_3_0/linux/Makefile
+--- spectrwm-SPECTRWM_3_3_0.orig/linux/Makefile	2019-12-19 19:15:12.054168461 +0100
++++ spectrwm-SPECTRWM_3_3_0/linux/Makefile	2019-12-19 19:15:39.420060857 +0100
+@@ -13,7 +13,7 @@
  
  MAINT_CFLAGS   = -std=c99 -Wmissing-prototypes -Wall -Wextra -Wshadow -Wno-uninitialized -g
  MAINT_LDFLAGS  = -Wl,--as-needed
@@ -10,7 +10,7 @@ diff -Nru spectrwm-SPECTRWM_3_2_0.orig/linux/Makefile spectrwm-SPECTRWM_3_2_0/li
  
  ifneq ("${BUILDVERSION}", "")
  MAINT_CPPFLAGS += -DSPECTRWM_BUILDSTR=\"$(BUILDVERSION)\"
-@@ -26,7 +26,7 @@
+@@ -28,7 +28,7 @@
  LIB_CPPFLAGS = $(shell pkg-config --cflags x11)
  LIB_LDLIBS   = $(shell pkg-config --libs   x11) -ldl
  
@@ -19,10 +19,10 @@ diff -Nru spectrwm-SPECTRWM_3_2_0.orig/linux/Makefile spectrwm-SPECTRWM_3_2_0/li
  
  spectrwm: spectrwm.o linux.o
  	$(CC) $(MAINT_LDFLAGS) $(BIN_LDFLAGS) $(LDFLAGS) -o $@ $+ $(BIN_LDLIBS) $(LDLIBS)
-diff -Nru spectrwm-SPECTRWM_3_2_0.orig/spectrwm.c spectrwm-SPECTRWM_3_2_0/spectrwm.c
---- spectrwm-SPECTRWM_3_2_0.orig/spectrwm.c	2018-09-09 13:19:53.214649480 +0200
-+++ spectrwm-SPECTRWM_3_2_0/spectrwm.c	2018-09-09 13:20:23.313980536 +0200
-@@ -290,9 +290,9 @@
+diff -Nru spectrwm-SPECTRWM_3_3_0.orig/spectrwm.c spectrwm-SPECTRWM_3_3_0/spectrwm.c
+--- spectrwm-SPECTRWM_3_3_0.orig/spectrwm.c	2019-12-19 19:15:12.054168461 +0100
++++ spectrwm-SPECTRWM_3_3_0/spectrwm.c	2019-12-19 19:15:39.420060857 +0100
+@@ -295,9 +295,9 @@
  #define SWM_CONF_DEFAULT	(0)
  #define SWM_CONF_KEYMAPPING	(1)
  
@@ -34,7 +34,7 @@ diff -Nru spectrwm-SPECTRWM_3_2_0.orig/spectrwm.c spectrwm-SPECTRWM_3_2_0/spectr
  
  char			**start_argv;
  xcb_atom_t		a_state;
-@@ -3884,6 +3884,7 @@
+@@ -4483,6 +4483,7 @@
  
  	close(xcb_get_file_descriptor(conn));
  
@@ -42,7 +42,7 @@ diff -Nru spectrwm-SPECTRWM_3_2_0.orig/spectrwm.c spectrwm-SPECTRWM_3_2_0/spectr
  	if ((ret = getenv("LD_PRELOAD"))) {
  		if (asprintf(&ret, "%s:%s", SWM_LIB, ret) == -1) {
  			warn("spawn: asprintf LD_PRELOAD");
-@@ -3894,6 +3895,7 @@
+@@ -4493,6 +4494,7 @@
  	} else {
  		setenv("LD_PRELOAD", SWM_LIB, 1);
  	}
