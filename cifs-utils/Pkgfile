@@ -4,21 +4,24 @@
 # Depends on:  linux-pam samba keyutils
 
 name=cifs-utils
-version=6.9
-release=2
+version=6.10
+release=1
 source=(https://download.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2
-        cifs-utils-man.tar.xz cifs)
+        $name-$version.patch $name-man.tar.xz cifs)
 
 build () {
     cd $name-$version
-    
+
+    patch -p1 -i $SRC/$name-$version.patch
+
+    install -d $PKG/{sbin,usr/share/man/man{1,8}}
+    install -m 0644 $SRC/*.1 $PKG/usr/share/man/man1
+    install -m 0644 $SRC/*.8 $PKG/usr/share/man/man8
+
+    autoreconf -i
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
-    
-    install -d $PKG/usr/share/man/man{1,8}
-    install -m 0644 $SRC/*.1 $PKG/usr/share/man/man1
-    install -m 0644 $SRC/*.8 $PKG/usr/share/man/man8
-    
+
     install -D -m 0755 $SRC/cifs $PKG/etc/rc.d/cifs
 }
