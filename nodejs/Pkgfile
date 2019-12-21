@@ -5,7 +5,7 @@
 # Optional: icu
 
 name=nodejs
-version=12.13.1
+version=12.14.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
 
