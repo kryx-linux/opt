@@ -6,7 +6,7 @@
 name=jdk
 version=8.232.09.1
 release=1
-source=(https://d3pxv6yz143wms.cloudfront.net/$version/amazon-corretto-$version-linux-x64.tar.gz)
+source=(https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-linux-x64.tar.gz)
 
 build(){
     cd amazon-corretto-$version-linux-x64
