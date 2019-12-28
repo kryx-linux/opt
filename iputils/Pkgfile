@@ -5,12 +5,14 @@
 
 name=iputils
 version=s20190709
-release=1
+release=2
 source=(https://github.com/iputils/iputils/archive/$version/$name-$version.tar.gz
-        $name-man-$version.tar.xz)
+        libcap-2.29.patch $name-man-$version.tar.xz)
 
 build() {
     cd $name-$version
+
+    patch -p1 -i $SRC/libcap-2.29.patch
 
     meson build --prefix /usr \
         -D BUILD_MANS=false \
