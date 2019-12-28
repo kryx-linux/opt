@@ -1,15 +1,15 @@
 # Description: The Rust language with Cargo included.
 # URL: http://www.rust-lang.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: llvm python3
+# Depends on: llvm
 # Optional: sccache llvm-32
 
 name=rust
-version=1.39.0
+version=1.40.0
 ##cat src/stage0.txt
-_date=2019-09-26
-_rustc=1.38.0
-_cargo=0.39.0
+_date=2019-11-07
+_rustc=1.39.0
+_cargo=0.40.0
 ##
 
 release=1
