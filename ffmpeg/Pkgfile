@@ -5,7 +5,7 @@
 # Optional: alsa-lib fdk-aac ffnvcodec-headers gnutls lame libass libsdl2 libtheora libva libvdpau libvorbis libvpx libwebp opus x264 x265 pulseaudio
 
 name=ffmpeg
-version=4.2.1
+version=4.2.2
 release=1
 source=(https://ffmpeg.org/releases/$name-$version.tar.bz2
 	ffmpeg-x264-10bit.sh
