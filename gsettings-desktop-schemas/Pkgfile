@@ -4,18 +4,16 @@
 # Depends on: gobject-introspection intltool
 
 name=gsettings-desktop-schemas
-version=3.28.0
-release=2
+version=3.34.0
+release=1
 source=(https://ftp.gnome.org/pub/gnome/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
-	./configure \
-		--prefix=/usr
-
-	make
-	make DESTDIR=$PKG install
+	meson build --prefix /usr
+	ninja -C build -j ${JOBS:-1}
+	DESTDIR="$PKG" ninja -C build install
 
 	rm -r $PKG/usr/share/locale
 }
