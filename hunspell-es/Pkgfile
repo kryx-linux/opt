@@ -1,12 +1,12 @@
 # Description:	Hunspell dictionary for Spanish
 # URL:		https://github.com/sbosio/rla-es/
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:	hunspell
+# Depends on:	hunspell zip unzip
 
 name=hunspell-es
-version=2.2
+version=2.5
 release=1
-source=(https://github.com/sbosio/rla-es/archive/v$version.zip)
+source=(https://github.com/sbosio/rla-es/archive/v$version/$name-$version.tar.gz)
 
 build() {
 	cd rla-es-$version
