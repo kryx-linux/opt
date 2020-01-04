@@ -2912,6 +2912,37 @@ drwxr-xr-x	root/root	usr/include/qt5/QtEdidSupport/5.13.2/QtEdidSupport/private/
 -rw-r--r--	root/root	usr/include/qt5/QtEdidSupport/QtEdidSupportDepends
 -rw-r--r--	root/root	usr/include/qt5/QtEdidSupport/QtEdidSupportVersion
 -rw-r--r--	root/root	usr/include/qt5/QtEdidSupport/qtedidsupportversion.h
+drwxr-xr-x	root/root	usr/include/qt5/QtEglFSDeviceIntegration/
+drwxr-xr-x	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/
+drwxr-xr-x	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/
+drwxr-xr-x	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/qeglfscontext_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/qeglfscursor_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/qeglfsdeviceintegration_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/qeglfsglobal_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/qeglfshooks_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/qeglfsintegration_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/qeglfsoffscreenwindow_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/qeglfsscreen_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/5.13.2/QtEglFSDeviceIntegration/private/qeglfswindow_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/QtEglFSDeviceIntegration
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/QtEglFSDeviceIntegrationDepends
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/QtEglFSDeviceIntegrationVersion
+-rw-r--r--	root/root	usr/include/qt5/QtEglFSDeviceIntegration/qteglfsdeviceintegrationversion.h
+drwxr-xr-x	root/root	usr/include/qt5/QtEglSupport/
+drwxr-xr-x	root/root	usr/include/qt5/QtEglSupport/5.13.2/
+drwxr-xr-x	root/root	usr/include/qt5/QtEglSupport/5.13.2/QtEglSupport/
+drwxr-xr-x	root/root	usr/include/qt5/QtEglSupport/5.13.2/QtEglSupport/private/
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/5.13.2/QtEglSupport/private/qeglconvenience_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/5.13.2/QtEglSupport/private/qeglpbuffer_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/5.13.2/QtEglSupport/private/qeglplatformcontext_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/5.13.2/QtEglSupport/private/qeglstreamconvenience_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/5.13.2/QtEglSupport/private/qt_egl_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/5.13.2/QtEglSupport/private/qxlibeglintegration_p.h
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/QtEglSupport
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/QtEglSupportDepends
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/QtEglSupportVersion
+-rw-r--r--	root/root	usr/include/qt5/QtEglSupport/qteglsupportversion.h
 drwxr-xr-x	root/root	usr/include/qt5/QtEventDispatcherSupport/
 drwxr-xr-x	root/root	usr/include/qt5/QtEventDispatcherSupport/5.13.2/
 drwxr-xr-x	root/root	usr/include/qt5/QtEventDispatcherSupport/5.13.2/QtEventDispatcherSupport/
@@ -7432,6 +7463,15 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt5DeviceDiscoverySupport/
 drwxr-xr-x	root/root	usr/lib/cmake/Qt5EdidSupport/
 -rw-r--r--	root/root	usr/lib/cmake/Qt5EdidSupport/Qt5EdidSupportConfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5EdidSupport/Qt5EdidSupportConfigVersion.cmake
+drwxr-xr-x	root/root	usr/lib/cmake/Qt5EglFSDeviceIntegration/
+-rw-r--r--	root/root	usr/lib/cmake/Qt5EglFSDeviceIntegration/Qt5EglFSDeviceIntegrationConfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5EglFSDeviceIntegration/Qt5EglFSDeviceIntegrationConfigVersion.cmake
+drwxr-xr-x	root/root	usr/lib/cmake/Qt5EglFsKmsSupport/
+-rw-r--r--	root/root	usr/lib/cmake/Qt5EglFsKmsSupport/Qt5EglFsKmsSupportConfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5EglFsKmsSupport/Qt5EglFsKmsSupportConfigVersion.cmake
+drwxr-xr-x	root/root	usr/lib/cmake/Qt5EglSupport/
+-rw-r--r--	root/root	usr/lib/cmake/Qt5EglSupport/Qt5EglSupportConfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5EglSupport/Qt5EglSupportConfigVersion.cmake
 drwxr-xr-x	root/root	usr/lib/cmake/Qt5EventDispatcherSupport/
 -rw-r--r--	root/root	usr/lib/cmake/Qt5EventDispatcherSupport/Qt5EventDispatcherSupportConfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5EventDispatcherSupport/Qt5EventDispatcherSupportConfigVersion.cmake
@@ -7453,6 +7493,11 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt5Gui/
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake
@@ -7464,6 +7509,7 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt5Gui/
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake
@@ -7475,6 +7521,7 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt5Gui/
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake
@@ -7844,6 +7891,21 @@ lrwxrwxrwx	root/root	usr/lib/libQt5DesignerComponents.so.5.13 -> libQt5DesignerC
 -rw-r--r--	root/root	usr/lib/libQt5EdidSupport.a
 -rw-r--r--	root/root	usr/lib/libQt5EdidSupport.la
 -rw-r--r--	root/root	usr/lib/libQt5EdidSupport.prl
+-rw-r--r--	root/root	usr/lib/libQt5EglFSDeviceIntegration.la
+-rw-r--r--	root/root	usr/lib/libQt5EglFSDeviceIntegration.prl
+lrwxrwxrwx	root/root	usr/lib/libQt5EglFSDeviceIntegration.so -> libQt5EglFSDeviceIntegration.so.5.13.2
+lrwxrwxrwx	root/root	usr/lib/libQt5EglFSDeviceIntegration.so.5 -> libQt5EglFSDeviceIntegration.so.5.13.2
+lrwxrwxrwx	root/root	usr/lib/libQt5EglFSDeviceIntegration.so.5.13 -> libQt5EglFSDeviceIntegration.so.5.13.2
+-rwxr-xr-x	root/root	usr/lib/libQt5EglFSDeviceIntegration.so.5.13.2
+-rw-r--r--	root/root	usr/lib/libQt5EglFsKmsSupport.la
+-rw-r--r--	root/root	usr/lib/libQt5EglFsKmsSupport.prl
+lrwxrwxrwx	root/root	usr/lib/libQt5EglFsKmsSupport.so -> libQt5EglFsKmsSupport.so.5.13.2
+lrwxrwxrwx	root/root	usr/lib/libQt5EglFsKmsSupport.so.5 -> libQt5EglFsKmsSupport.so.5.13.2
+lrwxrwxrwx	root/root	usr/lib/libQt5EglFsKmsSupport.so.5.13 -> libQt5EglFsKmsSupport.so.5.13.2
+-rwxr-xr-x	root/root	usr/lib/libQt5EglFsKmsSupport.so.5.13.2
+-rw-r--r--	root/root	usr/lib/libQt5EglSupport.a
+-rw-r--r--	root/root	usr/lib/libQt5EglSupport.la
+-rw-r--r--	root/root	usr/lib/libQt5EglSupport.prl
 -rw-r--r--	root/root	usr/lib/libQt5EventDispatcherSupport.a
 -rw-r--r--	root/root	usr/lib/libQt5EventDispatcherSupport.la
 -rw-r--r--	root/root	usr/lib/libQt5EventDispatcherSupport.prl
@@ -8841,6 +8903,9 @@ drwxr-xr-x	root/root	usr/lib/qt5/mkspecs/modules/
 -rw-r--r--	root/root	usr/lib/qt5/mkspecs/modules/qt_lib_designercomponents_private.pri
 -rw-r--r--	root/root	usr/lib/qt5/mkspecs/modules/qt_lib_devicediscovery_support_private.pri
 -rw-r--r--	root/root	usr/lib/qt5/mkspecs/modules/qt_lib_edid_support_private.pri
+-rw-r--r--	root/root	usr/lib/qt5/mkspecs/modules/qt_lib_egl_support_private.pri
+-rw-r--r--	root/root	usr/lib/qt5/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri
+-rw-r--r--	root/root	usr/lib/qt5/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri
 -rw-r--r--	root/root	usr/lib/qt5/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri
 -rw-r--r--	root/root	usr/lib/qt5/mkspecs/modules/qt_lib_fb_support_private.pri
 -rw-r--r--	root/root	usr/lib/qt5/mkspecs/modules/qt_lib_fontdatabase_support_private.pri
@@ -9083,6 +9148,11 @@ drwxr-xr-x	root/root	usr/lib/qt5/plugins/canbus/
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/canbus/libqtvirtualcanbus.so
 drwxr-xr-x	root/root	usr/lib/qt5/plugins/designer/
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/designer/libqquickwidget.so
+drwxr-xr-x	root/root	usr/lib/qt5/plugins/egldeviceintegrations/
+-rwxr-xr-x	root/root	usr/lib/qt5/plugins/egldeviceintegrations/libqeglfs-emu-integration.so
+-rwxr-xr-x	root/root	usr/lib/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so
+-rwxr-xr-x	root/root	usr/lib/qt5/plugins/egldeviceintegrations/libqeglfs-kms-integration.so
+-rwxr-xr-x	root/root	usr/lib/qt5/plugins/egldeviceintegrations/libqeglfs-x11-integration.so
 drwxr-xr-x	root/root	usr/lib/qt5/plugins/gamepads/
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/gamepads/libevdevgamepad.so
 drwxr-xr-x	root/root	usr/lib/qt5/plugins/generic/
@@ -9125,8 +9195,10 @@ drwxr-xr-x	root/root	usr/lib/qt5/plugins/platforminputcontexts/
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/platforminputcontexts/libqtvirtualkeyboardplugin.so
 drwxr-xr-x	root/root	usr/lib/qt5/plugins/platforms/
+-rwxr-xr-x	root/root	usr/lib/qt5/plugins/platforms/libqeglfs.so
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/platforms/libqlinuxfb.so
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/platforms/libqminimal.so
+-rwxr-xr-x	root/root	usr/lib/qt5/plugins/platforms/libqminimalegl.so
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/platforms/libqoffscreen.so
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/platforms/libqvnc.so
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/platforms/libqwebgl.so
@@ -9174,6 +9246,7 @@ drwxr-xr-x	root/root	usr/lib/qt5/plugins/virtualkeyboard/
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/virtualkeyboard/libqtvirtualkeyboard_tcime.so
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/virtualkeyboard/libqtvirtualkeyboard_thai.so
 drwxr-xr-x	root/root	usr/lib/qt5/plugins/xcbglintegrations/
+-rwxr-xr-x	root/root	usr/lib/qt5/plugins/xcbglintegrations/libqxcb-egl-integration.so
 -rwxr-xr-x	root/root	usr/lib/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so
 drwxr-xr-x	root/root	usr/lib/qt5/qml/
 drwxr-xr-x	root/root	usr/lib/qt5/qml/Qt/
