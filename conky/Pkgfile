@@ -1,22 +1,31 @@
 # Description: Light-weight system monitor
-# URL:         http://conky.sourceforge.net/
+# URL:         https://github.com/brndnmtthws/conky
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  curl, xorg-libxdamage, xorg-libxft
+# Depends on:  curl cmake lua imlib2 libxml2 xorg-libxdamage xorg-libxft xorg-libxinerama
 
 name=conky
-version=1.9.0
-release=2
-source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2)
+version=1.11.5
+release=1
+source=(https://github.com/brndnmtthws/conky/archive/v$version/$name-$version.tar.gz
+        conky.1.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr \
-                --disable-lua \
-                --enable-xft  \
-                --enable-portmon \
-                --enable-mpd \
-                --enable-rss \
-                --enable-curl
+
+    cmake . \
+        -D RELEASE=ON \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D SYSTEM_CONFIG_FILE=/usr/etc/conky.conf \
+        -D BUILD_DOCS=OFF \
+        -D BUILD_I18N=OFF \
+        -D BUILD_CURL=ON \
+        -D BUILD_RSS=ON
+
     make
     make DESTDIR=$PKG install
+
+    install -D $SRC/conky.1.gz $PKG/usr/share/man/man1/conky.1.gz
+    install -D data/conky.conf $PKG/usr/etc/conky.conf
+
+    rm -r $PKG/usr/share/doc
 }
