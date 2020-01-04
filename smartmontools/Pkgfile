@@ -1,10 +1,9 @@
 # Description: Utilities to control and monitor S.M.A.R.T. hard drives
-# URL: http://smartmontools.sourceforge.net/
-# Maintainer: Juergen Daubert, jue at crux dot nu
-# Packager: Juergen Daubert, jue at crux dot nu
+# URL:         http://smartmontools.sourceforge.net/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=smartmontools
-version=7.0
+version=7.1
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz \
         smartd)
