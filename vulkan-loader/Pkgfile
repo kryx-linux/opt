@@ -5,7 +5,7 @@
 
 name=vulkan-loader
 version=1.1.126.0
-release=1
+release=2
 source=(https://github.com/KhronosGroup/Vulkan-Loader/archive/sdk-$version/Vulkan-Loader-sdk-$version.tar.gz)
 
 build() {
@@ -23,7 +23,7 @@ build() {
 		-DBUILD_LOADER=True \
 		-DBUILD_WSI_XCB_SUPPORT=True \
 		-DBUILD_WSI_XLIB_SUPPORT=True \
-		-DBUILD_WSI_WAYLAND_SUPPORT=OFF \
+		-DBUILD_WSI_WAYLAND_SUPPORT=$(prt-get isinst wayland &> /dev/null && echo ON || echo OFF) \
 		-GNinja
 
 	ninja -j ${JOBS:-1}
