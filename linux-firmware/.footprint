@@ -129,11 +129,16 @@ drwxr-xr-x	root/root	lib/firmware/amdgpu/
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi10_vcn.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_asd.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_ce.bin
+-rw-r--r--	root/root	lib/firmware/amdgpu/navi14_ce_wks.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_gpu_info.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_me.bin
+-rw-r--r--	root/root	lib/firmware/amdgpu/navi14_me_wks.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_mec.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_mec2.bin
+-rw-r--r--	root/root	lib/firmware/amdgpu/navi14_mec2_wks.bin
+-rw-r--r--	root/root	lib/firmware/amdgpu/navi14_mec_wks.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_pfp.bin
+-rw-r--r--	root/root	lib/firmware/amdgpu/navi14_pfp_wks.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_rlc.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_sdma.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_sdma1.bin
@@ -545,6 +550,7 @@ drwxr-xr-x	root/root	lib/firmware/bnx2x/
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1-7.12.30.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1-7.13.1.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1-7.13.11.0.fw
+-rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1-7.13.15.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1-7.2.16.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1-7.2.51.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1-7.8.17.0.fw
@@ -560,6 +566,7 @@ drwxr-xr-x	root/root	lib/firmware/bnx2x/
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1h-7.12.30.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1h-7.13.1.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1h-7.13.11.0.fw
+-rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1h-7.13.15.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1h-7.2.16.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1h-7.2.51.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e1h-7.8.17.0.fw
@@ -575,6 +582,7 @@ drwxr-xr-x	root/root	lib/firmware/bnx2x/
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e2-7.12.30.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e2-7.13.1.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e2-7.13.11.0.fw
+-rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e2-7.13.15.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e2-7.2.16.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e2-7.2.51.0.fw
 -rw-r--r--	root/root	lib/firmware/bnx2x/bnx2x-e2-7.8.17.0.fw
@@ -615,6 +623,7 @@ lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43362-sdio.lemaker,bananapro.txt 
 -rw-r--r--	root/root	lib/firmware/brcm/brcmfmac43455-sdio.MINIX-NEO Z83-4.txt
 -rw-r--r--	root/root	lib/firmware/brcm/brcmfmac43455-sdio.bin
 -rw-r--r--	root/root	lib/firmware/brcm/brcmfmac43455-sdio.raspberrypi,3-model-b-plus.txt
+-rw-r--r--	root/root	lib/firmware/brcm/brcmfmac43455-sdio.raspberrypi,4-model-b.txt
 -rw-r--r--	root/root	lib/firmware/brcm/brcmfmac4350-pcie.bin
 -rw-r--r--	root/root	lib/firmware/brcm/brcmfmac4350c2-pcie.bin
 -rw-r--r--	root/root	lib/firmware/brcm/brcmfmac4354-sdio.bin
@@ -692,16 +701,16 @@ drwxr-xr-x	root/root	lib/firmware/cxgb4/configs/
 lrwxrwxrwx	root/root	lib/firmware/cxgb4/t4-config.txt -> configs/t4-config-default.txt
 -rw-r--r--	root/root	lib/firmware/cxgb4/t4fw-1.14.4.0.bin
 -rw-r--r--	root/root	lib/firmware/cxgb4/t4fw-1.15.37.0.bin
--rw-r--r--	root/root	lib/firmware/cxgb4/t4fw-1.24.3.0.bin
-lrwxrwxrwx	root/root	lib/firmware/cxgb4/t4fw.bin -> t4fw-1.24.3.0.bin
+-rw-r--r--	root/root	lib/firmware/cxgb4/t4fw-1.24.11.0.bin
+lrwxrwxrwx	root/root	lib/firmware/cxgb4/t4fw.bin -> t4fw-1.24.11.0.bin
 lrwxrwxrwx	root/root	lib/firmware/cxgb4/t5-config.txt -> configs/t5-config-default.txt
 -rw-r--r--	root/root	lib/firmware/cxgb4/t5fw-1.14.4.0.bin
 -rw-r--r--	root/root	lib/firmware/cxgb4/t5fw-1.15.37.0.bin
--rw-r--r--	root/root	lib/firmware/cxgb4/t5fw-1.24.3.0.bin
-lrwxrwxrwx	root/root	lib/firmware/cxgb4/t5fw.bin -> t5fw-1.24.3.0.bin
+-rw-r--r--	root/root	lib/firmware/cxgb4/t5fw-1.24.11.0.bin
+lrwxrwxrwx	root/root	lib/firmware/cxgb4/t5fw.bin -> t5fw-1.24.11.0.bin
 lrwxrwxrwx	root/root	lib/firmware/cxgb4/t6-config.txt -> configs/t6-config-default.txt
--rw-r--r--	root/root	lib/firmware/cxgb4/t6fw-1.24.3.0.bin
-lrwxrwxrwx	root/root	lib/firmware/cxgb4/t6fw.bin -> t6fw-1.24.3.0.bin
+-rw-r--r--	root/root	lib/firmware/cxgb4/t6fw-1.24.11.0.bin
+lrwxrwxrwx	root/root	lib/firmware/cxgb4/t6fw.bin -> t6fw-1.24.11.0.bin
 drwxr-xr-x	root/root	lib/firmware/dabusb/
 -rw-r--r--	root/root	lib/firmware/dabusb/bitstream.bin
 -rw-r--r--	root/root	lib/firmware/dabusb/firmware.fw
@@ -716,6 +725,9 @@ drwxr-xr-x	root/root	lib/firmware/dpaa2/mc/
 -rw-r--r--	root/root	lib/firmware/dpaa2/mc/mc_10.16.2_ls1088a.itb
 -rw-r--r--	root/root	lib/firmware/dpaa2/mc/mc_10.16.2_ls2088a.itb
 -rw-r--r--	root/root	lib/firmware/dpaa2/mc/mc_10.16.2_lx2160a.itb
+-rw-r--r--	root/root	lib/firmware/dpaa2/mc/mc_10.18.0_ls1088a.itb
+-rw-r--r--	root/root	lib/firmware/dpaa2/mc/mc_10.18.0_ls2088a.itb
+-rw-r--r--	root/root	lib/firmware/dpaa2/mc/mc_10.18.0_lx2160a.itb
 drwxr-xr-x	root/root	lib/firmware/dsp56k/
 -rw-r--r--	root/root	lib/firmware/dsp56k/bootstrap.bin
 -rw-r--r--	root/root	lib/firmware/dvb-fe-xc4000-1.4.1.fw
@@ -789,6 +801,8 @@ lrwxrwxrwx	root/root	lib/firmware/i915/bxt_dmc_ver1.bin -> bxt_dmc_ver1_07.bin
 -rw-r--r--	root/root	lib/firmware/i915/cml_huc_4.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/cnl_dmc_ver1_06.bin
 -rw-r--r--	root/root	lib/firmware/i915/cnl_dmc_ver1_07.bin
+-rw-r--r--	root/root	lib/firmware/i915/ehl_guc_33.0.4.bin
+-rw-r--r--	root/root	lib/firmware/i915/ehl_huc_9.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_dmc_ver1_04.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_guc_32.0.3.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_guc_33.0.0.bin
@@ -823,10 +837,16 @@ lrwxrwxrwx	root/root	lib/firmware/i915/skl_guc_ver6.bin -> skl_guc_ver6_1.bin
 -rw-r--r--	root/root	lib/firmware/i915/skl_huc_2.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/skl_huc_ver01_07_1398.bin
 -rw-r--r--	root/root	lib/firmware/i915/tgl_dmc_ver2_04.bin
+-rw-r--r--	root/root	lib/firmware/i915/tgl_guc_35.2.0.bin
+-rw-r--r--	root/root	lib/firmware/i915/tgl_huc_7.0.3.bin
 drwxr-xr-x	root/root	lib/firmware/imx/
 drwxr-xr-x	root/root	lib/firmware/imx/sdma/
 -rw-r--r--	root/root	lib/firmware/imx/sdma/sdma-imx6q.bin
 -rw-r--r--	root/root	lib/firmware/imx/sdma/sdma-imx7d.bin
+drwxr-xr-x	root/root	lib/firmware/inside-secure/
+drwxr-xr-x	root/root	lib/firmware/inside-secure/eip197_minifw/
+-rw-r--r--	root/root	lib/firmware/inside-secure/eip197_minifw/ifpp.bin
+-rw-r--r--	root/root	lib/firmware/inside-secure/eip197_minifw/ipue.bin
 drwxr-xr-x	root/root	lib/firmware/intel/
 -rw-r--r--	root/root	lib/firmware/intel/IntcSST2.bin
 lrwxrwxrwx	root/root	lib/firmware/intel/dsp_fw_bxtn.bin -> dsp_fw_bxtn_v3366.bin
@@ -883,6 +903,10 @@ lrwxrwxrwx	root/root	lib/firmware/intel/dsp_fw_release.bin -> dsp_fw_release_v34
 -rw-r--r--	root/root	lib/firmware/intel/ibt-19-0-4.sfi
 -rw-r--r--	root/root	lib/firmware/intel/ibt-19-16-4.ddc
 -rw-r--r--	root/root	lib/firmware/intel/ibt-19-16-4.sfi
+-rw-r--r--	root/root	lib/firmware/intel/ibt-19-240-1.ddc
+-rw-r--r--	root/root	lib/firmware/intel/ibt-19-240-1.sfi
+-rw-r--r--	root/root	lib/firmware/intel/ibt-19-240-4.ddc
+-rw-r--r--	root/root	lib/firmware/intel/ibt-19-240-4.sfi
 -rw-r--r--	root/root	lib/firmware/intel/ibt-19-32-0.ddc
 -rw-r--r--	root/root	lib/firmware/intel/ibt-19-32-0.sfi
 -rw-r--r--	root/root	lib/firmware/intel/ibt-19-32-1.ddc
@@ -1086,6 +1110,8 @@ drwxr-xr-x	root/root	lib/firmware/mellanox/
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.1910.622.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2000.1122.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2000.1886.mfa2
+-rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2000.2308.mfa2
+-rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2000.2308.mfa2
 drwxr-xr-x	root/root	lib/firmware/meson/
 drwxr-xr-x	root/root	lib/firmware/meson/vdec/
 -rw-r--r--	root/root	lib/firmware/meson/vdec/g12a_h264.bin
@@ -1592,6 +1618,16 @@ drwxr-xr-x	root/root	lib/firmware/qcom/
 -rw-r--r--	root/root	lib/firmware/qcom/a530v3_gpmu.fw2
 -rw-r--r--	root/root	lib/firmware/qcom/a630_gmu.bin
 -rw-r--r--	root/root	lib/firmware/qcom/a630_sqe.fw
+drwxr-xr-x	root/root	lib/firmware/qcom/sdm845/
+-rw-r--r--	root/root	lib/firmware/qcom/sdm845/adsp.mbn
+-rw-r--r--	root/root	lib/firmware/qcom/sdm845/adspr.jsn
+-rw-r--r--	root/root	lib/firmware/qcom/sdm845/adspua.jsn
+-rw-r--r--	root/root	lib/firmware/qcom/sdm845/cdsp.mbn
+-rw-r--r--	root/root	lib/firmware/qcom/sdm845/cdspr.jsn
+-rw-r--r--	root/root	lib/firmware/qcom/sdm845/mba.mbn
+-rw-r--r--	root/root	lib/firmware/qcom/sdm845/modem.mbn
+-rw-r--r--	root/root	lib/firmware/qcom/sdm845/modemuw.jsn
+-rw-r--r--	root/root	lib/firmware/qcom/sdm845/wlanmdsp.mbn
 drwxr-xr-x	root/root	lib/firmware/qcom/venus-1.8/
 -rw-r--r--	root/root	lib/firmware/qcom/venus-1.8/venus.b00
 -rw-r--r--	root/root	lib/firmware/qcom/venus-1.8/venus.b01
@@ -1614,6 +1650,14 @@ drwxr-xr-x	root/root	lib/firmware/qcom/venus-5.2/
 -rw-r--r--	root/root	lib/firmware/qcom/venus-5.2/venus.b04
 -rw-r--r--	root/root	lib/firmware/qcom/venus-5.2/venus.mbn
 -rw-r--r--	root/root	lib/firmware/qcom/venus-5.2/venus.mdt
+drwxr-xr-x	root/root	lib/firmware/qcom/venus-5.4/
+-rw-r--r--	root/root	lib/firmware/qcom/venus-5.4/venus.b00
+-rw-r--r--	root/root	lib/firmware/qcom/venus-5.4/venus.b01
+-rw-r--r--	root/root	lib/firmware/qcom/venus-5.4/venus.b02
+-rw-r--r--	root/root	lib/firmware/qcom/venus-5.4/venus.b03
+-rw-r--r--	root/root	lib/firmware/qcom/venus-5.4/venus.b04
+-rw-r--r--	root/root	lib/firmware/qcom/venus-5.4/venus.mbn
+-rw-r--r--	root/root	lib/firmware/qcom/venus-5.4/venus.mdt
 drwxr-xr-x	root/root	lib/firmware/qed/
 -rwxr-xr-x	root/root	lib/firmware/qed/qed_init_values-8.10.9.0.bin
 -rwxr-xr-x	root/root	lib/firmware/qed/qed_init_values-8.14.6.0.bin
@@ -1622,6 +1666,7 @@ drwxr-xr-x	root/root	lib/firmware/qed/
 -rwxr-xr-x	root/root	lib/firmware/qed/qed_init_values-8.30.12.0.bin
 -rwxr-xr-x	root/root	lib/firmware/qed/qed_init_values-8.33.12.0.bin
 -rwxr-xr-x	root/root	lib/firmware/qed/qed_init_values-8.37.7.0.bin
+-rwxr-xr-x	root/root	lib/firmware/qed/qed_init_values-8.40.33.0.bin
 -rw-r--r--	root/root	lib/firmware/qed/qed_init_values_zipped-8.10.10.0.bin
 -rw-r--r--	root/root	lib/firmware/qed/qed_init_values_zipped-8.10.5.0.bin
 -rw-r--r--	root/root	lib/firmware/qed/qed_init_values_zipped-8.15.3.0.bin
@@ -1933,6 +1978,7 @@ drwxr-xr-x	root/root	lib/firmware/rtl_bt/
 -rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8821c_fw.bin
 -rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8822b_config.bin
 -rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8822b_fw.bin
+-rwxr-xr-x	root/root	lib/firmware/rtl_bt/rtl8822cu_config.bin
 -rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8822cu_fw.bin
 drwxr-xr-x	root/root	lib/firmware/rtl_nic/
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8105e-1.fw
@@ -1941,6 +1987,10 @@ drwxr-xr-x	root/root	lib/firmware/rtl_nic/
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8107e-1.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8107e-2.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8125a-3.fw
+-rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8153a-2.fw
+-rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8153a-3.fw
+-rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8153a-4.fw
+-rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8153b-2.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168d-1.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168d-2.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168e-1.fw
@@ -1948,6 +1998,7 @@ drwxr-xr-x	root/root	lib/firmware/rtl_nic/
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168e-3.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168f-1.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168f-2.fw
+-rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168fp-3.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168g-1.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168g-2.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8168g-3.fw
@@ -1995,6 +2046,7 @@ drwxr-xr-x	root/root	lib/firmware/rtlwifi/
 -rw-r--r--	root/root	lib/firmware/rtlwifi/rtl8821aefw_wowlan.bin
 -rw-r--r--	root/root	lib/firmware/rtlwifi/rtl8822befw.bin
 drwxr-xr-x	root/root	lib/firmware/rtw88/
+-rw-r--r--	root/root	lib/firmware/rtw88/rtw8723d_fw.bin
 -rw-r--r--	root/root	lib/firmware/rtw88/rtw8822b_fw.bin
 -rw-r--r--	root/root	lib/firmware/rtw88/rtw8822c_fw.bin
 -rwxr-xr-x	root/root	lib/firmware/rtw88/rtw8822c_wow_fw.bin
