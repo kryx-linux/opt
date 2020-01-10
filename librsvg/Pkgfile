@@ -1,7 +1,8 @@
 # Description: SVG rendering library with cairo backend
-# URL: https://wiki.gnome.org/LibRsvg
+# URL: https://wiki.gnome.org/Projects/LibRsvg
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: gdk-pixbuf libcroco pango rust-bin
+# Optional: sccache
 
 name=librsvg
 version=2.46.4
@@ -10,6 +11,10 @@ source=(https://download.gnome.org/sources/$name/${version%.*}/$name-$version.ta
 
 build() {
 	cd $name-$version
+
+	prt-get isinst sccache && export RUSTC_WRAPPER=/usr/bin/sccache
+	mkdir "$PKGMK_SOURCE_DIR/rust" || true
+	export CARGO_HOME="$PKGMK_SOURCE_DIR/rust"
 
 	./configure \
 		--prefix=/usr \
