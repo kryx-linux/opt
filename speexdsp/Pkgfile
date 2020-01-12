@@ -4,18 +4,18 @@
 # Depends on:
 
 name=speexdsp
-version=1.2rc3
+version=1.2.0
 release=1
 source=(http://downloads.us.xiph.org/releases/speex/$name-$version.tar.gz)
 
-build() {
+build(){
 	cd $name-$version
 
 	./configure \
 		--prefix=/usr
 
+	sed -i -e '/^SUBDIRS *=/s|\bdoc\b||' Makefile
+
 	make
 	make DESTDIR=$PKG install
-
-	rm -rf $PKG/usr/share/doc
 }
