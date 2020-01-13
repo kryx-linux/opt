@@ -1,7 +1,6 @@
 # Description: tools used to create/alter ogg/vorbis files
 # URL: http://www.vorbis.com/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: libao libvorbis, curl
 
 name=vorbis-tools
