@@ -160,6 +160,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-show-branch
 -rwxr-xr-x	root/root	usr/lib/git-core/git-show-index
 -rwxr-xr-x	root/root	usr/lib/git-core/git-show-ref
+-rwxr-xr-x	root/root	usr/lib/git-core/git-sparse-checkout
 -rwxr-xr-x	root/root	usr/lib/git-core/git-stage
 -rwxr-xr-x	root/root	usr/lib/git-core/git-stash
 -rwxr-xr-x	root/root	usr/lib/git-core/git-status
@@ -276,6 +277,7 @@ drwxr-xr-x	root/root	usr/share/git-gui/lib/
 -rw-r--r--	root/root	usr/share/git-gui/lib/choose_font.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/choose_repository.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/choose_rev.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/chord.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/class.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/commit.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/console.tcl
@@ -457,6 +459,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/git-show-index.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-show-ref.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-show.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/git-sparse-checkout.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-stage.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-stash.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-status.1.gz
