@@ -4,7 +4,7 @@
 # Depends on:  mysql
 
 name=php-mysql
-version=7.3.13
+version=7.3.14
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
