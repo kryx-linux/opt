@@ -4,10 +4,10 @@
 # Depends on:  ncurses zlib openssl cmake libaio linux-pam
 
 name=mariadb
-version=10.4.11
+version=10.4.12
 release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz 
-        mariadb
+        mariadb.rc mariadb.pam
         pre-install)
 
 build() {
@@ -43,5 +43,7 @@ build() {
 
 	install -d -m 700 -o mysql -g mysql $PKG/var/{lib,log}/mysql
 	install -d -m 755 -o mysql -g mysql $PKG/var/run/mysqld
-	install -D -m 755 $SRC/mariadb $PKG/etc/rc.d/mariadb
+
+	install -D -m 755 $SRC/mariadb.rc  $PKG/etc/rc.d/mariadb
+	install -D -m 644 $SRC/mariadb.pam $PKG/etc/pam.d/mysql
 }
