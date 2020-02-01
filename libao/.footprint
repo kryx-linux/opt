@@ -15,9 +15,9 @@ drwxr-xr-x	root/root	usr/lib/ckport/
 drwxr-xr-x	root/root	usr/lib/ckport/db/
 -rw-r--r--	root/root	usr/lib/ckport/db/libao.ckport
 -rwxr-xr-x	root/root	usr/lib/libao.la
-lrwxrwxrwx	root/root	usr/lib/libao.so -> libao.so.4.1.0
-lrwxrwxrwx	root/root	usr/lib/libao.so.4 -> libao.so.4.1.0
--rwxr-xr-x	root/root	usr/lib/libao.so.4.1.0
+lrwxrwxrwx	root/root	usr/lib/libao.so -> libao.so.4.1.1
+lrwxrwxrwx	root/root	usr/lib/libao.so.4 -> libao.so.4.1.1
+-rwxr-xr-x	root/root	usr/lib/libao.so.4.1.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ao.pc
 drwxr-xr-x	root/root	usr/share/
