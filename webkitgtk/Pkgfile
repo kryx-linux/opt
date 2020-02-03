@@ -5,16 +5,13 @@
 # Optional: enchant libnotify geoclue openjpeg2
 
 name=webkitgtk
-version=2.26.2
+version=2.26.3
 release=1
-source=(https://webkitgtk.org/releases/$name-$version.tar.xz
-	icu65.patch)
+source=(https://webkitgtk.org/releases/$name-$version.tar.xz)
 
 build() {
 	mkdir build
 	cd $name-$version
-
-	patch -p1 -i $SRC/icu65.patch
 
 	# setting CC and CXX breaks compilation
 	prt-get isinst ccache && PKGMK_WEBKITGTK+=' -DCMAKE_CXX_COMPILER_LAUNCHER=ccache' && \
