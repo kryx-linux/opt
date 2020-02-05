@@ -1,12 +1,12 @@
 # Description: Fast CPU emulator and virtualizer for the x86 platform
 # URL:         http://www.qemu-project.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  libsdl glib xorg-libpixman
+# Depends on:  libsdl glib xorg-libpixman python3
 # Optional:    libseccomp libiscsi libusb usbredir spice
  
 name=qemu
 version=4.2.0
-release=1
+release=2
 source=(http://wiki.qemu-project.org/download/qemu-$version.tar.bz2)
 
 build() {
@@ -21,6 +21,7 @@ build() {
       --libexecdir=/usr/lib/qemu \
       --disable-gtk \
       --localstatedir=/var \
+      --python=/usr/bin/python3 \
       --target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu
 
   # fix include issues with libcap
