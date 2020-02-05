@@ -5,7 +5,7 @@
  
 name=qemu-agent
 version=4.2.0
-release=1
+release=2
 source=(http://wiki.qemu-project.org/download/qemu-$version.tar.bz2 qemu-agent)
 
 build() {
@@ -17,6 +17,7 @@ build() {
       --disable-docs \
       --libexecdir=/usr/lib/qemu \
       --disable-gtk \
+      --python=/usr/bin/python3 \
       --target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu \
       --enable-guest-agent
 
