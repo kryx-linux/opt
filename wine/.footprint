@@ -334,6 +334,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/dimm.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dinput.h
 -rw-r--r--	root/root	usr/include/wine/windows/dinputd.h
+-rw-r--r--	root/root	usr/include/wine/windows/directmanipulation.h
+-rw-r--r--	root/root	usr/include/wine/windows/directmanipulation.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dispdib.h
 -rw-r--r--	root/root	usr/include/wine/windows/dispex.h
 -rw-r--r--	root/root	usr/include/wine/windows/dispex.idl
@@ -999,6 +1001,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wuapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/wuapi.idl
 -rw-r--r--	root/root	usr/include/wine/windows/x3daudio.h
+-rw-r--r--	root/root	usr/include/wine/windows/xact3wb.h
 -rw-r--r--	root/root	usr/include/wine/windows/xapo.h
 -rw-r--r--	root/root	usr/include/wine/windows/xapo.idl
 -rw-r--r--	root/root	usr/include/wine/windows/xapofx.h
@@ -2228,6 +2231,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vcomp140.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vcomp90.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vcruntime140.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/vcruntime140_1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/vdmdbg.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/version.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/view.exe
@@ -2840,6 +2844,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/vcomp140.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vcomp90.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vcruntime140.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/vcruntime140_1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/vdmdbg.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/version.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/view.exe.so
@@ -4189,6 +4194,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcomp140.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcomp90.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcruntime140.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/vcruntime140_1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vdhcp.vxd
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/vdmdbg.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ver.dll16
@@ -4857,6 +4863,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/vcomp140.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vcomp90.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vcruntime140.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/vcruntime140_1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vdhcp.vxd.so
 -rwxr-xr-x	root/root	usr/lib32/wine/vdmdbg.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ver.dll16.so
