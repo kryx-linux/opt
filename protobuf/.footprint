@@ -135,19 +135,19 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/util/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libprotobuf-lite.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.22.0.2
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.22 -> libprotobuf-lite.so.22.0.2
--rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.22.0.2
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.22.0.3
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.22 -> libprotobuf-lite.so.22.0.3
+-rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.22.0.3
 -rw-r--r--	root/root	usr/lib/libprotobuf.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.22.0.2
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.22 -> libprotobuf.so.22.0.2
--rwxr-xr-x	root/root	usr/lib/libprotobuf.so.22.0.2
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.22.0.3
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.22 -> libprotobuf.so.22.0.3
+-rwxr-xr-x	root/root	usr/lib/libprotobuf.so.22.0.3
 -rw-r--r--	root/root	usr/lib/libprotoc.a
 -rwxr-xr-x	root/root	usr/lib/libprotoc.la
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.22.0.2
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so.22 -> libprotoc.so.22.0.2
--rwxr-xr-x	root/root	usr/lib/libprotoc.so.22.0.2
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.22.0.3
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so.22 -> libprotoc.so.22.0.3
+-rwxr-xr-x	root/root	usr/lib/libprotoc.so.22.0.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf-lite.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf.pc
