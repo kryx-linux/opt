@@ -4,7 +4,7 @@
 # Depends on: libidn nettle p11-kit
 
 name=gnutls
-version=3.6.11.1
+version=3.6.12
 release=1
 source=(https://www.gnupg.org/ftp/gcrypt/$name/v${version:0:3}/$name-$version.tar.xz)
 
