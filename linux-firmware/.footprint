@@ -126,6 +126,7 @@ drwxr-xr-x	root/root	lib/firmware/amdgpu/
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi10_sdma1.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi10_smc.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi10_sos.bin
+-rw-r--r--	root/root	lib/firmware/amdgpu/navi10_ta.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi10_vcn.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_asd.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/navi14_ce.bin
@@ -162,6 +163,7 @@ drwxr-xr-x	root/root	lib/firmware/amdgpu/
 -rw-r--r--	root/root	lib/firmware/amdgpu/picasso_rlc.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/picasso_rlc_am4.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/picasso_sdma.bin
+-rw-r--r--	root/root	lib/firmware/amdgpu/picasso_ta.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/picasso_vcn.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/pitcairn_ce.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/pitcairn_k_smc.bin
@@ -240,6 +242,7 @@ drwxr-xr-x	root/root	lib/firmware/amdgpu/
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven2_pfp.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven2_rlc.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven2_sdma.bin
+-rw-r--r--	root/root	lib/firmware/amdgpu/raven2_ta.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven2_vcn.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven_asd.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven_ce.bin
@@ -252,6 +255,7 @@ drwxr-xr-x	root/root	lib/firmware/amdgpu/
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven_pfp.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven_rlc.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven_sdma.bin
+-rw-r--r--	root/root	lib/firmware/amdgpu/raven_ta.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/raven_vcn.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/si58_mc.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/stoney_ce.bin
@@ -445,6 +449,10 @@ drwxr-xr-x	root/root	lib/firmware/ath10k/QCA99X0/
 drwxr-xr-x	root/root	lib/firmware/ath10k/QCA99X0/hw2.0/
 -rw-r--r--	root/root	lib/firmware/ath10k/QCA99X0/hw2.0/board.bin
 -rw-r--r--	root/root	lib/firmware/ath10k/QCA99X0/hw2.0/firmware-5.bin
+drwxr-xr-x	root/root	lib/firmware/ath10k/WCN3990/
+drwxr-xr-x	root/root	lib/firmware/ath10k/WCN3990/hw1.0/
+-rw-r--r--	root/root	lib/firmware/ath10k/WCN3990/hw1.0/firmware-5.bin
+-rw-r--r--	root/root	lib/firmware/ath10k/WCN3990/hw1.0/wlanmdsp.mbn
 -rw-r--r--	root/root	lib/firmware/ath3k-1.fw
 drwxr-xr-x	root/root	lib/firmware/ath6k/
 drwxr-xr-x	root/root	lib/firmware/ath6k/AR6002/
@@ -1111,7 +1119,9 @@ drwxr-xr-x	root/root	lib/firmware/mellanox/
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2000.1122.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2000.1886.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2000.2308.mfa2
+-rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2000.2714.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2000.2308.mfa2
+-rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2000.2714.mfa2
 drwxr-xr-x	root/root	lib/firmware/meson/
 drwxr-xr-x	root/root	lib/firmware/meson/vdec/
 -rw-r--r--	root/root	lib/firmware/meson/vdec/g12a_h264.bin
@@ -1574,6 +1584,87 @@ drwxr-xr-x	root/root	lib/firmware/nvidia/tegra210/
 lrwxrwxrwx	root/root	lib/firmware/nvidia/tegra210/vic.bin -> vic04_ucode.bin
 -rw-r--r--	root/root	lib/firmware/nvidia/tegra210/vic04_ucode.bin
 -rw-r--r--	root/root	lib/firmware/nvidia/tegra210/xusb.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu102/
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu102/acr/
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/acr/bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/acr/ucode_ahesasc.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/acr/ucode_asb.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/acr/ucode_unload.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/acr/unload_bl.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu102/gr/
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/fecs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/fecs_data.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/fecs_inst.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/fecs_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/gpccs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/gpccs_data.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/gpccs_inst.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/gpccs_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/sw_bundle_init.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/sw_ctx.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/sw_method_init.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/sw_nonctx.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/gr/sw_veid_bundle_init.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu102/nvdec/
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/nvdec/scrubber.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu102/sec2/
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/sec2/desc.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/sec2/image.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu102/sec2/sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu104/
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu104/acr/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/acr/bl.bin -> ../../tu102/acr/bl.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/acr/ucode_ahesasc.bin -> ../../tu102/acr/ucode_ahesasc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/acr/ucode_asb.bin -> ../../tu102/acr/ucode_asb.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/acr/ucode_unload.bin -> ../../tu102/acr/ucode_unload.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/acr/unload_bl.bin -> ../../tu102/acr/unload_bl.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu104/gr/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/gr/fecs_bl.bin -> ../../tu102/gr/fecs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/fecs_data.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/fecs_inst.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/fecs_sig.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/gr/gpccs_bl.bin -> ../../tu102/gr/gpccs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/gpccs_data.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/gpccs_inst.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/gpccs_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/sw_bundle_init.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/sw_ctx.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/sw_method_init.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/sw_nonctx.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu104/gr/sw_veid_bundle_init.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu104/nvdec/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/nvdec/scrubber.bin -> ../../tu102/nvdec/scrubber.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu104/sec2/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/sec2/desc.bin -> ../../tu102/sec2/desc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/sec2/image.bin -> ../../tu102/sec2/image.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu104/sec2/sig.bin -> ../../tu102/sec2/sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu106/
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu106/acr/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/acr/bl.bin -> ../../tu102/acr/bl.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/acr/ucode_ahesasc.bin -> ../../tu102/acr/ucode_ahesasc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/acr/ucode_asb.bin -> ../../tu102/acr/ucode_asb.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/acr/ucode_unload.bin -> ../../tu102/acr/ucode_unload.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/acr/unload_bl.bin -> ../../tu102/acr/unload_bl.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu106/gr/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/gr/fecs_bl.bin -> ../../tu102/gr/fecs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/fecs_data.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/fecs_inst.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/fecs_sig.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/gr/gpccs_bl.bin -> ../../tu102/gr/gpccs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/gpccs_data.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/gpccs_inst.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/gpccs_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/sw_bundle_init.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/sw_ctx.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/sw_method_init.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/sw_nonctx.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/tu106/gr/sw_veid_bundle_init.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu106/nvdec/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/nvdec/scrubber.bin -> ../../tu102/nvdec/scrubber.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/tu106/sec2/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/sec2/desc.bin -> ../../tu102/sec2/desc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/sec2/image.bin -> ../../tu102/sec2/image.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/tu106/sec2/sig.bin -> ../../tu102/sec2/sig.bin
 drwxr-xr-x	root/root	lib/firmware/nvidia/tu10x/
 drwxr-xr-x	root/root	lib/firmware/nvidia/tu10x/typec/
 -rw-r--r--	root/root	lib/firmware/nvidia/tu10x/typec/ccg_boot.cyacd
@@ -1627,7 +1718,7 @@ drwxr-xr-x	root/root	lib/firmware/qcom/sdm845/
 -rw-r--r--	root/root	lib/firmware/qcom/sdm845/mba.mbn
 -rw-r--r--	root/root	lib/firmware/qcom/sdm845/modem.mbn
 -rw-r--r--	root/root	lib/firmware/qcom/sdm845/modemuw.jsn
--rw-r--r--	root/root	lib/firmware/qcom/sdm845/wlanmdsp.mbn
+lrwxrwxrwx	root/root	lib/firmware/qcom/sdm845/wlanmdsp.mbn -> ../../ath10k/WCN3990/hw1.0/wlanmdsp.mbn
 drwxr-xr-x	root/root	lib/firmware/qcom/venus-1.8/
 -rw-r--r--	root/root	lib/firmware/qcom/venus-1.8/venus.b00
 -rw-r--r--	root/root	lib/firmware/qcom/venus-1.8/venus.b01
@@ -1676,6 +1767,7 @@ drwxr-xr-x	root/root	lib/firmware/qed/
 -rwxr-xr-x	root/root	lib/firmware/qed/qed_init_values_zipped-8.37.2.0.bin
 -rwxr-xr-x	root/root	lib/firmware/qed/qed_init_values_zipped-8.37.7.0.bin
 -rw-r--r--	root/root	lib/firmware/qed/qed_init_values_zipped-8.4.2.0.bin
+-rwxr-xr-x	root/root	lib/firmware/qed/qed_init_values_zipped-8.42.2.0.bin
 -rw-r--r--	root/root	lib/firmware/qed/qed_init_values_zipped-8.7.3.0.bin
 -rw-r--r--	root/root	lib/firmware/ql2100_fw.bin
 -rw-r--r--	root/root	lib/firmware/ql2200_fw.bin
