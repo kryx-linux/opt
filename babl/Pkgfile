@@ -4,7 +4,7 @@
 # Depends on: gobject-introspection lcms2
 
 name=babl
-version=0.1.72
+version=0.1.74
 release=1
 source=(https://ftp.gtk.org/pub/babl/${version%.*}/$name-$version.tar.xz)
 
