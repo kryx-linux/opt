@@ -4,9 +4,9 @@
 # Depends on:  libusb libtiff libpng xz
 
 name=sane
-version=1.0.28
+version=1.0.29
 release=1
-source=(https://gitlab.com/sane-project/backends/uploads/9e718daff347826f4cfe21126c8d5091/$name-backends-$version.tar.gz)
+source=(https://gitlab.com/sane-project/backends/uploads/54f858b20a364fc35d820df935a86478/$name-backends-$version.tar.gz)
 
 build () {
     cd $name-backends-$version
