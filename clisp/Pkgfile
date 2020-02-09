@@ -1,24 +1,29 @@
 # Description: GNU CLisp is an ANSI Common Lisp Implementation.
 # URL:         http://clisp.cons.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  libsigsegv readline
+# Depends on:  libsigsegv readline libffcall
 
 name=clisp
-version=2.49
+version=2.49.92
 release=1
-source=(https://ftp.gnu.org/pub/gnu/clisp/latest/$name-$version.tar.bz2)
+date=2018-02-18
+source=(https://gitlab.com/gnu-clisp/clisp/-/archive/$name-$version-$date/$name-$name-$version-$date.tar.bz2)
 
 build() {
-  cd $name-$version
+  cd $name-$name-$version-$date
 
+  FORCE_UNSAFE_CONFIGURE=1 \
   ./configure \
-    --prefix=/usr
+    --prefix=/usr \
+    --with-readline \
+    --with-ffcall
 
   cd src
 
   ./makemake \
     --with-dynamic-ffi \
-    --without-dynamic-modules \
+    --with-ffcall \
+    --with-readline \
     --prefix=/usr
 
   make -j1
