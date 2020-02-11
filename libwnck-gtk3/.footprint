@@ -1,7 +1,7 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/wnck-urgency-monitor
--rwxr-xr-x	root/root	usr/bin/wnckprop
+-rwxr-xr-x	root/root	usr/bin/wnck-urgency-monitor3
+-rwxr-xr-x	root/root	usr/bin/wnckprop3
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/libwnck-3.0/
 drwxr-xr-x	root/root	usr/include/libwnck-3.0/libwnck/
@@ -21,9 +21,11 @@ drwxr-xr-x	root/root	usr/include/libwnck-3.0/libwnck/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Wnck-3.0.typelib
--rwxr-xr-x	root/root	usr/lib/libwnck-3.la
-lrwxrwxrwx	root/root	usr/lib/libwnck-3.so -> libwnck-3.so.0.2.2
-lrwxrwxrwx	root/root	usr/lib/libwnck-3.so.0 -> libwnck-3.so.0.2.2
--rwxr-xr-x	root/root	usr/lib/libwnck-3.so.0.2.2
+lrwxrwxrwx	root/root	usr/lib/libwnck-3.so -> libwnck-3.so.0
+lrwxrwxrwx	root/root	usr/lib/libwnck-3.so.0 -> libwnck-3.so.0.3.0
+-rwxr-xr-x	root/root	usr/lib/libwnck-3.so.0.3.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libwnck-3.0.pc
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/gir-1.0/
+-rw-r--r--	root/root	usr/share/gir-1.0/Wnck-3.0.gir
