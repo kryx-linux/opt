@@ -4,7 +4,7 @@
 # Depends on:  libpcre2 libxml2
 
 name=php-fpm
-version=7.3.14
+version=7.4.2
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz
         php-fpm)
@@ -19,10 +19,9 @@ build () {
     --with-config-file-path=/etc/php \
     --with-config-file-scan-dir=/etc/php/conf.d \
     --with-zlib \
-    --with-pcre-regex=/usr \
+    --with-external-pcre \
     --disable-static --disable-debug \
     --without-sqlite3 --without-pdo-sqlite \
-    --without-libzip \
     --without-pear"
 
     EXTENSION_DIR=/usr/lib/php/extensions \
