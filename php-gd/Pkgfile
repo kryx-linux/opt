@@ -1,18 +1,20 @@
 # Description: GD module for PHP
 # URL:         http://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Packager:    Alan Mizrahi, alan at mizrahi dot com dot ve
 # Depends on:  libgd
 
 name=php-gd
-version=7.3.14
+version=7.4.2
 release=1
 source=(http://www.php.net/distributions/php-$version.tar.xz)
 
 build() {
     cd php-$version
 
-    ./configure --disable-all --with-gd=shared,/usr
+    ./configure --disable-all \
+                --enable-gd=shared \
+                --with-external-gd
+    
     make build-modules
 
     install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
