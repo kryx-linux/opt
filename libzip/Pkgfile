@@ -1,0 +1,21 @@
+# Description: Library to handle zip files
+# URL:         http://nih.at/libzip/
+# Maintainer:  Alan Mizrahi, alan at mizrahi dot com dot ve
+# Depends on:  cmake xz zlib bzip2 openssl 
+
+name=libzip
+version=1.6.1
+release=1
+source=(http://nih.at/$name/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	cmake . \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+		-DENABLE_GNUTLS=OFF
+
+	make DESTDIR=$PKG install
+}
