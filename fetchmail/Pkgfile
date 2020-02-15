@@ -4,9 +4,9 @@
 # Depends on:  openssl
 
 name=fetchmail
-version=6.4.1
+version=6.4.2
 release=1
-source=(http://downloads.sourceforge.net/project/$name/branch_6.4/$name-$version.tar.xz)
+source=(http://downloads.sourceforge.net/project/$name/branch_${version%.*}/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
