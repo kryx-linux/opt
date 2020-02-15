@@ -1,10 +1,10 @@
 # Description: PHP interpreter, extension modules and support stuff
 # URL:         http://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libpcre2 libxml2 curl db gdbm
+# Depends on:  bzip2 libpcre2 libxml2 curl db gdbm
 
 name=php
-version=7.3.14
+version=7.4.2
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
@@ -18,20 +18,17 @@ build () {
     --with-config-file-path=/etc/php \
     --with-config-file-scan-dir=/etc/php/conf.d \
     --with-zlib \
-    --with-pcre-regex=/usr \
+    --with-external-pcre \
     --disable-static --disable-debug \
     --without-sqlite3 --without-pdo-sqlite \
-    --without-libzip \
     --without-pear"
 
     local PHP_SHARED="
     --enable-dba=shared --with-gdbm --with-db4 \
     --with-bz2=shared \
     --with-curl=shared \
-    --with-openssl=shared \
-    --enable-zip=shared \
-    --enable-mbstring=shared"
-
+    --with-openssl=shared"
+    
     EXTENSION_DIR=/usr/lib/php/extensions \
     ./configure \
         $PHP_CONFIG \
@@ -50,6 +47,6 @@ build () {
     install -m 644 php.ini-* $PKG/etc/php
 
     # order matters !
-    printf 'extension=%s\n' {zip,bz2,curl,openssl,dba,mbstring}.so \
+    printf 'extension=%s\n' {bz2,curl,openssl,dba}.so \
            > $PKG/etc/php/conf.d/extensions.ini
 }
