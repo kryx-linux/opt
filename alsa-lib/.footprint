@@ -37,6 +37,15 @@ drwxr-xr-x	root/root	usr/include/alsa/sound/
 -rw-r--r--	root/root	usr/include/alsa/sound/sscape_ioctl.h
 -rw-r--r--	root/root	usr/include/alsa/sound/tlv.h
 -rw-r--r--	root/root	usr/include/alsa/sound/type_compat.h
+drwxr-xr-x	root/root	usr/include/alsa/sound/uapi/
+-rw-r--r--	root/root	usr/include/alsa/sound/uapi/asoc.h
+-rw-r--r--	root/root	usr/include/alsa/sound/uapi/asound_fm.h
+-rw-r--r--	root/root	usr/include/alsa/sound/uapi/emu10k1.h
+-rw-r--r--	root/root	usr/include/alsa/sound/uapi/hdsp.h
+-rw-r--r--	root/root	usr/include/alsa/sound/uapi/hdspm.h
+-rw-r--r--	root/root	usr/include/alsa/sound/uapi/sb16_csp.h
+-rw-r--r--	root/root	usr/include/alsa/sound/uapi/sscape_ioctl.h
+-rw-r--r--	root/root	usr/include/alsa/sound/uapi/tlv.h
 -rw-r--r--	root/root	usr/include/alsa/timer.h
 -rw-r--r--	root/root	usr/include/alsa/topology.h
 -rw-r--r--	root/root	usr/include/alsa/use-case.h
