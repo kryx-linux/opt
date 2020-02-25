@@ -1,18 +1,17 @@
 # Description: Bi-directional file synchronization tool
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Packager:    Markus Ackermann, maol at symlink dot ch
 # URL:         http://www.cis.upenn.edu/~bcpierce/unison/
 # Depends on:  ocaml
 
 name=unison
-version=2.51.2
+version=2.51.3-20200221
 release=1
-source=(http://www.cis.upenn.edu/~bcpierce/unison/download/releases/$name-$version/$name-$version.tar.gz)
+source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
 
 build() {
-    cd src
+    cd $name-$version
     unset CFLAGS CXXFLAGS
-    make -j1 UISTYLE=text THREADS=true NATIVE=true unison unison-fsmonitor
+    make UISTYLE=text THREADS=true NATIVE=true
     install -d $PKG/usr/bin
-    install -m 755 unison unison-fsmonitor $PKG/usr/bin/
+    install -m 0755 src/{unison,unison-fsmonitor} $PKG/usr/bin/
 }
