@@ -4,7 +4,7 @@
 # Depends on: libpcre meson ninja
 
 name=glib
-version=2.62.5
+version=2.64.0
 release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
 	gschemas.compiled)
@@ -19,4 +19,5 @@ build () {
 	install -m 0644 $SRC/gschemas.compiled $PKG/usr/share/glib-2.0/schemas/gschemas.compiled
 	rm -rf $PKG/usr/share/{gtk-doc,locale} $PKG/usr/libexec
 	rm -r $PKG/usr/share/bash-completion
+	rm -r $PKG/usr/share/installed-tests
 }
