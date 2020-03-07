@@ -1,11 +1,11 @@
-# Description:	Perl module for generating and using LALR parsers
-# URL:		http://search.cpan.org/~fdesar/Parse-Yapp-1.05/
-# Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
+# Description: Perl module for generating and using LALR parsers
+# URL:         https://metacpan.org/release/Parse-Yapp
+# Maintainer:  Alan Mizrahi, alan at mizrahi dot com dot ve
 
 name=p5-parse-yapp
-version=1.05
-release=2
-source=(http://search.cpan.org/CPAN/authors/id/F/FD/FDESAR/Parse-Yapp-$version.tar.gz)
+version=1.21
+release=1
+source=(https://cpan.metacpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-$version.tar.gz)
 
 build() {
 	cd Parse-Yapp-$version
