@@ -44,6 +44,7 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/doveadm
 -rwxr-xr-x	root/root	usr/bin/doveconf
+-rwxr-xr-x	root/root	usr/bin/dovecot-sysreport
 lrwxrwxrwx	root/root	usr/bin/dsync -> doveadm
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/dovecot/
@@ -449,6 +450,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/mdbox-sync.h
 -rw-r--r--	root/root	usr/include/dovecot/mech-otp-skey-common.h
 -rw-r--r--	root/root	usr/include/dovecot/mech-plain-common.h
+-rw-r--r--	root/root	usr/include/dovecot/mech-scram.h
 -rw-r--r--	root/root	usr/include/dovecot/mech.h
 -rw-r--r--	root/root	usr/include/dovecot/memarea.h
 -rw-r--r--	root/root	usr/include/dovecot/mempool.h
@@ -919,6 +921,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/doveadm.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/doveconf.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/dovecot-lda.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/dovecot-sysreport.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/dovecot.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/dsync.1.gz
 drwxr-xr-x	root/root	usr/share/man/man7/
