@@ -1,7 +1,7 @@
 # Description: A set of python bindings for cairo.
 # URL: https://pypi.org/project/pycairo/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cairo
+# Depends on: cairo python
 
 name=python-cairo
 version=1.18.2
