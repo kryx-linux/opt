@@ -1,11 +1,10 @@
 # Description: Lightweight Directory Access Protocol (LDAP) Toolkit
-# URL: https://www.openldap.org/
-# Packager: Daniel Mueller, daniel at danm dot de
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Depends on: cyrus-sasl libtool perl util-linux
+# URL:         https://www.openldap.org/
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  cyrus-sasl libtool perl util-linux
 
 name=openldap
-version=2.4.45
+version=2.4.49
 release=1
 source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/$name-$version.tgz
 	$name-config.patch slapd)
