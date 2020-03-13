@@ -7,7 +7,7 @@
 name=openldap
 version=2.4.45
 release=1
-source=(https://www.openldap.org/software/download/OpenLDAP/openldap-release/$name-$version.tgz
+source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/$name-$version.tgz
 	$name-config.patch slapd)
 
 build() {
