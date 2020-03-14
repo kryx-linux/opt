@@ -1,6 +1,6 @@
 UPDATE:
 
-When updating openldap you should first create a backup of all your data with
+When updateing openldap you should first create a backup of all your data with
 slapcat, like:
 
   slapcat -l backup.ldif

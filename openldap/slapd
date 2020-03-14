@@ -7,7 +7,7 @@ SLAPD_PID=/var/openldap/run/slapd.pid
 
 case $1 in
 start)
-	/usr/sbin/slapd -u ldap -g ldap
+	/usr/sbin/slapd
 	;;
 stop)
 	if [ -f $SLAPD_PID ]; then

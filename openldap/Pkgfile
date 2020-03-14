@@ -1,38 +1,26 @@
 # Description: Lightweight Directory Access Protocol (LDAP) Toolkit
-# URL: https://www.openldap.org/
-# Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cyrus-sasl libtool perl util-linux
+# URL:         https://www.openldap.org/
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  cyrus-sasl libtool perl util-linux
 
 name=openldap
 version=2.4.49
 release=1
 source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/$name-$version.tgz
-	openldap-ntlm.patch
-	$name-config.patch slapd.rc)
+	$name-config.patch slapd)
 
 build() {
 	cd $name-$version
-
-	patch -p1 -i "${SRC}"/openldap-ntlm.patch
-	sed -i 's|-m 644 $(LIBRARY)|-m 755 $(LIBRARY)|' libraries/{liblber,libldap,libldap_r}/Makefile.in
-	sed -i 's|#define LDAPI_SOCK LDAP_RUNDIR LDAP_DIRSEP "run" LDAP_DIRSEP "ldapi"|#define LDAPI_SOCK LDAP_DIRSEP "run" LDAP_DIRSEP "openldap" LDAP_DIRSEP "ldapi"|' include/ldap_defaults.h
-	sed -i 's|%LOCALSTATEDIR%/run|/run/openldap|' servers/slapd/slapd.{conf,ldif}
-	sed -i 's|-$(MKDIR) $(DESTDIR)$(localstatedir)/run|-$(MKDIR) $(DESTDIR)/run/openldap|' servers/slapd/Makefile.in
-
 	patch -p0 -i $SRC/$name-config.patch
 
-	autoconf
-
-	./configure \
-		--prefix=/usr \
+	./configure --prefix=/usr \
 		--sysconfdir=/etc \
-		--libexecdir=/usr/lib \
-		--localstatedir=/var/lib/openldap \
+		--libexecdir=/usr/sbin \
+		--localstatedir=/var/openldap \
 		--enable-syslog \
 		--with-threads \
 		--with-tls \
 		--with-cyrus-sasl \
-		--enable-overlays=mod \
 		--enable-spasswd \
 		--enable-dynamic \
 		--enable-ipv6 \
@@ -50,49 +38,14 @@ build() {
 		--enable-aci \
 		--enable-shared
 
-	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-
+	make depend
 	make
-	make -C contrib/slapd-modules/nssov OPT="$CFLAGS $CPPFLAGS" prefix=/usr libexecdir=/usr/lib sysconfdir=/etc/openldap
-	make -C contrib/slapd-modules/autogroup OPT="$CFLAGS $CPPFLAGS" prefix=/usr libexecdir=/usr/lib sysconfdir=/etc/openldap
-	make -C contrib/slapd-modules/lastbind OPT="$CFLAGS $CPPFLAGS" prefix=/usr libexecdir=/usr/lib sysconfdir=/etc/openldap
-	make -C contrib/slapd-modules/passwd/sha2 OPT="$CFLAGS $CPPFLAGS" prefix=/usr libexecdir=/usr/lib sysconfdir=/etc/openldap
+	make DESTDIR=$PKG install   
 
-	for dir in include libraries clients servers doc/man/man{1,3,5,8} ; do
-		pushd ${dir}
-		make DESTDIR="$PKG" install
-		popd
-	done
+	ln -sf liblber.so $PKG/usr/lib/liblber.so.2
+	ln -sf libldap.so $PKG/usr/lib/libldap.so.2
+	ln -sf libldap_r.so $PKG/usr/lib/libldap_r.so.2
 
-	make -C contrib/slapd-modules/autogroup prefix=/usr libexecdir=/usr/lib sysconfdir=/etc/openldap DESTDIR="$PKG" install
-	make -C contrib/slapd-modules/lastbind prefix=/usr libexecdir=/usr/lib sysconfdir=/etc/openldap DESTDIR="$PKG" install
-	make -C contrib/slapd-modules/passwd/sha2 prefix=/usr libexecdir=/usr/lib sysconfdir=/etc/openldap DESTDIR="$PKG" install
-	make -C contrib/slapd-modules/nssov prefix=/usr libexecdir=/usr/lib sysconfdir=/etc/openldap DESTDIR="$PKG" install
-	install -m644 contrib/slapd-modules/nssov/slapo-nssov.5 "$PKG"/usr/share/man/man5/slapo-nssov.5
-	install -m644 contrib/slapd-modules/autogroup/slapo-autogroup.5 "$PKG"/usr/share/man/man5/slapo-autogroup.5
-	install -m644 contrib/slapd-modules/lastbind/slapo-lastbind.5 "$PKG"/usr/share/man/man5/slapo-lastbind.5
-
-	rm "$PKG"/usr/share/man/man5/ldap.conf.5
-	rm -r "$PKG"/run
-
-	# remove duplicate default conf files
-	rm "$PKG"/etc/openldap/*.default
-
-	ln -s ../lib/slapd "$PKG"/usr/bin/slapd
-
-	chown root:ldap "$PKG"/etc/openldap/{slapd.{conf,ldif},DB_CONFIG.example}
-	chmod 640 "$PKG"/etc/openldap/{slapd.{conf,ldif},DB_CONFIG.example}
-
-	install -dm700 -o ldap -g ldap "$PKG"/var/lib/openldap
-	chown -R ldap:ldap "$PKG"/var/lib/openldap
-
-	install -dm700 -o ldap -g ldap "$PKG"/etc/openldap/slapd.d
-
-	install -D -m 0755 $SRC/slapd.rc "$PKG"/etc/rc.d/slapd
-
-	ln -s liblber.so $PKG/usr/lib/liblber.so.2
-	ln -s libldap.so $PKG/usr/lib/libldap.so.2
-	ln -s libldap_r.so $PKG/usr/lib/libldap_r.so.2
-
-	rm "$PKG"/etc/openldap/schema/README
+	install -D -m 0755 $SRC/slapd $PKG/etc/rc.d/slapd
+	rm -f $PKG/etc/openldap/schema/README
 }
