@@ -4,7 +4,7 @@
 # Depends on:  bzip2 libpcre2 libxml2 curl db gdbm
 
 name=php
-version=7.4.3
+version=7.4.4
 release=1
 source=(http://php.net/distributions/php-$version.tar.xz)
 
