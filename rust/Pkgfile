@@ -14,12 +14,28 @@ _cargo=0.42.0
 
 release=2
 source=(
-	https://static.rust-lang.org/dist/${name}c-$version-src.tar.gz
-	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.gz
-	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.gz
-	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.gz
+	https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
+	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.xz
+	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.xz
+	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
 )
- 
+
+unpack_source() {
+	for file in ${source[@]}; do
+		case ${file##*/} in
+			rustc-${version}-src.tar.xz)
+			echo "Unpacking $(get_filename $file)";
+			bsdtar -p -o -C $SRC -xf $(get_filename $file) ;;
+		*.tar.xz)
+			echo "Copying $(get_filename $file)";
+			mkdir -p $SRC/${name}c-$version-src/build/cache/$_date || true
+			cp $(get_filename $file) $SRC/${name}c-$version-src/build/cache/$_date ;;
+		*)
+			cp $(get_filename $file) $SRC ;;
+		esac
+	done
+}
+
 build() {
 	cd "${name}c-$version-src"
 
@@ -41,11 +57,6 @@ build() {
 	fi
 	[ $ERROR ] && exit 1
 	unset DATE RUSTC CARGO ERROR
-
-	mkdir -p build/cache/$_date
-	cp $PKGMK_SOURCE_DIR/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.gz build/cache/$_date/
-	cp $PKGMK_SOURCE_DIR/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.gz build/cache/$_date/
-	cp $PKGMK_SOURCE_DIR/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.gz build/cache/$_date/
 
 	prt-get isinst sccache && export RUSTC_WRAPPER=/usr/bin/sccache
 
@@ -106,9 +117,10 @@ EOF
 	DESTDIR=$PKG /usr/bin/python3 ./x.py --config="${SRC}"/config.toml install
 	unset LIBSSH2_SYS_USE_PKG_CONFIG
 
-	#cleanup
+	[ -e '/usr/bin/zsh' ] || rm -r $PKG/usr/share/zsh
+
+	# cleanup
 	rm -r $PKG/usr/share/doc
-	rm -r $PKG/usr/share/zsh
 	rm -r $PKG/etc
 	rm $PKG/usr/lib/rustlib/{components,manifest-rustc,rust-installer-version,uninstall.sh}
 }
