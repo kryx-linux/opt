@@ -57,6 +57,7 @@ drwxr-xr-x	root/root	usr/include/wine/msvcrt/
 -rw-r--r--	root/root	usr/include/wine/msvcrt/eh.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/errno.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/fcntl.h
+-rw-r--r--	root/root	usr/include/wine/msvcrt/fenv.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/float.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/fpieee.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/inttypes.h
@@ -615,6 +616,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/msdaguid.h
 -rw-r--r--	root/root	usr/include/wine/windows/msdasc.h
 -rw-r--r--	root/root	usr/include/wine/windows/msdasc.idl
+-rw-r--r--	root/root	usr/include/wine/windows/msdasql.h
 -rw-r--r--	root/root	usr/include/wine/windows/mshtmcid.h
 -rw-r--r--	root/root	usr/include/wine/windows/mshtmdid.h
 -rw-r--r--	root/root	usr/include/wine/windows/mshtmhst.h
@@ -1141,6 +1143,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-realtime-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-registry-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-registry-l2-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-registry-l2-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-registryuserspecific-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-rtlsupport-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-rtlsupport-l1-2-0.dll.so
@@ -1582,6 +1585,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-realtime-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-registry-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-registry-l2-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-registry-l2-2-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-registryuserspecific-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-rtlsupport-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-rtlsupport-l1-2-0.dll
@@ -3066,6 +3070,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-realtime-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-registry-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-registry-l2-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-registry-l2-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-registryuserspecific-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-rtlsupport-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-rtlsupport-l1-2-0.dll.so
@@ -3516,6 +3521,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-realtime-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-registry-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-registry-l2-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-registry-l2-2-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-registryuserspecific-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-rtlsupport-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-rtlsupport-l1-2-0.dll
@@ -5175,6 +5181,7 @@ drwxr-xr-x	root/root	usr/share/wine/nls/
 -rw-r--r--	root/root	usr/share/wine/nls/normnfd.nls
 -rw-r--r--	root/root	usr/share/wine/nls/normnfkc.nls
 -rw-r--r--	root/root	usr/share/wine/nls/normnfkd.nls
+-rw-r--r--	root/root	usr/share/wine/nls/sortdefault.nls
 -rw-r--r--	root/root	usr/share/wine/wine.inf
 -rw-r--r--	root/root	usr/share/wine/winebus.inf
 -rw-r--r--	root/root	usr/share/wine/winehid.inf
