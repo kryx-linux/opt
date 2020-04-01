@@ -4,10 +4,9 @@
 # Depends on:  gobject-introspection json-c intltool
 
 name=libmypaint
-version=1.4.0
+version=1.5.1
 release=1
-source=(https://github.com/mypaint/$name/archive/v$version/$name-$version.tar.gz
-  libmypaint-1d5d822-stable.patch.xz)
+source=(https://github.com/mypaint/$name/archive/v$version/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
