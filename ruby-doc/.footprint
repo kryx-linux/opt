@@ -1868,7 +1868,6 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/Bundler/Persistent/Net/HTTP/Persist
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Bundler/Persistent/Net/HTTP/Persistent/normalize_uri-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Bundler/Persistent/Net/HTTP/Persistent/open_timeout-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Bundler/Persistent/Net/HTTP/Persistent/override_headers-i.ri
--rw-r--r--	root/root	usr/share/ri/2.7/system/Bundler/Persistent/Net/HTTP/Persistent/pipeline-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Bundler/Persistent/Net/HTTP/Persistent/private_key%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Bundler/Persistent/Net/HTTP/Persistent/private_key-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Bundler/Persistent/Net/HTTP/Persistent/proxy%3d-i.ri
@@ -7656,6 +7655,8 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/Hash/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Hash/reject%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Hash/reject-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Hash/replace-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/Hash/ruby2_keywords_hash%3f-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/Hash/ruby2_keywords_hash-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Hash/select%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Hash/select-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Hash/shift-i.ri
@@ -7921,6 +7922,12 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/CantReturnToNormalMode/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/CantReturnToNormalMode/cdesc-CantReturnToNormalMode.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/CantShiftToMultiIrbMode/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/CantShiftToMultiIrbMode/cdesc-CantShiftToMultiIrbMode.ri
+drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/Canvas/
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Canvas/cdesc-Canvas.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Canvas/draw-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Canvas/line-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Canvas/line0-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Canvas/new-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/Color/
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/Color/SymbolState/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Color/SymbolState/cdesc-SymbolState.ri
@@ -7971,6 +7978,8 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/Context/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/load_modules-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/main-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/newline_before_multiline_output%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/newline_before_multiline_output-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/pop_workspace-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/prompt_c-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/prompt_i-i.ri
@@ -8244,6 +8253,11 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/line-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/readable_after_eof%3f-i.ri
+drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/RubyModel/
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/RubyModel/cdesc-RubyModel.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/RubyModel/init_ruby_model-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/RubyModel/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/RubyModel/render_frame-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/cdesc-StdioInputMethod.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/encoding-i.ri
@@ -8259,6 +8273,16 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/UndefinedPromptMode/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/UndefinedPromptMode/cdesc-UndefinedPromptMode.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/UnrecognizedSwitch/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/UnrecognizedSwitch/cdesc-UnrecognizedSwitch.ri
+drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/Vec/
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Vec/cdesc-Vec.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Vec/cross-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Vec/dot-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Vec/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Vec/normalize-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Vec/sub-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Vec/x-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Vec/y-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Vec/z-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/WorkSpace/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/WorkSpace/__evaluate__-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/WorkSpace/binding-i.ri
@@ -8273,6 +8297,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/WorkSpace/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/cdesc-IRB.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/conf-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/default_src_encoding-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/easter_egg-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/initialize_tracer-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/irb-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/irb_abort-c.ri
@@ -16080,6 +16105,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/Reline/Core/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/Core/dig_perfect_match_proc%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/Core/emacs_editing_mode%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/Core/emacs_editing_mode-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/Core/encoding-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/Core/filename_quote_characters%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/Core/get_screen_size-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/Core/inner_readline-i.ri
@@ -16103,6 +16129,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/Reline/Core/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/Core/vi_editing_mode-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/cdesc-Reline.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/core-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/encoding_system_needs-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/insert_text-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Reline/line_editor-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/RequiredArgumentMissingError/
@@ -18609,8 +18636,6 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/doc/syntax/
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/fatal/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/fatal/cdesc-fatal.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/lib/
-drwxr-xr-x	root/root	usr/share/ri/2.7/system/lib/irb/
--rw-r--r--	root/root	usr/share/ri/2.7/system/lib/irb/page-ruby_logo_aa.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/lib/racc/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/lib/racc/page-pre-setup.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/lib/racc/rdoc/
