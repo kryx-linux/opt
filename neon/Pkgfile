@@ -4,9 +4,9 @@
 # Depends on:  openssl expat
 
 name=neon
-version=0.30.2
-release=2
-source=(https://fossies.org/linux/www/$name-$version.tar.gz)
+version=0.31.0
+release=1
+source=(http://webdav.org/neon/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
