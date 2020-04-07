@@ -1,10 +1,10 @@
 # Description: SMB server and client for unix
 # URL:         http://www.samba.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  linux-pam libarchive libcap popt tdb tevent ldb python3 gnutls
+# Depends on:  linux-pam libarchive libcap popt tdb tevent ldb python3 gnutls p5-parse-yapp
 
 name=samba
-version=4.11.7
+version=4.12.1
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
@@ -33,13 +33,6 @@ build () {
 
     # cleanup
     chmod 1777 $PKG/var/lock
-
-    # remove pidl
-    find $PKG -iname '*pidl*' -type f -delete
-    find $PKG -depth -name perl5 -type d -exec rm -r {} \;
-
-    # remove third party python stuff
-    rm -r $PKG/usr/lib/python?.?
 
     # config-file and start-script
     install -d $PKG/etc/{samba,rc.d}
