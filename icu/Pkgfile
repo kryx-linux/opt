@@ -3,16 +3,12 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=icu
-version=65.1
+version=66.1
 release=1
-source=(https://github.com/unicode-org/icu/releases/download/release-${version//./-}/icu4c-${version/./_}-src.tgz
-	icu-65.1-initialized-buffer-uloc_getKeywordValue.patch)
+source=(https://github.com/unicode-org/icu/releases/download/release-${version//./-}/icu4c-${version/./_}-src.tgz)
 
 build() {
 	cd icu/source
-
-	# https://unicode-org.atlassian.net/browse/ICU-20884
-	patch -p2 -d .. -i $SRC/icu-65.1-initialized-buffer-uloc_getKeywordValue.patch
 
 	# icu tries to use clang by default
 	[ "$CC" ] || export CC=gcc
