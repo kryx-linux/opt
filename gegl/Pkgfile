@@ -1,8 +1,8 @@
 # Description: Graph based image processing framework
 # URL:         http://gegl.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  babl gexiv2 json-glib librsvg libspiro libwebp
-# Optional:    asciidoc ffmpeg graphviz gtk-doc jasper lcms2 ruby libsdl2 poppler umfpack v4l-utils vala lensfun libopenraw libumfpack luajit mrg openexr
+# Depends on:  babl gexiv2 json-glib librsvg
+# Optional:    asciidoc ffmpeg graphviz gtk-doc jasper lcms2 ruby libsdl2 libspiro libwebp poppler umfpack v4l-utils vala lensfun libopenraw libumfpack luajit mrg openexr
 
 name=gegl
 version=0.4.22
