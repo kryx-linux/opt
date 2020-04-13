@@ -4,17 +4,15 @@
 # Depends on:  nettle
 
 name=dnsmasq
-version=2.80
-release=3
+version=2.81
+release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.xz \
-        $name-config.patch dnsmasq \
-        nettle-3.5.patch)
+        $name-config.patch dnsmasq)
 
 build () {
     cd $name-$version
 
     patch -p1 -i $SRC/$name-config.patch
-    patch -p1 -i $SRC/nettle-3.5.patch
 
     make COPTS="-DHAVE_DNSSEC" CFLAGS="$CFLAGS -Wall -W"
     make COPTS="-DHAVE_DNSSEC" PREFIX=$PKG/usr install
