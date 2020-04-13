@@ -89,8 +89,6 @@ drwxr-xr-x	root/root	usr/include/gegl-0.4/sc/
 -rw-r--r--	root/root	usr/include/gegl-0.4/sc/sc-sample.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/gegl-0.4/
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/ff-load.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/ff-save.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/gegl-common-cxx.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/gegl-common-gpl3.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/gegl-common.so
@@ -104,7 +102,6 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.4/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/npd.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/npy-save.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/path.so
--rwxr-xr-x	root/root	usr/lib/gegl-0.4/pdf-load.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/pixbuf-load.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/pixbuf-save.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.4/png-load.so
@@ -137,7 +134,3 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/Gegl-0.4.gir
-drwxr-xr-x	root/root	usr/share/vala/
-drwxr-xr-x	root/root	usr/share/vala/vapi/
--rw-r--r--	root/root	usr/share/vala/vapi/gegl-0.4.deps (EMPTY)
--rw-r--r--	root/root	usr/share/vala/vapi/gegl-0.4.vapi

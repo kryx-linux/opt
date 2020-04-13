@@ -1,8 +1,8 @@
-# Description: graph based image processing framework
-# URL: http://gegl.org
+# Description: Graph based image processing framework
+# URL:         http://gegl.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on: babl gexiv2 glu json-glib librsvg
-# Optional: libsdl2 ffmpeg
+# Depends on:  babl gexiv2 json-glib librsvg libspiro libwebp
+# Optional:    asciidoc ffmpeg graphviz gtk-doc jasper lcms2 ruby libsdl2 poppler umfpack v4l-utils vala lensfun libopenraw libumfpack luajit mrg openexr
 
 name=gegl
 version=0.4.22
@@ -10,9 +10,7 @@ release=1
 source=(https://download.gimp.org/pub/$name/${version%.*}/$name-$version.tar.xz)
 
 build() {
-  cd $name-$version
-  meson build --prefix /usr
-  #DESTDIR=$PKG ninja -C build install
+  meson build $name-$version --prefix /usr
   ninja -C build
   DESTDIR=$PKG ninja -C build install
   rm -r $PKG/usr/share/locale
