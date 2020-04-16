@@ -9,16 +9,11 @@ release=1
 source=(https://wpewebkit.org/releases/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
-
-	mkdir build
-	cd build
-
-	cmake .. \
+	cmake -H$name-$version -Bbuild \
 		-DCMAKE_BUILD_TYPE=None \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=/usr/lib
 
-	make
-	make DESTDIR=$PKG install
+	cmake --build build
+	DESTDIR=$PKG cmake --build build --target install
 }
