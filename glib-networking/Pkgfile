@@ -4,19 +4,17 @@
 # Depends on: gnutls gsettings-desktop-schemas
 
 name=glib-networking
-version=2.64.1
+version=2.64.2
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
-
-	meson build \
+	meson build $name-$version \
 		--prefix /usr \
 		-Dlibproxy=disabled
 
         ninja -C build -j ${JOBS:-1}
-        DESTDIR="$PKG" ninja -C build install
+        DESTDIR=$PKG meson install -C build
 
 	rm -r $PKG/usr/share/locale
 }
