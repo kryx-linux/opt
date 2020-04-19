@@ -5,7 +5,7 @@
 # Optional: ffmpeg gst-plugins-base alsa-lib cups directfb neon pulseaudio xmlto
 
 name=freerdp2
-version=2.0.0-rc4
+version=2.0.0
 release=1
 source=(https://pub.freerdp.com/releases/freerdp-$version.tar.gz
 	xfreerdp.1)
