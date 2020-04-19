@@ -4,7 +4,7 @@
 # Depends on:  openssl ncurses
 
 name=mailx
-version=14.9.17
+version=14.9.18
 release=1
 source=(https://www.sdaoden.eu/downloads/s-nail-$version.tar.xz)
 
