@@ -3,16 +3,25 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=paper
-version=2.0
+version=2.2
 release=1
-source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
+source=(https://github.com/rrthomas/paper/releases/download/v$version/$name-$version.tar.gz
+        paper.1 paperspecs.5)
 
 build () {
     cd $name-$version
+
+    sed '/^SUBDIRS/s/man//' -i Makefile.in
+
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
                 --libexecdir=/usr/lib/paper
     make
     make DESTDIR=$PKG install
+
+    install -d $PKG/usr/share/man/man{1,5}
+    install -m 0644 $SRC/paper.1 $PKG/usr/share/man/man1
+    install -m 0644 $SRC/paperspecs.5 $PKG/usr/share/man/man5
+
     rm -r $PKG/usr/share/doc
 }
