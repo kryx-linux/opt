@@ -1,19 +1,15 @@
 # Description: Postscript Utilities
 # URL:         https://github.com/rrthomas/psutils
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  paper
+# Depends on:  paper p5-ipc-run3
 
 name=psutils
-version=1.93
+version=2.03
 release=1
 source=(https://github.com/rrthomas/psutils/releases/download/v$version/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-    
-    local sitelib=$(perl -e 'use Config; print $Config::Config{'installsitelib'}')
-
+    cd $name-$version
     ./configure --prefix=/usr
-    make
-    make DESTDIR=$PKG pkgdatadir=$sitelib install
+    make DESTDIR=$PKG install
 }
