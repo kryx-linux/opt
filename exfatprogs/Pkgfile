@@ -1,0 +1,22 @@
+# Description: Userspace utilities for the exfat filesystem kernel module
+# URL:         https://github.com/exfatprogs/exfatprogs
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+
+name=exfatprogs
+version=1.0.2
+release=1
+source=(https://github.com/exfatprogs/exfatprogs/archive/$version/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    # don't install the library
+    sed -r 's/^lib_(LTLIBRARIES)/noinst_\1/' -i lib/Makefile.am
+
+    ./autogen.sh
+
+    ./configure --sbindir=/sbin
+
+    make
+    make DESTDIR=$PKG install
+}
