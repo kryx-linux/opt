@@ -4,21 +4,18 @@
 # Depends on: ffmpeg libsdl2
 
 name=faudio
-version=20.03
+version=20.04
 release=1
 source=(https://github.com/FNA-XNA/FAudio/archive/$version/$name-$version.tar.gz)
 
 build() {
-	mkdir build
-	cd build
-
-	cmake ../FAudio-$version \
+	cmake -HFAudio-$version -Bbuild \
 		-GNinja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DFFMPEG=ON
 
-	ninja -j ${JOBS:-1}
-	DESTDIR=$PKG ninja install
+	cmake --build build
+	DESTDIR=$PKG cmake --build build --target install
 }
