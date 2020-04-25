@@ -2,7 +2,7 @@
 .\"     Title: bwrap
 .\"    Author: Alexander Larsson
 .\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
-.\"      Date: 09/22/2019
+.\"      Date: 04/25/2020
 .\"    Manual: User Commands
 .\"    Source: Project Atomic
 .\"  Language: English
@@ -176,6 +176,39 @@ Options related to kernel namespaces:
 \fB\-\-unshare\-net\fR
 \fB\-\-unshare\-uts\fR
 \fB\-\-unshare\-cgroup\-try\fR
+
+    .RE
+    .PP
+\fB\-\-userns \fR\fBFD\fR
+.RS 4
+
+      
+      Use an existing user namespace instead of creating a new one\&. The namespace must fulfil the permission requirements for setns(), which generally means that it must be a decendant of the currently active user namespace, owned by the same user\&.
+.sp
+
+      This is incompatible with \-\-unshare\-user, and doesn\*(Aqt work in the setuid version of bubblewrap\&.
+
+    .RE
+    .PP
+\fB\-\-userns2 \fR\fBFD\fR
+.RS 4
+
+      
+      After setting up the new namespace, switch into the specified namespace\&. For this to work the specified namespace must be a decendant of the user namespace used for the setup, so this is only useful in combination with \-\-userns\&.
+.sp
+
+      This is useful because sometimes bubblewrap itself creates nested user namespaces (to work around some kernel issues) and \-\-userns2 can be used to enter these\&.
+
+    .RE
+    .PP
+\fB\-\-pidns \fR\fBFD\fR
+.RS 4
+
+      
+      Use an existing pid namespace instead of creating one\&. This is often used with \-\-userns, because the pid namespace must be owned by the same user namespace that bwrap uses\&.
+.sp
+
+      Note that this can be combined with \-\-unshare\-pid, and in that case it means that the sandbox will be in its own pid namespace, which is a child of the passed in one\&.
 
     .RE
     .PP
