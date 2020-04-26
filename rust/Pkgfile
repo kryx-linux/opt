@@ -82,8 +82,8 @@ cat <<- EOF > $SRC/config.toml
 	python = "python3"
 EOF
 	# part of [build] options
-        if [ -e '/usr/bin/rustc' ]; then
-		if [ -z "$(/usr/bin/ldd /usr/bin/rustc | egrep '.*libLLVM-.*.so => not found')" ]; then
+	if [ -e '/usr/bin/rustc' ]; then
+		if [ -z "$(/usr/bin/ldd /usr/bin/rustc | egrep '.*libLLVM.*.so => not found')" ]; then
 cat <<- EOF >> $SRC/config.toml
 	cargo = "/usr/bin/cargo"
 	rustc = "/usr/bin/rustc"
