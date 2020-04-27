@@ -4,7 +4,7 @@
 # Depends on: gdk-pixbuf, pango, at-spi2-atk, libepoxy
 
 name=gtk3
-version=3.24.18
+version=3.24.20
 release=1
 source=(https://download.gnome.org/sources/gtk+/${version:0:4}/gtk+-$version.tar.xz)
 
