@@ -2,19 +2,28 @@
 # URL: http://www.cmake.org/
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
 # Depends on: curl libarchive expat ncurses
+# Optional: python3-sphinx
 
 name=cmake
-version=3.17.0
+version=3.17.1
 release=1
-source=(https://www.cmake.org/files/v${version%.*}/$name-$version.tar.gz)
+source=(https://cmake.org/files/v${version%.*}/$name-$version.tar.gz
+   ccmake.1 cmake.1 cpack.1 ctest.1 cmake-buildsystem.7 cmake-commands.7 
+   cmake-compile-features.7 cmake-developer.7 cmake-env-variables.7
+   cmake-file-api.7 cmake-generator-expressions.7 cmake-generators.7
+   cmake-language.7 cmake-modules.7 cmake-packages.7 cmake-policies.7
+   cmake-properties.7 cmake-qt.7 cmake-server.7 cmake-toolchains.7
+   cmake-variables.7 cpack-generators.7)
 
 build() {
     cd $name-$version
 
+[ -e '/usr/bin/sphinx-autogen' ] && PKGMK_CMAKE+=' -sphinx-man'
+
     sed -i Source/CMakeInstallDestinations.cmake \
         -e 's|share/cmake-${CMake_VERSION_MAJOR}.${CMake_VERSION_MINOR}|share/cmake|'
 
-    ./bootstrap \
+    ./bootstrap ${PKGMK_CMAKE} \
         --prefix=/usr \
         --system-curl \
         --system-expat \
@@ -22,9 +31,16 @@ build() {
         --system-bzip2 \
         --system-libarchive \
         --no-system-librhash
+	
     make
     make DESTDIR=$PKG install
     rm -r $PKG/usr/doc
 
     ln -sf $name $PKG/usr/share/$name-${version%.*}
+
+   if [ ! -e '/usr/bin/sphinx-autogen' ]; then
+      install -dm755 $PKG/usr/man/man{1,7}
+      install -m644 -t $PKG/usr/man/man1 $SRC/{ccmake,cmake,cpack,ctest}.1
+      install -m644 -t $PKG/usr/man/man7 $SRC/*.7
+   fi
 }
