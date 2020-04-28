@@ -5,19 +5,20 @@
 # Optional: sccache llvm-32
 
 name=rust
-version=1.42.0
+version=1.43.0
 ##cat src/stage0.txt
-_date=2020-02-27
-_rustc=1.41.1
-_cargo=0.42.0
+_date=2020-03-12
+_rustc=1.42.0
+_cargo=0.43.0
 ##
 
-release=2
+release=1
 source=(
 	https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
+	70163.patch
 )
 
 unpack_source() {
@@ -38,6 +39,9 @@ unpack_source() {
 
 build() {
 	cd "${name}c-$version-src"
+
+	# LLVM 10
+	patch -p1 -i $SRC/70163.patch
 
 	local ERROR
 	local DATE="$(awk '/^date: / { print $2 }' src/stage0.txt)"
