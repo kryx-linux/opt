@@ -455,6 +455,7 @@ drwxr-xr-x	root/root	usr/lib/python3.7/site-packages/samba/tests/kcc/
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/kcc/kcc_utils.py
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/kcc/ldif_import_export.py
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/krb5_credentials.py
+-rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/ldap_raw.py
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/ldap_referrals.py
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/libsmb.py
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/loadparm.py
