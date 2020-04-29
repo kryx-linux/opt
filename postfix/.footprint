@@ -52,6 +52,7 @@ drwxr-xr-x	root/root	usr/lib/postfix/
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-script
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-tls-script
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-wrapper
+-rwxr-xr-x	root/root	usr/lib/postfix/postlogd
 -rwxr-xr-x	root/root	usr/lib/postfix/postmulti-script
 -rwxr-xr-x	root/root	usr/lib/postfix/postscreen
 -rwxr-xr-x	root/root	usr/lib/postfix/proxymap
@@ -141,6 +142,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/oqmgr.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/pickup.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/pipe.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/postlogd.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/postscreen.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/proxymap.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/qmgr.8.gz
