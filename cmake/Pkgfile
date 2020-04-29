@@ -27,5 +27,4 @@ build() {
     rm -r $PKG/usr/doc
 
     ln -sf $name $PKG/usr/share/$name-${version%.*}
-    chmod 644 $PKG/usr/share/cmake/Modules/Platform/AIX/ExportImportList
 }
