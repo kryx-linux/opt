@@ -4,8 +4,8 @@
 # Depends on: ccache clang
 
 name=clang-ccache-bindings
-version=1
-release=4
+version=10
+release=1
 source=()
 
 build() {
@@ -24,4 +24,3 @@ build() {
 	ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang-$clang1
 	ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang++
 }
-
