@@ -4,8 +4,8 @@
 # Depends on: clang distcc
 
 name=clang-distcc-bindings
-version=1
-release=4
+version=10
+release=1
 source=()
 
 build() {
