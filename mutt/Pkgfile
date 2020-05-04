@@ -4,7 +4,7 @@
 # Depends on:  gdbm openssl zlib
 
 name=mutt
-version=1.13.5
+version=1.14.0
 release=1
 source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 
