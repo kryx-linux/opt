@@ -5,7 +5,7 @@
 # Optional: sccache llvm-32
 
 name=rust
-version=1.43.0
+version=1.43.1
 ##cat src/stage0.txt
 _date=2020-03-12
 _rustc=1.42.0
@@ -95,7 +95,7 @@ EOF
 		else
 			printf "\e[031mllvm broken symlink detected, not using system rust to bootstrap\033[0m\n"
 		fi
-        fi
+	fi
 
 cat <<- EOF >> $SRC/config.toml
 	[target.x86_64-unknown-linux-gnu]
