@@ -4,7 +4,7 @@
 # Depends on:  ncurses zlib openssl cmake libaio linux-pam
 
 name=mariadb
-version=10.4.12
+version=10.4.13
 release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz 
         mariadb.rc mariadb.pam
@@ -22,6 +22,7 @@ build() {
 		-DINSTALL_LIBDIR=lib \
 		-DINSTALL_PLUGINDIR=lib/mysql/plugin \
 		-DINSTALL_PCDIR=/usr/lib/pkgconfig \
+		-DINSTALL_PAMDIR=/lib/security \
 		-DMYSQL_DATADIR=/var/lib/mysql \
 		-DMYSQL_UNIX_ADDR=/var/run/mysqld/mysqld.sock \
 		-DWITH_READLINE=ON \

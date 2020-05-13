@@ -386,6 +386,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp_head.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp_pcontext.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp_rcontext.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/span.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/spatial.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_acl.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_admin.h
@@ -586,6 +587,7 @@ drwx------	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/wsrep_info.so
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libmariadb.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/mariadb.pc
 drwxr-xr-x	root/root	usr/sbin/
 lrwxrwxrwx	root/root	usr/sbin/mariadbd -> mysqld
 -rwxr-xr-x	root/root	usr/sbin/mysqld
@@ -738,8 +740,6 @@ drwxr-xr-x	root/root	usr/share/mysql/english/
 -rwxr-xr-x	root/root	usr/share/mysql/mysqld_multi.server
 -rw-r--r--	root/root	usr/share/mysql/wsrep.cnf
 -rwxr-xr-x	root/root	usr/share/mysql/wsrep_notify
-drwxr-xr-x	root/root	usr/share/pkgconfig/
--rw-r--r--	root/root	usr/share/pkgconfig/mariadb.pc
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
 drwx------	mysql/mysql	var/lib/mysql/
