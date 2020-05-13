@@ -1,23 +1,18 @@
 # Description: PulseAudio emulation for ALSA.
 # URL:         https://github.com/i-rinat/apulse
 # Maintainer:  Danny Rawlins, crux at romster dot me
-# Depends on:  cmake glib alsa-lib
+# Depends on: alsa-lib cmake glib
 
 name=apulse
-version=0.1.12
+version=0.1.13
 release=1
-source=(https://github.com/i-rinat/apulse/archive/v${version}.tar.gz)
+source=(https://github.com/i-rinat/$name/archive/v$version/$name-v$version.tar.gz)
 
 build() {
-	cd apulse-$version
-
-	mkdir build
-	cd build
-
-	cmake .. \
+	cmake -S$name-$version -Bbuild -GNinja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release
 
-	make
-	make DESTDIR=$PKG install
+	cmake --build build
+	DESTDIR=$PKG cmake --build build --target install
 }
