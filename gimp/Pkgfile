@@ -7,10 +7,10 @@
 name=gimp
 version=2.10.18
 release=2
-source=(https://download.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2)
+source=(https://download.gimp.org/pub/gimp/v${version%.*}/$name-$version.tar.bz2)
 
 build() {
-  cd gimp-$version
+  cd $name-$version
 
   sed -i -e '/$(helpbrowser)/d' plug-ins/Makefile.in
   ./configure --prefix=/usr \
