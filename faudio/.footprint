@@ -15,5 +15,5 @@ drwxr-xr-x	root/root	usr/lib/cmake/FAudio/
 -rw-r--r--	root/root	usr/lib/cmake/FAudio/FAudio-targets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/FAudio/FAudio-targets.cmake
 lrwxrwxrwx	root/root	usr/lib/libFAudio.so -> libFAudio.so.0
-lrwxrwxrwx	root/root	usr/lib/libFAudio.so.0 -> libFAudio.so.0.20.04
--rwxr-xr-x	root/root	usr/lib/libFAudio.so.0.20.04
+lrwxrwxrwx	root/root	usr/lib/libFAudio.so.0 -> libFAudio.so.0.20.05
+-rwxr-xr-x	root/root	usr/lib/libFAudio.so.0.20.05
