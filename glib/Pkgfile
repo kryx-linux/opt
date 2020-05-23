@@ -1,12 +1,12 @@
 # Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
 # URL:         http://www.gtk.org/
 # Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on:  libpcre meson ninja libffi
+# Depends on: libpcre meson ninja
 
 name=glib
-version=2.64.1
-release=2
-source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
+version=2.64.3
+release=1
+source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
 	gschemas.compiled)
 
 build () {
