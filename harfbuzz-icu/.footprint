@@ -7,9 +7,9 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cmake/
 drwxr-xr-x	root/root	usr/lib/cmake/harfbuzz/
 -rwxr-xr-x	root/root	usr/lib/libharfbuzz-icu.la
-lrwxrwxrwx	root/root	usr/lib/libharfbuzz-icu.so -> libharfbuzz-icu.so.0.20600.5
-lrwxrwxrwx	root/root	usr/lib/libharfbuzz-icu.so.0 -> libharfbuzz-icu.so.0.20600.5
--rwxr-xr-x	root/root	usr/lib/libharfbuzz-icu.so.0.20600.5
+lrwxrwxrwx	root/root	usr/lib/libharfbuzz-icu.so -> libharfbuzz-icu.so.0.20600.6
+lrwxrwxrwx	root/root	usr/lib/libharfbuzz-icu.so.0 -> libharfbuzz-icu.so.0.20600.6
+-rwxr-xr-x	root/root	usr/lib/libharfbuzz-icu.so.0.20600.6
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/harfbuzz-icu.pc
 drwxr-xr-x	root/root	usr/share/
