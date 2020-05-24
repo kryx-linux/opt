@@ -35,7 +35,9 @@ drwxr-xr-x	root/root	usr/share/transmission/web/javascript/jquery/
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.transmenu.min.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.ui-contextmenu.min.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/json2.min.js
+-rw-r--r--	root/root	usr/share/transmission/web/javascript/main.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/notifications.js
+-rw-r--r--	root/root	usr/share/transmission/web/javascript/polyfill.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/prefs-dialog.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/remote.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/torrent-row.js
