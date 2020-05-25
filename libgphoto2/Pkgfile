@@ -4,7 +4,7 @@
 # Depends on:  libtool libusb
 
 name=libgphoto2
-version=2.5.24
+version=2.5.25
 release=1
 source=(http://downloads.sourceforge.net/project/gphoto/libgphoto/$version/$name-$version.tar.bz2)
 
