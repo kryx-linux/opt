@@ -12,7 +12,10 @@ build () {
     cd $name-$version
 
     udevscriptdir=/lib/udev \
-    ./configure --prefix=/usr --disable-nls
+    ./configure \
+        --prefix=/usr \
+        --disable-nls  \
+        --with-doc-dir=/usr/share/doc
 
     make
     make DESTDIR=$PKG install
