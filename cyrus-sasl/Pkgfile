@@ -1,15 +1,19 @@
 # Description: Simple Authentication and Security Layer
 # URL:         https://www.cyrusimap.org/sasl/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  db openssl
+# Depends on:  db openssl linux-pam
 
 name=cyrus-sasl
 version=2.1.27
-release=1
-source=(https://www.cyrusimap.org/releases/$name-$version.tar.gz saslauthd)
+release=2
+source=(https://github.com/cyrusimap/$name/releases/download/$name-$version/$name-$version.tar.gz
+  saslauthd
+  cyrus-sasl-2.1.27-CVE-2019-19906.patch)
 
-build(){
+build() {
   cd $name-$version
+
+  patch -p1 -i $SRC/cyrus-sasl-2.1.27-CVE-2019-19906.patch
 
   ./configure \
       --prefix=/usr \
@@ -26,13 +30,12 @@ build(){
       --enable-digest \
       --enable-shared
 
-  make
+  make CFLAGS="$CFLAGS -fPIC"
   make DESTDIR=$PKG install
 
-  mkdir -p \
+  install -d \
       $PKG/usr/lib/sasl2 \
       $PKG/var/sasl/saslauthd \
-      $PKG/etc/rc.d
 
-  install -m 755 $SRC/saslauthd $PKG/etc/rc.d
+  install -Dm 755 $SRC/saslauthd $PKG/etc/rc.d/saslauthd
 }
