@@ -4,7 +4,7 @@
 # Depends on:  ghostscript
 
 name=libspectre
-version=0.2.8
+version=0.2.9
 release=1
 source=(https://libspectre.freedesktop.org/releases/$name-$version.tar.gz)
 
