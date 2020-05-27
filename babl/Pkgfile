@@ -1,15 +1,14 @@
 # Description: Dynamic, any to any, pixel format translation library
-# URL: http://gegl.org/babl
+# URL:         http://gegl.org/babl
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Depends on: gobject-introspection lcms2
 
 name=babl
 version=0.1.74
 release=1
-source=(https://ftp.gtk.org/pub/babl/${version%.*}/$name-$version.tar.xz)
+source=(https://download.gimp.org/pub/$name/${version%.*}/$name-$version.tar.xz)
 
 build() {
-  cd $name-$version
-  meson build --prefix=/usr
+  meson $name-$version build --prefix=/usr
   DESTDIR=$PKG ninja -C build -j ${JOBS:-1} install
 }
