@@ -5,7 +5,7 @@
 
 name=syslinux
 version=6.03
-release=5
+release=6
 source=(http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.xz \
         $name-Makefile.patch $name-sysmacros.patch)
 
@@ -15,8 +15,8 @@ build() {
   patch -p0 -i $SRC/$name-Makefile.patch
   patch -p1 -i $SRC/$name-sysmacros.patch
 
-  make OPTFLAGS="$CFLAGS" installer
-  make -j1 OPTFLAGS="$CFLAGS" INSTALLROOT=$PKG MANDIR=/usr/share/man install
+  make OPTFLAGS="$CFLAGS -fcommon" installer
+  make -j1 OPTFLAGS="$CFLAGS -fcommon" INSTALLROOT=$PKG MANDIR=/usr/share/man install
 
   # revdep
   install -d $PKG/etc/revdep.d
