@@ -1,12 +1,12 @@
 # Description: A remote-mail retrieval utility
-# URL:         http://www.fetchmail.info
+# URL:         https://www.fetchmail.info
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  openssl
 
 name=fetchmail
-version=6.4.5
+version=6.4.6
 release=1
-source=(http://downloads.sourceforge.net/project/$name/branch_${version%.*}/$name-$version.tar.xz)
+source=(https://downloads.sourceforge.net/project/$name/branch_${version%.*}/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
