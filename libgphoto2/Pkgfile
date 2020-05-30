@@ -1,7 +1,7 @@
 # Description: A library designed to allow access to digital cameras to external programs
 # URL:         http://www.gphoto.org/proj/libgphoto2/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libtool libusb
+# Depends on:  curl libtool libusb libxml2
 
 name=libgphoto2
 version=2.5.25
