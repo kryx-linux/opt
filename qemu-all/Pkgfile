@@ -1,7 +1,7 @@
 # Description: Fast CPU emulator and virtualizer for all supported platforms
 # URL:         http://www.qemu-project.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  libsdl glib xorg-libpixman
+# Depends on:  libsdl glib xorg-libpixman libxkbcommon
 # Optional:    libseccomp libiscsi libusb usbredir spice
  
 name=qemu-all
