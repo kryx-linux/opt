@@ -1,5 +1,5 @@
 # Description: Command-line utilities for working with desktop entries
-# URL: http://www.freedesktop.org/software/desktop-file-utils/
+# URL: https://www.freedesktop.org/software/desktop-file-utils/
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 # Depends on: glib pkg-config
 
@@ -10,9 +10,7 @@ source=(http://freedesktop.org/software/$name/releases/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
-
 	./configure --prefix=/usr
-
 	make
 	make DESTDIR=$PKG install
 
