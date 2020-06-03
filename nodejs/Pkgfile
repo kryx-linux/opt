@@ -5,15 +5,14 @@
 # Optional: icu
 
 name=nodejs
-version=12.16.3
+version=12.18.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
 
 build() {
 	cd node-v$version
 
-	# system icu is to new
-	#[ -e '/usr/lib/pkgconfig/icu-i18n.pc' ] && PKGMK_NODEJS+=' --with-intl=system-icu'
+	[ -e '/usr/lib/pkgconfig/icu-i18n.pc' ] && PKGMK_NODEJS+=' --with-intl=system-icu'
 
 	./configure ${PKGMK_NODEJS} \
 		--prefix=/usr \
