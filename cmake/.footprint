@@ -188,6 +188,8 @@ drwxr-xr-x	root/root	usr/share/cmake/Help/envvar/
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/FFLAGS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/LDFLAGS.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/MACOSX_DEPLOYMENT_TARGET.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/envvar/OBJC.rst
+-rw-r--r--	root/root	usr/share/cmake/Help/envvar/OBJCXX.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/PackageName_ROOT.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/RC.rst
 -rw-r--r--	root/root	usr/share/cmake/Help/envvar/RCFLAGS.rst
@@ -2085,7 +2087,7 @@ drwxr-xr-x	root/root	usr/share/cmake/Modules/Compiler/
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/XL-CXX.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/XL-Fortran.cmake
 drwxr-xr-x	root/root	usr/share/cmake/Modules/Compiler/XL-Fortran/
--rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/XL-Fortran/cpp
+-rwxr-xr-x	root/root	usr/share/cmake/Modules/Compiler/XL-Fortran/cpp
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/XL.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake
 -rw-r--r--	root/root	usr/share/cmake/Modules/Compiler/XLClang-C.cmake

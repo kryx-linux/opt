@@ -1,8 +1,7 @@
 # Description: Fast, lightweight, standards-compliant window manager
 # URL: http://openbox.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: xorg-libxinerama, xorg-libxrandr, pango
+# Depends on: xorg-libxinerama, xorg-libxrandr, pango, libxml2
 
 name=openbox
 version=3.6.1
