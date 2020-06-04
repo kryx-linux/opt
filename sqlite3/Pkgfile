@@ -1,14 +1,14 @@
 # Description: SQL database engine
-# URL:         http://www.sqlite.org/
+# URL:         https://www.sqlite.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  readline zlib
 
 name=sqlite3
-version=3.32.1
+version=3.32.2
 release=1
 _version=$(printf "%i%.2i%.2i%.2i" ${version//./ })
 
-source=(http://www.sqlite.org/2020/sqlite-autoconf-${_version}.tar.gz)
+source=(https://www.sqlite.org/2020/sqlite-autoconf-${_version}.tar.gz)
 
 build () {
     cd sqlite-autoconf-${_version}
