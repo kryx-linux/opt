@@ -4,29 +4,29 @@
 # Depends on:  nspr sqlite3
 
 name=nss
-version=3.52.1
+version=3.53
 release=1
 source=(https://ftp.mozilla.org/pub/security/nss/releases/NSS_${version//./_}_RTM/src/$name-$version.tar.gz \
-        nss-config.in nss.pc.in nss-util.pc.in nss-softokn.pc.in)
+        http://www.linuxfromscratch.org/patches/blfs/svn/nss-3.53-standalone-1.patch \
+	nss-config.in nss.pc.in nss-softokn.pc.in nss-util.pc.in)
 
 build() {
 	cd $name-$version/
-
-	sed -i nss/coreconf/Linux.mk \
-		-e 's|^CC.*=.*gcc$|#&|' \
-		-e 's|^CCC.*=.*g++$|#&|'
+	
+	patch -Np1 -i ../nss-3.53-standalone-1.patch
 
 	export NSPR_INCLUDE_DIR=/usr/include/nspr
 	export NSPR_LIB_DIR=/usr/lib
 	export NSS_USE_SYSTEM_SQLITE=1
+	export USE_SYSTEM_ZLIB=1
 	export NSS_ENABLE_ECC=1
 	export NSS_ENABLE_TLS_1_3=1
 	export BUILD_OPT=1
-	export XCFLAGS="-Wno-error ${CFLAGS}"
+	export NSS_ENABLE_WERROR=0
 	export NSS_DISABLE_GTESTS=1
 	export USE_64=1
 
-	make -j1 -C nss
+	make -C nss
 
 	install -d $PKG/usr/{bin,lib/pkgconfig,include/nss/private}
 
