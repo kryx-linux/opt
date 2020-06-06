@@ -1,12 +1,12 @@
 # Description: Bi-directional file synchronization tool
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# URL:         http://www.cis.upenn.edu/~bcpierce/unison/
+# URL:         https://www.cis.upenn.edu/~bcpierce/unison/
 # Depends on:  ocaml
 
 name=unison
 version=2.51.3-20200221
 release=1
-source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
+source=(https://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
 
 build() {
     cd $name-$version

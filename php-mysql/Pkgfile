@@ -1,12 +1,12 @@
 # Description: MySQL module for PHP
-# URL:         http://www.php.net
+# URL:         https://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  mysql
 
 name=php-mysql
 version=7.4.6
 release=1
-source=(http://php.net/distributions/php-$version.tar.xz)
+source=(https://php.net/distributions/php-$version.tar.xz)
 
 build () {
     cd php-$version

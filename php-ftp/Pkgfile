@@ -1,11 +1,11 @@
 # Description: FTP module for PHP
-# URL:         http://www.php.net
+# URL:         https://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=php-ftp
 version=7.4.6
 release=1
-source=(http://www.php.net/distributions/php-$version.tar.xz)
+source=(https://www.php.net/distributions/php-$version.tar.xz)
 
 build() {
     cd php-$version
