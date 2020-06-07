@@ -4,44 +4,40 @@
 # Depends on: spirv-tools
 
 name=glslang
-version=7.13.3496
-release=2
-source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
+version=8.13.3559
+commit=c9b28b9f3388c607ea5506f5e6197b7150238ad3
+release=1
+source=(
+	#https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
+	https://github.com/KhronosGroup/glslang/archive/$commit.tar.gz#/$name-$commit.tar.gz
 	glslang-default-resource-limits_staticlib.patch
-	glslang-lib-install.patch
-	0001-pkg-config-compatibility.patch
-	glslang-7.12.3353_pre20191027-fix-relative-includes.patch)
+	0001-pkg-config-compatibility.patch)
 
 build() {
-	cd $name-$version
-
-	patch -p1 -i $SRC/glslang-default-resource-limits_staticlib.patch
-	patch -p1 -i $SRC/glslang-lib-install.patch
-	patch -p1 -i $SRC/glslang-7.12.3353_pre20191027-fix-relative-includes.patch
+	patch -d $name-$commit -p1 -i $SRC/glslang-default-resource-limits_staticlib.patch
 
 	# Patch to build against system spirv-tools
-	patch -p1 -i $SRC/0001-pkg-config-compatibility.patch
-
-	mkdir -p build-{shared,static}
+	patch -d $name-$commit -p1 -i $SRC/0001-pkg-config-compatibility.patch
 
 	local config="
+-S$name-$commit \
 -DCMAKE_INSTALL_PREFIX=/usr \
 -DCMAKE_INSTALL_LIBDIR=lib \
 -DCMAKE_BUILD_TYPE=Release \
+-DCMAKE_SKIP_RPATH:BOOL=yes \
 -GNinja"
 
-	(cd build-shared
-	cmake .. $config -DBUILD_SHARED_LIBS=ON
-	ninja -j ${JOBS:-1}
-	)
+	cmake -Bbuild-static $config -DBUILD_SHARED_LIBS=OFF
+	cmake --build build-static
+	
+	cmake -Bbuild-shared $config -DBUILD_SHARED_LIBS=ON
+	cmake --build build-shared
+	
+	DESTDIR=$PKG cmake --build build-static --target install
+	DESTDIR=$PKG cmake --build build-shared --target install
 
-	(cd build-static
-	cmake .. $config -DBUILD_SHARED_LIBS=OFF
-	ninja -j ${JOBS:-1}
-	)
-
-	DESTDIR=$PKG ninja -C build-shared install
-	DESTDIR=$PKG ninja -C build-static install
+	# we don't want them in here
+	rm -rf $PKG/usr/include/SPIRV
 
 	cd $PKG/usr/lib
 		for lib in *.so; do
