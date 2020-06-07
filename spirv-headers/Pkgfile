@@ -20,8 +20,7 @@ build() {
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_BUILD_TYPE=Release \
-		-DSPIRV_HEADERS_SKIP_EXAMPLES=ON \
-		-GNinja
+		-DSPIRV_HEADERS_SKIP_EXAMPLES=ON
 
 	cmake --build build
 	DESTDIR=$PKG cmake --build build --target install
