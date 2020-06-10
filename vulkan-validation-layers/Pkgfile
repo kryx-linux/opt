@@ -4,33 +4,27 @@
 # Depends on: glslang vulkan-loader
 
 name=vulkan-validation-layers
-version=1.1.126.0
-release=2
+version=1.2.135.0
+release=1
 source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/sdk-$version/Vulkan-ValidationLayers-sdk-$version.tar.gz
 	fix_shared.patch)
 
 build() {
-	cd Vulkan-ValidationLayers-sdk-$version
+	patch -d Vulkan-ValidationLayers-sdk-$version -p1 -i $SRC/fix_shared.patch
 
-	patch -p1 -i $SRC/fix_shared.patch
-
-	mkdir build
-	cd build
-
-	cmake .. \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
+	cmake -SVulkan-ValidationLayers-sdk-$version -Bbuild -GNinja \
+		-DCMAKE_INSTALL_PREFIX='/usr' \
+		-DCMAKE_INSTALL_LIBDIR='lib' \
 		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_SKIP_RPATH=True \
-		-DBUILD_TESTS=False \
-		-DGLSLANG_INSTALL_DIR=/usr \
-		-DCMAKE_INSTALL_INCLUDEDIR=/usr/include/vulkan/ \
+		-DCMAKE_SKIP_RPATH=ON \
+		-DBUILD_TESTS=OFF \
+		-DGLSLANG_INSTALL_DIR='/usr' \
+		-DCMAKE_INSTALL_INCLUDEDIR='/usr/include/vulkan/' \
 		-DBUILD_LAYER_SUPPORT_FILES=ON \
 		-DBUILD_WSI_XCB_SUPPORT=ON \
 		-DBUILD_WSI_XLIB_SUPPORT=ON \
-		-DBUILD_WSI_WAYLAND_SUPPORT=$(prt-get isinst wayland &> /dev/null && echo ON || echo OFF) \
-		-GNinja
+		-DBUILD_WSI_WAYLAND_SUPPORT="$(prt-get isinst wayland &> /dev/null && echo ON || echo OFF)"
 
-	ninja -j ${JOBS:-1}
-	DESTDIR=$PKG ninja install
+	cmake --build build
+	DESTDIR=$PKG cmake --build build --target install
 }

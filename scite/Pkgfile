@@ -1,12 +1,12 @@
 # Description: Editor based on the Scintilla editing component
-# URL:         http://www.scintilla.org/
+# URL:         https://www.scintilla.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  gtk3
 
 name=scite
 version=4.4.3
 release=1
-source=(http://downloads.sourceforge.net/project/scintilla/SciTE/$version/$name${version//./}.tgz)
+source=(https://downloads.sourceforge.net/project/scintilla/SciTE/$version/$name${version//./}.tgz)
 
 build () {
     export GTK3=1

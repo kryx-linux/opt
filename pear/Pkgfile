@@ -1,12 +1,12 @@
 # Description: Framework and distribution system for reusable PHP components
-# URL:         http://pear.php.net/
+# URL:         https://pear.php.net/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  php
 
 name=pear
 version=1.10.12
 release=1
-source=(http://php.net/distributions/php-7.4.6.tar.xz)
+source=(https://php.net/distributions/php-7.4.6.tar.xz)
 
 build() {
     cd php-7.4.6/pear

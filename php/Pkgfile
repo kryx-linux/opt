@@ -1,12 +1,12 @@
 # Description: PHP interpreter, extension modules and support stuff
-# URL:         http://www.php.net
+# URL:         https://www.php.net
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  bzip2 libpcre2 libxml2 curl db gdbm
 
 name=php
 version=7.4.6
 release=1
-source=(http://php.net/distributions/php-$version.tar.xz)
+source=(https://php.net/distributions/php-$version.tar.xz)
 
 build () {
     cd php-$version

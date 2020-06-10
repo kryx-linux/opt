@@ -1,27 +1,23 @@
 # Description: API and commands for processing SPIR-V modules
 # URL: https://www.khronos.org/vulkan/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: python3 spirv-headers
+# Depends on: spirv-headers
 
 name=spirv-tools
-version=2019.4
-commit=3e4abc9ac382b6fc7a88316a700652404b6fb9f7
-release=3
+version=2019.5
+commit=67f4838659f475d618c120e13d1a196d7e00ba4b
+release=1
 source=(
 	#https://github.com/KhronosGroup/SPIRV-Tools/archive/v$version/SPIRV-Tools-v$version.tar.gz
 	https://github.com/KhronosGroup/SPIRV-Tools/archive/$commit.tar.gz#/$name-$commit.tar.gz
-	fix-cmake-install.patch
 )
 
 build() {
 #	cd SPIRV-Tools-$version
-	cd SPIRV-Tools-$commit
-
-	patch -p1 -i $SRC/fix-cmake-install.patch
-
-	mkdir build-{shared,static}
+#	cd SPIRV-Tools-$commit
 
 	local config="
+-SSPIRV-Tools-$commit \
 -DCMAKE_INSTALL_PREFIX=/usr \
 -DCMAKE_INSTALL_LIBDIR=lib \
 -DCMAKE_BUILD_TYPE=Release \
@@ -30,16 +26,12 @@ build() {
 -DPYTHON_EXECUTABLE=/usr/bin/python3 \
 -GNinja"
 
-	(cd build-static
-	cmake .. $config -DBUILD_SHARED_LIBS=OFF
-	ninja -j ${JOBS:-1}
-	)
+	cmake -Bbuild-static $config -DBUILD_SHARED_LIBS=OFF
+	cmake --build build-static
 
-	(cd build-shared
-	cmake .. $config -DBUILD_SHARED_LIBS=ON
-	ninja -j ${JOBS:-1}
-	)
+	cmake -Bbuild-shared $config -DBUILD_SHARED_LIBS=ON
+	cmake --build build-static
 
-	DESTDIR=$PKG ninja -C build-static install
-	DESTDIR=$PKG ninja -C build-shared install
+	DESTDIR=$PKG cmake --build build-static --target install
+	DESTDIR=$PKG cmake --build build-shared --target install
 }

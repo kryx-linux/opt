@@ -1,9 +1,9 @@
 # Description: A small library defining error values for GnuPG components
-# URL:         http://www.gnupg.org
+# URL:         https://www.gnupg.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 
 name=libgpg-error
-version=1.37
+version=1.38
 release=1
 source=(https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
 

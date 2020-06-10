@@ -6,8 +6,8 @@
 # Nice to have: tk
 
 name=git
-version=2.26.2
-release=2
+version=2.27.0
+release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
         git gitd.rc)
 

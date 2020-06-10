@@ -5,8 +5,8 @@
 
 name=spirv-headers
 version=1.5.1
-commit=af64a9e826bf5bb5fcd2434dd71be1e41e922563
-release=1
+commit=2ad0492fb00919d99500f1da74abf5ad3c870e4e
+release=2
 source=(
 	#https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz
 	https://github.com/KhronosGroup/SPIRV-Headers/archive/$commit.tar.gz#/$name-$commit.tar.gz
@@ -14,18 +14,14 @@ source=(
 
 build() {
 #	cd SPIRV-Headers-$version
-	cd SPIRV-Headers-$commit
+#	cd SPIRV-Headers-$commit
 
-	mkdir build
-	cd build
-
-	cmake .. \
+	cmake -SSPIRV-Headers-$commit -Bbuild -GNinja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_BUILD_TYPE=Release \
-		-DSPIRV_HEADERS_SKIP_EXAMPLES=ON \
-		-GNinja
+		-DSPIRV_HEADERS_SKIP_EXAMPLES=ON
 
-	ninja -j ${JOBS:-1}
-	DESTDIR=$PKG ninja install
+	cmake --build build
+	DESTDIR=$PKG cmake --build build --target install
 }
