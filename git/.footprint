@@ -27,6 +27,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-bisect--helper
 -rwxr-xr-x	root/root	usr/lib/git-core/git-blame
 -rwxr-xr-x	root/root	usr/lib/git-core/git-branch
+-rwxr-xr-x	root/root	usr/lib/git-core/git-bugreport
 -rwxr-xr-x	root/root	usr/lib/git-core/git-bundle
 -rwxr-xr-x	root/root	usr/lib/git-core/git-cat-file
 -rwxr-xr-x	root/root	usr/lib/git-core/git-check-attr
@@ -88,7 +89,6 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-init-db
 -rwxr-xr-x	root/root	usr/lib/git-core/git-instaweb
 -rwxr-xr-x	root/root	usr/lib/git-core/git-interpret-trailers
--rwxr-xr-x	root/root	usr/lib/git-core/git-legacy-stash
 -rwxr-xr-x	root/root	usr/lib/git-core/git-log
 -rwxr-xr-x	root/root	usr/lib/git-core/git-ls-files
 -rwxr-xr-x	root/root	usr/lib/git-core/git-ls-remote
@@ -341,6 +341,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/git-bisect.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-blame.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-branch.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/git-bugreport.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-bundle.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-cat-file.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-check-attr.1.gz
@@ -501,6 +502,7 @@ drwxr-xr-x	root/root	usr/share/man/man7/
 -rw-r--r--	root/root	usr/share/man/man7/gitcvs-migration.7.gz
 -rw-r--r--	root/root	usr/share/man/man7/gitdiffcore.7.gz
 -rw-r--r--	root/root	usr/share/man/man7/giteveryday.7.gz
+-rw-r--r--	root/root	usr/share/man/man7/gitfaq.7.gz
 -rw-r--r--	root/root	usr/share/man/man7/gitglossary.7.gz
 -rw-r--r--	root/root	usr/share/man/man7/gitnamespaces.7.gz
 -rw-r--r--	root/root	usr/share/man/man7/gitremote-helpers.7.gz
