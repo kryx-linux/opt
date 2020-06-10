@@ -7,7 +7,7 @@
 
 name=git
 version=2.27.0
-release=1
+release=2
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
         git gitd.rc)
 
@@ -18,7 +18,7 @@ build() {
        prefix=/usr \
        gitexecdir=/usr/lib/git-core \
        INSTALLSITEMAN3DIR=/usr/share/man/man3 \
-       perllibdir=/usr/lib/perl5/site_perl/5.30 \
+       perllibdir=$(perl -e 'use Config; print $Config::Config{'installsitelib'}') \
        DESTDIR=$PKG install
 
   cd $SRC
