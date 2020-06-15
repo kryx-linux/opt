@@ -135,7 +135,6 @@ drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/ax_check_docbook_xslt.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_check_docbook_xslt_min.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_check_dos_filesys.m4
--rw-r--r--	root/root	usr/share/aclocal/ax_check_enable_debug.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_check_func_in.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_check_gd.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_check_gir_symbols_gjs.m4
@@ -177,7 +176,6 @@ drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/ax_check_vscript.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_check_x86_features.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_check_zlib.m4
--rw-r--r--	root/root	usr/share/aclocal/ax_code_coverage.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_compare_version.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_compile_check_sizeof.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_compiler_flags.m4
@@ -303,6 +301,7 @@ drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/ax_dist_msi.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_dist_rpm.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_dll_string.m4
+-rw-r--r--	root/root	usr/share/aclocal/ax_elisp.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_enable_builddir.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_execinfo.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_expand_prefix.m4
@@ -437,8 +436,10 @@ drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_crontab.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_cxx_for_build.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_cxx_mpi.m4
+-rw-r--r--	root/root	usr/share/aclocal/ax_prog_date.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_dotnetcore_version.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_doxygen.m4
+-rw-r--r--	root/root	usr/share/aclocal/ax_prog_emacs.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_f77_mpi.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_fasm.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_fasm_opt.m4
@@ -449,6 +450,7 @@ drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_gjs.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_guile_version.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_haxe_version.m4
+-rw-r--r--	root/root	usr/share/aclocal/ax_prog_help2man.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_hla.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_hla_opt.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_prog_httpd.m4
@@ -498,6 +500,8 @@ drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/ax_python_embed.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_python_module.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_python_module_version.m4
+-rw-r--r--	root/root	usr/share/aclocal/ax_r_package.m4
+-rw-r--r--	root/root	usr/share/aclocal/ax_recursive_eval.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_require_defined.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_require_one_func.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_restore_flags.m4
@@ -518,6 +522,7 @@ drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/ax_strings_strcasecmp.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_struct_semun.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_subdir_files.m4
+-rw-r--r--	root/root	usr/share/aclocal/ax_subdirs_configure.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_subst_with.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_swig_enable_cxx.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_swig_multi_module_support.m4
@@ -566,8 +571,3 @@ drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/ax_xtra_classpath.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_zmq.m4
 -rw-r--r--	root/root	usr/share/aclocal/ax_zoneinfo.m4
-drwxr-xr-x	root/root	usr/share/autoconf-archive/
--rw-r--r--	root/root	usr/share/autoconf-archive/AUTHORS
--rw-r--r--	root/root	usr/share/autoconf-archive/COPYING
--rw-r--r--	root/root	usr/share/autoconf-archive/COPYING.EXCEPTION
--rw-r--r--	root/root	usr/share/autoconf-archive/README
