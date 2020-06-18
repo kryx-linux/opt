@@ -1,10 +1,10 @@
 # Description: High productivity build system.
-# URL: http://mesonbuild.com/
+# URL: https://mesonbuild.com/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: python3-setuptools
 
 name=meson
-version=0.54.2
+version=0.54.3
 release=1
 source=(https://github.com/mesonbuild/meson/releases/download/$version/$name-$version.tar.gz)
 
