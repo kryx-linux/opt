@@ -5,7 +5,7 @@
 # Optional: sccache llvm-32
 
 name=rust
-version=1.44.0
+version=1.44.1
 ##cat src/stage0.txt
 _date=2020-05-07
 _rustc=1.43.1
@@ -123,4 +123,15 @@ EOF
 	rm -r $PKG/usr/share/doc
 	rm -r $PKG/etc
 	rm $PKG/usr/lib/rustlib/{components,manifest-rustc,rust-installer-version,uninstall.sh}
+
+	# Remove analysis data for libs that weren't installed
+	local file lib
+	while read -rd '' file; do
+		lib="${file%.json}.rlib"
+		lib="${lib/\/analysis\///lib/}"
+		if [[ ! -e $lib ]]; then
+			echo "missing '$lib'"
+			rm -v "$file"
+		fi
+	done < <(find "$PKG/usr/lib/rustlib"  -path '*/analysis/*.json' -print0)
 }
