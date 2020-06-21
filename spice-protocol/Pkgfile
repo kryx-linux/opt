@@ -4,9 +4,9 @@
 # Depends on:  meson ninja
 
 name=spice-protocol
-version=0.14.1
+version=0.14.2
 release=1
-source=(https://spice-space.org/download/releases/$name-$version.tar.bz2)
+source=(https://spice-space.org/download/releases/$name-$version.tar.xz)
 
 build() {
   meson build $name-$version --prefix /usr
