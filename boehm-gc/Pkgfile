@@ -1,17 +1,17 @@
 # Description: Garbage collection and memory leak detection for C and C++
-# URL: http://hboehm.info/gc/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
+# URL: https://hboehm.info/gc/
+# Maintainer: Thomas Penteker, tek at serverop dot de
 # Packager: Han Boetes, han at mijncomputer dot dl
 
 name=boehm-gc
 version=8.0.4
 release=1
-source=(http://hboehm.info/gc/gc_source/gc-${version}.tar.gz \
+source=(https://hboehm.info/gc/gc_source/gc-${version}.tar.gz \
         https://github.com/ivmai/libatomic_ops/releases/download/v7.6.10/libatomic_ops-7.6.10.tar.gz)
 
 build () {
     cd gc-$version
-    
+
     ln -s ../libatomic_ops-7.6.10 libatomic_ops
 
     ./configure \
@@ -25,5 +25,4 @@ build () {
     rm -r $PKG/usr/share/doc
 
     install -D -m 644 doc/gc.man $PKG/usr/share/man/man3/gc.3
-
 }

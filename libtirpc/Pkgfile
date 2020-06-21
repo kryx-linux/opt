@@ -1,5 +1,5 @@
 # Description: Transport Independent RPC library
-# URL:         http://nfsv4.bullopensource.org/doc/tirpc_rpcbind.php
+# URL:         http://git.linux-nfs.org/?p=steved/libtirpc.git;a=summary
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=libtirpc
@@ -13,7 +13,7 @@ build() {
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
                 --disable-gssapi
-    
+
     make
     make DESTDIR=$PKG install
 }
