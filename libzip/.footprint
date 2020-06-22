@@ -7,9 +7,15 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/zip.h
 -rw-r--r--	root/root	usr/include/zipconf.h
 drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/cmake/
+drwxr-xr-x	root/root	usr/lib/cmake/libzip/
+-rw-r--r--	root/root	usr/lib/cmake/libzip/libzip-config.cmake
+-rw-r--r--	root/root	usr/lib/cmake/libzip/libzip-targets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/libzip/libzip-targets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/libzip/libzip-version.cmake
 lrwxrwxrwx	root/root	usr/lib/libzip.so -> libzip.so.5
-lrwxrwxrwx	root/root	usr/lib/libzip.so.5 -> libzip.so.5.1
--rwxr-xr-x	root/root	usr/lib/libzip.so.5.1
+lrwxrwxrwx	root/root	usr/lib/libzip.so.5 -> libzip.so.5.3
+-rwxr-xr-x	root/root	usr/lib/libzip.so.5.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libzip.pc
 drwxr-xr-x	root/root	usr/share/
@@ -24,9 +30,11 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/zip_add.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_add_dir.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_close.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/zip_compression_method_supported.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_delete.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_dir_add.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_discard.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/zip_encryption_method_supported.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_error_clear.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_error_code_system.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_error_code_zip.3.gz
@@ -44,6 +52,7 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/zip_fclose.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_fdopen.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_file_add.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/zip_file_attributes_init.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_file_error_clear.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_file_error_get.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/zip_file_extra_field_delete.3.gz

@@ -1,21 +1,15 @@
-# Description: protocol headers for interaction with virtualized desktop devices
-# URL:         http://spice-space.org
+# Description: Protocol headers for interaction with virtualized desktop devices
+# URL:         https://spice-space.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de 
-# Depends on:  python-pyparsing
+# Depends on:  meson ninja
 
 name=spice-protocol
-version=0.12.15
+version=0.14.2
 release=1
-source=(http://spice-space.org/download/releases/spice-protocol-$version.tar.bz2)
+source=(https://spice-space.org/download/releases/$name-$version.tar.xz)
 
 build() {
-
-  cd $name-$version
-
-  ./configure --prefix=/usr \
-              --datarootdir=/usr/lib
-
-  make
-  make DESTDIR=$PKG install
-
+  meson build $name-$version --prefix /usr
+  ninja -C build -j ${JOBS:-1}
+  DESTDIR=$PKG meson install -C build
 }

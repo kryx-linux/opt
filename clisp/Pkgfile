@@ -1,16 +1,21 @@
 # Description: GNU CLisp is an ANSI Common Lisp Implementation.
-# URL:         http://clisp.cons.org/
+# URL:         https://clisp.cons.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Depends on:  libsigsegv readline libffcall
 
 name=clisp
-version=2.49.92
+version=2.49.93
 release=1
-date=2018-02-18
-source=(https://gitlab.com/gnu-clisp/clisp/-/archive/$name-$version-$date/$name-$name-$version-$date.tar.bz2)
+#date=2018-02-18
+source=(
+  #https://gitlab.com/gnu-clisp/clisp/-/archive/$name-$version-$date/$name-$name-$version-$date.tar.bz2
+  # new stable version from https://src.fedoraproject.org/rpms/clisp
+  https://gitlab.com/gnu-clisp/clisp/-/archive/c26de78733578fc38952d2485313065eba4f5caa/clisp-c26de78733578fc38952d2485313065eba4f5caa.tar.bz2
+)
 
 build() {
-  cd $name-$name-$version-$date
+  #cd $name-$name-$version-$date
+  cd $name-c26de78733578fc38952d2485313065eba4f5caa
 
   FORCE_UNSAFE_CONFIGURE=1 \
   ./configure \
