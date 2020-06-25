@@ -4,7 +4,7 @@
 # Depends on:  cmake xz zlib bzip2 openssl 
 
 name=libzip
-version=1.7.0
+version=1.7.1
 release=1
 source=(https://libzip.org/download/$name-$version.tar.xz)
 
