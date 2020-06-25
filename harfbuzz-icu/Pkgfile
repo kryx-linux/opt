@@ -5,7 +5,7 @@
 # Optional: graphite2
 
 name=harfbuzz-icu
-version=2.6.7
+version=2.6.8
 release=1
 source=(https://github.com/harfbuzz/harfbuzz/releases/download/$version/harfbuzz-$version.tar.xz)
 
@@ -51,6 +51,7 @@ build() {
 		$PKG/usr/include/harfbuzz/hb-set.h \
 		$PKG/usr/include/harfbuzz/hb-shape-plan.h \
 		$PKG/usr/include/harfbuzz/hb-shape.h \
+		$PKG/usr/include/harfbuzz/hb-style.h \
 		$PKG/usr/include/harfbuzz/hb-subset.h \
 		$PKG/usr/include/harfbuzz/hb-unicode.h \
 		$PKG/usr/include/harfbuzz/hb-version.h \
