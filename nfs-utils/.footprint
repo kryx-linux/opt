@@ -33,6 +33,9 @@ drwxr-xr-x	root/root	usr/lib/libnfsidmap/
 -rw-r--r--	root/root	usr/lib/libnfsidmap/nsswitch.a
 -rwxr-xr-x	root/root	usr/lib/libnfsidmap/nsswitch.la
 -rwxr-xr-x	root/root	usr/lib/libnfsidmap/nsswitch.so
+-rw-r--r--	root/root	usr/lib/libnfsidmap/regex.a
+-rwxr-xr-x	root/root	usr/lib/libnfsidmap/regex.la
+-rwxr-xr-x	root/root	usr/lib/libnfsidmap/regex.so
 -rw-r--r--	root/root	usr/lib/libnfsidmap/static.a
 -rwxr-xr-x	root/root	usr/lib/libnfsidmap/static.la
 -rwxr-xr-x	root/root	usr/lib/libnfsidmap/static.so
@@ -40,11 +43,12 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libnfsidmap.pc
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/blkmapd
--rwxr-xr-x	root/root	usr/sbin/clddb-tool
 -rwxr-xr-x	root/root	usr/sbin/exportfs
 -rwxr-xr-x	root/root	usr/sbin/mountstats
 -rwxr-xr-x	root/root	usr/sbin/nfsconf
 -rwxr-xr-x	root/root	usr/sbin/nfsdcld
+-rwxr-xr-x	root/root	usr/sbin/nfsdclddb
+-rwxr-xr-x	root/root	usr/sbin/nfsdclnts
 -rwxr-xr-x	root/root	usr/sbin/nfsidmap
 -rwxr-xr-x	root/root	usr/sbin/nfsiostat
 -rwxr-xr-x	root/root	usr/sbin/nfsstat
@@ -71,7 +75,6 @@ drwxr-xr-x	root/root	usr/share/man/man7/
 -rw-r--r--	root/root	usr/share/man/man7/nfsd.7.gz
 drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/blkmapd.8.gz
--rw-r--r--	root/root	usr/share/man/man8/clddb-tool.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/exportfs.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/idmapd.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/mount.nfs.8.gz
@@ -80,6 +83,8 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/nfsconf.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsd.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsdcld.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/nfsdclddb.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/nfsdclnts.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsdcltrack.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsidmap.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsiostat.8.gz
