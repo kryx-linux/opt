@@ -1,7 +1,7 @@
 # Description: Qt Free Edition, version 5.x.
 # URL: http://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
+# Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm xorg-xcb-util-renderutil
 # Optional: icu
 
 name=qt5
