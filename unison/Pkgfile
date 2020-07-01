@@ -4,7 +4,7 @@
 # Depends on:  ocaml
 
 name=unison
-version=2.51.3-20200221
+version=2.51.3-20200614
 release=1
 source=(https://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
 
