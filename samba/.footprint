@@ -426,6 +426,7 @@ drwxr-xr-x	root/root	usr/lib/python3.7/site-packages/samba/tests/dcerpc/
 drwxr-xr-x	root/root	usr/lib/python3.7/site-packages/samba/tests/dns_forwarder_helpers/
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/dns_forwarder_helpers/server.py
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/dns_invalid.py
+-rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/dns_packet.py
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/dns_tkey.py
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/dns_wildcard.py
 -rw-r--r--	root/root	usr/lib/python3.7/site-packages/samba/tests/docs.py
