@@ -4,7 +4,7 @@
 # Depends on: ffmpeg libsdl2
 
 name=faudio
-version=20.06
+version=20.07
 release=1
 source=(https://github.com/FNA-XNA/FAudio/archive/$version/$name-$version.tar.gz)
 
