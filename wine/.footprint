@@ -258,6 +258,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3dcommon.idl
 -rw-r--r--	root/root	usr/include/wine/windows/d3dcompiler.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dhal.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3dkmdt.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3drm.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3drmdef.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3drmobj.h
@@ -448,6 +449,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/evntrace.h
 -rw-r--r--	root/root	usr/include/wine/windows/evr.h
 -rw-r--r--	root/root	usr/include/wine/windows/evr.idl
+-rw-r--r--	root/root	usr/include/wine/windows/evr9.h
+-rw-r--r--	root/root	usr/include/wine/windows/evr9.idl
 -rw-r--r--	root/root	usr/include/wine/windows/excpt.h
 -rw-r--r--	root/root	usr/include/wine/windows/exdisp.h
 -rw-r--r--	root/root	usr/include/wine/windows/exdisp.idl
@@ -1038,6 +1041,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wuapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/wuapi.idl
 -rw-r--r--	root/root	usr/include/wine/windows/x3daudio.h
+-rw-r--r--	root/root	usr/include/wine/windows/xact3.h
 -rw-r--r--	root/root	usr/include/wine/windows/xact3wb.h
 -rw-r--r--	root/root	usr/include/wine/windows/xapo.h
 -rw-r--r--	root/root	usr/include/wine/windows/xapo.idl
@@ -1143,6 +1147,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-memory-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-memory-l1-1-4.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-misc-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-namedpipe-ansi-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-namedpipe-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-namedpipe-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-namespace-l1-1-0.dll.so
@@ -1591,6 +1596,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-memory-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-memory-l1-1-4.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-misc-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-namedpipe-ansi-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-namedpipe-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-namedpipe-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-namespace-l1-1-0.dll
@@ -2306,6 +2312,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wer.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wevtapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wevtutil.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/where.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/whoami.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wiaservc.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wimgapi.dll
@@ -2503,6 +2510,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libdxerr9.a
 -rw-r--r--	root/root	usr/lib/wine/libdxgi.def
 -rw-r--r--	root/root	usr/lib/wine/libdxguid.a
+-rw-r--r--	root/root	usr/lib/wine/libdxva2.def
 -rw-r--r--	root/root	usr/lib/wine/libevr.def
 -rw-r--r--	root/root	usr/lib/wine/libfaultrep.def
 -rw-r--r--	root/root	usr/lib/wine/libgdi32.def
@@ -2937,6 +2945,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/wer.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wevtapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wevtutil.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/where.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/whoami.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/wiaservc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wimgapi.dll.so
@@ -3100,6 +3109,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-memory-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-memory-l1-1-4.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-misc-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-namedpipe-ansi-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-namedpipe-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-namedpipe-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-namespace-l1-1-0.dll.so
@@ -3557,6 +3567,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-memory-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-memory-l1-1-4.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-misc-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-namedpipe-ansi-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-namedpipe-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-namedpipe-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-namespace-l1-1-0.dll
@@ -4322,6 +4333,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wer.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wevtapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wevtutil.exe
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/where.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/whoami.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wiaservc.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wimgapi.dll
@@ -4536,6 +4548,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libdxerr9.a
 -rw-r--r--	root/root	usr/lib32/wine/libdxgi.def
 -rw-r--r--	root/root	usr/lib32/wine/libdxguid.a
+-rw-r--r--	root/root	usr/lib32/wine/libdxva2.def
 -rw-r--r--	root/root	usr/lib32/wine/libevr.def
 -rw-r--r--	root/root	usr/lib32/wine/libfaultrep.def
 -rw-r--r--	root/root	usr/lib32/wine/libgdi32.def
@@ -5008,6 +5021,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/wer.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wevtapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wevtutil.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/where.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/whoami.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wiaservc.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wimgapi.dll.so
