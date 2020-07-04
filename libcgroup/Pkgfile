@@ -1,18 +1,16 @@
 # Description: Library that abstracts the control group file system in Linux
-# URL:         http://libcg.sourceforge.net/
+# URL:         https://github.com/libcgroup/libcgroup
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:
 
 name=libcgroup
-version=0.41
+version=0.42.2
 release=1
-source=(http://download.sourceforge.net/project/libcg/$name/v${version}/${name}-${version}.tar.bz2)
+source=(https://github.com/libcgroup/libcgroup/releases/download/v$version/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
 
-  ./configure --prefix=/usr \
-              --disable-pam
+  ./configure --prefix=/usr
 
   make
   make DESTDIR=$PKG install

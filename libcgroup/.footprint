@@ -20,12 +20,24 @@ drwxr-xr-x	root/root	usr/include/libcgroup/
 -rw-r--r--	root/root	usr/include/libcgroup/log.h
 -rw-r--r--	root/root	usr/include/libcgroup/tasks.h
 drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libcgroup.a
 -rwxr-xr-x	root/root	usr/lib/libcgroup.la
-lrwxrwxrwx	root/root	usr/lib/libcgroup.so -> libcgroup.so.1.0.41
-lrwxrwxrwx	root/root	usr/lib/libcgroup.so.1 -> libcgroup.so.1.0.41
--rwxr-xr-x	root/root	usr/lib/libcgroup.so.1.0.41
+lrwxrwxrwx	root/root	usr/lib/libcgroup.so -> libcgroup.so.1.0.42
+lrwxrwxrwx	root/root	usr/lib/libcgroup.so.1 -> libcgroup.so.1.0.42
+-rwxr-xr-x	root/root	usr/lib/libcgroup.so.1.0.42
+-rw-r--r--	root/root	usr/lib/libcgroupfortesting.a
+-rwxr-xr-x	root/root	usr/lib/libcgroupfortesting.la
+lrwxrwxrwx	root/root	usr/lib/libcgroupfortesting.so -> libcgroupfortesting.so.1.0.42
+lrwxrwxrwx	root/root	usr/lib/libcgroupfortesting.so.1 -> libcgroupfortesting.so.1.0.42
+-rwxr-xr-x	root/root	usr/lib/libcgroupfortesting.so.1.0.42
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libcgroup.pc
+drwxr-xr-x	root/root	usr/lib/security/
+-rw-r--r--	root/root	usr/lib/security/pam_cgroup.a
+-rwxr-xr-x	root/root	usr/lib/security/pam_cgroup.la
+lrwxrwxrwx	root/root	usr/lib/security/pam_cgroup.so -> pam_cgroup.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/security/pam_cgroup.so.0 -> pam_cgroup.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/security/pam_cgroup.so.0.0.0
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/cgclear
 -rwxr-xr-x	root/root	usr/sbin/cgconfigparser
