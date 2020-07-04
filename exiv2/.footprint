@@ -1,37 +1,20 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/addmoddel
--rwxr-xr-x	root/root	usr/bin/convert-test
--rwxr-xr-x	root/root	usr/bin/easyaccess-test
 -rwxr-xr-x	root/root	usr/bin/exifcomment
 -rwxr-xr-x	root/root	usr/bin/exifdata
--rwxr-xr-x	root/root	usr/bin/exifdata-test
 -rwxr-xr-x	root/root	usr/bin/exifprint
 -rwxr-xr-x	root/root	usr/bin/exifvalue
 -rwxr-xr-x	root/root	usr/bin/exiv2
 -rwxr-xr-x	root/root	usr/bin/exiv2json
 -rwxr-xr-x	root/root	usr/bin/geotag
--rwxr-xr-x	root/root	usr/bin/ini-test
--rwxr-xr-x	root/root	usr/bin/iotest
 -rwxr-xr-x	root/root	usr/bin/iptceasy
 -rwxr-xr-x	root/root	usr/bin/iptcprint
--rwxr-xr-x	root/root	usr/bin/iptctest
--rwxr-xr-x	root/root	usr/bin/key-test
--rwxr-xr-x	root/root	usr/bin/largeiptc-test
 -rwxr-xr-x	root/root	usr/bin/metacopy
--rwxr-xr-x	root/root	usr/bin/mmap-test
 -rwxr-xr-x	root/root	usr/bin/mrwthumb
--rwxr-xr-x	root/root	usr/bin/path-test
--rwxr-xr-x	root/root	usr/bin/prevtest
--rwxr-xr-x	root/root	usr/bin/stringto-test
 -rwxr-xr-x	root/root	usr/bin/taglist
--rwxr-xr-x	root/root	usr/bin/tiff-test
--rwxr-xr-x	root/root	usr/bin/werror-test
--rwxr-xr-x	root/root	usr/bin/write-test
--rwxr-xr-x	root/root	usr/bin/write2-test
 -rwxr-xr-x	root/root	usr/bin/xmpdump
 -rwxr-xr-x	root/root	usr/bin/xmpparse
--rwxr-xr-x	root/root	usr/bin/xmpparser-test
 -rwxr-xr-x	root/root	usr/bin/xmpprint
 -rwxr-xr-x	root/root	usr/bin/xmpsample
 drwxr-xr-x	root/root	usr/include/
@@ -94,8 +77,8 @@ drwxr-xr-x	root/root	usr/lib/cmake/exiv2/
 -rw-r--r--	root/root	usr/lib/cmake/exiv2/exiv2ConfigVersion.cmake
 -rw-r--r--	root/root	usr/lib/libexiv2-xmp.a
 lrwxrwxrwx	root/root	usr/lib/libexiv2.so -> libexiv2.so.27
--rwxr-xr-x	root/root	usr/lib/libexiv2.so.0.27.2
-lrwxrwxrwx	root/root	usr/lib/libexiv2.so.27 -> libexiv2.so.0.27.2
+-rwxr-xr-x	root/root	usr/lib/libexiv2.so.0.27.3
+lrwxrwxrwx	root/root	usr/lib/libexiv2.so.27 -> libexiv2.so.0.27.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/exiv2.pc
 drwxr-xr-x	root/root	usr/share/
