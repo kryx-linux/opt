@@ -1,3 +1,10 @@
+drwxr-xr-x	root/root	lib/
+drwxr-xr-x	root/root	lib/security/
+-rw-r--r--	root/root	lib/security/pam_cgroup.a
+-rwxr-xr-x	root/root	lib/security/pam_cgroup.la
+lrwxrwxrwx	root/root	lib/security/pam_cgroup.so -> pam_cgroup.so.0.0.0
+lrwxrwxrwx	root/root	lib/security/pam_cgroup.so.0 -> pam_cgroup.so.0.0.0
+-rwxr-xr-x	root/root	lib/security/pam_cgroup.so.0.0.0
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/cgclassify
@@ -32,12 +39,6 @@ lrwxrwxrwx	root/root	usr/lib/libcgroupfortesting.so.1 -> libcgroupfortesting.so.
 -rwxr-xr-x	root/root	usr/lib/libcgroupfortesting.so.1.0.42
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libcgroup.pc
-drwxr-xr-x	root/root	usr/lib/security/
--rw-r--r--	root/root	usr/lib/security/pam_cgroup.a
--rwxr-xr-x	root/root	usr/lib/security/pam_cgroup.la
-lrwxrwxrwx	root/root	usr/lib/security/pam_cgroup.so -> pam_cgroup.so.0.0.0
-lrwxrwxrwx	root/root	usr/lib/security/pam_cgroup.so.0 -> pam_cgroup.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/security/pam_cgroup.so.0.0.0
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/cgclear
 -rwxr-xr-x	root/root	usr/sbin/cgconfigparser
