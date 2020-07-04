@@ -1,13 +1,12 @@
 # Description: commandline option parser 
-# URL: http://rpm5.org/files/popt/
-# Packager: Robert McMeekin, viper at mcmeekin dot info
+# URL: https://github.com/rpm-software-management/popt
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Depends on: gettext
 
 name=popt
-version=1.16
-release=2
-source=(http://ftp.rpm.org/mirror/$name/$name-$version.tar.gz)
+version=1.18
+release=1
+source=(http://ftp.rpm.org/popt/releases/popt-1.x/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
