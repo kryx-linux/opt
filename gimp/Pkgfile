@@ -5,8 +5,8 @@
 # Optional:    gimp-print libsdl ghostscript libmng
 
 name=gimp
-version=2.10.18
-release=2
+version=2.10.20
+release=1
 source=(https://download.gimp.org/pub/gimp/v${version%.*}/$name-$version.tar.bz2)
 
 build() {
