@@ -4,20 +4,21 @@
 # Depends on:	cmake
 
 name=exiv2
-version=0.27.2
+version=0.27.3
 release=1
 source=(https://github.com/Exiv2/exiv2/archive/v$version/$name-$version.tar.gz)
 
 build() {
-	mkdir build; cd build
 
-	cmake ../$name-$version \
+	export CXXFLAGS+=" -Wno-deprecated-declarations"
+
+	cmake -S$name-$version -Bbuild \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DEXIV2_ENABLE_BUILD_PO=OFF \
 		-DEXIV2_ENABLE_BUILD_SAMPLES=OFF \
 
-	make
-	make DESTDIR=$PKG install
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
 }
