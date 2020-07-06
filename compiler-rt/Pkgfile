@@ -1,0 +1,19 @@
+# Description: Compiler runtime libraries for clang
+# URL:         https://compiler-rt.llvm.org/
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  llvm
+
+name=compiler-rt
+version=10.0.0
+release=1
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/$name-$version.src.tar.xz)
+
+build() {
+	cmake -S$name-$version.src -Bbuild -GNinja \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DPYTHON_EXECUTABLE=/usr/bin/python3 \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
