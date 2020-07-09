@@ -4,7 +4,7 @@
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia
-version=440.100
+version=450.57
 release=1
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf)
@@ -63,7 +63,6 @@ build() {
 	install -m 0755 libcuda.so.$version $PKG/usr/lib/
 	ln -s libcuda.so.$version $PKG/usr/lib/libcuda.so.1
 	ln -s libcuda.so.$version $PKG/usr/lib/libcuda.so
-	install -m 0755 libnvidia-fatbinaryloader.so.$version $PKG/usr/lib/
 	install -m 0755 libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/
 	ln -s libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/libnvidia-ptxjitcompiler.so.1
 	ln -s libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/libnvidia-ptxjitcompiler.so
@@ -109,6 +108,11 @@ build() {
 	install -m 0755 libnvidia-opticalflow.so.$version $PKG/usr/lib/
 	ln -s libnvidia-opticalflow.so.$version $PKG/usr/lib/libnvidia-opticalflow.so.1
 	ln -s libnvidia-opticalflow.so.$version $PKG/usr/lib/libnvidia-opticalflow.so
+
+	# NGX library
+	install -m 0755 libnvidia-ngx.so.$version $PKG/usr/lib/
+	ln -s libnvidia-ngx.so.$version $PKG/usr/lib/libnvidia-ngx.so.1
+	ln -s libnvidia-ngx.so.$version $PKG/usr/lib/libnvidia-ngx.so
 
 	# X driver config
 	install -D -m 0644 $SRC/10-nvidia-drm-outputclass.conf \

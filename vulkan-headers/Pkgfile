@@ -15,5 +15,5 @@ build() {
 		-DCMAKE_BUILD_TYPE=Release
 
 	cmake --build build
-	DESTDIR=$PKG cmake --build build --target install
+	DESTDIR=$PKG cmake --install build
 }

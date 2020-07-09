@@ -23,5 +23,5 @@ build() {
 		-DSPIRV_HEADERS_SKIP_EXAMPLES=ON
 
 	cmake --build build
-	DESTDIR=$PKG cmake --build build --target install
+	DESTDIR=$PKG cmake --install build
 }
