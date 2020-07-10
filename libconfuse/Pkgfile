@@ -3,7 +3,7 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=libconfuse
-version=3.2.2
+version=3.3
 release=1
 source=(https://github.com/martinh/$name/releases/download/v$version/${name#lib}-$version.tar.xz)
 
