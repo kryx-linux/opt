@@ -32,6 +32,7 @@ drwxr-xr-x	root/root	usr/lib/jdk/bin/
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jconsole
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jdb
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jdeps
+-rwxr-xr-x	root/root	usr/lib/jdk/bin/jfr
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jhat
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jinfo
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jjs
@@ -174,6 +175,10 @@ drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/images/cursors/
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/javafx.properties
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/jce.jar
 -rwxr-xr-x	root/root	usr/lib/jdk/jre/lib/jexec
+-rw-r--r--	root/root	usr/lib/jdk/jre/lib/jfr.jar
+drwxr-xr-x	root/root	usr/lib/jdk/jre/lib/jfr/
+-rw-r--r--	root/root	usr/lib/jdk/jre/lib/jfr/default.jfc
+-rw-r--r--	root/root	usr/lib/jdk/jre/lib/jfr/profile.jfc
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/jfxswt.jar
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/jsse.jar
 -rw-r--r--	root/root	usr/lib/jdk/jre/lib/jvm.hprof.txt

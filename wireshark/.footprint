@@ -614,54 +614,54 @@ drwxr-xr-x	root/root	usr/include/wireshark/wsutil/
 -rw-r--r--	root/root	usr/include/wireshark/wsutil/ws_printf.h
 -rw-r--r--	root/root	usr/include/wireshark/wsutil/wsjson.h
 -rw-r--r--	root/root	usr/include/wireshark/wsutil/xtea.h
-drwxr-xr-x	root/root	usr/lib64/
-lrwxrwxrwx	root/root	usr/lib64/libwireshark.so -> libwireshark.so.13
-lrwxrwxrwx	root/root	usr/lib64/libwireshark.so.13 -> libwireshark.so.13.0.4
--rwxr-xr-x	root/root	usr/lib64/libwireshark.so.13.0.4
-lrwxrwxrwx	root/root	usr/lib64/libwiretap.so -> libwiretap.so.10
-lrwxrwxrwx	root/root	usr/lib64/libwiretap.so.10 -> libwiretap.so.10.0.4
--rwxr-xr-x	root/root	usr/lib64/libwiretap.so.10.0.4
-lrwxrwxrwx	root/root	usr/lib64/libwsutil.so -> libwsutil.so.11
-lrwxrwxrwx	root/root	usr/lib64/libwsutil.so.11 -> libwsutil.so.11.0.0
--rwxr-xr-x	root/root	usr/lib64/libwsutil.so.11.0.0
-drwxr-xr-x	root/root	usr/lib64/pkgconfig/
--rw-r--r--	root/root	usr/lib64/pkgconfig/wireshark.pc
-drwxr-xr-x	root/root	usr/lib64/wireshark/
-drwxr-xr-x	root/root	usr/lib64/wireshark/cmake/
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/FindGLIB2.cmake
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/FindWSLibrary.cmake
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/FindWSWinLibs.cmake
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/LocatePythonModule.cmake
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/UseAsn2Wrs.cmake
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/UseMakePluginReg.cmake
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/WiresharkConfig.cmake
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/WiresharkConfigVersion.cmake
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/WiresharkTargets-relwithdebinfo.cmake
--rw-r--r--	root/root	usr/lib64/wireshark/cmake/WiresharkTargets.cmake
-drwxr-xr-x	root/root	usr/lib64/wireshark/extcap/
--rwxr-xr-x	root/root	usr/lib64/wireshark/extcap/androiddump
--rwxr-xr-x	root/root	usr/lib64/wireshark/extcap/randpktdump
--rwxr-xr-x	root/root	usr/lib64/wireshark/extcap/udpdump
-drwxr-xr-x	root/root	usr/lib64/wireshark/plugins/
-drwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/
-drwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/codecs/
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/codecs/g711.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/codecs/l16mono.so
-drwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/ethercat.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/gryphon.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/irda.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/mate.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/opcua.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/profinet.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/stats_tree.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/transum.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/unistim.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/wimax.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/wimaxasncp.so
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/epan/wimaxmacphy.so
-drwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/wiretap/
--rwxr-xr-x	root/root	usr/lib64/wireshark/plugins/3.2/wiretap/usbdump.so
+drwxr-xr-x	root/root	usr/lib/
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so -> libwireshark.so.13
+lrwxrwxrwx	root/root	usr/lib/libwireshark.so.13 -> libwireshark.so.13.0.5
+-rwxr-xr-x	root/root	usr/lib/libwireshark.so.13.0.5
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so -> libwiretap.so.10
+lrwxrwxrwx	root/root	usr/lib/libwiretap.so.10 -> libwiretap.so.10.0.5
+-rwxr-xr-x	root/root	usr/lib/libwiretap.so.10.0.5
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so -> libwsutil.so.11
+lrwxrwxrwx	root/root	usr/lib/libwsutil.so.11 -> libwsutil.so.11.0.0
+-rwxr-xr-x	root/root	usr/lib/libwsutil.so.11.0.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/wireshark.pc
+drwxr-xr-x	root/root	usr/lib/wireshark/
+drwxr-xr-x	root/root	usr/lib/wireshark/cmake/
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/FindGLIB2.cmake
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/FindWSLibrary.cmake
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/FindWSWinLibs.cmake
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/LocatePythonModule.cmake
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/UseAsn2Wrs.cmake
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/UseMakePluginReg.cmake
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/WiresharkConfig.cmake
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/WiresharkConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/WiresharkTargets-relwithdebinfo.cmake
+-rw-r--r--	root/root	usr/lib/wireshark/cmake/WiresharkTargets.cmake
+drwxr-xr-x	root/root	usr/lib/wireshark/extcap/
+-rwxr-xr-x	root/root	usr/lib/wireshark/extcap/androiddump
+-rwxr-xr-x	root/root	usr/lib/wireshark/extcap/randpktdump
+-rwxr-xr-x	root/root	usr/lib/wireshark/extcap/udpdump
+drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
+drwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/
+drwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/codecs/
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/codecs/g711.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/codecs/l16mono.so
+drwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/ethercat.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/gryphon.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/irda.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/mate.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/opcua.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/profinet.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/stats_tree.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/transum.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/unistim.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/wimax.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/wimaxasncp.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/epan/wimaxmacphy.so
+drwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/wiretap/
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/3.2/wiretap/usbdump.so
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/appdata/
 -rw-r--r--	root/root	usr/share/appdata/wireshark.appdata.xml

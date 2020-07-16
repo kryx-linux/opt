@@ -4,7 +4,7 @@
 # Depends on: readline
 
 name=lua
-version=5.3.5
+version=5.4.0
 release=1
 source=(https://www.lua.org/ftp/$name-$version.tar.gz
 	liblua.so.patch lua.pc)
@@ -16,10 +16,7 @@ build() {
 
 	sed "s/%VER%/${version:0:3}/g;s/%REL%/$version/g" $SRC/lua.pc > lua.pc
 
-	# Lua 5.3.4 has wrong release version in its Makefile. Fix it.
-	sed "s/^R= \$V.4/R= \$V.5/" -i Makefile
-
-	make MYCFLAGS="$CFLAGS -fPIC -DLUA_COMPAT_5_2 -DLUA_COMPAT_5_1" MYLDFLAGS="$LDFLAGS" linux
+	make MYCFLAGS="$CFLAGS -fPIC" MYLDFLAGS="$LDFLAGS" linux
 
 	make \
 		TO_LIB="liblua.a liblua.so liblua.so.${version:0:3} liblua.so.$version" \
@@ -28,13 +25,12 @@ build() {
 		INSTALL_MAN=$PKG/usr/share/man/man1 \
 		install
 
-	# odd behaviour
-	chmod -v u+w $PKG/usr/share/man/man1/lua.1
-
 	ln -s lua $PKG/usr/bin/lua${version:0:3}
 	ln -s luac $PKG/usr/bin/luac${version:0:3}
 	ln -s liblua.so.$version $PKG/usr/lib/liblua${version:0:3}.so
 
-	install -m 0644 -D lua.pc $PKG/usr/lib/pkgconfig/lua53.pc
-	ln -s lua53.pc $PKG/usr/lib/pkgconfig/lua.pc
+	install -m 0644 -D lua.pc $PKG/usr/lib/pkgconfig/lua${version:0:1}${version:2:1}.pc
+	ln -s lua${version:0:1}${version:2:1}.pc $PKG/usr/lib/pkgconfig/lua.pc
+	ln -s lua${version:0:1}${version:2:1}.pc $PKG/usr/lib/pkgconfig/lua${version:0:3}.pc
+	ln -s lua${version:0:1}${version:2:1}.pc $PKG/usr/lib/pkgconfig/lua-${version:0:3}.pc
 }

@@ -1,16 +1,17 @@
 # Description: Network Sniffer
 # URL:         https://www.wireshark.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on: hicolor-icon-theme libgcrypt libpcap qt5
+# Depends on:  hicolor-icon-theme libgcrypt libpcap qt5
 
 name=wireshark
-version=3.2.4
+version=3.2.5
 release=1
 source=(https://www.wireshark.org/download/src/$name-$version.tar.xz)
 
 build() {
   cmake -S$name-$version -Bbuild -GNinja \
-    -DCMAKE_INSTALL_PREFIX=/usr
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib
 
   cmake --build build
   DESTDIR=$PKG cmake --install build

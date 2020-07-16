@@ -1,19 +1,18 @@
 # Description: Local/remote mirroring+incremental backup
-# URL:         http://www.nongnu.org/rdiff-backup/
+# URL:         https://github.com/rdiff-backup/rdiff-backup
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Simon Glossner, viper at hometux dot de
-# Depends on:  python, rdiff
+# Depends on:  python3-setuptools rdiff
 
 name=rdiff-backup
-version=1.2.8
+version=2.0.3
 release=1
-source=(http://savannah.nongnu.org/download/${name}/${name}-${version}.tar.gz)
+source=(https://github.com/rdiff-backup/rdiff-backup/releases/download/v$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
     
-    python setup.py build
-    python setup.py install --prefix=/usr --root=$PKG
+    /usr/bin/python3 setup.py build
+    /usr/bin/python3 setup.py install --prefix=/usr --root=$PKG
 
     rm -r $PKG/usr/share/doc
 }

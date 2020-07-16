@@ -9,13 +9,12 @@ release=1
 source=(https://cmocka.org/files/1.1/$name-$version.tar.xz)
 
 build() {
-	mkdir build; cd build
-
-	cmake ../$name-$version \
+	cmake -S$name-$version -Bbuild \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DUNIT_TESTING=On
 
-	make
-	make DESTDIR=$PKG install
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
 }

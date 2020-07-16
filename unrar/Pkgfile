@@ -1,12 +1,11 @@
 # Description: Extracts RAR archives
 # URL:         https://www.rarlab.com/rar_add.htm
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Jukka Heino, jukka dot heino at gmail dot com
 
 name=unrar
-version=5.8.1
+version=5.9.4
 release=1
-source=(http://www.rarlab.com/rar/${name}src-$version.tar.gz)
+source=(https://www.rarlab.com/rar/${name}src-$version.tar.gz)
 
 build() {
     cd $name
