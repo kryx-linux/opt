@@ -3,10 +3,10 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  python3-setuptools mysql
 
-name=python-mysql
+name=python3-mysql
 version=2.0.0
 release=1
-source=(https://github.com/PyMySQL/mysqlclient-python/archive/v$version/$name-$version.tar.gz)
+source=(https://github.com/PyMySQL/mysqlclient-python/archive/v$version/python-$version.tar.gz)
 
 build () {
     cd mysqlclient-python-$version
