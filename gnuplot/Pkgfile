@@ -6,8 +6,8 @@
 
 name=gnuplot
 version=5.4.0
-release=1
-source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
+release=2
+source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
@@ -17,6 +17,5 @@ build() {
                 --with-qt=no
     make
     make DESTDIR=$PKG install
-    #rm $PKG/usr/share/man/man1/gnuplot-ja.1
-    rm -rf $PKG/usr/share/info
+    rm $PKG/usr/share/gnuplot/${version%.*}/js/README
 }
