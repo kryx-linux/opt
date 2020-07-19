@@ -5,9 +5,9 @@
 
 name=wpa_supplicant
 version=2.9
-release=1
+release=2
 source=(https://w1.fi/releases/$name-$version.tar.gz
-        wlan)
+        wpa_supplicant wlan)
 
 build () {
     cd $name-$version/$name
@@ -31,6 +31,7 @@ build () {
 
     # rc script
     install -D -m 0755 $SRC/wlan $PKG/etc/rc.d/wlan
+    install -m 0755 $SRC/wpa_supplicant $PKG/etc/rc.d
 
     # dbus
     install -d $PKG/{usr/share/dbus-1/system-services,etc/dbus-1/system.d}
