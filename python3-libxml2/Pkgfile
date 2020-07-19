@@ -5,7 +5,7 @@
 
 name=python3-libxml2
 version=2.9.10
-release=1
+release=2
 source=(ftp://xmlsoft.org/libxml2/libxml2-$version.tar.gz)
 
 build () {
