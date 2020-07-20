@@ -10,9 +10,7 @@ source=(https://ftp.gwdg.de/pub/misc/mysql/Downloads/MySQL-5.7/$name-boost-$vers
         my.cnf mysqld)
 
 build () {
-    cd $name-$version
-
-    cmake . \
+    cmake -S $name-$version -B build \
         -DBUILD_CONFIG=mysql_release \
         -DINSTALL_LAYOUT=RPM \
         -DCMAKE_INSTALL_PREFIX=/usr \
@@ -21,13 +19,13 @@ build () {
         -DINSTALL_PLUGINDIR=lib/mysql/plugin \
         -DINSTALL_MANDIR=share/man \
         -DINSTALL_SECURE_PRIVDIR=/var/lib/mysql-files \
-        -DWITH_BOOST=./boost \
+        -DWITH_BOOST=$name-$version/boost \
         -DWITH_LIBWRAP=0 \
         -DWITH_SSL=system \
         -DWITH_ZLIB=system
 
-    make
-    make DESTDIR=$PKG install
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
 
     rm -r $PKG/usr/share/{mysql-test,info}
     rm $PKG/usr/share/mysql/charsets/README
