@@ -1190,6 +1190,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-sysinfo-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-sysinfo-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-sysinfo-l1-2-1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-systemtopology-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-threadpool-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-threadpool-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-threadpool-legacy-l1-1-0.dll.so
@@ -1639,6 +1640,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-sysinfo-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-sysinfo-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-sysinfo-l1-2-1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-systemtopology-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-threadpool-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-threadpool-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-threadpool-legacy-l1-1-0.dll
@@ -3152,6 +3154,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-sysinfo-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-sysinfo-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-sysinfo-l1-2-1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-systemtopology-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-threadpool-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-threadpool-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-threadpool-legacy-l1-1-0.dll.so
@@ -3610,6 +3613,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-sysinfo-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-sysinfo-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-sysinfo-l1-2-1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-systemtopology-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-threadpool-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-threadpool-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-threadpool-legacy-l1-1-0.dll
