@@ -6,11 +6,13 @@
 
 name=htop
 version=2.2.0
-release=1
-source=(https://hisham.hm/htop/releases/$version/htop-$version.tar.gz)
+release=2
+source=(https://hisham.hm/htop/releases/$version/htop-$version.tar.gz \
+    gcc10.patch)
 
 build() {
     cd $name-$version
+    patch -p1 -i $SRC/gcc10.patch
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
