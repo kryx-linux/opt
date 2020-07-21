@@ -7,8 +7,7 @@
 name=freerdp2
 version=2.2.0
 release=1
-source=(https://pub.freerdp.com/releases/freerdp-$version.tar.gz
-	xfreerdp.1)
+source=(https://pub.freerdp.com/releases/freerdp-$version.tar.gz)
 
 build() {
 	cmake -S freerdp-$version -B build \
