@@ -1,18 +1,18 @@
-# Packager:     Simone Rota, sip at crux dot nu
 # Maintainer:   Thomas Penteker, tek at serverop dot de
 # Description:  an interactive process viewer
 # URL:          http://hisham.hm/htop
-# Depends on:   python
+# Depends on:   python3
 
 name=htop
 version=2.2.0
-release=2
+release=3
 source=(https://hisham.hm/htop/releases/$version/htop-$version.tar.gz \
     gcc10.patch)
 
 build() {
     cd $name-$version
     patch -p1 -i $SRC/gcc10.patch
+    sed -i -e 's/python/python3/g' scripts/MakeHeader.py
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
