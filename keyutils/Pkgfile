@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=keyutils
-version=1.6.1
+version=1.6.3
 release=1
 source=(https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/snapshot/$name-$version.tar.gz)
 
