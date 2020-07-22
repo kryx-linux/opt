@@ -5,27 +5,21 @@
 # Optional: ffmpeg gst-plugins-base alsa-lib cups directfb neon pulseaudio xmlto
 
 name=freerdp2
-version=2.1.2
+version=2.2.0
 release=1
-source=(https://pub.freerdp.com/releases/freerdp-$version.tar.gz
-	xfreerdp.1)
+source=(https://pub.freerdp.com/releases/freerdp-$version.tar.gz)
 
 build() {
-
-	echo -n "$version" > freerdp-$version/.source_version
-
-	cmake -Sfreerdp-$version -Bbuild \
-		-DCMAKE_BUILD_TYPE=RELEASE \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_SKIP_RPATH=ON \
-		-DWITH_SERVER=OFF \
-		-DWITH_CLIENT=ON \
-		-DWITH_LIBSYSTEMD=OFF \
-		-DWITH_WAYLAND=OFF
+	cmake -S freerdp-$version -B build \
+		-D CMAKE_BUILD_TYPE=RELEASE \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=lib \
+		-D CMAKE_SKIP_RPATH=ON \
+		-D WITH_SERVER=OFF \
+		-D WITH_CLIENT=ON \
+		-D WITH_LIBSYSTEMD=OFF \
+		-D WITH_WAYLAND=OFF
 
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
-
-	install -m 0664 $SRC/xfreerdp.1 $PKG/usr/share/man/man1
 }

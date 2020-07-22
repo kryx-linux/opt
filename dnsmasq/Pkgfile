@@ -4,7 +4,7 @@
 # Depends on:  nettle
 
 name=dnsmasq
-version=2.81
+version=2.82
 release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.xz \
         $name-config.patch dnsmasq)

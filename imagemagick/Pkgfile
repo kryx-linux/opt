@@ -1,10 +1,10 @@
 # Description: Image manipulation wizard
 # URL:         http://www.imagemagick.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  util-linux lcms2 pango xorg-libxt chrpath
+# Depends on:  libtool lcms2 pango xorg-libxt chrpath
 
 name=imagemagick
-version=7.0.9-27
+version=7.0.10-24
 release=1
 source=(https://www.imagemagick.org/download/releases/ImageMagick-$version.tar.xz)
 

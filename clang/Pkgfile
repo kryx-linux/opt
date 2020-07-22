@@ -4,7 +4,7 @@
 # Depends on:  compiler-rt llvm
 
 name=clang
-version=10.0.0
+version=10.0.1
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-$version.src.tar.xz
         https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-tools-extra-$version.src.tar.xz)
@@ -12,14 +12,14 @@ source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/
 build() {
   mv $name-tools-extra-$version.src $name-$version.src/tools/extra
 
-  cmake -S$name-$version.src -Bbuild -GNinja \
+  cmake -S $name-$version.src -B build -G Ninja \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=Release \
     -DLLVM_INCLUDE_TESTS=0 \
     -DLLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
     -Wno-dev
-  cmake --build build
-  DESTDIR=$PKG cmake --install build
+  ninja -C build
+  DESTDIR=$PKG ninja -C build install
 
   # -DCMAKE_INSTALL_LIBEXECDIR is hardcoded..
   mv $PKG/usr/libexec/{c++-analyzer,ccc-analyzer} $PKG/usr/lib/clang
