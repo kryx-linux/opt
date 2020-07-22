@@ -4,13 +4,12 @@
 # Depends on: llvm
 
 name=lld
-version=10.0.0
+version=10.0.1
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/{llvm,$name}-$version.src.tar.xz)
 
 build() {
-	cmake -H$name-$version.src -Bbuild \
-		-G Ninja \
+	cmake -H$name-$version.src -Bbuild -G Ninja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DLLVM_LINK_LLVM_DYLIB=ON \
