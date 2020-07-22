@@ -4,7 +4,7 @@
 # Depends on: gtk3, dbus-glib
 
 name=thunderbird-bin
-version=68.9.0
+version=78.0.1
 release=1
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-x86_64/en-US/thunderbird-$version.tar.bz2 \
 	policies.json)
@@ -17,6 +17,7 @@ build() {
 	ln -s /usr/lib/thunderbird/thunderbird $PKG/usr/bin/thunderbird
 
         # Disable autoupdate
+	mkdir  $PKG/usr/lib/thunderbird/distribution
         install -m644 $SRC/policies.json $PKG/usr/lib/thunderbird/distribution/
 
         mkdir -p $PKG/etc/revdep.d
