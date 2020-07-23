@@ -4,19 +4,12 @@
 # Depends on: cmake ninja
 
 name=spirv-headers
-version=1.5.1
-commit=2ad0492fb00919d99500f1da74abf5ad3c870e4e
-release=2
-source=(
-	#https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz
-	https://github.com/KhronosGroup/SPIRV-Headers/archive/$commit.tar.gz#/$name-$commit.tar.gz
-)
+version=1.5.3
+release=1
+source=(https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz)
 
 build() {
-#	cd SPIRV-Headers-$version
-#	cd SPIRV-Headers-$commit
-
-	cmake -SSPIRV-Headers-$commit -Bbuild -GNinja \
+	cmake -SSPIRV-Headers-$version -Bbuild -GNinja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_BUILD_TYPE=Release \
