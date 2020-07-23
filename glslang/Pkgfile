@@ -4,23 +4,20 @@
 # Depends on: spirv-tools
 
 name=glslang
-version=8.13.3559
-commit=c9b28b9f3388c607ea5506f5e6197b7150238ad3
+version=8.13.3743
 release=1
-source=(
-	#https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
-	https://github.com/KhronosGroup/glslang/archive/$commit.tar.gz#/$name-$commit.tar.gz
+source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
 	glslang-default-resource-limits_staticlib.patch
 	0001-pkg-config-compatibility.patch)
 
 build() {
-	patch -d $name-$commit -p1 -i $SRC/glslang-default-resource-limits_staticlib.patch
+	patch -d $name-$version -p1 -i $SRC/glslang-default-resource-limits_staticlib.patch
 
 	# Patch to build against system spirv-tools
-	patch -d $name-$commit -p1 -i $SRC/0001-pkg-config-compatibility.patch
+	patch -d $name-$version -p1 -i $SRC/0001-pkg-config-compatibility.patch
 
 	local config="
--S$name-$commit \
+-S$name-$version \
 -DCMAKE_INSTALL_PREFIX=/usr \
 -DCMAKE_INSTALL_LIBDIR=lib \
 -DCMAKE_BUILD_TYPE=Release \
