@@ -116,3 +116,9 @@ drwxr-xr-x	root/root	usr/lib/clang/10.0.1/lib/linux/
 -rw-r--r--	root/root	usr/lib/clang/10.0.1/lib/linux/libclang_rt.xray-fdr-x86_64.a
 -rw-r--r--	root/root	usr/lib/clang/10.0.1/lib/linux/libclang_rt.xray-profiling-x86_64.a
 -rw-r--r--	root/root	usr/lib/clang/10.0.1/lib/linux/libclang_rt.xray-x86_64.a
+drwxr-xr-x	root/root	usr/lib/clang/10.0.1/share/
+-rw-r--r--	root/root	usr/lib/clang/10.0.1/share/asan_blacklist.txt
+-rw-r--r--	root/root	usr/lib/clang/10.0.1/share/cfi_blacklist.txt
+-rw-r--r--	root/root	usr/lib/clang/10.0.1/share/dfsan_abilist.txt
+-rw-r--r--	root/root	usr/lib/clang/10.0.1/share/hwasan_blacklist.txt
+-rw-r--r--	root/root	usr/lib/clang/10.0.1/share/msan_blacklist.txt
