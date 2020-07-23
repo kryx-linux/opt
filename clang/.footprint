@@ -836,12 +836,6 @@ drwxr-xr-x	root/root	usr/lib/clang/10.0.1/include/ppc_wrappers/
 -rw-r--r--	root/root	usr/lib/clang/10.0.1/include/xsaveoptintrin.h
 -rw-r--r--	root/root	usr/lib/clang/10.0.1/include/xsavesintrin.h
 -rw-r--r--	root/root	usr/lib/clang/10.0.1/include/xtestintrin.h
-drwxr-xr-x	root/root	usr/lib/clang/10.0.1/share/
-lrwxrwxrwx	root/root	usr/lib/clang/10.0.1/share/asan_blacklist.txt -> /usr/share/asan_blacklist.txt
-lrwxrwxrwx	root/root	usr/lib/clang/10.0.1/share/cfi_blacklist.txt -> /usr/share/cfi_blacklist.txt
-lrwxrwxrwx	root/root	usr/lib/clang/10.0.1/share/dfsan_abilist.txt -> /usr/share/dfsan_abilist.txt
-lrwxrwxrwx	root/root	usr/lib/clang/10.0.1/share/hwasan_blacklist.txt -> /usr/share/hwasan_blacklist.txt
-lrwxrwxrwx	root/root	usr/lib/clang/10.0.1/share/msan_blacklist.txt -> /usr/share/msan_blacklist.txt
 -rwxr-xr-x	root/root	usr/lib/clang/c++-analyzer
 -rwxr-xr-x	root/root	usr/lib/clang/ccc-analyzer
 drwxr-xr-x	root/root	usr/lib/cmake/

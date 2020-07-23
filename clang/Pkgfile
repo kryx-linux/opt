@@ -5,7 +5,7 @@
 
 name=clang
 version=10.0.1
-release=1
+release=2
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-$version.src.tar.xz
         https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-tools-extra-$version.src.tar.xz)
 
@@ -25,9 +25,4 @@ build() {
   mv $PKG/usr/libexec/{c++-analyzer,ccc-analyzer} $PKG/usr/lib/clang
   rmdir $PKG/usr/libexec
   sed -i 's|libexec|lib/clang|' $PKG/usr/bin/scan-build
-
-  # prepare compiler-rt
-  local txtfiles="asan_blacklist.txt cfi_blacklist.txt dfsan_abilist.txt hwasan_blacklist.txt msan_blacklist.txt"
-  mkdir -p $PKG/usr/lib/clang/$version/share
-  for i in $txtfiles; do ln -s /usr/share/$i $PKG/usr/lib/clang/$version/share/$i; done
 }
