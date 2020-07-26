@@ -5,13 +5,15 @@
 # Optional: graphite2
 
 name=harfbuzz-icu
-version=2.6.8
+version=2.7.0
 release=1
-source=(https://github.com/harfbuzz/harfbuzz/releases/download/$version/harfbuzz-$version.tar.xz)
+source=(https://github.com/harfbuzz/harfbuzz/archive/$version/harfbuzz-$version.tar.gz)
 
 build() {
 	cd harfbuzz-$version
-	
+
+	echo "EXTRA_DIST = " > gtk-doc.make
+	autoreconf --force --install
 	./configure \
 		--prefix=/usr \
 		--with-icu=yes \
@@ -67,8 +69,6 @@ build() {
 		$PKG/usr/lib/libharfbuzz-subset.so.0.*.? \
 		$PKG/usr/lib/pkgconfig/harfbuzz.pc \
 		$PKG/usr/lib/pkgconfig/harfbuzz-subset.pc
-
-	rm -r $PKG/usr/share/gtk-doc
 
 	# if graphite2 is installed
 	rm -f $PKG/usr/include/harfbuzz/hb-graphite2.h
