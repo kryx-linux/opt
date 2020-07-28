@@ -85,7 +85,7 @@ build() {
 
 	sed 's|/usr/bin/python|/usr/bin/python3|g' \
 		-i $PKG/usr/lib/qt5/mkspecs/features/uikit/devices.py
-	2to3-3.7 --write --nobackups $PKG/usr/lib/qt5/mkspecs/features/uikit/devices.py
+	2to3 --write --nobackups $PKG/usr/lib/qt5/mkspecs/features/uikit/devices.py
     
 	# Fix paths
 	find $PKG/usr/lib/ -type f -name '*.prl' \
