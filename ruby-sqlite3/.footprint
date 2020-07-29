@@ -3,10 +3,6 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/ruby/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/
-drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/build_info/
-drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/cache/
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/cache/sqlite3-1.4.2.gem
-drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/doc/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/x86_64-linux/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/x86_64-linux/2.7/
@@ -18,17 +14,6 @@ drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/x86_64-linux/2.7/sqlite3-1
 -rwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/x86_64-linux/2.7/sqlite3-1.4.2/sqlite3/sqlite3_native.so
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/.gemtest (EMPTY)
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/.travis.yml
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/API_CHANGES.rdoc
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/CHANGELOG.rdoc
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/ChangeLog.cvs
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/Gemfile
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/LICENSE
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/Manifest.txt
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/README.rdoc
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/Rakefile
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/appveyor.yml
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/ext/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/ext/sqlite3/
 -rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/sqlite3-1.4.2/ext/sqlite3/.sitearchdir.-.sqlite3.time (EMPTY)
