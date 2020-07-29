@@ -4,16 +4,20 @@
 # Depends on:  ruby mysql
 
 name=ruby-mysql
-version=0.5.2
-release=2
-source=(https://github.com/brianmario/mysql2/archive/$version/$name-$version.tar.gz)
+version=0.5.3
+release=1
+source=(https://rubygems.org/downloads/mysql2-$version.gem)
 
 build () {
-    cd mysql2-$version
+	gem install mysql2 \
+		--ignore-dependencies \
+		--no-user-install \
+		--no-document \
+		--local \
+		--build-root $PKG
 
-    gem install mysql2 \
-        --ignore-dependencies \
-        --no-user-install \
-        --no-document \
-        --build-root $PKG
+	cd $PKG/$(gem env gemdir)
+	rm -r cache doc build_info
+	cd gems/mysql2-$version
+	rm CHANGELOG.md LICENSE README.md
 }
