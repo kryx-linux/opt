@@ -5,15 +5,20 @@
 
 name=ruby-ncurses
 version=1.2.4
-release=2
-source=(https://github.com/eclubb/ncurses-ruby/archive/v$version/$name-$version.tar.gz)
+release=3
+source=(https://rubygems.org/downloads/ncurses-ruby-$version.gem)
 
 build () {
-    cd ncurses-ruby-$version
+	gem install ncurses-ruby \
+		--ignore-dependencies \
+		--no-user-install \
+		--no-document \
+		--local \
+		--build-root $PKG
 
-    gem install ncurses-ruby \
-        --ignore-dependencies \
-        --no-user-install \
-        --no-document \
-        --build-root $PKG
+	cd $PKG/$(gem env gemdir)
+	rm -r cache doc build_info
+	cd gems/ncurses-ruby-$version
+	rm COPYING Changelog.md LICENSE.txt README.md THANKS \
+	   TODO .gitignore examples/LICENSES_for_examples
 }

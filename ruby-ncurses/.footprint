@@ -3,10 +3,6 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/ruby/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/
-drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/build_info/
-drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/cache/
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/cache/ncurses-ruby-1.2.4.gem
-drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/doc/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/x86_64-linux/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/x86_64-linux/2.7/
@@ -17,15 +13,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/x86_64-linux/2.7/ncurses-r
 -rwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/extensions/x86_64-linux/2.7/ncurses-ruby-1.2.4/ncurses.so
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/
--rw-rw-r--	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/.gitignore
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/COPYING
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/Changelog.md
--rwxrwxr-x	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/LICENSE.txt
--rwxrwxr-x	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/README.md
--rwxrwxr-x	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/THANKS
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/TODO
 drwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/examples/
--rw-r--r--	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/examples/LICENSES_for_examples
 -rwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/examples/example.rb
 -rwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/examples/form.rb
 -rwxr-xr-x	root/root	usr/lib/ruby/gems/2.7/gems/ncurses-ruby-1.2.4/examples/form2.rb
