@@ -13,7 +13,7 @@ build() {
     cd $name-$version
 
     ./configure --prefix=/usr --bindir=/bin
-    make
+    make CFLAGS="$CFLAGS -fcommon"
     make DESTDIR=$PKG install
 
     rm -r $PKG/usr/share/locale
