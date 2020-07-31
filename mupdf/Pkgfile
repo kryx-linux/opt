@@ -16,7 +16,7 @@ build() {
     make install \
         prefix=$PKG/usr \
         mandir=$PKG/usr/share/man \
-        XCFLAGS="-fpic" \
+        XCFLAGS="-fpic -fcommon" \
         USE_SYSTEM_JBIG2DEC='no' \
         USE_SYSTEM_OPENJPEG='no' \
         USE_SYSTEM_GLUT='no'
