@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=exfatprogs
-version=1.0.3
+version=1.0.4
 release=1
 source=(https://github.com/exfatprogs/exfatprogs/archive/$version/$name-$version.tar.gz)
 
