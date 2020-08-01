@@ -15,7 +15,7 @@ build(){
 
   sed 's/FUNC_FFLUSH_STDIN/-1/g' -i lib/fseeko.c
 
-  make
+  make CFLAGS+=" -fcommon"
   make DESTDIR=$PKG install
 
   rm -rf $PKG/usr/share/info
