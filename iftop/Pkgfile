@@ -11,6 +11,6 @@ source=(http://www.ex-parrot.com/~pdw/iftop/download/$name-$version.tar.gz)
 build () {
     cd $name-$version
     ./configure --prefix=/usr
-    make iftop
+    make CFLAGS+=" -fcommon" iftop
     make DESTDIR=$PKG install
 }
