@@ -5,7 +5,7 @@
 # Optional: sccache llvm-32
 
 name=rust
-version=1.45.0
+version=1.45.1
 ##cat src/stage0.txt
 _date=2020-06-04
 _rustc=1.44.0

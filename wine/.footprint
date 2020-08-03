@@ -2103,6 +2103,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp120.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp120_app.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp140.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp140_1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp60.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp70.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/msvcp71.dll
@@ -2471,6 +2472,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libcards.def
 -rw-r--r--	root/root	usr/lib/wine/libcfgmgr32.def
 -rw-r--r--	root/root	usr/lib/wine/libclusapi.def
+-rw-r--r--	root/root	usr/lib/wine/libcombase.def
 -rw-r--r--	root/root	usr/lib/wine/libcomctl32.def
 -rw-r--r--	root/root	usr/lib/wine/libcomdlg32.def
 -rw-r--r--	root/root	usr/lib/wine/libcompstui.def
@@ -2735,6 +2737,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp120.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp120_app.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp140.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/msvcp140_1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp60.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp70.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcp71.dll.so
@@ -4096,6 +4099,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp120.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp120_app.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp140.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp140_1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp60.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp70.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/msvcp71.dll
@@ -4511,6 +4515,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libcards.def
 -rw-r--r--	root/root	usr/lib32/wine/libcfgmgr32.def
 -rw-r--r--	root/root	usr/lib32/wine/libclusapi.def
+-rw-r--r--	root/root	usr/lib32/wine/libcombase.def
 -rw-r--r--	root/root	usr/lib32/wine/libcomctl32.def
 -rw-r--r--	root/root	usr/lib32/wine/libcomdlg32.def
 -rw-r--r--	root/root	usr/lib32/wine/libcompstui.def
@@ -4783,6 +4788,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp120.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp120_app.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp140.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/msvcp140_1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp60.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp70.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/msvcp71.dll.so
@@ -5197,6 +5203,7 @@ drwxr-xr-x	root/root	usr/share/wine/fonts/
 -rw-r--r--	root/root	usr/share/wine/fonts/vgasysg.fon
 -rw-r--r--	root/root	usr/share/wine/fonts/vgasysr.fon
 -rw-r--r--	root/root	usr/share/wine/fonts/vgasyst.fon
+-rw-r--r--	root/root	usr/share/wine/fonts/webdings.ttf
 -rw-r--r--	root/root	usr/share/wine/fonts/wingding.ttf
 drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.1-x86.msi
