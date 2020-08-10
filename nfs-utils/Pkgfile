@@ -1,7 +1,7 @@
 # Description: NFS utilities 
 # URL:         http://nfs.sourceforge.net/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libdevmapper util-linux libcap rpcbind libevent keyutils sqlite3
+# Depends on:  libdevmapper util-linux libcap libnsl rpcbind libevent keyutils sqlite3
 
 name=nfs-utils
 version=2.5.1
