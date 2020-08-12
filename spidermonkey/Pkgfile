@@ -4,7 +4,7 @@
 # Depends on:  autoconf-2.13 readline zlib nspr python
 
 name=spidermonkey
-version=60.9.0
+version=68.11.0
 release=1
 source=(https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz)
 
