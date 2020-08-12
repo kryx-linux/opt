@@ -1,12 +1,12 @@
 # Description: tools used to create/alter ogg/vorbis files
 # URL: https://www.xiph.org/vorbis/
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Depends on: libao libvorbis, curl
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: curl libao libvorbis
 
 name=vorbis-tools
 version=1.4.0
 release=3
-source=(http://downloads.xiph.org/releases/vorbis/$name-$version.tar.gz
+source=(https://downloads.xiph.org/releases/vorbis/$name-$version.tar.gz
     vcut-fix-segfault.diff
     vorbis-tools-r19117-CVE-2014-9640.patch
     vorbis-tools-oggenc-CVE-2014-9639.patch
