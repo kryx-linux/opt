@@ -72,6 +72,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/auth-master.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-penalty.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-policy.h
+-rw-r--r--	root/root	usr/include/dovecot/auth-request-handler-private.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-request-handler.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-request-stats.h
 -rw-r--r--	root/root	usr/include/dovecot/auth-request-var-expand.h
@@ -448,6 +449,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/mdbox-storage-rebuild.h
 -rw-r--r--	root/root	usr/include/dovecot/mdbox-storage.h
 -rw-r--r--	root/root	usr/include/dovecot/mdbox-sync.h
+-rw-r--r--	root/root	usr/include/dovecot/mech-digest-md5-private.h
 -rw-r--r--	root/root	usr/include/dovecot/mech-otp-skey-common.h
 -rw-r--r--	root/root	usr/include/dovecot/mech-plain-common.h
 -rw-r--r--	root/root	usr/include/dovecot/mech-scram.h
@@ -494,6 +496,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ostream-private.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-rawlog.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-unix.h
+-rw-r--r--	root/root	usr/include/dovecot/ostream-wrapper.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-zlib.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream.h
 -rw-r--r--	root/root	usr/include/dovecot/passdb-blocking.h

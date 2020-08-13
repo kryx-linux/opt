@@ -4,7 +4,7 @@
 # Depends on:  glib util-linux nspr spidermonkey intltool gobject-introspection
 
 name=polkit
-version=0.116
+version=0.117
 release=1
 source=(http://www.freedesktop.org/software/$name/releases/$name-$version.tar.gz
 	polkit-1)

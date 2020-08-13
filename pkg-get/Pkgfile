@@ -1,19 +1,13 @@
-# Description: Package management tool for CRUX Linux
-# URL: http://www.varlock.com
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Simone Rota, sip at crux dot nu
-# Depends on: perl
+# Description: Package management tool for CRUX
+# URL:         http://www.varlock.com
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
 
 name=pkg-get
-version=0.4.6
-release=2
+version=0.4.7
+release=1
 source=(http://crux.nu/files/distfiles/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-
-	# fixed mandir location
-	sed 's|${PREFIX}/man|${PREFIX}/share/man|g' -i Makefile
-
-	make PREFIX=$PKG/usr CFGDIR=$PKG/etc install
+	make DESTDIR=$PKG install
 }
