@@ -1,7 +1,6 @@
 # Description: Garbage collection and memory leak detection for C and C++
 # URL: https://hboehm.info/gc/
 # Maintainer: Thomas Penteker, tek at serverop dot de
-# Packager: Han Boetes, han at mijncomputer dot dl
 
 name=boehm-gc
 version=8.0.4

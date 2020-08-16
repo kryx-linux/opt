@@ -1,9 +1,8 @@
 # Description: Directory content manager
 # URL:         https://git-scm.com/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Tilman Sauerbeck, tilman at crux dot nu
 # Depends on:  expat curl
-# Nice to have: tk
+# Optional:    tk
 
 name=git
 version=2.28.0
