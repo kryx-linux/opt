@@ -75,6 +75,7 @@ drwxr-xr-x	root/root	usr/include/wine/msvcrt/
 -rw-r--r--	root/root	usr/include/wine/msvcrt/setjmp.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/share.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/signal.h
+-rw-r--r--	root/root	usr/include/wine/msvcrt/stdbool.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/stddef.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/stdint.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/stdio.h
@@ -193,6 +194,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/compobj.h
 -rw-r--r--	root/root	usr/include/wine/windows/comsvcs.h
 -rw-r--r--	root/root	usr/include/wine/windows/comsvcs.idl
+-rw-r--r--	root/root	usr/include/wine/windows/consoleapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/control.h
 -rw-r--r--	root/root	usr/include/wine/windows/control.idl
 -rw-r--r--	root/root	usr/include/wine/windows/cor.h
@@ -247,6 +249,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3d11shader.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d12.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d12.idl
+-rw-r--r--	root/root	usr/include/wine/windows/d3d12shader.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3d12shader.idl
 -rw-r--r--	root/root	usr/include/wine/windows/d3d8.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d8caps.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d8types.h
@@ -954,6 +958,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wincodecsdk.h
 -rw-r--r--	root/root	usr/include/wine/windows/wincodecsdk.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wincon.h
+-rw-r--r--	root/root	usr/include/wine/windows/wincontypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/wincred.h
 -rw-r--r--	root/root	usr/include/wine/windows/wincrypt.h
 -rw-r--r--	root/root	usr/include/wine/windows/windef.h
@@ -1104,6 +1109,8 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-errorhandling-l1-1-3.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-fibers-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-fibers-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-file-ansi-l2-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-file-fromapp-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-file-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-file-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-file-l1-2-1.dll.so
@@ -1145,6 +1152,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-memory-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-memory-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-memory-l1-1-2.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-memory-l1-1-3.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-memory-l1-1-4.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-misc-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-namedpipe-ansi-l1-1-0.dll.so
@@ -1554,6 +1562,8 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-errorhandling-l1-1-3.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-fibers-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-fibers-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-file-ansi-l2-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-file-fromapp-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-file-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-file-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-file-l1-2-1.dll
@@ -1595,6 +1605,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-memory-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-memory-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-memory-l1-1-2.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-memory-l1-1-3.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-memory-l1-1-4.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-misc-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-namedpipe-ansi-l1-1-0.dll
@@ -3071,6 +3082,8 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-errorhandling-l1-1-3.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-fibers-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-fibers-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-file-ansi-l2-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-file-fromapp-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-file-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-file-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-file-l1-2-1.dll.so
@@ -3112,6 +3125,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-memory-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-memory-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-memory-l1-1-2.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-memory-l1-1-3.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-memory-l1-1-4.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-misc-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-namedpipe-ansi-l1-1-0.dll.so
@@ -3530,6 +3544,8 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-errorhandling-l1-1-3.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-fibers-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-fibers-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-file-ansi-l2-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-file-fromapp-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-file-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-file-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-file-l1-2-1.dll
@@ -3571,6 +3587,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-memory-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-memory-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-memory-l1-1-2.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-memory-l1-1-3.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-memory-l1-1-4.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-misc-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-namedpipe-ansi-l1-1-0.dll
