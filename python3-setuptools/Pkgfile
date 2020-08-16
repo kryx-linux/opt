@@ -3,7 +3,7 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=python3-setuptools
-version=49.2.0
+version=49.6.0
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.zip)
 
