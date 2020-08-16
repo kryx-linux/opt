@@ -1,15 +1,16 @@
-# Description:  an interactive process viewer
+# Description:  An interactive process viewer
 # URL:          http://hisham.hm/htop
-# Maintainer:   Thomas Penteker, tek at serverop dot d
-# Depends on:   python
+# Maintainer:   Thomas Penteker, tek at serverop dot de
+# Depends on:   ncurses python3
 
 name=htop
 version=2.2.0
-release=1
+release=2
 source=(https://hisham.hm/htop/releases/$version/htop-$version.tar.gz)
 
 build() {
     cd $name-$version
+    sed -i -e 's/python/python3/g' scripts/MakeHeader.py
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
