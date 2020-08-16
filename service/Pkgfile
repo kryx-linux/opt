@@ -1,7 +1,6 @@
 # Description: Wrapper for starting/stopping services, with completion
 # URL: http:///www.varlock.com
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Simone Rota, sip at crux dot nu
 # Depends on: bash-completion
 
 name=service

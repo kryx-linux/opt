@@ -1,7 +1,6 @@
 # Description: GObject wrapper around the Exiv2 photo metadata library
 # URL:         https://wiki.gnome.org/Projects/gexiv2
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    #teatime (irc.kyber.io), teatime at kyber dot io
 # Depends on:  exiv2 gobject-introspection
 
 name=gexiv2

@@ -1,7 +1,7 @@
-# Maintainer:   Thomas Penteker, tek at serverop dot de
-# Description:  an interactive process viewer
+# Description:  An interactive process viewer
 # URL:          http://hisham.hm/htop
-# Depends on:   python3
+# Maintainer:   Thomas Penteker, tek at serverop dot de
+# Depends on:   ncurses
 
 name=htop
 version=2.2.0
