@@ -4,10 +4,9 @@
 # Depends on:  util-linux xorg-libxaw xorg-font-alias xorg-font-misc-misc
 
 name=xterm
-version=358
+version=359
 release=1
 source=(https://invisible-mirror.net/archives/$name/$name-$version.tgz)
-#source=(ftp://ftp.invisible-island.net/$name/$name-$version.tgz)
 
 build() {
     cd $name-$version
