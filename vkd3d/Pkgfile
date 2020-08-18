@@ -5,11 +5,14 @@
 
 name=vkd3d
 version=1.1
-release=2
-source=(https://dl.winehq.org/vkd3d/source/$name-$version.tar.xz)
+release=3
+source=(https://dl.winehq.org/vkd3d/source/$name-$version.tar.xz
+	vulkan-headers.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/vulkan-headers.patch
 
 	./configure --prefix=/usr
 
