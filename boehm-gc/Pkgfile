@@ -5,7 +5,7 @@
 name=boehm-gc
 version=8.0.4
 release=1
-source=(https://hboehm.info/gc/gc_source/gc-${version}.tar.gz \
+source=(https://github.com/ivmai/bdwgc/releases/download/v$version/gc-$version.tar.gz
         https://github.com/ivmai/libatomic_ops/releases/download/v7.6.10/libatomic_ops-7.6.10.tar.gz)
 
 build () {
