@@ -1,8 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/ocaml
--rwxr-xr-x	root/root	usr/bin/ocaml-instr-graph
--rwxr-xr-x	root/root	usr/bin/ocaml-instr-report
 lrwxrwxrwx	root/root	usr/bin/ocamlc -> ocamlc.opt
 -rwxr-xr-x	root/root	usr/bin/ocamlc.byte
 -rwxr-xr-x	root/root	usr/bin/ocamlc.opt
@@ -31,6 +29,9 @@ lrwxrwxrwx	root/root	usr/bin/ocamlobjinfo -> ocamlobjinfo.opt
 lrwxrwxrwx	root/root	usr/bin/ocamlopt -> ocamlopt.opt
 -rwxr-xr-x	root/root	usr/bin/ocamlopt.byte
 -rwxr-xr-x	root/root	usr/bin/ocamlopt.opt
+lrwxrwxrwx	root/root	usr/bin/ocamloptp -> ocamloptp.opt
+-rwxr-xr-x	root/root	usr/bin/ocamloptp.byte
+-rwxr-xr-x	root/root	usr/bin/ocamloptp.opt
 lrwxrwxrwx	root/root	usr/bin/ocamlprof -> ocamlprof.opt
 -rwxr-xr-x	root/root	usr/bin/ocamlprof.byte
 -rwxr-xr-x	root/root	usr/bin/ocamlprof.opt
@@ -84,6 +85,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/caml/
 -rw-r--r--	root/root	usr/lib/ocaml/caml/domain_state.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/domain_state.tbl
 -rw-r--r--	root/root	usr/lib/ocaml/caml/dynlink.h
+-rw-r--r--	root/root	usr/lib/ocaml/caml/eventlog.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/exec.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/fail.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/finalise.h
@@ -412,6 +414,9 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmo_format.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmo_format.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmo_format.mli
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmt2annot.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmt2annot.cmt
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmt2annot.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmt_format.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmt_format.cmt
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/cmt_format.cmti
@@ -1328,6 +1333,11 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_properties.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_properties.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_properties.mli
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_separability.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_separability.cmt
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_separability.cmti
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_separability.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_separability.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_unboxed.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_unboxed.cmt
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/typedecl_unboxed.cmti
@@ -1443,6 +1453,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/dynlink_types.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/ephemeron.ml
 -rw-r--r--	root/root	usr/lib/ocaml/ephemeron.mli
+-rw-r--r--	root/root	usr/lib/ocaml/eventlog_metadata
 -rwxr-xr-x	root/root	usr/lib/ocaml/expunge
 -rwxr-xr-x	root/root	usr/lib/ocaml/extract_crc
 -rw-r--r--	root/root	usr/lib/ocaml/filename.ml
@@ -2094,6 +2105,7 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/Format.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Fun.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Gc.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/Gc.Memprof.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Genlex.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Hashtbl.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Hashtbl.HashedType.3o.gz
@@ -2141,6 +2153,7 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/Misc.Error_style.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Misc.Int_literal_converter.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Misc.LongString.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/Misc.Magic_number.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Misc.Stdlib.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Misc.Stdlib.Array.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Misc.Stdlib.List.3o.gz
@@ -2184,8 +2197,6 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/Parser.MenhirInterpreter.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Parsetree.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Parsing.3o.gz
--rw-r--r--	root/root	usr/share/man/man3/Pervasives.3o.gz
--rw-r--r--	root/root	usr/share/man/man3/Pervasives.LargeFile.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Pparse.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Pprintast.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Printast.3o.gz
