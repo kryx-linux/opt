@@ -3,9 +3,9 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=python3-setuptools
-version=49.6.0
+version=50.0.0
 release=1
-source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.zip)
+source=(https://github.com/pypa/${name#*-}/archive/v$version/${name#*-}-v$version.tar.gz)
 
 build() {
 	cd ${name#*-}-$version
