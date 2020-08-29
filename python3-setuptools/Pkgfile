@@ -4,9 +4,9 @@
 # Depends on: python3
 
 name=python3-setuptools
-version=50.0.0
+version=49.6.0
 release=1
-source=(https://github.com/pypa/${name#*-}/archive/v$version/${name#*-}-v$version.tar.gz)
+source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.zip)
 
 build() {
 	cd ${name#*-}-$version
