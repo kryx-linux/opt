@@ -1,11 +1,12 @@
 # Description: Easily download, build, install, upgrade, and uninstall Python packages.
 # URL: https://pypi.python.org/pypi/setuptools
 # Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: python3
 
 name=python3-setuptools
-version=50.0.0
-release=2
-source=(https://github.com/pypa/${name#*-}/archive/v$version/${name#*-}-v$version.tar.gz)
+version=49.6.0
+release=1
+source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.zip)
 
 build() {
 	cd ${name#*-}-$version
@@ -19,11 +20,4 @@ build() {
 		--prefix=/usr --root=$PKG --optimize=1
 
 	rm $PKG/usr/bin/easy_install
-
-	# wtf?
-	(
-	local pyver3="$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')"
-	cd $PKG/usr/lib/python$pyver3/site-packages
-	mv setuptools-$version*-py$pyver3.egg-info setuptools-$version-py$pyver3.egg-info
-	)
 }
