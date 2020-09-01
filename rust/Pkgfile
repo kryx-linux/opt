@@ -132,4 +132,7 @@ EOF
 			rm -v "$file"
 		fi
 	done < <(find "$PKG/usr/lib/rustlib"  -path '*/analysis/*.json' -print0)
+
+	install -d $PKG/etc/revdep.d
+	echo "/usr/lib/rustlib/i686-unknown-linux-gnu/lib" > $PKG/etc/revdep.d/rust
 }
