@@ -1,18 +1,18 @@
-# Description:	Ini file parser
-# URL:		http://ndevilla.free.fr/iniparser/
-# Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:	
+# Description: Ini file parser
+# URL:         https://github.com/ndevilla/iniparser
+# Maintainer:  Alan Mizrahi, alan at mizrahi dot com dot ve
 
 name=iniparser
-version=3.2
+version=4.1
 release=1
-source=(https://github.com/ndevilla/iniparser/archive/v$version.zip)
+source=(https://github.com/ndevilla/iniparser/archive/v$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 	make
-	install -D -m 644 src/dictionary.h $PKG/usr/include/dictionary.h
-	install -D -m 644 src/iniparser.h $PKG/usr/include/iniparser.h
-	install -D -m 644 libiniparser.a $PKG/usr/lib/libiniparser.a
-	install -D -m 755 libiniparser.so.0 $PKG/usr/lib/libiniparser.so
+	install -d $PKG/usr/{include,lib}
+	install -m 644 src/*.h $PKG/usr/include
+	install -m 644 libiniparser.a $PKG/usr/lib
+	install -m 755 libiniparser.so.1 $PKG/usr/lib
+	ln -s libiniparser.so.1 $PKG/usr/lib/libiniparser.so
 }
