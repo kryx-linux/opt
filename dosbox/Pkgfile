@@ -4,14 +4,13 @@
 # Depends on: libsdl glu
 
 name=dosbox
-version=0.74
+version=0.74-3
 release=1
 source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 	./configure --prefix=/usr
-	sed -i '23a#include <cstddef>' include/dos_inc.h
 	make
 	make DESTDIR=$PKG install
 }
