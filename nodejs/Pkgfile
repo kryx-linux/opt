@@ -1,11 +1,11 @@
 # Description: Evented I/O for V8 javascript.
 # URL: https://nodejs.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: python c-ares
+# Depends on: python3 c-ares
 # Optional: icu
 
 name=nodejs
-version=12.18.3
+version=14.9.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
 
