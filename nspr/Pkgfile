@@ -1,9 +1,9 @@
 # Description: Netscape Portable Runtime library
 # URL:         https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
-# Maintainer:  Fredrik Rinnestam, fredrik at rinnestam dot se
+# Maintainer:  UNMAINTAINED 
 
 name=nspr
-version=4.27
+version=4.28
 release=1
 source=(https://ftp.mozilla.org/pub/nspr/releases/v$version/src/$name-$version.tar.gz
         $name.pc.in)
