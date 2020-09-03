@@ -1,44 +1,36 @@
 # Description: Fast CPU emulator and virtualizer for the x86 platform
-# URL:         http://www.qemu-project.org/
+# URL:         https://www.qemu.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  glib libsdl xorg-libpixman libxkbcommon
-# Optional:    libseccomp libiscsi libusb usbredir spice
+# Depends on:  libusb linux-pam util-linux glib libsdl2 xorg-libpixman libxkbcommon
  
 name=qemu
-version=4.2.0
-release=2
-source=(http://wiki.qemu-project.org/download/qemu-$version.tar.bz2)
+version=5.1.0
+release=1
+source=(https://download.qemu.org/$name-$version.tar.xz
+	$name-man-$version.tar.xz)
 
 build() {
-  cd $name-$version
+	cd $name-$version
 
-  ./configure --prefix=/usr \
-      --cc="${CC:=gcc}" \
-      --host-cc="${CC:=gcc}" \
-      --sysconfdir=/etc \
-      --disable-docs \
-      --libexecdir=/usr/lib/qemu \
-      --disable-gtk \
-      --localstatedir=/var \
-      --python=/usr/bin/python3 \
-      --target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu
+	./configure \
+		--prefix=/usr \
+		--cc="${CC:=gcc}" \
+		--host-cc="${CC:=gcc}" \
+		--sysconfdir=/etc \
+		--disable-docs \
+		--libexecdir=/usr/lib/qemu \
+		--disable-gtk \
+		--localstatedir=/var \
+		--python=/usr/bin/python3 \
+		--target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu
 
-  # fix include issues with libcap
-  sed -i -e '/#include "qemu\/xattr.h"/d' \
-         -e 's|#include <sys/resource.h>|#include <sys/resource.h>\r\n#include "qemu\/xattr.h"|g' \
-  fsdev/virtfs-proxy-helper.c
+	make
+	make DESTDIR=$PKG install
 
-  make ${MAKEFLAGS:=}
-  make DESTDIR=$PKG install
+	cp -r $SRC/man $PKG/usr/share
 
-  make qemu.1 qemu-img.1 qemu-nbd.8
-  install -D -m 644 qemu.1 $PKG/usr/share/man/man1/qemu.1
-  install -D -m 644 qemu-img.1 $PKG/usr/share/man/man1/qemu-img.1
-  install -D -m 644 qemu-nbd.8 $PKG/usr/share/man/man8/qemu-nbd.8
+	install -d $PKG/etc/udev/rules.d/
+	echo 'KERNEL=="kvm", NAME="kvm", OWNER="root", GROUP="kvm", MODE="0660"' > \
+		$PKG/etc/udev/rules.d/60-kvm.rules
 
-  install -d $PKG/etc/udev/rules.d/
-  echo 'KERNEL=="kvm", NAME="kvm", OWNER="root", GROUP="kvm", MODE="0660"' > \
-  $PKG/etc/udev/rules.d/60-kvm.rules
-
-  rm -rf $PKG/usr/share/locale
 }
