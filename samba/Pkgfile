@@ -5,7 +5,7 @@
 
 name=samba
 version=4.12.6
-release=1
+release=2
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
 
@@ -18,7 +18,7 @@ build () {
                 --localstatedir=/var \
                 --sysconfdir=/etc \
                 --with-privatedir=/etc/samba/private \
-                --bundled-libraries=!tdb,!talloc,!tevent,!popt,!ldb \
+                --bundled-libraries=!tdb,!talloc,!tevent,!popt,!ldb,!cmocka \
                 --without-{ad-dc,ads,ldap} \
                 --without-json
 
