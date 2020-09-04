@@ -5,7 +5,7 @@
 
 name=cmocka
 version=1.1.5
-release=1
+release=2
 source=(https://cmocka.org/files/1.1/$name-$version.tar.xz)
 
 build() {
@@ -13,6 +13,7 @@ build() {
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
+		-DWITH_STATIC_LIB=On \
 		-DUNIT_TESTING=On
 
 	cmake --build build
