@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=f2fs-tools
-version=1.13.0
+version=1.14.0
 release=1
 source=(https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/$name-$version.tar.gz)
 
