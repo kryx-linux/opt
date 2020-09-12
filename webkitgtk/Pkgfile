@@ -5,7 +5,7 @@
 # Optional: enchant libnotify geoclue openjpeg2
 
 name=webkitgtk
-version=2.28.4
+version=2.30.0
 release=1
 source=(https://webkitgtk.org/releases/$name-$version.tar.xz)
 
@@ -27,6 +27,7 @@ build() {
 		-DPORT=GTK \
 		-DENABLE_MINIBROWSER=ON \
 		-DUSE_SYSTEM_MALLOC=ON \
+		-DUSE_SYSTEMD=OFF \
 		-Wno-dev
 
 	cmake --build build
