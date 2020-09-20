@@ -4,7 +4,7 @@
 # Depends On: meson ninja
 
 name=orc
-version=0.4.31
+version=0.4.32
 release=1
 source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
