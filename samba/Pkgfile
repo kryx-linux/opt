@@ -4,8 +4,8 @@
 # Depends on:  linux-pam libarchive libcap popt tdb tevent ldb python3 gnutls p5-parse-yapp rpcsvc-proto
 
 name=samba
-version=4.12.6
-release=2
+version=4.12.7
+release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
 
