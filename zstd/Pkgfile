@@ -1,7 +1,7 @@
 # Description:	Real-time compression with high compression ratios.
-# URL:		http://www.zstd.net/
+# URL:		https://facebook.github.io/zstd/
 # Maintainer:	Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on:	zlib xz 
+# Depends on:	zlib xz
 
 name=zstd
 version=1.4.5
