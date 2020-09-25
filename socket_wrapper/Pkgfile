@@ -4,18 +4,15 @@
 # Depends on:	cmake
 
 name=socket_wrapper
-version=1.1.7
+version=1.2.5
 release=1
 source=(https://ftp.samba.org/pub/cwrap/$name-$version.tar.gz)
 
 build() {
-
-	mkdir build; cd build
-
-	cmake ../$name-$version \
+	cmake -S $name-$version -B build\
 		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_INSTALL_PREFIX=/usr
-
-	make
-	make DESTDIR=$PKG install
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
 }

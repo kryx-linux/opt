@@ -7,8 +7,8 @@ drwxr-xr-x	root/root	usr/lib/cmake/nss_wrapper/
 -rw-r--r--	root/root	usr/lib/cmake/nss_wrapper/nss_wrapper-config-version.cmake
 -rw-r--r--	root/root	usr/lib/cmake/nss_wrapper/nss_wrapper-config.cmake
 lrwxrwxrwx	root/root	usr/lib/libnss_wrapper.so -> libnss_wrapper.so.0
-lrwxrwxrwx	root/root	usr/lib/libnss_wrapper.so.0 -> libnss_wrapper.so.0.2.3
--rwxr-xr-x	root/root	usr/lib/libnss_wrapper.so.0.2.3
+lrwxrwxrwx	root/root	usr/lib/libnss_wrapper.so.0 -> libnss_wrapper.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libnss_wrapper.so.0.3.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/nss_wrapper.pc
 drwxr-xr-x	root/root	usr/share/
