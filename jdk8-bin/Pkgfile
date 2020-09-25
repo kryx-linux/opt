@@ -3,7 +3,7 @@
 # Maintainer:  CRUX System Team, core-ports at crux dot nu
 # Depends on:  util-linux gtk alsa-lib
 
-name=jdk
+name=jdk8-bin
 version=8.265.01.1
 release=1
 source=(https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-linux-x64.tar.gz)
