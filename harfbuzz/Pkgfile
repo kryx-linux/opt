@@ -1,11 +1,11 @@
 # Description: An OpenType text shaping engine
 # URL:         https://github.com/harfbuzz/harfbuzz
 # Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on:  cairo meson ninja
+# Depends on:  cairo gobject-introspection meson ninja
 
 name=harfbuzz
 version=2.7.2
-release=2
+release=3
 source=(https://github.com/harfbuzz/harfbuzz/archive/$version/$name-$version.tar.gz)
 
 build() {
