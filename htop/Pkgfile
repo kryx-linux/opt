@@ -1,22 +1,17 @@
-# Description:  An interactive process viewer
-# URL:          http://hisham.hm/htop
-# Maintainer:   Thomas Penteker, tek at serverop dot de
-# Depends on:   ncurses
+# Description: An interactive process viewer
+# URL:         https://github.com/htop-dev/htop
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Depends on:  ncurses
 
 name=htop
-version=2.2.0
-release=3
-source=(https://hisham.hm/htop/releases/$version/htop-$version.tar.gz \
-    gcc10.patch)
+version=3.0.2
+release=1
+source=(https://github.com/htop-dev/htop/archive/$version/htop-$version.tar.gz)
 
 build() {
-    cd $name-$version
-    patch -p1 -i $SRC/gcc10.patch
-    sed -i -e 's/python/python3/g' scripts/MakeHeader.py
-    ./configure --prefix=/usr
-    make
-    make DESTDIR=$PKG install
-   
-    rm -rf $PKG/usr/{include,lib}
-    rm -rf $PKG/usr/share/{applications,pixmaps}
+	cd $name-$version
+	./autogen.sh
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
 }
