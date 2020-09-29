@@ -1,31 +1,17 @@
 # Description: Library for manipulating sound files.
 # URL: http://www.mega-nerd.com/libsndfile
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: alsa-lib flac libvorbis
-# Optional: sqlite3
+# Depends on: alsa-lib flac libvorbis opus python3
 
 name=libsndfile
-version=1.0.28
+version=1.0.30
 release=1
-source=(http://www.mega-nerd.com/$name/files/$name-$version.tar.gz
-	0001-FLAC-Fix-a-buffer-read-overrun.patch
-	0002-src-flac.c-Fix-a-buffer-read-overflow.patch
-	0010-src-aiff.c-Fix-a-buffer-read-overflow.patch
-	0020-src-common.c-Fix-heap-buffer-overflows-when-writing.patch)
+source=(https://github.com/erikd/libsndfile/releases/download/v$version/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 
-	patch -p1 -i $SRC/0001-FLAC-Fix-a-buffer-read-overrun.patch
-	patch -p1 -i $SRC/0002-src-flac.c-Fix-a-buffer-read-overflow.patch
-	patch -p1 -i $SRC/0010-src-aiff.c-Fix-a-buffer-read-overflow.patch
-	patch -p1 -i $SRC/0020-src-common.c-Fix-heap-buffer-overflows-when-writing.patch
-
-	./configure \
-		--prefix=/usr \
-		--disable-static \
-		--with-pic
-
+	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
 
