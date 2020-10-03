@@ -7136,6 +7136,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/Gem/Specification/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/rdoc_options-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/relative_loaded_from-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/remote-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/removed_method_calls-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/require_path%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/require_path-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/require_paths%3d-i.ri
@@ -7153,7 +7154,6 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/Gem/Specification/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/rg_loaded_from-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/ri_dir-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/ruby_code-i.ri
--rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/rubyforge_project-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/rubygems_version-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/runtime_dependencies-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Specification/same_attributes%3f-i.ri
@@ -7349,6 +7349,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/Gem/TestCase/StaticSet/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/TestCase/wait_for_child_process_to_exit-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/TestCase/win_platform%3f-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/TestCase/win_platform%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/TestCase/with_clean_path_to_ruby-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/TestCase/write_file-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/Gem/Text/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/Text/cdesc-Text.ri
@@ -7536,6 +7537,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/Gem/VersionOption/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/rubygems_version-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/searcher%3d-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/source_date_epoch-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/source_date_epoch_string-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/sources%3d-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/sources-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/Gem/spec_cache_dir-c.ri
@@ -7980,6 +7982,8 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/Context/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/newline_before_multiline_output%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/newline_before_multiline_output-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/omit_on_assignment%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/omit_on_assignment-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/pop_workspace-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/prompt_c-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Context/prompt_i-i.ri
@@ -8033,6 +8037,8 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/ExtendCommand/Fork/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ExtendCommand/Fork/cdesc-Fork.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/ExtendCommand/Help/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ExtendCommand/Help/cdesc-Help.ri
+drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/ExtendCommand/Info/
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ExtendCommand/Info/cdesc-Info.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/ExtendCommand/IrbCommand/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ExtendCommand/IrbCommand/cdesc-IrbCommand.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/ExtendCommand/Jobs/
@@ -8070,6 +8076,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/FileInputMethod/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/FileInputMethod/eof%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/FileInputMethod/file_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/FileInputMethod/gets-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/FileInputMethod/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/FileInputMethod/new-c.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/Frame/
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/Frame/FrameOverflow/
@@ -8097,9 +8104,11 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/InputMethod/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/InputMethod/cdesc-InputMethod.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/InputMethod/file_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/InputMethod/gets-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/InputMethod/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/InputMethod/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/InputMethod/prompt-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/InputMethod/readable_after_eof%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/InputMethod/winsize-i.ri
 drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/Inspector/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Inspector/cdesc-Inspector.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/Inspector/def_inspector-c.ri
@@ -8239,6 +8248,8 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/ReadlineInputMethod/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReadlineInputMethod/encoding-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReadlineInputMethod/eof%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReadlineInputMethod/gets-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReadlineInputMethod/initialize_readline-c.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReadlineInputMethod/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReadlineInputMethod/line-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReadlineInputMethod/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReadlineInputMethod/readable_after_eof%3f-i.ri
@@ -8250,6 +8261,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/encoding-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/eof%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/gets-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/line-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/ReidlineInputMethod/readable_after_eof%3f-i.ri
@@ -8263,6 +8275,7 @@ drwxr-xr-x	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/encoding-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/eof%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/gets-i.ri
+-rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/line-i.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/2.7/system/IRB/StdioInputMethod/readable_after_eof%3f-i.ri
