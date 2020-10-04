@@ -2,10 +2,10 @@
 # URL: https://nodejs.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: python3 c-ares
-# Optional: icu
+# Optional: icu libuv brotli ninja
 
 name=nodejs
-version=14.12.0
+version=14.13.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
 
@@ -13,6 +13,9 @@ build() {
 	cd node-v$version
 
 	[ -e '/usr/lib/pkgconfig/icu-i18n.pc' ] && PKGMK_NODEJS+=' --with-intl=system-icu'
+	[ -e '/usr/lib/pkgconfig/libuv.pc' ] && PKGMK_NODEJS+=' --shared-libuv'
+	[ -e '/usr/lib/pkgconfig/libbrotlicommon.pc' ] && PKGMK_NODEJS+=' --shared-brotli'
+	[ -e '/usr/bin/ninja' ] && PKGMK_NODEJS+=' --ninja'
 
 	./configure ${PKGMK_NODEJS} \
 		--prefix=/usr \
