@@ -4,7 +4,7 @@
 # Depends on: readline
 
 name=lua53
-version=5.3.5
+version=5.3.6
 release=1
 source=(https://www.lua.org/ftp/lua-$version.tar.gz
 	liblua.so.patch lua.pc)
