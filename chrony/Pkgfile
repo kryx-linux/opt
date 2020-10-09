@@ -1,10 +1,10 @@
 # Description: Network time protocol client/server
 # URL:         http://chrony.tuxfamily.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  readline libcap
+# Depends on:  libcap
 
 name=chrony
-version=3.5.1
+version=4.0
 release=1
 source=(http://download.tuxfamily.org/$name/$name-$version.tar.gz
         chronyd)
