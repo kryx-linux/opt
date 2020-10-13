@@ -1,28 +1,28 @@
 # Description: clang compiler
 # URL:         https://clang.llvm.org/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
 # Depends on:  compiler-rt llvm
 
 name=clang
-version=10.0.1
-release=2
+version=11.0.0
+release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-$version.src.tar.xz
         https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-tools-extra-$version.src.tar.xz)
 
 build() {
-  mv $name-tools-extra-$version.src $name-$version.src/tools/extra
+	mv $name-tools-extra-$version.src $name-$version.src/tools/extra
 
-  cmake -S $name-$version.src -B build -G Ninja \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DLLVM_INCLUDE_TESTS=0 \
-    -DLLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
-    -Wno-dev
-  ninja -C build
-  DESTDIR=$PKG ninja -C build install
+	cmake -S $name-$version.src -B build -G Ninja \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DLLVM_INCLUDE_TESTS=0 \
+		-DLLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
+		-Wno-dev
+	ninja -C build
+	DESTDIR=$PKG ninja -C build install
 
-  # -DCMAKE_INSTALL_LIBEXECDIR is hardcoded..
-  mv $PKG/usr/libexec/{c++-analyzer,ccc-analyzer} $PKG/usr/lib/clang
-  rmdir $PKG/usr/libexec
-  sed -i 's|libexec|lib/clang|' $PKG/usr/bin/scan-build
+	# -DCMAKE_INSTALL_LIBEXECDIR is hardcoded..
+	mv $PKG/usr/libexec/{c++-analyzer,ccc-analyzer} $PKG/usr/lib/clang
+	rmdir $PKG/usr/libexec
+	sed -i 's|libexec|lib/clang|' $PKG/usr/bin/scan-build
 }
