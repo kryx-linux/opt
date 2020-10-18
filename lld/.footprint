@@ -18,7 +18,6 @@ drwxr-xr-x	root/root	usr/include/lld/Common/
 -rw-r--r--	root/root	usr/include/lld/Common/Reproduce.h
 -rw-r--r--	root/root	usr/include/lld/Common/Strings.h
 -rw-r--r--	root/root	usr/include/lld/Common/TargetOptionsCommandFlags.h
--rw-r--r--	root/root	usr/include/lld/Common/Threads.h
 -rw-r--r--	root/root	usr/include/lld/Common/Timer.h
 -rw-r--r--	root/root	usr/include/lld/Common/Version.h
 drwxr-xr-x	root/root	usr/include/lld/Core/
@@ -46,12 +45,18 @@ drwxr-xr-x	root/root	usr/include/lld/ReaderWriter/
 -rw-r--r--	root/root	usr/include/lld/ReaderWriter/MachOLinkingContext.h
 -rw-r--r--	root/root	usr/include/lld/ReaderWriter/YamlContext.h
 drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/cmake/
+drwxr-xr-x	root/root	usr/lib/cmake/lld/
+-rw-r--r--	root/root	usr/lib/cmake/lld/LLDConfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/lld/LLDTargets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/lld/LLDTargets.cmake
 -rw-r--r--	root/root	usr/lib/liblldCOFF.a
 -rw-r--r--	root/root	usr/lib/liblldCommon.a
 -rw-r--r--	root/root	usr/lib/liblldCore.a
 -rw-r--r--	root/root	usr/lib/liblldDriver.a
 -rw-r--r--	root/root	usr/lib/liblldELF.a
 -rw-r--r--	root/root	usr/lib/liblldMachO.a
+-rw-r--r--	root/root	usr/lib/liblldMachO2.a
 -rw-r--r--	root/root	usr/lib/liblldMinGW.a
 -rw-r--r--	root/root	usr/lib/liblldReaderWriter.a
 -rw-r--r--	root/root	usr/lib/liblldWasm.a
