@@ -1,11 +1,11 @@
 # Description: A full-featured web proxy cache
 # URL:         http://www.squid-cache.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  db libcap libtool expat libxml2
+# Depends on:  db linux-pam libcap libnsl libtirpc libtool expat libxml2
 
 name=squid
 version=4.13
-release=1
+release=2
 source=(http://www.squid-cache.org/Versions/v4/$name-$version.tar.xz
         squid)
 

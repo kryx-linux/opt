@@ -3,9 +3,9 @@ README for squid 3.x
 REQUIREMENTS
 
 PRE-INSTALL
-1. Create user/group squid with a unused id < 99:
-   'groupadd -g 40 squid'
-   'useradd -g squid -u 40 -d /var/squid -s /bin/false squid'
+1. Create a system user/group squid:
+   'groupadd -r squid'
+   'useradd -g squid -r -d /var/squid -s /bin/false squid'
    'passwd -l squid'
 
 POST-INSTALL
