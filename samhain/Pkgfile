@@ -4,24 +4,26 @@
 
 name=samhain
 version=4.4.2
-release=1
+release=2
 source=(http://la-samhna.de/archive/${name}_signed-$version.tar.gz)
 
 build () {
-    tar xfz $name-$version.tar.gz
+	tar xfz $name-$version.tar.gz
 
-    cd $name-$version
-    ./configure --prefix=/usr \
-                --localstatedir=/var \
-                --sysconfdir=/etc \
-                --with-log-file=/var/log/samhain.log \
-                --enable-static \
-                --enable-login-watch \
-                --enable-suidcheck
-    make
-    make DESTDIR=$PKG install
+	cd $name-$version
+	./configure \
+		--prefix=/usr \
+		--localstatedir=/var \
+		--sysconfdir=/etc \
+		--with-log-file=/var/log/samhain.log \
+		--enable-static \
+		--enable-login-watch \
+		--enable-suidcheck \
+		--disable-asm
+	make
+	make DESTDIR=$PKG install
 
-    rm -r $PKG/var/run
-    touch $PKG/var/log/samhain.log
-    chmod 0640 $PKG/var/log/samhain.log
+	rm -r $PKG/var/run
+	touch $PKG/var/log/samhain.log
+	chmod 0640 $PKG/var/log/samhain.log
 }
