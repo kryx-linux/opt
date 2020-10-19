@@ -23,7 +23,8 @@ build(){
                --enable-so \
                --enable-modules=all \
                --enable-mods-shared=all \
-               --enable-mpms-shared=all
+               --enable-mpms-shared=all \
+               --disable-lua
    make 
    make -j1 DESTDIR=$PKG install
 
