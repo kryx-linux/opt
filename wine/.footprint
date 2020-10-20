@@ -33,7 +33,6 @@ drwxr-xr-x	root/root	usr/include/wine/
 -rw-r--r--	root/root	usr/include/wine/exception.h
 -rw-r--r--	root/root	usr/include/wine/itss.h
 -rw-r--r--	root/root	usr/include/wine/itss.idl
--rw-r--r--	root/root	usr/include/wine/library.h
 drwxr-xr-x	root/root	usr/include/wine/msvcrt/
 -rw-r--r--	root/root	usr/include/wine/msvcrt/assert.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/conio.h
@@ -249,6 +248,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3d11shader.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d12.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d12.idl
+-rw-r--r--	root/root	usr/include/wine/windows/d3d12sdklayers.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3d12sdklayers.idl
 -rw-r--r--	root/root	usr/include/wine/windows/d3d12shader.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d12shader.idl
 -rw-r--r--	root/root	usr/include/wine/windows/d3d8.h
@@ -706,6 +707,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/objectarray.idl
 -rw-r--r--	root/root	usr/include/wine/windows/objidl.h
 -rw-r--r--	root/root	usr/include/wine/windows/objidl.idl
+-rw-r--r--	root/root	usr/include/wine/windows/objidlbase.h
+-rw-r--r--	root/root	usr/include/wine/windows/objidlbase.idl
 -rw-r--r--	root/root	usr/include/wine/windows/objsafe.h
 -rw-r--r--	root/root	usr/include/wine/windows/objsafe.idl
 -rw-r--r--	root/root	usr/include/wine/windows/objsel.h
@@ -1323,6 +1326,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/avifil32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/avrt.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/bcrypt.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/bcrypt.so
 -rwxr-xr-x	root/root	usr/lib/wine/bluetoothapis.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/browseui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/bthprops.cpl.so
@@ -2325,6 +2329,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/webservices.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wer.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wevtapi.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/wevtsvc.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wevtutil.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/where.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/whoami.exe
@@ -2799,6 +2804,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/ntprint.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/objsel.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/odbc32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/odbc32.so
 -rwxr-xr-x	root/root	usr/lib/wine/odbcbcp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/odbccp32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/odbccu32.dll.so
@@ -2934,6 +2940,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/urlmon.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/usbd.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/user32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/user32.so
 -rwxr-xr-x	root/root	usr/lib/wine/userenv.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/usp10.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/utildll.dll.so
@@ -2960,6 +2967,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/webservices.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wer.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wevtapi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/wevtsvc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wevtutil.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/where.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/whoami.exe.so
@@ -3297,6 +3305,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/avifile.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/avrt.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/bcrypt.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/bcrypt.so
 -rwxr-xr-x	root/root	usr/lib32/wine/bluetoothapis.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/browseui.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/bthprops.cpl.so
@@ -4357,6 +4366,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/webservices.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wer.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wevtapi.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/wevtsvc.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wevtutil.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/where.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/whoami.exe
@@ -4857,6 +4867,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/ntprint.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/objsel.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/odbc32.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/odbc32.so
 -rwxr-xr-x	root/root	usr/lib32/wine/odbcbcp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/odbccp32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/odbccu32.dll.so
@@ -5012,6 +5023,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/usbd.sys.so
 -rwxr-xr-x	root/root	usr/lib32/wine/user.exe16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/user32.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/user32.so
 -rwxr-xr-x	root/root	usr/lib32/wine/userenv.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/usp10.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/utildll.dll.so
@@ -5047,6 +5059,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/webservices.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wer.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wevtapi.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/wevtsvc.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wevtutil.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/where.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/whoami.exe.so
@@ -5226,7 +5239,7 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.1-x86.msi
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.1-x86_64.msi
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-5.1.0-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-5.1.1-x86.msi
 drwxr-xr-x	root/root	usr/share/wine/nls/
 -rw-r--r--	root/root	usr/share/wine/nls/c_037.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_10000.nls
@@ -5273,6 +5286,7 @@ drwxr-xr-x	root/root	usr/share/wine/nls/
 -rw-r--r--	root/root	usr/share/wine/nls/c_28605.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_437.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_500.nls
+-rw-r--r--	root/root	usr/share/wine/nls/c_708.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_737.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_775.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_850.nls
