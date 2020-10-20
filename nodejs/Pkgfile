@@ -1,11 +1,11 @@
 # Description: Evented I/O for V8 javascript.
 # URL: https://nodejs.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: python3 c-ares
-# Optional: icu libuv brotli ninja
+# Depends on: python3 c-ares libuv
+# Optional: icu brotli ninja
 
 name=nodejs
-version=14.13.1
+version=14.14.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
 
@@ -13,7 +13,6 @@ build() {
 	cd node-v$version
 
 	[ -e '/usr/lib/pkgconfig/icu-i18n.pc' ] && PKGMK_NODEJS+=' --with-intl=system-icu'
-	[ -e '/usr/lib/pkgconfig/libuv.pc' ] && PKGMK_NODEJS+=' --shared-libuv'
 	[ -e '/usr/lib/pkgconfig/libbrotlicommon.pc' ] && PKGMK_NODEJS+=' --shared-brotli'
 	[ -e '/usr/bin/ninja' ] && PKGMK_NODEJS+=' --ninja'
 
@@ -21,6 +20,7 @@ build() {
 		--prefix=/usr \
 		--without-npm \
 		--shared-cares \
+		--shared-libuv \
 		--shared-zlib \
 		--shared-openssl
 
