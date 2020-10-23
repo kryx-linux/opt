@@ -2,14 +2,15 @@
 # URL: https://www.khronos.org/vulkan/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: glslang vulkan-loader
+# Optional: wayland
 
 name=vulkan-tools
-version=1.2.147
+version=1.2.154.0
 release=1
-source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/v$version/Vulkan-Tools-v$version.tar.gz)
+source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/sdk-$version/Vulkan-Tools-sdk-$version.tar.gz)
 
 build() {
-	cmake -SVulkan-Tools-$version -Bbuild -GNinja \
+	cmake -SVulkan-Tools-sdk-$version -Bbuild -GNinja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DGLSLANG_INSTALL_DIR=/usr \
@@ -19,7 +20,8 @@ build() {
 		-DBUILD_WSI_XCB_SUPPORT=True \
 		-DBUILD_WSI_XLIB_SUPPORT=True \
 		-DBUILD_WSI_WAYLAND_SUPPORT="$(prt-get isinst wayland &> /dev/null && echo ON || echo OFF)" \
-		-DBUILD_ICD=OFF
+		-DBUILD_ICD=OFF \
+		-Wno-dev
 
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
