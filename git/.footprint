@@ -138,7 +138,6 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-ftps
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-http
 -rwxr-xr-x	root/root	usr/lib/git-core/git-remote-https
--rwxr-xr-x	root/root	usr/lib/git-core/git-remote-testsvn
 -rwxr-xr-x	root/root	usr/lib/git-core/git-repack
 -rwxr-xr-x	root/root	usr/lib/git-core/git-replace
 -rwxr-xr-x	root/root	usr/lib/git-core/git-request-pull
@@ -189,7 +188,6 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 drwxr-xr-x	root/root	usr/lib/git-core/mergetools/
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/araxis
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/bc
--rw-r--r--	root/root	usr/lib/git-core/mergetools/bc3
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/codecompare
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/deltawalker
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/diffmerge
@@ -199,19 +197,16 @@ drwxr-xr-x	root/root	usr/lib/git-core/mergetools/
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/examdiff
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/guiffy
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/gvimdiff
--rw-r--r--	root/root	usr/lib/git-core/mergetools/gvimdiff2
--rw-r--r--	root/root	usr/lib/git-core/mergetools/gvimdiff3
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/kdiff3
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/kompare
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/meld
+-rw-r--r--	root/root	usr/lib/git-core/mergetools/nvimdiff
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/opendiff
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/p4merge
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/smerge
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/tkdiff
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/tortoisemerge
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/vimdiff
--rw-r--r--	root/root	usr/lib/git-core/mergetools/vimdiff2
--rw-r--r--	root/root	usr/lib/git-core/mergetools/vimdiff3
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/winmerge
 -rw-r--r--	root/root	usr/lib/git-core/mergetools/xxdiff
 drwxr-xr-x	root/root	usr/lib/perl5/
@@ -406,6 +401,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/git-ls-tree.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-mailinfo.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-mailsplit.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/git-maintenance.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-merge-base.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-merge-file.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/git-merge-index.1.gz

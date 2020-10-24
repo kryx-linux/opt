@@ -243,6 +243,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/devices/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/drive-removable-media.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/input-dialpad-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/input-gaming-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/input-keyboard-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/input-mouse-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/input-tablet-symbolic.symbolic.png
@@ -255,6 +256,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/devices/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/media-optical-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/media-optical.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/media-removable-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/media-tape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/media-zip-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/devices/modem-symbolic.symbolic.png
@@ -529,7 +531,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/media-playlist-repeat.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/media-playlist-shuffle.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/media-record.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/media-seek-backward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/media-seek-forward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/media-skip-backward.png
@@ -626,17 +627,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/view-restore.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/view-sort-ascending.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/view-sort-descending.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-clear-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-clear.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-few-clouds-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-few-clouds.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-fog.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-overcast.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-severe-alert.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-showers-scattered.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-showers.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-snow.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/weather-storm.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/web-browser.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/window-close.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/legacy/window-new.png
@@ -655,6 +645,8 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-x-executable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-x-firmware-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-x-firmware.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-x-generic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/application-x-sharedlib.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/audio-x-generic-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/audio-x-generic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/mimetypes/font-x-generic-symbolic.symbolic.png
@@ -940,7 +932,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/22x22/devices/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/devices/computer.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/devices/drive-harddisk.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/devices/drive-removable-media.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/devices/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/devices/media-optical.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/devices/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/devices/printer-network.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/devices/printer.png
 drwxr-xr-x	root/root	usr/share/icons/Adwaita/22x22/emblems/
@@ -1145,7 +1139,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/22x22/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/media-playlist-repeat.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/media-playlist-shuffle.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/media-record.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/media-seek-backward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/media-seek-forward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/media-skip-backward.png
@@ -1242,17 +1235,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/22x22/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/view-restore.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/view-sort-ascending.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/view-sort-descending.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-clear-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-clear.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-few-clouds-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-few-clouds.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-fog.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-overcast.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-severe-alert.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-showers-scattered.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-showers.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-snow.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/weather-storm.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/web-browser.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/window-close.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/legacy/window-new.png
@@ -1265,6 +1247,8 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/22x22/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/mimetypes/application-x-addon.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/mimetypes/application-x-executable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/mimetypes/application-x-firmware.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/mimetypes/application-x-generic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/mimetypes/application-x-sharedlib.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/mimetypes/audio-x-generic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/mimetypes/font-x-generic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/22x22/mimetypes/image-x-generic.png
@@ -1565,6 +1549,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/devices/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/devices/media-optical-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/devices/media-optical.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/devices/media-removable-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/devices/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/devices/media-tape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/devices/media-zip-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/devices/modem-symbolic.symbolic.png
@@ -1828,7 +1813,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/media-playlist-repeat.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/media-playlist-shuffle.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/media-record.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/media-seek-backward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/media-seek-forward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/media-skip-backward.png
@@ -1922,17 +1906,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/view-restore.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/view-sort-ascending.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/view-sort-descending.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-clear-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-clear.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-few-clouds-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-few-clouds.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-fog.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-overcast.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-severe-alert.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-showers-scattered.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-showers.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-snow.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/weather-storm.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/web-browser.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/window-close.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/legacy/window-new.png
@@ -1951,6 +1924,8 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-x-executable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-x-firmware-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-x-firmware.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-x-generic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/application-x-sharedlib.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/audio-x-generic-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/audio-x-generic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/mimetypes/font-x-generic-symbolic.symbolic.png
@@ -2314,7 +2289,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/256x256/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/256x256/legacy/mail-read.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/256x256/legacy/media-flash.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/256x256/legacy/media-floppy.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/256x256/legacy/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/256x256/legacy/multimedia-volume-control.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/256x256/legacy/network-cellular-connected.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/256x256/legacy/network-error.png
@@ -2628,6 +2602,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/devices/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/drive-removable-media.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/input-dialpad-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/input-gaming-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/input-keyboard-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/input-mouse-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/input-tablet-symbolic.symbolic.png
@@ -2640,6 +2615,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/devices/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/media-optical-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/media-optical.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/media-removable-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/media-tape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/media-zip-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/devices/modem-symbolic.symbolic.png
@@ -2912,7 +2888,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/media-playlist-repeat.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/media-playlist-shuffle.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/media-record.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/media-seek-backward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/media-seek-forward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/media-skip-backward.png
@@ -3007,17 +2982,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/view-restore.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/view-sort-ascending.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/view-sort-descending.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-clear-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-clear.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-few-clouds-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-few-clouds.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-fog.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-overcast.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-severe-alert.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-showers-scattered.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-showers.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-snow.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/weather-storm.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/web-browser.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/window-close.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/legacy/window-new.png
@@ -3036,6 +3000,8 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-x-executable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-x-firmware-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-x-firmware.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-x-generic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/application-x-sharedlib.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/audio-x-generic-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/audio-x-generic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/mimetypes/font-x-generic-symbolic.symbolic.png
@@ -3555,6 +3521,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/devices/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/drive-removable-media.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/input-dialpad-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/input-gaming-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/input-keyboard-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/input-mouse-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/input-tablet-symbolic.symbolic.png
@@ -3567,6 +3534,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/devices/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/media-optical-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/media-optical.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/media-removable-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/media-tape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/media-zip-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/devices/modem-symbolic.symbolic.png
@@ -3840,7 +3808,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/media-playlist-repeat.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/media-playlist-shuffle.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/media-record.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/media-seek-backward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/media-seek-forward.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/media-skip-backward.png
@@ -3935,17 +3902,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/legacy/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/view-restore.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/view-sort-ascending.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/view-sort-descending.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-clear-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-clear.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-few-clouds-night.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-few-clouds.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-fog.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-overcast.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-severe-alert.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-showers-scattered.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-showers.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-snow.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/weather-storm.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/web-browser.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/window-close.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/legacy/window-new.png
@@ -3964,6 +3920,8 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-x-executable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-x-firmware-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-x-firmware.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-x-generic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/application-x-sharedlib.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/audio-x-generic-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/audio-x-generic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/mimetypes/font-x-generic-symbolic.symbolic.png
@@ -4250,7 +4208,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/512x512/devices/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/devices/computer.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/devices/drive-harddisk.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/devices/drive-removable-media.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/devices/input-gaming.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/devices/media-optical.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/devices/media-removable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/devices/printer-network.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/devices/printer.png
 drwxr-xr-x	root/root	usr/share/icons/Adwaita/512x512/emblems/
@@ -4288,6 +4248,8 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/512x512/mimetypes/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/mimetypes/application-x-addon.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/mimetypes/application-x-executable.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/mimetypes/application-x-firmware.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/mimetypes/application-x-generic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/mimetypes/application-x-sharedlib.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/mimetypes/audio-x-generic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/mimetypes/font-x-generic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/512x512/mimetypes/image-x-generic.png
