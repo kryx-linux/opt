@@ -4,11 +4,16 @@
 # Depends on: cmake ninja
 
 name=spirv-headers
-version=1.5.3
+version=1.5.3-060627f
 release=1
-source=(https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz)
+source=(
+	#https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz
+	https://github.com/KhronosGroup/SPIRV-Headers/archive/060627f0b0d2fa8581b5acb939f46e3b9e500593.zip
+)
 
 build() {
+	mv SPIRV-Headers-060627f0b0d2fa8581b5acb939f46e3b9e500593 SPIRV-Headers-$version
+
 	cmake -SSPIRV-Headers-$version -Bbuild -GNinja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
