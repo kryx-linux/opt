@@ -1,5 +1,5 @@
 # Description: Very powerfull shell
-# URL:         http://www.zsh.org/
+# URL:         https://www.zsh.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Depends on:  libpcre
 
@@ -28,7 +28,7 @@ build() {
     # fix paths for kbd and usbutils
     sed -i 's|/usr/share/keymaps|/usr/share/kbd/keymaps|g' Completion/Unix/Command/_loadkeys
     sed -i 's|/usr/share/misc/usb.ids|/usr/share/usb.ids|g' Completion/Linux/Command/_lsusb
- 
+
     make
     make DESTDIR=$PKG install
 
