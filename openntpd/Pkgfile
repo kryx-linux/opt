@@ -4,7 +4,7 @@
 
 name=openntpd
 version=6.2p3
-release=1
+release=2
 source=(
 http://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz
 ntpd
@@ -23,9 +23,10 @@ build() {
 		--localstatedir=/var \
 		--with-privsep-user=ntp \
 		--disable-https-constraint
-	make
+
+	make CFLAGS+=" -fcommon"
 	make DESTDIR=$PKG install
-	
+
 	rmdir $PKG/var/db $PKG/var/run
 	install -D -m 0755 $SRC/ntpd $PKG/etc/rc.d/ntpd
 
