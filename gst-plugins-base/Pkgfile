@@ -6,13 +6,16 @@
 
 name=gst-plugins-base
 version=1.18.1
-release=1
-source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
+release=2
+source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz
+	https://gitlab.freedesktop.org/gstreamer/meson-ports/gl-headers/-/archive/5c8c7c0d3ca1f0b783272dac0b95e09414e49bc8/gl-headers-5c8c7c0d3ca1f0b783272dac0b95e09414e49bc8.tar.bz2
+	https://github.com/ebassi/graphene/releases/download/1.10.2/graphene-1.10.2.tar.xz)
 
 build() {
-	cd $name-$version
+	mv gl-headers-* $name-$version/subprojects/gl-headers
+	mv graphene-* $name-$version/subprojects/graphene
 
-	meson build \
+	meson setup $name-$version build \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
 		-D buildtype=release \
@@ -21,6 +24,6 @@ build() {
 		-D package-name="GStreamer (CRUX Linux)" \
 		-D package-origin="https://crux.nu/"
 
-	ninja -C build -j ${JOBS:-1}
-	DESTDIR=$PKG ninja -C build install
+	meson compile -C build -j ${JOBS:-1}
+	DESTDIR=$PKG meson install -C build
 }

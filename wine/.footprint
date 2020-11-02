@@ -1445,6 +1445,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dmusic32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dnsapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dplay.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dplaysvr.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/dplayx.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpnaddr.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpnet.dll.so
@@ -1452,6 +1453,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dpnlobby.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpnsvr.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpvoice.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dpvsetup.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpwsockx.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/drmclien.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dsdmo.dll.so
@@ -1898,6 +1900,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dmusic32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dnsapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dplay.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/dplaysvr.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dplayx.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnaddr.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnet.dll
@@ -1905,6 +1908,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnlobby.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpnsvr.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpvoice.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/dpvsetup.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dpwsockx.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/drmclien.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dsdmo.dll
@@ -2974,6 +2978,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/wiaservc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wimgapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/windowscodecs.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/windowscodecs.so
 -rwxr-xr-x	root/root	usr/lib/wine/windowscodecsext.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winealsa.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/wineboot.exe.so
@@ -3432,6 +3437,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/dmusic32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dnsapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dplay.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/dplaysvr.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dplayx.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnaddr.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnet.dll.so
@@ -3439,6 +3445,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnlobby.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpnsvr.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpvoice.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/dpvsetup.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dpwsockx.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/drmclien.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dsdmo.dll.so
@@ -3894,6 +3901,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dmusic32.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dnsapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dplay.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/dplaysvr.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dplayx.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnaddr.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnet.dll
@@ -3901,6 +3909,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnlobby.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpnsvr.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpvoice.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpvsetup.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dpwsockx.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/drmclien.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dsdmo.dll
@@ -5070,6 +5079,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/winaspi.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/windebug.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/windowscodecs.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/windowscodecs.so
 -rwxr-xr-x	root/root	usr/lib32/wine/windowscodecsext.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/winealsa.drv.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wineboot.exe.so

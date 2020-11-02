@@ -4,7 +4,7 @@
 # Depends on:  qt5 poppler 
 
 name=poppler-qt5
-version=20.10.0
+version=20.11.0
 release=1
 source=(https://poppler.freedesktop.org/poppler-$version.tar.xz)
 
@@ -21,7 +21,8 @@ build() {
         -DENABLE_ZLIB=ON \
         -DENABLE_CMS=lcms2 \
         -DENABLE_LIBOPENJPEG=none \
-        -DWITH_NSS3=OFF
+        -DWITH_NSS3=OFF \
+        -DRUN_GPERF_IF_PRESENT=OFF
 
     cmake --build build
     DESTDIR=$PKG cmake --install build
