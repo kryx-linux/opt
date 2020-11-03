@@ -265,6 +265,7 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/samba/dcerpc/
 -rwxr-xr-x	root/root	usr/lib/python3.9/site-packages/samba/dcerpc/wkssvc.cpython-39-x86_64-linux-gnu.so
 -rwxr-xr-x	root/root	usr/lib/python3.9/site-packages/samba/dcerpc/xattr.cpython-39-x86_64-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/descriptor.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/dnsresolver.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/dnsserver.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/domain_update.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/drs_utils.py

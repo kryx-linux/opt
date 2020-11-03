@@ -1,25 +1,20 @@
 # Description: An essential exemplary set of plugins for gstreamer.
 # URL: https://gstreamer.freedesktop.org/modules/gst-plugins-base.html
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: alsa-lib gstreamer libgudev libjpeg-turbo libtheora libvisual mesa opus orc pango
+# Depends on: alsa-lib graphene gstreamer libgudev libjpeg-turbo libtheora libvisual mesa3d opus orc pango
 # Optional: cdparanoia
 
 name=gst-plugins-base
 version=1.18.1
-release=2
-source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz
-	https://gitlab.freedesktop.org/gstreamer/meson-ports/gl-headers/-/archive/5c8c7c0d3ca1f0b783272dac0b95e09414e49bc8/gl-headers-5c8c7c0d3ca1f0b783272dac0b95e09414e49bc8.tar.bz2
-	https://github.com/ebassi/graphene/releases/download/1.10.2/graphene-1.10.2.tar.xz)
+release=3
+source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
 build() {
-	mv gl-headers-* $name-$version/subprojects/gl-headers
-	mv graphene-* $name-$version/subprojects/graphene
-
-	meson setup $name-$version build \
+	meson setup build $name-$version \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
-		-D buildtype=release \
-		-D gtk_doc=disabled \
+		--wrap-mode=nodownload \
+		-D buildtype=plain \
 		-D nls=disabled \
 		-D package-name="GStreamer (CRUX Linux)" \
 		-D package-origin="https://crux.nu/"
