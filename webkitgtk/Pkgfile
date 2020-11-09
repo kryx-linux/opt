@@ -1,8 +1,8 @@
 # Description: Small, efficient and fast rendering engine for Web Browsers.
 # URL: https://www.webkitgtk.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: bubblewrap gst-plugins-base gtk gtk3 harfbuzz-icu hyphen libseccomp libsecret libsoup libwebp libxslt ruby woff2 xdg-dbus-proxy xorg-libxt
-# Optional: enchant libnotify geoclue openjpeg2
+# Depends on: gst-plugins-base gtk gtk3 harfbuzz-icu hyphen libseccomp libsecret libsoup libwebp libxslt ruby woff2 xorg-libxt
+# Optional: enchant libnotify geoclue openjpeg2 xdg-dbus-proxy bubblewrap
 
 name=webkitgtk
 version=2.30.2
@@ -17,17 +17,21 @@ build() {
 	prt-get isinst enchant || PKGMK_WEBKITGTK+=' -DENABLE_SPELLCHECK=OFF'
 	prt-get isinst libnotify && PKGMK_WEBKITGTK+=' -DUSE_LIBNOTIFY=ON' || PKGMK_WEBKITGTK+=' -DUSE_LIBNOTIFY=OFF'
 	prt-get isinst geoclue && PKGMK_WEBKITGTK+=' -DENABLE_GEOLOCATION=ON' || PKGMK_WEBKITGTK+=' -DENABLE_GEOLOCATION=OFF'
+	prt-get isinst bubblewrap && prt-get isinst xdg-dbus-proxy && PKGMK_WEBKITGTK+=' -DENABLE_BUBBLEWRAP_SANDBOX=ON' \
+	|| PKGMK_WEBKITGTK+=' -DENABLE_BUBBLEWRAP_SANDBOX=OFF'
 
-	cmake -S$name-$version -Bbuild -GNinja ${PKGMK_WEBKITGTK} \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_INSTALL_PREFIX:PATH=/usr \
-		-DCMAKE_INSTALL_LIBDIR:PATH=/usr/lib \
-		-DCMAKE_INSTALL_LIBEXECDIR:PATH=/usr/lib \
-		-DCMAKE_SKIP_RPATH:BOOL=ON \
-		-DPORT=GTK \
-		-DENABLE_MINIBROWSER=ON \
-		-DUSE_SYSTEM_MALLOC=ON \
-		-DUSE_SYSTEMD=OFF \
+	cmake -S $name-$version -B build -G Ninja ${PKGMK_WEBKITGTK} \
+		-D CMAKE_INSTALL_PREFIX:PATH=/usr \
+		-D CMAKE_INSTALL_LIBDIR:PATH=/usr/lib \
+		-D CMAKE_INSTALL_LIBEXECDIR:PATH=/usr/lib \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS -DNDEBUG" \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS -DNDEBUG" \
+		-D CMAKE_SKIP_RPATH:BOOL=ON \
+		-D PORT=GTK \
+		-D ENABLE_MINIBROWSER=ON \
+		-D USE_SYSTEM_MALLOC=ON \
+		-D USE_SYSTEMD=OFF \
 		-Wno-dev
 
 	cmake --build build

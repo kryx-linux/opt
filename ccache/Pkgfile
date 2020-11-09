@@ -12,13 +12,17 @@ source=(https://github.com/$name/$name/releases/download/v$version/$name-$versio
 	ccache-man.patch)
 
 build() {
+	[[ -e '/usr/bin/ninja' ]] && PKGMK_CCACHE+=' -G Ninja'
+
 	# https://github.com/ccache/ccache/issues/684
 	patch -d $name-$version -p1 -i $SRC/ccache-man.patch
 
-	cmake -S$name-$version -Bbuild \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DZSTD_FROM_INTERNET="$(prt-get isinst zstd &> /dev/null && echo OFF || echo ON)"
+	cmake -S $name-$version -B build $PKGMK_CCACHE \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS -DNDEBUG" \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS -DNDEBUG" \
+		-D ZSTD_FROM_INTERNET="$(prt-get isinst zstd &> /dev/null && echo OFF || echo ON)"
 
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
