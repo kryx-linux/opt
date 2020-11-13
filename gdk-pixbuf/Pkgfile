@@ -4,7 +4,7 @@
 # Depends on: gobject-introspection shared-mime-info libpng libtiff xorg-libx11 meson ninja
 
 name=gdk-pixbuf
-version=2.40.0
+version=2.42.0
 release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
         gdk-pixbuf.loaders gdk-pixbuf-register.sh)
@@ -16,7 +16,7 @@ build () {
 		-Dinstalled_tests=false \
 		-Dman=false
 
-        DESTDIR=$PKG ninja -C build -j ${JOBS:-1} install
+        DESTDIR=$PKG ninja -C build install
 
 	install -m 644 $SRC/gdk-pixbuf.loaders \
 		$PKG/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
