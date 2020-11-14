@@ -1,7 +1,7 @@
 # Description: XAudio2 reimplementation
 # URL: https://github.com/FNA-XNA/FAudio/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cmake ninja ffmpeg libsdl2
+# Depends on: libsdl2 gst-libav
 
 name=faudio
 version=20.11
