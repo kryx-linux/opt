@@ -1,7 +1,7 @@
 # Description: An image loading library for GTK+
-# URL: https://www.gtk.org/
+# URL: https://wiki.gnome.org/Projects/GdkPixbuf
 # Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: gobject-introspection shared-mime-info libpng libtiff xorg-libx11 meson ninja
+# Depends on: gobject-introspection libpng libtiff shared-mime-info
 
 name=gdk-pixbuf
 version=2.42.0
@@ -10,9 +10,8 @@ source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.ta
         gdk-pixbuf.loaders gdk-pixbuf-register.sh)
 
 build () {
-	cd $name-$version
-
-        meson build --prefix=/usr \
+        meson setup build $name-$version --prefix=/usr \
+		--buildtype=plain \
 		-Dinstalled_tests=false \
 		-Dman=false
 
