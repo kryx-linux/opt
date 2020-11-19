@@ -6,7 +6,7 @@
 name=librsvg-compat
 version=2.40.20
 release=1
-source=(ftp://ftp.gnome.org/pub/gnome/sources/librsvg/${version%.*}/librsvg-$version.tar.xz)
+source=(https://download.gnome.org/sources/librsvg/${version%.*}/librsvg-$version.tar.xz)
 
 build() {
   cd librsvg-$version
