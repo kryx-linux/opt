@@ -9,12 +9,12 @@ release=1
 source=(https://libzip.org/download/$name-$version.tar.xz)
 
 build() {
-	cmake -S$name-$version -Bbuild \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=/usr/lib \
-		-DENABLE_GNUTLS=OFF
-
+	cmake -S $name-$version -B build \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS -DNDEBUG" \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=/usr/lib \
+		-D ENABLE_GNUTLS=OFF
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 }
