@@ -10,19 +10,26 @@ source=(https://ftp.gwdg.de/pub/misc/mysql/Downloads/MySQL-5.7/$name-boost-$vers
         my.cnf mysqld)
 
 build () {
+
+    export CXXFLAGS+=" -Wno-deprecated-declarations -DNDEBUG"
+
     cmake -S $name-$version -B build \
-        -DBUILD_CONFIG=mysql_release \
-        -DINSTALL_LAYOUT=RPM \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DSYSCONFDIR=/etc \
-        -DINSTALL_LIBDIR=lib \
-        -DINSTALL_PLUGINDIR=lib/mysql/plugin \
-        -DINSTALL_MANDIR=share/man \
-        -DINSTALL_SECURE_PRIVDIR=/var/lib/mysql-files \
-        -DWITH_BOOST=$name-$version/boost \
-        -DWITH_LIBWRAP=0 \
-        -DWITH_SSL=system \
-        -DWITH_ZLIB=system
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -DNDEBUG" \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D BUILD_CONFIG=mysql_release \
+        -D INSTALL_LAYOUT=RPM \
+        -D SYSCONFDIR=/etc \
+        -D INSTALL_LIBDIR=lib \
+        -D INSTALL_PLUGINDIR=lib/mysql/plugin \
+        -D INSTALL_MANDIR=share/man \
+        -D INSTALL_SECURE_PRIVDIR=/var/lib/mysql-files \
+        -D WITH_BOOST=$name-$version/boost \
+        -D WITH_LIBWRAP=0 \
+        -D WITH_SSL=system \
+        -D WITH_ZLIB=system \
+        -Wno-dev
 
     cmake --build build
     DESTDIR=$PKG cmake --install build
