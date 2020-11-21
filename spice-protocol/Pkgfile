@@ -9,7 +9,8 @@ release=1
 source=(https://spice-space.org/download/releases/$name-$version.tar.xz)
 
 build() {
-  meson build $name-$version --prefix /usr
-  ninja -C build -j ${JOBS:-1}
-  DESTDIR=$PKG meson install -C build
+	meson setup build $name-$version \
+		--prefix=/usr \
+		--buildtype=plain
+	DESTDIR=$PKG meson install -C build
 }
