@@ -13,13 +13,15 @@ build() {
 	mv $name-tools-extra-$version.src $name-$version.src/tools/extra
 
 	cmake -S $name-$version.src -B build -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DLLVM_INCLUDE_TESTS=0 \
-		-DLLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS -DNDEBUG" \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS -DNDEBUG" \
+		-D LLVM_INCLUDE_TESTS=0 \
+		-D LLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
 		-Wno-dev
-	ninja -C build
-	DESTDIR=$PKG ninja -C build install
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
 
 	# -DCMAKE_INSTALL_LIBEXECDIR is hardcoded..
 	mv $PKG/usr/libexec/{c++-analyzer,ccc-analyzer} $PKG/usr/lib/clang
