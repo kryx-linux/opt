@@ -10,7 +10,7 @@ source=(https://github.com/Exiv2/exiv2/archive/v$version/$name-$version.tar.gz)
 
 build() {
 
-	export CXXFLAGS+=" -Wno-deprecated-declarations -DNDEBUG"
+	export CXXFLAGS+=" -Wno-deprecated-declarations"
 
 	cmake -S $name-$version -B build \
 		-D CMAKE_BUILD_TYPE=Release \
