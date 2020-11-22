@@ -11,7 +11,7 @@ source=(https://github.com/$name/$name/archive/v$version/$name-v$version.tar.gz)
 build() {
     cmake -S $name-$version -B build \
         -D CMAKE_BUILD_TYPE=Release \
-        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -DNDEBUG" \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
         -D CMAKE_INSTALL_PREFIX=/usr \
         -D CMAKE_INSTALL_LIBDIR=lib \
 
