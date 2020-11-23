@@ -4,9 +4,9 @@
 # Depends on: openssl
 
 name=u-boot-tools
-version=2020.07
+version=2020.10
 release=1
-source=(ftp://ftp.denx.de/pub/u-boot/u-boot-$version.tar.bz2)
+source=(https://ftp.denx.de/pub/u-boot/u-boot-$version.tar.bz2)
 
 build() {
   cd u-boot-$version
