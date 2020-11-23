@@ -5,10 +5,10 @@
 # Optional: sccache
 
 name=rust
-version=1.47.0
-_date=2020-08-27
-_rustc=1.46.0
-_cargo=0.47.0
+version=1.48.0
+_date=2020-10-08
+_rustc=1.47.0
+_cargo=0.48.0
 _llvm=10.0.1
 release=1
 source=(
