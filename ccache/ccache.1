@@ -2,12 +2,12 @@
 .\"     Title: ccache
 .\"    Author: [see the "Author" section]
 .\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
-.\"      Date: 10/28/2020
+.\"      Date: 11/24/2020
 .\"    Manual: ccache Manual
-.\"    Source: ccache 4.0
+.\"    Source: ccache 4.1
 .\"  Language: English
 .\"
-.TH "CCACHE" "1" "10/28/2020" "ccache 4\&.0" "ccache Manual"
+.TH "CCACHE" "1" "11/24/2020" "ccache 4\&.1" "ccache Manual"
 .\" -----------------------------------------------------------------
 .\" * Define some portability stuff
 .\" -----------------------------------------------------------------
@@ -133,24 +133,35 @@ Clean up the cache by removing old cached files until the specified file number 
 Clear the entire cache, removing all cached files, but keeping the configuration file\&.
 
 .RE
-.sp
-\fB\fB\-d\fR\fR, \fB\fB\-\-directory\fR\fR \fIPATH\fR
-
-.sp
-.if n \{\
+.PP
+\fB\fB\-\-config\-path\fR\fR \fIPATH\fR
 .RS 4
-.\}
-.nf
-Let the subsequent command line options operate on cache directory PATH
-instead of the default for\&. For example, to show statistics for a cache
-directory at `/shared/ccache` you can run `ccache \-d /shared/ccache \-s`\&.
-.fi
-.if n \{\
+
+
+
+Let the subsequent command line options operate on configuration file
+\fIPATH\fR
+instead of the default\&. Using this option has the same effect as setting the environment variable
+\fBCCACHE_CONFIGPATH\fR
+temporarily\&.
+
 .RE
-.\}
-.sp
+.PP
+\fB\fB\-d\fR\fR, \fB\fB\-\-directory\fR\fR \fIPATH\fR
+.RS 4
 
 
+
+Let the subsequent command line options operate on cache directory
+\fIPATH\fR
+instead of the default\&. For example, to show statistics for a cache directory at
+\fB/shared/ccache\fR
+you can run
+\fBccache \-d /shared/ccache \-s\fR\&. Using this option has the same effect as setting the environment variable
+\fBCCACHE_DIR\fR
+temporarily\&.
+
+.RE
 .PP
 \fB\fB\-\-evict\-older\-than\fR\fR \fIAGE\fR
 .RS 4
@@ -473,7 +484,7 @@ is set, use that path\&.
 .\}
 
 Otherwise, if
-\fBccache_dir\fR
+\fBcache_dir\fR
 (\fBCCACHE_DIR\fR) is set then use
 \fB<ccache_dir>/ccache\&.conf\fR\&.
 .RE
@@ -489,7 +500,8 @@ Otherwise, if
 
 Otherwise, if there is a legacy
 \fB$HOME/\&.ccache\fR
-directory then use *$HOME/\&.ccache/ccache\&.conf\&.
+directory then use
+\fB$HOME/\&.ccache/ccache\&.conf\fR\&.
 .RE
 .sp
 .RS 4
@@ -519,7 +531,9 @@ is set then use
 Otherwise, use
 \fB%APPDATA%/ccache/ccache\&.conf\fR
 (Windows),
-\fB$HOME/Library/Preferences/ccache/ccache\&.conf (macOS) or *$HOME/\&.config/ccache/ccache\&.conf\fR
+\fB$HOME/Library/Preferences/ccache/ccache\&.conf\fR
+(macOS) or
+\fB$HOME/\&.config/ccache/ccache\&.conf\fR
 (other systems)\&.
 .RE
 
@@ -737,6 +751,19 @@ PRIMARY CONFIGURATION FILE>>\&.
 .\}
 .sp
 
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+If you want to use another *CCACHE_DIR* value temporarily for one ccache
+invocation you can use the `\-d/\-\-directory` command line option instead\&.
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+
 .RE
 .PP
 \fBcompiler\fR (\fBCCACHE_COMPILER\fR or (deprecated) \fBCCACHE_CC\fR)
@@ -844,6 +871,73 @@ method in combination with the
 \fBprefix_command\fR
 option if possible\&. See
 USING CCACHE WITH OTHER COMPILER WRAPPERS\&.
+
+.RE
+.sp
+
+.RE
+.PP
+\fBcompiler_type\fR (\fBCCACHE_COMPILERTYPE\fR)
+.RS 4
+
+
+
+Ccache normally guesses the compiler type based on the compiler name\&. The
+\fBcompiler_type\fR
+option lets you force a compiler type\&. This can be useful if the compiler has a non\-standard name but is actually one of the known compiler types\&. Possible values are:
+
+.PP
+\fBauto\fR
+.RS 4
+
+
+
+Guess one of the types below based on the compiler name (following symlinks)\&. This is the default\&.
+
+.RE
+.PP
+\fBclang\fR
+.RS 4
+
+
+
+Clang\-based compiler\&.
+
+.RE
+.PP
+\fBgcc\fR
+.RS 4
+
+
+
+GCC\-based compiler\&.
+
+.RE
+.PP
+\fBnvcc\fR
+.RS 4
+
+
+
+NVCC (CUDA) compiler\&.
+
+.RE
+.PP
+*other
+.RS 4
+
+
+
+Any compiler other than the known types\&.
+
+.RE
+.PP
+\fBpump\fR
+.RS 4
+
+
+
+distcc\(cqs "pump" script\&.
 
 .RE
 .sp

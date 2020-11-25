@@ -17,7 +17,8 @@ build() {
         -D BUILD_DOCS=OFF \
         -D BUILD_I18N=OFF \
         -D BUILD_CURL=ON \
-        -D BUILD_RSS=ON
+        -D BUILD_RSS=ON \
+        -D RELEASE=TRUE
     cmake --build build
     DESTDIR=$PKG cmake --install build
     rm -r $PKG/usr/share/doc
