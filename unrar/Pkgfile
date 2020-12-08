@@ -3,7 +3,7 @@
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 
 name=unrar
-version=5.9.4
+version=6.0.3
 release=1
 source=(https://www.rarlab.com/rar/${name}src-$version.tar.gz)
 
