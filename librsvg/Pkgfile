@@ -1,7 +1,7 @@
 # Description: SVG rendering library with cairo backend
 # URL: https://wiki.gnome.org/Projects/LibRsvg
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: gdk-pixbuf libcroco pango rust-bin
+# Depends on: gdk-pixbuf libcroco pango rust
 # Optional: sccache
 
 name=librsvg
