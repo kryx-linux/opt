@@ -5,7 +5,7 @@
 
 name=jdk8-bin
 version=8.275.01.1
-release=1
+release=2
 source=(https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-linux-x64.tar.gz)
 
 build(){
@@ -31,5 +31,5 @@ build(){
 
     # revdep
     install -d $PKG/etc/revdep.d
-    printf '%s\n%s\n%s\n' /usr/lib/jdk/{lib/amd64,jre/lib/amd64{,/server}} > $PKG/etc/revdep.d/jdk
+    printf '%s\n%s\n%s\n' /usr/lib/jdk/{lib/amd64,jre/lib/amd64{,/server}} > $PKG/etc/revdep.d/jdk8-bin
 }
