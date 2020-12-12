@@ -4,17 +4,17 @@
 # Depends on: ccache clang
 
 name=clang-ccache-bindings
-version=10
+version=11
 release=1
 source=()
 
 build() {
 	install -d $PKG/usr/lib/ccache
 
-	local clang0="$(clang++ -v 2>&1 | grep version | sed 's/.*version \([0-9]*\).[0-9]*.[0-9]* .*/\1/g')"
-	local clang1="$(clang++ -v 2>&1 | grep version | sed 's/.*version \([0-9]*.[0-9]*\).[0-9]* .*/\1/g')"
+	local clang0="$(clang++ -v 2>&1 | grep version | sed 's/.*version \([0-9]*\).[0-9]*.[0-9]*/\1/g')"
+	local clang1="$(clang++ -v 2>&1 | grep version | sed 's/.*version \([0-9]*.[0-9]*\).[0-9]*/\1/g')"
 
-	if [ -z $clang0 ]; then
+	if [ -z "$clang0" ]; then
 		echo 'Failed to find clang version'
 		exit 1
 	fi
