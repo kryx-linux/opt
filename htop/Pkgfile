@@ -2,6 +2,7 @@
 # URL:         https://github.com/htop-dev/htop
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Depends on:  ncurses
+# Optional:    lm_sensors lsof strace
 
 name=htop
 version=3.0.3
