@@ -3,8 +3,8 @@
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 
 name=lsof
-version=4.93.2
-release=2
+version=4.94.0
+release=1
 source=(https://github.com/lsof-org/lsof/archive/$version/$name-$version.tar.gz)
 
 build() {
