@@ -3,8 +3,8 @@
 # Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
 
 name=openntpd
-version=6.2p3
-release=2
+version=6.8p1
+release=1
 source=(
 http://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz
 ntpd
@@ -24,7 +24,7 @@ build() {
 		--with-privsep-user=ntp \
 		--disable-https-constraint
 
-	make CFLAGS+=" -fcommon"
+	make
 	make DESTDIR=$PKG install
 
 	rmdir $PKG/var/db $PKG/var/run
