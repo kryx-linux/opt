@@ -4,7 +4,7 @@
 # Depends on:  linux-pam libarchive libcap dbus popt tdb tevent ldb python3 gnutls p5-parse-yapp rpcsvc-proto
 
 name=samba
-version=4.13.2
+version=4.13.3
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
@@ -22,8 +22,8 @@ build () {
                 --without-{ad-dc,ads,ldap} \
                 --without-json
 
-    python3 ./buildtools/bin/waf build --jobs=${JOBS:-1}
-    python3 ./buildtools/bin/waf install --destdir=$PKG
+    /usr/bin/python3 ./buildtools/bin/waf build --jobs=${JOBS:-1}
+    /usr/bin/python3 ./buildtools/bin/waf install --destdir=$PKG
 
     # man pages
     local p
