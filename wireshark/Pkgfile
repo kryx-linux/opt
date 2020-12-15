@@ -4,14 +4,17 @@
 # Depends on:  c-ares hicolor-icon-theme libgcrypt libpcap qt5
 
 name=wireshark
-version=3.4.0
+version=3.4.1
 release=1
 source=(https://www.wireshark.org/download/src/$name-$version.tar.xz)
 
 build() {
   cmake -S$name-$version -Bbuild -GNinja \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_INSTALL_LIBDIR=lib
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib
 
   cmake --build build
   DESTDIR=$PKG cmake --install build
