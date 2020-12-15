@@ -12,8 +12,8 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gutenprint
 -rw-r--r--	root/root	usr/lib/libgutenprintui2.a
 -rwxr-xr-x	root/root	usr/lib/libgutenprintui2.la
-lrwxrwxrwx	root/root	usr/lib/libgutenprintui2.so -> libgutenprintui2.so.2.4.0
-lrwxrwxrwx	root/root	usr/lib/libgutenprintui2.so.2 -> libgutenprintui2.so.2.4.0
--rwxr-xr-x	root/root	usr/lib/libgutenprintui2.so.2.4.0
+lrwxrwxrwx	root/root	usr/lib/libgutenprintui2.so -> libgutenprintui2.so.2.5.0
+lrwxrwxrwx	root/root	usr/lib/libgutenprintui2.so.2 -> libgutenprintui2.so.2.5.0
+-rwxr-xr-x	root/root	usr/lib/libgutenprintui2.so.2.5.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gutenprintui2.pc
