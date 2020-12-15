@@ -1,10 +1,11 @@
 # Description: A fast image manipulation library
-# URL: http://freshmeat.net/projects/imlib2/
-# Maintainer: Fredrik Rinnestam, fredrik at crux dot guru
-# Depends on: freetype, libid3tag, libtiff, giflib, xorg-libsm, xorg-libxext
+# URL:         http://freshmeat.net/projects/imlib2/
+# Maintainer:  Fredrik Rinnestam, fredrik at crux dot guru
+# Depends on:  freetype libtiff xorg-libsm xorg-libxext
+# Optional:    libid3tag giflib
 
 name=imlib2
-version=1.7.0
+version=1.7.1
 release=1
 source=(http://download.sourceforge.net/enlightenment/$name-$version.tar.bz2)
 
