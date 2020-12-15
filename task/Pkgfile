@@ -4,22 +4,21 @@
 # Depends on:  util-linux cmake
 
 name=task
-version=2.5.1
+version=2.5.2
 release=1
-source=(https://taskwarrior.org/download/$name-$version.tar.gz)
+source=(https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v$version/$name-$version.tar.gz)
 
 build () {
-    cd $name-$version
-    
-    cmake . \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DTASK_DOCDIR=share/task \
-        -DCMAKE_BUILD_TYPE=release \
-        -DENABLE_SYNC=OFF
-    
-    make
-    make DESTDIR=$PKG install
+	cmake -S $name-$version -B build \
+		-D CMAKE_BUILD_TYPE=release \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D TASK_DOCDIR=share/task \
+		-D ENABLE_SYNC=OFF
 
-    rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,NEWS,README.md,INSTALL,LICENSE}
-    rm $PKG/usr/share/task/scripts/{add-ons,vim,hooks}/README
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+
+	rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,NEWS,README.md,INSTALL,LICENSE}
+	rm $PKG/usr/share/task/scripts/{add-ons,vim,hooks}/README
 }
