@@ -5,15 +5,11 @@
 # Optional: enchant libnotify geoclue openjpeg2 xdg-dbus-proxy bubblewrap
 
 name=webkitgtk
-version=2.30.3
+version=2.30.4
 release=1
-source=(https://webkitgtk.org/releases/$name-$version.tar.xz
-	bug-218522.patch)
+source=(https://webkitgtk.org/releases/$name-$version.tar.xz)
 
 build() {
-	[ $(pkginfo -i | awk '/^icu / {split($2,a,"."); print a[1]}') -ge 68 ] && \
-		patch -d $name-$version -p1 -i $SRC/bug-218522.patch
-
 	# Make sure we do not have ccache masquerade directory in PATH.
 	[ -e '/usr/bin/ccache' ] && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
