@@ -35,8 +35,10 @@ drwxr-xr-x	root/root	usr/include/wine/
 -rw-r--r--	root/root	usr/include/wine/itss.idl
 drwxr-xr-x	root/root	usr/include/wine/msvcrt/
 -rw-r--r--	root/root	usr/include/wine/msvcrt/assert.h
+-rw-r--r--	root/root	usr/include/wine/msvcrt/complex.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/conio.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/corecrt.h
+-rw-r--r--	root/root	usr/include/wine/msvcrt/corecrt_io.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/corecrt_startup.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/corecrt_stdio_config.h
 -rw-r--r--	root/root	usr/include/wine/msvcrt/corecrt_wctype.h
@@ -978,6 +980,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/windows.foundation.h
 -rw-r--r--	root/root	usr/include/wine/windows/windows.foundation.idl
 -rw-r--r--	root/root	usr/include/wine/windows/windows.h
+-rw-r--r--	root/root	usr/include/wine/windows/windowscontracts.h
+-rw-r--r--	root/root	usr/include/wine/windows/windowscontracts.idl
 -rw-r--r--	root/root	usr/include/wine/windows/windowsx.h
 -rw-r--r--	root/root	usr/include/wine/windows/winerror.h
 -rw-r--r--	root/root	usr/include/wine/windows/winevt.h
@@ -1078,7 +1082,6 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/xmllite.idl
 -rw-r--r--	root/root	usr/include/wine/windows/zmouse.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libwine.so -> libwine.so.1
 lrwxrwxrwx	root/root	usr/lib/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib/libwine.so.1.0
 drwxr-xr-x	root/root	usr/lib/wine/
@@ -1436,6 +1439,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dbgeng.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dbghelp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dciman32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dcomp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ddraw.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ddrawex.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/devenum.dll.so
@@ -1893,6 +1897,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dbgeng.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dbghelp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/dciman32.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/dcomp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ddraw.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ddrawex.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/devenum.dll
@@ -2368,6 +2373,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winedbg.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winedevice.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winefile.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/winegstreamer.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winehid.sys
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winejoystick.drv
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winemapi.dll
@@ -2872,6 +2878,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/pwrshplugin.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/qasf.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/qcap.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/qcap.so
 -rwxr-xr-x	root/root	usr/lib/wine/qdvd.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/qedit.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/qmgr.dll.so
@@ -3021,6 +3028,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/winedbg.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winedevice.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winefile.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/winegstreamer.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winehid.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/winejoystick.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/winemapi.dll.so
@@ -3083,7 +3091,6 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/xpsprint.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/xpssvcs.dll.so
 drwxr-xr-x	root/root	usr/lib32/
-lrwxrwxrwx	root/root	usr/lib32/libwine.so -> libwine.so.1
 lrwxrwxrwx	root/root	usr/lib32/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib32/libwine.so.1.0
 drwxr-xr-x	root/root	usr/lib32/wine/
@@ -3447,6 +3454,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/dbgeng.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dbghelp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dciman32.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/dcomp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ddeml.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ddraw.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ddrawex.dll.so
@@ -3913,6 +3921,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dbgeng.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dbghelp.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/dciman32.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/dcomp.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ddeml.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ddraw.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ddrawex.dll
@@ -4970,6 +4979,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/pwrshplugin.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/qasf.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/qcap.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/qcap.so
 -rwxr-xr-x	root/root	usr/lib32/wine/qdvd.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/qedit.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/qmgr.dll.so
@@ -5299,8 +5309,8 @@ drwxr-xr-x	root/root	usr/share/wine/fonts/
 -rw-r--r--	root/root	usr/share/wine/fonts/webdings.ttf
 -rw-r--r--	root/root	usr/share/wine/fonts/wingding.ttf
 drwxr-xr-x	root/root	usr/share/wine/gecko/
--rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.1-x86.msi
--rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.1-x86_64.msi
+-rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86_64.msi
 drwxr-xr-x	root/root	usr/share/wine/mono/
 -rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-5.1.1-x86.msi
 drwxr-xr-x	root/root	usr/share/wine/nls/
