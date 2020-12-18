@@ -4,7 +4,7 @@
 # Depends on: libsdl2 gst-libav
 
 name=faudio
-version=20.11
+version=20.12
 release=1
 source=(https://github.com/FNA-XNA/FAudio/archive/$version/$name-$version.tar.gz)
 
@@ -13,7 +13,7 @@ build() {
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=lib \
 		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS -DNDEBUG" \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-D GSTREAMER=ON
 
 	cmake --build build
