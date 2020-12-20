@@ -1,7 +1,7 @@
 # Description: SQL database server
 # URL:         https://www.mysql.com
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  ncurses zlib openssl cmake libaio
+# Depends on:  ncurses zlib openssl cmake libaio rpcsvc-proto
 
 name=mysql
 version=5.7.32
