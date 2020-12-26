@@ -4,7 +4,7 @@
 # Depends on: fontconfig-32 freeglut-32 gnutls-32 lcms2-32 mpg123-32 openal-32 prelink vkd3d-32 xorg-libxcomposite-32 xorg-libxcursor-32 xorg-libxinerama-32 xorg-libxxf86dga-32
 
 name=wine
-version=6.0-rc2
+version=6.0-rc3
 release=1
 source=(https://dl.winehq.org/wine/source/6.0/$name-$version.tar.xz
 	https://dl.winehq.org/wine/wine-gecko/2.47.2/wine-gecko-2.47.2-x86.msi
