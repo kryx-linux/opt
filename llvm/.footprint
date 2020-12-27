@@ -1787,6 +1787,9 @@ lrwxrwxrwx	root/root	usr/lib/libLLVM.so -> libLLVM-11.so
 -rw-r--r--	root/root	usr/lib/libLLVMMCJIT.a
 -rw-r--r--	root/root	usr/lib/libLLVMMCParser.a
 -rw-r--r--	root/root	usr/lib/libLLVMMIRParser.a
+-rw-r--r--	root/root	usr/lib/libLLVMNVPTXCodeGen.a
+-rw-r--r--	root/root	usr/lib/libLLVMNVPTXDesc.a
+-rw-r--r--	root/root	usr/lib/libLLVMNVPTXInfo.a
 -rw-r--r--	root/root	usr/lib/libLLVMObjCARCOpts.a
 -rw-r--r--	root/root	usr/lib/libLLVMObject.a
 -rw-r--r--	root/root	usr/lib/libLLVMObjectYAML.a
