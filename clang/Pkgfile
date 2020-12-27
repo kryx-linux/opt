@@ -5,18 +5,22 @@
 
 name=clang
 version=11.0.0
-release=1
+release=2
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-$version.src.tar.xz
-        https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-tools-extra-$version.src.tar.xz)
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-tools-extra-$version.src.tar.xz
+	cuda-version-detection.patch)
 
 build() {
 	mv $name-tools-extra-$version.src $name-$version.src/tools/extra
+
+	patch -d $name-$version.src -p2 -i $SRC/cuda-version-detection.patch
 
 	cmake -S $name-$version.src -B build -G Ninja \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-D LLVM_TARGETS_TO_BUILD='X86;AMDGPU;BPF;NVPTX' \
 		-D LLVM_INCLUDE_TESTS=0 \
 		-D LLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
 		-Wno-dev
