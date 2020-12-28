@@ -5,7 +5,7 @@
 
 name=ruby-mysql
 version=0.5.3
-release=1
+release=2
 source=(https://rubygems.org/downloads/mysql2-$version.gem)
 
 build () {
@@ -19,5 +19,6 @@ build () {
 	cd $PKG/$(gem env gemdir)
 	rm -r cache doc build_info
 	cd gems/mysql2-$version
+	rm -r ext/mysql2/.gem.*
 	rm CHANGELOG.md LICENSE README.md
 }
