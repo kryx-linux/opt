@@ -5,7 +5,7 @@
 
 name=ruby-ncurses
 version=1.2.4
-release=3
+release=4
 source=(https://rubygems.org/downloads/ncurses-ruby-$version.gem)
 
 build () {
@@ -19,6 +19,7 @@ build () {
 	cd $PKG/$(gem env gemdir)
 	rm -r cache doc build_info
 	cd gems/ncurses-ruby-$version
-	rm COPYING Changelog.md LICENSE.txt README.md THANKS \
-	   TODO .gitignore examples/LICENSES_for_examples
+	rm -r ext/ncurses/.gem.*
+	rm COPYING Changelog.md LICENSE.txt README.md THANKS
+	rm TODO .gitignore examples/LICENSES_for_examples
 }
