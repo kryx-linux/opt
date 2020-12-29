@@ -5,23 +5,30 @@
 
 name=libunique
 version=1.1.6
-release=5
+release=6
 source=(http://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.bz2 \
-        http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-upstream_fixes-1.patch)
+		$name-$version-G_CONST_RETURN.patch \
+		$name-$version-compiler-warnings.patch \
+		$name-$version-fix-test.patch \
+		$name-$version-include-terminator.patch)
 
 build() {
 	cd $name-$version
 
-	patch -p1 -i $SRC/$name-$version-upstream_fixes-1.patch
+	# patches from Gentto
+	patch -p1 -i $SRC/$name-$version-include-terminator.patch
+	patch -p1 -i $SRC/$name-$version-fix-test.patch
+	patch -p1 -i $SRC/$name-$version-compiler-warnings.patch
+	patch -p1 -i $SRC/$name-$version-G_CONST_RETURN.patch
 
-	autoreconf -fi
 	./configure \
 		--prefix=/usr \
 		--disable-dbus \
 		--disable-debug \
+		--disable-gtk-doc \
 		--with-x
 
-	make
+	make CFLAGS+=" -Wno-error -Wno-deprecated-declarations"
 	make DESTDIR=$PKG install
 
 	rm -r $PKG/usr/share/gtk-doc
