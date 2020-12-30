@@ -4,7 +4,7 @@
 # Depends on:  c-ares hicolor-icon-theme libgcrypt libpcap qt5
 
 name=wireshark
-version=3.4.1
+version=3.4.2
 release=1
 source=(https://www.wireshark.org/download/src/$name-$version.tar.xz)
 
