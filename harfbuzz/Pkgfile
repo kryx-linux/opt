@@ -4,16 +4,16 @@
 # Depends on:  cairo gobject-introspection meson ninja
 
 name=harfbuzz
-version=2.7.2
-release=3
+version=2.7.4
+release=1
 source=(https://github.com/harfbuzz/harfbuzz/archive/$version/$name-$version.tar.gz)
 
 build() {
-	meson build $name-$version \
+	meson setup build $name-$version \
 		--prefix=/usr \
-		-Dbenchmark=disabled \
-		-Ddocs=disabled \
-		-Dgraphite=auto
-
-	DESTDIR=$PKG ninja -C build install
+		-D benchmark=disabled \
+		-D docs=disabled \
+		-D graphite=auto
+	meson compile -C build -j ${JOBS:-1}
+	DESTDIR=$PKG meson install -C build
 }
