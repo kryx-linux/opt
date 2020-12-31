@@ -5,7 +5,7 @@
 
 name=yajl
 version=2.1.0
-release=1
+release=2
 source=(https://github.com/lloyd/$name/archive/$version/$name-$version.tar.gz)
 
 build() {
@@ -16,4 +16,7 @@ build() {
 		-Wno-dev
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
+
+	mv $PKG/usr/share/pkgconfig $PKG/usr/lib
+	rm -r $PKG/usr/share
 }
