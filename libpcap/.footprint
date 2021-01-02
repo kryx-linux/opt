@@ -24,8 +24,8 @@ drwxr-xr-x	root/root	usr/include/pcap/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libpcap.a
 lrwxrwxrwx	root/root	usr/lib/libpcap.so -> libpcap.so.1
-lrwxrwxrwx	root/root	usr/lib/libpcap.so.1 -> libpcap.so.1.9.1
--rwxr-xr-x	root/root	usr/lib/libpcap.so.1.9.1
+lrwxrwxrwx	root/root	usr/lib/libpcap.so.1 -> libpcap.so.1.10.0
+-rwxr-xr-x	root/root	usr/lib/libpcap.so.1.10.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libpcap.pc
 drwxr-xr-x	root/root	usr/share/
@@ -67,6 +67,7 @@ lrwxrwxrwx	root/root	usr/share/man/man3/pcap_freealldevs.3pcap.gz -> pcap_findal
 -rw-r--r--	root/root	usr/share/man/man3/pcap_get_tstamp_precision.3pcap.gz
 -rw-r--r--	root/root	usr/share/man/man3/pcap_geterr.3pcap.gz
 lrwxrwxrwx	root/root	usr/share/man/man3/pcap_getnonblock.3pcap.gz -> pcap_setnonblock.3pcap.gz
+-rw-r--r--	root/root	usr/share/man/man3/pcap_init.3pcap.gz
 -rw-r--r--	root/root	usr/share/man/man3/pcap_inject.3pcap.gz
 -rw-r--r--	root/root	usr/share/man/man3/pcap_is_swapped.3pcap.gz
 -rw-r--r--	root/root	usr/share/man/man3/pcap_lib_version.3pcap.gz
