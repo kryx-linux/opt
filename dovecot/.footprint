@@ -25,10 +25,10 @@ drwxr-xr-x	root/root	etc/dovecot/conf.d/
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-sql.conf.ext
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-static.conf.ext
 -rw-r--r--	root/root	etc/dovecot/conf.d/auth-system.conf.ext
--rw-r--r--	root/root	etc/dovecot/conf.d/auth-vpopmail.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-dict-auth.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-dict-sql.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-ldap.conf.ext
+-rw-r--r--	root/root	etc/dovecot/dovecot-oauth2.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot-sql.conf.ext
 -rw-r--r--	root/root	etc/dovecot/dovecot.conf
 drwxr-xr-x	root/root	etc/pam.d/
@@ -144,6 +144,8 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/dsync-ibc.h
 -rw-r--r--	root/root	usr/include/dovecot/eacces-error.h
 -rw-r--r--	root/root	usr/include/dovecot/env-util.h
+-rw-r--r--	root/root	usr/include/dovecot/event-filter-parser.h
+-rw-r--r--	root/root	usr/include/dovecot/event-filter-private.h
 -rw-r--r--	root/root	usr/include/dovecot/event-filter.h
 -rw-r--r--	root/root	usr/include/dovecot/event-log.h
 -rw-r--r--	root/root	usr/include/dovecot/execv-const.h
@@ -450,7 +452,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/mdbox-storage.h
 -rw-r--r--	root/root	usr/include/dovecot/mdbox-sync.h
 -rw-r--r--	root/root	usr/include/dovecot/mech-digest-md5-private.h
--rw-r--r--	root/root	usr/include/dovecot/mech-otp-skey-common.h
+-rw-r--r--	root/root	usr/include/dovecot/mech-otp-common.h
 -rw-r--r--	root/root	usr/include/dovecot/mech-plain-common.h
 -rw-r--r--	root/root	usr/include/dovecot/mech-scram.h
 -rw-r--r--	root/root	usr/include/dovecot/mech.h
@@ -617,6 +619,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/subscription-file.h
 -rw-r--r--	root/root	usr/include/dovecot/syslog-util.h
 -rw-r--r--	root/root	usr/include/dovecot/test-common.h
+-rw-r--r--	root/root	usr/include/dovecot/test-subprocess.h
 -rw-r--r--	root/root	usr/include/dovecot/time-util.h
 -rw-r--r--	root/root	usr/include/dovecot/unichar.h
 -rw-r--r--	root/root	usr/include/dovecot/unix-socket-create.h
@@ -625,7 +628,6 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/uri-util.h
 -rw-r--r--	root/root	usr/include/dovecot/userdb-blocking.h
 -rw-r--r--	root/root	usr/include/dovecot/userdb-template.h
--rw-r--r--	root/root	usr/include/dovecot/userdb-vpopmail.h
 -rw-r--r--	root/root	usr/include/dovecot/userdb.h
 -rw-r--r--	root/root	usr/include/dovecot/utc-mktime.h
 -rw-r--r--	root/root	usr/include/dovecot/utc-offset.h
