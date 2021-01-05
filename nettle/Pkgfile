@@ -4,13 +4,13 @@
 # Depends on:  libgmp
 
 name=nettle
-version=3.6
+version=3.7
 release=1
 source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build() {
-  cd $name-$version
-  ./configure --prefix=/usr --disable-documentation
-  make
-  make DESTDIR=$PKG install
+	cd $name-$version
+	./configure --prefix=/usr --disable-documentation
+	make
+	make DESTDIR=$PKG install
 }
