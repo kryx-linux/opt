@@ -1,6 +1,8 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/ppp/
 -rw-------	root/root	etc/ppp/chap-secrets
+-rw-------	root/root	etc/ppp/eaptls-client
+-rw-------	root/root	etc/ppp/eaptls-server
 -rw-r--r--	root/root	etc/ppp/options
 -rw-------	root/root	etc/ppp/pap-secrets
 drwxr-xr-x	root/root	usr/
@@ -9,6 +11,7 @@ drwxr-xr-x	root/root	usr/include/pppd/
 -rw-r--r--	root/root	usr/include/pppd/ccp.h
 -rw-r--r--	root/root	usr/include/pppd/chap-new.h
 -rw-r--r--	root/root	usr/include/pppd/chap_ms.h
+-rw-r--r--	root/root	usr/include/pppd/eap-tls.h
 -rw-r--r--	root/root	usr/include/pppd/eap.h
 -rw-r--r--	root/root	usr/include/pppd/ecp.h
 -rw-r--r--	root/root	usr/include/pppd/eui64.h
@@ -20,6 +23,7 @@ drwxr-xr-x	root/root	usr/include/pppd/
 -rw-r--r--	root/root	usr/include/pppd/magic.h
 -rw-r--r--	root/root	usr/include/pppd/md4.h
 -rw-r--r--	root/root	usr/include/pppd/md5.h
+-rw-r--r--	root/root	usr/include/pppd/mppe.h
 -rw-r--r--	root/root	usr/include/pppd/patchlevel.h
 -rw-r--r--	root/root	usr/include/pppd/pathnames.h
 -rw-r--r--	root/root	usr/include/pppd/pppcrypt.h
@@ -31,18 +35,19 @@ drwxr-xr-x	root/root	usr/include/pppd/
 -rw-r--r--	root/root	usr/include/pppd/upap.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/pppd/
-drwxr-xr-x	root/root	usr/lib/pppd/2.4.8/
--rwxr-xr-x	root/root	usr/lib/pppd/2.4.8/minconn.so
--rwxr-xr-x	root/root	usr/lib/pppd/2.4.8/openl2tp.so
--rwxr-xr-x	root/root	usr/lib/pppd/2.4.8/passprompt.so
--rwxr-xr-x	root/root	usr/lib/pppd/2.4.8/passwordfd.so
--rwsr-x---	root/root	usr/lib/pppd/2.4.8/pppoatm.so
--rwxr-xr-x	root/root	usr/lib/pppd/2.4.8/pppol2tp.so
--rwxr-xr-x	root/root	usr/lib/pppd/2.4.8/radattr.so
--rwxr-xr-x	root/root	usr/lib/pppd/2.4.8/radius.so
--rwxr-xr-x	root/root	usr/lib/pppd/2.4.8/radrealms.so
--rwsr-x---	root/root	usr/lib/pppd/2.4.8/rp-pppoe.so
--rwxr-xr-x	root/root	usr/lib/pppd/2.4.8/winbind.so
+drwxr-xr-x	root/root	usr/lib/pppd/2.4.9/
+-rwxr-xr-x	root/root	usr/lib/pppd/2.4.9/minconn.so
+-rwxr-xr-x	root/root	usr/lib/pppd/2.4.9/openl2tp.so
+-rwxr-xr-x	root/root	usr/lib/pppd/2.4.9/passprompt.so
+-rwxr-xr-x	root/root	usr/lib/pppd/2.4.9/passwordfd.so
+-rwsr-x---	root/root	usr/lib/pppd/2.4.9/pppoatm.so
+-rwsr-x---	root/root	usr/lib/pppd/2.4.9/pppoe.so
+-rwxr-xr-x	root/root	usr/lib/pppd/2.4.9/pppol2tp.so
+-rwxr-xr-x	root/root	usr/lib/pppd/2.4.9/radattr.so
+-rwxr-xr-x	root/root	usr/lib/pppd/2.4.9/radius.so
+-rwxr-xr-x	root/root	usr/lib/pppd/2.4.9/radrealms.so
+lrwxrwxrwx	root/root	usr/lib/pppd/2.4.9/rp-pppoe.so -> pppoe.so
+-rwxr-xr-x	root/root	usr/lib/pppd/2.4.9/winbind.so
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/chat
 -rwxr-xr-x	root/root	usr/sbin/pppd
