@@ -4,18 +4,14 @@
 # Depends on:  cmake libxml2 ninja
 
 name=llvm
-version=11.0.0
-release=2
+version=11.0.1
+release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
-	llvm-config.h
-	stack-clash-fixes.patch)
+	llvm-config.h)
 
 build() {
 	export CC=gcc
 	export CXX=g++
-
-	# https://bugs.llvm.org/show_bug.cgi?id=48007
-	patch -d $name-$version.src -p2 -i $SRC/stack-clash-fixes.patch
 
 	cmake -S $name-$version.src -B build -G Ninja \
 		-D CMAKE_INSTALL_PREFIX=/usr \
