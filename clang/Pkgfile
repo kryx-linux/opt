@@ -4,16 +4,13 @@
 # Depends on:  compiler-rt llvm
 
 name=clang
-version=11.0.0
-release=2
+version=11.0.1
+release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-tools-extra-$version.src.tar.xz
-	cuda-version-detection.patch)
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-tools-extra-$version.src.tar.xz)
 
 build() {
 	mv $name-tools-extra-$version.src $name-$version.src/tools/extra
-
-	patch -d $name-$version.src -p2 -i $SRC/cuda-version-detection.patch
 
 	cmake -S $name-$version.src -B build -G Ninja \
 		-D CMAKE_INSTALL_PREFIX=/usr \
