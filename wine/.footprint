@@ -2373,7 +2373,6 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winedbg.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winedevice.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winefile.exe
--rw-r--r--	root/root	usr/lib/wine/fakedlls/winegstreamer.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winehid.sys
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winejoystick.drv
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winemapi.dll
@@ -3028,7 +3027,6 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/winedbg.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winedevice.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winefile.exe.so
--rwxr-xr-x	root/root	usr/lib/wine/winegstreamer.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winehid.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/winejoystick.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/winemapi.dll.so
