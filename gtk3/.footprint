@@ -5,6 +5,8 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/gtk-launch
 -rwxr-xr-x	root/root	usr/bin/gtk-query-immodules-3.0
 -rwxr-xr-x	root/root	usr/bin/gtk-query-settings
+-rwxr-xr-x	root/root	usr/bin/gtk-register-3
+-rwxr-xr-x	root/root	usr/bin/gtk-update-icon-cache
 -rwxr-xr-x	root/root	usr/bin/gtk3-demo
 -rwxr-xr-x	root/root	usr/bin/gtk3-demo-application
 -rwxr-xr-x	root/root	usr/bin/gtk3-icon-browser
@@ -425,6 +427,7 @@ drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Gtk-3.0.typelib
 drwxr-xr-x	root/root	usr/lib/gtk-3.0/
 drwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/
+-rw-r--r--	root/root	usr/lib/gtk-3.0/3.0.0/immodules.cache
 drwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-am-et.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-am-et.so
