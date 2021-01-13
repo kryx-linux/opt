@@ -3,6 +3,6 @@
 # /usr/bin/gtk-register: register input modules
 #
 
-/usr/bin/gtk-query-immodules-2.0 > /usr/etc/gtk-2.0/gtk.immodules
+/usr/bin/gtk-query-immodules-2.0 --update-cache
 
 # End of file
