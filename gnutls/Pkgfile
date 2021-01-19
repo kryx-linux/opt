@@ -1,11 +1,11 @@
 # Description: A library that provides a secure layer over a reliable transport layer
 # URL: https://gnutls.org
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: libidn nettle p11-kit
+# Depends on: libidn2 nettle p11-kit
 
 name=gnutls
 version=3.6.15
-release=1
+release=2
 source=(https://www.gnupg.org/ftp/gcrypt/$name/v${version:0:3}/$name-$version.tar.xz)
 
 build() {
