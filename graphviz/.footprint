@@ -82,10 +82,6 @@ lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_dot_layout.so.6 -> libgvplugin
 lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_gd.so -> libgvplugin_gd.so.6.0.0
 lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_gd.so.6 -> libgvplugin_gd.so.6.0.0
 -rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_gd.so.6.0.0
--rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_gs.la
-lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_gs.so -> libgvplugin_gs.so.6.0.0
-lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_gs.so.6 -> libgvplugin_gs.so.6.0.0
--rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_gs.so.6.0.0
 -rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_neato_layout.la
 lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_neato_layout.so -> libgvplugin_neato_layout.so.6.0.0
 lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_neato_layout.so.6 -> libgvplugin_neato_layout.so.6.0.0
@@ -94,14 +90,6 @@ lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_neato_layout.so.6 -> libgvplug
 lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_pango.so -> libgvplugin_pango.so.6.0.0
 lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_pango.so.6 -> libgvplugin_pango.so.6.0.0
 -rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_pango.so.6.0.0
--rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_poppler.la
-lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_poppler.so -> libgvplugin_poppler.so.6.0.0
-lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_poppler.so.6 -> libgvplugin_poppler.so.6.0.0
--rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_poppler.so.6.0.0
--rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_rsvg.la
-lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_rsvg.so -> libgvplugin_rsvg.so.6.0.0
-lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_rsvg.so.6 -> libgvplugin_rsvg.so.6.0.0
--rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_rsvg.so.6.0.0
 -rwxr-xr-x	root/root	usr/lib/graphviz/libgvplugin_visio.la
 lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_visio.so -> libgvplugin_visio.so.6.0.0
 lrwxrwxrwx	root/root	usr/lib/graphviz/libgvplugin_visio.so.6 -> libgvplugin_visio.so.6.0.0

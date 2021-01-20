@@ -1,15 +1,16 @@
 # Description: Graph visualization software
 # URL:         https://www.graphviz.org/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libtool libgd pango ghostscript
+# Depends on:  libtool libgd pango
 
 name=graphviz
-version=2.44.1
+version=2.46.0
 release=1
-source=(https://www2.graphviz.org/Packages/stable/portable_source/$name-$version.tar.gz)
+source=(https://gitlab.com/graphviz/graphviz/-/archive/$version/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
+	./autogen.sh
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
