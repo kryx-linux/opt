@@ -4,8 +4,8 @@
 # Depends on:  util-linux gtk alsa-lib
 
 name=jdk8-bin
-version=8.275.01.1
-release=2
+version=8.282.08.1
+release=1
 source=(https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-linux-x64.tar.gz)
 
 build(){
