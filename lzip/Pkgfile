@@ -4,16 +4,14 @@
 # Depends on:
 
 name=lzip
-version=1.21
+version=1.22
 release=1
 source=(http://download.savannah.gnu.org/releases/lzip/lzip-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr
-
+	./configure --prefix=/usr CXXFLAGS="$CXXFLAGS"
 	make
 	make DESTDIR=$PKG install
-
 	rm -r $PKG/usr/share/info
 }
