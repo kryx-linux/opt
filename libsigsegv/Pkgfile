@@ -3,17 +3,17 @@
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 
 name=libsigsegv
-version=2.12
+version=2.13
 release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build() {
-  cd $name-$version
+	cd $name-$version
 
-  ./configure \
-    --prefix=/usr \
-    --enable-shared
+	./configure \
+		--prefix=/usr \
+		--enable-shared
 
-  make
-  make install DESTDIR=$PKG
+	make
+	make install DESTDIR=$PKG
 }
