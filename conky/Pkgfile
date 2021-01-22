@@ -1,7 +1,7 @@
 # Description: Light-weight system monitor
 # URL:         https://github.com/brndnmtthws/conky
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  curl cmake lua53 imlib2 libxml2 xorg-libxdamage xorg-libxft xorg-libxinerama
+# Depends on:  curl cmake lua imlib2 libxml2 xorg-libxdamage xorg-libxft xorg-libxinerama
 
 name=conky
 version=1.11.6
