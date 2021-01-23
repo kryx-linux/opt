@@ -1,7 +1,6 @@
 # Description: Small build system with a focus on speed
-# URL: https://ninja-build.org/
-# Maintainer: Fredrik Rinnestam, fredrik at crux dot guru
-# Depends on: python3
+# URL:         https://ninja-build.org/
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
 
 name=ninja
 version=1.10.2
@@ -10,7 +9,6 @@ source=(https://github.com/$name-build/$name/archive/v$version/$name-v$version.t
 
 build() {
 	cd $name-$version
-
 	/usr/bin/python3 configure.py --bootstrap
 	install -D -m 0755 $name $PKG/usr/bin/$name
 }
