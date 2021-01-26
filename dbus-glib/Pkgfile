@@ -1,7 +1,7 @@
 # Description: D-Bus GLib bindings
-# URL: http://freedesktop.org/wiki/Software/DBusBindings
-# Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
-# Depends on: dbus, glib
+# URL:         http://freedesktop.org/wiki/Software/DBusBindings
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  dbus glib
 
 name=dbus-glib
 version=0.110
@@ -10,10 +10,13 @@ source=(https://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr \
+
+	./configure \
+		--prefix=/usr \
 		--disable-static \
 		--enable-bash-completion=no
 	make
 	make DESTDIR=$PKG install
+
 	rm -r $PKG/usr/share/gtk-doc
 }
