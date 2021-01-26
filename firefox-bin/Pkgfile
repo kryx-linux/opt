@@ -1,10 +1,10 @@
 # Description: Firefox binary
-# URL: http://www.mozilla.com
-# Maintainer: Fredrik Rinnestam, fredrik at crux dot guru
-# Depends on: gtk3 dbus-glib
+# URL:         http://www.mozilla.com
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  gtk3 dbus-glib
 
 name=firefox-bin
-version=84.0.2
+version=85.0
 release=1
 source=(http://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.bz2 \
 	policies.json firefox.desktop)
