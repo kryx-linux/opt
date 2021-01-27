@@ -1,6 +1,6 @@
 # Description: Perl module for generating and using LALR parsers
 # URL:         https://metacpan.org/release/Parse-Yapp
-# Maintainer:  Alan Mizrahi, alan at mizrahi dot com dot ve
+# Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=p5-parse-yapp
 version=1.21
@@ -11,7 +11,7 @@ build() {
 	cd Parse-Yapp-$version
 	perl Makefile.PL
 	make OPTIMIZE="$CFLAGS"
-	make DESTDIR="$PKG" install
-	find "$PKG" \( -name perllocal.pod -o -name .packlist \) -exec rm {} \;
-	find "$PKG" -depth -type d -empty -exec rm -rf {} \;
+	make DESTDIR=$PKG install
+	find $PKG \( -name perllocal.pod -o -name .packlist \) -exec rm {} \;
+	find $PKG -depth -type d -empty -exec rm -rf {} \;
 }
