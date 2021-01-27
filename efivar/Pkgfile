@@ -1,7 +1,7 @@
 # Description: Tools and library to manipulate EFI variables
-# URL: https://github.com/rhinstaller/efivar
-# Maintainer: Thomas Penteker, tek at serverop dot de
-# Depends on: popt
+# URL:         https://github.com/rhinstaller/efivar
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  popt
 
 name=efivar
 version=37
