@@ -1,7 +1,7 @@
-# Description: commandline option parser 
-# URL: https://github.com/rpm-software-management/popt
-# Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on: gettext
+# Description: commandline option parser
+# URL:         https://github.com/rpm-software-management/popt
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  gettext
 
 name=popt
 version=1.18
@@ -9,8 +9,8 @@ release=1
 source=(http://ftp.rpm.org/popt/releases/popt-1.x/$name-$version.tar.gz)
 
 build() {
-  cd $name-$version
-  ./configure --prefix=/usr --disable-nls
-  make
-  make DESTDIR=$PKG install
+	cd $name-$version
+	./configure --prefix=/usr --disable-nls
+	make
+	make DESTDIR=$PKG install
 }
