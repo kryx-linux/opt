@@ -4,22 +4,23 @@
 # Depends on:  nettle
 
 name=dnsmasq
-version=2.83
+version=2.84
 release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.xz \
-        $name-config.patch dnsmasq)
+	$name-config.patch dnsmasq)
 
 build () {
-    cd $name-$version
+	cd $name-$version
 
-    patch -p1 -i $SRC/$name-config.patch
+	sed 's/rc2//' -i VERSION
+	patch -p1 -i $SRC/$name-config.patch
 
-    make COPTS="-DHAVE_DNSSEC" CFLAGS="$CFLAGS -Wall -W"
-    make COPTS="-DHAVE_DNSSEC" PREFIX=$PKG/usr install
+	make COPTS="-DHAVE_DNSSEC" CFLAGS="$CFLAGS -W -Wall"
+	make PREFIX=$PKG/usr install-common
 
-    install -d  $PKG/{var/lib/dhcp,etc/rc.d,usr/share/dnsmasq}
+	install -d  $PKG/{var/lib/dhcp,etc/rc.d,usr/share/dnsmasq}
 
-    install -m 755 $SRC/dnsmasq $PKG/etc/rc.d/
-    install -m 644 dnsmasq.conf.example $PKG/etc/dnsmasq.conf
-    install -m 644 trust-anchors.conf $PKG/usr/share/dnsmasq
+	install -m 755 $SRC/dnsmasq $PKG/etc/rc.d/
+	install -m 644 dnsmasq.conf.example $PKG/etc/dnsmasq.conf
+	install -m 644 trust-anchors.conf $PKG/usr/share/dnsmasq
 }

@@ -1,6 +1,6 @@
-diff -Nru dnsmasq-2.80.orig/dnsmasq.conf.example dnsmasq-2.80/dnsmasq.conf.example
---- dnsmasq-2.80.orig/dnsmasq.conf.example	2019-06-27 16:28:48.474960428 +0200
-+++ dnsmasq-2.80/dnsmasq.conf.example	2019-06-27 16:29:07.744482075 +0200
+diff -Nru dnsmasq-2.84.orig/dnsmasq.conf.example dnsmasq-2.84/dnsmasq.conf.example
+--- dnsmasq-2.84.orig/dnsmasq.conf.example	2021-01-27 10:45:11.611244801 +0100
++++ dnsmasq-2.84/dnsmasq.conf.example	2021-01-27 10:45:32.883980677 +0100
 @@ -22,7 +22,7 @@
  
  # Uncomment these to enable DNSSEC validation and caching:
@@ -30,19 +30,19 @@ diff -Nru dnsmasq-2.80.orig/dnsmasq.conf.example dnsmasq-2.80/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.80.orig/src/config.h dnsmasq-2.80/src/config.h
---- dnsmasq-2.80.orig/src/config.h	2019-06-27 16:28:48.474960428 +0200
-+++ dnsmasq-2.80/src/config.h	2019-06-27 16:29:07.744482075 +0200
-@@ -44,7 +44,7 @@
- #define ETHERSFILE "/etc/ethers"
- #define DEFLEASE 3600 /* default lease time, 1 hour */
+diff -Nru dnsmasq-2.84.orig/src/config.h dnsmasq-2.84/src/config.h
+--- dnsmasq-2.84.orig/src/config.h	2021-01-27 10:45:11.614578042 +0100
++++ dnsmasq-2.84/src/config.h	2021-01-27 10:45:32.883980677 +0100
+@@ -46,7 +46,7 @@
+ #define DEFLEASE 3600 /* default DHCPv4 lease time, one hour */
+ #define DEFLEASE6 (3600*24) /* default lease time for DHCPv6. One day. */
  #define CHUSER "nobody"
 -#define CHGRP "dip"
 +#define CHGRP "nobody"
  #define TFTP_MAX_CONNECTIONS 50 /* max simultaneous connections */
  #define LOG_MAX 5 /* log-queue length */
  #define RANDFILE "/dev/urandom"
-@@ -198,7 +198,7 @@
+@@ -204,7 +204,7 @@
  #   elif defined(__ANDROID__)
  #      define LEASEFILE "/data/misc/dhcp/dnsmasq.leases"
  #   else
