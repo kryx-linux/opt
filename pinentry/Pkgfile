@@ -5,9 +5,10 @@
 # Optional:    pinentry-gtk2 pinentry-qt4 libsecret
 
 name=pinentry
-version=1.1.0
+version=1.1.1
 release=1
-source=(https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2 pinentry)
+source=(https://gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2
+  pinentry)
 
 build() {
     cd $name-$version
