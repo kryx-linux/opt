@@ -11,8 +11,8 @@ drwxr-xr-x	root/root	usr/include/libfastjson/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libfastjson.a
 -rwxr-xr-x	root/root	usr/lib/libfastjson.la
-lrwxrwxrwx	root/root	usr/lib/libfastjson.so -> libfastjson.so.4.2.0
-lrwxrwxrwx	root/root	usr/lib/libfastjson.so.4 -> libfastjson.so.4.2.0
--rwxr-xr-x	root/root	usr/lib/libfastjson.so.4.2.0
+lrwxrwxrwx	root/root	usr/lib/libfastjson.so -> libfastjson.so.4.3.0
+lrwxrwxrwx	root/root	usr/lib/libfastjson.so.4 -> libfastjson.so.4.3.0
+-rwxr-xr-x	root/root	usr/lib/libfastjson.so.4.3.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libfastjson.pc
