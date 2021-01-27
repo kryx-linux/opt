@@ -81,6 +81,9 @@ drwxr-xr-x	root/root	usr/share/oprofile/arm/armv8-ca57/
 drwxr-xr-x	root/root	usr/share/oprofile/arm/armv8-pmuv3-common/
 -rw-r--r--	root/root	usr/share/oprofile/arm/armv8-pmuv3-common/events
 -rw-r--r--	root/root	usr/share/oprofile/arm/armv8-pmuv3-common/unit_masks
+drwxr-xr-x	root/root	usr/share/oprofile/arm/armv8-thunderx2/
+-rw-r--r--	root/root	usr/share/oprofile/arm/armv8-thunderx2/events
+-rw-r--r--	root/root	usr/share/oprofile/arm/armv8-thunderx2/unit_masks
 drwxr-xr-x	root/root	usr/share/oprofile/arm/armv8-xgene/
 -rw-r--r--	root/root	usr/share/oprofile/arm/armv8-xgene/events
 -rw-r--r--	root/root	usr/share/oprofile/arm/armv8-xgene/unit_masks
