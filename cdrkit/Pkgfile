@@ -1,7 +1,7 @@
 # Description: A suite of programs for recording CDs and DVDs
-# URL: https://en.wikipedia.org/wiki/Cdrkit
-# Maintainer: Fredrik Rinnestam, fredrik at rinnestam dot se
-# Depends on: file, cmake, libcap
+# URL:         https://en.wikipedia.org/wiki/Cdrkit
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  file cmake libcap
 
 name=cdrkit
 version=1.1.11
@@ -10,9 +10,13 @@ source=(http://pkgs.fedoraproject.org/repo/pkgs/cdrkit/cdrkit-1.1.11.tar.gz/efe0
 	cdrkit-1.1.9-efi-boot.patch)
 
 build () {
-    cd cdrkit-$version
-    patch -p1 -i $SRC/cdrkit-1.1.9-efi-boot.patch
-    CFLAGS="$CFLAGS -fcommon" \
-    cmake -Wno-dev -DCMAKE_INSTALL_PREFIX=$PKG/usr -DMANSUBDIR=share/man
-    make install
+	patch -d $name-$version -p1 -i $SRC/cdrkit-1.1.9-efi-boot.patch
+	cmake -S $name-$version -B build \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS -fcommon" \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D MANSUBDIR=share/man \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
 }
