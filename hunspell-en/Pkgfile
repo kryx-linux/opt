@@ -4,7 +4,7 @@
 # Depends on:	hunspell
 
 name=hunspell-en
-version=2019.10.06
+version=2020.12.07
 release=1
 source=(
 http://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_AU-$version.zip
