@@ -5,8 +5,8 @@
 # Optional:    cups paper
 
 name=xpdf
-version=4.02
-release=2
+version=4.03
+release=1
 source=(https://dl.xpdfreader.com/$name-$version.tar.gz
     xpdf-automagic.patch
     xpdf-visibility.patch
