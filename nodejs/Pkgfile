@@ -1,13 +1,13 @@
 # Description: Evented I/O for V8 javascript.
 # URL: https://nodejs.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: python3 libuv 
+# Depends on: python3 libuv
 # Optional: icu brotli ninja
 
 # c-ares  wait until a newer release than 1.16.1
 
 name=nodejs
-version=15.6.0
+version=15.7.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
 
