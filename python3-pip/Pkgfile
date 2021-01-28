@@ -5,7 +5,7 @@
 
 name=python3-pip
 version=21.0
-release=1
+release=2
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
 
 build() {
@@ -17,4 +17,7 @@ build() {
 		--prefix=/usr --root=$PKG --optimize=1
 
 	rm $PKG/usr/bin/pip
+
+	# again why does this happen?
+	find $PKG/usr/lib/python3.9/site-packages -type f -exec chmod o-w '{}' \+
 }
