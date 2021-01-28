@@ -4,15 +4,18 @@
 # Depends on: libxkbcommon mesa
 
 name=libwpe
-version=1.6.0
+version=1.8.0
 release=1
 source=(https://wpewebkit.org/releases/$name-$version.tar.xz)
 
 build() {
-	cmake -H$name-$version -Bbuild \
-		-DCMAKE_BUILD_TYPE=None \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=/usr/lib
+	cmake -S $name-$version -B build -G Ninja \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=lib \
+		-Wno-dev
 
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
