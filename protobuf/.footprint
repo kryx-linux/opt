@@ -60,7 +60,6 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/compiler/ruby/
 -rw-r--r--	root/root	usr/include/google/protobuf/generated_message_util.h
 -rw-r--r--	root/root	usr/include/google/protobuf/has_bits.h
 -rw-r--r--	root/root	usr/include/google/protobuf/implicit_weak_message.h
--rw-r--r--	root/root	usr/include/google/protobuf/inlined_string_field.h
 drwxr-xr-x	root/root	usr/include/google/protobuf/io/
 -rw-r--r--	root/root	usr/include/google/protobuf/io/coded_stream.h
 -rw-r--r--	root/root	usr/include/google/protobuf/io/gzip_stream.h
@@ -99,7 +98,6 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/stubs/
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/callback.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/casts.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/common.h
--rw-r--r--	root/root	usr/include/google/protobuf/stubs/fastmem.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/hash.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/logging.h
 -rw-r--r--	root/root	usr/include/google/protobuf/stubs/macros.h
@@ -135,19 +133,19 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/util/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libprotobuf-lite.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.24.0.0
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.24 -> libprotobuf-lite.so.24.0.0
--rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.24.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.25.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.25 -> libprotobuf-lite.so.25.0.0
+-rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.25.0.0
 -rw-r--r--	root/root	usr/lib/libprotobuf.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.24.0.0
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.24 -> libprotobuf.so.24.0.0
--rwxr-xr-x	root/root	usr/lib/libprotobuf.so.24.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.25.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.25 -> libprotobuf.so.25.0.0
+-rwxr-xr-x	root/root	usr/lib/libprotobuf.so.25.0.0
 -rw-r--r--	root/root	usr/lib/libprotoc.a
 -rwxr-xr-x	root/root	usr/lib/libprotoc.la
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.24.0.0
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so.24 -> libprotoc.so.24.0.0
--rwxr-xr-x	root/root	usr/lib/libprotoc.so.24.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.25.0.0
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so.25 -> libprotoc.so.25.0.0
+-rwxr-xr-x	root/root	usr/lib/libprotoc.so.25.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf-lite.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf.pc
