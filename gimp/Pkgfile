@@ -1,8 +1,8 @@
 # Description: The GIMP
-# URL:         http://www.gimp.org/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  gegl glib-networking gtk libart_lgpl mypaint-brushes poppler-data xorg-libxmu xorg-libxpm
-# Optional:    gimp-print libsdl ghostscript libmng
+# URL: https://www.gimp.org/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: gegl glib-networking gtk libart_lgpl mypaint-brushes poppler-data xorg-libxmu xorg-libxpm
+# Optional: gimp-print libsdl ghostscript libmng
 
 name=gimp
 version=2.10.22
