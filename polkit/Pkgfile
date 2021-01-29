@@ -1,32 +1,32 @@
 # Description: Application development toolkit for controlling system-wide privileges
-# URL:         http://www.freedesktop.org/wiki/Software/PolicyKit
-# Maintainer:  Alan Mizrahi, alan at mizrahi dot com dot ve
-# Depends on:  glib util-linux nspr mozjs78 intltool gobject-introspection
+# URL: https://gitlab.freedesktop.org/polkit/polkit/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: glib gobject-introspection intltool mozjs78 nspr util-linux
 
 name=polkit
 version=0.118
 release=1
-source=(http://www.freedesktop.org/software/$name/releases/$name-$version.tar.gz
-	polkit-1)
+source=(https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/$name-$version.tar.bz2
+  polkit-1)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--disable-tests \
-		--disable-nls \
-		--enable-libelogind=no \
-		--enable-libsystemd-login=no \
-		--with-authfw=pam \
-		--disable-man-pages
+  ./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --enable-libelogind=no \
+    --enable-libsystemd-login=no \
+    --with-authfw=pam \
+    --disable-tests \
+    --disable-nls \
+    --disable-man-pages
 
-	make
-	make DESTDIR=$PKG install
+  make
+  make DESTDIR=$PKG install
 
-	install -m 0644 $SRC/polkit-1 $PKG/etc/pam.d
+  install -m 0644 $SRC/polkit-1 $PKG/etc/pam.d
 
-	rm -r $PKG/usr/share/locale
+  rm -r $PKG/usr/share/locale
 }
