@@ -1,19 +1,19 @@
 # Description: IPC library for the GnuPG components
-# URL:         http://www.gnupg.org/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  libgpg-error
+# URL: https://www.gnupg.org/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: libgpg-error
 
 name=libassuan
 version=2.5.4
 release=1
-source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2)
+source=(https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
 
 build() {
-    cd $name-$version
+  cd $name-$version
 
-    ./configure --prefix=/usr
-    make
-    make DESTDIR=$PKG install
+  ./configure --prefix=/usr
+  make
+  make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/share/info
+  rm -r $PKG/usr/share/info
 }
