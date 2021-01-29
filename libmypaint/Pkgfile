@@ -1,7 +1,7 @@
 # Description: libmypaint is a library for making brushstrokes
-# URL:         https://github.com/mypaint/libmypaint
-# Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  gobject-introspection json-c intltool
+# URL: https://github.com/mypaint/libmypaint
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: gobject-introspection json-c intltool
 
 name=libmypaint
 version=1.6.1
@@ -14,7 +14,7 @@ build() {
   export LINGUAS=" "
 
   ./configure --prefix=/usr \
-        --disable-nls
+    --disable-nls
 
   make
   make DESTDIR=$PKG install
