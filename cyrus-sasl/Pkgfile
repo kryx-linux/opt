@@ -1,14 +1,13 @@
 # Description: Simple Authentication and Security Layer
-# URL:         https://www.cyrusimap.org/sasl/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  db openssl linux-pam
+# URL: https://www.cyrusimap.org/sasl/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: db openssl linux-pam
 
 name=cyrus-sasl
 version=2.1.27
 release=2
 source=(https://github.com/cyrusimap/$name/releases/download/$name-$version/$name-$version.tar.gz
-  saslauthd
-  cyrus-sasl-2.1.27-CVE-2019-19906.patch)
+  saslauthd cyrus-sasl-2.1.27-CVE-2019-19906.patch)
 
 build() {
   cd $name-$version
