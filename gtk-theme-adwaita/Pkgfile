@@ -1,6 +1,6 @@
 # Description: gtk2 theme matching the default gtk3 theme Adwaita
 # URL:         https://git.gnome.org/browse/gnome-themes-standard/
-# Maintainer:  Fredrik Rinnestam, fredrik at rinnestam dot se
+# Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  gtk
 
 name=gtk-theme-adwaita
@@ -12,10 +12,12 @@ build() {
 	cd gnome-themes-standard-$version
 
 	sed -i "s/HighContrast//" themes/Makefile.in
-	./configure	--prefix=/usr         \
-			--disable-glibtest    \
-			--disable-nls         \
-			--disable-gtk3-engine
+
+	./configure \
+		--prefix=/usr \
+		--disable-glibtest \
+		--disable-nls \
+		--disable-gtk3-engine
 
 	make
 	make install DESTDIR=$PKG
