@@ -1,6 +1,7 @@
 # Description: list open files
 # URL:         https://github.com/lsof-org/lsof
-# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  libtirpc
 
 name=lsof
 version=4.94.0
