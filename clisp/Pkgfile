@@ -1,7 +1,7 @@
 # Description: GNU CLisp is an ANSI Common Lisp Implementation.
-# URL:         https://clisp.cons.org/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  libsigsegv readline libffcall
+# URL: https://clisp.cons.org/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: libsigsegv readline libffcall
 
 name=clisp
 version=2.49.93
