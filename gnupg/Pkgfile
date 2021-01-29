@@ -1,7 +1,7 @@
 # Description: GNU privacy guard
-# URL:         http://www.gnupg.org
-# Maintainer:  Thomas Penteker, tek at serverop dot de
-# Depends on:  libgcrypt, libksba, pinentry, npth
+# URL: https://www.gnupg.org
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: libgcrypt libksba pinentry npth
 
 name=gnupg
 version=2.2.27
@@ -10,18 +10,17 @@ source=(https://gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
 
 
 build () {
-    cd $name-$version
+  cd $name-$version
 
-    ./configure \
-        --prefix=/usr \
-        --libexecdir=/usr/lib \
-        --disable-nls \
-        --disable-ldap
+  ./configure --prefix=/usr \
+    --libexecdir=/usr/lib \
+    --disable-nls \
+    --disable-ldap
 
-    make
-    make DESTDIR=$PKG install
+  make
+  make DESTDIR=$PKG install
 
-    rm -rf $PKG/usr/share/{info,doc}
-    rm -f $PKG/usr/share/gnupg/{FAQ,faq.html,qualified.txt}
-    rm -f $PKG/usr/share/gnupg/help*
+  rm -rf $PKG/usr/share/{info,doc}
+  rm -f $PKG/usr/share/gnupg/{FAQ,faq.html,qualified.txt}
+  rm -f $PKG/usr/share/gnupg/help*
 }
