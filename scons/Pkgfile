@@ -4,14 +4,17 @@
 # Depends on: python3-setuptools
 
 name=scons
-version=4.0.1
+version=4.1.0
 release=1
 source=(https://github.com/SCons/scons/archive/$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
+	# manpage install is completely broken
+	sed -i -e '/build\/doc\/man/d' setup.cfg
+
 	/usr/bin/python3 setup.py build
-	/usr/bin/python3 setup.py install --root=$PKG --optimize=1 \
+	/usr/bin/python3 setup.py install --root=$PKG --skip-build  --optimize=1 \
 		--install-data=/usr/share
 }
