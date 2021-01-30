@@ -1,19 +1,19 @@
 # Description: A fast image manipulation library
-# URL:         http://freshmeat.net/projects/imlib2/
-# Maintainer:  Fredrik Rinnestam, fredrik at crux dot guru
-# Depends on:  freetype libtiff xorg-libsm xorg-libxext
-# Optional:    libid3tag giflib
+# URL: https://sourceforge.net/projects/enlightenment/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: freetype libtiff xorg-libsm xorg-libxext
+# Optional: libid3tag giflib
 
 name=imlib2
 version=1.7.1
 release=1
-source=(http://download.sourceforge.net/enlightenment/$name-$version.tar.bz2)
+source=(https://download.sourceforge.net/enlightenment/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	./configure --prefix=/usr
+  ./configure --prefix=/usr
 
-	make
-	make DESTDIR=$PKG install
+  make
+  make DESTDIR=$PKG install
 }
