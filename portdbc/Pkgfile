@@ -1,17 +1,18 @@
 # Description: CRUX's portdb command line client
 # URL: https://github.com/sepen/portdbc
-# Maintainer: Fredrik Rinnestam, fredrik at crux dot guru
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: curl libxml2
 
 name=portdbc
-version=1.1
-release=5
-source=(https://crux.nu/files/$name-$version.tar.bz2 fixups.patch)
+version=1.2
+release=1
+_commit=ba7ff2c4189b12b020c9e7a4a054c6721692afc0
+source=(https://github.com/sepen/portdbc/archive/$_commit/$name-$version.tar.gz)
 
 build() {
-  cd $name-$version
-
-  patch -p1 < $SRC/fixups.patch
+  cd $name-$_commit
+  autoreconf -fvi
+  ./configure --prefix=/usr
   make
   make DESTDIR=$PKG MANDIR=/usr/share/man install
 }
