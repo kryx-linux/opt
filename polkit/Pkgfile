@@ -6,7 +6,7 @@
 name=polkit
 version=0.118
 release=1
-source=(https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/$name-$version.tar.bz2
+source=(https://freedesktop.org/software/polkit/releases/$name-$version.tar.gz
   polkit-1)
 
 build() {
