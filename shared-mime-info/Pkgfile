@@ -1,24 +1,36 @@
-# Description: core database of common types
-# URL: http://freedesktop.org/Software/shared-mime-info
+# Description: Core database of common types
+# URL: https://freedesktop.org/Software/shared-mime-info
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: glib libxml2 intltool
+# Depends on: glib libxml2 itstool
 
 name=shared-mime-info
-version=1.10
+version=2.1
 release=1
-source=(https://freedesktop.org/~hadess/$name-$version.tar.xz)
+_xdgmimever=cecafc8cd5cd725444b914d5f6cd17308633afa8
+source=(https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/$name-$version.tar.bz2
+	https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2
+	remove-weird-docs.patch)
 
 build() {
-	cd $name-$version
+	# Build mime database
+	sed -e "s|^CFLAGS=-Wall -Wmissing-prototypes  -Wno-sign-compare -g |CFLAGS=$CFLAGS |" \
+		-i xdgmime-$_xdgmimever/src/Makefile
+	make -C xdgmime-$_xdgmimever
 
-	# https://bugs.freedesktop.org/show_bug.cgi?id=70366
-	export ac_cv_func_fdatasync=no
+	# We don't want to include fancy docs
+	# Deletes references to xmllint and xmlto
+	patch -Np1 -d $name-$version -i $SRC/remove-weird-docs.patch
 
-	CONFIG_SHELL=/bin/bash \
-	./configure --prefix=/usr
+	meson $name-$version build \
+		--prefix=/usr \
+		--buildtype=plain \
+		-D update-mimedb=false \
+		-D xdgmime-path=$SRC/xdgmime-$_xdgmimever
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
 
-	make -j1
-	make DESTDIR=$PKG install
+	# Builds the initial database
+	/usr/bin/env PKGSYSTEM_ENABLE_FSYNC=0 $PKG/usr/bin/update-mime-database $PKG/usr/share/mime
 
 	rm -r $PKG/usr/share/locale
 }
