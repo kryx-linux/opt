@@ -2,6 +2,7 @@
 # URL:         http://www.cmake.org/
 # Maintainer:  CRUX System Team, core-ports at crux dot nu
 # Depends on:  curl libarchive expat ncurses
+# Optional:    python3-sphinx
 
 name=cmake
 version=3.19.4
@@ -23,7 +24,9 @@ build() {
 		--system-libarchive \
 		--system-zstd \
 		--no-system-librhash \
-		--parallel=${JOBS:-1}
+		--parallel=${JOBS:-1} \
+		$(prt-get isinst python3-sphinx >/dev/null && echo --sphinx-man)
+
 	make
 	make DESTDIR=$PKG install
 	rm -r $PKG/usr/{doc,share/cmake/Help}
