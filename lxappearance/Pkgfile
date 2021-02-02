@@ -1,6 +1,6 @@
 # Description: Enables change of themes, icons, and fonts used by applications easily. 
 # URL: https://wiki.lxde.org/en/LXAppearance
-# Maintainer: Fredrik Rinnestam, fredrik at rinnestam dot se
+# Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: gtk
 
 name=lxappearance
@@ -13,7 +13,8 @@ build() {
 
 	export LINGUAS=" "
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--sysconfdir=/etc \
 		--disable-nls
 
