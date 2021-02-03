@@ -1,17 +1,18 @@
 # Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
-# URL:         https://www.gtk.org/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  libpcre util-linux meson ninja
+# URL: https://www.gtk.org/
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: libpcre util-linux meson ninja
 
 name=glib
-version=2.66.4
+version=2.66.5
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
 	gschemas.compiled)
 
-build () {
+build() {
 	meson setup build $name-$version \
 		--prefix=/usr \
+		--buildtype=plain \
 		-D nls=disabled \
 		-D gtk_doc=false
 	meson compile -C build -j ${JOBS:-1}
