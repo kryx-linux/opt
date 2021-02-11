@@ -4,7 +4,7 @@
 # Depends on: util-linux xorg-libxaw xorg-font-alias xorg-font-misc-misc
 
 name=xterm
-version=365
+version=366
 release=1
 source=(https://invisible-mirror.net/archives/$name/$name-$version.tgz)
 
