@@ -676,6 +676,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/msxml6did.h
 -rw-r--r--	root/root	usr/include/wine/windows/msxmldid.h
 -rw-r--r--	root/root	usr/include/wine/windows/mtxdm.h
+-rw-r--r--	root/root	usr/include/wine/windows/mulres.idl
 -rw-r--r--	root/root	usr/include/wine/windows/multimon.h
 -rw-r--r--	root/root	usr/include/wine/windows/natupnp.h
 -rw-r--r--	root/root	usr/include/wine/windows/natupnp.idl
@@ -781,6 +782,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/raserror.h
 -rw-r--r--	root/root	usr/include/wine/windows/reason.h
 -rw-r--r--	root/root	usr/include/wine/windows/regstr.h
+-rw-r--r--	root/root	usr/include/wine/windows/relogger.h
+-rw-r--r--	root/root	usr/include/wine/windows/relogger.idl
 -rw-r--r--	root/root	usr/include/wine/windows/restartmanager.h
 -rw-r--r--	root/root	usr/include/wine/windows/restrictederrorinfo.h
 -rw-r--r--	root/root	usr/include/wine/windows/restrictederrorinfo.idl
@@ -1031,6 +1034,10 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wmp.h
 -rw-r--r--	root/root	usr/include/wine/windows/wmp.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wmpids.h
+-rw-r--r--	root/root	usr/include/wine/windows/wmprealestate.h
+-rw-r--r--	root/root	usr/include/wine/windows/wmprealestate.idl
+-rw-r--r--	root/root	usr/include/wine/windows/wmpservices.h
+-rw-r--r--	root/root	usr/include/wine/windows/wmpservices.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wmsbuffer.h
 -rw-r--r--	root/root	usr/include/wine/windows/wmsbuffer.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wmsdk.h
@@ -1374,6 +1381,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/cryptdll.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/cryptext.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/cryptnet.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/cryptsp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/cryptui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/cscript.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/ctapi32.dll.so
@@ -1832,6 +1840,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/cryptdll.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/cryptext.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/cryptnet.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/cryptsp.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/cryptui.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/cscript.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ctapi32.dll
@@ -2680,6 +2689,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libwbemuuid.a
 -rw-r--r--	root/root	usr/lib/wine/libwebservices.def
 -rw-r--r--	root/root	usr/lib/wine/libwer.def
+-rw-r--r--	root/root	usr/lib/wine/libwevtapi.def
 -rw-r--r--	root/root	usr/lib/wine/libwindowscodecs.a
 -rw-r--r--	root/root	usr/lib/wine/libwindowscodecsext.def
 -rw-r--r--	root/root	usr/lib/wine/libwinecrt0.a
@@ -3063,6 +3073,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/wmiutils.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wmp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wmphoto.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/wmphoto.so
 -rwxr-xr-x	root/root	usr/lib/wine/wmplayer.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/wmvcore.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wnaspi32.dll.so
@@ -3385,6 +3396,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/cryptdll.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/cryptext.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/cryptnet.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/cryptsp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/cryptui.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/cscript.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/ctapi32.dll.so
@@ -3852,6 +3864,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/cryptdll.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/cryptext.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/cryptnet.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/cryptsp.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/cryptui.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/cscript.exe
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/ctapi32.dll
@@ -4764,6 +4777,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libwbemuuid.a
 -rw-r--r--	root/root	usr/lib32/wine/libwebservices.def
 -rw-r--r--	root/root	usr/lib32/wine/libwer.def
+-rw-r--r--	root/root	usr/lib32/wine/libwevtapi.def
 -rw-r--r--	root/root	usr/lib32/wine/libwindowscodecs.a
 -rw-r--r--	root/root	usr/lib32/wine/libwindowscodecsext.def
 -rw-r--r--	root/root	usr/lib32/wine/libwinecrt0.a
@@ -5195,6 +5209,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/wmiutils.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wmp.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wmphoto.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/wmphoto.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wmplayer.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wmvcore.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wnaspi32.dll.so
@@ -5312,7 +5327,7 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86.msi
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86_64.msi
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-5.1.1-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-6.0.0-x86.msi
 drwxr-xr-x	root/root	usr/share/wine/nls/
 -rw-r--r--	root/root	usr/share/wine/nls/c_037.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_10000.nls
