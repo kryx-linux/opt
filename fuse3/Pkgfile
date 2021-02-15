@@ -1,10 +1,10 @@
 # Description: Interface for userspace filesystems
-# URL:         https://github.com/libfuse/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  meson ninja
+# URL: https://github.com/libfuse/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: meson ninja
 
 name=fuse3
-version=3.10.1
+version=3.10.2
 release=1
 source=(https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.xz)
 
