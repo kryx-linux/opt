@@ -6,7 +6,7 @@
 name=scummvm
 version=2.2.0
 release=1
-source=(https://downloads.scummvm.org/frs/scummvm/$name/$name-$version.tar.xz)
+source=(https://downloads.scummvm.org/frs/scummvm/$version/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
