@@ -1,10 +1,10 @@
 # Description: Graph visualization software
-# URL:         https://www.graphviz.org/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libtool libgd pango
+# URL: https://www.graphviz.org/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: libtool libgd pango
 
 name=graphviz
-version=2.46.0
+version=2.46.1
 release=1
 source=(https://gitlab.com/graphviz/graphviz/-/archive/$version/$name-$version.tar.bz2)
 
