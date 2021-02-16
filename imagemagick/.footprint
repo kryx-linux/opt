@@ -430,9 +430,9 @@ drwxr-xr-x	root/root	usr/lib/ImageMagick-7.0.10/modules-Q16HDRI/filters/
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.0.10/modules-Q16HDRI/filters/analyze.so
 -rw-r--r--	root/root	usr/lib/libMagick++-7.Q16HDRI.a
 -rwxr-xr-x	root/root	usr/lib/libMagick++-7.Q16HDRI.la
-lrwxrwxrwx	root/root	usr/lib/libMagick++-7.Q16HDRI.so -> libMagick++-7.Q16HDRI.so.4.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagick++-7.Q16HDRI.so.4 -> libMagick++-7.Q16HDRI.so.4.0.0
--rwxr-xr-x	root/root	usr/lib/libMagick++-7.Q16HDRI.so.4.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagick++-7.Q16HDRI.so -> libMagick++-7.Q16HDRI.so.5.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagick++-7.Q16HDRI.so.5 -> libMagick++-7.Q16HDRI.so.5.0.0
+-rwxr-xr-x	root/root	usr/lib/libMagick++-7.Q16HDRI.so.5.0.0
 -rw-r--r--	root/root	usr/lib/libMagickCore-7.Q16HDRI.a
 -rwxr-xr-x	root/root	usr/lib/libMagickCore-7.Q16HDRI.la
 lrwxrwxrwx	root/root	usr/lib/libMagickCore-7.Q16HDRI.so -> libMagickCore-7.Q16HDRI.so.9.0.0
