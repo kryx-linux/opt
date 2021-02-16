@@ -1,13 +1,13 @@
 # Description: Network Authentication Protocol
-# URL:         https://web.mit.edu/kerberos
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  e2fsprogs openssl
+# URL: https://web.mit.edu/kerberos
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: e2fsprogs openssl
 
 name=krb5
-version=1.18.3
+version=1.19
 release=1
 source=(https://kerberos.org/dist/$name/${version::4}/$name-$version.tar.gz
-        krb5)
+	krb5)
 
 build() {
 	cd $name-$version/src
