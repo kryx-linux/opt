@@ -5,21 +5,18 @@
 # Optional: boost
 
 name=taglib
-version=1.11.1
+version=1.12
 release=1
 source=(http://taglib.github.io/releases/$name-$version.tar.gz)
 
 build() {
-	install -d build
-	cd build
-
-	cmake ../$name-$version \
+	[[ -e /usr/bin/ninja ]] && PKGMK_TAGLIB=' -G Ninja'
+	cmake -S $name-$version -B build $PGKMK_TAGLIB \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_RELEASE_TYPE=Release \
 		-DBUILD_SHARED_LIBS=ON \
 		-DWITH_MP4=ON \
 		-DWITH_ASF=ON
-
-	make
-	make DESTDIR=$PKG install
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
 }
