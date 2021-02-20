@@ -4,12 +4,16 @@
 # Depends on:  autoconf-2.13 readline zlib nspr python3 rust
 
 name=mozjs78
-version=78.7.0
+version=78.7.1
 release=1
-source=(https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz)
+source=(https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz
+	rust-1.5.0-build.patch)
 
 build() {
 	cd firefox-$version
+
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=1684261
+	patch -p1 -i $SRC/rust-1.5.0-build.patch
 
 	export CC=gcc CXX=g++
 
