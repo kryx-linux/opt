@@ -1,14 +1,14 @@
 # Description: SQL database server, drop-in replacement for MySQL
-# URL:         https://mariadb.org/
-# Maintainer:  Juergen Daubert, jue at crux dot nu 
-# Depends on:  ncurses zlib openssl cmake libaio linux-pam
+# URL: https://mariadb.org/
+# Maintainer: Juergen Daubert, jue at crux dot nu 
+# Depends on: ncurses zlib openssl cmake libaio linux-pam
 
 name=mariadb
-version=10.5.8
-release=2
+version=10.5.9
+release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz 
-        mariadb.rc mariadb.pam
-        pre-install)
+	mariadb.rc mariadb.pam
+	pre-install)
 
 build() {
 	cmake -S $name-$version -B build \
