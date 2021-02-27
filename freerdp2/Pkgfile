@@ -2,10 +2,10 @@
 # URL: https://www.freerdp.com/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: cmake glib xorg-libxcursor xorg-libxinerama xorg-libxkbfile xorg-libxrandr xorg-libxv
-# Optional: ffmpeg gst-plugins-base alsa-lib cups directfb neon pulseaudio xmlto
+# Optional: alsa-lib cups directfb ffmpeg gst-plugins-base neon pulseaudio wayland xmlto
 
 name=freerdp2
-version=2.2.0
+version=2.3.0
 release=1
 source=(https://pub.freerdp.com/releases/freerdp-$version.tar.gz)
 
@@ -19,7 +19,7 @@ build() {
 		-D WITH_SERVER=OFF \
 		-D WITH_CLIENT=ON \
 		-D WITH_LIBSYSTEMD=OFF \
-		-D WITH_WAYLAND=OFF
+		-Wno-dev
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 }
