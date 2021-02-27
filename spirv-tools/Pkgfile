@@ -4,17 +4,15 @@
 # Depends on: spirv-headers
 
 name=spirv-tools
-version=2020.5-b27e039
+version=2020.5-b27b1af
 release=1
 source=(
 	#https://github.com/KhronosGroup/SPIRV-Tools/archive/v$version/SPIRV-Tools-v$version.tar.gz
-	https://github.com/KhronosGroup/SPIRV-Tools/archive/b27e039c68dd9eb959bb9249fcb2c9a54841474b.zip
-	0001-Revert-CMake-Enable-building-with-BUILD_SHARED_LIBS-.patch
-	spirv-tools-soversion.patch
-	0001-CMake-FIx-pkg-config-libdir-with-absolute-CMAKE_INST.patch)
+	https://github.com/KhronosGroup/SPIRV-Tools/archive/b27b1afd12d05bf238ac7368bb49de73cd620a8e.zip
+	spirv-tools-gcc11.patch)
 
 build() {
-	mv SPIRV-Tools-b27e039c68dd9eb959bb9249fcb2c9a54841474b SPIRV-Tools-$version
+	mv SPIRV-Tools-b27b1afd12d05bf238ac7368bb49de73cd620a8e SPIRV-Tools-$version
 
 	local config="
 -SSPIRV-Tools-$version \
@@ -26,12 +24,7 @@ build() {
 -DPYTHON_EXECUTABLE=/usr/bin/python3 \
 -GNinja"
 
-	# https://github.com/KhronosGroup/SPIRV-Tools/issues/3626
-	patch -d SPIRV-Tools-$version -p1 -i $SRC/0001-Revert-CMake-Enable-building-with-BUILD_SHARED_LIBS-.patch
-	patch -d SPIRV-Tools-$version -p1 -i $SRC/spirv-tools-soversion.patch
-
-	# https://github.com/KhronosGroup/SPIRV-Tools/pull/3906
-	patch -d SPIRV-Tools-$version -p1 -i $SRC/0001-CMake-FIx-pkg-config-libdir-with-absolute-CMAKE_INST.patch
+	patch -d SPIRV-Tools-$version -p1 -i $SRC/spirv-tools-gcc11.patch
 
 	cmake -Bbuild-static $config -DBUILD_SHARED_LIBS=OFF
 	cmake --build build-static
