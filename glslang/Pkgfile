@@ -4,30 +4,19 @@
 # Depends on: spirv-tools
 
 name=glslang
-version=11.0.0-bacaef3
+version=11.0.0-c594de2
 release=1
 source=(
 	#https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
-	https://github.com/KhronosGroup/glslang/archive/bacaef3237c515e40d1a24722be48c0a0b30f75f.zip
-	0001-CMake-Allow-linking-against-system-installed-SPIRV-T.patch
-	0001-CMake-Make-glslang-default-resource-limits-STATIC.patch
-	0002-CMake-Use-VERSION-SOVERSION-for-all-shared-libs.patch
-	0001-glslang-Rename-and-move-cmake-export.patch
-	0002-cmake-Use-the-same-export-config-for-all-installed-t.patch)
+	https://github.com/KhronosGroup/glslang/archive/c594de23cdd790d64ad5f9c8b059baae0ee2941d.zip
+	glslang-default-resource-limits_staticlib.patch
+	0001-pkg-config-compatibility.patch)
 
 build() {
-	mv $name-bacaef3237c515e40d1a24722be48c0a0b30f75f $name-$version
+	mv $name-c594de23cdd790d64ad5f9c8b059baae0ee2941d $name-$version
 
-	# https://github.com/KhronosGroup/glslang/pull/1621
-	patch -d $name-$version -p1 -i $SRC/0001-CMake-Allow-linking-against-system-installed-SPIRV-T.patch
-
-	# https://github.com/KhronosGroup/glslang/pull/2419
-	patch -d $name-$version -p1 -i $SRC/0001-CMake-Make-glslang-default-resource-limits-STATIC.patch
-	patch -d $name-$version -p1 -i $SRC/0002-CMake-Use-VERSION-SOVERSION-for-all-shared-libs.patch
-
-	# https://github.com/KhronosGroup/glslang/pull/1978
-	patch -d $name-$version -p1 -i $SRC/0001-glslang-Rename-and-move-cmake-export.patch
-	patch -d $name-$version -p1 -i $SRC/0002-cmake-Use-the-same-export-config-for-all-installed-t.patch
+	patch -d $name-$version -p1 -i $SRC/glslang-default-resource-limits_staticlib.patch
+	patch -d $name-$version -p1 -i $SRC/0001-pkg-config-compatibility.patch
 
 	local config="
 -S$name-$version \
