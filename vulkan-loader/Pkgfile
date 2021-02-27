@@ -4,7 +4,7 @@
 # Depends on: vulkan-headers xorg-libxrandr
 
 name=vulkan-loader
-version=1.2.154.0
+version=1.2.162.0
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-Loader/archive/sdk-$version/Vulkan-Loader-sdk-$version.tar.gz)
 
