@@ -1,10 +1,10 @@
 # Description: A tiling window manager
 # URL: https://i3wm.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: cmake pango xorg-xcb-util-cursor xorg-xcb-util-keysyms xorg-xcb-util-wm xorg-xcb-util-xrm libxkbcommon yajl libev startup-notification
+# Depends on: pango xorg-xcb-util-cursor xorg-xcb-util-keysyms xorg-xcb-util-wm xorg-xcb-util-xrm libxkbcommon yajl libev startup-notification
 
 name=i3
-version=4.19.1
+version=4.19.2
 release=1
 source=(http://i3wm.org/downloads/$name-$version.tar.xz)
 
