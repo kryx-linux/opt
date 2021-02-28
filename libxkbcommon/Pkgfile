@@ -1,20 +1,21 @@
 # Description: A library to handle keyboard descriptions.
 # URL: https://xkbcommon.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: xkeyboard-config
+# Depends on: meson ninja xkeyboard-config
+# Optional: wayland-protocols
 
 name=libxkbcommon
-version=0.10.0
+version=1.0.3
 release=1
 source=(https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-$version.tar.gz)
 
 build() {
-	cd libxkbcommon-xkbcommon-$version
+	prt-get isinst wayland-protocols || PKGMK_XKBCOMMON+=' -D enable-wayland=false'
 
-	meson build \
+	meson build libxkbcommon-xkbcommon-$version $PKGMK_XKBCOMMON \
 		--prefix=/usr \
-		-Denable-wayland=false \
-		-Denable-docs=false
+		--libexecdir=/usr/lib \
+		-D enable-docs=false
 
 	ninja -C build -j ${JOBS:-1}
 	DESTDIR=$PKG ninja -C build install
