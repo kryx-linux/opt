@@ -1,9 +1,10 @@
 # Description: Simple .INI file parser library written in C
 # URL:         https://github.com/benhoyt/inih
 # Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  meson ninja
 
 name=inih
-version=52
+version=53
 release=1
 source=(https://github.com/benhoyt/inih/archive/r$version/$name-$version.tar.gz)
 
