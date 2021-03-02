@@ -6,7 +6,7 @@
 name=p5-html-parser
 version=3.75
 release=1
-source=(https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/HTML-Parser-$version.tar.gz)
+source=(https://www.cpan.org/modules/by-module/HTML/HTML-Parser-$version.tar.gz)
 
 build() {
 	cd HTML-Parser-$version
