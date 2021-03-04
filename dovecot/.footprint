@@ -6,6 +6,7 @@ drwxr-xr-x	root/root	etc/dovecot/conf.d/
 -rw-r--r--	root/root	etc/dovecot/conf.d/10-logging.conf
 -rw-r--r--	root/root	etc/dovecot/conf.d/10-mail.conf
 -rw-r--r--	root/root	etc/dovecot/conf.d/10-master.conf
+-rw-r--r--	root/root	etc/dovecot/conf.d/10-metrics.conf
 -rw-r--r--	root/root	etc/dovecot/conf.d/10-ssl.conf
 -rw-r--r--	root/root	etc/dovecot/conf.d/15-lda.conf
 -rw-r--r--	root/root	etc/dovecot/conf.d/15-mailboxes.conf
@@ -103,8 +104,6 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/config.h
 -rw-r--r--	root/root	usr/include/dovecot/connection.h
 -rw-r--r--	root/root	usr/include/dovecot/crc32.h
--rw-r--r--	root/root	usr/include/dovecot/cydir-storage.h
--rw-r--r--	root/root	usr/include/dovecot/cydir-sync.h
 -rw-r--r--	root/root	usr/include/dovecot/data-stack.h
 -rw-r--r--	root/root	usr/include/dovecot/db-checkpassword.h
 -rw-r--r--	root/root	usr/include/dovecot/db-dict.h
@@ -185,6 +184,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/fts-tokenizer-private.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-tokenizer.h
 -rw-r--r--	root/root	usr/include/dovecot/fts-user.h
+-rw-r--r--	root/root	usr/include/dovecot/fuzzer.h
 -rw-r--r--	root/root	usr/include/dovecot/guid.h
 -rw-r--r--	root/root	usr/include/dovecot/hash-decl.h
 -rw-r--r--	root/root	usr/include/dovecot/hash-format.h
@@ -619,6 +619,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/subscription-file.h
 -rw-r--r--	root/root	usr/include/dovecot/syslog-util.h
 -rw-r--r--	root/root	usr/include/dovecot/test-common.h
+-rw-r--r--	root/root	usr/include/dovecot/test-mail-storage-common.h
 -rw-r--r--	root/root	usr/include/dovecot/test-subprocess.h
 -rw-r--r--	root/root	usr/include/dovecot/time-util.h
 -rw-r--r--	root/root	usr/include/dovecot/unichar.h
@@ -719,9 +720,6 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_acl_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_acl_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_acl_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_expire_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_expire_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_expire_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_quota_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_quota_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/lib10_doveadm_quota_plugin.so
@@ -746,18 +744,12 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib05_pop3_migration_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_pop3_migration_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_pop3_migration_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib05_snarf_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib10_last_login_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_last_login_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_last_login_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib10_mail_crypt_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_mail_crypt_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_mail_crypt_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/lib10_mail_filter_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_mail_filter_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_mail_filter_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib10_quota_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_quota_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_quota_plugin.so
@@ -770,15 +762,9 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/doveadm/
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib15_notify_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib15_notify_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib15_notify_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_autocreate_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_autocreate_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_autocreate_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_charset_alias_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_charset_alias_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_charset_alias_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_expire_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_expire_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_expire_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_fts_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_fts_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_fts_plugin.so
