@@ -5,7 +5,7 @@
 # Optional: icu vala
 
 name=vte3
-version=0.62.2
+version=0.62.3
 release=1
 source=(https://download.gnome.org/sources/vte/${version%.*}/vte-$version.tar.xz)
 
