@@ -1,29 +1,30 @@
 # Description: GTK version of the vim editor
-# URL:         http://www.vim.org/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  vim gtk3 xorg-libxt
+# URL: http://www.vim.org/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: vim gtk3 xorg-libxt
 
 name=gvim
-version=8.2.2282
+version=8.2.2576
 release=1
 source=(https://github.com/vim/vim/archive/v${version}/vim-$version.tar.gz)
 
-build () {
-    cd vim-$version/src
+build() {
+	cd vim-$version/src
 
-    sed -i '/^CFLAGS/d' Makefile
+	sed -i '/^CFLAGS/d' Makefile
 
-    ./configure --prefix=/usr \
-                --with-vim-name=gvim \
-                --with-x=yes \
-                --enable-gui=gtk3 \
-                --enable-multibyte \
-                --enable-cscope \
-                --disable-gpm \
-                --disable-nls
+	./configure \
+		--prefix=/usr \
+		--with-vim-name=gvim \
+		--with-x=yes \
+		--enable-gui=gtk3 \
+		--enable-multibyte \
+		--enable-cscope \
+		--disable-gpm \
+		--disable-nls
 
-    make VIMRTDIR=
-    make VIMRTDIR= DESTDIR=$PKG installvimbin install-icons
+	make VIMRTDIR=
+	make VIMRTDIR= DESTDIR=$PKG installvimbin install-icons
 
-    sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
+	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
 }
