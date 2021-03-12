@@ -133,19 +133,19 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/util/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libprotobuf-lite.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.26.0.5
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.26 -> libprotobuf-lite.so.26.0.5
--rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.26.0.5
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.26.0.6
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.26 -> libprotobuf-lite.so.26.0.6
+-rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.26.0.6
 -rw-r--r--	root/root	usr/lib/libprotobuf.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.26.0.5
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.26 -> libprotobuf.so.26.0.5
--rwxr-xr-x	root/root	usr/lib/libprotobuf.so.26.0.5
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.26.0.6
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.26 -> libprotobuf.so.26.0.6
+-rwxr-xr-x	root/root	usr/lib/libprotobuf.so.26.0.6
 -rw-r--r--	root/root	usr/lib/libprotoc.a
 -rwxr-xr-x	root/root	usr/lib/libprotoc.la
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.26.0.5
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so.26 -> libprotoc.so.26.0.5
--rwxr-xr-x	root/root	usr/lib/libprotoc.so.26.0.5
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.26.0.6
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so.26 -> libprotoc.so.26.0.6
+-rwxr-xr-x	root/root	usr/lib/libprotoc.so.26.0.6
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf-lite.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf.pc
