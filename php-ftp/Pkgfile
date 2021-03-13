@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=php-ftp
-version=7.4.15
+version=7.4.16
 release=1
 source=(https://www.php.net/distributions/php-$version.tar.xz)
 
