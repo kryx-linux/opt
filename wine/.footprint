@@ -190,6 +190,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/codecapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/colinf.idl
 -rw-r--r--	root/root	usr/include/wine/windows/colordlg.h
+-rw-r--r--	root/root	usr/include/wine/windows/colrst.idl
 -rw-r--r--	root/root	usr/include/wine/windows/comcat.h
 -rw-r--r--	root/root	usr/include/wine/windows/comcat.idl
 -rw-r--r--	root/root	usr/include/wine/windows/commctrl.h
@@ -1157,6 +1158,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-job-l2-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-kernel32-legacy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-kernel32-legacy-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-kernel32-legacy-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-kernel32-private-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-largeinteger-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-core-libraryloader-l1-1-0.dll.so
@@ -1619,6 +1621,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-job-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-kernel32-legacy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-kernel32-legacy-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-kernel32-legacy-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-kernel32-private-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-largeinteger-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-core-libraryloader-l1-1-0.dll
@@ -2424,6 +2427,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wmvcore.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wnaspi32.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wordpad.exe
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/wow64cpu.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wpc.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/write.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/ws2_32.dll
@@ -3080,6 +3084,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/wmvcore.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wnaspi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wordpad.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/wow64cpu.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wpc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/write.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/ws2_32.dll.so
@@ -3168,6 +3173,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-job-l2-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-kernel32-legacy-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-kernel32-legacy-l1-1-1.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-kernel32-legacy-l1-1-2.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-kernel32-private-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-largeinteger-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-core-libraryloader-l1-1-0.dll.so
@@ -3639,6 +3645,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-job-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-kernel32-legacy-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-kernel32-legacy-l1-1-1.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-kernel32-legacy-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-kernel32-private-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-largeinteger-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-core-libraryloader-l1-1-0.dll
@@ -5362,6 +5369,7 @@ drwxr-xr-x	root/root	usr/share/wine/nls/
 -rw-r--r--	root/root	usr/share/wine/nls/c_20127.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_20866.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_20932.nls
+-rw-r--r--	root/root	usr/share/wine/nls/c_20949.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_21866.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_28591.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_28592.nls
