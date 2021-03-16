@@ -5,7 +5,7 @@
 # Optional: alsa-lib cups directfb ffmpeg gst-plugins-base neon pulseaudio wayland xmlto
 
 name=freerdp2
-version=2.3.1
+version=2.3.2
 release=1
 source=(https://pub.freerdp.com/releases/freerdp-$version.tar.gz)
 
