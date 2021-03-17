@@ -1,10 +1,10 @@
 # Description: Lightweight Directory Access Protocol (LDAP) Toolkit
-# URL:         https://www.openldap.org/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  cyrus-sasl libtool perl util-linux
+# URL: https://www.openldap.org/
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: cyrus-sasl libtool perl util-linux
 
 name=openldap
-version=2.4.57
+version=2.4.58
 release=1
 source=(https://www.openldap.org/software/download/OpenLDAP/openldap-release/$name-$version.tgz
 	$name-config.patch slapd)
@@ -13,7 +13,8 @@ build() {
 	cd $name-$version
 	patch -p0 -i $SRC/$name-config.patch
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--sysconfdir=/etc \
 		--libexecdir=/usr/sbin \
 		--localstatedir=/var/openldap \
