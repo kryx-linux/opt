@@ -1,13 +1,13 @@
 # Description: LDAP-like embedded database library
-# URL:         https://ldb.samba.org/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  tevent tdb popt cmocka python3
+# URL: https://ldb.samba.org/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: tevent tdb popt cmocka python3
 
 name=ldb
-version=2.2.0
+version=2.3.0
 release=1
 source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz
-        $name-man-pages.tar.xz)
+	$name-man-pages.tar.xz)
 
 build() {
 	cd $name-$version
