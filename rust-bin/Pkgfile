@@ -5,10 +5,11 @@
 # Optional: sccache
 
 name=rust-bin
-version=1.50.0
-release=2
+version=1.51.0
+release=1
 source=(https://crux.ster.zone/downloads/rust/rust-$version-$release-crux-3.6-bin.tar.xz)
 
 build() {
-	cp -a $SRC/usr $PKG/
+	cp -a $SRC/usr $SRC/etc $PKG/
+	mv $PKG/etc/revdep.d/rust $PKG/etc/revdep.d/rust-bin
 }
