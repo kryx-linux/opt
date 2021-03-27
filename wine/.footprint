@@ -126,6 +126,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/asferr.h
 -rw-r--r--	root/root	usr/include/wine/windows/asptlb.h
 -rw-r--r--	root/root	usr/include/wine/windows/asptlb.idl
+-rw-r--r--	root/root	usr/include/wine/windows/asyncinfo.h
+-rw-r--r--	root/root	usr/include/wine/windows/asyncinfo.idl
 -rw-r--r--	root/root	usr/include/wine/windows/asynot.idl
 -rw-r--r--	root/root	usr/include/wine/windows/asysta.idl
 -rw-r--r--	root/root	usr/include/wine/windows/atlbase.h
@@ -459,6 +461,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/errors.h
 -rw-r--r--	root/root	usr/include/wine/windows/errrec.idl
 -rw-r--r--	root/root	usr/include/wine/windows/evcode.h
+-rw-r--r--	root/root	usr/include/wine/windows/eventtoken.h
+-rw-r--r--	root/root	usr/include/wine/windows/eventtoken.idl
 -rw-r--r--	root/root	usr/include/wine/windows/evntprov.h
 -rw-r--r--	root/root	usr/include/wine/windows/evntrace.h
 -rw-r--r--	root/root	usr/include/wine/windows/evr.h
@@ -985,9 +989,19 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/windows.foundation.collections.idl
 -rw-r--r--	root/root	usr/include/wine/windows/windows.foundation.h
 -rw-r--r--	root/root	usr/include/wine/windows/windows.foundation.idl
+-rw-r--r--	root/root	usr/include/wine/windows/windows.gaming.input.forcefeedback.h
+-rw-r--r--	root/root	usr/include/wine/windows/windows.gaming.input.forcefeedback.idl
+-rw-r--r--	root/root	usr/include/wine/windows/windows.gaming.input.h
+-rw-r--r--	root/root	usr/include/wine/windows/windows.gaming.input.idl
+-rw-r--r--	root/root	usr/include/wine/windows/windows.globalization.h
+-rw-r--r--	root/root	usr/include/wine/windows/windows.globalization.idl
 -rw-r--r--	root/root	usr/include/wine/windows/windows.h
 -rw-r--r--	root/root	usr/include/wine/windows/windows.media.speechsynthesis.h
 -rw-r--r--	root/root	usr/include/wine/windows/windows.media.speechsynthesis.idl
+-rw-r--r--	root/root	usr/include/wine/windows/windows.system.h
+-rw-r--r--	root/root	usr/include/wine/windows/windows.system.idl
+-rw-r--r--	root/root	usr/include/wine/windows/windows.system.userprofile.h
+-rw-r--r--	root/root	usr/include/wine/windows/windows.system.userprofile.idl
 -rw-r--r--	root/root	usr/include/wine/windows/windowscontracts.h
 -rw-r--r--	root/root	usr/include/wine/windows/windowscontracts.idl
 -rw-r--r--	root/root	usr/include/wine/windows/windowsx.h
@@ -2377,6 +2391,9 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/whoami.exe
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wiaservc.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wimgapi.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/windows.gaming.input.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/windows.globalization.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/windows.media.speech.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/windowscodecs.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/windowscodecsext.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/winealsa.drv
@@ -3032,6 +3049,9 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/whoami.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/wiaservc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wimgapi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/windows.gaming.input.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/windows.globalization.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/windows.media.speech.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/windowscodecs.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/windowscodecs.so
 -rwxr-xr-x	root/root	usr/lib/wine/windowscodecsext.dll.so
@@ -4455,6 +4475,9 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/win87em.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winaspi.dll16
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/windebug.dll16
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/windows.gaming.input.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/windows.globalization.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/windows.media.speech.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/windowscodecs.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/windowscodecsext.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/winealsa.drv
@@ -5164,6 +5187,9 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/win87em.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/winaspi.dll16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/windebug.dll16.so
+-rwxr-xr-x	root/root	usr/lib32/wine/windows.gaming.input.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/windows.globalization.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/windows.media.speech.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/windowscodecs.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/windowscodecs.so
 -rwxr-xr-x	root/root	usr/lib32/wine/windowscodecsext.dll.so
@@ -5336,7 +5362,7 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86.msi
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86_64.msi
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-6.0.0-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-6.1.0-x86.msi
 drwxr-xr-x	root/root	usr/share/wine/nls/
 -rw-r--r--	root/root	usr/share/wine/nls/c_037.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_10000.nls
