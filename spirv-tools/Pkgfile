@@ -1,35 +1,38 @@
 # Description: API and commands for processing SPIR-V modules
 # URL: https://www.khronos.org/vulkan/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: spirv-headers
 
 name=spirv-tools
-version=2020.5-b27b1af
+version=2020.7
 release=1
-source=(
-	#https://github.com/KhronosGroup/SPIRV-Tools/archive/v$version/SPIRV-Tools-v$version.tar.gz
-	https://github.com/KhronosGroup/SPIRV-Tools/archive/b27b1afd12d05bf238ac7368bb49de73cd620a8e.zip
-	spirv-tools-gcc11.patch)
+source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/v$version/SPIRV-Tools-v$version.tar.gz
+	https://github.com/KhronosGroup/SPIRV-Headers/archive/f88a1f98fa7a44ccfcf33d810c72b200e7d9a78a.zip)
 
 build() {
-	mv SPIRV-Tools-b27b1afd12d05bf238ac7368bb49de73cd620a8e SPIRV-Tools-$version
+	mv SPIRV-Headers-f88a1f98fa7a44ccfcf33d810c72b200e7d9a78a SPIRV-Headers
+	prt-get isinst ninja && PKGMK_SPIRV_TOOLS+=' -G Ninja'
 
-	local config="
--SSPIRV-Tools-$version \
--DCMAKE_INSTALL_PREFIX=/usr \
--DCMAKE_INSTALL_LIBDIR=lib \
--DCMAKE_BUILD_TYPE=Release \
--DSPIRV_WERROR=OFF \
--DSPIRV-Headers_SOURCE_DIR=/usr \
--DPYTHON_EXECUTABLE=/usr/bin/python3 \
--GNinja"
+	PKGMK_GLSLANG+=" \
+-S SPIRV-Tools-$version \
+-D CMAKE_INSTALL_PREFIX=/usr \
+-D CMAKE_INSTALL_LIBDIR=lib \
+-D CMAKE_BUILD_TYPE=Release \
+-D SPIRV_WERROR=OFF \
+-D SPIRV-Headers_SOURCE_DIR=/usr \
+-D PYTHON_EXECUTABLE=/usr/bin/python3 \
+-DSPIRV-Headers_SOURCE_DIR="${SRC}"/SPIRV-Headers \
+-Wno-dev"
 
-	patch -d SPIRV-Tools-$version -p1 -i $SRC/spirv-tools-gcc11.patch
-
-	cmake -Bbuild-static $config -DBUILD_SHARED_LIBS=OFF
+	cmake -B build-static $PKGMK_GLSLANG \
+		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+		-D BUILD_SHARED_LIBS=OFF
 	cmake --build build-static
 
-	cmake -Bbuild-shared $config -DBUILD_SHARED_LIBS=ON
+	cmake -B build-shared $PKGMK_GLSLANG \
+		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+		-D BUILD_SHARED_LIBS=ON
 	cmake --build build-shared
 
 	DESTDIR=$PKG cmake --build build-static --target install
