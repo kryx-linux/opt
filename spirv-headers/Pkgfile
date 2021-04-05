@@ -1,20 +1,17 @@
 # Description: Header files from the SPIR-V registry
 # URL: https://www.khronos.org/registry/spir-v/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cmake ninja
+# Depends on: cmake
 
 name=spirv-headers
-version=1.5.4-f027d53
+version=1.5.4.raytracing.fixed
 release=1
-source=(
-	#https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz
-	https://github.com/KhronosGroup/SPIRV-Headers/archive/f027d53ded7e230e008d37c8b47ede7cd308e19d.zip
-)
+source=(https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz)
 
 build() {
-	mv SPIRV-Headers-f027d53ded7e230e008d37c8b47ede7cd308e19d SPIRV-Headers-$version
+	prt-get isinst ninja && PKGMK_SPIRV_HEADERS+=' -G Ninja'
 
-	cmake -SSPIRV-Headers-$version -Bbuild -GNinja \
+	cmake -S SPIRV-Headers-$version -B build $PKGMK_SPIRV_HEADERS \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_BUILD_TYPE=Release \
