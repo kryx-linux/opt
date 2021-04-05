@@ -1,38 +1,51 @@
 # Description: OpenGL and OpenGL ES shader front end and validator
 # URL: https://www.khronos.org/opengles/sdk/tools/Reference-Compiler
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: spirv-tools
+# Depends on: cmake
+# Optional: ninja
 
 name=glslang
-version=11.0.0-c594de2
+version=11.2.0
 release=1
-source=(
-	#https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
-	https://github.com/KhronosGroup/glslang/archive/c594de23cdd790d64ad5f9c8b059baae0ee2941d.zip
-	glslang-default-resource-limits_staticlib.patch
-	0001-pkg-config-compatibility.patch)
+_commit=c594de23cdd790d64ad5f9c8b059baae0ee2941d
+_spirv_headers=75b30a659c8a4979104986652c54cc421fc51129
+_spirv_tools=c79edd260c2b503f0eca57310057b4a100999cc5
+source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
+	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/$name-$_spirv_headers.tar.gz
+	https://github.com/KhronosGroup/SPIRV-Tools/archive/$_spirv_tools/$name-$_spirv_tools.tar.gz)
 
 build() {
-	mv $name-c594de23cdd790d64ad5f9c8b059baae0ee2941d $name-$version
+	cp -r SPIRV-Tools-$_spirv_tools $name-$version/External/spirv-tools
+	cp -r SPIRV-Headers-$_spirv_headers $name-$version/External/spirv-tools/external/spirv-headers
 
-	patch -d $name-$version -p1 -i $SRC/glslang-default-resource-limits_staticlib.patch
-	patch -d $name-$version -p1 -i $SRC/0001-pkg-config-compatibility.patch
+	prt-get isinst ninja && PKGMK_GLSLANG+=' -G Ninja'
+	prt-get isinst ccache && PKGMK_GLSLANG+=' -D USE_CCACHE=ON'
+	prt-get isinst ccache && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
 	local config="
--S$name-$version \
--DCMAKE_INSTALL_PREFIX=/usr \
--DCMAKE_INSTALL_LIBDIR=lib \
--DCMAKE_BUILD_TYPE=Release \
--DCMAKE_SKIP_RPATH:BOOL=yes \
--GNinja"
+		-S $name-$version
+		-D CMAKE_INSTALL_PREFIX=/usr
+		-D CMAKE_INSTALL_LIBDIR=lib
+		-D CMAKE_BUILD_TYPE=Release
+		-D CMAKE_SKIP_RPATH:BOOL=yes
+		-Wno-dev"
 
-	cmake -Bbuild-static $config -DBUILD_SHARED_LIBS=OFF
+	cmake -B build-static $config $PKGMK_GLSLANG \
+		-D BUILD_SHARED_LIBS=OFF \
+		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}"
 	cmake --build build-static
-	
+
 	# https://github.com/KhronosGroup/glslang/issues/1484 -Wl,--no-undefined
-	cmake -Bbuild-shared $config -DBUILD_SHARED_LIBS=ON -DCMAKE_SHARED_LINKER_FLAGS='-Wl,--no-undefined'
+	cmake -B build-shared $config $PKGMK_GLSLANG \
+		-D BUILD_SHARED_LIBS=ON \
+		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+		-D CMAKE_SHARED_LINKER_FLAGS='-Wl,--no-undefined'
 	cmake --build build-shared
-	
+
 	DESTDIR=$PKG cmake --build build-static --target install
 	DESTDIR=$PKG cmake --build build-shared --target install
+
+	mv $PKG/usr/bin/spirv-remap $SRC/
+	rm -r $PKG/usr/{bin/spirv*,include/spirv-tools,lib/cmake/SPIRV-Tools*,lib/libSPIRV-*,lib/pkgconfig}
+	mv $SRC/spirv-remap $PKG/usr/bin/spirv-remap
 }
