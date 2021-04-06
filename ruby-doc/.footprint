@@ -946,6 +946,14 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Continuation/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Continuation/%5b%5d-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Continuation/call-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Continuation/cdesc-Continuation.ri
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/CoreExtensions/
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/CoreExtensions/TCPSocketExt/
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/CoreExtensions/TCPSocketExt/Initializer/
+-rw-r--r--	root/root	usr/share/ri/3.0/system/CoreExtensions/TCPSocketExt/Initializer/cdesc-Initializer.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/CoreExtensions/TCPSocketExt/Initializer/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/CoreExtensions/TCPSocketExt/cdesc-TCPSocketExt.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/CoreExtensions/TCPSocketExt/prepended-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/CoreExtensions/cdesc-CoreExtensions.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Coverage/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Coverage/cdesc-Coverage.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Coverage/line_stub-c.ri
@@ -2734,8 +2742,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/MakeDirs/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/MakeDirs/cdesc-MakeDirs.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/MakeDirs/mkdir_p-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/bin_file_names-i.ri
--rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/bundler_man1_files_in-i.ri
--rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/bundler_man5_files_in-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/cdesc-SetupCommand.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/check_ruby_version-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/execute-i.ri
@@ -2747,10 +2753,8 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/MakeDirs/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/install_file-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/install_file_list-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/install_lib-i.ri
--rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/install_man-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/install_rdoc-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/make_destination_dirs-i.ri
--rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/make_man_dir-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/regenerate_binstubs-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/SetupCommand/regenerate_plugins-i.ri
@@ -2841,6 +2845,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/ConfigFile/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/ConfigFile/handle_arguments-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/ConfigFile/hash-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/ConfigFile/home-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/ConfigFile/ipv4_fallback_enabled-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/ConfigFile/load_api_keys-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/ConfigFile/load_file-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/ConfigFile/new-c.ri
@@ -2879,6 +2884,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Dependency/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Dependency/%3d%3d%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Dependency/%3d%7e-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Dependency/cdesc-Dependency.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Dependency/filters_bundler%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Dependency/identity-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Dependency/latest_version%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Dependency/match%3f-i.ri
@@ -3388,7 +3394,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Platform/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Platform/cdesc-Platform.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Platform/cpu-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Platform/eql%3f-i.ri
--rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Platform/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Platform/installable%3f-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Platform/local-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Platform/match-c.ri
@@ -3441,6 +3446,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/RemoteFetcher/
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/RemoteFetcher/FetchError/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/RemoteFetcher/FetchError/cdesc-FetchError.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/RemoteFetcher/FetchError/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/RemoteFetcher/FetchError/original_uri-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/RemoteFetcher/FetchError/uri-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/RemoteFetcher/UnknownHostError/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/RemoteFetcher/UnknownHostError/cdesc-UnknownHostError.ri
@@ -3717,6 +3723,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/Delegates/Re
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/Delegates/SpecificationProvider/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/Delegates/SpecificationProvider/allow_missing%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/Delegates/SpecificationProvider/cdesc-SpecificationProvider.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/Delegates/SpecificationProvider/dependencies_equal%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/Delegates/SpecificationProvider/dependencies_for-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/Delegates/SpecificationProvider/name_for-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/Delegates/SpecificationProvider/name_for_explicit_dependency_source-i.ri
@@ -3800,6 +3807,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/DependencyGr
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/DependencyGraph/Vertex/is_reachable_from%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/DependencyGraph/Vertex/name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/DependencyGraph/Vertex/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/DependencyGraph/Vertex/new_vertex_set-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/DependencyGraph/Vertex/outgoing_edges-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/DependencyGraph/Vertex/path_to%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/DependencyGraph/Vertex/payload-i.ri
@@ -3921,6 +3929,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/ResolverErro
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/SpecificationProvider/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/SpecificationProvider/allow_missing%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/SpecificationProvider/cdesc-SpecificationProvider.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/SpecificationProvider/dependencies_equal%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/SpecificationProvider/dependencies_for-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/SpecificationProvider/name_for-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Resolver/Molinillo/SpecificationProvider/name_for_explicit_dependency_source-i.ri
@@ -5145,6 +5154,12 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/Color/SymbolState/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Color/scan-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Color/supported%3f-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Color/without_circular_ref-c.ri
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ColorPrinter/
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ColorPrinter/cdesc-ColorPrinter.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ColorPrinter/pp-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ColorPrinter/pp-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ColorPrinter/screen_width-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ColorPrinter/text-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/Context/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Context/__exit__-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Context/_set_last_value-i.ri
@@ -5245,6 +5260,10 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Kill/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Kill/cdesc-Kill.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Load/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Load/cdesc-Load.ri
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Ls/
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Ls/Output/
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Ls/Output/cdesc-Output.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Ls/cdesc-Ls.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Measure/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Measure/cdesc-Measure.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Nop/
@@ -5255,8 +5274,12 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/PushWorkspace/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/PushWorkspace/cdesc-PushWorkspace.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Require/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Require/cdesc-Require.ri
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/ShowSource/
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/ShowSource/cdesc-ShowSource.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Source/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Source/cdesc-Source.ri
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Whereami/
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Whereami/cdesc-Whereami.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Workspaces/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/Workspaces/cdesc-Workspaces.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommand/cdesc-ExtendCommand.ri
@@ -5272,12 +5295,14 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/ExtendCommandBundle/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/ExtendCommandBundle/irb_require-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/cdesc-FileInputMethod.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/close-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/encoding-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/eof%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/file_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/gets-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/FileInputMethod/open-c.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/Frame/
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/Frame/FrameOverflow/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Frame/FrameOverflow/cdesc-FrameOverflow.ri
@@ -5320,6 +5345,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/Irb/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Irb/assignment_expression%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Irb/cdesc-Irb.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Irb/context-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Irb/convert_invalid_byte_sequence-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Irb/eval_input-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Irb/handle_exception-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/Irb/inspect-i.ri
@@ -5335,6 +5361,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/Irb/
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/IrbAlreadyDead/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/IrbAlreadyDead/cdesc-IrbAlreadyDead.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/IRB/IrbLoader/
+-rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/IrbLoader/absolute_path%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/IrbLoader/cdesc-IrbLoader.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/IrbLoader/irb_load-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/IRB/IrbLoader/load_file-i.ri
@@ -11014,6 +11041,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Reline/Core/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Reline/encoding_system_needs-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Reline/insert_text-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Reline/line_editor-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Reline/ungetc-c.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Resolv/
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Resolv/DNS/
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Resolv/DNS/Config/
