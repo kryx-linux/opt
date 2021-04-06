@@ -1,18 +1,20 @@
 # Description: API and commands for processing SPIR-V modules
 # URL: https://www.khronos.org/vulkan/
 # Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: cmake
 
 name=spirv-tools
 version=2020.7
+_spirv_headers=f88a1f98fa7a44ccfcf33d810c72b200e7d9a78a
 release=1
 source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/v$version/SPIRV-Tools-v$version.tar.gz
-	https://github.com/KhronosGroup/SPIRV-Headers/archive/f88a1f98fa7a44ccfcf33d810c72b200e7d9a78a.zip)
+	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/SPIRV-Headers-$_spirv_headers.tar.gz)
 
 build() {
-	mv SPIRV-Headers-f88a1f98fa7a44ccfcf33d810c72b200e7d9a78a SPIRV-Headers
+	mv SPIRV-Headers-$_spirv_headers SPIRV-Headers
 	prt-get isinst ninja && PKGMK_SPIRV_TOOLS+=' -G Ninja'
 
-	PKGMK_GLSLANG+=" \
+	PKGMK_SPIRV_TOOLS+=" \
 -S SPIRV-Tools-$version \
 -D CMAKE_INSTALL_PREFIX=/usr \
 -D CMAKE_INSTALL_LIBDIR=lib \
@@ -23,13 +25,13 @@ build() {
 -DSPIRV-Headers_SOURCE_DIR="${SRC}"/SPIRV-Headers \
 -Wno-dev"
 
-	cmake -B build-static $PKGMK_GLSLANG \
+	cmake -B build-static $PKGMK_SPIRV_TOOLS \
 		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
 		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
 		-D BUILD_SHARED_LIBS=OFF
 	cmake --build build-static
 
-	cmake -B build-shared $PKGMK_GLSLANG \
+	cmake -B build-shared $PKGMK_SPIRV_TOOLS \
 		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
 		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
 		-D BUILD_SHARED_LIBS=ON
