@@ -1,10 +1,10 @@
 # Description: Caching DNS forwarder and DHCP/TFTP server 
-# URL:         http://www.thekelleys.org.uk/dnsmasq/doc.html
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  nettle
+# URL: http://www.thekelleys.org.uk/dnsmasq/doc.html
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: nettle
 
 name=dnsmasq
-version=2.84
+version=2.85
 release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.xz \
 	$name-config.patch dnsmasq)
@@ -12,7 +12,7 @@ source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.xz \
 build () {
 	cd $name-$version
 
-	sed 's/rc2//' -i VERSION
+	#sed 's/rc2//' -i VERSION
 	patch -p1 -i $SRC/$name-config.patch
 
 	make COPTS="-DHAVE_DNSSEC" CFLAGS="$CFLAGS -W -Wall"
