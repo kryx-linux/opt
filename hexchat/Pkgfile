@@ -6,11 +6,20 @@
 
 name=hexchat
 version=2.14.3
-release=1
-source=(https://dl.hexchat.net/hexchat/$name-$version.tar.xz)
+release=2
+source=(https://dl.hexchat.net/hexchat/$name-$version.tar.xz
+	0001-python-cffi.patch
+	0002-python-3-8.patch
+	0003-Use-pango_font_metrics_get_height-to-calculate-font-height.patch
+	0004-fix_segfault_on_lua_pop_with_Lua_5.4.3.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/0001-python-cffi.patch
+	patch -p1 -i $SRC/0002-python-3-8.patch
+	patch -p1 -i $SRC/0003-Use-pango_font_metrics_get_height-to-calculate-font-height.patch
+	patch -p1 -i $SRC/0004-fix_segfault_on_lua_pop_with_Lua_5.4.3.patch
 
 	# Lua scripting plugin, value is pkg-config name
 	prt-get isinst lua && PKGMK_HEXCHAT+=' -Dwith-lua=lua' || PKGMK_HEXCHAT+=' -Dwith-lua=false'
