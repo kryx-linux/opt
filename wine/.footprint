@@ -975,6 +975,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wimgapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/winapifamily.h
 -rw-r--r--	root/root	usr/include/wine/windows/winbase.h
+-rw-r--r--	root/root	usr/include/wine/windows/winber.h
 -rw-r--r--	root/root	usr/include/wine/windows/wincodec.h
 -rw-r--r--	root/root	usr/include/wine/windows/wincodec.idl
 -rw-r--r--	root/root	usr/include/wine/windows/wincodecsdk.h
@@ -1343,8 +1344,10 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-service-winsvc-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-service-winsvc-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-shcore-obsolete-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-shcore-scaling-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-shcore-scaling-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-shcore-stream-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-shcore-stream-winrt-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-shcore-thread-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-shell-shellcom-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/api-ms-win-shell-shellfolders-l1-1-0.dll.so
@@ -1489,6 +1492,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dmusic.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dmusic32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dnsapi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dnsapi.so
 -rwxr-xr-x	root/root	usr/lib/wine/dplay.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dplaysvr.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/dplayx.dll.so
@@ -1509,6 +1513,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dswave.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dwmapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dwrite.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dwrite.so
 -rwxr-xr-x	root/root	usr/lib/wine/dx8vb.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dxdiag.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/dxdiagn.dll.so
@@ -1806,8 +1811,10 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-service-winsvc-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-service-winsvc-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-shcore-obsolete-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-shcore-scaling-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-shcore-scaling-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-shcore-stream-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-shcore-stream-winrt-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-shcore-thread-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-shell-shellcom-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/api-ms-win-shell-shellfolders-l1-1-0.dll
@@ -2383,6 +2390,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wbemprox.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wdscore.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/webservices.dll
+-rw-r--r--	root/root	usr/lib/wine/fakedlls/websocket.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wer.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wevtapi.dll
 -rw-r--r--	root/root	usr/lib/wine/fakedlls/wevtsvc.dll
@@ -2617,6 +2625,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib/wine/libmf.def
 -rw-r--r--	root/root	usr/lib/wine/libmfmediaengine.def
 -rw-r--r--	root/root	usr/lib/wine/libmfplat.def
+-rw-r--r--	root/root	usr/lib/wine/libmfplay.def
 -rw-r--r--	root/root	usr/lib/wine/libmfreadwrite.def
 -rw-r--r--	root/root	usr/lib/wine/libmfuuid.a
 -rw-r--r--	root/root	usr/lib/wine/libmlang.def
@@ -3041,6 +3050,7 @@ drwxr-xr-x	root/root	usr/lib/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib/wine/wbemprox.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wdscore.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/webservices.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/websocket.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wer.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wevtapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wevtsvc.dll.so
@@ -3364,8 +3374,10 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-service-winsvc-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-service-winsvc-l1-2-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-shcore-obsolete-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-shcore-scaling-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-shcore-scaling-l1-1-1.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-shcore-stream-l1-1-0.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-shcore-stream-winrt-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-shcore-thread-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-shell-shellcom-l1-1-0.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/api-ms-win-shell-shellfolders-l1-1-0.dll.so
@@ -3519,6 +3531,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/dmusic.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dmusic32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dnsapi.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/dnsapi.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dplay.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dplaysvr.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dplayx.dll.so
@@ -3539,6 +3552,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/
 -rwxr-xr-x	root/root	usr/lib32/wine/dswave.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dwmapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dwrite.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/dwrite.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dx8vb.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dxdiag.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/dxdiagn.dll.so
@@ -3836,8 +3850,10 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-service-winsvc-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-service-winsvc-l1-2-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-shcore-obsolete-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-shcore-scaling-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-shcore-scaling-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-shcore-stream-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-shcore-stream-winrt-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-shcore-thread-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-shell-shellcom-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/api-ms-win-shell-shellfolders-l1-1-0.dll
@@ -4463,6 +4479,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wbemprox.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wdscore.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/webservices.dll
+-rw-r--r--	root/root	usr/lib32/wine/fakedlls/websocket.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wer.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wevtapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/fakedlls/wevtsvc.dll
@@ -4714,6 +4731,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rw-r--r--	root/root	usr/lib32/wine/libmf.def
 -rw-r--r--	root/root	usr/lib32/wine/libmfmediaengine.def
 -rw-r--r--	root/root	usr/lib32/wine/libmfplat.def
+-rw-r--r--	root/root	usr/lib32/wine/libmfplay.def
 -rw-r--r--	root/root	usr/lib32/wine/libmfreadwrite.def
 -rw-r--r--	root/root	usr/lib32/wine/libmfuuid.a
 -rw-r--r--	root/root	usr/lib32/wine/libmlang.def
@@ -5175,6 +5193,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/fakedlls/
 -rwxr-xr-x	root/root	usr/lib32/wine/wbemprox.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wdscore.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/webservices.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/websocket.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wer.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wevtapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/wevtsvc.dll.so
@@ -5362,7 +5381,7 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86.msi
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86_64.msi
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-6.1.0-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-6.1.1-x86.msi
 drwxr-xr-x	root/root	usr/share/wine/nls/
 -rw-r--r--	root/root	usr/share/wine/nls/c_037.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_10000.nls
