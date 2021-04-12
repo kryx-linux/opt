@@ -11,8 +11,6 @@ source=(https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/fi
 build() {
 	cd firefox-$version
 
-	export CC=gcc CXX=g++
-
 	mkdir obj ; cd obj
 	../js/src/configure \
 		--prefix=/usr \
