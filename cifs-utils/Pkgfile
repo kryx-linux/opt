@@ -1,10 +1,10 @@
 # Description: Utilities for doing and managing mounts of the Linux CIFS filesystem
-# URL:         https://wiki.samba.org/index.php/LinuxCIFS_utils
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  linux-pam samba keyutils
+# URL: https://wiki.samba.org/index.php/LinuxCIFS_utils
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: linux-pam samba keyutils
 
 name=cifs-utils
-version=6.12
+version=6.13
 release=1
 source=(https://download.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2
 	$name-man.tar.xz cifs)
