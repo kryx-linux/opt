@@ -3,12 +3,12 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=oniguruma
-version=6.9.7
+version=6.9.7.1
 release=1
 source=(https://github.com/kkos/oniguruma/releases/download/v${version/-/_}/onig-$version.tar.gz)
 
 build() {
-	cd onig-${version%-*}
+	cd onig-${version:0:5}
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
