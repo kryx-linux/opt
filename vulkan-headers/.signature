@@ -1,5 +1,7 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/TJljlnpAjQmPg1uQrKpeoOlPLbjCGUGZXweNx83fM+OPDuR7mnJRlvAxlofkwPtN1D8cBUqBITdUZHkCFGA+gg=
-SHA256 (Pkgfile) = 1ea2a3e7ad80692ef6d739b7d19d1b41680b455a880e0cc6b5e5f14caf00ce88
-SHA256 (.footprint) = bb1d8d1b927af6d39cda1ed1ea21266a1f6188e8939291246574b6001f5b475d
+RWSE3ohX2g5d/VWUpNdFpiecIbqzIJfb9WS0HPwG9UYjf01rvTZJ+vfbEPADViqo73Df4PEa7a7ECwgKjVfJ0mPOb1jdaw8eIwc=
+SHA256 (Pkgfile) = 88f6f5708af38463eba6d602c6929989fcd00995ccaa60be6eba7805d981d198
+SHA256 (.footprint) = a7c0c1d131eb4f7a55b42a0c5ba7dbe7cd647ac0636dabc1f96eb159866652b0
 SHA256 (vulkan-headers-v1.2.175.tar.gz) = 36d8ce49fc617b9a7610ecac1de0054cb059e2c2804febb64c916365d2e39831
+SHA256 (0001-Omitted-static-vk_video-headers-in-the-1.2.175-updat.patch) = 47dfe4f9a9fbb58c83dcb91cccdbeb5f36424b710cd8f7012ef32113dc128dac
+SHA256 (0002-Add-vk_video-headers-to-CMake-install-target.patch) = e7efda7cecf19f143c3be418b76a2cd6d6874009315cdd3a102b36c43882373a
