@@ -1,10 +1,10 @@
-# Description: NVIDIA Linux Display Driver (long lived branch)
+# Description: NVIDIA Linux Display Driver (production branch)
 # URL: https://www.nvidia.com/
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia
-version=460.67
+version=460.73.01
 release=1
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf)
