@@ -4,17 +4,11 @@
 # Depends on: cmake
 
 name=vulkan-headers
-version=1.2.175
-release=2
-source=(https://github.com/KhronosGroup/Vulkan-Headers/archive/v$version/$name-v$version.tar.gz
-	0001-Omitted-static-vk_video-headers-in-the-1.2.175-updat.patch
-	0002-Add-vk_video-headers-to-CMake-install-target.patch)
+version=1.2.176
+release=1
+source=(https://github.com/KhronosGroup/Vulkan-Headers/archive/v$version/$name-v$version.tar.gz)
 
 build() {
-	# fix building error with vulkan-icd-loader-1.2.174
-	patch -d Vulkan-Headers-$version -p1 -i $SRC/0001-Omitted-static-vk_video-headers-in-the-1.2.175-updat.patch
-	patch -d Vulkan-Headers-$version -p1 -i $SRC/0002-Add-vk_video-headers-to-CMake-install-target.patch
-
 	cmake -S Vulkan-Headers-$version -B build \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=lib \
