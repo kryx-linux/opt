@@ -4,7 +4,7 @@
 # Depends on: libtool libgd pango
 
 name=graphviz
-version=2.47.0
+version=2.47.1
 release=1
 source=(https://gitlab.com/graphviz/graphviz/-/archive/$version/$name-$version.tar.bz2)
 
