@@ -1,7 +1,7 @@
 # Description: Direct3D 12 to Vulkan translation library By WineHQ.
 # URL: https://github.com/d3d12/vkd3d
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: spirv-tools vulkan-loader xorg-xcb-util-keysyms
+# Depends on: spirv-headers spirv-tools vulkan-loader xorg-xcb-util-keysyms
 
 name=vkd3d
 version=1.2
