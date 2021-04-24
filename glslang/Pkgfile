@@ -5,22 +5,27 @@
 # Optional: ninja
 
 name=glslang
-version=11.2.0
+version=11.4.0
 release=1
-_commit=c594de23cdd790d64ad5f9c8b059baae0ee2941d
-_spirv_headers=75b30a659c8a4979104986652c54cc421fc51129
-_spirv_tools=c79edd260c2b503f0eca57310057b4a100999cc5
+_spirv_headers=dafead1765f6c1a5f9f8a76387dcb2abe4e54acd
+_spirv_tools=dc72924cb31cd9f3dbc3eb47e9d926cf641e3a07
 source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
-	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/$name-$_spirv_headers.tar.gz
-	https://github.com/KhronosGroup/SPIRV-Tools/archive/$_spirv_tools/$name-$_spirv_tools.tar.gz)
+	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/SPIRV-Headers-$_spirv_headers.tar.gz
+	https://github.com/KhronosGroup/SPIRV-Tools/archive/$_spirv_tools/SPIRV-Tools-$_spirv_tools.tar.gz
+	known_good.py.in)
 
 build() {
 	cp -r SPIRV-Tools-$_spirv_tools $name-$version/External/spirv-tools
 	cp -r SPIRV-Headers-$_spirv_headers $name-$version/External/spirv-tools/external/spirv-headers
 
+	sed -e "s|@SRC@|$SRC/$name-$version|" $SRC/known_good.py.in > $SRC/known_good.py
+	chmod u+x $SRC/known_good.py
+	$SRC/known_good.py
+
 	prt-get isinst ninja && PKGMK_GLSLANG+=' -G Ninja'
-	prt-get isinst ccache && PKGMK_GLSLANG+=' -D USE_CCACHE=ON'
-	prt-get isinst ccache && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
+	prt-get isinst ccache && \
+		PKGMK_GLSLANG+=' -D USE_CCACHE=ON' && \
+		PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
 	local config="
 		-S $name-$version
