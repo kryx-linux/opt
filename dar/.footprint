@@ -20,11 +20,13 @@ drwxr-xr-x	root/root	usr/include/dar/
 -rw-r--r--	root/root	usr/include/dar/archive_options5.hpp
 -rw-r--r--	root/root	usr/include/dar/archive_options_listing_shell.hpp
 -rw-r--r--	root/root	usr/include/dar/archive_summary.hpp
+-rw-r--r--	root/root	usr/include/dar/block_compressor.hpp
 -rw-r--r--	root/root	usr/include/dar/capabilities.hpp
 -rw-r--r--	root/root	usr/include/dar/cat_status.hpp
 -rw-r--r--	root/root	usr/include/dar/compile_time_features.hpp
 -rw-r--r--	root/root	usr/include/dar/compression.hpp
 -rw-r--r--	root/root	usr/include/dar/compressor.hpp
+-rw-r--r--	root/root	usr/include/dar/compressor_zstd.hpp
 -rw-r--r--	root/root	usr/include/dar/crc.hpp
 -rw-r--r--	root/root	usr/include/dar/crit_action.hpp
 -rw-r--r--	root/root	usr/include/dar/criterium.hpp
@@ -49,6 +51,7 @@ drwxr-xr-x	root/root	usr/include/dar/
 -rw-r--r--	root/root	usr/include/dar/etage.hpp
 -rw-r--r--	root/root	usr/include/dar/fichier_global.hpp
 -rw-r--r--	root/root	usr/include/dar/fichier_local.hpp
+-rw-r--r--	root/root	usr/include/dar/filesystem_ids.hpp
 -rw-r--r--	root/root	usr/include/dar/fsa_family.hpp
 -rw-r--r--	root/root	usr/include/dar/generic_file.hpp
 -rw-r--r--	root/root	usr/include/dar/get_version.hpp
@@ -70,7 +73,9 @@ drwxr-xr-x	root/root	usr/include/dar/
 -rw-r--r--	root/root	usr/include/dar/mem_ui.hpp
 -rw-r--r--	root/root	usr/include/dar/memory_file.hpp
 -rw-r--r--	root/root	usr/include/dar/mycurl_protocol.hpp
+-rw-r--r--	root/root	usr/include/dar/parallel_block_compressor.hpp
 -rw-r--r--	root/root	usr/include/dar/path.hpp
+-rw-r--r--	root/root	usr/include/dar/proto_compressor.hpp
 -rw-r--r--	root/root	usr/include/dar/proto_generic_file.hpp
 -rw-r--r--	root/root	usr/include/dar/range.hpp
 -rw-r--r--	root/root	usr/include/dar/real_infinint.hpp
@@ -93,9 +98,9 @@ drwxr-xr-x	root/root	usr/include/dar/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdar64.a
 -rwxr-xr-x	root/root	usr/lib/libdar64.la
-lrwxrwxrwx	root/root	usr/lib/libdar64.so -> libdar64.so.6000.2.8
-lrwxrwxrwx	root/root	usr/lib/libdar64.so.6000 -> libdar64.so.6000.2.8
--rwxr-xr-x	root/root	usr/lib/libdar64.so.6000.2.8
+lrwxrwxrwx	root/root	usr/lib/libdar64.so -> libdar64.so.6000.3.0
+lrwxrwxrwx	root/root	usr/lib/libdar64.so.6000 -> libdar64.so.6000.3.0
+-rwxr-xr-x	root/root	usr/lib/libdar64.so.6000.3.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libdar64.pc
 drwxr-xr-x	root/root	usr/share/
