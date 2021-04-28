@@ -16,7 +16,9 @@ build() {
   [[ -e /usr/lib/pkgconfig/bash-completion.pc ]] || PKGMK_PULSEAUDIO+=' -D bashcompletiondir=no'
   [[ -e /usr/bin/zsh ]] || PKGMK_PULSEAUDIO+=' -D zshcompletiondir=no'
 
-   meson setup $name-$version build $PKGMK_PULSEAUDIO \
+  sed -i -e '/doxygen/d' pulseaudio-$version/meson.build
+
+  meson setup $name-$version build $PKGMK_PULSEAUDIO \
     --prefix=/usr \
     --libexecdir=/usr/lib/$name \
     -D buildtype=plain \
