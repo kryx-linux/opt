@@ -1,12 +1,12 @@
-# Description: Interface for atk
-# URL:         http://developer.gnome.org/libatspi/
+# Description: Protocol definitions and daemon for D-Bus at-spi
+# URL:         https://gitlab.gnome.org/GNOME/at-spi2-core
 # Maintainer:  CRUX System Team, core-ports at crux dot nu
 # Depends on:  dbus gobject-introspection intltool xorg-libxtst meson ninja
 
 name=at-spi2-core
-version=2.40.0
+version=2.40.1
 release=1
-source=(http://ftp.gnome.org/pub/gnome/sources/at-spi2-core/${version:0:4}/at-spi2-core-$version.tar.xz)
+source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
 	meson setup build $name-$version \
