@@ -758,6 +758,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/battery-missing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/bluetooth-active-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/bluetooth-disabled-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/bluetooth-disconnected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/bluetooth-hardware-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/call-incoming-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/call-missed-symbolic.symbolic.png
@@ -769,7 +770,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/channel-insecure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/channel-secure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/computer-fail-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/content-loading-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/daytime-sunrise-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/daytime-sunset-symbolic.symbolic.png
@@ -853,6 +853,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/orientation-landscape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/orientation-portrait-left-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/orientation-portrait-right-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/power-profile-balanced-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/power-profile-performance-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/power-profile-power-saver-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/printer-error-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/printer-printing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/printer-warning-symbolic.symbolic.png
@@ -2037,6 +2040,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/battery-missing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/bluetooth-active-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/bluetooth-disabled-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/bluetooth-disconnected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/bluetooth-hardware-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/call-incoming-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/call-missed-symbolic.symbolic.png
@@ -2048,7 +2052,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/channel-insecure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/channel-secure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/computer-fail-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/content-loading-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/daytime-sunrise-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/daytime-sunset-symbolic.symbolic.png
@@ -2132,6 +2135,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/orientation-landscape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/orientation-portrait-left-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/orientation-portrait-right-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/power-profile-balanced-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/power-profile-performance-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/power-profile-power-saver-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/printer-error-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/printer-printing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/printer-warning-symbolic.symbolic.png
@@ -3113,6 +3119,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/battery-missing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/bluetooth-active-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/bluetooth-disabled-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/bluetooth-disconnected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/bluetooth-hardware-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/call-incoming-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/call-missed-symbolic.symbolic.png
@@ -3124,7 +3131,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/channel-insecure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/channel-secure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/computer-fail-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/content-loading-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/daytime-sunrise-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/daytime-sunset-symbolic.symbolic.png
@@ -3208,6 +3214,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/orientation-landscape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/orientation-portrait-left-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/orientation-portrait-right-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/power-profile-balanced-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/power-profile-performance-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/power-profile-power-saver-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/printer-error-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/printer-printing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/printer-warning-symbolic.symbolic.png
@@ -4033,6 +4042,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/battery-missing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/bluetooth-active-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/bluetooth-disabled-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/bluetooth-disconnected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/bluetooth-hardware-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/call-incoming-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/call-missed-symbolic.symbolic.png
@@ -4044,7 +4054,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/channel-insecure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/channel-secure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/computer-fail-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/content-loading-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/daytime-sunrise-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/daytime-sunset-symbolic.symbolic.png
@@ -4128,6 +4137,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/orientation-landscape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/orientation-portrait-left-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/orientation-portrait-right-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/power-profile-balanced-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/power-profile-performance-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/power-profile-power-saver-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/printer-error-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/printer-printing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/printer-warning-symbolic.symbolic.png
@@ -4686,6 +4698,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/battery-missing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/bluetooth-active-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/bluetooth-disabled-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/bluetooth-disconnected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/bluetooth-hardware-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/call-incoming-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/call-missed-symbolic.symbolic.png
@@ -4697,7 +4710,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/channel-insecure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/channel-secure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/computer-fail-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/content-loading-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/daytime-sunrise-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/daytime-sunset-symbolic.symbolic.png
@@ -4779,6 +4791,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/orientation-landscape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/orientation-portrait-left-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/orientation-portrait-right-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/power-profile-balanced-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/power-profile-performance-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/power-profile-power-saver-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/printer-error-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/printer-printing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/printer-warning-symbolic.symbolic.png
@@ -5256,6 +5271,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/battery-missing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/bluetooth-active-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/bluetooth-disabled-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/bluetooth-disconnected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/bluetooth-hardware-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/call-incoming-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/call-missed-symbolic.symbolic.png
@@ -5267,7 +5283,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/channel-insecure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/channel-secure-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/computer-fail-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/contact-new-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/content-loading-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/daytime-sunrise-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/daytime-sunset-symbolic.symbolic.png
@@ -5349,6 +5364,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/orientation-landscape-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/orientation-portrait-left-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/orientation-portrait-right-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/power-profile-balanced-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/power-profile-performance-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/power-profile-power-saver-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/printer-error-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/printer-printing-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/printer-warning-symbolic.symbolic.png
@@ -5501,6 +5519,7 @@ lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/not-allowed -> crossed_circ
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/ns-resize -> sb_v_double_arrow
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/nw-resize -> top_left_corner
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/nwse-resize -> bd_double_arrow
+-rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/openhand
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/pencil
 lrwxrwxrwx	root/root	usr/share/icons/Adwaita/cursors/pirate -> X_cursor
 -rw-r--r--	root/root	usr/share/icons/Adwaita/cursors/plus
@@ -5943,6 +5962,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/scalable/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/battery-missing-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/bluetooth-active-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/bluetooth-disabled-symbolic.svg
+-rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/bluetooth-disconnected-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/bluetooth-hardware-disabled-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/call-incoming-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/call-missed-symbolic.svg
@@ -5954,7 +5974,6 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/scalable/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/channel-insecure-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/channel-secure-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/computer-fail-symbolic.svg
--rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/contact-new-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/content-loading-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/daytime-sunrise-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/daytime-sunset-symbolic.svg
@@ -6036,6 +6055,9 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/scalable/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/orientation-landscape-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/orientation-portrait-left-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/orientation-portrait-right-symbolic.svg
+-rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/power-profile-balanced-symbolic.svg
+-rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/power-profile-performance-symbolic.svg
+-rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/power-profile-power-saver-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/printer-error-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/printer-printing-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/printer-warning-symbolic.svg
