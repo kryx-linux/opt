@@ -805,6 +805,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-cellular-2g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-cellular-3g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-cellular-4g-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-cellular-5g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-cellular-acquiring-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-cellular-connected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-cellular-disabled-symbolic.symbolic.png
@@ -846,6 +847,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/16x16/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-wireless-signal-none-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-wireless-signal-ok-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/network-wireless-signal-weak-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/night-light-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/night-light-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/non-starred-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/16x16/status/notifications-disabled-symbolic.symbolic.png
@@ -2087,6 +2089,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-cellular-2g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-cellular-3g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-cellular-4g-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-cellular-5g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-cellular-acquiring-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-cellular-connected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-cellular-disabled-symbolic.symbolic.png
@@ -2128,6 +2131,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/24x24/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-wireless-signal-none-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-wireless-signal-ok-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/network-wireless-signal-weak-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/night-light-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/night-light-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/non-starred-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/24x24/status/notifications-disabled-symbolic.symbolic.png
@@ -3166,6 +3170,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-cellular-2g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-cellular-3g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-cellular-4g-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-cellular-5g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-cellular-acquiring-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-cellular-connected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-cellular-disabled-symbolic.symbolic.png
@@ -3207,6 +3212,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/32x32/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-wireless-signal-none-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-wireless-signal-ok-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/network-wireless-signal-weak-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/night-light-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/night-light-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/non-starred-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/32x32/status/notifications-disabled-symbolic.symbolic.png
@@ -4089,6 +4095,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-cellular-2g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-cellular-3g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-cellular-4g-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-cellular-5g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-cellular-acquiring-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-cellular-connected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-cellular-disabled-symbolic.symbolic.png
@@ -4130,6 +4137,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/48x48/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-wireless-signal-none-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-wireless-signal-ok-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/network-wireless-signal-weak-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/night-light-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/night-light-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/non-starred-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/48x48/status/notifications-disabled-symbolic.symbolic.png
@@ -4743,6 +4751,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-cellular-2g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-cellular-3g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-cellular-4g-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-cellular-5g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-cellular-acquiring-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-cellular-connected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-cellular-disabled-symbolic.symbolic.png
@@ -4784,6 +4793,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/64x64/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-wireless-signal-none-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-wireless-signal-ok-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/network-wireless-signal-weak-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/night-light-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/night-light-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/non-starred-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/64x64/status/notifications-disabled-symbolic.symbolic.png
@@ -5316,6 +5326,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-cellular-2g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-cellular-3g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-cellular-4g-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-cellular-5g-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-cellular-acquiring-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-cellular-connected-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-cellular-disabled-symbolic.symbolic.png
@@ -5357,6 +5368,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/96x96/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-wireless-signal-none-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-wireless-signal-ok-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/network-wireless-signal-weak-symbolic.symbolic.png
+-rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/night-light-disabled-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/night-light-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/non-starred-symbolic.symbolic.png
 -rw-r--r--	root/root	usr/share/icons/Adwaita/96x96/status/notifications-disabled-symbolic.symbolic.png
@@ -6007,6 +6019,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/scalable/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-cellular-2g-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-cellular-3g-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-cellular-4g-symbolic.svg
+-rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-cellular-5g-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-cellular-acquiring-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-cellular-connected-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-cellular-disabled-symbolic.svg
@@ -6048,6 +6061,7 @@ drwxr-xr-x	root/root	usr/share/icons/Adwaita/scalable/status/
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-wireless-signal-none-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-wireless-signal-ok-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/network-wireless-signal-weak-symbolic.svg
+-rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/night-light-disabled-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/night-light-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/non-starred-symbolic.svg
 -rw-r--r--	root/root	usr/share/icons/Adwaita/scalable/status/notifications-disabled-symbolic.svg
