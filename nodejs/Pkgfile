@@ -7,7 +7,7 @@
 # c-ares  wait until a newer release than 1.16.1
 
 name=nodejs
-version=16.0.0
+version=16.1.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
 
