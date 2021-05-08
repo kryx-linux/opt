@@ -20,7 +20,7 @@ build() {
   cmake --build build
   DESTDIR=$PKG cmake --install build
 
-  python3 -m compileall -d $name-$version.src $PKG
-  python3 -O -m compileall -d $name-$version.src $PKG
-  python3 -OO -m compileall -d $name-$version.src $PKG
+  /usr/bin/python3 -m compileall -d $name-$version.src $PKG
+  /usr/bin/python3 -O -m compileall -d $name-$version.src $PKG
+  /usr/bin/python3 -OO -m compileall -d $name-$version.src $PKG
 }
