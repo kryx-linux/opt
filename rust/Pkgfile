@@ -1,28 +1,25 @@
 # Description: The Rust language with Cargo included.
 # URL: https://www.rust-lang.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: llvm
+# Depends on: compiler-rt
 # Optional: sccache ccache
 
 name=rust
-version=1.51.0
-_date=2021-02-11
-_rustc=1.50.0
+version=1.52.0
+_date=2021-03-25
+_rustc=1.51.0
 _cargo=$_rustc
-_llvm=11.1.0
 release=1
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$_llvm/compiler-rt-$_llvm.src.tar.xz
-	libexec.patch
-	rust-1.51.0-bootstrap_panic.patch)
+	libexec.patch)
 
 unpack_source() {
 	for file in ${source[@]}; do
 		case ${file##*/} in
-			rustc-${version}-src.tar.xz|compiler-rt-${_llvm}.src.tar.xz)
+			rustc-${version}-src.tar.xz)
 			echo "Unpacking $(get_filename $file)";
 			bsdtar -p -o -C ${SRC} -xf $(get_filename $file) ;;
 		*.tar.xz)
@@ -40,10 +37,6 @@ build() {
 
 	# Patch cargo so credential helpers are in /usr/lib instead of /usr/libexec
 	patch -p1 -i $SRC/libexec.patch
-
-	# https://github.com/rust-lang/rust/pull/81910
-	# https://github.com/rust-lang/rust/commit/31c93397bde772764cda3058e16f9cef61895090
-	patch -p1 -i $SRC/rust-1.51.0-bootstrap_panic.patch
 
 	local ERROR
 	local DATE="$(awk '/^date: / { print $2 }' src/stage0.txt)"
@@ -118,8 +111,7 @@ EOF
         fi
 
 	export RUST_BACKTRACE=1
-	export RUST_COMPILER_RT_ROOT="$SRC/compiler-rt-$_llvm.src"
-	/usr/bin/python3 ./x.py build --config="${SRC}"/config.toml -j $(nproc)
+	/usr/bin/python3 ./x.py build --config="${SRC}"/config.toml -j ${JOBS-1}
 	DESTDIR=$PKG /usr/bin/python3 ./x.py --config="${SRC}"/config.toml install
 
 	[ -e '/usr/bin/zsh' ] || rm -r $PKG/usr/share/zsh
