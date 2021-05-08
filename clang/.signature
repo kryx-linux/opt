@@ -1,6 +1,9 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/V0HdZtC+1Dw75iISm6/bjTa6j83DejZVTLQn7QyFvhJ62xbYQZJ0eXOKiyU4co3KXzM6NNW1g6DxjtlrA982ws=
-SHA256 (Pkgfile) = 6126149ceb80536a68d7409c9f1ff81e2a97209a7b61920d31c771cff8d09016
-SHA256 (.footprint) = f4a4660b06b27514567a662fad11211b4891efa9b58b5f2fa2554ec5f19d7f46
-SHA256 (clang-11.1.0.src.tar.xz) = 0a8288f065d1f57cb6d96da4d2965cbea32edc572aa972e466e954d17148558b
-SHA256 (clang-tools-extra-11.1.0.src.tar.xz) = 76707c249de7a9cde3456b960c9a36ed9bbde8e3642c01f0ef61a43d61e0c1a2
+RWSE3ohX2g5d/czqJZnVI3WHGfCUN+/XKUQpXGya9zaorx4vGQlpcQKerElTTknbxjbaEhf6pMuSQErkDuOw01B13N7EpIDjCwQ=
+SHA256 (Pkgfile) = a509455f9aff50dec78613b1977ce067aa71c3180475cea4e1738df2e1e7e9f1
+SHA256 (.footprint) = 28fc77df38981f045eb588423ee395f4844a15e431783373b10a50304e566e46
+SHA256 (clang-12.0.0.src.tar.xz) = e26e452e91d4542da3ebbf404f024d3e1cbf103f4cd110c26bf0a19621cca9ed
+SHA256 (clang-tools-extra-12.0.0.src.tar.xz) = ad41e0b527a65ade95c1ba690a5434cefaab4a2daa1be307caaa1e8541fe6d5c
+SHA256 (0001-PATCH-clang-tools-extra-Make-clangd-CompletionModel-.patch) = 27f7ff51f4ecbda7438b5258968af0ac8d5873b799d2c77e706b8806a814b31a
+SHA256 (0005-PATCH-clang-Partially-Revert-scan-view-Remove-Report.patch) = b65230862b29442963054ca2c64066a657b52fe926d2f868fee2e37fd0fb32a7
+SHA256 (0006-PATCH-clang-Allow-__ieee128-as-an-alias-to-__float12.patch) = c515554835643b2ab7a55ab1286910f9e65676649bd1d8e0b570ff5dfd4f3554
