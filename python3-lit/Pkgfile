@@ -4,12 +4,13 @@
 # Depends on: python3-setuptools
 
 name=python3-lit
-version=0.11.1
+_name=lit
+version=12.0.0
 release=1
-source=(https://pypi.io/packages/source/l/lit/lit-$version.tar.gz)
+source=(https://files.pythonhosted.org/packages/source/${_name:0:1}/$_name/$_name-$version.tar.gz)
 
 build() {
-  cd lit-$version
+  cd $_name-$version
   /usr/bin/python3 setup.py build
   /usr/bin/python3 setup.py install -O1 --root=$PKG --skip-build
 }
