@@ -1,5 +1,6 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/URdqoVCrJW/lI8R9dmEd7fuYX78IgsZc0hUrwf4V93hkzrj7SWMzGwoby16dtKRGqKv2KWIGyZfRTwF6+KkbAk=
-SHA256 (Pkgfile) = 44a5fe00c6648b8db00782e144959e07421edf964ed3963ad3919a5a6b30c0c6
-SHA256 (.footprint) = 335c683245c9891e63388c655bc842c1ff938e82901762b17d6c8dc6ea3151e3
-SHA256 (lld-11.1.0.src.tar.xz) = 017a788cbe1ecc4a949abf10755870519086d058a2e99f438829aef24f0c66ce
+RWSE3ohX2g5d/Z2+tDmCOhgK94FMUq6iwOXR/bzbcXF7mpiuNU3aJayg6nM+OYZCIOS8oWPAWT9IkvDkm2GPp8blGyCPuiMw4Ag=
+SHA256 (Pkgfile) = 169d05d779a5bed663500a0e674f6122b49ecde2e09028d993e0f2ab1c0511d5
+SHA256 (.footprint) = 1dd46daad9ea963716484a00386b3a884374561b25859f2a44c120e675f9de2a
+SHA256 (lld-12.0.0.src.tar.xz) = 2cb7d497f3ce33ce8a2c50ad26ec93a8c45f57268d4d96953cd0f25566f753fd
+SHA256 (0002-PATCH-lld-Import-compact_unwind_encoding.h-from-libu.patch) = 3b18edef05d3a3fc0030b7a7674e455574dfbdecf26f23c6af5bd30e987b0f55

@@ -2,6 +2,7 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 lrwxrwxrwx	root/root	usr/bin/ld.lld -> lld
 lrwxrwxrwx	root/root	usr/bin/ld64.lld -> lld
+lrwxrwxrwx	root/root	usr/bin/ld64.lld.darwinnew -> lld
 -rwxr-xr-x	root/root	usr/bin/lld
 lrwxrwxrwx	root/root	usr/bin/lld-link -> lld
 lrwxrwxrwx	root/root	usr/bin/wasm-ld -> lld
@@ -44,6 +45,8 @@ drwxr-xr-x	root/root	usr/include/lld/Core/
 drwxr-xr-x	root/root	usr/include/lld/ReaderWriter/
 -rw-r--r--	root/root	usr/include/lld/ReaderWriter/MachOLinkingContext.h
 -rw-r--r--	root/root	usr/include/lld/ReaderWriter/YamlContext.h
+drwxr-xr-x	root/root	usr/include/mach-o/
+-rw-r--r--	root/root	usr/include/mach-o/compact_unwind_encoding.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cmake/
 drwxr-xr-x	root/root	usr/lib/cmake/lld/
