@@ -100,7 +100,8 @@ drwxr-xr-x	root/root	usr/include/lldb/Breakpoint/
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/BreakpointSiteList.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/Stoppoint.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/StoppointCallbackContext.h
--rw-r--r--	root/root	usr/include/lldb/Breakpoint/StoppointLocation.h
+-rw-r--r--	root/root	usr/include/lldb/Breakpoint/StoppointHitCounter.h
+-rw-r--r--	root/root	usr/include/lldb/Breakpoint/StoppointSite.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/Watchpoint.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/WatchpointList.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/WatchpointOptions.h
@@ -300,7 +301,6 @@ drwxr-xr-x	root/root	usr/include/lldb/Interpreter/
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/CommandInterpreter.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/CommandObject.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/CommandObjectMultiword.h
--rw-r--r--	root/root	usr/include/lldb/Interpreter/CommandObjectRegexCommand.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/CommandOptionValidators.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/CommandReturnObject.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionArgParser.h
@@ -325,6 +325,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Interpreter/
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionValueChar.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionValueDictionary.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionValueEnumeration.h
+-rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionValueFileColonLine.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionValueFileSpec.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionValueFileSpecList.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionValueFormat.h
@@ -397,8 +398,10 @@ drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/OperatingSystem.h
 -rw-r--r--	root/root	usr/include/lldb/Target/PathMappingList.h
 -rw-r--r--	root/root	usr/include/lldb/Target/Platform.h
+-rw-r--r--	root/root	usr/include/lldb/Target/PostMortemProcess.h
 -rw-r--r--	root/root	usr/include/lldb/Target/Process.h
 -rw-r--r--	root/root	usr/include/lldb/Target/ProcessStructReader.h
+-rw-r--r--	root/root	usr/include/lldb/Target/ProcessTrace.h
 -rw-r--r--	root/root	usr/include/lldb/Target/Queue.h
 -rw-r--r--	root/root	usr/include/lldb/Target/QueueItem.h
 -rw-r--r--	root/root	usr/include/lldb/Target/QueueList.h
@@ -407,6 +410,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/RegisterContextUnwind.h
 -rw-r--r--	root/root	usr/include/lldb/Target/RegisterNumber.h
 -rw-r--r--	root/root	usr/include/lldb/Target/RemoteAwarePlatform.h
+-rw-r--r--	root/root	usr/include/lldb/Target/Runtime.h
 -rw-r--r--	root/root	usr/include/lldb/Target/SectionLoadHistory.h
 -rw-r--r--	root/root	usr/include/lldb/Target/SectionLoadList.h
 -rw-r--r--	root/root	usr/include/lldb/Target/StackFrame.h
@@ -441,6 +445,9 @@ drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/ThreadPlanStepUntil.h
 -rw-r--r--	root/root	usr/include/lldb/Target/ThreadPlanTracer.h
 -rw-r--r--	root/root	usr/include/lldb/Target/ThreadSpec.h
+-rw-r--r--	root/root	usr/include/lldb/Target/ThreadTrace.h
+-rw-r--r--	root/root	usr/include/lldb/Target/Trace.h
+-rw-r--r--	root/root	usr/include/lldb/Target/TraceSessionFileParser.h
 -rw-r--r--	root/root	usr/include/lldb/Target/UnixSignals.h
 -rw-r--r--	root/root	usr/include/lldb/Target/Unwind.h
 -rw-r--r--	root/root	usr/include/lldb/Target/UnwindAssembly.h
@@ -472,6 +479,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/Log.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Logging.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/NameMatches.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/OptionDefinition.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Predicate.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/ProcessInfo.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/RangeMap.h
@@ -479,6 +487,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/RegularExpression.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Reproducer.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/ReproducerInstrumentation.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/ReproducerProvider.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Scalar.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/SelectHelper.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/SharedCluster.h
@@ -498,6 +507,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/Timer.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/TraceOptions.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/UUID.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/UnimplementedError.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/UriParser.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/UserID.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/UserIDResolver.h
@@ -517,11 +527,11 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/lldb-types.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-versioning.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.11
-lrwxrwxrwx	root/root	usr/lib/liblldb.so.11 -> liblldb.so.11.1.0
--rwxr-xr-x	root/root	usr/lib/liblldb.so.11.1.0
-lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.11
--rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.11
+lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.12
+lrwxrwxrwx	root/root	usr/lib/liblldb.so.12 -> liblldb.so.12.0.0
+-rwxr-xr-x	root/root	usr/lib/liblldb.so.12.0.0
+lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.12
+-rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.12
 drwxr-xr-x	root/root	usr/lib/python3.9/
 drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/
 drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/lldb/

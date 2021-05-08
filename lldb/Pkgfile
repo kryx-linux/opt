@@ -4,7 +4,7 @@
 # Depends on: clang python3-six python3-lit swig
 
 name=lldb
-version=11.1.0
+version=12.0.0
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/lldb-$version.src.tar.xz)
 
@@ -14,7 +14,6 @@ build() {
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-    -D PYTHON_EXECUTABLE=/usr/bin/python3 \
     -D LLVM_LINK_LLVM_DYLIB=ON \
     -D LLDB_USE_SYSTEM_SIX=1 \
     -Wno-dev
