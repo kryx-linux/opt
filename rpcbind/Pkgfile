@@ -1,27 +1,28 @@
 # Description: Server that converts RPC program numbers into universal addresses
-# URL:         https://sourceforge.net/projects/rpcbind/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libtirpc
+# URL: https://sourceforge.net/projects/rpcbind/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: libtirpc
 
 name=rpcbind
-version=1.2.5
+version=1.2.6
 release=1
 source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2 \
-        rpcbind)
+	rpcbind)
 
 build() {
-    cd $name-$version
+	cd $name-$version
 
-    # use sunrpc instead of rpcbind as service-name
-    sed '/servname\[\]/s/rpcbind/sunrpc/' -i src/rpcbind.c
+	# use sunrpc instead of rpcbind as service-name
+	sed '/servname\[\]/s/rpcbind/sunrpc/' -i src/rpcbind.c
 
-    ./configure --prefix=/usr \
-                --sbindir=/sbin \
-                --disable-libwrap \
-                --without-systemdsystemunitdir
+	./configure \
+		--prefix=/usr \
+		--sbindir=/sbin \
+		--disable-libwrap \
+		--without-systemdsystemunitdir
 
-    make
-    make DESTDIR=$PKG install
+	make
+	make DESTDIR=$PKG install
 
-    install -D -m 755 $SRC/rpcbind $PKG/etc/rc.d/rpcbind
+	install -D -m 755 $SRC/rpcbind $PKG/etc/rc.d/rpcbind
 }
