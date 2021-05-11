@@ -773,7 +773,6 @@ drwxr-xr-x	root/root	usr/share/mysql/english/
 -rw-r--r--	root/root	usr/share/mysql/mysql_system_tables_data.sql
 -rw-r--r--	root/root	usr/share/mysql/mysql_test_data_timezone.sql
 -rw-r--r--	root/root	usr/share/mysql/mysql_test_db.sql
--rw-r--r--	root/root	usr/share/mysql/mysql_to_mariadb.sql
 -rwxr-xr-x	root/root	usr/share/mysql/mysqld_multi.server
 -rw-r--r--	root/root	usr/share/mysql/wsrep.cnf
 -rwxr-xr-x	root/root	usr/share/mysql/wsrep_notify
