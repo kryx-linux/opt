@@ -17,7 +17,7 @@ build () {
 	install -m 0644 $SRC/*.8 $PKG/usr/share/man/man8
 	ln -s mount.cifs.8 $PKG/usr/share/man/man8/mount.smb3.8
 
-	./configure --prefix=/usr
+	./configure --prefix=/usr --with-pamdir=/lib/security
 	make
 	make DESTDIR=$PKG install
 
