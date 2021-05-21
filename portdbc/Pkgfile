@@ -6,11 +6,10 @@
 name=portdbc
 version=1.2
 release=1
-_commit=ba7ff2c4189b12b020c9e7a4a054c6721692afc0
-source=(https://github.com/sepen/portdbc/archive/$_commit/$name-$version.tar.gz)
+source=(https://github.com/sepen/portdbc/archive/v$version/$name-$version.tar.gz)
 
 build() {
-  cd $name-$_commit
+  cd $name-$version
   autoreconf -fvi
   ./configure --prefix=/usr
   make
