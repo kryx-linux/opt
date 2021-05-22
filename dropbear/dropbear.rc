@@ -7,35 +7,18 @@ SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/dropbear
 PID=/var/run/dropbear.pid
 
-CONV=/usr/bin/dropbearconvert
 KEYG=/usr/bin/dropbearkey
 
 RSA=/etc/dropbear/dropbear_rsa_host_key
 DSS=/etc/dropbear/dropbear_dss_host_key
 ECDSA=/etc/dropbear/dropbear_ecdsa_host_key
+ED25519=/etc/dropbear/dropbear_ed25519_host_key
 
 create_keys() {
-	if [ ! -f $RSA ]; then
-	   if [ -f /etc/ssh/ssh_host_rsa_key ]; then
-	      $CONV openssh dropbear /etc/ssh/ssh_host_rsa_key $RSA
-	   else
-	      $KEYG -t rsa -s 4096 -f $RSA
-	   fi
-	fi
-	if [ ! -f $DSS ]; then
-	   if [ -f /etc/ssh/ssh_host_dsa_key ]; then
-	      $CONV openssh dropbear /etc/ssh/ssh_host_dsa_key $DSS
-	   else
-	      $KEYG -t dss -f $DSS
-	   fi
-	fi
-	if [ ! -f $ECDSA ]; then
-	   if [ -f /etc/ssh/ssh_host_ecdsa_key ]; then
-	      $CONV openssh dropbear /etc/ssh/ssh_host_ecdsa_key $ECDSA
-	   else
-	      $KEYG -t ecdsa -s 521 -f $ECDSA
-	   fi
-	fi
+	[ -f $RSA ]    || $KEYG -t rsa -s 4096 -f $RSA
+	[ -f $DSS ]    || $KEYG -t dss -f $DSS
+	[ -f $ECDSA ]  || $KEYG -t ecdsa -s 521 -f $ECDSA
+	[ -f ED25519 ] || $KEYG -t ed25519 -f $ED25519
 }
 
 case $1 in
