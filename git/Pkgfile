@@ -6,7 +6,7 @@
 
 name=git
 version=2.31.1
-release=1
+release=2
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
         git gitd.rc)
 
@@ -21,7 +21,7 @@ build() {
        DESTDIR=$PKG install
 
   prt-get isinst zsh && install -Dm644 contrib/completion/git-completion.zsh $PKG/usr/share/zsh/site-functions/_git
-  prt-get isinst bash-completions && install -Dm644 contrib/completion/git-completion.bash $PKG/usr/share/bash/completions/git
+  prt-get isinst bash-completion && install -Dm644 contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
 
   cd $SRC
 
