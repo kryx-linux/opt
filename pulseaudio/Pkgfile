@@ -1,8 +1,8 @@
 # Description: PulseAudio is a cross-platform, networked sound server
 # URL: https://www.freedesktop.org/wiki/Software/PulseAudio/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: dbus intltool libsndfile meson ninja speex
-# Optional: avahi bluez fftw glib orc sbc speexdsp xorg-libxtst xorg-libice xorg-libsm
+# Depends on: dbus intltool libsndfile meson ninja orc speexdsp
+# Optional: avahi bluez fftw glib sbc xorg-libxtst xorg-libice xorg-libsm
 
 name=pulseaudio
 version=14.2
@@ -25,6 +25,7 @@ build() {
     -D udevrulesdir=/etc/udev/rules.d \
     -D database=gdbm \
     -D tests=false \
+    -D speex=enabled \
     -D adrian-aec=false
   meson compile -C build
   DESTDIR=$PKG meson install -C build
