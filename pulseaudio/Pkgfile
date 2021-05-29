@@ -1,12 +1,12 @@
 # Description: PulseAudio is a cross-platform, networked sound server
 # URL: https://www.freedesktop.org/wiki/Software/PulseAudio/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: dbus intltool libsndfile meson ninja
+# Depends on: dbus intltool libsndfile meson ninja speex
 # Optional: avahi bluez fftw glib orc sbc speexdsp xorg-libxtst xorg-libice xorg-libsm
 
 name=pulseaudio
 version=14.2
-release=2
+release=3
 source=(https://freedesktop.org/software/pulseaudio/releases/pulseaudio-$version.tar.xz)
 
 build() {
