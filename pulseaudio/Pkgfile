@@ -24,7 +24,8 @@ build() {
     -D buildtype=plain \
     -D udevrulesdir=/etc/udev/rules.d \
     -D database=gdbm \
-    -D tests=false
+    -D tests=false \
+    -D adrian-aec=false
   meson compile -C build
   DESTDIR=$PKG meson install -C build
 
