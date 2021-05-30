@@ -4,8 +4,8 @@
 # Depends on: libidn2 nettle p11-kit
 
 name=gnutls
-version=3.6.15
-release=2
+version=3.6.16
+release=1
 source=(https://www.gnupg.org/ftp/gcrypt/$name/v${version:0:3}/$name-$version.tar.xz)
 
 build() {
