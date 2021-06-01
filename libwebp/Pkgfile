@@ -1,24 +1,24 @@
 # Description: A library for a new image format comparable to JPEG.
 # URL: https://developers.google.com/speed/webp/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: libpng libtiff
-# Optional: freeglut giflib libsdl
+# Depends on: giflib libpng libtiff
+# Optional: freeglut libsdl ninja
 
 name=libwebp
 version=1.2.0
-release=1
+release=2
 source=(https://storage.googleapis.com/downloads.webmproject.org/releases/webp/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+        prt-get isinst ninja && PKGMK_LIBWEBP+=' -G Ninja'
 
-	./configure \
-		--prefix=/usr \
-		--enable-swap-16bit-csp \
-		--enable-experimental \
-		--enable-libwebp{mux,demux,decoder,extras}
+        cmake -S ${name%-*}-$version -B build $PKGMK_LIBWEBP \
+                -D CMAKE_INSTALL_PREFIX="/usr" \
+                -D CMAKE_INSTALL_LIBDIR="/usr/lib" \
+                -D BUILD_SHARED_LIBS=ON \
+                -D CMAKE_BUILD_TYPE=Release \
+                -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}"
 
-	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-	make
-	make DESTDIR=$PKG install
+        cmake --build build
+        DESTDIR=$PKG cmake --install build
 }
