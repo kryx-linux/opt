@@ -1,10 +1,10 @@
 # Description: Postscript Utilities
 # URL: https://github.com/rrthomas/psutils
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: paper ghostscript
+# Depends on: p5-ipc-run3 paper ghostscript
 
 name=psutils
-version=2.05
+version=2.06
 release=1
 source=(https://github.com/rrthomas/psutils/releases/download/v$version/$name-$version.tar.gz)
 
