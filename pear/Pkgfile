@@ -5,11 +5,11 @@
 
 name=pear
 version=1.10.12
-release=3
-source=(https://php.net/distributions/php-7.4.13.tar.xz)
+release=4
+source=(https://php.net/distributions/php-8.0.7.tar.xz)
 
 build() {
-    cd php-7.4.13/pear
+    cd php-8.0.7/pear
 
     export PHP_PEAR_SYSCONF_DIR=/etc/php
     export INSTALL_ROOT=$PKG
