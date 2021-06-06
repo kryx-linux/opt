@@ -4,7 +4,7 @@
 # Depends on:  dbus gobject-introspection intltool xorg-libxtst meson ninja
 
 name=at-spi2-core
-version=2.40.1
+version=2.40.2
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
