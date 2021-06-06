@@ -1,30 +1,20 @@
 # Description: Application development toolkit for controlling system-wide privileges
 # URL: https://gitlab.freedesktop.org/polkit/polkit/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: glib gobject-introspection intltool mozjs78 nspr util-linux
+# Depends on: dbus gobject-introspection intltool mozjs78 util-linux
 
 name=polkit
-version=0.118
+version=0.119
 release=1
 source=(https://freedesktop.org/software/polkit/releases/$name-$version.tar.gz
   polkit-1)
 
 build() {
-  cd $name-$version
-
-  ./configure \
+  meson setup $name-$version build \
     --prefix=/usr \
-    --sysconfdir=/etc \
-    --localstatedir=/var \
-    --enable-libelogind=no \
-    --enable-libsystemd-login=no \
-    --with-authfw=pam \
-    --disable-tests \
-    --disable-nls \
-    --disable-man-pages
-
-  make
-  make DESTDIR=$PKG install
+    --buildtype=plain
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
 
   install -m 0644 $SRC/polkit-1 $PKG/etc/pam.d
 
