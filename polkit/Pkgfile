@@ -7,15 +7,17 @@ name=polkit
 version=0.119
 release=1
 source=(https://freedesktop.org/software/polkit/releases/$name-$version.tar.gz
-  polkit-1)
+  polkit-1 84.patch)
 
 build() {
+  patch -Np1 -d $name-$version -i $SRC/84.patch
   meson setup $name-$version build \
     --prefix=/usr \
     --buildtype=plain
   meson compile -C build
   DESTDIR=$PKG meson install -C build
 
+  chmod 4775 $PKG/usr/bin/pkexec
   install -m 0644 $SRC/polkit-1 $PKG/etc/pam.d
 
   rm -r $PKG/usr/share/locale
