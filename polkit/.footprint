@@ -56,7 +56,7 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/polkit-agent-1.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/polkit-gobject-1.pc
 drwxr-xr-x	root/root	usr/lib/polkit-1/
--rwxr-xr-x	root/root	usr/lib/polkit-1/polkit-agent-helper-1
+-rwsr-xr-x	root/root	usr/lib/polkit-1/polkit-agent-helper-1
 -rwxr-xr-x	root/root	usr/lib/polkit-1/polkitd
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/dbus-1/
