@@ -10,24 +10,24 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libavcall.a
 -rw-r--r--	root/root	usr/lib/libavcall.la
-lrwxrwxrwx	root/root	usr/lib/libavcall.so -> libavcall.so.1.0.2
-lrwxrwxrwx	root/root	usr/lib/libavcall.so.1 -> libavcall.so.1.0.2
--rw-r--r--	root/root	usr/lib/libavcall.so.1.0.2
+lrwxrwxrwx	root/root	usr/lib/libavcall.so -> libavcall.so.1.0.3
+lrwxrwxrwx	root/root	usr/lib/libavcall.so.1 -> libavcall.so.1.0.3
+-rw-r--r--	root/root	usr/lib/libavcall.so.1.0.3
 -rw-r--r--	root/root	usr/lib/libcallback.a
 -rw-r--r--	root/root	usr/lib/libcallback.la
-lrwxrwxrwx	root/root	usr/lib/libcallback.so -> libcallback.so.1.0.2
-lrwxrwxrwx	root/root	usr/lib/libcallback.so.1 -> libcallback.so.1.0.2
--rw-r--r--	root/root	usr/lib/libcallback.so.1.0.2
+lrwxrwxrwx	root/root	usr/lib/libcallback.so -> libcallback.so.1.0.3
+lrwxrwxrwx	root/root	usr/lib/libcallback.so.1 -> libcallback.so.1.0.3
+-rw-r--r--	root/root	usr/lib/libcallback.so.1.0.3
 -rw-r--r--	root/root	usr/lib/libffcall.a
 -rw-r--r--	root/root	usr/lib/libffcall.la
-lrwxrwxrwx	root/root	usr/lib/libffcall.so -> libffcall.so.0.0.2
-lrwxrwxrwx	root/root	usr/lib/libffcall.so.0 -> libffcall.so.0.0.2
--rw-r--r--	root/root	usr/lib/libffcall.so.0.0.2
+lrwxrwxrwx	root/root	usr/lib/libffcall.so -> libffcall.so.0.0.3
+lrwxrwxrwx	root/root	usr/lib/libffcall.so.0 -> libffcall.so.0.0.3
+-rw-r--r--	root/root	usr/lib/libffcall.so.0.0.3
 -rw-r--r--	root/root	usr/lib/libtrampoline.a
 -rw-r--r--	root/root	usr/lib/libtrampoline.la
-lrwxrwxrwx	root/root	usr/lib/libtrampoline.so -> libtrampoline.so.1.0.2
-lrwxrwxrwx	root/root	usr/lib/libtrampoline.so.1 -> libtrampoline.so.1.0.2
--rw-r--r--	root/root	usr/lib/libtrampoline.so.1.0.2
+lrwxrwxrwx	root/root	usr/lib/libtrampoline.so -> libtrampoline.so.1.0.3
+lrwxrwxrwx	root/root	usr/lib/libtrampoline.so.1 -> libtrampoline.so.1.0.3
+-rw-r--r--	root/root	usr/lib/libtrampoline.so.1.0.3
 -rw-r--r--	root/root	usr/lib/libvacall.a
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
