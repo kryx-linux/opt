@@ -2104,6 +2104,7 @@ lrwxrwxrwx	root/root	usr/lib/wine/x86_64-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/softpub.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/spoolss.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/spoolsv.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/sppc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/srclient.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/srvcli.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/sspicli.dll.so
@@ -3013,6 +3014,7 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-windows/
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/softpub.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/spoolss.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/spoolsv.exe
+-rw-r--r--	root/root	usr/lib/wine/x86_64-windows/sppc.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/srclient.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/srvcli.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/sspicli.dll
@@ -4187,6 +4189,7 @@ lrwxrwxrwx	root/root	usr/lib32/wine/i386-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/sound.drv16.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/spoolss.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/spoolsv.exe.so
+-rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/sppc.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/srclient.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/srvcli.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/sspicli.dll.so
@@ -5157,6 +5160,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-windows/
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/sound.drv16
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/spoolss.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/spoolsv.exe
+-rw-r--r--	root/root	usr/lib32/wine/i386-windows/sppc.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/srclient.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/srvcli.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/sspicli.dll
@@ -5421,7 +5425,7 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86.msi
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86_64.msi
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-6.1.1-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-6.2.0-x86.msi
 drwxr-xr-x	root/root	usr/share/wine/nls/
 -rw-r--r--	root/root	usr/share/wine/nls/c_037.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_10000.nls
