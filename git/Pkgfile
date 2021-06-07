@@ -20,7 +20,6 @@ build() {
        perllibdir=$(perl -e 'use Config; print $Config::Config{'installsitelib'}') \
        DESTDIR=$PKG install
 
-  prt-get isinst zsh && install -Dm644 contrib/completion/git-completion.zsh $PKG/usr/share/zsh/site-functions/_git
   prt-get isinst bash-completion && install -Dm644 contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
 
   cd $SRC
