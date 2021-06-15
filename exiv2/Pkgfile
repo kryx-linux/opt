@@ -4,12 +4,12 @@
 # Depends on: cmake
 
 name=exiv2
-version=0.27.3
+version=0.27.4
 release=1
 source=(https://github.com/Exiv2/exiv2/archive/v$version/$name-$version.tar.gz)
 
 build() {
-  [[ -e /usr/bin/ninja ]] && PKGMK_EXIV2+=' -G Ninja'
+  prt-get isinst ninja && PKGMK_EXIV2+=' -G Ninja'
 
   export CXXFLAGS+=" -Wno-deprecated-declarations"
 
