@@ -5,13 +5,13 @@
 
 name=grub2
 version=2.06
-release=1
+release=2
 source=(http://ftp.gnu.org/gnu/grub/grub-$version.tar.xz \
 	http://jaeger.morpheus.net/linux/crux/files/unifont-9.0.06.pcf.gz \
 	$name-00_header.diff $name-10_linux.diff grub.cfg.sample)
 
 build() {
-	export CFLAGS="${CFLAGS} -Wno-error"
+	export CFLAGS="${CFLAGS} -Wno-error -Os"
 	export PYTHON=python3
 	cd grub-$version
 
