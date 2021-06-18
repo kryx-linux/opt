@@ -5,16 +5,17 @@
 # Optional: sccache ccache
 
 name=rust
-version=1.52.1
-_date=2021-03-25
-_rustc=1.51.0
+version=1.53.0
+_date=2021-05-06
+_rustc=1.52.0
 _cargo=$_rustc
 release=1
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
-	libexec.patch)
+	libexec.patch
+	1.53.0-miri-vergen.patch)
 
 unpack_source() {
 	for file in ${source[@]}; do
@@ -37,6 +38,9 @@ build() {
 
 	# Patch cargo so credential helpers are in /usr/lib instead of /usr/libexec
 	patch -p1 -i $SRC/libexec.patch
+
+	# https://github.com/rust-lang/rust/issues/84182
+	patch -p1 -i $SRC/1.53.0-miri-vergen.patch
 
 	local ERROR
 	local DATE="$(awk '/^date: / { print $2 }' src/stage0.txt)"
@@ -110,7 +114,7 @@ EOF
                 export SCCACHE_IDLE_TIMEOUT='1500'
         fi
 
-	export RUST_BACKTRACE=1
+	export RUST_BACKTRACE=full
 	/usr/bin/python3 ./x.py build --config="${SRC}"/config.toml -j ${JOBS-1}
 	DESTDIR=$PKG /usr/bin/python3 ./x.py --config="${SRC}"/config.toml install
 
