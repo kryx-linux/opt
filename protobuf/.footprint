@@ -52,12 +52,16 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/compiler/ruby/
 -rw-r--r--	root/root	usr/include/google/protobuf/empty.proto
 -rw-r--r--	root/root	usr/include/google/protobuf/extension_set.h
 -rw-r--r--	root/root	usr/include/google/protobuf/extension_set_inl.h
+-rw-r--r--	root/root	usr/include/google/protobuf/field_access_listener.h
 -rw-r--r--	root/root	usr/include/google/protobuf/field_mask.pb.h
 -rw-r--r--	root/root	usr/include/google/protobuf/field_mask.proto
 -rw-r--r--	root/root	usr/include/google/protobuf/generated_enum_reflection.h
 -rw-r--r--	root/root	usr/include/google/protobuf/generated_enum_util.h
 -rw-r--r--	root/root	usr/include/google/protobuf/generated_message_reflection.h
 -rw-r--r--	root/root	usr/include/google/protobuf/generated_message_table_driven.h
+-rw-r--r--	root/root	usr/include/google/protobuf/generated_message_tctable_decl.h
+-rw-r--r--	root/root	usr/include/google/protobuf/generated_message_tctable_impl.h
+-rw-r--r--	root/root	usr/include/google/protobuf/generated_message_tctable_impl.inc
 -rw-r--r--	root/root	usr/include/google/protobuf/generated_message_util.h
 -rw-r--r--	root/root	usr/include/google/protobuf/has_bits.h
 -rw-r--r--	root/root	usr/include/google/protobuf/implicit_weak_message.h
@@ -134,19 +138,19 @@ drwxr-xr-x	root/root	usr/include/google/protobuf/util/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libprotobuf-lite.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.28.0.2
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.28 -> libprotobuf-lite.so.28.0.2
--rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.28.0.2
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.28.0.3
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.28 -> libprotobuf-lite.so.28.0.3
+-rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.28.0.3
 -rw-r--r--	root/root	usr/lib/libprotobuf.a
 -rwxr-xr-x	root/root	usr/lib/libprotobuf.la
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.28.0.2
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.28 -> libprotobuf.so.28.0.2
--rwxr-xr-x	root/root	usr/lib/libprotobuf.so.28.0.2
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.28.0.3
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.28 -> libprotobuf.so.28.0.3
+-rwxr-xr-x	root/root	usr/lib/libprotobuf.so.28.0.3
 -rw-r--r--	root/root	usr/lib/libprotoc.a
 -rwxr-xr-x	root/root	usr/lib/libprotoc.la
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.28.0.2
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so.28 -> libprotoc.so.28.0.2
--rwxr-xr-x	root/root	usr/lib/libprotoc.so.28.0.2
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.28.0.3
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so.28 -> libprotoc.so.28.0.3
+-rwxr-xr-x	root/root	usr/lib/libprotoc.so.28.0.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf-lite.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf.pc
