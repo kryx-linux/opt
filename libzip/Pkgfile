@@ -1,10 +1,11 @@
 # Description: Library to handle zip files
 # URL: https://libzip.org
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: bzip2 cmake openssl xz zlib
+# Depends on: cmake
+# Optional: ninja
 
 name=libzip
-version=1.7.3
+version=1.8.0
 release=1
 source=(https://libzip.org/download/$name-$version.tar.xz)
 
