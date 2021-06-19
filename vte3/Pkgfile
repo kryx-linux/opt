@@ -5,10 +5,9 @@
 # Optional: icu vala
 
 name=vte3
-version=0.64.1
+version=0.64.2
 release=1
-source=(
-https://gitlab.gnome.org/GNOME/vte/-/archive/$version/vte-$version.tar.bz2)
+source=(https://gitlab.gnome.org/GNOME/vte/-/archive/$version/vte-$version.tar.bz2)
 
 build() {
 	prt-get isinst vala || PKGMK_VTE+=' -D vapi=false'
