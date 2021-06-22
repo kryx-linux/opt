@@ -5,7 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/nfsdcld
-PID=/var/run/nfsdcld
+PID=/run/nfsdcld.pid
 OPTS="--foreground"
 
 case $1 in

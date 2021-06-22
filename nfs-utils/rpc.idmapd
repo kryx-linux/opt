@@ -5,7 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/rpc.idmapd
-PID=/var/run/rpc.idmapd.pid
+PID=/run/rpc.idmapd.pid
 OPTS="-f"
 
 case $1 in

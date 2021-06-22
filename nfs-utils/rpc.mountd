@@ -5,7 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/rpc.mountd
-PID=/var/run/rpc.mountd.pid
+PID=/run/rpc.mountd.pid
 OPTS="--foreground"
 
 case $1 in

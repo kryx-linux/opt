@@ -6,7 +6,7 @@
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/rpc.statd
 NAME=rpc.statd
-PID=/var/run/rpc.statd.pid
+PID=/run/rpc.statd.pid
 OPTS="--no-notify"
 
 case $1 in
