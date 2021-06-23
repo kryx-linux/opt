@@ -6,7 +6,6 @@
 name=valgrind
 version=3.17.0
 release=1
-source=(https://sourceware.org/pub/valgrind/valgrind-${version}.tar.bz2)
 source=(https://sourceware.org/pub/$name/$name-$version.tar.bz2)
 
 build() {
