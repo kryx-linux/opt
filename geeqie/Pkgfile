@@ -1,12 +1,12 @@
 # Description: Gtk+ based image viewer
-# URL:         http://geeqie.org/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  gtk3
+# URL: http://geeqie.org/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: gtk3
 
 name=geeqie
 version=1.6
 release=1
-source=(http://geeqie.org/$name-$version.tar.xz)
+source=(https://github.com/BestImageViewer/geeqie/releases/download/v$version/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
