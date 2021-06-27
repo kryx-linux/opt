@@ -5,7 +5,7 @@
 
 name=graphviz
 version=2.47.3
-release=1
+release=2
 source=(https://gitlab.com/graphviz/graphviz/-/archive/$version/$name-$version.tar.bz2)
 
 build() {
@@ -13,6 +13,8 @@ build() {
 
 	# build fails if swig is installed but tcl is not
 	prt-get isinst swig && ! prt-get isinst tcl && PKGMK_GRAPHVIZ='--disable-swig'
+	# no support for php 8 yet
+	prt-get isinst php && PKGMK_GRAPHVIZ+=' --disable-php'
 
 	./autogen.sh
 	./configure --prefix=/usr $PKGMK_GRAPHVIZ
