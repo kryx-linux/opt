@@ -4,7 +4,7 @@
 # Depends on: ncurses
 
 name=ncdu
-version=1.15.1
+version=1.16
 release=1
 source=(https://dev.yorhel.nl/download/$name-$version.tar.gz)
 
