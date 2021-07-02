@@ -1,0 +1,35 @@
+# Description: Vim-fork focused on extensibility and usability
+# URL: https://neovim.io/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: cmake unzip
+# Optional: ninja
+
+name=neovim
+version=0.5.0
+release=1
+source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz)
+
+build() {
+  prt-get isinst ninja && PKGMK_NEOVIM+=' -G Ninja'
+  cmake -S neovim-$version/third-party -B neovim-$version/.deps $PKGMK_NEOVIM \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -O3" \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CFLAGS -O3" \
+    -D ENABLE_LTO=ON \
+    -Wno-dev
+  cmake --build neovim-$version/.deps
+
+  cmake -S neovim-$version -B build $PKGMK_NEOVIM \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -O3" \
+    -D ENABLE_LTO=ON \
+    -Wno-dev
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+
+  install -Dm644 neovim-$version/runtime/nvim.desktop $PKG/usr/share/applications/nvim.desktop
+  install -Dm644 neovim-$version/runtime/nvim.png $PKG/usr/share/pixmaps/nvim.png
+  rm -r $PKG/usr/share/locale
+}
