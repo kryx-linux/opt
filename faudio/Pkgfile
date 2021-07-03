@@ -4,7 +4,7 @@
 # Depends on: libsdl2 gst-libav
 
 name=faudio
-version=21.06
+version=21.07
 release=1
 source=(https://github.com/FNA-XNA/FAudio/archive/$version/$name-$version.tar.gz)
 
