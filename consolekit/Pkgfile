@@ -5,15 +5,13 @@
 # Optional: polkit
 
 name=consolekit
-version=1.2.3
+version=1.2.4
 release=1
 source=(https://github.com/ConsoleKit2/ConsoleKit2/archive/$version/ConsoleKit2-$version.tar.gz
-  system-session pam-foreground-compat.ck warning-to-debug.patch)
+  system-session pam-foreground-compat.ck)
 
 build() {
   cd ConsoleKit2-$version
-
-  patch -p1 -i $SRC/warning-to-debug.patch
 
   NOCONFIGURE=1 ./autogen.sh
   ./configure \
