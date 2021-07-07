@@ -5,7 +5,7 @@
 # Optional: brotli c-ares icu nghttp2-libs ninja
 
 name=nodejs
-version=16.4.0
+version=16.4.1
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
 
@@ -20,6 +20,7 @@ build() {
 
 	./configure ${PKGMK_NODEJS} \
 		--prefix=/usr \
+		--enable-lto \
 		--without-npm \
 		--shared-libuv \
 		--shared-zlib \
