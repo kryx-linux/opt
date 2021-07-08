@@ -911,6 +911,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Complex/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Complex/denominator-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Complex/fdiv-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Complex/finite%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Complex/hash-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Complex/imag-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Complex/imaginary-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Complex/infinite%3f-i.ri
@@ -2610,10 +2611,13 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/build-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/cdesc-CertCommand.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/certificates_matching-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/check_openssl-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/execute-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/load_default_cert-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/load_default_key-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/open_cert-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/open_private_key-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/re_sign_cert-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/sign-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Commands/CertCommand/valid_email%3f-i.ri
@@ -3028,6 +3032,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/GemcutterUtilities/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/GemcutterUtilities/get_scope_params-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/GemcutterUtilities/host-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/GemcutterUtilities/mfa_unauthorized%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/GemcutterUtilities/otp-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/GemcutterUtilities/pretty_host-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/GemcutterUtilities/request_with_otp-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/GemcutterUtilities/rubygems_api_request-i.ri
@@ -4487,6 +4492,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/TestCase/StaticSet/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/StaticSet/load_spec-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/StaticSet/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/StaticSet/remote-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/_synchronize-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/add_to_fetcher-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/all_spec_names-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/ask_if_ok-i.ri
@@ -4495,6 +4501,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/TestCase/StaticSet/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/assert_directory_exists-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/bindir-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/build_rake_in-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/capture_subprocess_io-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/cdesc-TestCase.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/common_installer_setup-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/common_installer_teardown-i.ri
@@ -4510,6 +4517,8 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/TestCase/StaticSet/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/install_specs-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/java_platform%3f-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/java_platform%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/load_yaml-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/load_yaml_file-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/loaded_spec_names-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/make_command-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/make_command-i.ri
@@ -4550,6 +4559,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/TestCase/StaticSet/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/win_platform%3f-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/win_platform%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/with_clean_path_to_ruby-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/without_any_upwards_gemfiles-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/TestCase/write_file-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Gem/Text/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Gem/Text/cdesc-Text.ri
@@ -6409,6 +6419,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Net/FTP/NullSocket/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/FTP/storbinary-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/FTP/storlines-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/FTP/system-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Net/FTP/use_pasv_ip-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/FTP/voidcmd-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/FTP/welcome-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Net/FTPConnectionError/
@@ -6869,6 +6880,8 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Net/IMAP/ResponseError/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/IMAP/ResponseError/response-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/Net/IMAP/ResponseParseError/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/IMAP/ResponseParseError/cdesc-ResponseParseError.ri
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/Net/IMAP/UnknownResponseError/
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Net/IMAP/UnknownResponseError/cdesc-UnknownResponseError.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/IMAP/add_authenticator-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/IMAP/add_response_handler-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Net/IMAP/append-i.ri
@@ -7309,6 +7322,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Object/TimeoutError/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Object/singleton_class-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Object/singleton_method-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Object/singleton_methods-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Object/stub-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Object/taint-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Object/tainted%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Object/timeout-i.ri
@@ -9779,12 +9793,18 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/RDoc/Parser/C/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/C/singleton_classes-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/C/top_level-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/
+drwxr-xr-x	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/Git/
+-rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/Git/cdesc-Git.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/Git/create_entries-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/Git/parse_entries-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/Git/parse_info-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/cdesc-ChangeLog.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/continue_entry_body-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/create_document-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/create_entries-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/create_items-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/group_entries-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/parse_date-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/parse_entries-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/RDoc/Parser/ChangeLog/scan-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.0/system/RDoc/Parser/Markdown/
@@ -10908,6 +10928,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.0/system/Rational/
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Rational/denominator-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Rational/fdiv-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Rational/floor-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.0/system/Rational/hash-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Rational/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Rational/json_create-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.0/system/Rational/magnitude-i.ri
