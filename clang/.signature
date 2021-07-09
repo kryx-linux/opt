@@ -1,9 +1,6 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/VBmFnEN0+x+7VzSOew6V0jRXdLqgwVeAhJl08LZw2enWZEYjNszCpj2b6bRKLWC/HQovBWs7yJj7/gtfen+DwE=
-SHA256 (Pkgfile) = 52e7757819f82c3c2ea0e5bdb4ddc62102de5ace351756e5a8ce29a978584df0
-SHA256 (.footprint) = 2395cdc7ff8a97e785bb389aef707a63d7a65b7afcb6895163116a1152b980d1
-SHA256 (clang-12.0.0.src.tar.xz) = e26e452e91d4542da3ebbf404f024d3e1cbf103f4cd110c26bf0a19621cca9ed
-SHA256 (clang-tools-extra-12.0.0.src.tar.xz) = ad41e0b527a65ade95c1ba690a5434cefaab4a2daa1be307caaa1e8541fe6d5c
-SHA256 (0001-PATCH-clang-tools-extra-Make-clangd-CompletionModel-.patch) = 27f7ff51f4ecbda7438b5258968af0ac8d5873b799d2c77e706b8806a814b31a
-SHA256 (0005-PATCH-clang-Partially-Revert-scan-view-Remove-Report.patch) = b65230862b29442963054ca2c64066a657b52fe926d2f868fee2e37fd0fb32a7
-SHA256 (0006-PATCH-clang-Allow-__ieee128-as-an-alias-to-__float12.patch) = c515554835643b2ab7a55ab1286910f9e65676649bd1d8e0b570ff5dfd4f3554
+RWSE3ohX2g5d/YLzp21r2KnxPKxDJXP6WLtOH9w8IuTl9y3uyGdMecRYFcVif5ExJH64V84DyxXsAsQN9ObUyIndWfB23XACFg4=
+SHA256 (Pkgfile) = 30cf8da4291dd047d3732f65d2b374605e65326e2cd9e48d8b4332ed01ca64f7
+SHA256 (.footprint) = 7212eea09a6c153f57cb98c86b2d33092b3f7f9849d90c51bb6119a67bcf68ce
+SHA256 (clang-12.0.1.src.tar.xz) = 6e912133bcf56e9cfe6a346fa7e5c52c2cde3e4e48b7a6cc6fcc7c75047da45f
+SHA256 (clang-tools-extra-12.0.1.src.tar.xz) = 65659efdf97dbed70ae0caee989936b731f249dddc46f1cb4225b2f49b232ae5
