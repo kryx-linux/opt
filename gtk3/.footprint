@@ -1,3 +1,6 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/gtk-3.0/
+-rw-r--r--	root/root	etc/gtk-3.0/im-multipress.conf
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/gtk-builder-tool
@@ -7,13 +10,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/gtk-query-settings
 -rwxr-xr-x	root/root	usr/bin/gtk-register-3
 -rwxr-xr-x	root/root	usr/bin/gtk-update-icon-cache
--rwxr-xr-x	root/root	usr/bin/gtk3-demo
--rwxr-xr-x	root/root	usr/bin/gtk3-demo-application
--rwxr-xr-x	root/root	usr/bin/gtk3-icon-browser
--rwxr-xr-x	root/root	usr/bin/gtk3-widget-factory
-drwxr-xr-x	root/root	usr/etc/
-drwxr-xr-x	root/root	usr/etc/gtk-3.0/
--rw-r--r--	root/root	usr/etc/gtk-3.0/im-multipress.conf
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/gail-3.0/
 drwxr-xr-x	root/root	usr/include/gail-3.0/libgail-util/
@@ -100,6 +96,7 @@ drwxr-xr-x	root/root	usr/include/gtk-3.0/gtk/a11y/
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkcontainercellaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkentryaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkexpanderaccessible.h
+-rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkfilechooserwidgetaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkflowboxaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkflowboxchildaccessible.h
 -rw-r--r--	root/root	usr/include/gtk-3.0/gtk/a11y/gtkframeaccessible.h
@@ -429,45 +426,29 @@ drwxr-xr-x	root/root	usr/lib/gtk-3.0/
 drwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/
 -rw-r--r--	root/root	usr/lib/gtk-3.0/3.0.0/immodules.cache
 drwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-am-et.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-am-et.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-cedilla.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-cedilla.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-cyrillic-translit.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-cyrillic-translit.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-inuktitut.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-inuktitut.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-ipa.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-ipa.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-multipress.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-multipress.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-thai.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-thai.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-ti-er.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-ti-er.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-ti-et.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-ti-et.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-viqr.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-viqr.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-xim.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/immodules/im-xim.so
 drwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/printbackends/
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/printbackends/libprintbackend-file.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/printbackends/libprintbackend-file.so
--rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/printbackends/libprintbackend-lpr.la
 -rwxr-xr-x	root/root	usr/lib/gtk-3.0/3.0.0/printbackends/libprintbackend-lpr.so
--rwxr-xr-x	root/root	usr/lib/libgailutil-3.la
-lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so -> libgailutil-3.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so -> libgailutil-3.so.0
 lrwxrwxrwx	root/root	usr/lib/libgailutil-3.so.0 -> libgailutil-3.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgailutil-3.so.0.0.0
--rw-r--r--	root/root	usr/lib/libgdk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0.2404.25
-lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.2404.25
--rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.2404.25
--rw-r--r--	root/root	usr/lib/libgtk-3.la
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0.2404.25
-lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.2404.25
--rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.2404.25
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so -> libgdk-3.so.0
+lrwxrwxrwx	root/root	usr/lib/libgdk-3.so.0 -> libgdk-3.so.0.2404.26
+-rwxr-xr-x	root/root	usr/lib/libgdk-3.so.0.2404.26
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so -> libgtk-3.so.0
+lrwxrwxrwx	root/root	usr/lib/libgtk-3.so.0 -> libgtk-3.so.0.2404.26
+-rwxr-xr-x	root/root	usr/lib/libgtk-3.so.0.2404.26
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gail-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gdk-3.0.pc
@@ -478,10 +459,6 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/gtk-3.0.m4
-drwxr-xr-x	root/root	usr/share/applications/
--rw-r--r--	root/root	usr/share/applications/gtk3-demo.desktop
--rw-r--r--	root/root	usr/share/applications/gtk3-icon-browser.desktop
--rw-r--r--	root/root	usr/share/applications/gtk3-widget-factory.desktop
 drwxr-xr-x	root/root	usr/share/gettext/
 drwxr-xr-x	root/root	usr/share/gettext/its/
 -rw-r--r--	root/root	usr/share/gettext/its/gtkbuilder.its
@@ -492,67 +469,11 @@ drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/Gtk-3.0.gir
 drwxr-xr-x	root/root	usr/share/glib-2.0/
 drwxr-xr-x	root/root	usr/share/glib-2.0/schemas/
--rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Demo.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.ColorChooser.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.Debug.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.EmojiChooser.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml
--rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.exampleapp.gschema.xml
-drwxr-xr-x	root/root	usr/share/icons/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/16x16/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/16x16/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/16x16/apps/gtk3-demo-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/16x16/apps/gtk3-demo.png
--rw-r--r--	root/root	usr/share/icons/hicolor/16x16/apps/gtk3-widget-factory-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/16x16/apps/gtk3-widget-factory.png
-drwxr-xr-x	root/root	usr/share/icons/hicolor/22x22/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/22x22/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/22x22/apps/gtk3-demo-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/22x22/apps/gtk3-demo.png
--rw-r--r--	root/root	usr/share/icons/hicolor/22x22/apps/gtk3-widget-factory-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/22x22/apps/gtk3-widget-factory.png
-drwxr-xr-x	root/root	usr/share/icons/hicolor/24x24/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/24x24/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/24x24/apps/gtk3-demo-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/24x24/apps/gtk3-demo.png
--rw-r--r--	root/root	usr/share/icons/hicolor/24x24/apps/gtk3-widget-factory-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/24x24/apps/gtk3-widget-factory.png
-drwxr-xr-x	root/root	usr/share/icons/hicolor/256x256/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/256x256/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/256x256/apps/gtk3-demo-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/256x256/apps/gtk3-demo.png
--rw-r--r--	root/root	usr/share/icons/hicolor/256x256/apps/gtk3-widget-factory-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/256x256/apps/gtk3-widget-factory.png
-drwxr-xr-x	root/root	usr/share/icons/hicolor/32x32/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/32x32/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/32x32/apps/gtk3-demo-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/32x32/apps/gtk3-demo.png
--rw-r--r--	root/root	usr/share/icons/hicolor/32x32/apps/gtk3-widget-factory-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/32x32/apps/gtk3-widget-factory.png
-drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/gtk3-demo-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/gtk3-demo.png
--rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/gtk3-widget-factory-symbolic.symbolic.png
--rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/gtk3-widget-factory.png
-drwxr-xr-x	root/root	usr/share/man/
-drwxr-xr-x	root/root	usr/share/man/man1/
--rw-r--r--	root/root	usr/share/man/man1/broadwayd.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk-builder-tool.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk-encode-symbolic-svg.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk-launch.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk-query-immodules-3.0.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk-query-settings.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk-update-icon-cache.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk3-demo-application.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk3-demo.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk3-icon-browser.1.gz
--rw-r--r--	root/root	usr/share/man/man1/gtk3-widget-factory.1.gz
 drwxr-xr-x	root/root	usr/share/themes/
 drwxr-xr-x	root/root	usr/share/themes/Default/
 drwxr-xr-x	root/root	usr/share/themes/Default/gtk-3.0/
 -rw-r--r--	root/root	usr/share/themes/Default/gtk-3.0/gtk-keys.css
-drwxr-xr-x	root/root	usr/share/themes/Emacs/
-drwxr-xr-x	root/root	usr/share/themes/Emacs/gtk-3.0/
--rw-r--r--	root/root	usr/share/themes/Emacs/gtk-3.0/gtk-keys.css
