@@ -1,7 +1,7 @@
 # Description: A multi-platform toolkit for creating graphical user interfaces
 # URL: https://www.gtk.org/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: at-spi2-atk gdk-pixbuf libepoxy pango xorg-xrandr
+# Depends on: at-spi2-atk gdk-pixbuf libepoxy pango xorg-libxrandr
 # Optional: colord cups libxkbcommon wayland-protocols
 
 name=gtk3
@@ -18,6 +18,7 @@ build () {
   meson setup gtk+-$version build $PKGMK_GTK3 \
     --prefix=/usr \
     -D buildtype=plain \
+    --wrap-mode=nodownload \
     -D man=false \
     -D gtk_doc=false \
     -D examples=false \
