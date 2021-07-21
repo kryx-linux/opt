@@ -4,7 +4,7 @@
 # Depends on:  libpng
 
 name=freetype
-version=2.10.4
+version=2.11.0
 release=1
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.xz)
 
