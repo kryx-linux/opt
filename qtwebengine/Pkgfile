@@ -26,7 +26,7 @@ build() {
 	install -d build
 	cd build
 
-	qmake .. -- -proprietary-codecs
+	qmake-qt5 .. -- -proprietary-codecs
 	make
 	make INSTALL_ROOT=$PKG install
 
