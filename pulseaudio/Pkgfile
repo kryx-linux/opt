@@ -1,22 +1,20 @@
 # Description: PulseAudio is a cross-platform, networked sound server
 # URL: https://www.freedesktop.org/wiki/Software/PulseAudio/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: dbus intltool libsndfile meson ninja orc speexdsp
-# Optional: avahi bluez fftw glib gst-plugins-base sbc xorg-libice xorg-libsm xorg-libxtst
+# Depends on: dbus glib intltool libsndfile meson ninja orc speexdsp
+# Optional: avahi bluez fftw gst-plugins-base sbc xorg-libice xorg-libsm xorg-libxtst
 
 name=pulseaudio
-version=14.2
-release=3
+version=15.0
+release=1
 source=(https://freedesktop.org/software/pulseaudio/releases/pulseaudio-$version.tar.xz)
 
 build() {
-  [[ -e "/usr/lib/pkgconfig/xtst.pc" && -e "/usr/lib/pkgconfig/ice.pc" ]] || PKGMK_PULSEAUDIO+=' -D x11=disabled'
-  [[ -e "/usr/lib/pkgconfig/bluez.pc" && -e "/usr/lib/pkgconfig/sbc.pc" ]] || PKGMK_PULSEAUDIO+=' -D bluez5=false'
-  [[ -e /usr/lib/pkgconfig/gstreamer-1.0.pc && -e "usr/lib/pkgconfig/gstreamer-plugins-base-1.0.pc" ]] && PKGMK_PULSEAUDIO+=' -D gstreamer=enabled'
-  [[ -e /usr/lib/pkgconfig/bash-completion.pc ]] || PKGMK_PULSEAUDIO+=' -D bashcompletiondir=no'
-  [[ -e /usr/bin/zsh ]] || PKGMK_PULSEAUDIO+=' -D zshcompletiondir=no'
-
-  sed -i -e '/doxygen/d' pulseaudio-$version/meson.build
+  prt-get isinst bluez sbc || PKGMK_PULSEAUDIO+=' -D bluez5=disabled'
+  prt-get isinst gst-plugins-base || PKGMK_PULSEAUDIO+=' -D gstreamer=disabled'
+  prt-get isinst xorg-libice xorg-libsm xorg-libxtst || PKGMK_PULSEAUDIO+=' -D x11=disabled'
+  prt-get isinst bash-completion || PKGMK_PULSEAUDIO+=' -D bashcompletiondir=no'
+  prt-get isinst zsh || PKGMK_PULSEAUDIO+=' -D zshcompletiondir=no'
 
   meson setup $name-$version build $PKGMK_PULSEAUDIO \
     --prefix=/usr \
@@ -24,9 +22,10 @@ build() {
     -D buildtype=plain \
     -D udevrulesdir=/etc/udev/rules.d \
     -D database=gdbm \
-    -D tests=false \
     -D speex=enabled \
-    -D adrian-aec=false
+    -D tests=false \
+    -D adrian-aec=false \
+    -D doxygen=false
   meson compile -C build
   DESTDIR=$PKG meson install -C build
 
