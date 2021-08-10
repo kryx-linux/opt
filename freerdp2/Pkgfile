@@ -5,7 +5,7 @@
 # Optional: alsa-lib cups directfb ffmpeg gst-plugins-base neon pulseaudio wayland xmlto
 
 name=freerdp2
-version=2.3.2
+version=2.4.0
 release=1
 source=(https://pub.freerdp.com/releases/freerdp-$version.tar.gz)
 
@@ -20,6 +20,6 @@ build() {
 		-D WITH_CLIENT=ON \
 		-D WITH_LIBSYSTEMD=OFF \
 		-Wno-dev
-	cmake --build build
+	cmake --build build -j ${JOBS:-1}
 	DESTDIR=$PKG cmake --install build
 }
