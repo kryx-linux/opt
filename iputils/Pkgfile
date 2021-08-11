@@ -4,7 +4,7 @@
 # Depends on: libcap openssl meson ninja
 
 name=iputils
-version=20210202
+version=20210722
 release=1
 source=(https://github.com/iputils/iputils/archive/$version/$name-$version.tar.gz
 	$name-man-$version.tar.xz)
