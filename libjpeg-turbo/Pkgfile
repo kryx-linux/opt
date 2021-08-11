@@ -1,10 +1,10 @@
 # Description: Library of JPEG support functions.
 # URL:         https://www.libjpeg-turbo.org/
 # Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  cmake  nasm
+# Depends on:  cmake nasm
 
 name=libjpeg-turbo
-version=2.1.0
+version=2.1.1
 release=1
 source=(https://downloads.sourceforge.net/project/$name/$version/$name-$version.tar.gz)
 
