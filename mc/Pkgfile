@@ -1,23 +1,24 @@
 # Description: GNU Midnight Commander
-# URL:         http://www.midnight-commander.org
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  glib
+# URL: http://www.midnight-commander.org
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: glib
 
 name=mc
-version=4.8.26
+version=4.8.27
 release=1
 source=(http://ftp.osuosl.org/pub/midnightcommander/$name-$version.tar.xz)
 
-build () {
-    cd $name-$version
+build() {
+	cd $name-$version
 
-    ./configure --prefix=/usr \
-                --libexecdir=/usr/lib \
-                --disable-nls \
-                --with-screen=ncurses
+	./configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib \
+		--disable-nls \
+		--with-screen=ncurses
 
-    make
-    make DESTDIR=$PKG install
+	make
+	make DESTDIR=$PKG install
 
-    rm $PKG/usr/lib/mc/*/README*
+	rm $PKG/usr/lib/mc/*/README*
 }
