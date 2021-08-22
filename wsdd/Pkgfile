@@ -1,0 +1,28 @@
+# Description: A Web Service Discovery host daemon.
+# URL: https://github.com/christgau/wsdd
+# Maintainer: Danny Rawlins, crux at romster dot me
+
+name=wsdd
+version=0.6.4
+release=1
+source=(https://github.com/christgau/wsdd/archive/v$version/$name-$version.tar.gz
+	wsdd.rc)
+
+build() {
+	cd $name-$version
+	install -D -m 0755 src/wsdd.py $PKG/usr/sbin/wsdd
+	install -D -m 0644 man/wsdd.1 $PKG/usr/share/man/man1/wsdd.1
+
+	# service
+	install -D -m 0755 $SRC/wsdd.rc $PKG/etc/rc.d/wsdd
+
+	# pid
+	install -d $PKG/run/wsdd
+
+	# chroot
+	install -d $PKG/var/lib
+	install -d -m 0755 -o nobody -g nobody $PKG/var/lib/wsdd
+
+	# log
+	install -d $PKG/var/log
+}
