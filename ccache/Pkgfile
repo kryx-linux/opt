@@ -5,7 +5,7 @@
 # Optional: clang-ccache-bindings asciidoc
 
 name=ccache
-version=4.3
+version=4.4
 release=1
 source=(https://github.com/$name/$name/releases/download/v$version/$name-$version.tar.xz
 	ccache.1)
@@ -19,7 +19,8 @@ build() {
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D ZSTD_FROM_INTERNET=ON
+		-D ZSTD_FROM_INTERNET=ON \
+		-D REDIS_STORAGE_BACKEND=OFF
 
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
