@@ -21,6 +21,7 @@ build() {
 		-D ENABLE_CPP=ON \
 		-D ENABLE_GLIB=OFF \
 		-D ENABLE_QT5=OFF \
+		-D ENABLE_QT6=OFF \
 		-D ENABLE_ZLIB=ON \
 		-D ENABLE_CMS=lcms2 \
 		-D ENABLE_LIBOPENJPEG=none \
