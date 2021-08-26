@@ -5,15 +5,17 @@
 # Optional: brotli c-ares icu nghttp2-libs ninja
 
 name=nodejs
-version=16.7.0
+version=16.8.0
 release=1
-source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz)
+source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz
+	system-c-ares.patch)
 
 build() {
 	cd node-v$version
 
 	prt-get isinst brotli && PKGMK_NODEJS+=' --shared-brotli'
 	prt-get isinst c-ares && PKGMK_NODEJS+=' --shared-cares'
+	prt-get isinst c-ares && patch -Rp1 -i $SRC/system-c-ares.patch
 	prt-get isinst icu && PKGMK_NODEJS+=' --with-intl=system-icu'
 	prt-get isinst nghttp2-libs && PKGMK_NODEJS+=' --experimental-http-parser --shared-nghttp2'
 	prt-get isinst ninja && PKGMK_NODEJS+=' --ninja'
