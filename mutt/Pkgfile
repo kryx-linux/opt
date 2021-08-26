@@ -2,26 +2,28 @@
 # URL: http://www.mutt.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: gdbm openssl zlib
+# Optional: cyrus-sasl gpgme
 
 name=mutt
-version=2.1.1
+version=2.1.2
 release=1
 source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 
-build () {
+build() {
 	cd $name-$version
 
-	./configure \
+	prt-get isinst gpgme && PKGMK_MUTT+=' --enable-gpgme'
+	prt-get isinst cyrus-sasl && PKGMK_MUTT+=' --enable-smtp --with-sasl'
+
+	./configure $PKGMK_MUTT \
 		--prefix=/usr \
 		--with-mailpath=/var/spool/mail \
 		--enable-pop \
 		--enable-imap \
-		--with-ssl \
 		--enable-hcache \
-		--disable-nls \
 		--enable-sidebar \
-		# --enable-gpgme \
-		# --enable-smtp --with-sasl
+		--disable-nls \
+		--with-ssl
 
 	make
 	make DESTDIR=$PKG install
