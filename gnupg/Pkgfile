@@ -2,9 +2,10 @@
 # URL: https://www.gnupg.org
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libgcrypt libksba pinentry npth
+# Optional: openldap
 
 name=gnupg
-version=2.3.1
+version=2.3.2
 release=1
 source=(https://gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
 
@@ -12,10 +13,12 @@ source=(https://gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
 build () {
   cd $name-$version
 
-  ./configure --prefix=/usr \
+  prt-get isinst openldap || PKGMK_GNUPG+=' --disable-ldap'
+
+  ./configure $PKGMK_GNUPG \
+    --prefix=/usr \
     --libexecdir=/usr/lib \
-    --disable-nls \
-    --disable-ldap
+    --disable-nls
 
   make
   make DESTDIR=$PKG install
