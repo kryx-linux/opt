@@ -5,9 +5,9 @@
 # Optional: wayland
 
 name=vulkan-validation-layers
-version=1.2.181
-_spirv_headers=dafead1765f6c1a5f9f8a76387dcb2abe4e54acd
-_robin_hood=3.11.1
+version=1.2.182
+_spirv_headers=07f259e68af3a540038fa32df522554e74f53ed5
+_robin_hood=3.11.3
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/v$version/Vulkan-ValidationLayers-$version.tar.gz
 	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/SPIRV-Headers-$_spirv_headers.tar.gz
