@@ -5,7 +5,7 @@
 # Optional: wayland
 
 name=vulkan-tools
-version=1.2.181
+version=1.2.182
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/v$version/Vulkan-Tools-$version.tar.gz)
 
