@@ -12,7 +12,11 @@ source=(https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$versi
 build() {
 	meson setup build $name-$version \
 		--prefix=/usr \
-		--buildtype=plain
+		--buildtype=plain \
+		-D b_lto=true \
+		-D b_pie=true
+		#--wrap-mode nodownload \
+		#--auto-features disabled \
 
 	sed -i 's|-R/usr/lib||g' build/build.ninja
 
