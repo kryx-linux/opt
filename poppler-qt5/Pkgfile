@@ -4,7 +4,7 @@
 # Depends on: qt5 poppler
 
 name=poppler-qt5
-version=21.08.0
+version=21.09.0
 release=1
 source=(https://poppler.freedesktop.org/poppler-$version.tar.xz)
 
@@ -20,6 +20,7 @@ build() {
 		-D ENABLE_SPLASH=ON \
 		-D ENABLE_CPP=OFF \
 		-D ENABLE_GLIB=OFF \
+		-D ENABLE_QT6=OFF \
 		-D ENABLE_QT5=ON \
 		-D ENABLE_ZLIB=ON \
 		-D ENABLE_CMS=lcms2 \
