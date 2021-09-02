@@ -1,11 +1,11 @@
 # Description: A modern whois client
-# URL: http://www.linux.it/~md/software/
+# URL: https://github.com/rfc1036/whois
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=whois
 version=5.5.10
 release=1
-source=(http://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.xz)
+source=(https://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.xz)
 
 build() {
 	cd $name
