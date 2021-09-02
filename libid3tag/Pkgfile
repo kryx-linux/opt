@@ -1,21 +1,22 @@
 # Description: ID3 tag manipulation library
-# URL: https://www.mars.org/home/rob/proj/mpeg/
+# URL: https://github.com/tenacityteam/libid3tag
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: zlib
+# Depends on: zlib cmake
 
 name=libid3tag
-version=0.15.1b
+version=0.16.1
 release=1
-source=(https://download.sourceforge.net/mad/${name}-${version}.tar.gz
-  id3tag.pc)
+source=(https://github.com/tenacityteam/libid3tag/archive/$version/$name-$version.tar.gz)
 
 build() {
-  mkdir -p $PKG/usr/lib/pkgconfig/
-  sed "s/#version#/$version/" id3tag.pc > $PKG/usr/lib/pkgconfig/id3tag.pc
-
-  cd $name-$version
-
-  ./configure --prefix=/usr
-  make
-  make DESTDIR=$PKG install
+  prt-get isinst ninja && PKGMK_LIBID3TAG+=' -G Ninja'
+  cmake -S $name-$version -B build $PKGMK_LIBID3TAG \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -Wno-dev
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
 }
