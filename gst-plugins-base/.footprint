@@ -54,13 +54,6 @@ drwxr-xr-x	root/root	usr/include/gstreamer-1.0/gst/fft/
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/fft/gstffts16.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/fft/gstffts32.h
 drwxr-xr-x	root/root	usr/include/gstreamer-1.0/gst/gl/
-drwxr-xr-x	root/root	usr/include/gstreamer-1.0/gst/gl/egl/
--rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gl/egl/egl.h
--rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gl/egl/gstegl.h
--rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gl/egl/gsteglimage.h
--rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gl/egl/gstgldisplay_egl.h
--rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gl/egl/gstgldisplay_egl_device.h
--rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gl/egl/gstglmemoryegl.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gl/gl-enumtypes.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gl/gl-prelude.h
 -rw-r--r--	root/root	usr/include/gstreamer-1.0/gst/gl/gl.h
@@ -214,7 +207,6 @@ drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GstApp-1.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GstAudio-1.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GstGL-1.0.typelib
--rw-r--r--	root/root	usr/lib/girepository-1.0/GstGLEGL-1.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GstGLX11-1.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GstPbutils-1.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GstRtp-1.0.typelib
@@ -260,48 +252,47 @@ drwxr-xr-x	root/root	usr/lib/gstreamer-1.0/include/gst/gl/
 -rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/libgstximagesink.so
 -rwxr-xr-x	root/root	usr/lib/gstreamer-1.0/libgstxvimagesink.so
 lrwxrwxrwx	root/root	usr/lib/libgstallocators-1.0.so -> libgstallocators-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstallocators-1.0.so.0 -> libgstallocators-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstallocators-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstallocators-1.0.so.0 -> libgstallocators-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstallocators-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstapp-1.0.so -> libgstapp-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstapp-1.0.so.0 -> libgstapp-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstapp-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstapp-1.0.so.0 -> libgstapp-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstapp-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstaudio-1.0.so -> libgstaudio-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstaudio-1.0.so.0 -> libgstaudio-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstaudio-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstaudio-1.0.so.0 -> libgstaudio-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstaudio-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstfft-1.0.so -> libgstfft-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstfft-1.0.so.0 -> libgstfft-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstfft-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstfft-1.0.so.0 -> libgstfft-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstfft-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstgl-1.0.so -> libgstgl-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstgl-1.0.so.0 -> libgstgl-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstgl-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstgl-1.0.so.0 -> libgstgl-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstgl-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstpbutils-1.0.so -> libgstpbutils-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstpbutils-1.0.so.0 -> libgstpbutils-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstpbutils-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstpbutils-1.0.so.0 -> libgstpbutils-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstpbutils-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstriff-1.0.so -> libgstriff-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstriff-1.0.so.0 -> libgstriff-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstriff-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstriff-1.0.so.0 -> libgstriff-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstriff-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstrtp-1.0.so -> libgstrtp-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstrtp-1.0.so.0 -> libgstrtp-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstrtp-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstrtp-1.0.so.0 -> libgstrtp-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstrtp-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstrtsp-1.0.so -> libgstrtsp-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstrtsp-1.0.so.0 -> libgstrtsp-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstrtsp-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstrtsp-1.0.so.0 -> libgstrtsp-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstrtsp-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstsdp-1.0.so -> libgstsdp-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstsdp-1.0.so.0 -> libgstsdp-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstsdp-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstsdp-1.0.so.0 -> libgstsdp-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstsdp-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgsttag-1.0.so -> libgsttag-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgsttag-1.0.so.0 -> libgsttag-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgsttag-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgsttag-1.0.so.0 -> libgsttag-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgsttag-1.0.so.0.1805.0
 lrwxrwxrwx	root/root	usr/lib/libgstvideo-1.0.so -> libgstvideo-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libgstvideo-1.0.so.0 -> libgstvideo-1.0.so.0.1804.0
--rwxr-xr-x	root/root	usr/lib/libgstvideo-1.0.so.0.1804.0
+lrwxrwxrwx	root/root	usr/lib/libgstvideo-1.0.so.0 -> libgstvideo-1.0.so.0.1805.0
+-rwxr-xr-x	root/root	usr/lib/libgstvideo-1.0.so.0.1805.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-allocators-1.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-app-1.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-audio-1.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-fft-1.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-gl-1.0.pc
--rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-gl-egl-1.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-gl-prototypes-1.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-gl-x11-1.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gstreamer-pbutils-1.0.pc
@@ -318,7 +309,6 @@ drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/GstApp-1.0.gir
 -rw-r--r--	root/root	usr/share/gir-1.0/GstAudio-1.0.gir
 -rw-r--r--	root/root	usr/share/gir-1.0/GstGL-1.0.gir
--rw-r--r--	root/root	usr/share/gir-1.0/GstGLEGL-1.0.gir
 -rw-r--r--	root/root	usr/share/gir-1.0/GstGLX11-1.0.gir
 -rw-r--r--	root/root	usr/share/gir-1.0/GstPbutils-1.0.gir
 -rw-r--r--	root/root	usr/share/gir-1.0/GstRtp-1.0.gir
