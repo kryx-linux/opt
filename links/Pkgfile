@@ -4,7 +4,7 @@
 # Depends on: bzip2 xz zlib zstd libevent
 
 name=links
-version=2.23
+version=2.24
 release=1
 source=(http://links.twibright.com/download/links-$version.tar.bz2)
 
