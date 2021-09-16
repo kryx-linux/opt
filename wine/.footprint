@@ -1128,7 +1128,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/wine/
 drwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/
--rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/avicap32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/avicap32.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/bcrypt.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/capi2032.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/crypt32.so
@@ -1181,8 +1181,12 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3d8.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3d9.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3dcompiler.def
+-rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3dcompiler_43.def
+-rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3dcompiler_46.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3drm.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3dx10.def
+-rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3dx10_38.def
+-rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3dx10_39.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3dx10_40.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3dx10_41.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libd3dx10_42.def
@@ -1333,6 +1337,7 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libwebservices.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libwer.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libwevtapi.def
+-rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libwin32u.def
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libwindowscodecs.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libwindowscodecsext.def
 lrwxrwxrwx	root/root	usr/lib/wine/x86_64-unix/libwine.so.1 -> libwine.so.1.0
@@ -1378,11 +1383,11 @@ lrwxrwxrwx	root/root	usr/lib/wine/x86_64-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/secur32.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/shell32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/user32.so
+-rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/win32u.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/windowscodecs.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winealsa.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winebrowser.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winebus.sys.so
--rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winecfg.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/wined3d.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winedbg.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winejoystick.drv.so
@@ -1499,6 +1504,7 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-windows/
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-processthreads-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-processthreads-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-processthreads-l1-1-3.dll
+-rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-processtopology-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-processtopology-obsolete-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-profile-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-psapi-ansi-l1-1-0.dll
@@ -1966,8 +1972,12 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-windows/
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3d8.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3d9.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3dcompiler.a
+-rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3dcompiler_43.a
+-rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3dcompiler_46.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3drm.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3dx10.a
+-rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3dx10_38.a
+-rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3dx10_39.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3dx10_40.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3dx10_41.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libd3dx10_42.a
@@ -2118,6 +2128,7 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-windows/
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libwebservices.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libwer.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libwevtapi.a
+-rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libwin32u.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libwindowscodecs.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libwindowscodecsext.a
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/libwinecrt0.a
@@ -2475,6 +2486,7 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-windows/
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/wineusb.sys
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winevulkan.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winex11.drv
+-rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winexinput.sys
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/wing32.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winhlp32.exe
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winhttp.dll
@@ -2531,7 +2543,7 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-windows/
 drwxr-xr-x	root/root	usr/lib32/
 drwxr-xr-x	root/root	usr/lib32/wine/
 drwxr-xr-x	root/root	usr/lib32/wine/i386-unix/
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/avicap32.dll.so
+-rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/avicap32.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/bcrypt.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/capi2032.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/crypt32.so
@@ -2584,8 +2596,12 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-unix/
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3d8.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3d9.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3dcompiler.def
+-rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3dcompiler_43.def
+-rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3dcompiler_46.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3drm.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3dx10.def
+-rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3dx10_38.def
+-rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3dx10_39.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3dx10_40.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3dx10_41.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libd3dx10_42.def
@@ -2737,6 +2753,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-unix/
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libwebservices.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libwer.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libwevtapi.def
+-rw-r--r--	root/root	usr/lib32/wine/i386-unix/libwin32u.def
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libwindowscodecs.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libwindowscodecsext.def
 lrwxrwxrwx	root/root	usr/lib32/wine/i386-unix/libwine.so.1 -> libwine.so.1.0
@@ -2782,11 +2799,11 @@ lrwxrwxrwx	root/root	usr/lib32/wine/i386-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/secur32.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/shell32.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/user32.so
+-rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/win32u.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/windowscodecs.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winealsa.drv.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winebrowser.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winebus.sys.so
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winecfg.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/wined3d.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winedbg.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winejoystick.drv.so
@@ -2903,6 +2920,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-windows/
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-processthreads-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-processthreads-l1-1-2.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-processthreads-l1-1-3.dll
+-rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-processtopology-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-processtopology-obsolete-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-profile-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-psapi-ansi-l1-1-0.dll
@@ -3384,8 +3402,12 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-windows/
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3d8.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3d9.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3dcompiler.a
+-rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3dcompiler_43.a
+-rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3dcompiler_46.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3drm.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3dx10.a
+-rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3dx10_38.a
+-rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3dx10_39.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3dx10_40.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3dx10_41.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libd3dx10_42.a
@@ -3537,6 +3559,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-windows/
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libwebservices.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libwer.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libwevtapi.a
+-rw-r--r--	root/root	usr/lib32/wine/i386-windows/libwin32u.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libwindowscodecs.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libwindowscodecsext.a
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/libwinecrt0.a
@@ -3935,6 +3958,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-windows/
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winevdm.exe
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winevulkan.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winex11.drv
+-rw-r--r--	root/root	usr/lib32/wine/i386-windows/winexinput.sys
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/wing.dll16
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/wing32.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winhelp.exe16
@@ -4081,7 +4105,7 @@ drwxr-xr-x	root/root	usr/share/wine/gecko/
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86.msi
 -rwxr-xr-x	root/root	usr/share/wine/gecko/wine-gecko-2.47.2-x86_64.msi
 drwxr-xr-x	root/root	usr/share/wine/mono/
--rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-6.3.0-x86.msi
+-rwxr-xr-x	root/root	usr/share/wine/mono/wine-mono-6.4.0-x86.msi
 drwxr-xr-x	root/root	usr/share/wine/nls/
 -rw-r--r--	root/root	usr/share/wine/nls/c_037.nls
 -rw-r--r--	root/root	usr/share/wine/nls/c_10000.nls
