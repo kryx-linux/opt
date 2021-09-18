@@ -4,7 +4,7 @@
 # Depends on: libpcre util-linux meson ninja
 
 name=glib
-version=2.68.4
+version=2.70.0
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
 	gschemas.compiled)
