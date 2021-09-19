@@ -1,8 +1,8 @@
 # Description: SVG rendering library with cairo backend
 # URL: https://wiki.gnome.org/Projects/LibRsvg
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: gdk-pixbuf libcroco pango rust
-# Optional: sccache
+# Depends on: brotli gdk-pixbuf pango rust
+# Optional: graphite2 sccache
 
 name=librsvg
 version=2.52.0
@@ -11,14 +11,12 @@ source=(https://download.gnome.org/sources/$name/${version%.*}/$name-$version.ta
 
 build() {
 	cd $name-$version
-	export LC_ALL=C \
-		CARGO_PROFILE_RELEASE_LTO=true \
-		CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
 
 	prt-get isinst sccache && export RUSTC_WRAPPER=/usr/bin/sccache
 	mkdir "$PKGMK_SOURCE_DIR/rust" || true
 	export CARGO_HOME="$PKGMK_SOURCE_DIR/rust"
 
+	# causes segfault if set
 	unset __GL_NO_DSO_FINALIZER
 
 	./configure \
@@ -26,10 +24,8 @@ build() {
 		--disable-gtk-doc \
 		--disable-tools \
 		--disable-debug \
-		--disable-static \
-		--disable-nls
-
-	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0 /g' libtool
+		--disable-nls \
+		--enable-pixbuf-loader
 
 	make
 	make DESTDIR=$PKG install
