@@ -12,13 +12,15 @@ source=(https://download.gnome.org/sources/gtk+/${version:0:4}/gtk+-$version.tar
 
 build () {
   prt-get isinst colord || PKGMK_GTK3+=' -Dcolord=no'
-  prt-get isinst wayland-protocols && PKGMK_GTK3+=' -D wayland_backend=true' || PKGMK_GTK3+=' -Dwayland_backend=false'
+  prt-get isinst libxkbcommon wayland-protocols && PKGMK_GTK3+=' -D wayland_backend=true' || PKGMK_GTK3+=' -Dwayland_backend=false'
 
   CFLAGS+=" -DG_ENABLE_DEBUG -DG_DISABLE_CAST_CHECKS"
   meson setup gtk+-$version build $PKGMK_GTK3 \
     --prefix=/usr \
     -D buildtype=plain \
     --wrap-mode=nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
     -D man=false \
     -D gtk_doc=false \
     -D examples=false \
