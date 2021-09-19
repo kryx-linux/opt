@@ -1,0 +1,41 @@
+# Description: Tool for configuring the NVIDIA graphics driver
+# URL: https://github.com/NVIDIA/nvidia-settings
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: brotli gtk3 xorg-libxcomposite xorg-libxcursor xorg-libxinerama
+
+name=nvidia-settings
+version=470.63.01
+release=1
+source=(https://github.com/NVIDIA/nvidia-settings/archive/$version/$name-$version.tar.gz
+	libxnvctrl_so.patch)
+
+build() {
+	export PREFIX=/usr
+	export NV_USE_BUNDLED_LIBJANSSON=0
+	export OUTPUTDIR=out
+	cd $name-$version
+	patch -p0 -i $SRC/libxnvctrl_so.patch
+
+	make
+	make -C src/libXNVCtrl
+	make DESTDIR=$PKG install
+
+	rm $PKG/usr/lib/libnvidia-gtk2.so.$version
+
+# supplied by nvidia
+#	install -D -m644 doc/nvidia-settings.desktop $PKG/usr/share/applications/nvidia-settings.desktop
+#	install -D -m644 doc/nvidia-settings.png $PKG/usr/share/pixmaps/nvidia-settings.png
+
+#	sed \
+#		-e 's:__UTILS_PATH__:/usr/bin:' \
+#		-e 's:__PIXMAP_PATH__:/usr/share/pixmaps:' \
+#		-e 's/__NVIDIA_SETTINGS_DESKTOP_CATEGORIES__/Settings;HardwareSettings;/' \
+#		-i $PKG/usr/share/applications/nvidia-settings.desktop
+	rm $PKG/usr/bin/nvidia-settings $PKG/usr/share/man/man1/nvidia-settings.1.gz
+	find $PKG -type d -empty -delete
+#
+	cd src/libXNVCtrl
+	install -Dm 644 -t $PKG/usr/include/NVCtrl ./*.h
+	install -d $PKG/usr/lib
+	cp -Pr -t $PKG/usr/lib out/libXNVCtrl.*
+}

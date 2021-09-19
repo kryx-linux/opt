@@ -1,0 +1,12 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/NVCtrl/
+-rw-r--r--	root/root	usr/include/NVCtrl/NVCtrl.h
+-rw-r--r--	root/root	usr/include/NVCtrl/NVCtrlLib.h
+-rw-r--r--	root/root	usr/include/NVCtrl/nv_control.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libXNVCtrl.a
+lrwxrwxrwx	root/root	usr/lib/libXNVCtrl.so -> libXNVCtrl.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libXNVCtrl.so.0 -> libXNVCtrl.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libXNVCtrl.so.0.0.0
+-rw-r--r--	root/root	usr/lib/libnvidia-gtk3.so.470.63.01
