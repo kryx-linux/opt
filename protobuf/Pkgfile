@@ -4,7 +4,7 @@
 # Depends on: zlib
 
 name=protobuf
-version=3.18.0
+version=3.17.3
 release=1
 source=(https://github.com/protocolbuffers/$name/archive/v$version/$name-$version.tar.gz)
 
