@@ -4,15 +4,15 @@
 # Depends on: vulkan-headers xorg-libxrandr
 
 name=vulkan-loader
-version=1.2.182
+version=1.2.189.1
 release=1
-source=(https://github.com/KhronosGroup/Vulkan-Loader/archive/v$version/Vulkan-Loader-$version.tar.gz)
+source=(https://github.com/KhronosGroup/Vulkan-Loader/archive/sdk-$version/Vulkan-Loader-$version.tar.gz)
 
 build() {
 	prt-get isinst ninja && PKGMK_VULKAN_LOADER+=' -G Ninja'
 	prt-get isinst wayland || PKGMK_VULKAN_LOADER+=' -D BUILD_WSI_WAYLAND_SUPPORT=OFF'
 
-	cmake -S Vulkan-Loader-$version -B build $PKGMK_VULKAN_LOADER \
+	cmake -S Vulkan-Loader-sdk-$version -B build $PKGMK_VULKAN_LOADER \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=lib \
 		-D CMAKE_BUILD_TYPE=Release \
