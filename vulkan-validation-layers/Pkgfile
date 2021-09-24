@@ -5,29 +5,34 @@
 # Optional: wayland
 
 name=vulkan-validation-layers
-version=1.2.182
-_spirv_headers=07f259e68af3a540038fa32df522554e74f53ed5
+version=1.2.189.1
+_spirv_headers=449bc986ba6f4c5e10e32828783f9daef2a77644
 _robin_hood=3.11.3
 release=1
-source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/v$version/Vulkan-ValidationLayers-$version.tar.gz
+source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/sdk-$version/Vulkan-ValidationLayers-$version.tar.gz
 	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/SPIRV-Headers-$_spirv_headers.tar.gz
 	https://github.com/martinus/robin-hood-hashing/archive/$_robin_hood/robin-hood-hashing-$_robin_hood.tar.gz
 	known_good.py.in)
 
 build() {
-	mkdir -p Vulkan-ValidationLayers-$version/headers/external/spirv-headers \
-		Vulkan-ValidationLayers-$version/robin_hood/external/robin-hood-hashing
-	cp -r SPIRV-Headers-$_spirv_headers/* Vulkan-ValidationLayers-$version/headers/external/spirv-headers
-	cp -r robin-hood-hashing-$_robin_hood/* Vulkan-ValidationLayers-$version/robin_hood/external/robin-hood-hashing
 
-	sed -e "s|@SRC@|$SRC/Vulkan-ValidationLayers-$version|" $SRC/known_good.py.in > $SRC/known_good.py
+	(
+		cd Vulkan-ValidationLayers-sdk-$version
+		mkdir -p \
+			headers/external/spirv-headers \
+			robin_hood/external/robin-hood-hashing
+		cp -r $SRC/SPIRV-Headers-$_spirv_headers/* headers/external/spirv-headers
+		cp -r $SRC/robin-hood-hashing-$_robin_hood/* robin_hood/external/robin-hood-hashing
+	)
+
+	sed -e "s|@SRC@|$SRC/Vulkan-ValidationLayers-sdk-$version|" $SRC/known_good.py.in > $SRC/known_good.py
 	chmod u+x $SRC/known_good.py
 	$SRC/known_good.py
 
 	prt-get isinst ninja && PKGMK_VULKAN_VALIDATION_LAYERS+=' -G Ninja'
 	prt-get isinst wayland || PKGMK_VULKAN_VALIDATION_LAYERS+=' -D BUILD_WSI_WAYLAND_SUPPORT=OFF'
 
-	cmake -S Vulkan-ValidationLayers-$version -B build $PKGMK_VULKAN_VALIDATION_LAYERS \
+	cmake -S Vulkan-ValidationLayers-sdk-$version -B build $PKGMK_VULKAN_VALIDATION_LAYERS \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=lib \
 		-D CMAKE_BUILD_TYPE=Release \
@@ -35,8 +40,8 @@ build() {
 		-D BUILD_TESTS=OFF \
 		-D BUILD_LAYER_SUPPORT_FILES=ON \
 		-D GLSLANG_INSTALL_DIR:PATH='/usr/include/glslang' \
-		-D ROBIN_HOOD_HASHING_INSTALL_DIR:PATH="$SRC/Vulkan-ValidationLayers-$version/robin_hood/external/robin-hood-hashing" \
-		-D SPIRV_HEADERS_INSTALL_DIR:PATH="$SRC/Vulkan-ValidationLayers-$version/headers/external/spirv-headers" \
+		-D ROBIN_HOOD_HASHING_INSTALL_DIR:PATH="$SRC/Vulkan-ValidationLayers-sdk-$version/robin_hood/external/robin-hood-hashing" \
+		-D SPIRV_HEADERS_INSTALL_DIR:PATH="$SRC/Vulkan-ValidationLayers-sdk-$version/headers/external/spirv-headers" \
 		-Wno-dev
 
 	cmake --build build
