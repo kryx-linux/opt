@@ -4,12 +4,12 @@
 # Depends on: cmake
 
 name=vulkan-headers
-version=1.2.182
+version=1.2.189.1
 release=1
-source=(https://github.com/KhronosGroup/Vulkan-Headers/archive/v$version/$name-v$version.tar.gz)
+source=(https://github.com/KhronosGroup/Vulkan-Headers/archive/sdk-$version/$name-$version.tar.gz)
 
 build() {
-	cmake -S Vulkan-Headers-$version -B build \
+	cmake -S Vulkan-Headers-sdk-$version -B build \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=lib \
 		-D CMAKE_BUILD_TYPE=Release
