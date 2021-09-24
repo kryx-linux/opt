@@ -5,15 +5,15 @@
 # Optional: wayland
 
 name=vulkan-tools
-version=1.2.182
+version=1.2.189.1
 release=1
-source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/v$version/Vulkan-Tools-$version.tar.gz)
+source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/sdk-$version/Vulkan-Tools-$version.tar.gz)
 
 build() {
 	prt-get isinst ninja && PKGMK_VULKAN_TOOLS+=' -G Ninja'
 	prt-get isinst wayland || PKGMK_VULKAN_TOOLS+=' -D BUILD_WSI_WAYLAND_SUPPORT=OFF'
 
-	cmake -S Vulkan-Tools-$version -B build $PKGMK_VULKAN_TOOLS \
+	cmake -S Vulkan-Tools-sdk-$version -B build $PKGMK_VULKAN_TOOLS \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
