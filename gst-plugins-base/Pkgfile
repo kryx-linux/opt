@@ -2,16 +2,16 @@
 # URL: https://gstreamer.freedesktop.org/modules/gst-plugins-base.html
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: alsa-lib graphene gl-headers gstreamer libgudev libjpeg-turbo libtheora libvisual mesa opus orc pango xorg-libx11
-# Optional: cdparanoia
+# Optional: cdparanoia libglvnd wayland-protocols
 
 name=gst-plugins-base
 version=1.18.5
-release=1
+release=2
 source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
 build() {
 	# decide accordingly to what mesa builds with
-	prt-get isinst wayland-protocols && \
+	[ -e /usr/lib/pkgconfig/egl.pc ] || prt-get isinst wayland-protocols && \
 		PKGMK_GST_PLATFORM+='egl' \
 		PKGMK_GST_GLAPI+='gles2' \
 		PKGMK_GST_WINDOW+='egl'
