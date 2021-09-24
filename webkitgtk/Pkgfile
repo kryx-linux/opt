@@ -1,11 +1,11 @@
 # Description: Small, efficient and fast rendering engine for Web Browsers.
 # URL: https://www.webkitgtk.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: gst-plugins-base gtk gtk3 harfbuzz-icu hyphen libseccomp libsecret libsoup libwebp libxslt ruby woff2 xorg-libxt
+# Depends on: gst-plugins-base gtk gtk3 icu harfbuzz hyphen libseccomp libsecret libsoup libwebp libxslt ruby woff2 xorg-libxt
 # Optional: enchant libnotify geoclue openjpeg2 xdg-dbus-proxy bubblewrap wpebackend-fdo libmanette
 
 name=webkitgtk
-version=2.32.3
+version=2.32.4
 release=1
 source=(https://webkitgtk.org/releases/$name-$version.tar.xz)
 
