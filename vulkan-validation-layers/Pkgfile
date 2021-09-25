@@ -8,11 +8,13 @@ name=vulkan-validation-layers
 version=1.2.189.1
 _spirv_headers=449bc986ba6f4c5e10e32828783f9daef2a77644
 _robin_hood=3.11.3
-release=1
+release=2
 source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/sdk-$version/Vulkan-ValidationLayers-$version.tar.gz
 	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/SPIRV-Headers-$_spirv_headers.tar.gz
 	https://github.com/martinus/robin-hood-hashing/archive/$_robin_hood/robin-hood-hashing-$_robin_hood.tar.gz
-	known_good.py.in)
+	known_good.py.in
+	add-missing-export.patch
+	fix_shared.patch)
 
 build() {
 
@@ -23,6 +25,9 @@ build() {
 			robin_hood/external/robin-hood-hashing
 		cp -r $SRC/SPIRV-Headers-$_spirv_headers/* headers/external/spirv-headers
 		cp -r $SRC/robin-hood-hashing-$_robin_hood/* robin_hood/external/robin-hood-hashing
+
+		patch -p1 -i $SRC/add-missing-export.patch
+		patch -p1 -i $SRC/fix_shared.patch
 	)
 
 	sed -e "s|@SRC@|$SRC/Vulkan-ValidationLayers-sdk-$version|" $SRC/known_good.py.in > $SRC/known_good.py
