@@ -5,9 +5,9 @@
 # Optional: sccache ccache
 
 name=rust
-version=1.54.0
-_date=2021-06-17
-_rustc=1.53.0
+version=1.55.0
+_date=2021-07-29
+_rustc=1.54.0
 _cargo=$_rustc
 release=1
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
@@ -57,6 +57,8 @@ build() {
 	unset DATE RUSTC ERROR
 
 cat <<- EOF > $SRC/config.toml
+	changelog-seen = 2
+
 	[llvm]
 	ninja = true
 	link-shared = true
@@ -74,6 +76,7 @@ cat <<- EOF > $SRC/config.toml
 
 	debuginfo-level-std = 2
 	channel = "stable"
+	parallel-compiler = true
 	rpath = false
 
 	[build]
