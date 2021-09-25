@@ -5,11 +5,14 @@
 
 name=libgd
 version=2.3.3
-release=1
-source=(https://github.com/libgd/libgd/releases/download/gd-$version/$name-$version.tar.xz)
+release=2
+source=(https://github.com/libgd/libgd/releases/download/gd-$version/$name-$version.tar.xz
+	remove_gd_flip_macros.patch)
 
 build () {
 	cd $name-$version
+	# macros are used in php
+	patch -p1 -R -i $SRC/remove_gd_flip_macros.patch
 	./configure --prefix=/usr
 	make DESTDIR=$PKG install
 }
