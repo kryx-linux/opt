@@ -4,7 +4,7 @@
 # Depends on: binutils
 
 name=ocaml
-version=4.13.0
+version=4.13.1
 release=1
 source=(http://caml.inria.fr/pub/distrib/$name-${version%.*}/$name-$version.tar.xz)
 
