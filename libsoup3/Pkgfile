@@ -1,0 +1,27 @@
+# Description: HTTP library implementation in C.
+# URL: https://wiki.gnome.org/action/show/Projects/libsoup
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: glib-networking libpsl libxml2
+# Optional: vala krb5
+
+name=libsoup3
+version=3.0.1
+release=1
+source=(https://download.gnome.org/sources/libsoup/${version%.*}/libsoup-$version.tar.xz)
+
+build() {
+	meson setup build libsoup-$version \
+		--prefix=/usr \
+		--buildtype=plain \
+		-D b_lto=true \
+		-D b_pie=true
+		#--wrap-mode nodownload \
+		#--auto-features disabled \
+
+	sed -i 's|-R/usr/lib||g' build/build.ninja
+
+	meson compile -C build -j ${JOBS:-1}
+	DESTDIR=$PKG meson install -C build
+
+	rm -r $PKG/usr/share/locale
+}
