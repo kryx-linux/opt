@@ -65,7 +65,6 @@ drwxr-xr-x	root/root	usr/include/lldb/API/
 -rw-r--r--	root/root	usr/include/lldb/API/SBThreadCollection.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBThreadPlan.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBTrace.h
--rw-r--r--	root/root	usr/include/lldb/API/SBTraceOptions.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBType.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBTypeCategory.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBTypeEnumMember.h
@@ -110,10 +109,10 @@ drwxr-xr-x	root/root	usr/include/lldb/Core/
 -rw-r--r--	root/root	usr/include/lldb/Core/AddressRange.h
 -rw-r--r--	root/root	usr/include/lldb/Core/AddressResolver.h
 -rw-r--r--	root/root	usr/include/lldb/Core/AddressResolverFileLine.h
--rw-r--r--	root/root	usr/include/lldb/Core/AddressResolverName.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Architecture.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Communication.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Debugger.h
+-rw-r--r--	root/root	usr/include/lldb/Core/Declaration.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Disassembler.h
 -rw-r--r--	root/root	usr/include/lldb/Core/DumpDataExtractor.h
 -rw-r--r--	root/root	usr/include/lldb/Core/DumpRegisterValue.h
@@ -135,9 +134,11 @@ drwxr-xr-x	root/root	usr/include/lldb/Core/
 -rw-r--r--	root/root	usr/include/lldb/Core/Opcode.h
 -rw-r--r--	root/root	usr/include/lldb/Core/PluginInterface.h
 -rw-r--r--	root/root	usr/include/lldb/Core/PluginManager.h
+-rw-r--r--	root/root	usr/include/lldb/Core/Progress.h
 -rw-r--r--	root/root	usr/include/lldb/Core/RichManglingContext.h
 -rw-r--r--	root/root	usr/include/lldb/Core/SearchFilter.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Section.h
+-rw-r--r--	root/root	usr/include/lldb/Core/SourceLocationSpec.h
 -rw-r--r--	root/root	usr/include/lldb/Core/SourceManager.h
 -rw-r--r--	root/root	usr/include/lldb/Core/StreamAsynchronousIO.h
 -rw-r--r--	root/root	usr/include/lldb/Core/StreamBuffer.h
@@ -161,6 +162,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Core/
 -rw-r--r--	root/root	usr/include/lldb/Core/ValueObjectMemory.h
 -rw-r--r--	root/root	usr/include/lldb/Core/ValueObjectRegister.h
 -rw-r--r--	root/root	usr/include/lldb/Core/ValueObjectSyntheticFilter.h
+-rw-r--r--	root/root	usr/include/lldb/Core/ValueObjectUpdater.h
 -rw-r--r--	root/root	usr/include/lldb/Core/ValueObjectVariable.h
 -rw-r--r--	root/root	usr/include/lldb/Core/dwarf.h
 drwxr-xr-x	root/root	usr/include/lldb/DataFormatters/
@@ -257,6 +259,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Host/freebsd/
 -rw-r--r--	root/root	usr/include/lldb/Host/freebsd/HostInfoFreeBSD.h
 drwxr-xr-x	root/root	usr/include/lldb/Host/linux/
 -rw-r--r--	root/root	usr/include/lldb/Host/linux/AbstractSocket.h
+-rw-r--r--	root/root	usr/include/lldb/Host/linux/Host.h
 -rw-r--r--	root/root	usr/include/lldb/Host/linux/HostInfoLinux.h
 -rw-r--r--	root/root	usr/include/lldb/Host/linux/Ptrace.h
 -rw-r--r--	root/root	usr/include/lldb/Host/linux/Support.h
@@ -288,7 +291,6 @@ drwxr-xr-x	root/root	usr/include/lldb/Host/windows/
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/PipeWindows.h
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/PosixApi.h
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/ProcessLauncherWindows.h
--rw-r--r--	root/root	usr/include/lldb/Host/windows/editlinewin.h
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/windows.h
 drwxr-xr-x	root/root	usr/include/lldb/Initialization/
 -rw-r--r--	root/root	usr/include/lldb/Initialization/SystemInitializer.h
@@ -342,6 +344,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Interpreter/
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Options.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Property.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptInterpreter.h
+-rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedProcessInterface.h
 drwxr-xr-x	root/root	usr/include/lldb/Symbol/
 -rw-r--r--	root/root	usr/include/lldb/Symbol/ArmUnwindInfo.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/Block.h
@@ -354,7 +357,6 @@ drwxr-xr-x	root/root	usr/include/lldb/Symbol/
 -rw-r--r--	root/root	usr/include/lldb/Symbol/DWARFCallFrameInfo.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/DebugMacros.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/DeclVendor.h
--rw-r--r--	root/root	usr/include/lldb/Symbol/Declaration.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/FuncUnwinders.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/Function.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/LineEntry.h
@@ -394,6 +396,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/Memory.h
 -rw-r--r--	root/root	usr/include/lldb/Target/MemoryHistory.h
 -rw-r--r--	root/root	usr/include/lldb/Target/MemoryRegionInfo.h
+-rw-r--r--	root/root	usr/include/lldb/Target/MemoryTagManager.h
 -rw-r--r--	root/root	usr/include/lldb/Target/ModuleCache.h
 -rw-r--r--	root/root	usr/include/lldb/Target/OperatingSystem.h
 -rw-r--r--	root/root	usr/include/lldb/Target/PathMappingList.h
@@ -445,9 +448,10 @@ drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/ThreadPlanStepUntil.h
 -rw-r--r--	root/root	usr/include/lldb/Target/ThreadPlanTracer.h
 -rw-r--r--	root/root	usr/include/lldb/Target/ThreadSpec.h
--rw-r--r--	root/root	usr/include/lldb/Target/ThreadTrace.h
 -rw-r--r--	root/root	usr/include/lldb/Target/Trace.h
--rw-r--r--	root/root	usr/include/lldb/Target/TraceSessionFileParser.h
+-rw-r--r--	root/root	usr/include/lldb/Target/TraceCursor.h
+-rw-r--r--	root/root	usr/include/lldb/Target/TraceExporter.h
+-rw-r--r--	root/root	usr/include/lldb/Target/TraceInstructionDumper.h
 -rw-r--r--	root/root	usr/include/lldb/Target/UnixSignals.h
 -rw-r--r--	root/root	usr/include/lldb/Target/Unwind.h
 -rw-r--r--	root/root	usr/include/lldb/Target/UnwindAssembly.h
@@ -458,6 +462,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/Args.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Baton.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Broadcaster.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/Cloneable.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/CompletionRequest.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Connection.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/ConstString.h
@@ -505,7 +510,8 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/TildeExpressionResolver.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Timeout.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Timer.h
--rw-r--r--	root/root	usr/include/lldb/Utility/TraceOptions.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/TraceGDBRemotePackets.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/TraceIntelPTGDBRemotePackets.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/UUID.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/UnimplementedError.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/UriParser.h
@@ -527,11 +533,11 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/lldb-types.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-versioning.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.12
-lrwxrwxrwx	root/root	usr/lib/liblldb.so.12 -> liblldb.so.12.0.1
--rwxr-xr-x	root/root	usr/lib/liblldb.so.12.0.1
-lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.12
--rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.12
+lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.13
+lrwxrwxrwx	root/root	usr/lib/liblldb.so.13 -> liblldb.so.13.0.0
+-rwxr-xr-x	root/root	usr/lib/liblldb.so.13.0.0
+lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.13
+-rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.13
 drwxr-xr-x	root/root	usr/lib/python3.9/
 drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/
 drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/lldb/
@@ -586,6 +592,16 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/lldb/formatters/cpp/__pycac
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/formatters/metrics.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/formatters/synth.py
 lrwxrwxrwx	root/root	usr/lib/python3.9/site-packages/lldb/lldb-argdumper -> ../../../../bin/lldb-argdumper
+drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/lldb/plugins/
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/plugins/__init__.py
+drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/lldb/plugins/__pycache__/
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/plugins/__pycache__/__init__.cpython-39.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/plugins/__pycache__/__init__.cpython-39.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/plugins/__pycache__/__init__.cpython-39.pyc
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/plugins/__pycache__/scripted_process.cpython-39.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/plugins/__pycache__/scripted_process.cpython-39.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/plugins/__pycache__/scripted_process.cpython-39.pyc
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/plugins/scripted_process.py
 drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/lldb/utils/
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/lldb/utils/__init__.py
 drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/lldb/utils/__pycache__/
