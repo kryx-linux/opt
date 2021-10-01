@@ -1,0 +1,27 @@
+# Description: LLVM Framework for High-Level Loop and Data-Locality Optimizations
+# URL: http://polly.llvm.org/
+# Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: llvm
+
+name=polly
+version=13.0.0
+release=1
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/polly-$version.src.tar.xz)
+
+build() {
+	cmake -S $name-$version.src -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D LLVM_LIBDIR_SUFFIX= \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-D LLVM_LINK_LLVM_DYLIB=ON \
+		-D CMAKE_SKIP_RPATH=ON \
+		-D LLVM_EXTERNAL_LIT=/usr/bin/lit \
+		-D LLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
+		-Wno-dev
+
+	cmake --build build
+#	cmake --build build --target check-polly
+	DESTDIR=$PKG cmake --install build
+}
