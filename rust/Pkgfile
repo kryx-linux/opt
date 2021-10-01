@@ -2,7 +2,7 @@
 # URL: https://www.rust-lang.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: compiler-rt
-# Optional: sccache ccache
+# Optional: sccache ccache libgit2 lld polly
 
 name=rust
 version=1.55.0
@@ -62,6 +62,7 @@ cat <<- EOF > $SRC/config.toml
 	[llvm]
 	ninja = true
 	link-shared = true
+	@POLLY@
 	@CCACHE@
 
 	[install]
@@ -78,12 +79,15 @@ cat <<- EOF > $SRC/config.toml
 	channel = "stable"
 	parallel-compiler = true
 	rpath = false
+	optimize = true
+	@LLD@
 
 	[build]
 	target = ["x86_64-unknown-linux-gnu", "i686-unknown-linux-gnu"]
+	tools = ["cargo", "rls", "clippy", "rustfmt", "analysis", "src", "rust-demangler"]
 	docs = false
 	extended = true
-	sanitizers = false
+	sanitizers = true
 	profiler = true
 	vendor = true
 	python = "/usr/bin/python3"
@@ -97,14 +101,16 @@ cat <<- EOF > $SRC/config.toml
 EOF
 
 	if [ -e '/usr/bin/rustc' ]; then
-		if [ -z "$(/usr/bin/ldd /usr/bin/rustc | egrep '.*libLLVM.*.so => not found')" ]; then
+		if [[ -z "$(/usr/bin/ldd /usr/bin/rustc | egrep '.*libLLVM.*.so => not found')" && \
+			-z "$(/usr/bin/ldd /usr/bin/cargo | egrep 'libgit2.so.* => not found')" ]]; then
+
 			sed	-e 's|@CARGO@|cargo = "/usr/bin/cargo"|' \
 				-e 's|@RUST@|rustc = "/usr/bin/rustc"|' \
 				-e 's|@RUSTFMT@|rustfmt = "/usr/bin/rustfmt"|' \
 				-i $SRC/config.toml
 		else
 			sed -e 's|@CARGO@||' -e 's|@RUST@||' -e 's|@RUSTFMT@||' -i $SRC/config.toml
-			printf "\e[031mllvm broken symlink detected, not using system rust to bootstrap\033[0m\n"
+			printf "\e[031mShared library missing, not using system rust to bootstrap.\033[0m\n"
 		fi
 	else
 		sed -e 's|@CARGO@||' -e 's|@RUST@||' -e 's|@RUSTFMT@||' -i $SRC/config.toml
@@ -115,6 +121,9 @@ EOF
 	else
 		sed -e 's|@CCACHE@||' -i $SRC/config.toml
 	fi
+
+	prt-get isinst lld && sed -e 's|@LLD@|use-lld = true|' -i $SRC/config.toml || sed -e 's|@LLD@||' -i $SRC/config.toml
+	prt-get isinst polly && sed -e 's|@POLLY@|polly = true|' -i $SRC/config.toml || sed -e 's|@POLLY@||' -i $SRC/config.toml
 
 	cat $SRC/config.toml
 
