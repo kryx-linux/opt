@@ -74,8 +74,10 @@ cat <<- EOF > $SRC/config.toml
 	# http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html
 	# https://github.com/rust-lang/rust/issues/54872
 	codegen-units-std = 1
-
 	debuginfo-level-std = 2
+	codegen-tests = false
+
+	description = "CRUX"
 	channel = "stable"
 	parallel-compiler = true
 	rpath = false
@@ -130,11 +132,12 @@ EOF
 	mkdir "$PKGMK_SOURCE_DIR/rust" || true
 	export CARGO_HOME="$PKGMK_SOURCE_DIR/rust"
 
-        if [ -e '/usr/bin/sccache' ]; then
-                export RUSTC_WRAPPER='/usr/bin/sccache'
-                export SCCACHE_IDLE_TIMEOUT='1500'
-        fi
+	if [ -e '/usr/bin/sccache' ]; then
+		export RUSTC_WRAPPER='/usr/bin/sccache'
+		export SCCACHE_IDLE_TIMEOUT='1500'
+	fi
 
+	export LIBGIT2_NO_PKG_CONFIG=1
 	export RUST_BACKTRACE=full
 	/usr/bin/python3 ./x.py build --config="${SRC}"/config.toml -j ${JOBS-1}
 	DESTDIR=$PKG /usr/bin/python3 ./x.py --config="${SRC}"/config.toml install
