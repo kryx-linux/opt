@@ -1,7 +1,7 @@
 # Description: LLVM compiler backend
 # URL: https://llvm.org/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: cmake libxml2 ninja
+# Depends on: cmake libffi libxml2 ninja python3-setuptools
 # Optional: lld
 
 name=llvm
