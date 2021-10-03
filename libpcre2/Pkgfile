@@ -3,9 +3,9 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=libpcre2
-version=10.37
+version=10.38
 release=1
-source=(https://ftp.pcre.org/pub/pcre/pcre2-$version.tar.bz2)
+source=(https://github.com/PhilipHazel/pcre2/releases/download/pcre2-$version/pcre2-$version.tar.gz)
 
 build() {
 	cd pcre2-$version
