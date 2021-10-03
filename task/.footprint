@@ -36,8 +36,10 @@ drwxr-xr-x	root/root	usr/share/task/rc/
 -rw-r--r--	root/root	usr/share/task/rc/holidays.es-US.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.fi-FI.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.fr-BE.rc
+-rw-r--r--	root/root	usr/share/task/rc/holidays.fr-CA.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.fr-FR.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.hr-HR.rc
+-rw-r--r--	root/root	usr/share/task/rc/holidays.hu-HU.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.is-IS.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.it-IT.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.nb-NO.rc
@@ -45,8 +47,11 @@ drwxr-xr-x	root/root	usr/share/task/rc/
 -rw-r--r--	root/root	usr/share/task/rc/holidays.nl-NL.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.pl-PL.rc
 lrwxrwxrwx	root/root	usr/share/task/rc/holidays.por-PRT.rc -> holidays.pt-PT.rc
+-rw-r--r--	root/root	usr/share/task/rc/holidays.pt-BR.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.pt-PT.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.ru-RU.rc
+-rw-r--r--	root/root	usr/share/task/rc/holidays.sk-SK.rc
+-rw-r--r--	root/root	usr/share/task/rc/holidays.sv-FI.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.sv-SE.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.tr-TR.rc
 -rw-r--r--	root/root	usr/share/task/rc/light-16.theme
@@ -76,6 +81,4 @@ drwxr-xr-x	root/root	usr/share/task/scripts/vim/syntax/
 -rw-r--r--	root/root	usr/share/task/scripts/vim/syntax/taskdata.vim
 -rw-r--r--	root/root	usr/share/task/scripts/vim/syntax/taskedit.vim
 -rw-r--r--	root/root	usr/share/task/scripts/vim/syntax/taskrc.vim
-drwxr-xr-x	root/root	usr/share/task/scripts/zsh/
--rw-r--r--	root/root	usr/share/task/scripts/zsh/_task
 -rw-r--r--	root/root	usr/share/task/task-ref.pdf

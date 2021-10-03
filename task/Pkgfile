@@ -1,14 +1,14 @@
 # Description: Powerful task manager for the command-line 
-# URL:         https://taskwarrior.org/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  util-linux cmake
+# URL: https://taskwarrior.org/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: util-linux cmake
 
 name=task
-version=2.5.3
+version=2.6.0
 release=1
 source=(https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v$version/$name-$version.tar.gz)
 
-build () {
+build() {
 	cmake -S $name-$version -B build \
 		-D CMAKE_BUILD_TYPE=release \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
@@ -16,9 +16,10 @@ build () {
 		-D TASK_DOCDIR=share/task \
 		-D ENABLE_SYNC=OFF
 
-	cmake --build build
+	cmake --build build -j ${JOBS:-1}
 	DESTDIR=$PKG cmake --install build
 
+	prt-get isinst zsh || rm -r $PKG/usr/share/zsh
 	rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,NEWS,README.md,INSTALL,LICENSE}
 	rm $PKG/usr/share/task/scripts/{add-ons,vim,hooks}/README
 }
