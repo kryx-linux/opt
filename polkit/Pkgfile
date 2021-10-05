@@ -4,16 +4,18 @@
 # Depends on: dbus gobject-introspection intltool mozjs78 util-linux
 
 name=polkit
-version=0.119
+version=0.120
 release=1
 source=(https://freedesktop.org/software/polkit/releases/$name-$version.tar.gz
-  polkit-1 84.patch)
+  polkit-1)
 
 build() {
-  patch -Np1 -d $name-$version -i $SRC/84.patch
   meson setup $name-$version build \
     --prefix=/usr \
-    --buildtype=plain
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true
   meson compile -C build
   DESTDIR=$PKG meson install -C build
 
