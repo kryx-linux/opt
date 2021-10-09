@@ -1141,9 +1141,7 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/dnsapi.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/dwrite.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/dxgi.dll.so
--rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/gdi32.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/gphoto2.ds.so
--rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/iphlpapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/kerberos.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/l3codeca.acm.so
 -rw-r--r--	root/root	usr/lib/wine/x86_64-unix/libaclui.def
@@ -1379,7 +1377,7 @@ lrwxrwxrwx	root/root	usr/lib/wine/x86_64-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/msv1_0.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/msxml3.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/netapi32.so
--rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/nsiproxy.sys.so
+-rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/nsiproxy.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/ntdll.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/odbc32.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/openal32.dll.so
@@ -1391,12 +1389,9 @@ lrwxrwxrwx	root/root	usr/lib/wine/x86_64-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/win32u.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/windowscodecs.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winealsa.drv.so
--rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winebrowser.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winebus.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/wined3d.dll.so
--rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winedbg.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winejoystick.drv.so
--rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winemenubuilder.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/wineusb.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winevulkan.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winex11.drv.so
@@ -1518,6 +1513,7 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-windows/
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-psm-appnotify-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-quirks-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-realtime-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-realtime-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-registry-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-registry-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/api-ms-win-core-registry-l2-2-0.dll
@@ -2563,9 +2559,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-unix/
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/dnsapi.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/dwrite.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/dxgi.dll.so
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/gdi32.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/gphoto2.ds.so
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/iphlpapi.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/kerberos.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/l3codeca.acm.so
 -rw-r--r--	root/root	usr/lib32/wine/i386-unix/libaclui.def
@@ -2802,7 +2796,7 @@ lrwxrwxrwx	root/root	usr/lib32/wine/i386-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/msv1_0.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/msxml3.dll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/netapi32.so
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/nsiproxy.sys.so
+-rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/nsiproxy.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/ntdll.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/odbc32.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/openal32.dll.so
@@ -2814,13 +2808,9 @@ lrwxrwxrwx	root/root	usr/lib32/wine/i386-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/win32u.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/windowscodecs.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winealsa.drv.so
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winebrowser.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winebus.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/wined3d.dll.so
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winedbg.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winejoystick.drv.so
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winemenubuilder.exe.so
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winevdm.exe.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winevulkan.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winex11.drv.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winspool.drv.so
@@ -2941,6 +2931,7 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-windows/
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-psm-appnotify-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-quirks-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-realtime-l1-1-0.dll
+-rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-realtime-l1-1-1.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-registry-l1-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-registry-l2-1-0.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/api-ms-win-core-registry-l2-2-0.dll
