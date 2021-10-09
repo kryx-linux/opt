@@ -17,7 +17,7 @@ build() {
 	export CARGO_HOME="$PKGMK_SOURCE_DIR/rust"
 
 	export RUSTFLAGS+=' -C link-arg=-flto=thin'
-	prt-get isinst lld && LD=ld.lld LDFLAGS+=' -Wl,-fuse-ld=lld' RUSTFLAGS+=' -C link-arg=-fuse-ld=lld'
+	prt-get isinst lld && export LD=ld.lld LDFLAGS+=' -Wl,-fuse-ld=lld' RUSTFLAGS+=' -C link-arg=-fuse-ld=lld'
 	prt-get isinst clang && export CC='clang' CXX='clang++' AR='llvm-ar' NM='llvm-nm' RANLIB='llvm-ranlib' \
 		CFLAGS+=' -flto=thin' CXXFLAGS+=' -flto=thin' LDFLAGS+=' -Wl,-flto=thin'
 
