@@ -5,7 +5,7 @@
 # Optional: brotli c-ares icu nghttp2-libs ninja
 
 name=nodejs
-version=16.11.0
+version=16.11.1
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz
 	system-c-ares.patch)
