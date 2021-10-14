@@ -1,24 +1,24 @@
 # Description: Directory content manager
-# URL:         https://git-scm.com/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  expat curl
-# Optional:    tk
+# URL: https://git-scm.com/
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: expat curl
+# Optional: tk
 
 name=git
-version=2.33.0
+version=2.33.1
 release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
-        git gitd.rc)
+  git gitd.rc)
 
 build() {
   cd $name-$version
 
   make CFLAGS="$CFLAGS" \
-       prefix=/usr \
-       gitexecdir=/usr/lib/git-core \
-       INSTALLSITEMAN3DIR=/usr/share/man/man3 \
-       perllibdir=$(perl -e 'use Config; print $Config::Config{'installsitelib'}') \
-       DESTDIR=$PKG install
+    prefix=/usr \
+    gitexecdir=/usr/lib/git-core \
+    INSTALLSITEMAN3DIR=/usr/share/man/man3 \
+    perllibdir=$(perl -e 'use Config; print $Config::Config{'installsitelib'}') \
+    DESTDIR=$PKG install
 
   prt-get isinst bash-completion && install -Dm644 contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
 
