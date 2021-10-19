@@ -1,0 +1,54 @@
+# Description: A fast compressor/decompressor library
+# URL: https://google.github.io/snappy/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: cmake
+
+name=snappy
+version=1.1.9
+release=1
+source=(https://github.com/google/snappy/archive/$version/$name-$version.tar.gz
+  snappy-thirdparty.patch
+  snappy-inline.patch
+  snappy-do-not-disable-rtti.patch)
+
+build() {
+  prt-get isinst ninja && PKGMK_SNAPPY+=' -G Ninja'
+
+  patch -d $name-$version -p1 -i $SRC/snappy-thirdparty.patch
+  patch -d $name-$version -p1 -i $SRC/snappy-inline.patch
+  patch -d $name-$version -p1 -i $SRC/snappy-do-not-disable-rtti.patch
+
+  # compile without assertions
+  CXXFLAGS+=\ -DNDEBUG
+
+  cmake -S $name-$version -B build $PKGMK_SNAPPY \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -D BUILD_SHARED_LIBS=ON \
+    -D SNAPPY_BUILD_TESTS=OFF \
+    -D SNAPPY_BUILD_BENCHMARKS=OFF \
+    -D HAVE_LIBZ=NO \
+    -D HAVE_LIBLZO2=NO \
+    -D HAVE_LIBLZ4=NO \
+    -Wno-dev
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+
+cat <<- EOF > snappy.pc
+prefix=/usr
+exec_prefix=\${prefix}
+includedir=\${prefix}/include
+libdir=\${exec_prefix}/lib
+
+Name: ${name}
+Description: A fast compression/decompression library
+Version: ${version}
+Cflags: -I\${includedir}
+Libs: -L\${libdir} -lsnappy
+EOF
+ 
+  install -Dm644 snappy.pc $PKG/usr/lib/pkgconfig/snappy.pc
+}
