@@ -1,0 +1,53 @@
+From 5c7b3db32bf383afa00050370222f39e0f3083ca Mon Sep 17 00:00:00 2001
+From: Laszlo Agocs <laszlo.agocs@qt.io>
+Date: Mon, 20 Sep 2021 11:16:09 +0200
+Subject: Cater for upstream changes in eglplatform.h
+
+EGL_NO_X11 has been replaced with USE_X11, thus breaking all existing
+code out there, including Qt:
+https://github.com/KhronosGroup/EGL-Registry/pull/130
+
+Fix this by defining USE_X11 whenever we do not define EGL_NO_X11.
+
+Fixes: QTBUG-96392
+Change-Id: If8b68caa8c9022477d87169ca2e2a0121a9313e0
+Reviewed-by: Andy Nichols <andy.nichols@qt.io>
+(cherry picked from commit 4cc5428548cb8ab973e4b0281dd123d59bfaf6a0)
+Reviewed-by: Qt Cherry-pick Bot <cherrypick_bot@qt-project.org>
+---
+ src/gui/configure.cmake                | 1 +
+ src/gui/opengl/platform/egl/qt_egl_p.h | 6 +++++-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/src/gui/configure.cmake b/src/gui/configure.cmake
+index ea6752806e..395902f792 100644
+--- a/src/gui/configure.cmake
++++ b/src/gui/configure.cmake
+@@ -167,6 +167,7 @@ qt_config_compile_test(egl_x11
+ // has to be disabled in plugins like xcb in this case since the native display,
+ // window and pixmap types will be different than what an X-based platform
+ // plugin would expect.
++#define USE_X11
+ #include <EGL/egl.h>
+ #include <X11/Xlib.h>
+ 
+diff --git a/src/gui/opengl/platform/egl/qt_egl_p.h b/src/gui/opengl/platform/egl/qt_egl_p.h
+index c33cc8aa21..5d4e2fd6d4 100644
+--- a/src/gui/opengl/platform/egl/qt_egl_p.h
++++ b/src/gui/opengl/platform/egl/qt_egl_p.h
+@@ -65,7 +65,11 @@
+ # if !defined(Q_OS_INTEGRITY)
+ #  define WIN_INTERFACE_CUSTOM   // NV
+ # endif // Q_OS_INTEGRITY
+-#endif  // QT_EGL_NO_X11
++#else // QT_EGL_NO_X11
++// If one has an eglplatform.h with https://github.com/KhronosGroup/EGL-Registry/pull/130
++// that needs USE_X11 to be defined.
++# define USE_X11
++#endif
+ 
+ #ifdef QT_EGL_WAYLAND
+ # define WAYLAND // NV
+-- 
+cgit v1.2.1
+
