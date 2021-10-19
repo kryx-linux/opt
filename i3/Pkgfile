@@ -4,7 +4,7 @@
 # Depends on: pango xorg-xcb-util-cursor xorg-xcb-util-keysyms xorg-xcb-util-wm xorg-xcb-util-xrm libxkbcommon yajl libev startup-notification
 
 name=i3
-version=4.19.2
+version=4.20
 release=1
 source=(http://i3wm.org/downloads/$name-$version.tar.xz)
 
