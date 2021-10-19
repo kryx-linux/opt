@@ -1,8 +1,8 @@
 # Description: A cross-platform application and UI framework
 # URL: https://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: brotli cups double-conversion gst-plugins-base libb2 libinput libproxy libxkbcommon md4c shared-mime-info tslib vulkan-headers xdg-utils xmlstarlet xorg-libxi xorg-xcb-util-cursor xorg-xcb-util-keysyms xorg-xcb-util-wm
-# Optional: gtk3 mariadb postgresql unixodbc pulseaudio pipewire
+# Depends on: brotli cups double-conversion gst-plugins-base libb2 libinput libproxy libxkbcommon shared-mime-info vulkan-headers xdg-utils xorg-libxi xorg-xcb-util-cursor xorg-xcb-util-keysyms xorg-xcb-util-wm
+# Optional: gtk3 mariadb postgresql unixodbc pulseaudio pipewire md4c tslib xmlstarlet
 
 name=qt6-base
 version=6.2.0
