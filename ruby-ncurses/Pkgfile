@@ -19,7 +19,6 @@ build () {
 	cd $PKG/$(gem env gemdir)
 	rm -r cache doc build_info
 	cd gems/ncurses-ruby-$version
-	rm -r ext/ncurses/.gem.*
 	rm COPYING Changelog.md LICENSE.txt README.md THANKS
 	rm TODO .gitignore examples/LICENSES_for_examples
 }
