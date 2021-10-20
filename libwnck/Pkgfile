@@ -1,7 +1,7 @@
 # Description: Window Navigator Construction Kit library
-# URL:         https://developer.gnome.org/libwnck/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  gtk gobject-introspection
+# URL: https://developer.gnome.org/libwnck/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: gtk gobject-introspection intltool
 
 name=libwnck
 version=2.31.0
