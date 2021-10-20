@@ -19,6 +19,5 @@ build () {
 	cd $PKG/$(gem env gemdir)
 	rm -r cache doc build_info
 	cd gems/mysql2-$version
-	rm -r ext/mysql2/.gem.*
 	rm CHANGELOG.md LICENSE README.md
 }
