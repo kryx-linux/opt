@@ -1,7 +1,7 @@
 # Description: Virtual Terminal Emulator widget for use with GTK2
 # URL: https://wiki.gnome.org/Apps/Terminal/VTE
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: gtk util-linux
+# Depends on: gtk util-linux intltool
 
 name=vte
 version=0.28.2
