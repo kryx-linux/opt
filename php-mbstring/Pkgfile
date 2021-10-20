@@ -1,7 +1,7 @@
 # Description: Multibyte string module for PHP
 # URL: https://www.php.net
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: oniguruma
+# Depends on: oniguruma libpcre2
 
 name=php-mbstring
 version=8.0.11
