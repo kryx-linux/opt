@@ -19,7 +19,6 @@ build () {
 	cd $PKG/$(gem env gemdir)
 	rm -r cache doc build_info
 	cd gems/sqlite3-1.4.2
-	rm -r ext/sqlite3/.gem.*
 	rm .gemtest .travis.yml API_CHANGES.rdoc CHANGELOG.rdoc
 	rm ChangeLog.cvs Gemfile LICENSE Manifest.txt README.rdoc
 	rm Rakefile appveyor.yml
