@@ -1,7 +1,7 @@
 # Description: gtk2 theme matching the default gtk3 theme Adwaita
-# URL:         https://git.gnome.org/browse/gnome-themes-standard/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  gtk
+# URL: https://git.gnome.org/browse/gnome-themes-standard/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: gtk intltool
 
 name=gtk-theme-adwaita
 version=3.20
@@ -17,10 +17,7 @@ build() {
 		--prefix=/usr \
 		--disable-glibtest \
 		--disable-nls \
-		--disable-gtk3-engine
 
 	make
 	make install DESTDIR=$PKG
-
-	rm -rf $PKG/usr/share/themes/Adwaita/{gtk-3.0,metacity-1}
 }
