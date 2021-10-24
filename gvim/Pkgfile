@@ -1,10 +1,10 @@
 # Description: GTK version of the vim editor
-# URL: http://www.vim.org/
+# URL: https://www.vim.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: gtk3 vim xorg-libxt
 
 name=gvim
-version=8.2.3429
+version=8.2.3560
 release=1
 source=(https://github.com/vim/vim/archive/v${version}/vim-$version.tar.gz)
 
