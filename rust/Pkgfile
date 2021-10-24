@@ -5,9 +5,9 @@
 # Optional: sccache ccache libgit2 lld polly
 
 name=rust
-version=1.56.0
-_date=2021-09-09
-_rustc=1.55.0
+version=1.55.0
+_date=2021-07-29
+_rustc=1.54.0
 _cargo=$_rustc
 release=1
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
