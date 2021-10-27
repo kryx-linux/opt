@@ -1,20 +1,27 @@
 # Description: An SMTP client suitable for use with mutt etc.
 # URL: https://marlam.de/msmtp/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: openssl
+# Optional: openssl gnutls libidn2
 
 name=msmtp
-version=1.8.17
+version=1.8.18
 release=1
 source=(https://marlam.de/msmtp/releases/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
+
+	PKGMK_MSMTP="--with-tls=none"
+	prt-get isinst openssl && PKGMK_MSMTP="--with-tls=openssl"
+	prt-get isinst gnutls  && PKGMK_MSMTP="--with-tls=gnutls"
+
 	./configure \
+		$PKGMK_MSMTP \
 		--prefix=/usr \
-		--with-tls=openssl \
 		--disable-nls
+
 	make
 	make DESTDIR=$PKG install
+
 	rm -r $PKG/usr/share/info
 }
