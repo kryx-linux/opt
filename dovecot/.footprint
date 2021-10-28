@@ -412,6 +412,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list-subscriptions.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-list.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-log.h
+-rw-r--r--	root/root	usr/include/dovecot/mailbox-match-plugin.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-recent-flags.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-search-result-private.h
 -rw-r--r--	root/root	usr/include/dovecot/mailbox-tree.h
