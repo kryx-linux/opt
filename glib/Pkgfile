@@ -4,7 +4,7 @@
 # Depends on: libpcre util-linux meson ninja
 
 name=glib
-version=2.70.0
+version=2.70.1
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
 	gschemas.compiled)
@@ -17,7 +17,6 @@ build() {
 		-D b_lto=true \
 		-D b_pie=true \
 		-D nls=disabled \
-		-D internal_pcre=false \
 		-D selinux=disabled \
 		-D gtk_doc=false
 	meson compile -C build -j ${JOBS:-1}
