@@ -5,7 +5,7 @@
 # Optional: clang
 
 name=qt6-tools
-version=6.2.0
+version=6.2.1
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qttools-everywhere-src-$version.tar.xz)
 
