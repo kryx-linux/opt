@@ -5,11 +5,13 @@
 
 name=polkit
 version=0.120
-release=1
+release=2
 source=(https://freedesktop.org/software/polkit/releases/$name-$version.tar.gz
-  polkit-1)
+  polkit-1 99.patch)
 
 build() {
+  patch -Np1 -d $name-$version -i $SRC/99.patch
+
   meson setup $name-$version build \
     --prefix=/usr \
     --buildtype=plain \
