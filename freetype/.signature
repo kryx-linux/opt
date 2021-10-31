@@ -1,5 +1,16 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/deo7ySSG5FBZa4ZBQyHVHRPYMlAd7XR6EwrVfKKt6S1XUqwd46mJFxwE0Jbcq9UBPHEFXv793pVNtfbShfzPQE=
-SHA256 (Pkgfile) = ec010edf50e1fd4181247cdcda18a61b1216f7170c4f6ac85509b41dbe5fe0f8
-SHA256 (.footprint) = 9bcef8a8c4324e32878ae3cd3d28da10201c6b7ae851470269648b6364defbdf
+RWSE3ohX2g5d/THnwN6vnoNdeaXWGZRyk/xeSc7NImmauDAqIdjDsVTjJ9rEC4SO3QnpXnQKNXrS2f9Z5POJfjuIxBNXyq9vBw0=
+SHA256 (Pkgfile) = 38f3d951de81beb295f3691810a3bfdb3ccc9508606d04d28f64eeecc47e9356
+SHA256 (.footprint) = a8bec42616674a83ffa67823566f97ea9753f385af12a02157efb4a865c10e56
 SHA256 (freetype-2.11.0.tar.xz) = 8bee39bd3968c4804b70614a0a3ad597299ad0e824bc8aad5ce8aaf48067bde7
+SHA256 (freetype2.sh) = f7f8e09c44f7552c883846e9a6a1efc50377c4932234e74adc4a8ff750606467
+SHA256 (dlg-0cc0d3eaed28483fc8036d90ac18878ebd83ed87.tar.gz) = 768b226c285698fe8d371b435c99165697c1bebff6463681cff11c4e91c1c557
+SHA256 (0001-Enable-table-validation-modules.patch) = f41df4f336d5e82e58733c7a4594476c9216cfc85c096327745a7e1b559e17e1
+SHA256 (0002-Enable-subpixel-rendering.patch) = dc77c1cfee4bf8e7e0690628c95d211df09e0d0750e4c8f075b78b5f105514f7
+SHA256 (0003-Enable-infinality-subpixel-hinting.patch) = 21a62bc12b848320c686d602d8d4e3bcd51294a9def4dc9c301736e077b59f3f
+SHA256 (0004-Enable-long-PCF-family-names.patch) = 266384222f87a02fb02b2179828f6c26fe6d7b1fd09d1f7e3734e7fcb09cda2e
+SHA256 (0006-Return_FT_Err_Ok_while_trying_to_render_bitmap.patch) = 2b13b8cc9acc3e56be6b0f8102d648864227bf93637bc956d5052c77c8509782
+SHA256 (0007-Restore_quiet_no-op_rendering_of_bitmap_glyphs.patch) = 21a2d243bc6b44d1cdb88ef29af2bd5ceda8d0faaf928bdc2c078a474ddc61f1
+SHA256 (0008-sfnt-Add-API-for-retrieving-a-COLR-v1-ClipBox-table.patch) = 13aba5006db13522ff0f3ffc85f81058b6cfcc48671285b1a90ac041a6a51952
+SHA256 (0009-src-sfnt-ttcolr.c-tt_face_get_color_glyph_clipbox-Mi.patch) = 09a01b99839fc864db7a2c0748b4703ac5b04897cbd35e0d8969024b4ba89649
+SHA256 (0010-sfnt-Add-missing-blend-mode-plus-to-COLR-v1.patch) = fbabfb745db32e1d90f9798e1018da26578f3bce9714dac8e64c15b691e76f69
