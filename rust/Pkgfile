@@ -5,7 +5,7 @@
 # Optional: sccache ccache libgit2 lld polly
 
 name=rust
-version=1.56.0
+version=1.56.1
 _date=2021-09-09
 _rustc=1.55.0
 _cargo=$_rustc
