@@ -335,6 +335,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_json_writer.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_libwrap.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_md5.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/my_minidump.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_nosys.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_rdtsc.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_rnd.h
@@ -575,8 +576,8 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_0x0100.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_ed25519.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam.so
-drwx------	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/
--rwsr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
+drwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_v1.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_test_plugin.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/caching_sha2_password.so
