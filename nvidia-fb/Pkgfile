@@ -4,7 +4,7 @@
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia-fb
-version=465.31
+version=495.44
 release=1
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf)
@@ -29,6 +29,13 @@ build() {
 	ln -s libGLESv2_nvidia.so.$version $PKG/usr/lib/libGLESv2_nvidia.so.2
 	install -D -m 0644 10_nvidia.json $PKG/usr/share/glvnd/egl_vendor.d/10_nvidia.json
 
+	# GBM libraries and config
+	install -m 0755 libnvidia-egl-gbm.so.1.1.0 $PKG/usr/lib/
+	ln -s libnvidia-egl-gbm.so.1.1.0 $PKG/usr/lib/libnvidia-egl-gbm.so.1
+	ln -s libnvidia-egl-gbm.so.1.1.0 $PKG/usr/lib/libnvidia-egl-gbm.so
+	install -D -m 0644 15_nvidia_gbm.json $PKG/usr/share/egl/egl_external_platform.d/15_nvidia_gbm.json
+	ln -s libnvidia-allocator.so.$version $PKG/usr/lib/nvidia-drm_gbm.so
+
 	# wayland EGL library and config
 	#install -d $PKG/usr/share/egl/egl_external_platform.d
 	#install -m 0755 libnvidia-egl-wayland.so.1.0.2 $PKG/usr/lib/
@@ -45,6 +52,7 @@ build() {
 	install -m 0644 nvidia_icd.json $PKG/etc/vulkan/icd.d/nvidia_icd.json
 
 	# driver component libraries
+	install -m 0755 libnvidia-allocator.so.$version $PKG/usr/lib/
 	install -m 0755 libnvidia-cfg.so.$version $PKG/usr/lib/
 	install -m 0755 libnvidia-compiler.so.$version $PKG/usr/lib/
 	install -m 0755 libnvidia-eglcore.so.$version $PKG/usr/lib/
@@ -52,7 +60,6 @@ build() {
 	install -m 0755 libnvidia-glsi.so.$version $PKG/usr/lib/
 	install -m 0755 libnvidia-glvkspirv.so.$version $PKG/usr/lib/
 	install -m 0755 libnvidia-rtcore.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-cbl.so.$version $PKG/usr/lib/
 
 	# vendor VDPAU library
 	install -D -m 0755 libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so.$version
@@ -99,7 +106,6 @@ build() {
 	# encoding/decoding libraries
 	install -m 0755 libnvcuvid.so.$version $PKG/usr/lib/
 	install -m 0755 libnvidia-encode.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-ifr.so.$version $PKG/usr/lib/
 	install -m 0755 libnvidia-fbc.so.$version $PKG/usr/lib/
 
 	# OptiX ray tracing engine
