@@ -4,12 +4,15 @@
 # Depends on: python3-pyparsing python3-six
 
 name=python3-packaging
-version=21.0
+version=21.2
 release=1
-source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
+source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
+	487.patch)
 
 build() {
 	cd ${name#*-}-$version
+
+	patch -Np1 -i $SRC/487.patch
 
 	/usr/bin/python3 setup.py build
 
