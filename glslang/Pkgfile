@@ -5,10 +5,10 @@
 # Optional: ninja
 
 name=glslang
-version=11.6.0
+version=11.7.0
 release=1
-_spirv_headers=449bc986ba6f4c5e10e32828783f9daef2a77644
-_spirv_tools=1fbed83c8aab8517d821fcb4164c08567951938f
+_spirv_headers=814e728b30ddd0f4509233099a3ad96fd4318c07
+_spirv_tools=21e3f681e2004590c7865bc8c0195a4ab8e66c88
 source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
 	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/SPIRV-Headers-$_spirv_headers.tar.gz
 	https://github.com/KhronosGroup/SPIRV-Tools/archive/$_spirv_tools/SPIRV-Tools-$_spirv_tools.tar.gz
