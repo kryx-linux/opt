@@ -1,18 +1,33 @@
 # Description: Provides support for web applications using the Chromium browser project.
 # URL: https://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: nss qt5 xorg-libxscrnsaver xorg-libxtst libvpx python
+# Depends on: libvpx nodejs nss python qt5 xorg-libxscrnsaver xorg-libxtst
 
 name=qtwebengine
-version=5.15.2
+version=5.15.6
 release=1
-source=(https://download.qt.io/official_releases/qt/${version::4}/$version/submodules/$name-everywhere-src-$version.tar.xz)
+source=(https://anduin.linuxfromscratch.org/BLFS/qtwebengine/$name-$version.tar.xz
+	https://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-build_fixes-1.patch
+	https://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-harfbuzz3-1.patch)
 
 build() {
-	cd $name-everywhere-src-$version
+	cd qtwebengine-$version
+
+	# https://www.linuxfromscratch.org/blfs/view/svn/x/qtwebengine.html
+	patch -p1 -i $SRC/$name-$version-build_fixes-1.patch
+	patch -p1 -i $SRC/$name-$version-harfbuzz3-1.patch
+
+	mkdir -pv .git src/3rdparty/chromium/.git
+	sed -e '/^MODULE_VERSION/s/5.*/5.15.2/' -i .qmake.conf
+	find -type f -name "*.pr[io]" | \
+		xargs sed -i -e 's|INCLUDEPATH += |&$$QTWEBENGINE_ROOT/include |'
+
+	prt-get isinst pulseaudio && sed -e '/link_pulseaudio/s/false/true/' \
+		-i src/3rdparty/chromium/media/media_options.gni
 
 	# Ninja, by default, sets the number of jobs to the number of availalble threads
 	test -n "$JOBS" && export NINJAFLAGS+=" -j $JOBS"
+	sed -i 's/NINJAJOBS/NINJA_JOBS/' src/core/gn_run.pro
 
 	prt-get isinst ccache && export \
 		QMAKE_CC='ccache gcc' \
@@ -26,11 +41,18 @@ build() {
 	install -d build
 	cd build
 
-	qmake-qt5 .. -- -proprietary-codecs
+	ulimit -n 2048
+
+	prt-get isinst pulseaudio && PKGMK_QTWEBENGINE+=' -pulseaudio' || PKGMK_QTWEBENGINE+=' -no-pulseaudio'
+
+	qmake-qt5 .. -- \
+		$PKGMK_QTWEBENGINE \
+		-proprietary-codecs \
+		-system-ffmpeg \
+		-webengine-icu
 	make
 	make INSTALL_ROOT=$PKG install
 
 	find "$PKG/usr/lib" -type f -name '*.prl' \
 		-exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' {} \;
-
 }
