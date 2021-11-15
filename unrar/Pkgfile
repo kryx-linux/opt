@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=unrar
-version=6.0.7
+version=6.1.2
 release=1
 source=(https://www.rarlab.com/rar/${name}src-$version.tar.gz)
 
