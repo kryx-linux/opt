@@ -1,22 +1,26 @@
 # Description: HTTP library implementation in C.
 # URL: https://wiki.gnome.org/action/show/Projects/libsoup
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: glib-networking libpsl libxml2
-# Optional: vala krb5
+# Depends on: glib-networking libpsl libxml2 nghttp2-libs
+# Optional: brotli gobject-introspection vala krb5
 
 name=libsoup3
-version=3.0.1
+version=3.0.2
 release=1
 source=(https://download.gnome.org/sources/libsoup/${version%.*}/libsoup-$version.tar.xz)
 
 build() {
-	meson setup build libsoup-$version \
+	prt-get isinst brotli && PKGMK_LIBSOUP3+=' -D brotli=enabled'
+	prt-get isinst gobject-introspection && PKGMK_LIBSOUP3+=' -D introspection=enabled'
+	prt-get isinst vala && PKGMK_LIBSOUP3+=' -D vapi=enabled'
+
+	meson setup build libsoup-$version ${PKGMK_LIBSOUP3} \
 		--prefix=/usr \
 		--buildtype=plain \
 		-D b_lto=true \
-		-D b_pie=true
-		#--wrap-mode nodownload \
-		#--auto-features disabled \
+		-D b_pie=true \
+		--wrap-mode nodownload \
+		--auto-features disabled \
 
 	sed -i 's|-R/usr/lib||g' build/build.ninja
 

@@ -45,17 +45,9 @@ drwxr-xr-x	root/root	usr/include/libsoup-3.0/libsoup/
 -rw-r--r--	root/root	usr/include/libsoup-3.0/libsoup/soup-websocket.h
 -rw-r--r--	root/root	usr/include/libsoup-3.0/libsoup/soup.h
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/girepository-1.0/
--rw-r--r--	root/root	usr/lib/girepository-1.0/Soup-3.0.typelib
 lrwxrwxrwx	root/root	usr/lib/libsoup-3.0.so -> libsoup-3.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libsoup-3.0.so.0 -> libsoup-3.0.so.0.0.1
--rwxr-xr-x	root/root	usr/lib/libsoup-3.0.so.0.0.1
+lrwxrwxrwx	root/root	usr/lib/libsoup-3.0.so.0 -> libsoup-3.0.so.0.0.2
+-rwxr-xr-x	root/root	usr/lib/libsoup-3.0.so.0.0.2
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libsoup-3.0.pc
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/gir-1.0/
--rw-r--r--	root/root	usr/share/gir-1.0/Soup-3.0.gir
-drwxr-xr-x	root/root	usr/share/vala/
-drwxr-xr-x	root/root	usr/share/vala/vapi/
--rw-r--r--	root/root	usr/share/vala/vapi/libsoup-3.0.deps
--rw-r--r--	root/root	usr/share/vala/vapi/libsoup-3.0.vapi
