@@ -1,11 +1,11 @@
 # Description: Directory content manager
 # URL: https://git-scm.com/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: expat curl
+# Depends on: curl expat
 # Optional: tk
 
 name=git
-version=2.33.1
+version=2.34.0
 release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
   git gitd.rc)
@@ -36,5 +36,4 @@ build() {
   install -Dm755 $SRC/git $PKG/etc/ports/drivers/git
 
   install -D $SRC/gitd.rc $PKG/etc/rc.d/gitd
-
 }
