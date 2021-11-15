@@ -20,7 +20,7 @@ build() {
 		-D b_lto=true \
 		-D b_pie=true \
 		--wrap-mode nodownload \
-		--auto-features disabled \
+		--auto-features disabled
 
 	sed -i 's|-R/usr/lib||g' build/build.ninja
 
