@@ -1,18 +1,16 @@
 # Description: Provides a way to load and enumerate PKCS#11 modules
 # URL: https://p11-glue.github.io/p11-glue/p11-kit.html
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: libtasn1 libffi make-ca
+# Depends on: libffi libtasn1 make-ca meson ninja
 
 name=p11-kit
 version=0.24.0
-release=1
+release=2
 source=(https://github.com/p11-glue/$name/releases/download/$version/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
-
-	sed '20,$ d' -i trust/trust-extract-compat
-	cat >> trust/trust-extract-compat << "EOF"
+	sed '20,$ d' -i $name-$version/trust/trust-extract-compat
+	cat >> $name-$version/trust/trust-extract-compat << "EOF"
 # Copy existing anchor modifications to /etc/ssl/local
 /usr/lib/make-ca/copy-trust-modifications
 
@@ -20,19 +18,19 @@ build() {
 /usr/sbin/make-ca -f -g
 EOF
 
-	./configure \
+	meson setup $name-$version build \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--with-module-path=/usr/lib/pkcs11 \
-		--with-trust-paths=/etc/pki/anchors
+		--buildtype=plain \
+		--wrap-mode=nodownload \
+		-D b_lto=true \
+		-D b_pie=true \
+		-D trust_paths=/etc/pki/anchors \
+		-D module_path=/usr/lib/pkcs11 \
+		-D nls=false
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
 
-	make
-	make DESTDIR=$PKG install
-
-	ln -s ../lib/p11-kit/trust-extract-compat \
+	ln -s /usr/lib/p11-kit/trust-extract-compat \
 		$PKG/usr/bin/update-ca-trust
-
-	rm -r $PKG/usr/share/gtk-doc
 }
