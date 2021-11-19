@@ -1,7 +1,9 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/QkehMFqMWovc3NST3g0Zbs+fz3eKyJCDVeErRvWrtWXZu13aBGGqaYnmjYQ277uIJrPbAQFiYoFLSHR5HZn7A4=
-SHA256 (Pkgfile) = 52863419cb709a04a90e7064ba668bc9071bb20980dd474a29cc0bc78075cecf
+RWSE3ohX2g5d/WxTh5ZDThEZJQnninUujKFyYl0r3kf+LE95hQ30R5ebPySfAxyQz85E65znNbTlK0O1bsCBGbEvuNt2GpMx4Ao=
+SHA256 (Pkgfile) = 66251a576754c11a60bc920aa5b5be856f40de9b10f13358ff8ed23b2d932cb4
 SHA256 (.footprint) = b945d5a708013c2c3b534d0349b096b861f32a3ae97d16a38e2c64b0dabadee0
 SHA256 (cairo-1.17.4.tar.xz) = 74b24c1ed436bbe87499179a3b27c43f4143b8676d8ad237a6fa787401959705
 SHA256 (xlib-xcb.diff) = 70cd3783381bf73ea7fccd5c2db43956b10865a9c54d5edd251dbcdb9b595a43
 SHA256 (fix-library-versioning.diff) = ba678534bbfb2ae8d2397b015f77d30719efee7bb7992dbd2c8e5f2fa5fd8efc
+SHA256 (fix-mask-usage-in-image-compositor.patch) = cdfbdc1292629997d5cb39e91c7e577d872634669565e06e37a0130c2da2480a
+SHA256 (fix-pdf-fonts.patch) = a5926f8bca3cb09e41ed8d2a60fb053c4243fdeec2c36c5c7e15d2a784b6ee9a
