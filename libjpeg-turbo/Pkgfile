@@ -9,7 +9,7 @@ release=1
 source=(https://downloads.sourceforge.net/project/$name/$version/$name-$version.tar.gz)
 
 build() {
-	prt-get isinst ninja && PKGMK_LIBJPEGTURBO+=' -G ninja'
+	prt-get isinst ninja && PKGMK_LIBJPEGTURBO+=' -G Ninja'
 	cmake -S $name-$version -B build $PKGMK_LIBJPEGTURBO \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
