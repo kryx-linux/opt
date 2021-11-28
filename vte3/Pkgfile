@@ -6,12 +6,16 @@
 
 name=vte3
 version=0.66.1
-release=1
-source=(https://gitlab.gnome.org/GNOME/vte/-/archive/$version/vte-$version.tar.bz2)
+release=2
+source=(https://gitlab.gnome.org/GNOME/vte/-/archive/$version/vte-$version.tar.bz2
+	vte-cntnr-precmd-preexec-scroll.patch)
 
 build() {
 	prt-get isinst vala || PKGMK_VTE+=' -D vapi=false'
 	prt-get isinst icu || PKGMK_VTE+=' -D icu=false'
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=711059
+	patch -d vte-$version -p1 -i $SRC/vte-cntnr-precmd-preexec-scroll.patch
 
 	meson build vte-$version ${PKGMK_VTE} \
 		--prefix=/usr \
