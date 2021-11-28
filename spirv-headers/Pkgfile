@@ -4,14 +4,14 @@
 # Depends on: cmake
 
 name=spirv-headers
-version=1.5.4.raytracing.fixed
+version=1.2.198.0
 release=1
-source=(https://github.com/KhronosGroup/SPIRV-Headers/archive/$version/SPIRV-Headers-$version.tar.gz)
+source=(https://github.com/KhronosGroup/SPIRV-Headers/archive/sdk-$version/SPIRV-Headers-sdk-$version.tar.gz)
 
 build() {
 	prt-get isinst ninja && PKGMK_SPIRV_HEADERS+=' -G Ninja'
 
-	cmake -S SPIRV-Headers-$version -B build $PKGMK_SPIRV_HEADERS \
+	cmake -S SPIRV-Headers-sdk-$version -B build $PKGMK_SPIRV_HEADERS \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_BUILD_TYPE=Release \
