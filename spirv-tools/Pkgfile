@@ -4,15 +4,16 @@
 # Depends on: cmake
 
 name=spirv-tools
-version=2021.3
+version=2021.4
 ## DEPS
-_spirv_headers=e71feddb3f17c5586ff7f4cfb5ed1258b800574b
+_spirv_headers=814e728b30ddd0f4509233099a3ad96fd4318c07
 release=1
 source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/v$version/SPIRV-Tools-v$version.tar.gz
 	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/SPIRV-Headers-$_spirv_headers.tar.gz)
 
 build() {
 	mv SPIRV-Headers-$_spirv_headers SPIRV-Headers
+
 	prt-get isinst ninja && PKGMK_SPIRV_TOOLS+=' -G Ninja'
 
 	PKGMK_SPIRV_TOOLS+=" \
