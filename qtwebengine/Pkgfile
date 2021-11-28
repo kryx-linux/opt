@@ -1,21 +1,21 @@
 # Description: Provides support for web applications using the Chromium browser project.
 # URL: https://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: libvpx nodejs nss python qt5 xorg-libxscrnsaver xorg-libxtst
+# Depends on: ffmpeg libvpx libwebp nodejs nss python qt5 xorg-libxscrnsaver xorg-libxtst
 
 name=qtwebengine
 version=5.15.6
-release=1
+release=2
 source=(https://anduin.linuxfromscratch.org/BLFS/qtwebengine/$name-$version.tar.xz
-	https://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-build_fixes-1.patch
-	https://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-harfbuzz3-1.patch)
+	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-5.15.6-5.15.7-1.patch
+	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-5.15.7-build_fixes-1.patch)
 
 build() {
 	cd qtwebengine-$version
 
 	# https://www.linuxfromscratch.org/blfs/view/svn/x/qtwebengine.html
-	patch -p1 -i $SRC/$name-$version-build_fixes-1.patch
-	patch -p1 -i $SRC/$name-$version-harfbuzz3-1.patch
+	patch -p1 -i $SRC/qtwebengine-5.15.6-5.15.7-1.patch
+	patch -p1 -i $SRC/qtwebengine-5.15.7-build_fixes-1.patch
 
 	mkdir -pv .git src/3rdparty/chromium/.git
 	sed -e '/^MODULE_VERSION/s/5.*/5.15.2/' -i .qmake.conf
@@ -44,12 +44,13 @@ build() {
 	ulimit -n 2048
 
 	prt-get isinst pulseaudio && PKGMK_QTWEBENGINE+=' -pulseaudio' || PKGMK_QTWEBENGINE+=' -no-pulseaudio'
+	prt-get isinst icu && PKGMK_QTWEBENGINE+=' -webengine-icu' || PKGMK_QTWEBENGINE+=' -no-webengine-icu'
 
 	qmake-qt5 .. -- \
 		$PKGMK_QTWEBENGINE \
 		-proprietary-codecs \
-		-system-ffmpeg \
-		-webengine-icu
+		-system-ffmpeg
+
 	make
 	make INSTALL_ROOT=$PKG install
 
