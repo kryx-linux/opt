@@ -5,7 +5,7 @@
 # Optional: ninja
 
 name=neovim
-version=0.5.1
+version=0.6.0
 release=1
 source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz)
 
