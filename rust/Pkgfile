@@ -5,9 +5,9 @@
 # Optional: sccache ccache libgit2 lld polly
 
 name=rust
-version=1.56.1
-_date=2021-09-09
-_rustc=1.55.0
+version=1.57.0
+_date=2021-11-01
+_rustc=1.56.1
 _cargo=$_rustc
 release=1
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
@@ -33,7 +33,31 @@ unpack_source() {
 	done
 }
 
+_check_version() {
+	local ERROR
+	local DATE="$(awk '/^.*"date": / {gsub(/"|,/, "", $2); print $2 }' $SRC/${name}c-$version-src/src/stage0.json)"
+	local RUSTC="$(awk '/^.*"version": / {gsub(/"|,/, "", $2); print $2 }' $SRC/${name}c-$version-src/src/stage0.json)"
+
+	printf '\033[0;32m%s\033[0m\n' "Checking versions for bootstrap compiler.."
+	printf '\033[0;32m%s\033[0m\n' "Got _date = $_date && _rustc = $_rustc"
+
+	if [ "$DATE" != "$_date" ]; then
+		printf '\e[1;31m%-6s\e[m\n' "Error: _date $_date != $DATE"
+		ERROR=1
+	fi
+	if [ "$RUSTC" != "$_rustc" ]; then
+		printf '\e[1;31m%-6s\e[m\n' "Error: _rustc $_rustc != $RUSTC"
+		ERROR=1
+	fi
+
+	[ $ERROR ] && exit 1
+	printf '\033[0;32m%s\033[0m\n' "Versions check out! Proceeding.."
+	unset DATE RUSTC ERROR
+}
+
 build() {
+	_check_version
+
 	cd "${name}c-$version-src"
 
 	# Patch cargo so credential helpers are in /usr/lib instead of /usr/libexec
@@ -41,20 +65,6 @@ build() {
 
 	# Use our *-pc-linux-gnu targets, making LTO with clang simpler
 	patch -p1 -i $SRC/0002-compiler-Change-LLVM-targets.patch
-
-	local ERROR
-	local DATE="$(awk '/^date: / { print $2 }' src/stage0.txt)"
-	local RUSTC="$(awk '/^rustc: / { print $2 }' src/stage0.txt)"
-	if [ "$DATE" != "$_date" ]; then
-		printf "\e[031mError: _date $_date != $DATE\033[0m\n"
-		ERROR=1
-	fi
-	if [ "$RUSTC" != "$_rustc" ]; then
-		printf "\e[031mError: _rustc $_rustc != $RUSTC\033[0m\n"
-		ERROR=1
-	fi
-	[ $ERROR ] && exit 1
-	unset DATE RUSTC ERROR
 
 cat <<- EOF > $SRC/config.toml
 	changelog-seen = 2
