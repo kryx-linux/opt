@@ -5,15 +5,17 @@
 
 name=jasper
 version=2.0.33
-release=1
+release=2
 source=(https://github.com/jasper-software/jasper/archive/version-$version/$name-$version.tar.gz
-	jasper-1.900.1-fix-filename-buffer-overflow.patch)
+	jasper-1.900.1-fix-filename-buffer-overflow.patch
+	jasper-freeglut.patch)
 
 build() {
 	cd $name-version-$version
 
 	patch -p1 -i $SRC/jasper-1.900.1-fix-filename-buffer-overflow.patch
 	sed -r 's|(CMAKE_SKIP_BUILD_RPATH) FALSE|\1 TRUE|g' -i CMakeLists.txt
+	patch -p1 -i $SRC/jasper-freeglut.patch
 
 	mkdir -p build-{shared,static}
 
