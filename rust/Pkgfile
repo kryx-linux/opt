@@ -150,7 +150,7 @@ EOF
 	#error: field is never read: `id`
 	#   --> src/bootstrap/lib.rs:280:5
 	#   = note: `-D dead-code` implied by `-D warnings`
-	RUSTFLAGS+=' -A dead_code'
+	export RUSTFLAGS+=' -A dead_code'
 
 	export LIBGIT2_NO_PKG_CONFIG=1
 	export RUST_BACKTRACE=full
