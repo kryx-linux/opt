@@ -2,17 +2,17 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/qt6/
 drwxr-xr-x	root/root	usr/include/qt6/QtSvg/
-drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.1/
-drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/
-drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/private/
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/private/qsvgfont_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/private/qsvggraphics_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/private/qsvghandler_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/private/qsvgnode_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/private/qsvgstructure_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/private/qsvgstyle_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/private/qsvgtinydocument_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.1/QtSvg/private/qtsvgglobal_p.h
+drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.2/
+drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/
+drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/private/
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/private/qsvgfont_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/private/qsvggraphics_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/private/qsvghandler_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/private/qsvgnode_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/private/qsvgstructure_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/private/qsvgstyle_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/private/qsvgtinydocument_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.2/QtSvg/private/qtsvgglobal_p.h
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/QSvgGenerator
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/QSvgRenderer
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/QtSvg
@@ -41,17 +41,20 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6Gui/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfigVersionImpl.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgPluginConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgPluginConfigVersionImpl.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake
 drwxr-xr-x	root/root	usr/lib/cmake/Qt6Svg/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Svg/Qt6SvgAdditionalTargetInfo.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Svg/Qt6SvgConfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Svg/Qt6SvgConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6Svg/Qt6SvgConfigVersionImpl.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Svg/Qt6SvgDependencies.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Svg/Qt6SvgTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Svg/Qt6SvgTargets.cmake
@@ -60,18 +63,19 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6SvgWidgets/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsAdditionalTargetInfo.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfigVersionImpl.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsDependencies.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessTargets.cmake
 -rw-r--r--	root/root	usr/lib/libQt6Svg.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6Svg.so -> libQt6Svg.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6Svg.so.6 -> libQt6Svg.so.6.2.1
--rwxr-xr-x	root/root	usr/lib/libQt6Svg.so.6.2.1
+lrwxrwxrwx	root/root	usr/lib/libQt6Svg.so.6 -> libQt6Svg.so.6.2.2
+-rwxr-xr-x	root/root	usr/lib/libQt6Svg.so.6.2.2
 -rw-r--r--	root/root	usr/lib/libQt6SvgWidgets.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6SvgWidgets.so -> libQt6SvgWidgets.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6SvgWidgets.so.6 -> libQt6SvgWidgets.so.6.2.1
--rwxr-xr-x	root/root	usr/lib/libQt6SvgWidgets.so.6.2.1
+lrwxrwxrwx	root/root	usr/lib/libQt6SvgWidgets.so.6 -> libQt6SvgWidgets.so.6.2.2
+-rwxr-xr-x	root/root	usr/lib/libQt6SvgWidgets.so.6.2.2
 drwxr-xr-x	root/root	usr/lib/metatypes/
 -rw-r--r--	root/root	usr/lib/metatypes/qt6svg_release_metatypes.json
 -rw-r--r--	root/root	usr/lib/metatypes/qt6svgwidgets_release_metatypes.json
