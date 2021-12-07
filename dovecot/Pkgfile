@@ -4,7 +4,7 @@
 # Depends on: zlib bzip2 xz openssl libcap linux-pam
 
 name=dovecot
-version=2.3.17
+version=2.3.17.1
 release=1
 source=(https://dovecot.org/releases/2.3/$name-$version.tar.gz
 	dovecot.rc dovecot.pam)
