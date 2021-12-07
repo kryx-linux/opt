@@ -53,11 +53,13 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cups/
 drwxr-xr-x	root/root	usr/lib/cups/backend/
 lrwxrwxrwx	root/root	usr/lib/cups/backend/http -> ipp
--rwx------	root/root	usr/lib/cups/backend/ipp
--rwx------	root/root	usr/lib/cups/backend/lpd
+lrwxrwxrwx	root/root	usr/lib/cups/backend/https -> ipp
+-rwxr--r--	root/root	usr/lib/cups/backend/ipp
+lrwxrwxrwx	root/root	usr/lib/cups/backend/ipps -> ipp
+-rwxr--r--	root/root	usr/lib/cups/backend/lpd
 -rwxr-xr-x	root/root	usr/lib/cups/backend/snmp
 -rwxr-xr-x	root/root	usr/lib/cups/backend/socket
--rwxr-xr-x	root/root	usr/lib/cups/backend/usb
+-rwxr--r--	root/root	usr/lib/cups/backend/usb
 drwxr-xr-x	root/root	usr/lib/cups/cgi-bin/
 -rwxr-xr-x	root/root	usr/lib/cups/cgi-bin/admin.cgi
 -rwxr-xr-x	root/root	usr/lib/cups/cgi-bin/classes.cgi
@@ -85,12 +87,15 @@ drwxr-xr-x	root/root	usr/lib/cups/monitor/
 -rwxr-xr-x	root/root	usr/lib/cups/monitor/bcp
 -rwxr-xr-x	root/root	usr/lib/cups/monitor/tbcp
 drwxr-xr-x	root/root	usr/lib/cups/notifier/
+-rwxr-xr-x	root/root	usr/lib/cups/notifier/dbus
 -rwxr-xr-x	root/root	usr/lib/cups/notifier/mailto
 -rwxr-xr-x	root/root	usr/lib/cups/notifier/rss
 lrwxrwxrwx	root/root	usr/lib/libcups.so -> libcups.so.2
 -rwxr-xr-x	root/root	usr/lib/libcups.so.2
 lrwxrwxrwx	root/root	usr/lib/libcupsimage.so -> libcupsimage.so.2
 -rwxr-xr-x	root/root	usr/lib/libcupsimage.so.2
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/cups.pc
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/cupsaccept
 -rwxr-xr-x	root/root	usr/sbin/cupsctl
@@ -115,7 +120,6 @@ drwxr-xr-x	root/root	usr/share/cups/doc/help/
 -rw-r--r--	root/root	usr/share/cups/doc/help/api-admin.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/api-filter.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/api-ppd.html
--rw-r--r--	root/root	usr/share/cups/doc/help/api-raster.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/cgi.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/cupspm.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/encryption.html
@@ -183,22 +187,15 @@ drwxr-xr-x	root/root	usr/share/cups/doc/help/
 -rw-r--r--	root/root	usr/share/cups/doc/help/spec-stp.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/translation.html
 drwxr-xr-x	root/root	usr/share/cups/doc/images/
--rw-r--r--	root/root	usr/share/cups/doc/images/color-wheel.png
 -rw-r--r--	root/root	usr/share/cups/doc/images/cups-block-diagram.png
 -rw-r--r--	root/root	usr/share/cups/doc/images/cups-command-chain.png
--rw-r--r--	root/root	usr/share/cups/doc/images/cups-icon.png
 -rw-r--r--	root/root	usr/share/cups/doc/images/cups-postscript-chain.png
 -rw-r--r--	root/root	usr/share/cups/doc/images/cups-raster-chain.png
 -rw-r--r--	root/root	usr/share/cups/doc/images/cups.png
--rw-r--r--	root/root	usr/share/cups/doc/images/generic.png
--rw-r--r--	root/root	usr/share/cups/doc/images/left.gif
 -rw-r--r--	root/root	usr/share/cups/doc/images/raster-organization.png
 -rw-r--r--	root/root	usr/share/cups/doc/images/raster.png
--rw-r--r--	root/root	usr/share/cups/doc/images/right.gif
 -rw-r--r--	root/root	usr/share/cups/doc/images/sample-image.png
--rw-r--r--	root/root	usr/share/cups/doc/images/sel.gif
 -rw-r--r--	root/root	usr/share/cups/doc/images/smiley.jpg
--rw-r--r--	root/root	usr/share/cups/doc/images/unsel.gif
 -rw-r--r--	root/root	usr/share/cups/doc/images/wait.gif
 -rw-r--r--	root/root	usr/share/cups/doc/index.html
 -rw-r--r--	root/root	usr/share/cups/doc/robots.txt
@@ -273,6 +270,7 @@ drwxr-xr-x	root/root	usr/share/cups/ipptool/
 -rw-r--r--	root/root	usr/share/cups/ipptool/print-job-letter.test
 -rw-r--r--	root/root	usr/share/cups/ipptool/print-job-manual.test
 -rw-r--r--	root/root	usr/share/cups/ipptool/print-job-media-col.test
+-rw-r--r--	root/root	usr/share/cups/ipptool/print-job-media-needed.test
 -rw-r--r--	root/root	usr/share/cups/ipptool/print-job-password.test
 -rw-r--r--	root/root	usr/share/cups/ipptool/print-job.test
 -rw-r--r--	root/root	usr/share/cups/ipptool/print-uri.test
