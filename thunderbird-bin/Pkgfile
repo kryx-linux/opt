@@ -4,7 +4,7 @@
 # Depends on: gtk3 dbus-glib
 
 name=thunderbird-bin
-version=91.3.2
+version=91.4.0
 release=1
 source=(http://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-x86_64/en-US/thunderbird-$version.tar.bz2 \
 	policies.json thunderbird.desktop)
