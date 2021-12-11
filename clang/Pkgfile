@@ -5,7 +5,7 @@
 
 name=clang
 version=13.0.0
-release=1
+release=2
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-$version.src.tar.xz
 	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-tools-extra-$version.src.tar.xz)
 
@@ -19,7 +19,7 @@ build() {
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
 		-D LLVM_EXTERNAL_LIT=/usr/bin/lit \
-		-D LLVM_TARGETS_TO_BUILD="X86;AMDGPU;BPF;NVPTX" \
+		-D LLVM_TARGETS_TO_BUILD="X86;AMDGPU;BPF;NVPTX;WebAssembly" \
 		-D LLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
 		-Wno-dev
 	cmake --build build
