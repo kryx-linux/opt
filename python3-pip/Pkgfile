@@ -19,5 +19,5 @@ build() {
 	rm $PKG/usr/bin/pip
 
 	# again why does this happen?
-	find $PKG/usr/lib/python3.9/site-packages -type f -exec chmod o-w '{}' \+
+	find $PKG/usr/lib/python3.10/site-packages -type f -exec chmod o-w '{}' \+
 }
