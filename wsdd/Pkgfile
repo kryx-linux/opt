@@ -3,7 +3,7 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=wsdd
-version=0.6.4
+version=0.7.0
 release=1
 source=(https://github.com/christgau/wsdd/archive/v$version/$name-$version.tar.gz
 	wsdd.rc)
