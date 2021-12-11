@@ -1,13 +1,13 @@
 # Description: A message bus system
-# URL:         https://freedesktop.org/wiki/Software/dbus
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  expat
+# URL: https://freedesktop.org/wiki/Software/dbus
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: expat
 
 name=dbus
 version=1.12.20
-release=1
+release=2
 source=(https://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
-        rc.dbus 30-dbus.launch)
+	rc.dbus 30-dbus.launch)
 
 build() {
 	cd $name-$version
