@@ -5,7 +5,7 @@
 # Optional: icu vala
 
 name=vte3
-version=0.66.1
+version=0.66.2
 release=2
 source=(https://gitlab.gnome.org/GNOME/vte/-/archive/$version/vte-$version.tar.bz2
 	vte-cntnr-precmd-preexec-scroll.patch)
