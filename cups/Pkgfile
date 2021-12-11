@@ -2,6 +2,7 @@
 # URL: https://openprinting.github.io/cups/
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: acl libusb zlib linux-pam
+# Optional: dbus gnutls
 
 name=cups
 version=2.4.0
@@ -12,8 +13,10 @@ source=(https://github.com/OpenPrinting/cups/releases/download/v$version/$name-$
 build() {
 	cd $name-$version
 
+	prt-get isinst gnutls || PKGMK_CUPS+=' --without-tls'
+
 	CC=cc CXX=c++ \
-	./configure \
+	./configure $PKGMK_CUPS \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--libdir=/usr/lib \
@@ -26,7 +29,7 @@ build() {
 		--without-rcdir \
 		--with-optim="$CFLAGS" \
 		--enable-acl \
-		--disable-{gnutls,gssapi,systemd}
+		--without-systemd
 
 	make
 	make BUILDROOT=$PKG install

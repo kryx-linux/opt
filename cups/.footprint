@@ -53,9 +53,7 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cups/
 drwxr-xr-x	root/root	usr/lib/cups/backend/
 lrwxrwxrwx	root/root	usr/lib/cups/backend/http -> ipp
-lrwxrwxrwx	root/root	usr/lib/cups/backend/https -> ipp
 -rwxr--r--	root/root	usr/lib/cups/backend/ipp
-lrwxrwxrwx	root/root	usr/lib/cups/backend/ipps -> ipp
 -rwxr--r--	root/root	usr/lib/cups/backend/lpd
 -rwxr-xr-x	root/root	usr/lib/cups/backend/snmp
 -rwxr-xr-x	root/root	usr/lib/cups/backend/socket
