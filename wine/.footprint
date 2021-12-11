@@ -701,6 +701,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/mtxdm.h
 -rw-r--r--	root/root	usr/include/wine/windows/mulres.idl
 -rw-r--r--	root/root	usr/include/wine/windows/multimon.h
+-rw-r--r--	root/root	usr/include/wine/windows/namespaceapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/natupnp.h
 -rw-r--r--	root/root	usr/include/wine/windows/natupnp.idl
 -rw-r--r--	root/root	usr/include/wine/windows/nb30.h
@@ -784,6 +785,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/poppack.h
 -rw-r--r--	root/root	usr/include/wine/windows/powrprof.h
 -rw-r--r--	root/root	usr/include/wine/windows/prntvpt.h
+-rw-r--r--	root/root	usr/include/wine/windows/processthreadsapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/profinfo.h
 -rw-r--r--	root/root	usr/include/wine/windows/proofofpossessioncookieinfo.h
 -rw-r--r--	root/root	usr/include/wine/windows/proofofpossessioncookieinfo.idl
@@ -1144,6 +1146,10 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/xmldsodid.h
 -rw-r--r--	root/root	usr/include/wine/windows/xmllite.h
 -rw-r--r--	root/root	usr/include/wine/windows/xmllite.idl
+-rw-r--r--	root/root	usr/include/wine/windows/xpsobjectmodel.h
+-rw-r--r--	root/root	usr/include/wine/windows/xpsobjectmodel.idl
+-rw-r--r--	root/root	usr/include/wine/windows/xpsobjectmodel_1.h
+-rw-r--r--	root/root	usr/include/wine/windows/xpsobjectmodel_1.idl
 -rw-r--r--	root/root	usr/include/wine/windows/zmouse.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/wine/
@@ -1396,7 +1402,6 @@ lrwxrwxrwx	root/root	usr/lib/wine/x86_64-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winealsa.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winebus.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/wined3d.dll.so
--rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winejoystick.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/wineusb.sys.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winevulkan.so
 -rwxr-xr-x	root/root	usr/lib/wine/x86_64-unix/winex11.drv.so
@@ -2488,7 +2493,6 @@ drwxr-xr-x	root/root	usr/lib/wine/x86_64-windows/
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winedevice.exe
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winefile.exe
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winehid.sys
--rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winejoystick.drv
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winemapi.dll
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winemenubuilder.exe
 -rw-r--r--	root/root	usr/lib/wine/x86_64-windows/winemine.exe
@@ -2839,7 +2843,6 @@ lrwxrwxrwx	root/root	usr/lib32/wine/i386-unix/libwine.so.1 -> libwine.so.1.0
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winealsa.drv.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winebus.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/wined3d.dll.so
--rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winejoystick.drv.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winevulkan.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winex11.drv.so
 -rwxr-xr-x	root/root	usr/lib32/wine/i386-unix/winspool.so
@@ -3985,7 +3988,6 @@ drwxr-xr-x	root/root	usr/lib32/wine/i386-windows/
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winedevice.exe
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winefile.exe
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winehid.sys
--rw-r--r--	root/root	usr/lib32/wine/i386-windows/winejoystick.drv
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winemapi.dll
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winemenubuilder.exe
 -rw-r--r--	root/root	usr/lib32/wine/i386-windows/winemine.exe
