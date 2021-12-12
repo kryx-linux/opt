@@ -5,8 +5,8 @@
 # Optional: wayland
 
 name=vulkan-validation-layers
-version=1.2.189.1
-_spirv_headers=449bc986ba6f4c5e10e32828783f9daef2a77644
+version=1.2.198.0
+_spirv_headers=814e728b30ddd0f4509233099a3ad96fd4318c07
 _robin_hood=3.11.3
 release=2
 source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/sdk-$version/Vulkan-ValidationLayers-$version.tar.gz
