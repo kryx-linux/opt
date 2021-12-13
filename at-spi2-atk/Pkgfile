@@ -1,17 +1,20 @@
 # Description: atk to at-spi2 bridge library
-# URL:         https://wiki.gnome.org/Accessibility
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  atk at-spi2-core libxml2
+# URL: https://wiki.gnome.org/Accessibility
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: at-spi2-core atk libxml2
 
 name=at-spi2-atk
 version=2.38.0
-release=1
+release=2
 source=(https://ftp.gnome.org/pub/gnome/sources/at-spi2-atk/${version:0:4}/at-spi2-atk-$version.tar.xz)
 
 build() {
 	meson setup build $name-$version \
 		--prefix=/usr \
-		--buildtype=plain
+		--buildtype=plain \
+		--wrap-mode nodownload \
+		-D b_lto=true \
+		-D b_pie=true
 
 	meson compile -C build -j ${JOBS:-1}
 	DESTDIR=$PKG meson install -C build
