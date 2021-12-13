@@ -10,7 +10,7 @@ release=1
 source=(https://pub.freerdp.com/releases/freerdp-$version.tar.gz)
 
 build() {
-	cmake -S freerdp-$version -B build \
+	cmake -S freerdp-$version -B build -G Ninja \
 		-D CMAKE_BUILD_TYPE=RELEASE \
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-D CMAKE_INSTALL_PREFIX=/usr \
