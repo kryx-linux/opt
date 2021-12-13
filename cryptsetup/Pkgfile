@@ -1,7 +1,7 @@
 # Description: user-friendly dm-crypt/LUKS interface
 # URL: https://gitlab.com/cryptsetup/cryptsetup
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: libdevmapper openssl popt json-c
+# Depends on: json-c libdevmapper openssl popt
 
 name=cryptsetup
 version=2.4.2
