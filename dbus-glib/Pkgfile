@@ -1,20 +1,22 @@
 # Description: D-Bus GLib bindings
-# URL:         http://freedesktop.org/wiki/Software/DBusBindings
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Depends on:  dbus glib
+# URL: https://freedesktop.org/wiki/Software/DBusBindings
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: dbus glib
 
 name=dbus-glib
 version=0.112
-release=1
+release=2
 source=(https://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
-	./configure \
+	prt-get isinst bash-completion || PKGMK_DBUSGLIB+=' --enable-bash-completion=no'
+
+	./configure $PKGMK_DBUSGLIB \
 		--prefix=/usr \
-		--disable-static \
-		--enable-bash-completion=no
+		--libexecdir=/usr/lib/dbus-glib \
+		--disable-static
 	make
 	make DESTDIR=$PKG install
 
