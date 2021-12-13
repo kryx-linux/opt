@@ -6,7 +6,7 @@
 name=dbus
 version=1.12.20
 release=2
-source=(https://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
+source=(https://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz
 	rc.dbus 30-dbus.launch)
 
 build() {
