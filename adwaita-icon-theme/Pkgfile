@@ -1,7 +1,7 @@
 # Description: Adwaita Icon Theme
 # URL: https://git.gnome.org/browse/adwaita-icon-theme/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends On: librsvg gtk3 hicolor-icon-theme
+# Depends On: gtk3 hicolor-icon-theme librsvg
 
 name=adwaita-icon-theme
 version=41.0
