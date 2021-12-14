@@ -1,12 +1,12 @@
 # Description: LInux boot LOader
-# URL:         https://www.joonet.de/lilo/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# URL: https://www.joonet.de/lilo/
+# Maintainer: CRUX System Team, core-ports at crux dot nu
 
 name=lilo
 version=24.2
 release=3
-source=(https://www.joonet.de/lilo/ftp/sources/$name-$version.tar.gz \
-        lilo.static lilo.conf)
+source=(https://www.joonet.de/lilo/ftp/sources/$name-$version.tar.gz
+	lilo.static lilo.conf)
 
 build() {
 	cd $name-$version
