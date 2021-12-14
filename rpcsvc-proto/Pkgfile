@@ -1,6 +1,6 @@
 # Description: rpcsvc proto.x files from glibc
-# URL:         https://github.com/thkukuk/rpcsvc-proto
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# URL: https://github.com/thkukuk/rpcsvc-proto
+# Maintainer: CRUX System Team, core-ports at crux dot nu
 
 name=rpcsvc-proto
 version=1.4.2
@@ -10,7 +10,7 @@ source=(https://github.com/thkukuk/$name/releases/download/v$version/$name-$vers
 build() {
 	cd $name-$version
 	autoreconf -fi
-	./configure --prefix=/usr 
+	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
 }
