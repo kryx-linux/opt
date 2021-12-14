@@ -5,9 +5,9 @@
 # Optional: libid3tag giflib
 
 name=imlib2
-version=1.7.4
+version=1.7.5
 release=1
-source=(https://download.sourceforge.net/enlightenment/$name-$version.tar.bz2)
+source=(https://download.sourceforge.net/enlightenment/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
