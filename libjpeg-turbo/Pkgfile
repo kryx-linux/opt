@@ -9,8 +9,7 @@ release=1
 source=(https://downloads.sourceforge.net/project/$name/$version/$name-$version.tar.gz)
 
 build() {
-	prt-get isinst ninja && PKGMK_LIBJPEGTURBO+=' -G Ninja'
-	cmake -S $name-$version -B build $PKGMK_LIBJPEGTURBO \
+	cmake -S $name-$version -B build -G Ninja \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-D CMAKE_INSTALL_PREFIX=/usr \
@@ -18,5 +17,6 @@ build() {
 		-D WITH_JPEG8=ON
 	cmake --build build -j ${JOBS:-1}
 	DESTDIR=$PKG cmake --install build
+
 	rm -r $PKG/usr/share/doc
 }
