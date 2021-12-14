@@ -6,12 +6,12 @@
 name=nss
 version=3.73.1
 release=1
-source=(https://ftp.mozilla.org/pub/security/nss/releases/NSS_${version//./_}_RTM/src/$name-$version.tar.gz \
-	nss-3.54-standalone-2.patch \
+source=(https://ftp.mozilla.org/pub/security/nss/releases/NSS_${version//./_}_RTM/src/$name-$version.tar.gz
+	nss-3.54-standalone-2.patch
 	nss-config.in nss.pc.in nss-softokn.pc.in nss-util.pc.in)
 
 build() {
-	cd $name-$version/
+	cd $name-$version
 
 	patch -Np1 -i $SRC/nss-3.54-standalone-2.patch
 
