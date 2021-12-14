@@ -16,11 +16,12 @@ build() {
 		--prefix=/usr \
 		--with-dbus-daemondir=/usr/sbin \
 		--localstatedir=/var \
+		--runstatedir=/run \
 		--sysconfdir=/etc \
 		--libexecdir=/usr/lib/dbus \
 		--with-dbus-user=messagebus \
 		--with-init-scripts=none \
-		--with-system-pid-file=/var/run/$name/$name.pid
+		--with-system-pid-file=/run/$name.pid
 
 	make
 	make DESTDIR=$PKG install
