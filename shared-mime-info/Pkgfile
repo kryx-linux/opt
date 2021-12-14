@@ -9,7 +9,7 @@ release=1
 _xdgmimever=cecafc8cd5cd725444b914d5f6cd17308633afa8
 source=(https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/$name-$version.tar.bz2
 	https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2
-	remove-weird-docs.patch meson060.patch)
+	remove-weird-docs.patch meson.patch)
 
 build() {
 	# Build mime database
@@ -17,10 +17,10 @@ build() {
 		-i xdgmime-$_xdgmimever/src/Makefile
 	make -C xdgmime-$_xdgmimever
 
+	patch -Np1 -d $name-$version -i $SRC/meson.patch
 	# We don't want to include fancy docs
 	# Deletes references to xmllint and xmlto
 	patch -Np1 -d $name-$version -i $SRC/remove-weird-docs.patch
-	patch -Np1 -d $name-$version -i $SRC/meson060.patch
 
 	meson $name-$version build \
 		--prefix=/usr \
