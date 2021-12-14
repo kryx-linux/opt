@@ -6,7 +6,7 @@
 name=glib
 version=2.70.2
 release=1
-source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
+source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz
 	gschemas.compiled)
 
 build() {
