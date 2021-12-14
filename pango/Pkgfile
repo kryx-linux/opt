@@ -6,7 +6,7 @@
 name=pango
 version=1.50.3
 release=1
-source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
+source=(https://download-fallback.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
 	meson build $name-$version \
