@@ -1,10 +1,10 @@
 # Description: Fast CPU emulator and virtualizer for the x86 platform
 # URL: https://www.qemu.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: libusb linux-pam util-linux glib ninja libsdl2 libxkbcommon xorg-libpixman
+# Depends on: libusb linux-pam util-linux glib ninja libsdl2 libxkbcommon xorg-libpixman python3-sphinx
 
 name=qemu
-version=6.1.0
+version=6.2.0
 release=1
 source=(https://download.qemu.org/$name-$version.tar.xz
 	$name-man-$version.tar.xz)
