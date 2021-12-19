@@ -86,6 +86,12 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/Hdmi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/sof-hda-dsp.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/MediaTek/
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/MediaTek/mtk-rt5650/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/MediaTek/mtk-rt5650/HDMI.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/MediaTek/mtk-rt5650/HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/MediaTek/mtk-rt5650/init.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/MediaTek/mtk-rt5650/mtk-rt5650.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/NXP/
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/NXP/iMX8/
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/NXP/iMX8/Librem_5_Devkit/
@@ -349,6 +355,8 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/hda-dsp/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/hda-dsp/hda-dsp.conf -> ../../Intel/hda-dsp/hda-dsp.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/kblrt5660/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/kblrt5660/kblrt5660.conf -> ../../Intel/kblrt5660/kblrt5660.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/mtk-rt5650/
+lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/mtk-rt5650/mtk-rt5650.conf -> ../../MediaTek/mtk-rt5650/mtk-rt5650.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/rockchip_es8316/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/rockchip_es8316/rockchip_es8316.conf -> ../../Rockchip/es8316/es8316.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/sdm845/
