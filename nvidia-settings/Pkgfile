@@ -4,7 +4,7 @@
 # Depends on: brotli gtk3 xorg-libxcomposite xorg-libxcursor xorg-libxinerama
 
 name=nvidia-settings
-version=470.63.01
+version=495.46
 release=1
 source=(https://github.com/NVIDIA/nvidia-settings/archive/$version/$name-$version.tar.gz
 	libxnvctrl_so.patch)
