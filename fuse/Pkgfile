@@ -5,11 +5,19 @@
 name=fuse
 version=2.9.9
 release=1
-source=(https://github.com/libfuse/libfuse/releases/download/$name-$version/$name-$version.tar.gz)
+source=(https://github.com/libfuse/libfuse/releases/download/$name-$version/$name-$version.tar.gz
+    fuse2-0007-util-ulockmgr_server.c-conditionally-define-closefro.patch)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr
+    patch -Np1 -i $SRC/fuse2-0007-util-ulockmgr_server.c-conditionally-define-closefro.patch
+    autoreconf -vfi
+    UDEV_RULES_PATH=/usr/lib/udev/rules.d ./configure \
+        --prefix=/usr \
+        --libdir=/usr/lib \
+        --enable-lib \
+        --enable-util \
+        --disable-example
     make
     make DESTDIR=$PKG install
     rm -r $PKG/{dev,etc}
