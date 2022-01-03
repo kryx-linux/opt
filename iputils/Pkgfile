@@ -4,10 +4,10 @@
 # Depends on: libcap openssl meson ninja
 
 name=iputils
-version=20210722
+version=20211215
 release=1
-source=(https://github.com/iputils/iputils/archive/$version/$name-$version.tar.gz
-	$name-man-$version.tar.xz)
+source=(https://github.com/iputils/iputils/archive/$version/$name-$version.tar.gz)
+	#$name-man-$version.tar.xz)
 
 build() {
 	cd $name-$version
@@ -15,9 +15,11 @@ build() {
 	meson setup build . \
 		--prefix=/usr \
 		--buildtype=plain \
-		-D BUILD_MANS=false \
-		-D BUILD_TRACEROUTE6=true \
-		-D BUILD_RARPD=true
+		--wrap-mode nodownload \
+		-D b_lto=true \
+		-D b_pie=true \
+		-D BUILD_RARPD=true \
+		-D BUILD_MANS=false
 
 	meson compile -C build -j ${JOBS:-1}
 
@@ -26,8 +28,7 @@ build() {
 	install build/arping $PKG/sbin/
 	install build/{tracepath,clockdiff,rdisc,rarpd} $PKG/usr/sbin/
 	install build/ninfod/ninfod $PKG/usr/sbin/
-	install build/traceroute6 $PKG/usr/bin/
-	install -m 0644 $SRC/*.8 $PKG/usr/share/man/man8
+	#install -m 0644 $SRC/*.8 $PKG/usr/share/man/man8
 
-	chmod u+s $PKG/bin/ping $PKG/usr/bin/traceroute6
+	chmod u+s $PKG/bin/ping
 }
