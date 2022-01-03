@@ -5,7 +5,7 @@
 # Optional: colord cups libxkbcommon wayland-protocols
 
 name=gtk3
-version=3.24.30
+version=3.24.31
 release=1
 source=(https://download.gnome.org/sources/gtk+/${version:0:4}/gtk+-$version.tar.xz
   gtk-register-3.sh gtk.immodules)
