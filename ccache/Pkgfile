@@ -1,8 +1,8 @@
 # Description: A fast compiler cache.
 # URL: https://ccache.dev/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cmake
-# Optional: clang-ccache-bindings asciidoctor
+# Depends on:
+# Optional: asciidoctor clang-ccache-bindings
 
 name=ccache
 version=4.5.1
@@ -11,9 +11,7 @@ source=(https://github.com/$name/$name/releases/download/v$version/$name-$versio
 	ccache.1)
 
 build() {
-	[[ -e '/usr/bin/ninja' ]] && PKGMK_CCACHE+=' -G Ninja'
-
-	cmake -S $name-$version -B build $PKGMK_CCACHE \
+	cmake -S $name-$version -B build -G Ninja \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=lib \
 		-D CMAKE_BUILD_TYPE=Release \
