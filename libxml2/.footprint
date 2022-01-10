@@ -55,22 +55,25 @@ drwxr-xr-x	root/root	usr/include/libxml2/libxml/
 -rw-r--r--	root/root	usr/include/libxml2/libxml/xpointer.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cmake/
-drwxr-xr-x	root/root	usr/lib/cmake/libxml2/
--rw-r--r--	root/root	usr/lib/cmake/libxml2/libxml2-config.cmake
--rw-r--r--	root/root	usr/lib/libxml2.a
--rwxr-xr-x	root/root	usr/lib/libxml2.la
-lrwxrwxrwx	root/root	usr/lib/libxml2.so -> libxml2.so.2.9.12
-lrwxrwxrwx	root/root	usr/lib/libxml2.so.2 -> libxml2.so.2.9.12
--rwxr-xr-x	root/root	usr/lib/libxml2.so.2.9.12
+drwxr-xr-x	root/root	usr/lib/cmake/libxml2-2.9.10/
+-rw-r--r--	root/root	usr/lib/cmake/libxml2-2.9.10/libxml2-config-version.cmake
+-rw-r--r--	root/root	usr/lib/cmake/libxml2-2.9.10/libxml2-config.cmake
+-rw-r--r--	root/root	usr/lib/cmake/libxml2-2.9.10/libxml2-export-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/libxml2-2.9.10/libxml2-export.cmake
+lrwxrwxrwx	root/root	usr/lib/libxml2.so -> libxml2.so.2.9.10
+-rwxr-xr-x	root/root	usr/lib/libxml2.so.2.9.10
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libxml-2.0.pc
+drwxr-xr-x	root/root	usr/lib/python3.10/
+drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/drv_libxml2.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/libxml2.py
+lrwxrwxrwx	root/root	usr/lib/python3.10/site-packages/libxml2mod.so -> libxml2mod.so.2.9.10
+-rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/libxml2mod.so.2.9.10
 -rw-r--r--	root/root	usr/lib/xml2Conf.sh
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/aclocal/
--rw-r--r--	root/root	usr/share/aclocal/libxml.m4
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
--rw-r--r--	root/root	usr/share/man/man1/xml2-config.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/xmlcatalog.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/xmllint.1.gz
 drwxr-xr-x	root/root	usr/share/man/man3/

@@ -5,14 +5,17 @@
 
 name=libxml2
 version=2.9.12
-release=1
+release=2
 source=(https://gitlab.gnome.org/GNOME/libxml2/-/archive/v$version/libxml2-v$version.tar.bz2)
 
 build() {
-	cd $name-v$version
-	autoreconf -vfi
-	./configure --prefix=/usr --without-python
-	make
-	make DESTDIR=$PKG install
-	rm -r $PKG/usr/share/{doc,gtk-doc}
+	cmake -S $name-v$version -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=lib \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+	rm -r $PKG/usr/share/doc
 }
