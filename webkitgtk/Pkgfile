@@ -6,7 +6,7 @@
 
 name=webkitgtk
 version=2.34.3
-release=1
+release=2
 source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
 build() {
