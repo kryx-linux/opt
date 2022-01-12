@@ -5,7 +5,7 @@
 
 name=shared-mime-info
 version=2.1
-release=1
+release=2
 _xdgmimever=cecafc8cd5cd725444b914d5f6cd17308633afa8
 source=(https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/$name-$version.tar.bz2
 	https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2
