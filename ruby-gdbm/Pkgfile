@@ -1,0 +1,21 @@
+# Description: Ruby bindings for GNU dbm
+# URL: https://github.com/ruby/gdbm
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: ruby gdbm
+
+name=ruby-gdbm
+version=2.1.0
+release=1
+source=(https://rubygems.org/downloads/gdbm-$version.gem)
+
+build() {
+	gem install gdbm \
+		--ignore-dependencies \
+		--no-user-install \
+		--no-document \
+		--local \
+		--build-root $PKG
+
+	cd $PKG/$(gem env gemdir)
+	rm -r cache doc build_info
+}
