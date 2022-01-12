@@ -6,7 +6,7 @@
 
 name=libxkbcommon
 version=1.3.1
-release=1
+release=2
 source=(https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-$version.tar.gz)
 
 build() {
