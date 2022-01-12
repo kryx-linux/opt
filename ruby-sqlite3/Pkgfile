@@ -1,11 +1,11 @@
 # Description: Ruby bindings for SQLite3
-# URL:         https://github.com/sparklemotion/sqlite3-ruby
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  ruby sqlite3
+# URL: https://github.com/sparklemotion/sqlite3-ruby
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: ruby sqlite3
 
 name=ruby-sqlite3
 version=1.4.2
-release=4
+release=5
 source=(https://rubygems.org/downloads/sqlite3-$version.gem)
 
 build () {
