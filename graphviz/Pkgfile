@@ -5,7 +5,7 @@
 
 name=graphviz
 version=2.50.0
-release=1
+release=2
 source=(https://gitlab.com/graphviz/graphviz/-/archive/$version/$name-$version.tar.bz2)
 
 build() {
