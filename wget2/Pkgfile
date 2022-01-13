@@ -1,0 +1,29 @@
+# Description: A network utility for downloading content from the Web
+# URL: https://www.gnu.org/software/wget/
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: libpcre2 openssl util-linux zlib
+
+name=wget2
+version=2.0.0
+release=1
+source=(https://ftp.gnu.org/gnu/wget/$name-$version.tar.lz)
+
+build() {
+	cd $name-$version
+
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--with-openssl \
+		--with-ssl=openssl \
+		--enable-fuzzing \
+		--disable-nls \
+		--disable-doc \
+		--disable-rpath \
+		--disable-manylibs
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -f $PKG/usr/bin/wget2_noinstall
+}
