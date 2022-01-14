@@ -4,7 +4,7 @@
 # Depends on: openssl expat zlib
 
 name=neon
-version=0.32.1
+version=0.32.2
 release=1
 source=(https://notroj.github.io/neon/$name-$version.tar.gz)
 
