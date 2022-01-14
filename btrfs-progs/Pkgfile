@@ -11,8 +11,6 @@ source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-p
 build() {
 	cd $name-v$version
 
-	sed '31i#include <linux/kernel.h>' -i kerncompat.h
-
 	./configure \
 		--prefix=/usr \
 		--bindir=/sbin \
