@@ -1,12 +1,12 @@
 # Description: Evented I/O for V8 javascript.
 # URL: https://nodejs.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: openssl libuv zlib
-# Optional: brotli c-ares icu nghttp2-libs ninja
+# Depends on: libnghttp2 libuv openssl zlib
+# Optional: brotli c-ares icu
 
 name=nodejs
 version=17.3.0
-release=1
+release=2
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz
 	system-c-ares.patch)
 
@@ -17,16 +17,17 @@ build() {
 	prt-get isinst c-ares && PKGMK_NODEJS+=' --shared-cares'
 	prt-get isinst c-ares && patch -Rp1 -i $SRC/system-c-ares.patch
 	prt-get isinst icu && PKGMK_NODEJS+=' --with-intl=system-icu'
-	prt-get isinst nghttp2-libs && PKGMK_NODEJS+=' --experimental-http-parser --shared-nghttp2'
-	prt-get isinst ninja && PKGMK_NODEJS+=' --ninja'
 
 	./configure ${PKGMK_NODEJS} \
 		--prefix=/usr \
 		--enable-lto \
+		--ninja \
 		--without-npm \
 		--shared-libuv \
 		--shared-zlib \
-		--shared-openssl
+		--shared-openssl \
+		--shared-nghttp2 \
+		--experimental-http-parser
 
 	make
 	make DESTDIR=$PKG install
