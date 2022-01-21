@@ -5,7 +5,7 @@
 
 name=fcron
 version=3.3.1
-release=1
+release=2
 source=(http://fcron.free.fr/archives/$name-$version.src.tar.gz
 	fcron systab.orig)
 
@@ -17,6 +17,8 @@ build () {
 		--sysconfdir=/etc/fcron \
 		--localstatedir=/var \
 		--mandir=/usr/share/man \
+		--with-piddir=/run/fcron \
+		--with-fifodir=/run/fcron \
 		--with-spooldir=/var/spool/fcron \
 		--with-boot-install=no \
 		--with-answer-all=no \
@@ -30,7 +32,7 @@ build () {
 	make
 	make DESTDIR=$PKG install
 
-	rm -r $PKG/{usr/share/{doc,man/{fr,man3}},var/run}
+	rm -r $PKG/{usr/share/{doc,man/{fr,man3}},run}
 
 	install -D -m 644 files/fcron.pam $PKG/etc/pam.d/fcron
 	install -D -m 644 files/fcrontab.pam $PKG/etc/pam.d/fcrontab

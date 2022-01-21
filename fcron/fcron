@@ -5,11 +5,12 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/fcron
-PID=/var/run/fcron.pid
+PID=/run/fcron/fcron.pid
 OPTS="--background"
 
 case $1 in
 start)
+	mkdir -p /run/fcron
 	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
 	RETVAL=$?
 	if [ $RETVAL -eq 0 -a ! -f /var/spool/fcron/systab ]; then
