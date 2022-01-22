@@ -2,10 +2,10 @@
 # URL: https://www.rust-lang.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: compiler-rt
-# Optional: sccache ccache libgit2 lld polly
+# Optional: ccache libgit2 lld polly sccache
 
 name=rust
-version=1.58.0
+version=1.58.1
 _date=2021-12-02
 _rustc=1.57.0
 _cargo=$_rustc
@@ -130,6 +130,7 @@ EOF
 
 	if [ -e '/usr/bin/ccache' ]; then
 		sed -e 's|@CCACHE@|ccache = "/usr/bin/ccache"|' -i $SRC/config.toml
+		PATH=$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')
 	else
 		sed -e 's|@CCACHE@||' -i $SRC/config.toml
 	fi
