@@ -7,13 +7,9 @@ name=polkit
 version=0.120
 release=3
 source=(https://freedesktop.org/software/polkit/releases/$name-$version.tar.gz
-  polkit-1
-  CVE-2021-4034.patch 99.patch)
+  polkit-1)
 
 build() {
-  patch -Np1 -d $name-$version -i $SRC/99.patch
-  patch -Np1 -d $name-$version -i $SRC/CVE-2021-4034.patch
-
   meson setup $name-$version build \
     --prefix=/usr \
     --buildtype=plain \
@@ -23,8 +19,6 @@ build() {
   meson compile -C build
   DESTDIR=$PKG meson install -C build
 
-  chmod 4775 $PKG/usr/bin/pkexec
-  chmod 4755 $PKG/usr/lib/polkit-1/polkit-agent-helper-1
   install -m 0644 $SRC/polkit-1 $PKG/etc/pam.d
 
   rm -r $PKG/usr/share/locale
