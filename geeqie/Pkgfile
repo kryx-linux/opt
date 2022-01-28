@@ -4,22 +4,20 @@
 # Depends on: gtk3
 
 name=geeqie
-version=1.7.1
+version=1.7.2
 release=1
-#source=(https://github.com/BestImageViewer/geeqie/releases/download/v$version/$name-$version.tar.xz)
-source=(https://github.com/BestImageViewer/geeqie/archive/refs/tags/v1.7.1/$name-$version.tar.gz)
+source=(https://github.com/BestImageViewer/geeqie/releases/download/v$version/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
 	export LINGUAS=" "
 	export CFLAGS+=" -Wno-deprecated-declarations"
-	sed -e '/^*SUBDIRS/s/doc//' -e'/^readme_DATA/d' -i Makefile.am
 
 	NOCONFIGURE=1 ./autogen.sh
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/metainfo
+	rm -r $PKG/usr/share/{doc,metainfo}
 }
