@@ -4,14 +4,17 @@
 # Depends on: openssl zlib libuv
 
 name=bindutils
-version=9.16.25
+version=9.18.0
 release=1
 source=(https://ftp.isc.org/isc/bind9/$version/bind-$version.tar.xz)
 
 build() {
 	cd bind-$version
 
-	./configure \
+	## can be removed in 3.7 again
+	prt-get isinst nghttp2-libs || PKGMK_BINDUTILS+='  --disable-doh'
+
+	./configure $PKGMK_BINDUTILS \
 		--prefix=/usr \
 		--disable-linux-caps \
 		--with-libxml2=no \
