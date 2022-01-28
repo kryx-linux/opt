@@ -1,0 +1,190 @@
+From 0b59685e8f3729852a175777bceeccbe34870460 Mon Sep 17 00:00:00 2001
+From: Simon McVittie <smcv@debian.org>
+Date: Thu, 3 Jun 2021 17:11:46 +0100
+Subject: [PATCH 1/8] meson_post_install: Use geteuid instead of getpass
+
+Signed-off-by: Simon McVittie <smcv@debian.org>
+---
+ meson_post_install.py | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/meson_post_install.py b/meson_post_install.py
+index 0a0fccf..a87b711 100644
+--- a/meson_post_install.py
++++ b/meson_post_install.py
+@@ -1,6 +1,5 @@
+ #!/usr/bin/env python3
+ 
+-import getpass
+ import os
+ import pwd
+ import sys
+@@ -24,7 +23,7 @@ dst_dirs = [
+ for dst in dst_dirs:
+     if not os.path.exists(dst):
+         os.makedirs(dst, mode=0o700)
+-        if getpass.getuser() == "root":
++        if os.geteuid() == 0:
+             os.chown(dst, polkitd_uid, -1)
+ 
+ # polkit-agent-helper-1 need to be setuid root because it's used to
+@@ -32,5 +31,5 @@ for dst in dst_dirs:
+ # and/or other users.
+ dst = os.path.join(pkglibdir, 'polkit-agent-helper-1')
+ os.chmod(dst, 0o4755)
+-if getpass.getuser() == "root":
++if os.geteuid() == 0:
+     os.chown(dst, 0, -1)
+
+diff --git a/meson_post_install.py b/meson_post_install.py
+index a87b711..ef69bb2 100644
+--- a/meson_post_install.py
++++ b/meson_post_install.py
+@@ -11,7 +11,10 @@ pkgdatadir = os.path.join(prefix, sys.argv[2])
+ pkglibdir = os.path.join(prefix, sys.argv[3])
+ pkgsysconfdir = os.path.join(prefix, sys.argv[4])
+ 
+-polkitd_uid = pwd.getpwnam(sys.argv[5]).pw_uid
++try:
++    polkitd_uid = pwd.getpwnam(sys.argv[5]).pw_uid
++except KeyError:
++    polkitd_uid = None
+ 
+ os.chmod(os.path.join(bindir, 'pkexec'), 0o4775)
+ 
+@@ -23,7 +26,7 @@ dst_dirs = [
+ for dst in dst_dirs:
+     if not os.path.exists(dst):
+         os.makedirs(dst, mode=0o700)
+-        if os.geteuid() == 0:
++        if os.geteuid() == 0 and polkitd_uid is not None:
+             os.chown(dst, polkitd_uid, -1)
+ 
+ # polkit-agent-helper-1 need to be setuid root because it's used to
+
+diff --git a/meson_post_install.py b/meson_post_install.py
+index ef69bb2..de42531 100644
+--- a/meson_post_install.py
++++ b/meson_post_install.py
+@@ -10,9 +10,10 @@ bindir = os.path.join(prefix, sys.argv[1])
+ pkgdatadir = os.path.join(prefix, sys.argv[2])
+ pkglibdir = os.path.join(prefix, sys.argv[3])
+ pkgsysconfdir = os.path.join(prefix, sys.argv[4])
++polkitd_user = sys.argv[5]
+ 
+ try:
+-    polkitd_uid = pwd.getpwnam(sys.argv[5]).pw_uid
++    polkitd_uid = pwd.getpwnam(polkitd_user).pw_uid
+ except KeyError:
+     polkitd_uid = None
+ 
+@@ -28,6 +29,12 @@ for dst in dst_dirs:
+         os.makedirs(dst, mode=0o700)
+         if os.geteuid() == 0 and polkitd_uid is not None:
+             os.chown(dst, polkitd_uid, -1)
++        else:
++            print(
++                'Owner of {} needs to be set to {} after installation'.format(
++                    dst, polkitd_user,
++                )
++            )
+ 
+ # polkit-agent-helper-1 need to be setuid root because it's used to
+ # authenticate not only the invoking user, but possibly also root
+@@ -36,3 +43,7 @@ dst = os.path.join(pkglibdir, 'polkit-agent-helper-1')
+ os.chmod(dst, 0o4755)
+ if os.geteuid() == 0:
+     os.chown(dst, 0, -1)
++else:
++    print(
++        'Owner of {} needs to be set to root after installation'.format(dst)
++    )
+
+diff --git a/meson_post_install.py b/meson_post_install.py
+index de42531..94ffa57 100644
+--- a/meson_post_install.py
++++ b/meson_post_install.py
+@@ -17,7 +17,7 @@ try:
+ except KeyError:
+     polkitd_uid = None
+ 
+-os.chmod(os.path.join(bindir, 'pkexec'), 0o4775)
++os.chmod(os.path.join(bindir, 'pkexec'), 0o4755)
+ 
+ dst_dirs = [
+     os.path.join(pkgsysconfdir, 'rules.d'),
+
+diff --git a/meson_post_install.py b/meson_post_install.py
+index 94ffa57..85cd0ea 100644
+--- a/meson_post_install.py
++++ b/meson_post_install.py
+@@ -17,7 +17,18 @@ try:
+ except KeyError:
+     polkitd_uid = None
+ 
+-os.chmod(os.path.join(bindir, 'pkexec'), 0o4755)
++dst = os.path.join(bindir, 'pkexec')
++
++if os.geteuid() == 0:
++    os.chmod(dst, 0o4755)
++    os.chown(dst, 0, -1)
++else:
++    print(
++        'Owner and mode of {} need to be setuid root (04755) after '
++        'installation'.format(
++            dst,
++        )
++    )
+ 
+ dst_dirs = [
+     os.path.join(pkgsysconfdir, 'rules.d'),
+@@ -40,10 +51,14 @@ for dst in dst_dirs:
+ # authenticate not only the invoking user, but possibly also root
+ # and/or other users.
+ dst = os.path.join(pkglibdir, 'polkit-agent-helper-1')
+-os.chmod(dst, 0o4755)
++
+ if os.geteuid() == 0:
++    os.chmod(dst, 0o4755)
+     os.chown(dst, 0, -1)
+ else:
+     print(
+-        'Owner of {} needs to be set to root after installation'.format(dst)
++        'Owner and mode of {} need to be setuid root (04755) after '
++        'installation'.format(
++            dst,
++        )
+     )
+
+diff --git a/meson_post_install.py b/meson_post_install.py
+index 85cd0ea..0ab7469 100644
+--- a/meson_post_install.py
++++ b/meson_post_install.py
+@@ -4,12 +4,22 @@ import os
+ import pwd
+ import sys
+ 
++destdir = os.environ.get('DESTDIR')
+ prefix = os.environ['MESON_INSTALL_DESTDIR_PREFIX']
+ 
+-bindir = os.path.join(prefix, sys.argv[1])
+-pkgdatadir = os.path.join(prefix, sys.argv[2])
+-pkglibdir = os.path.join(prefix, sys.argv[3])
+-pkgsysconfdir = os.path.join(prefix, sys.argv[4])
++def destdir_path(p):
++    if os.path.isabs(p):
++        if destdir is None:
++            return p
++        else:
++            return os.path.join(destdir, os.path.relpath(p, '/'))
++    else:
++        return os.path.join(prefix, p)
++
++bindir = destdir_path(sys.argv[1])
++pkgdatadir = destdir_path(sys.argv[2])
++pkglibdir = destdir_path(sys.argv[3])
++pkgsysconfdir = destdir_path(sys.argv[4])
+ polkitd_user = sys.argv[5]
+ 
+ try:
+
