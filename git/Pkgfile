@@ -5,35 +5,35 @@
 # Optional: tk
 
 name=git
-version=2.35.0
+version=2.35.1
 release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
-  git gitd.rc)
+	git gitd.rc)
 
 build() {
-  cd $name-$version
+	cd $name-$version
 
-  make CFLAGS="$CFLAGS" \
-    prefix=/usr \
-    gitexecdir=/usr/lib/git-core \
-    INSTALLSITEMAN3DIR=/usr/share/man/man3 \
-    perllibdir=$(perl -e 'use Config; print $Config::Config{'installsitelib'}') \
-    DESTDIR=$PKG install
+	make CFLAGS="$CFLAGS" \
+		prefix=/usr \
+		gitexecdir=/usr/lib/git-core \
+		INSTALLSITEMAN3DIR=/usr/share/man/man3 \
+		perllibdir=$(perl -e 'use Config; print $Config::Config{'installsitelib'}') \
+		DESTDIR=$PKG install
 
-  prt-get isinst bash-completion && install -Dm644 contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
+	prt-get isinst bash-completion && install -Dm644 contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
 
-  cd $SRC
+	cd $SRC
 
-  for i in man*; do
-    install -d $PKG/usr/share/man/$i
-    install -m 644 $i/* $PKG/usr/share/man/$i;
-  done
+	for i in man*; do
+		install -d $PKG/usr/share/man/$i
+		install -m 644 $i/* $PKG/usr/share/man/$i;
+	done
 
-  find $PKG \( -name perllocal.pod -o -name .packlist \) -delete
-  rm -rf $PKG/usr/share/{locale,gitk}
+	find $PKG \( -name perllocal.pod -o -name .packlist \) -delete
+	rm -rf $PKG/usr/share/{locale,gitk}
 
-  # install the git ports driver
-  install -Dm755 $SRC/git $PKG/etc/ports/drivers/git
+	# install the git ports driver
+	install -Dm755 $SRC/git $PKG/etc/ports/drivers/git
 
-  install -D $SRC/gitd.rc $PKG/etc/rc.d/gitd
+	install -D $SRC/gitd.rc $PKG/etc/rc.d/gitd
 }
