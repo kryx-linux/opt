@@ -10,6 +10,7 @@ release=1
 source=(https://github.com/rhboot/efibootmgr/archive/$version/$name-$version.tar.gz)
 
 build() {
+	export CFLAGS="${CFLAGS} -Wno-error=pointer-sign"
 	cd $name-$version
 	sed -e '/extern int efi_set_verbose/d' -i src/efibootmgr.c
 	EFIDIR=/boot/efi make
