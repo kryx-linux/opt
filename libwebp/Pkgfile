@@ -5,20 +5,20 @@
 # Optional: freeglut libsdl ninja
 
 name=libwebp
-version=1.2.1
+version=1.2.2
 release=1
 source=(https://storage.googleapis.com/downloads.webmproject.org/releases/webp/$name-$version.tar.gz)
 
 build() {
-        prt-get isinst ninja && PKGMK_LIBWEBP+=' -G Ninja'
+	prt-get isinst ninja && PKGMK_LIBWEBP+=' -G Ninja'
 
-        cmake -S ${name%-*}-$version -B build $PKGMK_LIBWEBP \
-                -D CMAKE_INSTALL_PREFIX="/usr" \
-                -D CMAKE_INSTALL_LIBDIR="/usr/lib" \
-                -D BUILD_SHARED_LIBS=ON \
-                -D CMAKE_BUILD_TYPE=Release \
-                -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}"
+	cmake -S ${name%-*}-$version -B build $PKGMK_LIBWEBP \
+		-D CMAKE_INSTALL_PREFIX="/usr" \
+		-D CMAKE_INSTALL_LIBDIR="/usr/lib" \
+		-D BUILD_SHARED_LIBS=ON \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}"
 
-        cmake --build build
-        DESTDIR=$PKG cmake --install build
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
 }
