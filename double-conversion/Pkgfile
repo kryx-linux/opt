@@ -4,7 +4,7 @@
 # Depends on: cmake
 
 name=double-conversion
-version=3.1.6
+version=3.2.0
 release=1
 source=(https://github.com/google/double-conversion/archive/v$version/$name-v$version.tar.gz)
 
