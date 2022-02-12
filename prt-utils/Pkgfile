@@ -4,15 +4,13 @@
 # Depends on: elfutils
 
 name=prt-utils
-version=1.1.4
+version=1.2
 release=1
 source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.xz)
 
 build() {
-    cd $name-$version
-
-    make
-    make DESTDIR=$PKG install
-    
-    install -d $PKG/etc/revdep.d
+	cd $name-$version
+	make
+	make DESTDIR=$PKG install
+	install -d $PKG/etc/revdep.d
 }
