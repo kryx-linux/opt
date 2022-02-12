@@ -6,8 +6,8 @@
 SSD=/sbin/start-stop-daemon
 SMB=/usr/sbin/smbd
 NMB=/usr/sbin/nmbd
-SMB_PID=/var/run/samba/smbd.pid
-NMB_PID=/var/run/samba/nmbd.pid
+SMB_PID=/run/samba/smbd.pid
+NMB_PID=/run/samba/nmbd.pid
 
 
 print_status() {
@@ -22,6 +22,7 @@ print_status() {
 
 case $1 in
 start)
+	mkdir -p /run/samba
 	$SSD --start --pidfile $NMB_PID --exec $NMB -- -D
 	$SSD --start --pidfile $SMB_PID --exec $SMB -- -D
 	;;
