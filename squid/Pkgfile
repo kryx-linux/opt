@@ -4,7 +4,7 @@
 # Depends on: db linux-pam libcap libnsl libtirpc libtool expat libxml2
 
 name=squid
-version=5.3
+version=5.4.1
 release=1
 source=(http://www.squid-cache.org/Versions/v5/$name-$version.tar.xz
 	squid)
