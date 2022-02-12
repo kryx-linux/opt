@@ -5,7 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/httpd
-PID=/var/run/apache/httpd.pid
+PID=/run/apache/httpd.pid
 OPTS="-k start"
 KEY=/etc/apache/server.key
 CRT=/etc/apache/server.crt
@@ -15,6 +15,7 @@ start)
 	if [ ! -s $KEY -o ! -s $CRT ]; then
 		/usr/bin/mksslcert $KEY $CRT
 	fi
+	mkdir -p /run/apache
 	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
 	;;
 stop)

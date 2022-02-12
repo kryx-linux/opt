@@ -5,7 +5,7 @@
 
 name=apache
 version=2.4.52
-release=1
+release=2
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
 	crux.layout apache)
 
@@ -31,6 +31,7 @@ build(){
 	install -D -m 755 $SRC/apache $PKG/etc/rc.d/apache
 
 	rm -r $PKG/var/www/htdocs/*
+	rm -r $PKG/run
 	rm $PKG/var/www/{error,icons}/README*
 
 	chmod -R g-s $PKG/var/www/

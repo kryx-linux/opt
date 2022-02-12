@@ -258,8 +258,6 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/log/
 drwxr-xr-x	root/root	var/log/apache/
-drwxr-xr-x	root/root	var/run/
-drwxr-xr-x	root/root	var/run/apache/
 drwxr-xr-x	root/root	var/www/
 drwxr-xr-x	root/root	var/www/cgi-bin/
 -rw-r--r--	root/root	var/www/cgi-bin/printenv

@@ -16,9 +16,9 @@
     cgidir:          ${datadir}/cgi-bin
     errordir:        ${datadir}/error
     includedir:      ${prefix}/include/apache
+    runtimedir:      /run/apache
+    runstatedir:     /run/apache
     localstatedir:   /var
-    runtimedir:      ${localstatedir}/run/apache
     logfiledir:      ${localstatedir}/log/apache
     proxycachedir:   ${localstatedir}/cache/apache
 </Layout>
-
