@@ -5,7 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/dovecot
-PID=/var/run/dovecot/master.pid
+PID=/run/dovecot/master.pid
 KEY=/etc/ssl/private/dovecot.pem
 CRT=/etc/ssl/certs/dovecot.pem
 
@@ -14,7 +14,7 @@ start)
 	if [ ! -s $KEY -o ! -s $CRT ]; then
 		/usr/bin/mksslcert $KEY $CRT
 	fi
-
+	mkdir -p /run/dovecot
 	$SSD --start --pidfile $PID --exec $PROG
 	;;
 stop)

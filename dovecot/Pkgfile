@@ -5,7 +5,7 @@
 
 name=dovecot
 version=2.3.18
-release=1
+release=2
 source=(https://dovecot.org/releases/2.3/$name-$version.tar.gz
 	dovecot.rc dovecot.pam)
 
@@ -17,6 +17,7 @@ build() {
 		--libexecdir=/usr/lib \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
+		--with-rundir=/run/dovecot \
 		--with-moduledir=/usr/lib/dovecot/modules \
 		--with-pam \
 		--with-ssl=openssl
@@ -40,8 +41,6 @@ build() {
 
 	# directories
 	install -d -m 0750 $PKG/var/lib/dovecot
-	install -d -m 0755 $PKG/var/run/dovecot
-	install -d -m 0750 -o root -g dovecot $PKG/var/run/dovecot/login
 
 	# cleanup
 	rm -r $PKG/usr/share/doc
