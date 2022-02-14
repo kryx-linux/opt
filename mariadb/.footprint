@@ -4,6 +4,9 @@ drwxr-xr-x	root/root	etc/my.cnf.d/
 -rw-r--r--	root/root	etc/my.cnf.d/client.cnf
 -rw-r--r--	root/root	etc/my.cnf.d/enable_encryption.preset
 -rw-r--r--	root/root	etc/my.cnf.d/mysql-clients.cnf
+-rw-r--r--	root/root	etc/my.cnf.d/provider_bzip2.cnf
+-rw-r--r--	root/root	etc/my.cnf.d/provider_lzma.cnf
+-rw-r--r--	root/root	etc/my.cnf.d/provider_lzo.cnf
 -rw-r--r--	root/root	etc/my.cnf.d/s3.cnf
 -rw-r--r--	root/root	etc/my.cnf.d/server.cnf
 -rw-r--r--	root/root	etc/my.cnf.d/spider.cnf
@@ -213,6 +216,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/mysql/psi/
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_progress_report.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_sha1.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_sha2.h
+-rw-r--r--	root/root	usr/include/mysql/server/mysql/service_sql.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_thd_alloc.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_thd_autoinc.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_thd_error_context.h
@@ -377,6 +381,13 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/probes_mysql_nodtrace.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/procedure.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/protocol.h
+drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/
+-rw-r--r--	root/root	usr/include/mysql/server/private/providers/bzlib.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/providers/lz4.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/providers/lzma.h
+drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
+-rw-r--r--	root/root	usr/include/mysql/server/private/providers/lzo/lzo1x.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/providers/snappy-c.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/proxy_protocol.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/queues.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/records.h
@@ -483,13 +494,14 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_statistics.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_string.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_table.h
--rw-r--r--	root/root	usr/include/mysql/server/private/sql_tablespace.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_test.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_time.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_trigger.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_truncate.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_tvc.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_fixedbin.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_fixedbin_storage.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_geom.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_int.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_json.h
@@ -557,6 +569,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/sslopt-vars.h
 -rw-r--r--	root/root	usr/include/mysql/server/typelib.h
 drwxr-xr-x	root/root	usr/lib/
+lrwxrwxrwx	root/root	usr/lib/libmariadb.a -> libmariadbclient.a
 lrwxrwxrwx	root/root	usr/lib/libmariadb.so -> libmariadb.so.3
 -rwxr-xr-x	root/root	usr/lib/libmariadb.so.3
 -rw-r--r--	root/root	usr/lib/libmariadbclient.a
@@ -608,6 +621,10 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/metadata_lock_info.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/mypluglib.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/mysql_clear_password.so
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/password_reuse_check.so
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/provider_bzip2.so
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/provider_lzma.so
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/provider_lzo.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/qa_auth_client.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/qa_auth_interface.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/qa_auth_server.so
