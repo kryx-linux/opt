@@ -9,6 +9,7 @@ OPTS="-r"
 
 case $1 in
 start)
+	install -o chrony -g chrony -m 0750 -d /run/chrony
 	$SSD --start --exec $PROG -- $OPTS
 	;;
 stop)
