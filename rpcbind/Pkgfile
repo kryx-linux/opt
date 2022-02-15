@@ -5,7 +5,7 @@
 
 name=rpcbind
 version=1.2.6
-release=1
+release=2
 source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.bz2 \
 	rpcbind)
 
@@ -14,10 +14,12 @@ build() {
 
 	# use sunrpc instead of rpcbind as service-name
 	sed '/servname\[\]/s/rpcbind/sunrpc/' -i src/rpcbind.c
+	sed 's|/var/run|/run/rpcbind|' -i src/rpcbind.c
 
 	./configure \
 		--prefix=/usr \
 		--sbindir=/sbin \
+		--with-statedir=/run/rpcbind \
 		--disable-libwrap \
 		--without-systemdsystemunitdir
 

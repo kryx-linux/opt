@@ -5,11 +5,12 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/sbin/rpcbind
-PID=/var/run/rpcbind.pid
+PID=/run/rpcbind/rpcbind.pid
 OPTS="-f -s"
 
 case $1 in
 start)
+	mkdir -p /run/rpcbind
 	$SSD --start -bm --pidfile $PID --exec $PROG -- $OPTS
 	;;
 stop)
