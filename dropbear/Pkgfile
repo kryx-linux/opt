@@ -5,7 +5,7 @@
 
 name=dropbear
 version=2020.81
-release=2
+release=3
 source=(https://matt.ucc.asn.au/$name/releases/$name-$version.tar.bz2 \
 	dropbear.rc dropbear.pam)
 
@@ -17,6 +17,7 @@ build() {
 	echo '#define SFTPSERVER_PATH "/usr/lib/ssh/sftp-server"' > localoptions.h
 	echo '#define DROPBEAR_SVR_PASSWORD_AUTH 0' >> localoptions.h
 	echo '#define DROPBEAR_SVR_PAM_AUTH 1' >> localoptions.h
+	echo '#define DROPBEAR_PIDFILE "/run/dropbear.pid"' >> localoptions.h
 
 	./configure --prefix=/usr --enable-pam
 	make

@@ -5,7 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/dropbear
-PID=/var/run/dropbear.pid
+PID=/run/dropbear.pid
 
 KEYG=/usr/bin/dropbearkey
 
