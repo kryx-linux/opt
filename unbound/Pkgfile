@@ -5,7 +5,7 @@
 
 name=unbound
 version=1.15.0
-release=1
+release=2
 source=(https://unbound.net/downloads/$name-$version.tar.gz
 	unbound
 	README pre-install)
@@ -16,7 +16,7 @@ build () {
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
-		--with-pidfile=/var/run/unbound.pid \
+		--with-pidfile=/run/unbound.pid \
 		--with-chroot-dir=/etc/unbound \
 		--with-rootkey-file=/etc/unbound/anchor/root.key \
 		--disable-shared \
