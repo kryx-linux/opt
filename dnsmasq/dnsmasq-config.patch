@@ -1,6 +1,6 @@
-diff -Nru dnsmasq-2.84.orig/dnsmasq.conf.example dnsmasq-2.84/dnsmasq.conf.example
---- dnsmasq-2.84.orig/dnsmasq.conf.example	2021-01-27 10:45:11.611244801 +0100
-+++ dnsmasq-2.84/dnsmasq.conf.example	2021-01-27 10:45:32.883980677 +0100
+diff -Nru dnsmasq-2.86.orig/dnsmasq.conf.example dnsmasq-2.86/dnsmasq.conf.example
+--- dnsmasq-2.86.orig/dnsmasq.conf.example	2022-02-16 15:33:26.622970564 +0100
++++ dnsmasq-2.86/dnsmasq.conf.example	2022-02-16 15:34:00.675532744 +0100
 @@ -22,7 +22,7 @@
  
  # Uncomment these to enable DNSSEC validation and caching:
@@ -30,10 +30,10 @@ diff -Nru dnsmasq-2.84.orig/dnsmasq.conf.example dnsmasq-2.84/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.84.orig/src/config.h dnsmasq-2.84/src/config.h
---- dnsmasq-2.84.orig/src/config.h	2021-01-27 10:45:11.614578042 +0100
-+++ dnsmasq-2.84/src/config.h	2021-01-27 10:45:32.883980677 +0100
-@@ -46,7 +46,7 @@
+diff -Nru dnsmasq-2.86.orig/src/config.h dnsmasq-2.86/src/config.h
+--- dnsmasq-2.86.orig/src/config.h	2022-02-16 15:33:26.626303822 +0100
++++ dnsmasq-2.86/src/config.h	2022-02-16 15:34:45.014534363 +0100
+@@ -45,7 +45,7 @@
  #define DEFLEASE 3600 /* default DHCPv4 lease time, one hour */
  #define DEFLEASE6 (3600*24) /* default lease time for DHCPv6. One day. */
  #define CHUSER "nobody"
@@ -49,5 +49,14 @@ diff -Nru dnsmasq-2.84.orig/src/config.h dnsmasq-2.84/src/config.h
 -#      define LEASEFILE "/var/lib/misc/dnsmasq.leases"
 +#      define LEASEFILE "/var/lib/dhcp/dnsmasq.leases"
  #   endif
+ #endif
+ 
+@@ -228,7 +228,7 @@
+ #   if defined(__ANDROID__)
+ #      define RUNFILE "/data/dnsmasq.pid"
+ #    else
+-#      define RUNFILE "/var/run/dnsmasq.pid"
++#      define RUNFILE "/run/dnsmasq.pid"
+ #    endif
  #endif
  

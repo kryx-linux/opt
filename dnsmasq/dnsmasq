@@ -6,7 +6,7 @@
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/dnsmasq
 NAME=dnsmasq
-PID=/var/run/dnsmasq.pid
+PID=/run/dnsmasq.pid
 
 case $1 in
 start)
