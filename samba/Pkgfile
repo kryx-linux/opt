@@ -19,6 +19,7 @@ build () {
 		--localstatedir=/var \
 		--sysconfdir=/etc \
 		--with-piddir=/run/samba \
+		--with-sockets-dir=/run/samba \
 		--with-privatedir=/etc/samba/private \
 		--with-pammodulesdir=/lib/security \
 		--bundled-libraries=!tdb,!talloc,!tevent,!popt,!ldb,!cmocka \
@@ -36,7 +37,7 @@ build () {
 
 	# cleanup
 	chmod 1777 $PKG/var/lock
-	rm -r $PKG/var/run $PKG/run
+	rm -r $PKG/run
 
 	# config-file and start-script
 	install -d $PKG/etc/{samba,rc.d}
