@@ -4,7 +4,7 @@
 # Depends on: apache libpcre2
 
 name=mod_php
-version=8.0.15
+version=8.0.16
 release=1
 source=(https://php.net/distributions/php-$version.tar.xz)
 
