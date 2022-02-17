@@ -4,14 +4,11 @@
 # Depends on: glu xorg-libxi
 
 name=freeglut
-version=3.2.1
-release=2
-source=(https://downloads.sourceforge.net/$name/$name-$version.tar.gz
-	gcc10.patch)
+version=3.2.2
+release=1
+source=(https://downloads.sourceforge.net/$name/$name-$version.tar.gz)
 
 build() {
-	patch -d $name-$version -p1 -i $SRC/gcc10.patch
-
 	cmake -S$name-$version -Bbuild -GNinja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
