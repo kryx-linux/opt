@@ -6,7 +6,7 @@
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/stunnel
 NAME=stunnel
-PID=/var/run/stunnel/stunnel.pid
+PID=/run/stunnel/stunnel.pid
 CFG=/etc/stunnel.conf
 
 CRT=/etc/ssl/certs/stunnel.crt
@@ -17,6 +17,7 @@ start)
 	if [ ! -s $KEY -o ! -s $CRT ]; then 
 		/usr/bin/mksslcert $KEY $CRT
 	fi
+	install -o stunnel -g stunnel -m 0770 -d /run/stunnel
 	$SSD --start --pidfile $PID --exec $PROG -- $CFG
 	;;
 stop)
