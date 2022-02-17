@@ -5,7 +5,7 @@
 
 name=mariadb
 version=10.7.3
-release=1
+release=2
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz
 	mariadb.rc mariadb.pam
 	pre-install)
@@ -21,7 +21,7 @@ build() {
 		-D INSTALL_PCDIR=/usr/lib/pkgconfig \
 		-D INSTALL_PAMDIR=/lib/security \
 		-D MYSQL_DATADIR=/var/lib/mysql \
-		-D MYSQL_UNIX_ADDR=/var/run/mysqld/mysqld.sock \
+		-D MYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
 		-D WITH_READLINE=ON \
 		-D WITH_ZLIB=system \
 		-D WITH_SSL=system \
@@ -31,7 +31,7 @@ build() {
 		-D WITH_UNIT_TESTS=OFF \
 		-D SKIP_TESTS=ON
 
-	cmake --build build
+	cmake --build build -j ${JOBS:-1}
 	DESTDIR=$PKG cmake --install build
 
 	rm -r $PKG/etc/{init.d,logrotate.d}
@@ -41,7 +41,6 @@ build() {
 	find $PKG/usr/share/mysql/* -type d ! -name english ! -name charsets | xargs rm -rf {} \;
 
 	install -d -m 700 -o mysql -g mysql $PKG/var/{lib,log}/mysql
-	install -d -m 755 -o mysql -g mysql $PKG/var/run/mysqld
 
 	install -D -m 755 $SRC/mariadb.rc  $PKG/etc/rc.d/mariadb
 	install -D -m 644 $SRC/mariadb.pam $PKG/etc/pam.d/mysql
