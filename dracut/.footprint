@@ -53,6 +53,8 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-hostnamed/
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/01systemd-hostnamed/systemd-hostname-dracut.conf
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-initrd/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-initrd/module-setup.sh
+drwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-integritysetup/
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-integritysetup/module-setup.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-journald/
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/01systemd-journald/initrd.conf
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-journald/module-setup.sh
@@ -75,6 +77,7 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-sysext/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-sysext/module-setup.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-sysusers/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-sysusers/module-setup.sh
+-rw-rw-r--	root/root	usr/lib/dracut/modules.d/01systemd-sysusers/sysusers-dracut.conf
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-timedated/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-timedated/module-setup.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/01systemd-timesyncd/
@@ -278,6 +281,14 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/91crypt-gpg/
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/91crypt-loop/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/91crypt-loop/crypt-loop-lib.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/91crypt-loop/module-setup.sh
+drwxrwxr-x	root/root	usr/lib/dracut/modules.d/91fido2/
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/91fido2/module-setup.sh
+drwxrwxr-x	root/root	usr/lib/dracut/modules.d/91pcsc/
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/91pcsc/module-setup.sh
+-rw-rw-r--	root/root	usr/lib/dracut/modules.d/91pcsc/pcscd.service
+-rw-rw-r--	root/root	usr/lib/dracut/modules.d/91pcsc/pcscd.socket
+drwxrwxr-x	root/root	usr/lib/dracut/modules.d/91pkcs11/
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/91pkcs11/module-setup.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/91tpm2-tss/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/91tpm2-tss/module-setup.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/91zipl/
@@ -421,8 +432,9 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/98dracut-systemd/
 -rw-r--r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-pre-udev.service.8
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-pre-udev.service.8.asc
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-pre-udev.sh
+-rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown-onfailure.service
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown.service
--rw-r--r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown.service.8
+-rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown.service.8
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown.service.8.asc
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-tmpfiles.conf
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/emergency.service
