@@ -3111,6 +3111,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.1/system/Gem/Installer/FakePackage/
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/FakePackage/spec-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/app_script_text-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/at-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/bash_prolog_script-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/bin_dir-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/build_args-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/build_extensions-i.ri
@@ -3136,11 +3137,14 @@ drwxr-xr-x	root/root	usr/share/ri/3.1/system/Gem/Installer/FakePackage/
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/install-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/installation_satisfies_dependency%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/installed_specs-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/load_relative_enabled%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/options-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/package-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/path_warning-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/pre_install_checks-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/rb_config-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/ruby_install_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/shebang-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/spec-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/Installer/spec_file-i.ri
@@ -4628,7 +4632,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.1/system/Gem/VersionOption/
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/location_of_caller-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/marshal_version-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/needs-c.ri
--rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/open_with_flock-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/open_file-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/operating_system_defaults-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/path-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.1/system/Gem/path_separator-c.ri
