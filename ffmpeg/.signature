@@ -1,7 +1,8 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/X3jrAnWOI4FJawtpcAMwXK6NXB+yRNK93e/hYuZ0ZOcaJcqDEK/NJU7vxENbN7attAp7OAQHLlaJaxbgRJycws=
-SHA256 (Pkgfile) = aaabe961df2932961483370f07b27f2524eb0035892129b15039456319576934
-SHA256 (.footprint) = 1738e69565d5f2a7df346ad944b1476269c9d635e3a8368d55575d77477fea7d
-SHA256 (ffmpeg-4.4.1.tar.bz2) = 8fc9f20ac5ed95115a9e285647add0eedd5cc1a98a039ada14c132452f98ac42
+RWSE3ohX2g5d/V/vxDpqQUuzY89HCog47GFqkuVvDlLIy5qATJR8R3TTv0NrVulrsuueqcfRDzDJOxE8XiaGrSDAv+Knp3Vp9gs=
+SHA256 (Pkgfile) = 0784ecece44a5384f45714036d17554e87d5e38f73cf4a9ab3d33c4c744a4777
+SHA256 (.footprint) = 06e32249d28bb0ac16dc915a77d20353bed90a70a05410213cebba459fbddd23
+SHA256 (ffmpeg-5.0.tar.bz2) = c0130b8db2c763430fd1c6905288d61bc44ee0548ad5fcd2dfd650b88432bed9
 SHA256 (ffmpeg-x264-10bit.sh) = dde9627c41800235fbcfe0f74d2181be96239a82cd2d0d277715dddb57eb9cb3
-SHA256 (CVE-2018-6621.patch) = e3b9aff1fe9aef2d7153d7517f9c349beef27c2859bf1fb01076eeab263a445e
+SHA256 (vmaf-model-path.patch) = 8dff51f84a5f7460f8893f0514812f5d2bd668c3276ef7ab7713c99b71d7bd8d
+SHA256 (add-av_stream_get_first_dts-for-chromium.patch) = 91973c465f01446a999f278f0c2a3763304994dba1ac35de0e4c72f12f39409e
