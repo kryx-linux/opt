@@ -5,8 +5,8 @@
 # Optional: cdparanoia libglvnd wayland-protocols
 
 name=gst-plugins-base
-version=1.18.5
-release=2
+version=1.20.0
+release=1
 source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
 build() {
