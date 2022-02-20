@@ -2,7 +2,7 @@ drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/nsd/
 -rw-r--r--	root/root	etc/nsd/nsd.conf.sample
 drwxr-xr-x	root/root	etc/rc.d/
-lrwxrwxrwx	root/root	etc/rc.d/nsd -> /usr/sbin/nsd-control
+-rwxr-xr-x	root/root	etc/rc.d/nsd
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/nsd
@@ -22,6 +22,4 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/nsd.8.gz
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
-drwxr-xr-x	nsd/root	var/lib/nsd/
-drwxr-xr-x	root/root	var/run/
-drwxr-xr-x	nsd/root	var/run/nsd/
+drwxr-xr-x	nsd/nsd	var/lib/nsd/

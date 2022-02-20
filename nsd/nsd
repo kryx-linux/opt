@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# /etc/rc.d/nsd: start/stop nsd daemon
+#
+
+PROG=/usr/sbin/nsd-control
+
+case $1 in
+start)
+	install -o nsd -g nsd -m 0755 -d /run/nsd
+	$PROG start
+	;;
+stop)
+	$PROG stop
+	;;
+restart)
+	$0 stop
+	$0 start
+	;;
+status)
+	$PROG status
+	;;
+*)
+	$PROG "$@"
+	;;
+esac
+
+# End of file
