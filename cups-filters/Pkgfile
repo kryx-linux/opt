@@ -5,7 +5,7 @@
 
 name=cups-filters
 version=1.28.12
-release=1
+release=2
 source=(https://www.openprinting.org/download/$name/$name-$version.tar.xz
 	cups-browsed)
 
@@ -15,6 +15,8 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
+		--runstatedir=/run \
+		--with-cups-rundir=/run/cups \
 		--without-php \
 		--disable-avahi \
 		--disable-dbus \

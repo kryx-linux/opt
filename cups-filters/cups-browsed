@@ -5,7 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/cups-browsed
-PID=/var/run/cups-browsed.pid
+PID=/run/cups-browsed.pid
 
 case $1 in
 start)
