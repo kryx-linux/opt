@@ -4,9 +4,9 @@
 # Depends on: cmake
 
 name=spirv-tools
-version=2021.4
+version=2022.1
 ## DEPS
-_spirv_headers=814e728b30ddd0f4509233099a3ad96fd4318c07
+_spirv_headers=b42ba6d92faf6b4938e6f22ddd186dbdacc98d78
 release=1
 source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/v$version/SPIRV-Tools-v$version.tar.gz
 	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/SPIRV-Headers-$_spirv_headers.tar.gz)
