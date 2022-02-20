@@ -6,7 +6,7 @@
 
 name=cups
 version=2.4.1
-release=1
+release=2
 source=(https://github.com/OpenPrinting/cups/releases/download/v$version/$name-$version-source.tar.gz
 	cups.rc cups.pam)
 
@@ -21,6 +21,7 @@ build() {
 		--sysconfdir=/etc \
 		--libdir=/usr/lib \
 		--localstatedir=/var \
+		--with-rundir=/run/cups \
 		--with-docdir=/usr/share/cups/doc \
 		--with-logdir=/var/log/cups \
 		--with-cups-user=daemon \
@@ -38,7 +39,8 @@ build() {
 	rm -r $PKG/usr/share/cups/{banners,data}
 
 	# cleanup
-	rm -rf $PKG/usr/share/{applications,icons}
+	rm -r $PKG/usr/share/{applications,icons}
+	rm -r $PKG/run
 	chmod 0755 $PKG/var/{cache,spool}   
 	chmod -R +w $PKG
 
