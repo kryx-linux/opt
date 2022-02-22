@@ -5,12 +5,14 @@
 
 name=squid
 version=5.4.1
-release=1
+release=2
 source=(http://www.squid-cache.org/Versions/v5/$name-$version.tar.xz
 	squid)
 
 build() {
 	cd $name-$version
+
+	sed '/DEFAULT_STATEDIR/s/$(localstatedir)//' -i src/ipc/Makefile.in
 
 	./configure \
 		--prefix=/usr \
@@ -19,7 +21,7 @@ build() {
 		--localstatedir=/var \
 		--datadir=/usr/share/squid \
 		--with-logdir=/var/log/squid \
-		--with-pidfile=/var/run/squid.pid \
+		--with-pidfile=/run/squid.pid \
 		--with-swapdir=/var/squid \
 		--with-default-user=squid \
 		--enable-linux-netfilter \
@@ -36,10 +38,9 @@ build() {
 	make all
 	make DESTDIR=$PKG install
 
-	rm -r $PKG/var/run
+	rm -r $PKG/run $PKG/var/run
 	find $PKG/usr/share/squid/errors/* -prune ! -name templates | xargs rm -r
 
 	install -d -m 0700 -o squid -g squid $PKG/var/{log/squid,squid}
-	install -d -m 0700 -o squid -g squid $PKG/var/run/squid
 	install -D -m 755 $SRC/squid $PKG/etc/rc.d/squid
 }

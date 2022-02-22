@@ -5,11 +5,12 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/squid
-PID=/var/run/squid.pid
+PID=/run/squid.pid
 OPTS="-Y"
 
 case $1 in
 start)
+	install -o squid -g squid -m 0700 -d /run/squid
 	$SSD --start --pidfile $PID --exec $PROG -- $OPTS
 	;;
 stop)
