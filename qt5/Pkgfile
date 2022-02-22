@@ -6,8 +6,9 @@
 
 name=qt5
 version=5.15.2
-release=2
+release=3
 source=(https://download.qt.io/official_releases/qt/${version::4}/$version/single/qt-everywhere-src-$version.tar.xz
+	https://www.linuxfromscratch.org/patches/blfs/svn/qt-everywhere-src-5.15.2-kf5.15-2.patch
 	qt5-cflags.patch
 	qt5-logo.png
 	qtbase-everywhere-src-5.11.1-python3.patch
@@ -20,13 +21,14 @@ source=(https://download.qt.io/official_releases/qt/${version::4}/$version/singl
 build() {
 	cd qt-everywhere-src-$version
 
+	patch -p1 -i $SRC/qt-everywhere-src-5.15.2-kf5.15-2.patch
 	patch -d qtbase -p1 -i $SRC/qt5-cflags.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.11.1-python3.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.14.2-no_relocatable.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.15.2-libglvnd.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-filechooser-portal-send-window-id-in-hex.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-use-wayland-on-gnome.patch
-	patch -p1 -i $SRC/qt-everywhere-src-5.15.2-CVE-2021-3481-1.patch
+	#patch -p1 -i $SRC/qt-everywhere-src-5.15.2-CVE-2021-3481-1.patch
 
 	export PYTHON='/usr/bin/python3'
 	mkdir $SRC/bin
