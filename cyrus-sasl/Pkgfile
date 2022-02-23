@@ -4,15 +4,13 @@
 # Depends on: db openssl linux-pam
 
 name=cyrus-sasl
-version=2.1.27
-release=2
+version=2.1.28
+release=1
 source=(https://github.com/cyrusimap/$name/releases/download/$name-$version/$name-$version.tar.gz
-  saslauthd cyrus-sasl-2.1.27-CVE-2019-19906.patch)
+  saslauthd)
 
 build() {
   cd $name-$version
-
-  patch -p1 -i $SRC/cyrus-sasl-2.1.27-CVE-2019-19906.patch
 
   ./configure \
       --prefix=/usr \
