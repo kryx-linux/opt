@@ -5,7 +5,7 @@
 
 name=pure-ftpd
 version=1.0.50
-release=1
+release=2
 source=(https://download.pureftpd.org/$name/releases/$name-$version.tar.bz2 \
 	pure-ftpd.rc pure-ftpd.pam)
 
@@ -29,6 +29,8 @@ build() {
 	install -D -m 644 $SRC/pure-ftpd.pam $PKG/etc/pam.d/pure-ftpd
 	install -m 644 pam/ftpusers $PKG/etc/
 	install -m 644 pure-ftpd.conf $PKG/etc/
+
+	sed '/PIDFile/c PIDFile /run/pure-ftpd.pid' -i $PKG/etc/pure-ftpd.conf
 
 	rm -r $PKG/usr/share/doc
 }

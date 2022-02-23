@@ -5,7 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/pure-ftpd
-PID=/var/run/pure-ftpd.pid
+PID=/run/pure-ftpd.pid
 CRT=/etc/ssl/certs/pure-ftpd.pem
 
 OPTS="/etc/pure-ftpd.conf"
