@@ -338,6 +338,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/src/fmt/rt/
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/src/future/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/future/future.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/future/into_future.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/future/join.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/future/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/future/pending.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/future/poll_fn.rs
@@ -507,8 +508,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/src/str/
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/src/stream/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/stream/from_iter.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/stream/mod.rs
-drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/src/stream/stream/
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/stream/stream/mod.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/stream/stream.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/src/sync/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/sync/atomic.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/src/sync/mod.rs
@@ -537,11 +537,13 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/tests/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/clone.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/cmp.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/const_ptr.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/convert.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/tests/fmt/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/fmt/builders.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/fmt/float.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/fmt/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/fmt/num.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/future.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/tests/hash/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/hash/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/hash/sip.rs
@@ -626,6 +628,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/core/tests/ops/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/pin.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/ptr.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/result.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/simd.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/slice.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/str.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/core/tests/str_lossy.rs
@@ -692,6 +695,10 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/math.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/ops.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/ops/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/ops/assign.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/ops/deref.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/ops/unary.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/reduction.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/round.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/select.rs
@@ -710,6 +717,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/vendor/wasm32.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/vendor/x86.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/tests/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/tests/autoderef.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/tests/f32_ops.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/tests/f64_ops.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/tests/i16_ops.rs
@@ -856,6 +864,9 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/io/impls/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/io/impls/tests.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/io/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/io/prelude.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/io/readbuf.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/io/readbuf/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/io/readbuf/tests.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/io/stdio.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/io/stdio/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/io/stdio/tests.rs
@@ -1416,6 +1427,8 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/powerpc6
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/powerpc64-unknown-linux-gnu/Dockerfile
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/powerpc64le-unknown-linux-gnu/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/powerpc64le-unknown-linux-gnu/Dockerfile
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/riscv64gc-unknown-linux-gnu/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/riscv64gc-unknown-linux-gnu/Dockerfile
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/s390x-unknown-linux-gnu/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/s390x-unknown-linux-gnu/Dockerfile
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/wasm32-wasi/
@@ -1512,6 +1525,10 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/s
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/powerpc/vsx.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/powerpc64/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/powerpc64/mod.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/riscv64/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/riscv64/mod.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/riscv_shared/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/riscv_shared/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/simd.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/simd_llvm.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/v64.rs
@@ -1643,7 +1660,8 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-t
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-test/acle/tools/requirements.txt
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-test/acle/tools/rst2pdf-acle-intrinsics.style
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-test/acle/tools/rst2pdf-acle.style
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-test/missing.txt
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-test/missing_aarch64.txt
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-test/missing_arm.txt
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-test/src/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-test/src/acle_csv_parser.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/intrinsic-test/src/argument.rs
@@ -1669,6 +1687,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/arch/mips64.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/arch/powerpc.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/arch/powerpc64.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/arch/riscv.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/arch/x86.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/bit.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/cache.rs
@@ -1691,6 +1710,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/os/linux/mips.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/os/linux/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/os/linux/powerpc.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/os/linux/riscv.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/os/other.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/os/windows/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/detect/os/windows/aarch64.rs
@@ -1733,6 +1753,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/connect5.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/hex.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/wasm.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/rustfmt.toml (EMPTY)
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/triagebot.toml
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/vendor.yml
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/test/
@@ -1856,8 +1877,6 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/li
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/unwind_leaffunction.pass.cpp
 drwxr-xr-x	root/root	usr/lib/rustlib/x86_64-unknown-linux-gnu/
 drwxr-xr-x	root/root	usr/lib/rustlib/x86_64-unknown-linux-gnu/analysis/
-drwxr-xr-x	root/root	usr/lib/rustlib/x86_64-unknown-linux-gnu/bin/
--rwxr-xr-x	root/root	usr/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-llvm-dwp
 drwxr-xr-x	root/root	usr/lib/rustlib/x86_64-unknown-linux-gnu/lib/
 -rw-r--r--	root/root	usr/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.asan.a
 -rw-r--r--	root/root	usr/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.lsan.a
@@ -1885,6 +1904,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/cargo-package.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/cargo-pkgid.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/cargo-publish.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/cargo-report.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/cargo-run.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/cargo-rustc.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/cargo-rustdoc.1.gz
