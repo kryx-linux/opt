@@ -1,11 +1,11 @@
 # Description: Provides support for web applications using the Chromium browser project
 # URL: https://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: ffmpeg icu libva libvpx libwebp minizip nodejs nss pciutils python qt6-location qt6-tools qt6-webchannel re2 snappy xorg-libxcomposite xorg-libxcursor xorg-libxkbfile
+# Depends on: ffmpeg4 icu libva libvpx libwebp minizip nodejs nss pciutils python qt6-location qt6-tools qt6-webchannel re2 snappy xorg-libxcomposite xorg-libxcursor xorg-libxkbfile
 # Optional: dav1d fdk-aac gnutls graphite2 keyutils krb5 lame lcms2 libpcre2 libvdpau numactl pipewire x264 x265
 
 name=qt6-webengine
-version=6.2.2
+version=6.2.3
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz)
 
@@ -19,6 +19,9 @@ build() {
 		PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 	prt-get isinst sccache && echo "${PATH}" | grep --invert-match '/usr/lib/ccache' && \
 		PKGMK_QT6+=' -D CMAKE_C_COMPILER_LAUNCHER=sccache -D CMAKE_CXX_COMPILER_LAUNCHER=sccache'
+
+	export PKG_CONFIG_PATH='/usr/lib/ffmpeg4/pkgconfig'
+	export CXXFLAGS+=" $(pkg-config libavcodec --libs-only-L)"
 
 	cmake -S qtwebengine-everywhere-src-$version -B build $PKGMK_QT6 \
 		-D CMAKE_BUILD_TYPE=Release \
