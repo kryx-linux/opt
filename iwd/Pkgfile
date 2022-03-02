@@ -5,12 +5,14 @@
 
 name=iwd
 version=1.25
-release=1
+release=2
 source=(https://www.kernel.org/pub/linux/network/wireless/$name-$version.tar.xz
 	iwd)
 
 build() {
 	cd $name-$version
+
+	sed '/DEFAULT_SYSTEM_BUS_ADDRESS/s|/var/run|/run|' -i ell/dbus.c
 
 	./configure \
 		--prefix=/usr \

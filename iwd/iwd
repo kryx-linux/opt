@@ -5,7 +5,7 @@
 
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/iwd
-PID=/var/run/iwd.pid
+PID=/run/iwd.pid
 OPTS=""
 
 case $1 in
