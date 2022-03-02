@@ -4,10 +4,10 @@
 # Depends on:  expat
 
 name=dbus
-version=1.12.22
+version=1.14.0
 release=1
-source=(https://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
-        rc.dbus 30-dbus.launch)
+source=(https://dbus.freedesktop.org/releases/dbus/$name-$version.tar.xz
+	rc.dbus 30-dbus.launch)
 
 build() {
 	cd $name-$version
