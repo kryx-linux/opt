@@ -9,12 +9,18 @@ release=1
 source=(https://downloads.xiph.org/releases/flac/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
+	cmake -S $name-$version -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=lib \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-D BUILD_EXAMPLES=OFF \
+		-D BUILD_TESTING=OFF \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
 
-	./configure --prefix=/usr
-
-	make
-	make DESTDIR=$PKG install
-
-	rm -r $PKG/usr/share/doc
+	mkdir $PKG/usr/share/man/1
+	mv $PKG/usr/share/man/{,meta}flac.1 $PKG/usr/share/man/1/.
 }
