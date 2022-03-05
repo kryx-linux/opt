@@ -1,12 +1,11 @@
 # Description: A fast compiler cache.
 # URL: https://ccache.dev/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on:
 # Optional: asciidoctor clang-ccache-bindings
 
 name=ccache
-version=4.5.1
-release=2
+version=4.6
+release=1
 source=(https://github.com/$name/$name/releases/download/v$version/$name-$version.tar.xz
 	ccache.1)
 
