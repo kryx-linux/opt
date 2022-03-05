@@ -20,13 +20,13 @@ build() {
 -D OpenGL_GL_PREFERENCE=GLVND"
 
 	#build static lib
-	( cmake -S $name-version-$version -B build-static -G Ninja $config \
+	( cmake -S $name-$version -B build-static -G Ninja $config \
 		-D JAS_ENABLE_SHARED=OFF
 	cmake --build build-static
 	)
 
 	#build shared lib
-	( cmake -S $name-version-$version -B build-shared -G Ninja $config \
+	( cmake -S $name-$version -B build-shared -G Ninja $config \
 		-D JAS_ENABLE_SHARED=ON
 	cmake --build build-shared
 	)
