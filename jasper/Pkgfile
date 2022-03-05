@@ -4,45 +4,35 @@
 # Depends on: freeglut libjpeg-turbo xorg-libxmu
 
 name=jasper
-version=2.0.33
-release=2
-source=(https://github.com/jasper-software/jasper/archive/version-$version/$name-$version.tar.gz
-	jasper-1.900.1-fix-filename-buffer-overflow.patch
-	jasper-freeglut.patch)
+version=3.0.2
+release=1
+source=(https://github.com/jasper-software/jasper/releases/download/version-$version/jasper-$version.tar.gz)
 
 build() {
-	cd $name-version-$version
-
-	patch -p1 -i $SRC/jasper-1.900.1-fix-filename-buffer-overflow.patch
-	sed -r 's|(CMAKE_SKIP_BUILD_RPATH) FALSE|\1 TRUE|g' -i CMakeLists.txt
-	patch -p1 -i $SRC/jasper-freeglut.patch
-
-	mkdir -p build-{shared,static}
-
 	local config="
 -D CMAKE_INSTALL_PREFIX=/usr
 -D CMAKE_INSTALL_LIBDIR=lib
 -D CMAKE_BUILD_TYPE=Release
+-D CMAKE_SKIP_BUILD_RPATH=ON
 -D JAS_ENABLE_OPENGL=ON
 -D JAS_ENABLE_LIBJPEG=ON
--D JAS_ENABLE_AUTOMATIC_DEPENDENCIES=OFF
 -D CMAKE_SKIP_RPATH=ON
 -D OpenGL_GL_PREFERENCE=GLVND"
 
 	#build static lib
-	( cd build-static
-	cmake .. $config -D JAS_ENABLE_SHARED=OFF
-	make
+	( cmake -S $name-version-$version -B build-static -G Ninja $config \
+		-D JAS_ENABLE_SHARED=OFF
+	cmake --build build-static
 	)
 
 	#build shared lib
-	( cd build-shared
-	cmake .. $config -D JAS_ENABLE_SHARED=ON
-	make
+	( cmake -S $name-version-$version -B build-shared -G Ninja $config \
+		-D JAS_ENABLE_SHARED=ON
+	cmake --build build-shared
 	)
 
-	make -C build-static DESTDIR=$PKG install
-	make -C build-shared DESTDIR=$PKG install
+	DESTDIR=$PKG cmake --install build-static
+	DESTDIR=$PKG cmake --install build-shared
 
 	rm -r $PKG/usr/share/doc
 }
