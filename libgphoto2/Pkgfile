@@ -4,8 +4,8 @@
 # Depends on: curl libtool libusb libxml2
 
 name=libgphoto2
-version=2.5.28
-release=2
+version=2.5.29
+release=1
 source=(http://downloads.sourceforge.net/project/gphoto/libgphoto/$version/$name-$version.tar.bz2)
 
 build () {
