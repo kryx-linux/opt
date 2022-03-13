@@ -1,11 +1,11 @@
 # Description: The GNU Debugger (GDB)
 # URL: https://www.gnu.org/software/gdb
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: libmpfr readline xz zlib expat
+# Depends on: expat libmpfr readline xz zlib
 
 name=gdb
 version=11.2
-release=1
+release=2
 source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 
 build() {
@@ -17,14 +17,29 @@ build() {
 
   ../configure \
     --prefix=/usr \
-    --with-system-{readline,zlib}
+    --with-pkgversion="$(crux | awk '{ print $1 " " $3 }')" \
+    --with-bugurl="https://crux.nu/bugs" \
+    --with-system-{readline,zlib} \
+    --with-python=/usr/bin/python3 \
+    --enable-tui \
+    --enable-64-bit-bfd \
+    --without-zlib \
+    --disable-readline \
+    --disable-werror \
+    --disable-nls
   make
   make DESTDIR=$PKG install
+
+  export PYTHONHASHSEED=0
+  /usr/bin/python3 -m compileall -d /usr/share/gdb/python $PKG/usr/share/gdb/python
+  /usr/bin/python3 -O -m compileall -d /usr/share/gdb/python $PKG/usr/share/gdb/python
 
   install -d $PKG/usr/share/man/man{1,5}
   install -m 0644 ../gdb/doc/*.1 $PKG/usr/share/man/man1
   install -m 0644 ../gdb/doc/*.5 $PKG/usr/share/man/man5
 
-  rm -r $PKG/usr/{include,lib/{*.a,*.la}}
-  rm -r $PKG/usr/share/{info,locale}
+  rm -r $PKG/usr/{include,share/info}
+  find $PKG \( -name '*.la' -o \
+    -name '*.a' \) \
+    -type f -delete
 }
