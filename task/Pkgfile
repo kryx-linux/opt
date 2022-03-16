@@ -4,7 +4,7 @@
 # Depends on: util-linux cmake
 
 name=task
-version=2.6.1
+version=2.6.2
 release=1
 source=(https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v$version/$name-$version.tar.gz)
 
