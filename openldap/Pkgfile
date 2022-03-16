@@ -4,14 +4,13 @@
 # Depends on: cyrus-sasl libtool perl util-linux
 
 name=openldap
-version=2.4.59
+version=2.6.1
 release=1
 source=(https://www.openldap.org/software/download/OpenLDAP/openldap-release/$name-$version.tgz
-	$name-config.patch slapd)
+	slapd)
 
 build() {
 	cd $name-$version
-	patch -p0 -i $SRC/$name-config.patch
 
 	./configure \
 		--prefix=/usr \
@@ -36,6 +35,7 @@ build() {
 		--enable-dnssrv \
 		--enable-null \
 		--enable-perl \
+		--enable-dynacl \
 		--enable-aci \
 		--enable-shared
 
