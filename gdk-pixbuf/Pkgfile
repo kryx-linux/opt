@@ -4,7 +4,7 @@
 # Depends on: gobject-introspection libpng libtiff shared-mime-info
 
 name=gdk-pixbuf
-version=2.42.6
+version=2.42.8
 release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
 	gdk-pixbuf.loaders gdk-pixbuf-register.sh)
@@ -13,6 +13,9 @@ build() {
 	meson setup build $name-$version \
 		--prefix=/usr \
 		--buildtype=plain \
+		--wrap-mode nodownload \
+		-D b_lto=true \
+		-D b_pie=true \
 		-D installed_tests=false \
 		-D man=false
 
