@@ -1,6 +1,7 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/SAjJbJpa+FNyfcZQUqK1Nmhko/3bbuQTY9i7uHhr0/Sd6uXlkUraPUveeKL69tWHs/oMx0I4Z82huBQjZlxUw4=
-SHA256 (Pkgfile) = af4898f53342dc240afe95ca1791ae4b45ab604c6b124823da1155518d00885b
-SHA256 (.footprint) = 2831aaad7fa01254672a0b182001676ea28c5d04662179c8300c38a226e8d192
-SHA256 (clang-13.0.1.src.tar.xz) = 787a9e2d99f5c8720aa1773e4be009461cd30d3bd40fdd24591e473467c917c9
-SHA256 (clang-tools-extra-13.0.1.src.tar.xz) = cc2bc8598848513fa2257a270083e986fd61048347eccf1d801926ea709392d0
+RWSE3ohX2g5d/f6rt+JBSWHcua5bmVlghM1qXEyCQdSFioXOdG14TEdfjNkLESUdsUoLPKuYA1a2XUF1hQNxxlAKrHqbwvdMjgo=
+SHA256 (Pkgfile) = 43ef4fc9bef8cd849819a626e265165544ffa38e1e382a101c13fe0e6afca910
+SHA256 (.footprint) = 4d2210403945ef0cb41510bb07140b875ecea672d29cd2a7dfcbded7d6f4c5bc
+SHA256 (clang-14.0.0.src.tar.xz) = f5d7ffb86ed57f97d7c471d542c4e5685db4b75fb817c4c3f027bfa49e561b9b
+SHA256 (clang-tools-extra-14.0.0.src.tar.xz) = f49de4b4502a6608425338e2d93bbe4529cac0a22f2dc1c119ef175a4e1b5bf0
+SHA256 (llvm-14.0.0.src.tar.xz) = 4df7ed50b8b7017b90dc22202f6b59e9006a29a9568238c6af28df9c049c7b9b
