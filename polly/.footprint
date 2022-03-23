@@ -34,7 +34,6 @@ drwxr-xr-x	root/root	usr/include/polly/Config/
 -rw-r--r--	root/root	usr/include/polly/PolyhedralInfo.h
 -rw-r--r--	root/root	usr/include/polly/PruneUnprofitable.h
 -rw-r--r--	root/root	usr/include/polly/RegisterPasses.h
--rw-r--r--	root/root	usr/include/polly/RewriteByReferenceParameters.h
 -rw-r--r--	root/root	usr/include/polly/ScheduleOptimizer.h
 -rw-r--r--	root/root	usr/include/polly/ScheduleTreeTransform.h
 -rw-r--r--	root/root	usr/include/polly/ScopBuilder.h
@@ -44,6 +43,7 @@ drwxr-xr-x	root/root	usr/include/polly/Config/
 -rw-r--r--	root/root	usr/include/polly/ScopPass.h
 -rw-r--r--	root/root	usr/include/polly/Simplify.h
 drwxr-xr-x	root/root	usr/include/polly/Support/
+-rw-r--r--	root/root	usr/include/polly/Support/DumpFunctionPass.h
 -rw-r--r--	root/root	usr/include/polly/Support/DumpModulePass.h
 -rw-r--r--	root/root	usr/include/polly/Support/GICHelper.h
 -rw-r--r--	root/root	usr/include/polly/Support/ISLOStream.h
@@ -64,9 +64,6 @@ drwxr-xr-x	root/root	usr/include/polly/isl/
 -rw-r--r--	root/root	usr/include/polly/isl/ast_build.h
 -rw-r--r--	root/root	usr/include/polly/isl/ast_type.h
 -rw-r--r--	root/root	usr/include/polly/isl/constraint.h
--rw-r--r--	root/root	usr/include/polly/isl/cpp-checked-conversion.h
--rw-r--r--	root/root	usr/include/polly/isl/cpp-checked.h
--rw-r--r--	root/root	usr/include/polly/isl/cpp.h
 -rw-r--r--	root/root	usr/include/polly/isl/ctx.h
 -rw-r--r--	root/root	usr/include/polly/isl/fixed_box.h
 -rw-r--r--	root/root	usr/include/polly/isl/flow.h
@@ -110,7 +107,6 @@ drwxr-xr-x	root/root	usr/include/polly/isl/
 -rw-r--r--	root/root	usr/include/polly/isl/stdint.h
 -rw-r--r--	root/root	usr/include/polly/isl/stream.h
 -rw-r--r--	root/root	usr/include/polly/isl/stride_info.h
--rw-r--r--	root/root	usr/include/polly/isl/typed_cpp.h
 -rw-r--r--	root/root	usr/include/polly/isl/union_map.h
 -rw-r--r--	root/root	usr/include/polly/isl/union_map_type.h
 -rw-r--r--	root/root	usr/include/polly/isl/union_set.h

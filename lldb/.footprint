@@ -111,6 +111,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Core/
 -rw-r--r--	root/root	usr/include/lldb/Core/AddressResolverFileLine.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Architecture.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Communication.h
+-rw-r--r--	root/root	usr/include/lldb/Core/DataFileCache.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Debugger.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Declaration.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Disassembler.h
@@ -239,7 +240,6 @@ drwxr-xr-x	root/root	usr/include/lldb/Host/
 -rw-r--r--	root/root	usr/include/lldb/Host/SafeMachO.h
 -rw-r--r--	root/root	usr/include/lldb/Host/Socket.h
 -rw-r--r--	root/root	usr/include/lldb/Host/SocketAddress.h
--rw-r--r--	root/root	usr/include/lldb/Host/StringConvert.h
 -rw-r--r--	root/root	usr/include/lldb/Host/Terminal.h
 -rw-r--r--	root/root	usr/include/lldb/Host/ThreadLauncher.h
 -rw-r--r--	root/root	usr/include/lldb/Host/Time.h
@@ -344,6 +344,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Interpreter/
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Options.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Property.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptInterpreter.h
+-rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedInterface.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedProcessInterface.h
 drwxr-xr-x	root/root	usr/include/lldb/Symbol/
 -rw-r--r--	root/root	usr/include/lldb/Symbol/ArmUnwindInfo.h
@@ -383,8 +384,10 @@ drwxr-xr-x	root/root	usr/include/lldb/Symbol/
 -rw-r--r--	root/root	usr/include/lldb/Symbol/VariableList.h
 drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/ABI.h
+-rw-r--r--	root/root	usr/include/lldb/Target/AppleArm64ExceptionClass.h
 -rw-r--r--	root/root	usr/include/lldb/Target/AssertFrameRecognizer.h
 -rw-r--r--	root/root	usr/include/lldb/Target/DynamicLoader.h
+-rw-r--r--	root/root	usr/include/lldb/Target/DynamicRegisterInfo.h
 -rw-r--r--	root/root	usr/include/lldb/Target/ExecutionContext.h
 -rw-r--r--	root/root	usr/include/lldb/Target/ExecutionContextScope.h
 -rw-r--r--	root/root	usr/include/lldb/Target/InstrumentationRuntime.h
@@ -397,6 +400,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/MemoryHistory.h
 -rw-r--r--	root/root	usr/include/lldb/Target/MemoryRegionInfo.h
 -rw-r--r--	root/root	usr/include/lldb/Target/MemoryTagManager.h
+-rw-r--r--	root/root	usr/include/lldb/Target/MemoryTagMap.h
 -rw-r--r--	root/root	usr/include/lldb/Target/ModuleCache.h
 -rw-r--r--	root/root	usr/include/lldb/Target/OperatingSystem.h
 -rw-r--r--	root/root	usr/include/lldb/Target/PathMappingList.h
@@ -420,6 +424,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/StackFrameList.h
 -rw-r--r--	root/root	usr/include/lldb/Target/StackFrameRecognizer.h
 -rw-r--r--	root/root	usr/include/lldb/Target/StackID.h
+-rw-r--r--	root/root	usr/include/lldb/Target/Statistics.h
 -rw-r--r--	root/root	usr/include/lldb/Target/StopInfo.h
 -rw-r--r--	root/root	usr/include/lldb/Target/StructuredDataPlugin.h
 -rw-r--r--	root/root	usr/include/lldb/Target/SystemRuntime.h
@@ -478,6 +483,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/Flags.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/GDBRemote.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/IOObject.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/Instrumentation.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Iterable.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/LLDBAssert.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Listener.h
@@ -491,7 +497,6 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/RegisterValue.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/RegularExpression.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Reproducer.h
--rw-r--r--	root/root	usr/include/lldb/Utility/ReproducerInstrumentation.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/ReproducerProvider.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Scalar.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/SelectHelper.h
@@ -520,6 +525,8 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/VASPrintf.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/VMRange.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/XcodeSDK.h
+drwxr-xr-x	root/root	usr/include/lldb/Version/
+-rw-r--r--	root/root	usr/include/lldb/Version/Version.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-defines.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-enumerations.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-forward.h
@@ -533,11 +540,11 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/lldb-types.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-versioning.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.13
-lrwxrwxrwx	root/root	usr/lib/liblldb.so.13 -> liblldb.so.13.0.1
--rwxr-xr-x	root/root	usr/lib/liblldb.so.13.0.1
-lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.13
--rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.13
+lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.14
+lrwxrwxrwx	root/root	usr/lib/liblldb.so.14 -> liblldb.so.14.0.0
+-rwxr-xr-x	root/root	usr/lib/liblldb.so.14.0.0
+lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.14
+-rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.14
 drwxr-xr-x	root/root	usr/lib/python3.10/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/
@@ -549,7 +556,7 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/__pycache__/embedded_interpreter.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/__pycache__/embedded_interpreter.cpython-310.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/__pycache__/embedded_interpreter.cpython-310.pyc
-lrwxrwxrwx	root/root	usr/lib/python3.10/site-packages/lldb/_lldb.so -> ../../../liblldb.so
+lrwxrwxrwx	root/root	usr/lib/python3.10/site-packages/lldb/_lldb.cpython-310-x86_64-linux-gnu.so -> ../../../liblldb.so
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/embedded_interpreter.py
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/formatters/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/formatters/Logger.py
