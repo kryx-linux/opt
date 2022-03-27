@@ -4,8 +4,8 @@
 # Depends on: gobject-introspection meson ninja
 
 name=atk
-version=2.36.0
-release=2
+version=2.38.0
+release=1
 source=(http://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
