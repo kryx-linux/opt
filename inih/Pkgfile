@@ -4,7 +4,7 @@
 # Depends on:  meson ninja
 
 name=inih
-version=54
+version=55
 release=1
 source=(https://github.com/benhoyt/inih/archive/r$version/$name-$version.tar.gz)
 
@@ -12,6 +12,9 @@ build() {
 	meson setup build $name-r$version \
 		--prefix=/usr \
 		--buildtype=release \
+		--wrap-mode nodownload \
+		-D b_lto=true \
+		-D b_pie=true \
 		-D with_INIReader=true \
 		-D distro_install=true
 
