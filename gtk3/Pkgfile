@@ -6,16 +6,21 @@
 
 name=gtk3
 version=3.24.33
-release=1
-source=(https://download.gnome.org/sources/gtk+/${version:0:4}/gtk+-$version.tar.xz
-	gtk-register-3.sh gtk.immodules)
+release=2
+# https://gitlab.gnome.org/GNOME/gtk/-/issues/4790
+# https://gitlab.gnome.org/GNOME/gtk/-/merge_requests/4562
+_commit=21eb3b2a6c7828cbbe44df4bf8d5ee812bdb0094
+#source=(https://download.gnome.org/sources/gtk+/${version:0:4}/gtk+-$version.tar.xz
+source=(https://gitlab.gnome.org/GNOME/gtk/-/archive/$_commit/gtk+-$_commit.tar.bz2
+  gtk-register-3.sh gtk.immodules)
 
 build () {
 	prt-get isinst colord || PKGMK_GTK3+=' -Dcolord=no'
 	prt-get isinst libxkbcommon wayland-protocols && PKGMK_GTK3+=' -D wayland_backend=true' || PKGMK_GTK3+=' -Dwayland_backend=false'
 
 	CFLAGS+=" -DG_ENABLE_DEBUG -DG_DISABLE_CAST_CHECKS"
-	meson setup gtk+-$version build $PKGMK_GTK3 \
+#	meson setup gtk+-$version build $PKGMK_GTK3 \
+	meson setup gtk-$_commit build $PKGMK_GTK3 \
 		--prefix=/usr \
 		-D buildtype=plain \
 		--wrap-mode=nodownload \
