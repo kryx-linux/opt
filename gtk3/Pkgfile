@@ -18,7 +18,6 @@ build () {
   prt-get isinst colord || PKGMK_GTK3+=' -Dcolord=no'
   prt-get isinst libxkbcommon wayland-protocols && PKGMK_GTK3+=' -D wayland_backend=true' || PKGMK_GTK3+=' -Dwayland_backend=false'
 
-  ls -la
   CFLAGS+=" -DG_ENABLE_DEBUG -DG_DISABLE_CAST_CHECKS"
   #meson setup gtk+-$version build $PKGMK_GTK3 \
   meson setup gtk-$_commit build $PKGMK_GTK3 \
