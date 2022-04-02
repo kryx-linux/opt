@@ -4,18 +4,20 @@
 # Depends on: expat freetype
 
 name=fontconfig
-version=2.13.1
+version=2.14.0
 release=1
-source=(https://fontconfig.org/release/$name-$version.tar.bz2)
+source=(https://fontconfig.org/release/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--with-xmldir=/etc/fonts \
-		--with-templatedir=/etc/fonts/conf.avail
+		--with-templatedir=/etc/fonts/conf.avail \
+		--disable-nls
 
 	make
 	make DESTDIR=$PKG install
@@ -27,5 +29,4 @@ build() {
 
 	rm -f $PKG/etc/fonts/conf.d/README
 	rm -r $PKG/usr/share/doc
-	rm -r $PKG/usr/share/locale
 }
