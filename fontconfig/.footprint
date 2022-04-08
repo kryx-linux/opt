@@ -1,7 +1,7 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/fonts/
 drwxr-xr-x	root/root	etc/fonts/conf.d/
-lrwxrwxrwx	root/root	etc/fonts/conf.d/10-autohint.conf -> /etc/fonts/conf.avail/10-autohint.conf
+lrwxrwxrwx	root/root	etc/fonts/conf.d/10-autohint.conf -> /usr/share/fonts/conf.avail/10-autohint.conf
 lrwxrwxrwx	root/root	etc/fonts/conf.d/10-hinting-slight.conf -> /usr/share/fontconfig/conf.avail/10-hinting-slight.conf
 lrwxrwxrwx	root/root	etc/fonts/conf.d/10-scale-bitmap-fonts.conf -> /usr/share/fontconfig/conf.avail/10-scale-bitmap-fonts.conf
 lrwxrwxrwx	root/root	etc/fonts/conf.d/11-lcdfilter-default.conf -> /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf
