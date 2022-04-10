@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=whois
-version=5.5.12
+version=5.5.13
 release=1
 source=(https://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.xz)
 
