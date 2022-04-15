@@ -1,10 +1,10 @@
 # Description: JSON implementation in C
-# URL:         https://github.com/json-c/json-c/wiki
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  cmake
+# URL: https://github.com/json-c/json-c/wiki
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: cmake
 
 name=json-c
-version=0.15
+version=0.16
 release=1
 source=(https://s3.amazonaws.com/json-c_releases/releases/$name-$version.tar.gz)
 
