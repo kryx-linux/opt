@@ -5,7 +5,7 @@
 # Optional: libseccomp libiscsi usbredir spice
 
 name=qemu-all
-version=6.2.0
+version=7.0.0
 release=1
 source=(https://download.qemu.org/qemu-$version.tar.xz
 	qemu-man-$version.tar.xz)
