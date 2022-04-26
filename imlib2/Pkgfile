@@ -5,7 +5,7 @@
 # Optional: libid3tag giflib librsvg
 
 name=imlib2
-version=1.8.1
+version=1.9.0
 release=1
 source=(https://download.sourceforge.net/enlightenment/$name-$version.tar.xz)
 
