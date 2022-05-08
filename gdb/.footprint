@@ -26,6 +26,8 @@ drwxr-xr-x	root/root	usr/share/gdb/python/gdb/__pycache__/
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/__pycache__/printing.cpython-310.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/__pycache__/prompt.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/__pycache__/prompt.cpython-310.pyc
+-rw-r--r--	root/root	usr/share/gdb/python/gdb/__pycache__/styling.cpython-310.opt-1.pyc
+-rw-r--r--	root/root	usr/share/gdb/python/gdb/__pycache__/styling.cpython-310.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/__pycache__/types.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/__pycache__/types.cpython-310.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/__pycache__/unwinder.cpython-310.opt-1.pyc
@@ -83,6 +85,7 @@ drwxr-xr-x	root/root	usr/share/gdb/python/gdb/printer/__pycache__/
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/printer/bound_registers.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/printing.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/prompt.py
+-rw-r--r--	root/root	usr/share/gdb/python/gdb/styling.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/types.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/unwinder.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/xmethod.py
