@@ -1,7 +1,7 @@
 # Description: Apache HTTP server version 2.4.x
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # URL: http://httpd.apache.org/
-# Depends on: apr libpcre openssl libxml2
+# Depends on: apr libnghttp2 libpcre libxml2 openssl
 
 name=apache
 version=2.4.53
