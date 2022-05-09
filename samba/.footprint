@@ -758,7 +758,6 @@ lrwxrwxrwx	root/root	usr/lib/samba/libwind-samba4.so.0 -> libwind-samba4.so.0.0.
 drwxr-xr-x	root/root	usr/lib/samba/nss_info/
 -rwxr-xr-x	root/root	usr/lib/samba/nss_info/hash.so
 -rwxr-xr-x	root/root	usr/lib/samba/samba-bgqd
--rwxr-xr-x	root/root	usr/lib/samba/smbspool_krb5_wrapper
 drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/acl_tdb.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/acl_xattr.so
