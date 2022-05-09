@@ -1,0 +1,21 @@
+From 3e8b2ca1a1a7142cd75fa251b695eec12e4ff43a Mon Sep 17 00:00:00 2001
+From: rpm-build <rpm-build>
+Date: Thu, 5 May 2022 13:28:16 +0200
+Subject: [PATCH] include cstring in itemlisformaction
+
+---
+ src/itemlistformaction.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/itemlistformaction.cpp b/src/itemlistformaction.cpp
+index 145aa3945..9e6db376f 100644
+--- a/src/itemlistformaction.cpp
++++ b/src/itemlistformaction.cpp
+@@ -3,6 +3,7 @@
+ #include <cassert>
+ #include <cinttypes>
+ #include <cstdio>
++#include <cstring>
+ #include <langinfo.h>
+ #include <sstream>
+ #include <string>
