@@ -57,3 +57,32 @@ diff -up spamprobe-1.4d/src/includes/util.h.compile-fixes spamprobe-1.4d/src/inc
  #include <cctype>
  #include <cassert>
  #include <iostream>
+diff --git a/src/includes/LRUCache.h b/src/includes/LRUCache.h
+index cf7df30..5c84c5a 100644
+--- a/src/includes/LRUCache.h
++++ b/src/includes/LRUCache.h
+@@ -60,7 +60,7 @@ public:
+   {
+   public:
+     bool operator()(const NodeType *a,
+-                    const NodeType *b)
++                    const NodeType *b) const
+     {
+       return a->key < b->key;
+     }
+@@ -77,12 +77,12 @@ public:
+     }
+ 
+   public:
+-    bool operator==(const iterator &other)
++    bool operator==(const iterator &other) const
+     {
+       return m_iterator == other.m_iterator;
+     }
+ 
+-    bool operator!=(const iterator &other)
++    bool operator!=(const iterator &other) const
+     {
+       return m_iterator != other.m_iterator;
+     }
+
