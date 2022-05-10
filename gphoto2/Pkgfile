@@ -1,7 +1,7 @@
 # Description: Command-line client for libgphoto2
 # URL: http://www.gphoto.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: readline popt libgphoto2
+# Depends on: libexif libgphoto2 popt readline
 
 name=gphoto2
 version=2.5.28

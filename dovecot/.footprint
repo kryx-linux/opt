@@ -522,6 +522,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/primes.h
 -rw-r--r--	root/root	usr/include/dovecot/printf-format-fix.h
 -rw-r--r--	root/root	usr/include/dovecot/priorityq.h
+-rw-r--r--	root/root	usr/include/dovecot/process-stat.h
 -rw-r--r--	root/root	usr/include/dovecot/process-title.h
 -rw-r--r--	root/root	usr/include/dovecot/program-client.h
 -rw-r--r--	root/root	usr/include/dovecot/push-notification-drivers.h
@@ -568,6 +569,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/sdbox-sync.h
 -rw-r--r--	root/root	usr/include/dovecot/sendfile-util.h
 -rw-r--r--	root/root	usr/include/dovecot/seq-range-array.h
+-rw-r--r--	root/root	usr/include/dovecot/seq-set-builder.h
 -rw-r--r--	root/root	usr/include/dovecot/service-settings.h
 -rw-r--r--	root/root	usr/include/dovecot/settings-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/settings.h
