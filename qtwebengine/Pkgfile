@@ -1,19 +1,35 @@
 # Description: Provides support for web applications using the Chromium browser project.
 # URL: https://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: ffmpeg4 libvpx libwebp nodejs nss python qt5 xorg-libxscrnsaver xorg-libxtst
+# Depends on: ffmpeg libvpx libwebp nodejs nss opus python qt5 xorg-libxscrnsaver xorg-libxtst
 
 name=qtwebengine
-version=5.15.8
+version=5.15.9
 release=1
 source=(https://anduin.linuxfromscratch.org/BLFS/qtwebengine/$name-$version.tar.xz
-	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-5.15.8-build_fixes-1.patch)
+	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-$version-build_fixes-1.patch
+	qtwebengine-5.15.2-disable-fatal-warnings.patch
+	qtwebengine-5.15.2-extra_gn.patch
+	qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
+	qtwebengine-5.15.2_p20210521-clang-libc++.patch
+	qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch
+	qtwebengine-5.15.3_p20220406-ffmpeg5.patch
+	qt5-webengine-pipewire-0.3.patch
+	gcc12.patch)
 
 build() {
 	cd qtwebengine-$version
 
 	# https://www.linuxfromscratch.org/blfs/view/svn/x/qtwebengine.html
-	patch -p1 -i $SRC/qtwebengine-5.15.8-build_fixes-1.patch
+	patch -p1 -i $SRC/qtwebengine-$version-build_fixes-1.patch
+	patch -p1 -i $SRC/qtwebengine-5.15.2-disable-fatal-warnings.patch
+	patch -p1 -i $SRC/qtwebengine-5.15.2-extra_gn.patch
+	patch -p1 -i $SRC/qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
+	patch -p1 -i $SRC/qtwebengine-5.15.2_p20210521-clang-libc++.patch
+	patch -p1 -i $SRC/qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch
+	patch -p1 -i $SRC/qtwebengine-5.15.3_p20220406-ffmpeg5.patch
+	patch -p1 -d src/3rdparty -i $SRC/qt5-webengine-pipewire-0.3.patch
+	patch -p0 -d src/3rdparty/chromium/third_party/skia/src/utils/ -i $SRC/gcc12.patch
 
 	mkdir -pv .git src/3rdparty/chromium/.git
 	sed -e '/^MODULE_VERSION/s/5.*/5.15.2/' -i .qmake.conf
@@ -24,8 +40,7 @@ build() {
 		-i src/3rdparty/chromium/media/media_options.gni
 
 	# Ninja, by default, sets the number of jobs to the number of availalble threads
-	test -n "$JOBS" && export NINJAFLAGS+=" -j $JOBS"
-	sed -i 's/NINJAJOBS/NINJA_JOBS/' src/core/gn_run.pro
+	test -n "$JOBS" && export NINJAFLAGS+=" -j ${JOBS-1}"
 
 	prt-get isinst ccache && export \
 		QMAKE_CC='ccache gcc' \
@@ -40,14 +55,15 @@ build() {
 	cd build
 
 	prt-get isinst pulseaudio && PKGMK_QTWEBENGINE+=' -pulseaudio' || PKGMK_QTWEBENGINE+=' -no-pulseaudio'
+	prt-get isinst pipewire && PKGMK_QTWEBENGINE+=' -webengine-webrtc-pipewire'
 	prt-get isinst icu && PKGMK_QTWEBENGINE+=' -webengine-icu' || PKGMK_QTWEBENGINE+=' -no-webengine-icu'
-
-	export PKG_CONFIG_PATH+="/usr/lib/ffmpeg4/pkgconfig"
 
 	qmake-qt5 .. -- \
 		$PKGMK_QTWEBENGINE \
 		-proprietary-codecs \
-		-system-ffmpeg
+		-system-ffmpeg \
+		-system-opus \
+		-system-webp
 
 	make
 	make INSTALL_ROOT=$PKG install
