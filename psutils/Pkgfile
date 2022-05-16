@@ -4,7 +4,7 @@
 # Depends on: p5-ipc-run3 paper ghostscript
 
 name=psutils
-version=2.08
+version=2.09
 release=1
 source=(https://github.com/rrthomas/psutils/releases/download/v$version/$name-$version.tar.gz)
 
