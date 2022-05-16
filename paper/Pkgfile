@@ -1,27 +1,29 @@
 # Description: Utility to set the default paper size
-# URL:         https://github.com/rrthomas/paper/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
+# URL: https://github.com/rrthomas/paper/
+# Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=paper
-version=2.3
+version=1.2.0
 release=1
-source=(https://github.com/rrthomas/paper/releases/download/v$version/$name-$version.tar.gz
-        paper.1 paperspecs.5)
+source=(https://github.com/rrthomas/libpaper/releases/download/v$version/lib$name-$version.tar.gz
+	paper.1 paperspecs.5 paperconfig.8)
 
 build () {
-    cd $name-$version
+	cd lib$name-$version
 
-    sed '/^SUBDIRS/s/man//' -i Makefile.in
+	sed '/^SUBDIRS/s/man//' -i Makefile.in
 
-    ./configure --prefix=/usr \
-                --sysconfdir=/etc \
-                --libexecdir=/usr/lib/paper
-    make
-    make DESTDIR=$PKG install
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libexecdir=/usr/lib/paper
+	make
+	make DESTDIR=$PKG install
 
-    install -d $PKG/usr/share/man/man{1,5}
-    install -m 0644 $SRC/paper.1 $PKG/usr/share/man/man1
-    install -m 0644 $SRC/paperspecs.5 $PKG/usr/share/man/man5
+	install -d $PKG/usr/share/man/man{1,5,8}
+	install -m 0644 $SRC/paper.1 $PKG/usr/share/man/man1
+	install -m 0644 $SRC/paperspecs.5 $PKG/usr/share/man/man5
+	install -m 0644 $SRC/paperconfig.8 $PKG/usr/share/man/man8
 
-    rm -r $PKG/usr/share/doc
+	rm -r $PKG/usr/share/doc
 }
