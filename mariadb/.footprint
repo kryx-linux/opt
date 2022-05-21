@@ -109,6 +109,7 @@ lrwxrwxrwx	root/root	usr/bin/mysqltest_embedded -> mariadb-test-embedded
 -rwxr-xr-x	root/root	usr/bin/resolveip
 -rwxr-xr-x	root/root	usr/bin/sst_dump
 -rwxr-xr-x	root/root	usr/bin/test-connect-t
+-rwxr-xr-x	root/root	usr/bin/wsrep_sst_backup
 -rw-r--r--	root/root	usr/bin/wsrep_sst_common
 -rwxr-xr-x	root/root	usr/bin/wsrep_sst_mariabackup
 -rwxr-xr-x	root/root	usr/bin/wsrep_sst_mysqldump
@@ -358,6 +359,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/mysqld_default_groups.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/mysqld_suffix.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/mysys_err.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/opt_histogram_json.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_range.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_subselect.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_trace.h
@@ -639,6 +641,7 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/type_mysql_json.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/type_test.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/wsrep_info.so
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/zstd.so
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libmariadb.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/mariadb.pc
@@ -906,6 +909,7 @@ drwxr-xr-x	root/root	usr/share/mysql/english/
 -rw-r--r--	root/root	usr/share/mysql/magic
 -rw-r--r--	root/root	usr/share/mysql/maria_add_gis_sp.sql
 -rw-r--r--	root/root	usr/share/mysql/maria_add_gis_sp_bootstrap.sql
+-rwxr-xr-x	root/root	usr/share/mysql/mini-benchmark
 -rwxr-xr-x	root/root	usr/share/mysql/mysql-log-rotate
 -rwxr-xr-x	root/root	usr/share/mysql/mysql.server
 -rw-r--r--	root/root	usr/share/mysql/mysql_performance_tables.sql
