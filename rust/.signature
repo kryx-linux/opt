@@ -1,10 +1,11 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/YunxkxUCWGcD57OWLNseoVUF8SU4jj0Dn0G+pCc64rXq6LIVUlbNB3a7yak+OF4fwS+YG3gZkK3vjfxC4a7ww8=
-SHA256 (Pkgfile) = 9bb6a00c1c95c972e0d561a3439b5af0a5fcf6bad95fe0992cd326cc892d12e9
-SHA256 (.footprint) = 8513c4ab4ee193bdcfad8ada37472cb9859e68f3da36d42f475cfcf8b31c63ba
-SHA256 (rustc-1.60.0-src.tar.xz) = a025876deccbcb3f288d8e02623ea321f94623f31305d3c5c6f17855bb9685db
-SHA256 (rust-std-1.59.0-x86_64-unknown-linux-gnu.tar.xz) = c854a9ee3dd8e5be9522c1581f75838c1cbae6dece3934b0004f138c4a5024a3
-SHA256 (rustc-1.59.0-x86_64-unknown-linux-gnu.tar.xz) = 838de1fef855ef7733a87862c2575e8da9f3fa11fd0a8ce05c293038ea92356e
-SHA256 (cargo-1.59.0-x86_64-unknown-linux-gnu.tar.xz) = f56ebfb333ea46e4429377bf4b16a2ec889d61640a41c3093577cdd8f3c80b96
-SHA256 (libexec.patch) = 9ba3070dbc877ab5e045b6a20be9134f80d8aece42766b4cfbad2a4a60c27514
-SHA256 (0002-compiler-Change-LLVM-targets.patch) = 851172a5a3c35e209d455232d0572f51b6d34d3bc5f1a0416c01f426fdf60e92
+RWSE3ohX2g5d/bKKoOrzdSfKTCXOUmp412UA2V3zGzBkujlvs/YisFPyQysLq1403B7EI+Sf2zlzxQyjBW5Ka8UYy1npl46BAQs=
+SHA256 (Pkgfile) = 4cae984a1934a689bcd07387427d371313f8a751a084fd844628f81a7e90abd9
+SHA256 (.footprint) = 1804dc98758255921fc8d5c7a309afb3ab00801ef21951b3ebf9582d7fe0c78e
+SHA256 (rustc-1.61.0-src.tar.xz) = a63305a3ad734f170746b337a5e3d07ccaa7aa8f253dc52336b44c0a3b549d7b
+SHA256 (rust-std-1.60.0-x86_64-unknown-linux-gnu.tar.xz) = 6fb8ee3650beb10836ae48a9aaa535473e64eaca20695b88113267aea3c7557f
+SHA256 (rustc-1.60.0-x86_64-unknown-linux-gnu.tar.xz) = fc0b41c15e348ad0eeb7a6c015a922a2ac95e9577e531635558b26d99399f315
+SHA256 (cargo-1.60.0-x86_64-unknown-linux-gnu.tar.xz) = 48edb2eb51d7c56ef9a3130f0b331e83f139559161f6f93b9588d28cf72610f3
+SHA256 (0001-bootstrap-Change-libexec-dir.patch) = 60c6dfc100d292284af2187cfefc1d0d928139ca557d27bc6bef88edefccff70
+SHA256 (0001-cargo-Change-libexec-dir.patch) = c901a9bb036c29ca092f7dbc8b447efdd9aa1044a902a88f9d024cb22681dc19
+SHA256 (0002-compiler-Change-LLVM-targets.patch) = 8dcb566da29a92ecf3eb6afe094d9c7766d08230d90fd666bfd022c018ae676a
