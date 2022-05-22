@@ -1,8 +1,7 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/Y/RSRQx9ykpclyvUxa6GDAN/LYAB6VoerVDugPXrPMYvk3mBADBHmYFUfO7QqzZpSu4+qdjXo7tjeN+uZNB3wI=
-SHA256 (Pkgfile) = 1973a58d5ef6aeee8a5763422ca106e2d14f2046671996dc833a857b63659cb2
-SHA256 (.footprint) = a90f41be71456bf37074b54848385342bb3164641667b5d42271f6bc7aab2f6b
-SHA256 (glslang-11.8.0.tar.gz) = 9e5fbe5b844d203da5e61bcd84eda76326e0ff5dc696cb862147bbe01d2febb0
-SHA256 (SPIRV-Headers-b42ba6d92faf6b4938e6f22ddd186dbdacc98d78.tar.gz) = d58e8e65ea4b4f1e421caaad68f88ce7b713ac3519bd49e7b71b6a5690489eb6
-SHA256 (SPIRV-Tools-73735db943d7165d725883a1da0ad9eac79c1e34.tar.gz) = 28551980e0b69c2d188f9705747e7e3b0836a957e1ddce14ad1dfa621bed1ace
-SHA256 (known_good.py.in) = 3c9fdb7a6a0bdaf3790348193a6100814b879d02b2e4d4e89dc6fa95bafacdab
+RWSE3ohX2g5d/cV4vk+/OFQp19NFJphwPbCTEuAVpLMxpeR5xNUo/uWhUI0V+DJ5j5LIcktbScTcUPaclplHYLttp4WcsKXjPgU=
+SHA256 (Pkgfile) = 93724f277ae44bbbe8c4027becfe689f378338ae5bfd2ff8efd58b73cb4b13a1
+SHA256 (.footprint) = deef3c7b86e3deda4ae0af45fc78ef47d23909bdbbe5564340cec3e465baed26
+SHA256 (glslang-11.9.0.tar.gz) = d5744adba19eef9ad3d73f524226b39fec559d94cb582cd442e3c5de930004b2
+SHA256 (glslang-default-resource-limits_staticlib.patch) = 37fd2a024abc723c456c872a2ceb3d025ac1bf1267ce3539a0db2dc1e4803bd4
+SHA256 (0001-pkg-config-compatibility.patch) = 0867569b441b98012d5f3c13e744a693228e6550ec120a4da53a749138867105
