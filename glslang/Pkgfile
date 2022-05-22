@@ -1,26 +1,23 @@
 # Description: OpenGL and OpenGL ES shader front end and validator
 # URL: https://www.khronos.org/opengles/sdk/tools/Reference-Compiler
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cmake
+# Depends on: spirv-tools
 # Optional: ninja
 
 name=glslang
-version=11.8.0
+version=11.9.0
 release=1
-_spirv_headers=b42ba6d92faf6b4938e6f22ddd186dbdacc98d78
-_spirv_tools=73735db943d7165d725883a1da0ad9eac79c1e34
 source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
-	https://github.com/KhronosGroup/SPIRV-Headers/archive/$_spirv_headers/SPIRV-Headers-$_spirv_headers.tar.gz
-	https://github.com/KhronosGroup/SPIRV-Tools/archive/$_spirv_tools/SPIRV-Tools-$_spirv_tools.tar.gz
-	known_good.py.in)
+	glslang-default-resource-limits_staticlib.patch
+	0001-pkg-config-compatibility.patch)
 
 build() {
-	cp -r SPIRV-Tools-$_spirv_tools $name-$version/External/spirv-tools
-	cp -r SPIRV-Headers-$_spirv_headers $name-$version/External/spirv-tools/external/spirv-headers
+	patch -d $name-$version -p1 -i $SRC/glslang-default-resource-limits_staticlib.patch
 
-	sed -e "s|@SRC@|$SRC/$name-$version|" $SRC/known_good.py.in > $SRC/known_good.py
-	chmod u+x $SRC/known_good.py
-	$SRC/known_good.py
+	# https://patch-diff.githubusercontent.com/raw/KhronosGroup/glslang/pull/1722.patch#/0001-pkg-config-compatibility.patch
+	patch -d $name-$version -p1 -i $SRC/0001-pkg-config-compatibility.patch
+
+	find $SRC -name '*.h' -or -name '*.cpp' -or -name '*.hpp'| xargs chmod a-x
 
 	prt-get isinst ninja && PKGMK_GLSLANG+=' -G Ninja'
 	prt-get isinst ccache && \
@@ -32,25 +29,21 @@ build() {
 		-D CMAKE_INSTALL_PREFIX=/usr
 		-D CMAKE_INSTALL_LIBDIR=lib
 		-D CMAKE_BUILD_TYPE=Release
-		-D CMAKE_SKIP_RPATH:BOOL=yes
+		-D CMAKE_SKIP_RPATH=yes
 		-Wno-dev"
 
 	cmake -B build-static $config $PKGMK_GLSLANG \
 		-D BUILD_SHARED_LIBS=OFF \
-		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}"
+		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -ffat-lto-objects"
 	cmake --build build-static
 
 	# https://github.com/KhronosGroup/glslang/issues/1484 -Wl,--no-undefined
 	cmake -B build-shared $config $PKGMK_GLSLANG \
 		-D BUILD_SHARED_LIBS=ON \
-		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -ffat-lto-objects" \
 		-D CMAKE_SHARED_LINKER_FLAGS='-Wl,--no-undefined'
 	cmake --build build-shared
 
 	DESTDIR=$PKG cmake --build build-static --target install
 	DESTDIR=$PKG cmake --build build-shared --target install
-
-	mv $PKG/usr/bin/spirv-remap $SRC/
-	rm -r $PKG/usr/{bin/spirv*,include/spirv-tools,lib/cmake/SPIRV-Tools*,lib/libSPIRV-*,lib/pkgconfig}
-	mv $SRC/spirv-remap $PKG/usr/bin/spirv-remap
 }

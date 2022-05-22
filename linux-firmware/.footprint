@@ -622,7 +622,7 @@ drwxr-xr-x	root/root	lib/firmware/ath10k/QCA9984/hw1.0/
 -rw-r--r--	root/root	lib/firmware/ath10k/QCA9984/hw1.0/notice_ath10k_firmware-5.txt
 drwxr-xr-x	root/root	lib/firmware/ath10k/QCA99X0/
 drwxr-xr-x	root/root	lib/firmware/ath10k/QCA99X0/hw2.0/
--rw-r--r--	root/root	lib/firmware/ath10k/QCA99X0/hw2.0/board.bin
+-rw-r--r--	root/root	lib/firmware/ath10k/QCA99X0/hw2.0/board-2.bin
 -rw-r--r--	root/root	lib/firmware/ath10k/QCA99X0/hw2.0/firmware-5.bin
 -rw-r--r--	root/root	lib/firmware/ath10k/QCA99X0/hw2.0/notice_ath10k_firmware-5.txt
 drwxr-xr-x	root/root	lib/firmware/ath10k/WCN3990/
@@ -675,6 +675,26 @@ drwxr-xr-x	root/root	lib/firmware/ath11k/QCA6390/hw2.0/
 -rw-r--r--	root/root	lib/firmware/ath11k/QCA6390/hw2.0/amss.bin
 -rw-r--r--	root/root	lib/firmware/ath11k/QCA6390/hw2.0/board-2.bin
 -rw-r--r--	root/root	lib/firmware/ath11k/QCA6390/hw2.0/m3.bin
+drwxr-xr-x	root/root	lib/firmware/ath11k/QCN9074/
+drwxr-xr-x	root/root	lib/firmware/ath11k/QCN9074/hw1.0/
+-rw-r--r--	root/root	lib/firmware/ath11k/QCN9074/hw1.0/Notice.txt
+-rw-r--r--	root/root	lib/firmware/ath11k/QCN9074/hw1.0/amss.bin
+-rw-r--r--	root/root	lib/firmware/ath11k/QCN9074/hw1.0/board-2.bin
+-rw-r--r--	root/root	lib/firmware/ath11k/QCN9074/hw1.0/m3.bin
+drwxr-xr-x	root/root	lib/firmware/ath11k/WCN6750/
+drwxr-xr-x	root/root	lib/firmware/ath11k/WCN6750/hw1.0/
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/Notice.txt
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/board-2.bin
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.b00
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.b01
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.b02
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.b03
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.b04
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.b05
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.b06
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.b07
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.b08 (EMPTY)
+-rw-r--r--	root/root	lib/firmware/ath11k/WCN6750/hw1.0/wpss.mdt
 drwxr-xr-x	root/root	lib/firmware/ath11k/WCN6855/
 drwxr-xr-x	root/root	lib/firmware/ath11k/WCN6855/hw2.0/
 -rw-r--r--	root/root	lib/firmware/ath11k/WCN6855/hw2.0/Notice.txt
@@ -894,10 +914,12 @@ lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac4354-sdio.clm_blob -> ../cypress/
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac4356-pcie.bin -> ../cypress/cyfmac4356-pcie.bin
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac4356-pcie.clm_blob -> ../cypress/cyfmac4356-pcie.clm_blob
 -rw-r--r--	root/root	lib/firmware/brcm/brcmfmac4356-pcie.gpd-win-pocket.txt
+-rw-r--r--	root/root	lib/firmware/brcm/brcmfmac4356-sdio.AP6356S.txt
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac4356-sdio.bin -> ../cypress/cyfmac4356-sdio.bin
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac4356-sdio.clm_blob -> ../cypress/cyfmac4356-sdio.clm_blob
-lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac4356-sdio.khadas,vim2.txt -> brcmfmac4356-sdio.vamrs,rock960.txt
--rw-r--r--	root/root	lib/firmware/brcm/brcmfmac4356-sdio.vamrs,rock960.txt
+lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac4356-sdio.firefly,firefly-rk3399.txt -> brcmfmac4356-sdio.AP6356S.txt
+lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac4356-sdio.khadas,vim2.txt -> brcmfmac4356-sdio.AP6356S.txt
+lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac4356-sdio.vamrs,rock960.txt -> brcmfmac4356-sdio.AP6356S.txt
 -rw-r--r--	root/root	lib/firmware/brcm/brcmfmac43569.bin
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43570-pcie.bin -> ../cypress/cyfmac43570-pcie.bin
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43570-pcie.clm_blob -> ../cypress/cyfmac43570-pcie.clm_blob
@@ -1094,6 +1116,7 @@ drwxr-xr-x	root/root	lib/firmware/i915/
 -rw-r--r--	root/root	lib/firmware/i915/adlp_dmc_ver2_16.bin
 -rw-r--r--	root/root	lib/firmware/i915/adlp_guc_62.0.3.bin
 -rw-r--r--	root/root	lib/firmware/i915/adlp_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/adlp_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/adls_dmc_ver2_01.bin
 lrwxrwxrwx	root/root	lib/firmware/i915/bxt_dmc_ver1.bin -> bxt_dmc_ver1_07.bin
 -rw-r--r--	root/root	lib/firmware/i915/bxt_dmc_ver1_07.bin
@@ -1102,6 +1125,7 @@ lrwxrwxrwx	root/root	lib/firmware/i915/bxt_dmc_ver1.bin -> bxt_dmc_ver1_07.bin
 -rw-r--r--	root/root	lib/firmware/i915/bxt_guc_49.0.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/bxt_guc_62.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/bxt_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/bxt_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/bxt_guc_ver8_7.bin
 -rw-r--r--	root/root	lib/firmware/i915/bxt_guc_ver9_29.bin
 -rw-r--r--	root/root	lib/firmware/i915/bxt_huc_2.0.0.bin
@@ -1111,6 +1135,7 @@ lrwxrwxrwx	root/root	lib/firmware/i915/bxt_dmc_ver1.bin -> bxt_dmc_ver1_07.bin
 -rw-r--r--	root/root	lib/firmware/i915/cml_guc_49.0.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/cml_guc_62.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/cml_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/cml_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/cml_huc_4.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/cnl_dmc_ver1_06.bin
 -rw-r--r--	root/root	lib/firmware/i915/cnl_dmc_ver1_07.bin
@@ -1118,12 +1143,16 @@ lrwxrwxrwx	root/root	lib/firmware/i915/bxt_dmc_ver1.bin -> bxt_dmc_ver1_07.bin
 -rw-r--r--	root/root	lib/firmware/i915/dg1_guc_49.0.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/dg1_guc_62.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/dg1_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/dg1_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/dg1_huc_7.7.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/dg1_huc_7.9.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/dg2_dmc_ver2_06.bin
+-rw-r--r--	root/root	lib/firmware/i915/dg2_guc_70.1.2.bin
 -rw-r--r--	root/root	lib/firmware/i915/ehl_guc_33.0.4.bin
 -rw-r--r--	root/root	lib/firmware/i915/ehl_guc_49.0.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/ehl_guc_62.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/ehl_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/ehl_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/ehl_huc_9.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_dmc_ver1_04.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_guc_32.0.3.bin
@@ -1131,6 +1160,7 @@ lrwxrwxrwx	root/root	lib/firmware/i915/bxt_dmc_ver1.bin -> bxt_dmc_ver1_07.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_guc_49.0.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_guc_62.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/glk_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_huc_4.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/glk_huc_ver03_01_2893.bin
 -rw-r--r--	root/root	lib/firmware/i915/icl_dmc_ver1_07.bin
@@ -1140,6 +1170,7 @@ lrwxrwxrwx	root/root	lib/firmware/i915/bxt_dmc_ver1.bin -> bxt_dmc_ver1_07.bin
 -rw-r--r--	root/root	lib/firmware/i915/icl_guc_49.0.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/icl_guc_62.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/icl_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/icl_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/icl_huc_9.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/icl_huc_ver8_4_3238.bin
 lrwxrwxrwx	root/root	lib/firmware/i915/kbl_dmc_ver1.bin -> kbl_dmc_ver1_01.bin
@@ -1150,6 +1181,7 @@ lrwxrwxrwx	root/root	lib/firmware/i915/kbl_dmc_ver1.bin -> kbl_dmc_ver1_01.bin
 -rw-r--r--	root/root	lib/firmware/i915/kbl_guc_49.0.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/kbl_guc_62.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/kbl_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/kbl_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/kbl_guc_ver9_14.bin
 -rw-r--r--	root/root	lib/firmware/i915/kbl_guc_ver9_39.bin
 -rw-r--r--	root/root	lib/firmware/i915/kbl_huc_4.0.0.bin
@@ -1165,6 +1197,7 @@ lrwxrwxrwx	root/root	lib/firmware/i915/skl_dmc_ver1.bin -> skl_dmc_ver1_26.bin
 -rw-r--r--	root/root	lib/firmware/i915/skl_guc_49.0.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/skl_guc_62.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/skl_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/skl_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/skl_guc_ver1.bin
 -rw-r--r--	root/root	lib/firmware/i915/skl_guc_ver4.bin
 lrwxrwxrwx	root/root	lib/firmware/i915/skl_guc_ver6.bin -> skl_guc_ver6_1.bin
@@ -1180,6 +1213,7 @@ lrwxrwxrwx	root/root	lib/firmware/i915/skl_guc_ver6.bin -> skl_guc_ver6_1.bin
 -rw-r--r--	root/root	lib/firmware/i915/tgl_guc_49.0.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/tgl_guc_62.0.0.bin
 -rw-r--r--	root/root	lib/firmware/i915/tgl_guc_69.0.3.bin
+-rw-r--r--	root/root	lib/firmware/i915/tgl_guc_70.1.1.bin
 -rw-r--r--	root/root	lib/firmware/i915/tgl_huc_7.0.12.bin
 -rw-r--r--	root/root	lib/firmware/i915/tgl_huc_7.0.3.bin
 -rw-r--r--	root/root	lib/firmware/i915/tgl_huc_7.5.0.bin
@@ -1293,10 +1327,12 @@ lrwxrwxrwx	root/root	lib/firmware/intel/dsp_fw_release.bin -> dsp_fw_release_v34
 -rw-r--r--	root/root	lib/firmware/intel/ibt-hw-37.8.bseq
 drwxr-xr-x	root/root	lib/firmware/intel/ice/
 drwxr-xr-x	root/root	lib/firmware/intel/ice/ddp-comms/
--rw-r--r--	root/root	lib/firmware/intel/ice/ddp-comms/ice_comms-1.3.20.0.pkg
+-rw-r--r--	root/root	lib/firmware/intel/ice/ddp-comms/ice_comms-1.3.31.0.pkg
+drwxr-xr-x	root/root	lib/firmware/intel/ice/ddp-wireless_edge/
+-rw-r--r--	root/root	lib/firmware/intel/ice/ddp-wireless_edge/ice_wireless_edge-1.3.7.0.pkg
 drwxr-xr-x	root/root	lib/firmware/intel/ice/ddp/
--rw-r--r--	root/root	lib/firmware/intel/ice/ddp/ice-1.3.26.0.pkg
-lrwxrwxrwx	root/root	lib/firmware/intel/ice/ddp/ice.pkg -> ice-1.3.26.0.pkg
+-rw-r--r--	root/root	lib/firmware/intel/ice/ddp/ice-1.3.28.0.pkg
+lrwxrwxrwx	root/root	lib/firmware/intel/ice/ddp/ice.pkg -> ice-1.3.28.0.pkg
 lrwxrwxrwx	root/root	lib/firmware/intel/ipu3-fw.bin -> irci_irci_ecr-master_20161208_0213_20170112_1500.bin
 -rw-r--r--	root/root	lib/firmware/intel/irci_irci_ecr-master_20161208_0213_20170112_1500.bin
 -rw-r--r--	root/root	lib/firmware/intelliport2.bin
@@ -1590,7 +1626,13 @@ drwxr-xr-x	root/root	lib/firmware/mediatek/mt8173/
 -rw-r--r--	root/root	lib/firmware/mediatek/mt8173/vpu_p.bin
 drwxr-xr-x	root/root	lib/firmware/mediatek/mt8183/
 -rw-r--r--	root/root	lib/firmware/mediatek/mt8183/scp.img
+drwxr-xr-x	root/root	lib/firmware/mediatek/mt8192/
+-rw-r--r--	root/root	lib/firmware/mediatek/mt8192/scp.img
+drwxr-xr-x	root/root	lib/firmware/mediatek/mt8195/
+-rw-r--r--	root/root	lib/firmware/mediatek/mt8195/scp.img
 drwxr-xr-x	root/root	lib/firmware/mellanox/
+-rw-r--r--	root/root	lib/firmware/mellanox/lc_ini_bundle_2010_1006.bin
+-rw-r--r--	root/root	lib/firmware/mellanox/lc_ini_bundle_2010_1502.bin
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.1420.122.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.1530.152.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.1620.192.mfa2
@@ -1614,6 +1656,7 @@ drwxr-xr-x	root/root	lib/firmware/mellanox/
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2010.1006.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2010.1232.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2010.1406.mfa2
+-rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum-13.2010.1502.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2000.2308.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2000.2714.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2007.1168.mfa2
@@ -1629,6 +1672,7 @@ drwxr-xr-x	root/root	lib/firmware/mellanox/
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2010.1006.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2010.1232.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2010.1406.mfa2
+-rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum2-29.2010.1502.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum3-30.2007.1168.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum3-30.2008.1036.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum3-30.2008.1310.mfa2
@@ -1642,6 +1686,7 @@ drwxr-xr-x	root/root	lib/firmware/mellanox/
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum3-30.2010.1006.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum3-30.2010.1232.mfa2
 -rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum3-30.2010.1406.mfa2
+-rw-r--r--	root/root	lib/firmware/mellanox/mlxsw_spectrum3-30.2010.1502.mfa2
 drwxr-xr-x	root/root	lib/firmware/meson/
 drwxr-xr-x	root/root	lib/firmware/meson/vdec/
 -rw-r--r--	root/root	lib/firmware/meson/vdec/g12a_h264.bin
@@ -1831,6 +1876,96 @@ lrwxrwxrwx	root/root	lib/firmware/netronome/nic_AMDA0099-0001_1x10_1x25.nffw -> 
 lrwxrwxrwx	root/root	lib/firmware/netronome/nic_AMDA0099-0001_2x10.nffw -> nic/nic_AMDA0099-0001_2x10.nffw
 lrwxrwxrwx	root/root	lib/firmware/netronome/nic_AMDA0099-0001_2x25.nffw -> nic/nic_AMDA0099-0001_2x25.nffw
 drwxr-xr-x	root/root	lib/firmware/nvidia/
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga102/
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga102/acr/
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/acr/ucode_ahesasc.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/acr/ucode_asb.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/acr/ucode_unload.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga102/gr/
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/gr/NET_img.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/gr/fecs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/gr/fecs_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/gr/gpccs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/gr/gpccs_sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga102/nvdec/
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/nvdec/scrubber.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga102/sec2/
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/sec2/desc.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/sec2/hs_bl_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/sec2/image.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga102/sec2/sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga103/
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga103/acr/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga103/acr/ucode_ahesasc.bin -> ../../ga102/acr/ucode_ahesasc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga103/acr/ucode_asb.bin -> ../../ga102/acr/ucode_asb.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga103/acr/ucode_unload.bin -> ../../ga102/acr/ucode_unload.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga103/gr/
+-rw-r--r--	root/root	lib/firmware/nvidia/ga103/gr/NET_img.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga103/gr/fecs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga103/gr/fecs_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga103/gr/gpccs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga103/gr/gpccs_sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga103/nvdec/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga103/nvdec/scrubber.bin -> ../../ga102/nvdec/scrubber.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga103/sec2/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga103/sec2/desc.bin -> ../../ga102/sec2/desc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga103/sec2/hs_bl_sig.bin -> ../../ga102/sec2/hs_bl_sig.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga103/sec2/image.bin -> ../../ga102/sec2/image.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga103/sec2/sig.bin -> ../../ga102/sec2/sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga104/
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga104/acr/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga104/acr/ucode_ahesasc.bin -> ../../ga102/acr/ucode_ahesasc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga104/acr/ucode_asb.bin -> ../../ga102/acr/ucode_asb.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga104/acr/ucode_unload.bin -> ../../ga102/acr/ucode_unload.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga104/gr/
+-rw-r--r--	root/root	lib/firmware/nvidia/ga104/gr/NET_img.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga104/gr/fecs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga104/gr/fecs_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga104/gr/gpccs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga104/gr/gpccs_sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga104/nvdec/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga104/nvdec/scrubber.bin -> ../../ga102/nvdec/scrubber.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga104/sec2/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga104/sec2/desc.bin -> ../../ga102/sec2/desc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga104/sec2/hs_bl_sig.bin -> ../../ga102/sec2/hs_bl_sig.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga104/sec2/image.bin -> ../../ga102/sec2/image.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga104/sec2/sig.bin -> ../../ga102/sec2/sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga106/
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga106/acr/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga106/acr/ucode_ahesasc.bin -> ../../ga102/acr/ucode_ahesasc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga106/acr/ucode_asb.bin -> ../../ga102/acr/ucode_asb.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga106/acr/ucode_unload.bin -> ../../ga102/acr/ucode_unload.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga106/gr/
+-rw-r--r--	root/root	lib/firmware/nvidia/ga106/gr/NET_img.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga106/gr/fecs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga106/gr/fecs_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga106/gr/gpccs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga106/gr/gpccs_sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga106/nvdec/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga106/nvdec/scrubber.bin -> ../../ga102/nvdec/scrubber.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga106/sec2/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga106/sec2/desc.bin -> ../../ga102/sec2/desc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga106/sec2/hs_bl_sig.bin -> ../../ga102/sec2/hs_bl_sig.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga106/sec2/image.bin -> ../../ga102/sec2/image.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga106/sec2/sig.bin -> ../../ga102/sec2/sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga107/
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga107/acr/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga107/acr/ucode_ahesasc.bin -> ../../ga102/acr/ucode_ahesasc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga107/acr/ucode_asb.bin -> ../../ga102/acr/ucode_asb.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga107/acr/ucode_unload.bin -> ../../ga102/acr/ucode_unload.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga107/gr/
+-rw-r--r--	root/root	lib/firmware/nvidia/ga107/gr/NET_img.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga107/gr/fecs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga107/gr/fecs_sig.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga107/gr/gpccs_bl.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/ga107/gr/gpccs_sig.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga107/nvdec/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga107/nvdec/scrubber.bin -> ../../ga102/nvdec/scrubber.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/ga107/sec2/
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga107/sec2/desc.bin -> ../../ga102/sec2/desc.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga107/sec2/hs_bl_sig.bin -> ../../ga102/sec2/hs_bl_sig.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga107/sec2/image.bin -> ../../ga102/sec2/image.bin
+lrwxrwxrwx	root/root	lib/firmware/nvidia/ga107/sec2/sig.bin -> ../../ga102/sec2/sig.bin
 drwxr-xr-x	root/root	lib/firmware/nvidia/gk20a/
 -rw-r--r--	root/root	lib/firmware/nvidia/gk20a/fecs_data.bin
 -rw-r--r--	root/root	lib/firmware/nvidia/gk20a/fecs_inst.bin
@@ -2329,6 +2464,10 @@ drwxr-xr-x	root/root	lib/firmware/qca/
 drwxr-xr-x	root/root	lib/firmware/qcom/
 -rw-r--r--	root/root	lib/firmware/qcom/a300_pfp.fw
 -rw-r--r--	root/root	lib/firmware/qcom/a300_pm4.fw
+-rw-r--r--	root/root	lib/firmware/qcom/a330_pfp.fw
+-rw-r--r--	root/root	lib/firmware/qcom/a330_pm4.fw
+-rw-r--r--	root/root	lib/firmware/qcom/a420_pfp.fw
+-rw-r--r--	root/root	lib/firmware/qcom/a420_pm4.fw
 -rw-r--r--	root/root	lib/firmware/qcom/a530_pfp.fw
 -rw-r--r--	root/root	lib/firmware/qcom/a530_pm4.fw
 -rw-r--r--	root/root	lib/firmware/qcom/a530_zap.b00
@@ -2342,6 +2481,15 @@ drwxr-xr-x	root/root	lib/firmware/qcom/
 -rw-r--r--	root/root	lib/firmware/qcom/a650_sqe.fw
 -rw-r--r--	root/root	lib/firmware/qcom/a660_gmu.bin
 -rw-r--r--	root/root	lib/firmware/qcom/a660_sqe.fw
+drwxr-xr-x	root/root	lib/firmware/qcom/apq8096/
+-rw-r--r--	root/root	lib/firmware/qcom/apq8096/adsp.mbn
+-rw-r--r--	root/root	lib/firmware/qcom/apq8096/adspr.jsn
+-rw-r--r--	root/root	lib/firmware/qcom/apq8096/adspua.jsn
+-rw-r--r--	root/root	lib/firmware/qcom/apq8096/mba.mbn
+-rw-r--r--	root/root	lib/firmware/qcom/apq8096/modem.mbn
+-rw-r--r--	root/root	lib/firmware/qcom/apq8096/modemr.jsn
+-rw-r--r--	root/root	lib/firmware/qcom/leia_pfp_470.fw
+-rw-r--r--	root/root	lib/firmware/qcom/leia_pm4_470.fw
 drwxr-xr-x	root/root	lib/firmware/qcom/sdm845/
 -rw-r--r--	root/root	lib/firmware/qcom/sdm845/a630_zap.mbn
 -rw-r--r--	root/root	lib/firmware/qcom/sdm845/adsp.mbn
@@ -2754,6 +2902,10 @@ lrwxrwxrwx	root/root	lib/firmware/rtl_bt/rtl8821a_config.bin -> rtl8821c_config.
 -rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8822cu_fw.bin
 -rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8852au_config.bin
 -rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8852au_fw.bin
+-rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8852bu_config.bin
+-rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8852bu_fw.bin
+-rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8852cu_config.bin
+-rw-r--r--	root/root	lib/firmware/rtl_bt/rtl8852cu_fw.bin
 drwxr-xr-x	root/root	lib/firmware/rtl_nic/
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8105e-1.fw
 -rw-r--r--	root/root	lib/firmware/rtl_nic/rtl8106e-1.fw
@@ -2832,6 +2984,7 @@ drwxr-xr-x	root/root	lib/firmware/rtw88/
 -rw-r--r--	root/root	lib/firmware/rtw88/rtw8822c_wow_fw.bin
 drwxr-xr-x	root/root	lib/firmware/rtw89/
 -rw-r--r--	root/root	lib/firmware/rtw89/rtw8852a_fw.bin
+-rw-r--r--	root/root	lib/firmware/rtw89/rtw8852c_fw.bin
 lrwxrwxrwx	root/root	lib/firmware/s2250.fw -> go7007/s2250-2.fw
 lrwxrwxrwx	root/root	lib/firmware/s2250_loader.fw -> go7007/s2250-1.fw
 -rw-r--r--	root/root	lib/firmware/s5p-mfc-v6-v2.fw

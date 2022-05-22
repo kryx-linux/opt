@@ -1,10 +1,7 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/ddp0Mk6lnB83rimmC/5PqLKcw6mXeC9/g8ZmGCuBlRkZmleRojgpuHFNKjKktlQEq/P4hfveNQZRXvthM5xjAY=
-SHA256 (Pkgfile) = 12014068c3233e343d24b372b3380d47028ab1ee3fa886be10c1899d7efd7690
+RWSE3ohX2g5d/UN6VRL2QelnAugWjS6rb+oI7RQhwds41Ecnj+nj1jWLid3SjwwVUxBcHjrOU9VwuFcNofDZ5DsFgUI0OUuNUA0=
+SHA256 (Pkgfile) = c30600f47c8526e375fcaedbfea0538cdaa2a2cbf8799a53c4c534fdaf0a21b6
 SHA256 (.footprint) = cd0824869148d109d026a99a0393dd24215cedf6341979627c5b49957a634e5f
-SHA256 (Vulkan-ValidationLayers-1.3.204.0.tar.gz) = 82b59c4622e9d1dbe267c4651bb2514b6b89bee90e512ae7d1d7abc76c833a1d
-SHA256 (SPIRV-Headers-b42ba6d92faf6b4938e6f22ddd186dbdacc98d78.tar.gz) = d58e8e65ea4b4f1e421caaad68f88ce7b713ac3519bd49e7b71b6a5690489eb6
-SHA256 (known_good.py.in) = f5e5330201ab5686a84d9ff65fd372af510d564aa6eb2d3c332d59a6e69ce2e3
+SHA256 (Vulkan-ValidationLayers-sdk-1.3.211.0.tar.gz) = 927c1cb98c81fe8a1a529cf2d977d701dcda49c495a19583dc00e178b6757203
 SHA256 (add-missing-export.patch) = 6ce7222099403dea8425b1dd305b9ebc43e747c32aca2a24cfc7f67ddd34cebf
 SHA256 (fix_shared.patch) = 840af33ab26638c8c29da4a7f284eae6aeb40e01d506eef9851d7e6ee4a8bed0
-SHA256 (vulkan-layers-1.3.204-Fix-dependency-detection.patch) = 9aff42a5d6fc5073fbcb6c0dde45b4eba49083317a4bee0cd6db011c92b4744c
