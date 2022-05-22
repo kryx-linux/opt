@@ -1,0 +1,18 @@
+# Description: An incremental parsing system for programming tools
+# URL: https://github.com/tree-sitter/tree-sitter
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: rust
+
+name=tree-sitter
+version=0.20.6
+release=1
+source=(https://github.com/tree-sitter/tree-sitter/archive/v$version/$name-$version.tar.gz)
+
+build() {
+  cd $name-$version
+  cargo fetch --locked
+  make
+  cargo build --release --locked --offline --all-features --manifest-path cli/Cargo.toml
+  make DESTDIR=$PKG PREFIX=/usr install
+  install -Dm 755 target/release/$name -t $PKG/usr/bin
+}

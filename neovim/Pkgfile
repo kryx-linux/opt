@@ -2,7 +2,7 @@
 # URL: https://neovim.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: cmake unzip
-# Optional: ninja
+# Optional: ninja tree-sitter
 
 name=neovim
 version=0.7.0
