@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=fakeroot
-version=1.28
+version=1.29
 release=1
 source=(https://deb.debian.org/debian/pool/main/f/$name/${name}_${version}.orig.tar.gz)
 
