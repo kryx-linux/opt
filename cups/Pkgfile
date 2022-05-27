@@ -5,7 +5,7 @@
 # Optional: dbus gnutls
 
 name=cups
-version=2.4.1
+version=2.4.2
 release=1
 source=(https://github.com/OpenPrinting/cups/releases/download/v$version/$name-$version-source.tar.gz
 	cups.rc cups.pam)
