@@ -19,7 +19,10 @@ build() {
   meson setup $name-$version build $PKGMK_PULSEAUDIO \
     --prefix=/usr \
     --libexecdir=/usr/lib/$name \
-    -D buildtype=plain \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
     -D udevrulesdir=/etc/udev/rules.d \
     -D database=gdbm \
     -D speex=enabled \
