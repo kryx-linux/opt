@@ -160,9 +160,7 @@ lrwxrwxrwx	root/root	usr/lib/libndr.so.2 -> libndr.so.2.0.0
 lrwxrwxrwx	root/root	usr/lib/libnetapi.so -> libnetapi.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libnetapi.so.1 -> libnetapi.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libnetapi.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libnss_winbind.so -> libnss_winbind.so.2
 -rwxr-xr-x	root/root	usr/lib/libnss_winbind.so.2
-lrwxrwxrwx	root/root	usr/lib/libnss_wins.so -> libnss_wins.so.2
 -rwxr-xr-x	root/root	usr/lib/libnss_wins.so.2
 lrwxrwxrwx	root/root	usr/lib/libsamba-credentials.so -> libsamba-credentials.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libsamba-credentials.so.1 -> libsamba-credentials.so.1.0.0
@@ -280,7 +278,11 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/samba/emulate/
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/forest_update.py
 -rwxr-xr-x	root/root	usr/lib/python3.9/site-packages/samba/gensec.cpython-39-x86_64-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/getopt.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/gp_cert_auto_enroll_ext.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/gp_chromium_ext.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/gp_ext_loader.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/gp_firefox_ext.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/gp_firewalld_ext.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/gp_gnome_settings_ext.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/gp_msgs_ext.py
 drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/samba/gp_parse/
@@ -491,6 +493,7 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/samba/tests/krb5/
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/krb5/kdc_tests.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/krb5/kdc_tgs_tests.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/krb5/ms_kile_client_principal_lookup_tests.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/krb5/pac_align_tests.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/krb5/raw_testcase.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/krb5/rfc4120_constants.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/krb5/rfc4120_pyasn1.py
@@ -570,6 +573,7 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/samba/tests/samba_tool/
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/samba_tool/help.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/samba_tool/join.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/samba_tool/join_lmdb_size.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/samba_tool/join_member.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/samba_tool/ntacl.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/samba_tool/ou.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/samba_tool/passwordsettings.py
@@ -602,6 +606,7 @@ drwxr-xr-x	root/root	usr/lib/python3.9/site-packages/samba/tests/samba_tool/
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/smbd_base.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/smbd_fuzztest.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/source.py
+-rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/source_chars.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/strings.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/subunitrun.py
 -rw-r--r--	root/root	usr/lib/python3.9/site-packages/samba/tests/tdb_util.py
@@ -643,10 +648,12 @@ drwxr-xr-x	root/root	usr/lib/samba/ldb/
 -rwxr-xr-x	root/root	usr/lib/samba/libLIBWBCLIENT-OLD-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libMESSAGING-SEND-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libMESSAGING-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libREG-FULL-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libRPC-SERVER-LOOP-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libRPC-WORKER-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libaddns-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libads-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libasn1-samba4.so.8 -> libasn1-samba4.so.8.0.0
--rwxr-xr-x	root/root	usr/lib/samba/libasn1-samba4.so.8.0.0
+-rwxr-xr-x	root/root	usr/lib/samba/libasn1-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libasn1util-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libauth-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libauth-unix-token-samba4.so
@@ -663,8 +670,7 @@ lrwxrwxrwx	root/root	usr/lib/samba/libasn1-samba4.so.8 -> libasn1-samba4.so.8.0.
 -rwxr-xr-x	root/root	usr/lib/samba/libcluster-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libcmdline-contexts-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libcmdline-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libcom_err-samba4.so.0 -> libcom_err-samba4.so.0.25
--rwxr-xr-x	root/root	usr/lib/samba/libcom_err-samba4.so.0.25
+-rwxr-xr-x	root/root	usr/lib/samba/libcom-err-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libcommon-auth-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libdbwrap-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libdcerpc-pkt-auth-samba4.so
@@ -679,26 +685,19 @@ lrwxrwxrwx	root/root	usr/lib/samba/libcom_err-samba4.so.0 -> libcom_err-samba4.s
 -rwxr-xr-x	root/root	usr/lib/samba/libgpext-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libgpo-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libgse-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libgssapi-samba4.so.2 -> libgssapi-samba4.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/samba/libgssapi-samba4.so.2.0.0
-lrwxrwxrwx	root/root	usr/lib/samba/libhcrypto-samba4.so.5 -> libhcrypto-samba4.so.5.0.1
--rwxr-xr-x	root/root	usr/lib/samba/libhcrypto-samba4.so.5.0.1
-lrwxrwxrwx	root/root	usr/lib/samba/libhdb-samba4.so.11 -> libhdb-samba4.so.11.0.2
--rwxr-xr-x	root/root	usr/lib/samba/libhdb-samba4.so.11.0.2
-lrwxrwxrwx	root/root	usr/lib/samba/libheimbase-samba4.so.1 -> libheimbase-samba4.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/samba/libheimbase-samba4.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/samba/libheimntlm-samba4.so.1 -> libheimntlm-samba4.so.1.0.1
--rwxr-xr-x	root/root	usr/lib/samba/libheimntlm-samba4.so.1.0.1
+-rwxr-xr-x	root/root	usr/lib/samba/libgss-preauth-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libgssapi-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libhcrypto-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libhdb-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libheimbase-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libheimntlm-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libhttp-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libhx509-samba4.so.5 -> libhx509-samba4.so.5.0.0
--rwxr-xr-x	root/root	usr/lib/samba/libhx509-samba4.so.5.0.0
+-rwxr-xr-x	root/root	usr/lib/samba/libhx509-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libidmap-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libinterfaces-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libiov-buf-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libkdc-samba4.so.2 -> libkdc-samba4.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/samba/libkdc-samba4.so.2.0.0
-lrwxrwxrwx	root/root	usr/lib/samba/libkrb5-samba4.so.26 -> libkrb5-samba4.so.26.0.0
--rwxr-xr-x	root/root	usr/lib/samba/libkrb5-samba4.so.26.0.0
+-rwxr-xr-x	root/root	usr/lib/samba/libkdc-samba4.so
+-rwxr-xr-x	root/root	usr/lib/samba/libkrb5-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libkrb5samba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libldbsamba-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/liblibcli-lsa3-samba4.so
@@ -720,8 +719,7 @@ lrwxrwxrwx	root/root	usr/lib/samba/libkrb5-samba4.so.26 -> libkrb5-samba4.so.26.
 -rwxr-xr-x	root/root	usr/lib/samba/libprinting-migrate-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libregistry-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libreplace-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libroken-samba4.so.19 -> libroken-samba4.so.19.0.1
--rwxr-xr-x	root/root	usr/lib/samba/libroken-samba4.so.19.0.1
+-rwxr-xr-x	root/root	usr/lib/samba/libroken-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libsamba-cluster-support-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libsamba-debug-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libsamba-modules-samba4.so
@@ -751,13 +749,20 @@ lrwxrwxrwx	root/root	usr/lib/samba/libroken-samba4.so.19 -> libroken-samba4.so.1
 -rwxr-xr-x	root/root	usr/lib/samba/libutil-reg-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libutil-setid-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libutil-tdb-samba4.so
--rwxr-xr-x	root/root	usr/lib/samba/libwinbind-client-samba4.so
-lrwxrwxrwx	root/root	usr/lib/samba/libwind-samba4.so.0 -> libwind-samba4.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/samba/libwind-samba4.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/samba/libwind-samba4.so
 -rwxr-xr-x	root/root	usr/lib/samba/libxattr-tdb-samba4.so
 drwxr-xr-x	root/root	usr/lib/samba/nss_info/
 -rwxr-xr-x	root/root	usr/lib/samba/nss_info/hash.so
+-rwxr-xr-x	root/root	usr/lib/samba/rpcd_classic
+-rwxr-xr-x	root/root	usr/lib/samba/rpcd_epmapper
+-rwxr-xr-x	root/root	usr/lib/samba/rpcd_fsrvp
+-rwxr-xr-x	root/root	usr/lib/samba/rpcd_lsad
+-rwxr-xr-x	root/root	usr/lib/samba/rpcd_mdssvc
+-rwxr-xr-x	root/root	usr/lib/samba/rpcd_rpcecho
+-rwxr-xr-x	root/root	usr/lib/samba/rpcd_spoolss
+-rwxr-xr-x	root/root	usr/lib/samba/rpcd_winreg
 -rwxr-xr-x	root/root	usr/lib/samba/samba-bgqd
+-rwxr-xr-x	root/root	usr/lib/samba/samba-dcerpcd
 drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/acl_tdb.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/acl_xattr.so
@@ -858,6 +863,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/pam_winbind.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/pdbedit.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/samba-bgqd.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/samba-dcerpcd.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/samba-regedit.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/samba-tool.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/samba.8.gz
@@ -881,6 +887,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/vfs_crossrename.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_default_quota.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_dirsort.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/vfs_expand_msdfs.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_extd_audit.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_fake_perms.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/vfs_fileid.8.gz
