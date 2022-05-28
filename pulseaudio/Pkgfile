@@ -5,7 +5,7 @@
 # Optional: avahi bluez fftw gst-plugins-base sbc xorg-libice xorg-libsm xorg-libxtst
 
 name=pulseaudio
-version=15.0
+version=16.0
 release=1
 source=(https://freedesktop.org/software/pulseaudio/releases/pulseaudio-$version.tar.xz)
 
