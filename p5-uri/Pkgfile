@@ -4,7 +4,7 @@
 
 name=p5-uri
 version=5.10
-release=1
+release=2
 source=(https://www.cpan.org/modules/by-module/URI/URI-$version.tar.gz)
 
 build() {
