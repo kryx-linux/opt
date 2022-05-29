@@ -5,30 +5,26 @@
 # Optional: icu
 
 name=qt5
-version=5.15.2
-release=3
-source=(https://download.qt.io/official_releases/qt/${version::4}/$version/single/qt-everywhere-src-$version.tar.xz
-	https://www.linuxfromscratch.org/patches/blfs/svn/qt-everywhere-src-5.15.2-kf5.15-2.patch
+version=5.15.4
+release=1
+source=(https://download.qt.io/archive/qt/5.15/5.15.4/single/qt-everywhere-opensource-src-5.15.4.tar.xz
+	https://www.linuxfromscratch.org/patches/blfs/svn/qt-everywhere-opensource-src-5.15.4-kf5-1.patch
 	qt5-cflags.patch
 	qt5-logo.png
 	qtbase-everywhere-src-5.11.1-python3.patch
 	qtbase-everywhere-src-5.14.2-no_relocatable.patch
 	qtbase-everywhere-src-5.15.2-libglvnd.patch
-	qtbase-filechooser-portal-send-window-id-in-hex.patch
-	qtbase-use-wayland-on-gnome.patch
-	qt-everywhere-src-5.15.2-CVE-2021-3481-1.patch)
+	qtbase-use-wayland-on-gnome.patch)
 
 build() {
 	cd qt-everywhere-src-$version
 
-	patch -p1 -i $SRC/qt-everywhere-src-5.15.2-kf5.15-2.patch
+	patch -p1 -i $SRC/qt-everywhere-opensource-src-5.15.4-kf5-1.patch
 	patch -d qtbase -p1 -i $SRC/qt5-cflags.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.11.1-python3.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.14.2-no_relocatable.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.15.2-libglvnd.patch
-	patch -d qtbase -p1 -i $SRC/qtbase-filechooser-portal-send-window-id-in-hex.patch
 	patch -d qtbase -p1 -i $SRC/qtbase-use-wayland-on-gnome.patch
-	#patch -p1 -i $SRC/qt-everywhere-src-5.15.2-CVE-2021-3481-1.patch
 
 	export PYTHON='/usr/bin/python3'
 	mkdir $SRC/bin
@@ -41,6 +37,9 @@ build() {
 
 	prt-get isinst ccache && PKGMK_QT5+=' -ccache' && \
 		PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
+	prt-get isinst assimp && PKGMK_QT5+=' -system-assimp'
+	prt-get isinst clang && PKGMK_QT5+=' -platform linux-clang'
+	prt-get isinst clang lld && PKGMK_QT5+=' -linker lld' || PKGMK_QT5+=' -linker gold'
 
 	sed -i '/utility/a #include <limits>'     qtbase/src/corelib/global/qglobal.h
 	sed -i '/string/a #include <limits>'      qtbase/src/corelib/global/qfloat16.h
@@ -59,23 +58,21 @@ build() {
 		-examplesdir /usr/share/doc/qt5/examples \
 		-headerdir /usr/include/qt5 \
 		-libdir /usr/lib \
-		-sysconfdir /usr/etc/xdg \
+		-sysconfdir /etc/xdg \
 		-confirm-license \
-		-dbus-linked \
-		-nomake examples \
-		-no-pch \
-		-no-rpath \
-		-no-separate-debug-info \
-		-no-strip \
-		-opengl desktop \
 		-opensource \
-		-openssl-linked \
-		-reduce-relocations \
 		-release \
-		-shared \
-		-plugin-sql-sqlite \
 		-system-sqlite \
 		-system-harfbuzz \
+		-openssl-linked \
+		-dbus-linked \
+		-nomake examples \
+		-no-mimetype-database \
+		-no-use-gold-linker \
+		-no-rpath \
+		-no-strip \
+		-no-reduce-relocations \
+		-opengl desktop \
 		-skip qtwebengine \
 		-silent
 
