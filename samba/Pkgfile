@@ -2,10 +2,11 @@
 # URL: https://www.samba.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: linux-pam libarchive libcap dbus popt tdb tevent ldb python3 gnutls p5-json p5-parse-yapp rpcsvc-proto
+# Depends on: dbus gnutls ldb libarchive linux-pam gnutls jansson p5-json p5-parse-yapp popt python3 rpcsvc-proto tdb tevent
 
 name=samba
 version=4.16.1
-release=1
+release=2
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
 	samba)
 
@@ -23,8 +24,7 @@ build () {
 		--with-privatedir=/etc/samba/private \
 		--with-pammodulesdir=/lib/security \
 		--bundled-libraries=!tdb,!talloc,!tevent,!popt,!ldb,!cmocka \
-		--without-{ad-dc,ads,ldap} \
-		--without-json
+		--without-{ad-dc,ads,ldap}
 
 	make
 	make DESTDIR=$PKG install
