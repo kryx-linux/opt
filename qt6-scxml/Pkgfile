@@ -4,7 +4,7 @@
 # Depends on: qt6-declarative
 
 name=qt6-scxml
-version=6.2.4
+version=6.3.0
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtscxml-everywhere-src-$version.tar.xz)
 
