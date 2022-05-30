@@ -68,7 +68,6 @@ build() {
 		-dbus-linked \
 		-nomake examples \
 		-no-mimetype-database \
-		-no-use-gold-linker \
 		-no-rpath \
 		-no-strip \
 		-no-reduce-relocations \
