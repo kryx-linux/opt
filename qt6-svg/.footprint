@@ -2,17 +2,18 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/qt6/
 drwxr-xr-x	root/root	usr/include/qt6/QtSvg/
-drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.4/
-drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/
-drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/qsvgfont_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/qsvggraphics_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/qsvghandler_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/qsvgnode_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/qsvgstructure_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/qsvgstyle_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/qsvgtinydocument_p.h
--rw-r--r--	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/qtsvgglobal_p.h
+drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.3.0/
+drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/
+drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/qsvgfont_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/qsvggraphics_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/qsvghandler_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/qsvgnode_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/qsvgstructure_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/qsvgstyle_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/qsvgtinydocument_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/qtsvgexports_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/6.3.0/QtSvg/private/qtsvgglobal_p.h
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/QSvgGenerator
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/QSvgRenderer
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/QtSvg
@@ -20,6 +21,7 @@ drwxr-xr-x	root/root	usr/include/qt6/QtSvg/6.2.4/QtSvg/private/
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/QtSvgVersion
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/qsvggenerator.h
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/qsvgrenderer.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvg/qtsvgexports.h
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/qtsvgglobal.h
 -rw-r--r--	root/root	usr/include/qt6/QtSvg/qtsvgversion.h
 drwxr-xr-x	root/root	usr/include/qt6/QtSvgWidgets/
@@ -30,6 +32,7 @@ drwxr-xr-x	root/root	usr/include/qt6/QtSvgWidgets/
 -rw-r--r--	root/root	usr/include/qt6/QtSvgWidgets/QtSvgWidgetsVersion
 -rw-r--r--	root/root	usr/include/qt6/QtSvgWidgets/qgraphicssvgitem.h
 -rw-r--r--	root/root	usr/include/qt6/QtSvgWidgets/qsvgwidget.h
+-rw-r--r--	root/root	usr/include/qt6/QtSvgWidgets/qtsvgwidgetsexports.h
 -rw-r--r--	root/root	usr/include/qt6/QtSvgWidgets/qtsvgwidgetsglobal.h
 -rw-r--r--	root/root	usr/include/qt6/QtSvgWidgets/qtsvgwidgetsversion.h
 drwxr-xr-x	root/root	usr/lib/
@@ -70,12 +73,12 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6SvgWidgets/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessTargets.cmake
 -rw-r--r--	root/root	usr/lib/libQt6Svg.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6Svg.so -> libQt6Svg.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6Svg.so.6 -> libQt6Svg.so.6.2.4
--rwxr-xr-x	root/root	usr/lib/libQt6Svg.so.6.2.4
+lrwxrwxrwx	root/root	usr/lib/libQt6Svg.so.6 -> libQt6Svg.so.6.3.0
+-rwxr-xr-x	root/root	usr/lib/libQt6Svg.so.6.3.0
 -rw-r--r--	root/root	usr/lib/libQt6SvgWidgets.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6SvgWidgets.so -> libQt6SvgWidgets.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6SvgWidgets.so.6 -> libQt6SvgWidgets.so.6.2.4
--rwxr-xr-x	root/root	usr/lib/libQt6SvgWidgets.so.6.2.4
+lrwxrwxrwx	root/root	usr/lib/libQt6SvgWidgets.so.6 -> libQt6SvgWidgets.so.6.3.0
+-rwxr-xr-x	root/root	usr/lib/libQt6SvgWidgets.so.6.3.0
 drwxr-xr-x	root/root	usr/lib/metatypes/
 -rw-r--r--	root/root	usr/lib/metatypes/qt6svg_release_metatypes.json
 -rw-r--r--	root/root	usr/lib/metatypes/qt6svgwidgets_release_metatypes.json
