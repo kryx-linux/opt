@@ -4,7 +4,7 @@
 # Depends on: freeglut libjpeg-turbo xorg-libxmu
 
 name=jasper
-version=3.0.2
+version=3.0.3
 release=1
 source=(https://github.com/jasper-software/jasper/releases/download/version-$version/jasper-$version.tar.gz)
 
