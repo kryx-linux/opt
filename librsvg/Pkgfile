@@ -2,10 +2,10 @@
 # URL: https://wiki.gnome.org/Projects/LibRsvg
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: brotli gdk-pixbuf pango rust
-# Optional: graphite2 sccache clang lld
+# Optional: clang graphite2 lld sccache
 
 name=librsvg
-version=2.52.8
+version=2.54.3
 release=1
 source=(https://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.xz)
 
@@ -35,5 +35,5 @@ build() {
 	make
 	make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/{doc,gtk-doc}
+	rm -r $PKG/usr/share/doc
 }
