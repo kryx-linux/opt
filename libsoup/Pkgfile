@@ -5,7 +5,7 @@
 # Optional: vala krb5
 
 name=libsoup
-version=2.74.0
+version=2.74.2
 release=1
 source=(https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz)
 
@@ -13,9 +13,9 @@ build() {
 	meson setup build $name-$version \
 		--prefix=/usr \
 		--buildtype=plain \
+		--wrap-mode nodownload \
 		-D b_lto=true \
 		-D b_pie=true
-		#--wrap-mode nodownload \
 		#--auto-features disabled \
 
 	sed -i 's|-R/usr/lib||g' build/build.ninja
