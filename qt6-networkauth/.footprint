@@ -2,16 +2,16 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/qt6/
 drwxr-xr-x	root/root	usr/include/qt6/QtNetworkAuth/
-drwxr-xr-x	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/
-drwxr-xr-x	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/QtNetworkAuth/
-drwxr-xr-x	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/QtNetworkAuth/private/
--rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/QtNetworkAuth/private/qabstractoauth2_p.h
--rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/QtNetworkAuth/private/qabstractoauth_p.h
--rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/QtNetworkAuth/private/qabstractoauthreplyhandler_p.h
--rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/QtNetworkAuth/private/qoauth1_p.h
--rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/QtNetworkAuth/private/qoauth1signature_p.h
--rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/QtNetworkAuth/private/qoauth2authorizationcodeflow_p.h
--rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.2.4/QtNetworkAuth/private/qoauthhttpserverreplyhandler_p.h
+drwxr-xr-x	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/
+drwxr-xr-x	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/QtNetworkAuth/
+drwxr-xr-x	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/QtNetworkAuth/private/
+-rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/QtNetworkAuth/private/qabstractoauth2_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/QtNetworkAuth/private/qabstractoauth_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/QtNetworkAuth/private/qabstractoauthreplyhandler_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/QtNetworkAuth/private/qoauth1_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/QtNetworkAuth/private/qoauth1signature_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/QtNetworkAuth/private/qoauth2authorizationcodeflow_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/6.3.0/QtNetworkAuth/private/qoauthhttpserverreplyhandler_p.h
 -rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/QAbstractOAuth
 -rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/QAbstractOAuth2
 -rw-r--r--	root/root	usr/include/qt6/QtNetworkAuth/QAbstractOAuthReplyHandler
@@ -49,8 +49,8 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6NetworkAuth/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthVersionlessTargets.cmake
 -rw-r--r--	root/root	usr/lib/libQt6NetworkAuth.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6NetworkAuth.so -> libQt6NetworkAuth.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6NetworkAuth.so.6 -> libQt6NetworkAuth.so.6.2.4
--rwxr-xr-x	root/root	usr/lib/libQt6NetworkAuth.so.6.2.4
+lrwxrwxrwx	root/root	usr/lib/libQt6NetworkAuth.so.6 -> libQt6NetworkAuth.so.6.3.0
+-rwxr-xr-x	root/root	usr/lib/libQt6NetworkAuth.so.6.3.0
 drwxr-xr-x	root/root	usr/lib/metatypes/
 -rw-r--r--	root/root	usr/lib/metatypes/qt6networkauth_release_metatypes.json
 drwxr-xr-x	root/root	usr/lib/qt6/
