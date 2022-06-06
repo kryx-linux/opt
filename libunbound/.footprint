@@ -4,9 +4,11 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libunbound.a
 -rw-r--r--	root/root	usr/lib/libunbound.la
-lrwxrwxrwx	root/root	usr/lib/libunbound.so -> libunbound.so.8.1.15
-lrwxrwxrwx	root/root	usr/lib/libunbound.so.8 -> libunbound.so.8.1.15
--rwxr-xr-x	root/root	usr/lib/libunbound.so.8.1.15
+lrwxrwxrwx	root/root	usr/lib/libunbound.so -> libunbound.so.8.1.16
+lrwxrwxrwx	root/root	usr/lib/libunbound.so.8 -> libunbound.so.8.1.16
+-rwxr-xr-x	root/root	usr/lib/libunbound.so.8.1.16
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/libunbound.pc
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man3/

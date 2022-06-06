@@ -82,6 +82,10 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/Intel/sof-ehl-rt5660/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-ehl-rt5660/Hdmi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-ehl-rt5660/HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-ehl-rt5660/sof-ehl-rt5660.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/Intel/sof-essx8336/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-essx8336/Hdmi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-essx8336/HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-essx8336/sof-essx8336.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/Hdmi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi.conf
@@ -170,6 +174,15 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/Tegra/wm8903/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Tegra/wm8903/Acer-A500-HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Tegra/wm8903/Acer-A500.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Arturia/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Arturia/Minifuse-2-HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Arturia/Minifuse-2.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Audient/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Audient/Audient-iD4-HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Audient/Audient-iD4.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/UMC204HD-HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/UMC204HD.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Dell/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Dell/Desktop-Front-Speaker-Headset.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Dell/Desktop-Front.conf
@@ -191,6 +204,11 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Lenovo/
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Realtek/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Realtek/ALC1220-VB-Desktop-HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Realtek/ALC1220-VB-Desktop.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Realtek/ALC4080-HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Realtek/ALC4080.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Steinberg/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Steinberg/UR44-HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Steinberg/UR44.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/USB-Audio.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/codecs/
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/codecs/cx2072x/
@@ -308,8 +326,14 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/codecs/wsa881x/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/codecs/wsa881x/SpeakerDisableSeq.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/codecs/wsa881x/SpeakerEnableSeq.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/common/
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/common/ctl/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/common/ctl/remap.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/common/direct-verb.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/common/direct.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/common/linked-card.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/common/linked.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/common/pcm/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/common/pcm/split.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/DB410c/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/DB410c/DB410c.conf -> ../../Qualcomm/apq8016-sbc/apq8016-sbc.conf
@@ -325,6 +349,8 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/USB-Audio/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/USB-Audio/USB-Audio.conf -> ../../USB-Audio/USB-Audio.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/acp/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/acp/acp.conf -> ../../common/linked-card.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/acp6x/
+lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/acp6x/acp6x.conf -> ../../common/linked-card.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/bdw-rt5677/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/bdw-rt5677/bdw-rt5677.conf -> ../../Intel/bdw-rt5677/bdw-rt5677.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/broadwell-rt286/
@@ -363,12 +389,15 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/sdm845/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/sdm845/DB845c.conf -> ../../Qualcomm/sdm845/sdm845.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/simple-card/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/simple-card/Librem 5 Devkit.conf -> ../../NXP/iMX8/Librem_5_Devkit/Librem 5 Devkit.conf
+lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/simple-card/rockchip,es8316-codec.conf -> ../../Rockchip/es8316/es8316.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/skylake-rt286/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/skylake-rt286/skylake-rt286.conf -> ../../Intel/skylake-rt286/skylake-rt286.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/sm8250/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/sm8250/Qualcomm-RB5-WSA8815-Speakers-DMIC0.conf -> ../../Qualcomm/sm8250/Qualcomm-RB5-WSA8815-Speakers-DMIC0.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/sof-ehl-rt5660/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/sof-ehl-rt5660/sof-ehl-rt5660.conf -> ../../Intel/sof-ehl-rt5660/sof-ehl-rt5660.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/sof-essx8336/
+lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/sof-essx8336/sof-essx8336.conf -> ../../Intel/sof-essx8336/sof-essx8336.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/sof-hda-dsp/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/sof-hda-dsp/sof-hda-dsp.conf -> ../../Intel/sof-hda-dsp/sof-hda-dsp.conf
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/sof-hda-dsp/sof-skl_hda_card.conf -> ../../Intel/sof-hda-dsp/sof-hda-dsp.conf
