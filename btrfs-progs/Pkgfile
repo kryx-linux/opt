@@ -4,14 +4,12 @@
 # Depends on: lzo zstd util-linux
 
 name=btrfs-progs
-version=5.18
+version=5.18.1
 release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz)
 
 build() {
 	cd $name-v$version
-
-	sed '31i#include <linux/kernel.h>' -i kerncompat.h
 
 	./configure \
 		--prefix=/usr \
@@ -22,12 +20,4 @@ build() {
 		--disable-python
 	make
 	make DESTDIR=$PKG install
-
-	#install -d  $PKG/usr/share/man/{man5,man8}
-	#install -m644 Documentation/*.5 $PKG/usr/share/man/man5/
-	install -d  $PKG/usr/share/man/man8
-	install -m644 Documentation/*.8 $PKG/usr/share/man/man8/
-
-	#btrfs-convert disabled
-	#rm $PKG/usr/share/man/man8/btrfs-convert.8
 }
