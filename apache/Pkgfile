@@ -4,7 +4,7 @@
 # Depends on: apr libpcre openssl libxml2
 
 name=apache
-version=2.4.53
+version=2.4.54
 release=1
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
 	crux.layout apache)
