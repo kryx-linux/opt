@@ -13,6 +13,7 @@ build() {
 	cd $name-$version
 
 	sed '/DEFAULT_STATEDIR/s/$(localstatedir)//' -i src/ipc/Makefile.in
+	export CXXFLAGS="$CXXFLAGS -Wno-error"
 
 	./configure \
 		--prefix=/usr \
