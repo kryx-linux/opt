@@ -1,11 +1,11 @@
 # Description: Fast, secure, production-quality and standard-conformant FTP server
-# URL: https://www.pureftpd.org/project/pure-ftpd 
+# URL: https://www.pureftpd.org/project/pure-ftpd
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: openssl
 
 name=pure-ftpd
-version=1.0.50
-release=2
+version=1.0.51
+release=1
 source=(https://download.pureftpd.org/$name/releases/$name-$version.tar.bz2 \
 	pure-ftpd.rc pure-ftpd.pam)
 
