@@ -4,7 +4,7 @@
 # Depends on: zlib bzip2 xz openssl libcap linux-pam
 
 name=dovecot
-version=2.3.19
+version=2.3.19.1
 release=1
 source=(https://dovecot.org/releases/2.3/$name-$version.tar.gz
 	dovecot.rc dovecot.pam)
@@ -32,7 +32,7 @@ build() {
 	# PAM
 	install -D -m 644 $SRC/dovecot.pam $PKG/etc/pam.d/dovecot
 
-	# SSL 
+	# SSL
 	install -d $PKG/etc/ssl/{certs,private}
 	touch $PKG/etc/ssl/certs/dovecot.pem
 	touch $PKG/etc/ssl/private/dovecot.pem
