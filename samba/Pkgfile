@@ -4,7 +4,7 @@
 # Depends on: linux-pam libarchive libcap dbus popt tdb tevent ldb python3 gnutls p5-json p5-parse-yapp rpcsvc-proto
 
 name=samba
-version=4.16.1
+version=4.16.2
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
 	samba)
@@ -29,7 +29,7 @@ build () {
 
 	# man pages
 	local p
-	for p in docs/manpages/*; do 
+	for p in docs/manpages/*; do
 		install -D -m 644 $p $PKG/usr/share/man/man${p##*.}/${p##*/}
 	done
 
