@@ -4,12 +4,13 @@
 # Depends on: c-ares hicolor-icon-theme libgcrypt libpcap qt5
 
 name=wireshark
-version=3.6.5
+version=3.6.6
 release=1
 source=(https://www.wireshark.org/download/src/$name-$version.tar.xz)
 
 build() {
-  prt-get isinst ccache && PKGMK_WIRESHARK+=' -D ENABLE_CCACHE=ON'
+  prt-get isinst ccache && PKGMK_WIRESHARK+=' -D ENABLE_CCACHE=ON' && \
+    PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
   # lto only works well with lld due to a ld bug
   prt-get isinst clang lld && \
