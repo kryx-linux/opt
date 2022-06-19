@@ -3,6 +3,7 @@ drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/my.cnf.d/
 -rw-r--r--	root/root	etc/my.cnf.d/client.cnf
 -rw-r--r--	root/root	etc/my.cnf.d/enable_encryption.preset
+-rw-r--r--	root/root	etc/my.cnf.d/hashicorp_key_management.cnf
 -rw-r--r--	root/root	etc/my.cnf.d/mysql-clients.cnf
 -rw-r--r--	root/root	etc/my.cnf.d/provider_bzip2.cnf
 -rw-r--r--	root/root	etc/my.cnf.d/provider_lzma.cnf
@@ -308,6 +309,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/key.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/keycaches.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/lex_charset.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex_string.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex_symbol.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lf.h
@@ -556,6 +558,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_server_service.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_server_state.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_sst.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_status.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_storage_service.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_thd.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_trans_observer.h
@@ -618,6 +621,7 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_spider.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_test_sql_discovery.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/handlersocket.so
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/hashicorp_key_management.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/libdaemon_example.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/locales.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/metadata_lock_info.so
