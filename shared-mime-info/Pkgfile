@@ -4,29 +4,29 @@
 # Depends on: glib libxml2 itstool
 
 name=shared-mime-info
-version=2.1
-release=2
-_xdgmimever=cecafc8cd5cd725444b914d5f6cd17308633afa8
+version=2.2
+release=1
+
+# https://gitlab.freedesktop.org/xdg/shared-mime-info/-/blob/master/xdgmime
+_xdgmimever=fe2f298fa691b225bdea31d816cf6728df91ba6d
+
 source=(https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/$name-$version.tar.bz2
-	https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2
-	remove-weird-docs.patch meson.patch)
+	https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2)
 
 build() {
 	# Build mime database
-	sed -e "s|^CFLAGS=-Wall -Wmissing-prototypes  -Wno-sign-compare -g |CFLAGS=$CFLAGS |" \
-		-i xdgmime-$_xdgmimever/src/Makefile
-	make -C xdgmime-$_xdgmimever
-
-	patch -Np1 -d $name-$version -i $SRC/meson.patch
-	# We don't want to include fancy docs
-	# Deletes references to xmllint and xmlto
-	patch -Np1 -d $name-$version -i $SRC/remove-weird-docs.patch
+	meson setup xdgmime-$_xdgmimever xdgmime-build \
+		--prefix=/usr \
+		--buildtype=plain \
+		--wrap-mode nodownload \
+		-D b_pie=true
+	meson compile -C xdgmime-build
 
 	meson $name-$version build \
 		--prefix=/usr \
 		--buildtype=plain \
 		-D update-mimedb=false \
-		-D xdgmime-path=$SRC/xdgmime-$_xdgmimever
+		-D xdgmime-path=$SRC/xdgmime-build
 	meson compile -C build
 	DESTDIR=$PKG meson install -C build
 

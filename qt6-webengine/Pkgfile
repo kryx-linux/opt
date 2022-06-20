@@ -5,7 +5,7 @@
 # Optional: dav1d fdk-aac gnutls graphite2 keyutils krb5 lame lcms2 libpcre2 libvdpau numactl pipewire x264 x265
 
 name=qt6-webengine
-version=6.3.0
+version=6.3.1
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz
   qt6-webengine-system-icu.patch)
@@ -21,7 +21,7 @@ build() {
 	prt-get isinst sccache && echo "${PATH}" | grep --invert-match '/usr/lib/ccache' && \
 		PKGMK_QT6+=' -D CMAKE_C_COMPILER_LAUNCHER=sccache -D CMAKE_CXX_COMPILER_LAUNCHER=sccache'
 
-	patch -Np1 -d qtwebengine-everywhere-src-$version/src/3rdparty -i $SRC/qt6-webengine-system-icu.patch
+	#patch -Np1 -d qtwebengine-everywhere-src-$version/src/3rdparty -i $SRC/qt6-webengine-system-icu.patch
 
 	PYTHON=/usr/bin/python3 \
 	cmake -S qtwebengine-everywhere-src-$version -B build $PKGMK_QT6 \
