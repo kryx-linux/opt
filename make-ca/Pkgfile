@@ -1,11 +1,11 @@
 # Description: A utility to deliver and manage a complete PKI configuration.
-# URL: https://github.com/djlucas/make-ca/
+# URL: https://github.com/lfs-book/make-ca
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=make-ca
-version=1.7
+version=1.10
 release=1
-source=(https://github.com/djlucas/make-ca/releases/download/v$version/$name-$version.tar.xz)
+source=(https://github.com/lfs-book/make-ca/archive/v$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
