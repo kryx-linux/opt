@@ -91,6 +91,9 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/Intel/sof-hda-dsp/sof-hda-dsp.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/MediaTek/
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/MediaTek/mt8195_demo/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/MediaTek/mt8195_demo/HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/MediaTek/mt8195_demo/mt8195_demo.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/MediaTek/mtk-rt5650/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/MediaTek/mtk-rt5650/HDMI.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/MediaTek/mtk-rt5650/HiFi.conf
@@ -181,6 +184,10 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Audient/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Audient/Audient-iD4-HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Audient/Audient-iD4.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/Flow8-Recording-Hifi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/Flow8-Recording.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/Flow8-Streaming-Hifi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/Flow8-Streaming.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/UMC204HD-HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Behringer/UMC204HD.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Dell/
@@ -201,6 +208,9 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Lenovo/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Lenovo/ThinkStation-P620-Main.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Lenovo/ThinkStation-P620-Rear-HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Lenovo/ThinkStation-P620-Rear.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/MOTU/
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/MOTU/M4-HiFi.conf
+-rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/MOTU/M4.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/USB-Audio/Realtek/
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Realtek/ALC1220-VB-Desktop-HiFi.conf
 -rw-r--r--	root/root	usr/share/alsa/ucm2/USB-Audio/Realtek/ALC1220-VB-Desktop.conf
@@ -347,6 +357,8 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/SOF/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/SOF/SOF.conf -> ../../Intel/SOF/SOF.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/USB-Audio/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/USB-Audio/USB-Audio.conf -> ../../USB-Audio/USB-Audio.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/VEYRON-I2S/
+lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/VEYRON-I2S/VEYRON-I2S.conf -> ../../Rockchip/max98090/max98090.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/acp/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/acp/acp.conf -> ../../common/linked-card.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/acp6x/
@@ -381,8 +393,12 @@ drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/hda-dsp/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/hda-dsp/hda-dsp.conf -> ../../Intel/hda-dsp/hda-dsp.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/kblrt5660/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/kblrt5660/kblrt5660.conf -> ../../Intel/kblrt5660/kblrt5660.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/mt8195_demo/
+lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/mt8195_demo/mt8195_demo.conf -> ../../MediaTek/mt8195_demo/mt8195_demo.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/mtk-rt5650/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/mtk-rt5650/mtk-rt5650.conf -> ../../MediaTek/mtk-rt5650/mtk-rt5650.conf
+drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/rk3399-gru-soun/
+lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/rk3399-gru-soun/rk3399-gru-soun.conf -> ../../Rockchip/rk3399-gru-sound/rk3399-gru-sound.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/rockchip_es8316/
 lrwxrwxrwx	root/root	usr/share/alsa/ucm2/conf.d/rockchip_es8316/rockchip_es8316.conf -> ../../Rockchip/es8316/es8316.conf
 drwxr-xr-x	root/root	usr/share/alsa/ucm2/conf.d/sdm845/
