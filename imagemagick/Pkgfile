@@ -4,9 +4,9 @@
 # Depends on: libtool lcms2 pango xorg-libxt chrpath
 
 name=imagemagick
-version=7.1.0-37
+version=7.1.0-39
 release=1
-source=(https://www.imagemagick.org/download/releases/ImageMagick-$version.tar.xz)
+source=(https://imagemagick.org/archive/releases/ImageMagick-$version.tar.xz)
 
 build () {
 	cd ImageMagick-$version
@@ -26,7 +26,7 @@ build () {
 
 	# cleanup
 	rm -r $PKG/usr/share/doc
-	find $PKG -regex '.*\(ChangeLog\|LICENSE\|NEWS\.txt\)$' -delete 
+	find $PKG -regex '.*\(ChangeLog\|LICENSE\|NEWS\.txt\)$' -delete
 	find $PKG -regex '.*\(\.packlist\|perllocal.pod\|\.bs\)$' -delete
 	find $PKG -type d -empty -delete
 }
