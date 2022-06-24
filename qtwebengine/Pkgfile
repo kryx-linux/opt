@@ -5,7 +5,7 @@
 
 name=qtwebengine
 version=5.15.9
-release=1
+release=2
 source=(https://anduin.linuxfromscratch.org/BLFS/qtwebengine/$name-$version.tar.xz
 	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-$version-build_fixes-1.patch
 	qtwebengine-5.15.2-disable-fatal-warnings.patch
@@ -56,7 +56,8 @@ build() {
 
 	prt-get isinst pulseaudio && PKGMK_QTWEBENGINE+=' -pulseaudio' || PKGMK_QTWEBENGINE+=' -no-pulseaudio'
 	prt-get isinst pipewire && PKGMK_QTWEBENGINE+=' -webengine-webrtc-pipewire'
-	prt-get isinst icu && PKGMK_QTWEBENGINE+=' -webengine-icu' || PKGMK_QTWEBENGINE+=' -no-webengine-icu'
+	#prt-get isinst icu && PKGMK_QTWEBENGINE+=' -webengine-icu' || PKGMK_QTWEBENGINE+=' -no-webengine-icu'
+	PKGMK_QTWEBENGINE+=' -no-webengine-icu'
 
 	qmake-qt5 .. -- \
 		$PKGMK_QTWEBENGINE \
