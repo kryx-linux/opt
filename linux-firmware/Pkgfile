@@ -3,7 +3,7 @@
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 
 name=linux-firmware
-version=20220509
+version=20220610
 release=1
 source=(https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/$name-$version.tar.gz)
 

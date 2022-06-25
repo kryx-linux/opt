@@ -3,9 +3,9 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=dracut
-version=056
+version=057
 release=1
-source=(https://mirrors.edge.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.xz)
+source=(https://github.com/dracutdevs/$name/archive/$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version

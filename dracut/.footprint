@@ -123,6 +123,14 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/30convertfs/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/30convertfs/convertfs.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/30convertfs/do-convertfs.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/30convertfs/module-setup.sh
+drwxrwxr-x	root/root	usr/lib/dracut/modules.d/35connman/
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/35connman/cm-config.sh
+-rw-rw-r--	root/root	usr/lib/dracut/modules.d/35connman/cm-initrd.service
+-rw-rw-r--	root/root	usr/lib/dracut/modules.d/35connman/cm-lib.sh
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/35connman/cm-run.sh
+-rw-rw-r--	root/root	usr/lib/dracut/modules.d/35connman/cm-wait-online-initrd.service
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/35connman/module-setup.sh
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/35connman/netroot.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/35network-legacy/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/35network-legacy/dhclient-script.sh
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/35network-legacy/dhclient.conf
@@ -164,11 +172,6 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/45url-lib/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/45url-lib/url-lib.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/50drm/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/50drm/module-setup.sh
-drwxrwxr-x	root/root	usr/lib/dracut/modules.d/50gensplash/
--rwxrwxr-x	root/root	usr/lib/dracut/modules.d/50gensplash/gensplash-emergency.sh
--rwxrwxr-x	root/root	usr/lib/dracut/modules.d/50gensplash/gensplash-newroot.sh
--rwxrwxr-x	root/root	usr/lib/dracut/modules.d/50gensplash/gensplash-pretrigger.sh
--rwxrwxr-x	root/root	usr/lib/dracut/modules.d/50gensplash/module-setup.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/50plymouth/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/50plymouth/module-setup.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/50plymouth/plymouth-emergency.sh
@@ -185,6 +188,10 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/80cms/
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/80lvmmerge/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/80lvmmerge/lvmmerge.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/80lvmmerge/module-setup.sh
+drwxrwxr-x	root/root	usr/lib/dracut/modules.d/80lvmthinpool-monitor/
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/80lvmthinpool-monitor/module-setup.sh
+-rw-rw-r--	root/root	usr/lib/dracut/modules.d/80lvmthinpool-monitor/start-thinpool-monitor.service
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/80lvmthinpool-monitor/start-thinpool-monitor.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/81cio_ignore/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/81cio_ignore/module-setup.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/81cio_ignore/parse-cio_accept.sh
@@ -354,7 +361,7 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/95nfs/
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/95nvmf/
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/95nvmf/95-nvmf-initqueue.rules
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95nvmf/module-setup.sh
--rw-rw-r--	root/root	usr/lib/dracut/modules.d/95nvmf/nvmf-autoconnect.sh
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95nvmf/nvmf-autoconnect.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95nvmf/parse-nvmf-boot-connections.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/95qeth_rules/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95qeth_rules/module-setup.sh
@@ -381,6 +388,10 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/95virtfs/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95virtfs/module-setup.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95virtfs/mount-virtfs.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95virtfs/parse-virtfs.sh
+drwxrwxr-x	root/root	usr/lib/dracut/modules.d/95virtiofs/
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95virtiofs/module-setup.sh
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95virtiofs/mount-virtiofs.sh
+-rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95virtiofs/parse-virtiofs.sh
 drwxrwxr-x	root/root	usr/lib/dracut/modules.d/95zfcp/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95zfcp/module-setup.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/95zfcp/parse-zfcp.sh
@@ -434,7 +445,7 @@ drwxrwxr-x	root/root	usr/lib/dracut/modules.d/98dracut-systemd/
 -rwxrwxr-x	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-pre-udev.sh
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown-onfailure.service
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown.service
--rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown.service.8
+-rw-r--r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown.service.8
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown.service.8.asc
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/dracut-tmpfiles.conf
 -rw-rw-r--	root/root	usr/lib/dracut/modules.d/98dracut-systemd/emergency.service
