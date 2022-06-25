@@ -8,10 +8,10 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/vte-2.91/
 drwxr-xr-x	root/root	usr/include/vte-2.91/vte/
+-rw-r--r--	root/root	usr/include/vte-2.91/vte/vte.h
 -rw-r--r--	root/root	usr/include/vte-2.91/vte/vtedeprecated.h
 -rw-r--r--	root/root	usr/include/vte-2.91/vte/vteenums.h
 -rw-r--r--	root/root	usr/include/vte-2.91/vte/vteglobals.h
--rw-r--r--	root/root	usr/include/vte-2.91/vte/vte.h
 -rw-r--r--	root/root	usr/include/vte-2.91/vte/vtemacros.h
 -rw-r--r--	root/root	usr/include/vte-2.91/vte/vtepty.h
 -rw-r--r--	root/root	usr/include/vte-2.91/vte/vteregex.h
@@ -22,9 +22,9 @@ drwxr-xr-x	root/root	usr/include/vte-2.91/vte/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Vte-2.91.typelib
--rwxr-xr-x	root/root	usr/lib/libvte-2.91.so.0.6600.2
-lrwxrwxrwx	root/root	usr/lib/libvte-2.91.so.0 -> libvte-2.91.so.0.6600.2
 lrwxrwxrwx	root/root	usr/lib/libvte-2.91.so -> libvte-2.91.so.0
+lrwxrwxrwx	root/root	usr/lib/libvte-2.91.so.0 -> libvte-2.91.so.0.6800.0
+-rwxr-xr-x	root/root	usr/lib/libvte-2.91.so.0.6800.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/vte-2.91.pc
 -rwxr-xr-x	root/root	usr/lib/vte-urlencode-cwd
