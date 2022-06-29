@@ -1,21 +1,20 @@
 # Description: Provides support for web applications using the Chromium browser project.
 # URL: https://www.qt.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: ffmpeg libvpx libwebp nodejs nss opus python qt5 xorg-libxscrnsaver xorg-libxtst
+# Depends on: ffmpeg libvpx libwebp nodejs nss qt5 xorg-libxscrnsaver xorg-libxtst
+# Optional: jsoncpp krb5 libevent libsrtp pipewire pulseaudio snappy
 
 name=qtwebengine
-version=5.15.9
-release=2
+version=5.15.10
+release=1
 source=(https://anduin.linuxfromscratch.org/BLFS/qtwebengine/$name-$version.tar.xz
 	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-$version-build_fixes-1.patch
 	qtwebengine-5.15.2-disable-fatal-warnings.patch
-	qtwebengine-5.15.2-extra_gn.patch
 	qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
 	qtwebengine-5.15.2_p20210521-clang-libc++.patch
 	qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch
 	qtwebengine-5.15.3_p20220406-ffmpeg5.patch
-	qt5-webengine-pipewire-0.3.patch
-	gcc12.patch)
+	qt5-webengine-pipewire-0.3.patch)
 
 build() {
 	cd qtwebengine-$version
@@ -23,13 +22,11 @@ build() {
 	# https://www.linuxfromscratch.org/blfs/view/svn/x/qtwebengine.html
 	patch -p1 -i $SRC/qtwebengine-$version-build_fixes-1.patch
 	patch -p1 -i $SRC/qtwebengine-5.15.2-disable-fatal-warnings.patch
-	patch -p1 -i $SRC/qtwebengine-5.15.2-extra_gn.patch
 	patch -p1 -i $SRC/qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
 	patch -p1 -i $SRC/qtwebengine-5.15.2_p20210521-clang-libc++.patch
 	patch -p1 -i $SRC/qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch
 	patch -p1 -i $SRC/qtwebengine-5.15.3_p20220406-ffmpeg5.patch
 	patch -p1 -d src/3rdparty -i $SRC/qt5-webengine-pipewire-0.3.patch
-	patch -p0 -d src/3rdparty/chromium/third_party/skia/src/utils/ -i $SRC/gcc12.patch
 
 	mkdir -pv .git src/3rdparty/chromium/.git
 	sed -e '/^MODULE_VERSION/s/5.*/5.15.2/' -i .qmake.conf
@@ -42,13 +39,14 @@ build() {
 	# Ninja, by default, sets the number of jobs to the number of availalble threads
 	test -n "$JOBS" && export NINJAFLAGS+=" -j ${JOBS-1}"
 
+	prt-get isinst clang && CC=clang CXX=clang++
 	prt-get isinst ccache && export \
-		QMAKE_CC='ccache gcc' \
-		QMAKE_LINK_C='ccache gcc' \
-		QMAKE_LINK_C_SHLIB='ccache gcc' \
-		QMAKE_CXX='ccache g++' \
-		QMAKE_LINK='ccache g++' \
-		QMAKE_LINK_SHLIB='ccache g++' \
+		QMAKE_CC="ccache ${CC:-gcc}" \
+		QMAKE_LINK_C="ccache ${CC:-gcc}" \
+		QMAKE_LINK_C_SHLIB="ccache ${CC:-gcc}" \
+		QMAKE_CXX="ccache ${CXX:-g++}" \
+		QMAKE_LINK="ccache ${CXX:-g++}" \
+		QMAKE_LINK_SHLIB="ccache ${CXX:-g++}" \
 		PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
 	install -d build
@@ -56,8 +54,7 @@ build() {
 
 	prt-get isinst pulseaudio && PKGMK_QTWEBENGINE+=' -pulseaudio' || PKGMK_QTWEBENGINE+=' -no-pulseaudio'
 	prt-get isinst pipewire && PKGMK_QTWEBENGINE+=' -webengine-webrtc-pipewire'
-	#prt-get isinst icu && PKGMK_QTWEBENGINE+=' -webengine-icu' || PKGMK_QTWEBENGINE+=' -no-webengine-icu'
-	PKGMK_QTWEBENGINE+=' -no-webengine-icu'
+	prt-get isinst icu && PKGMK_QTWEBENGINE+=' -webengine-icu' || PKGMK_QTWEBENGINE+=' -no-webengine-icu'
 
 	qmake-qt5 .. -- \
 		$PKGMK_QTWEBENGINE \

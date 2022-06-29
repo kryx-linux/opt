@@ -5,7 +5,7 @@
 # Optional: ninja tree-sitter
 
 name=neovim
-version=0.7.0
+version=0.7.2
 release=1
 source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz)
 
