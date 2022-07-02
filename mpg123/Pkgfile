@@ -1,10 +1,10 @@
-# Description: Commandline MP3 player 
+# Description: Commandline MP3 player
 # URL: https://www.mpg123.de
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: alsa-lib
 
 name=mpg123
-version=1.29.3
+version=1.30.0
 release=1
 source=(https://www.mpg123.de/download/$name-$version.tar.bz2)
 
