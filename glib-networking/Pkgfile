@@ -4,7 +4,7 @@
 # Depends on: cmake gnutls gsettings-desktop-schemas
 
 name=glib-networking
-version=2.72.0
+version=2.72.1
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
@@ -13,8 +13,7 @@ build() {
 		--prefix /usr \
 		--wrap-mode nodownload \
 		-D b_lto=true \
-		-D b_pie=true \
-		-Dlibproxy=disabled
+		-D b_pie=true
 
 	ninja -C build -j ${JOBS:-1}
 	DESTDIR=$PKG meson install -C build

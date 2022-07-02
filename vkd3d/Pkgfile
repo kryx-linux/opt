@@ -4,7 +4,7 @@
 # Depends on: spirv-headers spirv-tools vulkan-loader xorg-xcb-util-keysyms
 
 name=vkd3d
-version=1.2
+version=1.4
 release=1
 source=(https://dl.winehq.org/vkd3d/source/$name-$version.tar.xz)
 
