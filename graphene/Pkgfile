@@ -5,12 +5,13 @@
 
 name=graphene
 version=1.10.8
-release=1
+release=2
 source=(https://github.com/ebassi/graphene/archive/$version/$name-$version.tar.gz)
 
 build() {
 	meson setup build $name-$version \
 		--prefix=/usr \
+		--libexecdir=/usr/lib/$name \
 		--wrap-mode nodownload \
 		-D b_lto=true \
 		-D b_pie=true \
