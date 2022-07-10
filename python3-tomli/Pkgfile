@@ -1,0 +1,25 @@
+# Description: A lil' TOML parser
+# URL: https://github.com/hukkin/tomli
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: python3-pip
+# Optional: python3-flit
+
+name=python3-tomli
+version=2.0.1
+release=1
+source=(https://pypi.python.org/packages/source/t/tomli/tomli-$version.tar.gz)
+
+build() {
+  cd tomli-$version
+
+  _pyver=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+
+  if prt-get isinst python3-flit-core; then
+    /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+    /usr/bin/python3 -m installer --compile-bytecode 0 --destdir=$PKG dist/*.whl
+  else
+    /usr/bin/pip3 install --isolate --root=$PKG --ignore-installed --no-deps tomli
+  fi
+
+  rm -rf $PKG/usr/lib/python$_pyver/site-packages/tomli-$version.dist-info/{INSTALLER,REQUESTED}
+}
