@@ -1,0 +1,24 @@
+# Description: Wrappers to build Python packages using PEP 517 hooks
+# URL: https://github.com/pypa/pep517
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: python3-tomli
+
+name=python3-pep517
+version=0.12.0
+release=1
+source=(https://pypi.python.org/packages/source/p/pep517/pep517-$version.tar.gz)
+
+build() {
+  cd pep517-$version
+
+  _pyver=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+
+  if prt-get isinst python3-flit-core; then
+    /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+    /usr/bin/python3 -m installer --compile-bytecode 0 --destdir=$PKG dist/*.whl
+  else
+    /usr/bin/pip3 install --isolate --root=$PKG --ignore-installed --no-deps pep517
+  fi
+
+  rm -rf $PKG/usr/lib/python$_pyver/site-packages/pep517-$version.dist-info/{INSTALLER,REQUESTED}
+}
