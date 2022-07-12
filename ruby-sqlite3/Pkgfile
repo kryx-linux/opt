@@ -4,7 +4,7 @@
 # Depends on:  ruby sqlite3
 
 name=ruby-sqlite3
-version=1.4.2
+version=1.4.4
 release=4
 source=(https://rubygems.org/downloads/sqlite3-$version.gem)
 
@@ -18,8 +18,8 @@ build () {
 
 	cd $PKG/$(gem env gemdir)
 	rm -r cache doc build_info
-	cd gems/sqlite3-1.4.2
-	rm .gemtest .travis.yml API_CHANGES.rdoc CHANGELOG.rdoc
+	cd gems/sqlite3-$version
+	rm .gemtest API_CHANGES.rdoc CHANGELOG.rdoc
 	rm ChangeLog.cvs Gemfile LICENSE Manifest.txt README.rdoc
 	rm Rakefile appveyor.yml
 }
