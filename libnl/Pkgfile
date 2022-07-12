@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=libnl
-version=3.6.0
+version=3.7.0
 release=1
 source=(https://github.com/thom311/libnl/releases/download/libnl${version//./_}/$name-$version.tar.gz)
 
