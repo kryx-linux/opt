@@ -4,7 +4,7 @@
 # Depends on: libpcre2 libxml2
 
 name=php-fpm
-version=8.1.7
+version=8.1.8
 release=1
 source=(https://php.net/distributions/php-$version.tar.xz
 	php-fpm)

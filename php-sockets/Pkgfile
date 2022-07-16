@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=php-sockets
-version=8.1.7
+version=8.1.8
 release=1
 source=(https://www.php.net/distributions/php-$version.tar.xz)
 

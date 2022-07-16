@@ -5,13 +5,16 @@
 name=dracut
 version=057
 release=1
-source=(https://github.com/dracutdevs/$name/archive/$version/$name-$version.tar.gz)
+source=(https://github.com/dracutdevs/$name/archive/$version/$name-$version.tar.gz \
+	https://crux.nu/files/$name-man-pages-$version.tar.xz)
 
 build() {
 	cd $name-$version
 	./configure --prefix=/usr \
-		--sysconfdir=/etc
+		--sysconfdir=/etc \
+		--disable-documentation
 	make
 	make DESTDIR=$PKG install
 	rm $PKG/usr/lib/$name/modules.d/*/README*
+	cp -r $SRC/usr $PKG/
 }

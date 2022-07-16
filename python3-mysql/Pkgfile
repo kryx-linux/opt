@@ -4,9 +4,9 @@
 # Depends on:  python3-setuptools mysql
 
 name=python3-mysql
-version=2.0.3
+version=2.1.1
 release=1
-source=(https://files.pythonhosted.org/packages/3c/df/59cd2fa5e48d0804d213bdcb1acb4d08c403b61c7ff7ed4dd4a6a2deb3f7/mysqlclient-$version.tar.gz)
+source=(https://files.pythonhosted.org/packages/50/5f/eac919b88b9df39bbe4a855f136d58f80d191cfea34a3dcf96bf5d8ace0a/mysqlclient-$version.tar.gz)
 
 build() {
 	cd mysqlclient-$version
