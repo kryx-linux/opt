@@ -4,7 +4,7 @@
 # Depends on: libgd pango
 
 name=gnuplot
-version=5.4.3
+version=5.4.4
 release=1
 source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
