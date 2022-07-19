@@ -10,20 +10,20 @@ source=(https://freedesktop.org/software/polkit/releases/$name-$version.tar.gz
 	polkit-1)
 
 build() {
-	prt-get isinst mozjs91 && PKGMK_POLKIT+=' -D js_engine=mozjs'
+  prt-get isinst mozjs91 && PKGMK_POLKIT+=' -D js_engine=mozjs'
 
-	meson setup $name-v.$version build $PKGMK_POLKIT \
-		--prefix=/usr \
-		--buildtype=plain \
-		--wrap-mode nodownload \
-		-D b_lto=true \
-		-D b_pie=true
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
+  meson setup $name-v.$version build $PKGMK_POLKIT \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
 
-	chmod 4775 $PKG/usr/bin/pkexec
-	chmod 4755 $PKG/usr/lib/polkit-1/polkit-agent-helper-1
-	install -m 0644 $SRC/polkit-1 $PKG/etc/pam.d
+  chmod 4775 $PKG/usr/bin/pkexec
+  chmod 4755 $PKG/usr/lib/polkit-1/polkit-agent-helper-1
+  install -m 0644 $SRC/polkit-1 $PKG/etc/pam.d
 
-	rm -r $PKG/usr/share/locale
+  rm -r $PKG/usr/share/locale
 }
