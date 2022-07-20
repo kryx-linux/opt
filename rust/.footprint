@@ -1182,6 +1182,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/sgx/abi/userca
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/sgx/abi/usercalls/alloc.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/sgx/abi/usercalls/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/sgx/abi/usercalls/raw.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/sgx/abi/usercalls/tests.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/sgx/alloc.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/sgx/args.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/sgx/condvar.rs
@@ -1340,6 +1341,8 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/windows/c/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/windows/env.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/windows/fs.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/windows/handle.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/windows/handle/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/windows/handle/tests.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/windows/io.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/windows/locks/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/windows/locks/condvar.rs

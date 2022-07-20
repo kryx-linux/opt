@@ -7,12 +7,10 @@ name=polkit
 version=121
 release=1
 source=(https://freedesktop.org/software/polkit/releases/$name-$version.tar.gz
-  polkit-1
-  CVE-2021-4034.patch
-  99.patch)
+	polkit-1)
 
 build() {
-  prt-get isinst mozjs78 && PKGMK_POLKIT+=' -D js_engine=mozjs'
+  prt-get isinst mozjs91 && PKGMK_POLKIT+=' -D js_engine=mozjs'
 
   meson setup $name-v.$version build $PKGMK_POLKIT \
     --prefix=/usr \

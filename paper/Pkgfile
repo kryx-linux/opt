@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=paper
-version=1.2.0
+version=1.2.2
 release=1
 source=(https://github.com/rrthomas/libpaper/releases/download/v$version/lib$name-$version.tar.gz
 	paper.1 paperspecs.5 paperconfig.8)
