@@ -1,10 +1,10 @@
 # Description: U-Boot tools
 # URL: https://www.denx.de/wiki/U-Boot/WebHome
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: openssl gnutls
+# Depends on: gnutls openssl swig
 
 name=u-boot-tools
-version=2022.04
+version=2022.07
 release=1
 source=(https://ftp.denx.de/pub/u-boot/u-boot-$version.tar.bz2)
 
