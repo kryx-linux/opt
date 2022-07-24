@@ -5,20 +5,13 @@
 # Optional: alsa-lib cuda dav1d fdk-aac nv-codec-headers gnutls gsm jack jack-audio-connection-kit lame libass libsdl2 libtheora libva libvdpau libvorbis libvpx libwebp opus pulseaudio x264 x265
 
 name=ffmpeg
-version=5.0.1
+version=5.1
 release=1
 source=(https://ffmpeg.org/releases/$name-$version.tar.bz2
-	ffmpeg-x264-10bit.sh
-	vmaf-model-path.patch
-	add-av_stream_get_first_dts-for-chromium.patch)
+	ffmpeg-x264-10bit.sh)
 
 build() {
 	cd $name-$version
-
-	patch -p1 -i $SRC/vmaf-model-path.patch
-
-	# https://crbug.com/1251779
-	patch -p1 -i $SRC/add-av_stream_get_first_dts-for-chromium.patch
 
 [[ -e '/usr/bin/clang' && -e '/usr/lib/pkgconfig/cuda.pc' && -e '/usr/share/pkgconfig/ffnvcodec.pc' ]] && \
 	PKGMK_FFMPEG+=' --enable-cuda-llvm --enable-nonfree --enable-cuda-nvcc --enable-libnpp' && \

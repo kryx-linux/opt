@@ -3,7 +3,7 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=libspiro
-version=20200505
+version=20220722
 release=1
 source=(https://github.com/fontforge/libspiro/releases/download/$version/libspiro-dist-$version.tar.gz)
 
