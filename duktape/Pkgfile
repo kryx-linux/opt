@@ -4,12 +4,12 @@
 
 name=duktape
 version=2.7.0
-release=1
+release=2
 source=(https://duktape.org/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
   export CFLAGS="$CFLAGS -DDUK_USE_FASTINT"
-  make -f Makefile.sharedlibrary
+  make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr
   make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr DESTDIR=$PKG install
 }
