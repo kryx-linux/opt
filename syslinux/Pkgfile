@@ -1,7 +1,7 @@
 # Description: Collection of boot loaders for the Linux operating system
 # URL: https://wiki.syslinux.org/wiki/index.php?title=The_Syslinux_Project
 # Maintainer: Matt Housh, jaeger at crux dot ninja
-# Depends on: mtools perl python
+# Depends on: mtools perl
 
 name=syslinux
 version=6.03
