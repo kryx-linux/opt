@@ -1,10 +1,10 @@
 # Description: Network Sniffer
 # URL: https://www.wireshark.org
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: c-ares hicolor-icon-theme libgcrypt libpcap qt5
+# Depends on: c-ares hicolor-icon-theme libgcrypt libpcap libpcre2 qt5
 
 name=wireshark
-version=3.6.6
+version=3.7.1
 release=1
 source=(https://www.wireshark.org/download/src/$name-$version.tar.xz)
 
