@@ -4,7 +4,7 @@
 # Depends on: attr  bzip2 curl lzo xz zlib zstd libgcrypt
 
 name=dar
-version=2.7.6
+version=2.7.7
 release=1
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz)
 
