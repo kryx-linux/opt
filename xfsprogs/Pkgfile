@@ -4,7 +4,7 @@
 # Depends on: inih libdevmapper liburcu
 
 name=xfsprogs
-version=5.18.0
+version=5.19.0
 release=1
 source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz)
 

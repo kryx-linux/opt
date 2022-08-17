@@ -238,6 +238,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/mysql/psi/
 -rw-r--r--	root/root	usr/include/mysql/server/mysqld_error.h
 -rw-r--r--	root/root	usr/include/mysql/server/pack.h
 drwxr-xr-x	root/root	usr/include/mysql/server/private/
+-rw-r--r--	root/root	usr/include/mysql/server/private/aligned.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/aria_backup.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/assume_aligned.h
 drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
