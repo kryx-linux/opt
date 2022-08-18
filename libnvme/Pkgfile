@@ -1,0 +1,17 @@
+# Description: C library for NVM Express on Linux
+# URL: https://github.com/linux-nvme/libnvme
+# Maintainer: Matt Housh, jaeger at crux dot ninja
+# Depends on: meson ninja json-c
+
+name=libnvme
+version=1.1
+release=1
+source=(https://github.com/linux-nvme/$name/archive/v$version/$name-$version.tar.gz)
+
+build() {
+	meson setup $name-$version build \
+		--prefix=/usr \
+		--buildtype=plain
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+}
