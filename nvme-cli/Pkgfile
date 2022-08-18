@@ -1,0 +1,20 @@
+# Description: NVMe management command line interface
+# URL: https://github.com/linux-nvme/nvme-cli
+# Maintainer: Matt Housh, jaeger at crux dot ninja
+# Depends on: libnvme
+
+name=nvme-cli
+version=2.1.2
+release=1
+source=(https://github.com/linux-nvme/nvme-cli/archive/v$version/$name-$version.tar.gz)
+
+build() {
+	meson setup $name-$version build \
+		--prefix=/usr \
+		--buildtype=plain \
+		-Dudevrulesdir=/lib/udev/rules.d
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+
+	rm -r $PKG/usr/lib/systemd
+}
