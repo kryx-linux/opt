@@ -5,7 +5,7 @@
 # Optional: alsa-lib ibus jack ninja pipewire pulseaudio wayland-protocols
 
 name=libsdl2
-version=2.0.22
+version=2.24.0
 release=1
 source=(https://www.libsdl.org/release/SDL2-$version.tar.gz)
 
@@ -29,4 +29,6 @@ build() {
 		-D SDL_DLOPEN=ON
 	cmake --build build -j ${JOBS:-1}
 	DESTDIR=$PKG cmake --install build
+
+	rm -r $PKG/usr/share/licenses
 }
