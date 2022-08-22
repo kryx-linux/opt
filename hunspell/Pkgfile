@@ -1,11 +1,10 @@
 # Description:	Advanced spell checker
 # URL: https://hunspell.github.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on:
 
 name=hunspell
-version=1.7.0
-release=2
+version=1.7.1
+release=1
 source=(https://github.com/hunspell/$name/archive/v$version/$name-v$version.tar.gz)
 
 build() {
