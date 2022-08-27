@@ -5,7 +5,7 @@
 # Optional: brotli c-ares icu nghttp2-libs ninja
 
 name=nodejs
-version=18.7.0
+version=18.8.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz
 	system-c-ares.patch)
@@ -22,7 +22,6 @@ build() {
 
 	./configure ${PKGMK_NODEJS} \
 		--prefix=/usr \
-		--enable-lto \
 		--without-npm \
 		--shared-libuv \
 		--shared-zlib \
