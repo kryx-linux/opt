@@ -3,15 +3,15 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=boehm-gc
-version=8.2.0
+version=8.2.2
 release=1
 source=(https://github.com/ivmai/bdwgc/releases/download/v$version/gc-$version.tar.gz
-  https://github.com/ivmai/libatomic_ops/releases/download/v7.6.10/libatomic_ops-7.6.10.tar.gz)
+  https://github.com/ivmai/libatomic_ops/releases/download/v7.6.14/libatomic_ops-7.6.14.tar.gz)
 
 build () {
   cd gc-$version
 
-  ln -s ../libatomic_ops-7.6.10 libatomic_ops
+  ln -s ../libatomic_ops-7.6.14 libatomic_ops
 
   ./configure \
       --prefix=/usr \

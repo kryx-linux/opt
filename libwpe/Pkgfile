@@ -4,7 +4,7 @@
 # Depends on: libxkbcommon mesa
 
 name=libwpe
-version=1.12.2
+version=1.12.3
 release=1
 source=(https://wpewebkit.org/releases/$name-$version.tar.xz)
 
