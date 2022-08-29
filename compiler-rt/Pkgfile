@@ -5,12 +5,14 @@
 
 name=compiler-rt
 version=14.0.6
-release=1
+release=2
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/compiler-rt-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz)
-
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
+	remove-include-linux-fs.h.patch)
 build() {
 	mv llvm-$version.src llvm
+
+	patch -Np2 -d $name-$version.src -i $SRC/remove-include-linux-fs.h.patch
 
 	cmake -S $name-$version.src -B build -G Ninja \
 		-D CMAKE_INSTALL_PREFIX=/usr \
