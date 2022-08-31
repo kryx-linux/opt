@@ -1,7 +1,7 @@
 # Description: Backends and filters for CUPS
 # URL: https://openprinting.github.io/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: ghostscript libexit mupdf poppler qpdf xorg-font-dejavu-ttf
+# Depends on: ghostscript libexif mupdf poppler qpdf xorg-font-dejavu-ttf
 
 name=cups-filters
 version=1.28.16
