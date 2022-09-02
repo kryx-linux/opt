@@ -5,12 +5,15 @@
 
 name=libxml2
 version=2.10.2
-release=1
+release=2
 source=(https://download.gnome.org/sources/libxml2/${version:0:4}/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr --without-python
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--without-python
 	make
 	make DESTDIR=$PKG install
 	rm -r $PKG/usr/share/{doc,gtk-doc}
