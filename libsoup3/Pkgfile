@@ -1,8 +1,8 @@
 # Description: HTTP library implementation in C.
 # URL: https://wiki.gnome.org/action/show/Projects/libsoup
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: glib-networking libpsl libxml2 nghttp2-libs
-# Optional: brotli gobject-introspection vala krb5
+# Depends on: glib-networking libnghttp2 libpsl libxml2
+# Optional: brotli gobject-introspection krb5 vala
 
 name=libsoup3
 version=3.0.7
