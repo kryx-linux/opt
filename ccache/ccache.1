@@ -1,13 +1,13 @@
 '\" t
 .\"     Title: ccache
 .\"    Author: [see the "AUTHOR(S)" section]
-.\" Generator: Asciidoctor 2.0.16
-.\"      Date: 2021-09-11
+.\" Generator: Asciidoctor 2.0.17
+.\"      Date: 2022-08-27
 .\"    Manual: \ \&
-.\"    Source: Ccache 4.4.1
+.\"    Source: Ccache 4.6.3
 .\"  Language: English
 .\"
-.TH "CCACHE" "1" "2021-09-11" "Ccache 4.4.1" "\ \&"
+.TH "CCACHE" "1" "2022-08-27" "Ccache 4.6.3" "\ \&"
 .ie \n(.g .ds Aq \(aq
 .el       .ds Aq '
 .ss \n[.ss] 0
@@ -135,8 +135,8 @@ configuration file.
 \fB\-\-config\-path\fP \fIPATH\fP
 .RS 4
 Let the command line options operate on configuration file \fIPATH\fP instead of
-the default. Using this option has the same effect as setting the
-environment variable \fBCCACHE_CONFIGPATH\fP temporarily.
+the default. Using this option has the same effect as setting (overriding)
+the environment variable \fBCCACHE_CONFIGPATH\fP temporarily.
 .RE
 .sp
 \fB\-d\fP, \fB\-\-dir\fP \fIPATH\fP
@@ -148,10 +148,17 @@ has the same effect as setting the environment variable \fBCCACHE_DIR\fP
 temporarily.
 .RE
 .sp
+\fB\-\-evict\-namespace\fP \fINAMESPACE\fP
+.RS 4
+Remove files created in the given \fBnamespace\fP from the
+cache.
+.RE
+.sp
 \fB\-\-evict\-older\-than\fP \fIAGE\fP
 .RS 4
 Remove files older than \fIAGE\fP from the cache. \fIAGE\fP should be an unsigned
-integer with a \fBd\fP (days) or \fBs\fP (seconds) suffix.
+integer with a \fBd\fP (days) or \fBs\fP (seconds) suffix. If combined with
+\fB\-\-evict\-namespace\fP, only remove old files within that namespace.
 .RE
 .sp
 \fB\-h\fP, \fB\-\-help\fP
@@ -284,27 +291,15 @@ LRU (least recently used) using the file modification timestamp.
 .sp
 \fB\-\-checksum\-file\fP \fIPATH\fP
 .RS 4
-Print the checksum (64 bit XXH3) of the file at \fIPATH\fP (\fB\-\fP for standard
+Print the checksum (128 bit XXH3) of the file at \fIPATH\fP (\fB\-\fP for standard
 input).
-.RE
-.sp
-\fB\-\-dump\-manifest\fP \fIPATH\fP
-.RS 4
-Dump manifest file at \fIPATH\fP (\fB\-\fP for standard input) in text format to
-standard output. This is only useful when debugging ccache and its behavior.
-.RE
-.sp
-\fB\-\-dump\-result\fP \fIPATH\fP
-.RS 4
-Dump result file at \fIPATH\fP (\fB\-\fP for standard input) in text format to
-standard output. This is only useful when debugging ccache and its behavior.
 .RE
 .sp
 \fB\-\-extract\-result\fP \fIPATH\fP
 .RS 4
 Extract data stored in the result file at \fIPATH\fP (\fB\-\fP for standard input).
 The data will be written to \fBccache\-result.*\fP files in to the current
-working directory. This is only useful when debugging ccache and its
+working directory. This option is only useful when debugging ccache and its
 behavior.
 .RE
 .sp
@@ -318,6 +313,15 @@ more information.
 .RS 4
 Print the hash (160 bit BLAKE3) of the file at \fIPATH\fP (\fB\-\fP for standard
 input). This is only useful when debugging ccache and its behavior.
+.RE
+.sp
+\fB\-\-inspect\fP \fIPATH\fP
+.RS 4
+Print the content of a result or manifest file at \fIPATH\fP (\fB\-\fP for standard
+input) to standard output in human\-readable format. File content embedded in
+a result file will however not be printed; use \fB\-\-extract\-result\fP to extract
+the file content. This option is only useful when debugging ccache and its
+behavior.
 .RE
 .sp
 \fB\-\-print\-stats\fP
@@ -632,14 +636,33 @@ differ. With \fBbase_dir\fP set to \fB/\fP there will be a cache miss since the
 relative path to \fB/usr/include/example\fP will be different. With \fBbase_dir\fP set
 to \fB/home/bob/stuff/project1\fP there will a cache miss since the path to
 project2 will be a different absolute path.
+.if n .sp
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+.B Warning
+.ps -1
+.br
+.sp
+Rewriting absolute paths to relative is kind of a brittle hack. It
+works OK in many cases, but there might be cases where things break. One known
+issue is that absolute paths are not reproduced in dependency files, which can
+mess up dependency detection in tools like Make and Ninja. If possible, use
+relative paths in the first place instead instead of using \fBbase_dir\fP.
+.sp .5v
+.RE
 .RE
 .sp
 \fBcache_dir\fP (\fBCCACHE_DIR\fP)
 .RS 4
 This option specifies where ccache will keep its cached compiler outputs.
 The default is \fB$XDG_CACHE_HOME/ccache\fP if \fBXDG_CACHE_HOME\fP is set,
-otherwise \fB$HOME/.cache/ccache\fP. Exception: If the legacy directory
-\fB$HOME/.ccache\fP exists then that directory is the default.
+otherwise \fB%APPDATA%/ccache\fP (Windows), \fB$HOME/Library/Caches/ccache\fP
+(macOS) or \fB$HOME/.config/ccache\fP (other systems). Exception: If the legacy
+directory \fB$HOME/.ccache\fP exists then that directory is the default.
 .sp
 See also \fILocation of the primary configuration file\fP.
 .sp
@@ -658,8 +681,9 @@ command line.
 .RS 4
 By default, ccache includes the modification time (\(lqmtime\(rq) and size of
 the compiler in the hash to ensure that results retrieved from the cache
-are accurate. This option can be used to select another strategy. Possible
-values are:
+are accurate. If compiler plugins are used, these plugins will also be
+added to the hash. This option can be used to select another strategy.
+Possible values are:
 .sp
 \fBcontent\fP
 .RS 4
@@ -749,9 +773,19 @@ symlinks). This is the default.
 Clang\-based compiler.
 .RE
 .sp
+\fBclang\-cl\fP
+.RS 4
+clang\-cl.
+.RE
+.sp
 \fBgcc\fP
 .RS 4
 GCC\-based compiler.
+.RE
+.sp
+\fBmsvc\fP
+.RS 4
+Microsoft Visual C++ (MSVC).
 .RE
 .sp
 \fBnvcc\fP
@@ -937,11 +971,11 @@ Do not enable this option unless you are aware of these caveats:
 If the resulting file is modified, the file in the cache will also be
 modified since they share content, which corrupts the cache entry. As of
 version 4.0, ccache makes stored and fetched object files read\-only as a
-safety measure guard. Furthermore, a simple integrity check is made for
-cached object files by verifying that their sizes are correct. This means
-that mistakes like \fBstrip file.o\fP or \fBecho >file.o\fP will be detected even if
-the object file is made writeable, but a modification that doesn\(cqt change the
-file size will not.
+safety measure. Furthermore, a simple integrity check is made for cached
+object files by verifying that their sizes are correct. This means that
+mistakes like \fBstrip file.o\fP or \fBecho >file.o\fP will be detected even if the
+object file is made writeable, but a modification that doesn\(cqt change the file
+size will not.
 .RE
 .sp
 .RS 4
@@ -1075,6 +1109,21 @@ Gi, Ti (binary). The default suffix is G. See also
 \fICACHE SIZE MANAGEMENT\fP.
 .RE
 .sp
+\fBnamespace\fP (\fBCCACHE_NAMESPACE\fP)
+.RS 4
+If set, the namespace string will be added to the hashed data for each
+compilation. This will make the associated cache entries logically separate
+from cache entries with other namespaces, but they will still share the same
+storage space. Cache entries can also be selectively removed from the
+primary cache with the command line option \fB\-\-evict\-namespace\fP, potentially
+in combination with \fB\-\-evict\-older\-than\fP.
+.sp
+For instance, if you use the same primary cache for several disparate projects,
+you can use a unique namespace string for each one. This allows you to remove
+cache entries that belong to a certain project if you stop working with that
+project.
+.RE
+.sp
 \fBpath\fP (\fBCCACHE_PATH\fP)
 .RS 4
 If set, ccache will search directories in this list when looking for the
@@ -1159,6 +1208,9 @@ the compiler. This will cause the compiler to leave the macros and other
 preprocessor information, and only process the \fB#include\fP directives. When run
 in this way, the preprocessor arguments will be passed to the compiler since it
 still has to do \fIsome\fP preprocessing (like macros).
+.sp
+This option is ignored with MSVC, as there is no way to make it compile without
+preprocessing first.
 .RE
 .sp
 \fBsecondary_storage\fP (\fBCCACHE_SECONDARY_STORAGE\fP)
@@ -1244,6 +1296,17 @@ as matching its cached version if the mtimes and ctimes match.
 .RS 4
 Ignore ctimes when \fBfile_stat_matches\fP is enabled. This can be useful when
 backdating files\*(Aq mtimes in a controlled way.
+.RE
+.sp
+\fBgcno_cwd\fP
+.RS 4
+By default, ccache will include the current working directory in the hash
+when producing a \fB.gcno\fP file (when compiling with \fB\-ftest\-coverage\fP or
+\fB\-\-coverage\fP). This is because GCC 9+ includes the current working directory
+in the \fB.gcno\fP file. The \fBgcno_cwd\fP sloppiness makes ccache not hash the
+current working directory so that you can get cache hits when compiling in
+different directories, with the tradeoff of potentially getting an incorrect
+directory in the \fB.gcno\fP file.
 .RE
 .sp
 \fBinclude_file_ctime\fP
@@ -1711,7 +1774,30 @@ Optional attributes:
 .  sp -1
 .  IP \(bu 2.3
 .\}
+\fBbearer\-token\fP: Bearer token used to authorize the HTTP requests.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
 \fBconnect\-timeout\fP: Timeout (in ms) for network connection. The default is 100.
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+\fBkeep\-alive\fP: If \fBtrue\fP, keep the HTTP connection to the storage server open
+to avoid reconnects. The default is \fBtrue\fP.
 .RE
 .sp
 .RS 4
@@ -1959,6 +2045,10 @@ Set the size and file number counters to match the files that were kept.
 The reason for removing more files than just those needed to not exceed the max
 limits is that a cleanup is a fairly slow operation, so it would not be a good
 idea to trigger it often, like after each cache miss.
+.sp
+The LRU cleanup makes use of the file modification time (mtime) of cache
+entries; ccache updates mtime of the cache entries read on a cache hit to mark
+them as "recently used".
 .SS "Manual cleanup"
 .sp
 You can run \fBccache \-c/\-\-cleanup\fP to force cleanup of the whole cache, i.e. all
@@ -2128,8 +2218,7 @@ T{
 Could not write to output file
 T}:T{
 .sp
-The output path specified with \fB\-o\fP is not a file (e.g. a directory or a device
-node).
+The output path specified with \fB\-o\fP could not be written to.
 T}
 T{
 .sp
@@ -2161,14 +2250,6 @@ T}:T{
 .sp
 The compiler\(cqs output file (typically an object file) was missing after
 compilation.
-T}
-T{
-.sp
-Compiler produced stdout
-T}:T{
-.sp
-The compiler wrote data to standard output. This is something that compilers
-normally never do, so ccache is not designed to store such output in the cache.
 T}
 T{
 .sp
@@ -2252,6 +2333,13 @@ Unsupported compiler option
 T}:T{
 .sp
 A compiler option not supported by ccache was found.
+T}
+T{
+.sp
+Unsupported environment variable
+T}:T{
+.sp
+An environment variable not supported by ccache was set.
 T}
 T{
 .sp
@@ -2817,7 +2905,7 @@ T}
 .TE
 .sp
 .sp
-If \fBconfig_dir\fP (environment variable \fBCCACHE_DEBUGDIR\fP) is
+If \fBdebug_dir\fP (environment variable \fBCCACHE_DEBUGDIR\fP) is
 set, the files above will be written to that directory with full absolute paths
 instead of next to the object file.
 .sp
