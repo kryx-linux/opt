@@ -20,12 +20,12 @@ drwxr-xr-x	root/root	usr/include/FLAC/
 -rw-r--r--	root/root	usr/include/FLAC/stream_decoder.h
 -rw-r--r--	root/root	usr/include/FLAC/stream_encoder.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libFLAC++.so -> libFLAC++.so.6
-lrwxrwxrwx	root/root	usr/lib/libFLAC++.so.6 -> libFLAC++.so.6.3.0
--rwxr-xr-x	root/root	usr/lib/libFLAC++.so.6.3.0
-lrwxrwxrwx	root/root	usr/lib/libFLAC.so -> libFLAC.so.8
-lrwxrwxrwx	root/root	usr/lib/libFLAC.so.8 -> libFLAC.so.8.3.0
--rwxr-xr-x	root/root	usr/lib/libFLAC.so.8.3.0
+lrwxrwxrwx	root/root	usr/lib/libFLAC++.so -> libFLAC++.so.10
+lrwxrwxrwx	root/root	usr/lib/libFLAC++.so.10 -> libFLAC++.so.10.0.0
+-rwxr-xr-x	root/root	usr/lib/libFLAC++.so.10.0.0
+lrwxrwxrwx	root/root	usr/lib/libFLAC.so -> libFLAC.so.12
+lrwxrwxrwx	root/root	usr/lib/libFLAC.so.12 -> libFLAC.so.12.0.0
+-rwxr-xr-x	root/root	usr/lib/libFLAC.so.12.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/flac++.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/flac.pc
@@ -38,5 +38,5 @@ drwxr-xr-x	root/root	usr/share/FLAC/cmake/
 -rw-r--r--	root/root	usr/share/FLAC/cmake/targets.cmake
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/1/
--rw-r--r--	root/root	usr/share/man/1/flac.1
--rw-r--r--	root/root	usr/share/man/1/metaflac.1
+-rw-r--r--	root/root	usr/share/man/1/flac.1 (EMPTY)
+-rw-r--r--	root/root	usr/share/man/1/metaflac.1 (EMPTY)

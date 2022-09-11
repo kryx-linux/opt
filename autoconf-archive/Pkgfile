@@ -3,7 +3,7 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=autoconf-archive
-version=2022.02.11
+version=2022.09.03
 release=1
 source=(https://ftpmirror.gnu.org/$name/$name-$version.tar.xz)
 
