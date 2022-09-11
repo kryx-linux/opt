@@ -1,6 +1,7 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/ddRHeKk3uc3xwFbncKYptN+RNi7OT+TQD1fut6aVk84PHpUDKhUucT9sfnG1MfjyIrNM6vZ7024n3UnRTkY9gs=
-SHA256 (Pkgfile) = 5d92f0e4bcd0885b46592fe864e3cd028a67a2ee7b5b244dee6210ba27a213b2
+RWSE3ohX2g5d/dsEEAEGzgBDogN9TIVjCjOYC0BNZ62v24VikooZr8sFAuPXI0DekpCcCqaFSAG1Fogp/byzd5oTIPmBuz6zyQ0=
+SHA256 (Pkgfile) = 46cafd7d1f1b4e28ef9bea55f4e50fe5a798121820143bef7c79ff6e8722afa7
 SHA256 (.footprint) = 93cc038b2af60596e07f1c67e86a45e941602cd888ae555943762c56cfd0a114
-SHA256 (ffmpeg-5.1.tar.bz2) = 32b56fb01ce90d452958ae25e91c9564abf49ed5453c127bec23c63e530aa8fa
+SHA256 (ffmpeg-5.1.1.tar.bz2) = cd0e16f903421266d5ccddedf7b83b9e5754aef4b9f7a7f06ce9e4c802f0545b
+SHA256 (add-av_stream_get_first_dts-for-chromium.patch) = 57e26caced5a1382cb639235f9555fc50e45e7bf8333f7c9ae3d49b3241d3f77
 SHA256 (ffmpeg-x264-10bit.sh) = dde9627c41800235fbcfe0f74d2181be96239a82cd2d0d277715dddb57eb9cb3
