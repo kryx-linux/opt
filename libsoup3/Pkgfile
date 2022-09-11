@@ -5,7 +5,7 @@
 # Optional: brotli gobject-introspection vala krb5
 
 name=libsoup3
-version=3.0.7
+version=3.0.8
 release=1
 source=(https://download.gnome.org/sources/libsoup/${version%.*}/libsoup-$version.tar.xz)
 
@@ -17,7 +17,7 @@ build() {
 	meson setup build libsoup-$version ${PKGMK_LIBSOUP3} \
 		--prefix=/usr \
 		--buildtype=plain \
-		-D b_lto=true \
+		-D b_lto=false \
 		-D b_pie=true \
 		--wrap-mode nodownload \
 		--auto-features disabled
