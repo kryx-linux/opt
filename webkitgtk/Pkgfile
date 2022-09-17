@@ -5,7 +5,7 @@
 # Optional: enchant libnotify geoclue openjpeg2 xdg-dbus-proxy bubblewrap wpebackend-fdo libmanette
 
 name=webkitgtk
-version=2.36.7
+version=2.38.0
 release=1
 source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
@@ -38,6 +38,7 @@ build() {
 		-D USE_SOUP2=ON \
 		-D ENABLE_MINIBROWSER=ON \
 		-D ENABLE_JOURNALD_LOG=OFF \
+		-D ENABLE_DOCUMENTATION=OFF \
 		-Wno-dev
 
 	cmake --build build
