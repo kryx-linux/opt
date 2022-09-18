@@ -1,7 +1,7 @@
 # Description: A multi-platform toolkit for creating graphical user interfaces
 # URL: https://www.gtk.org/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: at-spi2-atk gdk-pixbuf libepoxy pango xorg-libxrandr
+# Depends on: at-spi2-core gdk-pixbuf libepoxy pango xorg-libxrandr
 # Optional: colord cups libxkbcommon wayland-protocols
 
 name=gtk3
