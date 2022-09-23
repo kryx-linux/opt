@@ -30,6 +30,7 @@ drwxr-xr-x	root/root	usr/include/polly/Config/
 -rw-r--r--	root/root	usr/include/polly/LinkAllPasses.h
 -rw-r--r--	root/root	usr/include/polly/ManualOptimizer.h
 -rw-r--r--	root/root	usr/include/polly/MatmulOptimizer.h
+-rw-r--r--	root/root	usr/include/polly/MaximalStaticExpansion.h
 -rw-r--r--	root/root	usr/include/polly/Options.h
 -rw-r--r--	root/root	usr/include/polly/PolyhedralInfo.h
 -rw-r--r--	root/root	usr/include/polly/PruneUnprofitable.h
@@ -39,6 +40,7 @@ drwxr-xr-x	root/root	usr/include/polly/Config/
 -rw-r--r--	root/root	usr/include/polly/ScopBuilder.h
 -rw-r--r--	root/root	usr/include/polly/ScopDetection.h
 -rw-r--r--	root/root	usr/include/polly/ScopDetectionDiagnostic.h
+-rw-r--r--	root/root	usr/include/polly/ScopGraphPrinter.h
 -rw-r--r--	root/root	usr/include/polly/ScopInfo.h
 -rw-r--r--	root/root	usr/include/polly/ScopPass.h
 -rw-r--r--	root/root	usr/include/polly/Simplify.h
