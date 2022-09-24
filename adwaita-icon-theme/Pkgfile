@@ -4,13 +4,14 @@
 # Depends On: librsvg gtk3 hicolor-icon-theme
 
 name=adwaita-icon-theme
-version=42.0
+version=43
 release=1
-source=(https://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/${version%.*}/adwaita-icon-theme-$version.tar.xz)
+source=(https://gitlab.gnome.org/GNOME/adwaita-icon-theme/-/archive/$version/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 
+	NOCONFIGURE=1 ./autogen.sh
 	./configure --prefix=/usr
 
 	make
