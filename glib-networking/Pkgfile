@@ -4,7 +4,7 @@
 # Depends on: gnutls gsettings-desktop-schemas meson ninja
 
 name=glib-networking
-version=2.72.2
+version=2.74.0
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
