@@ -5,7 +5,7 @@
 # Optional: brotli c-ares icu
 
 name=nodejs
-version=18.9.0
+version=18.9.1
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz
 	system-c-ares.patch)
@@ -20,7 +20,6 @@ build() {
 
 	./configure ${PKGMK_NODEJS} \
 		--prefix=/usr \
-		--enable-lto \
 		--ninja \
 		--without-npm \
 		--shared-libuv \

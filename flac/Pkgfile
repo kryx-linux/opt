@@ -4,7 +4,7 @@
 # Depends on: libogg
 
 name=flac
-version=1.4.0
+version=1.4.1
 release=1
 source=(https://downloads.xiph.org/releases/flac/$name-$version.tar.xz)
 
@@ -34,7 +34,4 @@ build() {
 		-Wno-dev
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
-
-	mkdir $PKG/usr/share/man/1
-	mv $PKG/usr/share/man/{,meta}flac.1 $PKG/usr/share/man/1/.
 }

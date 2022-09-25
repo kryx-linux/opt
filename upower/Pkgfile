@@ -5,7 +5,7 @@
 # Optional: gobject-introspection gtk-doc libxslt
 
 name=upower
-version=0.99.20
+version=1.90.0
 release=1
 source=(https://gitlab.freedesktop.org/upower/upower/-/archive/v$version/upower-v$version.tar.bz2)
 
@@ -17,7 +17,7 @@ build() {
 		--libexecdir=lib/upower \
 		--buildtype=plain \
 		--wrap-mode nodownload \
-		-D b_lto=true \
+		-D b_lto=false \
 		-D b_pie=true \
 		-D os_backend=dummy \
 		-D udevrulesdir=/lib/udev/rules.d \
