@@ -4,7 +4,7 @@
 # Depends on: libogg
 
 name=flac
-version=1.4.0
+version=1.4.1
 release=1
 source=(https://downloads.xiph.org/releases/flac/$name-$version.tar.xz)
 
