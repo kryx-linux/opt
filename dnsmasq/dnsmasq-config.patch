@@ -1,6 +1,6 @@
-diff -Nru dnsmasq-2.84.orig/dnsmasq.conf.example dnsmasq-2.84/dnsmasq.conf.example
---- dnsmasq-2.84.orig/dnsmasq.conf.example	2021-01-27 10:45:11.611244801 +0100
-+++ dnsmasq-2.84/dnsmasq.conf.example	2021-01-27 10:45:32.883980677 +0100
+diff -Nru dnsmasq-2.87.orig/dnsmasq.conf.example dnsmasq-2.87/dnsmasq.conf.example
+--- dnsmasq-2.87.orig/dnsmasq.conf.example	2022-09-26 13:02:40.145014750 +0200
++++ dnsmasq-2.87/dnsmasq.conf.example	2022-09-26 13:02:54.071352953 +0200
 @@ -22,7 +22,7 @@
  
  # Uncomment these to enable DNSSEC validation and caching:
@@ -10,7 +10,7 @@ diff -Nru dnsmasq-2.84.orig/dnsmasq.conf.example dnsmasq-2.84/dnsmasq.conf.examp
  #dnssec
  
  # Replies which are not DNSSEC signed may be legitimate, because the domain
-@@ -96,8 +96,8 @@
+@@ -106,8 +106,8 @@
  
  # If you want dnsmasq to change uid and gid to something other
  # than the default, edit the following lines.
@@ -21,7 +21,7 @@ diff -Nru dnsmasq-2.84.orig/dnsmasq.conf.example dnsmasq-2.84/dnsmasq.conf.examp
  
  # If you want dnsmasq to listen for DHCP and DNS requests only on
  # specified interfaces (and the loopback) give the name of the
-@@ -535,7 +535,7 @@
+@@ -545,7 +545,7 @@
  # The DHCP server needs somewhere on disk to keep its lease database.
  # This defaults to a sane location, but if you want to change it, use
  # the line below.
@@ -30,10 +30,10 @@ diff -Nru dnsmasq-2.84.orig/dnsmasq.conf.example dnsmasq-2.84/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.84.orig/src/config.h dnsmasq-2.84/src/config.h
---- dnsmasq-2.84.orig/src/config.h	2021-01-27 10:45:11.614578042 +0100
-+++ dnsmasq-2.84/src/config.h	2021-01-27 10:45:32.883980677 +0100
-@@ -46,7 +46,7 @@
+diff -Nru dnsmasq-2.87.orig/src/config.h dnsmasq-2.87/src/config.h
+--- dnsmasq-2.87.orig/src/config.h	2022-09-26 13:02:40.145014750 +0200
++++ dnsmasq-2.87/src/config.h	2022-09-26 13:02:54.071352953 +0200
+@@ -45,7 +45,7 @@
  #define DEFLEASE 3600 /* default DHCPv4 lease time, one hour */
  #define DEFLEASE6 (3600*24) /* default lease time for DHCPv6. One day. */
  #define CHUSER "nobody"
@@ -42,7 +42,7 @@ diff -Nru dnsmasq-2.84.orig/src/config.h dnsmasq-2.84/src/config.h
  #define TFTP_MAX_CONNECTIONS 50 /* max simultaneous connections */
  #define LOG_MAX 5 /* log-queue length */
  #define RANDFILE "/dev/urandom"
-@@ -204,7 +204,7 @@
+@@ -208,7 +208,7 @@
  #   elif defined(__ANDROID__)
  #      define LEASEFILE "/data/misc/dhcp/dnsmasq.leases"
  #   else
