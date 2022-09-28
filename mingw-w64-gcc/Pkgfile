@@ -4,7 +4,7 @@
 # Depends on: mingw-w64-binutils mingw-w64-headers mingw-w64-crt
 
 name=mingw-w64-gcc
-version=10.2.0
+version=12.2.0
 release=1
 source=(http://gcc.gnu.org/pub/gcc/releases/gcc-$version/gcc-$version.tar.xz)
 
