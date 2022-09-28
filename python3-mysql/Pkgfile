@@ -1,11 +1,11 @@
 # Description: MySQL interface for Python
-# URL:         https://github.com/PyMySQL/mysqlclient-python
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  python3-setuptools mysql
+# URL: https://github.com/PyMySQL/mysqlclient-python
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: python3-setuptools mysql
 
 name=python3-mysql
 version=2.1.1
-release=1
+release=2
 source=(https://files.pythonhosted.org/packages/50/5f/eac919b88b9df39bbe4a855f136d58f80d191cfea34a3dcf96bf5d8ace0a/mysqlclient-$version.tar.gz)
 
 build() {
