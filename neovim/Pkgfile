@@ -1,11 +1,11 @@
 # Description: Vim-fork focused on extensibility and usability
 # URL: https://neovim.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: cmake unzip
+# Depends on: cmake git unzip
 # Optional: ninja tree-sitter
 
 name=neovim
-version=0.7.2
+version=0.8.0
 release=1
 source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz)
 
@@ -18,7 +18,7 @@ build() {
     export LDFLAGS+=' -fuse-ld=lld -flto=thin'
 
   prt-get isinst ninja && PKGMK_NEOVIM+=' -G Ninja'
-  cmake -S neovim-$version/third-party -B neovim-$version/.deps $PKGMK_NEOVIM \
+  cmake -S neovim-$version/cmake.deps -B neovim-$version/.deps $PKGMK_NEOVIM \
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -D CMAKE_CXX_FLAGS_RELEASE="$CFLAGS" \
