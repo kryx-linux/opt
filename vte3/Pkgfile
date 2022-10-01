@@ -17,7 +17,6 @@ build() {
 	meson build vte-$version ${PKGMK_VTE} \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
-		-D b_lto=true \
 		-D b_pie=true \
 		-D _systemd=false
 
