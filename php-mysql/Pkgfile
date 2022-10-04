@@ -1,7 +1,7 @@
 # Description: MySQL module for PHP
 # URL: https://www.php.net
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: mysql
+# Depends on: mariadb
 
 name=php-mysql
 version=8.1.11
