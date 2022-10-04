@@ -1,7 +1,7 @@
 # Description: Ruby bindings for MySQL
 # URL: https://github.com/brianmario/mysql2
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: ruby mysql
+# Depends on: ruby mariadb
 
 name=ruby-mysql
 version=0.5.3
