@@ -1,7 +1,7 @@
 # Description: Command-line utilities for working with desktop entries
 # URL: https://www.freedesktop.org/software/desktop-file-utils/
 # Maintainer: Matt Housh, jaeger at crux dot ninja
-# Depends on: glib pkg-config meson
+# Depends on: glib pkgconf meson
 
 name=desktop-file-utils
 version=0.26
