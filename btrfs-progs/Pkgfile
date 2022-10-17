@@ -5,8 +5,9 @@
 
 name=btrfs-progs
 version=6.0
-release=1
-source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz)
+release=2
+source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz
+	$name-man-$version.tar.xz)
 
 build() {
 	cd $name-v$version
@@ -20,4 +21,7 @@ build() {
 		--disable-python
 	make
 	make DESTDIR=$PKG install
+
+	install -d $PKG/usr/share
+	cp -r $SRC/man $PKG/usr/share
 }
