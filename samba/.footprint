@@ -154,9 +154,9 @@ lrwxrwxrwx	root/root	usr/lib/libndr-nbt.so.0 -> libndr-nbt.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libndr-standard.so -> libndr-standard.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libndr-standard.so.0 -> libndr-standard.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libndr-standard.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libndr.so -> libndr.so.2.0.0
-lrwxrwxrwx	root/root	usr/lib/libndr.so.2 -> libndr.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/libndr.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libndr.so -> libndr.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libndr.so.3 -> libndr.so.3.0.0
+-rwxr-xr-x	root/root	usr/lib/libndr.so.3.0.0
 lrwxrwxrwx	root/root	usr/lib/libnetapi.so -> libnetapi.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libnetapi.so.1 -> libnetapi.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libnetapi.so.1.0.0
@@ -165,8 +165,9 @@ lrwxrwxrwx	root/root	usr/lib/libnetapi.so.1 -> libnetapi.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libsamba-credentials.so -> libsamba-credentials.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libsamba-credentials.so.1 -> libsamba-credentials.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libsamba-credentials.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libsamba-errors.so -> libsamba-errors.so.1
--rwxr-xr-x	root/root	usr/lib/libsamba-errors.so.1
+lrwxrwxrwx	root/root	usr/lib/libsamba-errors.so -> libsamba-errors.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libsamba-errors.so.1 -> libsamba-errors.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib/libsamba-errors.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libsamba-hostconfig.so -> libsamba-hostconfig.so.0.0.1
 lrwxrwxrwx	root/root	usr/lib/libsamba-hostconfig.so.0 -> libsamba-hostconfig.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libsamba-hostconfig.so.0.0.1
@@ -279,13 +280,31 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/emulate/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/forest_update.py
 -rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/gensec.cpython-310-x86_64-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/getopt.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_cert_auto_enroll_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_chromium_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_ext_loader.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_firefox_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_firewalld_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_gnome_settings_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_msgs_ext.py
+drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/gp/
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_centrify_crontab_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_centrify_sudoers_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_cert_auto_enroll_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_chromium_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_ext_loader.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_firefox_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_firewalld_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_gnome_settings_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_msgs_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_scripts_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_sec_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_smb_conf_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gp_sudoers_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/gpclass.py
+drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/gp/util/
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/util/logging.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/vgp_access_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/vgp_files_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/vgp_issue_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/vgp_motd_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/vgp_openssh_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/vgp_startup_scripts_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/vgp_sudoers_ext.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp/vgp_symlink_ext.py
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/gp_parse/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_parse/__init__.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_parse/gp_aas.py
@@ -293,11 +312,6 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/gp_parse/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_parse/gp_inf.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_parse/gp_ini.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_parse/gp_pol.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_scripts_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_sec_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_smb_conf_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gp_sudoers_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/gpclass.py
 -rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/gpo.cpython-310-x86_64-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/graph.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/hostconfig.py
@@ -372,12 +386,14 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/samba3/
 -rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/samba3/mdscli.cpython-310-x86_64-linux-gnu.so
 -rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/samba3/param.cpython-310-x86_64-linux-gnu.so
 -rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/samba3/passdb.cpython-310-x86_64-linux-gnu.so
+-rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/samba3/smbconf.cpython-310-x86_64-linux-gnu.so
 -rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/samba3/smbd.cpython-310-x86_64-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/samdb.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/schema.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/sd_utils.py
 -rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/security.cpython-310-x86_64-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/sites.py
+-rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/smbconf.cpython-310-x86_64-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/subnets.py
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/subunit/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/subunit/__init__.py
@@ -404,6 +420,7 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/tests/blackbox/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/blackbox/downgradedatabase.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/blackbox/mdsearch.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/blackbox/ndrdump.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/blackbox/netads_dns.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/blackbox/netads_json.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/blackbox/samba_dnsupdate.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/blackbox/smbcacls.py
@@ -494,8 +511,11 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/kdc_tests.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/kdc_tgs_tests.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/kpasswd_tests.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/lockout_tests.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/ms_kile_client_principal_lookup_tests.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/nt_hash_tests.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/pac_align_tests.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/protected_users_tests.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/raw_testcase.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/rfc4120_constants.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/rfc4120_pyasn1.py
@@ -518,6 +538,7 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/ldap_upn_sam_account.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/libsmb.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/loadparm.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/logfiles.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/lsa_string.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/messaging.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/ndr.py
@@ -534,6 +555,7 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/tests/krb5/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/ntlmdisabled.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/pam_winbind.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/pam_winbind_chauthtok.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/pam_winbind_setcred.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/pam_winbind_warn_pwd_expire.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/param.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/password_hash.py
@@ -603,8 +625,10 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/tests/samba_tool/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/sddl.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/security.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/segfault.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/sid_strings.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/smb-notify.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/smb.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/smbconf.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/smbd_base.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/smbd_fuzztest.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/tests/source.py
@@ -621,14 +645,6 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/tests/samba_tool/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/upgrade.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/upgradehelpers.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/uptodateness.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/vgp_access_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/vgp_files_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/vgp_issue_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/vgp_motd_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/vgp_openssh_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/vgp_startup_scripts_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/vgp_sudoers_ext.py
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/vgp_symlink_ext.py
 -rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/werror.cpython-310-x86_64-linux-gnu.so
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/samba/xattr.py
 -rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/samba/xattr_native.cpython-310-x86_64-linux-gnu.so
@@ -936,3 +952,5 @@ drwxrwxrwt	root/root	var/lock/
 drwxr-xr-x	root/root	var/lock/samba/
 drwxr-xr-x	root/root	var/log/
 drwxr-xr-x	root/root	var/log/samba/
+drwxr-xr-x	root/root	var/run/
+drwxr-xr-x	root/root	var/run/samba/
