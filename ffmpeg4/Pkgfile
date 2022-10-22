@@ -5,7 +5,7 @@
 # Optional: alsa-lib cuda dav1d fdk-aac nv-codec-headers gnutls gsm jack jack-audio-connection-kit lame libass libsdl2 libtheora libva libvdpau libvorbis libvpx libwebp opus pulseaudio x264 x265
 
 name=ffmpeg4
-version=4.4.2
+version=4.4.3
 release=1
 source=(https://ffmpeg.org/releases/ffmpeg-$version.tar.bz2
 	CVE-2018-6621.patch)
