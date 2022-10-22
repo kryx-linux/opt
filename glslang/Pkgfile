@@ -2,29 +2,16 @@
 # URL: https://www.khronos.org/opengles/sdk/tools/Reference-Compiler
 # Maintainer: Danny Rawlins, crux at romster dot me
 # Depends on: spirv-tools
-# Optional: ninja
 
 name=glslang
-version=11.10.0
+version=11.12.0
 release=1
-source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz
-	glslang-default-resource-limits_staticlib.patch
-	0001-pkg-config-compatibility.patch)
+source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-$version.tar.gz)
 
 build() {
-	patch -d $name-$version -p1 -i $SRC/glslang-default-resource-limits_staticlib.patch
-
-	# https://patch-diff.githubusercontent.com/raw/KhronosGroup/glslang/pull/1722.patch#/0001-pkg-config-compatibility.patch
-	patch -d $name-$version -p1 -i $SRC/0001-pkg-config-compatibility.patch
-
-	find $SRC -name '*.h' -or -name '*.cpp' -or -name '*.hpp'| xargs chmod a-x
-
-	prt-get isinst ninja && PKGMK_GLSLANG+=' -G Ninja'
-	prt-get isinst ccache && \
-		PKGMK_GLSLANG+=' -D USE_CCACHE=ON' && \
-		PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
 	local config="
+		-G Ninja
 		-S $name-$version
 		-D CMAKE_INSTALL_PREFIX=/usr
 		-D CMAKE_INSTALL_LIBDIR=lib
@@ -37,7 +24,6 @@ build() {
 		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -ffat-lto-objects"
 	cmake --build build-static
 
-	# https://github.com/KhronosGroup/glslang/issues/1484 -Wl,--no-undefined
 	cmake -B build-shared $config $PKGMK_GLSLANG \
 		-D BUILD_SHARED_LIBS=ON \
 		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -ffat-lto-objects" \
