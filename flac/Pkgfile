@@ -4,22 +4,9 @@
 # Depends on: libogg
 
 name=flac
-version=1.4.1
+version=1.4.2
 release=1
-source=(https://downloads.xiph.org/releases/flac/$name-$version.tar.xz)
-
-unpack_source() {
-  mkdir $SRC/tarballs
-  for file in ${source[@]}; do
-    case ${file##*/} in
-      $name-$version.tar.xz)
-        echo "Unpacking $(get_filename $file)"
-        bsdtar -p -o -C $SRC -xf $(get_filename $file) ;;
-      *)
-        cp $(get_filename $file) $SRC ;;
-    esac
-  done
-}
+source=(https://github.com/xiph/flac/releases/download/$version/flac-$version.tar.xz)
 
 build() {
 	cmake -S $name-$version -B build -G Ninja \
