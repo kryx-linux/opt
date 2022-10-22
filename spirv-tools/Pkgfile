@@ -4,14 +4,14 @@
 # Depends on: spirv-headers
 
 name=spirv-tools
-version=2022.2
+version=2022.3
 release=1
 source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/v$version/SPIRV-Tools-v$version.tar.gz)
 
 build() {
-	prt-get isinst ninja && PKGMK_SPIRV_TOOLS+=' -G Ninja'
 
 	PKGMK_SPIRV_TOOLS+=" \
+-G Ninja \
 -S SPIRV-Tools-$version \
 -D CMAKE_INSTALL_PREFIX=/usr \
 -D CMAKE_INSTALL_LIBDIR=lib \
