@@ -4,7 +4,7 @@
 
 name=libgpg-error
 version=1.46
-release=1
+release=2
 source=(https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
 
 build() {
@@ -13,7 +13,8 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--disable-nls \
-		--enable-static
+		--enable-static \
+		--enable-install-gpg-error-config
 	make
 	make DESTDIR=$PKG install
 
