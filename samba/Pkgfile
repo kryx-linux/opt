@@ -4,10 +4,10 @@
 # Depends on: dbus gnutls ldb libarchive linux-pam gnutls jansson p5-json p5-parse-yapp popt python3 rpcsvc-proto tdb tevent
 
 name=samba
-version=4.17.1
+version=4.17.2
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
-	samba)
+	samba.rc samba.pam)
 
 build () {
 	cd $name-$version
@@ -39,9 +39,10 @@ build () {
 	rm -r $PKG/run
 
 	# config-file and start-script
-	install -d $PKG/etc/{samba,rc.d}
+	install -d $PKG/etc/{samba,rc.d,pam.d}
 	install -m 0600 examples/smb.conf.default $PKG/etc/samba
-	install -m 0755 $SRC/samba $PKG/etc/rc.d
+	install -m 0755 $SRC/samba.rc $PKG/etc/rc.d/samba
+	install -m 0644 $SRC/samba.pam $PKG/etc/pam.d/samba
 
 	# revdep
 	install -d $PKG/etc/revdep.d
