@@ -5,13 +5,12 @@
 # Optional: boost
 
 name=taglib
-version=1.12
+version=1.13
 release=1
 source=(http://taglib.github.io/releases/$name-$version.tar.gz)
 
 build() {
-	[[ -e /usr/bin/ninja ]] && PKGMK_TAGLIB=' -G Ninja'
-	cmake -S $name-$version -B build $PGKMK_TAGLIB \
+	cmake -S $name-$version -B build -G Ninja $PGKMK_TAGLIB \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_RELEASE_TYPE=Release \
 		-DBUILD_SHARED_LIBS=ON \
