@@ -12,6 +12,7 @@ source=(http://taglib.github.io/releases/$name-$version.tar.gz)
 build() {
 	cmake -S $name-$version -B build -G Ninja $PGKMK_TAGLIB \
 		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_RELEASE_TYPE=Release \
 		-DBUILD_SHARED_LIBS=ON \
 		-DWITH_MP4=ON \
