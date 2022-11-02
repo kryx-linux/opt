@@ -4,12 +4,12 @@
 # Depends on: gobject-introspection poppler
 
 name=poppler-glib
-version=22.10.0
+version=22.11.0
 release=1
 source=(https://poppler.freedesktop.org/poppler-$version.tar.xz)
 
 build() {
-	cmake -S poppler-$version -B build\
+	cmake -S poppler-$version -B build -G Ninja \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
