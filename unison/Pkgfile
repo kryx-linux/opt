@@ -1,10 +1,10 @@
 # Description: Bi-directional file synchronization tool
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# URL: https://www.cis.upenn.edu/~bcpierce/unison/
+# URL: https://github.com/bcpierce00/unison
 # Depends on: ocaml
 
 name=unison
-version=2.52.1
+version=2.53.0
 release=1
 source=(https://github.com/bcpierce00/unison/archive/v$version/$name-$version.tar.gz)
 
