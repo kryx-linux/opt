@@ -1,11 +1,11 @@
 # Description: Enables change of themes, icons, and fonts used by applications easily. 
 # URL: https://wiki.lxde.org/en/LXAppearance
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: gtk intltool
+# Depends on: gtk3 intltool
 
 name=lxappearance
 version=0.6.3
-release=1
+release=2
 source=(http://downloads.sourceforge.net/sourceforge/lxde/$name-$version.tar.xz)
 
 build() {
@@ -16,7 +16,8 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
-		--disable-nls
+		--disable-nls \
+		--enable-gtk3
 
 	make
 	make DESTDIR=$PKG install
