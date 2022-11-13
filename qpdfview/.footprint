@@ -6,8 +6,6 @@ drwxr-xr-x	root/root	usr/lib/qpdfview/
 -rwxr-xr-x	root/root	usr/lib/qpdfview/libqpdfview_image.so
 -rwxr-xr-x	root/root	usr/lib/qpdfview/libqpdfview_pdf.so
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/appdata/
--rw-r--r--	root/root	usr/share/appdata/qpdfview.appdata.xml
 drwxr-xr-x	root/root	usr/share/applications/
 -rw-r--r--	root/root	usr/share/applications/qpdfview.desktop
 drwxr-xr-x	root/root	usr/share/icons/
@@ -18,5 +16,7 @@ drwxr-xr-x	root/root	usr/share/icons/hicolor/scalable/apps/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/qpdfview.1.gz
+drwxr-xr-x	root/root	usr/share/metainfo/
+-rw-r--r--	root/root	usr/share/metainfo/qpdfview.appdata.xml
 drwxr-xr-x	root/root	usr/share/qpdfview/
 -rw-r--r--	root/root	usr/share/qpdfview/help.html

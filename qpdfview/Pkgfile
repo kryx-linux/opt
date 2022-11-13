@@ -1,30 +1,26 @@
 # Description: PDF viewer
-# URL:         https://launchpad.net/qpdfview
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  poppler-qt5
+# URL: https://launchpad.net/qpdfview
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: poppler-qt6 qt6-svg
 
 name=qpdfview
-version=0.4.18
-release=2
-source=(https://launchpad.net/qpdfview/trunk/$version/+download/$name-$version.tar.gz
-        qt5-5.15.diff)
+version=0.5.0beta1
+release=1
+source=(https://launchpad.net/qpdfview/trunk/$version/+download/$name-$version.tar.gz)
 
 build () {
-    cd $name-$version
+	cd $name-$version
 
-    patch -p0 -i $SRC/qt5-5.15.diff
+	prt-get isinst cups || PKGMK_QPDFVIEW+='without_cups '
+	prt-get isinst libspectre || PKGMK_QPDFVIEW+='without_ps '
+	prt-get isinst djvulibre || PKGMK_QPDFVIEW+='without_djvu '
 
-    local OPTS
-    pkginfo -i | grep -q '^cups '       || OPTS+='without_cups '
-    pkginfo -i | grep -q '^libspectre ' || OPTS+='without_ps '
-    pkginfo -i | grep -q '^djvulibre '  || OPTS+='without_djvu '
+	qmake-qt6 qpdfview.pro \
+		MANUAL_INSTALL_PATH=/usr/share/man/man1 \
+		CONFIG+="$PKGMK_QPDFVIEW"
 
-    qmake-qt5 qpdfview.pro \
-        MANUAL_INSTALL_PATH=/usr/share/man/man1 \
-        CONFIG+="$OPTS"
+	make
+	make INSTALL_ROOT=$PKG install
 
-    make
-    make INSTALL_ROOT=$PKG install
-    
-    rm $PKG/usr/share/qpdfview/help_*.html
+	rm $PKG/usr/share/qpdfview/help_*.html
 }
