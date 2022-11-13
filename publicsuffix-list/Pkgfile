@@ -3,8 +3,8 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=publicsuffix-list
-version=20190531.806.6f03f42
-commit=6f03f42a65d006c8ae657f125f14fb8f9d3337f4
+version=20220825.1289.4f29f15
+commit=4f29f15313eef1a540b3c8222ab891debf405a59
 release=1
 source=(https://github.com/publicsuffix/list/archive/$commit.tar.gz#/$name-$commit.tar.gz)
 
