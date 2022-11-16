@@ -6,11 +6,13 @@
 
 name=libxkbcommon
 version=1.4.1
-release=1
-source=(https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-$version.tar.gz)
+release=2
+source=(https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-$version.tar.gz
+	320f56d2a4a31026e5c8d3b60303af98bf885e1b.patch)
 
 build() {
 	prt-get isinst wayland-protocols || PKGMK_XKBCOMMON+=' -D enable-wayland=false'
+	patch -Np1 -d libxkbcommon-xkbcommon-$version -i $SRC/320f56d2a4a31026e5c8d3b60303af98bf885e1b.patch
 
 	meson build libxkbcommon-xkbcommon-$version $PKGMK_XKBCOMMON \
 		--prefix=/usr \
