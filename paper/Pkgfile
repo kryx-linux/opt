@@ -3,10 +3,10 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=paper
-version=2.0.0
+version=2.0.4
 release=1
 source=(https://github.com/rrthomas/libpaper/releases/download/v$version/lib$name-$version.tar.gz
-	paper.1 paperspecs.5 paperconfig.8)
+	paper.1)
 
 build () {
 	cd lib$name-$version
@@ -20,10 +20,8 @@ build () {
 	make
 	make DESTDIR=$PKG install
 
-	install -d $PKG/usr/share/man/man{1,5,8}
+	install -d $PKG/usr/share/man/man1
 	install -m 0644 $SRC/paper.1 $PKG/usr/share/man/man1
-	install -m 0644 $SRC/paperspecs.5 $PKG/usr/share/man/man5
-	install -m 0644 $SRC/paperconfig.8 $PKG/usr/share/man/man8
 
 	rm -r $PKG/usr/share/doc
 }
