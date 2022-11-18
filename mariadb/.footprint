@@ -547,6 +547,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
 -rw-r--r--	root/root	usr/include/mysql/server/private/winservice.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wqueue.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_allowlist_service.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_applier.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_binlog.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep_client_service.h
