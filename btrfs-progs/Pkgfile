@@ -2,26 +2,24 @@
 # URL: http://btrfs.wiki.kernel.org
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: lzo util-linux zstd
+# Optional: python3-sphinx
 
 name=btrfs-progs
-version=6.0.1
+version=6.0.2
 release=1
-source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz
-	$name-man-$version.tar.xz)
+source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz)
 
 build() {
 	cd $name-v$version
 
-	./configure \
+	prt-get isinst python3-sphinx && PKGMK_BTRFSPROGS+=' --enable-documentation' || PKGMK_BTRFSPROGS+=' --disable-documentation'
+
+	./configure $PKGMK_BTRFSPROGS \
 		--prefix=/usr \
 		--bindir=/sbin \
-		--disable-documentation \
 		--disable-convert \
 		--disable-zoned \
 		--disable-python
 	make
 	make DESTDIR=$PKG install
-
-	install -d $PKG/usr/share
-	cp -r $SRC/man $PKG/usr/share
 }
