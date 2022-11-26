@@ -4,10 +4,9 @@
 # Depends on: libcap meson ninja openssl
 
 name=iputils
-version=20211215
+version=20221126
 release=1
 source=(https://github.com/iputils/iputils/archive/$version/$name-$version.tar.gz)
-	#$name-man-$version.tar.xz)
 
 build() {
 	meson setup build $name-$version \
@@ -16,19 +15,14 @@ build() {
 		--wrap-mode nodownload \
 		-D b_lto=true \
 		-D b_pie=true \
-		-D BUILD_RARPD=true \
-		-D BUILD_MANS=false \
-		-D BUILD_MANS=false \
-		-D BUILD_RARPD=true
+		-D BUILD_MANS=false
 
 	meson compile -C build -j ${JOBS:-1}
 
-	install -d $PKG/{{sbin,bin},usr/{bin,sbin,share/man/man8}}
+	install -d $PKG/{{sbin,bin},usr/{bin,sbin}}
 	install build/ping/ping $PKG/bin/
 	install build/arping $PKG/sbin/
-	install build/{tracepath,clockdiff,rdisc,rarpd} $PKG/usr/sbin/
-	install build/ninfod/ninfod $PKG/usr/sbin/
-	#install -m 0644 $SRC/*.8 $PKG/usr/share/man/man8
+	install build/{tracepath,clockdiff} $PKG/usr/sbin/
 
 	chmod u+s $PKG/bin/ping
 }
