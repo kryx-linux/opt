@@ -1,0 +1,5 @@
+#!/bin/sh
+rm -f footprint.in
+mv .footprint footprint.in
+sed '/usr\/lib\/nvim\/parser\//d' footprint.in > .footprint
+rm -f footprint.in

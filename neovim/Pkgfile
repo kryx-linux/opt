@@ -1,11 +1,11 @@
 # Description: Vim-fork focused on extensibility and usability
 # URL: https://neovim.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: cmake git unzip
-# Optional: ninja tree-sitter
+# Depends on: git unzip
+# Optional: libluv libtermkey libuv libvterm lua51-lpeg lua51-mpack luajit luarocks msgpack-c tree-sitter tree-sitter-c tree-sitter-lua tree-sitter-vimdoc tree-sitter-viml unibilium
 
 name=neovim
-version=0.8.0
+version=0.8.1
 release=1
 source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz)
 
@@ -17,15 +17,25 @@ build() {
     export AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib && \
     export LDFLAGS+=' -fuse-ld=lld -flto=thin'
 
-  prt-get isinst ninja && PKGMK_NEOVIM+=' -G Ninja'
-  cmake -S neovim-$version/cmake.deps -B neovim-$version/.deps $PKGMK_NEOVIM \
+  prt-get isinst libtermkey && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_LIBTERMKEY=OFF'
+  prt-get isinst libuv && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_LIBUV=OFF'
+  prt-get isinst libvterm && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_LIBVTERM=OFF'
+  prt-get isinst luajit lua51-lpeg lua51-mpack && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_LUAJIT=OFF'
+  prt-get isinst luarocks lua51-lpeg lua51-mpack && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_LUAROCKS=OFF'
+  prt-get isinst libluv && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_LUV=OFF'
+  prt-get isinst msgpack-c && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_MSGPACK=OFF'
+  prt-get isinst tree-sitter && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_TS=OFF'
+  prt-get isinst tree-sitter-c tree-sitter-lua tree-sitter-vimdoc tree-sitter-viml && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_TS_PARSERS=OFF'
+  prt-get isinst unibilium && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_UNIBILIUM=OFF'
+
+  cmake -S neovim-$version/cmake.deps -B neovim-$version/.deps -G Ninja $PKGMK_NEOVIM_DEPS \
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -D CMAKE_CXX_FLAGS_RELEASE="$CFLAGS" \
     -Wno-dev
   cmake --build neovim-$version/.deps
 
-  cmake -S neovim-$version -B build $PKGMK_NEOVIM \
+  cmake -S neovim-$version -B build -G Ninja $PKGMK_NEOVIM \
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=lib \
     -D CMAKE_BUILD_TYPE=Release \
@@ -37,5 +47,6 @@ build() {
 
   install -Dm644 neovim-$version/runtime/nvim.desktop $PKG/usr/share/applications/nvim.desktop
   install -Dm644 neovim-$version/runtime/nvim.png $PKG/usr/share/pixmaps/nvim.png
+
   rm -r $PKG/usr/share/locale
 }
