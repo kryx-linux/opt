@@ -1,7 +1,7 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/e+aVo3ZdmLQRIu7q6esTAMFl6oEZ99XjSNueEKHd9/GO6VWwMOOpiXSfpeyjHWycu6dLt+7oNUj1f0nDcd57gI=
-SHA256 (Pkgfile) = cdfeea8db8ec5ceb8eb8d247ecc334fe2e7e20829ef1a31fab88efef2218948b
-SHA256 (.footprint) = acd06def77aa5ec5d8e7231465c494260b1a63a345c075ed2653bce6b567eecb
-SHA256 (compiler-rt-15.0.5.src.tar.xz) = d2a0680da5936f4187485682c28f17c98aabcd5e402d75af9ce78c992adae2ee
-SHA256 (llvm-15.0.5.src.tar.xz) = 4428688b567ab1c9911aa9e13cb44c9bc1b14431713c14de491e10369f2b0370
-SHA256 (cmake-15.0.5.src.tar.xz) = 61a9757f2fb7dd4c992522732531eb58b2bb031a2ca68848ff1cfda1fc07b7b3
+RWSE3ohX2g5d/X6lYQDzwE6TjPCIDBu3oavXE+WdtePYUsxejSu9Ak9GogHk0B95/sfodJCpgtN/AH4zn27w4VRyoTF0D9jGAAQ=
+SHA256 (Pkgfile) = cfb075e461a1621f45d82fb6bb32b9f68c18032ea35664007860c8322938d446
+SHA256 (.footprint) = a3282a4707bfd2b5849291526183952ef136d2e6eff6376748b9cd82b51043e1
+SHA256 (compiler-rt-15.0.6.src.tar.xz) = b46f5b5b02402ef3acd92e7adf2d551e0b2a8ed19fce66800472dc0ad2a81fbc
+SHA256 (llvm-15.0.6.src.tar.xz) = 0b32199401f27e2e0353846a8c5fbadd77beca2570654fb9ef7ac9b7f26967e3
+SHA256 (cmake-15.0.6.src.tar.xz) = 7613aeeaba9b8b12b35224044bc349b5fa45525919625057fa54dc882dcb4c86
