@@ -17,6 +17,8 @@ build() {
 	prt-get isinst pulseaudio && PKGMK_SDL2+=' -D SDL_PULSEAUDIO_SHARED=ON'
 	prt-get isinst wayland-protocols && PKGMK_SDL2+=' -D SDL_WAYLAND_SHARED=ON'
 
+	[[ -z $CCACHE_PREFIX ]] || unset CCACHE_PREFIX
+
 	cmake -S SDL2-$version -B build -G Ninja $PKGMK_SDL2 \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=lib \
