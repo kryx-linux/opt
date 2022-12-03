@@ -4,7 +4,7 @@
 # Depends on: libpcre zlib
 
 name=swig
-version=4.1.0
+version=4.1.1
 release=1
 source=(https://sourceforge.net/projects/$name/files/$name/$name-$version/$name-$version.tar.gz)
 
