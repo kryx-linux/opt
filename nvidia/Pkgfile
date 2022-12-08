@@ -4,7 +4,7 @@
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia
-version=515.76
+version=525.60.11
 release=1
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf nvidia-powerd.rc)
@@ -38,9 +38,11 @@ build() {
 	ln -s libnvidia-allocator.so.$version $PKG/usr/lib/nvidia-drm_gbm.so
 
 	# wayland EGL library and config
-	#install -d $PKG/usr/share/egl/egl_external_platform.d
-	#install -m 0755 libnvidia-egl-wayland.so.1.0.2 $PKG/usr/lib/
-	#install -m 0644 10_nvidia_wayland.json $PKG/usr/share/egl/egl_external_platform.d/
+	if [ $(prt-get isinst wayland > /dev/null) -ne 0 ]; then
+		install -d $PKG/usr/share/egl/egl_external_platform.d
+		install -m 0755 libnvidia-egl-wayland.so.1.0.2 $PKG/usr/lib/
+		install -m 0644 10_nvidia_wayland.json $PKG/usr/share/egl/egl_external_platform.d/
+	fi
 
 	# GLVND vendor implementation libraries
 	install -m 0755 libGLX_nvidia.so.$version $PKG/usr/lib/
@@ -70,6 +72,9 @@ build() {
 	install -m 0755 libcuda.so.$version $PKG/usr/lib/
 	ln -s libcuda.so.$version $PKG/usr/lib/libcuda.so.1
 	ln -s libcuda.so.$version $PKG/usr/lib/libcuda.so
+	install -m 0755 libcudadebugger.so.$version $PKG/usr/lib/
+	ln -s libcudadebugger.so.$version $PKG/usr/lib/libcudadebugger.so.1
+	ln -s libcudadebugger.so.$version $PKG/usr/lib/libcudadebugger.so
 	install -m 0755 libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/
 	ln -s libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/libnvidia-ptxjitcompiler.so.1
 	ln -s libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/libnvidia-ptxjitcompiler.so
