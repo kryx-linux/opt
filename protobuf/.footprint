@@ -1,7 +1,7 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
-lrwxrwxrwx	root/root	usr/bin/protoc -> protoc-3.21.10.0
--rwxr-xr-x	root/root	usr/bin/protoc-3.21.10.0
+lrwxrwxrwx	root/root	usr/bin/protoc -> protoc-3.21.11.0
+-rwxr-xr-x	root/root	usr/bin/protoc-3.21.11.0
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/google/
 drwxr-xr-x	root/root	usr/include/google/protobuf/
@@ -156,14 +156,14 @@ drwxr-xr-x	root/root	usr/lib/cmake/protobuf/
 -rw-r--r--	root/root	usr/lib/cmake/protobuf/protobuf-targets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/protobuf/protobuf-targets.cmake
 lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.32
--rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.3.21.10.0
-lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.32 -> libprotobuf-lite.so.3.21.10.0
+-rwxr-xr-x	root/root	usr/lib/libprotobuf-lite.so.3.21.11.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf-lite.so.32 -> libprotobuf-lite.so.3.21.11.0
 lrwxrwxrwx	root/root	usr/lib/libprotobuf.so -> libprotobuf.so.32
--rwxr-xr-x	root/root	usr/lib/libprotobuf.so.3.21.10.0
-lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.32 -> libprotobuf.so.3.21.10.0
+-rwxr-xr-x	root/root	usr/lib/libprotobuf.so.3.21.11.0
+lrwxrwxrwx	root/root	usr/lib/libprotobuf.so.32 -> libprotobuf.so.3.21.11.0
 lrwxrwxrwx	root/root	usr/lib/libprotoc.so -> libprotoc.so.32
--rwxr-xr-x	root/root	usr/lib/libprotoc.so.3.21.10.0
-lrwxrwxrwx	root/root	usr/lib/libprotoc.so.32 -> libprotoc.so.3.21.10.0
+-rwxr-xr-x	root/root	usr/lib/libprotoc.so.3.21.11.0
+lrwxrwxrwx	root/root	usr/lib/libprotoc.so.32 -> libprotoc.so.3.21.11.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf-lite.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/protobuf.pc
