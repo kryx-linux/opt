@@ -1,11 +1,12 @@
 # Description: An abstraction library that comes between applications and audio visualisation plugins.
-# URL: http://sourceforge.net/apps/mediawiki/libvisual/
+# URL: http://libvisual.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
+# Depends on: libsdl
 
 name=libvisual
-version=0.4.0
+version=0.4.1
 release=1
-source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.bz2)
+source=(https://github.com/Libvisual/libvisual/releases/download/$name-$version/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
