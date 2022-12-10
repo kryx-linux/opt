@@ -17,6 +17,6 @@ build() {
     /usr/bin/python3 -m installer --compile-bytecode 0 --destdir=$PKG dist/*.whl
   else
     /usr/bin/pip3 install --isolate --root=$PKG --ignore-installed --no-deps packaging
-    rm -rf $PKG/usr/lib/python3.10/site-packages/packaging-22.0.dist-info/{INSTALLER,REQUESTED}
+    rm -rf $PKG/usr/lib/python*/site-packages/packaging-$version.dist-info/{INSTALLER,REQUESTED}
   fi
 }
