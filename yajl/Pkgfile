@@ -6,7 +6,7 @@
 name=yajl
 version=2.1.0
 release=2
-source=(https://github.com/lloyd/$name/archive/$version/$name-$version.tar.gz)
+source=(https://github.com/lloyd/$name/archive/refs/tags/$version/$name-$version.tar.gz)
 
 build() {
 	cmake -S $name-$version -B build \
