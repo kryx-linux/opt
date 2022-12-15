@@ -1,7 +1,7 @@
 # Description: Programmable bash completion for pkgutils and ports
-# URL: http://www.crux.nu
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Depends on:  bash-completion
+# URL: https://www.crux.nu
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: bash-completion
 
 name=crux-bashcompletion
 version=20031028
@@ -9,6 +9,6 @@ release=1
 source=(crux_completions)
 
 build() {
-    install -D -m 755 crux_completions \
-        $PKG/etc/bash_completion.d/crux
+  install -D -m 755 crux_completions \
+    $PKG/etc/bash_completion.d/crux
 }
