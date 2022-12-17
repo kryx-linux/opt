@@ -5,9 +5,9 @@
 # Optional: ccache libgit2 lld polly sccache
 
 name=rust
-version=1.65.0
-_date=2022-09-22
-_rustc=1.64.0
+version=1.66.0
+_date=2022-11-03
+_rustc=1.65.0
 _cargo=$_rustc
 release=1
 
@@ -16,21 +16,20 @@ source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
 	0001-bootstrap-Change-libexec-dir.patch
-	0001-cargo-Change-libexec-dir.patch
 	0002-compiler-Change-LLVM-targets.patch)
 
 unpack_source() {
 	for file in ${source[@]}; do
 		case ${file##*/} in
 			rustc-${version}-src.tar.xz)
-			echo "Unpacking $(get_filename $file)";
-			bsdtar -p -o -C ${SRC} -xf $(get_filename $file) ;;
-		*.tar.xz)
-			echo "Copying $(get_filename $file)";
-			mkdir -p ${SRC}/${name}c-$version-src/build/cache/${_date} || true
-			cp $(get_filename $file) ${SRC}/${name}c-$version-src/build/cache/${_date} ;;
-		*)
-			cp $(get_filename $file) ${SRC} ;;
+				echo "Unpacking $(get_filename $file)";
+				bsdtar -p -o -C ${SRC} -xf $(get_filename $file) ;;
+			*.tar.xz)
+				echo "Copying $(get_filename $file)";
+				mkdir -p ${SRC}/${name}c-$version-src/build/cache/${_date} || true
+				cp $(get_filename $file) ${SRC}/${name}c-$version-src/build/cache/${_date} ;;
+			*)
+				cp $(get_filename $file) ${SRC} ;;
 		esac
 	done
 }
@@ -64,7 +63,6 @@ build() {
 
 	# Patch cargo so credential helpers are in /usr/lib instead of /usr/libexec
 	patch -p1 -i $SRC/0001-bootstrap-Change-libexec-dir.patch
-	patch -p1 -d src/tools/cargo -i $SRC/0001-cargo-Change-libexec-dir.patch
 
 	# Use our *-pc-linux-gnu targets, making LTO with clang simpler
 	patch -p1 -i $SRC/0002-compiler-Change-LLVM-targets.patch
