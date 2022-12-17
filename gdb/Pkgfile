@@ -6,10 +6,13 @@
 name=gdb
 version=12.1
 release=1
-source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
+source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
+  readline.patch)
 
 build() {
   cd $name-$version
+
+  patch -Np1 -i $SRC/readline.patch
 
   sed '/^SUBDIRS/s/doc//' -i gdb/Makefile.in
 
