@@ -5,15 +5,13 @@
 # Optional: openldap
 
 name=gnupg
-version=2.3.8
+version=2.4.0
 release=1
-source=(https://gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2
-  gnupg-2.2.40-fix-no-ldap-build.patch)
+source=(https://gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
 
 build () {
   cd $name-$version
 
-  patch -Np1 -i $SRC/gnupg-2.2.40-fix-no-ldap-build.patch
   prt-get isinst openldap || PKGMK_GNUPG+=' --disable-ldap'
 
   ./configure $PKGMK_GNUPG \
