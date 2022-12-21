@@ -11,6 +11,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/imlib2_view
 drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/Imlib2.h
+-rw-r--r--	root/root	usr/include/Imlib2_Loader.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/imlib2/
 drwxr-xr-x	root/root	usr/lib/imlib2/filters/
@@ -21,6 +22,8 @@ drwxr-xr-x	root/root	usr/lib/imlib2/filters/
 -rwxr-xr-x	root/root	usr/lib/imlib2/filters/testfilter.la
 -rwxr-xr-x	root/root	usr/lib/imlib2/filters/testfilter.so
 drwxr-xr-x	root/root	usr/lib/imlib2/loaders/
+-rwxr-xr-x	root/root	usr/lib/imlib2/loaders/ani.la
+-rwxr-xr-x	root/root	usr/lib/imlib2/loaders/ani.so
 -rwxr-xr-x	root/root	usr/lib/imlib2/loaders/argb.la
 -rwxr-xr-x	root/root	usr/lib/imlib2/loaders/argb.so
 -rwxr-xr-x	root/root	usr/lib/imlib2/loaders/bmp.la
@@ -53,9 +56,9 @@ drwxr-xr-x	root/root	usr/lib/imlib2/loaders/
 -rwxr-xr-x	root/root	usr/lib/imlib2/loaders/zlib.so
 -rw-r--r--	root/root	usr/lib/libImlib2.a
 -rwxr-xr-x	root/root	usr/lib/libImlib2.la
-lrwxrwxrwx	root/root	usr/lib/libImlib2.so -> libImlib2.so.1.9.1
-lrwxrwxrwx	root/root	usr/lib/libImlib2.so.1 -> libImlib2.so.1.9.1
--rwxr-xr-x	root/root	usr/lib/libImlib2.so.1.9.1
+lrwxrwxrwx	root/root	usr/lib/libImlib2.so -> libImlib2.so.1.10.0
+lrwxrwxrwx	root/root	usr/lib/libImlib2.so.1 -> libImlib2.so.1.10.0
+-rwxr-xr-x	root/root	usr/lib/libImlib2.so.1.10.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/imlib2.pc
 drwxr-xr-x	root/root	usr/share/
