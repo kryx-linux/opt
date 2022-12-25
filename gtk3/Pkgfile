@@ -8,15 +8,11 @@ name=gtk3
 version=3.24.36
 release=1
 source=(https://download.gnome.org/sources/gtk+/${version:0:4}/gtk+-$version.tar.xz
-	gtk-register-3.sh gtk.immodules
-	meson.build)
+	gtk-register-3.sh gtk.immodules)
 
 build () {
 	prt-get isinst colord || PKGMK_GTK3+=' -Dcolord=no'
 	prt-get isinst libxkbcommon wayland-protocols && PKGMK_GTK3+=' -D wayland_backend=true' || PKGMK_GTK3+=' -Dwayland_backend=false'
-	# it seems like upstream forgot to include this meson.build file
-	# the build fails without it
-	prt-get isinst libxkbcommon wayland-protocols && mv $SRC/meson.build gtk+-$version/gdk/wayland/cursor/meson.build
 
 	CFLAGS+=" -DG_ENABLE_DEBUG -DG_DISABLE_CAST_CHECKS"
 	meson setup gtk+-$version build $PKGMK_GTK3 \
