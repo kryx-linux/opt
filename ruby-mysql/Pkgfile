@@ -4,8 +4,8 @@
 # Depends on: ruby mariadb
 
 name=ruby-mysql
-version=0.5.3
-release=3
+version=0.5.4
+release=1
 source=(https://rubygems.org/downloads/mysql2-$version.gem)
 
 build () {
