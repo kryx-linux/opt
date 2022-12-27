@@ -4,12 +4,13 @@
 # Depends on: curl cmake lua imlib2 libxml2 xorg-libxdamage xorg-libxft xorg-libxinerama
 
 name=conky
-version=1.15.0
+version=1.16.1
 release=1
 source=(https://github.com/brndnmtthws/conky/archive/v$version/$name-$version.tar.gz)
 
 build() {
-	cmake -S $name-$version -B build \
+	prt-get isinst wayland && PKGMK_CONKY+=' -D BUILD_WAYLAND=ON'
+	cmake -S $name-$version -B build -G Ninja $PKGMK_CONKY \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
 		-D CMAKE_INSTALL_PREFIX=/usr \
