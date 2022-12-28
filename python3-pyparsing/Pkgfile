@@ -1,20 +1,25 @@
 # Description: Python parsing module.
 # URL: https://pypi.python.org/pypi/pyparsing/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: python3-setuptools
+# Depends on: python3-pip
+# Optional: python3-flit-core
 
 name=python3-pyparsing
-version=2.4.7
+version=3.0.9
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
 
 build() {
 	cd ${name#*-}-$version
 
-	/usr/bin/python3 setup.py build
+	  _pyver=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
 
-	/usr/bin/python3 setup.py install \
-		--prefix=/usr --root=$PKG --optimize=1
+	if prt-get isinst python3-flit-core; then
+		/usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+		/usr/bin/python3 -m installer --compile-bytecode 0 --destdir=$PKG dist/*.whl
+	else
+		/usr/bin/pip3 install --isolate --root=$PKG --ignore-installed --no-deps pyparsing
+	fi
 
-	find $PKG/usr/lib/python*/site-packages -type f -exec chmod go-w {} +
+	rm -rf $PKG/usr/lib/python$_pyver/site-packages/pyparsing-$version.dist-info/{INSTALLER,REQUESTED}
 }
