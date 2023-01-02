@@ -3,17 +3,13 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=libpcap
-version=1.10.1
+version=1.10.2
 release=1
 source=(https://www.tcpdump.org/release/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-
-	./configure \
-		--prefix=/usr \
-		--disable-dbus \
-		--without-libnl
+	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install install-shared
 }
