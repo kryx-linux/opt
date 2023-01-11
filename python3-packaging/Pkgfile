@@ -5,7 +5,7 @@
 # Optional: python3-flit-core
 
 name=python3-packaging
-version=22.0
+version=23.0
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
 
