@@ -105,3 +105,5 @@ drwxr-xr-x	root/root	usr/lib/cmake/glslang/
 lrwxrwxrwx	root/root	usr/lib/libglslang.so -> libglslang.so.11
 lrwxrwxrwx	root/root	usr/lib/libglslang.so.11 -> libglslang.so.11.13.0
 -rwxr-xr-x	root/root	usr/lib/libglslang.so.11.13.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/spirv.pc
