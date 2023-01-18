@@ -1,10 +1,10 @@
 # Description: Apache HTTP server version 2.4.x
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # URL: http://httpd.apache.org/
-# Depends on: apr libnghttp2 libpcre libxml2 openssl
+# Depends on: apr libnghttp2 libpcre2 libxml2 openssl
 
 name=apache
-version=2.4.54
+version=2.4.55
 release=1
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
 	crux.layout apache)
