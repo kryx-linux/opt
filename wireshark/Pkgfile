@@ -4,8 +4,8 @@
 # Depends on: c-ares hicolor-icon-theme libgcrypt libpcap qt6-5compat qt6-multimedia qt6-translations
 
 name=wireshark
-version=4.0.2
-release=2
+version=4.0.3
+release=1
 source=(https://www.wireshark.org/download/src/$name-$version.tar.xz)
 
 build() {
