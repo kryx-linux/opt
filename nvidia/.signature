@@ -1,8 +1,8 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/YQ84t+xmiAw0C9Kw7sGj8F3qbmpjHY+BxJLGpdtcav0qCO7+hpxmy1Um4z5ih0+iPGnbQShEAQILzpH4RcW8w8=
-SHA256 (Pkgfile) = b8d984473d8096aab495a68cc6302b5ec6a0af7b79d723fa26e04a517db21c5f
-SHA256 (.footprint) = 5aaf2c96944aac57d555d4cc6107eabdb8434842091fed8a6abbbf6fb797b8e6
-SHA256 (NVIDIA-Linux-x86_64-525.60.11.run) = 816ee6c2e0813ccc3d4a7958f71fc49a37c60efe1d51d6146c1ce72403983d5d
+RWSE3ohX2g5d/aLwoC2irQvz9xu0je6J6tXKDqlufW4cSfU3cPlCXyVShJiA+edh0Fp4T+bU9EyNG1ELAUxvOdqqvaHctX2h0wU=
+SHA256 (Pkgfile) = b2ce2ac04de56439739df3ea10aa9c06b3c263b4842c53f23735819788389d4d
+SHA256 (.footprint) = a38dc3ac4c723ae9a8fe5f0f61273e8c189b296531fbe5692e587ca0018bff31
+SHA256 (NVIDIA-Linux-x86_64-525.85.05.run) = ea63b4253403b224bb7313a8977a920dfe9d203d661dd5f6fc26585a70179140
 SHA256 (90-nvidia-uvm.rules) = c35c61cebf5bf9a112ac06539bdc670a388afa4b50a7f8223a114fbeafedb140
 SHA256 (10-nvidia-drm-outputclass.conf) = 4a72c70d7e348102f8c159b3f58973218bc740de1d86830f7cbee1c40744929c
 SHA256 (nvidia-powerd.rc) = 93aa2a176eba74041c8f39363da303eadb611c62a5f12f3cdb1725a3e329b022
