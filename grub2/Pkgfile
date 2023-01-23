@@ -5,18 +5,16 @@
 
 name=grub2
 version=2.06
-release=2
+release=3
 source=(http://ftp.gnu.org/gnu/grub/grub-$version.tar.xz \
 	http://jaeger.morpheus.net/linux/crux/files/unifont-9.0.06.pcf.gz \
-	$name-00_header.diff $name-10_linux.diff grub.cfg.sample)
+	$name-tweaks.diff grub.cfg.sample)
 
 build() {
 	export CFLAGS="${CFLAGS} -Wno-error -Os"
 	export PYTHON=python3
 	cd grub-$version
-
-	patch -i $SRC/$name-00_header.diff util/grub.d/00_header.in
-	patch -i $SRC/$name-10_linux.diff util/grub.d/10_linux.in
+	patch -p1 -i $SRC/$name-tweaks.diff
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
