@@ -1,7 +1,8 @@
 # Description: Network time protocol client/server
 # URL: http://chrony.tuxfamily.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: libcap
+# Depends on: libcap libedit ncurses
+# Optional: gnutls nettle nss
 
 name=chrony
 version=4.3
