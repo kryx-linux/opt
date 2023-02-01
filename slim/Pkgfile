@@ -6,27 +6,31 @@
 name=slim
 version=1.3.6
 release=1
-source=(http://downloads.sourceforge.net/project/slim.berlios/slim-$version.tar.gz \
-        http://crux.nu/~tek/slim-crux-smooth.tar.gz libpng.patch $name.rc)
+source=(http://downloads.sourceforge.net/project/slim.berlios/slim-$version.tar.gz
+    http://crux.nu/~tek/slim-crux-smooth.tar.gz $name.rc
+    signed-comparison.patch)
 
 build () {
-   cd $name-$version
+    cd $name-$version
 
-   # do NOT build slimlock (because of pam)
-   sed -i  -e '224d' CMakeLists.txt
+    # https://bugs.gentoo.org/786498
+    patch -p1 -i $SRC/signed-comparison.patch
 
-   cmake -DCMAKE_INSTALL_PREFIX=/usr
+    # do NOT build slimlock (because of pam)
+    sed -i  -e '224d' CMakeLists.txt
 
-   make
-   make DESTDIR=$PKG install
-   mkdir $PKG/etc/rc.d
-   install -m 755 ../$name.rc $PKG/etc/rc.d/$name
-   cd ../
+    cmake -DCMAKE_INSTALL_PREFIX=/usr
 
-   rm -f slim-crux-smooth/README
-   cp -r slim-crux-smooth $PKG/usr/share/slim/themes/crux-smooth
-   chmod 0644 $PKG/usr/share/slim/themes/crux-smooth/*
+    make
+    make DESTDIR=$PKG install
+    mkdir $PKG/etc/rc.d
+    install -m 755 ../$name.rc $PKG/etc/rc.d/$name
+    cd ../
 
-   # no systemd support
-   rm -r $PKG/lib $PKG/usr/share/man/man1/slimlock.1
+    rm -f slim-crux-smooth/README
+    cp -r slim-crux-smooth $PKG/usr/share/slim/themes/crux-smooth
+    chmod 0644 $PKG/usr/share/slim/themes/crux-smooth/*
+
+    # no systemd support
+    rm -r $PKG/lib $PKG/usr/share/man/man1/slimlock.1
 }
