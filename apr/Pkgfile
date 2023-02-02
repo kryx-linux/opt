@@ -4,12 +4,12 @@
 # Depends on: util-linux
 
 name=apr
-version=1.7.1
+version=1.7.2
 release=1
 source=(https://downloads.apache.org/$name/$name-$version.tar.bz2)
 
 build(){
-	cd $name-$version-rc2
+	cd $name-$version
 
 	./configure \
 		--prefix=/usr \
