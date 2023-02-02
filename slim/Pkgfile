@@ -7,7 +7,7 @@ name=slim
 version=1.3.6
 release=1
 source=(http://downloads.sourceforge.net/project/slim.berlios/slim-$version.tar.gz
-    http://crux.nu/~tek/slim-crux-smooth.tar.gz $name.rc
+    https://crux.nu/files/slim-crux-smooth.tar.gz $name.rc
     signed-comparison.patch)
 
 build () {
