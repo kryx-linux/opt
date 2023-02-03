@@ -1,10 +1,10 @@
 # Description: Thunderbird binary
 # URL: https://www.thunderbird.net/
 # Maintainer: Matt Housh, jaeger at crux dot ninja
-# Depends on: gtk3 dbus-glib
+# Depends on: gtk3 dbus-glib alsa-lib
 
 name=thunderbird-bin
-version=102.7.0
+version=102.7.1
 release=1
 source=(https://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-x86_64/en-US/thunderbird-$version.tar.bz2
 	policies.json thunderbird.desktop)
