@@ -2672,6 +2672,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.2/system/Gem/CommandManager/
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/CommandManager/find_command_possibilities-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/CommandManager/instance-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/CommandManager/instance-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/CommandManager/invoke_command-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/CommandManager/load_and_instantiate-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/CommandManager/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/CommandManager/process_args-i.ri
@@ -3073,17 +3074,15 @@ drwxr-xr-x	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/LinkFlagConver
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/LinkFlagConverter/cdesc-LinkFlagConverter.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/LinkFlagConverter/convert-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/build-i.ri
--rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/build_crate-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/build_env-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/cargo-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/cargo_command-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/cargo_crate_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/cargo_dylib_path-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/cargo_rustc_args-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/cdesc-CargoBuilder.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/darwin_target%3f-i.ri
--rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/final_extension_path-i.ri
--rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/finalize_directory-i.ri
--rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/get_relative_path-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/extension_nesting-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/ldflag_to_link_modifier-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/libruby_args-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/linker_args-i.ri
@@ -3094,10 +3093,10 @@ drwxr-xr-x	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/LinkFlagConver
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/msvc_target%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/mswin_link_args-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/normalize_path-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/platform_specific_rustc_args-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/profile-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/rb_config_env-i.ri
--rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/rename_cdylib_for_ruby_compatibility-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/ruby_static%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/runner-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/rustc_dynamic_linker_flags-i.ri
@@ -3105,7 +3104,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/LinkFlagConver
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/so_ext-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/spec-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/split_flags-i.ri
--rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/validate_cargo_build%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/win_target%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/Ext/CargoBuilder/write_deffile-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.2/system/Gem/Ext/CmakeBuilder/
@@ -4724,6 +4722,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.2/system/Gem/VersionOption/
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/deflate-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/dir-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/disable_system_update_message-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/discover_gems_on_require-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/done_installing-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/done_installing_hooks-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Gem/ensure_default_gem_subdirectories-c.ri
@@ -5932,7 +5931,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.2/system/Kernel/
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Kernel/format-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Kernel/frozen%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Kernel/gem-i.ri
--rw-r--r--	root/root	usr/share/ri/3.2/system/Kernel/gem_original_require-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Kernel/gets-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Kernel/global_variables-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.2/system/Kernel/gsub-i.ri
