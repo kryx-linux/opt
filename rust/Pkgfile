@@ -5,7 +5,7 @@
 # Optional: ccache libgit2 lld polly sccache
 
 name=rust
-version=1.67.0
+version=1.67.1
 _date=2023-01-10
 _rustc=1.66.1
 _cargo=$_rustc
@@ -16,6 +16,7 @@ source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
 	0001-bootstrap-Change-libexec-dir.patch
+	0001-cargo-Change-libexec-dir.patch
 	0002-compiler-Change-LLVM-targets.patch)
 
 unpack_source() {
@@ -63,6 +64,7 @@ build() {
 
 	# Patch cargo so credential helpers are in /usr/lib instead of /usr/libexec
 	patch -p1 -i $SRC/0001-bootstrap-Change-libexec-dir.patch
+	patch -d src/tools/cargo -Np1 -i $SRC/0001-cargo-Change-libexec-dir.patch
 
 	# Use our *-pc-linux-gnu targets, making LTO with clang simpler
 	patch -p1 -i $SRC/0002-compiler-Change-LLVM-targets.patch
@@ -87,10 +89,13 @@ cat <<- EOF > $SRC/config.toml
 	codegen-units-std = 1
 	debuginfo-level-std = 2
 	codegen-tests = false
+	backtrace-on-ice = true
+	remap-debuginfo = true
+	jemalloc = true
 
 	description = "CRUX"
 	channel = "stable"
-	parallel-compiler = true
+	parallel-compiler = false
 	rpath = false
 	optimize = true
 	@LLD@
@@ -103,6 +108,7 @@ cat <<- EOF > $SRC/config.toml
 	sanitizers = true
 	profiler = true
 	vendor = true
+	locked-deps = true
 	python = "/usr/bin/python3"
 	@CARGO@
 	@RUST@
