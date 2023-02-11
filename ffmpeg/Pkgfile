@@ -6,7 +6,7 @@
 
 name=ffmpeg
 version=5.1.2
-release=2
+release=3
 source=(https://ffmpeg.org/releases/$name-$version.tar.bz2
 	add-av_stream_get_first_dts-for-chromium.patch
 	ffmpeg-x264-10bit.sh)
