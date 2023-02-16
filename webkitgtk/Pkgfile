@@ -5,7 +5,7 @@
 # Optional: bubblewrap enchant geoclue libmanette libnotify openjpeg2 wpebackend-fdo xdg-dbus-proxy
 
 name=webkitgtk
-version=2.38.4
+version=2.38.5
 release=1
 source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
