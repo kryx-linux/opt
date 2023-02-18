@@ -1,23 +1,30 @@
-# Description: BitTorrent client/daemon with command-line and web user interface
-# URL:         https://transmissionbt.com/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  curl libevent
+# Description: BitTorrent client/daemon with command-line interface
+# URL: https://transmissionbt.com/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: curl libevent
 
 name=transmission
-version=3.00
+version=4.0.0
 release=1
-source=(https://github.com/transmission/transmission-releases/raw/master/transmission-$version.tar.xz)
+source=(https://github.com/transmission/transmission/releases/download/$version/$name-$version.tar.xz)
 
 build() {
-    cd $name-$version
+	cmake -S $name-$version -B build -G Ninja \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D RUN_CLANG_TIDY=OFF \
+		-D ENABLE_TESTS=OFF \
+		-D ENABLE_NLS=OFF \
+		-D INSTALL_DOC=ON \
+		-D INSTALL_LIB=OFF \
+		-D ENABLE_WEB=OFF \
+		-D ENABLE_GTK=OFF \
+		-D ENABLE_QT=OFF \
+		-D ENABLE_CLI=ON \
+		-D ENABLE_DAEMON=ON
 
-    ./configure --prefix=/usr \
-                --disable-nls \
-                --enable-cli \
-                --enable-daemon \
-                --without-gtk
-    make
-    make DESTDIR=$PKG install
+	cmake --build build -j ${JOBS:-1}
+	DESTDIR=$PKG cmake --install build
 
-    rm $PKG/usr/share/transmission/web/LICENSE
+	rm -r $PKG/usr/share/{doc,transmission}
 }
