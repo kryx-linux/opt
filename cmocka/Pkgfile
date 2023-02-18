@@ -1,21 +1,19 @@
 # Description: Unit testing framework
-# URL:         https://cmocka.org/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  cmake
+# URL: https://cmocka.org/
+# Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=cmocka
-version=1.1.5
-release=2
+version=1.1.6
+release=1
 source=(https://cmocka.org/files/1.1/$name-$version.tar.xz)
 
 build() {
-	cmake -S $name-$version -B build \
+	cmake -S $name-$version -B build -G Ninja \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=lib \
-		-D WITH_STATIC_LIB=On \
 		-D UNIT_TESTING=On
-	cmake --build build
+	cmake --build build -j ${JOBS:-1}
 	DESTDIR=$PKG cmake --install build
 }
