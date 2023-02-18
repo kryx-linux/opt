@@ -1,11 +1,11 @@
-# Description: BitTorrent client/daemon with command-line interface
+# Description: BitTorrent client/daemon with command-line and web user interface
 # URL: https://transmissionbt.com/
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: curl libevent
 
 name=transmission
 version=4.0.0
-release=1
+release=2
 source=(https://github.com/transmission/transmission/releases/download/$version/$name-$version.tar.xz)
 
 build() {
@@ -26,5 +26,6 @@ build() {
 	cmake --build build -j ${JOBS:-1}
 	DESTDIR=$PKG cmake --install build
 
-	rm -r $PKG/usr/share/{doc,transmission}
+	rm -r $PKG/usr/share/doc
+	find $PKG -name '*LICENSE*' -delete
 }
