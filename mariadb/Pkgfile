@@ -1,17 +1,17 @@
 # Description: SQL database server, drop-in replacement for MySQL
 # URL: https://mariadb.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: ncurses zlib openssl cmake libaio linux-pam libpcre2
+# Depends on: fmt libaio libpcre2 linux-pam ncurses openssl zlib
 
 name=mariadb
-version=10.10.3
+version=10.11.2
 release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz
 	mariadb.rc mariadb.pam
 	pre-install)
 
 build() {
-	cmake -S $name-$version -B build \
+	cmake -S $name-$version -B build -G Ninja \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
@@ -23,9 +23,11 @@ build() {
 		-D MYSQL_DATADIR=/var/lib/mysql \
 		-D MYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
 		-D WITH_READLINE=ON \
+		-D WITH_LIBAIO=ON \
 		-D WITH_ZLIB=system \
 		-D WITH_SSL=system \
 		-D WITH_PCRE=system \
+		-D WITH_LIBFMT=system \
 		-D WITH_EXTRA_CHARSETS=complex \
 		-D WITH_EMBEDDED_SERVER=ON \
 		-D WITH_UNIT_TESTS=OFF \

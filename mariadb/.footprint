@@ -918,8 +918,8 @@ drwxr-xr-x	root/root	usr/share/mysql/english/
 -rw-r--r--	root/root	usr/share/mysql/magic
 -rw-r--r--	root/root	usr/share/mysql/maria_add_gis_sp.sql
 -rw-r--r--	root/root	usr/share/mysql/maria_add_gis_sp_bootstrap.sql
+-rwxr-xr-x	root/root	usr/share/mysql/mariadb.logrotate
 -rwxr-xr-x	root/root	usr/share/mysql/mini-benchmark
--rwxr-xr-x	root/root	usr/share/mysql/mysql-log-rotate
 -rwxr-xr-x	root/root	usr/share/mysql/mysql.server
 -rw-r--r--	root/root	usr/share/mysql/mysql_performance_tables.sql
 -rw-r--r--	root/root	usr/share/mysql/mysql_sys_schema.sql
