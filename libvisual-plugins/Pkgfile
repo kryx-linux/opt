@@ -2,7 +2,7 @@
 # URL: https://github.com/Libvisual/libvisual
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libvisual xorg-libxt
-# Optional: gtk3
+# Optional: gtk
 
 name=libvisual-plugins
 version=0.4.1
@@ -12,7 +12,8 @@ source=(https://github.com/Libvisual/libvisual/releases/download/$name-$version/
 build() {
   cd $name-$version
 
-  prt-get isinst gtk3 || PKGMK_LIBVISUALP+=' --disable-gdkpixbuf-plugin'
+  # next version is probably gtk3
+  prt-get isinst gtk || PKGMK_LIBVISUALP+=' --disable-gdkpixbuf-plugin'
 
   ./configure --prefix=/usr $PKGMK_LIBVISUALP \
     --enable-extra-optimization \
