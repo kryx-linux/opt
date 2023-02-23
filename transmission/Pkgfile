@@ -4,8 +4,8 @@
 # Depends on: curl libevent
 
 name=transmission
-version=4.0.0
-release=2
+version=4.0.1
+release=1
 source=(https://github.com/transmission/transmission/releases/download/$version/$name-$version.tar.xz)
 
 build() {
