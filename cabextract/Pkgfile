@@ -1,17 +1,17 @@
 # Description: Microsoft Cabinet file decompressor
 # URL: https://www.cabextract.org.uk/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=cabextract
-version=1.10
+version=1.11
 release=1
 source=(https://www.cabextract.org.uk/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	./configure --prefix=/usr
+  ./configure --prefix=/usr
 
-	make
-	make DESTDIR=$PKG install
+  make
+  make DESTDIR=$PKG install
 }
