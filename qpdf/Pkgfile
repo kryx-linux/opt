@@ -5,12 +5,12 @@
 # Optional: gnutls
 
 name=qpdf
-version=11.2.0
+version=11.3.0
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
 build() {
-	cmake -S $name-$version -B build \
+	cmake -S $name-$version -B build -G Ninja \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=/usr/lib \
 		-D CMAKE_BUILD_TYPE=Release \
