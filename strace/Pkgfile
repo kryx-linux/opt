@@ -4,12 +4,13 @@
 # Depends on: elfutils
 
 name=strace
-version=6.1
+version=6.2
 release=1
 source=(https://github.com/strace/strace/releases/download/v$version/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
+
   ./configure --prefix=/usr
   make -j ${JOBS:-1}
   make DESTDIR=$PKG install
