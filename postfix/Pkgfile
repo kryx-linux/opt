@@ -26,7 +26,7 @@ build() {
     make non-interactive-package install_root=${PKG} \
         config_directory=/etc/postfix \
         daemon_directory=/usr/lib/postfix \
-	mail_owner=mail \
+    mail_owner=mail \
         manpage_directory=/usr/share/man \
         shlib_directory=/usr/lib/postfix
 
@@ -41,6 +41,8 @@ build() {
 
     touch ${PKG}/etc/postfix/{aliases,access,canonical,relocated,transport,virtual}.db
     touch ${PKG}/etc/postfix/{relay_domains,body_checks,mime_header_checks}
+
+    sed -i -e 's,egrep,grep -E,g' $PKG/usr/lib/postfix/postfix-{,tls-}script
 }
 
 # vim: set ts=4 et:
