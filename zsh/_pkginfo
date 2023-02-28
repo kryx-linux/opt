@@ -1,0 +1,10 @@
+#compdef pkginfo
+
+_arguments \
+  '(-i --installed)'{-i,--installed}'[show installed packages]' \
+  '(-l --list)'{-l,--list}'[list files in package]:package:_files' \
+  '(-o --owner)'{-o,--owner}'[list owner(s) of file(s) matching pattern]:pattern:_files' \
+  '(-f --footprint)'{-f,--footprint}'[print footprint for file]:file:_files' \
+  '(-r --root)'{-r,--root}'[specify alternative installation root]:root:_directories' \
+  '(-v --version)'{-v,--version}'[print version and exit]' \
+  '(-h --help)'{-h,--help}'[print help and exit]'

@@ -1,0 +1,19 @@
+#compdef pkgadd
+
+_packages() {
+  local -a list
+  DIR=$(/usr/bin/grep -e "^PKGMK_PACKAGE_DIR" /etc/pkgmk.conf &> /dev/null | cut -d = -f 2 | sed 's/\"//g')
+  for i in $DIR/*.pkg.tar.*; do
+    list+=($(echo "$i"))
+  done
+  _describe 'packages' list
+}
+
+_arguments -s \
+  '(-u --upgrade)'{-u,--upgrade}'[upgrade package with the same name]' \
+  '(-f --force)'{-f,--force}'[force install, overwrite conflicting files]' \
+  '(-r --root)'{-r,--root}'[specify alternative installation root]:root directory:_files -/' \
+  '(-c --config)'{-c,--config}'[use alternate configuration file]:config-file:_files' \
+  '(-v --version)'{-v,--version}'[print version and exit]' \
+  '(-h --help)'{-h,--help}'[print help and exit]' \
+  '*:package:_packages'

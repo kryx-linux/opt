@@ -1,0 +1,6 @@
+#compdef rejmerge
+
+_arguments \
+  '(-r --root)'{-r,--root}'[specify alternative root]:root directory:_files -/' \
+  '(-v --version)'{-v,--version}'[print version and exit]' \
+  '(-h --help)'{-h,--help}'[print help and exit]'

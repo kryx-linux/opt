@@ -1,123 +1,297 @@
 #compdef prt-get prt-cache
 
-local curcontext="$curcontext" expl ret=1 subcmd
+_commands=(
+  help:'show this help'
+  version:'show the current version'
+  list:'show a list of available ports'
+  printf:'print formatted list of available ports'
+  listinst:'show a list of installed ports'
+  listorphans:'list of ports with no packages depending on them'
+  info:'show info about a port'
+  path:'show path of a port'
+  readme:'show a port'"'"'s readme file (if it exists)'
+  dup:'find duplicate ports'
+  isinst:'print whether ports are installed'
+  current:'print installed version of port'
+  diff:'list outdated packages (or check args for change)'
+  quickdiff:'same as diff but simple format'
+  depends:'show dependencies for these ports'
+  quickdep:'same as depends but simple format'
+  deptree:'show dependencies tree for <port>'
+  dependent:'show installed packages which depend on '"'"'port'"'"''
+  search:'show port names containing '"'"'expr'"'"''
+  dsearch:'show ports containing '"'"'expr'"'"' in the name or description'
+  fsearch:'show file names in footprints matching '"'"'pattern'"'"''
+  install:'install ports'
+  update:'update ports'
+  grpinst:'install ports, stop on error'
+  depinst:'install ports and their dependencies'
+  remove:'remove ports'
+  sysup:'update all outdated ports'
+  lock:'lock current version of packages'
+  unlock:'unlock packages'
+  listlocked:'list locked packages'
+  ls:'print a listing of the port'"'"'s directory'
+  cat:'print out '"'"'port/file'"'"''
+  edit:'edit '"'"'port/file'"'"''
+)
 
-_list_notinstalled() {
-  local liste expl pkgs
-  local -a disp
+# Options Information
+_infooptions=(
+  "--depsort[Sort by dependencies]"
+)
 
-  installed=($(prt-cache listinst))
-  pkgs=($(prt-cache list))
-  pkgs=(${pkgs:#${(j:|:)~${installed:q}}})
+# Options for Differences / Check for updates
+_diffoptions=(
+  "--all[display locked ports too]"
+  "--prefer-higher[prefer higher installed versions over lower ports]"
+  "--strict-diff[override prefer higher configuration setting]"
+)
 
-  _wanted packages expl 'packages' \
-  compadd "$@" "$disp[@]" - "${(@)pkgs%%:*}"
+# Options for Dependencies
+_depoptions=(
+  "--all[list all dependent packages, not only installed]"
+  "--recursive[print recursive listing]"
+  "--tree[print recursive tree listing]"
+)
 
+# Options for Install, Update and Removal
+_installoptions=(
+  "-f[force installation]"
+  "-fi[force installation]"
+  "-fr[force rebuild]"
+  "-uf[update footprint]"
+  "-if[ignore footprint]"
+  "-um[update md5sum]"
+  "-im[ignore md5sum]"
+  "-us[update signature]"
+  "-is[ignore signature]"
+  "--margs=[pass 'string' to pkgmk]"
+  "--aargs=[pass 'string' to pkgadd]"
+  "--rargs=[pass 'string' to pkgrm]"
+  "--test[test mode]"
+  "--log[write log file]"
+  "--ignore=[Don't install/update those packages]:ignored packages:_allports"
+  "--pre-install[execute pre-install script]"
+  "--post-install[execute post-install script]"
+  "--install-scripts[execute pre-install and post-install script]"
+)
+
+# Options for System Update
+_sysupoptions=(
+  "--nodeps[don't sort by dependencies]"
+  "--test[test mode]"
+  "--log[write log file]"
+  "--prefer-higher[prefer higher installed versions over lower ones in ports tree]"
+  "--strict-diff[override prefer higher configuration setting]"
+)
+
+_printfoptions=(
+  '%n[name]'
+  '%p[path]'
+  '%v[version]'
+  '%r[release]'
+  '%d[description]'
+  '%e[dependencies]'
+  '%u[URL]'
+  '%P[Packager]'
+  '%M[Maintainer]'
+  '%R[Readme]'
+  '%E[pre-install script]'
+  '%O[post-install script]'
+  '%l[is locked]'
+  '%i[installed]'
+)
+
+# Options for General Options
+_options=(
+  "-v[Show version in listing]"
+  "-vv[Show version and decription in listing]"
+  "--path[Print path to port if appropriate (search, list, depends)]"
+  "--cache[Use a cache file]"
+  "--config=[Use alternative configuration file]:file:_files"
+  "--install-root=[Use alternative install root directory]:directory:_directories"
+  "--no-std-config[Don't parse default configuration file]"
+  "--config-prepend=[Prepend '..' to configuration]:directory:_directories"
+  "--config-append=[Append '..' to configuration]:directory:_directories"
+  "--config-set=[Set configuration data '..', overriding config file]:data"
+)
+
+# Port list generators
+_allports() {
+  local -a list
+  list=(${(f)"$(prt-get list 2>/dev/null)"})
+  _describe 'ports' list
 }
 
-_list() {
-  local liste expl pkgs installed
-  local -a disp
-
-  pkgs=($(prt-cache list))
-
-  _wanted packages expl 'packages' \
-  compadd "$@" "$disp[@]" - "${(@)pkgs%%:*}"
-
+_installedports() {
+  local -a list
+  list=(${(f)"$(prt-get listinst 2>/dev/null)"})
+  _describe 'installedports' list
 }
 
-_listinstalled() {
-  local liste expl pkgs installed
-  local -a disp
+_notinstalledports() {
+  local -a installed_ports all_ports not_installed_ports
+  installed_ports=(${(f)"$(prt-cache listinst 2>/dev/null)"})
+  all_ports=(${(f)"$(prt-cache list 2>/dev/null)"})
+  not_installed_ports=(${all_ports:|installed_ports})
 
-  pkgs=($(prt-cache listinst))
-
-  _wanted packages expl 'packages' \
-  compadd "$@" "$disp[@]" - "${(@)pkgs%%:*}"
-
+  _describe 'notinstalledports' not_installed_ports
 }
 
-_listlocked() {
-  local liste expl pkgs installed
-  local -a disp
-
-  pkgs=($(prt-cache listlocked))
-
-  _wanted packages expl 'packages' \
-  compadd "$@" "$disp[@]" - "${(@)pkgs%%:*}"
-
+_lockedports() {
+  local -a list
+  list=(${(f)"$(prt-cache listlocked 2>/dev/null)"})
+  _describe 'lockedports' list
 }
 
-_listupdates() {
-  local liste expl pkgs installed
-  local -a disp
-
-  pkgs=($(prt-cache quickdiff))
-
-  _wanted packages expl 'packages' \
-  compadd "$@" "$disp[@]" - "${(@)pkgs%%:*}"
-
+_unlockedports() {
+    local -a installed locked list
+    installed=("${(f)$(prt-cache listinst)}")
+    locked=("${(f)$(prt-cache listlocked)}")
+    list=("${(f)$(echo ${installed[@]} ${locked[@]} | tr ' ' '\n' | sort | uniq -u)}")
+    _describe 'unlockedports' list
 }
 
+_outdatedports() {
+  local -a list
+  list=(${(f)"$(prt-cache quickdiff | tr ' ' '\n' | sort)"})
+  _describe 'outdatedports' list
+}
 
-if (( CURRENT == 2 )); then
-  _describe 'prt-get command' '(
-    install:install\ package
-    depinst:install\ package\ including\ its\ dependencies
-    grpinst:install\ given\ packages\ but\ stop\ if\ installation\ of\ a\ package\ fails
-    update:update\ package
-    remove:remove\ package
-    sysup:update\ all\ installed\ packages\ which\ are\ outdated
-    lock:do\ not\ take\ into\ account\ these\ packages\ in\ sysup\ operation
-    unlock:remove\ lock\ from\ package
-    listlocked:list\ all\ locked\ packages
-    diff:show\ differences\ between\ installed\ packages\ and\ ports\ in\ the\ ports\ tree
-    quickdiff:print\ a\ simple\ list\ of\ packages\ whose\ versions\ differ\ from\ those\ in\ the\ ports\ tree
-    search:search\ ports\ tree\ for\ packages\ matching
-    dsearch:search\ ports\ tree\ for\ package\ name\ or\ description
-    fsearch:search\ for\ files\ in\ packages\ footprint
-    info:display\ information\ about\ a\ port
-    path:print\ path\ of\ a\ port
-    readme:print\ a\ ports\ readme
-    depends:print\ a\ recursive\ list\ of\ ports\ that\ are\ required\ by\ the\ given\ ports
-    quickdep:print\ a\ simple\ list\ of\ recursive\ dependencies\ of\ the\ given\ ports
-    dependent:print\ a\ list\ of\ ports\ depending\ on\ the\ given\ port
-    deptree:print\ a\ tree\ of\ dependencies\ of\ the\ given\ package
-    dup:list\ ports\ that\ can\ be\ found\ in\ multiple\ port\ directories
-    list:list\ ports\ available\ in\ the\ ports\ tree
-    printf:print\ formated\ port\ list
-    listinst:list\ installed\ ports
-    listorphans:list\ installed\ ports\ which\ have\ no\ no\ dependent\ packages
-    isinst:check\ wether\ a\ given\ package\ is\ installed
-    current:print\ version\ of\ an\ installed\ package
-    ls:print\ the\ the\ files\ of\ a\ package\ directory
-    cat:print\ the\ content\ of\ a\ file\ in\ a\ ports\ directory
-    edit:edit\ a\ packages\ file
-    help:show\ available\ options
-    dumpconfig:dump\ the\ current\ configuration
-    cache:create\ the\ cache\ file\ for\ prt-cache
-    version:show\ the\ current\ version\ of\ prt-get
-  )' && ret=0
+# TODO: print files from <port> that exist inside the directory
+# valid file for cat and edit
+_validfiles() {
+  local -a list
+  list=(
+    "Pkgfile"
+    ".signature"
+    ".footprint"
+    "README"
+    "README.md"
+  )
+  _describe 'validfiles' list
+}
 
-else
-  shift words
-  (( CURRENT-- ))
-  subcmd="$words[1]"
-  curcontext="${curcontext%:*}-${subcmd}:"
-  
-  if (( CURRENT == 2 )); then
-    case $subcmd in
-      remove|lock|current) _listinstalled && ret=0 ;;
-      path|depends|dependent|deptree|isinst|ls|cat|edit) _list && ret=0 ;;
-      unlock) _listlocked && ret=0 ;;
-      install|grpinst|depinst) _list_notinstalled  && ret=0 ;;
-      info|readme|search) _list && ret=0 ;;
-      update) _listupdates && ret=0 ;;
-      *) _message 'unknown subcommand: $subcmd' ;;
+# Main completion function
+_arguments \
+  "${_options[@]}" \
+  ":command:->command" \
+  "*::options:->options"
+
+# Command completion
+case $state in
+  command)
+    _describe 'commands' _commands
+    ;;
+  options)
+    case $words[1] in
+      help | version | listorphans)
+        # No options for help | version command
+        ;;
+      list)
+        _description list list '<filter>, e.g. *xorg*'
+        ;;
+      listinst)
+        # TODO [<filter>]
+        _arguments -C \
+          "${_infooptions[@]}"
+        ;;
+      printf)
+        # TODO <format>
+        # TODO [--sort=<format string2>] [--filter=<filter>]
+        local msg=(
+          'format string'
+          '[--sort=format_string2] [--filter=filter_string]'
+          ''
+          'Supported format specifiers:'
+          '%n - name'
+          '%p - path'
+          '%v - version'
+          '%r - release'
+          '%d - description'
+          '%e - dependencies'
+          '%u - URL'
+          '%P - Packager'
+          '%M - Maintainer'
+          '%R - Readme (yes/no)'
+          '%E - pre-install script (yes/no)'
+          '%O - post-install script (yes/no)'
+          '%l - is locked (yes/no)'
+          '%i - installed (no/yes/diff)'
+        )
+        ;;
+      info | path | readme | ls)
+        _arguments \
+          ":port:_allports"
+        ;;
+      current)
+        _arguments -S \
+          ":installedports:_installedports"
+        ;;
+      cat | edit)
+        _arguments -C \
+          ":port:_allports" \
+          ":validfiles:_validfiles" \
+        ;;
+      diff)
+        _arguments -S \
+          "*:outdatedports:_outdatedports" \
+          "${_diffoptions[@]}"
+        ;;
+      quickdiff)
+        # No Options for quickdiff
+        ;;
+      depends | quickdep | isinst)
+        _arguments -S \
+          ":port:_allports" \
+        ;;
+      dependent)
+        _arguments \
+          ":port:_allports" \
+          "${_depoptions[@]}"
+        ;;
+      deptree)
+        _arguments \
+          ":port:_allports"
+        ;;
+      dup | listlocked)
+        # No arguments for dup and listlocked commands
+        ;;
+      search | dsearch)
+        # TODO <expr>
+        ;;
+      fsearch)
+        # TODO <pattern>
+        ;;
+      update | remove)
+        # TODO: highlight ports that have an update available?
+        # TODO: this completes only outdated once, if available,
+        # then show installedports..
+        _arguments -S \
+          ":outdatedports:_outdatedports" \
+          "*:installedports:_installedports" \
+          "${_installoptions[@]}"
+        ;;
+      install | grpinst | depinst)
+        _arguments -S \
+          "*:notinstalledports:_notinstalledports" \
+          "${_installoptions[@]}"
+        ;;
+      sysup)
+        _arguments -S \
+          "${_sysupoptions[@]}"
+        ;;
+      lock)
+        _arguments -S \
+          "*:unlockedports:_unlockedports"
+        ;;
+      unlock)
+        _arguments -S \
+          "*:lockedports:_lockedports"
+        ;;
+      *)
+        ;;
     esac
-  fi
-fi
-
-
-
-return ret
+    ;;
+esac

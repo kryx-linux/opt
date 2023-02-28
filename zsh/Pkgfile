@@ -5,9 +5,10 @@
 
 name=zsh
 version=5.9
-release=1
+release=2
 source=(https://www.zsh.org/pub/$name-$version.tar.xz
-  _prt-get zsh-lovers.1)
+  _prt-get _pkgadd _pkgmk _pkginfo _pkgrm _rejmerge
+  zsh-lovers.1)
 
 build() {
   cd $name-$version
@@ -16,10 +17,7 @@ build() {
   sed -i 's#/usr/share/keymaps#/usr/share/kbd/keymaps#g' Completion/Unix/Command/_loadkeys
   sed -i 's#/usr/share/misc/usb.ids#/usr/share/usb.ids#g' Completion/Linux/Command/_lsusb
 
-  # fix a bug in recent glibc versions (2.16)
-  sed -e '/#include "attr.mdh"/d;/#include "attr.pro/d' \
-    -e 's|\(#include <sys/xattr.h>\)|\1\n#include "attr.mdh"\n#include "attr.pro"|g' \
-    -i Src/Modules/attr.c
+  sed -e 's|^\.NOTPARALLEL|#.NOTPARALLEL|' -i 'Config/defs.mk.in'
 
   for _fpath in AIX Cygwin Darwin Debian Mandriva openSUSE Redhat Solaris; do
     rm -rf Completion/$_fpath
@@ -27,6 +25,8 @@ build() {
   done
   rm -f  Completion/Linux/Command/_{pkgtool,rpmbuild,yast}
   rm -f  Completion/Unix/Command/_{osc,systemd}
+
+  rm Doc/version.yo
 
   ./configure \
     --prefix=/usr \
@@ -49,7 +49,9 @@ build() {
     --enable-multibyte \
     --enable-zsh-secure-free
 
-  make
+  make -C Src headers
+  make -C Src -f Makemod zsh{path,xmod}s.h version.h
+  make all
   make DESTDIR=$PKG install
 
   install -m 644 $SRC/zsh-lovers.1 $PKG/usr/share/man/man1/
@@ -62,4 +64,9 @@ build() {
   rm $PKG/usr/share/zsh/$version/functions/Completion/Unix/_pkg{add,rm,info}
 
   install -m 644 -t $PKG/usr/share/zsh/site-functions $SRC/_prt-get
+  install -m 644 -t $PKG/usr/share/zsh/site-functions $SRC/_pkgadd
+  install -m 644 -t $PKG/usr/share/zsh/site-functions $SRC/_pkgmk
+  install -m 644 -t $PKG/usr/share/zsh/site-functions $SRC/_pkginfo
+  install -m 644 -t $PKG/usr/share/zsh/site-functions $SRC/_pkgrm
+  install -m 644 -t $PKG/usr/share/zsh/site-functions $SRC/_rejmerge
 }

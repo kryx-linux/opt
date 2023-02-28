@@ -1,0 +1,7 @@
+#compdef pkgrm
+
+_arguments -s \
+  '-r[specify alternative installation root]:root:_directories' \
+  '-v[print version and exit]' \
+  '-h[print help and exit]' \
+  '*:package:_files'
