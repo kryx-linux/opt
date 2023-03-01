@@ -48,6 +48,7 @@ drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/adler32.h
 -rw-r--r--	root/root	usr/include/libavutil/aes.h
 -rw-r--r--	root/root	usr/include/libavutil/aes_ctr.h
+-rw-r--r--	root/root	usr/include/libavutil/ambient_viewing_environment.h
 -rw-r--r--	root/root	usr/include/libavutil/attributes.h
 -rw-r--r--	root/root	usr/include/libavutil/audio_fifo.h
 -rw-r--r--	root/root	usr/include/libavutil/avassert.h
@@ -150,37 +151,37 @@ drwxr-xr-x	root/root	usr/include/libswscale/
 -rw-r--r--	root/root	usr/include/libswscale/version_major.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libavcodec.a
-lrwxrwxrwx	root/root	usr/lib/libavcodec.so -> libavcodec.so.59.37.100
-lrwxrwxrwx	root/root	usr/lib/libavcodec.so.59 -> libavcodec.so.59.37.100
--rwxr-xr-x	root/root	usr/lib/libavcodec.so.59.37.100
+lrwxrwxrwx	root/root	usr/lib/libavcodec.so -> libavcodec.so.60.3.100
+lrwxrwxrwx	root/root	usr/lib/libavcodec.so.60 -> libavcodec.so.60.3.100
+-rwxr-xr-x	root/root	usr/lib/libavcodec.so.60.3.100
 -rw-r--r--	root/root	usr/lib/libavdevice.a
-lrwxrwxrwx	root/root	usr/lib/libavdevice.so -> libavdevice.so.59.7.100
-lrwxrwxrwx	root/root	usr/lib/libavdevice.so.59 -> libavdevice.so.59.7.100
--rwxr-xr-x	root/root	usr/lib/libavdevice.so.59.7.100
+lrwxrwxrwx	root/root	usr/lib/libavdevice.so -> libavdevice.so.60.1.100
+lrwxrwxrwx	root/root	usr/lib/libavdevice.so.60 -> libavdevice.so.60.1.100
+-rwxr-xr-x	root/root	usr/lib/libavdevice.so.60.1.100
 -rw-r--r--	root/root	usr/lib/libavfilter.a
-lrwxrwxrwx	root/root	usr/lib/libavfilter.so -> libavfilter.so.8.44.100
-lrwxrwxrwx	root/root	usr/lib/libavfilter.so.8 -> libavfilter.so.8.44.100
--rwxr-xr-x	root/root	usr/lib/libavfilter.so.8.44.100
+lrwxrwxrwx	root/root	usr/lib/libavfilter.so -> libavfilter.so.9.3.100
+lrwxrwxrwx	root/root	usr/lib/libavfilter.so.9 -> libavfilter.so.9.3.100
+-rwxr-xr-x	root/root	usr/lib/libavfilter.so.9.3.100
 -rw-r--r--	root/root	usr/lib/libavformat.a
-lrwxrwxrwx	root/root	usr/lib/libavformat.so -> libavformat.so.59.27.100
-lrwxrwxrwx	root/root	usr/lib/libavformat.so.59 -> libavformat.so.59.27.100
--rwxr-xr-x	root/root	usr/lib/libavformat.so.59.27.100
+lrwxrwxrwx	root/root	usr/lib/libavformat.so -> libavformat.so.60.3.100
+lrwxrwxrwx	root/root	usr/lib/libavformat.so.60 -> libavformat.so.60.3.100
+-rwxr-xr-x	root/root	usr/lib/libavformat.so.60.3.100
 -rw-r--r--	root/root	usr/lib/libavutil.a
-lrwxrwxrwx	root/root	usr/lib/libavutil.so -> libavutil.so.57.28.100
-lrwxrwxrwx	root/root	usr/lib/libavutil.so.57 -> libavutil.so.57.28.100
--rwxr-xr-x	root/root	usr/lib/libavutil.so.57.28.100
+lrwxrwxrwx	root/root	usr/lib/libavutil.so -> libavutil.so.58.2.100
+lrwxrwxrwx	root/root	usr/lib/libavutil.so.58 -> libavutil.so.58.2.100
+-rwxr-xr-x	root/root	usr/lib/libavutil.so.58.2.100
 -rw-r--r--	root/root	usr/lib/libpostproc.a
-lrwxrwxrwx	root/root	usr/lib/libpostproc.so -> libpostproc.so.56.6.100
-lrwxrwxrwx	root/root	usr/lib/libpostproc.so.56 -> libpostproc.so.56.6.100
--rwxr-xr-x	root/root	usr/lib/libpostproc.so.56.6.100
+lrwxrwxrwx	root/root	usr/lib/libpostproc.so -> libpostproc.so.57.1.100
+lrwxrwxrwx	root/root	usr/lib/libpostproc.so.57 -> libpostproc.so.57.1.100
+-rwxr-xr-x	root/root	usr/lib/libpostproc.so.57.1.100
 -rw-r--r--	root/root	usr/lib/libswresample.a
-lrwxrwxrwx	root/root	usr/lib/libswresample.so -> libswresample.so.4.7.100
-lrwxrwxrwx	root/root	usr/lib/libswresample.so.4 -> libswresample.so.4.7.100
--rwxr-xr-x	root/root	usr/lib/libswresample.so.4.7.100
+lrwxrwxrwx	root/root	usr/lib/libswresample.so -> libswresample.so.4.10.100
+lrwxrwxrwx	root/root	usr/lib/libswresample.so.4 -> libswresample.so.4.10.100
+-rwxr-xr-x	root/root	usr/lib/libswresample.so.4.10.100
 -rw-r--r--	root/root	usr/lib/libswscale.a
-lrwxrwxrwx	root/root	usr/lib/libswscale.so -> libswscale.so.6.7.100
-lrwxrwxrwx	root/root	usr/lib/libswscale.so.6 -> libswscale.so.6.7.100
--rwxr-xr-x	root/root	usr/lib/libswscale.so.6.7.100
+lrwxrwxrwx	root/root	usr/lib/libswscale.so -> libswscale.so.7.1.100
+lrwxrwxrwx	root/root	usr/lib/libswscale.so.7 -> libswscale.so.7.1.100
+-rwxr-xr-x	root/root	usr/lib/libswscale.so.7.1.100
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libavcodec.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libavdevice.pc
