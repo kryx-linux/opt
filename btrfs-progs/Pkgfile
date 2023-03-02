@@ -5,7 +5,7 @@
 # Optional: python3-sphinx
 
 name=btrfs-progs
-version=6.1.3
+version=6.2
 release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz)
 
@@ -14,6 +14,7 @@ build() {
 
 	prt-get isinst python3-sphinx && PKGMK_BTRFSPROGS+=' --enable-documentation' || PKGMK_BTRFSPROGS+=' --disable-documentation'
 
+	./autogen.sh
 	./configure $PKGMK_BTRFSPROGS \
 		--prefix=/usr \
 		--bindir=/sbin \
