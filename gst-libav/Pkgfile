@@ -4,13 +4,11 @@
 # Depends on: ffmpeg gst-plugins-base
 
 name=gst-libav
-version=1.22.0
-release=2
-source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz
-  233de05a98d7090092bbbc60d0c151acb22c6aa0.patch)
+version=1.22.1
+release=1
+source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
 build() {
-  patch -Np3 -d $name-$version -i $SRC/233de05a98d7090092bbbc60d0c151acb22c6aa0.patch
   meson build $name-$version \
     --prefix /usr \
     --libexecdir=/usr/lib \
