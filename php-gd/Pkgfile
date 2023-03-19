@@ -4,7 +4,7 @@
 # Depends on: libgd
 
 name=php-gd
-version=8.2.3
+version=8.2.4
 release=1
 source=(https://www.php.net/distributions/php-$version.tar.xz)
 
