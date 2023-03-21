@@ -4,16 +4,12 @@
 # Depends on: ocaml
 
 name=unison
-version=2.53.1
-release=2
+version=2.53.2
+release=1
 source=(https://github.com/bcpierce00/unison/archive/v$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-
-	# fix version string
-	sed '/^VERSION/s/0/1/' -i src/Makefile.ProjectInfo
-
 	make UISTYLE=text THREADS=true NATIVE=true
 	install -d $PKG/usr/{bin,share/man/man1}
 	install -m 0755 src/{unison,unison-fsmonitor} $PKG/usr/bin/
