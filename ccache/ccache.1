@@ -1,13 +1,13 @@
 '\" t
 .\"     Title: ccache
 .\"    Author: [see the "AUTHOR(S)" section]
-.\" Generator: Asciidoctor 2.0.17
-.\"      Date: 2022-10-17
+.\" Generator: Asciidoctor 2.0.18
+.\"      Date: 2023-03-12
 .\"    Manual: \ \&
-.\"    Source: Ccache 4.7
+.\"    Source: Ccache 4.8
 .\"  Language: English
 .\"
-.TH "CCACHE" "1" "2022-10-17" "Ccache 4.7" "\ \&"
+.TH "CCACHE" "1" "2023-03-12" "Ccache 4.8" "\ \&"
 .ie \n(.g .ds Aq \(aq
 .el       .ds Aq '
 .ss \n[.ss] 0
@@ -32,11 +32,16 @@ ccache \- a fast C/C++ compiler cache
 .SH "SYNOPSIS"
 .sp
 .nf
-\fBccache\fP [\fIoptions\fP]
-\fBccache\fP \fIcompiler\fP [\fIcompiler options\fP]
-\fIcompiler\fP [\fIcompiler options\fP]            (ccache masquerading as the compiler)
+\fBccache\fP [\fIccache options\fP]
+\fBccache\fP [\fIKEY\fP=\fIVALUE\fP ...] \fIcompiler\fP [\fIcompiler options\fP]
+\fIcompiler\fP [\fIcompiler options\fP]
 .fi
 .br
+.sp
+The first form takes options described in COMMAND LINE OPTIONS below. The
+second form invokes the compiler, optionally using configuration
+options as \fIKEY\fP=\fIVALUE\fP arguments. In the third form, ccache is masquerading
+as the compiler as described in RUN MODES.
 .SH "DESCRIPTION"
 .sp
 Ccache is a compiler cache. It speeds up recompilation by caching the result of
@@ -143,7 +148,7 @@ number and cache size limits are not exceeded. This also recalculates the
 cache file count and size totals. Normally, there is no need to initiate
 cleanup manually as ccache keeps the cache below the specified limits at
 runtime and keeps statistics up to date on each compilation. Forcing a
-cleanup is mostly useful if you manually modify the cache contents or
+cleanup is mostly useful if you have modified the cache contents manually or
 believe that the cache size statistics may be inaccurate.
 .RE
 .sp
@@ -197,22 +202,28 @@ and applies to all future compilations.
 \fB\-M\fP \fISIZE\fP, \fB\-\-max\-size\fP \fISIZE\fP
 .RS 4
 Set the maximum size of the files stored in the cache. \fISIZE\fP should be a
-number followed by an optional suffix: k, M, G, T (decimal), Ki, Mi, Gi or
-Ti (binary). The default suffix is G. Use 0 for no limit. The value is
-stored in a configuration file in the cache directory and applies to all
-future compilations.
+number followed by an optional suffix: kB, MB, GB, TB (decimal), KiB, MiB,
+GiB or TiB (binary). The default suffix is GiB. Use 0 for no limit. The
+value is stored in a configuration file in the cache directory and applies
+to all future compilations.
 .RE
 .sp
 \fB\-X\fP \fILEVEL\fP, \fB\-\-recompress\fP \fILEVEL\fP
 .RS 4
 Recompress the cache to level \fILEVEL\fP using the Zstandard algorithm. The
 level can be an integer, with the same semantics as the
-\fBcompression_level\fP configuration option), or
-the special value \fBuncompressed\fP for no compression. See
-\fICACHE COMPRESSION\fP for more information. This can potentionally take a
-long time since all files in the cache need to be visited. Only files that
-are currently compressed with a different level than \fILEVEL\fP will be
+\fBcompression_level\fP configuration option, or
+the special value \fBuncompressed\fP for no compression. See \fI[Cache
+compression]\fP for more information. This can potentially take a long time
+since all files in the cache need to be visited. Only files that are
+currently compressed with a different level than \fILEVEL\fP will be
 recompressed.
+.RE
+.sp
+\fB\-\-recompress\-threads\fP \fITHREADS\fP
+.RS 4
+Use up to \fITHREADS\fP threads when recompressing the cache. The default is to
+use one thread per CPU.
 .RE
 .sp
 \fB\-o\fP \fIKEY=VALUE\fP, \fB\-\-set\-config\fP \fIKEY\fP=\fIVALUE\fP
@@ -224,7 +235,7 @@ information.
 \fB\-x\fP, \fB\-\-show\-compression\fP
 .RS 4
 Print cache compression statistics. See \fICACHE COMPRESSION\fP for more
-information. This can potentionally take a long time since all files in the
+information. This can potentially take a long time since all files in the
 cache need to be visited.
 .RE
 .sp
@@ -266,8 +277,8 @@ Zero the cache statistics (but not the configuration options).
 .sp
 \fB\-\-trim\-dir\fP \fIPATH\fP
 .RS 4
-Remove old files from directory \fIPATH\fP until it is at most the size specified
-by \fB\-\-trim\-max\-size\fP.
+Remove old files from directory \fIPATH\fP until it is at most the size
+specified by \fB\-\-trim\-max\-size\fP.
 .if n .sp
 .RS 4
 .it 1 an-trap
@@ -287,9 +298,9 @@ directory to a certain size, use \fBCCACHE_MAXSIZE=\fISIZE\fP ccache \-c\fP.
 .sp
 \fB\-\-trim\-max\-size\fP \fISIZE\fP
 .RS 4
-Specify the maximum size for \fB\-\-trim\-dir\fP. \fISIZE\fP should be a number followed
-by an optional suffix: k, M, G, T (decimal), Ki, Mi, Gi or Ti (binary). The
-default suffix is G.
+Specify the maximum size for \fB\-\-trim\-dir\fP. \fISIZE\fP should be a number
+followed by an optional suffix: kB, MB, GB, TB (decimal), KiB, MiB, GiB or
+TiB (binary). The default suffix is GiB.
 .RE
 .sp
 \fB\-\-trim\-method\fP \fIMETHOD\fP
@@ -307,6 +318,24 @@ default.
 .RS 4
 LRU (least recently used) using the file modification timestamp.
 .RE
+.RE
+.sp
+\fB\-\-trim\-recompress\fP \fILEVEL\fP
+.RS 4
+Recompress to level \fILEVEL\fP using the Zstandard algorithm when using
+\fB\-\-trim\-dir\fP. The level can be an integer, with the same semantics as the
+\fBcompression_level\fP configuration option, or
+the special value \fBuncompressed\fP for no compression. See \fI[Cache
+compression]\fP for more information. This can potentially take a long time
+since all files in the cache need to be visited. Only files that are
+currently compressed with a different level than \fILEVEL\fP will be
+recompressed.
+.RE
+.sp
+\fB\-\-trim\-recompress\-threads\fP \fITHREADS\fP
+.RS 4
+Recompress using up to \fITHREADS\fP threads with \fB\-\-trim\-recompress\fP. The
+default is to use one thread per CPU.
 .RE
 .SS "Options for scripting or debugging"
 .sp
@@ -401,7 +430,15 @@ highest):
 .  sp -1
 .  IP " 1." 4.2
 .\}
-Environment variables.
+Command line settings in \fIKEY\fP=\fIVALUE\fP form. Example:
+.sp
+.if n .RS 4
+.nf
+.fam C
+ccache debug=true compiler_check="%compiler% \-\-version" gcc \-c example.c
+.fam
+.fi
+.if n .RE
 .RE
 .sp
 .RS 4
@@ -412,7 +449,7 @@ Environment variables.
 .  sp -1
 .  IP " 2." 4.2
 .\}
-The cache\-specific configuration file (see below).
+Environment variables.
 .RE
 .sp
 .RS 4
@@ -423,8 +460,7 @@ The cache\-specific configuration file (see below).
 .  sp -1
 .  IP " 3." 4.2
 .\}
-The system (read\-only) configuration file \fB<sysconfdir>/ccache.conf\fP
-(typically \fB/etc/ccache.conf\fP or \fB/usr/local/etc/ccache.conf\fP).
+The cache\-specific configuration file (see below).
 .RE
 .sp
 .RS 4
@@ -434,6 +470,18 @@ The system (read\-only) configuration file \fB<sysconfdir>/ccache.conf\fP
 .el \{\
 .  sp -1
 .  IP " 4." 4.2
+.\}
+The system (read\-only) configuration file \fB<sysconfdir>/ccache.conf\fP
+(typically \fB/etc/ccache.conf\fP or \fB/usr/local/etc/ccache.conf\fP).
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04' 5.\h'+01'\c
+.\}
+.el \{\
+.  sp -1
+.  IP " 5." 4.2
 .\}
 Compile\-time defaults.
 .RE
@@ -917,11 +965,6 @@ NVCC (CUDA) compiler.
 .RS 4
 Any compiler other than the known types.
 .RE
-.sp
-\fBpump\fP
-.RS 4
-distcc\(cqs \(lqpump\(rq script.
-.RE
 .RE
 .sp
 \fBcompression\fP (\fBCCACHE_COMPRESS\fP or \fBCCACHE_NOCOMPRESS\fP, see \fIBoolean values\fP above)
@@ -1031,6 +1074,9 @@ If true, the direct mode will be used. The default is true. See
 .RS 4
 When true, ccache will just call the real compiler, bypassing the cache
 completely. The default is false.
+.sp
+It is also possible to disable ccache for a specific source code file by adding
+the string \fBccache:disable\fP in a comment in the first 4096 bytes of the file.
 .RE
 .sp
 \fBextra_files_to_hash\fP (\fBCCACHE_EXTRAFILES\fP)
@@ -1094,7 +1140,7 @@ version 4.0, ccache makes stored and fetched object files read\-only as a
 safety measure. Furthermore, a simple integrity check is made for cached
 object files by verifying that their sizes are correct. This means that
 mistakes like \fBstrip file.o\fP or \fBecho >file.o\fP will be detected even if the
-object file is made writeable, but a modification that doesn\(cqt change the file
+object file is made writable, but a modification that doesn\(cqt change the file
 size will not.
 .RE
 .sp
@@ -1173,7 +1219,7 @@ example, \fB\-fmessage\-length=*\fP will match both \fB\-fmessage\-length=20\fP 
 .RS 4
 If true, ccache will cache source file hashes based on device, inode and
 timestamps. This reduces the time spent on hashing include files since the
-result can be resused between compilations. The default is true. The feature
+result can be reused between compilations. The default is true. The feature
 requires \fBtemporary_dir\fP to be located on a local
 filesystem of a supported type.
 .if n .sp
@@ -1195,14 +1241,8 @@ The inode cache feature is currently not available on Windows.
 \fBkeep_comments_cpp\fP (\fBCCACHE_COMMENTS\fP or \fBCCACHE_NOCOMMENTS\fP, see \fIBoolean values\fP above)
 .RS 4
 If true, ccache will not discard the comments before hashing preprocessor
-output. This can be used to check documentation with \fB\-Wdocumentation\fP.
-.RE
-.sp
-\fBlimit_multiple\fP (\fBCCACHE_LIMIT_MULTIPLE\fP)
-.RS 4
-Sets the limit when cleaning up. Files are deleted (in LRU order) until the
-levels are below the limit. The default is 0.8 (= 80%). See
-\fIAutomatic cleanup\fP for more information.
+output. The default is false. This can be used to check documentation with
+\fB\-Wdocumentation\fP.
 .RE
 .sp
 \fBlog_file\fP (\fBCCACHE_LOGFILE\fP)
@@ -1332,8 +1372,9 @@ the local cache directory unless \fBstats\fP is false. See also
 .RS 4
 This option specifies one or several storage backends (separated by space)
 to query after checking the local cache (unless
-\fBremote_only\fP is true). See \fI[Remote storage
-backends]\fP for documentation of syntax and available backends.
+\fBremote_only\fP is true). See
+\fIREMOTE STORAGE BACKENDS\fP for documentation of syntax and available
+backends.
 .sp
 Examples:
 .sp
@@ -1539,8 +1580,8 @@ See the discussion under \fITROUBLESHOOTING\fP for more information.
 .sp
 \fBstats\fP (\fBCCACHE_STATS\fP or \fBCCACHE_NOSTATS\fP, see \fIBoolean values\fP above)
 .RS 4
-If true, ccache will update the statistics counters on each compilation.
-The default is true.
+If true, ccache will update the statistics counters on each compilation. The
+default is true. If false, \fI[automatic cleanup]\fP will be disabled as well.
 .RE
 .sp
 \fBstats_log\fP (\fBCCACHE_STATSLOG\fP)
@@ -1567,7 +1608,8 @@ Lines in the stats log starting with a hash sign (\fB#\fP) are comments.
 \fBtemporary_dir\fP (\fBCCACHE_TEMPDIR\fP)
 .RS 4
 This option specifies where ccache will put temporary files. The default is
-\fB/run/user/<UID>/ccache\-tmp\fP if \fB/run/user/<UID>\fP exists, otherwise
+\fB$XDG_RUNTIME_DIR/ccache\-tmp\fP (typically \fB/run/user/<UID>/ccache\-tmp\fP) if
+\fBXDG_RUNTIME_DIR\fP is set and the directory exists, otherwise
 \fB<cache_dir>/tmp\fP.
 .if n .sp
 .RS 4
@@ -1592,6 +1634,13 @@ This option (an octal integer) specifies the umask for files and directories
 in the cache directory. This is mostly useful when you wish to share your
 cache with other users.
 .RE
+.SS "Disabling ccache"
+.sp
+To disable ccache completely for all invocations, set \fBdisable
+= true\fP (\fBCCACHE_DISABLE=1\fP). You can also disable ccache for a certain source
+code file by adding the string \fBccache:disable\fP in a comment in the first 4096
+bytes of the file. In the latter case the \fBCcache disabled\fP statistics counter
+will be increased.
 .SH "REMOTE STORAGE BACKENDS"
 .sp
 The \fBremote_storage\fP option lets you configure ccache
@@ -2238,72 +2287,18 @@ limits (in addition to other various statistics).
 Cleanup can be triggered in two different ways: automatic and manual.
 .SS "Automatic cleanup"
 .sp
-Ccache maintains counters for various statistics about the cache, including the
-size and number of all cached files. In order to improve performance and reduce
-issues with concurrent ccache invocations, there is one statistics file for
-each of the sixteen subdirectories in the cache.
-.sp
-After a new compilation result has been written to the cache, ccache will
-update the size and file number statistics for the subdirectory (one of
-sixteen) to which the result was written. Then, if the size counter for said
-subdirectory is greater than \fBmax_size / 16\fP or the file number counter is
-greater than \fBmax_files / 16\fP, automatic cleanup is triggered.
-.sp
-When automatic cleanup is triggered for a subdirectory in the cache, ccache
-will:
-.sp
-.RS 4
-.ie n \{\
-\h'-04' 1.\h'+01'\c
-.\}
-.el \{\
-.  sp -1
-.  IP " 1." 4.2
-.\}
-Count all files in the subdirectory and compute their aggregated size.
-.RE
-.sp
-.RS 4
-.ie n \{\
-\h'-04' 2.\h'+01'\c
-.\}
-.el \{\
-.  sp -1
-.  IP " 2." 4.2
-.\}
-Remove files in LRU (least recently used) order until the size is at most
-\fBlimit_multiple * max_size / 16\fP and the number of files is at most
-\fBlimit_multiple * max_files / 16\fP, where
-\fBlimit_multiple\fP, \fBmax_size\fP
-and \fBmax_files\fP are configuration options.
-.RE
-.sp
-.RS 4
-.ie n \{\
-\h'-04' 3.\h'+01'\c
-.\}
-.el \{\
-.  sp -1
-.  IP " 3." 4.2
-.\}
-Set the size and file number counters to match the files that were kept.
-.RE
-.sp
-The reason for removing more files than just those needed to not exceed the max
-limits is that a cleanup is a fairly slow operation, so it would not be a good
-idea to trigger it often, like after each cache miss.
-.sp
-The LRU cleanup makes use of the file modification time (mtime) of cache
-entries; ccache updates mtime of the cache entries read on a cache hit to mark
-them as "recently used".
+After a new compilation result has been written to the local cache, ccache will
+trigger an automatic cleanup if \fBmax_size\fP or
+\fBmax_files\fP is exceeded. The cleanup removes cache entries
+in LRU (least recently used) order based on the modification time (mtime) of
+files in the cache. For this reason, ccache updates mtime of the cache files
+read on a cache hit to mark them as recently used.
 .SS "Manual cleanup"
 .sp
-You can run \fBccache \-c/\-\-cleanup\fP to force cleanup of the whole cache, i.e. all
-of the sixteen subdirectories. This will recalculate the statistics counters
-and make sure that the configuration options \fBmax_size\fP and
-\fBmax_files\fP are not exceeded. Note that
-\fBlimit_multiple\fP is not taken into account for manual
-cleanup.
+You can run \fBccache \-c/\-\-cleanup\fP to force cleanup of the whole cache. This will
+recalculate the cache size information and also make sure that the cache size
+does not exceed \fBmax_size\fP and
+\fBmax_files\fP.
 .SH "CACHE COMPRESSION"
 .sp
 Ccache will by default compress all data it puts into the cache using the
@@ -2447,6 +2442,13 @@ The compiler was called for preprocessing, not compiling.
 T}
 T{
 .sp
+Ccache disabled
+T}:T{
+.sp
+Ccache was disabled by a \fBccache:disable\fP string in the source code file.
+T}
+T{
+.sp
 Could not use modules
 T}:T{
 .sp
@@ -2484,18 +2486,18 @@ A compiler check program specified by
 T}
 T{
 .sp
-Compiler produced empty output
+Compiler output file missing
 T}:T{
 .sp
-The compiler\(cqs output file (typically an object file) was empty after
+One of the files expected to be produced by the compiler was missing after
 compilation.
 T}
 T{
 .sp
-Compiler produced no output
+Compiler produced empty output
 T}:T{
 .sp
-The compiler\(cqs output file (typically an object file) was missing after
+The compiler\(cqs output file (typically an object file) was empty after
 compilation.
 T}
 T{
@@ -2868,8 +2870,8 @@ a compiler option not supported by the direct mode is used:
 .  sp -1
 .  IP \(bu 2.3
 .\}
-a \fB\-Wp,*\fP compiler option other than \fB\-Wp,\-MD,<path>\fP, \fB\-Wp,\-MMD,<path>\fP
-and \fB\-Wp,\-D<define>\fP
+a \fB\-Wp,*\fP compiler option other than \fB\-Wp,\-MD,<path>\fP, \fB\-Wp,\-MMD,<path>\fP,
+\fB\-Wp,\-D<macro[=defn]>\fP or \fB\-Wp,\-U<macro>\fP
 .RE
 .sp
 .RS 4
@@ -2952,7 +2954,7 @@ to some types of changes of compiler options and source code changes.
 .  sp -1
 .  IP \(bu 2.3
 .\}
-If \-MD is used, the manifest entries will include system header files as
+If \fB\-MD\fP is used, the manifest entries will include system header files as
 well, thus slowing down cache hits slightly, just as using \fB\-MD\fP slows down
 make. This is also the case for MSVC with \fB/showIncludes\fP.
 .RE
@@ -3007,8 +3009,8 @@ The compiler is not generating dependencies using \fB\-MD\fP or \fB\-MMD\fP (for
 .SH "HANDLING OF NEWLY CREATED HEADER FILES"
 .sp
 If modification time (mtime) or status change time (ctime) of one of the include
-files is the same second as the time compilation is being done, ccache disables
-the direct mode (or, in the case of a precompiled
+files is equal to (or newer than) the time compilation is being done, ccache
+disables the direct mode (or, in the case of a precompiled
 header, disables caching completely). This done as a safety measure to avoid a
 race condition (see below).
 .sp
@@ -3327,8 +3329,8 @@ relative before computing the hash.
 .RE
 .SH "PRECOMPILED HEADERS"
 .sp
-Ccache has support for GCC\(cqs precompiled headers. However, you have to do some
-things to make it work properly:
+Ccache has support for precompiled headers with GCC and Clang. However, you have
+to do some things to make it work properly:
 .sp
 .RS 4
 .ie n \{\
@@ -3405,12 +3407,23 @@ the PCH file generated from the precompiled header; or
 (for the GCC compiler) add the compiler option \fB\-fpch\-preprocess\fP when
 compiling.
 .RE
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.  sp -1
+.  IP \(bu 2.3
+.\}
+If you use Clang, you must compile with \fB\-fno\-pch\-timestamp\fP.
+.RE
 .sp
 If you don\(cqt do this, either the non\-precompiled version of the header file will
 be used (if available) or ccache will fall back to running the real compiler and
 increase the statistics counter \(lqPreprocessing failed\(rq (if the non\-precompiled
 header file is not available).
-.RE
 .SH "C++ MODULES"
 .sp
 Ccache has support for Clang\(cqs \fB\-fmodules\fP option. In practice ccache only
