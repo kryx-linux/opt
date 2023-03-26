@@ -4,8 +4,8 @@
 # Depends on: spirv-tools
 
 name=glslang
-version=12.0.0
-release=2
+version=12.1.0
+release=1
 source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-sdk-$version.tar.gz
   0001-pkg-config-compatibility.patch)
 
