@@ -5,8 +5,8 @@
 # Optional: jsoncpp krb5 libevent libsrtp pipewire pulseaudio snappy
 
 name=qtwebengine
-version=5.15.12
-release=2
+version=5.15.13
+release=1
 source=(https://anduin.linuxfromscratch.org/BLFS/qtwebengine/$name-$version.tar.xz
 	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-$version-build_fixes-1.patch
 	qtwebengine-5.15.2-disable-fatal-warnings.patch
