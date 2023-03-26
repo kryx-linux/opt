@@ -4,16 +4,18 @@
 # Depends on: ncurses
 
 name=texinfo
-version=7.0.2
+version=7.0.3
 release=1
 source=(ftp://ftp.gnu.org/gnu/texinfo/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
+
   ./configure \
     --prefix=/usr \
     --disable-nls
   make
   make DESTDIR=$PKG install
+
   rm -r $PKG/usr/share/info
 }
