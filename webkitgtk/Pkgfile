@@ -1,11 +1,11 @@
 # Description: Small, efficient and fast rendering engine for Web Browsers.
 # URL: https://www.webkitgtk.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: gst-plugins-base gtk3 hyphen icu lcms2 libseccomp libsecret libsoup libwebp libxslt ruby woff2 xorg-libxcomposite xorg-libxt
-# Optional: bubblewrap enchant geoclue libmanette libnotify openjpeg2 wpebackend-fdo xdg-dbus-proxy
+# Depends on: gst-plugins-base gtk3 hyphen icu lcms2 libseccomp libsecret libsoup libwebp libxslt ruby unifdef woff2 xorg-libxcomposite xorg-libxt
+# Optional: bubblewrap enchant geoclue gst-plugins-bad libavif libmanette libnotify openjpeg2 wpebackend-fdo xdg-dbus-proxy
 
 name=webkitgtk
-version=2.38.5
+version=2.40.0
 release=1
 source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
@@ -24,6 +24,8 @@ build() {
 	|| PKGMK_WEBKITGTK+=' -DENABLE_BUBBLEWRAP_SANDBOX=OFF'
 	prt-get isinst wpebackend-fdo || PKGMK_WEBKITGTK+=' -DUSE_WPE_RENDERER=OFF'
 	prt-get isinst libmanette || PKGMK_WEBKITGTK+=' -DENABLE_GAMEPAD=OFF'
+	prt-get isinst libavif || PKGMK_WEBKITGTK+=' -DUSE_AVIF=OFF'
+	prt-get isinst gst_plugins-bad || PKGMK_WEBKITGTK+=' -DUSE_GSTREAMER_TRANSCODER=OFF'
 
 	cmake -S webkitgtk-$version -B build -G Ninja ${PKGMK_WEBKITGTK} \
 		-D CMAKE_INSTALL_PREFIX:PATH=/usr \
