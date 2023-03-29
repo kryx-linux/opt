@@ -6,7 +6,7 @@
 name=rsyslog
 version=8.2302.0
 release=1
-source=(http://www.rsyslog.com/files/download/$name/$name-$version.tar.gz \
+source=(https://www.rsyslog.com/files/download/$name/$name-$version.tar.gz \
     $name.conf rsyslogd.rc)
 
 build() {
