@@ -5,7 +5,7 @@
 name=liblogging
 version=1.0.6
 release=1
-source=(http://download.rsyslog.com/$name/$name-$version.tar.gz)
+source=(https://download.rsyslog.com/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
