@@ -4,13 +4,14 @@
 # Depends on: libnvme
 
 name=nvme-cli
-version=2.3
+version=2.4
 release=1
 source=(https://github.com/linux-nvme/nvme-cli/archive/v$version/$name-$version.tar.gz)
 
 build() {
 	meson setup $name-$version build \
 		--prefix=/usr \
+		--sysconfdir=/etc \
 		--buildtype=plain \
 		-Dudevrulesdir=/lib/udev/rules.d
 	meson compile -C build
