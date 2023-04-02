@@ -11,15 +11,10 @@ source=(https://pypi.python.org/packages/source/b/build/build-$version.tar.gz)
 build() {
   cd build-$version
 
-  if ! prt-get isinst python3-flit-core; then
-    for i in build flit-core installer; do
-      /usr/bin/pip3 install --root=$SRC/tmp $i
-    done
+  PIP_CONFIG_FILE=/dev/null /usr/bin/pip3 install --isolated --root=$PKG \
+    --ignore-installed --no-deps .
 
-    PYTHON_VERSION=$(python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
-    export PYTHONPATH=$SRC/tmp/usr/lib/python${PYTHON_VERSION}/site-packages
-  fi
-
-  /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
-  /usr/bin/python3 -m installer --compile-bytecode 2 --destdir=$PKG dist/*.whl
+	/usr/bin/python3 -m compileall -d /usr/lib $PKG
+	/usr/bin/python3 -O -m compileall -d /usr/lib $PKG
+	/usr/bin/python3 -OO -m compileall -d /usr/lib $PKG
 }
