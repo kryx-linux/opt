@@ -1,0 +1,43 @@
+#
+# README for prime-run
+#
+
+This script replaces bbswitch/bumblebee/primus. Details can be found in the
+NVIDIA documentation, see:
+http://us.download.nvidia.com/XFree86/Linux-x86_64/525.105.17/README/primerenderoffload.html.
+
+It is intended to be used with the nvidia closed-source drivers. Either nvidia
+or nvidia-fb should work.
+
+Use it by calling it before a program, for example:
+
+	$ prime-run glxinfo
+
+It may be necessary to load nvidia kernel modules before starting the X
+server, for example like so in /etc/rc.modules:
+
+	/sbin/modprobe nvidia
+	/sbin/modprobe nvidia-drm
+	/sbin/modprobe nvidia-modeset
+	/sbin/modprobe nvidia-uvm
+
+If modules are loaded and devices detected correctly, you should be able to
+see multiple xrandr providers like so:
+
+	$ xrandr --listproviders
+	Providers: number : 2
+	Provider 0: id: 0x45 cap: 0xf, Source Output, Sink Output, Source Offload, Sink Offload crtcs: 3 outputs: 4 associated providers: 0 name:modesetting
+	Provider 1: id: 0x240 cap: 0x0 crtcs: 0 outputs: 0 associated providers: 0 name:NVIDIA-G0
+
+Example lspci output:
+
+	$ lspci | grep -E 'VGA|3D'
+	00:02.0 VGA compatible controller: Intel Corporation UHD Graphics 620 (rev 07)
+	01:00.0 3D controller: NVIDIA Corporation GP108M [GeForce MX150] (rev a1)
+
+Example prime-run usage test:
+
+	$ glxinfo | grep 'OpenGL renderer'
+	OpenGL renderer string: Mesa Intel(R) UHD Graphics 620 (KBL GT2)
+	$ prime-run glxinfo | grep 'OpenGL renderer'
+	OpenGL renderer string: NVIDIA GeForce MX150/PCIe/SSE2

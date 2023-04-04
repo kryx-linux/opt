@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# See http://us.download.nvidia.com/XFree86/Linux-x86_64/525.105.17/README/primerenderoffload.html
+# for details for the below variables.
+
+__GLX_VENDOR_LIBRARY_NAME=nvidia \
+__NV_PRIME_RENDER_OFFLOAD=1 \
+__VK_LAYER_NV_optimus=NVIDIA_only \
+"$@"

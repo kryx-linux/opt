@@ -1,0 +1,12 @@
+# Description: A wrapper script for NVIDIA PRIME Render Offload
+# URL: https://www.nvidia.com/en-us/drivers/unix/
+# Maintainer: Matt Housh, jaeger at crux dot ninja
+
+name=prime-run
+version=1.0
+release=1
+source=($name)
+
+build() {
+	install -D -m 0755 $SRC/$name $PKG/usr/bin/$name
+}
