@@ -4,14 +4,16 @@
 # Depends on: libpcap openssl
 
 name=ppp
-version=2.4.9
+version=2.5.0
 release=1
 source=(https://ftp.samba.org/pub/ppp/$name-$version.tar.gz)
 
 build () {
 	cd $name-$version
-	./configure --prefix=/usr --sysconfdir=/etc --cflags="$CFLAGS"
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--with-runtime-dir=/run/pppd
 	make
-	make DESTDIR=$PKG/usr INSTROOT=$PKG install install-etcppp
-	chmod +w -R $PKG
+	make DESTDIR=$PKG install
 }
