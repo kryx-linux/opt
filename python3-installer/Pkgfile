@@ -1,7 +1,7 @@
 # Description: A low-level library for installing from a Python wheel distribution
 # URL: https://github.com/pypa/installer
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: python3-build python3-flit-core
+# Depends on: python3-pip
 
 name=python3-installer
 version=0.7.0
@@ -11,7 +11,6 @@ source=(https://pypi.org/packages/source/i/installer/installer-$version.tar.gz)
 build() {
   cd installer-$version
 
-  /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
   PIP_CONFIG_FILE=/dev/null /usr/bin/pip3 install --isolated --root=$PKG \
-    --ignore-installed --no-deps $SRC/installer-$version/dist/*.whl
+    --ignore-installed --no-deps .
 }
