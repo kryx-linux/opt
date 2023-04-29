@@ -1,13 +1,12 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/TgfM0bq8v+859dXiJzoqk4YxHnR62mDiNTjxBoFmLvvouVJ8dRpn5CshxG130kIFzwKIJuGqXw1TV+ecdm9TgQ=
-SHA256 (Pkgfile) = 2f0d3f7a17dc2aeafc9c7ce5ceb454c425ce338fa393e3154197d9f80f40d7cd
-SHA256 (.footprint) = 727f0fd9c0e6be2a59cddbec7686c3eb3c2ab75009fcb9fa683f079e6dd8d974
-SHA256 (qt-everywhere-opensource-src-5.15.8.tar.xz) = 776a9302c336671f9406a53bd30b8e36f825742b2ec44a57c08217bff0fa86b9
-SHA256 (qt-everywhere-opensource-src-5.15.8-kf5-1.patch) = f1e381e47fe1ebae5af62ed5d1e600646accb6160d045e1b8f150ecf69a94f25
+RWSE3ohX2g5d/VfLQ15kzu8V6oPSK+a9xXc3xIFciLVS8Lf/w90IcayyQT/bTpTMpJDRkpw44v49W64DuoZCj/II43eIR85Alwg=
+SHA256 (Pkgfile) = ae7488a3f82b19a4a472bb1014a147594b6e72943fa736f2d82e7ad78d9e59d8
+SHA256 (.footprint) = a1f7c241c4b399deedf138f370189549263600ca71b4cc58591703d397398ae7
+SHA256 (qt-everywhere-opensource-src-5.15.9.tar.xz) = 26d5f36134db03abe4a6db794c7570d729c92a3fc1b0bf9b1c8f86d0573cd02f
+SHA256 (qt-everywhere-opensource-src-5.15.9-kf5-1.patch) = 7f4c7853574ce53c82f604453a91422470dfba205bc03758a1491a9a581aca84
 SHA256 (qtbase-5.15.8-fix-missing-qtsan-include.patch) = 65b435d09220fc66584f9613cdf7518367185af4e166c5b670301be6af98e8b1
 SHA256 (qt5-cflags.patch) = cf707cd970650f8b60f8897692b36708ded9ba116723ec8fcd885576783fe85c
 SHA256 (qt5-logo.png) = ae1335ecd1cd2d17032184895ab298a636cdfa8121b0ed71307c4f2b23ec928e
-SHA256 (qtbase-everywhere-src-5.11.1-python3.patch) = 5218cf7651f21a865fc1d8b18753e0eb0c1c412acbac080cd9d61f95b69589e5
 SHA256 (qtbase-everywhere-src-5.14.2-no_relocatable.patch) = 1fed8b9e4eb5749e70d85d7678f08a5abc881e2a2ecab85fb21f59cb124500e5
 SHA256 (qtbase-everywhere-src-5.15.2-libglvnd.patch) = 6dd54f841127f20c27300874833636105f15e7481f549c007504bb82cf26c177
 SHA256 (qtbase-use-wayland-on-gnome.patch) = d62367c679e655a472f2777b9a7a97e17bd1340c0f0b2d40d1621217743122b8
