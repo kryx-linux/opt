@@ -10,11 +10,15 @@ source=(https://download.gnome.org/sources/libxml2/${version:0:4}/$name-$version
 
 build() {
 	cd $name-$version
+
+	export PYTHON=/usr/bin/python3
+
 	./configure \
 		--prefix=/usr \
-		--sysconfdir=/etc \
-		#--without-python
+		--sysconfdir=/etc
+
 	make
 	make DESTDIR=$PKG install
+
 	rm -r $PKG/usr/share/{doc,gtk-doc}
 }
