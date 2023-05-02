@@ -4,7 +4,7 @@
 # Depends on: zlib xz
 
 name=libxml2
-version=2.10.4
+version=2.11.1
 release=1
 source=(https://download.gnome.org/sources/libxml2/${version:0:4}/$name-$version.tar.xz)
 
@@ -13,7 +13,7 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
-		--without-python
+		#--without-python
 	make
 	make DESTDIR=$PKG install
 	rm -r $PKG/usr/share/{doc,gtk-doc}
