@@ -5,7 +5,7 @@
 # Optional: gtk4 icu vala
 
 name=vte3
-version=0.70.3
+version=0.72.1
 release=1
 source=(https://gitlab.gnome.org/GNOME/vte/-/archive/$version/vte-$version.tar.bz2)
 
@@ -17,11 +17,13 @@ build() {
 	meson build vte-$version ${PKGMK_VTE} \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
+		--buildtype=plain \
+		--wrap-mode nodownload \
 		-D b_pie=true \
 		-D _systemd=false
 
-	ninja -C build -j ${JOBS:-1}
-	DESTDIR=$PKG ninja -C build install
+	meson compile -C build -j ${JOBS:-1}
+	DESTDIR=$PKG meson install -C build
 
 	rm -r $PKG/usr/share/locale
 }
