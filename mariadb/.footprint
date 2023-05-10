@@ -130,6 +130,7 @@ drwxr-xr-x	root/root	usr/include/mysql/mariadb/
 -rw-r--r--	root/root	usr/include/mysql/mariadb_rpl.h
 -rw-r--r--	root/root	usr/include/mysql/mariadb_stmt.h
 -rw-r--r--	root/root	usr/include/mysql/mariadb_version.h
+-rw-r--r--	root/root	usr/include/mysql/my_alloca.h
 -rw-r--r--	root/root	usr/include/mysql/my_config.h
 -rw-r--r--	root/root	usr/include/mysql/my_global.h
 -rw-r--r--	root/root	usr/include/mysql/my_sys.h
@@ -158,6 +159,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/
 -rw-r--r--	root/root	usr/include/mysql/server/ma_dyncol.h
 -rw-r--r--	root/root	usr/include/mysql/server/mariadb_capi_rename.h
 -rw-r--r--	root/root	usr/include/mysql/server/my_alloc.h
+-rw-r--r--	root/root	usr/include/mysql/server/my_alloca.h
 -rw-r--r--	root/root	usr/include/mysql/server/my_attribute.h
 -rw-r--r--	root/root	usr/include/mysql/server/my_byteorder.h
 -rw-r--r--	root/root	usr/include/mysql/server/my_compiler.h
