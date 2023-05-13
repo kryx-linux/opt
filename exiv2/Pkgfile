@@ -1,10 +1,10 @@
 # Description: Exif and Iptc metadata manipulation library and tools.
 # URL: https://www.exiv2.org/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on:
+# Depends on: brotli inih
 
 name=exiv2
-version=0.27.6
+version=0.28.0
 release=1
 source=(https://github.com/Exiv2/exiv2/archive/v$version/$name-$version.tar.gz)
 

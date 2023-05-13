@@ -1,22 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/addmoddel
--rwxr-xr-x	root/root	usr/bin/exifcomment
--rwxr-xr-x	root/root	usr/bin/exifdata
--rwxr-xr-x	root/root	usr/bin/exifprint
--rwxr-xr-x	root/root	usr/bin/exifvalue
 -rwxr-xr-x	root/root	usr/bin/exiv2
--rwxr-xr-x	root/root	usr/bin/exiv2json
--rwxr-xr-x	root/root	usr/bin/geotag
--rwxr-xr-x	root/root	usr/bin/iptceasy
--rwxr-xr-x	root/root	usr/bin/iptcprint
--rwxr-xr-x	root/root	usr/bin/metacopy
--rwxr-xr-x	root/root	usr/bin/mrwthumb
--rwxr-xr-x	root/root	usr/bin/taglist
--rwxr-xr-x	root/root	usr/bin/xmpdump
--rwxr-xr-x	root/root	usr/bin/xmpparse
--rwxr-xr-x	root/root	usr/bin/xmpprint
--rwxr-xr-x	root/root	usr/bin/xmpsample
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/exiv2/
 -rw-r--r--	root/root	usr/include/exiv2/asfvideo.hpp
@@ -39,7 +23,7 @@ drwxr-xr-x	root/root	usr/include/exiv2/
 -rw-r--r--	root/root	usr/include/exiv2/gifimage.hpp
 -rw-r--r--	root/root	usr/include/exiv2/http.hpp
 -rw-r--r--	root/root	usr/include/exiv2/image.hpp
--rw-r--r--	root/root	usr/include/exiv2/ini.hpp
+-rw-r--r--	root/root	usr/include/exiv2/image_types.hpp
 -rw-r--r--	root/root	usr/include/exiv2/iptc.hpp
 -rw-r--r--	root/root	usr/include/exiv2/jp2image.hpp
 -rw-r--r--	root/root	usr/include/exiv2/jpgimage.hpp
@@ -48,6 +32,7 @@ drwxr-xr-x	root/root	usr/include/exiv2/
 -rw-r--r--	root/root	usr/include/exiv2/mrwimage.hpp
 -rw-r--r--	root/root	usr/include/exiv2/orfimage.hpp
 -rw-r--r--	root/root	usr/include/exiv2/pgfimage.hpp
+-rw-r--r--	root/root	usr/include/exiv2/photoshop.hpp
 -rw-r--r--	root/root	usr/include/exiv2/pngimage.hpp
 -rw-r--r--	root/root	usr/include/exiv2/preview.hpp
 -rw-r--r--	root/root	usr/include/exiv2/properties.hpp
@@ -56,14 +41,11 @@ drwxr-xr-x	root/root	usr/include/exiv2/
 -rw-r--r--	root/root	usr/include/exiv2/rafimage.hpp
 -rw-r--r--	root/root	usr/include/exiv2/riffvideo.hpp
 -rw-r--r--	root/root	usr/include/exiv2/rw2image.hpp
--rw-r--r--	root/root	usr/include/exiv2/rwlock.hpp
 -rw-r--r--	root/root	usr/include/exiv2/slice.hpp
--rw-r--r--	root/root	usr/include/exiv2/ssh.hpp
 -rw-r--r--	root/root	usr/include/exiv2/tags.hpp
 -rw-r--r--	root/root	usr/include/exiv2/tgaimage.hpp
 -rw-r--r--	root/root	usr/include/exiv2/tiffimage.hpp
 -rw-r--r--	root/root	usr/include/exiv2/types.hpp
--rw-r--r--	root/root	usr/include/exiv2/utilsvideo.hpp
 -rw-r--r--	root/root	usr/include/exiv2/value.hpp
 -rw-r--r--	root/root	usr/include/exiv2/version.hpp
 -rw-r--r--	root/root	usr/include/exiv2/webpimage.hpp
@@ -75,10 +57,9 @@ drwxr-xr-x	root/root	usr/lib/cmake/exiv2/
 -rw-r--r--	root/root	usr/lib/cmake/exiv2/exiv2Config-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/exiv2/exiv2Config.cmake
 -rw-r--r--	root/root	usr/lib/cmake/exiv2/exiv2ConfigVersion.cmake
--rw-r--r--	root/root	usr/lib/libexiv2-xmp.a
-lrwxrwxrwx	root/root	usr/lib/libexiv2.so -> libexiv2.so.27
--rwxr-xr-x	root/root	usr/lib/libexiv2.so.0.27.6
-lrwxrwxrwx	root/root	usr/lib/libexiv2.so.27 -> libexiv2.so.0.27.6
+lrwxrwxrwx	root/root	usr/lib/libexiv2.so -> libexiv2.so.28
+-rwxr-xr-x	root/root	usr/lib/libexiv2.so.0.28.0
+lrwxrwxrwx	root/root	usr/lib/libexiv2.so.28 -> libexiv2.so.0.28.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/exiv2.pc
 drwxr-xr-x	root/root	usr/share/
