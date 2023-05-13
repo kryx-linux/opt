@@ -9,7 +9,7 @@ version=1.69.0
 _date=2023-03-28
 _rustc=1.68.2
 _cargo=$_rustc
-release=1
+release=2
 
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.xz
@@ -102,7 +102,7 @@ cat <<- EOF > $SRC/config.toml
 
 	[build]
 	target = ["x86_64-unknown-linux-gnu", "i686-unknown-linux-gnu"]
-	tools = ["cargo", "clippy", "rustfmt", "analysis", "src", "rust-demangler", "rust-analyzer"]
+	tools = ["cargo", "clippy", "rustfmt", "analysis", "src", "rust-demangler", "rust-analyzer", "rustdoc"]
 	docs = false
 	extended = true
 	sanitizers = true
