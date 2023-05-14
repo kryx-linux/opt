@@ -1,15 +1,18 @@
 # Description: XML to PO and back again.
-# URL: http://itstool.org/
+# URL: https://itstool.org/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: python3-libxml2
+# Depends on: libxml2
 
 name=itstool
 version=2.0.7
-release=1
-source=(http://files.itstool.org/itstool/$name-$version.tar.bz2)
+release=2
+source=(https://files.itstool.org/itstool/$name-$version.tar.bz2
+	0001-Fix-the-crash-from-912099.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/0001-Fix-the-crash-from-912099.patch
 
 	PYTHON=/usr/bin/python3 \
 	./configure --prefix=/usr
