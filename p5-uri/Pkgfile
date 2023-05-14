@@ -3,7 +3,7 @@
 # Maintainer: Danny Rawlins, crux at romster dot me
 
 name=p5-uri
-version=5.18
+version=5.19
 release=1
 source=(https://www.cpan.org/modules/by-module/URI/URI-$version.tar.gz)
 
