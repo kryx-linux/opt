@@ -4,7 +4,7 @@
 # Depends on: libpcre openssl util-linux zlib
 
 name=wget
-version=1.21.3
+version=1.21.4
 release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.lz \
 	wgetrc)
