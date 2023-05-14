@@ -7,12 +7,12 @@ name=itstool
 version=2.0.7
 release=2
 source=(https://files.itstool.org/itstool/$name-$version.tar.bz2
-	0001-Fix-the-crash-from-912099.patch)
+	fix_crash_912099.patch)
 
 build() {
 	cd $name-$version
 
-	patch -p1 -i $SRC/0001-Fix-the-crash-from-912099.patch
+	patch -p1 -i $SRC/fix_crash_912099.patch
 
 	PYTHON=/usr/bin/python3 \
 	./configure --prefix=/usr
