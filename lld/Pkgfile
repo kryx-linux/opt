@@ -4,7 +4,7 @@
 # Depends on: llvm
 
 name=lld
-version=15.0.7
+version=16.0.4
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/lld-$version.src.tar.xz
 	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz
@@ -13,7 +13,7 @@ source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/
 build() {
 	patch -d $name-$version.src -p2 -i $SRC/0002-PATCH-lld-Import-compact_unwind_encoding.h-from-libu.patch
 
-	cp -r $SRC/cmake-$version.src/Modules/* $name-$version.src/cmake/modules/.
+	mv cmake-$version.src cmake
 
 	cmake -S $name-$version.src -B build -G Ninja \
 		-D CMAKE_INSTALL_PREFIX=/usr \
