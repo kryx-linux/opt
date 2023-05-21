@@ -4,7 +4,7 @@
 # Depends on: compiler-rt
 
 name=clang
-version=15.0.7
+version=16.0.4
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-$version.src.tar.xz
 	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-tools-extra-$version.src.tar.xz
@@ -16,7 +16,7 @@ build() {
 	mv clang-tools-extra-$version.src clang-$version.src/tools/extra
 	prt-get isinst ccache && PKGMK_CLANG+=' -D LLVM_CCACHE_BUILD=ON'
 
-	cp -r $SRC/cmake-$version.src/Modules/* $name-$version.src/cmake/modules/.
+	mv cmake-$version.src cmake
 
 	cmake -S $name-$version.src -B build -G Ninja $PKGMK_CLANG \
 		-D CMAKE_INSTALL_PREFIX=/usr \
