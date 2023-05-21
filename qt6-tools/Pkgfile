@@ -6,7 +6,7 @@
 
 name=qt6-tools
 version=6.5.0
-release=1
+release=2
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qttools-everywhere-src-$version.tar.xz)
 
 build() {
