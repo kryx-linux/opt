@@ -65,6 +65,7 @@ drwxr-xr-x	root/root	usr/include/lldb/API/
 -rw-r--r--	root/root	usr/include/lldb/API/SBThreadCollection.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBThreadPlan.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBTrace.h
+-rw-r--r--	root/root	usr/include/lldb/API/SBTraceCursor.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBType.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBTypeCategory.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBTypeEnumMember.h
@@ -149,6 +150,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Core/
 -rw-r--r--	root/root	usr/include/lldb/Core/ThreadSafeDenseMap.h
 -rw-r--r--	root/root	usr/include/lldb/Core/ThreadSafeDenseSet.h
 -rw-r--r--	root/root	usr/include/lldb/Core/ThreadSafeValue.h
+-rw-r--r--	root/root	usr/include/lldb/Core/ThreadedCommunication.h
 -rw-r--r--	root/root	usr/include/lldb/Core/UniqueCStringMap.h
 -rw-r--r--	root/root	usr/include/lldb/Core/UserSettingsController.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Value.h
@@ -276,11 +278,11 @@ drwxr-xr-x	root/root	usr/include/lldb/Host/openbsd/
 drwxr-xr-x	root/root	usr/include/lldb/Host/posix/
 -rw-r--r--	root/root	usr/include/lldb/Host/posix/ConnectionFileDescriptorPosix.h
 -rw-r--r--	root/root	usr/include/lldb/Host/posix/DomainSocket.h
--rw-r--r--	root/root	usr/include/lldb/Host/posix/Fcntl.h
 -rw-r--r--	root/root	usr/include/lldb/Host/posix/HostInfoPosix.h
 -rw-r--r--	root/root	usr/include/lldb/Host/posix/HostProcessPosix.h
 -rw-r--r--	root/root	usr/include/lldb/Host/posix/HostThreadPosix.h
 -rw-r--r--	root/root	usr/include/lldb/Host/posix/LockFilePosix.h
+-rw-r--r--	root/root	usr/include/lldb/Host/posix/MainLoopPosix.h
 -rw-r--r--	root/root	usr/include/lldb/Host/posix/PipePosix.h
 -rw-r--r--	root/root	usr/include/lldb/Host/posix/ProcessLauncherPosixFork.h
 drwxr-xr-x	root/root	usr/include/lldb/Host/windows/
@@ -290,6 +292,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Host/windows/
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/HostProcessWindows.h
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/HostThreadWindows.h
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/LockFileWindows.h
+-rw-r--r--	root/root	usr/include/lldb/Host/windows/MainLoopWindows.h
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/PipeWindows.h
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/PosixApi.h
 -rw-r--r--	root/root	usr/include/lldb/Host/windows/ProcessLauncherWindows.h
@@ -349,6 +352,8 @@ drwxr-xr-x	root/root	usr/include/lldb/Interpreter/
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Property.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptInterpreter.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedInterface.h
+-rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedMetadata.h
+-rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedPlatformInterface.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedProcessInterface.h
 drwxr-xr-x	root/root	usr/include/lldb/Symbol/
 -rw-r--r--	root/root	usr/include/lldb/Symbol/ArmUnwindInfo.h
@@ -481,6 +486,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/DataBufferLLVM.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/DataEncoder.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/DataExtractor.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/Diagnostics.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Endian.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Environment.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Event.h
@@ -501,8 +507,6 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/RangeMap.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/RegisterValue.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/RegularExpression.h
--rw-r--r--	root/root	usr/include/lldb/Utility/Reproducer.h
--rw-r--r--	root/root	usr/include/lldb/Utility/ReproducerProvider.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Scalar.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/SelectHelper.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/SharedCluster.h
@@ -534,7 +538,6 @@ drwxr-xr-x	root/root	usr/include/lldb/Version/
 -rw-r--r--	root/root	usr/include/lldb/lldb-defines.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-enumerations.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-forward.h
--rw-r--r--	root/root	usr/include/lldb/lldb-private-defines.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-private-enumerations.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-private-forward.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-private-interfaces.h
@@ -544,11 +547,11 @@ drwxr-xr-x	root/root	usr/include/lldb/Version/
 -rw-r--r--	root/root	usr/include/lldb/lldb-types.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-versioning.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.15
-lrwxrwxrwx	root/root	usr/lib/liblldb.so.15 -> liblldb.so.15.0.7
--rwxr-xr-x	root/root	usr/lib/liblldb.so.15.0.7
-lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.15
--rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.15
+lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.16
+lrwxrwxrwx	root/root	usr/lib/liblldb.so.16 -> liblldb.so.16.0.4
+-rwxr-xr-x	root/root	usr/lib/liblldb.so.16.0.4
+lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.16
+-rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.16
 drwxr-xr-x	root/root	usr/lib/python3.10/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/
@@ -609,9 +612,13 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/__init__.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/__init__.cpython-310.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/__init__.cpython-310.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_platform.cpython-310.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_platform.cpython-310.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_platform.cpython-310.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_process.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_process.cpython-310.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_process.cpython-310.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/scripted_platform.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/scripted_process.py
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/utils/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/utils/__init__.py

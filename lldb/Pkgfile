@@ -4,13 +4,13 @@
 # Depends on: clang python3-six swig
 
 name=lldb
-version=15.0.7
+version=16.0.4
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/lldb-$version.src.tar.xz
 	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz)
 
 build() {
-  cp -r $SRC/cmake-$version.src/Modules/* $name-$version.src/cmake/modules/.
+  mv cmake-$version.src cmake
 
   cmake -S $name-$version.src -B build -G Ninja \
     -D CMAKE_INSTALL_PREFIX=/usr \
