@@ -1,12 +1,12 @@
 # Description: Compression and file packaging/archive utility
-# URL: http://infozip.sourceforge.net/Zip.html
+# URL: https://infozip.sourceforge.net/Zip.html
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: bzip2
 
 name=zip
 version=3.0
 release=2
-source=(http://downloads.sourceforge.net/sourceforge/infozip/${name}${version//./}.tar.gz)
+source=(https://downloads.sourceforge.net/sourceforge/infozip/${name}${version//./}.tar.gz)
 
 build() {
 	cd ${name}${version//./}
