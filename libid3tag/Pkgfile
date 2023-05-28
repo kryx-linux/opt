@@ -1,16 +1,16 @@
 # Description: ID3 tag manipulation library
-# URL: https://github.com/tenacityteam/libid3tag
+# URL: https://codeberg.org/tenacityteam/libid3tag
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: zlib cmake
 
 name=libid3tag
 version=0.16.2
 release=1
-source=(https://github.com/tenacityteam/libid3tag/archive/$version/$name-$version.tar.gz)
+source=(https://codeberg.org/tenacityteam/libid3tag/archive/$version.tar.gz)
+renames=($name-$version.tar.gz)
 
 build() {
-  prt-get isinst ninja && PKGMK_LIBID3TAG+=' -G Ninja'
-  cmake -S $name-$version -B build $PKGMK_LIBID3TAG \
+  cmake -S $name -B build -G Ninja \
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=lib \
     -D CMAKE_BUILD_TYPE=Release \
