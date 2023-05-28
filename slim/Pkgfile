@@ -1,25 +1,23 @@
-# Description: a graphical login utility
-# URL:         https://sourceforge.net/projects/slim.berlios/
-# Maintainer:  Matt Housh, jaeger at crux dot ninja
-# Depends on:  xorg-xauth libjpeg-turbo
+# Description: Simple Login Manager
+# URL: https://slim-fork.sourceforge.io/
+# Maintainer: Matt Housh, jaeger at crux dot ninja
+# Depends on: xorg-xauth libjpeg-turbo
 
 name=slim
-version=1.3.6
+version=1.4.0
 release=1
-source=(http://downloads.sourceforge.net/project/slim.berlios/slim-$version.tar.gz
-    https://crux.nu/files/slim-crux-smooth.tar.gz $name.rc
-    signed-comparison.patch)
+source=(https://sourceforge.net/projects/slim-fork/files/$name-$version.tar.gz
+    https://crux.nu/files/slim-crux-smooth.tar.gz $name.rc $name.pam)
 
 build () {
     cd $name-$version
 
-    # https://bugs.gentoo.org/786498
-    patch -p1 -i $SRC/signed-comparison.patch
-
-    # do NOT build slimlock (because of pam)
-    sed -i  -e '224d' CMakeLists.txt
-
-    cmake -DCMAKE_INSTALL_PREFIX=/usr
+    cmake -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DUSE_PAM=yes \
+        -DBUILD_SLIMLOCK=yes \
+        -DUSE_CONSOLEKIT=no
 
     make
     make DESTDIR=$PKG install
@@ -31,6 +29,5 @@ build () {
     cp -r slim-crux-smooth $PKG/usr/share/slim/themes/crux-smooth
     chmod 0644 $PKG/usr/share/slim/themes/crux-smooth/*
 
-    # no systemd support
-    rm -r $PKG/lib $PKG/usr/share/man/man1/slimlock.1
+    install -Dm 0644 $name.pam $PKG/etc/pam.d/$name
 }
