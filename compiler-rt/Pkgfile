@@ -4,7 +4,7 @@
 # Depends on: llvm
 
 name=compiler-rt
-version=16.0.4
+version=16.0.5
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/compiler-rt-$version.src.tar.xz
 	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
@@ -16,7 +16,6 @@ build() {
 
 	cmake -S $name-$version.src -B build -G Ninja \
 		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D COMPILER_RT_INSTALL_PATH=/usr/lib/clang/$version \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
