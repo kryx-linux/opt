@@ -1,0 +1,18 @@
+# Description: Automatically generates Rust FFI bindings to C (and some C++) libraries
+# URL: https://github.com/rust-lang/rust-bindgen
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: clang rust
+
+name=rust-bindgen
+version=0.65.1
+release=1
+source=(https://github.com/rust-lang/rust-bindgen/archive/v$version/$name-$version.tar.gz)
+
+build() {
+  prt-get isinst sccache && export RUSTC_WRAPPER=/usr/bin/sccache
+  [[ ! -e $PKGMK_SOURCE_DIR/rust ]] && mkdir $PKGMK_SOURCE_DIR/rust
+
+  cargo build --release --manifest-path $name-$version/Cargo.toml
+
+  install -Dt $PKG/usr/bin $name-$version/target/release/bindgen
+}
