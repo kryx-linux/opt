@@ -5,7 +5,7 @@
 # Optional: assimp icu
 
 name=qt5
-version=5.15.9
+version=5.15.10
 release=1
 source=(https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-opensource-src-$version.tar.xz
 	https://www.linuxfromscratch.org/patches/blfs/svn/qt-everywhere-opensource-src-$version-kf5-1.patch
