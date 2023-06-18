@@ -1,10 +1,10 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/X96Uy2pYXhhde8ki+vf5DI+JRk5IktULSxIBgpjGQlbCdyEk/z7t8O+9wq0BsTCHnt5kmWvWIV+lxQWAt/7Pwc=
-SHA256 (Pkgfile) = 81d6f30301d0c322ad428ea1300a572a85694e6db8877e7fc37a873ef272e0ed
-SHA256 (.footprint) = 8624f45fa41db16aed633988acdd618236db74e926275bef63620ff5605b54ca
-SHA256 (llvm-16.0.5.src.tar.xz) = 701b764a182d8ea8fb017b6b5f7f5f1272a29f17c339b838f48de894ffdd4f91
-SHA256 (cmake-16.0.5.src.tar.xz) = 9400d49acd53a4b8f310de60554a891436db5a19f6f227f99f0de13e4afaaaff
-SHA256 (third-party-16.0.5.src.tar.xz) = 0a4bbb8505e95570e529d6b3d5176e93beb3260f061de9001e320d57b59aed59
+RWSE3ohX2g5d/X50hZlcRZvcXLbP80EnuRs0u6kZfc00prAU8MqeAUGwGzl0vKUVWU1aYkbpMvnhZYsFpLIqFEWROAsJe7W33gs=
+SHA256 (Pkgfile) = bcd8cfc7aa4dc185b73ac5442e0c015c83ae03303e02dc50f9c45a6ae28d4807
+SHA256 (.footprint) = 43f04816603486bce546323abfc8a476a489c64dd86e8f6938d5fc7be65cfd86
+SHA256 (llvm-16.0.6.src.tar.xz) = e91db44d1b3bb1c33fcea9a7d1f2423b883eaa9163d3d56ca2aa6d2f0711bc29
+SHA256 (cmake-16.0.6.src.tar.xz) = 39d342a4161095d2f28fb1253e4585978ac50521117da666e2b1f6f28b62f514
+SHA256 (third-party-16.0.6.src.tar.xz) = 15f5b9aeeba938530af977d5f9205612737a091a7f0f6c8075df8723b7713f70
 SHA256 (install-prefix.patch) = 2649b61a459eb6d8a9aca38ab411aec27eeae57fe82e32d135db4ccb353c9dda
 SHA256 (rust-feature-tables.patch) = 88470afc557650112af05e9055d0010f07a888c34fcc61ed8b7cc165d8ecd9af
 SHA256 (llvm-config.h) = 2227b83b904348e5530f3475c978e11cb0f05a85024781dcb49ac86b65582707
