@@ -6,7 +6,7 @@
 
 name=git
 version=2.41.0
-release=1
+release=2
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
 	git gitd.rc)
 
@@ -16,8 +16,12 @@ build() {
 	make CFLAGS="$CFLAGS" \
 		prefix=/usr \
 		gitexecdir=/usr/lib/git-core \
+		CFLAGS="$CFLAGS -flto -ffat-lto-objects" \
+		LDFLAGS="$LDFLAGS -flto -ffat-lto-objects" \
 		INSTALLSITEMAN3DIR=/usr/share/man/man3 \
-		perllibdir=$(perl -e 'use Config; print $Config::Config{'installsitelib'}') \
+		perllibdir=$(/usr/bin/perl -MConfig -wle 'print $Config{installvendorlib}') \
+		INSTALL_SYMLINKS=1 \
+		USE_LIBPCRE2=1 \
 		DESTDIR=$PKG install
 
 	prt-get isinst bash-completion && install -Dm644 contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
