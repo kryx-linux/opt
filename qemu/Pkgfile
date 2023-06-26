@@ -12,6 +12,8 @@ source=(https://download.qemu.org/$name-$version.tar.xz
 build() {
 	cd $name-$version
 
+	sed "s/-l ar',$/-l ara',/" -i pc-bios/keymaps/meson.build
+
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
