@@ -4,7 +4,7 @@
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia
-version=525.116.04
+version=535.54.03
 release=1
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf nvidia-powerd.rc)
@@ -60,7 +60,7 @@ build() {
 	install -D -m 0644 nvidia_layers.json $PKG/usr/share/vulkan/implicit_layer.d/nvidia_layers.json
 
 	# driver component libraries
-	for C in cfg compiler {e,}glcore gl{si,vkspirv} rtcore allocator; do
+	for C in cfg {e,}glcore gl{si,vkspirv} rtcore allocator; do
 		install -m 0755 libnvidia-${C}.so.$version $PKG/usr/lib/
 		ln -s libnvidia-${C}.so.$version $PKG/usr/lib/libnvidia-${C}.so.1
 		ln -s libnvidia-${C}.so.$version $PKG/usr/lib/libnvidia-${C}.so
@@ -126,6 +126,7 @@ build() {
 	install -m 0755 libnvoptix.so.$version $PKG/usr/lib/
 	ln -s libnvoptix.so.$version $PKG/usr/lib/libnvoptix.so.1
 	ln -s libnvoptix.so.$version $PKG/usr/lib/libnvoptix.so
+	install -D -m 0644 nvoptix.bin $PKG/usr/share/nvidia/nvoptix.bin
 
 	# Optical Flow library
 	install -m 0755 libnvidia-opticalflow.so.$version $PKG/usr/lib/
