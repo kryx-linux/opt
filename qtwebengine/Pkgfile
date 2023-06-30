@@ -6,7 +6,7 @@
 
 name=qtwebengine
 version=5.15.14
-release=1
+release=2
 source=(https://anduin.linuxfromscratch.org/BLFS/qtwebengine/$name-$version.tar.xz
 	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-$version-build_fixes-1.patch
 	qtwebengine-5.15.2-disable-fatal-warnings.patch
@@ -41,7 +41,7 @@ build() {
 	# Ninja, by default, sets the number of jobs to the number of availalble threads
 	test -n "$JOBS" && export NINJAFLAGS+=" -j ${JOBS-1}"
 
-	prt-get isinst clang && export CC=clang CXX=clang++
+	prt-get isinst clang && export CC=clang CXX=clang++ QMAKE_XSPEC=linux-clang
 	prt-get isinst lld && export AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib LDFLAGS+=' -fuse-ld=lld'
 
 	prt-get isinst ccache && export \
@@ -51,7 +51,10 @@ build() {
 		QMAKE_CXX="ccache ${CXX:-g++}" \
 		QMAKE_LINK="ccache ${CXX:-g++}" \
 		QMAKE_LINK_SHLIB="ccache ${CXX:-g++}" \
+		QMAKESPEC=/usr/lib/qt5/mkspecs/${QMAKE_XSPEC:-linux-g++}
 		PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
+	sed -i -e 's|"-Wno-unknown-attributes",|"-Wno-enum-constexpr-conversion",\n      &|' \
+		src/3rdparty/chromium/build/config/compiler/BUILD.gn
 
 	install -d build
 	cd build
@@ -59,13 +62,16 @@ build() {
 	prt-get isinst pulseaudio && PKGMK_QTWEBENGINE+=' -pulseaudio' || PKGMK_QTWEBENGINE+=' -no-pulseaudio'
 	prt-get isinst pipewire && PKGMK_QTWEBENGINE+=' -webengine-webrtc-pipewire'
 	prt-get isinst icu && PKGMK_QTWEBENGINE+=' -webengine-icu' || PKGMK_QTWEBENGINE+=' -no-webengine-icu'
+	## recent system-re2 crashes build
+	prt-get isinst re2 && PKGMK_QTWEBENGINE+=' -no-feature-webengine-system-re2'
 
 	qmake-qt5 .. -- \
 		$PKGMK_QTWEBENGINE \
 		-proprietary-codecs \
 		-system-ffmpeg \
 		-system-opus \
-		-system-webp
+		-system-webp \
+		-no-feature-webengine-embedded-build
 
 	make
 	make INSTALL_ROOT=$PKG install
