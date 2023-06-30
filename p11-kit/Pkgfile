@@ -1,16 +1,16 @@
 # Description: Provides a way to load and enumerate PKCS#11 modules
 # URL: https://p11-glue.github.io/p11-glue/p11-kit.html
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libffi libtasn1 make-ca meson ninja
 
 name=p11-kit
-version=0.24.1
+version=0.25.0
 release=1
 source=(https://github.com/p11-glue/$name/releases/download/$version/$name-$version.tar.xz)
 
 build() {
-	sed '20,$ d' -i $name-$version/trust/trust-extract-compat
-	cat >> $name-$version/trust/trust-extract-compat << "EOF"
+  sed '20,$ d' -i $name-$version/trust/trust-extract-compat
+  cat >> $name-$version/trust/trust-extract-compat << "EOF"
 # Copy existing anchor modifications to /etc/ssl/local
 /usr/lib/make-ca/copy-trust-modifications
 
@@ -18,19 +18,19 @@ build() {
 /usr/sbin/make-ca -f -g
 EOF
 
-	meson setup $name-$version build \
-		--prefix=/usr \
-		--libexecdir=/usr/lib \
-		--buildtype=plain \
-		--wrap-mode=nodownload \
-		-D b_lto=true \
-		-D b_pie=true \
-		-D trust_paths=/etc/pki/anchors \
-		-D module_path=/usr/lib/pkcs11 \
-		-D nls=false
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
+  meson setup $name-$version build \
+    --prefix=/usr \
+    --libexecdir=/usr/lib \
+    --buildtype=plain \
+    --wrap-mode=nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D trust_paths=/etc/pki/anchors \
+    -D module_path=/usr/lib/pkcs11 \
+    -D nls=false
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
 
-	ln -s /usr/lib/p11-kit/trust-extract-compat \
-		$PKG/usr/bin/update-ca-trust
+  ln -s /usr/lib/p11-kit/trust-extract-compat \
+    $PKG/usr/bin/update-ca-trust
 }
