@@ -1,24 +1,24 @@
 # Description: Free Lossless Audio Codec.
 # URL: https://xiph.org/flac/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libogg
 
 name=flac
-version=1.4.2
+version=1.4.3
 release=1
 source=(https://github.com/xiph/flac/releases/download/$version/flac-$version.tar.xz)
 
 build() {
-	cmake -S $name-$version -B build -G Ninja \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_INSTALL_LIBDIR=lib \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-D BUILD_SHARED_LIBS=ON \
-		-D BUILD_EXAMPLES=OFF \
-		-D BUILD_TESTING=OFF \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+  cmake -S $name-$version -B build -G Ninja \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D BUILD_SHARED_LIBS=ON \
+    -D BUILD_EXAMPLES=OFF \
+    -D BUILD_TESTING=OFF \
+    -Wno-dev
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
 }
