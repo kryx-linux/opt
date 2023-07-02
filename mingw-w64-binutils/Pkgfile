@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=mingw-w64-binutils
-version=2.37
+version=2.38
 release=1
 source=(http://ftpmirror.gnu.org/gnu/binutils/binutils-$version.tar.xz)
 
@@ -16,6 +16,7 @@ build() {
 			--target=$T \
 			--disable-nls \
 			--disable-multilib
+		sed -i -e '/^MAKEINFO/s:=.*:= true:' Makefile
 		make
 		make DESTDIR=$PKG install
 		cd ..
