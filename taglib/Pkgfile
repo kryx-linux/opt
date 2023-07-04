@@ -1,11 +1,11 @@
 # Description: Library to read and edit the meta-data of popular audio formats.
 # URL: http://taglib.github.io/
 # Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cmake
+# Depends on:
 # Optional: boost
 
 name=taglib
-version=1.13
+version=1.13.1
 release=1
 source=(http://taglib.github.io/releases/$name-$version.tar.gz)
 
@@ -13,10 +13,8 @@ build() {
 	cmake -S $name-$version -B build -G Ninja $PGKMK_TAGLIB \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_RELEASE_TYPE=Release \
-		-DBUILD_SHARED_LIBS=ON \
-		-DWITH_MP4=ON \
-		-DWITH_ASF=ON
+		-DCMAKE_BUILD_TYPE=Release \
+		-DBUILD_SHARED_LIBS=ON
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 }
