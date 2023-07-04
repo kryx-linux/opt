@@ -5,7 +5,7 @@
 # Optional: gtk4 icu vala
 
 name=vte3
-version=0.72.1
+version=0.72.2
 release=1
 source=(https://gitlab.gnome.org/GNOME/vte/-/archive/$version/vte-$version.tar.bz2)
 
@@ -14,7 +14,7 @@ build() {
 	prt-get isinst vala || PKGMK_VTE+=' -D vapi=false'
 	prt-get isinst icu || PKGMK_VTE+=' -D icu=false'
 
-	meson build vte-$version ${PKGMK_VTE} \
+	meson setup build vte-$version ${PKGMK_VTE} \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
 		--buildtype=plain \
