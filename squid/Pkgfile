@@ -4,16 +4,15 @@
 # Depends on: db linux-pam libcap libnsl libtirpc libtool expat libxml2
 
 name=squid
-version=5.9
+version=6.1
 release=1
-source=(http://www.squid-cache.org/Versions/v5/$name-$version.tar.xz
+source=(http://www.squid-cache.org/Versions/v6/$name-$version.tar.xz
 	squid)
 
 build() {
 	cd $name-$version
 
 	sed '/DEFAULT_STATEDIR/s/$(localstatedir)//' -i src/ipc/Makefile.in
-	export CXXFLAGS="$CXXFLAGS -Wno-error"
 
 	./configure \
 		--prefix=/usr \
@@ -33,8 +32,7 @@ build() {
 		--with-aufs-threads=16 \
 		--disable-auto-locale \
 		--disable-arch-native \
-		--without-{mit,heimdal}-krb5 \
-		--without-{nettle,gnutls}
+		--without-{mit,heimdal}-krb5
 
 	make all
 	make DESTDIR=$PKG install
