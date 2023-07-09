@@ -3,14 +3,14 @@ drwxr-xr-x	root/root	etc/UPower/
 -rw-r--r--	root/root	etc/UPower/UPower.conf
 drwxr-xr-x	root/root	lib/
 drwxr-xr-x	root/root	lib/udev/
+drwxr-xr-x	root/root	lib/udev/hwdb.d/
+-rw-r--r--	root/root	lib/udev/hwdb.d/95-upower-hid.hwdb
 drwxr-xr-x	root/root	lib/udev/rules.d/
 -rw-r--r--	root/root	lib/udev/rules.d/95-upower-hid.rules
 -rw-r--r--	root/root	lib/udev/rules.d/95-upower-wup.rules
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/upower
-drwxr-xr-x	root/root	usr/hwdb.d/
--rw-r--r--	root/root	usr/hwdb.d/95-upower-hid.hwdb
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/libupower-glib/
 -rw-r--r--	root/root	usr/include/libupower-glib/up-autocleanups.h
