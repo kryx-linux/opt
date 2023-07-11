@@ -5,15 +5,13 @@
 # Optional: libseccomp libiscsi usbredir spice
 
 name=qemu-all
-version=8.0.2
+version=8.0.3
 release=1
 source=(https://download.qemu.org/qemu-$version.tar.xz
 	qemu-man-$version.tar.xz)
 
 build() {
 	cd qemu-$version
-
-	sed "s/-l ar',$/-l ara',/" -i pc-bios/keymaps/meson.build
 
 	./configure \
 		--prefix=/usr \
