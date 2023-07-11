@@ -4,15 +4,13 @@
 # Depends on: libusb linux-pam util-linux glib ninja libsdl2 libxkbcommon xorg-libpixman
 
 name=qemu
-version=8.0.2
+version=8.0.3
 release=1
 source=(https://download.qemu.org/$name-$version.tar.xz
 	$name-man-$version.tar.xz)
 
 build() {
 	cd $name-$version
-
-	sed "s/-l ar',$/-l ara',/" -i pc-bios/keymaps/meson.build
 
 	./configure \
 		--prefix=/usr \
