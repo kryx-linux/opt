@@ -1,11 +1,11 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/cExuGcJ8vyGFtsrnRtQB8cWYmDbns4ZsqZ2/nq8rJzdd0vKs9EqWCsCjSGQH2WLpDHh3Jeq+ZLfNoL1qWVBUwQ=
-SHA256 (Pkgfile) = de1d0b421a7265b47f823af9421a6dbf7c0a36acc7ec470be9c1581a6a701ee3
-SHA256 (.footprint) = 52ac9a52b8ae8299d98c7a10d6a3bd8520c84d59240a525e4a4513540e28059a
-SHA256 (rustc-1.70.0-src.tar.xz) = bb8e9c564566b2d3228d95de9063a9254182446a161353f1d843bfbaf5c34639
-SHA256 (rust-std-1.69.0-x86_64-unknown-linux-gnu.tar.xz) = 4c95739e6f0f1d4defd937f6d60360b566e051dfb2fa71879d0f9751392f3709
-SHA256 (rustc-1.69.0-x86_64-unknown-linux-gnu.tar.xz) = 70e97ab5b9600328b977268fc92ca4aa53064e4e97468df35215d4396e509279
-SHA256 (cargo-1.69.0-x86_64-unknown-linux-gnu.tar.xz) = 336eeabf231a7665c26c127a37b8aefffe28cb087c5c8d4ba0460419f5f8eff2
+RWSE3ohX2g5d/Yp25pb992UfDhCDr0YfdbSAnlOjgbYBmRcRYIom6HV/8eU0Y8OMRbTUnQnENkcsByusaQ137QDlf6s2Is33sQ8=
+SHA256 (Pkgfile) = 73e2ef14b75768cfc2b7ae2cc1fde4631c3d2fe20575071789b778c175d5abd2
+SHA256 (.footprint) = 15f0cfebf45366940a47e585b1afb8133bcceef831da52846dfe5d366e2560c7
+SHA256 (rustc-1.71.0-src.tar.xz) = 5814699031aafdcc2e2f71fc9b389678cd7042350d1583da061463d8e88681c7
+SHA256 (rust-std-1.70.0-x86_64-unknown-linux-gnu.tar.xz) = 0c0129717da1e27ccf2c56da950d2fe56973f71beec9e80ae6904b282d2f0ee9
+SHA256 (rustc-1.70.0-x86_64-unknown-linux-gnu.tar.xz) = 7d891d3e9bc4f1151545c83cbe3bc6af9ed234388c45ca2e19641262f48615e2
+SHA256 (cargo-1.70.0-x86_64-unknown-linux-gnu.tar.xz) = 650e7a890a52869cd14e2305652bff775aec7fc2cf47fc62cf4a89ff07242333
 SHA256 (0001-bootstrap-Change-libexec-dir.patch) = 34391ebea7d9c10246c4f3cbe05b3d5587a72105887dab5ecb00d10ea6a10d6a
 SHA256 (0001-cargo-Change-libexec-dir.patch) = b2ef8c3bca5d72ed58ff8930e69947602f875a639c2b01de5943b1ecb1b5c3c3
 SHA256 (0002-compiler-Change-LLVM-targets.patch) = 4a4ff5c294acc0b1ca800856218770f6330a878acee72193aa456d82846a8a28
