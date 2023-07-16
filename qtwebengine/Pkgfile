@@ -6,7 +6,7 @@
 
 name=qtwebengine
 version=5.15.14
-release=2
+release=3
 source=(https://anduin.linuxfromscratch.org/BLFS/qtwebengine/$name-$version.tar.xz
 	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-$version-build_fixes-1.patch
 	qtwebengine-5.15.2-disable-fatal-warnings.patch
@@ -15,7 +15,10 @@ source=(https://anduin.linuxfromscratch.org/BLFS/qtwebengine/$name-$version.tar.
 	qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch
 	qtwebengine-5.15.3_p20220406-ffmpeg5.patch
 	qtwebengine-5.15.13-icu_73-1.patch
-	qt5-webengine-pipewire-0.3.patch)
+	qt5-webengine-pipewire-0.3.patch
+	qtwebengine-5.15.15-c++17.patch
+	qtwebengine-system-absl-compat.patch
+	qtwebengine-re2-2023.07.01.patch)
 
 build() {
 	cd qtwebengine-$version
@@ -29,6 +32,19 @@ build() {
 	patch -p1 -i $SRC/qtwebengine-5.15.3_p20220406-ffmpeg5.patch
 	patch -p1 -i $SRC/qtwebengine-5.15.13-icu_73-1.patch
 	patch -p1 -d src/3rdparty -i $SRC/qt5-webengine-pipewire-0.3.patch
+
+	if prt-get isinst re2; then
+		patch -p1 -i $SRC/qtwebengine-re2-2023.07.01.patch
+		patch -p1 -i $SRC/qtwebengine-system-absl-compat.patch
+		cp -f /usr/include/absl/base/options.h \
+			src/3rdparty/chromium/third_party/abseil-cpp/absl/base/options.h
+		sed -i -e 's,#define ABSL_OPTION_USE_STD_OPTIONAL 1,#define ABSL_OPTION_USE_STD_OPTIONAL 0,' src/3rdparty/chromium/third_party/abseil-cpp/absl/base/options.h
+		patch -p1 -i $SRC/qtwebengine-5.15.15-c++17.patch
+		export CXXFLAGS+=' -std=gnu++17'
+		find . -name "*.pro" -o -name "*.pri" |while read r; do
+			echo 'QMAKE_CXXFLAGS_GNUCXX14 = -std=gnu++17' >>$r
+		done
+	fi
 
 	mkdir -pv .git src/3rdparty/chromium/.git
 	sed -e '/^MODULE_VERSION/s/5.*/5.15.2/' -i .qmake.conf
@@ -62,8 +78,6 @@ build() {
 	prt-get isinst pulseaudio && PKGMK_QTWEBENGINE+=' -pulseaudio' || PKGMK_QTWEBENGINE+=' -no-pulseaudio'
 	prt-get isinst pipewire && PKGMK_QTWEBENGINE+=' -webengine-webrtc-pipewire'
 	prt-get isinst icu && PKGMK_QTWEBENGINE+=' -webengine-icu' || PKGMK_QTWEBENGINE+=' -no-webengine-icu'
-	## recent system-re2 crashes build
-	prt-get isinst re2 && PKGMK_QTWEBENGINE+=' -no-feature-webengine-system-re2'
 
 	qmake-qt5 .. -- \
 		$PKGMK_QTWEBENGINE \

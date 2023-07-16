@@ -1,6 +1,6 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/UPTwI0tVcqapHabGDt1fQBK4VoEOYRbLDEEuBjBbDr3e3MzGaxyKftMPwONZzwj7jR8iq4shaSNSt5MwuQifAo=
-SHA256 (Pkgfile) = ae3e7ea90833b69569931ce3d067470def56c81a2992bd298af3e2075a8aedff
+RWSE3ohX2g5d/erfVMyHkwt8b0bz1PQtYfMqrfAldjFaiT9SmFlAfE2mO3HaS4c6AuuRGen//hADL0b/JIz+I47zIEDkkgqVdQg=
+SHA256 (Pkgfile) = ab52b64dc2ede6c1d7caca5776089c375ef6f2d92761705b1c203761b2236781
 SHA256 (.footprint) = 9c07e0209b90e6d45f593e30c0b5342a594c32de974cc61990189f9e80f4a21a
 SHA256 (qtwebengine-5.15.14.tar.xz) = 1475c004860585b22af13a2b719ef10992fad58f1c145bf5cb43fbc86a3a67d2
 SHA256 (qtwebengine-5.15.14-build_fixes-1.patch) = a9e248414302b6fbd19e0404142e5ad082fb4a45eaf6f96d1b847a7b4bf8e1bd
@@ -11,3 +11,6 @@ SHA256 (qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch) = 391f899137cabf
 SHA256 (qtwebengine-5.15.3_p20220406-ffmpeg5.patch) = 63b0a709c7d1e84193dada20109740d6b9a768f6d83809247dd9691ff50bfc7c
 SHA256 (qtwebengine-5.15.13-icu_73-1.patch) = 52351270248d714e124838725abbb1f15726f2530043f2289588ecd9a6e7a2ba
 SHA256 (qt5-webengine-pipewire-0.3.patch) = 5e3a3c4711d964d5152a04059a2b5c1d14bb13dd29bce370120f60e85b476b6f
+SHA256 (qtwebengine-5.15.15-c++17.patch) = b0b69017470617d3113d7f6faeebe7d2314cefaddf4cb209c85f69ae724eb8c9
+SHA256 (qtwebengine-system-absl-compat.patch) = 9ad4ff067701f326d57dfbb147b001320b6735641f6e0042196739fc125fe03e
+SHA256 (qtwebengine-re2-2023.07.01.patch) = 1d1af26b3e62c7acca086eb8a034f46f3b23f313bf62f883cf4676a9bece46d1
