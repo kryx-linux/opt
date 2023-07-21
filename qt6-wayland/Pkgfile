@@ -1,21 +1,21 @@
 # Description: Provides APIs for Wayland
 # URL: https://www.qt.io/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: qt6-declarative wayland-protocols xorg-libxcomposite
 
 name=qt6-wayland
-version=6.5.1
+version=6.5.2
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwayland-everywhere-src-$version.tar.xz)
 
 build() {
-	prt-get isinst ninja && PKGMK_QT6+=' -G Ninja'
-	prt-get isinst ccache && PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
+  prt-get isinst ninja && PKGMK_QT6+=' -G Ninja'
+  prt-get isinst ccache && PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
-	cmake -S qtwayland-everywhere-src-$version -B build $PKGMK_QT6 \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS"
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+  cmake -S qtwayland-everywhere-src-$version -B build $PKGMK_QT6 \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS"
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
 }
