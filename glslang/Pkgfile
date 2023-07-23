@@ -5,10 +5,13 @@
 
 name=glslang
 version=12.3.1
-release=1
-source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-sdk-$version.tar.gz)
+release=2
+source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-sdk-$version.tar.gz
+  destdir.patch)
 
 build() {
+	patch -Np1 -d $name-$version -i $SRC/destdir.patch
+
 	local config="
 		-G Ninja
 		-S $name-$version
