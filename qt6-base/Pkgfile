@@ -19,6 +19,8 @@ build() {
 
   prt-get isinst ccache && PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
+  [[ -e /usr/include/xkbcommon/xkbcommon-x11.h ]] && PKGMK_QT6+=' -D QT_FEATURE_xcb=ON -D QT_FEATURE_xkbcommon_x11=ON' || PKGMK_QT6+=' -D QT_FEATURE_xcb=OFF -D QT_FEATURE_xkbcommon_x11=OFF'
+
   cmake -S qtbase-everywhere-src-$version -B build -G Ninja $PKGMK_QT6 \
     -D BUILD_SHARED_LIBS=ON \
     -D CMAKE_INSTALL_PREFIX=/usr \
@@ -44,8 +46,6 @@ build() {
     -D QT_FEATURE_system_sqlite=ON \
     -D QT_FEATURE_no_direct_extern_access=ON \
     -D QT_FEATURE_vulkan=ON \
-    -D QT_FEATURE_xcb=ON \
-    -D QT_FEATURE_system_xcb_xinput=ON \
     -D QT_BUILD_TESTS_BY_DEFAULT=OFF \
     -D QT_FEATURE_reduce_relocations=OFF \
     -D QT_FEATURE_androiddeployqt=OFF \
