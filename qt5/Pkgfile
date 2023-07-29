@@ -1,8 +1,8 @@
 # Description: Qt Free Edition, version 5.x.
 # URL: http://www.qt.io/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libwebp libxkbcommon xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-renderutil xorg-xcb-util-wm
-# Optional: assimp icu
+# Optional: assimp bluez cups double-conversion gtk3 ibus icu libinput libsdl2 mariadb mtdev openal pulseaudio unixodbc vulkan-headers wayland-protocols xkeyboard-config
 
 name=qt5
 version=5.15.10
@@ -17,6 +17,12 @@ source=(https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-ope
 	qtbase-use-wayland-on-gnome.patch)
 
 build() {
+	if [[ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]]; then
+		printf '\e[31m%s\e[m\n' "libxkbcommon is not built with x11 support!"
+		printf '\e[31m%s\e[m\n' "qtx11extras will not be built!"
+		printf '\e[33m%s\e[m\n' "Install xkeyboard-config and rebuild libxkbcommon if you need that"
+	fi
+
 	cd qt-everywhere-src-$version
 
 	patch -p1 -i $SRC/qt-everywhere-opensource-src-$version-kf5-1.patch
@@ -38,8 +44,8 @@ build() {
 	prt-get isinst ccache && PKGMK_QT5+=' -ccache' && \
 		PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 	prt-get isinst assimp && PKGMK_QT5+=' -system-assimp'
-	prt-get isinst clang && PKGMK_QT5+=' -platform linux-clang'
-	prt-get isinst clang lld && PKGMK_QT5+=' -linker lld' || PKGMK_QT5+=' -linker gold'
+	#prt-get isinst clang && PKGMK_QT5+=' -platform linux-clang'
+	#prt-get isinst clang lld && PKGMK_QT5+=' -linker lld' || PKGMK_QT5+=' -linker gold'
 
 	sed -i '/utility/a #include <limits>'     qtbase/src/corelib/global/qglobal.h
 	sed -i '/string/a #include <limits>'      qtbase/src/corelib/global/qfloat16.h
