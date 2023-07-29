@@ -4,10 +4,9 @@
 # Depends on: dbus duktape gobject-introspection intltool util-linux
 
 name=polkit
-version=122
+version=123
 release=1
-source=(https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/polkit-$version.tar.bz2
-	polkit-1)
+source=(https://gitlab.freedesktop.org/polkit/polkit/-/archive/$version/polkit-$version.tar.bz2)
 
 build() {
   prt-get isinst mozjs91 && PKGMK_POLKIT+=' -D js_engine=mozjs'
@@ -17,13 +16,14 @@ build() {
     --buildtype=plain \
     --wrap-mode nodownload \
     -D b_lto=true \
-    -D b_pie=true
+    -D b_pie=true \
+    -D os_type=suse
   meson compile -C build
   DESTDIR=$PKG meson install -C build
 
   chmod 4775 $PKG/usr/bin/pkexec
   chmod 4755 $PKG/usr/lib/polkit-1/polkit-agent-helper-1
-  install -m 0644 $SRC/polkit-1 $PKG/etc/pam.d
+  install -m 0644 $SRC/build/data/polkit-1 $PKG/etc/pam.d
 
   rm -r $PKG/usr/share/locale
 }
