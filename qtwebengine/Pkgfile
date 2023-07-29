@@ -1,12 +1,12 @@
 # Description: The Qt WebEngine module provides a web browser engine
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: ffmpeg libvpx libwebp nodejs nss qt5 xorg-libxscrnsaver xorg-libxtst
+# Depends on: ffmpeg libvpx nodejs nss qt5 xorg-libxkbfile xorg-libxscrnsaver xorg-libxtst
 # Optional: glib jsoncpp krb5 krb5 lcms2 libevent libsrtp libxml2 minizip opus pipewire pulseaudio re2 snappy
 
 name=qtwebengine
 version=5.15.15
-release=1
+release=2
 
 # https://github.com/qt/qtwebengine/commits/5.15
 _qtwebengine_commit=43863f59f4c7fc0f3e89292e7669e9fe4ae67efa
@@ -25,7 +25,8 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$ve
   qt5-webengine-pipewire-0.3.patch
   qtwebengine-5.15.15-c++17.patch
   qtwebengine-system-absl-compat.patch
-  qtwebengine-re2-2023.07.01.patch)
+  qtwebengine-re2-2023.07.01.patch
+  python.patch)
 
 build() {
   cd qtwebengine-$_qtwebengine_commit
@@ -43,6 +44,7 @@ build() {
   patch -p1 -i $SRC/qtwebengine-5.15.3_p20220406-ffmpeg5.patch
   patch -p1 -i $SRC/qtwebengine-5.15.13-icu_73-1.patch
   patch -p1 -d src/3rdparty -i $SRC/qt5-webengine-pipewire-0.3.patch
+  patch -p1 -i $SRC/python.patch
 
   if prt-get isinst re2; then
     patch -p1 -i $SRC/qtwebengine-re2-2023.07.01.patch
