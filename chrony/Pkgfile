@@ -1,5 +1,5 @@
 # Description: Network time protocol client/server
-# URL: https://chrony.tuxfamily.org/
+# URL: https://chrony-project.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: libcap libedit ncurses
 # Optional: gnutls nettle nss
@@ -7,7 +7,7 @@
 name=chrony
 version=4.3
 release=1
-source=(https://download.tuxfamily.org/$name/$name-$version.tar.gz
+source=(https://chrony-project.org/releases/$name-$version.tar.gz
 	chronyd)
 
 build() {
