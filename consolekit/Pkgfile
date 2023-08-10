@@ -1,11 +1,11 @@
 # Description: Framework for defining and tracking users, login sessions, and seats
 # URL: http://www.freedesktop.org/wiki/Software/ConsoleKit
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: dbus gobject-introspection linux-pam util-linux xorg-libx11
+# Depends on: dbus gobject-introspection linux-pam xorg-libx11
 # Optional: polkit
 
 name=consolekit
-version=1.2.5
+version=1.2.6
 release=1
 source=(https://github.com/ConsoleKit2/ConsoleKit2/archive/$version/ConsoleKit2-$version.tar.gz
   system-session pam-foreground-compat.ck)
