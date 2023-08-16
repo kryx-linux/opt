@@ -1,7 +1,7 @@
 # Description: SMB server and client for unix
 # URL: https://www.samba.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: dbus gnutls ldb libarchive linux-pam gnutls jansson p5-json p5-parse-yapp popt python3 rpcsvc-proto tdb tevent
+# Depends on: dbus gnutls ldb libarchive linux-pam jansson p5-json p5-parse-yapp popt python3 rpcsvc-proto tdb tevent
 
 name=samba
 version=4.18.5
