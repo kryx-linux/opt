@@ -111,9 +111,6 @@ lrwxrwxrwx	root/root	usr/lib/libnvoptix.so -> libnvoptix.so.530.41.03
 lrwxrwxrwx	root/root	usr/lib/libnvoptix.so.1 -> libnvoptix.so.530.41.03
 -rwxr-xr-x	root/root	usr/lib/libnvoptix.so.530.41.03
 drwxr-xr-x	root/root	usr/lib/nvidia/
-drwxr-xr-x	root/root	usr/lib/nvidia/wine/
--rwxr-xr-x	root/root	usr/lib/nvidia/wine/_nvngx.dll
--rwxr-xr-x	root/root	usr/lib/nvidia/wine/nvngx.dll
 drwxr-xr-x	root/root	usr/lib/nvidia/xorg/
 lrwxrwxrwx	root/root	usr/lib/nvidia/xorg/libglxserver_nvidia.so -> libglxserver_nvidia.so.530.41.03
 lrwxrwxrwx	root/root	usr/lib/nvidia/xorg/libglxserver_nvidia.so.1 -> libglxserver_nvidia.so.530.41.03
