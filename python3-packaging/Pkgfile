@@ -1,12 +1,12 @@
 # Description: Core utilities for Python packages.
 # URL: https://pypi.python.org/pypi/packaging/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: python3-pip
 
 name=python3-packaging
 version=23.1
-release=1
-source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
+release=2
+source=(https://pypi.org/packages/source/p/packaging/packaging-$version.tar.gz)
 
 build() {
   cd packaging-$version
