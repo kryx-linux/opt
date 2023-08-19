@@ -1,37 +1,40 @@
 # Description: Core database of common types
 # URL: https://freedesktop.org/Software/shared-mime-info
-# Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: glib libxml2 itstool
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: glib itstool
 
 name=shared-mime-info
 version=2.2
-release=1
+release=2
 
 # https://gitlab.freedesktop.org/xdg/shared-mime-info/-/blob/master/xdgmime
 _xdgmimever=fe2f298fa691b225bdea31d816cf6728df91ba6d
 
 source=(https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/$name-$version.tar.bz2
-	https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2)
+  https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2)
 
 build() {
-	# Build mime database
-	meson setup xdgmime-$_xdgmimever xdgmime-build \
-		--prefix=/usr \
-		--buildtype=plain \
-		--wrap-mode nodownload \
-		-D b_pie=true
-	meson compile -C xdgmime-build
+  # Build mime database
+  meson setup xdgmime-$_xdgmimever xdgmime-build \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_pie=true
+  meson compile -C xdgmime-build
 
-	meson $name-$version build \
-		--prefix=/usr \
-		--buildtype=plain \
-		-D update-mimedb=false \
-		-D xdgmime-path=$SRC/xdgmime-build
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
+  meson setup $name-$version build \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D update-mimedb=false \
+    -D xdgmime-path=$SRC/xdgmime-build
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
 
-	# Builds the initial database
-	/usr/bin/env PKGSYSTEM_ENABLE_FSYNC=0 $PKG/usr/bin/update-mime-database $PKG/usr/share/mime
+  # Builds the initial database
+  /usr/bin/env PKGSYSTEM_ENABLE_FSYNC=0 $PKG/usr/bin/update-mime-database $PKG/usr/share/mime
 
-	rm -r $PKG/usr/share/locale
+  rm -r $PKG/usr/share/locale
 }
