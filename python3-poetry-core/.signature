@@ -1,5 +1,12 @@
 untrusted comment: verify with /etc/ports/opt.pub
+<<<<<<< HEAD
 RWSE3ohX2g5d/ZVJ3qSdjPthtOAmKbSCrHi8B7MIQC8pxJDnmtnwomAZxAkNyxqXVxh5AWvsRNKi72I7JvAWflb8XRILvVxiKws=
 SHA256 (Pkgfile) = 769dbdaf501d61dad8d7ba2b5f1a7472aba55363cc043d8828f7c36f24377149
 SHA256 (.footprint) = abcb057addeed3539c20e222c6378f9fe36fe2f98d0a6f9dc40df16081106103
 SHA256 (python3-poetry-core-1.6.1.tar.gz) = 77fafe290509000ff8f9f808cd8ad99da504d2cb830d05323082967274028823
+=======
+RWSE3ohX2g5d/d6D2TqRmTjPjfLKoB+2pkqi4HWAcejuU3/Ud+M1Bgvbdzp2qulmV6VGwl1LGpgWejTrll5cA9TOkXeitlTVxAw=
+SHA256 (Pkgfile) = b269031c155cd2e2d7d2aa11af425ed40d2c541972e4ebd77e6151e4fdcd5674
+SHA256 (.footprint) = 4acdc3d1d0205e97648255b8821ede0ffc75f3b305efd0b535b3b243c4c5ff38
+SHA256 (python3-poetry-core-1.7.0.tar.gz) = 302ede6fabb5935e1b6d0956376bb92e9874468f95cb8916eeb97e7a09276350
+>>>>>>> 6d6a2facb (python3-poetry-core: 1.6.1 -> 1.7.0)
