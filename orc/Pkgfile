@@ -4,7 +4,7 @@
 
 name=orc
 version=0.4.34
-release=2
+release=3
 source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
 build() {
@@ -17,7 +17,6 @@ build() {
     -D benchmarks=disabled \
     -D examples=disabled \
     -D gtk_doc=disabled \
-    -D orc-test=disabled \
     -D tests=disabled
 
   meson compile -C build -j ${JOBS:-1}
