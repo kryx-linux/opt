@@ -1,5 +1,0 @@
-#!/bin/sh
-rm -f footprint.in
-mv .footprint footprint.in
-grep -v 'icudtl.dat' footprint.in > .footprint
-rm -f footprint.in
