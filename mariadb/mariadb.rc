@@ -4,7 +4,7 @@
 #
 
 SSD=/sbin/start-stop-daemon
-PROG=/usr/sbin/mysqld
+PROG=/usr/sbin/mariadbd
 NAME=mysqld
 PID=/run/mysqld/mysqld.pid
 OPTS="--pid-file=$PID --user=mysql"

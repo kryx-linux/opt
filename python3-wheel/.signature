@@ -1,24 +1,5 @@
 untrusted comment: verify with /etc/ports/opt.pub
-<<<<<<< HEAD
-<<<<<<< HEAD
-RWSE3ohX2g5d/Qf67q3sllN/sJ+ZK0ocaqfG117nFlSXs+/HPTnoWk+tpzqbSYG3N/T66E6MNc7T5+xYRq7AzYmUv/bJ4wPfhQA=
-SHA256 (Pkgfile) = 090ce5935734c726226c4bac6b7dd2559b266de68729776a01585de2fad7fe0c
-SHA256 (.footprint) = 6dd7f929e16648b4e372377a6766c21092886a5877e9184f2dfa1646a977b13c
-SHA256 (wheel-0.41.1.tar.gz) = 12b911f083e876e10c595779709f8a88a59f45aacc646492a67fe9ef796c1b47
-=======
-=======
->>>>>>> 61528598d (python3-wheel: updated footprint for python 3.11)
-RWSE3ohX2g5d/WA1vCna7e3+KkZ3lHcM6bowiWbz0UHMkVQ5o01sa9mNeF5GWwTJAfrCXj9o+DpHiYW6/wU84vX3tP3mMtEwFwM=
+RWSE3ohX2g5d/Yk2mLXhBzpGxk15PIEeABPtmA7sF0O9JMYpuOcpG1tl5VV1mIz1lHsgQlBkLWC2vPu8vzEwwRLS5jBtvXsaswM=
 SHA256 (Pkgfile) = 3e58ae9a6915f2871b3ab4ff064d118d693107b1bd90a5750d65a106f4d6409f
-SHA256 (.footprint) = be44f8bcc3dff037354361b18806ad00b7161c6edb730dfb337e63fa9995f8e3
+SHA256 (.footprint) = 72bca01847a9389dae4826105804a7de94a533f7af77fdad2fb91d452177e5f9
 SHA256 (wheel-0.41.2.tar.gz) = 0c5ac5ff2afb79ac23ab82bab027a0be7b5dbcf2e54dc50efe4bf507de1f7985
-<<<<<<< HEAD
->>>>>>> 8fb9fb410 (python3-wheel: 0.41.1 -> 0.41.2)
-=======
-=======
-RWSE3ohX2g5d/Qf67q3sllN/sJ+ZK0ocaqfG117nFlSXs+/HPTnoWk+tpzqbSYG3N/T66E6MNc7T5+xYRq7AzYmUv/bJ4wPfhQA=
-SHA256 (Pkgfile) = 090ce5935734c726226c4bac6b7dd2559b266de68729776a01585de2fad7fe0c
-SHA256 (.footprint) = 6dd7f929e16648b4e372377a6766c21092886a5877e9184f2dfa1646a977b13c
-SHA256 (wheel-0.41.1.tar.gz) = 12b911f083e876e10c595779709f8a88a59f45aacc646492a67fe9ef796c1b47
->>>>>>> 1fd9a3371 (python3-wheel: updated footprint for python 3.11)
->>>>>>> 61528598d (python3-wheel: updated footprint for python 3.11)
