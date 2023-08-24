@@ -4,7 +4,7 @@
 # Depends on: fmt libaio libpcre2 linux-pam ncurses openssl zlib
 
 name=mariadb
-version=11.0.3
+version=11.1.2
 release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz
 	mariadb.rc mariadb.pam
@@ -37,10 +37,10 @@ build() {
 	DESTDIR=$PKG cmake --install build
 
 	rm -r $PKG/etc/{init.d,logrotate.d}
-	rm -r $PKG/usr/share/{doc,groonga*,mysql-test}
+	rm -r $PKG/usr/share/{doc,groonga*,mariadb-test}
 	rm $PKG/usr/sbin/rcmysql
 	rm $PKG/usr/share/man/man1/mysql-test-run.pl.1
-	find $PKG/usr/share/mysql/* -type d ! -name english ! -name charsets | xargs rm -rf {} \;
+	find $PKG/usr/share/mariadb/* -type d ! -name english ! -name charsets | xargs rm -rf {} \;
 
 	install -d -m 700 -o mysql -g mysql $PKG/var/{lib,log}/mysql
 
