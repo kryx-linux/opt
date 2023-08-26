@@ -5,10 +5,10 @@
 # Optional: brotli harfbuzz
 
 name=freetype
-version=2.13.1
+version=2.13.2
 release=1
 
-source=(https://download.savannah.gnu.org/releases/freetype/freetype-$version.tar.xz
+source=(https://sourceforge.net/projects/freetype/files/freetype2/$version/freetype-$version.tar.xz
 	freetype2.sh
 	0001-Enable-table-validation-modules.patch
 	0002-Enable-subpixel-rendering.patch
