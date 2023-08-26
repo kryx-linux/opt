@@ -4,14 +4,11 @@
 # Depends on: spirv-tools
 
 name=glslang
-version=12.3.1
-release=2
-source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-sdk-$version.tar.gz
-  destdir.patch)
+version=13.0.0
+release=1
+source=(https://github.com/KhronosGroup/glslang/archive/$version/$name-sdk-$version.tar.gz)
 
 build() {
-	patch -Np1 -d $name-$version -i $SRC/destdir.patch
-
 	local config="
 		-G Ninja
 		-S $name-$version
