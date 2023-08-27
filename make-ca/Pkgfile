@@ -1,17 +1,17 @@
-# Description: A utility to deliver and manage a complete PKI configuration.
+# Description: A utility to deliver and manage a complete PKI configuration
 # URL: https://github.com/lfs-book/make-ca
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=make-ca
-version=1.10
+version=1.12
 release=1
 source=(https://github.com/lfs-book/make-ca/archive/v$version/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	sed -i -e 's|^\(LIBEXECDIR=\).*|\1/usr/lib/make-ca|' Makefile
+  sed -i -e 's|^\(LIBEXECDIR=\).*|\1/usr/lib/make-ca|' Makefile
 
-	make
-	make DESTDIR=$PKG install
+  make
+  make DESTDIR=$PKG install
 }
