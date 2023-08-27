@@ -1,6 +1,6 @@
-# Description: Public Suffix List library.
+# Description: Public Suffix List library
 # URL: https://github.com/rockdaboot/libpsl
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libidn2 publicsuffix-list
 
 name=libpsl
@@ -9,17 +9,17 @@ release=1
 source=(https://github.com/rockdaboot/$name/releases/download/$version/$name-$version.tar.lz)
 
 build() {
-	meson setup build $name-$version \
-		--prefix=/usr \
-		--buildtype=plain \
-		--wrap-mode nodownload \
-		-D b_lto=true \
-		-D b_pie=true \
-		-D runtime=libidn2 \
-		-D builtin=true \
-		-D psl_file=/usr/share/publicsuffix/effective_tld_names.dat \
-		-D psl_testfile=/usr/share/publicsuffix/test_psl.txt
+  meson setup build $name-$version \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D runtime=libidn2 \
+    -D builtin=true \
+    -D psl_file=/usr/share/publicsuffix/effective_tld_names.dat \
+    -D psl_testfile=/usr/share/publicsuffix/test_psl.txt
 
-	ninja -j ${JOBS-1} -C build
-	DESTDIR=$PKG meson install -C build
+  ninja -j ${JOBS-1} -C build
+  DESTDIR=$PKG meson install -C build
 }
