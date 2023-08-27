@@ -17,6 +17,7 @@ drwxr-xr-x	root/root	usr/include/gnutls/
 -rw-r--r--	root/root	usr/include/gnutls/gnutlsxx.h
 -rw-r--r--	root/root	usr/include/gnutls/ocsp.h
 -rw-r--r--	root/root	usr/include/gnutls/openpgp.h
+-rw-r--r--	root/root	usr/include/gnutls/openssl.h
 -rw-r--r--	root/root	usr/include/gnutls/pkcs11.h
 -rw-r--r--	root/root	usr/include/gnutls/pkcs12.h
 -rw-r--r--	root/root	usr/include/gnutls/pkcs7.h
@@ -28,6 +29,10 @@ drwxr-xr-x	root/root	usr/include/gnutls/
 -rw-r--r--	root/root	usr/include/gnutls/x509-ext.h
 -rw-r--r--	root/root	usr/include/gnutls/x509.h
 drwxr-xr-x	root/root	usr/lib/
+-rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.la
+lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so -> libgnutls-openssl.so.27.0.2
+lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so.27 -> libgnutls-openssl.so.27.0.2
+-rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.so.27.0.2
 -rwxr-xr-x	root/root	usr/lib/libgnutls.la
 lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.30.36.0
 lrwxrwxrwx	root/root	usr/lib/libgnutls.so.30 -> libgnutls.so.30.36.0
