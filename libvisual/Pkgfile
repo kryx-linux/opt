@@ -1,6 +1,6 @@
-# Description: An abstraction library that comes between applications and audio visualisation plugins.
+# Description: Libvisual Audio Visualization
 # URL: http://libvisual.org/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libsdl
 
 name=libvisual
@@ -9,14 +9,14 @@ release=1
 source=(https://github.com/Libvisual/libvisual/releases/download/$name-$version/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--enable-extra-optimization \
-		--disable-examples \
-		--disable-nls
+  ./configure \
+    --prefix=/usr \
+    --enable-extra-optimization \
+    --disable-examples \
+    --disable-nls
 
-	make
-	make DESTDIR=$PKG install
+  make
+  make DESTDIR=$PKG install
 }

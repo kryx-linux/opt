@@ -1,7 +1,7 @@
 # Description: OpenGL headers for building GStreamer's OpenGL support
 # URL: https://gitlab.freedesktop.org/gstreamer/meson-ports/gl-headers
-# Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: meson ninja libglvnd
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: libglvnd
 
 name=gl-headers
 version=2019.1.0
@@ -10,11 +10,11 @@ _commit=5c8c7c0d3ca1f0b783272dac0b95e09414e49bc8
 source=(https://gitlab.freedesktop.org/gstreamer/meson-ports/gl-headers/-/archive/$_commit/gl-headers-$_commit.tar.bz2)
 
 build() {
-	meson setup $name-$_commit build \
-		--prefix=/usr \
-		--buildtype=plain \
-		-D wglext=enabled
+  meson setup $name-$_commit build \
+    --prefix=/usr \
+    --buildtype=plain \
+    -D wglext=enabled
 
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
 }

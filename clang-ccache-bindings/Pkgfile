@@ -1,6 +1,6 @@
-# Description: Masquerade directory to use ccache with clang.
+# Description: Masquerade directory to use ccache with clang
 # URL: https://ccache.dev/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: ccache clang
 
 name=clang-ccache-bindings
@@ -9,18 +9,18 @@ release=1
 source=()
 
 build() {
-	install -d $PKG/usr/lib/ccache
+  install -d $PKG/usr/lib/ccache
 
-	local clang0="$(clang --version | awk '/version/ { split($3,i,"."); print i[1]"."i[2] }')"
-	local clang1="${clang0:0:2}"
+  local clang0="$(clang --version | awk -F'[ .]' '/version/ { print $3"."$4 }')"
+  local clang1="${clang0:0:2}"
 
-	if [ -z "$clang0" ]; then
-		echo 'Failed to find clang version'
-		exit 1
-	fi
+  if [ -z "$clang0" ]; then
+    echo 'Failed to find clang version'
+    exit 1
+  fi
 
-	ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang
-	ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang-$clang0
-	ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang-$clang1
-	ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang++
+  ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang
+  ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang-$clang0
+  ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang-$clang1
+  ln -s ../../bin/ccache $PKG/usr/lib/ccache/clang++
 }

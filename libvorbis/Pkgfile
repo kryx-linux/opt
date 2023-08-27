@@ -1,6 +1,6 @@
 # Description: Vorbis codec library
 # URL: https://www.xiph.org/vorbis/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libogg
 
 name=libvorbis
@@ -9,12 +9,12 @@ release=1
 source=(https://downloads.xiph.org/releases/vorbis/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	./configure --prefix=/usr
+  ./configure --prefix=/usr
 
-	make
-	make DESTDIR=$PKG install
+  make
+  make DESTDIR=$PKG install
 
-	rm -rf $PKG/usr/share/doc
+  rm -rf $PKG/usr/share/doc
 }

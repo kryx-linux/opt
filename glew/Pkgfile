@@ -1,27 +1,43 @@
-# Description: The OpenGL Extension Wrangler Library.
+# Description: The OpenGL Extension Wrangler Library
 # URL: https://glew.sourceforge.net
-# Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: mesa xorg-libxi xorg-libxmu
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: glu xorg-libxi xorg-libxmu
 
 name=glew
 version=2.2.0
-release=1
+release=2
 source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tgz
-	glew-2.0.0-install-headers.patch)
+  egl+glx.patch
+  glew-install.patch)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	patch -p1 -i $SRC/glew-2.0.0-install-headers.patch
+  patch -Np1 -i $SRC/glew-install.patch
+  patch -Np1 -i $SRC/egl+glx.patch
 
-	sed -i -e "s|lib64|lib|" config/Makefile.linux
-	sed -i -e '/^.PHONY: .*\.pc$/d' -i Makefile
+  sed -i -e "s|lib64|lib|" config/Makefile.linux
+  sed -i -e '/^.PHONY: .*\.pc$/d' -i Makefile
 
-	make \
-		CC="${CC:-gcc}" \
-		LD="${CC:-gcc}" \
-		CFLAGS.EXTRA="$CFLAGS -fPIC" \
-		LDFLAGS.EXTRA="$LDFLAGS"
+  make \
+    CC="${CC:-gcc}" \
+    LD="${CC:-gcc}" \
+    CFLAGS.EXTRA="$CFLAGS -fPIC" \
+    LDFLAGS.EXTRA="$LDFLAGS" \
+    STRIP= \
+    glew.bin
 
-	make GLEW_DEST="$PKG/usr" install
+  mv bin/glewinfo bin/glxewinfo
+  rm glew.pc
+
+  make SYSTEM=linux-egl \
+    STRIP= \
+    glew.lib.shared bin/glewinfo
+
+  mv bin/glewinfo bin/eglewinfo
+
+  make GLEW_DEST=$PKG/usr STRIP= \
+    SYSTEM=linux-egl install
+  install -D -m755 -t $PKG/usr/bin bin/eglewinfo bin/glxewinfo bin/visualinfo
+  ln -s eglewinfo $PKG/usr/bin/glewinfo
 }

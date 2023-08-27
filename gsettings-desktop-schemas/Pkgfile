@@ -1,6 +1,6 @@
 # Description: Shared GSettings schemas for the desktop
 # URL: https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: gobject-introspection intltool
 
 name=gsettings-desktop-schemas
@@ -9,15 +9,15 @@ release=1
 source=(https://download.gnome.org/sources/$name/${version:0:2}/$name-$version.tar.xz)
 
 build() {
-	meson setup $name-$version build \
-	  --prefix=/usr \
-	  --buildtype=plain \
-	  --wrap-mode nodownload \
-	  -D b_lto=true \
-	  -D b_pie=true
+  meson setup $name-$version build \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true
 
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
 
-	rm -r $PKG/usr/share/locale
+  rm -r $PKG/usr/share/locale
 }

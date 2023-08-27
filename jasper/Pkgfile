@@ -1,6 +1,6 @@
-# Description: Codec JPEG-2000 Part-1 standard.
+# Description: Codec JPEG-2000 Part-1 standard
 # URL: https://www.ece.uvic.ca/~frodo/jasper/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: freeglut libjpeg-turbo xorg-libxmu
 
 name=jasper
@@ -9,7 +9,7 @@ release=1
 source=(https://github.com/jasper-software/jasper/releases/download/version-$version/jasper-$version.tar.gz)
 
 build() {
-	local config="
+  local config="
 -D CMAKE_INSTALL_PREFIX=/usr
 -D CMAKE_INSTALL_LIBDIR=lib
 -D CMAKE_BUILD_TYPE=Release
@@ -19,20 +19,20 @@ build() {
 -D CMAKE_SKIP_RPATH=ON
 -D OpenGL_GL_PREFERENCE=GLVND"
 
-	#build static lib
-	( cmake -S $name-$version -B build-static -G Ninja $config \
-		-D JAS_ENABLE_SHARED=OFF
-	cmake --build build-static
-	)
+  #build static lib
+  ( cmake -S $name-$version -B build-static -G Ninja $config \
+    -D JAS_ENABLE_SHARED=OFF
+  cmake --build build-static
+  )
 
-	#build shared lib
-	( cmake -S $name-$version -B build-shared -G Ninja $config \
-		-D JAS_ENABLE_SHARED=ON
-	cmake --build build-shared
-	)
+  #build shared lib
+  ( cmake -S $name-$version -B build-shared -G Ninja $config \
+    -D JAS_ENABLE_SHARED=ON
+  cmake --build build-shared
+  )
 
-	DESTDIR=$PKG cmake --install build-static
-	DESTDIR=$PKG cmake --install build-shared
+  DESTDIR=$PKG cmake --install build-static
+  DESTDIR=$PKG cmake --install build-shared
 
-	rm -r $PKG/usr/share/doc
+  rm -r $PKG/usr/share/doc
 }
