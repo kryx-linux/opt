@@ -1,41 +1,34 @@
-# Description: A fast compiler cache.
+# Description: A fast compiler cache
 # URL: https://ccache.dev/
-# Maintainer: Danny Rawlins, crux at romster dot me
-# Depends on: cmake
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on:
 # Optional: asciidoctor hiredis clang-ccache-bindings gcc-fortran-ccache-bindings mingw-ccache-bindings
 
 name=ccache
 version=4.8.2
 release=1
-source=(https://github.com/$name/$name/releases/download/v$version/$name-$version.tar.xz
-	ccache.1)
+source=(https://github.com/$name/$name/releases/download/v$version/$name-$version.tar.xz)
 
 build() {
-	prt-get isinst hiredis && PKGMK_CCACHE+=' -D REDIS_STORAGE_BACKEND=ON' || PKGMK_CCACHE+=' -D REDIS_STORAGE_BACKEND=OFF'
+  prt-get isinst hiredis && PKGMK_CCACHE+=' -D REDIS_STORAGE_BACKEND=ON' || PKGMK_CCACHE+=' -D REDIS_STORAGE_BACKEND=OFF'
 
-	cmake -S $name-$version -B build -G Ninja $PKGMK_CCACHE \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_INSTALL_LIBDIR=lib \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D ENABLE_IPO=ON \
-		-D HIREDIS_FROM_INTERNET=OFF \
-		-D ZSTD_FROM_INTERNET=OFF \
-		-D ENABLE_TESTING=OFF
+  cmake -S $name-$version -B build -G Ninja $PKGMK_CCACHE \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -D ENABLE_IPO=ON \
+    -D HIREDIS_FROM_INTERNET=OFF \
+    -D ZSTD_FROM_INTERNET=OFF \
+    -D ENABLE_TESTING=OFF
 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
 
-	# install bundled man page else generate it with asciidoctor
-	if [ ! -e '/usr/bin/asciidoctor' ]; then
-		install -d $PKG/usr/share/man/man1
-		install -m 644 $SRC/ccache.1 $PKG/usr/share/man/man1/
-	fi
+  install -d $PKG/usr/lib/ccache
 
-	install -d $PKG/usr/lib/ccache
-
-	for c in cc gcc g++ cpp c++; do
-		ln -s /usr/bin/ccache $PKG/usr/lib/ccache/$c
-	done
+  for c in cc gcc g++ cpp c++; do
+    ln -s /usr/bin/ccache $PKG/usr/lib/ccache/$c
+  done
 }
