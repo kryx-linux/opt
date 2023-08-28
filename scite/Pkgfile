@@ -4,7 +4,7 @@
 # Depends on: gtk3
 
 name=scite
-version=5.3.6
+version=5.3.7
 release=1
 source=(https://downloads.sourceforge.net/project/scintilla/SciTE/$version/$name${version//./}.tgz)
 
@@ -12,6 +12,7 @@ build () {
 	export GTK3=1
 
 	sed 's/-Os//' -i {lexilla/src,scintilla/gtk,scite/gtk}/makefile
+	sed '20i#include <stddef.h>' -i scite/src/StringList.cxx
 
 	make -C lexilla/src
 	make -C scintilla/gtk
