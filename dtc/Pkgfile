@@ -4,12 +4,14 @@
 
 name=dtc
 version=1.7.0
-release=1
-source=(https://www.kernel.org/pub/software/utils/$name/$name-$version.tar.xz)
+release=2
+source=(https://www.kernel.org/pub/software/utils/$name/$name-$version.tar.xz
+	pyscm.patch)
 
 build() {
 	sed '/version:/s/6/7/' -i $name-$version/{,libfdt}/meson.build
 	CFLAGS+=" -ffat-lto-objects"
+	patch -p1 -d $name-$version -i $SRC/pyscm.patch
 
 	meson setup build $name-$version \
 		--prefix=/usr \
