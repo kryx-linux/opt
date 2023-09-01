@@ -4,15 +4,15 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/python3.10/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/
-drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/build-0.10.0.dist-info/
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-0.10.0.dist-info/INSTALLER
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-0.10.0.dist-info/LICENSE
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-0.10.0.dist-info/METADATA
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-0.10.0.dist-info/RECORD
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-0.10.0.dist-info/REQUESTED (EMPTY)
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-0.10.0.dist-info/WHEEL
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-0.10.0.dist-info/direct_url.json
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-0.10.0.dist-info/entry_points.txt
+drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/build-1.0.0.dist-info/
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-1.0.0.dist-info/INSTALLER
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-1.0.0.dist-info/LICENSE
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-1.0.0.dist-info/METADATA
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-1.0.0.dist-info/RECORD
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-1.0.0.dist-info/REQUESTED (EMPTY)
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-1.0.0.dist-info/WHEEL
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-1.0.0.dist-info/direct_url.json
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build-1.0.0.dist-info/entry_points.txt
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/build/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__init__.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__main__.py
@@ -23,12 +23,24 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/build/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/__main__.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/__main__.cpython-310.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/__main__.cpython-310.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/_exceptions.cpython-310.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/_exceptions.cpython-310.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/_exceptions.cpython-310.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/_importlib.cpython-310.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/_importlib.cpython-310.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/_importlib.cpython-310.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/_util.cpython-310.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/_util.cpython-310.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/_util.cpython-310.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/env.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/env.cpython-310.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/env.cpython-310.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/util.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/util.cpython-310.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/__pycache__/util.cpython-310.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/_exceptions.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/_importlib.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/_util.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/env.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/py.typed (EMPTY)
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/build/util.py
