@@ -1,11 +1,11 @@
 # Description: Utility that does structural, content-preserving transformations on PDF files
 # URL: http://qpdf.sourceforge.net/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: cmake libjpeg-turbo openssl zlib
+# Depends on: libjpeg-turbo openssl zlib zstd
 # Optional: gnutls
 
 name=qpdf
-version=11.5.0
+version=11.6.0
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
