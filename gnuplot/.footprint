@@ -4,7 +4,6 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/gnuplot/
 drwxr-xr-x	root/root	usr/lib/gnuplot/5.4/
--rwxr-xr-x	root/root	usr/lib/gnuplot/5.4/gnuplot_x11
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/gnuplot/
 drwxr-xr-x	root/root	usr/share/gnuplot/5.4/
@@ -24,8 +23,6 @@ drwxr-xr-x	root/root	usr/share/gnuplot/5.4/PostScript/
 -rw-r--r--	root/root	usr/share/gnuplot/5.4/PostScript/koi8u.ps
 -rw-r--r--	root/root	usr/share/gnuplot/5.4/PostScript/prologue.ps
 -rw-r--r--	root/root	usr/share/gnuplot/5.4/PostScript/utf-8.ps
-drwxr-xr-x	root/root	usr/share/gnuplot/5.4/app-defaults/
--rw-r--r--	root/root	usr/share/gnuplot/5.4/app-defaults/Gnuplot
 -rw-r--r--	root/root	usr/share/gnuplot/5.4/colors_default.gp
 -rw-r--r--	root/root	usr/share/gnuplot/5.4/colors_mono.gp
 -rw-r--r--	root/root	usr/share/gnuplot/5.4/colors_podo.gp
