@@ -6,16 +6,14 @@
 
 name=dar
 version=2.7.12
-release=1
+release=2
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
 	prt-get isinst argon2 || PKGMK_DAR+=' --disable-libargon2-linking'
-	# gpgme and libassuan don't have static libraries currently,
-	# thus we cannot build dar_static
-	prt-get isinst gpgme && PKGMK_DAR+=' --disable-gpgme-linking'
+	prt-get isinst gpgme || PKGMK_DAR+=' --disable-gpgme-linking'
 
 	CONFIG_SHELL=/bin/bash \
 	./configure $PKGMK_DAR \
