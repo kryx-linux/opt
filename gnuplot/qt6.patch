@@ -1,0 +1,12 @@
+--- configure.ac.orig	2023-09-04 23:20:21.000000000 +0200
++++ configure.ac	2023-09-07 12:07:34.964484577 +0200
+@@ -1014,7 +1014,8 @@
+           MOC=moc-qt6
+           RCC=rcc-qt6
+       fi
+-      LRELEASE=lrelease-qt6
++      QT6BIN=`$PKG_CONFIG --variable=bindir Qt6Core`
++      LRELEASE=${QT6BIN}/lrelease
+       CXXFLAGS="$CXXFLAGS -fPIC"
+       AC_MSG_RESULT([The Qt terminal will use Qt6.])
+       QTVER="6"
