@@ -6,7 +6,7 @@
 
 name=qemu
 version=8.1.0
-release=2
+release=3
 source=(https://download.qemu.org/$name-$version.tar.xz
 	keyutils.patch)
 
@@ -30,6 +30,7 @@ build() {
 		--localstatedir=/var \
 		--enable-linux-user \
 		--enable-fdt=system \
+		--enable-slirp \
 		--python=/usr/bin/python3 \
 		--target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu \
 		--disable-gtk \

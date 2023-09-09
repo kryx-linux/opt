@@ -19,6 +19,9 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/qemu-plugin.h
 drwxr-xr-x	root/root	usr/lib/
+lrwxrwxrwx	root/root	usr/lib/libslirp.so -> libslirp.so.0
+lrwxrwxrwx	root/root	usr/lib/libslirp.so.0 -> libslirp.so.0.4.0
+-rwxr-xr-x	root/root	usr/lib/libslirp.so.0.4.0
 drwxr-xr-x	root/root	usr/lib/qemu/
 -rwxr-xr-x	root/root	usr/lib/qemu/qemu-bridge-helper
 drwxr-xr-x	root/root	usr/share/
