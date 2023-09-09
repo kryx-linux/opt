@@ -2,10 +2,10 @@
 # URL: http://www.mutt.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: gdbm openssl zlib
-# Optional: cyrus-sasl gpgme
+# Optional: cyrus-sasl gpgme libidn2
 
 name=mutt
-version=2.2.11
+version=2.2.12
 release=1
 source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 
@@ -14,6 +14,7 @@ build() {
 
 	prt-get isinst gpgme && PKGMK_MUTT+=' --enable-gpgme'
 	prt-get isinst cyrus-sasl && PKGMK_MUTT+=' --enable-smtp --with-sasl'
+	prt-get isinst libidn2 && PKGMK_MUTT+=' --with-idn2'
 
 	./configure $PKGMK_MUTT \
 		--prefix=/usr \
