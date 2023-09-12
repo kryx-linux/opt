@@ -15,6 +15,7 @@ build() {
 
 	patch -p0 -i $SRC/qt6.patch
 
+	PKGMK_GNUPLOT='--with-qt=no'
 	prt-get isinst qt5 && PKGMK_GNUPLOT='--with-qt=qt5'
 	prt-get isinst qt6-5compat qt6-tools qt6-svg && PKGMK_GNUPLOT='--with-qt=qt6'
 
