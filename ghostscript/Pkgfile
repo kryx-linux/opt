@@ -1,10 +1,11 @@
 # Description: Postscript interpreter
 # URL: https://www.ghostscript.com
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: util-linux cups fontconfig libtiff xorg-libxt xorg-libxext
+# Depends on: fontconfig glib util-linux xorg-libxt xorg-libxext
+# Optional: cups jbig2dec libjpeg-turbo libtiff openjpeg2 paper
 
 name=ghostscript
-version=10.01.2
+version=10.02.0
 release=1
 source=(https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${version//./}/$name-$version.tar.xz
 	https://downloads.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz)
@@ -12,16 +13,18 @@ source=(https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/
 build() {
 	cd $name-$version
 
-	./configure \
+	prt-get isinst libjpeg-turbo libtiff && PKGMK_GHOSTSCRIPT+=' --enable-openjpeg --with-system-libtiff' && rm -r tiff jpeg
+	prt-get isinst jbig2dec && PKGMK_GHOSTSCRIPT+=' --with-jbig2dec' && rm -r jbig2dec
+	prt-get isinst openjpeg2 && PKGMK_GHOSTSCRIPT+=' --enable-openjpeg' && rm -r openjpeg
+
+	./configure $PKGMK_GHOSTSCRIPT \
 		--prefix=/usr \
-		--enable-cups \
-		--disable-gtk \
-		--disable-dbus \
 		--with-drivers=ALL \
 		--with-ijs \
-		--with-fontpath=/usr/share/ghostscript/fonts:/usr/share/fonts
+		--with-fontpath=/usr/share/ghostscript/fonts:/usr/share/fonts \
+		--disable-gtk
 
-	make so all
+	make
 	make DESTDIR=$PKG install-so install
 
 	cd ijs
