@@ -1,19 +1,17 @@
 #!/bin/sh
-# pinentry wrapper
+## pinentry wrapper
+## alternatively, you can force a specific frontend
+## by adding:
+# pinentry-program /usr/bin/pinentry-curses
+## to ~/.gnupg/gpg-agent.conf
 
-if [ -x /usr/bin/pinentry-qt5 ];then
-  exec /usr/bin/pinentry-qt5 "$@"
-fi
-
-if [ -x /usr/bin/pinentry-qt ];then
+if [ -x /usr/bin/pinentry-qt ]; then
   exec /usr/bin/pinentry-qt "$@"
-fi
-
-if [ -x /usr/bin/pinentry-gtk-2 ];then
+elif [ -x /usr/bin/pinentry-gnome3 ]; then
+  exec /usr/bin/pinentry-gnome3 "$@"
+elif [ -x /usr/bin/pinentry-gtk-2 ]; then
   exec /usr/bin/pinentry-gtk-2 "$@"
-fi
-
-if [ -x /usr/bin/pinentry-curses ];then
+elif [ -x /usr/bin/pinentry-curses ]; then
   exec /usr/bin/pinentry-curses "$@"
 else
   echo "no pinentry binary available" > /dev/stderr

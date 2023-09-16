@@ -5,7 +5,7 @@
 # Optional: libluv libtermkey libuv libvterm lua51-lpeg lua51-mpack luajit luarocks msgpack-c tree-sitter tree-sitter-c tree-sitter-lua tree-sitter-vimdoc tree-sitter-viml unibilium
 
 name=neovim
-version=0.9.1
+version=0.9.2
 release=1
 source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz)
 
@@ -18,7 +18,7 @@ build() {
     export AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib && \
     export LDFLAGS+=' -fuse-ld=lld -flto=thin'
 
-  # disabled for now
+  # optionals: disabled for now {{{
   #prt-get isinst libtermkey && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_LIBTERMKEY=OFF'
   #prt-get isinst libuv && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_LIBUV=OFF'
   #prt-get isinst libvterm && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_LIBVTERM=OFF'
@@ -29,6 +29,7 @@ build() {
   #prt-get isinst tree-sitter && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_TS=OFF'
   #prt-get isinst tree-sitter-c tree-sitter-lua tree-sitter-vimdoc tree-sitter-viml && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_TS_PARSERS=OFF'
   #prt-get isinst unibilium && PKGMK_NEOVIM_DEPS+=' -D USE_BUNDLED_UNIBILIUM=OFF'
+  # }}}
 
   cmake -S neovim-$version/cmake.deps -B neovim-$version/.deps -G Ninja $PKGMK_NEOVIM_DEPS \
     -D CMAKE_BUILD_TYPE=Release \
@@ -41,8 +42,9 @@ build() {
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=lib \
     -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -O3" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -D ENABLE_LTO=ON \
+    -D CI_BUILD=OFF \
     -Wno-dev
   cmake --build build
   DESTDIR=$PKG cmake --install build

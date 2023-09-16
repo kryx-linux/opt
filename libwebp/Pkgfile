@@ -5,7 +5,7 @@
 # Optional: freeglut libsdl ninja
 
 name=libwebp
-version=1.3.1
+version=1.3.2
 release=1
 source=(https://storage.googleapis.com/downloads.webmproject.org/releases/webp/$name-$version.tar.gz)
 

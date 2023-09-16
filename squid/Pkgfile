@@ -1,10 +1,11 @@
 # Description: A full-featured web proxy cache
 # URL: http://www.squid-cache.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: db linux-pam libcap libnsl libtirpc libtool expat libxml2
+# Depends on: db libcap libnsl libtirpc libtool expat libxml2 zstd
+# Optional: brotli gnutls krb5 libunistr libidn2 nettle tdb
 
 name=squid
-version=6.2
+version=6.3
 release=1
 source=(http://www.squid-cache.org/Versions/v6/$name-$version.tar.xz
 	squid)
@@ -31,8 +32,7 @@ build() {
 		--with-pthreads \
 		--with-aufs-threads=16 \
 		--disable-auto-locale \
-		--disable-arch-native \
-		--without-{mit,heimdal}-krb5
+		--disable-arch-native
 
 	make all
 	make DESTDIR=$PKG install

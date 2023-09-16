@@ -5,13 +5,14 @@
 
 name=libassuan
 version=2.5.6
-release=1
+release=2
 source=(https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
 
-  ./configure --prefix=/usr
+  ./configure --prefix=/usr \
+    --enable-static
   make
   make DESTDIR=$PKG install
 

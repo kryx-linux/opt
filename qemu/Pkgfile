@@ -1,32 +1,46 @@
 # Description: Fast CPU emulator and virtualizer for the x86 platform
 # URL: https://www.qemu.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: libusb linux-pam util-linux glib ninja libsdl2 libxkbcommon xorg-libpixman
+# Depends on: dtc glib libusb linux-pam xorg-libpixman
+# Optional: alsa-lib fuse3 gnutls libaio libjpeg-turbo libpng libsdl2 libseccomp libssh liburing libxkbcommon nettle nfs-utils numactl pipewire pulseaudio python3-sphinx python3-sphinx_rtd_theme sdl2_image snappy xkeyboard-config xkeyboard-config
 
 name=qemu
-version=8.0.4
-release=1
+version=8.1.0
+release=3
 source=(https://download.qemu.org/$name-$version.tar.xz
-	$name-man-$version.tar.xz)
+	keyutils.patch)
 
 build() {
 	cd $name-$version
 
+	## https://lore.kernel.org/qemu-devel/20230824094208.255279-1-thuth@redhat.com/
+	patch -Np1 -i $SRC/keyutils.patch
+
+	## only needed for qemu-keymap
+	if [[ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]] && ! prt-get isinst xkeyboard-config; then
+		printf '\e[1;31m%-6s\e[m\n' "You need to install xkeyboard-config, then rebuild libxkbcommon to build qemu-keymap. We are disabling this feature now."
+		PKGMK_QEMU+=' --disable-xkbcommon'
+	fi
+	prt-get isinst python3-sphinx python3-sphinx_rtd_theme || PKGMK_QEMU+=' --disable-docs'
+
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
-		--disable-docs \
 		--libexecdir=/usr/lib/qemu \
-		--disable-gtk \
 		--localstatedir=/var \
+		--enable-linux-user \
+		--enable-fdt=system \
+		--enable-slirp \
 		--python=/usr/bin/python3 \
-		--target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu
+		--target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu \
+		--disable-gtk \
 	make
 	make DESTDIR=$PKG install
 
-	cp -r $SRC/man $PKG/usr/share
 
 	install -d $PKG/etc/udev/rules.d/
 	echo 'KERNEL=="kvm", NAME="kvm", OWNER="root", GROUP="kvm", MODE="0660"' > \
 		$PKG/etc/udev/rules.d/60-kvm.rules
+
+	rm -r $PKG/var
 }

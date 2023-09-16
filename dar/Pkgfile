@@ -2,21 +2,24 @@
 # URL: http://dar.linux.free.fr/
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: attr bzip2 curl lzo xz zlib zstd libgcrypt
+# Optional: argon2 gpgme libgcrypt lz4
 
 name=dar
-version=2.7.11
-release=1
+version=2.7.12
+release=2
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
-	./configure \
+	prt-get isinst argon2 || PKGMK_DAR+=' --disable-libargon2-linking'
+	prt-get isinst gpgme || PKGMK_DAR+=' --disable-gpgme-linking'
+
+	CONFIG_SHELL=/bin/bash \
+	./configure $PKGMK_DAR \
 		--prefix=/usr \
 		--disable-nls \
 		--enable-mode=64 \
-		--disable-gpgme-linking \
-		--disable-libargon2-linking \
 		--disable-build-html
 
 	make V=0

@@ -2,21 +2,26 @@
 # URL: https://gnupg.org/related_software/pinentry/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libassuan libcap util-linux
-# Optional: libsecret
+# Optional: gcr3 gtk libsecret qt5
 
 name=pinentry
 version=1.2.1
-release=1
+release=2
 source=(https://gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2
   pinentry)
 
 build() {
   cd $name-$version
 
-  ./configure \
+  prt-get isinst gcr3 || PKGMK_PINENTRY+=' --disable-gnome3'
+  prt-get isinst gtk || PKGMK_PINENTRY+=' --disable-gtk2'
+  prt-get isinst qt5 || PKGMK_PINENTRY+=' --disable-pinentry-qt5'
+
+  ./configure $PKGMK_PINENTRY \
     --prefix=/usr \
-    --disable-pinentry-{gtk2,qt,qt5} \
-    --enable-pinentry-curses
+    --enable-pinentry-curses \
+    --enable-pinentry-tty \
+    --disable-pinentry-qt4
 
   make
   make DESTDIR=$PKG install

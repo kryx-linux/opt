@@ -4,7 +4,7 @@
 # Depends on: bzip2 libpcre2 libxml2 curl db gdbm
 
 name=php
-version=8.2.9
+version=8.2.10
 release=1
 source=(https://php.net/distributions/php-$version.tar.xz)
 
@@ -15,6 +15,7 @@ build() {
 	--prefix=/usr \
 	--mandir=/usr/share/man \
 	--localstatedir=/var \
+	--runstatedir=/run \
 	--with-config-file-path=/etc/php \
 	--with-config-file-scan-dir=/etc/php/conf.d \
 	--with-zlib \
@@ -47,4 +48,6 @@ build() {
 
 	printf 'extension=%s\n' {bz2,curl,openssl,dba}.so \
 		> $PKG/etc/php/conf.d/extensions.ini
+
+	rm -r $PKG/var/run
 }
