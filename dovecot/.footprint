@@ -493,6 +493,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ostream-encrypt.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-failure-at.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-file-private.h
+-rw-r--r--	root/root	usr/include/dovecot/ostream-final-trickle.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-hash.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-metawrap.h
 -rw-r--r--	root/root	usr/include/dovecot/ostream-multiplex.h
