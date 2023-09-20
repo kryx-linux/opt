@@ -1,10 +1,11 @@
 # Description: Image manipulation wizard
 # URL: http://www.imagemagick.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: libtool lcms2 pango xorg-libxt chrpath
+# Depends on: bzip2 chrpath libtool xz zlib
+# Optional: fontconfig lcms2 libpng libtiff libxml2 openjpeg2 pango xorg-libxt
 
 name=imagemagick
-version=7.1.1-16
+version=7.1.1-17
 release=1
 source=(https://imagemagick.org/archive/releases/ImageMagick-$version.tar.xz)
 
@@ -15,8 +16,7 @@ build () {
 		--prefix=/usr \
 		--enable-shared \
 		--with-modules \
-		--with-perl=yes \
-		--with-lcms=yes
+		--with-perl=yes
 
 	make
 	make DESTDIR=$PKG install
