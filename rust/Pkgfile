@@ -5,7 +5,7 @@
 # Optional: ccache libgit2 lld polly sccache
 
 name=rust
-version=1.72.0
+version=1.72.1
 _date=2023-07-13
 _rustc=1.71.0
 _cargo=$_rustc
@@ -17,7 +17,7 @@ source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
 	0001-bootstrap-Change-libexec-dir.patch
 	0001-cargo-Change-libexec-dir.patch
-	0002-compiler-Change-LLVM-targets.patch)
+    0002-compiler-Change-LLVM-targets.patch)
 
 unpack_source() {
 	for file in ${source[@]}; do
@@ -68,7 +68,6 @@ build() {
 
 	# Use our *-pc-linux-gnu targets, making LTO with clang simpler
 	patch -p1 -i $SRC/0002-compiler-Change-LLVM-targets.patch
-	#patch -p1 -i $SRC/114440.patch
 
 cat <<- EOF > $SRC/config.toml
 	changelog-seen = 2
@@ -163,7 +162,7 @@ EOF
 		sed -e 's|@CCACHE@||' -i $SRC/config.toml
 	fi
 
-	prt-get isinst lld && sed -e 's|@LLD@|use-lld = true|' -i $SRC/config.toml || sed -e 's|@LLD@||' -i $SRC/config.toml
+	prt-get isinst lld && sed -e 's|@LLD@|use-lld = true\nlld = true|' -i $SRC/config.toml || sed -e 's|@LLD@||' -i $SRC/config.toml
 	prt-get isinst polly && sed -e 's|@POLLY@|polly = true|' -i $SRC/config.toml || sed -e 's|@POLLY@||' -i $SRC/config.toml
 
 	cat $SRC/config.toml
