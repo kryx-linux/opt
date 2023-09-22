@@ -52,6 +52,7 @@ drwxr-xr-x	root/root	usr/include/lldb/API/
 -rw-r--r--	root/root	usr/include/lldb/API/SBQueue.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBQueueItem.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBReproducer.h
+-rw-r--r--	root/root	usr/include/lldb/API/SBScriptObject.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBSection.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBSourceManager.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBStream.h
@@ -118,10 +119,10 @@ drwxr-xr-x	root/root	usr/include/lldb/Core/
 -rw-r--r--	root/root	usr/include/lldb/Core/Declaration.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Disassembler.h
 -rw-r--r--	root/root	usr/include/lldb/Core/DumpDataExtractor.h
+-rw-r--r--	root/root	usr/include/lldb/Core/DumpRegisterInfo.h
 -rw-r--r--	root/root	usr/include/lldb/Core/DumpRegisterValue.h
 -rw-r--r--	root/root	usr/include/lldb/Core/EmulateInstruction.h
 -rw-r--r--	root/root	usr/include/lldb/Core/FileLineResolver.h
--rw-r--r--	root/root	usr/include/lldb/Core/FileSpecList.h
 -rw-r--r--	root/root	usr/include/lldb/Core/FormatEntity.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Highlighter.h
 -rw-r--r--	root/root	usr/include/lldb/Core/IOHandler.h
@@ -147,7 +148,6 @@ drwxr-xr-x	root/root	usr/include/lldb/Core/
 -rw-r--r--	root/root	usr/include/lldb/Core/StreamBuffer.h
 -rw-r--r--	root/root	usr/include/lldb/Core/StreamFile.h
 -rw-r--r--	root/root	usr/include/lldb/Core/StructuredDataImpl.h
--rw-r--r--	root/root	usr/include/lldb/Core/ThreadSafeDenseMap.h
 -rw-r--r--	root/root	usr/include/lldb/Core/ThreadSafeDenseSet.h
 -rw-r--r--	root/root	usr/include/lldb/Core/ThreadSafeValue.h
 -rw-r--r--	root/root	usr/include/lldb/Core/ThreadedCommunication.h
@@ -204,6 +204,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Expression/
 -rw-r--r--	root/root	usr/include/lldb/Expression/IRMemoryMap.h
 -rw-r--r--	root/root	usr/include/lldb/Expression/LLVMUserExpression.h
 -rw-r--r--	root/root	usr/include/lldb/Expression/Materializer.h
+-rw-r--r--	root/root	usr/include/lldb/Expression/ObjectFileJIT.h
 -rw-r--r--	root/root	usr/include/lldb/Expression/REPL.h
 -rw-r--r--	root/root	usr/include/lldb/Expression/UserExpression.h
 -rw-r--r--	root/root	usr/include/lldb/Expression/UtilityFunction.h
@@ -259,6 +260,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Host/common/
 -rw-r--r--	root/root	usr/include/lldb/Host/common/NativeWatchpointList.h
 -rw-r--r--	root/root	usr/include/lldb/Host/common/TCPSocket.h
 -rw-r--r--	root/root	usr/include/lldb/Host/common/UDPSocket.h
+-rw-r--r--	root/root	usr/include/lldb/Host/common/ZipFileResolver.h
 drwxr-xr-x	root/root	usr/include/lldb/Host/freebsd/
 -rw-r--r--	root/root	usr/include/lldb/Host/freebsd/HostInfoFreeBSD.h
 drwxr-xr-x	root/root	usr/include/lldb/Host/linux/
@@ -351,8 +353,8 @@ drwxr-xr-x	root/root	usr/include/lldb/Interpreter/
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Options.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Property.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptInterpreter.h
+-rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptObject.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedInterface.h
--rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedMetadata.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedPlatformInterface.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/ScriptedProcessInterface.h
 drwxr-xr-x	root/root	usr/include/lldb/Symbol/
@@ -425,7 +427,9 @@ drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/RegisterCheckpoint.h
 -rw-r--r--	root/root	usr/include/lldb/Target/RegisterContext.h
 -rw-r--r--	root/root	usr/include/lldb/Target/RegisterContextUnwind.h
+-rw-r--r--	root/root	usr/include/lldb/Target/RegisterFlags.h
 -rw-r--r--	root/root	usr/include/lldb/Target/RegisterNumber.h
+-rw-r--r--	root/root	usr/include/lldb/Target/RegisterTypeBuilder.h
 -rw-r--r--	root/root	usr/include/lldb/Target/RemoteAwarePlatform.h
 -rw-r--r--	root/root	usr/include/lldb/Target/Runtime.h
 -rw-r--r--	root/root	usr/include/lldb/Target/SectionLoadHistory.h
@@ -491,6 +495,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/Environment.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Event.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/FileSpec.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/FileSpecList.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Flags.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/GDBRemote.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/IOObject.h
@@ -508,6 +513,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/RegisterValue.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/RegularExpression.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Scalar.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/ScriptedMetadata.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/SelectHelper.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/SharedCluster.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/State.h
@@ -520,6 +526,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/StringLexer.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/StringList.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/StructuredData.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/ThreadSafeDenseMap.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/TildeExpressionResolver.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Timeout.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Timer.h
@@ -533,6 +540,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/VASPrintf.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/VMRange.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/XcodeSDK.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/ZipFile.h
 drwxr-xr-x	root/root	usr/include/lldb/Version/
 -rw-r--r--	root/root	usr/include/lldb/Version/Version.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-defines.h
@@ -547,11 +555,11 @@ drwxr-xr-x	root/root	usr/include/lldb/Version/
 -rw-r--r--	root/root	usr/include/lldb/lldb-types.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-versioning.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.16
-lrwxrwxrwx	root/root	usr/lib/liblldb.so.16 -> liblldb.so.16.0.6
--rwxr-xr-x	root/root	usr/lib/liblldb.so.16.0.6
-lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.16
--rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.16
+lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.17
+lrwxrwxrwx	root/root	usr/lib/liblldb.so.17 -> liblldb.so.17.0.1
+-rwxr-xr-x	root/root	usr/lib/liblldb.so.17.0.1
+lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.17
+-rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.17
 drwxr-xr-x	root/root	usr/lib/python3.10/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/
