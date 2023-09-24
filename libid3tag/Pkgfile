@@ -4,7 +4,7 @@
 # Depends on: zlib cmake
 
 name=libid3tag
-version=0.16.2
+version=0.16.3
 release=1
 source=(https://codeberg.org/tenacityteam/libid3tag/archive/$version.tar.gz)
 renames=($name-$version.tar.gz)
