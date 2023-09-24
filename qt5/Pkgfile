@@ -2,7 +2,7 @@
 # URL: http://www.qt.io/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libwebp libxkbcommon xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-renderutil xorg-xcb-util-wm
-# Optional: assimp bluez cups double-conversion gtk3 ibus icu libinput libsdl2 mariadb mtdev openal pulseaudio unixodbc vulkan-headers wayland-protocols xkeyboard-config
+# Optional: assimp bluez cups double-conversion gtk3 ibus icu krb5 libinput libsdl2 mariadb mtdev openal pulseaudio unixodbc vulkan-headers wayland-protocols xkeyboard-config
 
 name=qt5
 version=5.15.10
