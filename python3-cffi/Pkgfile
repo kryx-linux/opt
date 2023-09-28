@@ -4,8 +4,8 @@
 # Depends on: python3-pycparser
 
 name=python3-cffi
-version=1.15.1
-release=2
+version=1.16.0
+release=1
 source=(https://pypi.org/packages/source/c/cffi/cffi-$version.tar.gz)
 
 build() {
