@@ -4,7 +4,7 @@
 # Depends on: dbus gobject-introspection intltool libxml2 xorg-libxtst
 
 name=at-spi2-core
-version=2.48.4
+version=2.50.0
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 

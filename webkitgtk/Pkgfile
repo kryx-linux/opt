@@ -1,11 +1,11 @@
-# Description: Small, efficient and fast rendering engine for Web Browsers.
+# Description: Small, efficient and fast rendering engine for Web Browsers
 # URL: https://www.webkitgtk.org/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: gst-plugins-base gtk3 hyphen icu lcms2 libseccomp libsecret libsoup libwebp libxslt ruby unifdef woff2 xorg-libxcomposite xorg-libxt
 # Optional: bubblewrap enchant geoclue gst-plugins-bad libavif libmanette libnotify openjpeg2 wpebackend-fdo xdg-dbus-proxy
 
 name=webkitgtk
-version=2.40.5
+version=2.42.1
 release=1
 source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
@@ -41,6 +41,7 @@ build() {
     -D ENABLE_MINIBROWSER=ON \
     -D ENABLE_JOURNALD_LOG=OFF \
     -D ENABLE_DOCUMENTATION=OFF \
+    -D USE_JPEGXL=OFF \
     -Wno-dev
 
   cmake --build build

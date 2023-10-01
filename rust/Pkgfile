@@ -5,11 +5,11 @@
 # Optional: ccache libgit2 lld polly sccache
 
 name=rust
-version=1.72.0
+version=1.72.1
 _date=2023-07-13
 _rustc=1.71.0
 _cargo=$_rustc
-release=1
+release=2
 
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.xz
@@ -17,7 +17,7 @@ source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
 	0001-bootstrap-Change-libexec-dir.patch
 	0001-cargo-Change-libexec-dir.patch
-	0002-compiler-Change-LLVM-targets.patch)
+    0002-compiler-Change-LLVM-targets.patch)
 
 unpack_source() {
 	for file in ${source[@]}; do
@@ -68,7 +68,12 @@ build() {
 
 	# Use our *-pc-linux-gnu targets, making LTO with clang simpler
 	patch -p1 -i $SRC/0002-compiler-Change-LLVM-targets.patch
-	#patch -p1 -i $SRC/114440.patch
+
+	# temp fixes for LLVM 17
+	# https://www.linuxfromscratch.org/blfs/view/svn/general/rust.html
+	sed 's/FS,/"", &/' -i ./compiler/rustc_llvm/llvm-wrapper/PassWrapper.cpp
+	sed '/LLVMContext.h/i#include "llvm/ADT/SmallString.h"' \
+		-i compiler/rustc_llvm/llvm-wrapper/SymbolWrapper.cpp
 
 cat <<- EOF > $SRC/config.toml
 	changelog-seen = 2
@@ -163,7 +168,7 @@ EOF
 		sed -e 's|@CCACHE@||' -i $SRC/config.toml
 	fi
 
-	prt-get isinst lld && sed -e 's|@LLD@|use-lld = true|' -i $SRC/config.toml || sed -e 's|@LLD@||' -i $SRC/config.toml
+	prt-get isinst lld && sed -e 's|@LLD@|use-lld = true\nlld = true|' -i $SRC/config.toml || sed -e 's|@LLD@||' -i $SRC/config.toml
 	prt-get isinst polly && sed -e 's|@POLLY@|polly = true|' -i $SRC/config.toml || sed -e 's|@POLLY@||' -i $SRC/config.toml
 
 	cat $SRC/config.toml
@@ -181,7 +186,8 @@ EOF
 	#   = note: `-D dead-code` implied by `-D warnings`
 	export RUSTFLAGS+=' -A dead_code'
 
-	export LIBGIT2_NO_PKG_CONFIG=1
+	{ [ ! -e /usr/include/libssh2.h ] ||
+		export LIBSSH2_SYS_USE_PKG_CONFIG=1; }
 	export RUST_BACKTRACE=full
 	/usr/bin/python3 ./x.py build --config="${SRC}"/config.toml -j ${JOBS-1}
 	DESTDIR=$PKG /usr/bin/python3 ./x.py --config="${SRC}"/config.toml install
@@ -207,6 +213,6 @@ EOF
 		fi
 	done < <(find "$PKG/usr/lib/rustlib"  -path '*/analysis/*.json' -print0)
 
-	rm $PKG/usr/bin/*.old
+	find $PKG/usr -name "*.old" -delete
 	rm $PKG/usr/lib/rustlib/{install.log,manifest-*}
 }

@@ -1,0 +1,21 @@
+# Description: A general purpose TCP-IP emulator
+# URL: https://gitlab.freedesktop.org/slirp/libslirp
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: glib
+
+name=libslirp
+version=4.7.0
+release=1
+source=(https://gitlab.freedesktop.org/slirp/$name/-/archive/v$version/$name-v$version.tar.bz2)
+
+build() {
+	meson setup build $name-v$version \
+		--prefix=/usr \
+		--buildtype=plain \
+		--wrap-mode nodownload \
+		-D b_lto=true \
+		-D b_pie=true
+
+	meson compile -C build -j ${JOBS:-1}
+	DESTDIR=$PKG meson install -C build
+}
