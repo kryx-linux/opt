@@ -1,11 +1,11 @@
 # Description: SDL version 2, Simple DirectMedia Layer
 # URL: https://www.libsdl.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: mesa cmake
+# Depends on: mesa
 # Optional: alsa-lib ibus jack pipewire pulseaudio wayland-protocols
 
 name=libsdl2
-version=2.28.3
+version=2.28.4
 release=1
 source=(https://www.libsdl.org/release/SDL2-$version.tar.gz)
 
