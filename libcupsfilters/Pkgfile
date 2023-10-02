@@ -1,0 +1,26 @@
+# Description: Code of the filters of the former cups-filters package as library functions
+# URL: https://github.com/OpenPrinting/libcupsfilters
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: cups fontconfig ghostscript lcms2 qpdf
+# Optional: dbus libexif mupdf popler
+
+name=libcupsfilters
+version=2.0.0
+release=1
+source=(https://github.com/OpenPrinting/libcupsfilters/releases/download/$version/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	prt-get isinst dbus || PKGMK_LIBCUPSFILTERS+=' --disable-dbus'
+	prt-get isinst libexif || PKGMK_LIBCUPSFILTERS+=' --disable-exif'
+	prt-get isinst mupdf || PKGMK_LIBCUPSFILTERS+=' --disable-mutool'
+	prt-get isinst poppler || PKGMK_LIBCUPSFILTERS+=' --disable-poppler'
+
+	./configure $PKGMK_LIBCUPSFILTERS --prefix=/usr
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -r $PKG/usr/share/doc
+}
