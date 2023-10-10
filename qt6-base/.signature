@@ -1,8 +1,8 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/VU17iEfcCWNCMMhgU/saqwXjoNdQ2YA+LNlT8HZ/rdEj7qGgwflR9UT2lglpKsUjuWet0R3W5M+lstEUFCopws=
-SHA256 (Pkgfile) = ddfaf8948ebde0ff2f55f26fa48d6cff5a926cb121026c47e168eebb1fed992e
-SHA256 (.footprint) = 0071740fe656669eaf830378b9959e639a3aefe57f7bf1de212c0d65acb70a53
-SHA256 (qtbase-everywhere-src-6.5.3.tar.xz) = df2f4a230be4ea04f9798f2c19ab1413a3b8ec6a80bef359f50284235307b546
+RWSE3ohX2g5d/YgGD4yrxr3sk6InpjFJrImFz9/VEpOJvriyoglVHZtNV7NnS2P5qncw3pGFpsWEvjmlyI7k3IQr5oMsbW1iTgk=
+SHA256 (Pkgfile) = 70d2ddad85fe3bfcb705c6b7a18419ef9894f304aaaa5d75f16310d5d505a8d9
+SHA256 (.footprint) = 596a899629c1eb75cebe7c2cb527be660070275847ec407521aac52bcf6000d2
+SHA256 (qtbase-everywhere-src-6.6.0.tar.xz) = 039d53312acb5897a9054bd38c9ccbdab72500b71fdccdb3f4f0844b0dd39e0e
 SHA256 (qt6-base-cflags.patch) = cf707cd970650f8b60f8897692b36708ded9ba116723ec8fcd885576783fe85c
 SHA256 (qt6-base-nostrip.patch) = 4b93f6a79039e676a56f9d6990a324a64a36f143916065973ded89adc621e094
-SHA256 (event-change-scale.patch) = adc4a5d1c5605a003fd13e9b67be6a1ce7766da106d4087c31d428eb4cfb0b03
+SHA256 (qtbase-6.5.3-xkbcommon160.patch) = ee9411953ebdeae8e0a9b782df7db65d7228363c4873e7a8ebd902ee3a44c8c8
