@@ -4,11 +4,11 @@
 # Depends on: glib itstool
 
 name=shared-mime-info
-version=2.2
-release=2
+version=2.3
+release=1
 
 # https://gitlab.freedesktop.org/xdg/shared-mime-info/-/blob/master/xdgmime
-_xdgmimever=fe2f298fa691b225bdea31d816cf6728df91ba6d
+_xdgmimever=179296748e92bd91bf531656632a1056307fb7b7
 
 source=(https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/$name-$version.tar.bz2
   https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2)

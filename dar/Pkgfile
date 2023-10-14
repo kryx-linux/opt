@@ -1,18 +1,17 @@
 # Description: Disk ARchive - a sophisticated backup utility for Linux
 # URL: http://dar.linux.free.fr/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: attr bzip2 curl lzo xz zlib zstd libgcrypt
+# Depends on: attr bzip2 curl lzo xz zlib zstd
 # Optional: argon2 gpgme libgcrypt lz4
 
 name=dar
-version=2.7.12
-release=2
+version=2.7.13
+release=1
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 
-	prt-get isinst argon2 || PKGMK_DAR+=' --disable-libargon2-linking'
 	prt-get isinst gpgme || PKGMK_DAR+=' --disable-gpgme-linking'
 
 	CONFIG_SHELL=/bin/bash \

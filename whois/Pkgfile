@@ -3,12 +3,12 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=whois
-version=5.5.18
+version=5.5.19
 release=1
 source=(https://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.xz)
 
 build() {
-	cd $name-$version
+	cd $name
 	sed -i "/^CFLAGS/s/=.*$/=$CFLAGS/" Makefile
 	make CONFIG_FILE='/etc/whois.conf' whois
 	install -D -m 0755 whois $PKG/usr/bin/whois

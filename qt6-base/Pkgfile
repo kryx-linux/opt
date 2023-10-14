@@ -5,17 +5,17 @@
 # Optional: gtk3 libproxy mariadb md4c pipewire postgresql pulseaudio tslib unixodbc xdg-utils xmlstarlet
 
 name=qt6-base
-version=6.5.3
+version=6.6.0
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtbase-everywhere-src-$version.tar.xz
   qt6-base-cflags.patch
   qt6-base-nostrip.patch
-  event-change-scale.patch)
+  qtbase-6.5.3-xkbcommon160.patch)
 
 build() {
   patch -d qtbase-everywhere-src-$version -p1 -i $SRC/qt6-base-cflags.patch
   patch -d qtbase-everywhere-src-$version -p1 -i $SRC/qt6-base-nostrip.patch
-  patch -Np1 -d qtbase-everywhere-src-$version -i $SRC/event-change-scale.patch
+  patch -d qtbase-everywhere-src-$version -p1 -i $SRC/qtbase-6.5.3-xkbcommon160.patch
 
   prt-get isinst ccache && PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 

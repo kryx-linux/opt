@@ -2,16 +2,17 @@
 # URL: https://xkbcommon.org/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: libxml2
-# Optional: wayland-protocols xkeyboard-config
+# Optional: bash-completion wayland-protocols xkeyboard-config
 
 name=libxkbcommon
-version=1.5.0
-release=3
+version=1.6.0
+release=1
 source=(https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-$version.tar.gz)
 
 build() {
 	prt-get isinst wayland-protocols || PKGMK_XKBCOMMON+=' -D enable-wayland=false'
 	prt-get isinst xkeyboard-config || PKGMK_XKBCOMMON+=' -D enable-x11=false'
+	prt-get isinst bash-completion  || PKGMK_XKBCOMMON+=' -D enable-bash-completion=false'
 
 	meson setup build libxkbcommon-xkbcommon-$version $PKGMK_XKBCOMMON \
 		--prefix=/usr \

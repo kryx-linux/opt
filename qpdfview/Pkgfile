@@ -2,6 +2,7 @@
 # URL: https://launchpad.net/qpdfview
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: poppler qt6-svg
+# Optional: cups djvulibre libspectre
 
 name=qpdfview
 version=0.5
