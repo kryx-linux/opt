@@ -4,7 +4,7 @@
 # Depends on: cmocka talloc
 
 name=tevent
-version=0.15.0
+version=0.16.0
 release=1
 source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz)
 
@@ -12,8 +12,8 @@ build() {
 	cd $name-$version
 
 	./configure \
-		--bundled-libraries=NONE \
-		--prefix=/usr
+		--prefix=/usr \
+		--bundled-libraries=NONE
 
 	make
 	make DESTDIR=$PKG install
