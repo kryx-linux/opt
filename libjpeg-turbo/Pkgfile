@@ -4,7 +4,7 @@
 # Depends on: nasm
 
 name=libjpeg-turbo
-version=3.0.0
+version=3.0.1
 release=1
 source=(https://downloads.sourceforge.net/project/$name/$version/$name-$version.tar.gz)
 
