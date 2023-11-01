@@ -12,9 +12,8 @@ build() {
   cd $name-$version
 
   ./configure --prefix=/usr \
-    --enable-static
+    --enable-static \
+    --disable-doc
   make
   make DESTDIR=$PKG install
-
-  rm -r $PKG/usr/share/info
 }
