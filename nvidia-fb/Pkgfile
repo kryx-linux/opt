@@ -4,7 +4,7 @@
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia-fb
-version=530.41.03
+version=545.29.02
 release=1
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf)
@@ -59,7 +59,7 @@ build() {
 	install -D -m 0644 nvidia_layers.json $PKG/usr/share/vulkan/implicit_layer.d/nvidia_layers.json
 
 	# driver component libraries
-	for C in allocator cfg compiler {e,}glcore gl{si,vkspirv} rtcore; do
+	for C in allocator cfg {e,}glcore gl{si,vkspirv} gpucomp rtcore; do
 		install -m 0755 libnvidia-${C}.so.$version $PKG/usr/lib/
 		ln -s libnvidia-${C}.so.$version $PKG/usr/lib/libnvidia-${C}.so.1
 		ln -s libnvidia-${C}.so.$version $PKG/usr/lib/libnvidia-${C}.so
