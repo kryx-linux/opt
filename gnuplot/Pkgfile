@@ -5,21 +5,17 @@
 # Optional: libgd lua qt5 (qt6-5compat qt6-tools qt6-svg)
 
 name=gnuplot
-version=5.4.9
-release=2
-source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz
-	qt6.patch)
+version=5.4.10
+release=1
+source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-
-	patch -p0 -i $SRC/qt6.patch
 
 	PKGMK_GNUPLOT='--with-qt=no'
 	prt-get isinst qt5 && PKGMK_GNUPLOT='--with-qt=qt5'
 	prt-get isinst qt6-5compat qt6-tools qt6-svg && PKGMK_GNUPLOT='--with-qt=qt6'
 
-	autoconf
 	./configure $PKGMK_GNUPLOT \
 		--prefix=/usr \
 		--libexecdir=/usr/lib

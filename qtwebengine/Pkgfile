@@ -5,11 +5,11 @@
 # Optional: glib jsoncpp krb5 krb5 lcms2 libevent libsrtp libxml2 minizip opus pipewire pulseaudio re2 snappy
 
 name=qtwebengine
-version=5.15.15
-release=2
+version=5.15.16
+release=1
 
 # https://github.com/qt/qtwebengine/commits/5.15
-_qtwebengine_commit=43863f59f4c7fc0f3e89292e7669e9fe4ae67efa
+_qtwebengine_commit=f9de20ca8375c18d9fc4a153829bbab6c28fe655
 # from $_qtwebengine_commit/src/3rdparty
 _chromium_commit=8df91f886e7fffb61408e2426f8a90d763a3b6ea
 
@@ -29,6 +29,7 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$ve
   python.patch)
 
 build() {
+  ls
   cd qtwebengine-$_qtwebengine_commit
 
   rm -rf src/3rdparty

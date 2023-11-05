@@ -5,16 +5,12 @@
 # Optional: alsa-lib fuse3 gnutls libaio libjpeg-turbo libpng libsdl2 libseccomp libslirp libssh liburing libxkbcommon nettle nfs-utils numactl pipewire pulseaudio python3-sphinx python3-sphinx_rtd_theme sdl2_image snappy xkeyboard-config xkeyboard-config
 
 name=qemu
-version=8.1.1
+version=8.1.2
 release=1
-source=(https://download.qemu.org/$name-$version.tar.xz
-	keyutils.patch)
+source=(https://download.qemu.org/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
-
-	## https://lore.kernel.org/qemu-devel/20230824094208.255279-1-thuth@redhat.com/
-	patch -Np1 -i $SRC/keyutils.patch
 
 	## only needed for qemu-keymap
 	if [[ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]] && ! prt-get isinst xkeyboard-config; then
@@ -35,7 +31,6 @@ build() {
 		--disable-gtk \
 	make
 	make DESTDIR=$PKG install
-
 
 	install -d $PKG/etc/udev/rules.d/
 	echo 'KERNEL=="kvm", NAME="kvm", OWNER="root", GROUP="kvm", MODE="0660"' > \

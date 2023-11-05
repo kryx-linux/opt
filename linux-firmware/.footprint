@@ -587,6 +587,12 @@ drwxr-xr-x	root/root	lib/firmware/amdgpu/
 -rw-r--r--	root/root	lib/firmware/amdgpu/yellow_carp_ta.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/yellow_carp_toc.bin
 -rw-r--r--	root/root	lib/firmware/amdgpu/yellow_carp_vcn.bin
+drwxr-xr-x	root/root	lib/firmware/amdtee/
+-rw-r--r--	root/root	lib/firmware/amdtee/773bd96f-b83f-4d52-b12dc529b13d8543.bin
+lrwxrwxrwx	root/root	lib/firmware/amdtee/amd_pmf_v3.bin -> 773bd96f-b83f-4d52-b12dc529b13d8543.bin
+drwxr-xr-x	root/root	lib/firmware/amlogic/
+drwxr-xr-x	root/root	lib/firmware/amlogic/bluetooth/
+-rw-r--r--	root/root	lib/firmware/amlogic/bluetooth/w2_bt_fw_uart.bin
 drwxr-xr-x	root/root	lib/firmware/amphion/
 drwxr-xr-x	root/root	lib/firmware/amphion/vpu/
 -rw-r--r--	root/root	lib/firmware/amphion/vpu/vpu_fw_imx8_dec.bin
@@ -932,6 +938,7 @@ lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43430-sdio.friendlyarm,nanopi-r1.
 -rw-r--r--	root/root	lib/firmware/brcm/brcmfmac43430-sdio.raspberrypi,3-model-b.txt
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43430-sdio.raspberrypi,model-zero-2-w.txt -> brcmfmac43430-sdio.raspberrypi,3-model-b.txt
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43430-sdio.raspberrypi,model-zero-w.txt -> brcmfmac43430-sdio.raspberrypi,3-model-b.txt
+lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43430-sdio.sinovoip,bananapi-m64.txt -> brcmfmac43430-sdio.AP6212.txt
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43430-sdio.sinovoip,bpi-m2-plus.txt -> brcmfmac43430-sdio.AP6212.txt
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43430-sdio.sinovoip,bpi-m2-ultra.txt -> brcmfmac43430-sdio.AP6212.txt
 lrwxrwxrwx	root/root	lib/firmware/brcm/brcmfmac43430-sdio.sinovoip,bpi-m2-zero.txt -> brcmfmac43430-sdio.AP6212.txt
@@ -1920,6 +1927,14 @@ lrwxrwxrwx	root/root	lib/firmware/intel/dsp_fw_release.bin -> avs/skl/dsp_basefw
 -rw-r--r--	root/root	lib/firmware/intel/ibt-0040-4150.sfi
 -rw-r--r--	root/root	lib/firmware/intel/ibt-0041-0041.ddc
 -rw-r--r--	root/root	lib/firmware/intel/ibt-0041-0041.sfi
+-rw-r--r--	root/root	lib/firmware/intel/ibt-0180-0041.ddc
+-rw-r--r--	root/root	lib/firmware/intel/ibt-0180-0041.sfi
+-rw-r--r--	root/root	lib/firmware/intel/ibt-0180-1050.ddc
+-rw-r--r--	root/root	lib/firmware/intel/ibt-0180-1050.sfi
+-rw-r--r--	root/root	lib/firmware/intel/ibt-0180-4150.ddc
+-rw-r--r--	root/root	lib/firmware/intel/ibt-0180-4150.sfi
+-rw-r--r--	root/root	lib/firmware/intel/ibt-0291-0291.ddc
+-rw-r--r--	root/root	lib/firmware/intel/ibt-0291-0291.sfi
 -rw-r--r--	root/root	lib/firmware/intel/ibt-1040-0041.ddc
 -rw-r--r--	root/root	lib/firmware/intel/ibt-1040-0041.sfi
 -rw-r--r--	root/root	lib/firmware/intel/ibt-1040-1020.ddc
@@ -2078,6 +2093,13 @@ drwxr-xr-x	root/root	lib/firmware/isci/
 -rw-r--r--	root/root	lib/firmware/iwlwifi-cc-a0-73.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-cc-a0-74.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-cc-a0-77.ucode
+-rw-r--r--	root/root	lib/firmware/iwlwifi-gl-c0-fm-c0-83.ucode
+-rw-r--r--	root/root	lib/firmware/iwlwifi-gl-c0-fm-c0.pnvm
+-rw-r--r--	root/root	lib/firmware/iwlwifi-ma-b0-gf-a0-83.ucode
+-rw-r--r--	root/root	lib/firmware/iwlwifi-ma-b0-gf-a0.pnvm
+-rw-r--r--	root/root	lib/firmware/iwlwifi-ma-b0-gf4-a0-83.ucode
+-rw-r--r--	root/root	lib/firmware/iwlwifi-ma-b0-gf4-a0.pnvm
+-rw-r--r--	root/root	lib/firmware/iwlwifi-ma-b0-hr-b0-83.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf-a0-72.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf-a0-73.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf-a0-74.ucode
@@ -2086,6 +2108,7 @@ drwxr-xr-x	root/root	lib/firmware/isci/
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf-a0-79.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf-a0-81.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf-a0-83.ucode
+-rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf-a0-84.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf-a0.pnvm
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf4-a0-72.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf4-a0-73.ucode
@@ -2095,6 +2118,7 @@ drwxr-xr-x	root/root	lib/firmware/isci/
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf4-a0-79.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf4-a0-81.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf4-a0-83.ucode
+-rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf4-a0-84.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-gf4-a0.pnvm
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-hr-b0-72.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-hr-b0-73.ucode
@@ -2102,6 +2126,8 @@ drwxr-xr-x	root/root	lib/firmware/isci/
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-hr-b0-77.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-hr-b0-79.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-hr-b0-81.ucode
+-rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-hr-b0-83.ucode
+-rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-hr-b0-84.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-jf-b0-72.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-jf-b0-73.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-so-a0-jf-b0-74.ucode
@@ -2116,6 +2142,7 @@ drwxr-xr-x	root/root	lib/firmware/isci/
 -rw-r--r--	root/root	lib/firmware/iwlwifi-ty-a0-gf-a0-79.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-ty-a0-gf-a0-81.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-ty-a0-gf-a0-83.ucode
+-rw-r--r--	root/root	lib/firmware/iwlwifi-ty-a0-gf-a0-84.ucode
 -rw-r--r--	root/root	lib/firmware/iwlwifi-ty-a0-gf-a0.pnvm
 drwxr-xr-x	root/root	lib/firmware/kaweth/
 -rw-r--r--	root/root	lib/firmware/kaweth/new_code.bin

@@ -5,9 +5,9 @@ drwxr-xr-x	root/root	etc/OpenCL/vendors/
 drwxr-xr-x	root/root	lib/
 drwxr-xr-x	root/root	lib/firmware/
 drwxr-xr-x	root/root	lib/firmware/nvidia/
-drwxr-xr-x	root/root	lib/firmware/nvidia/530.41.03/
--rw-r--r--	root/root	lib/firmware/nvidia/530.41.03/gsp_ga10x.bin
--rw-r--r--	root/root	lib/firmware/nvidia/530.41.03/gsp_tu10x.bin
+drwxr-xr-x	root/root	lib/firmware/nvidia/545.29.02/
+-rw-r--r--	root/root	lib/firmware/nvidia/545.29.02/gsp_ga10x.bin
+-rw-r--r--	root/root	lib/firmware/nvidia/545.29.02/gsp_tu10x.bin
 drwxr-xr-x	root/root	lib/modules/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/extra/
@@ -32,93 +32,93 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/nvidia-xconfig
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/gbm/
-lrwxrwxrwx	root/root	usr/lib/gbm/nvidia-drm_gbm.so -> libnvidia-allocator.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libEGL_nvidia.so.0 -> libEGL_nvidia.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libEGL_nvidia.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libGLESv1_CM_nvidia.so.1 -> libGLESv1_CM_nvidia.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libGLESv1_CM_nvidia.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libGLESv2_nvidia.so.2 -> libGLESv2_nvidia.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libGLESv2_nvidia.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libGLX_nvidia.so.0 -> libGLX_nvidia.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libGLX_nvidia.so.530.41.03
+lrwxrwxrwx	root/root	usr/lib/gbm/nvidia-drm_gbm.so -> libnvidia-allocator.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libEGL_nvidia.so.0 -> libEGL_nvidia.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libEGL_nvidia.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libGLESv1_CM_nvidia.so.1 -> libGLESv1_CM_nvidia.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libGLESv1_CM_nvidia.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libGLESv2_nvidia.so.2 -> libGLESv2_nvidia.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libGLESv2_nvidia.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libGLX_nvidia.so.0 -> libGLX_nvidia.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libGLX_nvidia.so.545.29.02
 -rwxr-xr-x	root/root	usr/lib/libOpenCL.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libcuda.so -> libcuda.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libcuda.so.1 -> libcuda.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libcuda.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libcudadebugger.so -> libcudadebugger.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libcudadebugger.so.1 -> libcudadebugger.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libcudadebugger.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvcuvid.so -> libnvcuvid.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvcuvid.so.1 -> libnvcuvid.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvcuvid.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-allocator.so -> libnvidia-allocator.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-allocator.so.1 -> libnvidia-allocator.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-allocator.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-cfg.so -> libnvidia-cfg.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-cfg.so.1 -> libnvidia-cfg.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-cfg.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-compiler.so -> libnvidia-compiler.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-compiler.so.1 -> libnvidia-compiler.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-compiler.so.530.41.03
+lrwxrwxrwx	root/root	usr/lib/libcuda.so -> libcuda.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libcuda.so.1 -> libcuda.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libcuda.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libcudadebugger.so -> libcudadebugger.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libcudadebugger.so.1 -> libcudadebugger.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libcudadebugger.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvcuvid.so -> libnvcuvid.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvcuvid.so.1 -> libnvcuvid.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvcuvid.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-allocator.so -> libnvidia-allocator.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-allocator.so.1 -> libnvidia-allocator.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-allocator.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-cfg.so -> libnvidia-cfg.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-cfg.so.1 -> libnvidia-cfg.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-cfg.so.545.29.02
 lrwxrwxrwx	root/root	usr/lib/libnvidia-egl-gbm.so -> libnvidia-egl-gbm.so.1.1.0
 lrwxrwxrwx	root/root	usr/lib/libnvidia-egl-gbm.so.1 -> libnvidia-egl-gbm.so.1.1.0
 -rwxr-xr-x	root/root	usr/lib/libnvidia-egl-gbm.so.1.1.0
-lrwxrwxrwx	root/root	usr/lib/libnvidia-eglcore.so -> libnvidia-eglcore.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-eglcore.so.1 -> libnvidia-eglcore.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-eglcore.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-encode.so -> libnvidia-encode.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-encode.so.1 -> libnvidia-encode.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-encode.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-fbc.so -> libnvidia-fbc.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-fbc.so.1 -> libnvidia-fbc.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-fbc.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-glcore.so -> libnvidia-glcore.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-glcore.so.1 -> libnvidia-glcore.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-glcore.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-glsi.so -> libnvidia-glsi.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-glsi.so.1 -> libnvidia-glsi.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-glsi.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-glvkspirv.so -> libnvidia-glvkspirv.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-glvkspirv.so.1 -> libnvidia-glvkspirv.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-glvkspirv.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-gtk2.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-gtk3.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-ml.so -> libnvidia-ml.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-ml.so.1 -> libnvidia-ml.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-ml.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-ngx.so -> libnvidia-ngx.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-ngx.so.1 -> libnvidia-ngx.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-ngx.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-nvvm.so -> libnvidia-nvvm.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-nvvm.so.1 -> libnvidia-nvvm.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-nvvm.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-opencl.so -> libnvidia-opencl.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-opencl.so.1 -> libnvidia-opencl.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-opencl.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-opticalflow.so -> libnvidia-opticalflow.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-opticalflow.so.1 -> libnvidia-opticalflow.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-opticalflow.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-ptxjitcompiler.so -> libnvidia-ptxjitcompiler.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-ptxjitcompiler.so.1 -> libnvidia-ptxjitcompiler.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-ptxjitcompiler.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-rtcore.so -> libnvidia-rtcore.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-rtcore.so.1 -> libnvidia-rtcore.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-rtcore.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-tls.so -> libnvidia-tls.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvidia-tls.so.1 -> libnvidia-tls.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvidia-tls.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvoptix.so -> libnvoptix.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/libnvoptix.so.1 -> libnvoptix.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/libnvoptix.so.530.41.03
+lrwxrwxrwx	root/root	usr/lib/libnvidia-eglcore.so -> libnvidia-eglcore.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-eglcore.so.1 -> libnvidia-eglcore.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-eglcore.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-encode.so -> libnvidia-encode.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-encode.so.1 -> libnvidia-encode.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-encode.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-fbc.so -> libnvidia-fbc.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-fbc.so.1 -> libnvidia-fbc.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-fbc.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-glcore.so -> libnvidia-glcore.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-glcore.so.1 -> libnvidia-glcore.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-glcore.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-glsi.so -> libnvidia-glsi.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-glsi.so.1 -> libnvidia-glsi.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-glsi.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-glvkspirv.so -> libnvidia-glvkspirv.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-glvkspirv.so.1 -> libnvidia-glvkspirv.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-glvkspirv.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-gpucomp.so -> libnvidia-gpucomp.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-gpucomp.so.1 -> libnvidia-gpucomp.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-gpucomp.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-gtk2.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-gtk3.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-ml.so -> libnvidia-ml.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-ml.so.1 -> libnvidia-ml.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-ml.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-ngx.so -> libnvidia-ngx.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-ngx.so.1 -> libnvidia-ngx.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-ngx.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-nvvm.so -> libnvidia-nvvm.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-nvvm.so.1 -> libnvidia-nvvm.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-nvvm.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-opencl.so -> libnvidia-opencl.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-opencl.so.1 -> libnvidia-opencl.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-opencl.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-opticalflow.so -> libnvidia-opticalflow.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-opticalflow.so.1 -> libnvidia-opticalflow.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-opticalflow.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-ptxjitcompiler.so -> libnvidia-ptxjitcompiler.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-ptxjitcompiler.so.1 -> libnvidia-ptxjitcompiler.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-ptxjitcompiler.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-rtcore.so -> libnvidia-rtcore.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-rtcore.so.1 -> libnvidia-rtcore.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-rtcore.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-tls.so -> libnvidia-tls.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvidia-tls.so.1 -> libnvidia-tls.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvidia-tls.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvoptix.so -> libnvoptix.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/libnvoptix.so.1 -> libnvoptix.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/libnvoptix.so.545.29.02
 drwxr-xr-x	root/root	usr/lib/nvidia/
 drwxr-xr-x	root/root	usr/lib/nvidia/xorg/
-lrwxrwxrwx	root/root	usr/lib/nvidia/xorg/libglxserver_nvidia.so -> libglxserver_nvidia.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/nvidia/xorg/libglxserver_nvidia.so.1 -> libglxserver_nvidia.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/nvidia/xorg/libglxserver_nvidia.so.530.41.03
+lrwxrwxrwx	root/root	usr/lib/nvidia/xorg/libglxserver_nvidia.so -> libglxserver_nvidia.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/nvidia/xorg/libglxserver_nvidia.so.1 -> libglxserver_nvidia.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/nvidia/xorg/libglxserver_nvidia.so.545.29.02
 drwxr-xr-x	root/root	usr/lib/vdpau/
-lrwxrwxrwx	root/root	usr/lib/vdpau/libvdpau_nvidia.so -> libvdpau_nvidia.so.530.41.03
-lrwxrwxrwx	root/root	usr/lib/vdpau/libvdpau_nvidia.so.1 -> libvdpau_nvidia.so.530.41.03
--rwxr-xr-x	root/root	usr/lib/vdpau/libvdpau_nvidia.so.530.41.03
+lrwxrwxrwx	root/root	usr/lib/vdpau/libvdpau_nvidia.so -> libvdpau_nvidia.so.545.29.02
+lrwxrwxrwx	root/root	usr/lib/vdpau/libvdpau_nvidia.so.1 -> libvdpau_nvidia.so.545.29.02
+-rwxr-xr-x	root/root	usr/lib/vdpau/libvdpau_nvidia.so.545.29.02
 drwxr-xr-x	root/root	usr/lib/xorg/
 drwxr-xr-x	root/root	usr/lib/xorg/modules/
 drwxr-xr-x	root/root	usr/lib/xorg/modules/drivers/
@@ -137,8 +137,8 @@ drwxr-xr-x	root/root	usr/share/glvnd/
 drwxr-xr-x	root/root	usr/share/glvnd/egl_vendor.d/
 -rw-r--r--	root/root	usr/share/glvnd/egl_vendor.d/10_nvidia.json
 drwxr-xr-x	root/root	usr/share/nvidia/
--rw-r--r--	root/root	usr/share/nvidia/nvidia-application-profiles-530.41.03-key-documentation
--rw-r--r--	root/root	usr/share/nvidia/nvidia-application-profiles-530.41.03-rc
+-rw-r--r--	root/root	usr/share/nvidia/nvidia-application-profiles-545.29.02-key-documentation
+-rw-r--r--	root/root	usr/share/nvidia/nvidia-application-profiles-545.29.02-rc
 drwxr-xr-x	root/root	usr/share/pixmaps/
 -rw-r--r--	root/root	usr/share/pixmaps/nvidia-settings.png
 drwxr-xr-x	root/root	usr/share/vulkan/
