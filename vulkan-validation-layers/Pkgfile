@@ -1,27 +1,24 @@
 # Description: Vulkan validation layers
 # URL: https://www.khronos.org/vulkan/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: glslang robin-hood-hashing vulkan-headers xorg-libxrandr
+# Depends on: glslang robin-hood-hashing vulkan-headers vulkan-utility-libraries xorg-libxrandr
 # Optional: wayland
 
 name=vulkan-validation-layers
-_name=Vulkan-ValidationLayers-sdk
-version=1.3.261.1
-_version=sdk-$version
+_name=Vulkan-ValidationLayers
+version=1.3.268.0
+_version=vulkan-sdk-$version
 release=1
-source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/$_version/$_name-$version.tar.gz
-	vulkan-layers-1.3.250-Build-shared-libs.patch)
+source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/$_version/$_name-$version.tar.gz)
 
 build() {
-	patch -d $_name-$version -p1 -i $SRC/vulkan-layers-1.3.250-Build-shared-libs.patch
-
 	prt-get isinst wayland || PKGMK_VULKAN_VALIDATION_LAYERS+=' -D BUILD_WSI_WAYLAND_SUPPORT=OFF'
 
-	cmake -S $_name-$version -B build -G Ninja $PKGMK_VULKAN_VALIDATION_LAYERS \
+	cmake -S $_name-$_version -B build -G Ninja $PKGMK_VULKAN_VALIDATION_LAYERS \
 		-D CMAKE_INSTALL_PREFIX=/usr \
 		-D CMAKE_INSTALL_LIBDIR=lib \
 		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -ffat-lto-objects" \
+		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
 		-D CMAKE_SKIP_RPATH=ON \
 		-D SPIRV_HEADERS_INSTALL_DIR=/usr \
 		-D VULKAN_HEADERS_INSTALL_DIR=/usr \
