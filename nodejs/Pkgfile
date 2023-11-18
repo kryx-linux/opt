@@ -5,16 +5,13 @@
 # Optional: brotli c-ares icu
 
 name=nodejs
-version=21.1.0
+version=21.2.0
 release=1
 source=(https://nodejs.org/dist/v$version/node-v$version.tar.xz
-  50209.patch
   system-c-ares.patch)
 
 build() {
   cd node-v$version
-
-  patch -Np1 -i $SRC/50209.patch
 
   prt-get isinst brotli && PKGMK_NODEJS+=' --shared-brotli'
   prt-get isinst c-ares && PKGMK_NODEJS+=' --shared-cares'

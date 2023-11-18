@@ -5,13 +5,12 @@
 # Optional: brotli libidn2
 
 name=gnutls
-version=3.8.1
-release=2
+version=3.8.2
+release=1
 source=(https://www.gnupg.org/ftp/gcrypt/$name/v${version:0:3}/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
-
 
   prt-get isinst brotli && PKGMK_GNUTLS+=' --with-brotli'
   prt-get isinst libidn2 && PKGMK_GNUTLS+=' --with-idn'

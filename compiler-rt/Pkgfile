@@ -4,7 +4,7 @@
 # Depends on: llvm
 
 name=compiler-rt
-version=17.0.4
+version=17.0.5
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/compiler-rt-$version.src.tar.xz
 	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
@@ -23,8 +23,4 @@ build() {
 		-Wno-dev
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
-		#-D COMPILER_RT_INSTALL_BINARY_DIR=/usr/lib/clang/${version:0:2}/bin \
-		#-D COMPILER_RT_INSTALL_INCLUDE_DIR=/usr/lib/clang/${version:0:2}/include \
-		#-D COMPILER_RT_INSTALL_LIBRARY_DIR=/usr/lib/clang/${version:0:2}/lib \
-		#-D COMPILER_RT_INSTALL_DATA_DIR=/usr/lib/clang/${version:0:2}/share \
 }

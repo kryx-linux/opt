@@ -257,6 +257,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/contributors.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/create_options.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/create_tmp_table.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/cset_narrowing.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/custom_conf.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/datadict.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/ddl_log.h

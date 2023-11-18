@@ -4,7 +4,7 @@
 # Depends on: clang python3-six swig
 
 name=lldb
-version=17.0.4
+version=17.0.5
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/lldb-$version.src.tar.xz
 	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz)

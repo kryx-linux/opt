@@ -9,7 +9,7 @@ release=1
 source=(https://download-fallback.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
-	meson build $name-$version \
+	meson setup $name-$version build \
 		--prefix=/usr \
 		--buildtype=plain \
 		--wrap-mode nodownload \
