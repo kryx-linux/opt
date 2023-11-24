@@ -4,13 +4,15 @@
 # Depends on: libpcre2 libxml2
 
 name=php-fcgi
-version=8.2.12
+version=8.2.13
 release=1
 source=(https://php.net/distributions/php-$version.tar.xz
-	php-fcgi)
+	php-fcgi libxml2-2.12.patch)
 
 build() {
 	cd php-$version
+
+	patch -p1 -i $SRC/libxml2-2.12.patch
 
 	local PHP_CONFIG="
 	--prefix=/usr \
