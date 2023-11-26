@@ -251,6 +251,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/authors.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/backup.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/bounded_queue.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/charset_collations.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/client_settings.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/compat56.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/config.h
@@ -323,6 +324,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/lf.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lock.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/log.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/log_cache.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/log_event.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/log_slow.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/maria.h
@@ -431,11 +433,13 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
 -rw-r--r--	root/root	usr/include/mysql/server/private/service_versions.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/session_tracker.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/set_var.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/simple_tokenizer.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/slave.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/source_revision.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp_cache.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp_head.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/sp_instr.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp_pcontext.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp_rcontext.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/span.h
@@ -525,6 +529,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_udf.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_union.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_update.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/sql_used.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_view.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_window.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/ssl_compat.h

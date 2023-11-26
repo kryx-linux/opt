@@ -6,10 +6,13 @@
 
 name=libsoup
 version=2.74.3
-release=1
-source=(https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz)
+release=2
+source=(https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz
+  385.patch)
 
 build() {
+  patch -Np1 -d $name-$version -i $SRC/385.patch
+
   meson setup $name-$version build \
     --prefix=/usr \
     --buildtype=plain \

@@ -4,12 +4,15 @@
 # Depends on: apache libpcre2
 
 name=mod_php
-version=8.2.12
+version=8.2.13
 release=1
-source=(https://php.net/distributions/php-$version.tar.xz)
+source=(https://php.net/distributions/php-$version.tar.xz
+	libxml2-2.12.patch)
 
 build() {
 	cd php-$version
+
+	patch -p1 -i $SRC/libxml2-2.12.patch
 
 	# to be compatible with our other php ports, don't build
 	# for a threaded MPM (ZTS). Use only the prefork MPM!
