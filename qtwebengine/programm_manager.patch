@@ -1,0 +1,798 @@
+diff -Naur qtwebengine-79a4e92cb0c9fc946f81e13b392a04be51d95991.old/src/3rdparty/chromium/gpu/command_buffer/service/program_manager.cc qtwebengine-79a4e92cb0c9fc946f81e13b392a04be51d95991/src/3rdparty/chromium/gpu/command_buffer/service/program_manager.cc
+--- qtwebengine-79a4e92cb0c9fc946f81e13b392a04be51d95991.old/src/3rdparty/chromium/gpu/command_buffer/service/program_manager.cc	2023-11-26 21:31:22.822866995 +0100
++++ qtwebengine-79a4e92cb0c9fc946f81e13b392a04be51d95991/src/3rdparty/chromium/gpu/command_buffer/service/program_manager.cc	2023-11-26 21:32:42.526872767 +0100
+@@ -30,7 +30,7 @@
+ #include "gpu/command_buffer/service/program_cache.h"
+ #include "gpu/command_buffer/service/shader_manager.h"
+ #include "gpu/config/gpu_preferences.h"
+-#include "third_party/re2/src/re2/re2.h"
++#include "re2/re2.h"
+ #include "ui/gl/gl_version_info.h"
+ #include "ui/gl/progress_reporter.h"
+ 
+@@ -57,8 +57,9 @@
+ // Given a name like "foo.bar[123].moo[456]" sets new_name to "foo.bar[123].moo"
+ // and sets element_index to 456. returns false if element expression was not a
+ // whole decimal number. For example: "foo[1b2]"
+-bool GetUniformNameSansElement(
+-    const std::string& name, int* element_index, std::string* new_name) {
++bool GetUniformNameSansElement(const std::string& name,
++                               int* element_index,
++                               std::string* new_name) {
+   DCHECK(element_index);
+   DCHECK(new_name);
+   if (name.size() < 3 || name.back() != ']') {
+@@ -69,8 +70,7 @@
+ 
+   // Look for an array specification.
+   size_t open_pos = name.find_last_of('[');
+-  if (open_pos == std::string::npos ||
+-      open_pos >= name.size() - 2) {
++  if (open_pos == std::string::npos || open_pos >= name.size() - 2) {
+     return false;
+   }
+ 
+@@ -94,11 +94,8 @@
+ 
+ bool IsBuiltInFragmentVarying(const std::string& name) {
+   // Built-in variables for fragment shaders.
+-  const char* kBuiltInVaryings[] = {
+-      "gl_FragCoord",
+-      "gl_FrontFacing",
+-      "gl_PointCoord"
+-  };
++  const char* kBuiltInVaryings[] = {"gl_FragCoord", "gl_FrontFacing",
++                                    "gl_PointCoord"};
+   for (size_t ii = 0; ii < base::size(kBuiltInVaryings); ++ii) {
+     if (name == kBuiltInVaryings[ii])
+       return true;
+@@ -106,8 +103,7 @@
+   return false;
+ }
+ 
+-bool IsBuiltInInvariant(
+-    const VaryingMap& varyings, const std::string& name) {
++bool IsBuiltInInvariant(const VaryingMap& varyings, const std::string& name) {
+   VaryingMap::const_iterator hit = varyings.find(name);
+   if (hit == varyings.end())
+     return false;
+@@ -470,8 +466,7 @@
+         static_cast<int>(output.isArray() ? output.getOutermostArraySize() : 1);
+     // TODO(zmo): Handle the special case in ES2 where gl_FragColor could
+     // be broadcasting to all draw buffers.
+-    DCHECK_LE(location + count,
+-              static_cast<int>(manager_->max_draw_buffers()));
++    DCHECK_LE(location + count, static_cast<int>(manager_->max_draw_buffers()));
+     for (int ii = location; ii < location + count; ++ii) {
+       // TODO(zmo): This does not work with glBindFragDataLocationIndexed.
+       // crbug.com/628010
+@@ -521,13 +516,13 @@
+   uniform_block_size_info_.resize(num_uniform_blocks);
+   for (GLint ii = 0; ii < num_uniform_blocks; ++ii) {
+     GLint binding = 0;
+-    glGetActiveUniformBlockiv(
+-        service_id_, ii, GL_UNIFORM_BLOCK_BINDING, &binding);
++    glGetActiveUniformBlockiv(service_id_, ii, GL_UNIFORM_BLOCK_BINDING,
++                              &binding);
+     uniform_block_size_info_[ii].binding = static_cast<GLuint>(binding);
+ 
+     GLint size = 0;
+-    glGetActiveUniformBlockiv(
+-        service_id_, ii, GL_UNIFORM_BLOCK_DATA_SIZE, &size);
++    glGetActiveUniformBlockiv(service_id_, ii, GL_UNIFORM_BLOCK_DATA_SIZE,
++                              &size);
+     uniform_block_size_info_[ii].data_size = static_cast<GLuint>(size);
+   }
+ }
+@@ -606,10 +601,8 @@
+   re2::StringPiece input(log);
+   std::string prior_log;
+   std::string hashed_name;
+-  while (RE2::Consume(&input,
+-                      "(.*?)(webgl_[0123456789abcdefABCDEF]+)",
+-                      &prior_log,
+-                      &hashed_name)) {
++  while (RE2::Consume(&input, "(.*?)(webgl_[0123456789abcdefABCDEF]+)",
++                      &prior_log, &hashed_name)) {
+     output += prior_log;
+ 
+     const std::string* original_name =
+@@ -620,7 +613,7 @@
+       output += hashed_name;
+   }
+ 
+-  return output + input.as_string();
++  return output + std::string(input);
+ }
+ 
+ void Program::UpdateLogInfo() {
+@@ -659,107 +652,107 @@
+     }
+     const void* zero = &(*zero_buffer)[0];
+     switch (uniform_info.type) {
+-    case GL_FLOAT:
+-      glUniform1fv(location, size, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_VEC2:
+-      glUniform2fv(location, size, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_VEC3:
+-      glUniform3fv(location, size, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_VEC4:
+-      glUniform4fv(location, size, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_INT:
+-    case GL_BOOL:
+-    case GL_SAMPLER_2D:
+-    case GL_SAMPLER_CUBE:
+-    case GL_SAMPLER_EXTERNAL_OES:  // extension.
+-    case GL_SAMPLER_2D_RECT_ARB:  // extension.
+-      glUniform1iv(location, size, reinterpret_cast<const GLint*>(zero));
+-      break;
+-    case GL_INT_VEC2:
+-    case GL_BOOL_VEC2:
+-      glUniform2iv(location, size, reinterpret_cast<const GLint*>(zero));
+-      break;
+-    case GL_INT_VEC3:
+-    case GL_BOOL_VEC3:
+-      glUniform3iv(location, size, reinterpret_cast<const GLint*>(zero));
+-      break;
+-    case GL_INT_VEC4:
+-    case GL_BOOL_VEC4:
+-      glUniform4iv(location, size, reinterpret_cast<const GLint*>(zero));
+-      break;
+-    case GL_FLOAT_MAT2:
+-      glUniformMatrix2fv(
+-          location, size, false, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_MAT3:
+-      glUniformMatrix3fv(
+-          location, size, false, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_MAT4:
+-      glUniformMatrix4fv(
+-          location, size, false, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-
+-    // ES3 types.
+-    case GL_UNSIGNED_INT:
+-      glUniform1uiv(location, size, reinterpret_cast<const GLuint*>(zero));
+-      break;
+-    case GL_SAMPLER_3D:
+-    case GL_SAMPLER_2D_SHADOW:
+-    case GL_SAMPLER_2D_ARRAY:
+-    case GL_SAMPLER_2D_ARRAY_SHADOW:
+-    case GL_SAMPLER_CUBE_SHADOW:
+-    case GL_INT_SAMPLER_2D:
+-    case GL_INT_SAMPLER_3D:
+-    case GL_INT_SAMPLER_CUBE:
+-    case GL_INT_SAMPLER_2D_ARRAY:
+-    case GL_UNSIGNED_INT_SAMPLER_2D:
+-    case GL_UNSIGNED_INT_SAMPLER_3D:
+-    case GL_UNSIGNED_INT_SAMPLER_CUBE:
+-    case GL_UNSIGNED_INT_SAMPLER_2D_ARRAY:
+-      glUniform1iv(location, size, reinterpret_cast<const GLint*>(zero));
+-      break;
+-    case GL_UNSIGNED_INT_VEC2:
+-      glUniform2uiv(location, size, reinterpret_cast<const GLuint*>(zero));
+-      break;
+-    case GL_UNSIGNED_INT_VEC3:
+-      glUniform3uiv(location, size, reinterpret_cast<const GLuint*>(zero));
+-      break;
+-    case GL_UNSIGNED_INT_VEC4:
+-      glUniform4uiv(location, size, reinterpret_cast<const GLuint*>(zero));
+-      break;
+-    case GL_FLOAT_MAT2x3:
+-      glUniformMatrix2x3fv(
+-          location, size, false, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_MAT3x2:
+-      glUniformMatrix3x2fv(
+-          location, size, false, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_MAT2x4:
+-      glUniformMatrix2x4fv(
+-          location, size, false, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_MAT4x2:
+-      glUniformMatrix4x2fv(
+-          location, size, false, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_MAT3x4:
+-      glUniformMatrix3x4fv(
+-          location, size, false, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-    case GL_FLOAT_MAT4x3:
+-      glUniformMatrix4x3fv(
+-          location, size, false, reinterpret_cast<const GLfloat*>(zero));
+-      break;
+-
+-    default:
+-      NOTREACHED();
+-      break;
++      case GL_FLOAT:
++        glUniform1fv(location, size, reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_VEC2:
++        glUniform2fv(location, size, reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_VEC3:
++        glUniform3fv(location, size, reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_VEC4:
++        glUniform4fv(location, size, reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_INT:
++      case GL_BOOL:
++      case GL_SAMPLER_2D:
++      case GL_SAMPLER_CUBE:
++      case GL_SAMPLER_EXTERNAL_OES:  // extension.
++      case GL_SAMPLER_2D_RECT_ARB:   // extension.
++        glUniform1iv(location, size, reinterpret_cast<const GLint*>(zero));
++        break;
++      case GL_INT_VEC2:
++      case GL_BOOL_VEC2:
++        glUniform2iv(location, size, reinterpret_cast<const GLint*>(zero));
++        break;
++      case GL_INT_VEC3:
++      case GL_BOOL_VEC3:
++        glUniform3iv(location, size, reinterpret_cast<const GLint*>(zero));
++        break;
++      case GL_INT_VEC4:
++      case GL_BOOL_VEC4:
++        glUniform4iv(location, size, reinterpret_cast<const GLint*>(zero));
++        break;
++      case GL_FLOAT_MAT2:
++        glUniformMatrix2fv(location, size, false,
++                           reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_MAT3:
++        glUniformMatrix3fv(location, size, false,
++                           reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_MAT4:
++        glUniformMatrix4fv(location, size, false,
++                           reinterpret_cast<const GLfloat*>(zero));
++        break;
++
++      // ES3 types.
++      case GL_UNSIGNED_INT:
++        glUniform1uiv(location, size, reinterpret_cast<const GLuint*>(zero));
++        break;
++      case GL_SAMPLER_3D:
++      case GL_SAMPLER_2D_SHADOW:
++      case GL_SAMPLER_2D_ARRAY:
++      case GL_SAMPLER_2D_ARRAY_SHADOW:
++      case GL_SAMPLER_CUBE_SHADOW:
++      case GL_INT_SAMPLER_2D:
++      case GL_INT_SAMPLER_3D:
++      case GL_INT_SAMPLER_CUBE:
++      case GL_INT_SAMPLER_2D_ARRAY:
++      case GL_UNSIGNED_INT_SAMPLER_2D:
++      case GL_UNSIGNED_INT_SAMPLER_3D:
++      case GL_UNSIGNED_INT_SAMPLER_CUBE:
++      case GL_UNSIGNED_INT_SAMPLER_2D_ARRAY:
++        glUniform1iv(location, size, reinterpret_cast<const GLint*>(zero));
++        break;
++      case GL_UNSIGNED_INT_VEC2:
++        glUniform2uiv(location, size, reinterpret_cast<const GLuint*>(zero));
++        break;
++      case GL_UNSIGNED_INT_VEC3:
++        glUniform3uiv(location, size, reinterpret_cast<const GLuint*>(zero));
++        break;
++      case GL_UNSIGNED_INT_VEC4:
++        glUniform4uiv(location, size, reinterpret_cast<const GLuint*>(zero));
++        break;
++      case GL_FLOAT_MAT2x3:
++        glUniformMatrix2x3fv(location, size, false,
++                             reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_MAT3x2:
++        glUniformMatrix3x2fv(location, size, false,
++                             reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_MAT2x4:
++        glUniformMatrix2x4fv(location, size, false,
++                             reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_MAT4x2:
++        glUniformMatrix4x2fv(location, size, false,
++                             reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_MAT3x4:
++        glUniformMatrix3x4fv(location, size, false,
++                             reinterpret_cast<const GLfloat*>(zero));
++        break;
++      case GL_FLOAT_MAT4x3:
++        glUniformMatrix4x3fv(location, size, false,
++                             reinterpret_cast<const GLfloat*>(zero));
++        break;
++
++      default:
++        NOTREACHED();
++        break;
+     }
+   }
+ }
+@@ -780,8 +773,8 @@
+     GLsizei length = 0;
+     GLsizei size = 0;
+     GLenum type = 0;
+-    glGetActiveAttrib(
+-        service_id_, ii, max_len, &length, &size, &type, name_buffer.get());
++    glGetActiveAttrib(service_id_, ii, max_len, &length, &size, &type,
++                      name_buffer.get());
+     DCHECK(max_len == 0 || length < max_len);
+     DCHECK(length == 0 || name_buffer[length] == '\0');
+     std::string original_name;
+@@ -830,8 +823,7 @@
+     DVLOG(1) << "----: attribs for service_id: " << service_id();
+     for (size_t ii = 0; ii < attrib_infos_.size(); ++ii) {
+       const VertexAttrib& info = attrib_infos_[ii];
+-      DVLOG(1) << ii << ": loc = " << info.location
+-               << ", size = " << info.size
++      DVLOG(1) << ii << ": loc = " << info.location << ", size = " << info.size
+                << ", type = " << GLES2Util::GetStringEnum(info.type)
+                << ", name = " << info.name;
+     }
+@@ -933,7 +925,7 @@
+           if (block.instanceName.empty()) {
+             for (const auto& value : block.fields) {
+               if (value.findInfoByMappedName(service_name, &info,
+-                      &client_name)) {
++                                             &client_name)) {
+                 find = true;
+                 break;
+               }
+@@ -944,8 +936,8 @@
+             if (block.mappedName == top_variable_name) {
+               DCHECK(pos != std::string::npos);
+               for (const auto& field : block.fields) {
+-                if (field.findInfoByMappedName(service_name.substr(
+-                    pos + 1), &info, &client_name)) {
++                if (field.findInfoByMappedName(service_name.substr(pos + 1),
++                                               &info, &client_name)) {
+                   find = true;
+                   client_name = block.name + "." + client_name;
+                   break;
+@@ -1122,8 +1114,7 @@
+ 
+     std::vector<const char*> mapped_names;
+     mapped_names.reserve(transform_feedback_varyings_.size());
+-    for (StringVector::const_iterator it =
+-             transform_feedback_varyings_.begin();
++    for (StringVector::const_iterator it = transform_feedback_varyings_.begin();
+          it != transform_feedback_varyings_.end(); ++it) {
+       const std::string& orig = *it;
+       const std::string* mapped = vertex_shader->GetVaryingMappedName(orig);
+@@ -1134,8 +1125,7 @@
+       }
+       mapped_names.push_back(mapped->c_str());
+     }
+-    glTransformFeedbackVaryings(service_id_,
+-                                mapped_names.size(),
++    glTransformFeedbackVaryings(service_id_, mapped_names.size(),
+                                 &mapped_names.front(),
+                                 transform_feedback_buffer_mode_);
+   }
+@@ -1248,14 +1238,12 @@
+   bool link = true;
+   ProgramCache* cache = manager_->program_cache_;
+   // This is called before program linking, so refer to attached_shaders_.
+-  if (cache &&
+-      !attached_shaders_[0]->last_compiled_source().empty() &&
++  if (cache && !attached_shaders_[0]->last_compiled_source().empty() &&
+       !attached_shaders_[1]->last_compiled_source().empty()) {
+     ProgramCache::LinkedProgramStatus status = cache->GetLinkedProgramStatus(
+         attached_shaders_[0]->last_compiled_signature(),
+         attached_shaders_[1]->last_compiled_signature(),
+-        &bind_attrib_location_map_,
+-        transform_feedback_varyings_,
++        &bind_attrib_location_map_, transform_feedback_varyings_,
+         transform_feedback_buffer_mode_);
+ 
+     bool cache_hit = status == ProgramCache::LINK_SUCCEEDED;
+@@ -1287,8 +1275,10 @@
+     }
+     std::string conflicting_name;
+     if (DetectUniformsMismatch(&conflicting_name)) {
+-      std::string info_log = "Uniforms with the same name but different "
+-                             "type/precision: " + conflicting_name;
++      std::string info_log =
++          "Uniforms with the same name but different "
++          "type/precision: " +
++          conflicting_name;
+       set_log_info(ProcessLogInfo(info_log).c_str());
+       return false;
+     }
+@@ -1305,10 +1295,11 @@
+       return false;
+     }
+     if (DetectVaryingsMismatch(&conflicting_name)) {
+-      std::string info_log = "Varyings with the same name but different type, "
+-                             "or statically used varyings in fragment shader "
+-                             "are not declared in vertex shader: " +
+-                             conflicting_name;
++      std::string info_log =
++          "Varyings with the same name but different type, "
++          "or statically used varyings in fragment shader "
++          "are not declared in vertex shader: " +
++          conflicting_name;
+       set_log_info(ProcessLogInfo(info_log).c_str());
+       return false;
+     }
+@@ -1317,13 +1308,16 @@
+       return false;
+     }
+     if (DetectBuiltInInvariantConflicts()) {
+-      set_log_info("Invariant settings for certain built-in varyings "
+-                   "have to match");
++      set_log_info(
++          "Invariant settings for certain built-in varyings "
++          "have to match");
+       return false;
+     }
+     if (DetectGlobalNameConflicts(&conflicting_name)) {
+-      std::string info_log = "Name conflicts between an uniform and an "
+-                             "attribute: " + conflicting_name;
++      std::string info_log =
++          "Name conflicts between an uniform and an "
++          "attribute: " +
++          conflicting_name;
+       set_log_info(ProcessLogInfo(info_log).c_str());
+       return false;
+     }
+@@ -1340,8 +1334,7 @@
+     ExecuteProgramOutputBindCalls();
+ 
+     if (cache && gl::g_current_gl_driver->ext.b_GL_ARB_get_program_binary) {
+-      glProgramParameteri(service_id(),
+-                          PROGRAM_BINARY_RETRIEVABLE_HINT,
++      glProgramParameteri(service_id(), PROGRAM_BINARY_RETRIEVABLE_HINT,
+                           GL_TRUE);
+     }
+     glLinkProgram(service_id());
+@@ -1400,8 +1393,7 @@
+   UpdateLogInfo();
+ }
+ 
+-GLint Program::GetUniformFakeLocation(
+-    const std::string& name) const {
++GLint Program::GetUniformFakeLocation(const std::string& name) const {
+   GLSLArrayName parsed_name(name);
+ 
+   for (const UniformInfo& info : uniform_infos_) {
+@@ -1418,8 +1410,8 @@
+           DCHECK_GT(static_cast<int>(info.element_locations.size()), index);
+           if (info.element_locations[index] == -1)
+             return -1;
+-          return ProgramManager::MakeFakeLocation(
+-              info.fake_location_base, index);
++          return ProgramManager::MakeFakeLocation(info.fake_location_base,
++                                                  index);
+         }
+       }
+     }
+@@ -1427,8 +1419,7 @@
+   return -1;
+ }
+ 
+-GLint Program::GetAttribLocation(
+-    const std::string& original_name) const {
++GLint Program::GetAttribLocation(const std::string& original_name) const {
+   for (GLuint ii = 0; ii < attrib_infos_.size(); ++ii) {
+     const VertexAttrib& info = attrib_infos_[ii];
+     if (info.name == original_name) {
+@@ -1438,9 +1429,10 @@
+   return -1;
+ }
+ 
+-const Program::UniformInfo*
+-    Program::GetUniformInfoByFakeLocation(
+-        GLint fake_location, GLint* real_location, GLint* array_index) const {
++const Program::UniformInfo* Program::GetUniformInfoByFakeLocation(
++    GLint fake_location,
++    GLint* real_location,
++    GLint* array_index) const {
+   DCHECK(real_location);
+   DCHECK(array_index);
+   if (fake_location < 0)
+@@ -1551,8 +1543,8 @@
+   return nullptr;
+ }
+ 
+-bool Program::SetUniformLocationBinding(
+-    const std::string& name, GLint location) {
++bool Program::SetUniformLocationBinding(const std::string& name,
++                                        GLint location) {
+   std::string short_name;
+   int element_index = 0;
+   if (!GetUniformNameSansElement(name, &element_index, &short_name) ||
+@@ -1577,8 +1569,9 @@
+       std::make_pair(color_name, index);
+ }
+ 
+-void Program::GetVertexAttribData(
+-    const std::string& name, std::string* original_name, GLenum* type) const {
++void Program::GetVertexAttribData(const std::string& name,
++                                  std::string* original_name,
++                                  GLenum* type) const {
+   DCHECK(original_name);
+   DCHECK(type);
+   Shader* shader =
+@@ -1600,18 +1593,17 @@
+   *original_name = name;
+ }
+ 
+-const Program::UniformInfo*
+-    Program::GetUniformInfo(
+-        GLint index) const {
++const Program::UniformInfo* Program::GetUniformInfo(GLint index) const {
+   if (static_cast<size_t>(index) >= uniform_infos_.size()) {
+     return nullptr;
+   }
+   return &uniform_infos_[index];
+ }
+ 
+-bool Program::SetSamplers(
+-    GLint num_texture_units, GLint fake_location,
+-    GLsizei count, const GLint* value) {
++bool Program::SetSamplers(GLint num_texture_units,
++                          GLint fake_location,
++                          GLsizei count,
++                          const GLint* value) {
+   // The caller has checked that the location is active and valid.
+   DCHECK(fake_location >= 0);
+   size_t location_index =
+@@ -1677,9 +1669,7 @@
+   }
+ }
+ 
+-bool Program::AttachShader(
+-    ShaderManager* shader_manager,
+-    Shader* shader) {
++bool Program::AttachShader(ShaderManager* shader_manager, Shader* shader) {
+   DCHECK(shader_manager);
+   DCHECK(shader);
+   int index = ShaderTypeToIndex(shader->shader_type());
+@@ -1696,9 +1686,7 @@
+          shader;
+ }
+ 
+-void Program::DetachShader(
+-    ShaderManager* shader_manager,
+-    Shader* shader) {
++void Program::DetachShader(ShaderManager* shader_manager, Shader* shader) {
+   DCHECK(shader_manager);
+   DCHECK(shader);
+   DCHECK(IsShaderAttached(shader));
+@@ -1939,15 +1927,15 @@
+   const VaryingMap& vertex_varyings = attached_shaders_[0]->varying_map();
+   const VaryingMap& fragment_varyings = attached_shaders_[1]->varying_map();
+ 
+-  bool gl_position_invariant = IsBuiltInInvariant(
+-      vertex_varyings, "gl_Position");
+-  bool gl_point_size_invariant = IsBuiltInInvariant(
+-      vertex_varyings, "gl_PointSize");
+-
+-  bool gl_frag_coord_invariant = IsBuiltInInvariant(
+-      fragment_varyings, "gl_FragCoord");
+-  bool gl_point_coord_invariant = IsBuiltInInvariant(
+-      fragment_varyings, "gl_PointCoord");
++  bool gl_position_invariant =
++      IsBuiltInInvariant(vertex_varyings, "gl_Position");
++  bool gl_point_size_invariant =
++      IsBuiltInInvariant(vertex_varyings, "gl_PointSize");
++
++  bool gl_frag_coord_invariant =
++      IsBuiltInInvariant(fragment_varyings, "gl_FragCoord");
++  bool gl_point_coord_invariant =
++      IsBuiltInInvariant(fragment_varyings, "gl_PointCoord");
+ 
+   return ((gl_frag_coord_invariant && !gl_position_invariant) ||
+           (gl_point_coord_invariant && !gl_point_size_invariant));
+@@ -1961,8 +1949,7 @@
+   const UniformMap* uniforms[2];
+   uniforms[0] = &(attached_shaders_[0]->uniform_map());
+   uniforms[1] = &(attached_shaders_[1]->uniform_map());
+-  const AttributeMap* attribs =
+-      &(attached_shaders_[0]->attrib_map());
++  const AttributeMap* attribs = &(attached_shaders_[0]->attrib_map());
+ 
+   for (const auto& key_value : *attribs) {
+     for (int ii = 0; ii < 2; ++ii) {
+@@ -2011,8 +1998,8 @@
+       static_cast<int>(manager_->max_varying_vectors()), variables);
+ }
+ 
+-void Program::GetProgramInfo(
+-    ProgramManager* manager, CommonDecoder::Bucket* bucket) const {
++void Program::GetProgramInfo(ProgramManager* manager,
++                             CommonDecoder::Bucket* bucket) const {
+   // NOTE: It seems to me the math in here does not need check for overflow
+   // because the data being calucated from has various small limits. The max
+   // number of attribs + uniforms is somewhere well under 1024. The maximum size
+@@ -2039,8 +2026,8 @@
+ 
+   bucket->SetSize(size);
+   ProgramInfoHeader* header = bucket->GetDataAs<ProgramInfoHeader*>(0, size);
+-  ProgramInput* inputs = bucket->GetDataAs<ProgramInput*>(
+-      sizeof(ProgramInfoHeader), input_size);
++  ProgramInput* inputs =
++      bucket->GetDataAs<ProgramInput*>(sizeof(ProgramInfoHeader), input_size);
+   int32_t* locations = bucket->GetDataAs<int32_t*>(
+       sizeof(ProgramInfoHeader) + input_size, location_size);
+   char* strings = bucket->GetDataAs<char*>(
+@@ -2132,8 +2119,8 @@
+   size += header_size;
+   std::vector<std::string> names(num_uniform_blocks);
+   GLint max_name_length = 0;
+-  glGetProgramiv(
+-      program, GL_ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH, &max_name_length);
++  glGetProgramiv(program, GL_ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH,
++                 &max_name_length);
+   std::vector<GLchar> buffer(max_name_length);
+   GLsizei length;
+   for (uint32_t ii = 0; ii < num_uniform_blocks; ++ii) {
+@@ -2147,13 +2134,13 @@
+ 
+     blocks[ii].name_offset = size.ValueOrDefault(0);
+     param = 0;
+-    glGetActiveUniformBlockiv(
+-        program, ii, GL_UNIFORM_BLOCK_NAME_LENGTH, &param);
++    glGetActiveUniformBlockiv(program, ii, GL_UNIFORM_BLOCK_NAME_LENGTH,
++                              &param);
+     DCHECK_GE(max_name_length, param);
+     memset(&buffer[0], 0, param);
+     length = 0;
+-    glGetActiveUniformBlockName(
+-        program, ii, static_cast<GLsizei>(param), &length, &buffer[0]);
++    glGetActiveUniformBlockName(program, ii, static_cast<GLsizei>(param),
++                                &length, &buffer[0]);
+     DCHECK_EQ(param, length + 1);
+     names[ii] = std::string(&buffer[0], length);
+     size_t pos = names[ii].find_first_of('[');
+@@ -2171,8 +2158,8 @@
+     size += blocks[ii].name_length;
+ 
+     param = 0;
+-    glGetActiveUniformBlockiv(
+-        program, ii, GL_UNIFORM_BLOCK_ACTIVE_UNIFORMS, &param);
++    glGetActiveUniformBlockiv(program, ii, GL_UNIFORM_BLOCK_ACTIVE_UNIFORMS,
++                              &param);
+     blocks[ii].active_uniforms = static_cast<uint32_t>(param);
+     blocks[ii].active_uniform_offset = size.ValueOrDefault(0);
+     base::CheckedNumeric<uint32_t> indices_size = blocks[ii].active_uniforms;
+@@ -2200,8 +2187,8 @@
+   bucket->SetSize(total_size);
+   UniformBlocksHeader* header =
+       bucket->GetDataAs<UniformBlocksHeader*>(0, header_size);
+-  UniformBlockInfo* entries = bucket->GetDataAs<UniformBlockInfo*>(
+-      header_size, entry_size);
++  UniformBlockInfo* entries =
++      bucket->GetDataAs<UniformBlockInfo*>(header_size, entry_size);
+   char* data = bucket->GetDataAs<char*>(header_size + entry_size, data_size);
+   DCHECK(header);
+   DCHECK(entries);
+@@ -2279,8 +2266,8 @@
+   size += header_size;
+   std::vector<std::string> names(num_transform_feedback_varyings);
+   GLint max_name_length = 0;
+-  glGetProgramiv(
+-      program, GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH, &max_name_length);
++  glGetProgramiv(program, GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH,
++                 &max_name_length);
+   if (max_name_length < 1)
+     max_name_length = 1;
+   std::vector<char> buffer(max_name_length);
+@@ -2288,9 +2275,9 @@
+     GLsizei var_size = 0;
+     GLsizei var_name_length = 0;
+     GLenum var_type = 0;
+-    glGetTransformFeedbackVarying(
+-        program, ii, max_name_length,
+-        &var_name_length, &var_size, &var_type, &buffer[0]);
++    glGetTransformFeedbackVarying(program, ii, max_name_length,
++                                  &var_name_length, &var_size, &var_type,
++                                  &buffer[0]);
+     varyings[ii].size = static_cast<uint32_t>(var_size);
+     varyings[ii].type = static_cast<uint32_t>(var_type);
+     varyings[ii].name_offset = static_cast<uint32_t>(size.ValueOrDefault(0));
+@@ -2374,19 +2361,16 @@
+   // Instead of GetDataAs<UniformES3Info*>, we do GetDataAs<int32_t>. This is
+   // because struct UniformES3Info is defined as five int32_t.
+   // By doing this, we can fill the structs through loops.
+-  int32_t* entries =
+-      bucket->GetDataAs<int32_t*>(header_size, entry_size);
++  int32_t* entries = bucket->GetDataAs<int32_t*>(header_size, entry_size);
+   DCHECK(entries);
+   const size_t kStride = sizeof(UniformES3Info) / sizeof(int32_t);
+ 
+   const GLenum kPname[] = {
+-    GL_UNIFORM_BLOCK_INDEX,
+-    GL_UNIFORM_OFFSET,
+-    GL_UNIFORM_ARRAY_STRIDE,
+-    GL_UNIFORM_MATRIX_STRIDE,
+-    GL_UNIFORM_IS_ROW_MAJOR,
++      GL_UNIFORM_BLOCK_INDEX,  GL_UNIFORM_OFFSET,
++      GL_UNIFORM_ARRAY_STRIDE, GL_UNIFORM_MATRIX_STRIDE,
++      GL_UNIFORM_IS_ROW_MAJOR,
+   };
+-  const GLint kDefaultValue[] = { -1, -1, -1, -1, 0 };
++  const GLint kDefaultValue[] = {-1, -1, -1, -1, 0};
+   const size_t kNumPnames = base::size(kPname);
+   std::vector<GLuint> indices(count);
+   for (GLsizei ii = 0; ii < count; ++ii) {
+@@ -2397,8 +2381,8 @@
+     for (GLsizei ii = 0; ii < count; ++ii) {
+       params[ii] = kDefaultValue[pname_index];
+     }
+-    glGetActiveUniformsiv(
+-        program, count, &indices[0], kPname[pname_index], &params[0]);
++    glGetActiveUniformsiv(program, count, &indices[0], kPname[pname_index],
++                          &params[0]);
+     for (GLsizei ii = 0; ii < count; ++ii) {
+       entries[kStride * ii + pname_index] = params[ii];
+     }
+@@ -2497,13 +2481,10 @@
+   --program_count_;
+ }
+ 
+-Program* ProgramManager::CreateProgram(
+-    GLuint client_id, GLuint service_id) {
++Program* ProgramManager::CreateProgram(GLuint client_id, GLuint service_id) {
+   std::pair<ProgramMap::iterator, bool> result =
+-      programs_.insert(
+-          std::make_pair(client_id,
+-                         scoped_refptr<Program>(
+-                             new Program(this, service_id))));
++      programs_.insert(std::make_pair(
++          client_id, scoped_refptr<Program>(new Program(this, service_id))));
+   DCHECK(result.second);
+   return result.first->second.get();
+ }
+@@ -2545,15 +2526,15 @@
+   return false;
+ }
+ 
+-void ProgramManager::RemoveProgramInfoIfUnused(
+-    ShaderManager* shader_manager, Program* program) {
++void ProgramManager::RemoveProgramInfoIfUnused(ShaderManager* shader_manager,
++                                               Program* program) {
+   DCHECK(shader_manager);
+   DCHECK(program);
+   DCHECK(IsOwned(program));
+   if (program->IsDeleted() && !program->InUse()) {
+     program->DetachShaders(shader_manager);
+-    for (ProgramMap::iterator it = programs_.begin();
+-         it != programs_.end(); ++it) {
++    for (ProgramMap::iterator it = programs_.begin(); it != programs_.end();
++         ++it) {
+       if (it->second.get() == program) {
+         programs_.erase(it);
+         return;
+@@ -2563,9 +2544,8 @@
+   }
+ }
+ 
+-void ProgramManager::MarkAsDeleted(
+-    ShaderManager* shader_manager,
+-    Program* program) {
++void ProgramManager::MarkAsDeleted(ShaderManager* shader_manager,
++                                   Program* program) {
+   DCHECK(shader_manager);
+   DCHECK(program);
+   DCHECK(IsOwned(program));
+@@ -2579,9 +2559,8 @@
+   program->IncUseCount();
+ }
+ 
+-void ProgramManager::UnuseProgram(
+-    ShaderManager* shader_manager,
+-    Program* program) {
++void ProgramManager::UnuseProgram(ShaderManager* shader_manager,
++                                  Program* program) {
+   DCHECK(shader_manager);
+   DCHECK(program);
+   DCHECK(IsOwned(program));

@@ -25,7 +25,7 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$ve
   qt5-webengine-pipewire-0.3.patch
   qtwebengine-5.15.15-c++17.patch
   qtwebengine-system-absl-compat.patch
-  qtwebengine-re2-2023.07.01.patch
+  programm_manager.patch
   python.patch)
 
 build() {
@@ -47,8 +47,8 @@ build() {
   patch -p1 -i $SRC/python.patch
 
   if prt-get isinst re2; then
-    patch -p1 -i $SRC/qtwebengine-re2-2023.07.01.patch
     patch -p1 -i $SRC/qtwebengine-system-absl-compat.patch
+    patch -p1 -i $SRC/programm_manager.patch
     cp -f /usr/include/absl/base/options.h \
       src/3rdparty/chromium/third_party/abseil-cpp/absl/base/options.h
     sed -i -e 's,#define ABSL_OPTION_USE_STD_OPTIONAL 1,#define ABSL_OPTION_USE_STD_OPTIONAL 0,' src/3rdparty/chromium/third_party/abseil-cpp/absl/base/options.h
