@@ -5,13 +5,13 @@
 # Optional: glib jsoncpp krb5 krb5 lcms2 libevent libsrtp libxml2 minizip opus pipewire pulseaudio re2 snappy
 
 name=qtwebengine
-version=5.15.16
+version=5.15.17
 release=1
 
 # https://github.com/qt/qtwebengine/commits/5.15
-_qtwebengine_commit=f9de20ca8375c18d9fc4a153829bbab6c28fe655
+_qtwebengine_commit=79a4e92cb0c9fc946f81e13b392a04be51d95991
 # from $_qtwebengine_commit/src/3rdparty
-_chromium_commit=8df91f886e7fffb61408e2426f8a90d763a3b6ea
+_chromium_commit=ce00f9b5aa761866b24d6460e10aacb671c92cf0
 
 source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$version.tar.gz
   https://github.com/qt/qtwebengine-chromium/archive/$_chromium_commit/$name-chromium-$_chromium_commit.tar.gz
@@ -29,7 +29,6 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$ve
   python.patch)
 
 build() {
-  ls
   cd qtwebengine-$_qtwebengine_commit
 
   rm -rf src/3rdparty
@@ -59,6 +58,9 @@ build() {
       echo 'QMAKE_CXXFLAGS_GNUCXX14 = -std=gnu++17' >>$r
     done
   fi
+
+  sed -e 's/^#define BA_LB_COUNT.*$/#define BA_LB_COUNT 40/' \
+    -i src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
 
   sed -e '/^MODULE_VERSION/s/5.*/5.15.2/' -i .qmake.conf
   find -type f -name "*.pr[io]" | \

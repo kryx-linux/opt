@@ -1,9 +1,9 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/ZNCfOemrCWB8hGBr9gq4R1vx4aqznK18pjkKZL0SDzWUzFGxmiHuwRvxpdRm7N1FtEA0oyALQp/DKqOCo7BLwM=
-SHA256 (Pkgfile) = bea6ac1a7b35cde56a6649f8f2f0309dbe50d21f5aa1fca5c3d17b1b64ccbf33
+RWSE3ohX2g5d/bn5MNlYD3N1DAeXiDlQOK4muq8gEX8V2kb77++ixndkIyq6ZAMG7b47Uh1eAwDqf/03YKAsGQoOK5AkddApagE=
+SHA256 (Pkgfile) = 1fafd341b7a414e2042352f4060c0436db35c9e985bce480251be1a332a18c55
 SHA256 (.footprint) = 9c07e0209b90e6d45f593e30c0b5342a594c32de974cc61990189f9e80f4a21a
-SHA256 (qtwebengine-5.15.16.tar.gz) = 257590f02e98791b527489fe4f6e1e56703d8603c03d8d8784a67adc535b5662
-SHA256 (qtwebengine-chromium-8df91f886e7fffb61408e2426f8a90d763a3b6ea.tar.gz) = 490b5dce724097d8be048b8ef19ea74b8f984510fe5a3f5fef7ac33d563d594a
+SHA256 (qtwebengine-5.15.17.tar.gz) = 2ad54fcc3e43f750c3accf3ac0909f47722b31d69e9fd80394c8d9d11b2d9ab5
+SHA256 (qtwebengine-chromium-ce00f9b5aa761866b24d6460e10aacb671c92cf0.tar.gz) = 7ccc1b485bc57c54a1dac4663cf90aaeb5fb8a4be614f8ccf1b251e935404b11
 SHA256 (qtwebengine-build_fixes-1.patch) = a9e248414302b6fbd19e0404142e5ad082fb4a45eaf6f96d1b847a7b4bf8e1bd
 SHA256 (qtwebengine-5.15.2-disable-fatal-warnings.patch) = 19dac26d6753f4cbe1fe2bcb911d8124ea082f55ff86b45cdcba294d3c199249
 SHA256 (qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch) = 4bd5364a5f45c68e0bd452dad7a6f638142503da8c43aaeb15d577aa09369c7c
