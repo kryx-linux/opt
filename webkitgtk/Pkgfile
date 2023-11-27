@@ -6,8 +6,9 @@
 
 name=webkitgtk
 version=2.42.2
-release=1
-source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
+release=2
+source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz
+  1bad176b2496579d760852c80cff3ad9fb7c3a4b.patch)
 
 build() {
   # fail the build if dependencies are not met
@@ -26,6 +27,8 @@ build() {
   prt-get isinst libmanette || PKGMK_WEBKITGTK+=' -DENABLE_GAMEPAD=OFF'
   prt-get isinst libavif || PKGMK_WEBKITGTK+=' -DUSE_AVIF=OFF'
   prt-get isinst gst_plugins-bad || PKGMK_WEBKITGTK+=' -DUSE_GSTREAMER_TRANSCODER=OFF'
+
+  patch -Np1 -d webkitgtk-$version -i $SRC/1bad176b2496579d760852c80cff3ad9fb7c3a4b.patch
 
   cmake -S webkitgtk-$version -B build -G Ninja ${PKGMK_WEBKITGTK} \
     -D CMAKE_INSTALL_PREFIX=/usr \
