@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=libnl
-version=3.8.0
+version=3.9.0
 release=1
 source=(https://github.com/thom311/libnl/releases/download/libnl${version//./_}/$name-$version.tar.gz)
 
@@ -14,7 +14,8 @@ build() {
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
-		--disable-cli
+		--disable-cli \
+		--disable-debug
 
 	make
 	make DESTDIR=$PKG install
