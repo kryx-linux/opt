@@ -1,17 +1,27 @@
 # Description: 8086 assembler and loader which can generate 32-bit code for the 386+ processors
-# URL: https://github.com/lkundrak/dev86/tree/master/bin86
+# URL: https://github.com/jbruchon/dev86
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 
 name=bin86
 version=0.16.21
-release=1
-source=(https://mirror.netcologne.de/gentoo/distfiles/$name-$version.tar.gz
+release=2
+_commit=c83297b0dc5bf79dc900c005837a31e9c27f8aba
+source=(https://github.com/jbruchon/dev86/archive/$_commit/$name-$version-${_commit:0:7}.tar.gz
 	$name-x86_64.patch)
 
 build() {
-	cd $name-$version
+	cd dev86-$_commit
+
 	patch -p1 -i $SRC/$name-x86_64.patch
+
+	sed -i '/#include "version.h"/d' as/as.c ld/io.c
+
+	cd bin86
+	for i in ld as man; do ln -s ../${i} .; done
 	make -j1 CFLAGS="$CFLAGS -D_POSIX_SOURCE" PREFIX=/usr
+
 	install -d $PKG/usr/{bin,share/man/man1}
 	make PREFIX=$PKG/usr MANDIR=$PKG/usr/share/man/man1 install
+
+	rm -rf $PKG/usr/share/man/man1/{bcc,elks,elsemu}.1
 }
