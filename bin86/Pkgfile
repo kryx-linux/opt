@@ -4,7 +4,7 @@
 
 name=bin86
 version=0.16.21
-release=2
+release=3
 _commit=c83297b0dc5bf79dc900c005837a31e9c27f8aba
 source=(https://github.com/jbruchon/dev86/archive/$_commit/$name-$version-${_commit:0:7}.tar.gz
 	$name-x86_64.patch)
@@ -23,5 +23,5 @@ build() {
 	install -d $PKG/usr/{bin,share/man/man1}
 	make PREFIX=$PKG/usr MANDIR=$PKG/usr/share/man/man1 install
 
-	rm -rf $PKG/usr/share/man/man1/{bcc,elks,elsemu}.1
+	rm -r $PKG/usr/share/man/man1/{bcc,elks,elksemu}.1
 }
