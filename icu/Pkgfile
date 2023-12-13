@@ -4,9 +4,10 @@
 # Optional: clang lld
 
 name=icu
-version=74.1
+version=74.2
 release=1
-source=(https://github.com/unicode-org/icu/releases/download/release-${version//./-}/icu4c-${version/./_}-src.tgz)
+source=(https://github.com/unicode-org/icu/releases/download/release-${version//./-}/icu4c-${version/./_}-src.tgz
+  ICU-22132.patch)
 
 build() {
   cd icu/source
@@ -16,11 +17,16 @@ build() {
   prt-get isinst clang && export CC=clang CXX=clang++ AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib || \
     export CC=gcc CXX=g++
 
+  patch -Np1 -i $SRC/ICU-22132.patch
+
   ./configure \
     --prefix=/usr \
     --mandir=/usr/share/man \
     --disable-samples \
     --disable-tests
+
+  # https://github.com/unicode-org/icu/blob/main/icu4c/LICENSE does not seem to work
+  touch ../LICENSE
 
   make
   make -j1 DESTDIR=$PKG install
