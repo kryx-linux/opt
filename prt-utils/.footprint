@@ -13,6 +13,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/portspage
 -rwxr-xr-x	root/root	usr/bin/prtcheck
 -rwxr-xr-x	root/root	usr/bin/prtcheckmissing
+-rwxr-xr-x	root/root	usr/bin/prtcheckperms
 -rwxr-xr-x	root/root	usr/bin/prtcreate
 -rwxr-xr-x	root/root	usr/bin/prtorphan
 -rwxr-xr-x	root/root	usr/bin/prtrej
@@ -58,6 +59,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/prt-utils.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/prtcheck.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/prtcheckmissing.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/prtcheckperms.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/prtcreate.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/prtorphan.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/prtsweep.1.gz
