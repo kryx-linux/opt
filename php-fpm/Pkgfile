@@ -4,15 +4,13 @@
 # Depends on: libpcre2 libxml2
 
 name=php-fpm
-version=8.2.13
+version=8.3.1
 release=1
 source=(https://php.net/distributions/php-$version.tar.xz
-	php-fpm libxml2-2.12.patch)
+	php-fpm)
 
 build() {
 	cd php-$version
-
-	patch -p1 -i $SRC/libxml2-2.12.patch
 
 	local PHP_CONFIG="
 	--prefix=/usr \
