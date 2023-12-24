@@ -473,6 +473,11 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compmisc.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compmisc.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compmisc.mli
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compression.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compression.cmt
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compression.cmti
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compression.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/compression.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/config.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/config.cmt
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/config.cmti
@@ -2250,6 +2255,7 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/Clflags.Int_arg_helper.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Compiler_libs.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Complex.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/Compression.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Condition.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Config.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Config_boot.3o.gz

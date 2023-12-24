@@ -5,13 +5,13 @@
 # Optional: glib jsoncpp krb5 krb5 lcms2 libevent libsrtp libxml2 minizip opus pipewire pulseaudio re2 snappy
 
 name=qtwebengine
-version=5.15.16
+version=5.15.17
 release=1
 
 # https://github.com/qt/qtwebengine/commits/5.15
-_qtwebengine_commit=f9de20ca8375c18d9fc4a153829bbab6c28fe655
+_qtwebengine_commit=79a4e92cb0c9fc946f81e13b392a04be51d95991
 # from $_qtwebengine_commit/src/3rdparty
-_chromium_commit=8df91f886e7fffb61408e2426f8a90d763a3b6ea
+_chromium_commit=ce00f9b5aa761866b24d6460e10aacb671c92cf0
 
 source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$version.tar.gz
   https://github.com/qt/qtwebengine-chromium/archive/$_chromium_commit/$name-chromium-$_chromium_commit.tar.gz
@@ -25,11 +25,11 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$ve
   qt5-webengine-pipewire-0.3.patch
   qtwebengine-5.15.15-c++17.patch
   qtwebengine-system-absl-compat.patch
-  qtwebengine-re2-2023.07.01.patch
-  python.patch)
+  programm_manager.patch
+  python.patch
+  imp.patch)
 
 build() {
-  ls
   cd qtwebengine-$_qtwebengine_commit
 
   rm -rf src/3rdparty
@@ -46,10 +46,11 @@ build() {
   patch -p1 -i $SRC/qtwebengine-5.15.13-icu_73-1.patch
   patch -p1 -d src/3rdparty -i $SRC/qt5-webengine-pipewire-0.3.patch
   patch -p1 -i $SRC/python.patch
+  patch -p1 -d src/3rdparty -i $SRC/imp.patch
 
   if prt-get isinst re2; then
-    patch -p1 -i $SRC/qtwebengine-re2-2023.07.01.patch
     patch -p1 -i $SRC/qtwebengine-system-absl-compat.patch
+    patch -p1 -i $SRC/programm_manager.patch
     cp -f /usr/include/absl/base/options.h \
       src/3rdparty/chromium/third_party/abseil-cpp/absl/base/options.h
     sed -i -e 's,#define ABSL_OPTION_USE_STD_OPTIONAL 1,#define ABSL_OPTION_USE_STD_OPTIONAL 0,' src/3rdparty/chromium/third_party/abseil-cpp/absl/base/options.h
@@ -63,6 +64,20 @@ build() {
   sed -e 's/\^(?i)/(?i)^/' \
     -i src/3rdparty/chromium/tools/metrics/ukm/ukm_model.py &&
   sed -e "s/'rU'/'r'/" \
+    -i src/3rdparty/chromium/tools/grit/grit/util.py
+  sed -e 's/^#define BA_LB_COUNT.*$/#define BA_LB_COUNT 40/' \
+    -i src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
+
+  sed -e "/import imp/d" \
+    -i src/3rdparty/chromium/mojo/public/tools/mojom/mojom/fileutil.py \
+       src/3rdparty/chromium/mojo/public/tools/mojom/mojom/parse/lexer.py
+
+  sed -e /six.move/d \
+    -i src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/internal/python_message.py
+  rm -r src/3rdparty/chromium/tools/grit/third_party/six
+
+  sed -e /.*import.*six/d \
+    -e /.*from.*six.*import/d \
     -i src/3rdparty/chromium/tools/grit/grit/util.py
 
   sed -e '/^MODULE_VERSION/s/5.*/5.15.2/' -i .qmake.conf

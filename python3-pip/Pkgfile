@@ -4,9 +4,10 @@
 # Depends on: python3-setuptools
 
 name=python3-pip
-version=23.3.1
+version=23.3.2
 release=1
-source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz)
+source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
+  EXTERNALLY-MANAGED.in)
 
 build() {
   cd ${name#*-}-$version
@@ -20,4 +21,11 @@ build() {
 
   # again why does this happen?
   find $PKG/usr/lib/python*/site-packages -type f -exec chmod o-w '{}' \+
+
+  _pyver=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+  # again why does this happen?
+  find $PKG/usr/lib/python${_pyver}/site-packages -type f \
+    -exec chmod o-w '{}' \+
+
+  install -m 644 $SRC/EXTERNALLY-MANAGED.in $PKG/usr/lib/python${_pyver}/EXTERNALLY-MANAGED
 }

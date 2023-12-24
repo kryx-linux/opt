@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=mingw-w64-binutils
-version=2.38
+version=2.39
 release=1
 source=(http://ftpmirror.gnu.org/gnu/binutils/binutils-$version.tar.xz)
 

@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=directx-headers
-version=1.610.2
+version=1.611.0
 release=1
 source=(https://github.com/microsoft/DirectX-Headers/archive/v$version/$name-$version.tar.gz)
 

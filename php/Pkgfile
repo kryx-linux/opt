@@ -4,15 +4,12 @@
 # Depends on: bzip2 libpcre2 libxml2 curl db gdbm
 
 name=php
-version=8.2.13
+version=8.3.1
 release=1
-source=(https://php.net/distributions/php-$version.tar.xz
-	libxml2-2.12.patch)
+source=(https://php.net/distributions/php-$version.tar.xz)
 
 build() {
 	cd php-$version
-
-	patch -p1 -i $SRC/libxml2-2.12.patch
 
 	local PHP_CONFIG="
 	--prefix=/usr \

@@ -4,7 +4,7 @@
 # Depends on: openssl libevent
 
 name=nsd
-version=4.7.0
+version=4.8.0
 release=1
 source=(http://www.nlnetlabs.nl/downloads/nsd/$name-$version.tar.gz
 	README pre-install nsd)
@@ -26,7 +26,7 @@ build() {
 
 	install -m 0755 nsd-mem $PKG/usr/sbin
 	install -D $SRC/nsd $PKG/etc/rc.d/nsd
+	install -d -o nsd -g nsd $PKG/var/lib/nsd
 
-	chown nsd:nsd $PKG/var/lib/nsd
 	rm -r $PKG/run
 }

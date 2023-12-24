@@ -2,7 +2,6 @@
 # URL: https://github.com/KhronosGroup/SPIRV-LLVM-Translator
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: llvm spirv-tools
-# Optional: clang lld
 
 name=spirv-llvm-translator
 version=17.0.0
@@ -11,11 +10,6 @@ source=(https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$version/
 
 build() {
   prt-get isinst ccache && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
-
-  if prt-get isinst clang lld; then
-    export CC=clang CXX=clang++ AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib LDFLAGS+=' -fuse-ld=lld'
-    PKGMK_SLT+=' -D LLVM_ENABLE_LTO=ON'
-  fi
 
   cmake -S SPIRV-LLVM-Translator-$version -B build -G Ninja $PKGMK_SLT \
     -D CMAKE_INSTALL_PREFIX=/usr \
@@ -27,6 +21,7 @@ build() {
     -D CMAKE_SKIP_RPATH=ON \
     -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr/include/spirv \
     -D FETCHCONTENT_FULLY_DISCONNECTED=ON \
+    -D LLVM_EXTERNAL_LIT=/usr/bin/lit \
     -Wno-dev
 
   cmake --build build
