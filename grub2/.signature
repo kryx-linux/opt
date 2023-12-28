@@ -1,9 +1,10 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/YHPe8LUbbA7SqWOEIjfvH0YJey/aStyX/huITXu8SvvlTWpwGz4CC2M5d+ZhvG+hGmCQptElTmGhJWYsDAwZAI=
-SHA256 (Pkgfile) = 9209bb29c8fd3819c099cff7366282bea5423dda0955e7b113e1bbd3f62ca219
-SHA256 (.footprint) = 968205938dd7d408b4b7b1033647df6f21f53b67c27347013fc7f74c5eded913
-SHA256 (grub-2.06.tar.xz) = b79ea44af91b93d17cd3fe80bdae6ed43770678a9a5ae192ccea803ebb657ee1
+RWSE3ohX2g5d/RDHJZwvCzSIkXwK7HsqbamupqsP+LMvtpxPk5zvhGOhnJ5kugY0EeLclOpHJ41/iZjfIVeQoH24fQUGGqlC1gU=
+SHA256 (Pkgfile) = 6375e5e8d6ac357921d5a18b0424fbf2ee217ca01338c933c849c1e11b1f15dd
+SHA256 (.footprint) = 3a4f8eb6fee1424f83d080eab86d45584e8551006dbf3ea4951a098c5fbc2cae
+SHA256 (grub-2.12.tar.xz) = f3c97391f7c4eaa677a78e090c7e97e6dc47b16f655f04683ebd37bef7fe0faa
 SHA256 (unifont-9.0.06.pcf.gz) = 6d23e82ea3fd3d79849d675c0c30129b62a3973a83b4cdc05f9994efef773b86
-SHA256 (grub2-tweaks.diff) = 7b1b96a5d0d97bf671b34e3ab12e88a95ed343cbf7a548209b32bc86b4aeba39
+SHA256 (grub2-tweaks.diff) = 11261ece2e7025eecaf1c2d7145bdb1caaccd813104dd19c0b3301c95f51c59b
 SHA256 (grub.cfg.sample) = c2e72228c1dd150f727e8d611d6f14956080ce078651b03eb14fcf65b0917dda
 SHA256 (csum_seed.diff) = ec7b142af05f0bdf3b923e0f3c365592760fc9c10896e9a23899f96e59ad5bfb
+SHA256 (extra_deps.lst) = 78d83a1c8ed69220853ac90114e0c7ea13fda00fbe6c81b1fedb1296479e62b4
