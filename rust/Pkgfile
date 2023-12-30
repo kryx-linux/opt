@@ -90,8 +90,8 @@ cat <<- EOF > $SRC/config.toml
 	debuginfo-level-std = 2
 	codegen-tests = false
 	backtrace-on-ice = true
-	remap-debuginfo = true
 	jemalloc = true
+	remap-debuginfo = false
 
 	description = "CRUX"
 	channel = "stable"
