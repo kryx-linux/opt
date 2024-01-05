@@ -5,7 +5,7 @@
 
 name=ruby-sqlite3
 version=1.7.0
-release=1
+release=2
 source=(https://rubygems.org/downloads/sqlite3-$version.gem)
 
 build () {
