@@ -1,7 +1,7 @@
 # Description: PDF rendering library based on xpdf 3.0
 # URL: https://poppler.freedesktop.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: freetype
+# Depends on: fontconfig libjpeg-turbo
 # Optional: boost cairo curl gobject-introspection gpgme lcms2 libgd libtiff nss openjpeg2 qt5 qt6-base
 
 name=poppler
