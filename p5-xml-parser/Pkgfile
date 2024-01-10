@@ -4,7 +4,7 @@
 # Depends on: expat perl
 
 name=p5-xml-parser
-version=2.46
+version=2.47
 release=1
 source=(http://search.cpan.org/CPAN/authors/id/T/TO/TODDR/XML-Parser-$version.tar.gz)
 
