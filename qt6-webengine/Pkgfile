@@ -1,7 +1,7 @@
 # Description: Provides support for web applications using the Chromium browser project
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: cups ffmpeg icu libevent libva libvpx libwebp minizip nodejs nss pciutils python3-html5lib python3-six qt6-positioning qt6-tools qt6-webchannel re2 snappy xorg-libxcomposite xorg-libxcursor
+# Depends on: cups ffmpeg icu libevent libva libvpx libwebp minizip nodejs nss pciutils python3-html5lib qt6-positioning qt6-tools qt6-webchannel re2 snappy xorg-libxcomposite xorg-libxcursor
 # Optional: dav1d fdk-aac gnutls graphite2 keyutils krb5 lame lcms2 libpcre2 libvdpau numactl pipewire x264 x265
 
 name=qt6-webengine
