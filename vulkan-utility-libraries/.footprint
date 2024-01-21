@@ -4,7 +4,6 @@ drwxr-xr-x	root/root	usr/include/vulkan/
 drwxr-xr-x	root/root	usr/include/vulkan/layer/
 -rw-r--r--	root/root	usr/include/vulkan/layer/vk_layer_settings.h
 -rw-r--r--	root/root	usr/include/vulkan/layer/vk_layer_settings.hpp
--rw-r--r--	root/root	usr/include/vulkan/layer/vk_layer_settings_ext.h
 drwxr-xr-x	root/root	usr/include/vulkan/utility/
 -rw-r--r--	root/root	usr/include/vulkan/utility/vk_dispatch_table.h
 -rw-r--r--	root/root	usr/include/vulkan/utility/vk_format_utils.h
@@ -13,6 +12,7 @@ drwxr-xr-x	root/root	usr/include/vulkan/utility/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cmake/
 drwxr-xr-x	root/root	usr/lib/cmake/VulkanUtilityLibraries/
--rw-r--r--	root/root	usr/lib/cmake/VulkanUtilityLibraries/VulkanUtilityLibrariesConfig-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/VulkanUtilityLibraries/VulkanUtilityLibraries-targets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/VulkanUtilityLibraries/VulkanUtilityLibraries-targets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/VulkanUtilityLibraries/VulkanUtilityLibrariesConfig.cmake
 -rw-r--r--	root/root	usr/lib/libVulkanLayerSettings.a
