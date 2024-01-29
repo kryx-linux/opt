@@ -1,10 +1,10 @@
 # Description: Abseil Common Libraries (C++)
 # URL: https://abseil.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: ninja
+# Depends on:
 
 name=abseil-cpp
-version=20230802.1
+version=20240116.0
 release=1
 source=(https://github.com/abseil/abseil-cpp/archive/$version/$name-$version.tar.gz)
 
