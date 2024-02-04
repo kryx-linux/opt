@@ -4,12 +4,12 @@
 # Depends on: php
 
 name=pear
-version=1.10.13
-release=6
-source=(https://php.net/distributions/php-8.2.12.tar.xz)
+version=1.10.14
+release=1
+source=(https://php.net/distributions/php-8.3.1.tar.xz)
 
 build() {
-	cd php-8.2.12/pear
+	cd php-8.3.1/pear
 
 	export PHP_PEAR_SYSCONF_DIR=/etc/php
 	export INSTALL_ROOT=$PKG

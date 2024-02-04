@@ -1,5 +1,5 @@
-Not yet Submitted By: Ken Moffat <ken at linuxfromscratch dot org>
-Date: 2023-03-01
+Submitted By: Ken Moffat <ken at linuxfromscratch dot org>
+Date: 2024-01-03
 Initial Package Version: From git 5.15 branch.
 Upstream Status: Not applied
 Origin: upstreams and gentoo, Douglas, fedora, self, Arch.
@@ -13,6 +13,16 @@ Updated on 2022-06-22: patches from Arch via gentoo to use python3, one modified
 The lingering arm and mips patches from an earlier fedora patchset have been dropped.
 Include a patch for gcc12.
 Updated on 2023-03-01: rework Doug's patch for upstream changes.
+Updated on 2023-12-28: Applied several seds that were in the book. In particular,
+the sed for shipped ffmpeg, the sed for the Python 3.11 compatibility, the
+NINJAJOBS sed, and a modified version of the ICU sed (to allow support for prior
+versions of ICU to work with qtwebengine still). This will leave the Pulseaudio
+sed to allow updating for building without Pulseaudio installed. In addition,
+added a patch to allow 32-bit x86 systems to run applications which use
+QtWebEngine without crashing due to seccomp sandbox errors. That patch came
+from Arch Linux 32, with minor modifications since some hunks were already
+applied.
+Updated on 2024-01-03: Updated the patch submission date.
 
 References to old patches, in the order they were applied, are retained to
 assist people wishing to review what has changed compared to previous versions.
@@ -1139,7 +1149,7 @@ index a43260414db..a85b03abe75 100644
 -    idl_types_methods = zip(idl_types, methods)
 +    idl_types_methods = list(zip(idl_types, methods))
  
-     # We can’t do a single loop through all methods or simply sort them, because
+     # We canâ€™t do a single loop through all methods or simply sort them, because
      # a method may be listed in multiple steps of the resolution algorithm, and
 diff --git a/chromium/third_party/blink/renderer/bindings/scripts/v8_methods.py b/chromium/third_party/blink/renderer/bindings/scripts/v8_methods.py
 index 5f1f89a3def..6ee8a407798 100644
@@ -1905,7 +1915,7 @@ index fa8e73d34af..7d0b84b2171 100644
 --- a/src/3rdparty/chromium/chromium/third_party/devtools-frontend/src/scripts/build/build_release_applications.py
 +++ b/src/3rdparty/chromium/third_party/devtools-frontend/src/scripts/build/build_release_applications.py
 @@ -10,7 +10,7 @@ Builds applications in release mode:
- and the application loader into a single script.
+ andÂ theÂ applicationÂ loaderÂ intoÂ aÂ singleÂ script.
  """
  
 -from cStringIO import StringIO
@@ -2772,3 +2782,174 @@ index 3bf1a5d57..29fd2603c 100644
 -- 
 2.35.1
 
+Thirteenth, fix a build failure if a user is using the shipped version of ffmpeg
+instead of the system version.
+
+diff -Naurp qtwebengine-5.15.17.orig/src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/mathops.h qtwebengine-5.15.17/src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/mathops.h
+--- qtwebengine-5.15.17.orig/src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/mathops.h  2023-12-27 19:48:43.560815251 -0600
++++ qtwebengine-5.15.17/src/3rdparty/chromium/third_party/ffmpeg/libavcodec/x86/mathops.h 2023-12-27 19:49:57.916853340 -0600
+@@ -39,7 +39,7 @@ static av_always_inline av_const int MUL
+         "imull %3               \n\t"
+         "shrdl %4, %%edx, %%eax \n\t"
+         :"=a"(rt), "=d"(dummy)
+-        :"a"(a), "rm"(b), "ci"((uint8_t)shift)
++        :"a"(a), "rm"(b), "ci"(shift & 0x1F)
+     );
+     return rt;
+ }
+@@ -115,7 +115,7 @@ __asm__ volatile(\
+ static inline  int32_t NEG_SSR32( int32_t a, int8_t s){
+     __asm__ ("sarl %1, %0\n\t"
+          : "+r" (a)
+-         : "ic" ((uint8_t)(-s))
++         : "ic" ((-s) & 0x1F)
+     );
+     return a;
+ }
+@@ -124,7 +124,7 @@ static inline  int32_t NEG_SSR32( int32_
+ static inline uint32_t NEG_USR32(uint32_t a, int8_t s){
+     __asm__ ("shrl %1, %0\n\t"
+          : "+r" (a)
+-         : "ic" ((uint8_t)(-s))
++         : "ic" ((-s) & 0x1F)
+     );
+     return a;
+ }
+
+Fourteenth, include the changes for Python-3.11 compatibilty from the book.
+
+diff -Naurp qtwebengine-5.15.17.orig/src/3rdparty/chromium/tools/grit/grit/util.py qtwebengine-5.15.17/src/3rdparty/chromium/tools/grit/grit/util.py
+--- qtwebengine-5.15.17.orig/src/3rdparty/chromium/tools/grit/grit/util.py 2023-12-27 19:48:12.092992385 -0600
++++ qtwebengine-5.15.17/src/3rdparty/chromium/tools/grit/grit/util.py   2023-12-27 19:55:53.525150370 -0600
+@@ -211,7 +211,7 @@ def ReadFile(filename, encoding):
+     mode = 'rb'
+     encoding = None
+   else:
+-    mode = 'rU'
++    mode = 'r'
+
+   with io.open(abs(filename), mode, encoding=encoding) as f:
+     return f.read()
+diff -Naurp qtwebengine-5.15.17.orig/src/3rdparty/chromium/tools/metrics/ukm/ukm_model.py qtwebengine-5.15.17/src/3rdparty/chromium/tools/metrics/ukm/ukm_model.py
+--- qtwebengine-5.15.17.orig/src/3rdparty/chromium/tools/metrics/ukm/ukm_model.py   2023-12-27 19:48:12.641058955 -0600
++++ qtwebengine-5.15.17/src/3rdparty/chromium/tools/metrics/ukm/ukm_model.py  2023-12-27 19:55:53.515149151 -0600
+@@ -42,7 +42,7 @@ _INDEX_TYPE = models.ObjectNodeType(
+ _STATISTICS_TYPE =  models.ObjectNodeType(
+     'statistics',
+     attributes=[
+-      ('export', str, r'^(?i)(|true|false)$'),
++      ('export', str, r'(?i)^(|true|false)$'),
+     ],
+     children=[
+         models.ChildType(_QUANTILES_TYPE.tag, _QUANTILES_TYPE, multiple=False),
+@@ -94,7 +94,7 @@ _EVENT_TYPE =  models.ObjectNodeType(
+     'event',
+     attributes=[
+       ('name', str, r'^[A-Za-z0-9.]+$'),
+-      ('singular', str, r'^(?i)(|true|false)$'),
++      ('singular', str, r'(?i)^(|true|false)$'),
+     ],
+     alphabetization=[
+         (_OBSOLETE_TYPE.tag, _KEEP_ORDER),
+
+Fifteenth, include the NINJA_JOBS sed from the book:
+
+diff -Naurp qtwebengine-5.15.17.orig/src/core/gn_run.pro qtwebengine-5.15.17/src/core/gn_run.pro
+--- qtwebengine-5.15.17.orig/src/core/gn_run.pro   2023-12-27 19:47:47.686028240 -0600
++++ qtwebengine-5.15.17/src/core/gn_run.pro  2023-12-27 20:03:18.547432564 -0600
+@@ -62,7 +62,7 @@ build_pass|!debug_and_release {
+                  error("GN run error for $$arch!")
+             }
+             runninja_$${arch}.target = run_ninja_$${arch}
+-            runninja_$${arch}.commands = $$NINJA $$ninjaflags \$\(NINJAJOBS\) -C $$gn_build_root QtWebEngineCore
++            runninja_$${arch}.commands = $$NINJA $$ninjaflags \$\(NINJA_JOBS\) -C $$gn_build_root QtWebEngineCore
+             QMAKE_EXTRA_TARGETS += runninja_$${arch}
+             runninja.depends += runninja_$${arch}
+         }
+@@ -75,7 +75,7 @@ build_pass|!debug_and_release {
+         !system($$gn_run) {
+             error("GN run error!")
+         }
+-        runninja.commands = $$NINJA $$ninjaflags \$\(NINJAJOBS\) -C $$gn_build_root QtWebEngineCore
++        runninja.commands = $$NINJA $$ninjaflags \$\(NINJA_JOBS\) -C $$gn_build_root QtWebEngineCore
+     }
+ }
+
+Sixteenth, adapt QtWebEngine to changes in ICU-74, while still maintaining
+compatibility with previous versions of ICU.
+
+diff -Naurp qtwebengine-5.15.17.orig/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc qtwebengine-5.15.17/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
+--- qtwebengine-5.15.17.orig/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc   2023-12-27 19:49:19.890230315 -0600
++++ qtwebengine-5.15.17/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc  2023-12-27 20:13:13.736594613 -0600
+@@ -162,7 +162,9 @@ static const unsigned char kAsciiLineBre
+ };
+ // clang-format on
+
+-#if U_ICU_VERSION_MAJOR_NUM >= 58
++#if U_ICU_VERSION_MAJOR_NUM >= 74
++#define BA_LB_COUNT (U_LB_COUNT - 8)
++#elif U_ICU_VERSION_MAJOR_NUM >= 58
+ #define BA_LB_COUNT (U_LB_COUNT - 3)
+ #else
+ #define BA_LB_COUNT U_LB_COUNT
+
+Seventeenth, adapt QtWebEngine to not crash immediately on i686 systems due to
+seccomp sandbox changes. This patch was lifted from ArchLinux 32.
+
+diff -Naurp qtwebengine-5.15.17.orig/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/baseline_policy.cc qtwebengine-5.15.17/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/baseline_policy.cc
+--- qtwebengine-5.15.17.orig/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/baseline_policy.cc 2023-12-28 10:41:45.308095533 -0600
++++ qtwebengine-5.15.17/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/baseline_policy.cc      2023-12-28 10:42:50.683525245 -0600
+@@ -198,7 +198,11 @@ ResultExpr EvaluateSyscallImpl(int fs_de
+   }
+ #endif
+ 
+-  if (sysno == __NR_futex)
++  if (sysno == __NR_futex
++#if defined(__NR_futex_time64)
++     || sysno == __NR_futex_time64
++#endif
++     )
+     return RestrictFutex();
+ 
+   if (sysno == __NR_set_robust_list)
+@@ -244,7 +248,7 @@ ResultExpr EvaluateSyscallImpl(int fs_de
+     return RestrictPrctl();
+ 
+ #if defined(__x86_64__) || defined(__arm__) || defined(__mips__) || \
+-    defined(__aarch64__)
++    defined(__aarch64__) || defined(__i386__)
+   if (sysno == __NR_socketpair) {
+     // Only allow AF_UNIX, PF_UNIX. Crash if anything else is seen.
+     static_assert(AF_UNIX == PF_UNIX,
+
+diff -Naurp qtwebengine-5.15.17.orig/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/syscall_sets.cc qtwebengine-5.15.17/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/syscall_sets.cc
+--- qtwebengine-5.15.17.orig/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/syscall_sets.cc    2023-12-28 10:41:45.308095533 -0600
++++ qtwebengine-5.15.17/src/3rdparty/chromium/sandbox/linux/seccomp-bpf-helpers/syscall_sets.cc 2023-12-28 10:43:10.307654288 -0600
+@@ -564,6 +564,9 @@ bool SyscallSets::IsAllowedGeneralIo(int
+ #endif
+     case __NR_ppoll:
+     case __NR_pselect6:
++#if defined(__i386__)
++    case __NR_pselect6_time64:
++#endif
+     case __NR_read:
+     case __NR_readv:
+     case __NR_pread64:
+@@ -572,7 +575,7 @@ bool SyscallSets::IsAllowedGeneralIo(int
+     case __NR_recv:
+ #endif
+ #if defined(__x86_64__) || defined(__arm__) || defined(__mips__) || \
+-    defined(__aarch64__)
++    defined(__aarch64__) || defined(__i386__)
+     case __NR_recvfrom:  // Could specify source.
+     case __NR_recvmsg:   // Could specify source.
+ #endif
+@@ -587,7 +590,7 @@ bool SyscallSets::IsAllowedGeneralIo(int
+     case __NR_send:
+ #endif
+ #if defined(__x86_64__) || defined(__arm__) || defined(__mips__) || \
+-    defined(__aarch64__)
++    defined(__aarch64__) || defined(__i386__)
+     case __NR_sendmsg:  // Could specify destination.
+     case __NR_sendto:   // Could specify destination.
+ #endif

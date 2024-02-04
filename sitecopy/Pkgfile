@@ -5,7 +5,7 @@
 
 name=sitecopy
 version=0.16.6
-release=6
+release=7
 source=(https://www.manyfish.co.uk/sitecopy/sitecopy-0.16.6.tar.gz
 	$name-$version.patch)
 

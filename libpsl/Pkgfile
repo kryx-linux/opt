@@ -4,7 +4,7 @@
 # Depends on: libidn2 publicsuffix-list
 
 name=libpsl
-version=0.21.2
+version=0.21.5
 release=1
 source=(https://github.com/rockdaboot/$name/releases/download/$version/$name-$version.tar.lz)
 
@@ -18,7 +18,8 @@ build() {
     -D runtime=libidn2 \
     -D builtin=true \
     -D psl_file=/usr/share/publicsuffix/effective_tld_names.dat \
-    -D psl_testfile=/usr/share/publicsuffix/test_psl.txt
+    -D psl_testfile=/usr/share/publicsuffix/test_psl.txt \
+    -D tests=false
 
   ninja -j ${JOBS-1} -C build
   DESTDIR=$PKG meson install -C build

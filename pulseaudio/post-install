@@ -1,2 +1,10 @@
 #!/bin/sh
+_USER=pulse
+_HOME=/var/lib/pulse
+_GROUP=pulse
+
+/usr/bin/getent group $_GROUP > /dev/null 2>&1 || /usr/sbin/groupadd $_GROUP
+/usr/bin/getent passwd $_USER > /dev/null 2>&1 || /usr/sbin/useradd -c 'postgres system user' -g $_GROUP -d $_HOME -s /bin/false $_USER
+#passwd -l $_USER > /dev/null
+
 [ -e /usr/share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml ] && glib-compile-schemas /usr/share/glib-2.0/schemas || true

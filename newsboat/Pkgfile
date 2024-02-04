@@ -2,12 +2,12 @@
 # URL: http://www.newsboat.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: curl libxml2 sqlite3 stfl json-c rust
+# Optional: asciidoctor
 
 name=newsboat
-version=2.33
+version=2.34
 release=1
-source=(https://newsboat.org/releases/$version/$name-$version.tar.xz
-	newsboat.1.gz podboat.1.gz)
+source=(https://newsboat.org/releases/$version/$name-$version.tar.xz)
 
 build () {
 	cd $name-$version
@@ -16,8 +16,10 @@ build () {
 	export prefix=/usr
 	./config.sh
 	make newsboat podboat
+	make DESTDIR=$PKG install-{news,pod}boat
 
-	install -d $PKG/usr/{bin,share/man/man1}
-	install -m 0755 newsboat podboat $PKG/usr/bin
-	install -m 0644 $SRC/*.1.gz $PKG/usr/share/man/man1
+	if prt-get isinst asciidoctor; then
+		make DESTDIR=$PKG install-docs
+		rm -r $PKG/usr/share/doc
+	fi
 }

@@ -4,20 +4,20 @@
 # Depends on: freeglut libjpeg-turbo xorg-libxmu
 
 name=jasper
-version=4.1.1
+version=4.1.2
 release=1
 source=(https://github.com/jasper-software/jasper/releases/download/version-$version/jasper-$version.tar.gz)
 
 build() {
   local config="
--D CMAKE_INSTALL_PREFIX=/usr
--D CMAKE_INSTALL_LIBDIR=lib
--D CMAKE_BUILD_TYPE=Release
--D CMAKE_SKIP_BUILD_RPATH=ON
--D JAS_ENABLE_OPENGL=ON
--D JAS_ENABLE_LIBJPEG=ON
--D CMAKE_SKIP_RPATH=ON
--D OpenGL_GL_PREFERENCE=GLVND"
+    -D CMAKE_INSTALL_PREFIX=/usr
+    -D CMAKE_INSTALL_LIBDIR=lib
+    -D CMAKE_BUILD_TYPE=Release
+    -D CMAKE_SKIP_BUILD_RPATH=ON
+    -D JAS_ENABLE_OPENGL=ON
+    -D JAS_ENABLE_LIBJPEG=ON
+    -D CMAKE_SKIP_RPATH=ON
+    -D OpenGL_GL_PREFERENCE=GLVND"
 
   #build static lib
   ( cmake -S $name-$version -B build-static -G Ninja $config \

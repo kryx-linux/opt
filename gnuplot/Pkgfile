@@ -5,7 +5,7 @@
 # Optional: libgd lua qt5 (qt6-5compat qt6-tools qt6-svg)
 
 name=gnuplot
-version=5.4.10
+version=6.0.0
 release=1
 source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
@@ -23,4 +23,6 @@ build() {
 	make DESTDIR=$PKG install
 
 	rm $PKG/usr/share/gnuplot/${version%.*}/js/README
+	rm -rf $PKG/usr/share/gnuplot/${version%.*}/qt
+	rm -r $PKG/usr/share/man/ja
 }

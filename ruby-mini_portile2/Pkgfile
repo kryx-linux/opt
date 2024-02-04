@@ -5,7 +5,7 @@
 
 name=ruby-mini_portile2
 version=2.8.5
-release=1
+release=2
 source=(https://rubygems.org/downloads/mini_portile2-$version.gem)
 
 build() {

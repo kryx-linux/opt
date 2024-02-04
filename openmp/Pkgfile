@@ -1,0 +1,25 @@
+# Description: LLVM OpenMP Runtime Library
+# URL: https://openmp.llvm.org/
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: clang
+
+name=openmp
+version=17.0.6
+release=1
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-$version.src.tar.xz
+  https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz)
+
+build() {
+  mv cmake-$version.src cmake
+
+  cmake -S $name-$version.src -B build -G Ninja \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D LIBOMP_INSTALL_ALIASES=OFF \
+    -Wno-dev
+
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+}
