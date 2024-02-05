@@ -4,7 +4,7 @@
 # Depends on: inih libdevmapper liburcu
 
 name=xfsprogs
-version=6.5.0
+version=6.6.0
 release=1
 source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz)
 
@@ -26,5 +26,5 @@ build() {
 	rm $PKG/lib/libhandle.{so,a,la}
 	ln -sf ../../lib/$(readlink $PKG/lib/libhandle.so.1) $PKG/usr/lib/libhandle.so
 
-	rm -r $PKG/usr/{share/doc,lib/xfsprogs}
+	rm -r $PKG/usr/share/doc
 }
