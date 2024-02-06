@@ -5,10 +5,12 @@
 
 name=gsettings-desktop-schemas
 version=45.0
-release=1
+release=2
 source=(https://download.gnome.org/sources/$name/${version:0:2}/$name-$version.tar.xz)
 
 build() {
+  sed -i -r 's:"(/system):"/org/gnome\1:g' $name-$version/schemas/*.in
+
   meson setup $name-$version build \
     --prefix=/usr \
     --buildtype=plain \
