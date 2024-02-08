@@ -326,6 +326,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/log.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/log_cache.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/log_event.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/log_event_data_type.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/log_slow.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/maria.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/mariadb.h
@@ -435,6 +436,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
 -rw-r--r--	root/root	usr/include/mysql/server/private/set_var.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/simple_tokenizer.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/slave.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/socketpair.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/source_revision.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sp_cache.h
