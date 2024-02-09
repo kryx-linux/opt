@@ -5,9 +5,9 @@
 # Optional: bash-completion docbook-xsl vala
 
 name=libsecret
-version=0.21.2
+version=0.21.3
 release=1
-source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
+source=(https://gitlab.gnome.org/GNOME/libsecret/-/archive/$version/libsecret-$version.tar.bz2)
 
 build() {
   prt-get isinst bash-completion || \

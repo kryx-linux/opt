@@ -1,8 +1,9 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/dBonXlNvvGOv1PHV9oIj5zINCunSw6Gy5rLxndahTC3nIsK9fus8LLGp0GdqKOckz7XUFc08qQmQHN+zfgqqw8=
-SHA256 (Pkgfile) = ab9110eec91f90b1cac52b6bc54f29f60a4b19cddd839cb4b9c5b52d41ccdc1d
-SHA256 (.footprint) = a98d8ff04f3a5d5fb9306a8733cba42abbfa074d64de76b1a927eddc6cafb1d3
-SHA256 (mariadb-11.2.2.tar.gz) = faedbd8790c7ee65b348c0169706b4bae91eb6ce7335a76b27dbd8813c42e21b
+RWSE3ohX2g5d/bOqcaX2dyqAq28/Sk57fw+WWCimeyKbF5w+bP2elyqMbTpBBmx5qnOyGZlvDGcGVIZYw6wZEwhVCtU/LsSrzQQ=
+SHA256 (Pkgfile) = 6ac5685b909c7f16b762a54d0c4f820d2e42792bce5a90698759cf5b880a9430
+SHA256 (.footprint) = 4c46dc76d604c764779a5c8c3934d00a4e938f8c9d45d3892ca33171fbf7a427
+SHA256 (mariadb-11.2.3.tar.gz) = 14a0bba0c2847eb3f69a4637f55798f8abe10904cd1dd22899c9b0a39c43e35f
 SHA256 (mariadb.rc) = 176aefb898a408d17f920b69582caed803cd338db48bcf9dadad59074a5b582d
 SHA256 (mariadb.pam) = 962b53d37719ed4798643a8fe3557454d23f74c2b14f1dfc1c1c67d361cab891
 SHA256 (pre-install) = 62040c17eeb3da88172d49240633c871a93c3c642ad7f61911ce2e83d8414d1c
+SHA256 (libfmt.patch) = 62243984cd3461240439cb23e76323536540b06725a4d92307d2eb6eec68861c
