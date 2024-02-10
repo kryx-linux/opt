@@ -9,16 +9,16 @@ release=2
 source=(https://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	prt-get isinst bash-completion || PKGMK_DBUSGLIB+=' --enable-bash-completion=no'
+    prt-get isinst bash-completion || PKGMK_DBUSGLIB+=' --enable-bash-completion=no'
 
-	./configure $PKGMK_DBUSGLIB \
-		--prefix=/usr \
-		--libexecdir=/usr/lib/dbus-glib \
-		--disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure $PKGMK_DBUSGLIB \
+        --prefix=/usr \
+        --libexecdir=/usr/lib/dbus-glib \
+        --disable-static
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/gtk-doc
+    rm -r $PKG/usr/share/gtk-doc
 }

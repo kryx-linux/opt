@@ -11,17 +11,17 @@ release=1
 source=(https://github.com/KhronosGroup/Vulkan-Loader/archive/$_version/$_name-$version.tar.gz)
 
 build() {
-	prt-get isinst wayland || PKGMK_VULKAN_LOADER+=' -D BUILD_WSI_WAYLAND_SUPPORT=OFF'
+    prt-get isinst wayland || PKGMK_VULKAN_LOADER+=' -D BUILD_WSI_WAYLAND_SUPPORT=OFF'
 
-	cmake -S $_name-$_version -B build -G Ninja $PKGMK_VULKAN_LOADER \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_INSTALL_LIBDIR=lib \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-		-D CMAKE_SKIP_RPATH=ON \
-		-D BUILD_TESTS=OFF
+    cmake -S $_name-$_version -B build -G Ninja $PKGMK_VULKAN_LOADER \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBDIR=lib \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -D CMAKE_SKIP_RPATH=ON \
+        -D BUILD_TESTS=OFF
 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
 }

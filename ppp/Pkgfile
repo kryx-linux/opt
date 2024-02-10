@@ -9,11 +9,11 @@ release=1
 source=(https://ftp.samba.org/pub/ppp/$name-$version.tar.gz)
 
 build () {
-	cd $name-$version
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--with-runtime-dir=/run/pppd
-	make
-	make DESTDIR=$PKG install
+    cd $name-$version
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --with-runtime-dir=/run/pppd
+    make
+    make DESTDIR=$PKG install
 }

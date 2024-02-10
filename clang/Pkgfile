@@ -7,28 +7,28 @@ name=clang
 version=17.0.6
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-tools-extra-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz
-	)
+    https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-tools-extra-$version.src.tar.xz
+    https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
+    https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz
+    )
 
 build() {
-	mv clang-tools-extra-$version.src clang-$version.src/tools/extra
-	prt-get isinst ccache && PKGMK_CLANG+=' -D LLVM_CCACHE_BUILD=ON'
+    mv clang-tools-extra-$version.src clang-$version.src/tools/extra
+    prt-get isinst ccache && PKGMK_CLANG+=' -D LLVM_CCACHE_BUILD=ON'
 
-	mv cmake-$version.src cmake
+    mv cmake-$version.src cmake
 
-	cmake -S $name-$version.src -B build -G Ninja $PKGMK_CLANG \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_INSTALL_LIBEXECDIR=lib/clang \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-D LLVM_MAIN_SRC_DIR="$SRC/llvm-$version.src" \
-		-D LLVM_EXTERNAL_LIT=/usr/bin/lit \
-		-D LLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
-		-D LLVM_INCLUDE_TESTS=OFF \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S $name-$version.src -B build -G Ninja $PKGMK_CLANG \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBEXECDIR=lib/clang \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D LLVM_MAIN_SRC_DIR="$SRC/llvm-$version.src" \
+        -D LLVM_EXTERNAL_LIT=/usr/bin/lit \
+        -D LLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
+        -D LLVM_INCLUDE_TESTS=OFF \
+        -Wno-dev
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
 }

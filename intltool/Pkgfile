@@ -7,15 +7,15 @@ name=intltool
 version=0.51.0
 release=2
 source=(http://edge.launchpad.net/$name/trunk/$version/+download/$name-$version.tar.gz
-	intltool-perl-5.22.patch)
+    intltool-perl-5.22.patch)
 
 
 build() {
-	cd $name-$version
-	patch -p0 -i $SRC/intltool-perl-5.22.patch
-	./configure --prefix=/usr
+    cd $name-$version
+    patch -p0 -i $SRC/intltool-perl-5.22.patch
+    ./configure --prefix=/usr
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 }
 

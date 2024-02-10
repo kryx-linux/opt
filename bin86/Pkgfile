@@ -7,21 +7,21 @@ version=0.16.21
 release=3
 _commit=c83297b0dc5bf79dc900c005837a31e9c27f8aba
 source=(https://github.com/jbruchon/dev86/archive/$_commit/$name-$version-${_commit:0:7}.tar.gz
-	$name-x86_64.patch)
+    $name-x86_64.patch)
 
 build() {
-	cd dev86-$_commit
+    cd dev86-$_commit
 
-	patch -p1 -i $SRC/$name-x86_64.patch
+    patch -p1 -i $SRC/$name-x86_64.patch
 
-	sed -i '/#include "version.h"/d' as/as.c ld/io.c
+    sed -i '/#include "version.h"/d' as/as.c ld/io.c
 
-	cd bin86
-	for i in ld as man; do ln -s ../${i} .; done
-	make -j1 CFLAGS="$CFLAGS -D_POSIX_SOURCE" PREFIX=/usr
+    cd bin86
+    for i in ld as man; do ln -s ../${i} .; done
+    make -j1 CFLAGS="$CFLAGS -D_POSIX_SOURCE" PREFIX=/usr
 
-	install -d $PKG/usr/{bin,share/man/man1}
-	make PREFIX=$PKG/usr MANDIR=$PKG/usr/share/man/man1 install
+    install -d $PKG/usr/{bin,share/man/man1}
+    make PREFIX=$PKG/usr MANDIR=$PKG/usr/share/man/man1 install
 
-	rm -r $PKG/usr/share/man/man1/{bcc,elks,elksemu}.1
+    rm -r $PKG/usr/share/man/man1/{bcc,elks,elksemu}.1
 }

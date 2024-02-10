@@ -9,14 +9,14 @@ release=1
 source=(https://www.gnupg.org/ftp/gcrypt/libgcrypt/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--disable-padlock-support \
-		--enable-static=yes
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-padlock-support \
+        --enable-static=yes
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/info
+    rm -r $PKG/usr/share/info
 }

@@ -9,15 +9,15 @@ release=1
 source=(https://gitlab.gnome.org/GNOME/adwaita-icon-theme/-/archive/$version/$name-$version.tar.bz2)
 
 build() {
-	meson setup $name-$version build \
-		--prefix=/usr \
-		--buildtype=plain \
-		--wrap-mode nodownload \
-		-D b_lto=true \
-		-D b_pie=true
+    meson setup $name-$version build \
+        --prefix=/usr \
+        --buildtype=plain \
+        --wrap-mode nodownload \
+        -D b_lto=true \
+        -D b_pie=true
 
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
+    meson compile -C build
+    DESTDIR=$PKG meson install -C build
 
-	rm -rf $PKG/usr/share/licenses
+    rm -rf $PKG/usr/share/licenses
 }

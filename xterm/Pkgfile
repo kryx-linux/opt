@@ -9,18 +9,18 @@ release=1
 source=(https://invisible-mirror.net/archives/$name/$name-$version.tgz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--with-app-defaults=/usr/share/X11/app-defaults/ \
-		--disable-nls \
-		--enable-256-color \
-		--enable-wide-chars
+    ./configure \
+        --prefix=/usr \
+        --with-app-defaults=/usr/share/X11/app-defaults/ \
+        --disable-nls \
+        --enable-256-color \
+        --enable-wide-chars
 
-	make
-	make install DESTDIR=$PKG
+    make
+    make install DESTDIR=$PKG
 
-	install -d $PKG/usr/share/applications
-	install -m 0644 xterm.desktop $PKG/usr/share/applications
+    install -d $PKG/usr/share/applications
+    install -m 0644 xterm.desktop $PKG/usr/share/applications
 }

@@ -12,21 +12,21 @@ release=1
 source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/$_version/$_name-$version.tar.gz)
 
 build() {
-	prt-get isinst wayland || PKGMK_VULKAN_TOOLS+=' -D BUILD_WSI_WAYLAND_SUPPORT=OFF'
+    prt-get isinst wayland || PKGMK_VULKAN_TOOLS+=' -D BUILD_WSI_WAYLAND_SUPPORT=OFF'
 
-	cmake -S $_name-$_version -B build -G Ninja $PKGMK_VULKAN_TOOLS \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS} -ffat-lto-objects" \
-		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -ffat-lto-objects" \
-		-D BUILD_CUBE=True \
-		-D BUILD_VULKANINFO=True \
-		-D CUBE_WSI_SELECTION='XCB' \
-		-D BUILD_WSI_XCB_SUPPORT=True \
-		-D BUILD_WSI_XLIB_SUPPORT=True \
-		-D BUILD_ICD=OFF \
-		-Wno-dev
+    cmake -S $_name-$_version -B build -G Ninja $PKGMK_VULKAN_TOOLS \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="${CFLAGS} -ffat-lto-objects" \
+        -D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -ffat-lto-objects" \
+        -D BUILD_CUBE=True \
+        -D BUILD_VULKANINFO=True \
+        -D CUBE_WSI_SELECTION='XCB' \
+        -D BUILD_WSI_XCB_SUPPORT=True \
+        -D BUILD_WSI_XLIB_SUPPORT=True \
+        -D BUILD_ICD=OFF \
+        -Wno-dev
 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
 }

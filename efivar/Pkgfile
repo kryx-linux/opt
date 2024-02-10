@@ -10,8 +10,8 @@ source=(https://github.com/rhboot/efivar/archive/refs/tags/$version.tar.gz)
 renames=($name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-	sed 's/docs//' -i Makefile
-	make -j1
-	make libdir=/usr/lib DESTDIR=$PKG install
+    cd $name-$version
+    sed 's/docs//' -i Makefile
+    make -j1
+    make libdir=/usr/lib DESTDIR=$PKG install
 }

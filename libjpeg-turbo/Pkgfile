@@ -9,14 +9,14 @@ release=1
 source=(https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/$version/$name-$version.tar.gz)
 
 build() {
-	cmake -S $name-$version -B build -G Ninja \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_INSTALL_LIBDIR=/usr/lib \
-		-D WITH_JPEG8=ON
-	cmake --build build -j ${JOBS:-1}
-	DESTDIR=$PKG cmake --install build
+    cmake -S $name-$version -B build -G Ninja \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBDIR=/usr/lib \
+        -D WITH_JPEG8=ON
+    cmake --build build -j ${JOBS:-1}
+    DESTDIR=$PKG cmake --install build
 
-	rm -r $PKG/usr/share/doc
+    rm -r $PKG/usr/share/doc
 }

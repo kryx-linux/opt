@@ -8,7 +8,7 @@ release=1
 source=(https://icon-theme.freedesktop.org/releases/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr
-	make DESTDIR=$PKG install
+    cd $name-$version
+    ./configure --prefix=/usr
+    make DESTDIR=$PKG install
 }

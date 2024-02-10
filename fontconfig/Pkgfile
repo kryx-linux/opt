@@ -9,24 +9,24 @@ release=2
 source=(https://fontconfig.org/release/$name-$version.tar.xz)
 
 build() {
-	meson setup $name-$version build \
-		--prefix=/usr \
-		--buildtype=plain \
-		--wrap-mode=nodownload \
-		-D b_lto=true \
-		-D b_pie=true \
-		-D doc-man=enabled \
-		-D doc=disabled \
-		-D nls=disabled \
-		-D tests=disabled \
-		-D cache-build=disabled
-	meson compile -C build -j ${JOBS:-1}
-	DESTDIR=$PKG meson install -C build
+    meson setup $name-$version build \
+        --prefix=/usr \
+        --buildtype=plain \
+        --wrap-mode=nodownload \
+        -D b_lto=true \
+        -D b_pie=true \
+        -D doc-man=enabled \
+        -D doc=disabled \
+        -D nls=disabled \
+        -D tests=disabled \
+        -D cache-build=disabled
+    meson compile -C build -j ${JOBS:-1}
+    DESTDIR=$PKG meson install -C build
 
-	# Enabling autohinting by default
-	pushd $PKG/etc/fonts/conf.d
-	ln -sf ../../../usr/share/fontconfig/conf.avail/10-autohint.conf
-	popd
+    # Enabling autohinting by default
+    pushd $PKG/etc/fonts/conf.d
+    ln -sf ../../../usr/share/fontconfig/conf.avail/10-autohint.conf
+    popd
 
-	rm -f $PKG/etc/fonts/conf.d/README
+    rm -f $PKG/etc/fonts/conf.d/README
 }

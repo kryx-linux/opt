@@ -9,7 +9,7 @@ release=1
 source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/vulkan-sdk-$version/SPIRV-Tools-v$version.tar.gz)
 
 build() {
-	PKGMK_SPIRV_TOOLS+=" \
+    PKGMK_SPIRV_TOOLS+=" \
 -G Ninja \
 -S SPIRV-Tools-vulkan-sdk-$version \
 -D CMAKE_INSTALL_PREFIX=/usr \
@@ -20,18 +20,18 @@ build() {
 -D SPIRV_TOOLS_BUILD_STATIC=OFF \
 -Wno-dev"
 
-	cmake -B build-static $PKGMK_SPIRV_TOOLS \
-		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-		-D BUILD_SHARED_LIBS=OFF
-	cmake --build build-static
+    cmake -B build-static $PKGMK_SPIRV_TOOLS \
+        -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -D BUILD_SHARED_LIBS=OFF
+    cmake --build build-static
 
-	cmake -B build-shared $PKGMK_SPIRV_TOOLS \
-		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-		-D BUILD_SHARED_LIBS=ON
-	cmake --build build-shared
+    cmake -B build-shared $PKGMK_SPIRV_TOOLS \
+        -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -D BUILD_SHARED_LIBS=ON
+    cmake --build build-shared
 
-	DESTDIR=$PKG cmake --build build-static --target install
-	DESTDIR=$PKG cmake --build build-shared --target install
+    DESTDIR=$PKG cmake --build build-static --target install
+    DESTDIR=$PKG cmake --build build-shared --target install
 }

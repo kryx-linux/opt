@@ -7,21 +7,21 @@ name=wget
 version=1.21.4
 release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.lz \
-	wgetrc)
+    wgetrc)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--disable-debug \
-		--disable-nls \
-		--with-ssl=openssl
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --disable-debug \
+        --disable-nls \
+        --with-ssl=openssl
 
-	make
-	make DESTDIR=$PKG install
-	install -D -m 644 $SRC/wgetrc $PKG/etc/wgetrc
+    make
+    make DESTDIR=$PKG install
+    install -D -m 644 $SRC/wgetrc $PKG/etc/wgetrc
 
-	rm -r $PKG/usr/share/info
+    rm -r $PKG/usr/share/info
 }

@@ -9,8 +9,8 @@ release=1
 source=(http://ftp.rpm.org/popt/releases/popt-1.x/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr --disable-nls
-	make
-	make DESTDIR=$PKG install
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
 }

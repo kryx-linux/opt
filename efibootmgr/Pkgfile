@@ -9,13 +9,13 @@ release=1
 source=(https://github.com/rhboot/efibootmgr/archive/$version/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	export CFLAGS="${CFLAGS} -Wno-error=pointer-sign"
-	sed -e '/extern int efi_set_verbose/d' -i src/efibootmgr.c
+    export CFLAGS="${CFLAGS} -Wno-error=pointer-sign"
+    sed -e '/extern int efi_set_verbose/d' -i src/efibootmgr.c
 
-	EFIDIR=/boot/efi make
+    EFIDIR=/boot/efi make
 
-	install -D src/efibootmgr $PKG/usr/sbin/efibootmgr
-	install -D src/efibootmgr.8 $PKG/usr/share/man/man8/efibootmgr.8
+    install -D src/efibootmgr $PKG/usr/sbin/efibootmgr
+    install -D src/efibootmgr.8 $PKG/usr/share/man/man8/efibootmgr.8
 }

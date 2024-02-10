@@ -9,18 +9,18 @@ release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz)
 
 build() {
-	cd $name-v$version
+    cd $name-v$version
 
-	./configure \
-		--prefix=/usr \
-		--bindir=/sbin \
-		--disable-convert \
-		--disable-zoned \
-		--disable-documentation
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --bindir=/sbin \
+        --disable-convert \
+        --disable-zoned \
+        --disable-documentation
+    make
+    make DESTDIR=$PKG install
 
-	install -d $PKG/usr/share/man/man{5,8}
-	install -m 644 Documentation/*.5 $PKG/usr/share/man/man5
-	install -m 644 Documentation/*.8 $PKG/usr/share/man/man8
+    install -d $PKG/usr/share/man/man{5,8}
+    install -m 644 Documentation/*.5 $PKG/usr/share/man/man5
+    install -m 644 Documentation/*.8 $PKG/usr/share/man/man8
 }

@@ -8,15 +8,15 @@ release=1
 source=(https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--disable-nls \
-		--enable-static \
-		--enable-install-gpg-error-config
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-nls \
+        --enable-static \
+        --enable-install-gpg-error-config
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/info/
+    rm -r $PKG/usr/share/info/
 }

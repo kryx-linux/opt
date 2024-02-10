@@ -7,20 +7,20 @@ name=compiler-rt
 version=17.0.6
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/compiler-rt-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz)
+    https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
+    https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz)
 
 build() {
-	mv llvm-$version.src llvm
-	mv cmake-$version.src cmake
+    mv llvm-$version.src llvm
+    mv cmake-$version.src cmake
 
-	cmake -S $name-$version.src -B build -G Ninja \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-D COMPILER_RT_INSTALL_PATH=/usr/lib/clang/${version:0:2} \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S $name-$version.src -B build -G Ninja \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D COMPILER_RT_INSTALL_PATH=/usr/lib/clang/${version:0:2} \
+        -Wno-dev
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
 }
