@@ -1,6 +1,6 @@
-diff -Nru dnsmasq-2.88.orig/dnsmasq.conf.example dnsmasq-2.88/dnsmasq.conf.example
---- dnsmasq-2.88.orig/dnsmasq.conf.example	2022-12-05 08:16:20.476784879 +0100
-+++ dnsmasq-2.88/dnsmasq.conf.example	2022-12-05 08:16:47.219423244 +0100
+diff -Nru dnsmasq-2.90.orig/dnsmasq.conf.example dnsmasq-2.90/dnsmasq.conf.example
+--- dnsmasq-2.90.orig/dnsmasq.conf.example	2024-02-13 18:55:49.047945740 +0100
++++ dnsmasq-2.90/dnsmasq.conf.example	2024-02-13 18:56:05.594774718 +0100
 @@ -22,7 +22,7 @@
  
  # Uncomment these to enable DNSSEC validation and caching:
@@ -30,10 +30,10 @@ diff -Nru dnsmasq-2.88.orig/dnsmasq.conf.example dnsmasq-2.88/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.88.orig/src/config.h dnsmasq-2.88/src/config.h
---- dnsmasq-2.88.orig/src/config.h	2022-12-05 08:16:20.476784879 +0100
-+++ dnsmasq-2.88/src/config.h	2022-12-05 08:16:47.219423244 +0100
-@@ -46,7 +46,7 @@
+diff -Nru dnsmasq-2.90.orig/src/config.h dnsmasq-2.90/src/config.h
+--- dnsmasq-2.90.orig/src/config.h	2024-02-13 18:55:49.044612374 +0100
++++ dnsmasq-2.90/src/config.h	2024-02-13 18:56:05.594774718 +0100
+@@ -49,7 +49,7 @@
  #define DEFLEASE 3600 /* default DHCPv4 lease time, one hour */
  #define DEFLEASE6 (3600*24) /* default lease time for DHCPv6. One day. */
  #define CHUSER "nobody"
@@ -42,7 +42,7 @@ diff -Nru dnsmasq-2.88.orig/src/config.h dnsmasq-2.88/src/config.h
  #define TFTP_MAX_CONNECTIONS 50 /* max simultaneous connections */
  #define LOG_MAX 5 /* log-queue length */
  #define RANDFILE "/dev/urandom"
-@@ -211,7 +211,7 @@
+@@ -214,7 +214,7 @@
  #   elif defined(__ANDROID__)
  #      define LEASEFILE "/data/misc/dhcp/dnsmasq.leases"
  #   else
@@ -51,7 +51,7 @@ diff -Nru dnsmasq-2.88.orig/src/config.h dnsmasq-2.88/src/config.h
  #   endif
  #endif
  
-@@ -235,7 +235,7 @@
+@@ -238,7 +238,7 @@
  #   if defined(__ANDROID__)
  #      define RUNFILE "/data/dnsmasq.pid"
  #    else
