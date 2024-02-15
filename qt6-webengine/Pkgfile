@@ -5,10 +5,9 @@
 # Optional: dav1d fdk-aac gnutls graphite2 keyutils krb5 lame lcms2 libpcre2 libvdpau numactl pipewire x264 x265
 
 name=qt6-webengine
-version=6.6.1
+version=6.6.2
 release=1
-source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz
-  qtwebengine-6.5.3-libxml2-2.12.patch)
+source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz)
 
 build() {
   if [[ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]]; then
@@ -28,8 +27,6 @@ build() {
   PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
   prt-get isinst sccache && echo "${PATH}" | grep --invert-match '/usr/lib/ccache' && \
   PKGMK_QT6+=' -D CMAKE_C_COMPILER_LAUNCHER=sccache -D CMAKE_CXX_COMPILER_LAUNCHER=sccache'
-
-  patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/qtwebengine-6.5.3-libxml2-2.12.patch
 
   sed -e 's/^#define BA_LB_COUNT.*$/#define BA_LB_COUNT 40/' \
     -i qtwebengine-everywhere-src-$version/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
