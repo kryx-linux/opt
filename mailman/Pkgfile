@@ -1,44 +1,23 @@
 # Description: Mailman, the GNU Mailing List Manager
-# URL: http://www.gnu.org/software/mailman/
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Jose V Beneyto, sepen at crux dot nu
-# Depends on: dnspython
+# URL: https://www.gnu.org/software/mailman/
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: gunicorn python3-aiosmtpd python3-alembic python3-authheaders python3-click python3-dateutil python3-falcon python3-flufl-bounce python3-flufl-i18n python3-flufl-lock python3-lazr-config python3-passlib python3-requests python3-zope-component python3-zope-configuration
 
 name=mailman
-version=2.1.23
+version=3.3.9
 release=1
-source=(http://ftp.gnu.org/gnu/$name/$name-$version.tgz \
-        $name.rc)
+source=(https://gitlab.com/mailman/mailman/-/archive/v$version/mailman-v$version.tar.bz2
+  $name.rc)
 
 build() {
-  cd $name-$version
+  cd $name-v$version
 
-  # update patch from 2.1.5 to 2.1.21
-  sed 's|# pidfile: .*|# pidfile: @VAR_PREFIX@/data/master-qrunner.pid|' -i contrib/redhat_fhs.patch
-  patch -p1 -i contrib/redhat_fhs.patch
+  printf "[mailman]\nlayout: fhs\n" >> ../mailman.cfg
+  sed -e 's|/var/tmp/mailman|/var/lib/mailman|g' -i src/mailman/config/schema.cfg
 
-  rm -f configure
-  aclocal
-  autoconf
+  /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+  /usr/bin/python3 -m installer --compile-bytecode 2 --destdir=$PKG dist/*.whl
 
-  ./configure --prefix=/usr/lib/$name \
-              --with-var-prefix=/var/lib/$name \
-              --with-config-dir=/etc/$name \
-              --with-lock-dir=/var/lock/$name \
-              --with-log-dir=/var/log/$name \
-              --with-pid-dir=/var/run/$name \
-              --with-queue-dir=/var/spool/$name \
-              --with-mailhost=localhost.localdomain \
-              --with-urlhost=localhost.localdomain \
-              --with-mail-gid=$name \
-              --with-cgi-id=www \
-              --with-cgi-gid=www \
-              --without-permcheck
-              
-  make
-  make DESTDIR=$PKG install
-  install -D -m 0755 $SRC/$name.rc $PKG/etc/rc.d/$name
-  
   # create empty crontab
   install -d $PKG/etc/cron.d
   cat > $PKG/etc/cron.d/$name << __EOF__
@@ -52,13 +31,14 @@ build() {
 __EOF__
 
   # fix permissions
-  chown -R root:$name $PKG/etc/$name $PKG/usr/lib/$name $PKG/var/{lib,lock,log,run,spool}/$name
+  mkdir -p $PKG/etc/$name $PKG/usr/lib/$name $PKG/var/{lib,lock,log,spool}/$name $PKG/var/lib/$name/archives/private
+  chown -R root:$name $PKG/etc/$name $PKG/usr/lib/$name $PKG/var/{lib,lock,log,spool}/$name
   chmod 0775 $PKG/var/log/$name
   chmod 1777 $PKG/var/lock
   find $PKG/usr/lib/$name -type d -exec chmod 0775 {} \;
   chmod o+x $PKG/var/lib/$name/archives/private
 
   # fix configs
-  ln -sf /usr/lib/$name/Mailman/mm_cfg.py $PKG/etc/$name
-  ln -sf /etc/$name/sitelist.cfg $PKG/var/lib/$name/data
+  install -vDm 640 ../mailman.cfg -t $PKG/etc/
+  #ln -sf /etc/$name/sitelist.cfg $PKG/var/lib/$name/data
 }
