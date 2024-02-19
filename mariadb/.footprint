@@ -251,6 +251,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/authors.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/backup.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/bounded_queue.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/char_buffer.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/charset_collations.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/client_settings.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/compat56.h
@@ -264,6 +265,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/ddl_log.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/debug.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/debug_sync.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/deprecation.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/derived_handler.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/derror.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/des_key_file.h
@@ -319,6 +321,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/keycaches.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex_charset.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/lex_ident.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex_string.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex_symbol.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lf.h
@@ -528,6 +531,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_json.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_real.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_string.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/sql_type_timeofday.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_udf.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_union.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/sql_update.h

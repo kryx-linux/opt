@@ -1,10 +1,10 @@
 # Description: Classes for QML and JavaScript languages
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: at-spi2-core qt6-shadertools
+# Depends on: qt6-shadertools
 
 name=qt6-declarative
-version=6.6.1
+version=6.6.2
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtdeclarative-everywhere-src-$version.tar.xz)
 
