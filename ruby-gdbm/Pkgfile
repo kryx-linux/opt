@@ -9,13 +9,13 @@ release=3
 source=(https://rubygems.org/downloads/gdbm-$version.gem)
 
 build() {
-	gem install gdbm \
-		--ignore-dependencies \
-		--no-user-install \
-		--no-document \
-		--local \
-		--build-root $PKG
+    gem install gdbm \
+        --ignore-dependencies \
+        --no-user-install \
+        --no-document \
+        --local \
+        --build-root $PKG
 
-	cd $PKG/$(gem env gemdir)
-	rm -r cache doc build_info
+    cd $PKG/$(gem env gemdir)
+    rm -r cache doc build_info
 }

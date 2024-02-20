@@ -7,29 +7,29 @@ name=libunique
 version=1.1.6
 release=6
 source=(http://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.bz2 \
-		$name-$version-G_CONST_RETURN.patch \
-		$name-$version-compiler-warnings.patch \
-		$name-$version-fix-test.patch \
-		$name-$version-include-terminator.patch)
+        $name-$version-G_CONST_RETURN.patch \
+        $name-$version-compiler-warnings.patch \
+        $name-$version-fix-test.patch \
+        $name-$version-include-terminator.patch)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	# patches from Gentto
-	patch -p1 -i $SRC/$name-$version-include-terminator.patch
-	patch -p1 -i $SRC/$name-$version-fix-test.patch
-	patch -p1 -i $SRC/$name-$version-compiler-warnings.patch
-	patch -p1 -i $SRC/$name-$version-G_CONST_RETURN.patch
+    # patches from Gentto
+    patch -p1 -i $SRC/$name-$version-include-terminator.patch
+    patch -p1 -i $SRC/$name-$version-fix-test.patch
+    patch -p1 -i $SRC/$name-$version-compiler-warnings.patch
+    patch -p1 -i $SRC/$name-$version-G_CONST_RETURN.patch
 
-	./configure \
-		--prefix=/usr \
-		--disable-dbus \
-		--disable-debug \
-		--disable-gtk-doc \
-		--with-x
+    ./configure \
+        --prefix=/usr \
+        --disable-dbus \
+        --disable-debug \
+        --disable-gtk-doc \
+        --with-x
 
-	make CFLAGS+=" -Wno-error -Wno-deprecated-declarations"
-	make DESTDIR=$PKG install
+    make CFLAGS+=" -Wno-error -Wno-deprecated-declarations"
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/gtk-doc
+    rm -r $PKG/usr/share/gtk-doc
 }

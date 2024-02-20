@@ -9,16 +9,16 @@ release=1
 source=(https://ftp.osuosl.org/pub/midnightcommander/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--libexecdir=/usr/lib \
-		--disable-nls \
-		--with-screen=ncurses
+    ./configure \
+        --prefix=/usr \
+        --libexecdir=/usr/lib \
+        --disable-nls \
+        --with-screen=ncurses
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 
-	rm $PKG/usr/lib/mc/*/README*
+    rm $PKG/usr/lib/mc/*/README*
 }

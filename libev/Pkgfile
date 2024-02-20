@@ -8,9 +8,9 @@ release=1
 source=(http://dist.schmorp.de/$name/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr
-	make
-	make prefix=$PKG/usr install
-	rm $PKG/usr/include/event.h
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make prefix=$PKG/usr install
+    rm $PKG/usr/include/event.h
 }

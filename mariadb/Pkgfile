@@ -7,47 +7,47 @@ name=mariadb
 version=11.3.2
 release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz
-	mariadb.rc mariadb.pam
-	pre-install
-	libfmt.patch)
+    mariadb.rc mariadb.pam
+    pre-install
+    libfmt.patch)
 
 build() {
-	patch -d $name-$version/cmake -i $SRC/libfmt.patch
+    patch -d $name-$version/cmake -i $SRC/libfmt.patch
 
-	cmake -S $name-$version -B build -G Ninja \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D INSTALL_LAYOUT=RPM \
-		-D INSTALL_LIBDIR=lib \
-		-D INSTALL_PLUGINDIR=lib/mysql/plugin \
-		-D INSTALL_PCDIR=/usr/lib/pkgconfig \
-		-D INSTALL_PAMDIR=/lib/security \
-		-D MYSQL_DATADIR=/var/lib/mysql \
-		-D MYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
-		-D WITH_READLINE=ON \
-		-D WITH_LIBAIO=ON \
-		-D WITH_ZLIB=system \
-		-D WITH_SSL=system \
-		-D WITH_PCRE=system \
-		-D WITH_LIBFMT=system \
-		-D WITH_SYSTEMD=no \
-		-D WITH_EXTRA_CHARSETS=complex \
-		-D WITH_EMBEDDED_SERVER=ON \
-		-D WITH_UNIT_TESTS=OFF \
-		-D SKIP_TESTS=ON
+    cmake -S $name-$version -B build -G Ninja \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D INSTALL_LAYOUT=RPM \
+        -D INSTALL_LIBDIR=lib \
+        -D INSTALL_PLUGINDIR=lib/mysql/plugin \
+        -D INSTALL_PCDIR=/usr/lib/pkgconfig \
+        -D INSTALL_PAMDIR=/lib/security \
+        -D MYSQL_DATADIR=/var/lib/mysql \
+        -D MYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock \
+        -D WITH_READLINE=ON \
+        -D WITH_LIBAIO=ON \
+        -D WITH_ZLIB=system \
+        -D WITH_SSL=system \
+        -D WITH_PCRE=system \
+        -D WITH_LIBFMT=system \
+        -D WITH_SYSTEMD=no \
+        -D WITH_EXTRA_CHARSETS=complex \
+        -D WITH_EMBEDDED_SERVER=ON \
+        -D WITH_UNIT_TESTS=OFF \
+        -D SKIP_TESTS=ON
 
-	cmake --build build -j ${JOBS:-1}
-	DESTDIR=$PKG cmake --install build
+    cmake --build build -j ${JOBS:-1}
+    DESTDIR=$PKG cmake --install build
 
-	rm -r $PKG/etc/{init.d,logrotate.d}
-	rm -r $PKG/usr/share/{doc,groonga*,mariadb-test}
-	rm $PKG/usr/sbin/rcmysql
-	rm $PKG/usr/share/man/man1/mysql-test-run.pl.1
-	find $PKG/usr/share/mariadb/* -type d ! -name english ! -name charsets | xargs rm -rf {} \;
+    rm -r $PKG/etc/{init.d,logrotate.d}
+    rm -r $PKG/usr/share/{doc,groonga*,mariadb-test}
+    rm $PKG/usr/sbin/rcmysql
+    rm $PKG/usr/share/man/man1/mysql-test-run.pl.1
+    find $PKG/usr/share/mariadb/* -type d ! -name english ! -name charsets | xargs rm -rf {} \;
 
-	install -d -m 700 -o mysql -g mysql $PKG/var/{lib,log}/mysql
+    install -d -m 700 -o mysql -g mysql $PKG/var/{lib,log}/mysql
 
-	install -D -m 755 $SRC/mariadb.rc  $PKG/etc/rc.d/mariadb
-	install -D -m 644 $SRC/mariadb.pam $PKG/etc/pam.d/mysql
+    install -D -m 755 $SRC/mariadb.rc  $PKG/etc/rc.d/mariadb
+    install -D -m 644 $SRC/mariadb.pam $PKG/etc/pam.d/mysql
 }

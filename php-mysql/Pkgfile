@@ -9,20 +9,20 @@ release=1
 source=(https://php.net/distributions/php-$version.tar.xz)
 
 build () {
-	cd php-$version
+    cd php-$version
 
-	./configure \
-		--disable-all \
-		--enable-pdo=shared \
-		--enable-mysqlnd=shared \
-		--with-mysqli=shared,mysqlnd \
-		--with-pdo-mysql=shared,mysqlnd
+    ./configure \
+        --disable-all \
+        --enable-pdo=shared \
+        --enable-mysqlnd=shared \
+        --with-mysqli=shared,mysqlnd \
+        --with-pdo-mysql=shared,mysqlnd
 
-	make build-modules
+    make build-modules
 
-	install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
-	install -m 755 modules/*mysql*.so $PKG/usr/lib/php/extensions
+    install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
+    install -m 755 modules/*mysql*.so $PKG/usr/lib/php/extensions
 
-	printf 'extension=%s\n' {mysqlnd,mysqli,pdo_mysql}.so \
-		> $PKG/etc/php/conf.d/mysql.ini
+    printf 'extension=%s\n' {mysqlnd,mysqli,pdo_mysql}.so \
+        > $PKG/etc/php/conf.d/mysql.ini
 }

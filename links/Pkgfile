@@ -9,12 +9,12 @@ release=1
 source=(http://links.twibright.com/download/links-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man
+    ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 }

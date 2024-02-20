@@ -9,22 +9,22 @@ release=1
 source=(https://github.com/vim/vim/archive/v${version}/vim-$version.tar.gz)
 
 build() {
-	cd vim-$version/src
+    cd vim-$version/src
 
-	sed -i '/^CFLAGS/d' Makefile
+    sed -i '/^CFLAGS/d' Makefile
 
-	./configure \
-		--prefix=/usr \
-		--with-vim-name=gvim \
-		--with-x=yes \
-		--enable-gui=gtk3 \
-		--enable-multibyte \
-		--enable-cscope \
-		--disable-gpm \
-		--disable-nls
+    ./configure \
+        --prefix=/usr \
+        --with-vim-name=gvim \
+        --with-x=yes \
+        --enable-gui=gtk3 \
+        --enable-multibyte \
+        --enable-cscope \
+        --disable-gpm \
+        --disable-nls
 
-	make VIMRTDIR=
-	make VIMRTDIR= DESTDIR=$PKG installvimbin install-icons
+    make VIMRTDIR=
+    make VIMRTDIR= DESTDIR=$PKG installvimbin install-icons
 
-	sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
+    sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
 }

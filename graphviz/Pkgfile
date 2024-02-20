@@ -10,15 +10,15 @@ release=1
 source=(https://gitlab.com/graphviz/graphviz/-/archive/$version/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	# build fails if swig is installed but tcl is not
-	prt-get isinst swig && ! prt-get isinst tcl && PKGMK_GRAPHVIZ='--disable-swig'
+    # build fails if swig is installed but tcl is not
+    prt-get isinst swig && ! prt-get isinst tcl && PKGMK_GRAPHVIZ='--disable-swig'
 
-	./autogen.sh NOCONFIG
-	./configure --prefix=/usr $PKGMK_GRAPHVIZ
-	make
-	make DESTDIR=$PKG install
+    ./autogen.sh NOCONFIG
+    ./configure --prefix=/usr $PKGMK_GRAPHVIZ
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/doc
+    rm -r $PKG/usr/share/doc
 }

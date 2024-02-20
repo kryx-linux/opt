@@ -8,21 +8,21 @@ name=chrony
 version=4.5
 release=1
 source=(https://chrony-project.org/releases/$name-$version.tar.gz
-	chronyd)
+    chronyd)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--chronyrundir=/run/chrony \
-		--with-pidfile=/run/chrony/chronyd.pid \
-		--with-user=chrony
+    ./configure \
+        --prefix=/usr \
+        --chronyrundir=/run/chrony \
+        --with-pidfile=/run/chrony/chronyd.pid \
+        --with-user=chrony
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 
-	install -d -o chrony -g chrony -m 0750 $PKG/var/{lib,log}/chrony
-	install -D -m 0755 $SRC/chronyd $PKG/etc/rc.d/chronyd
-	install examples/chrony.conf.example1 $PKG/etc/chrony.conf
+    install -d -o chrony -g chrony -m 0750 $PKG/var/{lib,log}/chrony
+    install -D -m 0755 $SRC/chronyd $PKG/etc/rc.d/chronyd
+    install examples/chrony.conf.example1 $PKG/etc/chrony.conf
 }

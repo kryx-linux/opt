@@ -9,16 +9,16 @@ release=1
 source=(https://www.php.net/distributions/php-$version.tar.xz)
 
 build() {
-	cd php-$version
+    cd php-$version
 
-	./configure \
-		--disable-all \
-		--enable-mbstring=shared \
-		--with-external-pcre
-	make build-modules
+    ./configure \
+        --disable-all \
+        --enable-mbstring=shared \
+        --with-external-pcre
+    make build-modules
 
-	install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
-	install -m 755 modules/mbstring.so $PKG/usr/lib/php/extensions/
+    install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
+    install -m 755 modules/mbstring.so $PKG/usr/lib/php/extensions/
 
-	printf 'extension=%s\n' mbstring.so > $PKG/etc/php/conf.d/mbstring.ini
+    printf 'extension=%s\n' mbstring.so > $PKG/etc/php/conf.d/mbstring.ini
 }

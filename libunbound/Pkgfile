@@ -9,12 +9,12 @@ release=1
 source=(https://unbound.net/downloads/unbound-$version.tar.gz)
 
 build () {
-	cd unbound-$version
+    cd unbound-$version
 
-	./configure \
-		--prefix=/usr \
-		--with-libunbound-only
+    ./configure \
+        --prefix=/usr \
+        --with-libunbound-only
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 }

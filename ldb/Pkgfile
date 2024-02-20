@@ -11,14 +11,14 @@ release=1
 source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--with-modulesdir=/usr/lib \
-		--bundled-libraries=NONE \
-		--without-ldb-lmdb
+    ./configure \
+        --prefix=/usr \
+        --with-modulesdir=/usr/lib \
+        --bundled-libraries=NONE \
+        --without-ldb-lmdb
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 }

@@ -9,20 +9,20 @@ release=1
 source=(https://www.sdaoden.eu/downloads/s-nail-$version.tar.xz)
 
 build() {
-	cd s-nail-$version
+    cd s-nail-$version
 
-	make config \
-		VAL_SID= \
-		VAL_MAILX=mailx \
-		VAL_PREFIX=/usr \
-		VAL_LIBEXECDIR=/usr/lib/mailx \
-		OPT_AUTOCC=no
+    make config \
+        VAL_SID= \
+        VAL_MAILX=mailx \
+        VAL_PREFIX=/usr \
+        VAL_LIBEXECDIR=/usr/lib/mailx \
+        OPT_AUTOCC=no
 
-	make DESTDIR=$PKG install
+    make DESTDIR=$PKG install
 
-	chmod -R u+w $PKG
+    chmod -R u+w $PKG
 
-	ln -s mailx   $PKG/usr/bin/Mail
-	ln -s mailx   $PKG/usr/bin/mail
-	ln -s mailx.1 $PKG/usr/share/man/man1/mail.1
+    ln -s mailx   $PKG/usr/bin/Mail
+    ln -s mailx   $PKG/usr/bin/mail
+    ln -s mailx.1 $PKG/usr/share/man/man1/mail.1
 }

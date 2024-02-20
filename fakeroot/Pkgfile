@@ -8,10 +8,10 @@ release=1
 source=(https://deb.debian.org/debian/pool/main/f/$name/${name}_${version}.orig.tar.gz)
 
 build() {
-	cd $name-$version
-	sed -i '/^SUBDIRS/d' doc/Makefile.am
-	./bootstrap
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    cd $name-$version
+    sed -i '/^SUBDIRS/d' doc/Makefile.am
+    ./bootstrap
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
 }

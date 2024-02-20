@@ -9,9 +9,9 @@ release=1
 source=(https://github.com/bcpierce00/unison/archive/v$version/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-	make UISTYLE=text THREADS=true NATIVE=true
-	install -d $PKG/usr/{bin,share/man/man1}
-	install -m 0755 src/{unison,unison-fsmonitor} $PKG/usr/bin/
-	install -m 0644 man/unison.1 $PKG/usr/share/man/man1
+    cd $name-$version
+    make UISTYLE=text THREADS=true NATIVE=true
+    install -d $PKG/usr/{bin,share/man/man1}
+    install -m 0755 src/{unison,unison-fsmonitor} $PKG/usr/bin/
+    install -m 0644 man/unison.1 $PKG/usr/share/man/man1
 }

@@ -9,17 +9,17 @@ release=1
 source=(https://www.php.net/distributions/php-$version.tar.xz)
 
 build() {
-	cd php-$version
+    cd php-$version
 
-	./configure \
-		--disable-all \
-		--enable-gd=shared \
-		--with-external-gd
+    ./configure \
+        --disable-all \
+        --enable-gd=shared \
+        --with-external-gd
 
-	make build-modules
+    make build-modules
 
-	install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
-	install -m 755 modules/gd.so $PKG/usr/lib/php/extensions/
+    install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
+    install -m 755 modules/gd.so $PKG/usr/lib/php/extensions/
 
-	printf 'extension=%s\n' gd.so > $PKG/etc/php/conf.d/gd.ini
+    printf 'extension=%s\n' gd.so > $PKG/etc/php/conf.d/gd.ini
 }

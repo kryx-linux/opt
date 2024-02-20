@@ -8,10 +8,10 @@ release=1
 source=(https://cpan.metacpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-$version.tar.gz)
 
 build() {
-	cd Parse-Yapp-$version
-	perl Makefile.PL
-	make OPTIMIZE="$CFLAGS"
-	make DESTDIR=$PKG install
-	find $PKG \( -name perllocal.pod -o -name .packlist \) -exec rm {} \;
-	find $PKG -depth -type d -empty -exec rm -rf {} \;
+    cd Parse-Yapp-$version
+    perl Makefile.PL
+    make OPTIMIZE="$CFLAGS"
+    make DESTDIR=$PKG install
+    find $PKG \( -name perllocal.pod -o -name .packlist \) -exec rm {} \;
+    find $PKG -depth -type d -empty -exec rm -rf {} \;
 }

@@ -10,15 +10,15 @@ release=1
 source=(https://github.com/OpenPrinting/cups-filters/releases/download/$version/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	prt-get isinst avahi || PKGMK_CUPSFILTERS+=' --disable-avahi'
-	prt-get isinst mupdf || PKGMK_CUPSFILTERS+=' --disable-mutool'
-	prt-get isinst poppler || PKGMK_CUPSFILTERS+=' --disable-poppler'
+    prt-get isinst avahi || PKGMK_CUPSFILTERS+=' --disable-avahi'
+    prt-get isinst mupdf || PKGMK_CUPSFILTERS+=' --disable-mutool'
+    prt-get isinst poppler || PKGMK_CUPSFILTERS+=' --disable-poppler'
 
-	./configure $PKGMK_CUPSFILTERS --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    ./configure $PKGMK_CUPSFILTERS --prefix=/usr
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/doc
+    rm -r $PKG/usr/share/doc
 }

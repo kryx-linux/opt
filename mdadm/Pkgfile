@@ -6,15 +6,15 @@ name=mdadm
 version=4.2
 release=2
 source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.xz
-	$name-$version-in_initrd-collision.patch)
+    $name-$version-in_initrd-collision.patch)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	# From gentoo
-	patch -p1 -i $SRC/$name-$version-in_initrd-collision.patch
+    # From gentoo
+    patch -p1 -i $SRC/$name-$version-in_initrd-collision.patch
 
-	make all mdadm.static
-	make DESTDIR=$PKG install
-	install -m0755 mdadm.static $PKG/sbin
+    make all mdadm.static
+    make DESTDIR=$PKG install
+    install -m0755 mdadm.static $PKG/sbin
 }

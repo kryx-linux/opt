@@ -10,19 +10,19 @@ release=1
 source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	PKGMK_GNUPLOT='--with-qt=no'
-	prt-get isinst qt5 && PKGMK_GNUPLOT='--with-qt=qt5'
-	prt-get isinst qt6-5compat qt6-tools qt6-svg && PKGMK_GNUPLOT='--with-qt=qt6'
+    PKGMK_GNUPLOT='--with-qt=no'
+    prt-get isinst qt5 && PKGMK_GNUPLOT='--with-qt=qt5'
+    prt-get isinst qt6-5compat qt6-tools qt6-svg && PKGMK_GNUPLOT='--with-qt=qt6'
 
-	./configure $PKGMK_GNUPLOT \
-		--prefix=/usr \
-		--libexecdir=/usr/lib
-	make
-	make DESTDIR=$PKG install
+    ./configure $PKGMK_GNUPLOT \
+        --prefix=/usr \
+        --libexecdir=/usr/lib
+    make
+    make DESTDIR=$PKG install
 
-	rm $PKG/usr/share/gnuplot/${version%.*}/js/README
-	rm -rf $PKG/usr/share/gnuplot/${version%.*}/qt
-	rm -r $PKG/usr/share/man/ja
+    rm $PKG/usr/share/gnuplot/${version%.*}/js/README
+    rm -rf $PKG/usr/share/gnuplot/${version%.*}/qt
+    rm -r $PKG/usr/share/man/ja
 }

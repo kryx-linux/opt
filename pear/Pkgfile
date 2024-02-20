@@ -9,13 +9,13 @@ release=1
 source=(https://php.net/distributions/php-8.3.1.tar.xz)
 
 build() {
-	cd php-8.3.1/pear
+    cd php-8.3.1/pear
 
-	export PHP_PEAR_SYSCONF_DIR=/etc/php
-	export INSTALL_ROOT=$PKG
+    export PHP_PEAR_SYSCONF_DIR=/etc/php
+    export INSTALL_ROOT=$PKG
 
-	php -n install-pear-nozlib.phar
+    php -n install-pear-nozlib.phar
 
-	rm -r $PKG/.{filemap,lock,depdb*,channels,registry}
-	rm -r $PKG/usr/lib/php/pear/{docs,tests}
+    rm -r $PKG/.{filemap,lock,depdb*,channels,registry}
+    rm -r $PKG/usr/lib/php/pear/{docs,tests}
 }

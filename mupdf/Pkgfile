@@ -10,20 +10,20 @@ release=1
 source=(https://mupdf.com/downloads/archive/$name-$version-source.tar.gz)
 
 build() {
-	cd $name-$version-source
+    cd $name-$version-source
 
-	PKGMK_MUPDF="USE_SYSTEM_LIBS=yes"
+    PKGMK_MUPDF="USE_SYSTEM_LIBS=yes"
 
-	prt-get isinst freeglut || PKGMK_MUPDF+=" USE_SYSTEM_GLUT=no"
-	prt-get isinst openjpeg2 || PKGMK_MUPDF+=" USE_SYSTEM_OPENJPEG=no"
-	prt-get isinst jbig2dec || PKGMK_MUPDF+=" USE_SYSTEM_JBIG2DEC=no"
-	prt-get isinst gumbo-parser || PKGMK_MUPDF+=" USE_SYSTEM_GUMBO=no"
+    prt-get isinst freeglut || PKGMK_MUPDF+=" USE_SYSTEM_GLUT=no"
+    prt-get isinst openjpeg2 || PKGMK_MUPDF+=" USE_SYSTEM_OPENJPEG=no"
+    prt-get isinst jbig2dec || PKGMK_MUPDF+=" USE_SYSTEM_JBIG2DEC=no"
+    prt-get isinst gumbo-parser || PKGMK_MUPDF+=" USE_SYSTEM_GUMBO=no"
 
-	make install $PKGMK_MUPDF\
-		prefix=$PKG/usr \
-		mandir=$PKG/usr/share/man \
-		XCFLAGS="-fpic -fcommon"
+    make install $PKGMK_MUPDF\
+        prefix=$PKG/usr \
+        mandir=$PKG/usr/share/man \
+        XCFLAGS="-fpic -fcommon"
 
-	ln -s mupdf-gl $PKG/usr/bin/mupdf
-	rm -r $PKG/usr/share/doc
+    ln -s mupdf-gl $PKG/usr/bin/mupdf
+    rm -r $PKG/usr/share/doc
 }

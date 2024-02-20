@@ -9,22 +9,22 @@ release=1
 source=(https://github.com/transmission/transmission/releases/download/$version/$name-$version.tar.xz)
 
 build() {
-	cmake -S $name-$version -B build -G Ninja \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D RUN_CLANG_TIDY=OFF \
-		-D ENABLE_TESTS=OFF \
-		-D ENABLE_NLS=OFF \
-		-D INSTALL_DOC=ON \
-		-D INSTALL_LIB=OFF \
-		-D ENABLE_GTK=OFF \
-		-D ENABLE_QT=OFF \
-		-D ENABLE_CLI=ON \
-		-D ENABLE_DAEMON=ON
+    cmake -S $name-$version -B build -G Ninja \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D RUN_CLANG_TIDY=OFF \
+        -D ENABLE_TESTS=OFF \
+        -D ENABLE_NLS=OFF \
+        -D INSTALL_DOC=ON \
+        -D INSTALL_LIB=OFF \
+        -D ENABLE_GTK=OFF \
+        -D ENABLE_QT=OFF \
+        -D ENABLE_CLI=ON \
+        -D ENABLE_DAEMON=ON
 
-	cmake --build build -j ${JOBS:-1}
-	DESTDIR=$PKG cmake --install build
+    cmake --build build -j ${JOBS:-1}
+    DESTDIR=$PKG cmake --install build
 
-	rm -r $PKG/usr/share/doc
-	find $PKG -name '*LICENSE*' -o -name '*LEGAL*' -delete
+    rm -r $PKG/usr/share/doc
+    find $PKG -name '*LICENSE*' -o -name '*LEGAL*' -delete
 }

@@ -9,18 +9,18 @@ release=2
 source=(http://download.sourceforge.net/project/courier/$name/$version/$name-$version.tar.bz2)
 
 build () {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--with-db=gdbm \
-		--enable-maildrop-uid=root \
-		--enable-maildrop-gid=root \
-		--disable-tempdir \
-		--enable-syslog=1
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --with-db=gdbm \
+        --enable-maildrop-uid=root \
+        --enable-maildrop-gid=root \
+        --disable-tempdir \
+        --enable-syslog=1
+    make
+    make DESTDIR=$PKG install
 
-	chmod u+s $PKG/usr/bin/maildrop
-	rm -r $PKG/usr/share/{man/man3,doc}
+    chmod u+s $PKG/usr/bin/maildrop
+    rm -r $PKG/usr/share/{man/man3,doc}
 }

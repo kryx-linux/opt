@@ -9,19 +9,19 @@ release=1
 source=(https://marlam.de/msmtp/releases/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	PKGMK_MSMTP="--with-tls=none"
-	prt-get isinst openssl && PKGMK_MSMTP="--with-tls=openssl"
-	prt-get isinst gnutls  && PKGMK_MSMTP="--with-tls=gnutls"
+    PKGMK_MSMTP="--with-tls=none"
+    prt-get isinst openssl && PKGMK_MSMTP="--with-tls=openssl"
+    prt-get isinst gnutls  && PKGMK_MSMTP="--with-tls=gnutls"
 
-	./configure \
-		$PKGMK_MSMTP \
-		--prefix=/usr \
-		--disable-nls
+    ./configure \
+        $PKGMK_MSMTP \
+        --prefix=/usr \
+        --disable-nls
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/info
+    rm -r $PKG/usr/share/info
 }

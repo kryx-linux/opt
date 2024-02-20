@@ -9,12 +9,12 @@ release=1
 source=(https://ftpmirror.gnu.org/gnu/a2ps/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure --prefix=/usr --disable-nls
-	make
-	make DESTDIR=$PKG install
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/{info,emacs}
-	find $PKG -type f -name README -delete
+    rm -r $PKG/usr/share/{info,emacs}
+    find $PKG -type f -name README -delete
 }

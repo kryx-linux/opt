@@ -9,10 +9,10 @@ release=1
 source=(https://www.nano-editor.org/dist/v${version%%.*}/$name-$version.tar.xz)
 
 build(){
-	cd $name-$version
-	./configure --prefix=/usr --disable-nls
-	make
-	make DESTDIR=$PKG install
-	install -D -m 644 doc/sample.nanorc $PKG/usr/etc/nanorc
-	rm -r $PKG/usr/share/{doc,info}
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
+    install -D -m 644 doc/sample.nanorc $PKG/usr/etc/nanorc
+    rm -r $PKG/usr/share/{doc,info}
 }

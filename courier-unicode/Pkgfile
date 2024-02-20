@@ -8,8 +8,8 @@ release=1
 source=(http://download.sourceforge.net/project/courier/$name/$version/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
 }

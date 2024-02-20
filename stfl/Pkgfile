@@ -9,7 +9,7 @@ release=1
 source=(https://clifford.at/wp-content/uploads/2023/07/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-	sed -i 's|ncursesw/||' stfl_internals.h 
-	make prefix=/usr FOUND_SWIG=0 DESTDIR=$PKG install
+    cd $name-$version
+    sed -i 's|ncursesw/||' stfl_internals.h 
+    make prefix=/usr FOUND_SWIG=0 DESTDIR=$PKG install
 }

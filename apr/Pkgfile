@@ -9,14 +9,14 @@ release=1
 source=(https://downloads.apache.org/$name/$name-$version.tar.bz2)
 
 build(){
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--with-installbuilddir=/usr/share/apr-1 
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --with-installbuilddir=/usr/share/apr-1 
+    make
+    make DESTDIR=$PKG install
 
-	sed -i -r "/^APR_(SOURCE|BUILD)/s|=.*|=|" $PKG/usr/bin/apr-1-config
-	rm -r $PKG/usr/lib/*.exp
+    sed -i -r "/^APR_(SOURCE|BUILD)/s|=.*|=|" $PKG/usr/bin/apr-1-config
+    rm -r $PKG/usr/lib/*.exp
 }

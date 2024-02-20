@@ -9,18 +9,18 @@ release=1
 source=(https://php.net/distributions/php-$version.tar.xz)
 
 build() {
-	cd php-$version
+    cd php-$version
 
-	./configure \
-		--disable-all \
-		--enable-pdo=shared \
-		--with-sqlite3=shared,/usr \
-		--with-pdo-sqlite=shared,/usr
+    ./configure \
+        --disable-all \
+        --enable-pdo=shared \
+        --with-sqlite3=shared,/usr \
+        --with-pdo-sqlite=shared,/usr
 
-	make build-modules
+    make build-modules
 
-	install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
-	install -m 755 modules/*sqlite*.so $PKG/usr/lib/php/extensions
+    install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
+    install -m 755 modules/*sqlite*.so $PKG/usr/lib/php/extensions
 
-	printf 'extension=%s\n' {pdo_sqlite,sqlite3}.so > $PKG/etc/php/conf.d/sqlite3.ini
+    printf 'extension=%s\n' {pdo_sqlite,sqlite3}.so > $PKG/etc/php/conf.d/sqlite3.ini
 }

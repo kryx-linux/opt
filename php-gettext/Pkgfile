@@ -8,13 +8,13 @@ release=1
 source=(https://www.php.net/distributions/php-$version.tar.xz)
 
 build() {
-	cd php-$version
+    cd php-$version
 
-	./configure --disable-all --with-gettext=shared,/usr
-	make build-modules
+    ./configure --disable-all --with-gettext=shared,/usr
+    make build-modules
 
-	install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
-	install -m 755 modules/gettext.so $PKG/usr/lib/php/extensions/
+    install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
+    install -m 755 modules/gettext.so $PKG/usr/lib/php/extensions/
 
-	printf 'extension=%s\n' gettext.so > $PKG/etc/php/conf.d/gettext.ini
+    printf 'extension=%s\n' gettext.so > $PKG/etc/php/conf.d/gettext.ini
 }

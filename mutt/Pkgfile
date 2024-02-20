@@ -10,26 +10,26 @@ release=1
 source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	prt-get isinst gpgme && PKGMK_MUTT+=' --enable-gpgme'
-	prt-get isinst cyrus-sasl && PKGMK_MUTT+=' --enable-smtp --with-sasl'
-	prt-get isinst libidn2 && PKGMK_MUTT+=' --with-idn2'
+    prt-get isinst gpgme && PKGMK_MUTT+=' --enable-gpgme'
+    prt-get isinst cyrus-sasl && PKGMK_MUTT+=' --enable-smtp --with-sasl'
+    prt-get isinst libidn2 && PKGMK_MUTT+=' --with-idn2'
 
-	./configure $PKGMK_MUTT \
-		--prefix=/usr \
-		--with-mailpath=/var/spool/mail \
-		--enable-pop \
-		--enable-imap \
-		--enable-hcache \
-		--enable-sidebar \
-		--disable-nls \
-		--with-ssl
+    ./configure $PKGMK_MUTT \
+        --prefix=/usr \
+        --with-mailpath=/var/spool/mail \
+        --enable-pop \
+        --enable-imap \
+        --enable-hcache \
+        --enable-sidebar \
+        --disable-nls \
+        --with-ssl
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 
-	rm $PKG/usr/etc/{Muttrc,mime.types}.dist 
-	rm -r $PKG/usr/share/{doc,info}
-	rm $PKG/usr/share/man/man5/{mmdf.5,mbox.5}
+    rm $PKG/usr/etc/{Muttrc,mime.types}.dist 
+    rm -r $PKG/usr/share/{doc,info}
+    rm $PKG/usr/share/man/man5/{mmdf.5,mbox.5}
 }

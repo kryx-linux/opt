@@ -9,14 +9,14 @@ release=1
 source=(http://caml.inria.fr/pub/distrib/$name-${version%.*}/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man
+    ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man
 
-	make world.opt
-	make DESTDIR=$PKG install
+    make world.opt
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/doc
+    rm -r $PKG/usr/share/doc
 }

@@ -9,22 +9,22 @@ release=1
 source=(https://gitlab.com/sane-project/backends/uploads/110fc43336d0fb5e514f1fdc7360dd87/sane-backends-$version.tar.gz)
 
 build() {
-	cd $name-backends-$version
+    cd $name-backends-$version
 
-	./configure \
-		--prefix=/usr \
-		--localstatedir=/var \
-		--sysconfdir=/etc \
-		--disable-translations \
-		--disable-locking \
-		--disable-latex \
-		--with-group=scanner \
-		--with-usb
+    ./configure \
+        --prefix=/usr \
+        --localstatedir=/var \
+        --sysconfdir=/etc \
+        --disable-translations \
+        --disable-locking \
+        --disable-latex \
+        --with-group=scanner \
+        --with-usb
 
-	make
-	make -j1 DESTDIR=$PKG install
+    make
+    make -j1 DESTDIR=$PKG install
 
-	install -D -m 644 tools/udev/libsane.rules $PKG/etc/udev/rules.d/85-libsane.rules
+    install -D -m 644 tools/udev/libsane.rules $PKG/etc/udev/rules.d/85-libsane.rules
 
-	rm -r $PKG/usr/share/{doc,locale,sane}
+    rm -r $PKG/usr/share/{doc,locale,sane}
 }

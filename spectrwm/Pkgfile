@@ -9,7 +9,7 @@ release=1
 source=(https://github.com/conformal/spectrwm/archive/SPECTRWM_${version//./_}.tar.gz)
 
 build() {
-	cd $name-SPECTRWM_${version//./_}/linux
-	make PREFIX=/usr DESTDIR=$PKG install
-	rm -r $PKG/usr/share/doc
+    cd $name-SPECTRWM_${version//./_}/linux
+    make PREFIX=/usr DESTDIR=$PKG install
+    rm -r $PKG/usr/share/doc
 }

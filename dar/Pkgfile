@@ -10,19 +10,19 @@ release=1
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	prt-get isinst gpgme || PKGMK_DAR+=' --disable-gpgme-linking'
+    prt-get isinst gpgme || PKGMK_DAR+=' --disable-gpgme-linking'
 
-	CONFIG_SHELL=/bin/bash \
-	./configure $PKGMK_DAR \
-		--prefix=/usr \
-		--disable-nls \
-		--enable-mode=64 \
-		--disable-build-html
+    CONFIG_SHELL=/bin/bash \
+    ./configure $PKGMK_DAR \
+        --prefix=/usr \
+        --disable-nls \
+        --enable-mode=64 \
+        --disable-build-html
 
-	make V=0
-	make DESTDIR=$PKG install
+    make V=0
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/dar
+    rm -r $PKG/usr/share/dar
 }

@@ -10,18 +10,18 @@ release=1
 source=(https://launchpad.net/qpdfview/trunk/$version.0/+download/$name-$version.tar.gz)
 
 build () {
-	cd $name-$version
+    cd $name-$version
 
-	prt-get isinst cups || PKGMK_QPDFVIEW+='without_cups '
-	prt-get isinst libspectre || PKGMK_QPDFVIEW+='without_ps '
-	prt-get isinst djvulibre || PKGMK_QPDFVIEW+='without_djvu '
+    prt-get isinst cups || PKGMK_QPDFVIEW+='without_cups '
+    prt-get isinst libspectre || PKGMK_QPDFVIEW+='without_ps '
+    prt-get isinst djvulibre || PKGMK_QPDFVIEW+='without_djvu '
 
-	qmake6 qpdfview.pro \
-		MANUAL_INSTALL_PATH=/usr/share/man/man1 \
-		CONFIG+="$PKGMK_QPDFVIEW"
+    qmake6 qpdfview.pro \
+        MANUAL_INSTALL_PATH=/usr/share/man/man1 \
+        CONFIG+="$PKGMK_QPDFVIEW"
 
-	make
-	make INSTALL_ROOT=$PKG install
+    make
+    make INSTALL_ROOT=$PKG install
 
-	rm $PKG/usr/share/qpdfview/help_*.html
+    rm $PKG/usr/share/qpdfview/help_*.html
 }

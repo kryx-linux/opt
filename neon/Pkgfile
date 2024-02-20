@@ -9,16 +9,16 @@ release=1
 source=(https://notroj.github.io/neon/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--with-ssl \
-		--with-expat \
-		--enable-shared \
-		--disable-nls \
-		--disable-debug
+    ./configure \
+        --prefix=/usr \
+        --with-ssl \
+        --with-expat \
+        --enable-shared \
+        --disable-nls \
+        --disable-debug
 
-	make
-	make DESTDIR=$PKG install-{lib,headers,config}
+    make
+    make DESTDIR=$PKG install-{lib,headers,config}
 }

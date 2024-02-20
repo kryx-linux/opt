@@ -9,20 +9,20 @@ release=1
 source=(https://downloads.apache.org/apr/$name-$version.tar.bz2)
 
 build(){
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--with-apr=/usr \
-		--with-expat=/usr \
-		--with-berkeley-db=/usr \
-		--with-gdbm=/usr \
-		--with-sqlite3=/usr \
-		--with-openssl=/usr \
-		--with-crypto
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --with-apr=/usr \
+        --with-expat=/usr \
+        --with-berkeley-db=/usr \
+        --with-gdbm=/usr \
+        --with-sqlite3=/usr \
+        --with-openssl=/usr \
+        --with-crypto
+    make
+    make DESTDIR=$PKG install
 
-	sed -i -r "/^APU_(SOURCE|BUILD)/s|=.*|=|" $PKG/usr/bin/apu-1-config
-	rm -r $PKG/usr/lib/*.exp
+    sed -i -r "/^APU_(SOURCE|BUILD)/s|=.*|=|" $PKG/usr/bin/apu-1-config
+    rm -r $PKG/usr/lib/*.exp
 }

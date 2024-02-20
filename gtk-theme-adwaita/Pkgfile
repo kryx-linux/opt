@@ -10,16 +10,16 @@ release=2
 source=(http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/${version:0:4}/gnome-themes-standard-${version}.tar.xz)
 
 build() {
-	cd gnome-themes-standard-$version
+    cd gnome-themes-standard-$version
 
-	prt-get isinst gtk || PKGMK_THEME_ADWAITA+=' --disable-gtk2-engine'
-	sed -i "s/HighContrast//" themes/Makefile.in
+    prt-get isinst gtk || PKGMK_THEME_ADWAITA+=' --disable-gtk2-engine'
+    sed -i "s/HighContrast//" themes/Makefile.in
 
-	./configure $PKGMK_THEME_ADWAITA \
-		--prefix=/usr \
-		--disable-glibtest \
-		--disable-nls
+    ./configure $PKGMK_THEME_ADWAITA \
+        --prefix=/usr \
+        --disable-glibtest \
+        --disable-nls
 
-	make
-	make install DESTDIR=$PKG
+    make
+    make install DESTDIR=$PKG
 }

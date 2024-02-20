@@ -9,12 +9,12 @@ source=(https://codeberg.org/pere/chrpath/archive/release-$version.tar.gz)
 renames=($name-$version.tar.gz)
 
 build() {
-	cd $name
+    cd $name
 
-	./bootstrap
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    ./bootstrap
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/doc
+    rm -r $PKG/usr/doc
 }

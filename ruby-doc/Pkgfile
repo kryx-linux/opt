@@ -9,6 +9,6 @@ release=1
 source=(https://cache.ruby-lang.org/pub/ruby/${version%.*}/ruby-$version.tar.xz)
 
 build() {
-	cd ruby-$version
-	rdoc --encoding=UTF-8 --all --ri --op $PKG/usr/share/ri/${version%.*}/system .
+    cd ruby-$version
+    rdoc --encoding=UTF-8 --all --ri --op $PKG/usr/share/ri/${version%.*}/system .
 }

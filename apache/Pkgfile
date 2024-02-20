@@ -7,34 +7,34 @@ name=apache
 version=2.4.58
 release=2
 source=(https://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
-	crux.layout apache libxml2-2.12.patch)
+    crux.layout apache libxml2-2.12.patch)
 
 build(){
-	cd httpd-$version
+    cd httpd-$version
 
-	patch -p1 -i $SRC/libxml2-2.12.patch
+    patch -p1 -i $SRC/libxml2-2.12.patch
 
-	cat $SRC/crux.layout >> config.layout
-	sed -ri '/^(User|Group)/s/daemon/www/' docs/conf/httpd.conf.in
+    cat $SRC/crux.layout >> config.layout
+    sed -ri '/^(User|Group)/s/daemon/www/' docs/conf/httpd.conf.in
 
-	./configure \
-		--enable-layout=CRUX \
-		--with-apr=/usr \
-		--with-apr-util=/usr \
-		--with-pcre=/usr \
-		--enable-so \
-		--enable-modules=all \
-		--enable-mods-shared=all \
-		--enable-mpms-shared=all \
-		--disable-lua
-	make 
-	make -j1 DESTDIR=$PKG install
+    ./configure \
+        --enable-layout=CRUX \
+        --with-apr=/usr \
+        --with-apr-util=/usr \
+        --with-pcre=/usr \
+        --enable-so \
+        --enable-modules=all \
+        --enable-mods-shared=all \
+        --enable-mpms-shared=all \
+        --disable-lua
+    make 
+    make -j1 DESTDIR=$PKG install
 
-	install -D -m 755 $SRC/apache $PKG/etc/rc.d/apache
+    install -D -m 755 $SRC/apache $PKG/etc/rc.d/apache
 
-	rm -r $PKG/var/www/htdocs/*
-	rm -r $PKG/run
-	rm $PKG/var/www/{error,icons}/README*
+    rm -r $PKG/var/www/htdocs/*
+    rm -r $PKG/run
+    rm $PKG/var/www/{error,icons}/README*
 
-	chmod -R g-s $PKG/var/www/
+    chmod -R g-s $PKG/var/www/
 }

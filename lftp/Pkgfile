@@ -9,16 +9,16 @@ release=1
 source=(https://lftp.yar.ru/ftp/lftp-$version.tar.xz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--disable-nls \
-		--with-openssl=/usr \
-		--sysconfdir=/usr/etc
+    ./configure \
+        --prefix=/usr \
+        --disable-nls \
+        --with-openssl=/usr \
+        --sysconfdir=/usr/etc
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/lib
+    rm -r $PKG/usr/lib
 }

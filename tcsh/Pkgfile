@@ -7,18 +7,18 @@ name=tcsh
 version=6.24.10
 release=1
 source=(https://astron.com/pub/$name/$name-$version.tar.gz \
-	csh.login csh.logout csh.cshrc)
+    csh.login csh.logout csh.cshrc)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--bindir=/bin \
-		--disable-nls-catalogs
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --bindir=/bin \
+        --disable-nls-catalogs
+    make
+    make DESTDIR=$PKG install
 
-	install -d $PKG/etc
-	install -m 644 $SRC/csh.* $PKG/etc
+    install -d $PKG/etc
+    install -m 644 $SRC/csh.* $PKG/etc
 }

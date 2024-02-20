@@ -7,27 +7,27 @@ name=iwd
 version=2.14
 release=1
 source=(https://www.kernel.org/pub/linux/network/wireless/$name-$version.tar.xz
-	iwd)
+    iwd)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	sed '/DEFAULT_SYSTEM_BUS_ADDRESS/s|/var/run|/run|' -i ell/dbus.c
+    sed '/DEFAULT_SYSTEM_BUS_ADDRESS/s|/var/run|/run|' -i ell/dbus.c
 
-	./configure \
-		--prefix=/usr \
-		--libexecdir=/usr/sbin \
-		--localstatedir=/var \
-		--runstatedir=/run \
-		--sysconfdir=/etc \
-		--disable-systemd-service
+    ./configure \
+        --prefix=/usr \
+        --libexecdir=/usr/sbin \
+        --localstatedir=/var \
+        --runstatedir=/run \
+        --sysconfdir=/etc \
+        --disable-systemd-service
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 
-	install -d -m 0700 $PKG/var/lib/iwd
-	install -d -m 0700 $PKG/etc/iwd
+    install -d -m 0700 $PKG/var/lib/iwd
+    install -d -m 0700 $PKG/etc/iwd
 
-	# rc script
-	install -D -m 0755 $SRC/iwd $PKG/etc/rc.d/iwd
+    # rc script
+    install -D -m 0755 $SRC/iwd $PKG/etc/rc.d/iwd
 }

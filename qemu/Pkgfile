@@ -10,31 +10,31 @@ release=1
 source=(https://download.qemu.org/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	## only needed for qemu-keymap
-	if [[ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]] && ! prt-get isinst xkeyboard-config; then
-		printf '\e[1;31m%-6s\e[m\n' "You need to install xkeyboard-config, then rebuild libxkbcommon to build qemu-keymap. We are disabling this feature now."
-		PKGMK_QEMU+=' --disable-xkbcommon'
-	fi
-	prt-get isinst python3-sphinx python3-sphinx_rtd_theme || PKGMK_QEMU+=' --disable-docs'
+    ## only needed for qemu-keymap
+    if [[ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]] && ! prt-get isinst xkeyboard-config; then
+        printf '\e[1;31m%-6s\e[m\n' "You need to install xkeyboard-config, then rebuild libxkbcommon to build qemu-keymap. We are disabling this feature now."
+        PKGMK_QEMU+=' --disable-xkbcommon'
+    fi
+    prt-get isinst python3-sphinx python3-sphinx_rtd_theme || PKGMK_QEMU+=' --disable-docs'
 
-	./configure $PKGMK_QEMU \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--libexecdir=/usr/lib/qemu \
-		--localstatedir=/var \
-		--enable-linux-user \
-		--enable-fdt=system \
-		--python=/usr/bin/python3 \
-		--target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu \
-		--disable-gtk \
-	make
-	make DESTDIR=$PKG install
+    ./configure $PKGMK_QEMU \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --libexecdir=/usr/lib/qemu \
+        --localstatedir=/var \
+        --enable-linux-user \
+        --enable-fdt=system \
+        --python=/usr/bin/python3 \
+        --target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu \
+        --disable-gtk \
+    make
+    make DESTDIR=$PKG install
 
-	install -d $PKG/etc/udev/rules.d/
-	echo 'KERNEL=="kvm", NAME="kvm", OWNER="root", GROUP="kvm", MODE="0660"' > \
-		$PKG/etc/udev/rules.d/60-kvm.rules
+    install -d $PKG/etc/udev/rules.d/
+    echo 'KERNEL=="kvm", NAME="kvm", OWNER="root", GROUP="kvm", MODE="0660"' > \
+        $PKG/etc/udev/rules.d/60-kvm.rules
 
-	rm -r $PKG/var
+    rm -r $PKG/var
 }

@@ -8,14 +8,14 @@ release=1
 source=(https://github.com/rrthomas/libpaper/releases/download/v$version/lib$name-$version.tar.gz)
 
 build () {
-	cd lib$name-$version
+    cd lib$name-$version
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--libexecdir=/usr/lib/paper
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --libexecdir=/usr/lib/paper
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/doc
+    rm -r $PKG/usr/share/doc
 }

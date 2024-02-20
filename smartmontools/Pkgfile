@@ -6,24 +6,24 @@ name=smartmontools
 version=7.4
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz \
-	smartd)
+    smartd)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--with-initscriptdir=/etc/rc.d \
-		--localstatedir=/var \
-		--with-savestates \
-		--with-attributelog
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --with-initscriptdir=/etc/rc.d \
+        --localstatedir=/var \
+        --with-savestates \
+        --with-attributelog
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 
-	install -d $PKG/var/lib/smartmontools
-	install -m 755 $SRC/smartd $PKG/etc/rc.d
+    install -d $PKG/var/lib/smartmontools
+    install -m 755 $SRC/smartd $PKG/etc/rc.d
 
-	rm -r $PKG/usr/share/doc
+    rm -r $PKG/usr/share/doc
 }

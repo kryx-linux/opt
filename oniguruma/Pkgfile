@@ -8,8 +8,8 @@ release=1
 source=(https://github.com/kkos/oniguruma/releases/download/v${version/-/_}/onig-$version.tar.gz)
 
 build() {
-	cd onig-${version:0:5}
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    cd onig-${version:0:5}
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
 }

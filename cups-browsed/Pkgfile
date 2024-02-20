@@ -8,26 +8,26 @@ name=cups-browsed
 version=2.0.0
 release=1
 source=(https://github.com/OpenPrinting/$name/releases/download/$version/$name-$version.tar.xz
-	disabled_avahi.patch cups-browsed)
+    disabled_avahi.patch cups-browsed)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	patch -p1 -i $SRC/disabled_avahi.patch
+    patch -p1 -i $SRC/disabled_avahi.patch
 
-	prt-get isinst avahi || PKGMK_CUPSBROWSED+=' --disable-avahi'
+    prt-get isinst avahi || PKGMK_CUPSBROWSED+=' --disable-avahi'
 
-	./configure $PKGMK_CUPSBROWSED \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--runstatedir=/run \
-		--with-cups-rundir=/run/cups \
-		--without-rcdir
+    ./configure $PKGMK_CUPSBROWSED \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --runstatedir=/run \
+        --with-cups-rundir=/run/cups \
+        --without-rcdir
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 
-	install -D -m 0755 $SRC/cups-browsed $PKG/etc/rc.d/cups-browsed
+    install -D -m 0755 $SRC/cups-browsed $PKG/etc/rc.d/cups-browsed
 
-	rm -r $PKG/usr/share/doc
+    rm -r $PKG/usr/share/doc
 }

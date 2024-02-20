@@ -9,14 +9,14 @@ release=2
 source=(https://github.com/lloyd/$name/archive/refs/tags/$version/$name-$version.tar.gz)
 
 build() {
-	cmake -S $name-$version -B build \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S $name-$version -B build \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -Wno-dev
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
 
-	mv $PKG/usr/share/pkgconfig $PKG/usr/lib
-	rm -r $PKG/usr/share
+    mv $PKG/usr/share/pkgconfig $PKG/usr/lib
+    rm -r $PKG/usr/share
 }

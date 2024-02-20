@@ -9,17 +9,17 @@ release=2
 source=(https://rubygems.org/downloads/mini_portile2-$version.gem)
 
 build() {
-	gem install mini_portile2 \
-		--ignore-dependencies \
-		--no-user-install \
-		--no-document \
-		--local \
-		--build-root $PKG
+    gem install mini_portile2 \
+        --ignore-dependencies \
+        --no-user-install \
+        --no-document \
+        --local \
+        --build-root $PKG
 
-	cd $PKG/$(gem env gemdir)
-	rm -r cache doc build_info
-	cd gems/mini_portile2-$version
-	rm -r .github
-	find -maxdepth 1 -type f -delete
+    cd $PKG/$(gem env gemdir)
+    rm -r cache doc build_info
+    cd gems/mini_portile2-$version
+    rm -r .github
+    find -maxdepth 1 -type f -delete
 }
 

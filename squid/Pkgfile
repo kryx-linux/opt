@@ -8,38 +8,38 @@ name=squid
 version=6.7
 release=1
 source=(http://www.squid-cache.org/Versions/v6/$name-$version.tar.xz
-	squid)
+    squid)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	sed '/DEFAULT_STATEDIR/s/$(localstatedir)//' -i src/ipc/Makefile.in
+    sed '/DEFAULT_STATEDIR/s/$(localstatedir)//' -i src/ipc/Makefile.in
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc/squid \
-		--libexecdir=/usr/lib/squid \
-		--localstatedir=/var \
-		--datadir=/usr/share/squid \
-		--with-logdir=/var/log/squid \
-		--with-pidfile=/run/squid.pid \
-		--with-swapdir=/var/squid \
-		--with-default-user=squid \
-		--enable-linux-netfilter \
-		--enable-storeio=ufs,aufs,diskd,rock \
-		--enable-removal-policies=lru,heap \
-		--with-large-files \
-		--with-pthreads \
-		--with-aufs-threads=16 \
-		--disable-auto-locale \
-		--disable-arch-native
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc/squid \
+        --libexecdir=/usr/lib/squid \
+        --localstatedir=/var \
+        --datadir=/usr/share/squid \
+        --with-logdir=/var/log/squid \
+        --with-pidfile=/run/squid.pid \
+        --with-swapdir=/var/squid \
+        --with-default-user=squid \
+        --enable-linux-netfilter \
+        --enable-storeio=ufs,aufs,diskd,rock \
+        --enable-removal-policies=lru,heap \
+        --with-large-files \
+        --with-pthreads \
+        --with-aufs-threads=16 \
+        --disable-auto-locale \
+        --disable-arch-native
 
-	make all
-	make DESTDIR=$PKG install
+    make all
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/run $PKG/var/run
-	find $PKG/usr/share/squid/errors/* -prune ! -name templates | xargs rm -r
+    rm -r $PKG/run $PKG/var/run
+    find $PKG/usr/share/squid/errors/* -prune ! -name templates | xargs rm -r
 
-	install -d -m 0700 -o squid -g squid $PKG/var/{log/squid,squid}
-	install -D -m 755 $SRC/squid $PKG/etc/rc.d/squid
+    install -d -m 0700 -o squid -g squid $PKG/var/{log/squid,squid}
+    install -D -m 755 $SRC/squid $PKG/etc/rc.d/squid
 }

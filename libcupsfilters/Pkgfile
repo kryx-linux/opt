@@ -10,17 +10,17 @@ release=1
 source=(https://github.com/OpenPrinting/libcupsfilters/releases/download/$version/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	prt-get isinst dbus || PKGMK_LIBCUPSFILTERS+=' --disable-dbus'
-	prt-get isinst libexif || PKGMK_LIBCUPSFILTERS+=' --disable-exif'
-	prt-get isinst mupdf || PKGMK_LIBCUPSFILTERS+=' --disable-mutool'
-	prt-get isinst poppler || PKGMK_LIBCUPSFILTERS+=' --disable-poppler'
+    prt-get isinst dbus || PKGMK_LIBCUPSFILTERS+=' --disable-dbus'
+    prt-get isinst libexif || PKGMK_LIBCUPSFILTERS+=' --disable-exif'
+    prt-get isinst mupdf || PKGMK_LIBCUPSFILTERS+=' --disable-mutool'
+    prt-get isinst poppler || PKGMK_LIBCUPSFILTERS+=' --disable-poppler'
 
-	./configure $PKGMK_LIBCUPSFILTERS --prefix=/usr
+    ./configure $PKGMK_LIBCUPSFILTERS --prefix=/usr
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/doc
+    rm -r $PKG/usr/share/doc
 }

@@ -9,16 +9,16 @@ release=2
 source=(http://downloads.sourceforge.net/sourceforge/lxde/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
+    cd $name-$version
 
-	export LINGUAS=" "
+    export LINGUAS=" "
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--disable-nls \
-		--enable-gtk3
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --disable-nls \
+        --enable-gtk3
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR=$PKG install
 }

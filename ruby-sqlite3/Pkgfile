@@ -9,18 +9,18 @@ release=1
 source=(https://rubygems.org/downloads/sqlite3-$version.gem)
 
 build () {
-	gem install sqlite3 \
-		--ignore-dependencies \
-		--no-user-install \
-		--no-document \
-		--local \
-		--build-root $PKG \
-		-- \
-		--enable-system-libraries
+    gem install sqlite3 \
+        --ignore-dependencies \
+        --no-user-install \
+        --no-document \
+        --local \
+        --build-root $PKG \
+        -- \
+        --enable-system-libraries
 
-	cd $PKG/$(gem env gemdir)
-	rm -r cache doc build_info
-	cd gems/sqlite3-$version
-	rm -r ext ports test
-	find -maxdepth 1 -type f -delete
+    cd $PKG/$(gem env gemdir)
+    rm -r cache doc build_info
+    cd gems/sqlite3-$version
+    rm -r ext ports test
+    find -maxdepth 1 -type f -delete
 }

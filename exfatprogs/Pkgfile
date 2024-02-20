@@ -8,9 +8,9 @@ release=1
 source=(https://github.com/exfatprogs/exfatprogs/archive/$version/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-	./autogen.sh
-	./configure --prefix=/usr --sbindir=/sbin
-	make
-	make DESTDIR=$PKG install
+    cd $name-$version
+    ./autogen.sh
+    ./configure --prefix=/usr --sbindir=/sbin
+    make
+    make DESTDIR=$PKG install
 }

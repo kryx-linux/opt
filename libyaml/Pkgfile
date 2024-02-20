@@ -8,9 +8,9 @@ release=1
 source=(https://pyyaml.org/download/$name/yaml-$version.tar.gz)
 
 build() {
-	cd yaml-$version
+    cd yaml-$version
 
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
 }

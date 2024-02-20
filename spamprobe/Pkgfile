@@ -10,18 +10,18 @@ source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$ver
 64bit.patch compile-fixes.patch)
 
 build() {
-	cd $SRC/$name-$version
+    cd $SRC/$name-$version
 
-	# https://src.fedoraproject.org/rpms/spamprobe/tree/master
-	patch -p1 -i $SRC/64bit.patch
-	patch -p1 -i $SRC/compile-fixes.patch
+    # https://src.fedoraproject.org/rpms/spamprobe/tree/master
+    patch -p1 -i $SRC/64bit.patch
+    patch -p1 -i $SRC/compile-fixes.patch
 
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--enable-default-8-bit \
-		--without-{gif,jpeg,png}
+    ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man \
+        --enable-default-8-bit \
+        --without-{gif,jpeg,png}
 
-	make 
-	make DESTDIR=$PKG install
+    make 
+    make DESTDIR=$PKG install
 }

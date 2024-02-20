@@ -10,32 +10,32 @@ release=1
 source=(https://download.qemu.org/qemu-$version.tar.xz)
 
 build() {
-	cd qemu-$version
+    cd qemu-$version
 
-	## only needed for qemu-keymap
-	if [[ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]] && ! prt-get isinst xkeyboard-config; then
-		printf '\e[1;31m%-6s\e[m\n' "You need to install xkeyboard-config, then rebuild libxkbcommon to build qemu-keymap. We are disabling this feature now."
-		PKGMK_QEMU+=' --disable-xkbcommon'
-	fi
-	prt-get isinst python3-sphinx python3-sphinx_rtd_theme || PKGMK_QEMU+=' --disable-docs'
+    ## only needed for qemu-keymap
+    if [[ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]] && ! prt-get isinst xkeyboard-config; then
+        printf '\e[1;31m%-6s\e[m\n' "You need to install xkeyboard-config, then rebuild libxkbcommon to build qemu-keymap. We are disabling this feature now."
+        PKGMK_QEMU+=' --disable-xkbcommon'
+    fi
+    prt-get isinst python3-sphinx python3-sphinx_rtd_theme || PKGMK_QEMU+=' --disable-docs'
 
-	./configure $PKGMK_QEMU \
-		--prefix=/usr \
-		--cc="${CC:=gcc}" \
-		--host-cc="${CC:=gcc}" \
-		--sysconfdir=/etc \
-		--libexecdir=/usr/lib/qemu \
-		--disable-gtk \
-		--localstatedir=/var \
-		--enable-fdt=system \
-		--python=/usr/bin/python3 
+    ./configure $PKGMK_QEMU \
+        --prefix=/usr \
+        --cc="${CC:=gcc}" \
+        --host-cc="${CC:=gcc}" \
+        --sysconfdir=/etc \
+        --libexecdir=/usr/lib/qemu \
+        --disable-gtk \
+        --localstatedir=/var \
+        --enable-fdt=system \
+        --python=/usr/bin/python3 
 
-	make ${MAKEFLAGS:=}
-	make DESTDIR=$PKG install
+    make ${MAKEFLAGS:=}
+    make DESTDIR=$PKG install
 
-	install -d $PKG/etc/udev/rules.d/
-	echo 'KERNEL=="kvm", NAME="kvm", OWNER="root", GROUP="kvm", MODE="0660"' > \
-		$PKG/etc/udev/rules.d/60-kvm.rules
+    install -d $PKG/etc/udev/rules.d/
+    echo 'KERNEL=="kvm", NAME="kvm", OWNER="root", GROUP="kvm", MODE="0660"' > \
+        $PKG/etc/udev/rules.d/60-kvm.rules
 
-	rm -r $PKG/var
+    rm -r $PKG/var
 }
