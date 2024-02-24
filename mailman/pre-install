@@ -2,7 +2,7 @@
 
 mmuser="mailman"
 mmgroup="mailman"
-mmhome="/usr/lib/mailman"
+mmhome="/var/lib/mailman"
 
 # make sure the user/group exists or add if not exists
 /usr/bin/getent group $mmgroup || \
