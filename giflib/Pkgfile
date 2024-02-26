@@ -14,4 +14,9 @@ build() {
 
   make
   make PREFIX=$PKG/usr install
+
+  rm $PKG/usr/share/man/man1/*.xml
+  #mkdir $PKG/usr/share/man/man7
+  install -vDm 640 doc/*.1 -t $PKG/usr/share/man/man1/
+  install -vDm 640 doc/*.7 -t $PKG/usr/share/man/man7/
 }
