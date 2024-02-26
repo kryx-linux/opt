@@ -5,18 +5,28 @@
 
 name=libxml2
 version=2.12.5
-release=1
+release=2
 source=(https://download.gnome.org/sources/libxml2/${version:0:4}/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
+	export PYTHON=/usr/bin/python3
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc
-
 	make
 	make DESTDIR=$PKG install
+
+	if prt-get isinst python
+	then
+		export PYTHON=/usr/bin/python
+		./configure \
+			--prefix=/usr \
+			--sysconfdir=/etc
+		make
+		make DESTDIR=$PKG install
+	fi
 
 	rm -r $PKG/usr/share/{doc,gtk-doc}
 }
