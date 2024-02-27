@@ -5,7 +5,7 @@
 # Optional: bash-completion docbook-xsl vala
 
 name=libsecret
-version=0.21.3
+version=0.21.4
 release=1
 source=(https://gitlab.gnome.org/GNOME/libsecret/-/archive/$version/libsecret-$version.tar.bz2)
 

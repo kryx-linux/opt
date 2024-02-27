@@ -3,15 +3,20 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=giflib
-version=5.2.1
+version=5.2.2
 release=1
 source=(https://sourceforge.net/projects/giflib/files/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
+
+  sed -e "/\$(MAKE) -C doc$/d" -i Makefile
+
   make
   make PREFIX=$PKG/usr install
 
-  # We only want the library and no manpages
-  rm -rf $PKG/usr/share
+  rm $PKG/usr/share/man/man1/*.xml
+  #mkdir $PKG/usr/share/man/man7
+  install -vDm 640 doc/*.1 -t $PKG/usr/share/man/man1/
+  install -vDm 640 doc/*.7 -t $PKG/usr/share/man/man7/
 }

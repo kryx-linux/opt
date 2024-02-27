@@ -3,9 +3,10 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=mdadm
-version=4.2
-release=2
-source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.xz
+version=4.3
+release=1
+#source=(https://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.xz
+source=(https://git.kernel.org/pub/scm/utils/mdadm/mdadm.git/snapshot/$name-$version.tar.gz
     $name-$version-in_initrd-collision.patch)
 
 build() {
