@@ -1,11 +1,11 @@
 # Description: Postfix Mail Transport Agent (MTA)
-# URL: http://www.postfix.org/
+# URL: https://www.postfix.org/
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 # Depends on: cyrus-sasl
 
 name=postfix
 version=3.8.5
-release=1
+release=2
 source=(http://ftp.porcupine.org/mirrors/postfix-release/official/${name}-${version}.tar.gz
     aliases postfix.rc)
 

@@ -40,6 +40,7 @@ drwxr-xr-x	root/root	etc/sane.d/dll.d/
 -rw-r--r--	root/root	etc/sane.d/kvs1025.conf
 -rw-r--r--	root/root	etc/sane.d/leo.conf
 -rw-r--r--	root/root	etc/sane.d/lexmark.conf
+-rw-r--r--	root/root	etc/sane.d/lexmark_x2600.conf
 -rw-r--r--	root/root	etc/sane.d/ma1509.conf
 -rw-r--r--	root/root	etc/sane.d/magicolor.conf
 -rw-r--r--	root/root	etc/sane.d/matsushita.conf
@@ -279,6 +280,10 @@ lrwxrwxrwx	root/root	usr/lib/sane/libsane-leo.so.1 -> libsane-leo.so.1.2.1
 lrwxrwxrwx	root/root	usr/lib/sane/libsane-lexmark.so -> libsane-lexmark.so.1.2.1
 lrwxrwxrwx	root/root	usr/lib/sane/libsane-lexmark.so.1 -> libsane-lexmark.so.1.2.1
 -rwxr-xr-x	root/root	usr/lib/sane/libsane-lexmark.so.1.2.1
+-rwxr-xr-x	root/root	usr/lib/sane/libsane-lexmark_x2600.la
+lrwxrwxrwx	root/root	usr/lib/sane/libsane-lexmark_x2600.so -> libsane-lexmark_x2600.so.1.2.1
+lrwxrwxrwx	root/root	usr/lib/sane/libsane-lexmark_x2600.so.1 -> libsane-lexmark_x2600.so.1.2.1
+-rwxr-xr-x	root/root	usr/lib/sane/libsane-lexmark_x2600.so.1.2.1
 -rwxr-xr-x	root/root	usr/lib/sane/libsane-ma1509.la
 lrwxrwxrwx	root/root	usr/lib/sane/libsane-ma1509.so -> libsane-ma1509.so.1.2.1
 lrwxrwxrwx	root/root	usr/lib/sane/libsane-ma1509.so.1 -> libsane-ma1509.so.1.2.1
@@ -493,6 +498,7 @@ drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/sane-kvs40xx.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/sane-leo.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/sane-lexmark.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/sane-lexmark_x2600.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/sane-ma1509.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/sane-magicolor.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/sane-matsushita.5.gz

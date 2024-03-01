@@ -1,52 +1,47 @@
 #!/bin/sh
-######################################################################
-#     postfix: starts/stops postfix daemon
-# description: Postfix is a Mail Transport Agent, which is the program
-#              that moves mail from one machine to another.
-######################################################################
+#
+# /etc/rc.d/postfix: start/stop postfix daemon
+#
 
-daemon="/usr/sbin/postfix"
-config="/etc/postfix"
+SSD=/sbin/start-stop-daemon
+PROG=/usr/sbin/postfix
+PID=/var/spool/postfix/pid/master.pid
 
-######################################################################
-# Sanity Check
-######################################################################
-[ -x $daemon ] || exit 1
-
-######################################################################
-# Uncomment these if you want to rebuild aliases on restart
-######################################################################
-#/usr/sbin/postalias hash:$config/aliases
-#/usr/sbin/postmap   hash:$config/{access,canonical,relocated,transport,virtual}
-#/usr/sbin/postmap   hash:$config/access.{client,helo,sender,recpnt}
-
-######################################################################
-# Start/Stop/Reload/Status Functions
-######################################################################
-status() {
-        base=${daemon##*/}
-        dpid=`pidof -o $$ -o $PPID -o %PPID -x ${base}`
-        if [ "$dpid" != "" ]; then
-           echo "${base} (pid $dpid) is running..."
-        elif [ -s /var/run/${base}.pid ]; then
-           echo "${base} is dead but pid file exists..."
-        else
-           echo "${base} is stopped."
-        fi
-        return
-}
-######################################################################
-# See how we were called
-######################################################################
-case "$1" in
-       start) $daemon start  ;;
-        stop) $daemon stop   ;;
-      reload) $daemon reload ;;
-     restart) $daemon reload ;;
-      status) status         ;;
-       abort) $daemon abort  ;;
-       flush) $daemon flush  ;;
-       check) $daemon check  ;;
-           *) echo "Usage: $0 {start|stop|reload|restart|status|abort|flush|check}" ; exit 1 ;;
+case $1 in
+    start)
+        $SSD --start --exec $PROG -- start
+        ;;
+    stop)
+        $SSD --stop --retry 10 --pidfile $PID
+        ;;
+    reload)
+        $PROG reload
+        ;;
+    restart)
+        $0 stop
+        $0 start
+        ;;
+    abort)
+        $PROG abort
+        ;;
+    check)
+        $PROG check
+        ;;
+    flush)
+        $PROG flush
+        ;;
+    status)
+        $SSD --status --pidfile $PID
+        case $? in
+        0) echo "$PROG is running with pid $(cat $PID)" ;;
+        1) echo "$PROG is not running but the pid file $PID exists" ;;
+        3) echo "$PROG is not running" ;;
+        4) echo "Unable to determine the program status" ;;
+        esac
+        ;;
+    *)
+        echo "usage: $0 [start|stop|reload|restart|abort|check|flush|status]"
+        ;;
 esac
-exit $?
+
+# End of file

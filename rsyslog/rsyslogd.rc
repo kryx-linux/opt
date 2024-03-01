@@ -3,7 +3,7 @@
 # /etc/rc.d/rsyslogd: start/stop rsyslogd logging daemon
 #
 
-PIDFILE=/var/run/rsyslogd.pid
+PIDFILE=/run/rsyslogd.pid
 
 case $1 in
     "start")
