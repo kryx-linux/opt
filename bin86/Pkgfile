@@ -6,11 +6,12 @@ name=bin86
 version=0.16.21
 release=3
 _commit=c83297b0dc5bf79dc900c005837a31e9c27f8aba
-source=(https://github.com/jbruchon/dev86/archive/$_commit/$name-$version-${_commit:0:7}.tar.gz
+source=(https://codeberg.org/jbruchon/dev86/archive/$_commit.tar.gz
 	$name-x86_64.patch)
+renames=($name-$version-c83297b.tar.gz SKIP)
 
 build() {
-	cd dev86-$_commit
+	cd dev86
 
 	patch -p1 -i $SRC/$name-x86_64.patch
 
