@@ -3,18 +3,18 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=dracut
-version=059
+version=060
 release=1
-source=(https://github.com/dracutdevs/$name/archive/$version/$name-$version.tar.gz \
-	https://crux.nu/files/$name-man-pages-$version.tar.xz)
+source=(https://crux.nu/files/$name-$version.tar.xz \
+    https://crux.nu/files/$name-man-pages-$version.tar.xz)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr \
-		--sysconfdir=/etc \
-		--disable-documentation
-	make
-	make DESTDIR=$PKG install
-	rm $PKG/usr/lib/$name/modules.d/*/README*
-	cp -r $SRC/usr $PKG/
+    cd $name-$version
+    ./configure --prefix=/usr \
+        --sysconfdir=/etc \
+        --disable-documentation
+    make
+    make DESTDIR=$PKG install
+    rm $PKG/usr/lib/$name/modules.d/*/README*
+    cp -r $SRC/usr $PKG/
 }
