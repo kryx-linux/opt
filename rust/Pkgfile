@@ -9,12 +9,13 @@ version=1.76.0
 _date=2023-12-28
 _rustc=1.75.0
 _cargo=$_rustc
-release=1
+release=2
 
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.xz
 	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
+	llvm18.patch
 	0001-bootstrap-Change-libexec-dir.patch
 	0002-compiler-Change-LLVM-targets.patch
 	0004-compiler-Use-wasm-ld-for-wasm-targets.patch)
@@ -61,6 +62,8 @@ build() {
 	_check_version
 
 	cd "${name}c-$version-src"
+
+	patch -p1 -i $SRC/llvm18.patch
 
 	patch -p1 -i $SRC/0001-bootstrap-Change-libexec-dir.patch
 
