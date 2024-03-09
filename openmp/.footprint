@@ -57,14 +57,14 @@ drwxr-xr-x	root/root	usr/lib/cmake/openmp/
 -rw-r--r--	root/root	usr/lib/libomptarget-nvptx-sm_89.bc
 -rw-r--r--	root/root	usr/lib/libomptarget-nvptx-sm_90.bc
 -rw-r--r--	root/root	usr/lib/libomptarget.devicertl.a
-lrwxrwxrwx	root/root	usr/lib/libomptarget.rtl.amdgpu.so -> libomptarget.rtl.amdgpu.so.18.1rc
--rwxr-xr-x	root/root	usr/lib/libomptarget.rtl.amdgpu.so.18.1rc
-lrwxrwxrwx	root/root	usr/lib/libomptarget.rtl.cuda.so -> libomptarget.rtl.cuda.so.18.1rc
--rwxr-xr-x	root/root	usr/lib/libomptarget.rtl.cuda.so.18.1rc
-lrwxrwxrwx	root/root	usr/lib/libomptarget.rtl.x86_64.so -> libomptarget.rtl.x86_64.so.18.1rc
--rwxr-xr-x	root/root	usr/lib/libomptarget.rtl.x86_64.so.18.1rc
-lrwxrwxrwx	root/root	usr/lib/libomptarget.so -> libomptarget.so.18.1rc
--rwxr-xr-x	root/root	usr/lib/libomptarget.so.18.1rc
+lrwxrwxrwx	root/root	usr/lib/libomptarget.rtl.amdgpu.so -> libomptarget.rtl.amdgpu.so.18.1
+-rwxr-xr-x	root/root	usr/lib/libomptarget.rtl.amdgpu.so.18.1
+lrwxrwxrwx	root/root	usr/lib/libomptarget.rtl.cuda.so -> libomptarget.rtl.cuda.so.18.1
+-rwxr-xr-x	root/root	usr/lib/libomptarget.rtl.cuda.so.18.1
+lrwxrwxrwx	root/root	usr/lib/libomptarget.rtl.x86_64.so -> libomptarget.rtl.x86_64.so.18.1
+-rwxr-xr-x	root/root	usr/lib/libomptarget.rtl.x86_64.so.18.1
+lrwxrwxrwx	root/root	usr/lib/libomptarget.so -> libomptarget.so.18.1
+-rwxr-xr-x	root/root	usr/lib/libomptarget.so.18.1
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/gdb/
 drwxr-xr-x	root/root	usr/share/gdb/python/
