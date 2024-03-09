@@ -1525,11 +1525,11 @@ drwxr-xr-x	root/root	usr/lib/cmake/clang/
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangConfigVersion.cmake
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/clang/ClangTargets.cmake
-lrwxrwxrwx	root/root	usr/lib/libclang-cpp.so -> libclang-cpp.so.18.1rc
--rwxr-xr-x	root/root	usr/lib/libclang-cpp.so.18.1rc
-lrwxrwxrwx	root/root	usr/lib/libclang.so -> libclang.so.18.1rc
--rwxr-xr-x	root/root	usr/lib/libclang.so.18.1.0rc
-lrwxrwxrwx	root/root	usr/lib/libclang.so.18.1rc -> libclang.so.18.1.0rc
+lrwxrwxrwx	root/root	usr/lib/libclang-cpp.so -> libclang-cpp.so.18.1
+-rwxr-xr-x	root/root	usr/lib/libclang-cpp.so.18.1
+lrwxrwxrwx	root/root	usr/lib/libclang.so -> libclang.so.18.1
+lrwxrwxrwx	root/root	usr/lib/libclang.so.18.1 -> libclang.so.18.1.1
+-rwxr-xr-x	root/root	usr/lib/libclang.so.18.1.1
 -rw-r--r--	root/root	usr/lib/libclangAPINotes.a
 -rw-r--r--	root/root	usr/lib/libclangARCMigrate.a
 -rw-r--r--	root/root	usr/lib/libclangAST.a
