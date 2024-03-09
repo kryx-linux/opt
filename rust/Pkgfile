@@ -9,7 +9,7 @@ version=1.76.0
 _date=2023-12-28
 _rustc=1.75.0
 _cargo=$_rustc
-release=2
+release=3
 
 source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.xz
@@ -143,8 +143,7 @@ cat <<- EOF > $SRC/config.toml
 EOF
 
 	if [ -e '/usr/bin/rustc' ]; then
-		if ! /usr/bin/ldd /usr/bin/rustc | grep -q -E '.*libLLVM.*.so => not found' && \
-		! /usr/bin/ldd /usr/bin/cargo | grep -q -E 'libgit2.so.* => not found'; then
+		if ! /usr/bin/ldd /usr/bin/rustc | grep -q -E '.*not found'; then
 			sed	-e 's|@CARGO@|cargo = "/usr/bin/cargo"|' \
 				-e 's|@RUST@|rustc = "/usr/bin/rustc"|' \
 				-e 's|@RUSTFMT@|rustfmt = "/usr/bin/rustfmt"|' \
