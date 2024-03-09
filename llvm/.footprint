@@ -2194,9 +2194,9 @@ drwxr-xr-x	root/root	usr/lib/cmake/llvm/
 -rw-r--r--	root/root	usr/lib/cmake/llvm/UseLibtool.cmake
 -rw-r--r--	root/root	usr/lib/cmake/llvm/VersionFromVCS.cmake
 -rw-r--r--	root/root	usr/lib/cmake/llvm/llvm-driver-template.cpp.in
-lrwxrwxrwx	root/root	usr/lib/libLLVM-18rc.so -> libLLVM.so.18.1rc
-lrwxrwxrwx	root/root	usr/lib/libLLVM.so -> libLLVM.so.18.1rc
--rwxr-xr-x	root/root	usr/lib/libLLVM.so.18.1rc
+lrwxrwxrwx	root/root	usr/lib/libLLVM-18.so -> libLLVM.so.18.1
+lrwxrwxrwx	root/root	usr/lib/libLLVM.so -> libLLVM.so.18.1
+-rwxr-xr-x	root/root	usr/lib/libLLVM.so.18.1
 -rw-r--r--	root/root	usr/lib/libLLVMAArch64AsmParser.a
 -rw-r--r--	root/root	usr/lib/libLLVMAArch64CodeGen.a
 -rw-r--r--	root/root	usr/lib/libLLVMAArch64Desc.a
@@ -2390,10 +2390,10 @@ lrwxrwxrwx	root/root	usr/lib/libLLVM.so -> libLLVM.so.18.1rc
 -rw-r--r--	root/root	usr/lib/libLLVMXCoreInfo.a
 -rw-r--r--	root/root	usr/lib/libLLVMXRay.a
 -rw-r--r--	root/root	usr/lib/libLLVMipo.a
-lrwxrwxrwx	root/root	usr/lib/libLTO.so -> libLTO.so.18.1rc
--rwxr-xr-x	root/root	usr/lib/libLTO.so.18.1rc
-lrwxrwxrwx	root/root	usr/lib/libRemarks.so -> libRemarks.so.18.1rc
--rwxr-xr-x	root/root	usr/lib/libRemarks.so.18.1rc
+lrwxrwxrwx	root/root	usr/lib/libLTO.so -> libLTO.so.18.1
+-rwxr-xr-x	root/root	usr/lib/libLTO.so.18.1
+lrwxrwxrwx	root/root	usr/lib/libRemarks.so -> libRemarks.so.18.1
+-rwxr-xr-x	root/root	usr/lib/libRemarks.so.18.1
 drwxr-xr-x	root/root	usr/lib/python3.10/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lit-18.1.0.dev0-py3.10.egg-info/
