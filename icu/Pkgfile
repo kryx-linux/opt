@@ -1,4 +1,4 @@
-# Description: Widely used set of C/C++ libraries providing Unicode and Globalization support.
+# Description: Widely used set of C/C++ libraries providing Unicode and Globalization support
 # URL: https://icu.unicode.org
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Optional: clang lld
@@ -24,9 +24,6 @@ build() {
     --mandir=/usr/share/man \
     --disable-samples \
     --disable-tests
-
-  # https://github.com/unicode-org/icu/blob/main/icu4c/LICENSE does not seem to work
-  touch ../LICENSE
 
   make
   make -j1 DESTDIR=$PKG install

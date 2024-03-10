@@ -9,9 +9,7 @@ release=1
 source=(https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$version/SPIRV-Headers-vulkan-sdk-$version.tar.gz)
 
 build() {
-    prt-get isinst ninja && PKGMK_SPIRV_HEADERS+=' -G Ninja'
-
-    cmake -S SPIRV-Headers-vulkan-sdk-$version -B build $PKGMK_SPIRV_HEADERS \
+    cmake -S SPIRV-Headers-vulkan-sdk-$version -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \

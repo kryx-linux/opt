@@ -4,12 +4,15 @@
 # Depends on: llvm spirv-tools
 
 name=spirv-llvm-translator
-version=17.0.0
+version=18.1.0
 release=1
-source=(https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$version/$name-$version.tar.gz)
+source=(https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$version/$name-$version.tar.gz
+  2388.patch)
 
 build() {
   prt-get isinst ccache && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
+
+  patch -Rp1 -d SPIRV-LLVM-Translator-$version -i $SRC/2388.patch
 
   cmake -S SPIRV-LLVM-Translator-$version -B build -G Ninja $PKGMK_SLT \
     -D CMAKE_INSTALL_PREFIX=/usr \
@@ -19,9 +22,12 @@ build() {
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -D CMAKE_POSITION_INDEPENDENT_CODE=ON \
     -D CMAKE_SKIP_RPATH=ON \
+    -D LLVM_BUILD_TOOLS=ON \
+    -D CCACHE_ALLOWED=OFF \
+    -D LLVM_DIR=/usr/lib/cmake/llvm \
+    -D LLVM_SPIRV_BUILD_EXTERNAL=YES \
     -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr/include/spirv \
     -D FETCHCONTENT_FULLY_DISCONNECTED=ON \
-    -D LLVM_EXTERNAL_LIT=/usr/bin/lit \
     -Wno-dev
 
   cmake --build build
