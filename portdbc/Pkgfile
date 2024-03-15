@@ -4,7 +4,7 @@
 # Depends on: curl libxml2
 
 name=portdbc
-version=1.2
+version=1.3
 release=1
 source=(https://github.com/sepen/portdbc/archive/v$version/$name-$version.tar.gz)
 
