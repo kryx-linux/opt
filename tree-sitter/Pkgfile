@@ -4,9 +4,9 @@
 # Depends on:
 
 name=tree-sitter
-version=0.21.0
+version=0.22.1
 release=1
-source=(https://github.com/tree-sitter/tree-sitter/archive/$version/$name-$version.tar.gz)
+source=(https://github.com/tree-sitter/tree-sitter/archive/v$version/$name-$version.tar.gz)
 
 build() {
   cd $name-$version

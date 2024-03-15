@@ -4,7 +4,7 @@
 # Depends on: python3-pip
 
 name=python3-packaging
-version=23.2
+version=24.0
 release=1
 source=(https://pypi.org/packages/source/p/packaging/packaging-$version.tar.gz)
 
