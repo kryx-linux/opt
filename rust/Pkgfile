@@ -158,7 +158,7 @@ EOF
 	else
 		sed -e 's|@CCACHE@||' -i $SRC/config.toml
 	fi
-_
+
 	if prt-get isinst clang lld; then
 		sed -e 's|@TARGETCC@|"clang"|g' -e 's|@TARGETCXX@|"clang++"|g' -e 's|@TARGETAR@|"llvm-ar"|g' -e 's|@TARGETRANLIB@|"llvm-ranlib"|g' -i $SRC/config.toml
 	else
