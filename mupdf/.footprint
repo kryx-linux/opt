@@ -32,6 +32,8 @@ drwxr-xr-x	root/root	usr/include/mupdf/fitz/
 -rw-r--r--	root/root	usr/include/mupdf/fitz/glyph-cache.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/glyph.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/hash.h
+-rw-r--r--	root/root	usr/include/mupdf/fitz/heap-imp.h
+-rw-r--r--	root/root	usr/include/mupdf/fitz/heap.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/image.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/link.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/log.h
@@ -60,6 +62,7 @@ drwxr-xr-x	root/root	usr/include/mupdf/fitz/
 -rw-r--r--	root/root	usr/include/mupdf/fitz/write-pixmap.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/writer.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/xml.h
+-rw-r--r--	root/root	usr/include/mupdf/html.h
 -rw-r--r--	root/root	usr/include/mupdf/memento.h
 -rw-r--r--	root/root	usr/include/mupdf/pdf.h
 drwxr-xr-x	root/root	usr/include/mupdf/pdf/
@@ -71,6 +74,7 @@ drwxr-xr-x	root/root	usr/include/mupdf/pdf/
 -rw-r--r--	root/root	usr/include/mupdf/pdf/event.h
 -rw-r--r--	root/root	usr/include/mupdf/pdf/font.h
 -rw-r--r--	root/root	usr/include/mupdf/pdf/form.h
+-rw-r--r--	root/root	usr/include/mupdf/pdf/image-rewriter.h
 -rw-r--r--	root/root	usr/include/mupdf/pdf/interpret.h
 -rw-r--r--	root/root	usr/include/mupdf/pdf/javascript.h
 -rw-r--r--	root/root	usr/include/mupdf/pdf/name-table.h
