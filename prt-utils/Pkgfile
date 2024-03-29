@@ -1,13 +1,14 @@
 # Description: Collection of scripts for CRUX, mainly oriented towards package and port management
-# URL: https://crux.nu/Wiki/PrtUtils
+# URL: https://git.crux.nu/tools/prt-utils
 # Maintainer: John McQuah, jmcquah at disroot dot org
-# Depends on: elfutils
+# Depends on: elfutils dialog
 
 name=prt-utils
 version=1.3.2
 release=1
-source=(https://git.crux.nu/tools/$name/archive/release-$version.tar.gz)
-renames=($name-$version.tar.gz)
+_commit=937c5e3a001069c7eb28724f118957eb049a76ca
+source=(https://git.crux.nu/tools/$name/archive/$_commit.tar.gz)
+renames=($name-$version-$release.tar.gz)
 
 build() {
     cd $name
