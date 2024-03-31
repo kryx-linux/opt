@@ -5,14 +5,13 @@
 
 name=prt-utils
 version=1.3.2
-release=1
-_commit=937c5e3a001069c7eb28724f118957eb049a76ca
+release=2
+_commit=2b269ab3bda954cc5d97ff83788171520dd8acab
 source=(https://git.crux.nu/tools/$name/archive/$_commit.tar.gz)
 renames=($name-$version-$release.tar.gz)
 
 build() {
     cd $name
-    make
     make DESTDIR=$PKG install
     install -d $PKG/etc/revdep.d
 }
