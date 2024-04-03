@@ -2,30 +2,69 @@
 # URL: https://www.cyrusimap.org/sasl/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: db openssl linux-pam
+# Optional: krb5 mariadb openldap postgresql
 
 name=cyrus-sasl
 version=2.1.28
-release=1
+release=2
 source=(https://github.com/cyrusimap/$name/releases/download/$name-$version/$name-$version.tar.gz
+  0013-Don-t-use-la-files-for-opening-plugins.patch
+  0022-Fix-keytab-option-for-MIT-Kerberos.patch
+  0032-Add-with_pgsql-include-postgresql-to-include-path.patch
   saslauthd)
 
 build() {
   cd $name-$version
 
-  ./configure \
+  patch -p1 -i $SRC/0013-Don-t-use-la-files-for-opening-plugins.patch
+  patch -p1 -i $SRC/0022-Fix-keytab-option-for-MIT-Kerberos.patch
+  prt-get isinst postgresql && \
+    patch -p1 -i $SRC/0032-Add-with_pgsql-include-postgresql-to-include-path.patch
+
+  CPPFLAGS="$CFLAGS"
+
+  prt-get isinst krb5 && PKGMK_CYRUSSASL+=' --enable-gssapi'
+  prt-get isinst mariadb && PKGMK_CYRUSSASL+=' --with-mysql=yes' CPPFLAGS+=" $(mysql_config --libs | sed -e 's,-[^L][^ ]*,,g' -e 's,^ *,,' -e 's, *$,,' -e 's,  *, ,g')" || PKGMK_CYRUSSASL+=' --with-mysql=no'
+  prt-get isinst openldap && PKGMK_CYRUSSASL+=' --enable-ldapdb --with-ldap'
+  prt-get isinst postgresql && PKGMK_CYRUSSASL+=' --with-pgsql=yes' CPPFLAGS+=" -I$(pg_config --includedir)" || PKGMK_CYRUSSASL+=' --with-pgsql=no'
+
+  if [[ $(prt-get isinst mariadb) || $(prt-get isinst postgresql) ]]; then
+    PKGMK_CYRUSSASL+=' --enable-sql'
+  else
+    PKGMK_CYRUSSASL+=' --disable-sql'
+  fi
+
+  rm -f config/config.guess config/config.sub
+  rm -f config/ltconfig config/ltmain.sh config/libtool.m4
+  rm -fr autom4te.cache
+  libtoolize -c
+  aclocal -I config
+  automake -a -c
+  autoheader
+  autoconf
+
+  ./configure $PKGMK_CYRUSSASL \
       --prefix=/usr \
       --sysconfdir=/etc/sasl \
+      --with-configdir=/etc/sasl2:/etc/sasl:/usr/lib/sasl2 \
       --with-plugindir=/usr/lib/sasl2 \
       --with-saslauthd=/var/sasl/saslauthd \
-      --with-dbpath=/etc/sasl/sasldb2 \
+      --with-dbpath=/var/sasl/sasldb2 \
       --with-dblib=berkeley \
       --with-bdb-incdir=/usr/include \
       --with-bdb-libdir=/usr/lib \
       --with-openssl=/usr \
+      --with-devrandom=/dev/urandom \
+      --with-sqlite3=/usr/lib \
       --enable-login \
       --enable-cram \
       --enable-digest \
-      --enable-shared
+      --enable-shared \
+      --enable-auth-sasldb \
+      --enable-plain \
+      --enable-login \
+      --enable-ntlm
+  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
   make CFLAGS="$CFLAGS -fPIC"
   make DESTDIR=$PKG install

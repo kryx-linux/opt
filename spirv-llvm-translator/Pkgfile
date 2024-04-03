@@ -5,14 +5,11 @@
 
 name=spirv-llvm-translator
 version=18.1.0
-release=1
-source=(https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$version/$name-$version.tar.gz
-  2388.patch)
+release=2
+source=(https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$version/$name-$version.tar.gz)
 
 build() {
   prt-get isinst ccache && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
-
-  patch -Rp1 -d SPIRV-LLVM-Translator-$version -i $SRC/2388.patch
 
   cmake -S SPIRV-LLVM-Translator-$version -B build -G Ninja $PKGMK_SLT \
     -D CMAKE_INSTALL_PREFIX=/usr \

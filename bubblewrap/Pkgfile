@@ -2,31 +2,25 @@
 # URL: https://github.com/projectatomic/bubblewrap/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libcap
-# Optional: docbook-xsl
+# Optional: bash-completion docbook-xsl zsh
 
 name=bubblewrap
-version=0.8.0
+version=0.9.0
 release=1
-source=(https://github.com/projectatomic/bubblewrap/releases/download/v$version/$name-$version.tar.xz
-  bwrap.1)
+source=(https://github.com/projectatomic/bubblewrap/releases/download/v$version/$name-$version.tar.xz)
 
 build() {
-  cd $name-$version
+  prt-get isinst bash-completion || PKGMK_BUBBLEWRAP+=' -D bash_completion=disabled'
+  prt-get isinst zsh || PKGMK_BUBBLEWRAP+=' -D zsh_completion=disabled'
 
-  if [ ! -e '/usr/share/xml/docbook/xsl-stylesheets' ]; then
-    # build will fail if libxslt is installed witout docbook-xsl
-    PKGMK_BUBBLEWRAP+=' --disable-man'
-
-    install -Dm644 $SRC/bwrap.1 $PKG/usr/share/man/man1/bwrap.1
-  fi
-
-  ./configure ${PKGMK_BUBBLEWRAP} \
+  meson setup $name-$version build $PKGMK_BUBBLEWRAP \
     --prefix=/usr \
-    --with-priv-mode=setuid
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
 
-  make
-  make DESTDIR=$PKG install
-
-  prt-get isinst bash-completion || rm -r $PKG/usr/share/bash-completion
-  prt-get isinst zsh || rm -r $PKG/usr/share/zsh
+  chmod u+s $PKG/usr/bin/bwrap
 }

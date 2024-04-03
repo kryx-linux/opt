@@ -4,7 +4,7 @@
 
 name=vulkan-headers
 _name=Vulkan-Headers
-version=1.3.275.0
+version=1.3.280.0
 _version=vulkan-sdk-$version
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-Headers/archive/$_version/$_name-$version.tar.gz)
