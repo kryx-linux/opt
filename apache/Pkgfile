@@ -4,15 +4,13 @@
 # Depends on: apr-util libnghttp2 libpcre2 libxml2 openssl
 
 name=apache
-version=2.4.58
-release=2
+version=2.4.59
+release=1
 source=(https://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
-	crux.layout apache libxml2-2.12.patch)
+	crux.layout apache)
 
 build(){
 	cd httpd-$version
-
-	patch -p1 -i $SRC/libxml2-2.12.patch
 
 	cat $SRC/crux.layout >> config.layout
 	sed -ri '/^(User|Group)/s/daemon/www/' docs/conf/httpd.conf.in
