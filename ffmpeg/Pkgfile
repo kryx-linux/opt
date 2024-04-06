@@ -9,6 +9,7 @@ version=6.1.1
 release=2
 source=(https://ffmpeg.org/releases/$name-$version.tar.bz2
   add-av_stream_get_first_dts-for-chromium.patch
+  fef22c87ada4517441701e6e61e062c9f4399c8e.patch
   250471ea1745fc703eb346a2a662304536a311b1.patch
   ffmpeg-x264-10bit.sh)
 
@@ -70,6 +71,7 @@ build() {
   prt-get isinst x265 && PKGMK_FFMPEG+=' --enable-libx265'
 
   patch -Np1 -i $SRC/250471ea1745fc703eb346a2a662304536a311b1.patch
+  patch -Np1 -i $SRC/fef22c87ada4517441701e6e61e062c9f4399c8e.patch
   patch -Np1 -i $SRC/add-av_stream_get_first_dts-for-chromium.patch
 
   sed -i -e '/check_cflags -fdiagnostics-color=auto/d' configure
