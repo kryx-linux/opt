@@ -10,23 +10,32 @@ release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz)
 
 build() {
-  if [[ ! -e /usr/include/xkbcommon/xkbcommon-x11.h ]]; then
-    printf '\e[31m%s\e[m\n' "libxkbcommon is not built with x11 support!"
-    printf '\e[31m%s\e[m\n' "Therefor, qt6-base is not built with x11-support!"
-    printf '\e[33m%s\e[m\n' "This build will fail because x11 is needed, else it will fail"
-    printf '\e[31m%s\e[m\n' "Rebuild libxkbcommon with x11 support, then rebuild qt6-base"
-    printf '\e[31m%s\e[m\n' "Rebuild libxkbcommon with x11 support, then rebuild qt6-base"
+  # WARNING: QtWebEngine won't be built. Could not find all necessary libraries for qpa-xcb support. X11:YES LIBDRM:YES XCOMPOSITE:YES XCURSOR:YES XRANDR:YES XI:YES XPROTO:YES XSHMFENCE:YES XTST:YES
+  if [[ ! -e /usr/lib/qt6/plugins/platforms/libqxcb.so ]]; then
+    printf '\e[31m%s\e[m\n' "
+opt/qt6-base is not build with x11-platform support, and
+opt/qt6-webeningedepends on it!
+Please make sure xorg/xkeyboard-config is installed, then rebuild
+opt/libxkbcommon and opt/qt6-base. After that, you can attempt to build
+opt/qt6-webengine again.
+"
+    exit 1
+  fi
+  if [[ ! -e /usr/lib/qt6/plugins/printsupport/libcupsprintersupport.so ]]; then
+    printf '\e[31m%s\e[m\n' "
+opt/qt6-base is not build with opt/cups support, and opt/qt6-webeninge
+depends on it!
+Please make sure opt/cups is installed, then rebuild opt/qt6-base. After
+that, you can attempt to build opt/qt6-webengine again.
+"
     exit 1
   fi
 
   prt-get isinst krb5 && PKGMK_QT6+=' -D QT_FEATURE_webengine_kerberos=ON'
   prt-get isinst pipewire && PKGMK_QT6+=' -D QT_FEATURE_webengine_webrtc_pipewire=ON'
 
-  # use ccache if found on system and in PATH, else use sccache if found on system
   prt-get isinst ccache && echo "${PATH}" | grep '/usr/lib/ccache' && \
   PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
-  prt-get isinst sccache && echo "${PATH}" | grep --invert-match '/usr/lib/ccache' && \
-  PKGMK_QT6+=' -D CMAKE_C_COMPILER_LAUNCHER=sccache -D CMAKE_CXX_COMPILER_LAUNCHER=sccache'
 
   sed -e 's/^#define BA_LB_COUNT.*$/#define BA_LB_COUNT 40/' \
     -i qtwebengine-everywhere-src-$version/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
@@ -41,7 +50,7 @@ build() {
     -D QT_FEATURE_webengine_system_icu=ON \
     -D QT_FEATURE_webengine_system_libevent=ON \
     -D QT_FEATURE_webengine_proprietary_codecs=ON \
-    -D QT_FEATURE_webengine_system_re2=OFF \
+    -D QT_FEATURE_webengine_system_re2=ON \
     -D QT_FEATURE_webengine_ozone_x11=ON \
     -Wno-dev
   cmake --build build
