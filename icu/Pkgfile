@@ -5,7 +5,7 @@
 
 name=icu
 version=74.2
-release=1
+release=2
 source=(https://github.com/unicode-org/icu/releases/download/release-${version//./-}/icu4c-${version/./_}-src.tgz
   ICU-22132.patch)
 
@@ -18,7 +18,11 @@ build() {
     export CC=gcc CXX=g++
 
   patch -Np1 -i $SRC/ICU-22132.patch
+  export CFLAGS="$CFLAGS -fno-strict-aliasing"
+  export CXXFLAGS="$CFLAGS"
+  echo $CFLAGS $CXXFLAGS
 
+  CONFIG_SHELL=/bin/bash \
   ./configure \
     --prefix=/usr \
     --mandir=/usr/share/man \
