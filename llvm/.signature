@@ -1,10 +1,10 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/fvlyc6yKBptrIqfQZYlLas2zXGwq9A9TQA8v6rx8bK102jFb1lEGxWfTpfVY3EFXyJDVem62qk2LoDvTxYOBAA=
-SHA256 (Pkgfile) = ad0223e508bc18c4941767b2d274ba1289339149dfbd898d80afe005bca489a2
-SHA256 (.footprint) = 0c6b3b4d1b5923be17b5b754d363780b2909db0234b2cae8473c43a00fe95b66
-SHA256 (llvm-18.1.2.src.tar.xz) = 13ef90fa598a239222ecadd64a63d81e4db59813aa5f255cbb5e9d3e0cf927d0
-SHA256 (cmake-18.1.2.src.tar.xz) = b55a1eed9fe9c5d86c9f73c8aabde3e2407e603e737e1555545c3d136655955b
-SHA256 (third-party-18.1.2.src.tar.xz) = d3f2ded8386c590c2ba26770df573b13ec3215182c7b15baba546edfeb182565
+RWSE3ohX2g5d/YoPc29oD6gKv73xOg6XUztmZRrPP5WMqIIeBTkFsiRQKQA1wdRM2bpcIVOKFkvSAA3LYaiizOAnDUOXU+esWwk=
+SHA256 (Pkgfile) = d094447528598a1916ea0a1d7c7ea10a8a3e07cf5750208018e2951a4b7ccf80
+SHA256 (.footprint) = 0c80a1ae0cad1a0efa5f7cdaea39df7a73cb055303536178e57a939904698642
+SHA256 (llvm-18.1.3.src.tar.xz) = fa6db8951f5ef576ac6bad43d5e1ed83962754538c998fbfa0397cd4521abc00
+SHA256 (cmake-18.1.3.src.tar.xz) = acfecb615d41c5b1a0a31e15324994ca06f7a3f37d8958d719b20de0d217b71b
+SHA256 (third-party-18.1.3.src.tar.xz) = ba1de46e740133d361c0d5d1387befa309f0b60f81bc2bf003252bebdcf9eada
 SHA256 (install-prefix.patch) = 2649b61a459eb6d8a9aca38ab411aec27eeae57fe82e32d135db4ccb353c9dda
 SHA256 (rust-feature-tables.patch) = 88470afc557650112af05e9055d0010f07a888c34fcc61ed8b7cc165d8ecd9af
 SHA256 (llvm-config.h) = 2227b83b904348e5530f3475c978e11cb0f05a85024781dcb49ac86b65582707

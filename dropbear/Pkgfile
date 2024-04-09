@@ -4,7 +4,7 @@
 # Depends on: zlib linux-pam
 
 name=dropbear
-version=2022.83
+version=2024.84
 release=1
 source=(https://matt.ucc.asn.au/$name/releases/$name-$version.tar.bz2 \
     dropbear.rc dropbear.pam)
@@ -12,7 +12,7 @@ source=(https://matt.ucc.asn.au/$name/releases/$name-$version.tar.bz2 \
 build() {
     cd $name-$version
 
-    sed '/pam_start/s/sshd/dropbear/' -i svr-authpam.c
+    sed '/pam_start/s/sshd/dropbear/' -i src/svr-authpam.c
 
     echo '#define SFTPSERVER_PATH "/usr/lib/ssh/sftp-server"' > localoptions.h
     echo '#define DROPBEAR_SVR_PASSWORD_AUTH 0' >> localoptions.h

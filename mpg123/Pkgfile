@@ -5,7 +5,7 @@
 # Optional: alsa-lib flac lame libsdl2 pulseaudio
 
 name=mpg123
-version=1.32.5
+version=1.32.6
 release=1
 source=(https://sourceforge.net/projects/mpg123/files/mpg123/$version/$name-$version.tar.bz2)
 
