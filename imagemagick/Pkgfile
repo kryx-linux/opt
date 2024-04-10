@@ -5,18 +5,21 @@
 # Optional: fontconfig lcms2 libpng libtiff libxml2 openjpeg2 pango xorg-libxt
 
 name=imagemagick
-version=7.1.1-29
+version=7.1.1-30
 release=1
 source=(https://imagemagick.org/archive/releases/ImageMagick-$version.tar.xz)
 
 build () {
 	cd ImageMagick-$version
 
+	sed '/INSTALL_BASE/d' -i PerlMagick/Makefile.PL.in
+
 	./configure \
 		--prefix=/usr \
 		--enable-shared \
 		--with-modules \
-		--with-perl=yes
+		--with-perl=yes \
+		--with-perl-options=''
 
 	make
 	make DESTDIR=$PKG install
