@@ -30,6 +30,17 @@ lrwxrwxrwx	root/root	usr/lib/libupower-glib.so.3 -> libupower-glib.so.3.1.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/upower-glib.pc
 drwxr-xr-x	root/root	usr/lib/upower/
+drwxr-xr-x	root/root	usr/lib/upower/upower/
+-rwxr-xr-x	root/root	usr/lib/upower/upower/integration-test.py
+-rw-r--r--	root/root	usr/lib/upower/upower/output_checker.py
+drwxr-xr-x	root/root	usr/lib/upower/upower/tests/
+-rw-r--r--	root/root	usr/lib/upower/upower/tests/logitech-g903.device
+-rw-r--r--	root/root	usr/lib/upower/upower/tests/steelseries-headset.device
+-rw-r--r--	root/root	usr/lib/upower/upower/tests/usb-headset.device
+-rw-r--r--	root/root	usr/lib/upower/upower/tests/wacom-bluetooth-active.device
+-rw-r--r--	root/root	usr/lib/upower/upower/tests/wacom-dongle-active.device
+-rw-r--r--	root/root	usr/lib/upower/upower/tests/wacom-dongle-waiting.device
+-rw-r--r--	root/root	usr/lib/upower/upower/tests/wacom-pen-digitiser.device
 -rwxr-xr-x	root/root	usr/lib/upower/upowerd
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/dbus-1/
@@ -43,6 +54,9 @@ drwxr-xr-x	root/root	usr/share/dbus-1/system.d/
 -rw-r--r--	root/root	usr/share/dbus-1/system.d/org.freedesktop.UPower.conf
 drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/UPowerGlib-1.0.gir
+drwxr-xr-x	root/root	usr/share/installed-tests/
+drwxr-xr-x	root/root	usr/share/installed-tests/upower/
+-rw-r--r--	root/root	usr/share/installed-tests/upower/upower-integration.test
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
 drwxr-xr-x	root/root	var/lib/upower/
