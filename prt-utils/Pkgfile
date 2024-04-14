@@ -5,8 +5,8 @@
 
 name=prt-utils
 version=1.3.2
-release=2
-_commit=2b269ab3bda954cc5d97ff83788171520dd8acab
+release=3
+_commit=1bdb894947dddab6192e6d0c8c6d1617cd8a44f4
 source=(https://git.crux.nu/tools/$name/archive/$_commit.tar.gz)
 renames=($name-$version-$release.tar.gz)
 
