@@ -1,10 +1,10 @@
-# Description: Gstreamer is a library that allows the construction of graphs of media-handling components.
+# Description: open-source multimedia framework
 # URL: https://gstreamer.freedesktop.org/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: gobject-introspection libcap
 
 name=gstreamer
-version=1.24.1
+version=1.24.2
 release=1
 source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 
