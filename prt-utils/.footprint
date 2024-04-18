@@ -67,3 +67,14 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/prtverify.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/prtwash.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/revdep.1.gz
+drwxr-xr-x	root/root	usr/share/portspage/
+-rw-r--r--	root/root	usr/share/portspage/style.html
+drwxr-xr-x	root/root	usr/share/prtcreate/
+-rw-r--r--	root/root	usr/share/prtcreate/autotools
+-rw-r--r--	root/root	usr/share/prtcreate/cmake
+-rw-r--r--	root/root	usr/share/prtcreate/meson
+-rw-r--r--	root/root	usr/share/prtcreate/ninja
+-rw-r--r--	root/root	usr/share/prtcreate/perl
+-rw-r--r--	root/root	usr/share/prtcreate/py3pip
+-rw-r--r--	root/root	usr/share/prtcreate/py3setup
+-rw-r--r--	root/root	usr/share/prtcreate/r
