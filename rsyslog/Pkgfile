@@ -5,13 +5,13 @@
 
 name=rsyslog
 version=8.2404.0
-release=1
+release=2
 source=(https://www.rsyslog.com/files/download/$name/$name-$version.tar.gz \
     $name.conf rsyslogd.rc)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr
+    PID_FILE_PATH=/run/rsyslogd.pid ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
 
