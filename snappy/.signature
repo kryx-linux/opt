@@ -1,7 +1,7 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/S87Uv/k25m1Zo3MTur0KmaqeakKDIGAt13bxqF2XOOstRpBPhU/iYgSXu/1VdTgNICMx97/OZS2A6DbLRigdgU=
-SHA256 (Pkgfile) = 0702f22448b4ef9872e65fe825c89954b6d1a5d04559c39d3f17c20b611b6049
+RWSE3ohX2g5d/QszJPYtIZjvV+0ZIp7hseQ3zDBs8jR/G59oUZE4+rZ1sr/UGIFbSaSKaefugCxwGzWB3upx3ocLHIIkuwKTswk=
+SHA256 (Pkgfile) = 76e9b8c2a727a1417a770ae7a1845add22890ab8550f6402beee24ee96f71535
 SHA256 (.footprint) = 4e6caf096a0a3890f9fed498418de3635acfb1fdb7239bd17bff22934bd70eee
-SHA256 (snappy-1.1.10.tar.gz) = 49d831bffcc5f3d01482340fe5af59852ca2fe76c3e05df0e67203ebbe0f1d90
-SHA256 (snappy-thirdparty.patch) = c9599e8a4880e7205c74aaadad153c5426853d11ffb7c8a6862d3e291353de7d
-SHA256 (snappy-do-not-disable-rtti.patch) = 0934868ea57a9d9cb3f55b5a2bf0c66f53ec130bd1e1bb3f83f200e6cf3af557
+SHA256 (snappy-1.2.0.tar.gz) = 9b8f10fbb5e3bc112f2e5e64f813cb73faea42ec9c533a5023b5ae08aedef42e
+SHA256 (snappy-thirdparty.patch) = c6414e04258e9cc0ea37adf35eba19987f26606afe7527fac094a290f9311c9e
+SHA256 (snappy-do-not-disable-rtti.patch) = 66d4a99c2194b15c3bab4ee9c7eda6b5fcf391bf5d1687b1b5255bb77cae12f4

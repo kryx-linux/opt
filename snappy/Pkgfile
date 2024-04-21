@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=snappy
-version=1.1.10
+version=1.2.0
 release=1
 source=(https://github.com/google/snappy/archive/$version/$name-$version.tar.gz
   snappy-thirdparty.patch
