@@ -4,7 +4,7 @@
 # Depends on: rust util-linux
 
 name=task
-version=3.0.0
+version=3.0.1
 release=1
 source=(https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v$version/$name-$version.tar.gz)
 
@@ -22,6 +22,6 @@ build() {
 	DESTDIR=$PKG cmake --install build
 
 	prt-get isinst zsh || rm -r $PKG/usr/share/zsh
-	rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,NEWS,README.md,INSTALL,LICENSE}
+	rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,README.md,INSTALL,LICENSE}
 	rm $PKG/usr/share/task/scripts/{add-ons,vim,hooks}/README
 }
