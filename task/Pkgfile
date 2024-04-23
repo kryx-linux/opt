@@ -4,7 +4,7 @@
 # Depends on: rust util-linux
 
 name=task
-version=3.0.1
+version=3.0.2
 release=1
 source=(https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v$version/$name-$version.tar.gz)
 
