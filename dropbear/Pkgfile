@@ -4,7 +4,7 @@
 # Depends on: zlib linux-pam
 
 name=dropbear
-version=2024.84
+version=2024.85
 release=1
 source=(https://matt.ucc.asn.au/$name/releases/$name-$version.tar.bz2 \
 	dropbear.rc dropbear.pam)
