@@ -5,9 +5,9 @@
 
 name=sc
 version=7.16
-release=7
+release=8
 source=(http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16.orig.tar.gz \
-	http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16-4.1.debian.tar.xz)
+	http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16-4.2.debian.tar.xz)
 
 build() {
 	cd $name-$version
