@@ -3,8 +3,8 @@
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 
 name=mathopd
-version=1.6b15
-release=3
+version=1.6b16
+release=1
 source=(http://www.mathopd.org/dist/$name-$version.tar.gz \
         http://jue.li/misc/dir_cgi/dir_cgi-1.1.tar.gz \
         http://www.mathopd.org/doc/mathopd.8.gz \
