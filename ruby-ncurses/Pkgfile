@@ -1,15 +1,15 @@
 # Description: Ruby bindings for the ncurses library
-# URL: https://github.com/eclubb/ncurses-ruby
+# URL: https://github.com/sup-heliotrope/ncursesw-ruby
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: ruby ncurses
 
 name=ruby-ncurses
-version=1.2.4
-release=7
-source=(https://rubygems.org/downloads/ncurses-ruby-$version.gem)
+version=1.4.11
+release=1
+source=(https://rubygems.org/downloads/ncursesw-$version.gem)
 
 build () {
-	gem install ncurses-ruby \
+	gem install ncursesw \
 		--ignore-dependencies \
 		--no-user-install \
 		--no-document \
@@ -18,7 +18,6 @@ build () {
 
 	cd $PKG/$(gem env gemdir)
 	rm -r cache doc build_info
-	cd gems/ncurses-ruby-$version
-	rm COPYING Changelog.md LICENSE.txt README.md THANKS
-	rm TODO .gitignore examples/LICENSES_for_examples
+	cd gems/ncursesw-$version
+	rm COPYING Changes README.md THANKS TODO
 }
