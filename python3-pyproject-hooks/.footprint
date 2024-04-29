@@ -2,21 +2,18 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/python3.10/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/
-drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.0.0.dist-info/
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.0.0.dist-info/INSTALLER
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.0.0.dist-info/LICENSE
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.0.0.dist-info/METADATA
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.0.0.dist-info/RECORD
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.0.0.dist-info/REQUESTED (EMPTY)
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.0.0.dist-info/WHEEL
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.0.0.dist-info/direct_url.json
+drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.1.0.dist-info/
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.1.0.dist-info/INSTALLER
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.1.0.dist-info/METADATA
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.1.0.dist-info/RECORD
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.1.0.dist-info/REQUESTED (EMPTY)
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.1.0.dist-info/WHEEL
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks-1.1.0.dist-info/direct_url.json
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/__init__.py
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/__pycache__/__init__.cpython-310.pyc
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/__pycache__/_compat.cpython-310.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/__pycache__/_impl.cpython-310.pyc
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/_compat.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/_impl.py
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/_in_process/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/_in_process/__init__.py
@@ -24,3 +21,4 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/_in_proces
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/_in_process/__pycache__/__init__.cpython-310.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/_in_process/__pycache__/_in_process.cpython-310.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/_in_process/_in_process.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/pyproject_hooks/py.typed (EMPTY)
