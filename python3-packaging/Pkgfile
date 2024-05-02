@@ -1,7 +1,7 @@
 # Description: Core utilities for Python packages.
 # URL: https://pypi.python.org/pypi/packaging/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: python3-pip
+# Depends on: python3-flit-core
 
 name=python3-packaging
 version=24.0

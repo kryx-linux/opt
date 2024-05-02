@@ -1,7 +1,17 @@
-diff -r efdeda5cdfa2 CMakeLists.txt
---- a/CMakeLists.txt	Sat May 15 14:50:17 2021 +0200
-+++ b/CMakeLists.txt	Sat May 15 14:54:41 2021 +0200
-@@ -284,29 +284,12 @@
+From 4e6c67832f53b126d1e54b9398b88f23e75846f3 Mon Sep 17 00:00:00 2001
+From: "Azamat H. Hackimov" <azamat.hackimov@gmail.com>
+Date: Thu, 11 Apr 2024 10:05:30 +0300
+Subject: [PATCH 1/3] Use external GTest suite
+
+---
+ CMakeLists.txt | 22 ++--------------------
+ 1 file changed, 2 insertions(+), 20 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 85afe58..e23d2ca 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -319,27 +319,9 @@ endif(SNAPPY_BUILD_TESTS OR SNAPPY_BUILD_BENCHMARKS)
  if(SNAPPY_BUILD_TESTS)
    enable_testing()
  
@@ -11,7 +21,7 @@ diff -r efdeda5cdfa2 CMakeLists.txt
 -  set(install_gmock OFF)
 -  set(build_gmock ON)
 -
--  # This project is tested using GoogleTest.
+   # This project is tested using GoogleTest.
 -  add_subdirectory("third_party/googletest")
 -
 -  # GoogleTest triggers a missing field initializers warning.
@@ -22,27 +32,14 @@ diff -r efdeda5cdfa2 CMakeLists.txt
 -        APPEND PROPERTY COMPILE_OPTIONS -Wno-missing-field-initializers)
 -  endif(SNAPPY_HAVE_NO_MISSING_FIELD_INITIALIZERS)
 -
+-  if(SNAPPY_HAVE_NO_IMPLICIT_INT_FLOAT_CONVERSION)
+-    set_property(TARGET gtest
+-        APPEND PROPERTY COMPILE_OPTIONS -Wno-implicit-int-float-conversion)
+-  endif(SNAPPY_HAVE_NO_IMPLICIT_INT_FLOAT_CONVERSION)
++  find_package(GTest REQUIRED)
++  include(GoogleTest)
+ 
    add_executable(snappy_unittest "")
    target_sources(snappy_unittest
-     PRIVATE
-       "snappy_unittest.cc"
-   )
--  target_link_libraries(snappy_unittest snappy_test_support gmock_main gtest)
-+  target_link_libraries(snappy_unittest snappy_test_support gtest_main gtest)
- 
-   add_test(
-     NAME snappy_unittest
-@@ -327,12 +310,11 @@
-     PRIVATE
-       "snappy_benchmark.cc"
-   )
--  target_link_libraries(snappy_benchmark snappy_test_support benchmark_main)
-+  target_link_libraries(snappy_benchmark snappy_test_support benchmark_main benchmark)
- 
-   # This project uses Google benchmark for benchmarking.
-   set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "" FORCE)
-   set(BENCHMARK_ENABLE_EXCEPTIONS OFF CACHE BOOL "" FORCE)
--  add_subdirectory("third_party/benchmark")
- endif(SNAPPY_BUILD_BENCHMARKS)
- 
- if(SNAPPY_FUZZING_BUILD)
+-- 
+2.43.2

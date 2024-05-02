@@ -2697,7 +2697,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Commands/BuildCommand/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/BuildCommand/cdesc-BuildCommand.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/BuildCommand/error_message-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/BuildCommand/execute-i.ri
--rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/BuildCommand/find_gemspec-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/BuildCommand/gem_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/BuildCommand/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/BuildCommand/resolve_gem_name-i.ri
@@ -2844,6 +2843,21 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Commands/RdocCommand/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RdocCommand/cdesc-RdocCommand.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RdocCommand/execute-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RdocCommand/new-c.ri
+drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/build_gem-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/build_package-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/cdesc-RebuildCommand.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/compare-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/download_gem-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/error_message-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/execute-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/get_gem_name_and_version-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/get_timestamp-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/prep_dirs-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/rubygems_version-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/sha256-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/RebuildCommand/with_source_date_epoch-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Commands/SearchCommand/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/SearchCommand/cdesc-SearchCommand.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Commands/SearchCommand/new-c.ri
@@ -3248,6 +3262,9 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/GemcutterUtilities/WebauthnPoll
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/GemcutterUtilities/wait_for_otp_thread-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/GemcutterUtilities/webauthn_verification_url-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/GemcutterUtilities/with_response-i.ri
+drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/GemspecHelpers/
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/GemspecHelpers/cdesc-GemspecHelpers.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/GemspecHelpers/find_gemspec-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/ImpossibleDependenciesError/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ImpossibleDependenciesError/cdesc-ImpossibleDependenciesError.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ImpossibleDependenciesError/conflicts-i.ri
@@ -3862,6 +3879,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Resolver/SpecSpecification/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Resolver/SpecSpecification/cdesc-SpecSpecification.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Resolver/SpecSpecification/dependencies-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Resolver/SpecSpecification/full_name-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Resolver/SpecSpecification/hash-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Resolver/SpecSpecification/name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Resolver/SpecSpecification/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Resolver/SpecSpecification/platform-i.ri
@@ -4483,6 +4501,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_require_paths-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_required%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_required_attributes-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_required_ruby_version-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_rubygems_version-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_self_inclusion_in_files_list-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_shebang_line_in-i.ri
@@ -4688,6 +4707,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/dump-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/dump_hash-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/load-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/strip_comment-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/activated_gem_paths-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/add_to_load_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/already_loaded%3f-c.ri
@@ -4726,6 +4746,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ensure_gem_subdirectories-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/env_requirement-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/find_config_file-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/find_default_spec-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/find_files-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/find_home-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/find_latest_files-c.ri
@@ -13312,6 +13333,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/RDoc/Store/MissingFileError/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/RDoc/Store/main%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/RDoc/Store/main-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/RDoc/Store/make_variable_map-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/RDoc/Store/marshal_load-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/RDoc/Store/method_file-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/RDoc/Store/module_names-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/RDoc/Store/modules_hash-i.ri
