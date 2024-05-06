@@ -4,15 +4,15 @@
 # Optional: gdb
 
 name=valgrind
-version=3.22.0
+version=3.23.0
 release=1
 source=(https://sourceware.org/pub/$name/$name-$version.tar.bz2)
 
 build() {
-  cd $name-$version
-  ./configure --prefix=/usr \
-    --libexecdir=/usr/lib
-  make
-  make DESTDIR=$PKG install
-  rm -rf $PKG/usr/share/doc
+    cd $name-$version
+    ./configure --prefix=/usr \
+        --libexecdir=/usr/lib
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share/doc
 }
