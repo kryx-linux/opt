@@ -1,12 +1,12 @@
 # Description: An OpenType text shaping engine
 # URL: https://github.com/harfbuzz/harfbuzz
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: cairo gobject-introspection
+# Depends on: cairo glib-introspection
 # Optional: chafa graphite2 icu
 
 name=harfbuzz
 version=8.5.0
-release=1
+release=2
 source=(https://github.com/harfbuzz/harfbuzz/releases/download/$version/$name-$version.tar.xz)
 
 build() {
