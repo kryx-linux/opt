@@ -1,17 +1,22 @@
 # Description: Very powerfull shell
 # URL: https://www.zsh.org/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: libpcre
+# Depends on: libpcre2
 
 name=zsh
 version=5.9
-release=2
+release=3
 source=(https://www.zsh.org/pub/$name-$version.tar.xz
   _prt-get _pkgadd _pkgmk _pkginfo _pkgrm _rejmerge
+  0002-fix-autocompletion.patch
+  0004-pcre2.patch
   zsh-lovers.1)
 
 build() {
   cd $name-$version
+
+  patch -Np1 -i $SRC/0002-fix-autocompletion.patch
+  patch -Np1 -i $SRC/0004-pcre2.patch
 
   # fix paths https://crux.nu/bugs/index.php?getfile=539
   sed -i 's#/usr/share/keymaps#/usr/share/kbd/keymaps#g' Completion/Unix/Command/_loadkeys
@@ -27,6 +32,8 @@ build() {
   rm -f  Completion/Unix/Command/_{osc,systemd}
 
   rm Doc/version.yo
+
+  autoreconf -fi
 
   ./configure \
     --prefix=/usr \

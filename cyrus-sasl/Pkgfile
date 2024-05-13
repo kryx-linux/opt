@@ -1,7 +1,7 @@
 # Description: Simple Authentication and Security Layer
 # URL: https://www.cyrusimap.org/sasl/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: db openssl linux-pam
+# Depends on: openssl linux-pam
 # Optional: krb5 mariadb openldap postgresql
 
 name=cyrus-sasl
@@ -11,6 +11,7 @@ source=(https://github.com/cyrusimap/$name/releases/download/$name-$version/$nam
   0013-Don-t-use-la-files-for-opening-plugins.patch
   0022-Fix-keytab-option-for-MIT-Kerberos.patch
   0032-Add-with_pgsql-include-postgresql-to-include-path.patch
+  time-include.patch
   saslauthd)
 
 build() {
@@ -20,6 +21,7 @@ build() {
   patch -p1 -i $SRC/0022-Fix-keytab-option-for-MIT-Kerberos.patch
   prt-get isinst postgresql && \
     patch -p1 -i $SRC/0032-Add-with_pgsql-include-postgresql-to-include-path.patch
+  patch -p1 -i $SRC/time-include.patch
 
   CPPFLAGS="$CFLAGS"
 
@@ -44,26 +46,23 @@ build() {
   autoconf
 
   ./configure $PKGMK_CYRUSSASL \
-      --prefix=/usr \
-      --sysconfdir=/etc/sasl \
-      --with-configdir=/etc/sasl2:/etc/sasl:/usr/lib/sasl2 \
-      --with-plugindir=/usr/lib/sasl2 \
-      --with-saslauthd=/var/sasl/saslauthd \
-      --with-dbpath=/var/sasl/sasldb2 \
-      --with-dblib=berkeley \
-      --with-bdb-incdir=/usr/include \
-      --with-bdb-libdir=/usr/lib \
-      --with-openssl=/usr \
-      --with-devrandom=/dev/urandom \
-      --with-sqlite3=/usr/lib \
-      --enable-login \
-      --enable-cram \
-      --enable-digest \
-      --enable-shared \
-      --enable-auth-sasldb \
-      --enable-plain \
-      --enable-login \
-      --enable-ntlm
+    --prefix=/usr \
+    --sysconfdir=/etc/sasl \
+    --with-configdir=/etc/sasl2:/etc/sasl:/usr/lib/sasl2 \
+    --with-plugindir=/usr/lib/sasl2 \
+    --with-saslauthd=/var/sasl/saslauthd \
+    --with-dbpath=/var/sasl/sasldb2 \
+    --with-openssl=/usr \
+    --with-devrandom=/dev/urandom \
+    --with-sqlite3=/usr/lib \
+    --enable-login \
+    --enable-cram \
+    --enable-digest \
+    --enable-shared \
+    --enable-auth-sasldb \
+    --enable-plain \
+    --enable-login \
+    --enable-ntlm
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
   make CFLAGS="$CFLAGS -fPIC"

@@ -4,7 +4,7 @@
 # Depends on: compiler-rt
 
 name=clang
-version=18.1.4
+version=18.1.5
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-$version.src.tar.xz
     https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-tools-extra-$version.src.tar.xz
@@ -25,7 +25,6 @@ build() {
         -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
         -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
         -D LLVM_MAIN_SRC_DIR="$SRC/llvm-$version.src" \
-        -D LLVM_EXTERNAL_LIT=/usr/bin/lit \
         -D LLVM_PARALLEL_COMPILE_JOBS="${JOBS:-1}" \
         -D LLVM_INCLUDE_TESTS=OFF \
         -Wno-dev

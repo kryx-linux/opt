@@ -1,15 +1,15 @@
 # Description: An event-driven initramfs infrastructure
-# URL: https://dracut.wiki.kernel.org/index.php/Main_Page
+# URL: https://github.com/dracut-ng/dracut-ng
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=dracut
-version=060
+version=101
 release=1
-source=(https://crux.nu/files/$name-$version.tar.xz \
+source=(https://github.com/dracut-ng/dracut-ng/archive/$version/$name-$version.tar.gz
     https://crux.nu/files/$name-man-pages-$version.tar.xz)
 
 build() {
-    cd $name-$version
+    cd dracut-ng-$version
     ./configure --prefix=/usr \
         --sysconfdir=/etc \
         --disable-documentation
@@ -17,4 +17,5 @@ build() {
     make DESTDIR=$PKG install
     rm $PKG/usr/lib/$name/modules.d/*/README*
     cp -r $SRC/usr $PKG/
+    chmod -R g-w $PKG/usr/lib/$name/modules.d
 }
