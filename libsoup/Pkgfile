@@ -1,8 +1,8 @@
 # Description: HTTP library implementation in C
 # URL: https://wiki.gnome.org/action/show/Projects/libsoup
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: glib-networking libpsl libxml2
-# Optional: vala krb5
+# Depends on: glib-introspection glib-networking libpsl
+# Optional: krb5 vala
 
 name=libsoup
 version=2.74.3
