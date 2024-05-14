@@ -9,26 +9,6 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/php/
 drwxr-xr-x	root/root	usr/lib/php/pear/
-drwxr-xr-x	root/root	usr/lib/php/pear/.channels/
-drwxr-xr-x	root/root	usr/lib/php/pear/.channels/.alias/
--rw-r--r--	root/root	usr/lib/php/pear/.channels/.alias/pear.txt
--rw-r--r--	root/root	usr/lib/php/pear/.channels/.alias/pecl.txt
--rw-r--r--	root/root	usr/lib/php/pear/.channels/.alias/phpdocs.txt
--rw-r--r--	root/root	usr/lib/php/pear/.channels/__uri.reg
--rw-r--r--	root/root	usr/lib/php/pear/.channels/doc.php.net.reg
--rw-r--r--	root/root	usr/lib/php/pear/.channels/pear.php.net.reg
--rw-r--r--	root/root	usr/lib/php/pear/.channels/pecl.php.net.reg
--rw-r--r--	root/root	usr/lib/php/pear/.filemap
--rw-r--r--	root/root	usr/lib/php/pear/.lock (EMPTY)
-drwxr-xr-x	root/root	usr/lib/php/pear/.registry/
-drwxr-xr-x	root/root	usr/lib/php/pear/.registry/.channel.__uri/
-drwxr-xr-x	root/root	usr/lib/php/pear/.registry/.channel.doc.php.net/
-drwxr-xr-x	root/root	usr/lib/php/pear/.registry/.channel.pecl.php.net/
--rw-r--r--	root/root	usr/lib/php/pear/.registry/archive_tar.reg
--rw-r--r--	root/root	usr/lib/php/pear/.registry/console_getopt.reg
--rw-r--r--	root/root	usr/lib/php/pear/.registry/pear.reg
--rw-r--r--	root/root	usr/lib/php/pear/.registry/structures_graph.reg
--rw-r--r--	root/root	usr/lib/php/pear/.registry/xml_util.reg
 drwxr-xr-x	root/root	usr/lib/php/pear/Archive/
 -rw-r--r--	root/root	usr/lib/php/pear/Archive/Tar.php
 drwxr-xr-x	root/root	usr/lib/php/pear/Console/

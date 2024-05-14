@@ -16,6 +16,6 @@ build() {
 
     php -n install-pear-nozlib.phar
 
-    rm -r $PKG/.{filemap,lock,depdb*,channels,registry}
+    rm -r $PKG/usr/lib/php/pear/.{filemap,lock,channels,registry}
     rm -r $PKG/usr/lib/php/pear/{docs,tests}
 }
