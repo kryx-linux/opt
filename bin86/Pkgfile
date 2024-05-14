@@ -11,7 +11,7 @@ source=(https://codeberg.org/jbruchon/dev86/archive/$_commit.tar.gz
 renames=($name-$version-c83297b.tar.gz SKIP)
 
 build() {
-    cd dev86-*
+    cd dev86
 
     patch -p1 -i $SRC/$name-x86_64.patch
     sed -i '/#include "version.h"/d' as/as.c ld/io.c
