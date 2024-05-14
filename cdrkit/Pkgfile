@@ -7,10 +7,49 @@ name=cdrkit
 version=1.1.11
 release=5
 source=(http://pkgs.fedoraproject.org/repo/pkgs/cdrkit/cdrkit-1.1.11.tar.gz/efe08e2f3ca478486037b053acd512e9/cdrkit-1.1.11.tar.gz
-    cdrkit-1.1.9-efi-boot.patch)
+    cdrkit-1.1.8-werror.patch
+    cdrkit-1.1.9-efi-boot.patch
+    cdrkit-1.1.9-no_mp3.patch
+    cdrkit-1.1.9-buffer_overflow.patch
+    cdrkit-1.1.10-build-fix.patch
+    cdrkit-1.1.11-manpagefix.patch
+    cdrkit-1.1.11-rootstat.patch
+    cdrkit-1.1.11-usalinst.patch
+    cdrkit-1.1.11-readsegfault.patch
+    cdrkit-1.1.11-format.patch
+    cdrkit-1.1.11-handler.patch
+    cdrkit-1.1.11-dvdman.patch
+    cdrkit-1.1.11-utf8.patch
+    cdrkit-1.1.11-cmakewarn.patch
+    cdrkit-1.1.11-memset.patch
+    cdrkit-1.1.11-ppc64le_elfheader.patch
+    cdrkit-1.1.11-werror_gcc5.patch
+    cdrkit-1.1.11-devname.patch
+    cdrkit-1.1.11-sysmacros.patch
+    cdrkit-1.1.11-gcc10.patch)
 
 build () {
-    patch -d $name-$version -p1 -i $SRC/cdrkit-1.1.9-efi-boot.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.8-werror.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.9-efi-boot.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.9-no_mp3.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.9-buffer_overflow.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.10-build-fix.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-manpagefix.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-rootstat.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-usalinst.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-readsegfault.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-format.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-handler.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-dvdman.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-utf8.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-cmakewarn.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-memset.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-ppc64le_elfheader.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-werror_gcc5.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-devname.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-sysmacros.patch
+    patch -Np1 -d $name-$version -i $SRC/cdrkit-1.1.11-gcc10.patch
+
     cmake -S $name-$version -B build -G Ninja \
         -D CMAKE_BUILD_TYPE=Release \
         -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -fcommon" \

@@ -14,6 +14,29 @@ lrwxrwxrwx	root/root	usr/bin/cdda2mp3 -> cdda2ogg
 -rwxr-xr-x	root/root	usr/bin/readmult
 -rwxr-xr-x	root/root	usr/bin/readom
 -rwxr-xr-x	root/root	usr/bin/wodim
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/usal/
+-rw-r--r--	root/root	usr/include/usal/aspi-dos.h
+-rw-r--r--	root/root	usr/include/usal/aspi-win32.h
+-rw-r--r--	root/root	usr/include/usal/pg.h
+-rw-r--r--	root/root	usr/include/usal/scsicdb.h
+-rw-r--r--	root/root	usr/include/usal/scsidefs.h
+-rw-r--r--	root/root	usr/include/usal/scsireg.h
+-rw-r--r--	root/root	usr/include/usal/scsisense.h
+-rw-r--r--	root/root	usr/include/usal/scsitransp.h
+-rw-r--r--	root/root	usr/include/usal/spti-wnt.h
+-rw-r--r--	root/root	usr/include/usal/srb_os2.h
+-rw-r--r--	root/root	usr/include/usal/usalcmd.h
+-rw-r--r--	root/root	usr/include/usal/usalio.h
+-rw-r--r--	root/root	usr/include/usal/usalops.h
+-rw-r--r--	root/root	usr/include/usal/usaltimes.h
+drwxr-xr-x	root/root	usr/lib/
+lrwxrwxrwx	root/root	usr/lib/librols.so -> librols.so.0
+lrwxrwxrwx	root/root	usr/lib/librols.so.0 -> librols.so.0.0.1
+-rwxr-xr-x	root/root	usr/lib/librols.so.0.0.1
+lrwxrwxrwx	root/root	usr/lib/libusal.so -> libusal.so.0
+lrwxrwxrwx	root/root	usr/lib/libusal.so.0 -> libusal.so.0.0.1
+-rwxr-xr-x	root/root	usr/lib/libusal.so.0.0.1
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/netscsid
 drwxr-xr-x	root/root	usr/share/
