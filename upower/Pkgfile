@@ -1,8 +1,8 @@
 # Description: Abstraction for enumerating power devices, listening to device events and querying history and statistics.
 # URL: https://upower.freedesktop.org/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: dbus-glib intltool libgudev libusb
-# Optional: gobject-introspection gtk-doc libxslt
+# Depends on: dbus-glib intltool libgudev libusb glib-introspection
+# Optional: gtk-doc libxslt
 
 name=upower
 version=1.90.4
