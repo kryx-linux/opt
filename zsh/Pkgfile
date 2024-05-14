@@ -8,15 +8,25 @@ version=5.9
 release=3
 source=(https://www.zsh.org/pub/$name-$version.tar.xz
   _prt-get _pkgadd _pkgmk _pkginfo _pkgrm _rejmerge
+  0001-zsh-5.9-do-not-use-egrep-in-tests.patch
+  0002-zsh-Use-int-main-in-test-c-codes.patch
   0002-fix-autocompletion.patch
-  0004-pcre2.patch
+  0003-zsh-fix-module-loading-problem-with-full-RELRO.patch
+  0004-zsh-enable-PCRE-locale-switching.patch
+  0005-zsh-port-to-pcre2.patch
+  0007-zsh-configure-c99.patch
   zsh-lovers.1)
 
 build() {
   cd $name-$version
 
+  patch -Np1 -i $SRC/0001-zsh-5.9-do-not-use-egrep-in-tests.patch
+  patch -Np1 -i $SRC/0002-zsh-Use-int-main-in-test-c-codes.patch
   patch -Np1 -i $SRC/0002-fix-autocompletion.patch
-  patch -Np1 -i $SRC/0004-pcre2.patch
+  patch -Np1 -i $SRC/0003-zsh-fix-module-loading-problem-with-full-RELRO.patch
+  patch -Np1 -i $SRC/0004-zsh-enable-PCRE-locale-switching.patch
+  patch -Np1 -i $SRC/0005-zsh-port-to-pcre2.patch
+  patch -Np1 -i $SRC/0007-zsh-configure-c99.patch
 
   # fix paths https://crux.nu/bugs/index.php?getfile=539
   sed -i 's#/usr/share/keymaps#/usr/share/kbd/keymaps#g' Completion/Unix/Command/_loadkeys

@@ -1,6 +1,6 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/cPWJb1Ze6IbysEQVv82zDCrBANFqjXsl16XyHUVpW1fnTqivmccFi0xUvSziOwDIu3DpXme+Zx9uX8y2crnoAg=
-SHA256 (Pkgfile) = 7e53ef096fea1f23a2452cef17f55ef18c1633127797f5dee96e5867831adcb8
+RWSE3ohX2g5d/aD7GE+mxKotokjbHu7zrtabZWDbwU7Ofrd5fJ+4LmkmG5Sj3QPe3tNNz1IuIO5aBAlzSPEJVxIskXKHCmLEyAI=
+SHA256 (Pkgfile) = 502600465fc989feb0ca7dccaaaa313972fc928eb7817b59877e9143480d267c
 SHA256 (.footprint) = f4bf0634a73205ac5c1ae0739ef230cbbf6867bd012755e13da4ed8da30a838b
 SHA256 (zsh-5.9.tar.xz) = 9b8d1ecedd5b5e81fbf1918e876752a7dd948e05c1a0dba10ab863842d45acd5
 SHA256 (_prt-get) = a0ffcbe04f9a217543e8923b20c676bf8ea6864dbc4037a3e1afe41e0b33ff91
@@ -9,6 +9,11 @@ SHA256 (_pkgmk) = 1499c43d5092d98dfa3ed07be6388735ed4f0e43608e26eedd3cf95494c580
 SHA256 (_pkginfo) = 90d7e38e0982271133d5a9a6ff436830e6c7669c4d3b47bcca49e33bfbdd9f7f
 SHA256 (_pkgrm) = cdd2bc5097cfc5c57592b677dee39f5ff4ae065e04997fa628367977068d4458
 SHA256 (_rejmerge) = d9060208a9f26c88bfe96f734cdbd461252dcbc413782c947a3a2a0e25e82d38
+SHA256 (0001-zsh-5.9-do-not-use-egrep-in-tests.patch) = bdd4a2b643fe387d8acff42a3c1a3f10385f8c94577195fb3b6740d494776c27
+SHA256 (0002-zsh-Use-int-main-in-test-c-codes.patch) = 1e39a0e1b12c51fb0095adace1bbe612fa12c8f6507f8c4cbf16487d9f067438
 SHA256 (0002-fix-autocompletion.patch) = e7060f64936bcc94aeaf44e69b6d476917a8c14cd339a3bc779c080fb01bb2f7
-SHA256 (0004-pcre2.patch) = ea68214d5be0514aa1b19e93fc9f44de878b9428e920227230a8fa3a75b0bd18
+SHA256 (0003-zsh-fix-module-loading-problem-with-full-RELRO.patch) = 63c520a80cc4818db652651e348e73a1ca773128d58455d2985214cdd93ac1c2
+SHA256 (0004-zsh-enable-PCRE-locale-switching.patch) = fc7ee5c381851eb7eeff474aa15973afc150a43f8ec5871d023e99ae09401368
+SHA256 (0005-zsh-port-to-pcre2.patch) = 8e6b2b7e6a489c31b914d6c9c686668ea0d7bc0d2b5cf022581a126d6f917bd9
+SHA256 (0007-zsh-configure-c99.patch) = fa6dc2ff9f901861c8b281fc998b83166c7887a06735716c33ee5413523c028c
 SHA256 (zsh-lovers.1) = c13688b37897c98d2593826b0ab7606927a28998d73ff0c8a2a4d07dad93944a
