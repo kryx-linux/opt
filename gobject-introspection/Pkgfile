@@ -13,7 +13,7 @@ build() {
   prt-get isinst cairo || PKGMK_GOBJECTINTROSPECTION+=' -D cairo=disabled'
   prt-get isinst python3-mako python3-markdown || PKGMK_GOBJECTINTROSPECTION+=' -D doctool=disabled'
 
-  meson setup $name-$version build \
+  meson setup $name-$version build $PKGMK_GOBJECTINTROSPECTION \
     --prefix=/usr \
     --buildtype=plain \
     --wrap-mode nodownload \
