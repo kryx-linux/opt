@@ -1,10 +1,18 @@
 untrusted comment: verify with /etc/ports/opt.pub
+<<<<<<< HEAD
 RWSE3ohX2g5d/flL0oKXu00R7EeW8sae0esONNmkxMGUcd89DwAXCgy4RHP2WS0e4apS9Qejj5wG5lVOTuCmdp3NlTCDp2DvGg0=
 SHA256 (Pkgfile) = 4f54805ef46cecb165844b4a09493aba9b4a1f6a7faa1c7077fb9a4eff0803ad
 SHA256 (.footprint) = 13e7b824cefe5aacf7ad004dd2ca521a6bfcd82fb9ab9e7956d8823568f78434
 SHA256 (qt-everywhere-opensource-src-5.15.12.tar.xz) = 93f2c0889ee2e9cdf30c170d353c3f829de5f29ba21c119167dee5995e48ccce
 SHA256 (qt-everywhere-opensource-src-5.15.12-kf5-1.patch) = 50db2eb15bada7e87ddbe43a9a6a8f2844513356dd9c9adc9f4fedfc12b0db6d
 SHA256 (qt-5.15.11-xkbcommon160.patch) = ec3a75466a2c0f99b397103a8f0ff278c5b73c38c26460fc0943b91e89655d80
+=======
+RWSE3ohX2g5d/REC9ZlahurTRugFlGvYS6HfR/9Foe6DUUFN7kItV0PJvKELzuv3dYCu+m9l+I9+dQ4U33eskHU7W+JfYGwkpwA=
+SHA256 (Pkgfile) = 84e3d6260ae5ea1606b7dc1c83c13bf78e131b103bb7a2dc0088609d935a5d9a
+SHA256 (.footprint) = 1daabe9cc3b7a1072c5fcce0ed1b62dd51afa6d6845e9d3c818026208681e087
+SHA256 (qt-everywhere-opensource-src-5.15.13.tar.xz) = 9550ec8fc758d3d8d9090e261329700ddcd712e2dda97e5fcfeabfac22bea2ca
+SHA256 (qt-everywhere-opensource-src-5.15.13-kf5-1.patch) = 4b3e79176ae712afe4092c7080c98f456fbdc1b82e54790d87a108e6f9602e9c
+>>>>>>> origin/3.7
 SHA256 (qtbase-5.15.8-fix-missing-qtsan-include.patch) = 65b435d09220fc66584f9613cdf7518367185af4e166c5b670301be6af98e8b1
 SHA256 (qt5-cflags.patch) = cf707cd970650f8b60f8897692b36708ded9ba116723ec8fcd885576783fe85c
 SHA256 (qt5-logo.png) = ae1335ecd1cd2d17032184895ab298a636cdfa8121b0ed71307c4f2b23ec928e
