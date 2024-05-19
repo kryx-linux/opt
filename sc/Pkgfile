@@ -6,8 +6,9 @@
 name=sc
 version=7.16
 release=8
-source=(http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16.orig.tar.gz \
-    http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16-4.2.debian.tar.xz)
+source=(http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16.orig.tar.gz
+    http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16-4.2.debian.tar.xz
+    sc-gcc14.patch)
 
 build() {
     cd $name-$version
@@ -16,6 +17,10 @@ build() {
     for p in $(< $SRC/debian/patches/series); do
         patch -p1 -i $SRC/debian/patches/$p
     done
+
+    patch -p1 -i $SRC/sc-gcc14.patch
+
+    export CFLAGS="$CFLAGS -Wno-error=int-conversion"
 
     sed -e "/^CFLAGS=/s/-O2 -pipe/$CFLAGS/" \
         -e "/^LIBDIR=/s|doc/||" \
