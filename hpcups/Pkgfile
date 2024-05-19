@@ -6,10 +6,13 @@
 name=hpcups
 version=3.23.12
 release=1
-source=(http://downloads.sourceforge.net/project/hplip/hplip/$version/hplip-$version.tar.gz)
+source=(http://downloads.sourceforge.net/project/hplip/hplip/$version/hplip-$version.tar.gz
+    hplip-gcc14.patch)
 
 build() {
     cd hplip-$version
+
+    patch -p1 -i $SRC/hplip-gcc14.patch
 
     ./configure \
         --prefix=/usr \
