@@ -48,6 +48,10 @@ lrwxrwxrwx	root/root	usr/lib/apr-util-1/apr_crypto_openssl.so -> apr_crypto_open
 -rw-r--r--	root/root	usr/lib/apr-util-1/apr_dbd_sqlite3.a
 -rwxr-xr-x	root/root	usr/lib/apr-util-1/apr_dbd_sqlite3.la
 lrwxrwxrwx	root/root	usr/lib/apr-util-1/apr_dbd_sqlite3.so -> apr_dbd_sqlite3-1.so
+-rwxr-xr-x	root/root	usr/lib/apr-util-1/apr_dbm_db-1.so
+-rw-r--r--	root/root	usr/lib/apr-util-1/apr_dbm_db.a
+-rwxr-xr-x	root/root	usr/lib/apr-util-1/apr_dbm_db.la
+lrwxrwxrwx	root/root	usr/lib/apr-util-1/apr_dbm_db.so -> apr_dbm_db-1.so
 -rwxr-xr-x	root/root	usr/lib/apr-util-1/apr_dbm_gdbm-1.so
 -rw-r--r--	root/root	usr/lib/apr-util-1/apr_dbm_gdbm.a
 -rwxr-xr-x	root/root	usr/lib/apr-util-1/apr_dbm_gdbm.la

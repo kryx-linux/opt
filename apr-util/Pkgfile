@@ -1,7 +1,7 @@
 # Description: APR-util provides a number of helpful abstractions on top of APR
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # URL: https://apr.apache.org/
-# Depends on: apr expat gdbm openssl sqlite3
+# Depends on: apr db expat gdbm openssl sqlite3
 
 name=apr-util
 version=1.6.3
@@ -15,6 +15,7 @@ build(){
         --prefix=/usr \
         --with-apr=/usr \
         --with-expat=/usr \
+        --with-berkeley-db=/usr \
         --with-gdbm=/usr \
         --with-sqlite3=/usr \
         --with-openssl=/usr \
