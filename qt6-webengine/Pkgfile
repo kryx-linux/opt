@@ -5,7 +5,7 @@
 # Optional: dav1d fdk-aac gnutls graphite2 keyutils krb5 lame lcms2 libpcre2 libvdpau numactl pipewire x264 x265
 
 name=qt6-webengine
-version=6.7.0
+version=6.7.1
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz
   ninja-1.12.patch
@@ -54,7 +54,6 @@ that, you can attempt to build opt/qt6-webengine again.
   sed -e 's/^#define BA_LB_COUNT.*$/#define BA_LB_COUNT 40/' \
     -i qtwebengine-everywhere-src-$version/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
 
-  patch -Np1 -d qtwebengine-everywhere-src-$version/src/3rdparty -i $SRC/ninja-1.12.patch
   patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/ninja-1.12-2.patch
 
   cd $SRC/qtwebengine-everywhere-src-$version/src/3rdparty/chromium

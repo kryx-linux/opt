@@ -1,7 +1,7 @@
 # Description: Print plugin and ghostscript/cups driver (formerly called gimp-print)
 # URL:         http://gimp-print.sourceforge.net/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  ghostscript
+# Depends on:  cups ghostscript
 
 name=gutenprint
 version=5.3.4

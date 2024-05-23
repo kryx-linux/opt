@@ -13,6 +13,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/assistant_hr.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/assistant_hu.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/assistant_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/assistant_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/assistant_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/assistant_nl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/assistant_pl.qm
@@ -36,6 +37,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/designer_hr.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/designer_hu.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/designer_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/designer_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/designer_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/designer_nl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/designer_pl.qm
@@ -58,6 +60,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/linguist_hu.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/linguist_it.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/linguist_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/linguist_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/linguist_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/linguist_nl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/linguist_pl.qm
@@ -97,6 +100,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_help_hu.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_help_it.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_help_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qt_help_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_help_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_help_nl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_help_nn.qm
@@ -113,6 +117,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_hu.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_it.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qt_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_lt.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qt_lv.qm
@@ -146,6 +151,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qtbase_hu.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtbase_it.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtbase_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qtbase_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtbase_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtbase_lv.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtbase_nl.qm
@@ -166,6 +172,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qtconnectivity_es.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtconnectivity_hr.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtconnectivity_hu.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qtconnectivity_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtconnectivity_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtconnectivity_nl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtconnectivity_pl.qm
@@ -187,6 +194,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qtdeclarative_hr.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtdeclarative_hu.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtdeclarative_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qtdeclarative_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtdeclarative_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtdeclarative_lv.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtdeclarative_nl.qm
@@ -209,6 +217,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qtlocation_fr.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtlocation_hr.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtlocation_hu.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qtlocation_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtlocation_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtlocation_nl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtlocation_pl.qm
@@ -232,6 +241,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qtmultimedia_hu.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtmultimedia_it.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtmultimedia_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qtmultimedia_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtmultimedia_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtmultimedia_nl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtmultimedia_nn.qm
@@ -247,6 +257,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qtserialport_en.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtserialport_es.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtserialport_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qtserialport_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtserialport_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtserialport_pl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtserialport_ru.qm
@@ -256,6 +267,7 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebengine_de.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebengine_en.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebengine_es.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qtwebengine_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebengine_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebengine_pl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebengine_ru.qm
@@ -267,7 +279,9 @@ drwxr-xr-x	root/root	usr/share/qt6/translations/
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebsockets_es.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebsockets_fr.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebsockets_ja.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qtwebsockets_ka.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebsockets_ko.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebsockets_pl.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebsockets_ru.qm
 -rw-r--r--	root/root	usr/share/qt6/translations/qtwebsockets_uk.qm
+-rw-r--r--	root/root	usr/share/qt6/translations/qtwebsockets_zh_CN.qm

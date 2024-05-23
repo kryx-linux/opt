@@ -4,7 +4,7 @@
 # Depends on: autoconf-archive libusb libtiff libpng xz
 
 name=sane
-version=1.3.0
+version=1.3.1
 release=1
 #source=(https://gitlab.com/sane-project/backends/uploads/110fc43336d0fb5e514f1fdc7360dd87/sane-backends-$version.tar.gz)
 source=(https://gitlab.com/sane-project/backends/-/archive/$version/backends-$version.tar.bz2)
