@@ -3,12 +3,17 @@
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 
 name=hicolor-icon-theme
-version=0.17
+version=0.18
 release=1
 source=(https://icon-theme.freedesktop.org/releases/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr
-	make DESTDIR=$PKG install
+    meson setup $name-$version build \
+        --prefix=/usr \
+        --buildtype=plain \
+        --wrap-mode nodownload \
+        -D b_lto=true \
+        -D b_pie=true
+    meson compile -C build
+    DESTDIR=$PKG meson install -C build
 }
