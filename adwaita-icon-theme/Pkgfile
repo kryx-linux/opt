@@ -4,7 +4,7 @@
 # Depends On: gtk3 hicolor-icon-theme librsvg
 
 name=adwaita-icon-theme
-version=46.0
+version=46.2
 release=1
 source=(https://gitlab.gnome.org/GNOME/adwaita-icon-theme/-/archive/$version/$name-$version.tar.bz2)
 
