@@ -138,7 +138,6 @@ drwxr-xr-x	root/root	usr/include/mysql/mariadb/
 drwxr-xr-x	root/root	usr/include/mysql/mysql/
 -rw-r--r--	root/root	usr/include/mysql/mysql/client_plugin.h
 -rw-r--r--	root/root	usr/include/mysql/mysql/plugin_auth.h
--rw-r--r--	root/root	usr/include/mysql/mysql/plugin_auth_common.h
 -rw-r--r--	root/root	usr/include/mysql/mysql_com.h
 -rw-r--r--	root/root	usr/include/mysql/mysql_version.h
 -rw-r--r--	root/root	usr/include/mysql/mysqld_error.h
@@ -218,6 +217,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/mysql/psi/
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_my_crypt.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_my_print_error.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_my_snprintf.h
+-rw-r--r--	root/root	usr/include/mysql/server/mysql/service_print_check_msg.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_progress_report.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_sha1.h
 -rw-r--r--	root/root	usr/include/mysql/server/mysql/service_sha2.h
@@ -288,6 +288,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/grant.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/group_by_handler.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/gstream.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/gtid_index.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/ha_handler_stats.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/ha_partition.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/ha_sequence.h
@@ -337,7 +338,6 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/mem_root_array.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/message.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/multi_range_read.h
--rw-r--r--	root/root	usr/include/mysql/server/private/my_alarm.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_apc.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_atomic.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/my_atomic_wrapper.h
@@ -545,7 +545,6 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
 -rw-r--r--	root/root	usr/include/mysql/server/private/t_ctype.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/table.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/table_cache.h
--rw-r--r--	root/root	usr/include/mysql/server/private/thr_alarm.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/thr_lock.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/thr_malloc.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/thr_timer.h
@@ -562,7 +561,6 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
 -rw-r--r--	root/root	usr/include/mysql/server/private/violite.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/waiting_threads.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/welcome_copyright_notice.h
--rw-r--r--	root/root	usr/include/mysql/server/private/win_tzname_data.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/winservice.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wqueue.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/wsrep.h
@@ -775,6 +773,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/replace.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/resolve_stack_dump.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/resolveip.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/wsrep_sst_backup.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/wsrep_sst_common.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/wsrep_sst_mariabackup.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/wsrep_sst_mysqldump.1.gz
@@ -935,7 +934,6 @@ drwxr-xr-x	root/root	usr/share/mariadb/charsets/
 -rw-r--r--	root/root	usr/share/mariadb/charsets/swe7.xml
 drwxr-xr-x	root/root	usr/share/mariadb/english/
 -rw-r--r--	root/root	usr/share/mariadb/english/errmsg.sys
--rw-r--r--	root/root	usr/share/mariadb/errmsg-utf8.txt
 -rw-r--r--	root/root	usr/share/mariadb/fill_help_tables.sql
 -rw-r--r--	root/root	usr/share/mariadb/magic
 -rw-r--r--	root/root	usr/share/mariadb/maria_add_gis_sp.sql
