@@ -1,11 +1,11 @@
 # Description: A fast compiler cache
 # URL: https://ccache.dev/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on:
+# Depends on: fmt xxhash zstd
 # Optional: asciidoctor clang-ccache-bindings gcc-fortran-ccache-bindings hiredis mingw-ccache-bindings
 
 name=ccache
-version=4.9.1
+version=4.10
 release=1
 source=(https://github.com/$name/$name/releases/download/v$version/$name-$version.tar.xz)
 
@@ -18,10 +18,10 @@ build() {
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -D DEPS=LOCAL \
     -D ENABLE_IPO=ON \
-    -D HIREDIS_FROM_INTERNET=OFF \
-    -D ZSTD_FROM_INTERNET=OFF \
-    -D ENABLE_TESTING=OFF
+    -D ENABLE_TESTING=OFF \
+    -D ENABLE_DOCUMENTATION=OFF
 
   cmake --build build
   DESTDIR=$PKG cmake --install build
