@@ -6,9 +6,12 @@
 name=gst-libav
 version=1.24.4
 release=1
-source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
+source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz
+  ffmpeg7.patch)
 
 build() {
+  patch -Np3 -d $name-$version -i $SRC/ffmpeg7.patch
+
   meson build $name-$version \
     --prefix /usr \
     --libexecdir=/usr/lib \
