@@ -6,8 +6,9 @@
 
 name=gst-plugins-base
 version=1.24.4
-release=1
-source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
+release=2
+source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz
+  ffmpeg7.patch)
 
 build() {
   # decide accordingly to what mesa builds with
@@ -19,6 +20,8 @@ build() {
     PKGMK_GST_PLATFORM+=',glx' \
     PKGMK_GST_GLAPI+=',opengl' \
     PKGMK_GST_WINDOW+=',x11'
+
+  patch -Np3 -d $name-$version -i $SRC/ffmpeg7.patch
 
   meson setup build $name-$version \
     --prefix=/usr \
