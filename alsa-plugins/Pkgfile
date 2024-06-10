@@ -6,14 +6,16 @@
 
 name=alsa-plugins
 version=1.2.7.1
-release=2
+release=3
 source=(ftp://ftp.alsa-project.org/pub/plugins/$name-$version.tar.bz2
+  ffmpeg7.patch
   pulse-sysdefault.diff)
 
 build() {
   cd $name-$version
 
   patch -Np1 -i $SRC/pulse-sysdefault.diff
+  patch -Np1 -i $SRC/ffmpeg7.patch
 
   ./configure --prefix=/usr --sysconfdir=/etc
 
