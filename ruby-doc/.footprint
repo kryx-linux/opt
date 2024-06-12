@@ -420,6 +420,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Binding/
 drwxr-xr-x	root/root	usr/share/ri/3.3/system/Bundler/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/app_cache-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/app_config_path-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/auto_install-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/bin_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/bundle_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/cdesc-Bundler.ri
@@ -3030,7 +3031,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Dependency/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Dependency/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Dependency/prerelease%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Dependency/prerelease-i.ri
--rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Dependency/prioritizes_bundler%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Dependency/requirement-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Dependency/requirements_list-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Dependency/runtime%3f-i.ri
@@ -3144,7 +3144,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Ext/CargoBuilder/LinkFlagConver
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Ext/CargoBuilder/runner-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Ext/CargoBuilder/rustc_dynamic_linker_flags-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Ext/CargoBuilder/rustc_lib_flags-i.ri
--rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Ext/CargoBuilder/so_ext-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Ext/CargoBuilder/spec-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Ext/CargoBuilder/split_flags-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Ext/CargoBuilder/win_target%3f-i.ri
@@ -3511,6 +3510,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Package/TooLongFileName/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Package/gem-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Package/gzip_to-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Package/initialize-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Package/limit_read-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Package/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Package/normalize_path-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Package/prog_mode-i.ri
@@ -4401,11 +4401,9 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Specification/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/from_yaml-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/full_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/gems_dir-i.ri
--rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/gemspec_stubs_in-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/has_conflicts%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/homepage-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/initialize_copy-i.ri
--rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/installed_stubs-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/invalidate_memoized_attributes-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/keep_only_files_and_directories-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/latest_spec_for-c.ri
@@ -4417,7 +4415,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Specification/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/licenses-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/load-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/load_defaults-c.ri
--rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/mark_version-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/metadata-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/missing_extensions%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/name-i.ri
@@ -4461,6 +4458,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Specification/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/spec_dir-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/spec_file-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/spec_name-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/specification_record-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/specification_version-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/stubbed%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/stubs-c.ri
@@ -4508,6 +4506,28 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_specification_version-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_unique_links-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_values-i.ri
+drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/add_spec-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/all%3d-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/all-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/all_names-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/cdesc-SpecificationRecord.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/dirs_from-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/each-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/find_active_stub_by_path-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/find_all_by_name-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/find_by_path-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/find_inactive_by_path-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/from_path-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/installed_stubs-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/latest_spec_for-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/latest_specs-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/map_stubs-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/remove_spec-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/stubs-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/stubs_for-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationRecord/stubs_for_pattern-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/StreamUI/
 drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/StreamUI/SilentDownloadReporter/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/StreamUI/SilentDownloadReporter/cdesc-SilentDownloadReporter.ri
@@ -4585,6 +4605,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/gem_home-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/path_ok%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/plugin_dir_for-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/regenerate_plugins-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/remove-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/remove_all-i.ri
@@ -4753,6 +4774,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/find_spec_for_exe-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/find_unresolved_default_spec-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/finish_resolve-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/freebsd_platform%3f-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/gemdeps-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/host%3d-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/host-c.ri
