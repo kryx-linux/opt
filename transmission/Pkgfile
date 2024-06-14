@@ -4,11 +4,14 @@
 # Depends on: curl libevent
 
 name=transmission
-version=4.0.5
+version=4.0.6
 release=1
-source=(https://github.com/transmission/transmission/releases/download/$version/$name-$version.tar.xz)
+source=(https://github.com/transmission/transmission/releases/download/$version/$name-$version.tar.xz
+    miniupnp.patch)
 
 build() {
+    patch -d transmission-$version -p1 -i $SRC/miniupnp.patch
+
     cmake -S $name-$version -B build -G Ninja \
         -D CMAKE_BUILD_TYPE=Release \
         -D CMAKE_INSTALL_PREFIX=/usr \

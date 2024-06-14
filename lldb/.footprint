@@ -568,8 +568,8 @@ drwxr-xr-x	root/root	usr/include/lldb/Version/
 -rw-r--r--	root/root	usr/include/lldb/lldb-versioning.h
 drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.18.1
-lrwxrwxrwx	root/root	usr/lib/liblldb.so.18.1 -> liblldb.so.18.1.6
--rwxr-xr-x	root/root	usr/lib/liblldb.so.18.1.6
+lrwxrwxrwx	root/root	usr/lib/liblldb.so.18.1 -> liblldb.so.18.1.7
+-rwxr-xr-x	root/root	usr/lib/liblldb.so.18.1.7
 lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.18.1
 -rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.18.1
 drwxr-xr-x	root/root	usr/lib/python3.12/

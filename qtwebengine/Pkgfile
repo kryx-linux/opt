@@ -1,21 +1,20 @@
 # Description: The Qt WebEngine module provides a web browser engine
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: ffmpeg libvpx nodejs nss qt5 xorg-libxkbfile xorg-libxscrnsaver xorg-libxtst
+# Depends on: ffmpeg libvpx nodejs nss qt5 xorg-libxkbfile xorg-libxscrnsaver xorg-libxtst python3-html5lib
 # Optional: glib jsoncpp krb5 krb5 lcms2 libevent libsrtp libxml2 minizip opus pipewire pulseaudio re2 snappy
 
 name=qtwebengine
 version=5.15.17
-release=1
+release=2
 
 # https://github.com/qt/qtwebengine/commits/5.15
-_qtwebengine_commit=79a4e92cb0c9fc946f81e13b392a04be51d95991
+_qtwebengine_commit=63d4e58009c7f069ace14b64f1528ba2664272e9
 # from $_qtwebengine_commit/src/3rdparty
-_chromium_commit=ce00f9b5aa761866b24d6460e10aacb671c92cf0
+_chromium_commit=fdfef5b37af3bed8402d7c7e20a5487f2602b0a6
 
-source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$version.tar.gz
+source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_commit.tar.gz
   https://github.com/qt/qtwebengine-chromium/archive/$_chromium_commit/$name-chromium-$_chromium_commit.tar.gz
-  qtwebengine-build_fixes-2.patch
   qtwebengine-5.15.2-disable-fatal-warnings.patch
   qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
   qtwebengine-5.15.2_p20210521-clang-libc++.patch
@@ -26,8 +25,10 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$ve
   qtwebengine-5.15.15-c++17.patch
   qtwebengine-system-absl-compat.patch
   programm_manager.patch
-  python.patch
-  imp.patch)
+  ninja-1.12.patch
+  no-h264.patch
+  qt5-webengine-ffmpeg7.patch
+)
 
 build() {
   cd qtwebengine-$_qtwebengine_commit
@@ -37,7 +38,6 @@ build() {
   mkdir -pv .git src/3rdparty/chromium/.git
 
   # https://www.linuxfromscratch.org/blfs/view/svn/x/qtwebengine.html
-  patch -p1 -i $SRC/qtwebengine-build_fixes-2.patch
   patch -p1 -i $SRC/qtwebengine-5.15.2-disable-fatal-warnings.patch
   patch -p1 -i $SRC/qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
   patch -p1 -i $SRC/qtwebengine-5.15.2_p20210521-clang-libc++.patch
@@ -45,8 +45,9 @@ build() {
   patch -p1 -i $SRC/qtwebengine-5.15.3_p20220406-ffmpeg5.patch
   patch -p1 -i $SRC/qtwebengine-5.15.13-icu_73-1.patch
   patch -p1 -d src/3rdparty -i $SRC/qt5-webengine-pipewire-0.3.patch
-  patch -p1 -i $SRC/python.patch
-  patch -p1 -d src/3rdparty -i $SRC/imp.patch
+  patch -p1 -i $SRC/ninja-1.12.patch
+  patch -p1 -d src/3rdparty/chromium -i $SRC/qt5-webengine-ffmpeg7.patch
+  patch -p1 -i $SRC/no-h264.patch
 
   if prt-get isinst re2; then
     patch -p1 -i $SRC/qtwebengine-system-absl-compat.patch

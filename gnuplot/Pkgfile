@@ -5,7 +5,7 @@
 # Optional: libgd lua qt5 (qt6-5compat qt6-tools qt6-svg)
 
 name=gnuplot
-version=6.0.0
+version=6.0.1
 release=1
 source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 

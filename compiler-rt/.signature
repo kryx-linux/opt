@@ -1,8 +1,8 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/cbuLDL+UTwAOfdmGwvK0Zkukz0hMSXDJUP+i9hpHh9uWL1h2L/GpPN0GVXROMG81n03mJ73OtjCVswFOPBeDwU=
-SHA256 (Pkgfile) = 89319e4bd684c38bde774e3defd4f712026b33bb363ff86b27faf0c35eb421cc
+RWSE3ohX2g5d/ewcWEw3WVh8vvNS/wpAKQKFKxgH0uURVv4AaB6WBuZ3AOt43SzojDMV1pJYjNNHW00HV/HXBcB0tW7CJeWwMwg=
+SHA256 (Pkgfile) = d3d3338f0ff47c073be19670473d1779fe343df022bfa28ee3de425a8ccf1942
 SHA256 (.footprint) = 84bb3f3ad5a657004a0ce908f95855bf5bb77e4bd91a51f90b5f7a6296ca72ab
-SHA256 (compiler-rt-18.1.6.src.tar.xz) = f05f4e15a4524194c93303aa6027006a5182eccfe8f5c90491c2f1fbfcedb96b
-SHA256 (llvm-18.1.6.src.tar.xz) = c231d0a5445db2aafab855e052c247bdd9856ff9d7d9bffdd04e9f0bf8d5366f
-SHA256 (cmake-18.1.6.src.tar.xz) = a643261ed98ff76ab10f1a7039291fa841c292435ba1cfe11e235c2231b95cdb
+SHA256 (compiler-rt-18.1.7.src.tar.xz) = 7df49e669b0e93d183f5c0fcf01a4b5bbeeeb90304afffbdd84d4871da6b6e98
+SHA256 (llvm-18.1.7.src.tar.xz) = 17ba3d57c3db185722c36e736a189b2110e8cb842cc9e53dcc74e938bdadb97e
+SHA256 (cmake-18.1.7.src.tar.xz) = f0b67599f51cddcdbe604c35b6de97f2d0a447e18b9c30df300c82bf1ee25bd7
 SHA256 (libsanitizer-timebits.diff) = f88d5c03b835d411cc1b244ea52a5621b089ccd540efb46631b86ef8781e6262

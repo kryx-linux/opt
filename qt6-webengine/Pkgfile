@@ -6,10 +6,12 @@
 
 name=qt6-webengine
 version=6.7.1
-release=1
+release=2
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz
   ninja-1.12.patch
   ninja-1.12-2.patch
+  qtwebengine-ffmpeg-7.patch
+  no-h264.patch
 )
 
 build() {
@@ -55,6 +57,8 @@ that, you can attempt to build opt/qt6-webengine again.
     -i qtwebengine-everywhere-src-$version/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
 
   patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/ninja-1.12-2.patch
+  patch -Np1 -d qtwebengine-everywhere-src-$version/src/3rdparty/chromium -i $SRC/qtwebengine-ffmpeg-7.patch
+  patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/no-h264.patch
 
   cd $SRC/qtwebengine-everywhere-src-$version/src/3rdparty/chromium
   ./build/linux/unbundle/replace_gn_files.py --system-libraries $SYSLIBS

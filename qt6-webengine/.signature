@@ -1,7 +1,9 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/UuV48uTfnCzANNyCaa8mlTN3P4NS1iRj2RctMwexLGaFL4lAr1IekjlTJ2hFUdwaERAtJeO6ywqITdRH/X+eQ4=
-SHA256 (Pkgfile) = 9dd2de5e46af5a3d5521dd2748df19bccad9d80a3103b983893dab1c09e97fa8
+RWSE3ohX2g5d/QAxOz0KInrbixRadKu4ov5I6zLeLA1LJG4zXNupCu9LNgRDVnVTlE4Pku/hnneH+JKWEhqStpHvwHTiuk3TVw8=
+SHA256 (Pkgfile) = 4d053e6087e4bd7f43541baa4c4072eaf7f0732eb646b916be656062ede2de5b
 SHA256 (.footprint) = eb01d98ef8ef4bb41ce01b8b5f67656bbb5273f77e7c263a1ebbd6eb84ca650d
 SHA256 (qtwebengine-everywhere-src-6.7.1.tar.xz) = 53f08012609a7d949b0e951728ac2364a06466325ffd163b56a87c3fd021dc44
 SHA256 (ninja-1.12.patch) = 2f0eb6a69e514c834c295e413473a8cd9855e61a4774a84df001139b319663e3
 SHA256 (ninja-1.12-2.patch) = d6609b1714cd418a193f544f50685bf116be6505115cc106e9bea6a59601a701
+SHA256 (qtwebengine-ffmpeg-7.patch) = d31143fcb04acdb4d0a183eb0e1f37be66aad19454ebbbd326a8fa68ce6f0d35
+SHA256 (no-h264.patch) = 5e41df98141a5a3c6ab1ef1f1a45ea4a27631cfa3fe8b0cdd524624424d74541
