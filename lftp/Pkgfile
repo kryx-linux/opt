@@ -1,7 +1,8 @@
 # Description: Sophisticated command line based FTP client
-# URL:         https://lftp.yar.ru/
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  openssl
+# URL: https://lftp.yar.ru/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: expat openssl readline zlib
+# Optional: libidn2
 
 name=lftp
 version=4.9.2
