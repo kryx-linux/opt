@@ -5,10 +5,10 @@
 
 name=shared-mime-info
 version=2.4
-release=1
+release=2
 
 # https://gitlab.freedesktop.org/xdg/shared-mime-info/-/blob/master/xdgmime
-_xdgmimever=179296748e92bd91bf531656632a1056307fb7b7
+_xdgmimever=e861d3eb3d522a9c22c5a870526728e2a3d9fc04
 
 source=(https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/$name-$version.tar.bz2
   https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2)
@@ -37,4 +37,6 @@ build() {
   /usr/bin/env PKGSYSTEM_ENABLE_FSYNC=0 $PKG/usr/bin/update-mime-database $PKG/usr/share/mime
 
   rm -r $PKG/usr/share/locale
+
+  find $PKG/usr/share/mime -type f -exec chmod 644 {} ';'
 }
