@@ -13,7 +13,7 @@ _qtwebengine_commit=63d4e58009c7f069ace14b64f1528ba2664272e9
 # from $_qtwebengine_commit/src/3rdparty
 _chromium_commit=fdfef5b37af3bed8402d7c7e20a5487f2602b0a6
 
-source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_commit.tar.gz
+source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_qtwebengine_commit.tar.gz
   https://github.com/qt/qtwebengine-chromium/archive/$_chromium_commit/$name-chromium-$_chromium_commit.tar.gz
   qtwebengine-5.15.2-disable-fatal-warnings.patch
   qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
