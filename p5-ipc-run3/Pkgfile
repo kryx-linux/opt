@@ -4,7 +4,7 @@
 
 name=p5-ipc-run3
 version=0.049
-release=1
+release=2
 source=(https://cpan.metacpan.org/authors/id/R/RJ/RJBS/IPC-Run3-$version.tar.gz)
 
 build() {
