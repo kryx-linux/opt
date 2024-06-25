@@ -9,7 +9,10 @@ source=(https://deb.debian.org/debian/pool/main/f/$name/${name}_${version}.orig.
 
 build() {
     cd $name-$version
+
     sed -i '/^SUBDIRS/d' doc/Makefile.am
+    export CFLAGS="$CFLAGS -Wno-error=incompatible-pointer-types"
+
     ./bootstrap
     ./configure --prefix=/usr
     make
