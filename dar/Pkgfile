@@ -1,11 +1,11 @@
 # Description: Disk ARchive - a sophisticated backup utility for Linux
 # URL: http://dar.linux.free.fr/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: attr bzip2 curl lzo xz zlib zstd
+# Depends on: attr bzip2 curl lzo
 # Optional: argon2 gpgme libgcrypt lz4
 
 name=dar
-version=2.7.14
+version=2.7.15
 release=1
 source=(http://downloads.sourceforge.net/project/dar/dar/$version/$name-$version.tar.gz)
 
