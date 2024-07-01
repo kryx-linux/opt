@@ -28,6 +28,9 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_q
   ninja-1.12.patch
   no-h264.patch
   qt5-webengine-ffmpeg7.patch
+  python3.12-imp.patch
+  python3.12-six.patch
+
 )
 
 build() {
@@ -48,6 +51,9 @@ build() {
   patch -p1 -i $SRC/ninja-1.12.patch
   patch -p1 -d src/3rdparty/chromium -i $SRC/qt5-webengine-ffmpeg7.patch
   patch -p1 -i $SRC/no-h264.patch
+  patch -p1 -d src/3rdparty/chromium -i $SRC/python3.12-imp.patch
+  patch -p1 -d src/3rdparty/chromium -i $SRC/python3.12-six.patch
+
 
   if prt-get isinst re2; then
     patch -p1 -i $SRC/qtwebengine-system-absl-compat.patch
@@ -68,18 +74,6 @@ build() {
     -i src/3rdparty/chromium/tools/grit/grit/util.py
   sed -e 's/^#define BA_LB_COUNT.*$/#define BA_LB_COUNT 40/' \
     -i src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
-
-  sed -e "/import imp/d" \
-    -i src/3rdparty/chromium/mojo/public/tools/mojom/mojom/fileutil.py \
-       src/3rdparty/chromium/mojo/public/tools/mojom/mojom/parse/lexer.py
-
-  sed -e /six.move/d \
-    -i src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/internal/python_message.py
-  rm -r src/3rdparty/chromium/tools/grit/third_party/six
-
-  sed -e /.*import.*six/d \
-    -e /.*from.*six.*import/d \
-    -i src/3rdparty/chromium/tools/grit/grit/util.py
 
   sed -e '/^MODULE_VERSION/s/5.*/5.15.2/' -i .qmake.conf
   find -type f -name "*.pr[io]" | \
