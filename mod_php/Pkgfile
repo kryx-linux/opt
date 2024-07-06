@@ -1,10 +1,10 @@
 # Description: PHP DSO module for apache 
 # URL: https://www.php.net
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: apache libpcre2
+# Depends on: apache
 
 name=mod_php
-version=8.3.8
+version=8.3.9
 release=1
 source=(https://php.net/distributions/php-$version.tar.xz)
 
