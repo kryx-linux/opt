@@ -57,6 +57,7 @@ drwxr-xr-x	root/root	usr/share/gdb/python/gdb/command/__pycache__/
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/command/__pycache__/xmethods.cpython-312.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/command/explore.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/command/frame_filters.py
+-rw-r--r--	root/root	usr/share/gdb/python/gdb/command/missing_debug.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/command/pretty_printers.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/command/prompt.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/command/type_printers.py
@@ -146,6 +147,7 @@ drwxr-xr-x	root/root	usr/share/gdb/python/gdb/function/__pycache__/
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/function/as_string.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/function/caller_is.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/function/strfns.py
+-rw-r--r--	root/root	usr/share/gdb/python/gdb/missing_debug.py
 drwxr-xr-x	root/root	usr/share/gdb/python/gdb/printer/
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/printer/__init__.py
 drwxr-xr-x	root/root	usr/share/gdb/python/gdb/printer/__pycache__/
@@ -167,6 +169,7 @@ drwxr-xr-x	root/root	usr/share/gdb/syscalls/
 -rw-r--r--	root/root	usr/share/gdb/syscalls/freebsd.xml
 -rw-r--r--	root/root	usr/share/gdb/syscalls/gdb-syscalls.dtd
 -rw-r--r--	root/root	usr/share/gdb/syscalls/i386-linux.xml
+-rw-r--r--	root/root	usr/share/gdb/syscalls/loongarch-linux.xml
 -rw-r--r--	root/root	usr/share/gdb/syscalls/mips-n32-linux.xml
 -rw-r--r--	root/root	usr/share/gdb/syscalls/mips-n64-linux.xml
 -rw-r--r--	root/root	usr/share/gdb/syscalls/mips-o32-linux.xml
