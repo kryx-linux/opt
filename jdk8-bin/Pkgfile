@@ -1,10 +1,10 @@
 # Description: Java 8 Software Development Kit (amazon-corretto)
 # URL: https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/what-is-corretto-8.html
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: util-linux gtk alsa-lib
+# Depends on: alsa-lib gtk
 
 name=jdk8-bin
-version=8.412.08.1
+version=8.422.05.1
 release=1
 source=(https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-linux-x64.tar.gz)
 

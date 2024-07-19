@@ -18,7 +18,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-i386
 -rwxr-xr-x	root/root	usr/bin/qemu-img
 -rwxr-xr-x	root/root	usr/bin/qemu-io
--rwxr-xr-x	root/root	usr/bin/qemu-keymap
 -rwxr-xr-x	root/root	usr/bin/qemu-loongarch64
 -rwxr-xr-x	root/root	usr/bin/qemu-m68k
 -rwxr-xr-x	root/root	usr/bin/qemu-microblaze
@@ -84,6 +83,7 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/qemu/
 -rwxr-xr-x	root/root	usr/lib/qemu/qemu-bridge-helper
+-rwxr-xr-x	root/root	usr/lib/qemu/virtfs-proxy-helper
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/applications/
 -rw-r--r--	root/root	usr/share/applications/qemu.desktop
