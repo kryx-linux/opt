@@ -69,7 +69,6 @@ build() {
   prt-get isinst pulseaudio && sed -e '/link_pulseaudio/s/false/true/' \
     -i src/3rdparty/chromium/media/media_options.gni
 
-  # Ninja, by default, sets the number of jobs to the number of availalble threads
   test -n "$JOBS" && export NINJAFLAGS+=" -j ${JOBS-1}"
 
   # since 5.15.14 unsupported
