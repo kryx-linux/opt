@@ -67,7 +67,11 @@ drwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-ldconfig/
 drwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-modules-load/
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-modules-load/module-setup.sh
 drwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-networkd/
+-rw-r--r--	root/root	usr/lib/dracut/modules.d/01systemd-networkd/99-default.network
+-rw-r--r--	root/root	usr/lib/dracut/modules.d/01systemd-networkd/99-wait-online-dracut.conf
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-networkd/module-setup.sh
+-rwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-networkd/networkd-config.sh
+-rwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-networkd/networkd-run.sh
 drwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-pcrphase/
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-pcrphase/module-setup.sh
 drwxr-xr-x	root/root	usr/lib/dracut/modules.d/01systemd-portabled/
@@ -361,6 +365,8 @@ drwxr-xr-x	root/root	usr/lib/dracut/modules.d/95fcoe/
 drwxr-xr-x	root/root	usr/lib/dracut/modules.d/95fstab-sys/
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/95fstab-sys/module-setup.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/95fstab-sys/mount-sys.sh
+drwxr-xr-x	root/root	usr/lib/dracut/modules.d/95hwdb/
+-rw-r--r--	root/root	usr/lib/dracut/modules.d/95hwdb/module-setup.sh
 drwxr-xr-x	root/root	usr/lib/dracut/modules.d/95iscsi/
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/95iscsi/cleanup-iscsi.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/95iscsi/iscsiroot.sh
