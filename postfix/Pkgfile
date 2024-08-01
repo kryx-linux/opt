@@ -5,7 +5,7 @@
 
 name=postfix
 version=3.9.0
-release=1
+release=2
 source=(http://ftp.porcupine.org/mirrors/postfix-release/official/${name}-${version}.tar.gz
     aliases postfix.rc)
 
@@ -32,6 +32,7 @@ build() {
 
     chown mail ${PKG}/var/spool/postfix/* \
         ${PKG}/var/lib/postfix
+    chown root ${PKG}/var/spool/postfix/pid
     chgrp postdrop ${PKG}/var/spool/postfix/{maildrop,public} \
         ${PKG}/usr/sbin/post{drop,queue}
     chmod g+s ${PKG}/usr/sbin/post{drop,queue}

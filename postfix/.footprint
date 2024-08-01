@@ -183,7 +183,7 @@ drwx------	mail/root	var/spool/postfix/flush/
 drwx------	mail/root	var/spool/postfix/hold/
 drwx------	mail/root	var/spool/postfix/incoming/
 drwx-wx---	mail/postdrop	var/spool/postfix/maildrop/
-drwxr-xr-x	mail/root	var/spool/postfix/pid/
+drwxr-xr-x	root/root	var/spool/postfix/pid/
 drwx------	mail/root	var/spool/postfix/private/
 drwx--x---	mail/postdrop	var/spool/postfix/public/
 drwx------	mail/root	var/spool/postfix/saved/
