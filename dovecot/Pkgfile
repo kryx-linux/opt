@@ -6,7 +6,7 @@
 
 name=dovecot
 version=2.3.21
-release=1
+release=2
 source=(https://dovecot.org/releases/2.3/$name-$version.tar.gz
 	dovecot-2.3.21-openssl3_fixes-1.patch
 	dovecot-2.3.21-security_fix-1.patch
