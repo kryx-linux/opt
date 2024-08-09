@@ -4,14 +4,11 @@
 # Depends on: rust util-linux
 
 name=task
-version=3.0.2
+version=3.1.0
 release=1
 source=(https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v$version/$name-$version.tar.gz)
 
 build() {
-
-    sed '/integration-tests/d' -i $name-$version/Cargo.toml
-
     cmake -S $name-$version -B build \
         -D CMAKE_BUILD_TYPE=release \
         -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
