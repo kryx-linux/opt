@@ -7,7 +7,7 @@
 name=pulseaudio
 version=17.0
 release=1
-source=(https://freedesktop.org/software/pulseaudio/releases/pulseaudio-$version.tar.xz)
+source=(https://distributions.freedesktop.org/software/pulseaudio/releases/pulseaudio-$version.tar.xz)
 
 build() {
   prt-get isinst bluez sbc || PKGMK_PULSEAUDIO+=' -D bluez5=disabled'
