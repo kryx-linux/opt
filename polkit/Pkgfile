@@ -7,7 +7,7 @@ name=polkit
 version=125
 release=1
 source=(https://github.com/polkit-org/polkit/archive/$version/$name-$version.tar.gz
-  https://github.com/polkit-org/polkit/commit/22193ca2cc0f4e023d331cc1391f55143ef9cade.patch)
+  22193ca2cc0f4e023d331cc1391f55143ef9cade.patch)
 
 build() {
   prt-get isinst mozjs91 && PKGMK_POLKIT+=' -D js_engine=mozjs'
