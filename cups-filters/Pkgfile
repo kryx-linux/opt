@@ -5,14 +5,13 @@
 # Optional: avahi mupdf poppler
 
 name=cups-filters
-version=2.0.0
+version=2.0.1
 release=1
 source=(https://github.com/OpenPrinting/cups-filters/releases/download/$version/$name-$version.tar.xz)
 
 build() {
 	cd $name-$version
 
-	prt-get isinst avahi || PKGMK_CUPSFILTERS+=' --disable-avahi'
 	prt-get isinst mupdf || PKGMK_CUPSFILTERS+=' --disable-mutool'
 	prt-get isinst poppler || PKGMK_CUPSFILTERS+=' --disable-poppler'
 
