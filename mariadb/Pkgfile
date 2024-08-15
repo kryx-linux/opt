@@ -4,16 +4,13 @@
 # Depends on: fmt libaio libpcre2 linux-pam ncurses openssl zlib
 
 name=mariadb
-version=11.4.3
+version=11.5.2
 release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz
 	mariadb.rc mariadb.pam
-	pre-install
-	libfmt.patch)
+	pre-install)
 
 build() {
-	patch -d $name-$version/cmake -i $SRC/libfmt.patch
-
 	cmake -S $name-$version -B build -G Ninja \
 		-D CMAKE_BUILD_TYPE=Release \
 		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
