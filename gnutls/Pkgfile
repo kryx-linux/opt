@@ -5,12 +5,12 @@
 # Optional: brotli libidn2 tpm2-tss
 
 name=gnutls
-version=3.8.6
+version=3.8.7.1
 release=1
 source=(https://www.gnupg.org/ftp/gcrypt/$name/v${version:0:3}/$name-$version.tar.xz)
 
 build() {
-  cd $name-$version
+  cd $name-${version:0:5}
 
   prt-get isinst brotli && PKGMK_GNUTLS+=' --with-brotli'
   prt-get isinst libidn2 && PKGMK_GNUTLS+=' --with-idn'
