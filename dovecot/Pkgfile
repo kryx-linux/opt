@@ -1,12 +1,12 @@
 # Description: IMAP and POP3 server with ssl/ipv6 support, written with security primarily in mind
 # URL: https://dovecot.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: bzip2 libcap linux-pam openssl sqlite xz zlib
+# Depends on: bzip2 libcap linux-pam openssl sqlite3 xz zlib
 # Optional: clucene cyrus-sasl icu krb5 libsodium lua53 lz4 mariadb nss openldap postgresql
 
 name=dovecot
-version=2.3.21
-release=2
+version=2.3.21.1
+release=1
 source=(https://dovecot.org/releases/2.3/$name-$version.tar.gz
     dovecot-2.3.21-openssl3_fixes-1.patch
     dovecot-2.3.21-security_fix-1.patch

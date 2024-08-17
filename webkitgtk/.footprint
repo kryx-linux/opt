@@ -23,6 +23,7 @@ drwxr-xr-x	root/root	usr/include/webkitgtk-6.0/webkit/
 -rw-r--r--	root/root	usr/include/webkitgtk-6.0/webkit/WebKitBackForwardListItem.h
 -rw-r--r--	root/root	usr/include/webkitgtk-6.0/webkit/WebKitClipboardPermissionRequest.h
 -rw-r--r--	root/root	usr/include/webkitgtk-6.0/webkit/WebKitColorChooserRequest.h
+-rw-r--r--	root/root	usr/include/webkitgtk-6.0/webkit/WebKitConsoleMessage.h
 -rw-r--r--	root/root	usr/include/webkitgtk-6.0/webkit/WebKitContextMenu.h
 -rw-r--r--	root/root	usr/include/webkitgtk-6.0/webkit/WebKitContextMenuActions.h
 -rw-r--r--	root/root	usr/include/webkitgtk-6.0/webkit/WebKitContextMenuItem.h
@@ -103,11 +104,11 @@ drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/WebKit-6.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/WebKitWebProcessExtension-6.0.typelib
 lrwxrwxrwx	root/root	usr/lib/libjavascriptcoregtk-6.0.so -> libjavascriptcoregtk-6.0.so.1
-lrwxrwxrwx	root/root	usr/lib/libjavascriptcoregtk-6.0.so.1 -> libjavascriptcoregtk-6.0.so.1.2.6
--rwxr-xr-x	root/root	usr/lib/libjavascriptcoregtk-6.0.so.1.2.6
+lrwxrwxrwx	root/root	usr/lib/libjavascriptcoregtk-6.0.so.1 -> libjavascriptcoregtk-6.0.so.1.2.7
+-rwxr-xr-x	root/root	usr/lib/libjavascriptcoregtk-6.0.so.1.2.7
 lrwxrwxrwx	root/root	usr/lib/libwebkitgtk-6.0.so -> libwebkitgtk-6.0.so.4
-lrwxrwxrwx	root/root	usr/lib/libwebkitgtk-6.0.so.4 -> libwebkitgtk-6.0.so.4.5.6
--rwxr-xr-x	root/root	usr/lib/libwebkitgtk-6.0.so.4.5.6
+lrwxrwxrwx	root/root	usr/lib/libwebkitgtk-6.0.so.4 -> libwebkitgtk-6.0.so.4.5.7
+-rwxr-xr-x	root/root	usr/lib/libwebkitgtk-6.0.so.4.5.7
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/javascriptcoregtk-6.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/webkitgtk-6.0.pc

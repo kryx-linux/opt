@@ -323,6 +323,8 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex_charset.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex_ident.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/lex_ident_cli.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/lex_ident_sys.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex_string.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lex_symbol.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/lf.h
@@ -557,7 +559,6 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/providers/lzo/
 -rw-r--r--	root/root	usr/include/mysql/server/private/tztime.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/uniques.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/unireg.h
--rw-r--r--	root/root	usr/include/mysql/server/private/vers_string.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/violite.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/waiting_threads.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/welcome_copyright_notice.h
