@@ -4,6 +4,12 @@ drwxr-xr-x	root/root	sbin/
 -rwxr-xr-x	root/root	sbin/arping
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man8/
+-rwxr-xr-x	root/root	usr/man/man8/arping.8.gz
+-rwxr-xr-x	root/root	usr/man/man8/clockdiff.8.gz
+-rwxr-xr-x	root/root	usr/man/man8/ping.8.gz
+-rwxr-xr-x	root/root	usr/man/man8/tracepath.8.gz
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/clockdiff
 -rwxr-xr-x	root/root	usr/sbin/tracepath
