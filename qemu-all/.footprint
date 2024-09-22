@@ -29,7 +29,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-mipsn32
 -rwxr-xr-x	root/root	usr/bin/qemu-mipsn32el
 -rwxr-xr-x	root/root	usr/bin/qemu-nbd
--rwxr-xr-x	root/root	usr/bin/qemu-nios2
 -rwxr-xr-x	root/root	usr/bin/qemu-or1k
 -rwxr-xr-x	root/root	usr/bin/qemu-ppc
 -rwxr-xr-x	root/root	usr/bin/qemu-ppc64
@@ -59,7 +58,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-system-mips64
 -rwxr-xr-x	root/root	usr/bin/qemu-system-mips64el
 -rwxr-xr-x	root/root	usr/bin/qemu-system-mipsel
--rwxr-xr-x	root/root	usr/bin/qemu-system-nios2
 -rwxr-xr-x	root/root	usr/bin/qemu-system-or1k
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppc
 -rwxr-xr-x	root/root	usr/bin/qemu-system-ppc64
@@ -75,6 +73,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu-system-x86_64
 -rwxr-xr-x	root/root	usr/bin/qemu-system-xtensa
 -rwxr-xr-x	root/root	usr/bin/qemu-system-xtensaeb
+-rwxr-xr-x	root/root	usr/bin/qemu-vmsr-helper
 -rwxr-xr-x	root/root	usr/bin/qemu-x86_64
 -rwxr-xr-x	root/root	usr/bin/qemu-xtensa
 -rwxr-xr-x	root/root	usr/bin/qemu-xtensaeb
@@ -132,6 +131,8 @@ drwxr-xr-x	root/root	usr/share/qemu/
 -rw-r--r--	root/root	usr/share/qemu/edk2-i386-secure-code.fd
 -rw-r--r--	root/root	usr/share/qemu/edk2-i386-vars.fd
 -rw-r--r--	root/root	usr/share/qemu/edk2-licenses.txt
+-rw-r--r--	root/root	usr/share/qemu/edk2-riscv-code.fd
+-rw-r--r--	root/root	usr/share/qemu/edk2-riscv-vars.fd
 -rw-r--r--	root/root	usr/share/qemu/edk2-x86_64-code.fd
 -rw-r--r--	root/root	usr/share/qemu/edk2-x86_64-secure-code.fd
 -rw-r--r--	root/root	usr/share/qemu/efi-e1000.rom

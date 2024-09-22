@@ -421,6 +421,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Bundler/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/app_cache-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/app_config_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/auto_install-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/auto_switch-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/bin_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/bundle_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Bundler/cdesc-Bundler.ri
@@ -2586,15 +2587,18 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/BUNDLED_GEMS/
 drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/activated%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/base_dir-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/base_dir_priority-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/cdesc-BasicSpecification.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/contains_requirable_file%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/datadir-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/default_gem%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/default_gem_priority-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/default_specifications_dir-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/extension_dir-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/extensions_dir-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/full_gem_path-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/full_name-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/full_name_with_location-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/full_require_paths-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/gem_dir-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/BasicSpecification/gems_dir-i.ri
@@ -2971,6 +2975,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/ConfigFile/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ConfigFile/concurrent_downloads-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ConfigFile/config_file_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ConfigFile/credentials_path-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ConfigFile/deep_transform_config_keys%21-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ConfigFile/disable_default_gem_server-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ConfigFile/dump_with_rubygems_yaml-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/ConfigFile/each-i.ri
@@ -4473,6 +4478,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Specification/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/unresolved_specs-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/validate-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/validate_dependencies-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/validate_for_resolution-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/validate_metadata-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/validate_permissions-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Specification/version%3d-i.ri
@@ -4486,6 +4492,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_array_attributes-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_attribute_present-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_authors_field-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_for_resolution-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_lazy_metadata-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_licenses-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_licenses_length-i.ri
@@ -4499,6 +4506,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_require_paths-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_required%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_required_attributes-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_required_metadata%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_required_ruby_version-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_rubygems_version-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/SpecificationPolicy/validate_self_inclusion_in_files_list-i.ri
@@ -4612,6 +4620,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/remove_executables-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/safe_delete-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/spec-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/specification_record-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/uninstall-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/uninstall_gem-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/Uninstaller/warn_cannot_uninstall_default_gems-i.ri
@@ -4724,7 +4733,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/WebauthnVerificationError/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/WebauthnVerificationError/new-c.ri
 drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/cdesc-YAMLSerializer.ri
--rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/convert_to_backward_compatible_key%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/dump-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/dump_hash-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/load-i.ri
@@ -4793,6 +4801,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.3/system/Gem/YAMLSerializer/
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/marshal_version-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/needs-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/open_file-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/open_file_with_flock-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/operating_system_defaults-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/path-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.3/system/Gem/path_separator-c.ri

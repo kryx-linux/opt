@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=libpcap
-version=1.10.4
+version=1.10.5
 release=1
 source=(https://www.tcpdump.org/release/$name-$version.tar.gz)
 

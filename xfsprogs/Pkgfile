@@ -4,7 +4,7 @@
 # Depends on: inih libdevmapper liburcu
 
 name=xfsprogs
-version=6.9.0
+version=6.10.1
 release=1
 source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz)
 
@@ -23,8 +23,8 @@ build() {
     make
     make -j1 DIST_ROOT=$PKG install install-dev
 
-    rm $PKG/lib/libhandle.{so,a,la}
-    ln -sf ../../lib/$(readlink $PKG/lib/libhandle.so.1) $PKG/usr/lib/libhandle.so
+    install -d $PKG/sbin
+    mv $PKG/usr/sbin/{fsck.xfs,xfs_repair} $PKG/sbin
 
     rm -r $PKG/usr/share/doc
 }

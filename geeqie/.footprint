@@ -6,6 +6,7 @@ drwxr-xr-x	root/root	usr/lib/geeqie/
 -rwxr-xr-x	root/root	usr/lib/geeqie/downsize
 -rwxr-xr-x	root/root	usr/lib/geeqie/geeqie-camera-import
 -rwxr-xr-x	root/root	usr/lib/geeqie/geeqie-camera-import-hook-script
+-rwxr-xr-x	root/root	usr/lib/geeqie/geeqie-exif-datetime-to-file
 -rwxr-xr-x	root/root	usr/lib/geeqie/geeqie-export-jpeg
 -rwxr-xr-x	root/root	usr/lib/geeqie/geeqie-image-crop
 -rwxr-xr-x	root/root	usr/lib/geeqie/geeqie-random-image
@@ -23,6 +24,7 @@ drwxr-xr-x	root/root	usr/share/applications/
 drwxr-xr-x	root/root	usr/share/geeqie/
 drwxr-xr-x	root/root	usr/share/geeqie/applications/
 -rw-r--r--	root/root	usr/share/geeqie/applications/org.geeqie.camera-import.desktop
+-rw-r--r--	root/root	usr/share/geeqie/applications/org.geeqie.exif-datetime-to-file.desktop
 -rw-r--r--	root/root	usr/share/geeqie/applications/org.geeqie.export-jpeg.desktop
 -rw-r--r--	root/root	usr/share/geeqie/applications/org.geeqie.image-crop.desktop
 -rw-r--r--	root/root	usr/share/geeqie/applications/org.geeqie.open-with.desktop

@@ -5,7 +5,7 @@
 
 name=lua
 version=5.4.7
-release=1
+release=2
 source=(https://www.lua.org/ftp/$name-$version.tar.gz
   liblua.so.patch lua.pc)
 
@@ -16,7 +16,7 @@ build() {
 
   sed "s/%VER%/${version:0:3}/g;s/%REL%/$version/g" $SRC/lua.pc > lua.pc
 
-  make MYCFLAGS="$CFLAGS -fPIC" MYLDFLAGS="$LDFLAGS" linux
+  make MYCFLAGS="$CFLAGS -fPIC" MYLDFLAGS="$LDFLAGS" linux-readline
 
   make \
     TO_LIB="liblua.a liblua.so liblua.so.${version:0:3} liblua.so.$version" \

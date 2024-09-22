@@ -1,11 +1,11 @@
 # Description: SMB server and client for unix
 # URL: https://www.samba.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: dbus gnutls ldb linux-pam jansson p5-json p5-parse-yapp rpcsvc-proto
+# Depends on: dbus gnutls linux-pam jansson p5-json p5-parse-yapp rpcsvc-proto tdb tevent
 # Optional: brotli cups libidn2
 
 name=samba
-version=4.20.4
+version=4.21.0
 release=1
 source=(https://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
     samba.rc samba.pam)
@@ -23,7 +23,8 @@ build () {
         --with-sockets-dir=/run/samba \
         --with-privatedir=/etc/samba/private \
         --with-pammodulesdir=/lib/security \
-        --bundled-libraries=!tdb,!talloc,!tevent,!popt,!ldb,!cmocka \
+        --private-libraries=!ldb \
+        --bundled-libraries=!tdb,!talloc,!tevent,!popt,!cmocka \
         --without-{ad-dc,ads,ldap}
 
     make
