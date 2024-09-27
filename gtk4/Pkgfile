@@ -1,0 +1,36 @@
+# Description: A multi-platform toolkit for creating graphical user interfaces, version 4
+# URL: https://www.gtk.org/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: adwaita-icon-theme docbook-xsl graphene libxkbcommon sassc xorg-libxcursor xorg-libxinerama
+# Optional: colord cups gst-plugins-bad shaderc vulkan-loader wayland-protocols
+
+name=gtk4
+version=4.16.2
+release=1
+source=(https://gitlab.gnome.org/GNOME/gtk/-/archive/$version/gtk-$version.tar.bz2)
+
+build() {
+  prt-get isinst colord && PKGMK_GTK4+=' -D colord=enabled'
+  prt-get isinst shaderc vulkan-loader || PKGMK_GTK4+=' -D vulkan=disabled'
+  prt-get isinst gst-plugins-bad || PKGMK_GTK4+=' -D media-gstreamer=disabled'
+  prt-get isinst wayland-protocols || PKGMK_GTK4+=' -D wayland-backend=false'
+  # manpages need rst2man, which we don't have
+  prt-get isinst rst2man && PKGMK_GTK4+=' -D man-pages=enabled'
+
+  meson setup gtk-$version build $PKGMK_GTK4 \
+    --prefix=/usr \
+    -D buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D broadway-backend=true \
+    -D introspection=enabled \
+    -D build-tests=false \
+    -D build-testsuite=false \
+    -D build-examples=false \
+    -D build-demos=false
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
+
+  rm -r $PKG/usr/share/locale
+}
