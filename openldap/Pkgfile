@@ -1,7 +1,8 @@
 # Description: Lightweight Directory Access Protocol (LDAP) Toolkit
 # URL: https://www.openldap.org/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: cyrus-sasl libtool perl util-linux
+# Depends on: libtool perl util-linux
+# Optional: cyrus-sasl libsodium mariadb unixodbc
 
 name=openldap
 version=2.6.8
@@ -12,28 +13,42 @@ source=(https://www.openldap.org/software/download/OpenLDAP/openldap-release/$na
 build() {
 	cd $name-$version
 
-	./configure \
+	sed -i 's|-m 644 $(LIBRARY)|-m 755 $(LIBRARY)|' libraries/{liblber,libldap}/Makefile.in
+
+	sed -i 's|#define LDAPI_SOCK LDAP_RUNDIR LDAP_DIRSEP "run" LDAP_DIRSEP "ldapi"|#define LDAPI_SOCK LDAP_DIRSEP "run" LDAP_DIRSEP "openldap" LDAP_DIRSEP "ldapi"|' include/ldap_defaults.h
+	sed -i 's|%LOCALSTATEDIR%/run|/run/openldap|' servers/slapd/slapd.{conf,ldif}
+	sed -i 's|-$(MKDIR) $(DESTDIR)$(localstatedir)/run|-$(MKDIR) $(DESTDIR)/run/openldap|' servers/slapd/Makefile.in
+
+	prt-get isinst cyrus-sasl && PKGMK_LDAP+=' --with-cyrus-sasl --enable-spasswd' || PKGMK_LDAP+=' --without-cyrus-sasl --disable-spasswd'
+	prt-get isinst libsodium && PKGMK_LDAP+=' --enable-argon2 --with-argon2=libsodium'
+	prt-get isinst mariadb unixodbc && PKGMK_LDAP+=' --enable-sql --with-odbc=unixodbc' || PKGMK_LDAP+=' --disable-sql'
+
+	./configure $PKGMK_LDAP \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--libexecdir=/usr/sbin \
 		--localstatedir=/var/openldap \
-		--enable-syslog \
+		--with-pic \
 		--with-threads \
 		--with-tls \
-		--with-cyrus-sasl \
-		--enable-spasswd \
+		--enable-aci \
+		--enable-backends \
+		--enable-crypt \
+		--enable-dnssrv=mod \
+		--enable-dynacl \
 		--enable-dynamic \
 		--enable-ipv6 \
-		--enable-modules \
-		--enable-crypt \
 		--enable-ldap \
-		--enable-meta \
-		--enable-dnssrv \
-		--enable-null \
+		--enable-local \
+		--enable-meta=mod \
+		--enable-modules \
+		--enable-null=mod \
+		--enable-overlays=mod \
 		--enable-perl \
-		--enable-dynacl \
-		--enable-aci \
-		--enable-shared
+		--enable-shared \
+		--enable-syslog \
+		--enable-versioning \
+		--disable-wt
 
 	make depend
 	make
