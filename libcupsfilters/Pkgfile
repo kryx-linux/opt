@@ -6,11 +6,14 @@
 
 name=libcupsfilters
 version=2.0.0
-release=1
-source=(https://github.com/OpenPrinting/libcupsfilters/releases/download/$version/$name-$version.tar.xz)
+release=2
+source=(https://github.com/OpenPrinting/libcupsfilters/releases/download/$version/$name-$version.tar.xz
+	validate-response-attributes.patch)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/validate-response-attributes.patch
 
 	prt-get isinst dbus || PKGMK_LIBCUPSFILTERS+=' --disable-dbus'
 	prt-get isinst libexif || PKGMK_LIBCUPSFILTERS+=' --disable-exif'
