@@ -1,0 +1,26 @@
+# Description: A linkable library for Git
+# URL: https://libgit2.org/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: http-parser
+
+name=libgit2
+version=1.8.1
+release=1
+source=(https://github.com/libgit2/libgit2/archive/v$version/$name-$version.tar.gz)
+
+build() {
+  sed -i -e 's:HTTP_Parser:HTTPParser:' \
+    $name-$version/cmake/SelectHTTPParser.cmake
+
+  cmake -S $name-$version -B build -G Ninja \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D USE_HTTP_PARSER=system \
+    -Wno-dev
+
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+}

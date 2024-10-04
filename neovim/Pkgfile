@@ -5,7 +5,7 @@
 # Optional: libluv libtermkey libuv libvterm lua51-lpeg lua51-mpack luajit luarocks msgpack-c tree-sitter tree-sitter-c tree-sitter-lua tree-sitter-vimdoc tree-sitter-viml unibilium
 
 name=neovim
-version=0.10.1
+version=0.10.2
 release=1
 source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz)
 
