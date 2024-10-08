@@ -6,7 +6,7 @@
 name=mariadb
 version=11.5.2
 release=1
-source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz
+source=(https://dlm.mariadb.com/3899595/MariaDB/$name-$version/source/$name-$version.tar.gz
 	mariadb.rc mariadb.pam
 	pre-install)
 
