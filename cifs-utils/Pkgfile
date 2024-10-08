@@ -2,20 +2,16 @@
 # URL: https://wiki.samba.org/index.php/LinuxCIFS_utils
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: linux-pam samba keyutils
+# Optional: python3-docutils
 
 name=cifs-utils
-version=7.0
+version=7.1
 release=1
 source=(https://download.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2
-	$name-man.tar.xz cifs)
+	cifs)
 
 build () {
 	cd $name-$version
-
-	install -d $PKG/{sbin,usr/share/man/man{1,8}}
-	install -m 0644 $SRC/*.1 $PKG/usr/share/man/man1
-	install -m 0644 $SRC/*.8 $PKG/usr/share/man/man8
-	ln -s mount.cifs.8 $PKG/usr/share/man/man8/mount.smb3.8
 
 	./configure --prefix=/usr --with-pamdir=/lib/security
 	make
