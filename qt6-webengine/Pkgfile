@@ -5,13 +5,12 @@
 # Optional: dav1d fdk-aac gnutls graphite2 keyutils krb5 lame lcms2 libpcre2 libvdpau numactl pipewire x264 x265
 
 name=qt6-webengine
-version=6.7.3
+version=6.8.0
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz
-  ninja-1.12.patch
   ninja-1.12-2.patch
-  qtwebengine-ffmpeg-7.patch
   no-h264.patch
+  03-gn-bootstrap.patch
 )
 
 build() {
@@ -57,8 +56,8 @@ that, you can attempt to build opt/qt6-webengine again.
     -i qtwebengine-everywhere-src-$version/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
 
   patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/ninja-1.12-2.patch
-  patch -Np1 -d qtwebengine-everywhere-src-$version/src/3rdparty/chromium -i $SRC/qtwebengine-ffmpeg-7.patch
   patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/no-h264.patch
+  patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/03-gn-bootstrap.patch
 
   cd $SRC/qtwebengine-everywhere-src-$version/src/3rdparty/chromium
   ./build/linux/unbundle/replace_gn_files.py --system-libraries $SYSLIBS
@@ -70,10 +69,9 @@ that, you can attempt to build opt/qt6-webengine again.
   PYTHON=/usr/bin/python3 \
   cmake -S qtwebengine-everywhere-src-$version -B build -G Ninja $PKGMK_QT6 \
     -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS -Wno-error" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -Wno-error" \
     -D CMAKE_TOOLCHAIN_FILE=/usr/lib/cmake/Qt6/qt.toolchain.cmake \
-    -D QT_FEATURE_webengine_system_ffmpeg=ON \
     -D QT_FEATURE_webengine_system_icu=ON \
     -D QT_FEATURE_webengine_system_libevent=ON \
     -D QT_FEATURE_webengine_proprietary_codecs=ON \
@@ -81,7 +79,11 @@ that, you can attempt to build opt/qt6-webengine again.
     -D QT_FEATURE_webengine_ozone_x11=ON \
     -D QT_FEATURE_qtpdf_build=ON \
     -D QT_FEATURE_webengine_system_re2=OFF \
+    -D QT_FEATURE_webengine_system_libvpx=OFF \
+    -D QT_FEATURE_webengine_system_ffmpeg=OFF \
+    -D QT_FEATURE_webengine_embedded_build=OFF \
     -D QT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
+    -D WARNINGS_ARE_ERRORS=OFF \
     -Wno-dev
   cmake --build build
   DESTDIR=$PKG cmake --install build
