@@ -2,15 +2,14 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/qt6/
 drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimeline/
-drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/
-drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/QtQuickTimeline/
-drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/QtQuickTimeline/private/
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/QtQuickTimeline/private/qquickkeyframe_p.h
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/QtQuickTimeline/private/qquickkeyframedatautils_p.h
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/QtQuickTimeline/private/qquicktimeline_p.h
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/QtQuickTimeline/private/qquicktimelineanimation_p.h
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/QtQuickTimeline/private/qtquicktimelineexports_p.h
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/QtQuickTimeline/private/qtquicktimelineglobal_p.h
+drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimeline/6.8.0/
+drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimeline/6.8.0/QtQuickTimeline/
+drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimeline/6.8.0/QtQuickTimeline/private/
+-rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.8.0/QtQuickTimeline/private/qquickkeyframe_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.8.0/QtQuickTimeline/private/qquickkeyframedatautils_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.8.0/QtQuickTimeline/private/qquicktimeline_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.8.0/QtQuickTimeline/private/qquicktimelineanimation_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/6.8.0/QtQuickTimeline/private/qtquicktimelineglobal_p.h
 -rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/QtQuickTimeline
 -rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/QtQuickTimelineDepends
 -rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/QtQuickTimelineVersion
@@ -18,14 +17,13 @@ drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimeline/6.7.3/QtQuickTimeline/priva
 -rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/qtquicktimelineglobal.h
 -rw-r--r--	root/root	usr/include/qt6/QtQuickTimeline/qtquicktimelineversion.h
 drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/
-drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.7.3/
-drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.7.3/QtQuickTimelineBlendTrees/
-drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.7.3/QtQuickTimelineBlendTrees/private/
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.7.3/QtQuickTimelineBlendTrees/private/qblendanimationnode_p.h
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.7.3/QtQuickTimelineBlendTrees/private/qblendtreenode_p.h
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.7.3/QtQuickTimelineBlendTrees/private/qtimelineanimationnode_p.h
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.7.3/QtQuickTimelineBlendTrees/private/qtquicktimelineblendtreesexports_p.h
--rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.7.3/QtQuickTimelineBlendTrees/private/qtquicktimelineblendtreesglobal_p.h
+drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.8.0/
+drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.8.0/QtQuickTimelineBlendTrees/
+drwxr-xr-x	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.8.0/QtQuickTimelineBlendTrees/private/
+-rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.8.0/QtQuickTimelineBlendTrees/private/qblendanimationnode_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.8.0/QtQuickTimelineBlendTrees/private/qblendtreenode_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.8.0/QtQuickTimelineBlendTrees/private/qtimelineanimationnode_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/6.8.0/QtQuickTimelineBlendTrees/private/qtquicktimelineblendtreesglobal_p.h
 -rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/QtQuickTimelineBlendTrees
 -rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/QtQuickTimelineBlendTreesDepends
 -rw-r--r--	root/root	usr/include/qt6/QtQuickTimelineBlendTrees/QtQuickTimelineBlendTreesVersion
@@ -59,6 +57,7 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6QuickTimeline/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimeline/Qt6QuickTimelineDependencies.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimeline/Qt6QuickTimelineTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimeline/Qt6QuickTimelineTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimeline/Qt6QuickTimelineVersionlessAliasTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimeline/Qt6QuickTimelineVersionlessTargets.cmake
 drwxr-xr-x	root/root	usr/lib/cmake/Qt6QuickTimelineBlendTrees/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimelineBlendTrees/Qt6QuickTimelineBlendTreesAdditionalTargetInfo.cmake
@@ -68,15 +67,16 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6QuickTimelineBlendTrees/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimelineBlendTrees/Qt6QuickTimelineBlendTreesDependencies.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimelineBlendTrees/Qt6QuickTimelineBlendTreesTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimelineBlendTrees/Qt6QuickTimelineBlendTreesTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimelineBlendTrees/Qt6QuickTimelineBlendTreesVersionlessAliasTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6QuickTimelineBlendTrees/Qt6QuickTimelineBlendTreesVersionlessTargets.cmake
 -rw-r--r--	root/root	usr/lib/libQt6QuickTimeline.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6QuickTimeline.so -> libQt6QuickTimeline.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6QuickTimeline.so.6 -> libQt6QuickTimeline.so.6.7.3
--rwxr-xr-x	root/root	usr/lib/libQt6QuickTimeline.so.6.7.3
+lrwxrwxrwx	root/root	usr/lib/libQt6QuickTimeline.so.6 -> libQt6QuickTimeline.so.6.8.0
+-rwxr-xr-x	root/root	usr/lib/libQt6QuickTimeline.so.6.8.0
 -rw-r--r--	root/root	usr/lib/libQt6QuickTimelineBlendTrees.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6QuickTimelineBlendTrees.so -> libQt6QuickTimelineBlendTrees.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6QuickTimelineBlendTrees.so.6 -> libQt6QuickTimelineBlendTrees.so.6.7.3
--rwxr-xr-x	root/root	usr/lib/libQt6QuickTimelineBlendTrees.so.6.7.3
+lrwxrwxrwx	root/root	usr/lib/libQt6QuickTimelineBlendTrees.so.6 -> libQt6QuickTimelineBlendTrees.so.6.8.0
+-rwxr-xr-x	root/root	usr/lib/libQt6QuickTimelineBlendTrees.so.6.8.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt6QuickTimeline.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt6QuickTimelineBlendTrees.pc
