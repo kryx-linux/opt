@@ -10,6 +10,8 @@ drwxr-xr-x	root/root	usr/include/lldb/
 drwxr-xr-x	root/root	usr/include/lldb/API/
 -rw-r--r--	root/root	usr/include/lldb/API/LLDB.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBAddress.h
+-rw-r--r--	root/root	usr/include/lldb/API/SBAddressRange.h
+-rw-r--r--	root/root	usr/include/lldb/API/SBAddressRangeList.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBAttachInfo.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBBlock.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBBreakpoint.h
@@ -40,6 +42,7 @@ drwxr-xr-x	root/root	usr/include/lldb/API/
 -rw-r--r--	root/root	usr/include/lldb/API/SBInstruction.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBInstructionList.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBLanguageRuntime.h
+-rw-r--r--	root/root	usr/include/lldb/API/SBLanguages.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBLaunchInfo.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBLineEntry.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBListener.h
@@ -54,9 +57,11 @@ drwxr-xr-x	root/root	usr/include/lldb/API/
 -rw-r--r--	root/root	usr/include/lldb/API/SBQueue.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBQueueItem.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBReproducer.h
+-rw-r--r--	root/root	usr/include/lldb/API/SBSaveCoreOptions.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBScriptObject.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBSection.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBSourceManager.h
+-rw-r--r--	root/root	usr/include/lldb/API/SBStatisticsOptions.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBStream.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBStringList.h
 -rw-r--r--	root/root	usr/include/lldb/API/SBStructuredData.h
@@ -107,13 +112,14 @@ drwxr-xr-x	root/root	usr/include/lldb/Breakpoint/
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/StoppointHitCounter.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/StoppointSite.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/Watchpoint.h
+-rw-r--r--	root/root	usr/include/lldb/Breakpoint/WatchpointAlgorithms.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/WatchpointList.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/WatchpointOptions.h
 -rw-r--r--	root/root	usr/include/lldb/Breakpoint/WatchpointResource.h
--rw-r--r--	root/root	usr/include/lldb/Breakpoint/WatchpointResourceList.h
 drwxr-xr-x	root/root	usr/include/lldb/Core/
 -rw-r--r--	root/root	usr/include/lldb/Core/Address.h
 -rw-r--r--	root/root	usr/include/lldb/Core/AddressRange.h
+-rw-r--r--	root/root	usr/include/lldb/Core/AddressRangeListImpl.h
 -rw-r--r--	root/root	usr/include/lldb/Core/AddressResolver.h
 -rw-r--r--	root/root	usr/include/lldb/Core/AddressResolverFileLine.h
 -rw-r--r--	root/root	usr/include/lldb/Core/Architecture.h
@@ -211,6 +217,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Expression/
 -rw-r--r--	root/root	usr/include/lldb/Expression/UserExpression.h
 -rw-r--r--	root/root	usr/include/lldb/Expression/UtilityFunction.h
 drwxr-xr-x	root/root	usr/include/lldb/Host/
+-rw-r--r--	root/root	usr/include/lldb/Host/Alarm.h
 -rw-r--r--	root/root	usr/include/lldb/Host/Config.h
 -rw-r--r--	root/root	usr/include/lldb/Host/ConnectionFileDescriptor.h
 -rw-r--r--	root/root	usr/include/lldb/Host/Debug.h
@@ -322,6 +329,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Interpreter/Interfaces/
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Interfaces/ScriptedPlatformInterface.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Interfaces/ScriptedProcessInterface.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/Interfaces/ScriptedThreadInterface.h
+-rw-r--r--	root/root	usr/include/lldb/Interpreter/Interfaces/ScriptedThreadPlanInterface.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionArgParser.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionGroupArchitecture.h
 -rw-r--r--	root/root	usr/include/lldb/Interpreter/OptionGroupBoolean.h
@@ -383,12 +391,14 @@ drwxr-xr-x	root/root	usr/include/lldb/Symbol/
 -rw-r--r--	root/root	usr/include/lldb/Symbol/ObjectContainer.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/ObjectFile.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/PostfixExpression.h
+-rw-r--r--	root/root	usr/include/lldb/Symbol/SaveCoreOptions.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/SourceModule.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/Symbol.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/SymbolContext.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/SymbolContextScope.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/SymbolFile.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/SymbolFileOnDemand.h
+-rw-r--r--	root/root	usr/include/lldb/Symbol/SymbolLocation.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/SymbolLocator.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/SymbolVendor.h
 -rw-r--r--	root/root	usr/include/lldb/Symbol/Symtab.h
@@ -482,6 +492,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Target/
 -rw-r--r--	root/root	usr/include/lldb/Target/Unwind.h
 -rw-r--r--	root/root	usr/include/lldb/Target/UnwindAssembly.h
 -rw-r--r--	root/root	usr/include/lldb/Target/UnwindLLDB.h
+-rw-r--r--	root/root	usr/include/lldb/Target/VerboseTrapFrameRecognizer.h
 drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/AddressableBits.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/AnsiTerminal.h
@@ -503,6 +514,7 @@ drwxr-xr-x	root/root	usr/include/lldb/Utility/
 -rw-r--r--	root/root	usr/include/lldb/Utility/Diagnostics.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Endian.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Environment.h
+-rw-r--r--	root/root	usr/include/lldb/Utility/ErrorMessages.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/Event.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/FileSpec.h
 -rw-r--r--	root/root	usr/include/lldb/Utility/FileSpecList.h
@@ -567,11 +579,11 @@ drwxr-xr-x	root/root	usr/include/lldb/Version/
 -rw-r--r--	root/root	usr/include/lldb/lldb-types.h
 -rw-r--r--	root/root	usr/include/lldb/lldb-versioning.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.18.1
-lrwxrwxrwx	root/root	usr/lib/liblldb.so.18.1 -> liblldb.so.18.1.8
--rwxr-xr-x	root/root	usr/lib/liblldb.so.18.1.8
-lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.18.1
--rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.18.1
+lrwxrwxrwx	root/root	usr/lib/liblldb.so -> liblldb.so.19.1
+lrwxrwxrwx	root/root	usr/lib/liblldb.so.19.1 -> liblldb.so.19.1.2
+-rwxr-xr-x	root/root	usr/lib/liblldb.so.19.1.2
+lrwxrwxrwx	root/root	usr/lib/liblldbIntelFeatures.so -> liblldbIntelFeatures.so.19.1
+-rwxr-xr-x	root/root	usr/lib/liblldbIntelFeatures.so.19.1
 drwxr-xr-x	root/root	usr/lib/python3.10/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/
@@ -635,15 +647,23 @@ drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/operating_system.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/operating_system.cpython-310.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/operating_system.cpython-310.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/parsed_cmd.cpython-310.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/parsed_cmd.cpython-310.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/parsed_cmd.cpython-310.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_platform.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_platform.cpython-310.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_platform.cpython-310.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_process.cpython-310.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_process.cpython-310.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_process.cpython-310.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_thread_plan.cpython-310.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_thread_plan.cpython-310.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/__pycache__/scripted_thread_plan.cpython-310.pyc
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/operating_system.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/parsed_cmd.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/scripted_platform.py
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/scripted_process.py
+-rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/plugins/scripted_thread_plan.py
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/utils/
 -rw-r--r--	root/root	usr/lib/python3.10/site-packages/lldb/utils/__init__.py
 drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/lldb/utils/__pycache__/
