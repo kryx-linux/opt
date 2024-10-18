@@ -4,7 +4,7 @@
 # Depends on: llvm spirv-tools
 
 name=spirv-llvm-translator
-version=18.1.4
+version=19.1.0
 release=1
 source=(https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$version/$name-$version.tar.gz)
 
