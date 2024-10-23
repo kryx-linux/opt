@@ -4,7 +4,7 @@
 # Depends on: mariadb python3-setuptools
 
 name=python3-mysqlclient
-version=2.2.4
+version=2.2.5
 release=1
 source=(https://pypi.org/packages/source/m/mysqlclient/mysqlclient-$version.tar.gz)
 
