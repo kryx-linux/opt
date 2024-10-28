@@ -1,10 +1,10 @@
-# Description: NFS utilities 
+# Description: NFS utilities
 # URL: http://nfs.sourceforge.net/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: libdevmapper util-linux libcap rpcsvc-proto rpcbind libevent libxml2 keyutils sqlite3
+# Depends on: keyutils libcap libdevmapper libevent libnl libxml2 rpcbind rpcsvc-proto
 
 name=nfs-utils
-version=2.7.1
+version=2.8.1
 release=1
 source=(https://www.kernel.org/pub/linux/utils/$name/$version/$name-$version.tar.xz
     exports idmapd.conf
@@ -19,7 +19,6 @@ build() {
         --sysconfdir=/etc \
         --libexecdir=/usr/sbin \
         --with-statedir=/var/lib/nfs \
-        --with-modprobedir=/etc/modprobe.d \
         --with-systemd=no \
         --without-tcp-wrappers \
         --disable-gss \

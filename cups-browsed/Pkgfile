@@ -1,11 +1,11 @@
 # Description: Helper daemon to browse the network for remote CUPS queues and IPP network printers
 # URL: https://github.com/OpenPrinting/cups-browsed
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: glib libcupsfilters libppd
+# Depends on: glib libppd
 # Optional: avahi
 
 name=cups-browsed
-version=2.0.1
+version=2.1.0
 release=1
 source=(https://github.com/OpenPrinting/$name/releases/download/$version/$name-$version.tar.xz
     cups-browsed)
