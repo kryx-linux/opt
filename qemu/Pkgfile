@@ -5,7 +5,7 @@
 # Optional: alsa-lib fuse3 gnutls libaio libjpeg-turbo libpng libsdl2 libseccomp libslirp libssh liburing libxkbcommon nettle nfs-utils numactl pipewire pulseaudio python3-sphinx python3-sphinx_rtd_theme sdl2_image snappy xkeyboard-config xkeyboard-config
 
 name=qemu
-version=9.1.0
+version=9.1.1
 release=1
 source=(https://download.qemu.org/$name-$version.tar.xz)
 
@@ -28,7 +28,7 @@ build() {
         --enable-fdt=system \
         --python=/usr/bin/python3 \
         --target-list=x86_64-linux-user,i386-linux-user,i386-softmmu,x86_64-softmmu \
-        --disable-gtk \
+        --disable-gtk
     make
     make DESTDIR=$PKG install
 
