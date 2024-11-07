@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=libzip
-version=1.11.1
+version=1.11.2
 release=1
 source=(https://libzip.org/download/$name-$version.tar.xz)
 
