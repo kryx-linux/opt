@@ -1,10 +1,10 @@
 # Description: A network utility for downloading content from the Web
 # URL: http://www.gnu.org/software/wget/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: libpcre openssl util-linux zlib
+# Depends on: libpcre openssl util-linux
 
 name=wget
-version=1.24.5
+version=1.25.0
 release=1
 source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.lz \
 	wgetrc)
