@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=dracut
-version=103
+version=105
 release=1
 source=(https://github.com/dracut-ng/dracut-ng/archive/$version/$name-$version.tar.gz
     https://crux.nu/files/$name-man-pages-$version.tar.xz)
@@ -13,6 +13,7 @@ build() {
     ./configure --prefix=/usr \
         --sysconfdir=/etc \
         --disable-documentation
+    sed -i -e 's,-arx modules,-rx modules,' Makefile
     make
     make DESTDIR=$PKG install
     rm $PKG/usr/lib/$name/modules.d/*/README*
