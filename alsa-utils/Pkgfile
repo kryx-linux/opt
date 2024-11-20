@@ -4,13 +4,14 @@
 # Depends on: gettext alsa-lib dialog
 
 name=alsa-utils
-version=1.2.12
-release=1
+version=1.2.13
+release=2
 source=(https://www.alsa-project.org/files/pub/utils/$name-$version.tar.bz2 \
-    rc.alsa)
+    rc.alsa alsa_restore_std.patch)
 
 build() {
     cd $name-$version
+    patch -p1 -i $SRC/alsa_restore_std.patch
     ./configure --prefix=/usr \
         --disable-bat \
         --disable-nls \
