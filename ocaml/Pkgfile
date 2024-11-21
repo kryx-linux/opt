@@ -4,7 +4,7 @@
 # Depends on: zstd
 
 name=ocaml
-version=5.2.0
+version=5.2.1
 release=1
 source=(https://github.com/ocaml/ocaml/archive/refs/tags/$version/$name-$version.tar.gz)
 
