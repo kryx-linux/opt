@@ -28,6 +28,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/aria_pack
 -rwxr-xr-x	root/root	usr/bin/aria_read_log
 -rwxr-xr-x	root/root	usr/bin/aria_s3_copy
+-rwxr-xr-x	root/root	usr/bin/galera_new_cluster
 -rwxr-xr-x	root/root	usr/bin/innochecksum
 lrwxrwxrwx	root/root	usr/bin/mariabackup -> mariadb-backup
 -rwxr-xr-x	root/root	usr/bin/mariadb
@@ -622,6 +623,7 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/
 drwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_v1.so
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_parsec.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_test_plugin.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/caching_sha2_password.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/client_ed25519.so
@@ -652,6 +654,7 @@ drwxr-xr-x	root/root	usr/lib/mysql/plugin/auth_pam_tool_dir/
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/metadata_lock_info.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/mypluglib.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/mysql_clear_password.so
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/parsec.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/password_reuse_check.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/provider_bzip2.so
 -rwxr-xr-x	root/root	usr/lib/mysql/plugin/provider_lzma.so

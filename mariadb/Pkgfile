@@ -4,9 +4,9 @@
 # Depends on: fmt libaio libpcre2 linux-pam ncurses openssl zlib
 
 name=mariadb
-version=11.5.2
+version=11.6.2
 release=1
-source=(https://dlm.mariadb.com/3899595/MariaDB/$name-$version/source/$name-$version.tar.gz
+source=(https://dlm.mariadb.com/3971300/MariaDB/$name-$version/source/$name-$version.tar.gz
 	mariadb.rc mariadb.pam
 	pre-install)
 
