@@ -1,30 +1,26 @@
 # Description: Curses based spreadsheet with vi key-bindings 
-# URL: http://www.ibiblio.org/pub/Linux/apps/financial/spreadsheet/
+# URL: https://github.com/n-t-roff/sc
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: ncurses
 
 name=sc
-version=7.16
-release=9
-source=(http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16.orig.tar.gz \
-	http://ftp.de.debian.org/debian/pool/main/s/sc/sc_7.16-4.3.debian.tar.xz)
+version=7.16-1.1.2
+release=1
+source=(http://ftp.de.debian.org/debian/pool/main/s/sc/sc_$version.orig.tar.gz \
+	http://ftp.de.debian.org/debian/pool/main/s/sc/sc_$version-1.debian.tar.xz)
 
 build() {
-	cd $name-$version
+	cd $name-${version/-/_}
 
 	local p
+	sed '/^#/d' -i $SRC/debian/patches/series
 	for p in $(< $SRC/debian/patches/series); do
 		patch -p1 -i $SRC/debian/patches/$p
 	done
+ 
+	sed '/^prefix/s|/local||' -i Makefile.in
 
-	sed -e "/^CFLAGS=/s/-O2 -pipe/$CFLAGS/" \
-		-e "/^LIBDIR=/s|doc/||" \
-		-e "/^LIB=/s/ncurses/ncursesw/" -i Makefile
-
-	install -d $PKG/usr/{bin,share/man/man1,share/sc}
-
+	./configure
 	make
-	make prefix=$PKG/usr MANDIR=$PKG/usr/share/man/man1 install
-
-	sed -i "s|$PKG||g" $PKG/usr/share/man/man1/sc.1
+	make prefix=$PKG/usr install
 }
