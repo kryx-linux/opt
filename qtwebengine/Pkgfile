@@ -5,13 +5,13 @@
 # Optional: glib jsoncpp krb5 krb5 lcms2 libevent libsrtp libxml2 minizip opus pipewire pulseaudio re2 snappy
 
 name=qtwebengine
-version=5.15.17
-release=2
+version=5.15.19
+release=1
 
 # https://github.com/qt/qtwebengine/commits/5.15
-_qtwebengine_commit=63d4e58009c7f069ace14b64f1528ba2664272e9
+_qtwebengine_commit=4b7673d7ae19cf3dd8c18d987954048a6635b02e
 # from $_qtwebengine_commit/src/3rdparty
-_chromium_commit=fdfef5b37af3bed8402d7c7e20a5487f2602b0a6
+_chromium_commit=1b7db6c55868144f9c44d87a48097716d67f32b9
 
 source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_qtwebengine_commit.tar.gz
   https://github.com/qt/qtwebengine-chromium/archive/$_chromium_commit/$name-chromium-$_chromium_commit.tar.gz
