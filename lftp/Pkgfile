@@ -5,20 +5,13 @@
 # Optional: libidn2
 
 name=lftp
-version=4.9.2
-release=3
-source=(https://lftp.yar.ru/ftp/lftp-$version.tar.xz
-    http://deb.debian.org/debian/pool/main/l/lftp/lftp_4.9.2-3.debian.tar.xz)
+version=4.9.3
+release=1
+source=(https://lftp.yar.ru/ftp/lftp-$version.tar.xz)
 
 build() {
     cd $name-$version
 
-    local p
-    for p in $(< $SRC/debian/patches/series); do
-        patch -p1 -i $SRC/debian/patches/$p
-    done
-
-    autoreconf -fi
     ./configure \
         --prefix=/usr \
         --disable-nls \
@@ -28,5 +21,6 @@ build() {
     make
     make DESTDIR=$PKG install
 
+    prt-get isinst zsh || rm -r $PKG/usr/share/zsh
     rm -r $PKG/usr/lib
 }
