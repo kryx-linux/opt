@@ -4,9 +4,9 @@
 # Depends on: python3-pip
 
 name=python3-tomli
-version=2.1.0
+version=2.2.1
 release=1
-source=(https://pypi.python.org/packages/source/t/tomli/tomli-$version.tar.gz)
+source=(https://pypi.org/packages/source/t/tomli/tomli-$version.tar.gz)
 
 build() {
   cd tomli-$version
