@@ -4,26 +4,19 @@
 # Depends on: qt6-shadertools
 
 name=qt6-declarative
-version=6.8.0
-release=2
-source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtdeclarative-everywhere-src-$version.tar.xz
-  0ae3697cf40bcd3ae1de20621abad17cf6c5f52d.patch
-  861a7921ed7833a90f77b5fca436c789a4f9517c.patch
-  281f620ceea03e7a222d796ae0cca917a9778368.patch
-)
+version=6.8.1
+release=1
+source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtdeclarative-everywhere-src-$version.tar.xz)
 
 build() {
   prt-get isinst ccache && PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
-
-  patch -Np1 -d qtdeclarative-everywhere-src-$version -i $SRC/0ae3697cf40bcd3ae1de20621abad17cf6c5f52d.patch
-  patch -Np1 -d qtdeclarative-everywhere-src-$version -i $SRC/861a7921ed7833a90f77b5fca436c789a4f9517c.patch
-  patch -Np1 -d qtdeclarative-everywhere-src-$version -i $SRC/281f620ceea03e7a222d796ae0cca917a9778368.patch
 
   cmake -S qtdeclarative-everywhere-src-$version -B build -G Ninja $PKGMK_QT6 \
     -D INSTALL_PUBLICBINDIR=usr/bin \
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS"
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -Wno-dev
   cmake --build build
   DESTDIR=$PKG cmake --install build
 
