@@ -4,7 +4,7 @@
 # Depends on: compiler-rt
 
 name=clang
-version=19.1.4
+version=19.1.5
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-$version.src.tar.xz
 	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-tools-extra-$version.src.tar.xz
@@ -13,6 +13,16 @@ source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/
 	)
 
 build() {
+	llvm_version=$(prt-get current llvm)
+	if [ ! "$llvm_version" == "$version-$release" ]; then
+		printf '\e[31m%s\e[m\n' "llvm out-of-sync error!
+Your current llvm version is $llvm_version, while this Pkgfile currently
+provides $version-$release.
+
+The build may not fail but produce problems later on. To save your time the
+build will exit here. Please update llvm and compiler-rt first."
+		exit 1
+	fi
 	mv clang-tools-extra-$version.src clang-$version.src/tools/extra
 	prt-get isinst ccache && PKGMK_CLANG+=' -D LLVM_CCACHE_BUILD=ON'
 

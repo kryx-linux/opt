@@ -1,8 +1,8 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/Sh1mY4H/iGuQBbO41DzvmflTrufZ83Qos8CJ+cSYX9wqrEmtS4y3NS6GDTclJx/w6ZleISoXdC/vAw7WVJblQE=
-SHA256 (Pkgfile) = 6042f4f9dca61c812c2b226964481956226b10504ea142ebc396258849659a39
-SHA256 (.footprint) = d65797b5e0be66ec0db155b4001eab8160f7af1becc90c3fada476605f51b718
-SHA256 (clang-19.1.4.src.tar.xz) = b6d123a4435f1869af709f3288c4c4db48173acaf621088400d91521bc5aa225
-SHA256 (clang-tools-extra-19.1.4.src.tar.xz) = e09d0becbbe4dc3dec45dbda44649357456e559b46a72004696674c963734fa6
-SHA256 (llvm-19.1.4.src.tar.xz) = 4fe1bc197ff13f33af6179f836ce1cf2ae9886b822974a736f3a20c8aed0c1b2
-SHA256 (cmake-19.1.4.src.tar.xz) = dd13ce8eba6ece85cad567f028b8e16d72f3e142cdcbbd693ac23a88b4013803
+RWSE3ohX2g5d/avx8NQykUn8vRPxQ88KVWQoYsCUybQh/vr4mchU05NXqNx8529vb27dBTBGD1BJIp6J8Y0NmloDIQ7xRtDTdgg=
+SHA256 (Pkgfile) = 340732fc0fc53c79446019be72b949e6a9e1bbf5cf6d50cd257d31a74f798979
+SHA256 (.footprint) = 919e9bd3df3349c612a866b0aa11fd97a4da197f6ed536dc21c94e133af5d7a8
+SHA256 (clang-19.1.5.src.tar.xz) = e7dfc8050407b5cc564c1c1afe19517255c9229cccd886dbd5bac9b652828d85
+SHA256 (clang-tools-extra-19.1.5.src.tar.xz) = 9288a607dfb6350906e466ee49590e769ffb311a2f989889e9e52bd3e64c9398
+SHA256 (llvm-19.1.5.src.tar.xz) = 7d71635948e4da1814ce8e15ec45399e4094a5442e86d352c96ded0f2b3171b6
+SHA256 (cmake-19.1.5.src.tar.xz) = a08ae477571fd5e929c27d3d0d28c6168d58dd00b6354c2de3266ae0d86ad44f
