@@ -5,9 +5,10 @@
 # Optional: bubblewrap enchant geoclue gst-plugins-bad libavif libmanette libnotify openjpeg2 wpebackend-fdo xdg-dbus-proxy
 
 name=webkitgtk
-version=2.46.3
+version=2.46.4
 release=1
-source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
+source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz
+  1cfbdd74e97ea29636ce442322b5399b43937401.patch)
 
 build() {
   # fail the build if dependencies are not met
@@ -27,14 +28,15 @@ build() {
   prt-get isinst libavif || PKGMK_WEBKITGTK+=' -DUSE_AVIF=OFF'
   prt-get isinst gst_plugins-bad || PKGMK_WEBKITGTK+=' -DUSE_GSTREAMER_TRANSCODER=OFF'
 
+  patch -Np1 -d webkitgtk-$version -i $SRC/1cfbdd74e97ea29636ce442322b5399b43937401.patch
+
   cmake -S webkitgtk-$version -B build -G Ninja ${PKGMK_WEBKITGTK} \
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=/usr/lib \
     -D CMAKE_INSTALL_LIBEXECDIR=/usr/lib \
     -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -DNDEBUG -ffat-lto-objects" \
-    -D CMAKE_C_FLAGS_RELEASE="${CFLAGS} -DNDEBUG -ffat-lto-objects" \
-    -D CMAKE_EXE_LINKER_FLAGS="${LDFLAGS} -Wl,-fuse-ld=gold" \
+    -D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -DNDEBUG -ffat-lto-objects -fcf-protection=none" \
+    -D CMAKE_C_FLAGS_RELEASE="${CFLAGS} -DNDEBUG -ffat-lto-objects -fcf-protection=none" \
     -D CMAKE_SKIP_RPATH=ON \
     -D PORT=GTK \
     -D ENABLE_MINIBROWSER=ON \
@@ -42,6 +44,7 @@ build() {
     -D ENABLE_DOCUMENTATION=OFF \
     -D USE_LIBBACKTRACE=OFF \
     -D USE_JPEGXL=OFF \
+    -D USE_GOLD=OFF \
     -D USE_SYSTEM_SYSPROF_CAPTURE=NO \
     -Wno-dev
 
