@@ -4,7 +4,7 @@
 # Depends on: gtk3 vim xorg-libxt
 
 name=gvim
-version=9.1.0754
+version=9.1.0887
 release=1
 source=(https://github.com/vim/vim/archive/v${version}/vim-$version.tar.gz)
 
@@ -26,5 +26,6 @@ build() {
     make VIMRTDIR=
     make VIMRTDIR= DESTDIR=$PKG installvimbin install-icons
 
+    rm -r $PKG/usr/share/icons $PKG/usr/share/applications/vim.desktop
     sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
 }
