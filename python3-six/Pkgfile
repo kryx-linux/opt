@@ -4,8 +4,8 @@
 # Depends on: python3-setuptools
 
 name=python3-six
-version=1.16.0
-release=2
+version=1.17.0
+release=1
 source=(https://pypi.org/packages/source/s/six/six-$version.tar.gz)
 
 build() {
