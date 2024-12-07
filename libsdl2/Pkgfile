@@ -5,9 +5,9 @@
 # Optional: alsa-lib ibus jack pipewire pulseaudio wayland-protocols
 
 name=libsdl2
-version=2.30.9
+version=2.30.10
 release=1
-source=(https://www.libsdl.org/release/SDL2-$version.tar.gz)
+source=(https://github.com/libsdl-org/SDL/releases/download/release-$version/SDL2-$version.tar.gz)
 
 build() {
 	prt-get isinst alsa-lib && PKGMK_SDL2+=' -D SDL_ALSA_SHARED=ON'
