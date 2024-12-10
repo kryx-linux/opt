@@ -4,10 +4,10 @@
 
 name=mingw-w64-crt
 version=12.0.0
-release=1
+release=2
 source=(https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/mingw-w64-v$version.tar.bz2 \
-	http://ftpmirror.gnu.org/gnu/binutils/binutils-2.39.tar.xz \
-	http://gcc.gnu.org/pub/gcc/releases/gcc-13.1.0/gcc-13.1.0.tar.xz)
+	http://ftpmirror.gnu.org/gnu/binutils/binutils-2.43.tar.xz \
+	http://gcc.gnu.org/pub/gcc/releases/gcc-14.2.0/gcc-14.2.0.tar.xz)
 
 build() {
 
@@ -20,7 +20,7 @@ build() {
 		for T in {i686,x86_64}-w64-mingw32; do
 			mkdir build-binutils-$T
 			cd build-binutils-$T
-			../binutils-2.39/configure --target=$T --disable-multilib --prefix=$SRC/sysroot $SYSROOT
+			../binutils-2.43/configure --target=$T --disable-multilib --prefix=$SRC/sysroot $SYSROOT
 			sed -i -e '/^MAKEINFO/s:=.*:= true:' Makefile
 			make
 			make install
@@ -44,7 +44,7 @@ build() {
 		for T in {i686,x86_64}-w64-mingw32; do
 			mkdir build-gcc-$T
 			cd build-gcc-$T
-			../gcc-13.1.0/configure --target=$T --disable-multilib --disable-nls --enable-threads=posix --prefix=$SRC/sysroot $SYSROOT
+			../gcc-14.2.0/configure --target=$T --disable-multilib --disable-nls --enable-threads=posix --prefix=$SRC/sysroot $SYSROOT
 			make all-gcc
 			make install-gcc
 			cd ..

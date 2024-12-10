@@ -4,9 +4,9 @@
 # Depends on: fribidi xorg-libsm xorg-libxft
 
 name=pango
-version=1.54.0
+version=1.55.0
 release=1
-source=(https://download-fallback.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
+source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
     meson setup $name-$version build \

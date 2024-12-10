@@ -1,16 +1,18 @@
 # Description: Authoritative only, high performance name server
 # URL: http://www.nlnetlabs.nl/projects/nsd/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: openssl libevent
+# Depends on: libevent
 
 name=nsd
-version=4.10.1
+version=4.10.2
 release=1
 source=(http://www.nlnetlabs.nl/downloads/nsd/$name-$version.tar.gz
     README pre-install nsd)
 
 build() {
     cd $name-$version
+
+    sed '/^dbdir/s|=.*|=/run/nsd|' -i configure.ac
 
     autoreconf -i
     ./configure \
