@@ -4,7 +4,7 @@
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia-fb
-version=560.35.03
+version=565.77
 release=1
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf)
@@ -30,9 +30,9 @@ build() {
 	install -D -m 0644 10_nvidia.json $PKG/usr/share/glvnd/egl_vendor.d/10_nvidia.json
 
 	# GBM libraries and config
-	install -m 0755 libnvidia-egl-gbm.so.1.1.1 $PKG/usr/lib/
-	ln -s libnvidia-egl-gbm.so.1.1.1 $PKG/usr/lib/libnvidia-egl-gbm.so.1
-	ln -s libnvidia-egl-gbm.so.1.1.1 $PKG/usr/lib/libnvidia-egl-gbm.so
+	install -m 0755 libnvidia-egl-gbm.so.1.1.2 $PKG/usr/lib/
+	ln -s libnvidia-egl-gbm.so.1.1.2 $PKG/usr/lib/libnvidia-egl-gbm.so.1
+	ln -s libnvidia-egl-gbm.so.1.1.2 $PKG/usr/lib/libnvidia-egl-gbm.so
 	install -D -m 0644 15_nvidia_gbm.json $PKG/usr/share/egl/egl_external_platform.d/15_nvidia_gbm.json
 	install -d -m 0755 $PKG/usr/lib/gbm
 	ln -s libnvidia-allocator.so.$version $PKG/usr/lib/gbm/nvidia-drm_gbm.so
