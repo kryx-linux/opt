@@ -4,8 +4,8 @@
 # Depends on: cyrus-sasl
 
 name=postfix
-version=3.9.0
-release=2
+version=3.9.1
+release=1
 source=(http://ftp.porcupine.org/mirrors/postfix-release/official/${name}-${version}.tar.gz
     aliases postfix.rc)
 
