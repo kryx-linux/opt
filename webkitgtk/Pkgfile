@@ -5,10 +5,9 @@
 # Optional: bubblewrap enchant geoclue gst-plugins-bad libavif libmanette libnotify openjpeg2 wpebackend-fdo xdg-dbus-proxy
 
 name=webkitgtk
-version=2.46.4
+version=2.46.5
 release=1
-source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz
-  1cfbdd74e97ea29636ce442322b5399b43937401.patch)
+source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
 build() {
   # fail the build if dependencies are not met
@@ -27,8 +26,6 @@ build() {
   prt-get isinst libmanette || PKGMK_WEBKITGTK+=' -DENABLE_GAMEPAD=OFF'
   prt-get isinst libavif || PKGMK_WEBKITGTK+=' -DUSE_AVIF=OFF'
   prt-get isinst gst_plugins-bad || PKGMK_WEBKITGTK+=' -DUSE_GSTREAMER_TRANSCODER=OFF'
-
-  patch -Np1 -d webkitgtk-$version -i $SRC/1cfbdd74e97ea29636ce442322b5399b43937401.patch
 
   cmake -S webkitgtk-$version -B build -G Ninja ${PKGMK_WEBKITGTK} \
     -D CMAKE_INSTALL_PREFIX=/usr \
