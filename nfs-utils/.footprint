@@ -18,9 +18,8 @@ drwxr-xr-x	root/root	lib/udev/
 drwxr-xr-x	root/root	lib/udev/rules.d/
 -rw-r--r--	root/root	lib/udev/rules.d/99-nfs.rules
 drwxr-xr-x	root/root	sbin/
--r-s--x--x	root/root	sbin/mount.nfs
+-rws--x--x	root/root	sbin/mount.nfs
 lrwxrwxrwx	root/root	sbin/mount.nfs4 -> mount.nfs
--rwxr-xr-x	root/root	sbin/nfsdcltrack
 lrwxrwxrwx	root/root	sbin/umount.nfs -> mount.nfs
 lrwxrwxrwx	root/root	sbin/umount.nfs4 -> mount.nfs
 drwxr-xr-x	root/root	usr/
@@ -95,7 +94,6 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/nfsdcld.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsdclddb.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsdclnts.8.gz
--rw-r--r--	root/root	usr/share/man/man8/nfsdcltrack.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsdctl.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsidmap.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/nfsiostat.8.gz
@@ -117,7 +115,6 @@ drwxr-xr-x	root/root	var/lib/
 drwxr-xr-x	nobody/root	var/lib/nfs/
 -rw-r--r--	root/root	var/lib/nfs/etab (EMPTY)
 drwxr-xr-x	root/root	var/lib/nfs/nfsdcld/
-drwxr-xr-x	root/root	var/lib/nfs/nfsdcltrack/
 -rw-r--r--	root/root	var/lib/nfs/rmtab (EMPTY)
 drwxr-xr-x	root/root	var/lib/nfs/rpc_pipefs/
 drwx------	nobody/root	var/lib/nfs/sm.bak/

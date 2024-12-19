@@ -4,12 +4,13 @@
 # Depends on: rdfind
 
 name=linux-firmware
-version=20241110
+version=20241210
 release=1
 source=(https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
     make DESTDIR=$PKG FIRMWAREDIR=/lib/firmware install
+    make DESTDIR=$PKG dedup
     find $PKG \( -name 'ChangeLog' -or -name 'README' \) -delete
 }
