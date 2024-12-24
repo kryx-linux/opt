@@ -11,14 +11,13 @@ source=(https://storage.googleapis.com/downloads.webmproject.org/releases/webp/$
 
 build() {
   cmake -S $name-$version -B build -G Ninja $PKGMK_LIBWEBP \
-    -D CMAKE_INSTALL_PREFIX="/usr" \
-    -D CMAKE_INSTALL_LIBDIR="/usr/lib" \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
     -D BUILD_SHARED_LIBS=ON \
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -flto=auto -ffat-lto-objects" \
     -D CMAKE_SKIP_INSTALL_RPATH=ON \
     -D WEBP_ENABLE_SIMD=ON \
-    -D OpenGL_GL_Preference=GLVND \
     -D WEBP_BUILD_VWEBP=OFF \
     -DWEBP_BUILD_{C,D,GIF2,IMG2}WEBP=ON \
     -Wno-dev
