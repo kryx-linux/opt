@@ -18,7 +18,6 @@ build() {
 
   prt-get isinst openjpeg2 || PKGMK_WEBKITGTK+=' -DUSE_OPENJPEG=OFF'
   prt-get isinst enchant || PKGMK_WEBKITGTK+=' -DENABLE_SPELLCHECK=OFF'
-  prt-get isinst libnotify && PKGMK_WEBKITGTK+=' -DUSE_LIBNOTIFY=ON' || PKGMK_WEBKITGTK+=' -DUSE_LIBNOTIFY=OFF'
   prt-get isinst geoclue && PKGMK_WEBKITGTK+=' -DENABLE_GEOLOCATION=ON' || PKGMK_WEBKITGTK+=' -DENABLE_GEOLOCATION=OFF'
   prt-get isinst bubblewrap xdg-dbus-proxy && PKGMK_WEBKITGTK+=' -DENABLE_BUBBLEWRAP_SANDBOX=ON' \
   || PKGMK_WEBKITGTK+=' -DENABLE_BUBBLEWRAP_SANDBOX=OFF'
@@ -41,7 +40,6 @@ build() {
     -D ENABLE_DOCUMENTATION=OFF \
     -D USE_LIBBACKTRACE=OFF \
     -D USE_JPEGXL=OFF \
-    -D USE_GOLD=OFF \
     -D USE_SYSTEM_SYSPROF_CAPTURE=NO \
     -Wno-dev
 
