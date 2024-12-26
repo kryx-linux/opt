@@ -1,11 +1,11 @@
 # Description: GNU EFI library
-# URL: https://sourceforge.net/projects/gnu-efi/
+# URL: https://github.com/ncroxon/gnu-efi
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 
 name=gnu-efi
-version=3.0.18
+version=4.0.0
 release=1
-source=(https://download.sourceforge.net/$name/$name-$version.tar.bz2)
+source=(https://github.com/ncroxon/gnu-efi/archive/$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version

@@ -2,23 +2,24 @@
 # URL: https://developers.google.com/speed/webp/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: giflib libpng libtiff
-# Optional: freeglut libsdl ninja
+# Optional: freeglut libsdl
 
 name=libwebp
-version=1.4.0
-release=1
+version=1.5.0
+release=2
 source=(https://storage.googleapis.com/downloads.webmproject.org/releases/webp/$name-$version.tar.gz)
 
 build() {
-  prt-get isinst ninja && PKGMK_LIBWEBP+=' -G Ninja'
-
-  cmake -S ${name%-*}-$version -B build $PKGMK_LIBWEBP \
-    -D CMAKE_INSTALL_PREFIX="/usr" \
-    -D CMAKE_INSTALL_LIBDIR="/usr/lib" \
+  cmake -S $name-$version -B build -G Ninja $PKGMK_LIBWEBP \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
     -D BUILD_SHARED_LIBS=ON \
     -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -flto=auto -ffat-lto-objects" \
+    -D CMAKE_SKIP_INSTALL_RPATH=ON \
+    -D WEBP_ENABLE_SIMD=ON \
     -D WEBP_BUILD_VWEBP=OFF \
+    -DWEBP_BUILD_{C,D,GIF2,IMG2}WEBP=ON \
     -Wno-dev
 
   cmake --build build
