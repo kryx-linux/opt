@@ -4,7 +4,7 @@
 # Depends on: http-parser
 
 name=libgit2
-version=1.8.4
+version=1.9.0
 release=1
 source=(https://github.com/libgit2/libgit2/archive/v$version/$name-$version.tar.gz)
 
@@ -15,10 +15,8 @@ build() {
   cmake -S $name-$version -B build -G Ninja \
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=lib \
-    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -D CMAKE_BUILD_TYPE=Release \
-    -D USE_HTTP_PARSER=system \
     -Wno-dev
 
   cmake --build build
