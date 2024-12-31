@@ -1,0 +1,21 @@
+# Description: HTTP/3 library written in C
+# URL: https://github.com/ngtcp2/nghttp3
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on:
+
+name=libnghttp3
+version=1.7.0
+release=1
+source=(https://github.com/ngtcp2/nghttp3/releases/download/v$version/nghttp3-$version.tar.xz)
+
+build() {
+  cd nghttp3-$version
+
+  autoreconf -fvi
+  ./configure --prefix=/usr \
+    --enable-lib-only
+  make
+  make DESTDIR=$PKG install
+
+  rm -r $PKG/usr/share
+}

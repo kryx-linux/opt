@@ -84,7 +84,6 @@ drwxr-xr-x	root/root	usr/include/git2/sys/
 -rw-r--r--	root/root	usr/include/git2/sys/openssl.h
 -rw-r--r--	root/root	usr/include/git2/sys/path.h
 -rw-r--r--	root/root	usr/include/git2/sys/refdb_backend.h
--rw-r--r--	root/root	usr/include/git2/sys/reflog.h
 -rw-r--r--	root/root	usr/include/git2/sys/refs.h
 -rw-r--r--	root/root	usr/include/git2/sys/remote.h
 -rw-r--r--	root/root	usr/include/git2/sys/repository.h
@@ -99,8 +98,14 @@ drwxr-xr-x	root/root	usr/include/git2/sys/
 -rw-r--r--	root/root	usr/include/git2/version.h
 -rw-r--r--	root/root	usr/include/git2/worktree.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libgit2.so -> libgit2.so.1.8
-lrwxrwxrwx	root/root	usr/lib/libgit2.so.1.8 -> libgit2.so.1.8.4
--rwxr-xr-x	root/root	usr/lib/libgit2.so.1.8.4
+drwxr-xr-x	root/root	usr/lib/cmake/
+drwxr-xr-x	root/root	usr/lib/cmake/libgit2/
+-rw-r--r--	root/root	usr/lib/cmake/libgit2/libgit2Config.cmake
+-rw-r--r--	root/root	usr/lib/cmake/libgit2/libgit2ConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/cmake/libgit2/libgit2Targets-release.cmake
+-rw-r--r--	root/root	usr/lib/cmake/libgit2/libgit2Targets.cmake
+lrwxrwxrwx	root/root	usr/lib/libgit2.so -> libgit2.so.1.9
+lrwxrwxrwx	root/root	usr/lib/libgit2.so.1.9 -> libgit2.so.1.9.0
+-rwxr-xr-x	root/root	usr/lib/libgit2.so.1.9.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libgit2.pc
