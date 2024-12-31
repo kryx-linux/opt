@@ -1,0 +1,303 @@
+diff --git a/config.h.in b/config.h.in
+index 9a13927..56d956d 100644
+--- a/config.h.in
++++ b/config.h.in
+@@ -309,6 +309,9 @@
+ /* Define if you have the setresuid function.  */
+ #undef HAVE_SETRESUID
+ 
++/* Define if you have the sigaction function.  */
++#undef HAVE_SIGACTION
++
+ /* Define if you have the signal function.  */
+ #undef HAVE_SIGNAL
+ 
+diff --git a/configure.in b/configure.in
+index 5fef169..99936a4 100644
+--- a/configure.in
++++ b/configure.in
+@@ -113,6 +113,7 @@ AC_CHECK_FUNCS(getopt_long)
+ AC_CHECK_FUNCS(mkstemp)
+ AC_CHECK_FUNCS(flock lockf)
+ AC_CHECK_FUNCS(setlinebuf)
++AC_CHECK_FUNCS(sigaction)
+ AC_CHECK_FUNCS(signal)
+ AC_CHECK_FUNCS(sigset)
+ 
+diff --git a/fcron.c b/fcron.c
+index d7f8366..7abc6ca 100644
+--- a/fcron.c
++++ b/fcron.c
+@@ -48,6 +48,9 @@ void sigchild_handler(int x);
+ void sigusr1_handler(int x);
+ void sigusr2_handler(int x);
+ void sigcont_handler(int x);
++void set_signal_handler(int signal, void (*handler)(int), bool first_install);
++void install_signal_handler(int signal, void (*handler)(int));
++void reinstall_signal_handler(int signal, void (*handler)(int));
+ int parseopt(int argc, char *argv[]);
+ void get_lock(void);
+ int is_system_reboot(void);
+@@ -533,6 +536,56 @@ sigcont_handler(int x)
+     sig_cont = 1;
+ }
+ 
++void
++set_signal_handler(int signal, void (*handler)(int), bool first_install)
++    /* (re)install a signal handler, with restartable syscalls retried. */
++{
++#ifdef HAVE_SIGACTION
++    /* The signal handler stays set after the handler is called when set
++       with sigaction(): we only need to install it once. */
++    if (first_install) {
++        struct sigaction act = {0};
++        act.sa_flags = SA_RESTART;
++        act.sa_handler = handler;
++        if (sigaction(signal, &act, NULL) < 0) {
++            die_e("sigaction() failed on signal %d", signal);
++        }
++    }
++#elif defined(HAVE_SIGNAL)
++    /* Some systems reset the handler to SIG_DFL when the handler
++       is called when the handler was set with signal(). So we have to install
++       it (again) every time. */
++    if (signal(signal, handler) == SIG_ERR) {
++        die_e("signal() failed on signal %d", signal);
++    }
++    if (siginterrupt(signal, 0) < 0) {
++        die_e("siginterrupt() failed on signal %d", signal);
++    }
++#elif defined(HAVE_SIGSET)
++    /* The signal handler stays set after the handler is called when set
++       with sigset(): we only need to install it once. */
++    if (first_install) {
++        if (sigset(signal, handler) == -1) {
++            die_e("sigset() failed on signal %d", signal);
++        }
++    }
++#else
++#error "No signal installation function found"
++#endif
++}
++
++void
++install_signal_handler(int signal, void (*handler)(int)) {
++    set_signal_handler(signal, handler, true);
++}
++
++void
++reinstall_signal_handler(int signal, void (*handler)(int))
++    /* reinstall the signal handler, after execution, if needed. */
++{
++    set_signal_handler(signal, handler, false);
++}
++
+ int
+ main(int argc, char **argv)
+ {
+@@ -652,32 +705,15 @@ main(int argc, char **argv)
+ 
+     explain("%s[%d] " VERSION_QUOTED " started", prog_name, daemon_pid);
+ 
+-#ifdef HAVE_SIGNAL
+-    /* FIXME: check for errors */
+-    signal(SIGTERM, sigterm_handler);
+-    signal(SIGHUP, sighup_handler);
+-    siginterrupt(SIGHUP, 0);
+-    signal(SIGCHLD, sigchild_handler);
+-    siginterrupt(SIGCHLD, 0);
+-    signal(SIGUSR1, sigusr1_handler);
+-    siginterrupt(SIGUSR1, 0);
+-    signal(SIGUSR2, sigusr2_handler);
+-    siginterrupt(SIGUSR2, 0);
+-    signal(SIGCONT, sigcont_handler);
+-    siginterrupt(SIGCONT, 0);
++    install_signal_handler(SIGTERM, sigterm_handler);
++    install_signal_handler(SIGHUP, sighup_handler);
++    install_signal_handler(SIGCHLD, sigchild_handler);
++    install_signal_handler(SIGUSR1, sigusr1_handler);
++    install_signal_handler(SIGUSR2, sigusr2_handler);
++    install_signal_handler(SIGCONT, sigcont_handler);
+     /* we don't want SIGPIPE to kill fcron, and don't need to handle it as when ignored
+      * write() on a pipe closed at the other end will return EPIPE */
+-    signal(SIGPIPE, SIG_IGN);
+-#elif HAVE_SIGSET
+-    /* FIXME: check for errors */
+-    sigset(SIGTERM, sigterm_handler);
+-    sigset(SIGHUP, sighup_handler);
+-    sigset(SIGCHLD, sigchild_handler);
+-    sigset(SIGUSR1, sigusr1_handler);
+-    sigset(SIGUSR2, sigusr2_handler);
+-    sigset(SIGCONT, sigcont_handler);
+-    sigset(SIGPIPE, SIG_IGN);
+-#endif
++    install_signal_handler(SIGPIPE, SIG_IGN);
+ 
+     /* initialize job database */
+     next_id = 0;
+@@ -739,10 +775,7 @@ check_signal()
+     if (sig_chld > 0) {
+         wait_chld();
+         sig_chld = 0;
+-#ifdef HAVE_SIGNAL
+-        (void)signal(SIGCHLD, sigchild_handler);
+-        siginterrupt(SIGCHLD, 0);
+-#endif
++        reinstall_signal_handler(SIGCHLD, sigchild_handler);
+     }
+ 
+     if (sig_conf > 0) {
+@@ -751,19 +784,13 @@ check_signal()
+             /* update configuration */
+             synchronize_dir(".", 0);
+             sig_conf = 0;
+-#ifdef HAVE_SIGNAL
+-            signal(SIGHUP, sighup_handler);
+-            siginterrupt(SIGHUP, 0);
+-#endif
++            reinstall_signal_handler(SIGHUP, sighup_handler);
+         }
+         else {
+             /* reload all configuration */
+             reload_all(".");
+             sig_conf = 0;
+-#ifdef HAVE_SIGNAL
+-            signal(SIGUSR1, sigusr1_handler);
+-            siginterrupt(SIGUSR1, 0);
+-#endif
++            reinstall_signal_handler(SIGUSR1, sigusr1_handler);
+         }
+ 
+     }
+@@ -773,10 +800,7 @@ check_signal()
+         debug_opt = (debug_opt > 0) ? 0 : 1;
+         explain("debug_opt = %d", debug_opt);
+         sig_debug = 0;
+-#ifdef HAVE_SIGNAL
+-        signal(SIGUSR2, sigusr2_handler);
+-        siginterrupt(SIGUSR2, 0);
+-#endif
++        reinstall_signal_handler(SIGUSR2, sigusr2_handler);
+     }
+ 
+ }
+@@ -788,10 +812,7 @@ reset_sig_cont(void)
+     if (sig_cont > 0) {
+ 
+         sig_cont = 0;
+-#ifdef HAVE_SIGNAL
+-        signal(SIGCONT, sigcont_handler);
+-        siginterrupt(SIGCONT, 0);
+-#endif
++        reinstall_signal_handler(SIGCONT, sigcont_handler);
+     }
+ }
+ 
+diff --git a/fcrondyn.c b/fcrondyn.c
+index e04e0ae..d76224c 100644
+--- a/fcrondyn.c
++++ b/fcrondyn.c
+@@ -253,9 +253,10 @@ parse_cmd(char *cmd_str, long int **cmd, int *cmd_len)
+                     fprintf(stderr, "  uid = ALL\n");
+             }
+             else {
+-                Write_cmd(user_uid);
++                int_buf = (long int)user_uid;
++                Write_cmd(int_buf);
+                 if (debug_opt)
+-                    fprintf(stderr, "  uid = %d\n", (int)user_uid);
++                    fprintf(stderr, "  uid = %ld\n", int_buf);
+             }
+ 
+         }
+diff --git a/fcronsighup.c b/fcronsighup.c
+index 89eabb0..7621cec 100644
+--- a/fcronsighup.c
++++ b/fcronsighup.c
+@@ -98,7 +98,7 @@ sig_daemon(void)
+     if (max_delay_s > 0) {
+         time_t now_epoch = 0;
+         int delay_s = 0;
+-        time_t *target_time_epoch = NULL;
++        time_t target_time_epoch = 0;
+         struct tm *target_time_tm = NULL;
+         FILE *fp = NULL;
+         int fd = 0;
+diff --git a/fcrontab.c b/fcrontab.c
+index 9a544f2..6a45476 100644
+--- a/fcrontab.c
++++ b/fcrontab.c
+@@ -80,7 +80,6 @@ char need_sig = 0;              /* do we need to signal fcron daemon */
+ char orig_dir[PATH_LEN];
+ cf_t *file_base = NULL;
+ char buf[PATH_LEN];
+-char file[PATH_LEN];
+ 
+ /* needed by log part : */
+ char *prog_name = NULL;
+@@ -888,7 +887,7 @@ parseopt(int argc, char *argv[])
+                 Set(fcronconf, optarg);
+             }
+             else {
+-                char buf[PATH_LEN];
++                char buf[sizeof(orig_dir)+1+strlen(optarg)+1];
+                 snprintf(buf, sizeof(buf), "%s/%s", orig_dir, optarg);
+                 Set(fcronconf, buf);
+             }
+@@ -995,12 +994,12 @@ main(int argc, char **argv)
+     const char *const *env;
+ #endif
+     struct passwd *pass;
++    char *fcrontab_file_path = NULL;
+ 
+     rootuid = get_user_uid_safe(ROOTNAME);
+     rootgid = get_group_gid_safe(ROOTGROUP);
+ 
+     memset(buf, 0, sizeof(buf));
+-    memset(file, 0, sizeof(file));
+ 
+     if (strrchr(argv[0], '/') == NULL)
+         prog_name = argv[0];
+@@ -1112,18 +1111,20 @@ main(int argc, char **argv)
+         else {
+             int fd = -1;
+ 
+-            if (*argv[file_opt] != '/')
++            if (*argv[file_opt] != '/') {
+                 /* this is just the file name, not the path : complete it */
+-                snprintf(file, sizeof(file), "%s/%s", orig_dir, argv[file_opt]);
++                size_t path_len = strlen(orig_dir) + 1 + strlen(argv[file_opt]) + 1;
++                alloc_safe(path_len, fcrontab_file_path);
++                snprintf(fcrontab_file_path, path_len, "%s/%s", orig_dir, argv[file_opt]);
++            }
+             else {
+-                strncpy(file, argv[file_opt], sizeof(file) - 1);
+-                file[sizeof(file) - 1] = '\0';
++                fcrontab_file_path = strdup(argv[file_opt]);
+             }
+ 
+-            fd = open_as_user(file, useruid, usergid, O_RDONLY);
++            fd = open_as_user(fcrontab_file_path, useruid, usergid, O_RDONLY);
+             if (fd < 0)
+-                die_e("Could not open file %s", file);
+-            if (make_file(file, fd) == OK)
++                die_e("Could not open file %s", fcrontab_file_path);
++            if (make_file(fcrontab_file_path, fd) == OK)
+                 xexit(EXIT_OK);
+             else
+                 xexit(EXIT_ERR);
+diff --git a/global.h b/global.h
+index 1e328fd..0b1feef 100644
+--- a/global.h
++++ b/global.h
+@@ -198,8 +198,8 @@ typedef struct cf_t {
+     int cf_running;             /* number of jobs running                    */
+     signed char cf_tzdiff;      /* time diff between system and local hour   */
+ #ifdef WITH_SELINUX
+-    security_context_t cf_user_context;
+-    security_context_t cf_file_context;
++    char *cf_user_context;
++    char *cf_file_context;
+ #endif
+ } cf_t;
+ 
