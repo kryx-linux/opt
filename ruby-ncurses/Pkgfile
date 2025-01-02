@@ -5,7 +5,7 @@
 
 name=ruby-ncurses
 version=1.4.11
-release=1
+release=2
 source=(https://rubygems.org/downloads/ncursesw-$version.gem)
 
 build () {
