@@ -1,12 +1,12 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/W4Fu6kF3RBGLdysdZ/l8Qo6AkJ5E4ZhceL2DiZI1Du8V3qF+qkTqZ5Uetc779nQcWoUyVWuiO9cmTTPsrdqFwE=
-SHA256 (Pkgfile) = 518a0ae4b1f6a6cf0c96b9357a7e79f86d56397e1ee1cc00ae2f17b3e0d0867c
-SHA256 (.footprint) = 8fde4821c3fcb3b9f4b48d5d85dc91186c52d5224cf77c9dc3e6e79359af91aa
-SHA256 (rustc-1.83.0-src.tar.xz) = 7b11d4242dab0921a7d54758ad3fe805153c979c144625fecde11735760f97df
-SHA256 (rust-std-1.82.0-x86_64-unknown-linux-gnu.tar.xz) = 2eca3d36f7928f877c334909f35fe202fbcecce109ccf3b439284c2cb7849594
-SHA256 (rustc-1.82.0-x86_64-unknown-linux-gnu.tar.xz) = 90b61494f5ccfd4d1ca9a5ce4a0af49a253ca435c701d9c44e3e44b5faf70cb8
-SHA256 (cargo-1.82.0-x86_64-unknown-linux-gnu.tar.xz) = 97aeae783874a932c4500f4d36473297945edf6294d63871784217d608718e70
+RWSE3ohX2g5d/Uxps06bGYaqlVVKtkKofzms2gblfrxD2IHqO0RH1ZaaLCtIvrxOUo/QQL4filCxhpa1biPRhcmDpoCLwlcE8gE=
+SHA256 (Pkgfile) = 5094754cdce23a7288a6ad036423274977061eb574b5c417ebf26aefc91a487d
+SHA256 (.footprint) = 6fb048c8b8fef779488fb5f41a9287ae3b2356ec9a1b0e0d3834f0b2f6e1266c
+SHA256 (rustc-1.84.0-src.tar.xz) = bc2c1639f26814c7b17a323992f1e08c3b01fe88cdff9a27d951987d886e00b3
+SHA256 (rust-std-1.83.0-x86_64-unknown-linux-gnu.tar.xz) = c88fe6cb22f9d2721f26430b6bdd291e562da759e8629e2b4c7eb2c7cad705f2
+SHA256 (rustc-1.83.0-x86_64-unknown-linux-gnu.tar.xz) = 6ec40e0405c8cbed3b786a97d374c144b012fc831b7c22b535f8ecb524f495ad
+SHA256 (cargo-1.83.0-x86_64-unknown-linux-gnu.tar.xz) = de834a4062d9cd200f8e0cdca894c0b98afe26f1396d80765df828880a39b98c
 SHA256 (0001-bootstrap-Change-libexec-dir.patch) = 3127ef3346430bd82dde03bfc3c8875cdfc00c62d98f27b3f798099df719dbb9
 SHA256 (0002-bootstrap-Change-bash-completion-dir.patch) = 49c8799720cae67e44d24c0dab484ecc596a2d74c8560504f4053f77864ce849
-SHA256 (0003-compiler-Change-LLVM-targets.patch) = 29068559ad29eaf62c7fb78e6ddabfad25857308b0194575eb12b937411b3063
+SHA256 (0003-compiler-Change-LLVM-targets.patch) = 9ed7a6b1f8981988eb5b254fc199e47503399f106444c0b96459c811d1004d55
 SHA256 (0004-compiler-Use-wasm-ld-for-wasm-targets.patch) = b5a6ee8942fff48a2165289a24039662945e89a65863d726469cb3bab88d3fb7
