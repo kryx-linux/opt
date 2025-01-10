@@ -2,14 +2,17 @@
 # URL: https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: rdfind
+# Optional: parallel
 
 name=linux-firmware
-version=20241210
+version=20250109
 release=1
 source=(https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
+
+	prt-get isinst parallel || MAKEFLAGS="-j 1"
 	make DESTDIR=$PKG FIRMWAREDIR=/lib/firmware install
 	make DESTDIR=$PKG dedup
 	find $PKG \( -name 'ChangeLog' -or -name 'README' \) -delete
