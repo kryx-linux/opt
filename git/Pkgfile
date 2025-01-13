@@ -5,28 +5,25 @@
 # Optional: tk
 
 name=git
-version=2.47.1
+version=2.48.0
 release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
 	git gitd.rc)
 
 build() {
-	cd $name-$version
+	meson setup $name-$version build \
+		--prefix=/usr \
+		--libexecdir=lib \
+		--buildtype=plain \
+		--wrap-mode nodownload \
+		-D b_lto=true \
+		-D b_pie=true \
+		-D runtime_prefix=true
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
 
-	make CFLAGS="$CFLAGS" \
-		prefix=/usr \
-		gitexecdir=/usr/lib/git-core \
-		CFLAGS="$CFLAGS -flto -ffat-lto-objects" \
-		LDFLAGS="$LDFLAGS -flto -ffat-lto-objects" \
-		INSTALLSITEMAN3DIR=/usr/share/man/man3 \
-		perllibdir=$(/usr/bin/perl -MConfig -wle 'print $Config{installvendorlib}') \
-		INSTALL_SYMLINKS=1 \
-		USE_LIBPCRE2=1 \
-		DESTDIR=$PKG install
-
-	prt-get isinst bash-completion && install -Dm644 contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
-
-	cd $SRC
+	prt-get isinst bash-completion && install -Dm644 $name-$version/contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
+	prt-get isinst zsh && install -Dm644 $name-$version/contrib/completion/git-completion.zsh $PKG/usr/share/zsh/site-functions/_git
 
 	for i in man*; do
 		install -d $PKG/usr/share/man/$i

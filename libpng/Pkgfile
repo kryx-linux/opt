@@ -4,14 +4,12 @@
 # Depends on: zlib
 
 name=libpng
-version=1.6.44
+version=1.6.45
 release=1
-source=(http://download.sourceforge.net/$name/$name-$version.tar.xz
-    $name-apng.patch)
+source=(http://download.sourceforge.net/$name/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    patch -p1 -i $SRC/$name-apng.patch
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install

@@ -56,6 +56,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/caml/
 -rw-r--r--	root/root	usr/lib/ocaml/caml/address_class.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/addrmap.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/alloc.h
+-rw-r--r--	root/root	usr/lib/ocaml/caml/asm.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/atomic_refcount.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/backtrace.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/backtrace_prim.h
@@ -65,6 +66,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/caml/
 -rw-r--r--	root/root	usr/lib/ocaml/caml/camlatomic.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/codefrag.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/compare.h
+-rw-r--r--	root/root	usr/lib/ocaml/caml/compatibility.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/config.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/custom.h
 -rw-r--r--	root/root	usr/lib/ocaml/caml/debugger.h
@@ -238,7 +240,9 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/ast_mapper.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/ast_mapper.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/asttypes.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/asttypes.cmt
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/asttypes.cmti
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/asttypes.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/asttypes.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/attr_helper.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/attr_helper.cmt
@@ -596,6 +600,11 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/errortrace.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/errortrace.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/errortrace.mli
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/errortrace_report.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/errortrace_report.cmt
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/errortrace_report.cmti
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/errortrace_report.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/errortrace_report.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/export_id.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/export_id.cmt
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/export_id.cmti
@@ -655,6 +664,11 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/flambda_utils.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/flambda_utils.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/flambda_utils.mli
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/format_doc.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/format_doc.cmt
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/format_doc.cmti
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/format_doc.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/format_doc.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/freshening.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/freshening.cmt
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/freshening.cmti
@@ -665,6 +679,11 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/genprintval.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/genprintval.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/genprintval.mli
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/gprinttyp.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/gprinttyp.cmt
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/gprinttyp.cmti
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/gprinttyp.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/gprinttyp.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/id_types.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/id_types.cmt
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/id_types.cmti
@@ -833,6 +852,11 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linkage_name.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linkage_name.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linkage_name.mli
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linkdeps.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linkdeps.cmt
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linkdeps.cmti
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linkdeps.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linkdeps.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linscan.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linscan.cmt
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/linscan.cmti
@@ -967,6 +991,11 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/optmaindriver.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/optmaindriver.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/optmaindriver.mli
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/out_type.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/out_type.cmt
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/out_type.cmti
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/out_type.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/out_type.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/outcometree.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/outcometree.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/outcometree.mli
@@ -1108,6 +1137,11 @@ drwxr-xr-x	root/root	usr/lib/ocaml/compiler-libs/
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/projection.cmti
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/projection.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/projection.mli
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/rawprinttyp.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/rawprinttyp.cmt
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/rawprinttyp.cmti
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/rawprinttyp.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/rawprinttyp.mli
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/ref_to_variables.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/ref_to_variables.cmt
 -rw-r--r--	root/root	usr/lib/ocaml/compiler-libs/ref_to_variables.cmti
@@ -1586,7 +1620,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/dynlink/
 -rw-r--r--	root/root	usr/lib/ocaml/dynlink/dynlink.cmxa
 -rw-r--r--	root/root	usr/lib/ocaml/dynlink/dynlink.mli
 -rw-r--r--	root/root	usr/lib/ocaml/dynlink/dynlink_common.cmx
--rw-r--r--	root/root	usr/lib/ocaml/dynlink/dynlink_compilerlibs.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/dynlink/dynlink_config.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/dynlink/dynlink_platform_intf.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/dynlink/dynlink_types.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/effect.ml
@@ -2256,6 +2290,7 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/CamlinternalMenhirLib.EngineTypes.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/CamlinternalMenhirLib.EngineTypes.ENGINE.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/CamlinternalMenhirLib.EngineTypes.INCREMENTAL_ENGINE_START.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/CamlinternalMenhirLib.EngineTypes.LOG.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/CamlinternalMenhirLib.EngineTypes.MONOLITHIC_ENGINE.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/CamlinternalMenhirLib.EngineTypes.TABLE.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/CamlinternalMenhirLib.EngineTypes.TABLE.Log.3o.gz
@@ -2352,6 +2387,8 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/Float.Array.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Float.ArrayLabels.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Format.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/Format_doc.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/Format_doc.Doc.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Format_tutorial.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Fun.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Gc.3o.gz
@@ -2387,12 +2424,14 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/Lazy_backtrack.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Lexer.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Lexing.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/Linkdeps.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/List.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/ListLabels.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Load_path.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Load_path.Dir.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Local_store.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Location.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/Location.Doc.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Longident.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Map.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Map.Make.3o.gz
@@ -2413,6 +2452,7 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/Misc.Stdlib.String.Set.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Misc.Stdlib.String.Tbl.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Misc.Style.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/Misc.Utf8_lexeme.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/MoreLabels.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/MoreLabels.Hashtbl.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/MoreLabels.Hashtbl.HashedType.3o.gz
@@ -2451,6 +2491,7 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/Parsing.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Pparse.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Pprintast.3o.gz
+-rw-r--r--	root/root	usr/share/man/man3/Pprintast.Doc.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Printast.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Printexc.3o.gz
 -rw-r--r--	root/root	usr/share/man/man3/Printexc.Slot.3o.gz
