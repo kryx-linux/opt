@@ -1,17 +1,15 @@
-# Description: disk usage analyzer, rewritten in Zig
+# Description: disk usage analyzer, static binary
 # URL:        https://dev.yorhel.nl/ncdu 
 # Maintainer:  John McQuah, jmcquah at disroot dot org
-# Depends on:  zig
+# Depends on:  
 
 name=ncdu
-version=2.5
+version=2.7
 release=1
-source=(https://dev.yorhel.nl/download/$name-$version.tar.gz)
+source=(https://dev.yorhel.nl/download/$name-$version-linux-x86_64.tar.gz
+        https://code.blicky.net/yorhel/$name/raw/branch/zig/$name.1)
 
 build () {
-    cd $name-$version
-
-    zig build --release=fast
-    install -D -m 0755 zig-out/bin/$name $PKG/usr/bin/$name
+    install -D -m 0755 $name $PKG/usr/bin/$name
     install -D -m 0644 $name.1 $PKG/usr/share/man/man1/$name.1
 }

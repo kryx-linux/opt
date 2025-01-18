@@ -5,13 +5,14 @@
 
 name=libnvme
 version=1.11.1
-release=1
+release=2
 source=(https://github.com/linux-nvme/$name/archive/v$version/$name-$version.tar.gz)
 
 build() {
     meson setup $name-$version build \
         --prefix=/usr \
-        --buildtype=plain
+        --buildtype=plain \
+        --default-library=both
     meson compile -C build
     DESTDIR=$PKG meson install -C build
 }
