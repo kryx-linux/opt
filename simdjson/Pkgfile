@@ -4,7 +4,7 @@
 # Depends on:
 
 name=simdjson
-version=3.11.6
+version=3.12.0
 release=1
 source=(https://github.com/simdjson/simdjson/archive/v$version/$name-$version.tar.gz)
 
