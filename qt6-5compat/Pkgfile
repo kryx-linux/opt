@@ -1,10 +1,10 @@
 # Description: Module that contains unsupported Qt 5 APIs
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: qt6-declarative icu
+# Depends on: icu qt6-declarative
 
 name=qt6-5compat
-version=6.8.1
+version=6.8.2
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qt5compat-everywhere-src-$version.tar.xz)
 
