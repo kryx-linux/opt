@@ -5,7 +5,7 @@
 
 name=nvidia
 version=550.144.03
-release=1
+release=2
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf nvidia-powerd.rc)
 
@@ -36,7 +36,7 @@ build() {
 	ln -s libnvidia-egl-gbm.so.1.1.1 $PKG/usr/lib/libnvidia-egl-gbm.so
 	install -D -m 0644 15_nvidia_gbm.json $PKG/usr/share/egl/egl_external_platform.d/15_nvidia_gbm.json
 	install -d -m 0755 $PKG/usr/lib/gbm
-	ln -s libnvidia-allocator.so.$version $PKG/usr/lib/gbm/nvidia-drm_gbm.so
+	ln -s ../libnvidia-allocator.so.$version $PKG/usr/lib/gbm/nvidia-drm_gbm.so
 
 	# wayland config
 	install -d $PKG/usr/share/egl/egl_external_platform.d
