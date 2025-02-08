@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=libtasn1
-version=4.19.0
+version=4.20.0
 release=1
 source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
