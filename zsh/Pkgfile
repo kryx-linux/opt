@@ -5,11 +5,12 @@
 
 name=zsh
 version=5.9
-release=3
+release=4
 source=(https://www.zsh.org/pub/$name-$version.tar.xz
   _prt-get _pkgadd _pkgmk _pkginfo _pkgrm _rejmerge
   0002-fix-autocompletion.patch
   0004-pcre2.patch
+  _git
   zsh-lovers.1)
 
 build() {
@@ -17,6 +18,7 @@ build() {
 
   patch -Np1 -i $SRC/0002-fix-autocompletion.patch
   patch -Np1 -i $SRC/0004-pcre2.patch
+  mv $SRC/_git Completion/Unix/Command/_git
 
   # fix paths https://crux.nu/bugs/index.php?getfile=539
   sed -i 's#/usr/share/keymaps#/usr/share/kbd/keymaps#g' Completion/Unix/Command/_loadkeys

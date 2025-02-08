@@ -1,6 +1,6 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/cPWJb1Ze6IbysEQVv82zDCrBANFqjXsl16XyHUVpW1fnTqivmccFi0xUvSziOwDIu3DpXme+Zx9uX8y2crnoAg=
-SHA256 (Pkgfile) = 7e53ef096fea1f23a2452cef17f55ef18c1633127797f5dee96e5867831adcb8
+RWSE3ohX2g5d/Q2izPRcy5E+XWCGapeFaItJXLc19AK7c2lOTtfa1oUn2BQRpmCgCH7xoW6Gb2SsG5yvpWkkIe/YC6nfFrJ8fAg=
+SHA256 (Pkgfile) = bf832a15be0ddc88616e4dbe3a90cc8b7ca1633c3e9f94dbb96e6c5cf4ded6b1
 SHA256 (.footprint) = f4bf0634a73205ac5c1ae0739ef230cbbf6867bd012755e13da4ed8da30a838b
 SHA256 (zsh-5.9.tar.xz) = 9b8d1ecedd5b5e81fbf1918e876752a7dd948e05c1a0dba10ab863842d45acd5
 SHA256 (_prt-get) = a0ffcbe04f9a217543e8923b20c676bf8ea6864dbc4037a3e1afe41e0b33ff91
@@ -11,4 +11,5 @@ SHA256 (_pkgrm) = cdd2bc5097cfc5c57592b677dee39f5ff4ae065e04997fa628367977068d44
 SHA256 (_rejmerge) = d9060208a9f26c88bfe96f734cdbd461252dcbc413782c947a3a2a0e25e82d38
 SHA256 (0002-fix-autocompletion.patch) = e7060f64936bcc94aeaf44e69b6d476917a8c14cd339a3bc779c080fb01bb2f7
 SHA256 (0004-pcre2.patch) = ea68214d5be0514aa1b19e93fc9f44de878b9428e920227230a8fa3a75b0bd18
+SHA256 (_git) = e9d3c3eb44320ec38263a94545d70515bd993d771140369ceff0c8ca447b756d
 SHA256 (zsh-lovers.1) = c13688b37897c98d2593826b0ab7606927a28998d73ff0c8a2a4d07dad93944a
