@@ -4,7 +4,7 @@
 # Depends on: vulkan-loader
 
 name=volk
-version=1.4.304.0
+version=1.4.304.1
 _version=vulkan-sdk-$version
 release=1
 source=(https://github.com/zeux/volk/archive/$_version/$name-$version.tar.gz)

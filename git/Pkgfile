@@ -19,7 +19,7 @@ build() {
 		-D b_lto=true \
 		-D b_pie=true \
 		-D runtime_prefix=true
-	meson compile -C build
+	meson compile -C build -j ${JOBS}
 	DESTDIR=$PKG meson install -C build
 
 	prt-get isinst bash-completion && install -Dm644 $name-$version/contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
