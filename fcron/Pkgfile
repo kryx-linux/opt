@@ -4,18 +4,14 @@
 # Depends on: readline
 
 name=fcron
-version=3.3.2
+version=3.3.3
 release=1
 source=(http://fcron.free.fr/archives/$name-$version.src.tar.gz
-	fcron-3.3.2.6.patch
 	fcron systab.orig)
 
 build () {
 	cd $name-$version
 
-	patch -p1 -i $SRC/fcron-3.3.2.6.patch
-
-	autoconf
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc/fcron \
