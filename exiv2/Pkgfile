@@ -4,7 +4,7 @@
 # Depends on: brotli inih
 
 name=exiv2
-version=0.28.3
+version=0.28.4
 release=1
 source=(https://github.com/Exiv2/exiv2/archive/v$version/$name-$version.tar.gz)
 
