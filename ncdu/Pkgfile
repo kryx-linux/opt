@@ -1,15 +1,16 @@
-# Description: disk usage analyzer, static binary
+# Description: disk usage analyzer
 # URL:        https://dev.yorhel.nl/ncdu 
 # Maintainer:  John McQuah, jmcquah at disroot dot org
-# Depends on:  
+# Depends on: ncurses
 
 name=ncdu
-version=2.7
+version=1.21
 release=1
-source=(https://dev.yorhel.nl/download/$name-$version-linux-x86_64.tar.gz
-        https://code.blicky.net/yorhel/$name/raw/branch/zig/$name.1)
+source=(https://dev.yorhel.nl/download/$name-$version.tar.gz)
 
 build () {
-    install -D -m 0755 $name $PKG/usr/bin/$name
-    install -D -m 0644 $name.1 $PKG/usr/share/man/man1/$name.1
+	cd $name-$version
+	autoreconf -i
+	./configure --prefix=/usr
+	make DESTDIR=$PKG install
 }
