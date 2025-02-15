@@ -19,10 +19,6 @@ build() {
     meson compile -C build -j ${JOBS:-1}
     DESTDIR=$PKG meson install -C build
 
-<<<<<<< HEAD
+    prt-get isinst bash-completion || rm -r $PKG/usr/share/bash-completion
     rm -r $PKG/usr/share/{doc,locale,metainfo}
-=======
-	prt-get isinst bash-completion || rm -r $PKG/usr/share/bash-completion
-	rm -r $PKG/usr/share/{doc,locale,metainfo}
->>>>>>> dc6bca87f90ab0e03da678a80b04e5c2ac48ebba
 }
