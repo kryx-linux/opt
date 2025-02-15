@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=double-conversion
-version=3.3.0
+version=3.3.1
 release=1
 source=(https://github.com/google/double-conversion/archive/v$version/$name-v$version.tar.gz)
 
