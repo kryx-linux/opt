@@ -5,9 +5,9 @@
 # Optional: ccache clang libgit2 lld polly sccache
 
 name=rust
-version=1.84.1
-_date=2024-11-28
-_rustc=1.83.0
+version=1.85.0
+_date=2025-01-09
+_rustc=1.84.0
 _cargo=$_rustc
 release=1
 
@@ -70,7 +70,7 @@ build() {
 
 cat <<- EOF > $SRC/config.toml
 	profile = "dist"
-	change-id = 133207
+	change-id = 134650
 
 	[llvm]
 	ninja = true
@@ -97,7 +97,6 @@ cat <<- EOF > $SRC/config.toml
 	remap-debuginfo = false
 
 	description = "CRUX"
-	parallel-compiler = false
 	rpath = false
 	frame-pointers = true
 	deny-warnings = false
