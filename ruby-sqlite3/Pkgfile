@@ -4,8 +4,8 @@
 # Depends on: ruby-mini_portile2 sqlite3
 
 name=ruby-sqlite3
-version=2.5.0
-release=2
+version=2.6.0
+release=1
 source=(https://rubygems.org/downloads/sqlite3-$version.gem)
 
 build () {

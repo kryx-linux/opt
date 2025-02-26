@@ -5,10 +5,10 @@
 # Optional: brotli gnutls krb5 libunistr libidn2 nettle tdb
 
 name=squid
-version=6.12
+version=6.13
 release=1
-source=(http://www.squid-cache.org/Versions/v6/$name-$version.tar.xz
-    squid)
+source=(https://github.com/squid-cache/squid/releases/download/SQUID_${version/./_}/$name-$version.tar.xz
+	squid)
 
 build() {
     cd $name-$version
