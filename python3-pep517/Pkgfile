@@ -1,7 +1,7 @@
 # Description: Wrappers to build Python packages using PEP 517 hooks
 # URL: https://github.com/pypa/pep517
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: python3-tomli
+# Depends on: python3-wheel
 
 name=python3-pep517
 version=0.13.1
@@ -11,6 +11,6 @@ source=(https://pypi.python.org/packages/source/p/pep517/pep517-$version.tar.gz)
 build() {
   cd pep517-$version
 
-  PIP_CONFIG_FILE=/dev/null /usr/bin/pip3 install --isolated --root=$PKG \
-    --ignore-installed --no-deps .
+  /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+  /usr/bin/python3 -m installer --compile-bytecode 2 --destdir=$PKG dist/*.whl
 }
