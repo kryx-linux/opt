@@ -1,7 +1,7 @@
 # Description: Python parsing module.
 # URL: https://pypi.python.org/pypi/pyparsing/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: python3-pip
+# Depends on: python3-wheel
 
 name=python3-pyparsing
 version=3.2.1
@@ -11,5 +11,6 @@ source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${
 build() {
   cd ${name#*-}-$version
 
-  /usr/bin/pip3 install --isolate --root=$PKG --ignore-installed --no-deps .
+  /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+  /usr/bin/python3 -m installer --compile-bytecode 2 --destdir=$PKG dist/*.whl
 }
