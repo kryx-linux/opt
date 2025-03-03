@@ -1,7 +1,7 @@
 # Description: Poetry PEP 517 Build Backend & Core Utilities
 # URL: https://github.com/python-poetry/poetry-core
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: python3-pip
+# Depends on: python3-wheel
 
 name=python3-poetry-core
 version=2.1.1
@@ -11,6 +11,6 @@ source=(https://github.com/python-poetry/poetry-core/archive/$version/$name-$ver
 build() {
   cd poetry-core-$version
 
-  PIP_CONFIG_FILE=/dev/null /usr/bin/pip3 install --isolated --root=$PKG \
-    --ignore-installed --no-deps .
+  /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+  /usr/bin/python3 -m installer --compile-bytecode 2 --destdir=$PKG dist/*.whl
 }
