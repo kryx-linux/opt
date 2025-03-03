@@ -1,7 +1,7 @@
 # Description: A lil' TOML parser
 # URL: https://github.com/hukkin/tomli
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: python3-pip
+# Depends on: python3-build
 
 name=python3-tomli
 version=2.2.1
@@ -11,5 +11,6 @@ source=(https://pypi.org/packages/source/t/tomli/tomli-$version.tar.gz)
 build() {
   cd tomli-$version
 
-  /usr/bin/pip3 install --isolate --root=$PKG --ignore-installed --no-deps .
+  /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+  /usr/bin/python3 -m installer --compile-bytecode 2 --destdir=$PKG dist/*.whl
 }
