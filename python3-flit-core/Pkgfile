@@ -11,5 +11,6 @@ source=(https://github.com/takluyver/flit/archive/$version/flit-$version.tar.gz)
 build() {
   cd flit-$version/flit_core
   /usr/bin/python3 -m flit_core.wheel
-  /usr/bin/python3 bootstrap_install.py --installdir $PKG/usr/lib/python3/site-packages dist/flit_core-*.whl
+  _pyver=$(/usr/bin/python3 -c 'import sys; print("%s.%s" % sys.version_info[:2])')
+  /usr/bin/python3 bootstrap_install.py --installdir $PKG/usr/lib/python${_pyver}/site-packages dist/flit_core-*.whl
 }
