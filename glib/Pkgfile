@@ -4,7 +4,7 @@
 # Depends on: elfutils libpcre2 meson ninja python3-packaging util-linux
 
 name=glib
-version=2.82.5
+version=2.84.0
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz \
     gschemas.compiled)
@@ -19,10 +19,10 @@ build() {
         --wrap-mode nodownload \
         -D b_lto=true \
         -D b_pie=true \
+        -D introspection=disabled \
         -D nls=disabled \
         -D selinux=disabled \
         -D documentation=false \
-        -D introspection=disabled \
         -D tests=false
     meson compile -C build -j ${JOBS:-1}
     DESTDIR=$PKG meson install -C build
