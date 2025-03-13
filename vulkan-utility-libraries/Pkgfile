@@ -5,8 +5,8 @@
 # Optional:
 
 name=vulkan-utility-libraries
-version=1.4.304.1
-_commit=5a88b6042edb8f03eefc8de73bd73a899989373f
+version=1.4.309.0
+_commit=897ee4d90309f5b4f8e254472863d0489e6439d2
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-Utility-Libraries/archive/$_commit/$name-$version.tar.gz)
 
