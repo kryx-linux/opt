@@ -4,9 +4,9 @@
 # Depends on: freetype
 
 name=fontconfig
-version=2.16.0
+version=2.16.1
 release=1
-source=(https://fontconfig.org/release/$name-$version.tar.xz)
+source=(https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/$version/fontconfig-$version.tar.xz)
 
 build() {
     meson setup $name-$version build \
