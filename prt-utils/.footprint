@@ -32,6 +32,7 @@ drwxr-xr-x	root/root	usr/lib/prtverify/
 -rw-r--r--	root/root	usr/lib/prtverify/20_evil_cmds.awk
 -rw-r--r--	root/root	usr/lib/prtverify/20_maintainer_email.awk
 -rw-r--r--	root/root	usr/lib/prtverify/20_missing_deps.awk
+-rw-r--r--	root/root	usr/lib/prtverify/20_pkgfile_functions.awk
 -rw-r--r--	root/root	usr/lib/prtverify/20_pkgfile_headers.awk
 -rw-r--r--	root/root	usr/lib/prtverify/20_pkgfile_vars.awk
 -rw-r--r--	root/root	usr/lib/prtverify/20_redundant_deps.awk
