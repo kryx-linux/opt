@@ -5,15 +5,12 @@
 # Optional: tk
 
 name=git
-version=2.48.1
-release=2
+version=2.49.0
+release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
-	runtimeprefix.patch
 	git gitd.rc)
 
 build() {
-	patch -Np1 -d $name-$version -i $SRC/runtimeprefix.patch
-
 	meson setup $name-$version build \
 		--prefix=/usr \
 		--libexecdir=lib \
