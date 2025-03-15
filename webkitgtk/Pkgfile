@@ -5,7 +5,7 @@
 # Optional: bubblewrap enchant geoclue gst-plugins-bad libavif libmanette libnotify openjpeg2 wpebackend-fdo xdg-dbus-proxy
 
 name=webkitgtk
-version=2.46.6
+version=2.48.0
 release=1
 source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
@@ -41,6 +41,7 @@ build() {
     -D USE_LIBBACKTRACE=OFF \
     -D USE_JPEGXL=OFF \
     -D USE_SYSTEM_SYSPROF_CAPTURE=NO \
+    -D ENABLE_SPEECH_SYNTHESIS=NO \
     -Wno-dev
 
   cmake --build build
