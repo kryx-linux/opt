@@ -887,7 +887,6 @@ lrwxrwxrwx	root/root	usr/share/bash-completion/completions/scp -> ssh
 -rw-r--r--	root/root	usr/share/bash-completion/completions/screen
 -rw-r--r--	root/root	usr/share/bash-completion/completions/scrub
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/sdptool -> hcitool
--rw-r--r--	root/root	usr/share/bash-completion/completions/secret-tool
 -rw-r--r--	root/root	usr/share/bash-completion/completions/set
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/setquota -> quota
 lrwxrwxrwx	root/root	usr/share/bash-completion/completions/sftp -> ssh
