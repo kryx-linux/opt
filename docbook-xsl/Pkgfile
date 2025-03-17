@@ -10,6 +10,7 @@ source=(https://github.com/docbook/xslt10-stylesheets/releases/download/snapshot
 renames=($name-snapshot-$version.zip)
 
 build() {
+<<<<<<< HEAD
     cd $name-nons-snapshot
 
     install -v -m 0755 -d $PKG/usr/share/xml/docbook/xsl-stylesheets-$version
@@ -25,4 +26,21 @@ build() {
     ln -sf xsl-stylesheets-$version $PKG/usr/share/xml/docbook/xsl-stylesheets
 
     find $PKG \( -name "NEWS*" -o -name "README*" -o -name "ChangeLog*" \) -delete
+=======
+	cd $name-nons-snapshot
+
+	install -v -m 0755 -d $PKG/usr/share/xml/docbook/xsl-stylesheets-$version
+
+	cp -v -R -t $PKG/usr/share/xml/docbook/xsl-stylesheets-$version \
+		VERSION common eclipse epub epub3 fo \
+		highlighting html htmlhelp images javahelp lib manpages \
+		params profiling roundtrip slides template tests tools website \
+		xhtml xhtml-1_1 xhtml5
+
+	ln -s VERSION $PKG/usr/share/xml/docbook/xsl-stylesheets-${version}/VERSION.xsl
+
+	ln -sf xsl-stylesheets-$version $PKG/usr/share/xml/docbook/xsl-stylesheets
+
+	find $PKG \( -name "NEWS*" -o -name "README*" -o -name "ChangeLog*" \) -delete
+>>>>>>> 2f5c2372b3485ff2726b59d763c565f51847cd5d
 }
