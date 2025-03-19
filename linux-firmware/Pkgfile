@@ -7,7 +7,7 @@
 name=linux-firmware
 version=20250311
 release=1
-source=(https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/$name-$version.tar.gz)
+source=(https://www.kernel.org/pub/linux/kernel/firmware/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
