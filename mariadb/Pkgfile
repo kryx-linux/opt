@@ -4,17 +4,19 @@
 # Depends on: fmt libaio libpcre2 linux-pam ncurses openssl zlib
 
 name=mariadb
-version=11.6.2
+version=11.7.2
 release=1
-source=(https://dlm.mariadb.com/3971300/MariaDB/$name-$version/source/$name-$version.tar.gz
+source=(https://dlm.mariadb.com/4181709/MariaDB/$name-$version/source/$name-$version.tar.gz
 	mariadb.rc mariadb.pam
 	pre-install)
 
 build() {
+
+	# Don't set C resp. CC Flags
+	# https://jira.mariadb.org/browse/MDEV-36113
+
 	cmake -S $name-$version -B build -G Ninja \
 		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-D INSTALL_LAYOUT=RPM \
 		-D INSTALL_LIBDIR=lib \
 		-D INSTALL_PLUGINDIR=lib/mysql/plugin \
