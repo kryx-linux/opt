@@ -4,7 +4,7 @@
 # Depends on: nettle
 
 name=dnsmasq
-version=2.90
+version=2.91
 release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.xz \
     $name-config.patch dnsmasq)
@@ -14,8 +14,10 @@ build () {
 
     patch -p1 -i $SRC/$name-config.patch
 
-    make COPTS="-DHAVE_DNSSEC" CFLAGS="$CFLAGS -W -Wall"
-    make PREFIX=$PKG/usr install-common
+    make install \
+        COPTS='-DHAVE_DNSSEC' \
+        CFLAGS="$CFLAGS -W -Wall" \
+        PREFIX=$PKG/usr
 
     install -d  $PKG/{var/lib/dhcp,etc/rc.d,usr/share/dnsmasq}
 
