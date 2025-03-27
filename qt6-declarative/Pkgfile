@@ -2,9 +2,10 @@
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: qt6-shadertools
+# Optional: qt6-svg
 
 name=qt6-declarative
-version=6.8.2
+version=6.8.3
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtdeclarative-everywhere-src-$version.tar.xz)
 
