@@ -1,11 +1,11 @@
 # Description: Fast CPU emulator and virtualizer for the x86 platform
 # URL: https://www.qemu.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: dtc glib libusb python3-tomli xorg-libpixman
+# Depends on: dtc glib libusb python3-pip python3-tomli xorg-libpixman
 # Optional: alsa-lib fuse3 gnutls libaio libjpeg-turbo libpng libsdl2 libseccomp libslirp libssh liburing libxkbcommon nettle nfs-utils numactl pipewire pulseaudio python3-sphinx python3-sphinx_rtd_theme sdl2_image snappy xkeyboard-config xkeyboard-config
 
 name=qemu
-version=9.2.2
+version=9.2.3
 release=1
 source=(https://download.qemu.org/$name-$version.tar.xz)
 
