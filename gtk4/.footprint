@@ -429,8 +429,8 @@ drwxr-xr-x	root/root	usr/lib/gtk-4.0/4.0.0/
 drwxr-xr-x	root/root	usr/lib/gtk-4.0/4.0.0/printbackends/
 -rwxr-xr-x	root/root	usr/lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so
 lrwxrwxrwx	root/root	usr/lib/libgtk-4.so -> libgtk-4.so.1
-lrwxrwxrwx	root/root	usr/lib/libgtk-4.so.1 -> libgtk-4.so.1.1800.2
--rwxr-xr-x	root/root	usr/lib/libgtk-4.so.1.1800.2
+lrwxrwxrwx	root/root	usr/lib/libgtk-4.so.1 -> libgtk-4.so.1.1800.3
+-rwxr-xr-x	root/root	usr/lib/libgtk-4.so.1.1800.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gtk4-atspi.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gtk4-broadway.pc
@@ -449,6 +449,7 @@ drwxr-xr-x	root/root	usr/share/gir-1.0/
 -rw-r--r--	root/root	usr/share/gir-1.0/Gtk-4.0.gir
 drwxr-xr-x	root/root	usr/share/glib-2.0/
 drwxr-xr-x	root/root	usr/share/glib-2.0/schemas/
+-rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.gtk4.Inspector.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.gtk4.Settings.ColorChooser.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.gtk4.Settings.Debug.gschema.xml
 -rw-r--r--	root/root	usr/share/glib-2.0/schemas/org.gtk.gtk4.Settings.EmojiChooser.gschema.xml
