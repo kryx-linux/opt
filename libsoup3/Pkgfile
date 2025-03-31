@@ -1,11 +1,7 @@
 # Description: HTTP library implementation in C.
 # URL: https://wiki.gnome.org/Projects/libsoup
 # Maintainer: John McQuah, jmcquah at disroot dot org
-<<<<<<< HEAD
-# Depends on: glib-introspection glib-networking libpsl
-=======
-# Depends on: glib-networking libpsl libxml2
->>>>>>> 2f5c2372b3485ff2726b59d763c565f51847cd5d
+# Depends on: glib-introspection glib-networking libpsl libxml2
 # Optional: brotli krb5 vala
 
 name=libsoup3
@@ -17,11 +13,7 @@ build() {
   prt-get isinst brotli && PKGMK_LIBSOUP3+=' -D brotli=enabled'
   prt-get isinst vala && PKGMK_LIBSOUP3+=' -D vapi=enabled'
 
-<<<<<<< HEAD
   # turn off translations here, for a trivial reduction in CPU time
-=======
-  # turn off translations here, for a trivial reduction in CPU time 
->>>>>>> 2f5c2372b3485ff2726b59d763c565f51847cd5d
   # compared to removing $PKG/usr/share/locale later
   # (assumes the user does not have xDolmetscher in $PATH)
   sed -i 's/xgettext/xDolmetscher/g' libsoup-$version/meson.build
