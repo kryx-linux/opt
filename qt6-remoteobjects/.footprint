@@ -2,24 +2,27 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/qt6/
 drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjects/
-drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/
-drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/
-drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qconnection_local_backend_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qconnection_tcpip_backend_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qconnectionfactories_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectabstractitemmodeladapter_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectabstractitemmodelreplica_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectabstractitemmodeltypes_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectcontainers_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectnode_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectpacket_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectpendingcall_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectregistrysource_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectreplica_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectsource_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qremoteobjectsourceio_p.h
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/private/qtremoteobjects-config_p.h (EMPTY)
+drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/
+drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/
+drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qconnection_local_backend_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qconnection_tcpip_backend_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qconnectionfactories_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectabstractitemmodeladapter_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectabstractitemmodelreplica_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectabstractitemmodeltypes_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectcontainers_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectnode_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectpacket_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectpendingcall_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectregistrysource_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectreplica_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectrepparser_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectsource_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectsourceio_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qremoteobjectstructs_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/qtremoteobjects-config_p.h (EMPTY)
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/6.9.0/QtRemoteObjects/private/rep_grammar_p.h
 -rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/QAbstractItemModelReplica
 -rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/QConnectionAbstractServer
 -rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/QIntHash
@@ -59,11 +62,12 @@ drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjects/6.8.3/QtRemoteObjects/priva
 -rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/qtremoteobjects-config.h
 -rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/qtremoteobjectsexports.h
 -rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/qtremoteobjectsversion.h
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjects/repparser.h
 drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjectsQml/
-drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjectsQml/6.8.3/
-drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjectsQml/6.8.3/QtRemoteObjectsQml/
-drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjectsQml/6.8.3/QtRemoteObjectsQml/private/
--rw-r--r--	root/root	usr/include/qt6/QtRemoteObjectsQml/6.8.3/QtRemoteObjectsQml/private/qremoteobjectsqml_p.h
+drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjectsQml/6.9.0/
+drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjectsQml/6.9.0/QtRemoteObjectsQml/
+drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjectsQml/6.9.0/QtRemoteObjectsQml/private/
+-rw-r--r--	root/root	usr/include/qt6/QtRemoteObjectsQml/6.9.0/QtRemoteObjectsQml/private/qremoteobjectsqml_p.h
 -rw-r--r--	root/root	usr/include/qt6/QtRemoteObjectsQml/QtRemoteObjectsQml
 -rw-r--r--	root/root	usr/include/qt6/QtRemoteObjectsQml/QtRemoteObjectsQmlDepends
 -rw-r--r--	root/root	usr/include/qt6/QtRemoteObjectsQml/QtRemoteObjectsQmlVersion
@@ -71,6 +75,7 @@ drwxr-xr-x	root/root	usr/include/qt6/QtRemoteObjectsQml/6.8.3/QtRemoteObjectsQml
 drwxr-xr-x	root/root	usr/include/qt6/QtRepParser/
 -rw-r--r--	root/root	usr/include/qt6/QtRepParser/QtRepParserDepends
 -rw-r--r--	root/root	usr/include/qt6/QtRepParser/parser.g
+-rw-r--r--	root/root	usr/include/qt6/QtRepParser/qregexparser.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cmake/
 drwxr-xr-x	root/root	usr/lib/cmake/Qt6BuildInternals/
@@ -95,6 +100,15 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6RemoteObjects/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsVersionlessAliasTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsVersionlessTargets.cmake
+drwxr-xr-x	root/root	usr/lib/cmake/Qt6RemoteObjectsPrivate/
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateAdditionalTargetInfo.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateConfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateConfigVersionImpl.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateDependencies.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateVersionlessAliasTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsPrivate/Qt6RemoteObjectsPrivateVersionlessTargets.cmake
 drwxr-xr-x	root/root	usr/lib/cmake/Qt6RemoteObjectsQml/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlAdditionalTargetInfo.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlConfig.cmake
@@ -105,6 +119,15 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6RemoteObjectsQml/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlVersionlessAliasTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlVersionlessTargets.cmake
+drwxr-xr-x	root/root	usr/lib/cmake/Qt6RemoteObjectsQmlPrivate/
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateAdditionalTargetInfo.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateConfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateConfigVersionImpl.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateDependencies.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateVersionlessAliasTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsQmlPrivate/Qt6RemoteObjectsQmlPrivateVersionlessTargets.cmake
 drwxr-xr-x	root/root	usr/lib/cmake/Qt6RemoteObjectsTools/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsAdditionalTargetInfo.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsConfig.cmake
@@ -123,14 +146,23 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6RepParser/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RepParser/Qt6RepParserTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RepParser/Qt6RepParserVersionlessAliasTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6RepParser/Qt6RepParserVersionlessTargets.cmake
+drwxr-xr-x	root/root	usr/lib/cmake/Qt6RepParserPrivate/
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateAdditionalTargetInfo.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateConfig.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateConfigVersion.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateConfigVersionImpl.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateDependencies.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateVersionlessAliasTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6RepParserPrivate/Qt6RepParserPrivateVersionlessTargets.cmake
 -rw-r--r--	root/root	usr/lib/libQt6RemoteObjects.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6RemoteObjects.so -> libQt6RemoteObjects.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6RemoteObjects.so.6 -> libQt6RemoteObjects.so.6.8.3
--rwxr-xr-x	root/root	usr/lib/libQt6RemoteObjects.so.6.8.3
+lrwxrwxrwx	root/root	usr/lib/libQt6RemoteObjects.so.6 -> libQt6RemoteObjects.so.6.9.0
+-rwxr-xr-x	root/root	usr/lib/libQt6RemoteObjects.so.6.9.0
 -rw-r--r--	root/root	usr/lib/libQt6RemoteObjectsQml.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6RemoteObjectsQml.so -> libQt6RemoteObjectsQml.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6RemoteObjectsQml.so.6 -> libQt6RemoteObjectsQml.so.6.8.3
--rwxr-xr-x	root/root	usr/lib/libQt6RemoteObjectsQml.so.6.8.3
+lrwxrwxrwx	root/root	usr/lib/libQt6RemoteObjectsQml.so.6 -> libQt6RemoteObjectsQml.so.6.9.0
+-rwxr-xr-x	root/root	usr/lib/libQt6RemoteObjectsQml.so.6.9.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt6RemoteObjects.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt6RemoteObjectsQml.pc
@@ -165,4 +197,4 @@ drwxr-xr-x	root/root	usr/lib/qt6/qml/QtRemoteObjects/
 -rw-r--r--	root/root	usr/lib/qt6/qml/QtRemoteObjects/qmldir
 -rwxr-xr-x	root/root	usr/lib/qt6/repc
 drwxr-xr-x	root/root	usr/lib/qt6/sbom/
--rw-r--r--	root/root	usr/lib/qt6/sbom/qtremoteobjects-6.8.3.spdx
+-rw-r--r--	root/root	usr/lib/qt6/sbom/qtremoteobjects-6.9.0.spdx
