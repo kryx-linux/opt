@@ -11,6 +11,8 @@ source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submo
   ninja-1.12-2.patch
   no-h264.patch
   03-gn-bootstrap.patch
+  pipewire14.patch
+  add-more-CFI-suppressions-for-inline-PipeWire-functions.patch
 )
 
 build() {
@@ -60,6 +62,10 @@ that, you can attempt to build opt/qt6-webengine again.
   patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/03-gn-bootstrap.patch
 
   cd $SRC/qtwebengine-everywhere-src-$version/src/3rdparty/chromium
+  ./build/linux/unbundle/replace_gn_files.py --system-libraries $SYSLIBS
+  patch -Np1 -i $SRC/pipewire14.patch
+  patch -Np1 -i $SRC/add-more-CFI-suppressions-for-inline-PipeWire-functions.patch
+
   ./build/linux/unbundle/replace_gn_files.py --system-libraries $SYSLIBS
 
   cd $SRC
