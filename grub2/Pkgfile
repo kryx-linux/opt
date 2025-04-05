@@ -1,7 +1,7 @@
 # Description: A Multiboot boot loader
 # URL: http://www.gnu.org/software/grub/
 # Maintainer: Matt Housh, jaeger at crux dot ninja
-# Depends on: libdevmapper freetype python3
+# Depends on: libdevmapper freetype libnvme keyutils
 
 name=grub2
 version=2.12
