@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=make-ca
-version=1.15
+version=1.16
 release=1
 source=(https://github.com/lfs-book/make-ca/archive/v$version/$name-$version.tar.gz)
 
