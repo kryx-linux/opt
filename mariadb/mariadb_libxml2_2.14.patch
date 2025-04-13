@@ -1,0 +1,12 @@
+diff -Nru mariadb-11.7.2.orig/storage/connect/plgxml.h mariadb-11.7.2/storage/connect/plgxml.h
+--- mariadb-11.7.2.orig/storage/connect/plgxml.h	2025-04-13 13:14:36.503103837 +0200
++++ mariadb-11.7.2/storage/connect/plgxml.h	2025-04-13 13:16:33.277472587 +0200
+@@ -5,7 +5,7 @@
+ /******************************************************************/
+ /*  Dual XML implementation base classes defines.                 */
+ /******************************************************************/
+-#if !defined(BASE_BUFFER_SIZE)
++#if !defined(__XML_TREE_H__)
+ enum ElementType {               // libxml2
+      XML_ELEMENT_NODE       =  1,
+      XML_ATTRIBUTE_NODE     =  2,
