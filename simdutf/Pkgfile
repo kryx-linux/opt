@@ -4,7 +4,7 @@
 # Depends on:
 
 name=simdutf
-version=6.4.2
+version=6.5.0
 release=1
 source=(https://github.com/simdutf/simdutf/archive/v$version/$name-$version.tar.gz)
 
