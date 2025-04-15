@@ -346,7 +346,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/Bundler/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Bundler/load_gemspec-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Bundler/load_gemspec_uncached-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Bundler/load_marshal-c.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/Bundler/load_plugins-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Bundler/local_platform-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Bundler/locked_gems-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Bundler/mkdir_p-c.ri
@@ -3053,16 +3052,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/Gem/QueryUtils/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/QueryUtils/spec_platforms-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/QueryUtils/spec_summary-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/QueryUtils/specs_type-i.ri
-drwxr-xr-x	root/root	usr/share/ri/3.4/system/Gem/RDoc/
--rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RDoc/cdesc-RDoc.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RDoc/default_gem%3f-c.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RDoc/force-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RDoc/generate-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RDoc/generate_rdoc-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RDoc/generate_ri-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RDoc/generation_hook-c.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RDoc/new-c.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RDoc/remove-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/Gem/RemoteError/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/RemoteError/cdesc-RemoteError.ri
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/Gem/RemoteFetcher/
@@ -16063,7 +16052,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/URI/Generic/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/host-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/hostname%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/hostname-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/merge%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/merge-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/merge_path-i.ri
@@ -16081,7 +16069,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/URI/Generic/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/port-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/query%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/query-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/registry%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/relative%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/replace%21-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Generic/route_from-i.ri
@@ -16164,7 +16151,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/URI/RFC2396_Parser/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/RFC2396_Parser/extract-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/RFC2396_Parser/initialize_pattern-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/RFC2396_Parser/initialize_regexp-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/URI/RFC2396_Parser/inspect-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/RFC2396_Parser/join-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/RFC2396_Parser/make_regexp-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/RFC2396_Parser/new-c.ri
@@ -16177,8 +16163,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/URI/RFC2396_REGEXP/
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/URI/RFC2396_REGEXP/PATTERN/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/RFC2396_REGEXP/PATTERN/cdesc-PATTERN.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/RFC2396_REGEXP/cdesc-RFC2396_REGEXP.ri
-drwxr-xr-x	root/root	usr/share/ri/3.4/system/URI/Schemes/
--rw-r--r--	root/root	usr/share/ri/3.4/system/URI/Schemes/cdesc-Schemes.ri
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/URI/WS/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/WS/build-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/WS/cdesc-WS.ri
@@ -16188,7 +16172,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/URI/WSS/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/_decode_uri_component-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/_encode_uri_component-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/cdesc-URI.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/URI/const_missing-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/decode_uri_component-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/decode_www_form-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/URI/decode_www_form_component-c.ri
