@@ -8,9 +8,9 @@ drwxr-xr-x	root/root	usr/include/ngtcp2/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libngtcp2.a
 -rwxr-xr-x	root/root	usr/lib/libngtcp2.la
-lrwxrwxrwx	root/root	usr/lib/libngtcp2.so -> libngtcp2.so.16.2.9
-lrwxrwxrwx	root/root	usr/lib/libngtcp2.so.16 -> libngtcp2.so.16.2.9
--rwxr-xr-x	root/root	usr/lib/libngtcp2.so.16.2.9
+lrwxrwxrwx	root/root	usr/lib/libngtcp2.so -> libngtcp2.so.16.3.0
+lrwxrwxrwx	root/root	usr/lib/libngtcp2.so.16 -> libngtcp2.so.16.3.0
+-rwxr-xr-x	root/root	usr/lib/libngtcp2.so.16.3.0
 -rw-r--r--	root/root	usr/lib/libngtcp2_crypto_gnutls.a
 -rwxr-xr-x	root/root	usr/lib/libngtcp2_crypto_gnutls.la
 lrwxrwxrwx	root/root	usr/lib/libngtcp2_crypto_gnutls.so -> libngtcp2_crypto_gnutls.so.8.2.0
