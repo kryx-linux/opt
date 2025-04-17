@@ -5,12 +5,13 @@
 
 name=xterm
 version=398
-release=1
+release=2
 source=(https://invisible-mirror.net/archives/$name/$name-$version.tgz)
 
 build() {
     cd $name-$version
 
+    LDFLAGS+="-lfreetype" \
     ./configure \
         --prefix=/usr \
         --with-app-defaults=/usr/share/X11/app-defaults/ \
