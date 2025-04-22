@@ -1,7 +1,7 @@
 # Description: Program to fetch mail and deliver it in various ways
 # URL: https://github.com/nicm/fdm
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: libpcre2 openssl tdb
+# Depends on: libbsd libpcre2 openssl tdb
 
 name=fdm
 version=2.2
@@ -10,7 +10,11 @@ source=(https://github.com/nicm/fdm/releases/download/$version/$name-$version.ta
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr
+
+    ./configure \
+        --prefix=/usr \
+        --enable-pcre2
+
     make
     make DESTDIR=$PKG install
 }
