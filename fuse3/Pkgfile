@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=fuse3
-version=3.17.1
+version=3.17.2
 release=1
 source=(https://github.com/libfuse/libfuse/archive/refs/tags/fuse-$version.tar.gz)
 
