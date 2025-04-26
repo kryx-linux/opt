@@ -5,18 +5,22 @@
 
 name=mariadb
 version=11.7.2
-release=2
+release=3
 source=(https://dlm.mariadb.com/4181709/MariaDB/$name-$version/source/$name-$version.tar.gz
     mariadb.rc mariadb.pam
     pre-install
-    mariadb_libxml2_2.14.patch)
+    mariadb_libxml2_2.14.patch
+    mariadb_fmt_11.1.patch)
 
 build() {
     # Don't set C resp. CC Flags
     # https://jira.mariadb.org/browse/MDEV-36113
 
-    # https://jira.mariadb.org/browse(MDEV-36427
+    # https://jira.mariadb.org/browse/MDEV-36427
     patch -p1 -d $name-$version -i $SRC/mariadb_libxml2_2.14.patch
+
+    # https://jira.mariadb.org/browse/MDEV-35746
+    patch -p1 -d $name-$version -i $SRC/mariadb_fmt_11.1.patch
 
     cmake -S $name-$version -B build -G Ninja \
         -D CMAKE_BUILD_TYPE=Release \

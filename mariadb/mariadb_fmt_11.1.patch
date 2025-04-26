@@ -1,0 +1,78 @@
+From 8896de2baa953600bea9762ae54ecf06d3c72545 Mon Sep 17 00:00:00 2001
+From: Sergei Golubchik <serg@mariadb.org>
+Date: Mon, 24 Mar 2025 20:21:45 +0100
+Subject: [PATCH] MDEV-35746 support fmtlib-11.1.0
+
+in 11.1.0 fmtlib removed support for FMT_STATIC_THOUSANDS_SEPARATOR
+https://github.com/fmtlib/fmt/commit/b3ccc2d210
+
+to keep :L format working we need to use a proper std::locate now.
+
+use a custom our own locale which is the same as the default "C" one
+but uses comma as a thousand separator. Because any named locale,
+like "en_US.UTF-8" is not guaranteed to exist on the target system.
+
+Let's create a locale statically, this means there's no overhead
+for SFORMAT calls unless {:L} is used. For {:L} there's ~20% slowdown.
+---
+ cmake/libfmt.cmake  |  5 ++---
+ sql/item_strfunc.cc | 10 ++++++++--
+ 2 files changed, 10 insertions(+), 5 deletions(-)
+
+diff --git a/cmake/libfmt.cmake b/cmake/libfmt.cmake
+index a9dc6937b8690..7fded49b9169a 100644
+--- a/cmake/libfmt.cmake
++++ b/cmake/libfmt.cmake
+@@ -28,15 +28,14 @@ MACRO (CHECK_LIBFMT)
+   IF(WITH_LIBFMT STREQUAL "system" OR WITH_LIBFMT STREQUAL "auto")
+     SET(CMAKE_REQUIRED_INCLUDES ${LIBFMT_INCLUDE_DIR})
+     CHECK_CXX_SOURCE_RUNS(
+-    "#define FMT_STATIC_THOUSANDS_SEPARATOR ','
+-     #define FMT_HEADER_ONLY 1
++    "#define FMT_HEADER_ONLY 1
+      #include <fmt/args.h>
+      int main() {
+        using ArgStore= fmt::dynamic_format_arg_store<fmt::format_context>;
+        ArgStore arg_store;
+        int answer= 4321;
+        arg_store.push_back(answer);
+-       return fmt::vformat(\"{:L}\", arg_store).compare(\"4,321\");
++       return fmt::vformat(\"{}\", arg_store).compare(\"4321\");
+      }" HAVE_SYSTEM_LIBFMT)
+     SET(CMAKE_REQUIRED_INCLUDES)
+   ENDIF()
+diff --git a/sql/item_strfunc.cc b/sql/item_strfunc.cc
+index 04f471f9a5f9c..bea950d3cdfb4 100644
+--- a/sql/item_strfunc.cc
++++ b/sql/item_strfunc.cc
+@@ -56,7 +56,6 @@ C_MODE_END
+ #include "sql_statistics.h"
+ 
+ /* fmtlib include (https://fmt.dev/). */
+-#define FMT_STATIC_THOUSANDS_SEPARATOR ','
+ #define FMT_HEADER_ONLY 1
+ #include "fmt/args.h"
+ 
+@@ -1403,6 +1402,13 @@ namespace fmt {
+   };
+ };
+ 
++struct fmt_locale_comma : std::numpunct<char>
++{
++  char do_thousands_sep() const override { return ','; }
++  std::string do_grouping() const override { return "\3"; }
++};
++static std::locale fmt_locale(std::locale(), new fmt_locale_comma);
++
+ /*
+   SFORMAT(format_string, ...)
+   This function receives a formatting specification string and N parameters
+@@ -1455,7 +1461,7 @@ String *Item_func_sformat::val_str(String *res)
+   /* Create the string output  */
+   try
+   {
+-    auto text = fmt::vformat(fmt_arg->c_ptr_safe(), arg_store);
++    auto text = fmt::vformat(fmt_locale, fmt_arg->c_ptr_safe(), arg_store);
+     res->length(0);
+     res->set_charset(collation.collation);
+     res->append(text.c_str(), text.size(), fmt_arg->charset());
