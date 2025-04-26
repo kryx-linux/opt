@@ -4,8 +4,8 @@
 # Depends on:
 
 name=fmt
-version=11.0.2
-release=2
+version=11.1.4
+release=1
 source=(https://github.com/fmtlib/$name/archive/$version/$name-$version.tar.gz)
 
 build() {
