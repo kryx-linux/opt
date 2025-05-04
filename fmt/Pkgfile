@@ -4,7 +4,7 @@
 # Depends on:
 
 name=fmt
-version=11.1.4
+version=11.2.0
 release=1
 source=(https://github.com/fmtlib/$name/archive/$version/$name-$version.tar.gz)
 
