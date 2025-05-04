@@ -4,17 +4,12 @@
 # Depends on: 
 
 name=pkg-get
-version=0.5.0
+version=0.5.1
 release=1
 source=(https://git.crux.nu/tools/$name/archive/release-$version.tar.gz)
 renames=($name-$version.tar.gz)
 
 build() {
-    mkdir -p "$PKG"/usr/bin "$PKG"/usr/share/man/man8
-    cp $name/doc/*.8 "$PKG"/usr/share/man/man8/
-    for _p in $name/scripts/*.pl; do
-        install -m 0755 "$_p" "$PKG"/usr/bin/$(basename "$_p" .pl)
-    done
-    install -D -m 644 $name/doc/$name.conf "$PKG"/etc/$name.conf
-    install -D -m 644 $name/doc/style.html "$PKG"/usr/share/$name/style.html
+    cd $name
+    make DESTDIR="$PKG" install
 }
