@@ -4,7 +4,7 @@
 # Depends on: python3-wheel
 
 name=python3-poetry-core
-version=2.1.2
+version=2.1.3
 release=1
 source=(https://github.com/python-poetry/poetry-core/archive/$version/$name-$version.tar.gz)
 
