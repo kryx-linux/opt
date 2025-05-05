@@ -5,12 +5,12 @@
 
 name=python3-pyproject-hooks
 version=1.2.0
-release=1
+release=2
 source=(https://files.pythonhosted.org/packages/source/p/pyproject_hooks/pyproject_hooks-$version.tar.gz)
 
 build() {
   cd pyproject_hooks-$version
 
   /usr/bin/python3 -m flit_core.wheel
-  /usr/bin/python3 -m installer --compile-bytecode 2 --destdir=$PKG dist/*.whl
+  /usr/bin/python3 -m installer --destdir=$PKG dist/*.whl
 }
