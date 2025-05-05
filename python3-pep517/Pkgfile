@@ -5,12 +5,12 @@
 
 name=python3-pep517
 version=0.13.1
-release=1
+release=2
 source=(https://pypi.python.org/packages/source/p/pep517/pep517-$version.tar.gz)
 
 build() {
   cd pep517-$version
 
   /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
-  /usr/bin/python3 -m installer --compile-bytecode 2 --destdir=$PKG dist/*.whl
+  /usr/bin/python3 -m installer --destdir=$PKG dist/*.whl
 }
