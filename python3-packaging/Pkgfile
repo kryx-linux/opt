@@ -5,12 +5,12 @@
 
 name=python3-packaging
 version=25.0
-release=1
+release=2
 source=(https://pypi.org/packages/source/p/packaging/packaging-$version.tar.gz)
 
 build() {
   cd packaging-$version
 
   /usr/bin/python3 -m flit_core.wheel
-  /usr/bin/python3 -m installer --compile-bytecode 2 --destdir=$PKG dist/*.whl
+  /usr/bin/python3 -m installer --destdir=$PKG dist/*.whl
 }
