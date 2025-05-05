@@ -4,9 +4,9 @@
 # Depends on: elfutils dialog
 
 name=prt-utils
-version=1.3.4
-release=2
-source=(https://git.crux.nu/tools/$name/archive/release-${version}b.tar.gz)
+version=1.3.5
+release=1
+source=(https://git.crux.nu/tools/$name/archive/release-${version}.tar.gz)
 renames=($name-$version-$release.tar.gz)
 
 build() {

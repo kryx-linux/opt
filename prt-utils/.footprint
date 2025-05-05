@@ -6,6 +6,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/finddeps
 -rwxr-xr-x	root/root	usr/bin/findredundantdeps
 -rwxr-xr-x	root/root	usr/bin/oldfiles
+-rwxr-xr-x	root/root	usr/bin/pkg-not
 -rwxr-xr-x	root/root	usr/bin/pkg_installed
 -rwxr-xr-x	root/root	usr/bin/pkgexport
 -rwxr-xr-x	root/root	usr/bin/pkgfoster
@@ -52,6 +53,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/finddeps.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/findredundantdeps.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/oldfiles.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/pkg-not.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pkg_installed.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pkgexport.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/pkgfoster.1.gz
