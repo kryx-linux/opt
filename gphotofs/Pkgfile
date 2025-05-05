@@ -1,12 +1,12 @@
 # Description: FUSE filesystem client based on libgphoto2
 # URL:         http://www.gphoto.org
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  fuse, glib, libgphoto2
+# Depends on:  fuse3, glib, libgphoto2
 
 name=gphotofs
-version=0.5
+version=1.0
 release=1
-source=(http://downloads.sourceforge.net/project/gphoto/$name/$version.0/$name-$version.tar.bz2)
+source=(https://github.com/gphoto/gphotofs/releases/download/v$version/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
