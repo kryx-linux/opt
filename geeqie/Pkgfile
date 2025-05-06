@@ -4,11 +4,13 @@
 # Depends on: gtk3
 
 name=geeqie
-version=2.5
+version=2.6
 release=1
 source=(https://github.com/BestImageViewer/geeqie/releases/download/v$version/$name-$version.tar.xz)
 
 build() {
+    sed "/^subdir('po')/d" -i $name-$version/meson.build
+
     meson setup build $name-$version \
         --prefix=/usr \
         --buildtype=plain \
@@ -20,5 +22,5 @@ build() {
     DESTDIR=$PKG meson install -C build
 
     prt-get isinst bash-completion || rm -r $PKG/usr/share/bash-completion
-    rm -r $PKG/usr/share/{doc,locale,metainfo}
+    rm -r $PKG/usr/share/{doc,metainfo}
 }
