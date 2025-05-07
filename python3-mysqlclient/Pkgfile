@@ -5,11 +5,11 @@
 
 name=python3-mysqlclient
 version=2.2.7
-release=1
+release=2
 source=(https://pypi.org/packages/source/m/mysqlclient/mysqlclient-$version.tar.gz)
 
 build() {
     cd mysqlclient-$version
-    /usr/bin/python3 setup.py install --root=$PKG
-    chmod -R go-w $PKG
+    /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+    /usr/bin/python3 -m installer --destdir=$PKG dist/*.whl
 }
