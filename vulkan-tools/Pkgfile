@@ -6,7 +6,7 @@
 
 name=vulkan-tools
 _name=Vulkan-Tools
-version=1.4.309.0
+version=1.4.313.0
 _version=vulkan-sdk-$version
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/$_version/$_name-$version.tar.gz)
@@ -21,7 +21,6 @@ build() {
 		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -ffat-lto-objects" \
 		-D BUILD_CUBE=True \
 		-D BUILD_VULKANINFO=True \
-		-D CUBE_WSI_SELECTION='XCB' \
 		-D BUILD_WSI_XCB_SUPPORT=True \
 		-D BUILD_WSI_XLIB_SUPPORT=True \
 		-D BUILD_ICD=OFF \
