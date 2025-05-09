@@ -13,6 +13,7 @@ source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submo
   03-gn-bootstrap.patch
   pipewire14.patch
   add-more-CFI-suppressions-for-inline-PipeWire-functions.patch
+  gperf.patch
 )
 
 build() {
@@ -60,6 +61,7 @@ that, you can attempt to build opt/qt6-webengine again.
   patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/ninja-1.12-2.patch
   patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/no-h264.patch
   patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/03-gn-bootstrap.patch
+  patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/gperf.patch
 
   cd $SRC/qtwebengine-everywhere-src-$version/src/3rdparty/chromium
   ./build/linux/unbundle/replace_gn_files.py --system-libraries $SYSLIBS
@@ -89,8 +91,12 @@ that, you can attempt to build opt/qt6-webengine again.
     -D QT_FEATURE_webengine_system_ffmpeg=OFF \
     -D QT_FEATURE_webengine_embedded_build=OFF \
     -D QT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
+    -D INSTALL_GN=OFF \
     -D WARNINGS_ARE_ERRORS=OFF \
     -Wno-dev
+
+  NINJA_STATUS="[%f/%t %es] " \
+  EXTRA_GN="symbol_level=0" \
   cmake --build build
   DESTDIR=$PKG cmake --install build
 }
