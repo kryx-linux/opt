@@ -8,6 +8,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/lsinitrd
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/dracut/
+-rwxr-xr-x	root/root	usr/lib/dracut/dracut-cpio
 lrwxrwxrwx	root/root	usr/lib/dracut/dracut-functions -> dracut-functions.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/dracut-functions.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/dracut-init.sh
@@ -110,6 +111,8 @@ drwxr-xr-x	root/root	usr/lib/dracut/modules.d/45plymouth/
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/45plymouth/plymouth-newroot.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/45plymouth/plymouth-populate-initrd.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/45plymouth/plymouth-pretrigger.sh
+drwxr-xr-x	root/root	usr/lib/dracut/modules.d/45simpledrm/
+-rwxr-xr-x	root/root	usr/lib/dracut/modules.d/45simpledrm/module-setup.sh
 drwxr-xr-x	root/root	usr/lib/dracut/modules.d/45url-lib/
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/45url-lib/module-setup.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/45url-lib/url-lib.sh
@@ -202,9 +205,9 @@ drwxr-xr-x	root/root	usr/lib/dracut/modules.d/90multipath/
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/90multipath/module-setup.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/90multipath/multipath-shutdown.sh
 -rw-r--r--	root/root	usr/lib/dracut/modules.d/90multipath/multipathd-configure.service
+-rw-r--r--	root/root	usr/lib/dracut/modules.d/90multipath/multipathd-dracut.conf
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/90multipath/multipathd-needshutdown.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/90multipath/multipathd-stop.sh
--rw-r--r--	root/root	usr/lib/dracut/modules.d/90multipath/multipathd.service
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/90multipath/multipathd.sh
 drwxr-xr-x	root/root	usr/lib/dracut/modules.d/90numlock/
 -rwxr-xr-x	root/root	usr/lib/dracut/modules.d/90numlock/module-setup.sh
@@ -434,7 +437,13 @@ drwxrwxr-x	root/root	usr/lib/dracut/test/TEST-60-NFS/
 drwxrwxr-x	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/
 -rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/Makefile
 -rwxrwxr-x	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/client-init.sh
--rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/client.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/client-persistent-lan0.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/client-persistent-lan1.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/client-persistent-lan2.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/client-persistent-lan254.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/client-persistent-lan255.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/client-persistent-lan98.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/client-persistent-lan99.link
 -rwxrwxr-x	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/create-root.sh
 -rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/dhcpd.conf
 -rw-rw-r--	root/root	usr/lib/dracut/test/TEST-61-MULTINIC/exports
@@ -460,7 +469,8 @@ drwxrwxr-x	root/root	usr/lib/dracut/test/TEST-62-BONDBRIDGEVLAN/
 drwxrwxr-x	root/root	usr/lib/dracut/test/TEST-70-ISCSI/
 -rw-rw-r--	root/root	usr/lib/dracut/test/TEST-70-ISCSI/Makefile
 -rwxrwxr-x	root/root	usr/lib/dracut/test/TEST-70-ISCSI/client-init.sh
--rw-rw-r--	root/root	usr/lib/dracut/test/TEST-70-ISCSI/client.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-70-ISCSI/client-persistent-lan0.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-70-ISCSI/client-persistent-lan1.link
 -rwxrwxr-x	root/root	usr/lib/dracut/test/TEST-70-ISCSI/create-client-root.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/test/TEST-70-ISCSI/create-server-root.sh
 -rw-rw-r--	root/root	usr/lib/dracut/test/TEST-70-ISCSI/dhcpd.conf
@@ -473,7 +483,8 @@ drwxrwxr-x	root/root	usr/lib/dracut/test/TEST-70-ISCSI/
 drwxrwxr-x	root/root	usr/lib/dracut/test/TEST-71-ISCSI-MULTI/
 -rw-rw-r--	root/root	usr/lib/dracut/test/TEST-71-ISCSI-MULTI/Makefile
 -rwxrwxr-x	root/root	usr/lib/dracut/test/TEST-71-ISCSI-MULTI/client-init.sh
--rw-rw-r--	root/root	usr/lib/dracut/test/TEST-71-ISCSI-MULTI/client.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-71-ISCSI-MULTI/client-persistent-lan0.link
+-rw-rw-r--	root/root	usr/lib/dracut/test/TEST-71-ISCSI-MULTI/client-persistent-lan1.link
 -rwxrwxr-x	root/root	usr/lib/dracut/test/TEST-71-ISCSI-MULTI/create-client-root.sh
 -rwxrwxr-x	root/root	usr/lib/dracut/test/TEST-71-ISCSI-MULTI/create-server-root.sh
 -rw-rw-r--	root/root	usr/lib/dracut/test/TEST-71-ISCSI-MULTI/dhcpd.conf
@@ -505,6 +516,7 @@ drwxrwxr-x	root/root	usr/lib/dracut/test/TEST-82-DRACUT-CPIO/
 drwxrwxr-x	root/root	usr/lib/dracut/test/container/
 -rw-rw-r--	root/root	usr/lib/dracut/test/container/Dockerfile-alpine
 -rw-rw-r--	root/root	usr/lib/dracut/test/container/Dockerfile-arch
+-rw-rw-r--	root/root	usr/lib/dracut/test/container/Dockerfile-azurelinux
 -rw-rw-r--	root/root	usr/lib/dracut/test/container/Dockerfile-debian
 -rw-rw-r--	root/root	usr/lib/dracut/test/container/Dockerfile-fedora
 -rw-rw-r--	root/root	usr/lib/dracut/test/container/Dockerfile-gentoo
