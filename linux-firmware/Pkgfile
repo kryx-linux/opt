@@ -5,7 +5,7 @@
 # Optional: parallel
 
 name=linux-firmware
-version=20250410
+version=20250509
 release=1
 source=(https://www.kernel.org/pub/linux/kernel/firmware/$name-$version.tar.xz)
 
