@@ -3,8 +3,6 @@ drwxr-xr-x	root/root	usr/bin/
 lrwxrwxrwx	root/root	usr/bin/mupdf -> mupdf-gl
 -rwxr-xr-x	root/root	usr/bin/mupdf-gl
 -rwxr-xr-x	root/root	usr/bin/mupdf-x11
--rwxr-xr-x	root/root	usr/bin/mupdf-x11-curl
--rwxr-xr-x	root/root	usr/bin/muraster
 -rwxr-xr-x	root/root	usr/bin/mutool
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/mupdf/
@@ -12,6 +10,7 @@ drwxr-xr-x	root/root	usr/include/mupdf/
 drwxr-xr-x	root/root	usr/include/mupdf/fitz/
 -rw-r--r--	root/root	usr/include/mupdf/fitz/archive.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/band-writer.h
+-rw-r--r--	root/root	usr/include/mupdf/fitz/barcode.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/bidi.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/bitmap.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/buffer.h
@@ -36,6 +35,7 @@ drwxr-xr-x	root/root	usr/include/mupdf/fitz/
 -rw-r--r--	root/root	usr/include/mupdf/fitz/heap-imp.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/heap.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/image.h
+-rw-r--r--	root/root	usr/include/mupdf/fitz/json.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/link.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/log.h
 -rw-r--r--	root/root	usr/include/mupdf/fitz/outline.h
