@@ -5,9 +5,10 @@
 
 name=pkg-get
 version=0.5.1
-release=1
-source=(https://git.crux.nu/tools/$name/archive/release-$version.tar.gz)
-renames=($name-$version.tar.gz)
+release=2
+_commit=4e466a07a7afd3a1061f85dabc3e1034309cf29e
+source=(https://git.crux.nu/tools/$name/archive/$_commit.tar.gz)
+renames=($name-$version-$release.tar.gz)
 
 build() {
     cd $name
