@@ -5,10 +5,10 @@
 
 name=prt-utils
 version=1.3.5
-release=1
-_commit=6e507dde0e7ac6d0a8981ed26aed59e197d3e277
+release=2
+_commit=390d0f774a76ce6a8323fa8827602fca39c05bc5
 source=(https://git.crux.nu/tools/$name/archive/$_commit.tar.gz)
-renames=($name-${_commit:0:10}.tar.gz)
+renames=($name-$version-$release.tar.gz)
 
 build() {
     cd $name
