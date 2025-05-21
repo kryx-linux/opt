@@ -33,7 +33,8 @@ drwxr-xr-x	root/root	usr/include/efi/
 -rw-r--r--	root/root	usr/include/efi/efitcp.h
 -rw-r--r--	root/root	usr/include/efi/efiudp.h
 -rw-r--r--	root/root	usr/include/efi/efiui.h
--rw-r--r--	root/root	usr/include/efi/legacy.h
+drwxr-xr-x	root/root	usr/include/efi/legacy/
+-rw-r--r--	root/root	usr/include/efi/legacy/efilib.h
 -rw-r--r--	root/root	usr/include/efi/lib.h
 -rw-r--r--	root/root	usr/include/efi/libsmbios.h
 -rw-r--r--	root/root	usr/include/efi/pci22.h

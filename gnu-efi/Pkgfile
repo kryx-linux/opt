@@ -3,7 +3,7 @@
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 
 name=gnu-efi
-version=4.0.0
+version=4.0.1
 release=1
 source=(https://github.com/ncroxon/gnu-efi/archive/$version/$name-$version.tar.gz)
 
