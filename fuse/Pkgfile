@@ -11,7 +11,7 @@ source=(https://github.com/libfuse/libfuse/releases/download/$name-$version/$nam
 build() {
     cd $name-$version
     patch -Np1 -i $SRC/fuse2-0007-util-ulockmgr_server.c-conditionally-define-closefro.patch
-    autoreconf -vfi
+    autoreconf -vfi  -I /usr/share/gettext/m4
     UDEV_RULES_PATH=/usr/lib/udev/rules.d ./configure \
         --prefix=/usr \
         --libdir=/usr/lib \
