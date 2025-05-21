@@ -7,7 +7,8 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/pygobject-3.0.pc
 drwxr-xr-x	root/root	usr/lib/python3.12/
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/PyGObject-3.48.2.egg-info
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/PyGObject-3.52.3.dist-info/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/PyGObject-3.52.3.dist-info/METADATA
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__init__.py
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/
@@ -15,6 +16,8 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/__init__.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_constants.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_constants.cpython-312.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_enum.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_enum.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_error.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_error.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_gtktemplate.cpython-312.opt-1.pyc
@@ -27,8 +30,12 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_propertyhelper.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_signalhelper.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_signalhelper.cpython-312.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_signature.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/_signature.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/docstring.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/docstring.cpython-312.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/events.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/events.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/importer.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/importer.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/module.cpython-312.opt-1.pyc
@@ -38,6 +45,7 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/types.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/types.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/_constants.py
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/_enum.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/_error.py
 -rwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/_gi.cpython-312-x86_64-linux-gnu.so
 -rwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/_gi_cairo.cpython-312-x86_64-linux-gnu.so
@@ -46,7 +54,9 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/_ossighelper.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/_propertyhelper.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/_signalhelper.py
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/_signature.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/docstring.py
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/events.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/importer.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/module.py
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/overrides/
@@ -78,9 +88,6 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/overrides/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/overrides/__pycache__/Pango.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/overrides/__pycache__/__init__.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/overrides/__pycache__/__init__.cpython-312.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/overrides/__pycache__/keysyms.cpython-312.opt-1.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/overrides/__pycache__/keysyms.cpython-312.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/overrides/keysyms.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/pygtkcompat.py
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/repository/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/repository/__init__.py
@@ -93,9 +100,6 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pygtkcompat/
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pygtkcompat/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pygtkcompat/__pycache__/__init__.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pygtkcompat/__pycache__/__init__.cpython-312.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/pygtkcompat/__pycache__/generictreemodel.cpython-312.opt-1.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/pygtkcompat/__pycache__/generictreemodel.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pygtkcompat/__pycache__/pygtkcompat.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pygtkcompat/__pycache__/pygtkcompat.cpython-312.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/pygtkcompat/generictreemodel.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pygtkcompat/pygtkcompat.py
