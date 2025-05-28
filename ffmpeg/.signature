@@ -1,10 +1,11 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/bzyLp8OyLwXNo+Pk4KtLhmaVcz/hpY9he1JPZHd98DiG4Zl8XEG/sJaLN6W76PCk9a551AFXCi+JRPNJESrvwI=
-SHA256 (Pkgfile) = 85123376685acc526ab40964a39d05bbe12ec3d7b1941f8908d3f3c6c1851255
+RWSE3ohX2g5d/UIbdZymElxvrZBO+pnsNOlhXxWDksuVlkp6H73+1gAq54CseFDjUEgOe+QMTQoEvhMXyCmErE5xjjX+uu9KmQQ=
+SHA256 (Pkgfile) = ea341458282c230d7b64a9acda8a3629738ffa2f14a8f46e7dc74be1eafd6a15
 SHA256 (.footprint) = 240451e72678edd4c33c719c6d2e98afe3e3172e3b06754415131be4924b87d3
 SHA256 (ffmpeg-7.1.1.tar.bz2) = 0c8da2f11579a01e014fc007cbacf5bb4da1d06afd0b43c7f8097ec7c0f143ba
 SHA256 (add-av_stream_get_first_dts-for-chromium.patch) = 57e26caced5a1382cb639235f9555fc50e45e7bf8333f7c9ae3d49b3241d3f77
 SHA256 (fef22c87ada4517441701e6e61e062c9f4399c8e.patch) = c2ef9c35082ed2e5989428d086b7bfef1dfe9e0a85e6d259daf46f369f115483
 SHA256 (bcfbf2bac8f9eeeedc407b40596f5c7aaa0d5b47.patch) = 2b0c1a2a27e29c035bebc8d7896df39fb45fb603337c7586957172a31dd38442
 SHA256 (d0facac679faf45d3356dff2e2cb382580d7a521.patch) = 0f3170deb660442cd8a46b05be50f084f70b0b045f198cce5840e59e4e91fec9
+SHA256 (ffmpeg-7.1.1-svt-av1-3.patch) = 761fad5bb84d180f8a49ed1163f6242bbdd41b7c22cd634cb728c9fb8836ab85
 SHA256 (ffmpeg-x264-10bit.sh) = dde9627c41800235fbcfe0f74d2181be96239a82cd2d0d277715dddb57eb9cb3
