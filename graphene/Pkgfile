@@ -1,7 +1,7 @@
 # Description: A thin layer of graphic data types
 # URL: https://ebassi.github.io/graphene/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: gobject-introspection
+# Depends on: glib-introspection
 
 name=graphene
 version=1.10.8
