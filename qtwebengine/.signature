@@ -1,12 +1,12 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/XcFWinUNvmB4vLxq1H+YpnESkB0ffQVDx6Qmo0oAjhtNWC5H1QhT7AaQQsAM4TLD6oMPQzB+pb7Gc4JcNzYbQ0=
-SHA256 (Pkgfile) = 47b7407729b426d3300b8982e20f7666c927390e67597312106ba15de2bd6a54
+RWSE3ohX2g5d/cLeFuh8+1ee/+qrFazbjSEZjFPKpJZipjOYp+d5SfeMkVYBSfE6Xzgk3fULQlGJH+KYfisGr8VXwSLsf4Pv2QY=
+SHA256 (Pkgfile) = 642d4552c0fe9b6474a9bcaf2ea7c0f300ffd0928dd6a65fe9bb388b2bbcf18e
 SHA256 (.footprint) = 44b1db82a792e29d0e7a4bf1a4ea7d0ed7b440ab9f0df493452d03ff3c164554
-SHA256 (qtwebengine-4b7673d7ae19cf3dd8c18d987954048a6635b02e.tar.gz) = ed6af6b663b8e49a1533c058cc14b0350926b994e11d385b74ac321ce50beaee
-SHA256 (qtwebengine-chromium-1b7db6c55868144f9c44d87a48097716d67f32b9.tar.gz) = f5e5787addef54fc588a13758d3bbb9bc42769e286c348441bad06187b4a8489
+SHA256 (qtwebengine-a5d11cd6f8c487443c15c7e3a6cd8090b65cb313.tar.gz) = aeb8839035c5e3d7e9c1bd68ca6c96111db571a88c9446f82373f169b5f75e8c
+SHA256 (qtwebengine-chromium-6d29e9cfcfffa7632cc3858ceaf8940677ba9c91.tar.gz) = 05c17d2facae807577b0b1eeb31bbbb27a02256e7c058f364ede5b67677f3974
 SHA256 (qtwebengine-5.15.2-disable-fatal-warnings.patch) = 19dac26d6753f4cbe1fe2bcb911d8124ea082f55ff86b45cdcba294d3c199249
 SHA256 (qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch) = 4bd5364a5f45c68e0bd452dad7a6f638142503da8c43aaeb15d577aa09369c7c
-SHA256 (qtwebengine-5.15.2_p20210521-clang-libc++.patch) = 64f786a919c7c145033139e6effe236459dad7b7bb5b52428e00fc70592ce05d
+SHA256 (qtwebengine-5.15.2_p20.1.621-clang-libc++.patch) = 64f786a919c7c145033139e6effe236459dad7b7bb5b52428e00fc70592ce05d
 SHA256 (qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch) = 391f899137cabf4c90ff3bc3a1cf9687d6a273e7bd42618760e7f09c7e0d3e32
 SHA256 (qtwebengine-5.15.3_p20220406-ffmpeg5.patch) = 63b0a709c7d1e84193dada20109740d6b9a768f6d83809247dd9691ff50bfc7c
 SHA256 (qtwebengine-5.15.13-icu_73-1.patch) = 52351270248d714e124838725abbb1f15726f2530043f2289588ecd9a6e7a2ba
@@ -17,5 +17,4 @@ SHA256 (programm_manager.patch) = 93fc47c6d453002194d18887527fec6185c8bd05ac59a6
 SHA256 (ninja-1.12.patch) = 56e84d291705d18e16f8c0a1bfc298e7087a985bf6de830264a45f7d6293bb17
 SHA256 (no-h264.patch) = b8f65c5bd5f0ce5ee297d3642c9e0ef58fbc525e304386d05cfa950b66cf206b
 SHA256 (qt5-webengine-ffmpeg7.patch) = cd8d3c4e2b8c352c7ff8ecc457c7551d59f7aa43806d41e75661b5b95ee33c37
-SHA256 (python3.12-imp.patch) = 1f4357708e985bb5aca61a7e5dc4c0c1285d2af00994bb49ff89ede78198e0d2
 SHA256 (python3.12-six.patch) = ac87ec55ee5cbcf2d520e1ea433d041c0bf754271a17f859edbb9976f192ce3f

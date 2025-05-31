@@ -6,18 +6,18 @@
 
 name=qtwebengine
 version=5.15.19
-release=1
+release=2
 
 # https://github.com/qt/qtwebengine/commits/5.15
-_qtwebengine_commit=4b7673d7ae19cf3dd8c18d987954048a6635b02e
+_qtwebengine_commit=a5d11cd6f8c487443c15c7e3a6cd8090b65cb313
 # from $_qtwebengine_commit/src/3rdparty
-_chromium_commit=1b7db6c55868144f9c44d87a48097716d67f32b9
+_chromium_commit=6d29e9cfcfffa7632cc3858ceaf8940677ba9c91
 
 source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_qtwebengine_commit.tar.gz
   https://github.com/qt/qtwebengine-chromium/archive/$_chromium_commit/$name-chromium-$_chromium_commit.tar.gz
   qtwebengine-5.15.2-disable-fatal-warnings.patch
   qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
-  qtwebengine-5.15.2_p20210521-clang-libc++.patch
+  qtwebengine-5.15.2_p20.1.621-clang-libc++.patch
   qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch
   qtwebengine-5.15.3_p20220406-ffmpeg5.patch
   qtwebengine-5.15.13-icu_73-1.patch
@@ -28,7 +28,6 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_q
   ninja-1.12.patch
   no-h264.patch
   qt5-webengine-ffmpeg7.patch
-  python3.12-imp.patch
   python3.12-six.patch
 
 )
@@ -43,7 +42,7 @@ build() {
   # https://www.linuxfromscratch.org/blfs/view/svn/x/qtwebengine.html
   patch -p1 -i $SRC/qtwebengine-5.15.2-disable-fatal-warnings.patch
   patch -p1 -i $SRC/qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
-  patch -p1 -i $SRC/qtwebengine-5.15.2_p20210521-clang-libc++.patch
+  patch -p1 -i $SRC/qtwebengine-5.15.2_p20.1.621-clang-libc++.patch
   patch -p1 -i $SRC/qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch
   patch -p1 -i $SRC/qtwebengine-5.15.3_p20220406-ffmpeg5.patch
   patch -p1 -i $SRC/qtwebengine-5.15.13-icu_73-1.patch
@@ -51,7 +50,6 @@ build() {
   patch -p1 -i $SRC/ninja-1.12.patch
   patch -p1 -d src/3rdparty/chromium -i $SRC/qt5-webengine-ffmpeg7.patch
   patch -p1 -i $SRC/no-h264.patch
-  patch -p1 -d src/3rdparty/chromium -i $SRC/python3.12-imp.patch
   patch -p1 -d src/3rdparty/chromium -i $SRC/python3.12-six.patch
 
 
