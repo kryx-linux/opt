@@ -2,17 +2,24 @@
 # URL: https://github.com/lm-sensors/lm-sensors
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: perl
+# Optional: rrdtool
 
 name=lm_sensors
-version=3.6.0
+version=3.6.2
 release=1
-source=(https://github.com/lm-sensors/lm-sensors/archive/V${version//./-}/$name-$version.tar.gz)
+source=(https://github.com/hramrach/lm-sensors/archive/V${version//./-}/$name-$version.tar.gz
+  sensord.service)
 
 build () {
   cd lm-sensors-${version//./-}
 
-  make install PREFIX=/usr \
-    ETCDIR=/usr/etc \
+  prt-get isinst rrdtool && PKGMK_LMSENSORS+=' PROG_EXTRA=sensord'
+  prt-get isinst rrdtool && install -Dm755 $SRC/sensord.service $PKG/etc/rc.d/sensord
+
+  make install $PKGMK_LMSENSORS \
+    PREFIX=/usr \
+    ETCDIR=/etc \
     MANDIR=/usr/share/man \
+    BUILD_STATIC_LIB=0 \
     DESTDIR=$PKG
 }
