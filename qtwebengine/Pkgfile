@@ -2,7 +2,7 @@
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: ffmpeg libvpx nodejs nss qt5 xorg-libxkbfile xorg-libxscrnsaver xorg-libxtst python3-html5lib
-# Optional: glib jsoncpp krb5 krb5 lcms2 libevent libsrtp libxml2 minizip opus pipewire pulseaudio re2 snappy
+# Optional: glib icu jsoncpp krb5 krb5 lcms2 libevent libsrtp libxml2 libxslt minizip opus pipewire pulseaudio re2 snappy
 
 name=qtwebengine
 version=5.15.19
@@ -29,7 +29,6 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_q
   no-h264.patch
   qt5-webengine-ffmpeg7.patch
   python3.12-six.patch
-
 )
 
 build() {
@@ -52,13 +51,9 @@ build() {
   patch -p1 -i $SRC/no-h264.patch
   patch -p1 -d src/3rdparty/chromium -i $SRC/python3.12-six.patch
 
-
   if prt-get isinst re2; then
     patch -p1 -i $SRC/qtwebengine-system-absl-compat.patch
     patch -p1 -i $SRC/programm_manager.patch
-    cp -f /usr/include/absl/base/options.h \
-      src/3rdparty/chromium/third_party/abseil-cpp/absl/base/options.h
-    sed -i -e 's,#define ABSL_OPTION_USE_STD_OPTIONAL 1,#define ABSL_OPTION_USE_STD_OPTIONAL 0,' src/3rdparty/chromium/third_party/abseil-cpp/absl/base/options.h
     patch -p1 -i $SRC/qtwebengine-5.15.15-c++17.patch
     export CXXFLAGS+=' -std=gnu++17'
     find . -name "*.pro" -o -name "*.pri" |while read r; do
@@ -82,10 +77,6 @@ build() {
 
   test -n "$JOBS" && export NINJAFLAGS+=" -j ${JOBS-1}"
 
-  # since 5.15.14 unsupported
-  #prt-get isinst clang && export CC=clang CXX=clang++ QMAKE_XSPEC=linux-clang
-  #prt-get isinst lld && export AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib LDFLAGS+=' -fuse-ld=lld'
-
   prt-get isinst ccache && export \
     QMAKE_CC="ccache ${CC:-gcc}" \
     QMAKE_LINK_C="ccache ${CC:-gcc}" \
@@ -97,6 +88,9 @@ build() {
     PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
   sed -i -e 's|"-Wno-unknown-attributes",|"-Wno-enum-constexpr-conversion",\n      &|' \
     src/3rdparty/chromium/build/config/compiler/BUILD.gn
+
+  #SYSLIBS="freetype harfbuzz-ng libdrm libevent libpng libxml libxslt"
+  #/usr/bin/python3 ./src/3rdparty/chromium/build/linux/unbundle/replace_gn_files.py --system-libraries $SYSLIBS
 
   install -d build
   cd build
