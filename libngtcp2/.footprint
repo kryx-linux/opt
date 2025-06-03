@@ -4,18 +4,25 @@ drwxr-xr-x	root/root	usr/include/ngtcp2/
 -rw-r--r--	root/root	usr/include/ngtcp2/ngtcp2.h
 -rw-r--r--	root/root	usr/include/ngtcp2/ngtcp2_crypto.h
 -rw-r--r--	root/root	usr/include/ngtcp2/ngtcp2_crypto_gnutls.h
+-rw-r--r--	root/root	usr/include/ngtcp2/ngtcp2_crypto_ossl.h
 -rw-r--r--	root/root	usr/include/ngtcp2/version.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libngtcp2.a
 -rwxr-xr-x	root/root	usr/lib/libngtcp2.la
-lrwxrwxrwx	root/root	usr/lib/libngtcp2.so -> libngtcp2.so.16.3.0
-lrwxrwxrwx	root/root	usr/lib/libngtcp2.so.16 -> libngtcp2.so.16.3.0
--rwxr-xr-x	root/root	usr/lib/libngtcp2.so.16.3.0
+lrwxrwxrwx	root/root	usr/lib/libngtcp2.so -> libngtcp2.so.16.3.1
+lrwxrwxrwx	root/root	usr/lib/libngtcp2.so.16 -> libngtcp2.so.16.3.1
+-rwxr-xr-x	root/root	usr/lib/libngtcp2.so.16.3.1
 -rw-r--r--	root/root	usr/lib/libngtcp2_crypto_gnutls.a
 -rwxr-xr-x	root/root	usr/lib/libngtcp2_crypto_gnutls.la
 lrwxrwxrwx	root/root	usr/lib/libngtcp2_crypto_gnutls.so -> libngtcp2_crypto_gnutls.so.8.2.0
 lrwxrwxrwx	root/root	usr/lib/libngtcp2_crypto_gnutls.so.8 -> libngtcp2_crypto_gnutls.so.8.2.0
 -rwxr-xr-x	root/root	usr/lib/libngtcp2_crypto_gnutls.so.8.2.0
+-rw-r--r--	root/root	usr/lib/libngtcp2_crypto_ossl.a
+-rwxr-xr-x	root/root	usr/lib/libngtcp2_crypto_ossl.la
+lrwxrwxrwx	root/root	usr/lib/libngtcp2_crypto_ossl.so -> libngtcp2_crypto_ossl.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libngtcp2_crypto_ossl.so.0 -> libngtcp2_crypto_ossl.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libngtcp2_crypto_ossl.so.0.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libngtcp2.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libngtcp2_crypto_gnutls.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/libngtcp2_crypto_ossl.pc
