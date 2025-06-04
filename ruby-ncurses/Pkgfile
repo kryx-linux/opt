@@ -4,7 +4,7 @@
 # Depends on: ruby
 
 name=ruby-ncurses
-version=1.4.12
+version=1.4.13
 release=1
 source=(https://rubygems.org/downloads/ncursesw-$version.gem)
 
