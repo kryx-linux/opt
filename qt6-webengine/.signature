@@ -1,11 +1,9 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/XcHvHJlTpJlTDqZVAKP/a6ksr/KjzpfhhgFyfZdj19uzcFPjTDlwkKWV5b7goc/VlEa3qS6VEqew4/Omk2vygM=
-SHA256 (Pkgfile) = 6c7f5ac2e58f2a5ed2b7bee7df4a5682d4a04ff252961ae8dc8494f15bc8af27
-SHA256 (.footprint) = 6eb86ae3e369694c6807473b9f8c0e991eaa821a00bad59b985af0fab7510344
-SHA256 (qtwebengine-everywhere-src-6.9.0.tar.xz) = 2b33d1c85e85ed58729db228448f92105ab746ffdc9b98f0c4e3bf00b789789e
+RWSE3ohX2g5d/ZibR+XvPnz9DJY0lkqWj309S2RGkF6X+3LTuCuvuWHo0ORRpTZ8M4E9x1amjd9j3NKjbbkWqpE6gG50+p++Fws=
+SHA256 (Pkgfile) = b057fc315f0633e73f94105a70df4c2ea699bc5deb484e3ef237adf7dec1602e
+SHA256 (.footprint) = 3ce6d91cfb2e01b3e064b46ed9b739b246c415f66661599cfcb079f43944cf3f
+SHA256 (qtwebengine-everywhere-src-6.9.1.tar.xz) = 787dfde22b348f6d620f2207ed7e32ad0a5389373182614272de28ff3f91c26c
 SHA256 (ninja-1.12-2.patch) = d6609b1714cd418a193f544f50685bf116be6505115cc106e9bea6a59601a701
 SHA256 (no-h264.patch) = 5e41df98141a5a3c6ab1ef1f1a45ea4a27631cfa3fe8b0cdd524624424d74541
 SHA256 (03-gn-bootstrap.patch) = 7d9fe6e89b4f72e3521a5cdcad7f42acc0980c56c283cb9edc35a3de4e4b5d32
-SHA256 (pipewire14.patch) = ab76d07abe99ba01591408c3dd2586ee6369fa9b58415c93ce229010330371cc
-SHA256 (add-more-CFI-suppressions-for-inline-PipeWire-functions.patch) = d3dd9b4132c9748b824f3dcf730ec998c0087438db902bc358b3c391658bebf5
 SHA256 (gperf.patch) = 3e1c2d3daed2695ee7ebc7b47438613964e4189686949d986ba0e6daa8906b95

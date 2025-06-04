@@ -5,14 +5,12 @@
 # Optional: dav1d fdk-aac gnutls graphite2 keyutils krb5 lame lcms2 libpcre2 libvdpau numactl pipewire x264 x265
 
 name=qt6-webengine
-version=6.9.0
+version=6.9.1
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz
   ninja-1.12-2.patch
   no-h264.patch
   03-gn-bootstrap.patch
-  pipewire14.patch
-  add-more-CFI-suppressions-for-inline-PipeWire-functions.patch
   gperf.patch
 )
 
@@ -65,11 +63,6 @@ that, you can attempt to build opt/qt6-webengine again.
 
   cd $SRC/qtwebengine-everywhere-src-$version/src/3rdparty/chromium
   ./build/linux/unbundle/replace_gn_files.py --system-libraries $SYSLIBS
-  patch -Np1 -i $SRC/pipewire14.patch
-  patch -Np1 -i $SRC/add-more-CFI-suppressions-for-inline-PipeWire-functions.patch
-
-  ./build/linux/unbundle/replace_gn_files.py --system-libraries $SYSLIBS
-
   cd $SRC
 
   export NINJAFLAGS="-j $(( $(awk '/^MemAvailable:/ {print $2}' /proc/meminfo) / 3000000))"
