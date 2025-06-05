@@ -4,7 +4,7 @@
 # Depends on: libcap
 
 name=iputils
-version=20250602
+version=20250605
 release=1
 source=(https://github.com/iputils/iputils/releases/download/$version/$name-$version.tar.xz)
 
