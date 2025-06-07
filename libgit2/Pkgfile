@@ -4,7 +4,7 @@
 # Depends on: http-parser
 
 name=libgit2
-version=1.9.0
+version=1.9.1
 release=1
 source=(https://github.com/libgit2/libgit2/archive/v$version/$name-$version.tar.gz)
 
