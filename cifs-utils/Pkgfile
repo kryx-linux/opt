@@ -5,7 +5,7 @@
 # Optional: python3-docutils
 
 name=cifs-utils
-version=7.3
+version=7.4
 release=1
 source=(https://download.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2
     cifs)
@@ -13,6 +13,7 @@ source=(https://download.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2
 build () {
     cd $name-$version
 
+    autoreconf -i
     ./configure --prefix=/usr --with-pamdir=/lib/security
     make
     make DESTDIR=$PKG install
