@@ -6,35 +6,36 @@
 
 name=git
 version=2.50.0
-release=1
+release=2
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
-	git gitd.rc)
+    git gitd.rc)
 
 build() {
-	meson setup $name-$version build \
-		--prefix=/usr \
-		--libexecdir=lib \
-		--buildtype=plain \
-		--wrap-mode nodownload \
-		-D b_lto=true \
-		-D b_pie=true \
-		-D runtime_prefix=true
-	meson compile -C build -j ${JOBS:-1}
-	DESTDIR=$PKG meson install -C build
+    sed -i "s|git_exec_path = libexec|& / 'git-core'|" -i $name-$version/meson.build
+    meson setup $name-$version build \
+        --prefix=/usr \
+        --libexecdir=lib \
+        --buildtype=plain \
+        --wrap-mode nodownload \
+        -D b_lto=true \
+        -D b_pie=true \
+        -D runtime_prefix=true
+    meson compile -C build -j ${JOBS:-1}
+    DESTDIR=$PKG meson install -C build
 
-	prt-get isinst bash-completion && install -Dm644 $name-$version/contrib/completion/git-completion.bash $PKG/usr/share/bash-completion/completions/git
-	prt-get isinst zsh && install -Dm644 $name-$version/contrib/completion/git-completion.zsh $PKG/usr/share/zsh/site-functions/_git
+    prt-get isinst bash-completion || rm -rf $PKG/usr/share/bash-completion
+    prt-get isinst zsh && install -Dm644 $name-$version/contrib/completion/git-completion.zsh $PKG/usr/share/zsh/site-functions/_git
 
-	for i in man*; do
-		install -d $PKG/usr/share/man/$i
-		install -m 644 $i/* $PKG/usr/share/man/$i;
-	done
+    for i in man*; do
+        install -d $PKG/usr/share/man/$i
+        install -m 644 $i/* $PKG/usr/share/man/$i;
+    done
 
-	find $PKG \( -name perllocal.pod -o -name .packlist \) -delete
-	rm -rf $PKG/usr/share/{locale,gitk}
+    find $PKG \( -name perllocal.pod -o -name .packlist \) -delete
+    rm -rf $PKG/usr/share/{locale,gitk}
 
-	# install the git ports driver
-	install -Dm755 $SRC/git $PKG/etc/ports/drivers/git
+    # install the git ports driver
+    install -Dm755 $SRC/git $PKG/etc/ports/drivers/git
 
-	install -D $SRC/gitd.rc $PKG/etc/rc.d/gitd
+    install -D $SRC/gitd.rc $PKG/etc/rc.d/gitd
 }
