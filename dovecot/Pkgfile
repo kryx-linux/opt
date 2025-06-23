@@ -17,7 +17,7 @@ build() {
 
     patch -Np1 -i $SRC/dovecot-2.3.21-openssl3_fixes-1.patch
     patch -Np1 -i $SRC/dovecot-2.3.21-security_fix-1.patch
-    autoreconf -fvi
+    autoreconf -fvi -I /usr/share/gettext/m4
 
     prt-get isinst clucene && PKGMK_DOVECOT+=' --with-lucene'
     prt-get isinst icu && PKGMK_DOVECOT+=' --with-icu'
