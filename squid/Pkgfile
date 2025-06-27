@@ -1,14 +1,14 @@
 # Description: A full-featured web proxy cache
 # URL: http://www.squid-cache.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: db libcap libnsl libtirpc libtool expat libxml2 zstd
+# Depends on: db libbsd libcap libnsl libtirpc libtool expat libxml2 zstd
 # Optional: brotli gnutls krb5 libunistr libidn2 nettle tdb
 
 name=squid
-version=6.13
+version=6.14
 release=1
 source=(https://github.com/squid-cache/squid/releases/download/SQUID_${version/./_}/$name-$version.tar.xz
-	squid)
+    squid)
 
 build() {
     cd $name-$version
