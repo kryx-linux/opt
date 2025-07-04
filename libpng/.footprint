@@ -1,6 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
--rw-r--r--	root/root	usr/bin/libpng-config
+lrwxrwxrwx	root/root	usr/bin/libpng-config -> libpng16-config
 -rwxr-xr-x	root/root	usr/bin/libpng16-config
 -rwxr-xr-x	root/root	usr/bin/png-fix-itxt
 -rwxr-xr-x	root/root	usr/bin/pngfix
