@@ -4,9 +4,9 @@
 # Depends on: libpcre2 libxml2
 
 name=php-fcgi
-version=8.4.8
+version=8.4.10
 release=1
-source=(https://php.net/distributions/php-$version.tar.xz
+source=(https://www.php.net/distributions/php-$version.tar.xz
     php-fcgi)
 
 build() {
