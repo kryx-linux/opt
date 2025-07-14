@@ -2,9 +2,10 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # URL: https://httpd.apache.org/
 # Depends on: apr-util libnghttp2 libpcre2 libxml2
+# Optional: brotli lua
 
 name=apache
-version=2.4.63
+version=2.4.64
 release=1
 source=(https://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
     crux.layout apache)
@@ -23,8 +24,7 @@ build(){
         --enable-so \
         --enable-modules=all \
         --enable-mods-shared=all \
-        --enable-mpms-shared=all \
-        --disable-lua
+        --enable-mpms-shared=all
     make 
     make -j1 DESTDIR=$PKG install
 
