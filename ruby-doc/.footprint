@@ -2569,6 +2569,8 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/Gem/Ext/Builder/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/Ext/Builder/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/Ext/Builder/ruby-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/Ext/Builder/run-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/Ext/Builder/shelljoin-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/Ext/Builder/shellsplit-c.ri
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/Gem/Ext/CargoBuilder/
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/Gem/Ext/CargoBuilder/DylibNotFoundError/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Gem/Ext/CargoBuilder/DylibNotFoundError/cdesc-DylibNotFoundError.ri
@@ -13053,7 +13055,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/documented%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/done_documenting%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/done_documenting-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/each_parent-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/file-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/file_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/force_documentation%3d-i.ri
@@ -13067,7 +13068,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/new-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/options-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/parent-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/parent_file_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/parent_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/received_nodoc-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/record_location-i.ri
@@ -13078,7 +13078,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/store-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/suppress-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/suppressed%3f-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/CodeObject/viewer-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/Comment/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Comment/cdesc-Comment.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Comment/document-i.ri
@@ -13176,16 +13175,21 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/MarkupReference/DummyModule/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/MarkupReference/method-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/MarkupReference/yields_directive-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/Options/
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/apply_default_exclude-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/autolink_excluded_words-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/canonical_root-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/cdesc-Options.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/charset-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/check_files-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/check_generator-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/class_module_path_prefix-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/coverage_report-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/default_title%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/dry_run-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/embed_mixins-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/encoding-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/exclude-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/file_path_prefix-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/files-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/finish-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Options/finish_page_dir-i.ri
@@ -13316,6 +13320,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/Parser/PrismRuby/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/PrismRuby/visibility-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/PrismRuby/visible_tokens_from_location-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/PrismRuby/with_container-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/PrismRuby/with_in_proc_block-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/Parser/RD/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/RD/cdesc-RD.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/RD/scan-i.ri
@@ -13345,7 +13350,9 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/parse_attr_accessor-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/parse_call_parameters-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/parse_class-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/parse_class_regular-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/parse_comment-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/parse_comment_ghost-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/parse_comment_tomdoc-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/parse_constant-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Parser/Ruby/parse_constant_visibility-i.ri
@@ -13441,7 +13448,6 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/RDoc/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RDoc/remove_unparseable-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RDoc/setup_output_dir-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RDoc/stats-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RDoc/store%3d-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RDoc/store-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RDoc/update_output_dir-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/RI/
@@ -13473,8 +13479,12 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/generate_rdoc-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/generate_ri-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/generation_hook-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/load_rdoc-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/rdoc_installed%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/rdoc_version-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/remove-i.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/RubygemsHook/ri_installed%3f-i.ri
 drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/Servlet/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Servlet/asset-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Servlet/asset_dirs-i.ri
@@ -13579,10 +13589,10 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/RDoc/Store/MissingFileError/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/module_names-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/modules_hash-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/new-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/options-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/page-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/page_file-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/path-i.ri
--rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/rdoc-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/remove_nodoc-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/resolve_c_superclasses-i.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/RDoc/Store/save-i.ri
@@ -14688,6 +14698,7 @@ drwxr-xr-x	root/root	usr/share/ri/3.4/system/Resolv/SZ/
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Resolv/get_hosts_dir-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Resolv/get_hosts_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Resolv/get_info-c.ri
+-rw-r--r--	root/root	usr/share/ri/3.4/system/Resolv/get_item_property-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Resolv/get_resolv_info-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Resolv/getaddress-c.ri
 -rw-r--r--	root/root	usr/share/ri/3.4/system/Resolv/getaddress-i.ri
