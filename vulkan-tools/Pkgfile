@@ -9,10 +9,13 @@ _name=Vulkan-Tools
 version=1.4.321.0
 _version=vulkan-sdk-$version
 release=1
-source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/$_version/$_name-$version.tar.gz)
+source=(https://github.com/KhronosGroup/Vulkan-Tools/archive/$_version/$_name-$version.tar.gz
+    wayland.patch)
 
 build() {
     prt-get isinst wayland || PKGMK_VULKAN_TOOLS+=' -D BUILD_WSI_WAYLAND_SUPPORT=OFF'
+
+    patch -Np1 -d $_name-$_version -i $SRC/wayland.patch
 
     cmake -S $_name-$_version -B build -G Ninja $PKGMK_VULKAN_TOOLS \
         -D CMAKE_INSTALL_PREFIX=/usr \
