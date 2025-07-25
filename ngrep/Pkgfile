@@ -5,11 +5,19 @@
 
 name=ngrep
 version=1.47
-release=1
-source=(https://github.com/jpr5/ngrep/archive/V${version//./_}/$name-$version.tar.gz)
+release=2
+source=(https://github.com/jpr5/ngrep/archive/V${version//./_}/$name-$version.tar.gz
+    $name-$version-clang16.patch $name-$version-regex.patch)
 
 build () {
     cd $name-${version//./_}
+
+    # patches from gentoo
+    patch -p1 -i $SRC/$name-$version-clang16.patch
+    patch -p1 -i $SRC/$name-$version-regex.patch
+
+    autoreconf -i
+
     ./configure --prefix=/usr --enable-ipv6
     make
     make DESTDIR=$PKG install
