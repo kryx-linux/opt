@@ -4,9 +4,9 @@
 # Depends on: gtk3 dbus-glib alsa-lib
 
 name=thunderbird-bin
-version=128.11.1esr
+version=140.1.0esr
 release=1
-source=(https://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-x86_64/en-US/thunderbird-$version.tar.bz2
+source=(https://ftp.mozilla.org/pub/thunderbird/releases/$version/linux-x86_64/en-US/thunderbird-$version.tar.xz
     policies.json thunderbird.desktop)
 
 build() {
