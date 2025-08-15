@@ -4,7 +4,7 @@
 # Depends on: abseil-cpp
 
 name=protobuf
-version=31.1
+version=32.0
 release=1
 source=(https://github.com/protocolbuffers/protobuf/archive/v$version/$name-$version.tar.gz)
 
@@ -17,7 +17,6 @@ build() {
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -D protobuf_BUILD_SHARED_LIBS=ON \
     -D protobuf_BUILD_TESTS=OFF \
-    -D protobuf_ABSL_PROVIDER=package \
     -Wno-dev
 
   cmake --build build
