@@ -4,9 +4,9 @@
 # Depends on: libexif libgphoto2 popt readline
 
 name=gphoto2
-version=2.5.28
+version=2.5.32
 release=1
-source=(http://downloads.sourceforge.net/project/gphoto/gphoto/$version/$name-$version.tar.bz2)
+source=(http://downloads.sourceforge.net/project/gphoto/gphoto/$version/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
