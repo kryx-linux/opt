@@ -8,7 +8,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/lsinitrd
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/dracut/
--rwxr-xr-x	root/root	usr/lib/dracut/dracut-cpio
 lrwxrwxrwx	root/root	usr/lib/dracut/dracut-functions -> dracut-functions.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/dracut-functions.sh
 -rwxr-xr-x	root/root	usr/lib/dracut/dracut-init.sh
