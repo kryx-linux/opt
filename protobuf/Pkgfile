@@ -9,6 +9,9 @@ release=2
 source=(https://github.com/protocolbuffers/protobuf/archive/v$version/$name-$version.tar.gz)
 
 build() {
+  CFLAGS="-O2 -pipe"
+  CXXFLAGS="-O2 -pipe"
+
   cmake -S $name-$version -B build -G Ninja \
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=lib \
