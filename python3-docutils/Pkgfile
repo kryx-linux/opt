@@ -1,0 +1,18 @@
+# Description: Python Documentation Utilities
+# URL: https://docutils.sourceforge.io/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: python3-wheel
+
+name=python3-docutils
+version=0.22
+release=1
+source=(https://downloads.sourceforge.net/docutils/docutils-$version.tar.gz)
+
+build() {
+  cd docutils-$version
+
+  /usr/bin/python3 -m build --wheel --skip-dependency-check --no-isolation
+  /usr/bin/python3 -m installer --destdir=$PKG dist/*.whl
+
+  find $PKG -iname "*README*" -delete
+}
