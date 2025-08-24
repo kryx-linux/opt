@@ -9,6 +9,11 @@ version=3.7.4a
 release=1
 source=(https://github.com/deadbeefsociety/sshfs/releases/download/sshfs-$version/sshfs-$version.tar.xz)
 
+unpack_source() {
+    bsdtar -xf $PKGMK_SOURCE_DIR/sshfs-$version.tar.xz \
+        -C $SRC -po --no-xattr
+}
+
 build() {
     meson setup build sshfs-$version \
         --prefix=/usr \
