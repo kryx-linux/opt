@@ -5,10 +5,13 @@
 
 name=spirv-headers
 version=1.4.321.0
-release=1
-source=(https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$version/SPIRV-Headers-vulkan-sdk-$version.tar.gz)
+release=2
+source=(https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$version/SPIRV-Headers-vulkan-sdk-$version.tar.gz
+    9e3836d7d6023843a72ecd3fbf3f09b1b6747a9e.patch)
 
 build() {
+    patch -Np1 -d SPIRV-Headers-vulkan-sdk-$version -i $SRC/9e3836d7d6023843a72ecd3fbf3f09b1b6747a9e.patch
+
     cmake -S SPIRV-Headers-vulkan-sdk-$version -B build -G Ninja \
         -D CMAKE_INSTALL_PREFIX=/usr \
         -D CMAKE_INSTALL_LIBDIR=lib \
