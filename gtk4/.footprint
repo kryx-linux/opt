@@ -106,6 +106,7 @@ drwxr-xr-x	root/root	usr/include/gtk-4.0/gsk/gpu/
 -rw-r--r--	root/root	usr/include/gtk-4.0/gsk/gpu/gskvulkanrenderer.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gsk/gsk.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gsk/gskcairorenderer.h
+-rw-r--r--	root/root	usr/include/gtk-4.0/gsk/gskcomponenttransfer.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gsk/gskenums.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gsk/gskenumtypes.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gsk/gskglshader.h
@@ -289,6 +290,7 @@ drwxr-xr-x	root/root	usr/include/gtk-4.0/gtk/deprecated/
 -rw-r--r--	root/root	usr/include/gtk-4.0/gtk/gtkgridlayout.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gtk/gtkgridview.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gtk/gtkheaderbar.h
+-rw-r--r--	root/root	usr/include/gtk-4.0/gtk/gtkiconpaintable.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gtk/gtkicontheme.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gtk/gtkimage.h
 -rw-r--r--	root/root	usr/include/gtk-4.0/gtk/gtkimcontext.h
@@ -424,13 +426,9 @@ drwxr-xr-x	root/root	usr/lib/girepository-1.0/
 -rw-r--r--	root/root	usr/lib/girepository-1.0/GdkX11-4.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Gsk-4.0.typelib
 -rw-r--r--	root/root	usr/lib/girepository-1.0/Gtk-4.0.typelib
-drwxr-xr-x	root/root	usr/lib/gtk-4.0/
-drwxr-xr-x	root/root	usr/lib/gtk-4.0/4.0.0/
-drwxr-xr-x	root/root	usr/lib/gtk-4.0/4.0.0/printbackends/
--rwxr-xr-x	root/root	usr/lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so
 lrwxrwxrwx	root/root	usr/lib/libgtk-4.so -> libgtk-4.so.1
-lrwxrwxrwx	root/root	usr/lib/libgtk-4.so.1 -> libgtk-4.so.1.1800.6
--rwxr-xr-x	root/root	usr/lib/libgtk-4.so.1.1800.6
+lrwxrwxrwx	root/root	usr/lib/libgtk-4.so.1 -> libgtk-4.so.1.2000.0
+-rwxr-xr-x	root/root	usr/lib/libgtk-4.so.1.2000.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gtk4-atspi.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gtk4-broadway.pc
@@ -438,6 +436,12 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gtk4-x11.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gtk4.pc
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/bash-completion/
+drwxr-xr-x	root/root	usr/share/bash-completion/completions/
+-rw-r--r--	root/root	usr/share/bash-completion/completions/gtk4-builder-tool
+-rw-r--r--	root/root	usr/share/bash-completion/completions/gtk4-image-tool
+-rw-r--r--	root/root	usr/share/bash-completion/completions/gtk4-path-tool
+-rw-r--r--	root/root	usr/share/bash-completion/completions/gtk4-rendernode-tool
 drwxr-xr-x	root/root	usr/share/gettext/
 drwxr-xr-x	root/root	usr/share/gettext/its/
 -rw-r--r--	root/root	usr/share/gettext/its/gtk4builder.its
