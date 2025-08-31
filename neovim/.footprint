@@ -1141,6 +1141,8 @@ drwxr-xr-x	root/root	usr/share/nvim/runtime/lua/jit/
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/dis_mips64r6el.lua
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/dis_mipsel.lua
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/dis_ppc.lua
+-rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/dis_riscv.lua
+-rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/dis_riscv64.lua
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/dis_x64.lua
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/dis_x86.lua
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/dump.lua
@@ -1149,6 +1151,8 @@ drwxr-xr-x	root/root	usr/share/nvim/runtime/lua/jit/
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/vmdef.lua
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/jit/zone.lua
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/man.lua
+drwxr-xr-x	root/root	usr/share/nvim/runtime/lua/nvim/
+-rw-r--r--	root/root	usr/share/nvim/runtime/lua/nvim/tutor.lua
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/tohtml.lua
 drwxr-xr-x	root/root	usr/share/nvim/runtime/lua/vim/
 -rw-r--r--	root/root	usr/share/nvim/runtime/lua/vim/F.lua
@@ -2050,6 +2054,7 @@ drwxr-xr-x	root/root	usr/share/nvim/runtime/syntax/shared/
 -rw-r--r--	root/root	usr/share/nvim/runtime/syntax/tt2.vim
 -rw-r--r--	root/root	usr/share/nvim/runtime/syntax/tt2html.vim
 -rw-r--r--	root/root	usr/share/nvim/runtime/syntax/tt2js.vim
+-rw-r--r--	root/root	usr/share/nvim/runtime/syntax/tutor.lua
 -rw-r--r--	root/root	usr/share/nvim/runtime/syntax/tutor.vim
 -rw-r--r--	root/root	usr/share/nvim/runtime/syntax/typescript.vim
 -rw-r--r--	root/root	usr/share/nvim/runtime/syntax/typescriptreact.vim
@@ -2140,5 +2145,10 @@ drwxr-xr-x	root/root	usr/share/nvim/runtime/tutor/ja/
 -rw-r--r--	root/root	usr/share/nvim/runtime/tutor/ja/vim-01-beginner.tutor.json
 -rw-r--r--	root/root	usr/share/nvim/runtime/tutor/tutor.tutor
 -rw-r--r--	root/root	usr/share/nvim/runtime/tutor/tutor.tutor.json
+drwxr-xr-x	root/root	usr/share/nvim/runtime/tutor/zh/
+-rw-r--r--	root/root	usr/share/nvim/runtime/tutor/zh/vim-01-beginner.tutor
+-rw-r--r--	root/root	usr/share/nvim/runtime/tutor/zh/vim-01-beginner.tutor.json
+-rw-r--r--	root/root	usr/share/nvim/runtime/tutor/zh/vim-02-beginner.tutor
+-rw-r--r--	root/root	usr/share/nvim/runtime/tutor/zh/vim-02-beginner.tutor.json
 drwxr-xr-x	root/root	usr/share/pixmaps/
 -rw-r--r--	root/root	usr/share/pixmaps/nvim.png

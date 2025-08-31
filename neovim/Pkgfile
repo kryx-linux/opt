@@ -5,14 +5,19 @@
 # Optional: libluv libtermkey libuv libvterm lua51-lpeg lua51-mpack luajit luarocks msgpack-c tree-sitter tree-sitter-c tree-sitter-lua tree-sitter-vimdoc tree-sitter-viml unibilium
 
 name=neovim
-version=0.11.3
+version=0.11.4
 release=1
-source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz)
+source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz
+  1267.patch
+  luajit.patch
+)
 
 build() {
   if command -v ccache >/dev/null 2>&1; then
     export PATH=$(echo $PATH | tr ':' '\n' | grep -E '/(s?bin)$' | tr '\n' ':')
   fi
+
+  patch -Np1 -d $name-$version -i $SRC/luajit.patch
 
   ## use lld for thinlto if possible
   prt-get isinst clang lld && \
@@ -38,6 +43,7 @@ build() {
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -D CMAKE_CXX_FLAGS_RELEASE="$CFLAGS" \
+    -D LUAJIT_PATCHES="$SRC/1267.patch" \
     -Wno-dev
   cmake --build neovim-$version/.deps
 

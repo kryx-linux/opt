@@ -1,0 +1,29 @@
+diff -Naur neovim-0.11.3.orig/cmake.deps/cmake/BuildLuajit.cmake neovim-0.11.3/cmake.deps/cmake/BuildLuajit.cmake
+--- neovim-0.11.3.orig/cmake.deps/cmake/BuildLuajit.cmake	2025-08-31 22:13:52.644953383 +0200
++++ neovim-0.11.3/cmake.deps/cmake/BuildLuajit.cmake	2025-08-31 22:19:07.413415223 +0200
+@@ -14,6 +14,25 @@
+     INSTALL_COMMAND "${_luajit_INSTALL_COMMAND}"
+     DEPENDS "${_luajit_DEPENDS}"
+     ${EXTERNALPROJECT_OPTIONS})
++
++  if(LUAJIT_PATCHES)
++    find_program(PATCH_EXECUTABLE NAMES gpatch patch DOC "POSIX patch utility")
++    if(NOT PATCH_EXECUTABLE)
++      message(FATAL_ERROR "LUAJIT_PATCHES set, but no 'patch' tool found.")
++    endif()
++    ExternalProject_Get_Property(luajit SOURCE_DIR)
++
++    set(_i 0)
++    foreach(_p IN LISTS LUAJIT_PATCHES)
++      ExternalProject_Add_Step(luajit patch_${_i}
++        WORKING_DIRECTORY ${SOURCE_DIR}
++        DEPENDEES update
++        DEPENDERS configure
++        COMMAND ${PATCH_EXECUTABLE} -p1 -N -i ${_p}
++        COMMENT "Applying LuaJIT patch: ${_p}")
++      math(EXPR _i "${_i}+1")
++    endforeach()
++  endif()
+ endfunction()
+ 
+ check_c_compiler_flag(-fno-stack-check HAS_NO_STACK_CHECK)
