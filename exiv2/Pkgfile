@@ -4,16 +4,14 @@
 # Depends on: brotli inih
 
 name=exiv2
-version=0.28.6
+version=0.28.7
 release=1
 source=(https://github.com/Exiv2/exiv2/archive/v$version/$name-$version.tar.gz)
 
 build() {
-  export CXXFLAGS+=" -Wno-deprecated-declarations"
-
   cmake -S $name-$version -B build -G Ninja $PKGMK_EXIV2 \
     -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS -Wno-deprecated-declarations" \
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=lib
 
