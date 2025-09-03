@@ -5,7 +5,8 @@
 name=autoconf-archive
 version=2024.10.16
 release=1
-source=(https://ftpmirror.gnu.org/$name/$name-$version.tar.xz)
+source=(https://ftpmirror.gnu.org/$name/$name-$version.tar.xz
+  312.patch)
 
 build() {
   cd $name-$version
