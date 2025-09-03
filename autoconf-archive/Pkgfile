@@ -10,6 +10,9 @@ source=(https://ftpmirror.gnu.org/$name/$name-$version.tar.xz)
 build() {
   cd $name-$version
 
+  # Fix quote m4_fatal bug
+  patch -Np1 -i ../312.patch
+
   ./configure --prefix=/usr
   make
   make DESTDIR=$PKG install
