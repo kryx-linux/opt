@@ -4,7 +4,7 @@
 # Depends on: libevent
 
 name=nsd
-version=4.12.0
+version=4.13.0
 release=1
 source=(http://www.nlnetlabs.nl/downloads/nsd/$name-$version.tar.gz
     README pre-install nsd)
@@ -23,7 +23,8 @@ build() {
         --with-xfrdir=/run/nsd \
         --with-xfrdfile=/run/nsd/xfrd.state \
         --with-zonelistfile=/run/nsd/zone.list \
-        --with-user=nsd
+        --with-user=nsd \
+        --disable-dnstap
 
     make all nsd-mem
     make DESTDIR=$PKG install
