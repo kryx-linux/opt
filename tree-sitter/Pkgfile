@@ -4,7 +4,7 @@
 # Depends on:
 
 name=tree-sitter
-version=0.25.8
+version=0.25.9
 release=1
 source=(https://github.com/tree-sitter/tree-sitter/archive/v$version/$name-$version.tar.gz)
 
