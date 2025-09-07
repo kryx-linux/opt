@@ -4,19 +4,22 @@
 
 name=giflib
 version=5.2.2
-release=1
-source=(https://sourceforge.net/projects/giflib/files/$name-$version.tar.gz)
+release=2
+source=(https://sourceforge.net/projects/giflib/files/$name-$version.tar.gz
+  giflib-5.2.2-security_fixes-1.patch
+  giflib-5.2.2-upstream_fixes-1.patch)
 
 build() {
   cd $name-$version
 
   sed -e "/\$(MAKE) -C doc$/d" -i Makefile
 
+  patch -Np1 -i $SRC/giflib-5.2.2-security_fixes-1.patch
+  patch -Np1 -i $SRC/giflib-5.2.2-upstream_fixes-1.patch
+
   make
   make PREFIX=$PKG/usr install
 
-  rm $PKG/usr/share/man/man1/*.xml
-  #mkdir $PKG/usr/share/man/man7
-  install -vDm 640 doc/*.1 -t $PKG/usr/share/man/man1/
-  install -vDm 640 doc/*.7 -t $PKG/usr/share/man/man7/
+  install -vDm 644 doc/*.1 -t $PKG/usr/share/man/man1/
+  install -vDm 644 doc/*.7 -t $PKG/usr/share/man/man7/
 }
