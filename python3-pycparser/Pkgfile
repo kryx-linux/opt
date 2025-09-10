@@ -4,12 +4,11 @@
 # Depends on: python3-setuptools
 
 name=python3-pycparser
-version=2.22
+version=2.23
 release=1
 source=(https://pypi.org/packages/source/p/pycparser/pycparser-$version.tar.gz)
 
 build() {
-  ls
   cd pycparser-$version
 
   /usr/bin/python3 setup.py build
