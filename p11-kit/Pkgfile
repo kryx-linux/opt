@@ -4,7 +4,7 @@
 # Depends on: libtasn1 make-ca meson ninja
 
 name=p11-kit
-version=0.25.5
+version=0.25.7
 release=1
 source=(https://github.com/p11-glue/$name/releases/download/$version/$name-$version.tar.xz)
 
@@ -18,7 +18,10 @@ build() {
 /usr/sbin/make-ca -f -g
 EOF
 
-  meson setup $name-$version build \
+  prt-get isinst bash-completion || PKGMK_P11KIT+=' -D bash_completion=disabled'
+  prt-get isinst zsh || PKGMK_P11KIT+=' -D zsh_completion=disabled'
+
+  meson setup $name-$version build $PKGMK_P11KIT \
     --prefix=/usr \
     --libexecdir=/usr/lib \
     --buildtype=plain \
