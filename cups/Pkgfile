@@ -5,7 +5,7 @@
 # Optional: dbus gnutls openssl
 
 name=cups
-version=2.4.12
+version=2.4.14
 release=1
 source=(https://github.com/OpenPrinting/cups/releases/download/v$version/$name-$version-source.tar.gz
     cups.rc cups.pam)
@@ -40,7 +40,7 @@ build() {
     rm -r $PKG/usr/share/cups/{banners,data}
 
     # cleanup
-    rm -r $PKG/usr/share/{applications,icons}
+    rm -r $PKG/usr/share/{applications,icons,locale}
     rm -r $PKG/run
     chmod 0755 $PKG/var/{cache,spool}
     chmod -R +w $PKG
