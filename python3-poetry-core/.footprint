@@ -321,6 +321,7 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/json/__pycache
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/json/__pycache__/__init__.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/json/__pycache__/__init__.cpython-312.pyc
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/json/schemas/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/json/schemas/dependency-groups-schema.json
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/json/schemas/poetry-schema.json
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/json/schemas/project-schema.json
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/masonry/
@@ -506,8 +507,9 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/version/pep440
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/version/pep440/segments.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/version/pep440/version.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/version/requirements.py
-drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry_core-2.1.3.dist-info/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.1.3.dist-info/LICENSE
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.1.3.dist-info/METADATA
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.1.3.dist-info/RECORD
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.1.3.dist-info/WHEEL
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry_core-2.2.0.dist-info/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.2.0.dist-info/METADATA
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.2.0.dist-info/RECORD
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.2.0.dist-info/WHEEL
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry_core-2.2.0.dist-info/licenses/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.2.0.dist-info/licenses/LICENSE
