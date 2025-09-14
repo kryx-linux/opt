@@ -6,9 +6,10 @@
 name=pkg-get-bashcompletion
 version=0.4.5
 release=2
-source=(http://www.varlock.com/files/pkg-get-$version.tar.gz)
+source=(https://git.crux.nu/tools/pkg-get/archive/release-$version.tar.gz)
+renames=($name-$version.tar.gz)
 
 build() {
-  cd pkg-get-$version/scripts
+  cd pkg-get/scripts
   install -D -m 755 pkg-get_completion.sh $PKG/etc/bash_completion.d/pkg-get
 }
