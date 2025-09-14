@@ -1,7 +1,7 @@
 # Description: Library for storing and retrieving passwords and other secrets
 # URL: https://wiki.gnome.org/Projects/Libsecret
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: gobject-introspection libgcrypt
+# Depends on: glib-introspection libgcrypt
 # Optional: bash-completion docbook-xsl vala
 
 name=libsecret
