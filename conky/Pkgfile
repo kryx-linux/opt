@@ -11,6 +11,8 @@ source=(https://github.com/brndnmtthws/conky/archive/v$version/$name-$version.ta
 build() {
     prt-get isinst wayland && PKGMK_CONKY+=' -D BUILD_WAYLAND=ON'
 
+    sed -i '/include(CCache)/d' -i $name-$version/CMakeLists.txt
+
     cmake -S $name-$version -B build -G Ninja $PKGMK_CONKY \
         -D CMAKE_BUILD_TYPE=Release \
         -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
