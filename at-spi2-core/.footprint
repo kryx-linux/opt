@@ -95,8 +95,8 @@ drwxr-xr-x	root/root	usr/lib/gtk-2.0/
 drwxr-xr-x	root/root	usr/lib/gtk-2.0/modules/
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/modules/libatk-bridge.so
 lrwxrwxrwx	root/root	usr/lib/libatk-1.0.so -> libatk-1.0.so.0
-lrwxrwxrwx	root/root	usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.25613.1
--rwxr-xr-x	root/root	usr/lib/libatk-1.0.so.0.25613.1
+lrwxrwxrwx	root/root	usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.25809.1
+-rwxr-xr-x	root/root	usr/lib/libatk-1.0.so.0.25809.1
 lrwxrwxrwx	root/root	usr/lib/libatk-bridge-2.0.so -> libatk-bridge-2.0.so.0
 lrwxrwxrwx	root/root	usr/lib/libatk-bridge-2.0.so.0 -> libatk-bridge-2.0.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libatk-bridge-2.0.so.0.0.0
@@ -107,6 +107,13 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/atk-bridge-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/atk.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/atspi-2.pc
+drwxr-xr-x	root/root	usr/lib/python3.12/
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/overrides/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/overrides/Atspi.py
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/gi/overrides/__pycache__/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/gi/overrides/__pycache__/Atspi.cpython-312.pyc
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/dbus-1/
 drwxr-xr-x	root/root	usr/share/dbus-1/accessibility-services/
