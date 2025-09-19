@@ -1,7 +1,7 @@
 # Description: A free and portable TrueType font rendering engine
 # URL: https://www.freetype.org
 # Maintainer: CRUX System Team, core-ports at crux dot nu
-# Depends on: meson ninja libpng
+# Depends on: libpng
 # Optional: brotli harfbuzz
 
 name=freetype
