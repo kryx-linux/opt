@@ -1,12 +1,14 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/RiE11cfGg5zge6nYbSlm6Cs5esmPfB5cI4jJiwFG/r5ujvL5nhngilt5XVcitk1A1RJmFffKg8YYp5VP6ar/QE=
-SHA256 (Pkgfile) = daa0441012a1a81e4a73213b7a8adbb2a0d0fdf87554642f4be66c328fbeeb24
-SHA256 (.footprint) = d326062b0c59bf6104fb21d0db17b2d7ea8a0665de8b0fcc86ec1a676e683c7a
-SHA256 (rustc-1.89.0-src.tar.xz) = 0b9d55610d8270e06c44f459d1e2b7918a5e673809c592abed9b9c600e33d95a
-SHA256 (rust-std-1.88.0-x86_64-unknown-linux-gnu.tar.xz) = 36d7eacf46bd5199cb433e49a9ed9c9b380d82f8a0ebc05e89b43b51c070c955
-SHA256 (rustc-1.88.0-x86_64-unknown-linux-gnu.tar.xz) = b049fd57fce274d10013e2cf0e05f215f68f6580865abc52178f66ae9bf43fd8
-SHA256 (cargo-1.88.0-x86_64-unknown-linux-gnu.tar.xz) = 856962610ee821648cee32e3d6abac667af7bb7ea6ec6f3d184cc31e66044f6b
+RWSE3ohX2g5d/fBca3gMSPhk46nYT4rctxs9zejTFmdn7PtiC0n7gKsLsxSPIAX0heTX/OoBUvzcPV0h1Jt0yMhTlp0X0tqkJw4=
+SHA256 (Pkgfile) = 7f9e87fff2a43279df0277d62eab9a3c1140add26811ff024a6c81ae987359dc
+SHA256 (.footprint) = 2b11d16ad9aa70c44b754fae613fa3912b4ff0023196d1b860ccb776576a6007
+SHA256 (rustc-1.90.0-src.tar.xz) = 6bfeaddd90ffda2f063492b092bfed925c4b8c701579baf4b1316e021470daac
+SHA256 (rust-std-1.89.0-x86_64-unknown-linux-gnu.tar.xz) = 2719470dcd78b3f97d78b978c8f85a1a58d84ff11b62558294621c01bca34d49
+SHA256 (rustc-1.89.0-x86_64-unknown-linux-gnu.tar.xz) = b42c254e1349df86bd40bc28fdf386172a1a46f2eeabe3c7a08a75cf1fb60e27
+SHA256 (cargo-1.89.0-x86_64-unknown-linux-gnu.tar.xz) = 99fc10be2aeedf2c23a484f217bfa76458494495a0eee33e280d3616bb08282d
 SHA256 (0001-bootstrap-Change-libexec-dir.patch) = b6fc1b7c3992876025ef989359d3227e0b38f9cc9093a9eb9ac9af3645be7f5d
 SHA256 (0002-bootstrap-Change-bash-completion-dir.patch) = d90abe88deb4682de981d05083d69074df551c1a0bb7d2264dbfab6aaf897a2a
 SHA256 (0003-compiler-Change-LLVM-targets.patch) = 0165321fa47f6fad5d15dc5c1fe7fd2ff8e65ff64663245aa81f58a07cf562d3
 SHA256 (0004-compiler-Use-wasm-ld-for-wasm-targets.patch) = 052fe0760bf848aaf3abf871a8ebe8057954e9cfd5b835b98119d917dfbf22fc
+SHA256 (0006-compiler-Swap-primary-and-secondary-lib-dirs.patch) = 08bab3fd57ef444fe4b87bd951e47bc3d11e9f77a6acb4e68227482ebe665e8f
+SHA256 (0007-bootstrap-Workaround-for-system-stage0.patch) = e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
