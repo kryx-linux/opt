@@ -4,7 +4,7 @@
 # Depends on: python3-wheel
 
 name=python3-docutils
-version=0.22.1
+version=0.22.2
 release=1
 source=(https://downloads.sourceforge.net/docutils/docutils-$version.tar.gz)
 
