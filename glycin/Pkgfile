@@ -1,0 +1,38 @@
+# Description: Sandboxed and extendable image loading
+# URL: https://gitlab.gnome.org/GNOME/glycin
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Depends on: bubblewrap fontconfig glib-introspection lcms2 libseccomp rust
+# Optional: jasper libheif libjxl librsvg
+
+name=glycin
+version=2.0.0
+release=1
+source=(https://gitlab.gnome.org/GNOME/glycin/-/archive/$version/glycin-$version.tar.bz2)
+
+build() {
+  prt-get isinst sccache && export RUSTC_WRAPPER=/usr/bin/sccache
+  [[ ! -e $PKGMK_SOURCE_DIR/rust ]] && mkdir $PKGMK_SOURCE_DIR/rust
+
+  PKGMK_GLYCIN_LOADERS='glycin-image-rs'
+  prt-get isinst libheif && PKGMK_GLYCIN_LOADERS+=',glycin-heif'
+  prt-get isinst librsvg && PKGMK_GLYCIN_LOADERS+=',glycin-svg'
+  prt-get isinst jasper && PKGMK_GLYCIN_LOADERS+=',glycin-jpeg2000'
+  prt-get isinst gtk4 && PKGMK_GLYCIN+=' -D libglycin-gtk4=true' || PKGMK_GLYCIN+=' -D libglycin-gtk4=false'
+
+  meson setup $name-$version build $PKGMK_GLYCIN \
+    --prefix=/usr \
+    --libexecdir=lib/$name \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true \
+    -D test_skip_install=false \
+    -D tests=false \
+    -D glycin-loaders=true \
+    -D glycin-thumbnailer=false \
+    -D loaders="$PKGMK_GLYCIN_LOADERS" \
+    -D vapi=false
+
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
+}
