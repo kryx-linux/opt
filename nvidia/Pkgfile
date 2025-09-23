@@ -4,9 +4,10 @@
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia
-version=580.76.05
+version=580.82.09
 release=1
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
+	https://github.com/NVIDIA/open-gpu-kernel-modules/archive/$version/$name-open-$version.tar.gz \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf nvidia-powerd.rc)
 
 build() {
@@ -169,8 +170,15 @@ build() {
 	install -D -m 0644 $SRC/90-nvidia-uvm.rules $PKG/lib/udev/rules.d/90-nvidia-uvm.rules
 
 	# kernel modules
-	cd kernel
-	IGNORE_CC_MISMATCH=1 make module
-	install -d $PKG/lib/modules/$(uname -r)/extra
-	install -m 0644 *.ko $PKG/lib/modules/$(uname -r)/extra/
+	if [ "${NVIDIA_PROPRIETARY_MODULES}" -eq 1 ]; then
+		cd kernel
+		IGNORE_CC_MISMATCH=1 make module
+		install -d $PKG/lib/modules/${KVER:-$(uname -r)}/extra
+		install -m 0644 *.ko $PKG/lib/modules/${KVER:-$(uname -r)}/extra/
+	else
+		cd $SRC/open-gpu-kernel-modules-$version
+		make modules
+		install -d $PKG/lib/modules/${KVER:-$(uname -r)}/extra
+		install -m 0644 kernel-open/*.ko $PKG/lib/modules/${KVER:-$(uname -r)}/extra/
+	fi
 }

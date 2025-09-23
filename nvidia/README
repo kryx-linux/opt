@@ -1,11 +1,26 @@
+-----------------------------------------------
+NOTE about open vs. proprietary kernel modules:
+-----------------------------------------------
 
+By default the 'open' (https://github.com/NVIDIA/open-gpu-kernel-modules)
+kernel modules are now used. If for some reason you prefer to fall back to
+the proprietary modules, set the following environment variable before
+building the nvidia port:
+
+NVIDIA_PROPRIETARY_MODULES=1
+
+
+-----------------------------------------
 NOTE about groups and device permissions:
+-----------------------------------------
 
 Add your user to the "video" group to be able to
 use the nvidia devices required for 3D to function properly.
 
 
+---------------------------------
 NOTE about wayland and eglstream:
+---------------------------------
 
 If wayland is installed and eglstream support is desired/needed,
 additionally install the 'egl-wayland' port.
