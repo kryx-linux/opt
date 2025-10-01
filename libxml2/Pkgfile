@@ -1,21 +1,24 @@
 # Description: XML library version 2
-# URL: http://xmlsoft.org/
+# URL: https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: zlib xz
+# Depends on: zlib
 
 name=libxml2
-version=2.14.6
+version=2.15.0
 release=1
 source=(https://download.gnome.org/sources/libxml2/${version:0:4}/$name-$version.tar.xz)
 
 build() {
-    cd $name-$version
+    sed -i '20,23s/^/#/' $name-$version/meson.build
 
-    ./configure \
+    meson setup $name-$version build \
         --prefix=/usr \
-        --sysconfdir=/etc
-    make
-    make DESTDIR=$PKG install
+        --buildtype=plain \
+        --wrap-mode nodownload \
+        -D b_lto=true \
+        -D b_pie=true \
+        -D legacy=enabled
 
-    rm -r $PKG/usr/share/{doc,gtk-doc}
+    meson compile -C build -j ${JOBS:-1}
+    DESTDIR=$PKG meson install -C build
 }
