@@ -5,9 +5,9 @@
 # Optional: cyrus-sasl gpgme libidn2
 
 name=mutt
-version=2.2.14
+version=2.2.15
 release=1
-source=(https://bitbucket.org/mutt/mutt/downloads/$name-$version.tar.gz)
+source=(http://ftp.mutt.org/pub/mutt/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
