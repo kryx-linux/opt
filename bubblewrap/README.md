@@ -31,8 +31,6 @@ can be used.
 - [Bubblewrap - Gentoo Wiki](https://wiki.gentoo.org/wiki/Bubblewrap)
 - [containers/bubblewrap: Low-level unprivileged sandboxing tool used by Flatpak and similar projects](https://github.com/containers/bubblewrap)
 
----
-
 [^1]: https://man7.org/linux/man-pages/man7/user_namespaces.7.html
 [^2]: https://man7.org/linux/man-pages/man7/namespaces.7.html
 [^3]: https://man.docs.euro-linux.com/EL%208/bubblewrap/bwrap.1.en.html
