@@ -1,0 +1,22 @@
+# Description:  Compatibility layer bettwen SDL2 and SDL3
+# URL: https://www.libsdl.org
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: libsdl3
+
+name=libsdl2-compat
+version=2.32.56
+release=1
+source=(https://github.com/libsdl-org/sdl2-compat/releases/download/release-$version/sdl2-compat-$version.tar.gz)
+
+build() {
+    cmake -S sdl2-compat-$version -B build \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBDIR=lib \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS"
+    
+    cmake --build build -j ${JOBS:-1}
+    DESTDIR=$PKG cmake --install build
+
+    rm -r $PKG/usr/share/licenses
+}
