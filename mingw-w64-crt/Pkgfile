@@ -3,8 +3,8 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=mingw-w64-crt
-version=12.0.0
-release=2
+version=13.0.0
+release=1
 source=(https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/mingw-w64-v$version.tar.bz2 \
 	http://ftpmirror.gnu.org/gnu/binutils/binutils-2.43.tar.xz \
 	http://gcc.gnu.org/pub/gcc/releases/gcc-14.2.0/gcc-14.2.0.tar.xz)
