@@ -1,0 +1,28 @@
+# Description: Source code documentation generator tool
+# URL: https://www.doxygen.nl/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: sqlite3
+# Optional: clang qt5 qt6-base spdlog
+
+name=doxygen
+version=1.14.0
+release=1
+source=(https://www.doxygen.nl/files/$name-$version.src.tar.gz)
+
+build() {
+    prt-get isinst spdlog   && PKGMK_DOXYGEN+=' -D use_sys_spdlog=ON -D use_sys_fmt=ON'
+    prt-get isinst clang    && PKGMK_DOXYGEN+=' -D use_libclang=ON'
+    prt-get isinst qt6-base || prt-get isinst qt5 && PKGMK_DOXYGEN+=' -D build_wizard=ON'
+
+    cmake -S $name-$version -B build $PKGMK_DOXYGEN \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBDIR=/usr/lib \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D use_sys_sqlite3=ON \
+        -Wno-dev
+
+    cmake --build build -j ${JOBS:-1}
+    DESTDIR=$PKG cmake --install build
+}
