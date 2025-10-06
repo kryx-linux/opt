@@ -1,10 +1,10 @@
 # Description: Provides access to Bluetooth hardware
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: qt6-declarative bluez
+# Depends on: bluez qt6-declarative
 
 name=qt6-connectivity
-version=6.9.2
+version=6.9.3
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtconnectivity-everywhere-src-$version.tar.xz)
 
