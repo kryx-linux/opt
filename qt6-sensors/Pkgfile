@@ -1,10 +1,10 @@
 # Description: Provides access to sensor hardware and motion gesture recognition
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: qt6-connectivity
+# Depends on: qt6-declarative
 
 name=qt6-sensors
-version=6.9.3
+version=6.10.0
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtsensors-everywhere-src-$version.tar.xz)
 
