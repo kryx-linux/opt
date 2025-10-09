@@ -1,10 +1,10 @@
 # Description: Classes for audio, video, radio and camera functionality
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: gst-libav qt6-declarative
+# Depends on: gst-libav qt6-quick3d
 
 name=qt6-multimedia
-version=6.9.3
+version=6.10.0
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtmultimedia-everywhere-src-$version.tar.xz)
 

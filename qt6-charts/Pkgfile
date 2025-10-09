@@ -1,10 +1,10 @@
 # Description: Provides a set of easy to use chart components
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: qt6-declarative
+# Depends on: qt6-multimedia
 
 name=qt6-charts
-version=6.9.3
+version=6.10.0
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtcharts-everywhere-src-$version.tar.xz)
 

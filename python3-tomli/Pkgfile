@@ -4,8 +4,8 @@
 # Depends on: python3-build
 
 name=python3-tomli
-version=2.2.1
-release=2
+version=2.3.0
+release=1
 source=(https://pypi.org/packages/source/t/tomli/tomli-$version.tar.gz)
 
 build() {

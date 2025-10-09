@@ -4,10 +4,9 @@
 # Depends on: spirv-headers
 
 name=spirv-tools
-version=1.4.321.0
-release=2
-source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/vulkan-sdk-$version/SPIRV-Tools-v$version.tar.gz
-    28a883ba4c67f58a9540fb0651c647bb02883622.patch)
+version=1.4.328.1
+release=1
+source=(https://github.com/KhronosGroup/SPIRV-Tools/archive/vulkan-sdk-$version/SPIRV-Tools-v$version.tar.gz)
 
 build() {
     PKGMK_SPIRV_TOOLS+=" \
@@ -20,8 +19,6 @@ build() {
 -D SPIRV-Headers_SOURCE_DIR=/usr \
 -D SPIRV_TOOLS_BUILD_STATIC=OFF \
 -Wno-dev"
-
-    patch -Np1 -d SPIRV-Tools-vulkan-sdk-$version -i $SRC/28a883ba4c67f58a9540fb0651c647bb02883622.patch
 
     cmake -B build-static $PKGMK_SPIRV_TOOLS \
         -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \

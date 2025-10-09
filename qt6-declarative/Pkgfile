@@ -1,12 +1,11 @@
 # Description: Classes for QML and JavaScript languages
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: qt6-shadertools
-# Optional: qt6-svg
+# Depends on: qt6-imageformats qt6-shadertools qt6-svg
 
 name=qt6-declarative
-version=6.9.3
-release=2
+version=6.10.0
+release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtdeclarative-everywhere-src-$version.tar.xz)
 
 build() {
