@@ -2,10 +2,10 @@
 # URL: https://www.webkitgtk.org/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: gst-plugins-base gtk4 hyphen icu libsecret libsoup3 libwebp ruby unifdef woff2 xorg-libxcomposite
-# Optional: bubblewrap enchant geoclue gst-plugins-bad libavif libmanette libnotify openjpeg2 wpebackend-fdo xdg-dbus-proxy
+# Optional: bubblewrap enchant geoclue gst-plugins-bad lcms2 libavif libmanette libnotify openjpeg2 wpebackend-fdo xdg-dbus-proxy
 
 name=webkitgtk
-version=2.50.0
+version=2.50.1
 release=1
 source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
@@ -16,15 +16,16 @@ build() {
   # Make sure we do not have ccache masquerade directory in PATH.
   #[ -e '/usr/bin/ccache' ] && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
-  prt-get isinst openjpeg2 || PKGMK_WEBKITGTK+=' -DUSE_OPENJPEG=OFF'
-  prt-get isinst enchant || PKGMK_WEBKITGTK+=' -DENABLE_SPELLCHECK=OFF'
-  prt-get isinst geoclue && PKGMK_WEBKITGTK+=' -DENABLE_GEOLOCATION=ON' || PKGMK_WEBKITGTK+=' -DENABLE_GEOLOCATION=OFF'
   prt-get isinst bubblewrap xdg-dbus-proxy && PKGMK_WEBKITGTK+=' -DENABLE_BUBBLEWRAP_SANDBOX=ON' \
   || PKGMK_WEBKITGTK+=' -DENABLE_BUBBLEWRAP_SANDBOX=OFF'
-  prt-get isinst wpebackend-fdo || PKGMK_WEBKITGTK+=' -DUSE_WPE_RENDERER=OFF'
-  prt-get isinst libmanette || PKGMK_WEBKITGTK+=' -DENABLE_GAMEPAD=OFF'
-  prt-get isinst libavif || PKGMK_WEBKITGTK+=' -DUSE_AVIF=OFF'
+  prt-get isinst enchant || PKGMK_WEBKITGTK+=' -DENABLE_SPELLCHECK=OFF'
+  prt-get isinst geoclue && PKGMK_WEBKITGTK+=' -DENABLE_GEOLOCATION=ON' || PKGMK_WEBKITGTK+=' -DENABLE_GEOLOCATION=OFF'
   prt-get isinst gst_plugins-bad || PKGMK_WEBKITGTK+=' -DUSE_GSTREAMER_TRANSCODER=OFF'
+  prt-get isinst lcms2 || PKGMK_WEBKITGTK+=' -D USE_LCMS=OFF'
+  prt-get isinst libavif || PKGMK_WEBKITGTK+=' -DUSE_AVIF=OFF'
+  prt-get isinst libmanette || PKGMK_WEBKITGTK+=' -DENABLE_GAMEPAD=OFF'
+  prt-get isinst openjpeg2 || PKGMK_WEBKITGTK+=' -DUSE_OPENJPEG=OFF'
+  prt-get isinst wpebackend-fdo || PKGMK_WEBKITGTK+=' -DUSE_WPE_RENDERER=OFF'
 
   cmake -S webkitgtk-$version -B build -G Ninja ${PKGMK_WEBKITGTK} \
     -D CMAKE_INSTALL_PREFIX=/usr \
