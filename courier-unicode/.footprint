@@ -6,13 +6,12 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libcourier-unicode.a
 -rwxr-xr-x	root/root	usr/lib/libcourier-unicode.la
-lrwxrwxrwx	root/root	usr/lib/libcourier-unicode.so -> libcourier-unicode.so.8.0.0
-lrwxrwxrwx	root/root	usr/lib/libcourier-unicode.so.8 -> libcourier-unicode.so.8.0.0
--rwxr-xr-x	root/root	usr/lib/libcourier-unicode.so.8.0.0
+lrwxrwxrwx	root/root	usr/lib/libcourier-unicode.so -> libcourier-unicode.so.10.0.0
+lrwxrwxrwx	root/root	usr/lib/libcourier-unicode.so.10 -> libcourier-unicode.so.10.0.0
+-rwxr-xr-x	root/root	usr/lib/libcourier-unicode.so.10.0.0
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/courier-unicode-version.m4
--rw-r--r--	root/root	usr/share/aclocal/courier-unicode.m4
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/unicode::bidi.3.gz
@@ -43,6 +42,7 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/unicode::linebreakc_callback_base.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/unicode::linebreakc_iter.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/unicode::tolower.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/unicode::totitle.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/unicode::toupper.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/unicode::ucs_2.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/unicode::ucs_4.3.gz
@@ -160,6 +160,8 @@ drwxr-xr-x	root/root	usr/share/man/man3/
 -rw-r--r--	root/root	usr/share/man/man3/unicode_wbscan_end.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/unicode_wbscan_init.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/unicode_wbscan_next.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/unicode_wcwidth.3.gz
+-rw-r--r--	root/root	usr/share/man/man3/unicode_wcwidth_str.3.gz
 -rw-r--r--	root/root	usr/share/man/man3/unicode_word_break.3.gz
 drwxr-xr-x	root/root	usr/share/man/man7/
 -rw-r--r--	root/root	usr/share/man/man7/courier-unicode.7.gz
