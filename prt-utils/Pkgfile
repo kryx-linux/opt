@@ -4,14 +4,20 @@
 # Depends on: elfutils dialog
 
 name=prt-utils
-version=1.3.5
-release=2
-_commit=390d0f774a76ce6a8323fa8827602fca39c05bc5
-source=(https://git.crux.nu/tools/$name/archive/$_commit.tar.gz)
-renames=($name-$version-$release.tar.gz)
+version=1.3.6
+release=1
+source=(https://git.crux.nu/tools/$name/archive/release-$version.tar.gz)
+renames=($name-$version.tar.gz)
 
 build() {
     cd $name
-    make DESTDIR=$PKG install
-    install -d $PKG/etc/revdep.d
+    make DESTDIR="$PKG" install
+    install -d "$PKG"/etc/revdep.d
+
+    # Uncomment the following and edit the sed command, if you want the 
+    # original bash scripts instead of the awk rewrites. Older shell 
+    # scripts are available for: prtverify, finddeps, findredundantdeps
+    #
+    # sed "/^LEGACY/s/=.*/= prtverify finddeps/" -i Makefile
+    # make DESTDIR="$PKG" install-legacy
 }
