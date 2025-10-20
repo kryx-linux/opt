@@ -3,25 +3,39 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=boehm-gc
-version=8.2.8
+version=8.2.10
 release=1
+_libatomic_ops=7.8.4
 source=(https://github.com/ivmai/bdwgc/releases/download/v$version/gc-$version.tar.gz
-  https://github.com/ivmai/libatomic_ops/releases/download/v7.8.2/libatomic_ops-7.8.2.tar.gz)
+  https://github.com/ivmai/libatomic_ops/releases/download/v$_libatomic_ops/libatomic_ops-$_libatomic_ops.tar.gz)
 
 build () {
-  cd gc-$version
+  PKGMK_GC_OPTIONS=(
+    -D CMAKE_INSTALL_PREFIX=/usr
+    -D CMAKE_INSTALL_LIBDIR=lib
+    -D CMAKE_BUILD_TYPE=Release
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS"
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS"
+    -D BUILD_TESTING=OFF
+    -D enable_docs=OFF
+    -D enable_cplusplus=ON
+    -Wno-dev
+    )
+  ln -s libatomic_ops-$_libatomic_ops gc-$version/libatomic_ops
 
-  ln -s ../libatomic_ops-7.8.2 libatomic_ops
+  cmake -S gc-$version -B build-shared -G Ninja \
+    "${PKGMK_GC_OPTIONS[@]}" \
+    -D BUILD_SHARED_LIBS=ON \
+    -D BUILD_STATIC_LIBS=OFF
+  cmake --build build-shared
+  DESTDIR=$PKG cmake --install build-shared
 
-  ./configure \
-      --prefix=/usr \
-      --enable-threads=pthreads \
-      --enable-static \
-      --enable-shared
-  make
-  make DESTDIR=$PKG install
+  cmake -S gc-$version -B build-static -G Ninja \
+    "${PKGMK_GC_OPTIONS[@]}" \
+    -D BUILD_STATIC_LIBS=ON \
+    -D BUILD_SHARED_LIBS=OFF
+  cmake --build build-static
+  DESTDIR=$PKG cmake --install build-static
 
-  rm -r $PKG/usr/share/doc
-
-  install -D -m 644 doc/gc.man $PKG/usr/share/man/man3/gc.3
+  install -D -m 644 gc-$version/doc/gc.man $PKG/usr/share/man/man3/gc.3
 }
