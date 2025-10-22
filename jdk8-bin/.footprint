@@ -14,6 +14,7 @@ lrwxrwxrwx	root/root	usr/lib/java -> jdk
 drwxr-xr-x	root/root	usr/lib/jdk/
 drwxr-xr-x	root/root	usr/lib/jdk/bin/
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/appletviewer
+-rwxr-xr-x	root/root	usr/lib/jdk/bin/asprof
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/clhsdb
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/extcheck
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/hsdb
@@ -33,6 +34,7 @@ drwxr-xr-x	root/root	usr/lib/jdk/bin/
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jdb
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jdeps
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jfr
+-rwxr-xr-x	root/root	usr/lib/jdk/bin/jfrconv
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jhat
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jinfo
 -rwxr-xr-x	root/root	usr/lib/jdk/bin/jjs
@@ -222,6 +224,7 @@ drwxr-xr-x	root/root	usr/lib/jdk/lib/amd64/jli/
 -rw-r--r--	root/root	usr/lib/jdk/lib/javafx-mx.jar
 -rw-r--r--	root/root	usr/lib/jdk/lib/jconsole.jar
 -rwxr-xr-x	root/root	usr/lib/jdk/lib/jexec
+-rw-r--r--	root/root	usr/lib/jdk/lib/libasyncProfiler.so
 -rw-r--r--	root/root	usr/lib/jdk/lib/orb.idl
 -rw-r--r--	root/root	usr/lib/jdk/lib/packager.jar
 -rw-r--r--	root/root	usr/lib/jdk/lib/sa-jdi.jar
