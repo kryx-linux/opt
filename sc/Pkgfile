@@ -4,7 +4,7 @@
 # Depends on: ncurses
 
 name=sc
-version=7.16-1.1.2
+version=7.16-1.1.3
 release=1
 source=(http://ftp.de.debian.org/debian/pool/main/s/sc/sc_$version.orig.tar.gz \
     http://ftp.de.debian.org/debian/pool/main/s/sc/sc_$version-1.debian.tar.xz)
