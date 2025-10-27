@@ -22,7 +22,6 @@ build() {
   export CXXFLAGS="$CFLAGS"
   echo $CFLAGS $CXXFLAGS
 
-  CONFIG_SHELL=/bin/bash \
   ./configure \
     --prefix=/usr \
     --mandir=/usr/share/man \
