@@ -5,7 +5,7 @@
 # Optional: clang qt5 qt6-base spdlog
 
 name=doxygen
-version=1.14.0
+version=1.15.0
 release=1
 source=(https://www.doxygen.nl/files/$name-$version.src.tar.gz)
 
