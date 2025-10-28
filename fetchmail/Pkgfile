@@ -4,18 +4,21 @@
 # Depends on: openssl
 
 name=fetchmail
-version=6.5.7
+version=6.6.0
 release=1
 source=(https://downloads.sourceforge.net/project/$name/branch_${version%.*}/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
 
-    # don't build python stuff it depends on TK
-    sed -i '22,27s/^/#/' Makefile.am
-    autoreconf -vi
+    ./configure \
+        --prefix=/usr \
+        --disable-nls \
+        PYTHON=:
 
-    ./configure --prefix=/usr --disable-nls
     make
     make DESTDIR=$PKG install
+
+    rm $PKG/usr/bin/fetchmailconf
+    rm $PKG/usr/share/man/man1/fetchmailconf.1
 }
