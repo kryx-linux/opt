@@ -4,7 +4,7 @@
 # Depends on: python3-tomli
 
 name=python3-pip
-version=25.2
+version=25.3
 release=1
 source=(https://files.pythonhosted.org/packages/source/${name:8:1}/${name#*-}/${name#*-}-$version.tar.gz
   EXTERNALLY-MANAGED.in)
