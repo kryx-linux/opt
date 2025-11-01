@@ -1,10 +1,10 @@
 # Description: Network grep utility
 # URL:         https://github.com/jpr5/ngrep
 # Maintainer:  Juergen Daubert, jue at crux dot nu
-# Depends on:  libpcap
+# Depends on:  libpcap libpcre2
 
 name=ngrep
-version=1.48.0
+version=1.48.1
 release=1
 source=(https://github.com/jpr5/ngrep/archive/refs/tags/v$version/$name-$version.tar.gz)
 
