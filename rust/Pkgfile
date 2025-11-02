@@ -5,9 +5,9 @@
 # Optional: clang libgit2 polly sccache
 
 name=rust
-version=1.90.0
-_date=2025-08-07
-_rustc=1.89.0
+version=1.91.0
+_date=2025-09-18
+_rustc=1.90.0
 _cargo=$_rustc
 release=1
 
@@ -17,10 +17,10 @@ source=(https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
     https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.xz
     0001-bootstrap-Change-libexec-dir.patch
     0002-bootstrap-Change-bash-completion-dir.patch
-    0003-compiler-Change-LLVM-targets.patch
-    0004-compiler-Use-wasm-ld-for-wasm-targets.patch
+    0003-bootstrap-Workaround-for-system-stage0.patch
+    0004-compiler-Change-LLVM-targets.patch
+    0005-compiler-Use-aarch64-linux-gnu-gcc-to-link-aarch64-t.patch
     0006-compiler-Swap-primary-and-secondary-lib-dirs.patch
-    0007-bootstrap-Workaround-for-system-stage0.patch
 )
 
 unpack_source() {
@@ -68,14 +68,14 @@ build() {
 
     patch -p1 -i $SRC/0001-bootstrap-Change-libexec-dir.patch
     patch -p1 -i $SRC/0002-bootstrap-Change-bash-completion-dir.patch
-    patch -p1 -i $SRC/0003-compiler-Change-LLVM-targets.patch
-    patch -p1 -i $SRC/0004-compiler-Use-wasm-ld-for-wasm-targets.patch
+    patch -p1 -i $SRC/0003-bootstrap-Workaround-for-system-stage0.patch
+    patch -p1 -i $SRC/0004-compiler-Change-LLVM-targets.patch
+    patch -p1 -i $SRC/0005-compiler-Use-aarch64-linux-gnu-gcc-to-link-aarch64-t.patch
     patch -p1 -i $SRC/0006-compiler-Swap-primary-and-secondary-lib-dirs.patch
-    patch -p1 -i $SRC/0007-bootstrap-Workaround-for-system-stage0.patch
 
 cat <<- EOF > $SRC/bootstrap.toml
 profile = "dist"
-change-id = 144675
+change-id = 146435
 
 [llvm]
 download-ci-llvm = false
@@ -96,7 +96,6 @@ backtrace-on-ice = true
 lld = false
 use-lld = "external"
 llvm-bitcode-linker = false
-jemalloc = true
 rpath = false
 frame-pointers = true
 deny-warnings = false
@@ -123,9 +122,9 @@ vendor = true
 locked-deps = true
 python = "/usr/bin/python3"
 optimized-compiler-builtins = true
-#@CARGO@
-#@RUST@
-#@RUSTFMT@
+@CARGO@
+@RUST@
+@RUSTFMT@
 
 [dist]
 compression-formats = ["gz"]
@@ -138,6 +137,7 @@ cc = @TARGETCC@
 cxx = @TARGETCXX@
 ar = @TARGETAR@
 ranlib = @TARGETRANLIB@
+@CLANGDIR64@
 
 [target.i686-unknown-linux-gnu]
 llvm-config = "/usr/bin/llvm-config"
@@ -146,6 +146,7 @@ cc = @TARGETCC@
 cxx = @TARGETCXX@
 ar = @TARGETAR@
 ranlib = @TARGETRANLIB@
+@CLANGDIR32@
 EOF
 
     if [ -e '/usr/bin/rustc' ]; then
@@ -166,16 +167,21 @@ EOF
     fi
 
     if prt-get isinst clang; then
+        clangdir="$(/usr/bin/clang -print-resource-dir)"
         sed -e 's|@TARGETCC@|"clang"|g' \
           -e 's|@TARGETCXX@|"clang++"|g' \
           -e 's|@TARGETAR@|"llvm-ar"|g' \
           -e 's|@TARGETRANLIB@|"llvm-ranlib"|g' \
+          -e "s|@CLANGDIR64@|optimized-compiler-builtins = \"$clangdir/lib/linux/libclang_rt.builtins-x86_64.a\"|g" \
+          -e "s|@CLANGDIR32@|optimized-compiler-builtins = \"$clangdir/lib/linux/libclang_rt.builtins-i386.a\"|g" \
           -i $SRC/bootstrap.toml
     else
         sed -e 's|@TARGETCC@|"gcc"|g' \
           -e 's|@TARGETCXX@|"g++"|g' \
           -e 's|@TARGETAR@|"gcc-ar"|g' \
           -e 's|@TARGETRANLIB@|"gcc-ranlib"|g' \
+          -e 's|@CLANGDIR64@||g' \
+          -e 's|@CLANGDIR32@||g' \
           -i $SRC/bootstrap.toml
     fi
 
@@ -224,5 +230,6 @@ EOF
     done < <(find "$PKG/usr/lib/rustlib"  -path '*/analysis/*.json' -print0)
 
     find $PKG/usr -name "*.old" -delete
+    rm $PKG/etc/target-spec-json-schema.json
     rm $PKG/usr/lib/rustlib/{install.log,manifest-*}
 }
