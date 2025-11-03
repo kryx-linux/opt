@@ -5,8 +5,8 @@
 # Optional: gdk-pixbuf graphite2 libdav1d sccache vala
 
 name=librsvg
-version=2.61.2
-release=3
+version=2.61.3
+release=1
 source=(https://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.xz)
 
 build() {
