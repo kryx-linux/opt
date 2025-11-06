@@ -5,7 +5,7 @@
 # Optional: gtk4 jasper libheif libjxl librsvg
 
 name=glycin
-version=2.0.4
+version=2.0.5
 release=1
 source=(https://gitlab.gnome.org/GNOME/glycin/-/archive/$version/glycin-$version.tar.bz2)
 
