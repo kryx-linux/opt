@@ -1,0 +1,22 @@
+# Description: Provides access to Bluetooth hardware
+# URL: https://www.qt.io/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: qt6-quick3d
+
+name=qt6-graphs
+version=6.10.0
+release=1
+source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtgraphs-everywhere-src-$version.tar.xz)
+
+build() {
+  prt-get isinst ccache && PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
+
+  cmake -S qtgraphs-everywhere-src-$version -B build -G Ninja $PKGMK_QT6 \
+    -D INSTALL_PUBLICBINDIR=usr/bin \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -Wno-dev
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+}
