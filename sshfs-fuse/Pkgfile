@@ -5,14 +5,9 @@
 # Optional: python3-docutils
 
 name=sshfs-fuse
-version=3.7.4a
+version=3.7.5
 release=1
-source=(https://github.com/deadbeefsociety/sshfs/releases/download/sshfs-$version/sshfs-$version.tar.xz)
-
-unpack_source() {
-    bsdtar -xf $PKGMK_SOURCE_DIR/sshfs-$version.tar.xz \
-        -C $SRC -po --no-xattr
-}
+source=(https://github.com/libfuse/sshfs/releases/download/sshfs-$version/sshfs-$version.tar.xz)
 
 build() {
     meson setup build sshfs-$version \
