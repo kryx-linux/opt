@@ -6,8 +6,9 @@
 SSD=/sbin/start-stop-daemon
 PROG=/usr/sbin/dovecot
 PID=/run/dovecot/master.pid
-KEY=/etc/ssl/private/dovecot.pem
-CRT=/etc/ssl/certs/dovecot.pem
+CRT=/etc/dovecot/ssl-cert.pem
+KEY=/etc/dovecot/ssl-key.pem
+}
 
 case $1 in
 start)
