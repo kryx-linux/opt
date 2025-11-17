@@ -11,7 +11,6 @@ source=(http://downloads.sourceforge.net/project/gimp-print/$name-5.3/$version/$
 build () {
     cd $name-$version
 
-    CONFIG_SHELL=/bin/bash \
     ./configure --prefix=/usr \
                 --disable-nls \
                 --disable-samples \
