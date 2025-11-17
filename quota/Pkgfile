@@ -11,7 +11,7 @@ source=(https://downloads.sourceforge.net/sourceforge/linuxquota/$name-$version.
 build(){
     cd $name-$version
 
-    CONFIG_SHELL=/bin/bash ./configure \
+    ./configure \
         --prefix=/usr \
         --sysconfdir=/etc \
         --disable-nls \
