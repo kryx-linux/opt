@@ -14,7 +14,6 @@ build() {
 
     prt-get isinst gpgme || PKGMK_DAR+=' --disable-gpgme-linking'
 
-    CONFIG_SHELL=/bin/bash \
     ./configure $PKGMK_DAR \
         --prefix=/usr \
         --disable-nls \
