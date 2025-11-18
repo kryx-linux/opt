@@ -8,7 +8,7 @@ PROG=/usr/sbin/dovecot
 PID=/run/dovecot/master.pid
 CRT=/etc/dovecot/ssl-cert.pem
 KEY=/etc/dovecot/ssl-key.pem
-}
+
 
 case $1 in
 start)

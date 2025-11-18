@@ -6,7 +6,7 @@
 
 name=dovecot
 version=2.4.2
-release=1
+release=2
 source=(https://dovecot.org/releases/2.4/$name-$version.tar.gz
     dovecot.rc dovecot.pam)
 
