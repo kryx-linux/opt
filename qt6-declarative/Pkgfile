@@ -4,7 +4,7 @@
 # Depends on: qt6-imageformats qt6-shadertools qt6-svg
 
 name=qt6-declarative
-version=6.10.0
+version=6.10.1
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtdeclarative-everywhere-src-$version.tar.xz)
 
