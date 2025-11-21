@@ -1,11 +1,11 @@
 # Description: Provides support for web applications using the Chromium browser project
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: cups ffmpeg fontconfig libevent libva libvpx minizip nodejs nss pciutils python3-html5lib qt6-positioning qt6-tools qt6-webchannel snappy xorg-libxcomposite xorg-libxcursor
+# Depends on: cups ffmpeg libevent libva libvpx minizip nodejs nss pciutils python3-html5lib qt6-positioning qt6-tools qt6-webchannel snappy xorg-libxcomposite xorg-libxcursor
 # Optional: dav1d fdk-aac gnutls graphite2 keyutils krb5 lame lcms2 libpcre2 libvdpau numactl pipewire x264 x265
 
 name=qt6-webengine
-version=6.10.0
+version=6.10.1
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz
   no-h264.patch
@@ -34,7 +34,7 @@ that, you can attempt to build opt/qt6-webengine again.
     exit 1
   fi
 
-  if ! /usr/bin/grep "#define QT_FEATURE_icu 1" /usr/include/qt6/QtCore/6.10.0/QtCore/private/qtcore-config_p.h &>/dev/null; then
+  if ! /usr/bin/grep "#define QT_FEATURE_icu 1" /usr/include/qt6/QtCore/6.10.1/QtCore/private/qtcore-config_p.h &>/dev/null; then
     printf '\e[31m%s\e[m\n' "
 opt/qt6-base is not build with opt/icu support, and opt/qt6-webengine
 depends on it!
