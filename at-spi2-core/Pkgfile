@@ -4,7 +4,7 @@
 # Depends on: dbus glib-introspection intltool xorg-libxtst
 
 name=at-spi2-core
-version=2.58.1
+version=2.58.2
 release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
@@ -16,7 +16,8 @@ build() {
         --buildtype=plain \
         --wrap-mode nodownload \
         -D b_lto=true \
-        -D b_pie=true
+        -D b_pie=true \
+        -D gtk2_atk_adaptor=false
 
     meson compile -C build -j ${JOBS:-1}
     DESTDIR=$PKG meson install -C build
