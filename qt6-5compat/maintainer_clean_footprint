@@ -1,0 +1,15 @@
+#!/bin/bash
+
+rm -f footprint.in
+mv .footprint footprint.in
+
+# These files are created when qt6-base is not built with icu support. There
+# will be a different footprint if it is.
+hash_patterns="qbig5codec_p.h qeucjpcodec_p.h qeuckrcodec_p.h qgb18030codec_p.h qiconvcodec_p.h qjiscodec_p.h qjpunicode_p.h qsjiscodec_p.h"
+
+for hash_pattern in ${hash_patterns[@]}; do
+  sed -i "/$hash_pattern/d" footprint.in
+done
+
+cp footprint.in .footprint
+rm -f footprint.in
