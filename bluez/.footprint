@@ -3,8 +3,6 @@ drwxr-xr-x	root/root	etc/bluetooth/
 -rw-r--r--	root/root	etc/bluetooth/input.conf
 -rw-r--r--	root/root	etc/bluetooth/main.conf
 -rw-r--r--	root/root	etc/bluetooth/network.conf
--rw-r--r--	root/root	etc/bluetooth/rfcomm.conf
--rw-r--r--	root/root	etc/bluetooth/uart.conf
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/bluetoothd
 drwxr-xr-x	root/root	lib/
