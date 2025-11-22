@@ -1,0 +1,38 @@
+# Description: Bluetooth libraries and utilities
+# URL: https://www.bluez.org/
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: dbus glib
+# Optional: alsa-lib cups json-c libical python3-docutils
+
+name=bluez
+version=5.85
+release=2
+source=(https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
+  bluetoothd.service)
+
+build() {
+  cd bluez-$version
+
+  prt-get isinst alsa-lib && PKGMK_BLUEZ+=' --enable-midi'
+  #prt-get isinst cups || PKGMK_BLUEZ+=' --disable-cups'
+  prt-get isinst python3-docutils || PKGMK_BLUEZ+=' --disable-manpages'
+  prt-get isinst json-c && PKGMK_BLUEZ+=' --enable-mesh'
+  prt-get isinst libical && PKGMK_BLUEZ+=' --enable-obex' || PKGMK_BLUEZ+=' --disable-obex'
+
+  CFLAGS="$CFLAGS -flto=auto" \
+  ./configure $PKGMK_BLUEZ \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --libexecdir=/usr/lib \
+    --enable-{a2dp,client,datafiles,deprecated,experimental,hid2hci,library,optimization,pie,tools} \
+    --disable-systemd
+  make
+  make DESTDIR=$PKG install
+
+  prt-get isinst libical && install -D -m 0755 tools/obexctl $PKG/usr/lib/bluetooth/obexctl
+  prt-get isinst zsh || rm -rf $PKG/usr/share/zsh
+
+  install -D -m 0644 src/main.conf $PKG/etc/bluetooth/main.conf
+  install -D -m 0755 $SRC/bluetoothd.service $PKG/etc/rc.d/bluetoothd
+}
