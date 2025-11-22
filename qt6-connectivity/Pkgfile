@@ -2,6 +2,7 @@
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: bluez qt6-declarative
+# Optional: pcsclite
 
 name=qt6-connectivity
 version=6.10.1
