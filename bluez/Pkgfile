@@ -19,7 +19,10 @@ build() {
   prt-get isinst json-c && PKGMK_BLUEZ+=' --enable-mesh'
   prt-get isinst libical && PKGMK_BLUEZ+=' --enable-obex' || PKGMK_BLUEZ+=' --disable-obex'
 
-  CFLAGS="$CFLAGS -flto=auto" \
+  if [[ "$(uname -m)" = "x86_64" ]]; then
+    export CFLAGS="$CFLAGS -flto=auto"
+  fi
+
   ./configure $PKGMK_BLUEZ \
     --prefix=/usr \
     --sysconfdir=/etc \
