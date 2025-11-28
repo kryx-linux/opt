@@ -2,10 +2,10 @@
 # URL: https://openprinting.github.io/cups/
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: acl libusb zlib linux-pam
-# Optional: dbus gnutls openssl
+# Optional: dbus gnutls
 
 name=cups
-version=2.4.14
+version=2.4.15
 release=1
 source=(https://github.com/OpenPrinting/cups/releases/download/v$version/$name-$version-source.tar.gz
     cups.rc cups.pam)
@@ -13,8 +13,7 @@ source=(https://github.com/OpenPrinting/cups/releases/download/v$version/$name-$
 build() {
     cd $name-$version
 
-    prt-get isinst openssl && PKGMK_CUPS=' --with-tls=openssl'
-    prt-get isinst gnutls && PKGMK_CUPS=' --with-tls=gnutls'
+    prt-get isinst gnutls && PKGMK_CUPS='--with-tls=gnutls' || PKGMK_CUPS='--with-tls=openssl'
 
     CC=cc CXX=c++ \
     ./configure $PKGMK_CUPS \
