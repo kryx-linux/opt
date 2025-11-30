@@ -5,7 +5,7 @@
 # Optional: libgcrypt
 
 name=libxslt
-version=1.1.44
+version=1.1.45
 release=1
 source=(https://gitlab.gnome.org/GNOME/libxslt/-/archive/v$version/libxslt-v$version.tar.bz2)
 
