@@ -57,11 +57,13 @@ drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/crt0-efi-x86_64.o
 -rw-r--r--	root/root	usr/lib/elf_x86_64_efi.lds
 -rw-r--r--	root/root	usr/lib/elf_x86_64_fbsd_efi.lds
+-rw-r--r--	root/root	usr/lib/gnu-efi.pc
 drwxr-xr-x	root/root	usr/lib/gnuefi/
 drwxr-xr-x	root/root	usr/lib/gnuefi/apps/
 -rw-r--r--	root/root	usr/lib/gnuefi/apps/AllocPages.efi
 -rw-r--r--	root/root	usr/lib/gnuefi/apps/FreePages.efi
 -rw-r--r--	root/root	usr/lib/gnuefi/apps/bltgrid.efi
+-rw-r--r--	root/root	usr/lib/gnuefi/apps/check_print.efi
 -rw-r--r--	root/root	usr/lib/gnuefi/apps/ctors_dtors_priority_test.efi
 -rw-r--r--	root/root	usr/lib/gnuefi/apps/ctors_test.efi
 -rw-r--r--	root/root	usr/lib/gnuefi/apps/debughook.efi
