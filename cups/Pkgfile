@@ -6,7 +6,7 @@
 
 name=cups
 version=2.4.16
-release=1
+release=2
 source=(https://github.com/OpenPrinting/cups/releases/download/v$version/$name-$version-source.tar.gz
     cups.rc cups.pam)
 
@@ -14,6 +14,8 @@ build() {
     cd $name-$version
 
     prt-get isinst gnutls && PKGMK_CUPS='--with-tls=gnutls' || PKGMK_CUPS='--with-tls=openssl'
+
+    sed '/^IdleExitTimeout/s/^/#/' -i conf/cupsd.conf.in
 
     CC=cc CXX=c++ \
     ./configure $PKGMK_CUPS \
