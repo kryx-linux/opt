@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=simdjson
-version=4.2.2
+version=4.2.3
 release=1
 source=(https://github.com/simdjson/simdjson/archive/v$version/$name-$version.tar.gz)
 
