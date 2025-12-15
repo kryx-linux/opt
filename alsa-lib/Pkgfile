@@ -4,11 +4,14 @@
 
 name=alsa-lib
 version=1.2.15
-release=1
-source=(https://www.alsa-project.org/files/pub/lib/$name-$version.tar.bz2)
+release=2
+source=(https://www.alsa-project.org/files/pub/lib/$name-$version.tar.bz2 \
+    488.patch)
 
 build() {
     cd $name-$version
+    patch -p1 -i $SRC/488.patch
+    autoreconf -fi
     ./configure --prefix=/usr \
         --disable-python
     make
