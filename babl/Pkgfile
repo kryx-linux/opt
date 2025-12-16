@@ -5,14 +5,17 @@
 # Optional: vala
 
 name=babl
-version=0.1.116
+version=0.1.118
 release=1
-source=(https://gitlab.gnome.org/GNOME/babl/-/archive/BABL_${version//./_}/babl-BABL_${version//./_}.tar.bz2)
+source=(https://download.gimp.org/pub/babl/0.1/babl-$version.tar.xz
+  4efc8b827e008417c4995a93ae3310697318cfab.patch)
 
 build() {
-  sed "s!@BABL_GIT_VERSION@!$version!g" ${name}-BABL_${version//./_}/git-version.h.in > ${name}-BABL_${version//./_}/git-version.h
+  sed "s!@BABL_GIT_VERSION@!$version!g" $name-$version/git-version.h.in > $name-$version/git-version.h
 
-  meson setup build ${name}-BABL_${version//./_} \
+  patch -Np1 -d $name-$version -i $SRC/4efc8b827e008417c4995a93ae3310697318cfab.patch
+
+  meson setup build $name-$version \
     --prefix=/usr \
     --buildtype=plain \
     --wrap-mode nodownload \
