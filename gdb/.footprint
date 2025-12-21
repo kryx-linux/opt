@@ -83,6 +83,8 @@ drwxr-xr-x	root/root	usr/share/gdb/python/gdb/dap/__pycache__/
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/__pycache__/breakpoint.cpython-312.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/__pycache__/bt.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/__pycache__/bt.cpython-312.pyc
+-rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/__pycache__/completions.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/__pycache__/completions.cpython-312.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/__pycache__/disassemble.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/__pycache__/disassemble.cpython-312.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/__pycache__/evaluate.cpython-312.opt-1.pyc
@@ -125,6 +127,7 @@ drwxr-xr-x	root/root	usr/share/gdb/python/gdb/dap/__pycache__/
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/__pycache__/varref.cpython-312.pyc
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/breakpoint.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/bt.py
+-rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/completions.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/disassemble.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/evaluate.py
 -rw-r--r--	root/root	usr/share/gdb/python/gdb/dap/events.py
