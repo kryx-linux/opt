@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=cmocka
-version=2.0.0
+version=2.0.1
 release=1
 source=(https://cmocka.org/files/2.0/$name-$version.tar.xz)
 
