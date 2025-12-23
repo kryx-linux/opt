@@ -2,12 +2,12 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/python3.12/
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/
-drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing-3.2.5.dist-info/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing-3.2.5.dist-info/METADATA
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing-3.2.5.dist-info/RECORD
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing-3.2.5.dist-info/WHEEL
-drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing-3.2.5.dist-info/licenses/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing-3.2.5.dist-info/licenses/LICENSE
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing-3.3.0.dist-info/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing-3.3.0.dist-info/METADATA
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing-3.3.0.dist-info/RECORD
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing-3.3.0.dist-info/WHEEL
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing-3.3.0.dist-info/licenses/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing-3.3.0.dist-info/licenses/LICENSE
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/__init__.py
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing/__pycache__/
@@ -32,6 +32,20 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/__pycache__/util.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/__pycache__/util.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/actions.py
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/__init__.py (EMPTY)
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/__pycache__/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/__pycache__/__init__.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/__pycache__/__init__.cpython-312.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/best_practices.md
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/show_best_practices/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/show_best_practices/__init__.py (EMPTY)
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/show_best_practices/__main__.py
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/show_best_practices/__pycache__/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/show_best_practices/__pycache__/__init__.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/show_best_practices/__pycache__/__init__.cpython-312.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/show_best_practices/__pycache__/__main__.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/ai/show_best_practices/__pycache__/__main__.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/common.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/pyparsing/core.py
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/pyparsing/diagram/
