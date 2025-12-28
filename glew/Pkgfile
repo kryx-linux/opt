@@ -4,40 +4,37 @@
 # Depends on: glu xorg-libxi xorg-libxmu
 
 name=glew
-version=2.2.0
-release=2
-source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tgz
-  egl+glx.patch
-  glew-install.patch)
+version=2.3.0
+release=1
+source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tgz)
 
 build() {
   cd $name-$version
 
-  patch -Np1 -i $SRC/glew-install.patch
-  patch -Np1 -i $SRC/egl+glx.patch
-
+  sed -i \
+    -e '/INSTALL/s:-s::' \
+    -e '/$(CC) $(CFLAGS) -o/s:$(CFLAGS):$(CFLAGS) $(LDFLAGS):' \
+    -e '/^.PHONY: .*\.pc$/d' \
+    Makefile
   sed -i -e "s|lib64|lib|" config/Makefile.linux
-  sed -i -e '/^.PHONY: .*\.pc$/d' -i Makefile
+  cp config/Makefile.linux config/Makefile.solaris
 
-  make \
+  GLEW_OPTIONS=(
     CC="${CC:-gcc}" \
     LD="${CC:-gcc}" \
     CFLAGS.EXTRA="$CFLAGS -fPIC" \
-    LDFLAGS.EXTRA="$LDFLAGS" \
-    STRIP= \
+    LDFLAGS.EXTRA="$LDFLAGS $(pkgconf --libs x11)" \
+    STRIP=true \
+    M_ARCH="" \
+    POPT="$CFLAGS" \
+    SYSTEM="linux-egl"
+  )
+
+  make "${GLEW_OPTIONS[@]}" \
     glew.bin
-
-  mv bin/glewinfo bin/glxewinfo
-  rm glew.pc
-
-  make SYSTEM=linux-egl \
-    STRIP= \
-    glew.lib.shared bin/glewinfo
-
-  mv bin/glewinfo bin/eglewinfo
-
-  make GLEW_DEST=$PKG/usr STRIP= \
-    SYSTEM=linux-egl install
-  install -D -m755 -t $PKG/usr/bin bin/eglewinfo bin/glxewinfo bin/visualinfo
-  ln -s eglewinfo $PKG/usr/bin/glewinfo
+  make "${GLEW_OPTIONS[@]}" \
+    LIBDIR="$PKG/usr/lib" \
+    GLEW_DEST="$PKG/usr" \
+    PKGDIR="$PKG/usr/lib/pkgconfig" \
+    install.all
 }
