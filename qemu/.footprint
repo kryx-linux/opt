@@ -65,6 +65,8 @@ drwxr-xr-x	root/root	usr/share/qemu/
 drwxr-xr-x	root/root	usr/share/qemu/dtb/
 -rw-r--r--	root/root	usr/share/qemu/dtb/bamboo.dtb
 -rw-r--r--	root/root	usr/share/qemu/dtb/canyonlands.dtb
+-rw-r--r--	root/root	usr/share/qemu/dtb/pegasos1.dtb
+-rw-r--r--	root/root	usr/share/qemu/dtb/pegasos2.dtb
 -rw-r--r--	root/root	usr/share/qemu/dtb/petalogix-ml605.dtb
 -rw-r--r--	root/root	usr/share/qemu/dtb/petalogix-s3adsp1800.dtb
 -rw-r--r--	root/root	usr/share/qemu/edk2-aarch64-code.fd
@@ -162,7 +164,7 @@ drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/skiboot.lid
 -rw-r--r--	root/root	usr/share/qemu/slof.bin
 -rw-r--r--	root/root	usr/share/qemu/trace-events-all
--rw-r--r--	root/root	usr/share/qemu/u-boot-sam460-20100605.bin
+-rw-r--r--	root/root	usr/share/qemu/u-boot-sam460.bin
 -rw-r--r--	root/root	usr/share/qemu/u-boot.e500
 -rw-r--r--	root/root	usr/share/qemu/vgabios-ati.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios-bochs-display.bin
