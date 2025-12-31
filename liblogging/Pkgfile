@@ -4,7 +4,7 @@
 # Depends on: python3-docutils
 
 name=liblogging
-version=1.0.7
+version=1.0.8
 release=1
 source=(https://github.com/rsyslog/liblogging/archive/v$version/$name-$version.tar.gz)
 
