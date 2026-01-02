@@ -1,0 +1,66 @@
+diff -Nru mdadm-4.5.orig/Grow.c mdadm-4.5/Grow.c
+--- mdadm-4.5.orig/Grow.c	2026-01-02 15:24:36.372318508 +0100
++++ mdadm-4.5/Grow.c	2026-01-02 15:27:20.984094338 +0100
+@@ -3509,7 +3509,7 @@
+ 		sysfs_set_str(sra, NULL, "array_state", "active");
+ 
+ 	/* Do not run in initrd */
+-	if (in_initrd()) {
++	if (mdadm_in_initrd()) {
+ 		free(fdlist);
+ 		free(offsets);
+ 		sysfs_free(sra);
+@@ -3814,7 +3814,7 @@
+ 		close(fd);
+ 
+ 		/* Do not run reshape in initrd but let it initialize.*/
+-		if (in_initrd()) {
++		if (mdadm_in_initrd()) {
+ 			sysfs_free(cc);
+ 			exit(0);
+ 		}
+diff -Nru mdadm-4.5.orig/mdadm.h mdadm-4.5/mdadm.h
+--- mdadm-4.5.orig/mdadm.h	2026-01-02 15:24:36.385651978 +0100
++++ mdadm-4.5/mdadm.h	2026-01-02 15:25:02.826043918 +0100
+@@ -1752,7 +1752,7 @@
+ bool stat_is_md_dev(struct stat *st);
+ extern char *fd2devnm(int fd);
+ 
+-extern int in_initrd(void);
++extern int mdadm_in_initrd(void);
+ 
+ struct cmap_hooks {
+ 	void *cmap_handle;      /* corosync lib related */
+diff -Nru mdadm-4.5.orig/mdmon.c mdadm-4.5/mdmon.c
+--- mdadm-4.5.orig/mdmon.c	2026-01-02 15:24:36.385651978 +0100
++++ mdadm-4.5/mdmon.c	2026-01-02 15:25:02.826241730 +0100
+@@ -366,7 +366,7 @@
+ 		}
+ 	}
+ 
+-	if (in_initrd()) {
++	if (mdadm_in_initrd()) {
+ 		/*
+ 		 * set first char of argv[0] to @. This is used by
+ 		 * systemd to signal that the task was launched from
+diff -Nru mdadm-4.5.orig/util.c mdadm-4.5/util.c
+--- mdadm-4.5.orig/util.c	2026-01-02 15:24:36.417946166 +0100
++++ mdadm-4.5/util.c	2026-01-02 15:25:02.826418953 +0100
+@@ -1974,7 +1974,7 @@
+ 	int len;
+ 	pid_t pid;
+ 	int status;
+-	char *prefix = in_initrd() ? "initrd-" : "";
++	char *prefix = mdadm_in_initrd() ? "initrd-" : "";
+ 	char pathbuf[1024];
+ 	char *paths[4] = {
+ 		pathbuf,
+@@ -2339,7 +2339,7 @@
+ 	return MDADM_STATUS_ERROR;
+ }
+ 
+-int in_initrd(void)
++int mdadm_in_initrd(void)
+ {
+ 	return access("/etc/initrd-release", F_OK) >= 0;
+ }
