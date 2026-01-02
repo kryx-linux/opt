@@ -1,10 +1,10 @@
 # Description: Network sniffer with command line interface
 # URL: https://www.tcpdump.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
-# Depends on: libpcap, openssl
+# Depends on: libpcap openssl
 
 name=tcpdump
-version=4.99.5
+version=4.99.6
 release=1
 source=(https://www.tcpdump.org/release/$name-$version.tar.gz)
 
