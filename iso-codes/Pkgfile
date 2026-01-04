@@ -4,16 +4,19 @@
 # Depends on: gettext python3
 
 name=iso-codes
-version=4.19.0
+version=4.20.1
 release=1
 source=(https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v$version/iso-codes-v$version.tar.gz)
 
 build() {
-    cd $name-v$version
+  meson setup $name-v$version build \
+    --prefix=/usr \
+    --buildtype=plain \
+    --wrap-mode nodownload \
+    -D b_lto=true \
+    -D b_pie=true
+  meson compile -C build
+  DESTDIR=$PKG meson install -C build
 
-    ./configure --prefix=/usr
-    make
-    make DESTDIR=$PKG install
-
-    rm -r $PKG/usr/share/locale
+  rm -r $PKG/usr/share/locale
 }
