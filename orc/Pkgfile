@@ -3,9 +3,9 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=orc
-version=0.4.41
+version=0.4.42
 release=1
-source=(https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
+source=(https://gitlab.freedesktop.org/gstreamer/orc/-/archive/$version/orc-$version.tar.bz2)
 
 build() {
   meson setup $name-$version build \
@@ -16,7 +16,6 @@ build() {
     -D b_pie=true \
     -D benchmarks=disabled \
     -D examples=disabled \
-    -D gtk_doc=disabled \
     -D tests=disabled
 
   meson compile -C build -j ${JOBS:-1}
