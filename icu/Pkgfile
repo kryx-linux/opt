@@ -4,7 +4,7 @@
 # Optional: clang lld
 
 name=icu
-version=78.1
+version=78.2
 release=1
 source=(https://github.com/unicode-org/icu/releases/download/release-$version/icu4c-$version-sources.tgz)
 
