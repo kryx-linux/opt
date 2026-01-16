@@ -5,15 +5,12 @@
 # Optional: vala
 
 name=babl
-version=0.1.118
+version=0.1.120
 release=1
-source=(https://download.gimp.org/pub/babl/0.1/babl-$version.tar.xz
-  4efc8b827e008417c4995a93ae3310697318cfab.patch)
+source=(https://download.gimp.org/pub/babl/0.1/babl-$version.tar.xz)
 
 build() {
   sed "s!@BABL_GIT_VERSION@!$version!g" $name-$version/git-version.h.in > $name-$version/git-version.h
-
-  patch -Np1 -d $name-$version -i $SRC/4efc8b827e008417c4995a93ae3310697318cfab.patch
 
   meson setup build $name-$version \
     --prefix=/usr \
