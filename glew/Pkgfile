@@ -4,7 +4,7 @@
 # Depends on: glu xorg-libxi xorg-libxmu
 
 name=glew
-version=2.3.0
+version=2.3.1
 release=1
 source=(https://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tgz)
 
