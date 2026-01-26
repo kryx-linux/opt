@@ -4,9 +4,9 @@
 
 name=dracut
 version=109
-release=1
+release=2
 source=(https://github.com/dracut-ng/dracut-ng/archive/$version/$name-$version.tar.gz
-    https://crux.nu/files/$name-man-pages-$version.tar.xz)
+    https://crux.nu/files/$name-man-pages-$version.tar.xz i18n_vars.conf)
 
 build() {
     cd dracut-ng-$version
@@ -19,4 +19,5 @@ build() {
     rm $PKG/usr/lib/$name/modules.d/*/README*
     cp -r $SRC/usr $PKG/
     chmod -R g-w $PKG/usr/lib/$name/modules.d
+    install -m 0644 $SRC/i18n_vars.conf $PKG/etc/dracut.conf.d/i18n_vars.conf
 }
