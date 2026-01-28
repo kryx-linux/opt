@@ -4,10 +4,14 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/dar_cp
 -rwxr-xr-x	root/root	usr/bin/dar_cp_static
 -rwxr-xr-x	root/root	usr/bin/dar_manager
+-rwxr-xr-x	root/root	usr/bin/dar_manager_static
 -rwxr-xr-x	root/root	usr/bin/dar_slave
+-rwxr-xr-x	root/root	usr/bin/dar_slave_static
 -rwxr-xr-x	root/root	usr/bin/dar_split
+-rwxr-xr-x	root/root	usr/bin/dar_split_static
 -rwxr-xr-x	root/root	usr/bin/dar_static
 -rwxr-xr-x	root/root	usr/bin/dar_xform
+-rwxr-xr-x	root/root	usr/bin/dar_xform_static
 drwxr-xr-x	root/root	usr/etc/
 -rw-r--r--	root/root	usr/etc/darrc
 drwxr-xr-x	root/root	usr/include/
@@ -93,9 +97,9 @@ drwxr-xr-x	root/root	usr/include/dar/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdar64.a
 -rwxr-xr-x	root/root	usr/lib/libdar64.la
-lrwxrwxrwx	root/root	usr/lib/libdar64.so -> libdar64.so.7000.0.0
-lrwxrwxrwx	root/root	usr/lib/libdar64.so.7000 -> libdar64.so.7000.0.0
--rwxr-xr-x	root/root	usr/lib/libdar64.so.7000.0.0
+lrwxrwxrwx	root/root	usr/lib/libdar64.so -> libdar64.so.7000.0.2
+lrwxrwxrwx	root/root	usr/lib/libdar64.so.7000 -> libdar64.so.7000.0.2
+-rwxr-xr-x	root/root	usr/lib/libdar64.so.7000.0.2
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libdar64.pc
 drwxr-xr-x	root/root	usr/share/
