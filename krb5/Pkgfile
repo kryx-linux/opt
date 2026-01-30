@@ -5,7 +5,7 @@
 # Optional: keyutils openldap
 
 name=krb5
-version=1.22.1
+version=1.22.2
 release=1
 source=(https://kerberos.org/dist/$name/${version::4}/$name-$version.tar.gz
     krb5)
@@ -22,14 +22,16 @@ build() {
         --prefix=/usr \
         --localstatedir=/var \
         --runstatedir=/run \
+        --enable-dns-for-realm \
         --enable-shared \
-        --disable-rpath \
-        --disable-nls \
-        --without-tcl \
+        --enable-thread-support \
         --with-system-et \
         --with-system-ss \
+        --disable-nls \
+        --disable-rpath \
         --without-system-verto \
-        --enable-dns-for-realm
+        --without-hesiod \
+        --without-tcl
 
     make
     make DESTDIR=$PKG install
