@@ -9,6 +9,7 @@ version=8.0.1
 release=1
 source=(https://ffmpeg.org/releases/$name-$version.tar.bz2
   add-av_stream_get_first_dts-for-chromium.patch
+  ffmpeg-8.0.1-svt-av1-4.patch
   ffmpeg-x264-10bit.sh)
 
 build() {
@@ -69,6 +70,7 @@ build() {
   prt-get isinst x265 && PKGMK_FFMPEG+=' --enable-libx265'
 
   patch -Np1 -i $SRC/add-av_stream_get_first_dts-for-chromium.patch
+  patch -Np1 -i $SRC/ffmpeg-8.0.1-svt-av1-4.patch
 
   sed -i -e '/check_cflags -fdiagnostics-color=auto/d' configure
 
