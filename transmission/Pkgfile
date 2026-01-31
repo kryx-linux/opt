@@ -2,17 +2,18 @@
 # URL: https://transmissionbt.com/
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: curl libevent
+# Optional: qt6-tools gtkmm3
 
 name=transmission
-version=4.0.6
+version=4.1.0
 release=1
-source=(https://github.com/transmission/transmission/releases/download/$version/$name-$version.tar.xz
-    miniupnp.patch)
+source=(https://github.com/transmission/transmission/releases/download/$version/$name-$version.tar.xz)
 
 build() {
-    patch -d transmission-$version -p1 -i $SRC/miniupnp.patch
+    prt-get isinst qt6-tools && PKGMK_TRANSMISSION+=' -D ENABLE_QT=ON'
+    prt-get isinst gtkmm3 && PKGMK_TRANSMISSION+=' -D ENABLE_GTK=ON'
 
-    cmake -S $name-$version -B build -G Ninja \
+    cmake -S $name-$version -B build -G Ninja $PKGMK_TRANSMISSION \
         -D CMAKE_BUILD_TYPE=Release \
         -D CMAKE_INSTALL_PREFIX=/usr \
         -D RUN_CLANG_TIDY=OFF \
@@ -20,8 +21,6 @@ build() {
         -D ENABLE_NLS=OFF \
         -D INSTALL_DOC=ON \
         -D INSTALL_LIB=OFF \
-        -D ENABLE_GTK=OFF \
-        -D ENABLE_QT=OFF \
         -D ENABLE_CLI=ON \
         -D ENABLE_DAEMON=ON
 
