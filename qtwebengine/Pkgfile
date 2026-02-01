@@ -1,12 +1,12 @@
 # Description: The Qt WebEngine module provides a web browser engine
 # URL: https://www.qt.io/
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: ffmpeg libvpx nodejs nss qt5 xorg-libxkbfile xorg-libxscrnsaver xorg-libxtst python3-html5lib
+# Depends on: libvpx nodejs nss qt5 xorg-libxkbfile xorg-libxscrnsaver xorg-libxtst python3-html5lib
 # Optional: glib icu jsoncpp krb5 krb5 lcms2 libevent libsrtp libxml2 libxslt minizip opus pipewire pulseaudio re2 snappy
 
 name=qtwebengine
 version=5.15.19
-release=2
+release=3
 
 # https://github.com/qt/qtwebengine/commits/5.15
 _qtwebengine_commit=a5d11cd6f8c487443c15c7e3a6cd8090b65cb313
@@ -19,7 +19,6 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_q
   qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
   qtwebengine-5.15.2_p20.1.621-clang-libc++.patch
   qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch
-  qtwebengine-5.15.3_p20220406-ffmpeg5.patch
   qtwebengine-5.15.13-icu_73-1.patch
   qt5-webengine-pipewire-0.3.patch
   qtwebengine-5.15.15-c++17.patch
@@ -27,7 +26,6 @@ source=(https://github.com/qt/qtwebengine/archive/$_qtwebengine_commit/$name-$_q
   programm_manager.patch
   ninja-1.12.patch
   no-h264.patch
-  qt5-webengine-ffmpeg7.patch
   python3.12-six.patch
 )
 
@@ -43,11 +41,9 @@ build() {
   patch -p1 -i $SRC/qtwebengine-5.15.2_p20210224-chromium-87-v8-icu68.patch
   patch -p1 -i $SRC/qtwebengine-5.15.2_p20.1.621-clang-libc++.patch
   patch -p1 -i $SRC/qtwebengine-5.15.2_p20211015-pdfium-system-lcms2.patch
-  patch -p1 -i $SRC/qtwebengine-5.15.3_p20220406-ffmpeg5.patch
   patch -p1 -i $SRC/qtwebengine-5.15.13-icu_73-1.patch
   patch -p1 -d src/3rdparty -i $SRC/qt5-webengine-pipewire-0.3.patch
   patch -p1 -i $SRC/ninja-1.12.patch
-  patch -p1 -d src/3rdparty/chromium -i $SRC/qt5-webengine-ffmpeg7.patch
   patch -p1 -i $SRC/no-h264.patch
   patch -p1 -d src/3rdparty/chromium -i $SRC/python3.12-six.patch
 
@@ -102,7 +98,6 @@ build() {
   qmake-qt5 .. -- \
     $PKGMK_QTWEBENGINE \
     -proprietary-codecs \
-    -system-ffmpeg \
     -system-opus \
     -system-webp \
     -no-feature-webengine-embedded-build
