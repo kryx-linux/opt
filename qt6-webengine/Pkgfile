@@ -96,6 +96,6 @@ that, you can attempt to build opt/qt6-webengine again.
 
   NINJA_STATUS="[%f/%t %es] " \
   EXTRA_GN="symbol_level=0" \
-  cmake --build build
+  cmake --build build -j ${JOBS-1}
   DESTDIR=$PKG cmake --install build
 }

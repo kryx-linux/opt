@@ -70,7 +70,7 @@ build opt/qt6-base again.
     -D QT_FEATURE_rpath=OFF \
     -Wno-dev
 
-  cmake --build build
+  cmake --build build -j ${JOBS-1}
   DESTDIR=$PKG cmake --install build
 
   rm -r $PKG/usr/share/doc

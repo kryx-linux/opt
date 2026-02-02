@@ -17,6 +17,6 @@ build() {
     -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -Wno-dev
-  cmake --build build
+  cmake --build build -j ${JOBS-1}
   DESTDIR=$PKG cmake --install build
 }
