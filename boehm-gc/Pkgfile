@@ -3,18 +3,14 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=boehm-gc
-version=8.2.10
-release=2
+version=8.2.12
+release=1
 _libatomic_ops=7.8.4
 source=(https://github.com/ivmai/bdwgc/releases/download/v$version/gc-$version.tar.gz
   https://github.com/ivmai/libatomic_ops/releases/download/v$_libatomic_ops/libatomic_ops-$_libatomic_ops.tar.gz
-  2cd0f5e56.patch 74fc05d12.patch
 )
 
 build () {
-  patch -Rp1 -d gc-$version -i $SRC/2cd0f5e56.patch
-  patch -Rp1 -d gc-$version -i $SRC/74fc05d12.patch
-
   PKGMK_GC_OPTIONS=(
     -D CMAKE_INSTALL_PREFIX=/usr
     -D CMAKE_INSTALL_LIBDIR=lib
