@@ -2,10 +2,10 @@
 # URL: https://gnutls.org
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: libunistring nettle p11-kit
-# Optional: brotli libidn2 tpm2-tss
+# Optional: brotli libidn2 texinfo tpm2-tss
 
 name=gnutls
-version=3.8.11
+version=3.8.12
 release=1
 source=(https://www.gnupg.org/ftp/gcrypt/$name/v${version:0:3}/$name-$version.tar.xz)
 
@@ -14,7 +14,8 @@ build() {
 
   prt-get isinst brotli && PKGMK_GNUTLS+=' --with-brotli'
   prt-get isinst libidn2 && PKGMK_GNUTLS+=' --with-idn'
-  prt-get isinst tpm2-tss || PKGMK_GNUTLS+='--without-tpm2'
+  prt-get isinst texinfo || PKGMK_GNUTLS+=' --disable-doc'
+  prt-get isinst tpm2-tss || PKGMK_GNUTLS+=' --without-tpm2'
 
   ./configure $PKGMK_GNUTLS \
     --prefix=/usr \
@@ -28,5 +29,5 @@ build() {
   make
   make DESTDIR=$PKG install
 
-  rm -r $PKG/usr/share/{doc,info,locale}
+  rm -r $PKG/usr/share/locale
 }
