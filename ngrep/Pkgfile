@@ -4,7 +4,7 @@
 # Depends on:  libpcap libpcre2
 
 name=ngrep
-version=1.48.3
+version=1.49.0
 release=1
 source=(https://github.com/jpr5/ngrep/archive/refs/tags/v$version/$name-$version.tar.gz)
 
