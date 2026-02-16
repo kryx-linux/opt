@@ -4,13 +4,13 @@
 # Depends on: bzip2 curl fmt libaio libpcre2 libxcrypt libxml2 linux-pam lzo ncurses
 
 name=mariadb
-version=12.1.2
+version=12.2.2
 release=1
-source=(https://dlm.mariadb.com/4509471/MariaDB/$name-$version/source/$name-$version.tar.gz
+source=(https://dlm.mariadb.com/4582483/MariaDB/$name-$version/source/$name-$version.tar.gz
     mariadb.rc mariadb.pam
     pre-install)
 
-build() {
+    build() {
     cmake -S $name-$version -B build -G Ninja \
         -D CMAKE_BUILD_TYPE=Release \
         -D INSTALL_LAYOUT=RPM \
