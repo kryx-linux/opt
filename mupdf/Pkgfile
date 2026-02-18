@@ -6,8 +6,9 @@
 
 name=mupdf
 version=1.27.1
-release=1
-source=(https://mupdf.com/downloads/archive/$name-$version-source.tar.lz)
+release=2
+source=(https://mupdf.com/downloads/archive/$name-$version-source.tar.lz
+    mupdf.pc.in)
 
 build() {
     cd $name-$version-source
@@ -23,8 +24,13 @@ build() {
     make install $PKGMK_MUPDF\
         prefix=$PKG/usr \
         mandir=$PKG/usr/share/man \
+        shared=yes \
         XCFLAGS="-fpic -fcommon"
 
     ln -s mupdf-gl $PKG/usr/bin/mupdf
+
+    sed "s/VERSION/$version/" $SRC/mupdf.pc.in > $SRC/mupdf.pc
+    install -D -m644 $SRC/mupdf.pc $PKG/usr/lib/pkgconfig/mupdf.pc
+
     rm -r $PKG/usr/share/doc
 }
