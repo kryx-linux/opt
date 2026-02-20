@@ -4,30 +4,36 @@
 # Depends on: xorg-xauth libjpeg-turbo
 
 name=slim
-version=1.4.0
+version=1.4.1
 release=1
 source=(https://sourceforge.net/projects/slim-fork/files/$name-$version.tar.gz
-    https://crux.nu/files/slim-crux-smooth.tar.gz $name.rc $name.pam)
+    https://crux.nu/files/slim-crux-smooth.tar.gz $name.rc $name.pam
+    log_h_includes.patch)
 
 build () {
-    cd $name-$version
+    patch -d $name-$version -p1 -i $SRC/log_h_includes.patch
 
-    cmake -DCMAKE_INSTALL_PREFIX=/usr \
+    cmake -S $name-$version -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=/usr/lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DUSE_PAM=yes \
         -DBUILD_SLIMLOCK=yes \
         -DUSE_CONSOLEKIT=no
 
-    make
-    make DESTDIR=$PKG install
+    cmake --build build
+
+    DESTDIR=$PKG cmake --install build
+
     mkdir $PKG/etc/rc.d
-    install -m 755 ../$name.rc $PKG/etc/rc.d/$name
-    cd ../
+    install -m 755 $SRC/$name.rc $PKG/etc/rc.d/$name
 
     rm -f slim-crux-smooth/README
     cp -r slim-crux-smooth $PKG/usr/share/slim/themes/crux-smooth
     chmod 0644 $PKG/usr/share/slim/themes/crux-smooth/*
 
     install -Dm 0644 $name.pam $PKG/etc/pam.d/$name
+
+    # remove systemd service file
+    rm -r $PKG/lib
 }
