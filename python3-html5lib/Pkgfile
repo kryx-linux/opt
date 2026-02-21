@@ -1,16 +1,18 @@
 # Description: A Python HTML parser/tokenizer based on the WHATWG HTML5 spec.
 # URL: https://github.com/html5lib/html5lib-python
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: python3-six python3-webencodings
+# Depends on: python3-packaging python3-six python3-webencodings
 
 name=python3-html5lib
 version=1.1
 release=2
-source=(https://github.com/html5lib/html5lib-python/archive/$version/html5lib-python-$version.tar.gz)
+source=(https://github.com/html5lib/html5lib-python/archive/$version/html5lib-python-$version.tar.gz
+  setuptools.patch)
 
 build() {
   cd html5lib-python-$version
 
+  patch -Np1 -i $SRC/setuptools.patch
   /usr/bin/python3 setup.py build
 
   /usr/bin/python3 setup.py install \
