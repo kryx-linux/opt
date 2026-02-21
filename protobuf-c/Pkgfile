@@ -1,0 +1,24 @@
+# Description: Protocol Buffers implementation in C
+# URL: https://github.com/protobuf-c/protobuf-c
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: protobuf
+
+name=protobuf-c
+version=1.5.2
+release=2
+source=(https://github.com/protobuf-c/protobuf-c/releases/download/v$version/$name-$version.tar.gz)
+
+build() {
+  cd $name-$version
+
+  CFLAGS="-O2 -pipe"
+  CXXFLAGS="-O2 -pipe"
+
+  autoreconf -fvi
+
+  ./configure --prefix=/usr \
+    --disable-static \
+    --disable-nls
+  make
+  make DESTDIR=$PKG install
+}
