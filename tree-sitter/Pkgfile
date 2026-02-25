@@ -4,13 +4,17 @@
 # Depends on:
 
 name=tree-sitter
-version=0.26.5
+version=0.26.6
 release=1
 source=(https://github.com/tree-sitter/tree-sitter/archive/v$version/$name-$version.tar.gz)
 
 build() {
-  cd $name-$version
-
-  make AMALGAMATED=1
-  make DESTDIR=$PKG PREFIX=/usr install
+  cmake -S $name-$version -B build -G Ninja \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -Wno-dev
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
 }
