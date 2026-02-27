@@ -11,11 +11,11 @@ lrwxrwxrwx	root/root	usr/share/hunspell/en_BW.aff -> en_GB.aff
 lrwxrwxrwx	root/root	usr/share/hunspell/en_BW.dic -> en_GB.dic
 lrwxrwxrwx	root/root	usr/share/hunspell/en_BZ.aff -> en_GB.aff
 lrwxrwxrwx	root/root	usr/share/hunspell/en_BZ.dic -> en_GB.dic
-lrwxrwxrwx	root/root	usr/share/hunspell/en_CA.aff -> en_AU.aff
+-rw-r--r--	root/root	usr/share/hunspell/en_CA.aff
 -rw-r--r--	root/root	usr/share/hunspell/en_CA.dic
 lrwxrwxrwx	root/root	usr/share/hunspell/en_DK.aff -> en_GB.aff
 lrwxrwxrwx	root/root	usr/share/hunspell/en_DK.dic -> en_GB.dic
-lrwxrwxrwx	root/root	usr/share/hunspell/en_GB.aff -> en_AU.aff
+-rw-r--r--	root/root	usr/share/hunspell/en_GB.aff
 -rw-r--r--	root/root	usr/share/hunspell/en_GB.dic
 lrwxrwxrwx	root/root	usr/share/hunspell/en_GH.aff -> en_GB.aff
 lrwxrwxrwx	root/root	usr/share/hunspell/en_GH.dic -> en_GB.dic
@@ -39,7 +39,7 @@ lrwxrwxrwx	root/root	usr/share/hunspell/en_SG.aff -> en_GB.aff
 lrwxrwxrwx	root/root	usr/share/hunspell/en_SG.dic -> en_GB.dic
 lrwxrwxrwx	root/root	usr/share/hunspell/en_TT.aff -> en_GB.aff
 lrwxrwxrwx	root/root	usr/share/hunspell/en_TT.dic -> en_GB.dic
-lrwxrwxrwx	root/root	usr/share/hunspell/en_US.aff -> en_AU.aff
+-rw-r--r--	root/root	usr/share/hunspell/en_US.aff
 -rw-r--r--	root/root	usr/share/hunspell/en_US.dic
 lrwxrwxrwx	root/root	usr/share/hunspell/en_ZA.aff -> en_GB.aff
 lrwxrwxrwx	root/root	usr/share/hunspell/en_ZA.dic -> en_GB.dic
