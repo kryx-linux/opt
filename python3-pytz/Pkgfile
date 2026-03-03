@@ -4,7 +4,7 @@
 # Depends on: python3-setuptools
 
 name=python3-pytz
-version=2025.2
+version=2026.1.post1
 release=1
 source=(https://pypi.io/packages/source/p/pytz/pytz-$version.tar.gz)
 
