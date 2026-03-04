@@ -5,7 +5,7 @@
 # Optional: doxygen
 
 name=libxml2
-version=2.15.1
+version=2.15.2
 release=1
 source=(https://download.gnome.org/sources/libxml2/${version:0:4}/$name-$version.tar.xz)
 
@@ -13,7 +13,7 @@ build() {
     prt-get isinst doxygen && PKGMK_LIBXML2+=' -D python=enabled'
 
     # Don't depend on git
-    sed -i '20,23s/^/#/' $name-$version/meson.build
+    sed -i '19,22s/^/#/' $name-$version/meson.build
 
     meson setup $name-$version build $PKGMK_LIBXML2 \
         --prefix=/usr \
