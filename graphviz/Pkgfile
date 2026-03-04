@@ -5,9 +5,9 @@
 # Optional: ghostscript gtk libgd librsvg libxrender pango poppler swig tcl
 
 name=graphviz
-version=14.1.2
+version=14.1.3
 release=1
-source=(https://gitlab.com/graphviz/graphviz/-/archive/$version/$name-$version.tar.bz2)
+source=(https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/$version/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
@@ -15,7 +15,6 @@ build() {
     # build fails if swig is installed but tcl is not
     prt-get isinst swig && ! prt-get isinst tcl && PKGMK_GRAPHVIZ='--disable-swig'
 
-    ./autogen.sh NOCONFIG
     ./configure --prefix=/usr $PKGMK_GRAPHVIZ
     make
     make DESTDIR=$PKG install
