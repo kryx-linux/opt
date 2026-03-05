@@ -5,9 +5,9 @@
 # Optional: clang libgit2 polly sccache
 
 name=rust
-version=1.93.1
-_date=2025-12-11
-_rustc=1.92.0
+version=1.94.0
+_date=2026-01-22
+_rustc=1.93.0
 _cargo=$_rustc
 release=1
 
@@ -75,7 +75,7 @@ build() {
 
 cat <<- EOF > $SRC/bootstrap.toml
 profile = "dist"
-change-id = 148795
+change-id = 148671
 
 [llvm]
 download-ci-llvm = false
@@ -172,8 +172,8 @@ EOF
           -e 's|@TARGETCXX@|"clang++"|g' \
           -e 's|@TARGETAR@|"llvm-ar"|g' \
           -e 's|@TARGETRANLIB@|"llvm-ranlib"|g' \
-          -e "s|@CLANGDIR64@|optimized-compiler-builtins = \"$clangdir/lib/linux/libclang_rt.builtins-x86_64.a\"|g" \
-          -e "s|@CLANGDIR32@|optimized-compiler-builtins = \"$clangdir/lib/linux/libclang_rt.builtins-i386.a\"|g" \
+          -e "s|@CLANGDIR64@|optimized-compiler-builtins = \"$clangdir/lib/x86_64-unknown-linux-gnu/libclang_rt.builtins.a\"|g" \
+          -e "s|@CLANGDIR32@|optimized-compiler-builtins = \"$clangdir/lib/i386-unknown-linux-gnu/libclang_rt.builtins.a\"|g" \
           -i $SRC/bootstrap.toml
     else
         sed -e 's|@TARGETCC@|"gcc"|g' \
