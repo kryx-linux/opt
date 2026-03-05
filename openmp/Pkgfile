@@ -4,22 +4,19 @@
 # Depends on: clang
 
 name=openmp
-version=21.1.8
+version=22.1.0
 release=1
-source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/$name-$version.src.tar.xz
-  https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz)
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz)
 
 build() {
-  mv cmake-$version.src cmake
+    cmake -S llvm-project-$version.src/openmp -B build -G Ninja \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D LIBOMP_INSTALL_ALIASES=OFF \
+        -Wno-dev
 
-  cmake -S $name-$version.src -B build -G Ninja \
-    -D CMAKE_INSTALL_PREFIX=/usr \
-    -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-    -D LIBOMP_INSTALL_ALIASES=OFF \
-    -Wno-dev
-
-  cmake --build build
-  DESTDIR=$PKG cmake --install build
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
 }
