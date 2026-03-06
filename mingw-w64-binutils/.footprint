@@ -20,7 +20,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/i686-w64-mingw32-strip
 -rwxr-xr-x	root/root	usr/bin/i686-w64-mingw32-windmc
 -rwxr-xr-x	root/root	usr/bin/i686-w64-mingw32-windres
--rw-------	root/root	usr/bin/st7TsgYz (EMPTY)
 -rwxr-xr-x	root/root	usr/bin/x86_64-w64-mingw32-addr2line
 -rwxr-xr-x	root/root	usr/bin/x86_64-w64-mingw32-ar
 -rwxr-xr-x	root/root	usr/bin/x86_64-w64-mingw32-as
@@ -54,6 +53,7 @@ drwxr-xr-x	root/root	usr/i686-w64-mingw32/bin/
 -rwxr-xr-x	root/root	usr/i686-w64-mingw32/bin/ranlib
 -rwxr-xr-x	root/root	usr/i686-w64-mingw32/bin/readelf
 -rwxr-xr-x	root/root	usr/i686-w64-mingw32/bin/strip
+-rwxr-xr-x	root/root	usr/i686-w64-mingw32/bin/windres
 drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/
 drwxr-xr-x	root/root	usr/i686-w64-mingw32/lib/ldscripts/
 -rw-r--r--	root/root	usr/i686-w64-mingw32/lib/ldscripts/i386pe.x
@@ -119,6 +119,7 @@ drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/bin/
 -rwxr-xr-x	root/root	usr/x86_64-w64-mingw32/bin/ranlib
 -rwxr-xr-x	root/root	usr/x86_64-w64-mingw32/bin/readelf
 -rwxr-xr-x	root/root	usr/x86_64-w64-mingw32/bin/strip
+-rwxr-xr-x	root/root	usr/x86_64-w64-mingw32/bin/windres
 drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/
 drwxr-xr-x	root/root	usr/x86_64-w64-mingw32/lib/ldscripts/
 -rw-r--r--	root/root	usr/x86_64-w64-mingw32/lib/ldscripts/i386pe.x
