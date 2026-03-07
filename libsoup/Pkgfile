@@ -1,5 +1,5 @@
 # Description: HTTP library implementation in C
-# URL: https://wiki.gnome.org/action/show/Projects/libsoup
+# URL: https://wiki.gnome.org/Projects/libsoup
 # Maintainer: Tim Biermann, tbier at posteo dot de
 # Depends on: glib-introspection glib-networking libpsl
 # Optional: krb5 vala
@@ -19,7 +19,6 @@ build() {
     --wrap-mode nodownload \
     -D b_lto=true \
     -D b_pie=true
-    #--auto-features disabled \
 
   sed -i 's|-R/usr/lib||g' build/build.ninja
 
