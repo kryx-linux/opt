@@ -6,7 +6,7 @@
 name=lua51
 version=5.1.5
 release=2
-source=(http://www.lua.org/ftp/lua-$version.tar.gz
+source=(https://www.lua.org/ftp/lua-$version.tar.gz
   lua.diff lua-5.1-cflags.diff)
 
 build() {
