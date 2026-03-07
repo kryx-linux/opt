@@ -6,14 +6,15 @@
 name=libmpeg2
 version=0.5.1
 release=1
-source=(https://libmpeg2.sourceforge.io/files/$name-$version.tar.gz)
+source=(https://download.videolan.org/contrib/libmpeg2/libmpeg2-$version.tar.gz)
 
 build () {
   cd $name-$version
+
   ./configure --prefix=/usr \
-  --with-gnu-ld \
-  --enable-shared \
-  --disable-nls
+    --with-gnu-ld \
+    --enable-shared \
+    --disable-nls
   make
   make DESTDIR=$PKG install
 }
