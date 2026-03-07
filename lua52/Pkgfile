@@ -6,7 +6,7 @@
 name=lua52
 version=5.2.4
 release=4
-source=(http://www.lua.org/ftp/lua-$version.tar.gz
+source=(https://www.lua.org/ftp/lua-$version.tar.gz
   lua.diff lua-5.2-cflags.diff lua.pc)
 
 build() {
