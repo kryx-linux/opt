@@ -53,11 +53,13 @@ drwxr-xr-x	root/root	usr/lib/postfix/
 -rwxr-xr-x	root/root	usr/lib/postfix/lmtp
 -rwxr-xr-x	root/root	usr/lib/postfix/local
 -rwxr-xr-x	root/root	usr/lib/postfix/master
+-rwxr-xr-x	root/root	usr/lib/postfix/nbdb_reindexd
 -rwxr-xr-x	root/root	usr/lib/postfix/nqmgr
 -rwxr-xr-x	root/root	usr/lib/postfix/oqmgr
 -rwxr-xr-x	root/root	usr/lib/postfix/pickup
 -rwxr-xr-x	root/root	usr/lib/postfix/pipe
 -rwxr-xr-x	root/root	usr/lib/postfix/post-install
+-rwxr-xr-x	root/root	usr/lib/postfix/postfix-non-bdb-script
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-pcre.so
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-script
 -rwxr-xr-x	root/root	usr/lib/postfix/postfix-tls-script
@@ -101,6 +103,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/postcat.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postconf.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postdrop.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/postfix-non-bdb.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postfix-tls.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postfix.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/postkick.1.gz
@@ -150,6 +153,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/lmtp.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/local.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/master.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/nbdb_reindexd.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/oqmgr.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/pickup.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/pipe.8.gz
