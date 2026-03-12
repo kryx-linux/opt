@@ -15,6 +15,9 @@ build() {
     prt-get isinst graphite2 && PKGMK_HARFBUZZ+=' -D graphite2=enabled'
     prt-get isinst icu || PKGMK_HARFBUZZ+=' -D icu=disabled'
 
+    sed -i '/# include/s/chafa.h/chafa\/chafa.h/' \
+      $name-$version/util/hb-info.cc $name-$version/util/helper-image-output.hh
+
     meson setup build $name-$version $PKGMK_HARFBUZZ \
         --prefix=/usr \
         --buildtype=plain \
