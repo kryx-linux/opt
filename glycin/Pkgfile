@@ -2,7 +2,7 @@
 # URL: https://gitlab.gnome.org/GNOME/glycin
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: bubblewrap fontconfig glib-introspection lcms2 libseccomp rust
-# Optional: gtk4 jasper libheif libjxl librsvg
+# Optional: gtk4 libheif libjxl librsvg
 
 name=glycin
 version=2.1.0
@@ -15,7 +15,6 @@ build() {
 
   PKGMK_GLYCIN_LOADERS='glycin-image-rs'
   prt-get isinst gtk4 && PKGMK_GLYCIN+=' -D libglycin-gtk4=true' || PKGMK_GLYCIN+=' -D libglycin-gtk4=false'
-  prt-get isinst jasper && PKGMK_GLYCIN_LOADERS+=',glycin-jpeg2000'
   prt-get isinst libheif && PKGMK_GLYCIN_LOADERS+=',glycin-heif'
   prt-get isinst libjxl && PKGMK_GLYCIN_LOADERS+=',glycin-jxl'
   prt-get isinst librsvg && PKGMK_GLYCIN_LOADERS+=',glycin-svg'
