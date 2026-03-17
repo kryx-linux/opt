@@ -4,9 +4,9 @@
 # Depends on: clang lld spirv-llvm-translator
 
 name=libclc
-version=21.1.8
+version=22.1.1
 release=1
-source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/libclc-$version.src.tar.xz)
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz)
 
 build() {
   # Strip mcpu|march|mtune flags
@@ -17,7 +17,7 @@ build() {
   # libclc is intended to be used with the Clang compiler's OpenCL frontend
   export CC=clang CXX=clang++ AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib LDFLAGS+=' -fuse-ld=lld'
 
-  cmake -S $name-$version.src -B build -G Ninja \
+  cmake -S llvm-project-$version.src/libclc -B build -G Ninja \
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=lib \
     -D CMAKE_BUILD_TYPE=Release \
