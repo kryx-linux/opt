@@ -1745,9 +1745,11 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/BasicSpecification/
 drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/bundle_config_version-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/bundle_update_bundler_version-c.ri
--rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/bundler_config_file-c.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/bundler_global_config_file-c.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/bundler_local_config_file-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/bundler_version-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/cdesc-BundlerVersionFinder.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/gemfile_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/lockfile_contents-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/lockfile_version-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BundlerVersionFinder/prioritize%21-c.ri
@@ -3568,6 +3570,7 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/Specification/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Specification/find_in_unresolved-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Specification/find_in_unresolved_tree-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Specification/find_inactive_by_path-c.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Specification/find_unloaded_by_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Specification/for_cache-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Specification/from_yaml-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Specification/gems_dir-i.ri
@@ -3653,6 +3656,7 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/SpecificationPolicy/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationPolicy/validate_array_attributes-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationPolicy/validate_attribute_present-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationPolicy/validate_authors_field-i.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationPolicy/validate_executable-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationPolicy/validate_for_resolution-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationPolicy/validate_lazy_metadata-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationPolicy/validate_licenses-i.ri
@@ -3687,6 +3691,7 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/SpecificationRecord/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationRecord/find_all_by_name-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationRecord/find_by_path-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationRecord/find_inactive_by_path-i.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationRecord/find_unloaded_by_path-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationRecord/from_path-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationRecord/installed_stubs-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SpecificationRecord/latest_spec_for-i.ri
