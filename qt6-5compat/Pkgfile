@@ -5,7 +5,7 @@
 # Optinal: icu
 
 name=qt6-5compat
-version=6.10.2
+version=6.11.0
 release=1
 source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qt5compat-everywhere-src-$version.tar.xz)
 
