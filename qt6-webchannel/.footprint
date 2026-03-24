@@ -2,12 +2,12 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/qt6/
 drwxr-xr-x	root/root	usr/include/qt6/QtWebChannel/
-drwxr-xr-x	root/root	usr/include/qt6/QtWebChannel/6.10.2/
-drwxr-xr-x	root/root	usr/include/qt6/QtWebChannel/6.10.2/QtWebChannel/
-drwxr-xr-x	root/root	usr/include/qt6/QtWebChannel/6.10.2/QtWebChannel/private/
--rw-r--r--	root/root	usr/include/qt6/QtWebChannel/6.10.2/QtWebChannel/private/qmetaobjectpublisher_p.h
--rw-r--r--	root/root	usr/include/qt6/QtWebChannel/6.10.2/QtWebChannel/private/qwebchannel_p.h
--rw-r--r--	root/root	usr/include/qt6/QtWebChannel/6.10.2/QtWebChannel/private/signalhandler_p.h
+drwxr-xr-x	root/root	usr/include/qt6/QtWebChannel/6.11.0/
+drwxr-xr-x	root/root	usr/include/qt6/QtWebChannel/6.11.0/QtWebChannel/
+drwxr-xr-x	root/root	usr/include/qt6/QtWebChannel/6.11.0/QtWebChannel/private/
+-rw-r--r--	root/root	usr/include/qt6/QtWebChannel/6.11.0/QtWebChannel/private/qmetaobjectpublisher_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtWebChannel/6.11.0/QtWebChannel/private/qwebchannel_p.h
+-rw-r--r--	root/root	usr/include/qt6/QtWebChannel/6.11.0/QtWebChannel/private/signalhandler_p.h
 -rw-r--r--	root/root	usr/include/qt6/QtWebChannel/QWebChannel
 -rw-r--r--	root/root	usr/include/qt6/QtWebChannel/QWebChannelAbstractTransport
 -rw-r--r--	root/root	usr/include/qt6/QtWebChannel/QtWebChannel
@@ -19,10 +19,10 @@ drwxr-xr-x	root/root	usr/include/qt6/QtWebChannel/6.10.2/QtWebChannel/private/
 -rw-r--r--	root/root	usr/include/qt6/QtWebChannel/qwebchannelabstracttransport.h
 -rw-r--r--	root/root	usr/include/qt6/QtWebChannel/qwebchannelglobal.h
 drwxr-xr-x	root/root	usr/include/qt6/QtWebChannelQuick/
-drwxr-xr-x	root/root	usr/include/qt6/QtWebChannelQuick/6.10.2/
-drwxr-xr-x	root/root	usr/include/qt6/QtWebChannelQuick/6.10.2/QtWebChannelQuick/
-drwxr-xr-x	root/root	usr/include/qt6/QtWebChannelQuick/6.10.2/QtWebChannelQuick/private/
--rw-r--r--	root/root	usr/include/qt6/QtWebChannelQuick/6.10.2/QtWebChannelQuick/private/qqmlwebchannelattached_p.h
+drwxr-xr-x	root/root	usr/include/qt6/QtWebChannelQuick/6.11.0/
+drwxr-xr-x	root/root	usr/include/qt6/QtWebChannelQuick/6.11.0/QtWebChannelQuick/
+drwxr-xr-x	root/root	usr/include/qt6/QtWebChannelQuick/6.11.0/QtWebChannelQuick/private/
+-rw-r--r--	root/root	usr/include/qt6/QtWebChannelQuick/6.11.0/QtWebChannelQuick/private/qqmlwebchannelattached_p.h
 -rw-r--r--	root/root	usr/include/qt6/QtWebChannelQuick/QQmlWebChannel
 -rw-r--r--	root/root	usr/include/qt6/QtWebChannelQuick/QtWebChannelQuick
 -rw-r--r--	root/root	usr/include/qt6/QtWebChannelQuick/QtWebChannelQuickDepends
@@ -44,14 +44,17 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6Qml/QmlPlugins/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginConfigVersionImpl.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginTargetsPrecheck.cmake
 drwxr-xr-x	root/root	usr/lib/cmake/Qt6WebChannel/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelAdditionalTargetInfo.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelConfig.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelConfigVersion.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelConfigVersionImpl.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelDependencies.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelExtras.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelTargetsPrecheck.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelVersionlessAliasTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannel/Qt6WebChannelVersionlessTargets.cmake
 drwxr-xr-x	root/root	usr/lib/cmake/Qt6WebChannelPrivate/
@@ -61,6 +64,7 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6WebChannelPrivate/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelPrivate/Qt6WebChannelPrivateConfigVersionImpl.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelPrivate/Qt6WebChannelPrivateDependencies.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelPrivate/Qt6WebChannelPrivateTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelPrivate/Qt6WebChannelPrivateTargetsPrecheck.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelPrivate/Qt6WebChannelPrivateVersionlessAliasTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelPrivate/Qt6WebChannelPrivateVersionlessTargets.cmake
 drwxr-xr-x	root/root	usr/lib/cmake/Qt6WebChannelQuick/
@@ -71,6 +75,7 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6WebChannelQuick/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickDependencies.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickTargetsPrecheck.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickVersionlessAliasTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickVersionlessTargets.cmake
 drwxr-xr-x	root/root	usr/lib/cmake/Qt6WebChannelQuickPrivate/
@@ -80,16 +85,17 @@ drwxr-xr-x	root/root	usr/lib/cmake/Qt6WebChannelQuickPrivate/
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuickPrivate/Qt6WebChannelQuickPrivateConfigVersionImpl.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuickPrivate/Qt6WebChannelQuickPrivateDependencies.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuickPrivate/Qt6WebChannelQuickPrivateTargets.cmake
+-rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuickPrivate/Qt6WebChannelQuickPrivateTargetsPrecheck.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuickPrivate/Qt6WebChannelQuickPrivateVersionlessAliasTargets.cmake
 -rw-r--r--	root/root	usr/lib/cmake/Qt6WebChannelQuickPrivate/Qt6WebChannelQuickPrivateVersionlessTargets.cmake
 -rw-r--r--	root/root	usr/lib/libQt6WebChannel.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6WebChannel.so -> libQt6WebChannel.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6WebChannel.so.6 -> libQt6WebChannel.so.6.10.2
--rwxr-xr-x	root/root	usr/lib/libQt6WebChannel.so.6.10.2
+lrwxrwxrwx	root/root	usr/lib/libQt6WebChannel.so.6 -> libQt6WebChannel.so.6.11.0
+-rwxr-xr-x	root/root	usr/lib/libQt6WebChannel.so.6.11.0
 -rw-r--r--	root/root	usr/lib/libQt6WebChannelQuick.prl
 lrwxrwxrwx	root/root	usr/lib/libQt6WebChannelQuick.so -> libQt6WebChannelQuick.so.6
-lrwxrwxrwx	root/root	usr/lib/libQt6WebChannelQuick.so.6 -> libQt6WebChannelQuick.so.6.10.2
--rwxr-xr-x	root/root	usr/lib/libQt6WebChannelQuick.so.6.10.2
+lrwxrwxrwx	root/root	usr/lib/libQt6WebChannelQuick.so.6 -> libQt6WebChannelQuick.so.6.11.0
+-rwxr-xr-x	root/root	usr/lib/libQt6WebChannelQuick.so.6.11.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt6WebChannel.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt6WebChannelQuick.pc
@@ -112,4 +118,10 @@ drwxr-xr-x	root/root	usr/lib/qt6/qml/QtWebChannel/
 -rw-r--r--	root/root	usr/lib/qt6/qml/QtWebChannel/plugins.qmltypes
 -rw-r--r--	root/root	usr/lib/qt6/qml/QtWebChannel/qmldir
 drwxr-xr-x	root/root	usr/lib/qt6/sbom/
--rw-r--r--	root/root	usr/lib/qt6/sbom/qtwebchannel-6.10.2.spdx
+-rw-r--r--	root/root	usr/lib/qt6/sbom/qtwebchannel-6.11.0.spdx
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/qt6/
+drwxr-xr-x	root/root	usr/share/qt6/webchannel/
+-rw-r--r--	root/root	usr/share/qt6/webchannel/qwebchannel.js
+drwxr-xr-x	root/root	usr/usr/
+drwxr-xr-x	root/root	usr/usr/bin/
