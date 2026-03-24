@@ -5,11 +5,9 @@
 # Optional: dav1d fdk-aac gnutls graphite2 keyutils krb5 lame lcms2 libpcre2 libvdpau numactl pipewire x264 x265
 
 name=qt6-webengine
-version=6.10.2
+version=6.11.0
 release=1
-source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz
-  no-h264.patch
-)
+source=(https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qtwebengine-everywhere-src-$version.tar.xz)
 
 build() {
   # WARNING: QtWebEngine won't be built. Could not find all necessary libraries for qpa-xcb support. X11:YES LIBDRM:YES XCOMPOSITE:YES XCURSOR:YES XRANDR:YES XI:YES XPROTO:YES XSHMFENCE:YES XTST:YES
@@ -64,8 +62,6 @@ that, you can attempt to build opt/qt6-webengine again.
   sed -e 's/^#define BA_LB_COUNT.*$/#define BA_LB_COUNT 40/' \
     -i qtwebengine-everywhere-src-$version/src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc
 
-  patch -Np1 -d qtwebengine-everywhere-src-$version -i $SRC/no-h264.patch
-
   cd $SRC/qtwebengine-everywhere-src-$version/src/3rdparty/chromium
   ./build/linux/unbundle/replace_gn_files.py --system-libraries $SYSLIBS
   cd $SRC
@@ -92,6 +88,7 @@ that, you can attempt to build opt/qt6-webengine again.
     -D QT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
     -D INSTALL_GN=OFF \
     -D WARNINGS_ARE_ERRORS=OFF \
+    -D FEATURE_webengine_system_minizip=OFF \
     -Wno-dev
 
   NINJA_STATUS="[%f/%t %es] " \
