@@ -4,7 +4,7 @@
 # Depends on: gtk3 dbus-glib xorg-libxcomposite xorg-libxcursor
 
 name=firefox-bin
-version=148.0.2
+version=149.0
 release=1
 source=(https://ftp.mozilla.org/pub/firefox/releases/$version/linux-x86_64/en-US/firefox-$version.tar.xz \
     policies.json firefox.desktop)
@@ -20,7 +20,7 @@ build() {
     echo "/usr/lib/firefox" > $PKG/etc/revdep.d/firefox-bin
 
     # Disable autoupdate
-    mkdir $PKG/usr/lib/firefox/distribution
+    #mkdir $PKG/usr/lib/firefox/distribution
 
     install -m644 $SRC/policies.json $PKG/usr/lib/firefox/distribution/
 
