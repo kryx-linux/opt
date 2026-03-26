@@ -1,7 +1,7 @@
 # Description: XML::Parser
 # URL: https://metacpan.org/pod/XML::Parser
 # Maintainer: Matt Housh, jaeger at crux dot ninja
-# Depends on: expat perl p5-file-sharedir-install
+# Depends on: expat perl p5-file-sharedir-install p5-file-sharedir
 
 name=p5-xml-parser
 version=2.52
