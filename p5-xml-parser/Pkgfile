@@ -4,7 +4,7 @@
 # Depends on: expat perl p5-file-sharedir-install p5-file-sharedir
 
 name=p5-xml-parser
-version=2.52
+version=2.54
 release=1
 source=(http://search.cpan.org/CPAN/authors/id/T/TO/TODDR/XML-Parser-$version.tar.gz)
 
