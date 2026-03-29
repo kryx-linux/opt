@@ -5,7 +5,7 @@
 # Optional: libluv libtermkey libuv libvterm lua51-lpeg lua51-mpack luajit luarocks msgpack-c tree-sitter tree-sitter-c tree-sitter-lua tree-sitter-vimdoc tree-sitter-viml unibilium
 
 name=neovim
-version=0.11.7
+version=0.12.0
 release=1
 source=(https://github.com/neovim/neovim/archive/v$version/$name-$version.tar.gz
   1267.patch
@@ -49,7 +49,7 @@ build() {
     -D CMAKE_CXX_FLAGS_RELEASE="$CFLAGS" \
     -D LUAJIT_PATCHES="$SRC/1267.patch" \
     -Wno-dev
-  cmake --build neovim-$version/.deps
+  cmake --build neovim-$version/.deps --verbose
 
   cmake -S neovim-$version -B build -G Ninja $PKGMK_NEOVIM \
     -D CMAKE_INSTALL_PREFIX=/usr \
