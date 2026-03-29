@@ -5,13 +5,15 @@
 name=f2fs-tools
 version=1.16.0
 release=1
-source=(https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/$name-$version.tar.gz)
+source=(https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/$name-$version.tar.gz\
+    0001-f2fs-tools-use-stdbool.h-instead-of-bool.patch)
 
 build() {
-	cd $name-$version
-	autoreconf -fi
-	./configure --prefix=/usr \
-		--sbindir=/sbin
-	make
-	make DESTDIR=$PKG install
+    cd $name-$version
+    patch -p1 -i $SRC/0001-f2fs-tools-use-stdbool.h-instead-of-bool.patch
+    autoreconf -fi
+    ./configure --prefix=/usr \
+        --sbindir=/sbin
+    make
+    make DESTDIR=$PKG install
 }
