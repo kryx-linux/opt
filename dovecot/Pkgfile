@@ -2,11 +2,11 @@
 # URL: https://dovecot.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: bzip2 libcap linux-pam openssl sqlite3 xz zlib
-# Optional: clucene cyrus-sasl icu krb5 libsodium lua53 lz4 mariadb nss openldap postgresql
+# Optional: clucene cyrus-sasl icu krb5 libsodium lua lz4 mariadb nss openldap postgresql
 
 name=dovecot
-version=2.4.2
-release=2
+version=2.4.3
+release=1
 source=(https://dovecot.org/releases/2.4/$name-$version.tar.gz
     dovecot.rc dovecot.pam)
 
@@ -17,7 +17,7 @@ build() {
     prt-get isinst icu && PKGMK_DOVECOT+=' --with-icu'
     prt-get isinst krb5 && PKGMK_DOVECOT+=' --with-gssapi'
     prt-get isinst libsodium && PKGMK_DOVECOT+=' --with-sodium'
-    prt-get isinst lua && PKGMK_DOVECOT+=' --with-lua=plugin'
+    prt-get isinst lua && PKGMK_DOVECOT+=' --with-lua=plugin' || PKGMK_DOVECOT+=' --without-lua'
     prt-get isinst mariadb && PKGMK_DOVECOT+=' --with-mysql'
     prt-get isinst openldap && PKGMK_DOVECOT+=' --with-ldap=plugin'
     prt-get isinst postgresql && PKGMK_DOVECOT+=' --with-pgsql'
