@@ -65,7 +65,7 @@ build() {
     --enable-ntlm
   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
-  make CFLAGS="$CFLAGS -fPIC"
+  make CFLAGS="$CFLAGS -fPIC -std=gnu17"
   make DESTDIR=$PKG install
 
   install -d \
