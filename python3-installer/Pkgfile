@@ -4,7 +4,7 @@
 # Depends on: python3-flit-core
 
 name=python3-installer
-version=1.0.0
+version=0.7.0
 release=1
 source=(https://pypi.org/packages/source/i/installer/installer-$version.tar.gz)
 
