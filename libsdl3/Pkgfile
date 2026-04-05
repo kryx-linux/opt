@@ -5,7 +5,7 @@
 # Optional: alsa-lib ibus jack pipewire pulseaudio wayland-protocols xorg-libxcursor xorg-libxfixes xorg-libxi xorg-libxscrnsaver xorg-xinput
 
 name=libsdl3
-version=3.4.2
+version=3.4.4
 release=1
 source=(https://github.com/libsdl-org/SDL/releases/download/release-$version/SDL3-$version.tar.gz)
 
