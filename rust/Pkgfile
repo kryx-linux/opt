@@ -125,6 +125,7 @@ optimized-compiler-builtins = true
 @CARGO@
 @RUST@
 @RUSTFMT@
+@CCACHE@
 
 [dist]
 compression-formats = ["gz"]
@@ -191,10 +192,13 @@ EOF
     export CARGO_HOME="$PKGMK_SOURCE_DIR/rust"
 
     ## sccache currently leads to errors
-    #if [ -e '/usr/bin/sccache' ]; then
-    #    export RUSTC_WRAPPER='/usr/bin/sccache'
-    #    export SCCACHE_IDLE_TIMEOUT='1500'
-    #fi
+    if [ -e '/usr/bin/sccache' ]; then
+        sed -e 's|@CCACHE@|ccache = "sccache"|g' \
+          -i $SRC/bootstrap.toml
+      else
+        sed -e 's|@CCACHE@||g' \
+          -i $SRC/bootstrap.toml
+    fi
 
     #error: field is never read: `id`
     #   --> src/bootstrap/lib.rs:280:5
