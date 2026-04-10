@@ -12,6 +12,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/pkgfoster
 -rwxr-xr-x	root/root	usr/bin/pkgsize
 -rwxr-xr-x	root/root	usr/bin/portspage
+lrwxrwxrwx	root/root	usr/bin/portspage-md -> portspage
 -rwxr-xr-x	root/root	usr/bin/prtcheck
 -rwxr-xr-x	root/root	usr/bin/prtcheckmissing
 -rwxr-xr-x	root/root	usr/bin/prtcheckperms
@@ -72,6 +73,8 @@ drwxr-xr-x	root/root	usr/share/portspage/
 -rw-r--r--	root/root	usr/share/portspage/style.html
 drwxr-xr-x	root/root	usr/share/prtcreate/
 -rw-r--r--	root/root	usr/share/prtcreate/autotools
+-rw-r--r--	root/root	usr/share/prtcreate/cargo
+-rw-r--r--	root/root	usr/share/prtcreate/cargo-offline
 -rw-r--r--	root/root	usr/share/prtcreate/cmake
 -rw-r--r--	root/root	usr/share/prtcreate/meson
 -rw-r--r--	root/root	usr/share/prtcreate/ninja
