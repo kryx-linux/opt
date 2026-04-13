@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=rootlesskit-bin
-version=2.3.6
+version=3.0.0
 release=1
 source=(https://github.com/rootless-containers/rootlesskit/releases/download/v$version/rootlesskit-x86_64.tar.gz)
 renames=(rootlesskit-$version-x86_64.tar.gz)
@@ -11,4 +11,5 @@ renames=(rootlesskit-$version-x86_64.tar.gz)
 build() {
     install -d $PKG/usr/bin
     install rootlesskit $PKG/usr/bin
+    ln -s rootlesskit $PKG/usr/bin/rlk
 }
