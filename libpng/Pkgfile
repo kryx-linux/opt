@@ -4,13 +4,13 @@
 # Depends on: zlib
 
 name=libpng
-version=1.6.57
+version=1.6.58
 release=1
 source=(https://download.sourceforge.net/$name/$name-$version.tar.xz
-    libpng-1.6.56-apng.patch)
+    libpng-1.6.57-apng-v2.patch)
 
 build() {
-    patch -Np1 -d $name-$version -i $SRC/libpng-1.6.56-apng.patch
+    patch -Np1 -d $name-$version -i $SRC/libpng-1.6.57-apng-v2.patch
 
     cmake -S $name-$version -B build -G Ninja \
       -D CMAKE_INSTALL_PREFIX=/usr \
