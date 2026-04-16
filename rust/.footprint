@@ -92,6 +92,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/alloc/src/ffi/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/alloc/src/ffi/c_str.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/alloc/src/ffi/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/alloc/src/fmt.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/alloc/src/intrinsics.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/alloc/src/lib.miri.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/alloc/src/lib.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/alloc/src/macros.rs
@@ -193,6 +194,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/backtrace/.github/
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/backtrace/.github/workflows/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/backtrace/.github/workflows/main.yml
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/backtrace/.github/workflows/publish.yml
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/backtrace/CHANGELOG.md
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/backtrace/Cargo.lock
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/backtrace/Cargo.toml
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/backtrace/LICENSE-APACHE
@@ -414,7 +416,6 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/aarch64.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/aarch64_outline_atomics.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/arm.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/arm_linux.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/avr.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/float/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/float/add.rs
@@ -483,6 +484,11 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/mem/x86_64.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/probestack.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/riscv.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/sync/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/sync/arm_linux.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/sync/arm_thumb_shared.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/sync/mod.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/sync/thumbv6k.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/x86.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins/src/x86_64.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/
@@ -510,8 +516,15 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/p
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/panic-handler/src/lib.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/Cargo.toml
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/build.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/src/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/src/main.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/tests/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/tests/all.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/tests/input/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/tests/input/core_symbols.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/tests/input/duplicates.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/symbol-check/tests/input/good.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/util/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/util/Cargo.toml
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/util/build.rs
@@ -520,6 +533,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/crates/u
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/etc/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/etc/function-definitions.json
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/etc/function-list.txt
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/etc/thumbv6-none-eabi.json
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/etc/thumbv7em-none-eabi-renamed.json
 -rwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/etc/update-api-list.py
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/compiler-builtins/josh-sync.toml
@@ -1105,6 +1119,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/coretests/benches/str/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/benches/str/char_count.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/benches/str/corpora.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/benches/str/debug.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/benches/str/eq_ignore_ascii_case.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/benches/str/iter.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/benches/tuple.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/lib.rs
@@ -1189,6 +1204,8 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/iter/trait
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/manually_drop.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/mem.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/mem/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/mem/fn_ptr.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/mem/trait_info_of.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/mem/type_info.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/net/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/net/ip_addr.rs
@@ -1198,6 +1215,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/net/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/nonzero.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/num/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/num/bignum.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/num/carryless_mul.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/num/clamp_magnitude.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/num/const_from.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/coretests/tests/num/dec2flt/
@@ -1315,12 +1333,8 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/core_simd_docs.md
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/fmt.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/iter.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/lane_count.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/lib.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/masks.rs
-drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/masks/
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/masks/bitmask.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/masks/full_masks.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/ops.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/core_simd/src/ops/
@@ -1399,6 +1413,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/std_f
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/test_helpers/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/test_helpers/Cargo.toml
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/test_helpers/src/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/test_helpers/src/approxeq.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/test_helpers/src/array.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/test_helpers/src/biteq.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/portable-simd/crates/test_helpers/src/lib.rs
@@ -1586,6 +1601,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/os/fd/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/fd/net.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/fd/owned.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/fd/raw.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/fd/stdio.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/fd/tests.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/os/fortanix_sgx/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/fortanix_sgx/arch.rs
@@ -1749,6 +1765,11 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/io/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/io/socket.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/io/tests.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/mod.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/net/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/net/addr.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/net/listener.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/net/mod.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/net/stream.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/process.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/raw.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/os/windows/thread.rs
@@ -1858,7 +1879,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/env/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/env/xous.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/env/zkvm.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/env_consts.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/exit_guard.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/exit.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/fd/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/fd/hermit.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/fd/mod.rs
@@ -1977,7 +1998,6 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/itron/time
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/motor/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/motor/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/motor/os.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/motor/time.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/abi/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/abi/entry.S
@@ -2000,7 +2020,6 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/abi/us
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/os.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/thread_parking.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/time.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/waitqueue/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/waitqueue/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/sgx/waitqueue/spin_mutex.rs
@@ -2018,7 +2037,6 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/solid/abi/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/solid/error.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/solid/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/solid/os.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/solid/time.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/teeos/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/teeos/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/teeos/os.rs
@@ -2028,8 +2046,8 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/uefi/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/uefi/helpers.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/uefi/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/uefi/os.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/uefi/system_time.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/uefi/tests.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/uefi/time.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/unix/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/unix/fuchsia.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/unix/futex.rs
@@ -2061,11 +2079,8 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/unsupporte
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/unsupported/common.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/unsupported/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/unsupported/os.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/unsupported/time.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/vexos/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/vexos/mod.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/vexos/os.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/vexos/time.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/wasi/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/wasi/cabi_realloc.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/wasi/helpers.rs
@@ -2103,7 +2118,6 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/xous/os/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/xous/os/params.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/xous/os/params/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/xous/os/params/tests.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/xous/time.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/zkvm/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/zkvm/abi.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/pal/zkvm/mod.rs
@@ -2285,6 +2299,17 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/thread_local/n
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/mod.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/thread_local/no_threads.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/thread_local/os.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/hermit.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/mod.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/sgx.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/solid.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/uefi.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/unix.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/unsupported.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/vexos.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/windows.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/sys/time/xous.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/test_helpers.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/src/thread/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/src/thread/builder.rs
@@ -2311,12 +2336,6 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/tests/common/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/env_modify.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/eq-multidispatch.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/error.rs
-drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/tests/floats/
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/floats/f128.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/floats/f16.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/floats/f32.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/floats/f64.rs
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/floats/lib.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/istr.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/log-knows-the-names-of-variants-in-std.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/minmax-stability-issue-23687.rs
@@ -2353,6 +2372,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std/tests/thread_local/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/volatile-fat-ptr.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/win_delete_self.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/windows.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std/tests/windows_unix_socket.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/std_detect/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std_detect/Cargo.toml
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/std_detect/README.md
@@ -2445,6 +2465,8 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/arm-unkn
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/arm-unknown-linux-gnueabihf/Dockerfile
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/armv7-unknown-linux-gnueabihf/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/armv7-unknown-linux-gnueabihf/Dockerfile
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/hexagon-unknown-linux-musl/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/hexagon-unknown-linux-musl/Dockerfile
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/i586-unknown-linux-gnu/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/i586-unknown-linux-gnu/Dockerfile
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/ci/docker/i686-unknown-linux-gnu/
@@ -2497,7 +2519,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/MISSING.md
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/README.md
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/missing-x86.md
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/rustfmt.toml
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/rustfmt.toml (EMPTY)
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/aarch64/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/aarch64/mod.rs
@@ -2533,6 +2555,10 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/s
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/arm_shared/neon/table_lookup_tests.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/arm_shared/test_support.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/core_arch_docs.md
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/hexagon/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/hexagon/mod.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/hexagon/v128.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/hexagon/v64.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/lib.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/loongarch32/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/core_arch/src/loongarch32/mod.rs
@@ -2667,6 +2693,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/simd-test-m
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/simd-test-macro/src/lib.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-arm/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-arm/Cargo.toml
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-arm/README.md
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-arm/spec/
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-arm/spec/neon/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-arm/spec/neon/aarch64.spec.yml
@@ -2686,6 +2713,11 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-arm/src/typekinds.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-arm/src/wildcards.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-arm/src/wildstring.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-hexagon/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-hexagon/Cargo.toml
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-hexagon/hvx_hexagon_protos.h
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-hexagon/src/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-hexagon/src/main.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-loongarch/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-loongarch/Cargo.toml
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-gen-loongarch/README.md
@@ -2704,6 +2736,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/crates/stdarch-tes
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/Cargo.toml
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/connect5.rs
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/gaussian.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/hex.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/stdarch/examples/wasm.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/stdarch/intrinsics_data/
@@ -2720,6 +2753,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/sysroot/src/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/sysroot/src/lib.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/test/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/test/Cargo.toml
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/test/build.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/test/src/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/test/src/bench.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/test/src/cli.rs
@@ -2767,10 +2801,10 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/unwind/src/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/unwind/src/libunwind.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/unwind/src/unwinding.rs
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/unwind/src/wasm.rs
-drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/windows_targets/
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/windows_targets/Cargo.toml
-drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/windows_targets/src/
--rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/windows_targets/src/lib.rs
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/windows_link/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/windows_link/Cargo.toml
+drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/library/windows_link/src/
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/library/windows_link/src/lib.rs
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/src/
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/src/llvm-project/
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/
@@ -2829,6 +2863,8 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/src/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/src/shadow_stack_unwind.h
 drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/CMakeLists.txt
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/aarch64_vg_unwind.pass.cpp
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/aarch64_za_unwind.pass.cpp
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/aix_runtime_link.pass.cpp
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/aix_signal_unwind.pass.sh.S
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/alignment.compile.pass.cpp
@@ -2843,6 +2879,7 @@ drwxr-xr-x	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/co
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/configs/llvm-libunwind-shared.cfg.in
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/configs/llvm-libunwind-static-mingw.cfg.in
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/configs/llvm-libunwind-static.cfg.in
+-rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/eh_frame_fde_pc_range.pass.cpp
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/floatregister.pass.cpp
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/forceunwind.pass.cpp
 -rw-r--r--	root/root	usr/lib/rustlib/src/rust/src/llvm-project/libunwind/test/libunwind_01.pass.cpp
