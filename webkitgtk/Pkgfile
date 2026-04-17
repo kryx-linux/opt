@@ -5,7 +5,7 @@
 # Optional: bubblewrap enchant geoclue lcms2 libavif libjxl libmanette libnotify xdg-dbus-proxy
 
 name=webkitgtk
-version=2.52.2
+version=2.52.3
 release=1
 source=(https://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
@@ -42,7 +42,7 @@ build() {
     -D ENABLE_SPEECH_SYNTHESIS=NO \
     -Wno-dev
 
-  cmake --build build
+  cmake --build build -j $(($(nproc) / 2))
   DESTDIR=$PKG cmake --install build
 
   rm -r $PKG/usr/share/locale
