@@ -12,7 +12,7 @@ build() {
   prt-get isinst ccache && PKGMK_QT6+=' -D QT_USE_CCACHE=ON' && PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
   cmake -S qtwebsockets-everywhere-src-$version -B build -G Ninja $PKGMK_QT6 \
-    -D INSTALL_PUBLICBINDIR=usr/bin \
+    -D INSTALL_PUBLICBINDIR=bin \
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
