@@ -1,6 +1,8 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/YQTolVLxDwH3sXFA9LgaCjbrlEyI5Jt4HAIqXnTW0XsbDytv3MWxs8Nnp+uugPE7pnpNRd0HAxzygQpa3W91wY=
-SHA256 (Pkgfile) = 2c7fc607b2bb0b32cc072a2a90b9945c0625b13183efb5646439c7e7018af1c0
+RWSE3ohX2g5d/bV7w3JkfUYoIa/LWbz6jHUboZSlzc49bgAvHrO1tVDHv/+M+9xwL33pdldLCWnLo22RhOrRJGlUW1JYdRUOaws=
+SHA256 (Pkgfile) = 051edb5d877f4c343dbd60071082a23862e8c98703e6ae261557608ab1092676
 SHA256 (.footprint) = 89277bc1141c73971f2135933f00f70b7cdf73afcb198e4806e0825e7caa139c
 SHA256 (polkit-127.tar.gz) = 9b7bc16f086479dcc626c575976568ba4a85d34297a750d8ab3d2e57f6d8b988
 SHA256 (22193ca2cc0f4e023d331cc1391f55143ef9cade.patch) = 3c03860a53415fc8deedd5b05774e137ccac49f2efb0229514ec59ca1aabfa16
+SHA256 (patch-src_polkit_polkitunixsession.c) = 1a367480e2119293d824fb8e79828b4293fab3ce26645e80e55af1cff025a8cd
+SHA256 (patch-src_polkitbackend_polkitbackendsessionmonitor.c) = cf8176698acbfe89d2cfe464cbbd55b5a98db7dba3f497f1044e89ed85143385

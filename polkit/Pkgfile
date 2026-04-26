@@ -5,14 +5,18 @@
 
 name=polkit
 version=127
-release=1
+release=2
 source=(https://github.com/polkit-org/polkit/archive/$version/$name-$version.tar.gz
-  22193ca2cc0f4e023d331cc1391f55143ef9cade.patch)
+  22193ca2cc0f4e023d331cc1391f55143ef9cade.patch
+  patch-src_polkit_polkitunixsession.c
+  patch-src_polkitbackend_polkitbackendsessionmonitor.c)
 
 build() {
   prt-get isinst mozjs91 && PKGMK_POLKIT+=' -D js_engine=mozjs'
 
   patch -Rp1 -d $name-$version -i $SRC/22193ca2cc0f4e023d331cc1391f55143ef9cade.patch
+  patch -Np0 -d $name-$version -i $SRC/patch-src_polkit_polkitunixsession.c
+  patch -Np0 -d $name-$version -i $SRC/patch-src_polkitbackend_polkitbackendsessionmonitor.c
 
   meson setup $name-$version build $PKGMK_POLKIT \
     --prefix=/usr \
