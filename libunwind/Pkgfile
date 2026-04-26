@@ -12,6 +12,7 @@ build() {
   cd $name-$version
 
   autoreconf -fvi
+  CFLAGS+=' -std=gnu17'
   ./configure --prefix=/usr \
     --libexecdir=/usr/lib/$name \
     --enable-documentation
