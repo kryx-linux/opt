@@ -4,7 +4,7 @@
 # Depends on: dbus glib-introspection intltool xorg-libxtst
 
 name=at-spi2-core
-version=2.60.2
+version=2.60.3
 release=1
 source=(https://gitlab.gnome.org/GNOME/at-spi2-core/-/archive/$version/at-spi2-core-$version.tar.bz2)
 
