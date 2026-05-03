@@ -1,0 +1,70 @@
+From b5f03f151f0edbf43dd5793e2d6f1c94f7d3d408 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Randy=20D=C3=B6ring?=
+ <30527984+radoering@users.noreply.github.com>
+Date: Sun, 29 Mar 2026 18:23:06 +0200
+Subject: [PATCH] Fix long path issue on Windows (#321)
+
+Path.is_relative_to does not work if one of both paths has a long path prefix and the other has not. A long path prefix may be added when calling Path.resolve().
+---
+ src/installer/destinations.py |  3 +-
+ src/installer/utils.py        | 28 +++++++++++++++
+ tests/test_utils.py           | 66 +++++++++++++++++++++++++++++++++++
+ 3 files changed, 96 insertions(+), 1 deletion(-)
+
+diff --git a/src/installer/destinations.py b/src/installer/destinations.py
+index 2858c9b0..71a8f9f4 100644
+--- a/src/installer/destinations.py
++++ b/src/installer/destinations.py
+@@ -19,6 +19,7 @@
+     construct_record_file,
+     copyfileobj_with_hashing,
+     fix_shebang,
++    is_relative_to,
+     make_file_executable,
+ )
+ 
+@@ -139,7 +140,7 @@ def _path_with_destdir(self, scheme: Scheme, path: str) -> Path:
+         target_dir = Path(self.scheme_dict[scheme]).resolve()
+         file = (target_dir / path).resolve()
+ 
+-        if not file.is_relative_to(target_dir):
++        if not is_relative_to(file, target_dir):
+             raise ValueError(
+                 f"Attempting to write {path} outside of the target directory"
+             )
+diff --git a/src/installer/utils.py b/src/installer/utils.py
+index d7cc6704..515dd44a 100644
+--- a/src/installer/utils.py
++++ b/src/installer/utils.py
+@@ -270,3 +270,31 @@ def _current_umask() -> int:
+ def make_file_executable(path: Path) -> None:
+     """Make the file at the provided path executable."""
+     path.chmod(0o777 & ~_current_umask() | 0o111)
++
++
++# Borrowed from:
++# https://github.com/python-poetry/poetry/blob/95cd84c149a14b55ae8e41328bc6752fbb8b6883/src/poetry/utils/_compat.py#L56
++def is_relative_to(path1: Path, path2: Path) -> bool:
++    """Check if path1 is relative to path2.
++
++    Works also if one of both paths has a Windows long path prefix.
++    A long path prefix may be added when calling Path.resolve().
++    """
++    if _WINDOWS:  # pragma: no cover
++        # Work around an issue that is_relative_to() does not work if
++        # one of both paths has a long path prefix and the other path has not.
++        long_path_prefix = "\\\\?\\"
++        long_path_unc_prefix = f"{long_path_prefix}UNC\\"
++
++        def remove_long_path_prefix(path: Path) -> Path:
++            if (path_str := str(path)).startswith(long_path_prefix):
++                if path_str.startswith(long_path_unc_prefix):
++                    path = Path("\\\\" + path_str.removeprefix(long_path_unc_prefix))
++                else:
++                    path = Path(path_str.removeprefix(long_path_prefix))
++            return path
++
++        path1 = remove_long_path_prefix(path1)
++        path2 = remove_long_path_prefix(path2)
++
++    return path1.is_relative_to(path2)

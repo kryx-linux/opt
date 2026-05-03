@@ -1,0 +1,87 @@
+From 8b72cf945bfa72295fe4e0e8b9ddc13f8df32964 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Randy=20D=C3=B6ring?=
+ <30527984+radoering@users.noreply.github.com>
+Date: Wed, 8 Apr 2026 12:35:08 +0200
+Subject: [PATCH] perf: use `os.path.abspath()` instead of `Path.resolve()`
+ (#326)
+
+Additionally, remove the Windows long path workaround because it should not be required if we no not resolve paths.
+---
+ src/installer/destinations.py | 19 +++++++---
+ src/installer/utils.py        | 28 ---------------
+ tests/test_utils.py           | 66 -----------------------------------
+ 3 files changed, 14 insertions(+), 99 deletions(-)
+
+diff --git a/src/installer/destinations.py b/src/installer/destinations.py
+index 71a8f9f4..ed5d07a9 100644
+--- a/src/installer/destinations.py
++++ b/src/installer/destinations.py
+@@ -19,7 +19,6 @@
+     construct_record_file,
+     copyfileobj_with_hashing,
+     fix_shebang,
+-    is_relative_to,
+     make_file_executable,
+ )
+ 
+@@ -137,10 +136,20 @@ class SchemeDictionaryDestination(WheelDestination):
+     """Silently overwrite existing files."""
+ 
+     def _path_with_destdir(self, scheme: Scheme, path: str) -> Path:
+-        target_dir = Path(self.scheme_dict[scheme]).resolve()
+-        file = (target_dir / path).resolve()
+-
+-        if not is_relative_to(file, target_dir):
++        # See https://docs.python.org/3/library/zipfile.html#zipfile.Path:
++        #  When handling untrusted archives,
++        #  consider resolving filenames using os.path.abspath()
++        #  and checking against the target directory with os.path.commonpath().
++        #
++        # Attention: Path.absolute() is not sufficient because it does not
++        #  normalize, i.e. does not remove "..".
++        #
++        # We want to avoid Path.resolve() because it is significantly slower
++        # than os.path.abspath()!
++        target_dir = Path(os.path.abspath(self.scheme_dict[scheme]))  # noqa: PTH100
++        file = Path(os.path.abspath(target_dir / path))  # noqa: PTH100
++
++        if not file.is_relative_to(target_dir):
+             raise ValueError(
+                 f"Attempting to write {path} outside of the target directory"
+             )
+diff --git a/src/installer/utils.py b/src/installer/utils.py
+index 515dd44a..d7cc6704 100644
+--- a/src/installer/utils.py
++++ b/src/installer/utils.py
+@@ -270,31 +270,3 @@ def _current_umask() -> int:
+ def make_file_executable(path: Path) -> None:
+     """Make the file at the provided path executable."""
+     path.chmod(0o777 & ~_current_umask() | 0o111)
+-
+-
+-# Borrowed from:
+-# https://github.com/python-poetry/poetry/blob/95cd84c149a14b55ae8e41328bc6752fbb8b6883/src/poetry/utils/_compat.py#L56
+-def is_relative_to(path1: Path, path2: Path) -> bool:
+-    """Check if path1 is relative to path2.
+-
+-    Works also if one of both paths has a Windows long path prefix.
+-    A long path prefix may be added when calling Path.resolve().
+-    """
+-    if _WINDOWS:  # pragma: no cover
+-        # Work around an issue that is_relative_to() does not work if
+-        # one of both paths has a long path prefix and the other path has not.
+-        long_path_prefix = "\\\\?\\"
+-        long_path_unc_prefix = f"{long_path_prefix}UNC\\"
+-
+-        def remove_long_path_prefix(path: Path) -> Path:
+-            if (path_str := str(path)).startswith(long_path_prefix):
+-                if path_str.startswith(long_path_unc_prefix):
+-                    path = Path("\\\\" + path_str.removeprefix(long_path_unc_prefix))
+-                else:
+-                    path = Path(path_str.removeprefix(long_path_prefix))
+-            return path
+-
+-        path1 = remove_long_path_prefix(path1)
+-        path2 = remove_long_path_prefix(path2)
+-
+-    return path1.is_relative_to(path2)
