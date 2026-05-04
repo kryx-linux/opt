@@ -19,13 +19,18 @@ build() {
   prt-get isinst json-c && PKGMK_BLUEZ+=' --enable-mesh'
   prt-get isinst libical && PKGMK_BLUEZ+=' --enable-obex' || PKGMK_BLUEZ+=' --disable-obex'
 
+  if [[ "$(uname -m)" = "x86_64" ]]; then
+    export CFLAGS="$CFLAGS -flto=auto"
+  fi
+
   ./configure $PKGMK_BLUEZ \
     --prefix=/usr \
     --sysconfdir=/etc \
     --localstatedir=/var \
     --libexecdir=/usr/lib \
     --enable-{a2dp,client,datafiles,deprecated,experimental,hid2hci,library,optimization,pie,tools} \
-    --disable-systemd
+    --disable-systemd \
+    ICAL_LIBS="$(pkgconf --libs libicalvcal)"
   make
   make DESTDIR=$PKG install
 
