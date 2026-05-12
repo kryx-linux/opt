@@ -2034,6 +2034,8 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/Commands/SignoutCommand/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Commands/SignoutCommand/execute-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Commands/SignoutCommand/new-c.ri
 drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/Commands/SourcesCommand/
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Commands/SourcesCommand/build_new_source-i.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Commands/SourcesCommand/build_source-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Commands/SourcesCommand/cdesc-SourcesCommand.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Commands/SourcesCommand/check_typo_squatting-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Commands/SourcesCommand/config_file_name-i.ri
@@ -3882,6 +3884,7 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/Version/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Version/bump-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Version/canonical_segments-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Version/cdesc-Version.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Version/compute_sort_key-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Version/correct%3f-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Version/create-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Version/eql%3f-i.ri
