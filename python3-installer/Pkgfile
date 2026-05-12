@@ -4,17 +4,12 @@
 # Depends on: python3-flit-core
 
 name=python3-installer
-version=1.0.0
-release=2
-source=(https://pypi.org/packages/source/i/installer/installer-$version.tar.gz
-  b5f03f151f0edbf43dd5793e2d6f1c94f7d3d408.patch
-  8b72cf945bfa72295fe4e0e8b9ddc13f8df32964.patch)
+version=1.0.1
+release=1
+source=(https://pypi.org/packages/source/i/installer/installer-$version.tar.gz)
 
 build() {
   cd installer-$version
-
-  patch -Np1 -i $SRC/b5f03f151f0edbf43dd5793e2d6f1c94f7d3d408.patch
-  patch -Np1 -i $SRC/8b72cf945bfa72295fe4e0e8b9ddc13f8df32964.patch
 
   /usr/bin/python3 -m flit_core.wheel
 
