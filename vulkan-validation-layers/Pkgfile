@@ -6,7 +6,7 @@
 
 name=vulkan-validation-layers
 _name=Vulkan-ValidationLayers
-version=1.4.341.0
+version=1.4.350.0
 _version=vulkan-sdk-$version
 release=1
 source=(https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/$_version/$_name-$version.tar.gz)
@@ -24,6 +24,7 @@ build() {
         -D VULKAN_HEADERS_INSTALL_DIR=/usr \
         -D USE_ROBIN_HOOD_HASHING=ON \
         -D BUILD_TESTS=OFF \
+        -D UPDATE_DEPS=OFF \
         -Wno-dev
 
     cmake --build build
