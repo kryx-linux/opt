@@ -3,13 +3,14 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=dracut
-version=109
-release=2
+version=111
+release=1
 source=(https://github.com/dracut-ng/dracut-ng/archive/$version/$name-$version.tar.gz
-    https://crux.nu/files/$name-man-pages-$version.tar.xz i18n_vars.conf)
+    https://crux.nu/files/$name-man-pages-$version.tar.xz i18n_vars.conf
+    modules.conf)
 
 build() {
-    cd dracut-ng-$version
+    cd dracut-$version
     ./configure --prefix=/usr \
         --sysconfdir=/etc \
         --disable-documentation
@@ -19,5 +20,5 @@ build() {
     rm $PKG/usr/lib/$name/modules.d/*/README*
     cp -r $SRC/usr $PKG/
     chmod -R g-w $PKG/usr/lib/$name/modules.d
-    install -m 0644 $SRC/i18n_vars.conf $PKG/etc/dracut.conf.d/i18n_vars.conf
+    install -m 0644 $SRC/{i18n_vars,modules}.conf $PKG/etc/dracut.conf.d/
 }

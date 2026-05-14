@@ -1,0 +1,13 @@
+README for dracut
+
+---
+
+WARNING!!!
+
+If you are using lvm and/or cryptsetep, make sure you see those modules in the
+output of 'dracut -v'! If you don't see them, the generated initramfs/initrd
+likely will NOT boot properly!
+
+Also, this port now includes a module configuration that enables the 'bash'
+module instead of relying on the 'dash' module as it seems to be very broken
+with lvm currently.
