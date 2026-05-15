@@ -4,12 +4,15 @@
 # Depends on: libdevmapper libaio
 
 name=lvm2
-version=2.03.40
+version=2.03.41
 release=1
 source=(https://mirrors.kernel.org/sourceware/lvm2/LVM2.$version.tgz)
 
 build() {
     cd LVM2.$version
+
+    #fix the install_lvm2 make target
+    sed '/SIMPLE_RECURSIVE_TARGETS/s/=/= install_lvm2/' -i libdm/make.tmpl.in
 
     # needed for static linking
     export LIBS="-lpthread -luuid -lm"
