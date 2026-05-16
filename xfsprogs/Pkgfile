@@ -4,12 +4,14 @@
 # Depends on: inih libdevmapper liburcu
 
 name=xfsprogs
-version=6.19.0
+version=7.0.0
 release=1
 source=(https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
+
+    # Build of healer breaks currently, we disable it for now
 
     make configure
 
@@ -20,7 +22,8 @@ build() {
         --prefix=/usr \
         --localstatedir=/var \
         --disable-gettext \
-        --disable-libicu
+        --disable-libicu \
+        --enable-healer=no
     make
     make -j1 DIST_ROOT=$PKG install install-dev
 
