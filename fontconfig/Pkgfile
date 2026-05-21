@@ -4,7 +4,7 @@
 # Depends on: freetype
 
 name=fontconfig
-version=2.17.1
+version=2.18.0
 release=2
 source=(https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/$version/fontconfig-$version.tar.xz)
 
