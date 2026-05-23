@@ -17,6 +17,7 @@ build() {
     -D CMAKE_INSTALL_LIBDIR=lib \
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -D CMAKE_BUILD_TYPE=Release \
+    -D BUILD_TESTS=OFF \
     -Wno-dev
 
   cmake --build build
