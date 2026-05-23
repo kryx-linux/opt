@@ -5,10 +5,12 @@
 
 name=fontconfig
 version=2.18.0
-release=2
-source=(https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/$version/fontconfig-$version.tar.xz)
+release=3
+source=(https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/$version/fontconfig-$version.tar.xz
+    c215e6e012f006ba810c80a06c0a2177ac7f033d.diff)
 
 build() {
+    patch -d $name-$version -p1 -i $SRC/c215e6e012f006ba810c80a06c0a2177ac7f033d.diff
     meson setup $name-$version build \
         --prefix=/usr \
         --buildtype=plain \
