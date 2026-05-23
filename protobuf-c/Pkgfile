@@ -5,11 +5,14 @@
 
 name=protobuf-c
 version=1.5.2
-release=3
-source=(https://github.com/protobuf-c/protobuf-c/releases/download/v$version/$name-$version.tar.gz)
+release=4
+source=(https://github.com/protobuf-c/protobuf-c/releases/download/v$version/$name-$version.tar.gz
+  protobuf-34-build-fix.patch)
 
 build() {
   cd $name-$version
+
+  patch -Np1 -i $SRC/protobuf-34-build-fix.patch
 
   CFLAGS="-O2 -pipe"
   CXXFLAGS="-O2 -pipe"
