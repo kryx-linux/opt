@@ -1,16 +1,12 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/RYqjKd7iGO116Ke0WHRZ1l8mrBusXiw/IhsVT7pEfAJck0yO0c340sSwdCrpchmhJdV55hyshgB148XtyGiswM=
-SHA256 (Pkgfile) = 96f4424d8c3f7163a90ffba1699525bb06918768d676d8f32577a42022490f51
-SHA256 (.footprint) = 395ed22bb788b12ee5384b9ba6c87aecca6f356736d3ddd97b74af2f7985ad1f
-SHA256 (qt-everywhere-opensource-src-5.15.18.tar.xz) = cea1fbabf02455f3f0e8eaa839f5d6f45cdb56b62c8a83af5c1d00ac05f912ea
-SHA256 (qt-everywhere-opensource-src-5.15.18-kf5-1.patch) = 40f78c38b81e228a405f0edb295dd48ee32e0006b20faf2ae01c0a0a3810b23d
-SHA256 (qtbase-5.15.8-fix-missing-qtsan-include.patch) = 65b435d09220fc66584f9613cdf7518367185af4e166c5b670301be6af98e8b1
+RWSE3ohX2g5d/S8HDVkJOQEY+/F6qGMJIHYIIg1o4q+xpikOt2doGan1Wtq3yKPgrO78N+hT6h1IrA5CU4YXgiT0QUIH+81/Pw0=
+SHA256 (Pkgfile) = d7d31700550fc4ffc011e6f3dd2e3d45813b15039757afbdef116d1c01e6a1b6
+SHA256 (.footprint) = eb6760bed1ffa53fca89f887f001ffc16b00e7a784e6dcb245019e745e1c7afc
+SHA256 (qt-everywhere-opensource-src-5.15.19.tar.xz) = 173c2326dae138bbb0d98921e9d911e55c00163d93a6db29f294b5e19ff306ae
+SHA256 (qt-everywhere-opensource-src-5.15.19-kf5-1.patch) = deafbaebe9586dd85358a22a45adc14c96deecd9983fc89faf98dbdd96c1d1d7
 SHA256 (qt5-cflags.patch) = cf707cd970650f8b60f8897692b36708ded9ba116723ec8fcd885576783fe85c
 SHA256 (qt5-logo.png) = ae1335ecd1cd2d17032184895ab298a636cdfa8121b0ed71307c4f2b23ec928e
 SHA256 (qt5-quick3d-assimp-5.1.patch) = 57a3ac54c46f86d1f99ce20653bb34215cbd65fbd36f7ee802360336e88f268e
-SHA256 (d8054f1efa0b97b291a6f8c7fff9090b0fd4328e.patch) = 9647d0a0fc4a1983a824bcb66643e14b8e3cf433542820b75d1654f33a4d78aa
-SHA256 (5a07e1967dcc925d9def47accadae991436b9686.patch) = ef9c6e5f5f7b2426406a4ac582eca84669bc5cc7283cfd884f1f6f9f2206fd03
-SHA256 (0d9987b43e695f5202c5d69a5e42ab70a678b04f.patch) = c9888e8b981c1869efa689e7ec7a7310da1ffc66643e2ff33067bcb9741917fa
 SHA256 (35d566724c48180c9a372c2ed50a253871a51574.patch) = 2f293914133b326ee180d100dfe769c66e594ff8d6d6f354b052a0f0e45352e5
 SHA256 (qtlocation-fix-rapidjson-build.patch) = 12d435c05527923b6455a2e18ad109bf66e6b9faaa71bf64459a2eab2cb45c22
 SHA256 (qtbase-everywhere-src-5.14.2-no_relocatable.patch) = 1fed8b9e4eb5749e70d85d7678f08a5abc881e2a2ecab85fb21f59cb124500e5
@@ -18,4 +14,5 @@ SHA256 (qtbase-everywhere-src-5.15.2-libglvnd.patch) = 6dd54f841127f20c273008748
 SHA256 (qtbase-use-wayland-on-gnome.patch) = d62367c679e655a472f2777b9a7a97e17bd1340c0f0b2d40d1621217743122b8
 SHA256 (0200-Bump-mapbox-gl-native-deps.patch) = 29ad9c90aa1b45060bbb70c4df93d05f70ddb0c231740322e360d4c8e11c420c
 SHA256 (0201-mapbox-gl-fix-smart-ptr.patch) = 48c1484d71a7f999debab926c60b9e3032d1e45358893bb8c650e584f035e816
+SHA256 (qtbase-5.15.8-fix-missing-qtsan-include.patch) = bb6c231b360c883ef0cd4edba69ae56c260e5fc38881498a9533ccb2893b258d
 SHA256 (include.patch) = e68057bb9d4e1cfc170bdd95ae2310556136db9918d7a2ed66411d75ffab1ac8

@@ -1,3 +1,4 @@
+Submodule qtbase c68297f6..fbed962c:
 diff --git a/qtbase/mkspecs/common/android/qplatformdefs.h b/qtbase/mkspecs/common/android/qplatformdefs.h
 index f75bc4093b6..2bd59410d4e 100644
 --- a/qtbase/mkspecs/common/android/qplatformdefs.h
@@ -140,7 +141,7 @@ index e9e51c4b93d..85f72c494d4 100644
  
  template<typename T>
 diff --git a/qtbase/src/corelib/global/qglobal.cpp b/qtbase/src/corelib/global/qglobal.cpp
-index 5ad82c259de..ecf7b1efaa6 100644
+index 70d7c723913..be0254e8c09 100644
 --- a/qtbase/src/corelib/global/qglobal.cpp
 +++ b/qtbase/src/corelib/global/qglobal.cpp
 @@ -97,6 +97,10 @@
@@ -235,28 +236,8 @@ index 445b520c76a..4c216eeb65b 100644
      static Q_DECL_CONST_FUNCTION Q_CORE_EXPORT QRandomGenerator64 *system();
      static Q_DECL_CONST_FUNCTION Q_CORE_EXPORT QRandomGenerator64 *global();
      static Q_CORE_EXPORT QRandomGenerator64 securelySeeded();
-diff --git a/qtbase/src/corelib/io/qdataurl.cpp b/qtbase/src/corelib/io/qdataurl.cpp
-index 9cb1b9abd0a..707bc358b98 100644
---- a/qtbase/src/corelib/io/qdataurl.cpp
-+++ b/qtbase/src/corelib/io/qdataurl.cpp
-@@ -76,10 +76,11 @@ Q_CORE_EXPORT bool qDecodeDataUrl(const QUrl &uri, QString &mimeType, QByteArray
-         }
- 
-         if (data.toLower().startsWith("charset")) {
--            int i = 7;      // strlen("charset")
--            while (data.at(i) == ' ')
--                ++i;
--            if (data.at(i) == '=')
-+            int prefixSize = 7; // strlen("charset")
-+            QLatin1String copy(data.constData() + prefixSize, data.size() - prefixSize);
-+            while (copy.startsWith(QLatin1String(" ")))
-+                copy = copy.mid(1);
-+            if (copy.startsWith(QLatin1String("=")))
-                 data.prepend("text/plain;");
-         }
- 
 diff --git a/qtbase/src/corelib/io/qfilesystemengine_win.cpp b/qtbase/src/corelib/io/qfilesystemengine_win.cpp
-index 002f720926a..73177de0700 100644
+index fcbf543fc7d..73177de0700 100644
 --- a/qtbase/src/corelib/io/qfilesystemengine_win.cpp
 +++ b/qtbase/src/corelib/io/qfilesystemengine_win.cpp
 @@ -664,14 +664,14 @@ QFileSystemEntry QFileSystemEngine::absoluteName(const QFileSystemEntry &entry)
@@ -276,23 +257,6 @@ index 002f720926a..73177de0700 100644
  
  // File ID for Windows up to version 7 and FAT32 drives
  static inline QByteArray fileId(HANDLE handle)
-@@ -1390,7 +1390,15 @@ QString QFileSystemEngine::tempPath()
-     QString ret;
- #ifndef Q_OS_WINRT
-     wchar_t tempPath[MAX_PATH];
--    const DWORD len = GetTempPath(MAX_PATH, tempPath);
-+    using GetTempPathPrototype = DWORD (WINAPI *)(DWORD, LPWSTR);
-+    // We try to resolve GetTempPath2 and use that, otherwise fall back to GetTempPath:
-+    static GetTempPathPrototype getTempPathW = []() {
-+        const HMODULE kernel32 = GetModuleHandleW(L"kernel32.dll");
-+        if (auto *func = QFunctionPointer(GetProcAddress(kernel32, "GetTempPath2W")))
-+            return GetTempPathPrototype(func);
-+        return GetTempPath;
-+    }();
-+    const DWORD len = getTempPathW(MAX_PATH, tempPath);
-     if (len) { // GetTempPath() can return short names, expand.
-         wchar_t longTempPath[MAX_PATH];
-         const DWORD longLen = GetLongPathName(tempPath, longTempPath, MAX_PATH);
 diff --git a/qtbase/src/corelib/io/qfilesystemwatcher_inotify.cpp b/qtbase/src/corelib/io/qfilesystemwatcher_inotify.cpp
 index 94d9d06bcb9..27e0b13b0bf 100644
 --- a/qtbase/src/corelib/io/qfilesystemwatcher_inotify.cpp
@@ -666,54 +630,6 @@ index 89a928d3480..3a8c2cb9ec3 100644
  }
  
  /*!
-diff --git a/qtbase/src/corelib/serialization/qxmlstream.g b/qtbase/src/corelib/serialization/qxmlstream.g
-index 8c6a1a58870..18fbf14c035 100644
---- a/qtbase/src/corelib/serialization/qxmlstream.g
-+++ b/qtbase/src/corelib/serialization/qxmlstream.g
-@@ -1512,8 +1512,8 @@ attribute_value_content ::= literal_content | char_ref | entity_ref_in_attribute
- attribute ::= qname space_opt EQ space_opt attribute_value;
- /.
-         case $rule_number: {
--            QStringRef prefix = symPrefix(1);
--            if (prefix.isEmpty() && symString(1) == QLatin1String("xmlns") && namespaceProcessing) {
-+            const QStringRef prfx = symPrefix(1);
-+            if (prfx.isEmpty() && symString(1) == QLatin1String("xmlns") && namespaceProcessing) {
-                 NamespaceDeclaration &namespaceDeclaration = namespaceDeclarations.push();
-                 namespaceDeclaration.prefix.clear();
- 
-@@ -1563,7 +1563,7 @@ attribute ::= qname space_opt EQ space_opt attribute_value;
-                     attribute.value.pos = pos;
-                     attribute.value.len = n;
-                 }
--                if (prefix == QLatin1String("xmlns") && namespaceProcessing) {
-+                if (prfx == QLatin1String("xmlns") && namespaceProcessing) {
-                     NamespaceDeclaration &namespaceDeclaration = namespaceDeclarations.push();
-                     QStringRef namespacePrefix = symString(attribute.key);
-                     QStringRef namespaceUri = symString(attribute.value);
-diff --git a/qtbase/src/corelib/serialization/qxmlstream_p.h b/qtbase/src/corelib/serialization/qxmlstream_p.h
-index be7b1fe6655..fd8fcca4e15 100644
---- a/qtbase/src/corelib/serialization/qxmlstream_p.h
-+++ b/qtbase/src/corelib/serialization/qxmlstream_p.h
-@@ -1722,8 +1722,8 @@ bool QXmlStreamReaderPrivate::parse()
-         break;
- 
-         case 229: {
--            QStringRef prefix = symPrefix(1);
--            if (prefix.isEmpty() && symString(1) == QLatin1String("xmlns") && namespaceProcessing) {
-+            const QStringRef prfx = symPrefix(1);
-+            if (prfx.isEmpty() && symString(1) == QLatin1String("xmlns") && namespaceProcessing) {
-                 NamespaceDeclaration &namespaceDeclaration = namespaceDeclarations.push();
-                 namespaceDeclaration.prefix.clear();
- 
-@@ -1773,7 +1773,7 @@ bool QXmlStreamReaderPrivate::parse()
-                     attribute.value.pos = pos;
-                     attribute.value.len = n;
-                 }
--                if (prefix == QLatin1String("xmlns") && namespaceProcessing) {
-+                if (prfx == QLatin1String("xmlns") && namespaceProcessing) {
-                     NamespaceDeclaration &namespaceDeclaration = namespaceDeclarations.push();
-                     QStringRef namespacePrefix = symString(attribute.key);
-                     QStringRef namespaceUri = symString(attribute.value);
 diff --git a/qtbase/src/corelib/text/qlocale_data_p.h b/qtbase/src/corelib/text/qlocale_data_p.h
 index c5e6a0d461c..c613e4e537a 100644
 --- a/qtbase/src/corelib/text/qlocale_data_p.h
@@ -1093,7 +1009,7 @@ index cf2a690f507..fb9fb1528b4 100644
      static QTimeZone::OffsetData invalidOffsetData();
      static QTimeZone::OffsetData toOffsetData(const Data &data);
 diff --git a/qtbase/src/corelib/tools/qduplicatetracker_p.h b/qtbase/src/corelib/tools/qduplicatetracker_p.h
-index c5ddfe37af0..140fc31a34c 100644
+index fcf1b1aac76..9f4901a7671 100644
 --- a/qtbase/src/corelib/tools/qduplicatetracker_p.h
 +++ b/qtbase/src/corelib/tools/qduplicatetracker_p.h
 @@ -52,7 +52,7 @@
@@ -1105,25 +1021,6 @@ index c5ddfe37af0..140fc31a34c 100644
  #  include <unordered_set>
  #  include <memory_resource>
  #else
-diff --git a/qtbase/src/dbus/qdbusintegrator.cpp b/qtbase/src/dbus/qdbusintegrator.cpp
-index a4cbfecc98b..9ccbbbb37d3 100644
---- a/qtbase/src/dbus/qdbusintegrator.cpp
-+++ b/qtbase/src/dbus/qdbusintegrator.cpp
-@@ -1135,7 +1135,13 @@ void QDBusConnectionPrivate::closeConnection()
-         }
-     }
- 
--    qDeleteAll(pendingCalls);
-+    for (auto it = pendingCalls.begin(); it != pendingCalls.end(); ++it) {
-+        auto call = *it;
-+        if (!call->ref.deref()) {
-+            delete call;
-+        }
-+    }
-+    pendingCalls.clear();
- 
-     // Disconnect all signals from signal hooks and from the object tree to
-     // avoid QObject::destroyed being sent to dbus daemon thread which has
 diff --git a/qtbase/src/gui/configure.json b/qtbase/src/gui/configure.json
 index d5582dda6e5..3523dc6df67 100644
 --- a/qtbase/src/gui/configure.json
@@ -1273,10 +1170,10 @@ index 96f1e8cb1d9..0e73bbbdb05 100644
              }
          }
 diff --git a/qtbase/src/gui/itemmodels/qstandarditemmodel.cpp b/qtbase/src/gui/itemmodels/qstandarditemmodel.cpp
-index fc9424763ef..a3e0853fa8b 100644
+index 101f919cd1b..d1be379cbdf 100644
 --- a/qtbase/src/gui/itemmodels/qstandarditemmodel.cpp
 +++ b/qtbase/src/gui/itemmodels/qstandarditemmodel.cpp
-@@ -3113,13 +3113,13 @@ QStringList QStandardItemModel::mimeTypes() const
+@@ -3124,13 +3124,13 @@ QStringList QStandardItemModel::mimeTypes() const
  */
  QMimeData *QStandardItemModel::mimeData(const QModelIndexList &indexes) const
  {
@@ -1293,7 +1190,7 @@ index fc9424763ef..a3e0853fa8b 100644
      QByteArray encoded;
      QDataStream stream(&encoded, QIODevice::WriteOnly);
  
-@@ -3172,7 +3172,7 @@ QMimeData *QStandardItemModel::mimeData(const QModelIndexList &indexes) const
+@@ -3183,7 +3183,7 @@ QMimeData *QStandardItemModel::mimeData(const QModelIndexList &indexes) const
      }
  
      data->setData(format, encoded);
@@ -1538,7 +1435,7 @@ index 5490ad80255..afd3d8dbe65 100644
      uploadOptions.setAlignment(1);
      setData(0, QOpenGLTexture::RGBA, QOpenGLTexture::UInt8, glImage.constBits(), &uploadOptions);
 diff --git a/qtbase/src/gui/painting/qpainterpath.cpp b/qtbase/src/gui/painting/qpainterpath.cpp
-index f9544a32419..d80fafeaf16 100644
+index 9558ead975f..2174850c807 100644
 --- a/qtbase/src/gui/painting/qpainterpath.cpp
 +++ b/qtbase/src/gui/painting/qpainterpath.cpp
 @@ -1253,7 +1253,7 @@ void QPainterPath::addText(const QPointF &point, const QFont &f, const QString &
@@ -1618,7 +1515,7 @@ index ec2b0b6b4ce..3da33a8a2b1 100644
      }
  
 diff --git a/qtbase/src/gui/text/qfontdatabase.cpp b/qtbase/src/gui/text/qfontdatabase.cpp
-index 2011f935a9c..7aa62289483 100644
+index 52c487f1891..4e41a9177b0 100644
 --- a/qtbase/src/gui/text/qfontdatabase.cpp
 +++ b/qtbase/src/gui/text/qfontdatabase.cpp
 @@ -983,7 +983,7 @@ QFontEngine *loadSingleEngine(int script,
@@ -2459,7 +2356,7 @@ index f484795fbb7..97bdfabb855 100644
      QDBusServiceWatcher *m_dbusWatcher;
      bool m_statusNotifierHostRegistered;
 diff --git a/qtbase/src/platformsupport/themes/genericunix/qgenericunixthemes.cpp b/qtbase/src/platformsupport/themes/genericunix/qgenericunixthemes.cpp
-index cb1b39db646..6e01af052c1 100644
+index 3de19734250..ea7e1d357a0 100644
 --- a/qtbase/src/platformsupport/themes/genericunix/qgenericunixthemes.cpp
 +++ b/qtbase/src/platformsupport/themes/genericunix/qgenericunixthemes.cpp
 @@ -755,6 +755,9 @@ QVariant QGnomeTheme::themeHint(QPlatformTheme::ThemeHint hint) const
@@ -2472,19 +2369,6 @@ index cb1b39db646..6e01af052c1 100644
      default:
          break;
      }
-diff --git a/qtbase/src/plugins/platforms/eglfs/deviceintegration/eglfs_kms_support/qeglfskmseventreader.cpp b/qtbase/src/plugins/platforms/eglfs/deviceintegration/eglfs_kms_support/qeglfskmseventreader.cpp
-index 645a0ae2e92..3e0e406f1ab 100644
---- a/qtbase/src/plugins/platforms/eglfs/deviceintegration/eglfs_kms_support/qeglfskmseventreader.cpp
-+++ b/qtbase/src/plugins/platforms/eglfs/deviceintegration/eglfs_kms_support/qeglfskmseventreader.cpp
-@@ -179,7 +179,7 @@ void QEglFSKmsEventReader::create(QEglFSKmsDevice *device)
- 
-     m_device = device;
- 
--    qCDebug(qLcEglfsKmsDebug, "Initalizing event reader for device %p fd %d",
-+    qCDebug(qLcEglfsKmsDebug, "Initializing event reader for device %p fd %d",
-             m_device, m_device->fd());
- 
-     m_thread = new QEglFSKmsEventReaderThread(m_device->fd());
 diff --git a/qtbase/src/plugins/platforms/offscreen/qoffscreenintegration.cpp b/qtbase/src/plugins/platforms/offscreen/qoffscreenintegration.cpp
 index 141fb68a23f..d4294d425a4 100644
 --- a/qtbase/src/plugins/platforms/offscreen/qoffscreenintegration.cpp
@@ -2517,7 +2401,7 @@ index 0ea90f6c2fa..fe00fde07cd 100644
  };
  
 diff --git a/qtbase/src/plugins/platforms/xcb/qxcbconnection.cpp b/qtbase/src/plugins/platforms/xcb/qxcbconnection.cpp
-index 2881442e94a..54f15c80ac6 100644
+index d7c050a6fd4..ab3d3f6fe53 100644
 --- a/qtbase/src/plugins/platforms/xcb/qxcbconnection.cpp
 +++ b/qtbase/src/plugins/platforms/xcb/qxcbconnection.cpp
 @@ -707,6 +707,8 @@ void QXcbConnection::handleXcbEvent(xcb_generic_event_t *event)
@@ -2529,165 +2413,11 @@ index 2881442e94a..54f15c80ac6 100644
          } else {
              HANDLE_PLATFORM_WINDOW_EVENT(xcb_property_notify_event_t, window, handlePropertyNotifyEvent);
          }
-diff --git a/qtbase/src/plugins/platforms/xcb/qxcbconnection_screens.cpp b/qtbase/src/plugins/platforms/xcb/qxcbconnection_screens.cpp
-index ec099101f5a..9cee3bc5e16 100644
---- a/qtbase/src/plugins/platforms/xcb/qxcbconnection_screens.cpp
-+++ b/qtbase/src/plugins/platforms/xcb/qxcbconnection_screens.cpp
-@@ -165,7 +165,7 @@ void QXcbConnection::updateScreens(const xcb_randr_notify_event_t *event)
-                 // Screen has been disabled
-                 auto outputInfo = Q_XCB_REPLY(xcb_randr_get_output_info, xcb_connection(),
-                                               output.output, output.config_timestamp);
--                if (outputInfo->crtc == XCB_NONE) {
-+                if (!outputInfo || outputInfo->crtc == XCB_NONE) {
-                     qCDebug(lcQpaScreen) << "output" << screen->name() << "has been disabled";
-                     destroyScreen(screen);
-                 } else {
 diff --git a/qtbase/src/plugins/platforms/xcb/qxcbconnection_xi2.cpp b/qtbase/src/plugins/platforms/xcb/qxcbconnection_xi2.cpp
-index f799f5ff315..45f66a18b5d 100644
+index 7bf15e753fe..45f66a18b5d 100644
 --- a/qtbase/src/plugins/platforms/xcb/qxcbconnection_xi2.cpp
 +++ b/qtbase/src/plugins/platforms/xcb/qxcbconnection_xi2.cpp
-@@ -521,96 +521,23 @@ static inline qreal fixed1616ToReal(xcb_input_fp1616_t val)
-     return qreal(val) / 0x10000;
- }
- 
--//implementation is ported from https://codereview.qt-project.org/c/qt/qtbase/+/231552/12/src/plugins/platforms/xcb/qxcbconnection_xi2.cpp#558
--namespace {
--
--/*! \internal
--
-- Qt listens for XIAllDevices to avoid losing mouse events. This function
-- ensures that we don't process the same event twice: from a slave device and
-- then again from a master device.
--
-- In a normal use case (e.g. mouse press and release inside a window), we will
-- drop events from master devices as duplicates. Other advantage of processing
-- events from slave devices is that they don't share button state. All buttons
-- on a master device share the state.
--
-- Examples of special cases:
--
--\list
--
--\li During system move/resize, window manager (_NET_WM_MOVERESIZE) grabs the
--   master pointer, in this case we process the matching release from the slave
--   device. A master device event is not sent by the server, hence no duplicate
--   event to drop. If we listened for XIAllMasterDevices instead, we would never
--   see a release event in this case.
--
--\li If we dismiss a context menu by clicking somewhere outside a Qt application,
--   we will process the mouse press from the master pointer as that is the
--   device we are grabbing. We are not grabbing slave devices (grabbing on the
--   slave device is buggy according to 19d289ab1b5bde3e136765e5432b5c7d004df3a4).
--   And since the event occurs outside our window, the slave device event is
--   not sent to us by the server, hence no duplicate event to drop.
--
--\endlist
--*/
--bool isDuplicateEvent(xcb_ge_event_t *event)
--{
--    Q_ASSERT(event);
--
--    struct qXIEvent {
--        bool isValid = false;
--        uint16_t sourceid;
--        uint8_t evtype;
--        uint32_t detail;
--        int32_t root_x;
--        int32_t root_y;
--    };
--    static qXIEvent lastSeenEvent;
--
--    bool isDuplicate = false;
--    auto *xiDeviceEvent = reinterpret_cast<qt_xcb_input_device_event_t *>(event);
--    if (lastSeenEvent.isValid) {
--        isDuplicate = lastSeenEvent.sourceid == xiDeviceEvent->sourceid &&
--                lastSeenEvent.evtype == xiDeviceEvent->event_type &&
--                lastSeenEvent.detail == xiDeviceEvent->detail &&
--                lastSeenEvent.root_x == xiDeviceEvent->root_x &&
--                lastSeenEvent.root_y == xiDeviceEvent->root_y;
--    } else {
--        lastSeenEvent.isValid = true;
--    }
--    lastSeenEvent.sourceid = xiDeviceEvent->sourceid;
--    lastSeenEvent.evtype = xiDeviceEvent->event_type;
--    lastSeenEvent.detail = xiDeviceEvent->detail;
--    lastSeenEvent.root_x = xiDeviceEvent->root_x;
--    lastSeenEvent.root_y = xiDeviceEvent->root_y;
--
--    if (isDuplicate) {
--        qCDebug(lcQpaXInputEvents, "Duplicate XI2 event %d", event->event_type);
--        // This sanity check ensures that special cases like QTBUG-59277 keep working.
--        lastSeenEvent.isValid = false; // An event can be a duplicate only once.
--    }
--
--    return isDuplicate;
--}
--
--} // namespace
--
- void QXcbConnection::xi2HandleEvent(xcb_ge_event_t *event)
- {
-     auto *xiEvent = reinterpret_cast<qt_xcb_input_device_event_t *>(event);
--    if (m_xiSlavePointerIds.contains(xiEvent->deviceid)) {
--        if (!(xiEvent->event_type == XCB_INPUT_BUTTON_PRESS
--              || xiEvent->event_type == XCB_INPUT_BUTTON_RELEASE
--              || xiEvent->event_type == XCB_INPUT_MOTION)) {
--            if (!m_duringSystemMoveResize)
--                return;
--            if (xiEvent->event == XCB_NONE)
--                return;
--
--            if (xiEvent->event_type == XCB_INPUT_TOUCH_END)
--                abortSystemMoveResize(xiEvent->event);
-+    setTime(xiEvent->time);
-+    if (m_xiSlavePointerIds.contains(xiEvent->deviceid) && xiEvent->event_type != XCB_INPUT_PROPERTY) {
-+        if (!m_duringSystemMoveResize)
-+            return;
-+        if (xiEvent->event == XCB_NONE)
-+            return;
- 
-+        if (xiEvent->event_type == XCB_INPUT_BUTTON_RELEASE
-+            && xiEvent->detail == XCB_BUTTON_INDEX_1 ) {
-+            abortSystemMoveResize(xiEvent->event);
-+        } else if (xiEvent->event_type == XCB_INPUT_TOUCH_END) {
-+            abortSystemMoveResize(xiEvent->event);
-+            return;
-+        } else {
-             return;
-         }
-     }
-@@ -622,27 +549,11 @@ void QXcbConnection::xi2HandleEvent(xcb_ge_event_t *event)
-     switch (xiEvent->event_type) {
-     case XCB_INPUT_BUTTON_PRESS:
-     case XCB_INPUT_BUTTON_RELEASE:
--    case XCB_INPUT_MOTION: {
--        if (isDuplicateEvent(event))
--            return;
--        if (m_xiSlavePointerIds.contains(xiEvent->deviceid)) {
--            if (m_duringSystemMoveResize) {
--                if (xiEvent->event_type == XCB_INPUT_BUTTON_RELEASE
--                    && xiEvent->detail == XCB_BUTTON_INDEX_1 ) {
--                    abortSystemMoveResize(xiEvent->event);
--                } else {
--                    return;
--                }
--            }
--        }
--        xiDeviceEvent = xiEvent;
--        eventListener = windowEventListenerFromId(xiDeviceEvent->event);
--        sourceDeviceId = xiDeviceEvent->sourceid; // use the actual device id instead of the master
--        break;
--    }
-+    case XCB_INPUT_MOTION:
-     case XCB_INPUT_TOUCH_BEGIN:
-     case XCB_INPUT_TOUCH_UPDATE:
--    case XCB_INPUT_TOUCH_END: {
-+    case XCB_INPUT_TOUCH_END:
-+    {
-         xiDeviceEvent = xiEvent;
-         eventListener = windowEventListenerFromId(xiDeviceEvent->event);
-         sourceDeviceId = xiDeviceEvent->sourceid; // use the actual device id instead of the master
-@@ -1403,16 +1314,14 @@ void QXcbConnection::xi2ReportTabletEvent(const void *event, TabletData *tabletD
+@@ -1314,16 +1314,14 @@ void QXcbConnection::xi2ReportTabletEvent(const void *event, TabletData *tabletD
              if (Q_LIKELY(useValuators)) {
                  const qreal value = scaleOneValuator(normalizedValue, physicalScreenArea.x(), physicalScreenArea.width());
                  global.setX(value);
@@ -2795,7 +2525,7 @@ index 6e186f5eff2..1baf5858cbe 100644
      }
  
 diff --git a/qtbase/src/plugins/platformthemes/xdgdesktopportal/qxdgdesktopportalfiledialog.cpp b/qtbase/src/plugins/platformthemes/xdgdesktopportal/qxdgdesktopportalfiledialog.cpp
-index c6596c35dea..8987e3efd0d 100644
+index f2250e9fc97..8987e3efd0d 100644
 --- a/qtbase/src/plugins/platformthemes/xdgdesktopportal/qxdgdesktopportalfiledialog.cpp
 +++ b/qtbase/src/plugins/platformthemes/xdgdesktopportal/qxdgdesktopportalfiledialog.cpp
 @@ -102,15 +102,12 @@ const QDBusArgument &operator >>(const QDBusArgument &arg, QXdgDesktopPortalFile
@@ -2893,32 +2623,7 @@ index c6596c35dea..8987e3efd0d 100644
          } else {
              QDBusConnection::sessionBus().connect(nullptr,
                                                    reply.value().path(),
-@@ -330,7 +343,7 @@ QUrl QXdgDesktopPortalFileDialog::directory() const
- {
-     Q_D(const QXdgDesktopPortalFileDialog);
- 
--    if (d->nativeFileDialog && (options()->fileMode() == QFileDialogOptions::Directory || options()->fileMode() == QFileDialogOptions::DirectoryOnly))
-+    if (d->nativeFileDialog && useNativeFileDialog())
-         return d->nativeFileDialog->directory();
- 
-     return d->directory;
-@@ -352,7 +365,7 @@ QList<QUrl> QXdgDesktopPortalFileDialog::selectedFiles() const
- {
-     Q_D(const QXdgDesktopPortalFileDialog);
- 
--    if (d->nativeFileDialog && (options()->fileMode() == QFileDialogOptions::Directory || options()->fileMode() == QFileDialogOptions::DirectoryOnly))
-+    if (d->nativeFileDialog && useNativeFileDialog())
-         return d->nativeFileDialog->selectedFiles();
- 
-     QList<QUrl> files;
-@@ -407,16 +420,13 @@ void QXdgDesktopPortalFileDialog::exec()
- {
-     Q_D(QXdgDesktopPortalFileDialog);
- 
--    if (d->nativeFileDialog && (options()->fileMode() == QFileDialogOptions::Directory || options()->fileMode() == QFileDialogOptions::DirectoryOnly)) {
-+    if (d->nativeFileDialog && useNativeFileDialog()) {
-         d->nativeFileDialog->exec();
-         return;
+@@ -413,10 +426,7 @@ void QXdgDesktopPortalFileDialog::exec()
      }
  
      // HACK we have to avoid returning until we emit that the dialog was accepted or rejected
@@ -2937,7 +2642,7 @@ index c6596c35dea..8987e3efd0d 100644
 -    d->modal = windowModality != Qt::NonModal;
 -    d->winId = parent ? parent->winId() : 0;
 -
--    if (d->nativeFileDialog && (options()->fileMode() == QFileDialogOptions::Directory || options()->fileMode() == QFileDialogOptions::DirectoryOnly))
+-    if (d->nativeFileDialog && useNativeFileDialog())
 +    if (d->nativeFileDialog && useNativeFileDialog(OpenFallback))
          return d->nativeFileDialog->show(windowFlags, windowModality, parent);
  
@@ -2946,17 +2651,21 @@ index c6596c35dea..8987e3efd0d 100644
  
      return true;
  }
-@@ -469,6 +476,23 @@ void QXdgDesktopPortalFileDialog::gotResponse(uint response, const QVariantMap &
+@@ -469,13 +476,20 @@ void QXdgDesktopPortalFileDialog::gotResponse(uint response, const QVariantMap &
      }
  }
  
+-bool QXdgDesktopPortalFileDialog::useNativeFileDialog() const
 +bool QXdgDesktopPortalFileDialog::useNativeFileDialog(QXdgDesktopPortalFileDialog::FallbackType fallbackType) const
-+{
+ {
+-    if (options()->fileMode() == QFileDialogOptions::Directory)
+-        return true;
+-    else if (options()->fileMode() == QFileDialogOptions::DirectoryOnly)
 +    Q_D(const QXdgDesktopPortalFileDialog);
 +
 +    if (d->failedToOpen && fallbackType != OpenFallback)
-+        return true;
-+
+         return true;
+ 
 +    if (d->fileChooserPortalVersion < 3) {
 +        if (options()->fileMode() == QFileDialogOptions::Directory)
 +            return true;
@@ -2964,14 +2673,11 @@ index c6596c35dea..8987e3efd0d 100644
 +            return true;
 +    }
 +
-+    return false;
-+}
-+
- QT_END_NAMESPACE
+     return false;
+ }
  
- #include "moc_qxdgdesktopportalfiledialog_p.cpp"
 diff --git a/qtbase/src/plugins/platformthemes/xdgdesktopportal/qxdgdesktopportalfiledialog_p.h b/qtbase/src/plugins/platformthemes/xdgdesktopportal/qxdgdesktopportalfiledialog_p.h
-index 4f4de96ecf2..65e22a5cf2a 100644
+index 5c1231bb54b..65e22a5cf2a 100644
 --- a/qtbase/src/plugins/platformthemes/xdgdesktopportal/qxdgdesktopportalfiledialog_p.h
 +++ b/qtbase/src/plugins/platformthemes/xdgdesktopportal/qxdgdesktopportalfiledialog_p.h
 @@ -51,6 +51,11 @@ class QXdgDesktopPortalFileDialog : public QPlatformFileDialogHelper
@@ -2995,11 +2701,12 @@ index 4f4de96ecf2..65e22a5cf2a 100644
      ~QXdgDesktopPortalFileDialog();
  
      bool defaultNameFilterDisables() const override;
-@@ -92,7 +97,8 @@ private Q_SLOTS:
+@@ -92,8 +97,8 @@ private Q_SLOTS:
  
  private:
      void initializeDialog();
 -    void openPortal();
+-    bool useNativeFileDialog() const;
 +    void openPortal(Qt::WindowFlags windowFlags, Qt::WindowModality windowModality, QWindow *parent);
 +    bool useNativeFileDialog(FallbackType fallbackType = GenericFallback) const;
  
@@ -3060,29 +2767,6 @@ index e0c72fa240d..309bbdad57b 100644
  #endif  // MYSQL_VERSION_ID >= 50007
  
      d->preparedQuerysEnabled = checkPreparedQueries(d->mysql);
-diff --git a/qtbase/src/plugins/sqldrivers/odbc/qsql_odbc.cpp b/qtbase/src/plugins/sqldrivers/odbc/qsql_odbc.cpp
-index 8e2e8836525..d1477740555 100644
---- a/qtbase/src/plugins/sqldrivers/odbc/qsql_odbc.cpp
-+++ b/qtbase/src/plugins/sqldrivers/odbc/qsql_odbc.cpp
-@@ -745,10 +745,15 @@ static QSqlField qMakeFieldInfo(const SQLHANDLE hStmt, int i, QString *errorMess
-     f.setAutoValue(isAutoValue(hStmt, i));
-     QVarLengthArray<SQLTCHAR> tableName(TABLENAMESIZE);
-     SQLSMALLINT tableNameLen;
--    r = SQLColAttribute(hStmt, i + 1, SQL_DESC_BASE_TABLE_NAME, tableName.data(),
--                        TABLENAMESIZE, &tableNameLen, 0);
-+    r = SQLColAttribute(hStmt,
-+                        i + 1,
-+                        SQL_DESC_BASE_TABLE_NAME,
-+                        tableName.data(),
-+                        SQLSMALLINT(tableName.size() * sizeof(SQLTCHAR)), // SQLColAttribute needs/returns size in bytes
-+                        &tableNameLen,
-+                        0);
-     if (r == SQL_SUCCESS)
--        f.setTableName(fromSQLTCHAR(tableName, tableNameLen));
-+        f.setTableName(fromSQLTCHAR(tableName, tableNameLen / sizeof(SQLTCHAR)));
-     return f;
- }
- 
 diff --git a/qtbase/src/printsupport/dialogs/images/print-24.png b/qtbase/src/printsupport/dialogs/images/printer-24.png
 similarity index 100%
 rename from src/printsupport/dialogs/images/print-24.png
@@ -3305,24 +2989,6 @@ index 4247731275c..30445fa069e 100644
      if (!colorPickingEventFilter)
          colorPickingEventFilter = new QColorPickingEventFilter(this, q);
      q->installEventFilter(colorPickingEventFilter);
-diff --git a/qtbase/src/widgets/itemviews/qabstractitemdelegate.cpp b/qtbase/src/widgets/itemviews/qabstractitemdelegate.cpp
-index e120817edc6..8ea36b54278 100644
---- a/qtbase/src/widgets/itemviews/qabstractitemdelegate.cpp
-+++ b/qtbase/src/widgets/itemviews/qabstractitemdelegate.cpp
-@@ -400,12 +400,7 @@ bool QAbstractItemDelegate::helpEvent(QHelpEvent *event,
-         const QString tooltip = index.isValid() ?
-               d->textForRole(Qt::ToolTipRole, index.data(Qt::ToolTipRole), option.locale, precision) :
-               QString();
--        QRect rect;
--        if (index.isValid()) {
--            const QRect r = view->visualRect(index);
--            rect = QRect(view->mapToGlobal(r.topLeft()), r.size());
--        }
--        QToolTip::showText(he->globalPos(), tooltip, view, rect);
-+        QToolTip::showText(he->globalPos(), tooltip, view->viewport(), option.rect);
-         event->setAccepted(!tooltip.isEmpty());
-         break;
-         }
 diff --git a/qtbase/src/widgets/itemviews/qlistview.cpp b/qtbase/src/widgets/itemviews/qlistview.cpp
 index fab44923dec..79254e052f5 100644
 --- a/qtbase/src/widgets/itemviews/qlistview.cpp
@@ -3399,7 +3065,7 @@ index 258a1ea0a04..737c1e82850 100644
  public:
      // note this is copied into qplatformmenu.h, which must stay in sync
 diff --git a/qtbase/src/widgets/styles/qfusionstyle.cpp b/qtbase/src/widgets/styles/qfusionstyle.cpp
-index a225d4b5631..35e2769ac46 100644
+index 9918bedddc7..1efc2e80594 100644
 --- a/qtbase/src/widgets/styles/qfusionstyle.cpp
 +++ b/qtbase/src/widgets/styles/qfusionstyle.cpp
 @@ -1772,14 +1772,6 @@ void QFusionStyle::drawControl(ControlElement element, const QStyleOption *optio
@@ -3487,10 +3153,10 @@ index a128b239506..dc40bf62fbe 100644
  
  /*!\reimp
 diff --git a/qtbase/src/widgets/widgets/qcombobox.cpp b/qtbase/src/widgets/widgets/qcombobox.cpp
-index 422082da6ce..5692c6e82ba 100644
+index db410b9717d..f41d2d040dc 100644
 --- a/qtbase/src/widgets/widgets/qcombobox.cpp
 +++ b/qtbase/src/widgets/widgets/qcombobox.cpp
-@@ -3354,7 +3354,23 @@ void QComboBox::keyPressEvent(QKeyEvent *e)
+@@ -3365,7 +3365,23 @@ void QComboBox::keyPressEvent(QKeyEvent *e)
  
      Move move = NoMove;
      int newIndex = currentIndex();
@@ -3515,7 +3181,7 @@ index 422082da6ce..5692c6e82ba 100644
      case Qt::Key_Up:
          if (e->modifiers() & Qt::ControlModifier)
              break; // pass to line edit for auto completion
-@@ -3396,26 +3412,11 @@ void QComboBox::keyPressEvent(QKeyEvent *e)
+@@ -3407,26 +3423,11 @@ void QComboBox::keyPressEvent(QKeyEvent *e)
              return;
          }
          break;
@@ -3617,19 +3283,6 @@ index 02a0bed3256..3f3eccc3709 100644
              bool toggle = (d->pressedControl == QStyle::SC_GroupBoxLabel
                             || d->pressedControl == QStyle::SC_GroupBoxCheckBox);
              d->pressedControl = QStyle::SC_None;
-diff --git a/qtbase/src/widgets/widgets/qlineedit_p.cpp b/qtbase/src/widgets/widgets/qlineedit_p.cpp
-index 80c9258da47..3fa0f29d280 100644
---- a/qtbase/src/widgets/widgets/qlineedit_p.cpp
-+++ b/qtbase/src/widgets/widgets/qlineedit_p.cpp
-@@ -434,7 +434,7 @@ void QLineEditIconButton::animateShow(bool visible)
- 
- void QLineEditIconButton::startOpacityAnimation(qreal endValue)
- {
--    QPropertyAnimation *animation = new QPropertyAnimation(this, QByteArrayLiteral("opacity"));
-+    QPropertyAnimation *animation = new QPropertyAnimation(this, QByteArrayLiteral("opacity"), this);
-     connect(animation, &QPropertyAnimation::finished, this, &QLineEditIconButton::onAnimationFinished);
- 
-     animation->setDuration(160);
 diff --git a/qtbase/src/widgets/widgets/qtoolbutton.cpp b/qtbase/src/widgets/widgets/qtoolbutton.cpp
 index e380cb647ba..9953db73af3 100644
 --- a/qtbase/src/widgets/widgets/qtoolbutton.cpp
@@ -3663,134 +3316,6 @@ index 52bd2d5f7a3..82b5d7924fe 100644
      void nextCheckState() override;
      void initStyleOption(QStyleOptionToolButton *option) const;
  
-diff --git a/qtbase/src/xml/dom/qdom.cpp b/qtbase/src/xml/dom/qdom.cpp
-index 45da7f961de..04b868a7e1d 100644
---- a/qtbase/src/xml/dom/qdom.cpp
-+++ b/qtbase/src/xml/dom/qdom.cpp
-@@ -3676,59 +3676,67 @@ static QString encodeText(const QString &str,
-     const QTextCodec *const codec = s.codec();
-     Q_ASSERT(codec);
- #endif
--    QString retval(str);
--    int len = retval.length();
--    int i = 0;
-+    QString retval;
-+    int start = 0;
-+    auto appendToOutput = [&](int cur, QLatin1String replacement)
-+    {
-+        if (start < cur) {
-+            retval.reserve(str.size() + replacement.size());
-+            retval.append(QStringView(str).left(cur).mid(start));
-+        }
-+        // Skip over str[cur], replaced by replacement
-+        start = cur + 1;
-+        retval.append(replacement);
-+    };
- 
--    while (i < len) {
--        const QChar ati(retval.at(i));
--
--        if (ati == QLatin1Char('<')) {
--            retval.replace(i, 1, QLatin1String("&lt;"));
--            len += 3;
--            i += 4;
--        } else if (encodeQuotes && (ati == QLatin1Char('"'))) {
--            retval.replace(i, 1, QLatin1String("&quot;"));
--            len += 5;
--            i += 6;
--        } else if (ati == QLatin1Char('&')) {
--            retval.replace(i, 1, QLatin1String("&amp;"));
--            len += 4;
--            i += 5;
--        } else if (ati == QLatin1Char('>') && i >= 2 && retval[i - 1] == QLatin1Char(']') && retval[i - 2] == QLatin1Char(']')) {
--            retval.replace(i, 1, QLatin1String("&gt;"));
--            len += 3;
--            i += 4;
--        } else if (performAVN &&
--                   (ati == QChar(0xA) ||
--                    ati == QChar(0xD) ||
--                    ati == QChar(0x9))) {
--            const QString replacement(QLatin1String("&#x") + QString::number(ati.unicode(), 16) + QLatin1Char(';'));
--            retval.replace(i, 1, replacement);
--            i += replacement.length();
--            len += replacement.length() - 1;
--        } else if (encodeEOLs && ati == QChar(0xD)) {
--            retval.replace(i, 1, QLatin1String("&#xd;")); // Replace a single 0xD with a ref for 0xD
--            len += 4;
--            i += 5;
--        } else {
-+    const int len = str.size();
-+    for (int cur = 0; cur < len; ++cur) {
-+        switch (const char16_t ati = str[cur].unicode()) {
-+        case u'<':
-+            appendToOutput(cur, QLatin1String("&lt;"));
-+            break;
-+        case u'"':
-+            if (encodeQuotes)
-+                appendToOutput(cur, QLatin1String("&quot;"));
-+            break;
-+        case u'&':
-+            appendToOutput(cur, QLatin1String("&amp;"));
-+            break;
-+        case u'>':
-+            if (cur >= 2 && str[cur - 1] == u']' && str[cur - 2] == u']')
-+                appendToOutput(cur, QLatin1String("&gt;"));
-+            break;
-+        case u'\r':
-+            if (performAVN || encodeEOLs)
-+                appendToOutput(cur, QLatin1String("&#xd;"));    // \r == 0x0d
-+            break;
-+        case u'\n':
-+            if (performAVN)
-+                appendToOutput(cur, QLatin1String("&#xa;"));    // \n == 0x0a
-+            break;
-+        case u'\t':
-+            if (performAVN)
-+                appendToOutput(cur, QLatin1String("&#x9;"));    // \t == 0x09
-+            break;
-+        default:
- #if QT_CONFIG(textcodec)
-             if(codec->canEncode(ati))
--                ++i;
-+                ; // continue
-             else
- #endif
-             {
-                 // We have to use a character reference to get it through.
--                const ushort codepoint(ati.unicode());
--                const QString replacement(QLatin1String("&#x") + QString::number(codepoint, 16) + QLatin1Char(';'));
--                retval.replace(i, 1, replacement);
--                i += replacement.length();
--                len += replacement.length() - 1;
-+                const QByteArray replacement = "&#x" + QByteArray::number(uint{ati}, 16) + ';';
-+                appendToOutput(cur, QLatin1String{replacement});
-             }
-+            break;
-         }
-     }
--
--    return retval;
-+    if (start > 0) {
-+        retval.append(QStringView(str).left(len).mid(start));
-+        return retval;
-+    }
-+    return str;
- }
- 
- void QDomAttrPrivate::save(QTextStream& s, int, int) const
-diff --git a/qtbase/sync.profile b/qtbase/sync.profile
-index 0292bf0dc2f..7dd0177b908 100644
---- a/qtbase/sync.profile
-+++ b/qtbase/sync.profile
-@@ -77,7 +77,7 @@
-         "qsql.h" => "QtSql/qtsqlglobal.h"
-     },
-     "QtDBus" => {
--        "qdbusmacros.h" => "QtDbus/qtdbusglobal.h"
-+        "qdbusmacros.h" => "QtDBus/qtdbusglobal.h"
-     },
-     "QtTest" => {
-         "qtest_global.h" => "QtTest/qttestglobal.h"
 diff --git a/qtbase/tests/auto/corelib/itemmodels/qconcatenatetablesproxymodel/tst_qconcatenatetablesproxymodel.cpp b/qtbase/tests/auto/corelib/itemmodels/qconcatenatetablesproxymodel/tst_qconcatenatetablesproxymodel.cpp
 index e1ea7a45525..90972caa575 100644
 --- a/qtbase/tests/auto/corelib/itemmodels/qconcatenatetablesproxymodel/tst_qconcatenatetablesproxymodel.cpp
@@ -83933,10 +83458,10 @@ index eb108a40de7..dca5528c1bf 100644
  QTEST_MAIN(tst_QAbstractButton)
  #include "tst_qabstractbutton.moc"
 diff --git a/qtbase/tests/auto/widgets/widgets/qcombobox/tst_qcombobox.cpp b/qtbase/tests/auto/widgets/widgets/qcombobox/tst_qcombobox.cpp
-index 7af60ed7578..46b5af6d63b 100644
+index 7ad9abaa142..ad1141d46e9 100644
 --- a/qtbase/tests/auto/widgets/widgets/qcombobox/tst_qcombobox.cpp
 +++ b/qtbase/tests/auto/widgets/widgets/qcombobox/tst_qcombobox.cpp
-@@ -168,6 +168,7 @@ private slots:
+@@ -172,6 +172,7 @@ private slots:
      void checkMenuItemPosWhenStyleSheetIsSet();
      void checkEmbeddedLineEditWhenStyleSheetIsSet();
      void propagateStyleChanges();
@@ -83944,7 +83469,7 @@ index 7af60ed7578..46b5af6d63b 100644
  
  private:
      PlatformInputContext m_platformInputContext;
-@@ -3642,5 +3643,24 @@ void tst_QComboBox::propagateStyleChanges()
+@@ -3667,5 +3668,24 @@ void tst_QComboBox::propagateStyleChanges()
      QVERIFY(frameStyle.inquired);
  }
  
@@ -84164,96 +83689,8 @@ index e818514a79d..4043e9326a2 100644
 diff --git a/qtbase/tests/manual/rhi/cubemap_render/buildshader.bat b/qtbase/tests/manual/rhi/cubemap_render/buildshader.bat
 old mode 100755
 new mode 100644
-diff --git a/qtsvg/src/plugins/imageformats/svg/qsvgiohandler.cpp b/qtsvg/src/plugins/imageformats/svg/qsvgiohandler.cpp
-index 561e77e9..12e05748 100644
---- a/qtsvg/src/plugins/imageformats/svg/qsvgiohandler.cpp
-+++ b/qtsvg/src/plugins/imageformats/svg/qsvgiohandler.cpp
-@@ -191,6 +191,8 @@ bool QSvgIOHandler::read(QImage *image)
-             }
-         }
-         if (!finalSize.isEmpty()) {
-+            if (qMax(finalSize.width(), finalSize.height()) > 0xffff)
-+                return false; // Assume corrupted file
-             image->fill(d->backColor.rgba());
-             QPainter p(image);
-             d->r.render(&p, bounds);
-diff --git a/qtsvg/src/svg/qsvghandler.cpp b/qtsvg/src/svg/qsvghandler.cpp
-index dd9b7164..222b6d89 100644
---- a/qtsvg/src/svg/qsvghandler.cpp
-+++ b/qtsvg/src/svg/qsvghandler.cpp
-@@ -1393,9 +1393,10 @@ static void parseFont(QSvgNode *node,
-         case FontSizeNone:
-             break;
-         case FontSizeValue: {
--            QSvgHandler::LengthType dummy; // should always be pixel size
--            fontStyle->setSize(qMin(parseLength(attributes.fontSize, dummy, handler),
--                                    qreal(0xffff)));
-+            QSvgHandler::LengthType type;
-+            qreal fs = parseLength(attributes.fontSize, type, handler);
-+            fs = convertToPixels(fs, true, type);
-+            fontStyle->setSize(qMin(fs, qreal(0xffff)));
-         }
-             break;
-         default:
-@@ -2578,6 +2579,8 @@ static QSvgNode *createCircleNode(QSvgNode *parent,
-     qreal ncx = toDouble(cx);
-     qreal ncy = toDouble(cy);
-     qreal nr  = toDouble(r);
-+    if (nr < 0.0)
-+        return nullptr;
- 
-     QRectF rect(ncx-nr, ncy-nr, nr*2, nr*2);
-     QSvgNode *circle = new QSvgCircle(parent, rect);
-@@ -3048,15 +3051,16 @@ static QSvgStyleProperty *createRadialGradientNode(QSvgNode *node,
- 
-     qreal ncx = 0.5;
-     qreal ncy = 0.5;
--    qreal nr  = 0.5;
-     if (!cx.isEmpty())
-         ncx = toDouble(cx);
-     if (!cy.isEmpty())
-         ncy = toDouble(cy);
-+
-+    qreal nr = 0.0;
-     if (!r.isEmpty())
-         nr = toDouble(r);
--    if (nr < 0.5)
--        nr = 0.5;
-+    if (nr <= 0.0)
-+        return nullptr;
- 
-     qreal nfx = ncx;
-     if (!fx.isEmpty())
-@@ -3352,7 +3356,9 @@ static QSvgNode *createTextNode(QSvgNode *parent,
-     //### editable and rotate not handled
-     QSvgHandler::LengthType type;
-     qreal nx = parseLength(x, type, handler);
-+    nx = convertToPixels(nx, true, type);
-     qreal ny = parseLength(y, type, handler);
-+    ny = convertToPixels(ny, true, type);
- 
-     QSvgNode *text = new QSvgText(parent, QPointF(nx, ny));
-     return text;
-diff --git a/qtsvg/src/svg/qsvgstructure.cpp b/qtsvg/src/svg/qsvgstructure.cpp
-index b89608b5..89c9e4ec 100644
---- a/qtsvg/src/svg/qsvgstructure.cpp
-+++ b/qtsvg/src/svg/qsvgstructure.cpp
-@@ -255,9 +255,13 @@ inline static bool isSupportedSvgFeature(const QString &str)
-     };
- 
-     if (str.length() <= MAX_WORD_LENGTH && str.length() >= MIN_WORD_LENGTH) {
-+        const char16_t unicode44 = str.at(44).unicode();
-+        const char16_t unicode45 = str.at(45).unicode();
-+        if (unicode44 >= sizeof(asso_values) || unicode45 >= sizeof(asso_values))
-+            return false;
-         const int key = str.length()
--                        + asso_values[str.at(45).unicode()]
--                        + asso_values[str.at(44).unicode()];
-+                        + asso_values[unicode45]
-+                        + asso_values[unicode44];
-         if (key <= MAX_HASH_VALUE && key >= 0)
-             return str == QLatin1String(wordlist[key]);
-     }
+Submodule qtcanvas3d 1319e096...00000000 (submodule deleted)
+Submodule qtdeclarative dbb2e3b6..5bc1ac07:
 diff --git a/qtdeclarative/src/3rdparty/masm/assembler/ARM64Assembler.h b/qtdeclarative/src/3rdparty/masm/assembler/ARM64Assembler.h
 index 3e988a277c..f49af39682 100644
 --- a/qtdeclarative/src/3rdparty/masm/assembler/ARM64Assembler.h
@@ -85569,261 +85006,12 @@ index 0000000000..38dfde41c3
 +        }
 +    }
 +}
-diff --git a/qtscript/.qmake.conf b/qtscript/.qmake.conf
-index 342abd1..4a2ae58 100644
---- a/qtscript/.qmake.conf
-+++ b/qtscript/.qmake.conf
-@@ -3,4 +3,4 @@ android|boot2qt: CONFIG -= headersclean
- 
- DEFINES += QT_NO_FOREACH QT_NO_JAVA_STYLE_ITERATORS QT_NO_LINKED_LIST
- 
--MODULE_VERSION = 5.15.18
-+MODULE_VERSION = 5.15.19
-diff --git a/qtmultimedia/src/gsttools/qgstvideorenderersink.cpp b/qtmultimedia/src/gsttools/qgstvideorenderersink.cpp
-index 4000f2178..a446d93fe 100644
---- a/qtmultimedia/src/gsttools/qgstvideorenderersink.cpp
-+++ b/qtmultimedia/src/gsttools/qgstvideorenderersink.cpp
-@@ -368,7 +368,8 @@ static GstGLContext *gstGLDisplayContext(QAbstractVideoSurface *surface)
-     if (!nativeContext)
-         qWarning() << "Could not find resource for" << contextName;
- 
--    GstGLContext *appContext = gst_gl_context_new_wrapped(display, (guintptr)nativeContext, glPlatform, GST_GL_API_ANY);
-+    GstGLAPI glApi = QOpenGLContext::openGLModuleType() == QOpenGLContext::LibGL ? GST_GL_API_OPENGL : GST_GL_API_GLES2;
-+    GstGLContext *appContext = gst_gl_context_new_wrapped(display, (guintptr)nativeContext, glPlatform, glApi);
-     if (!appContext)
-         qWarning() << "Could not create wrappped context for platform:" << glPlatform;
- 
-diff --git a/qtmultimedia/src/multimediawidgets/multimediawidgets.pro b/qtmultimedia/src/multimediawidgets/multimediawidgets.pro
-index 1919e8107..4c30d8fbf 100644
---- a/qtmultimedia/src/multimediawidgets/multimediawidgets.pro
-+++ b/qtmultimedia/src/multimediawidgets/multimediawidgets.pro
-@@ -2,8 +2,6 @@
- TARGET = QtMultimediaWidgets
- QT = core gui multimedia widgets-private
- QT_PRIVATE += multimedia-private
--qtHaveModule(opengl): \
--   QT_PRIVATE += opengl
- 
- PRIVATE_HEADERS += \
-     qvideowidget_p.h \
-diff --git a/qttools/src/assistant/help/help.pro b/qttools/src/assistant/help/help.pro
-index 800c4a38d..7556f451b 100644
---- a/qttools/src/assistant/help/help.pro
-+++ b/qttools/src/assistant/help/help.pro
-@@ -1,7 +1,6 @@
- TARGET = QtHelp
- 
- QT = core-private gui widgets sql
--QT_PRIVATE = network
- 
- DEFINES += QHELP_LIB
- 
-diff --git a/qttools/src/assistant/qhelpgenerator/helpgenerator.cpp b/qttools/src/assistant/qhelpgenerator/helpgenerator.cpp
-index feab1e2d5..cbfb82507 100644
---- a/qttools/src/assistant/qhelpgenerator/helpgenerator.cpp
-+++ b/qttools/src/assistant/qhelpgenerator/helpgenerator.cpp
-@@ -445,7 +445,9 @@ bool HelpGeneratorPrivate::insertFiles(const QStringList &files, const QString &
-     if (filterSetId < 0)
-         return false;
-     ++filterSetId;
--    for (int attId : qAsConst(filterAtts)) {
-+    QList<int> attValues = filterAtts.values();
-+    std::sort(attValues.begin(), attValues.end());
-+    for (int attId : qAsConst(attValues)) {
-         m_query->prepare(QLatin1String("INSERT INTO FileAttributeSetTable "
-             "VALUES(?, ?)"));
-         m_query->bindValue(0, filterSetId);
-diff --git a/qttools/src/assistant/qhelpgenerator/qhelpgenerator.pro b/qttools/src/assistant/qhelpgenerator/qhelpgenerator.pro
-index bb22000c8..415347a00 100644
---- a/qttools/src/assistant/qhelpgenerator/qhelpgenerator.pro
-+++ b/qttools/src/assistant/qhelpgenerator/qhelpgenerator.pro
-@@ -1,4 +1,4 @@
--QT += network help-private
-+QT += help-private
- 
- QTPLUGIN.platforms = qminimal
- QTPLUGIN.sqldrivers = qsqlite
-diff --git a/qttools/src/qdoc/clangcodeparser.cpp b/qttools/src/qdoc/clangcodeparser.cpp
-index 539a603da..a41b99cec 100644
---- a/qttools/src/qdoc/clangcodeparser.cpp
-+++ b/qttools/src/qdoc/clangcodeparser.cpp
-@@ -1395,8 +1395,7 @@ void ClangCodeParser::buildPCH()
-             args_.push_back("-xc++");
-             CXTranslationUnit tu;
-             QString tmpHeader = pchFileDir_->path() + "/" + module;
--            QFile tmpHeaderFile(tmpHeader);
--            if (tmpHeaderFile.open(QIODevice::Text | QIODevice::WriteOnly)) {
-+            { QFile tmpHeaderFile(tmpHeader); if (tmpHeaderFile.open(QIODevice::Text | QIODevice::WriteOnly)) {
-                 QTextStream out(&tmpHeaderFile);
-                 if (header.isEmpty()) {
-                     for (auto it = allHeaders_.constKeyValueBegin();
-@@ -1421,8 +1420,7 @@ void ClangCodeParser::buildPCH()
-                             out << line << "\n";
-                     }
-                 }
--                tmpHeaderFile.close();
--            }
-+            } }
-             if (printParsingErrors_ == 0)
-                 qCWarning(lcQdoc) << "clang not printing errors; include paths were guessed";
-             CXErrorCode err =
-diff --git a/qtdoc/doc/src/platforms/android/android-building.qdoc b/qtdoc/doc/src/platforms/android/android-building.qdoc
-index 942753cc9..36bdf6379 100644
---- a/qtdoc/doc/src/platforms/android/android-building.qdoc
-+++ b/qtdoc/doc/src/platforms/android/android-building.qdoc
-@@ -120,7 +120,7 @@
-     mkdir <path_to_build_dir>/build-qt
-     cd <path_to_build_dir>/build-qt
- 
--    <path_to_qt_source>/configure -xplatform android-clang -prefix </path/to/install> -disable-rpath -nomake tests -nomake examples -android-ndk <path/to/sdk>/ndk/<ndk_version> -android-sdk <path/to/sdk> -no-warnings-are-errors
-+    <path_to_qt_source>/configure -xplatform android-clang -prefix </path/to/install> -android-ndk <path/to/sdk>/ndk/<ndk_version> -android-sdk <path/to/sdk>
-     \endcode
- 
-     \l{Qt Configure Options} contains more information about the configure options.
-@@ -217,7 +217,7 @@
-     mkdir C:\Qt\Build\build-qt
-     cd C:\Qt\Build\build-qt
- 
--    ..\Src_%VERSION%\configure.bat -platform win32-g++ -xplatform android-clang -prefix <\path\to\install> -nomake tests -nomake examples -android-sdk <ANDROID_SDK_PATH> -android-ndk <ANDROID_SDK_PATH>\ndk\<ndk_version> -android-ndk-host windows-x86_64 -no-warnings-are-errors
-+    ..\Src_%VERSION%\configure.bat -platform win32-g++ -xplatform android-clang -prefix <\path\to\install> -android-sdk <ANDROID_SDK_PATH> -android-ndk <ANDROID_SDK_PATH>\ndk\<ndk_version> -android-ndk-host windows-x86_64
-     \endcode
- 
-     \l{Qt Configure Options} contains more information about the configure options.
-diff --git a/qtdoc/doc/src/platforms/android/android.qdoc b/qtdoc/doc/src/platforms/android/android.qdoc
-index 34f46f435..0d2bf2f6b 100644
---- a/qtdoc/doc/src/platforms/android/android.qdoc
-+++ b/qtdoc/doc/src/platforms/android/android.qdoc
-@@ -196,16 +196,16 @@ Different Qt versions depend on different NDK versions, as listed below:
-             Qt 5.13.2 or later
-             Qt 5.12.6 or later
-         \li NDK r20b or r21
--        \li \e android-clang
-+        \li android-clang
-     \row
-         \li Qt 5.12.0 to 5.12.5
-             Qt 5.13.0 to 5.13.1
-         \li NDK r19c
--        \li \e android-clang
-+        \li android-clang
-     \row
-         \li Qt 5.11 and earlier
-         \li NDK r10e
--        \li \e GCC toolchain
-+        \li GCC toolchain
- \endtable
- 
- \note Qt 5.14.0 and 5.14.1 with NDK r21 have a bug fixed at \l {QTBUG-81461}.
-@@ -253,21 +253,20 @@ After the package installation is complete, install the driver from
- \l{Android: adb}{adb} commands now and check whether your Android device
- responds to them.
- 
--\section2 Linux 64-bit
-+\section2 Linux
- 
--If you're developing on a 64-bit Linux machine, you must install the
--following dependencies in order to run 32-bit executables like \c adb, which
--allows Qt Creator to find devices to deploy to:
-+The following dependencies are needed for using tools such as \c adb or \c gdb which
-+can be used by Qt Creator:
- 
- \badcode
--sudo apt-get install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
-+sudo apt-get install libstdc++6 libncurses5
- \endcode
- 
- \target emulator dependencies
- To run the Android emulator, the following dependencies are also necessary:
- 
- \badcode
--sudo apt-get install libsdl1.2debian:i386
-+sudo apt-get install libsdl1.2debian
- \endcode
- 
- \section2 Qt Creator IDE
+Submodule qtdoc fa6a98ff...385efd46:
 diff --git a/qtdoc/doc/src/platforms/linux.qdoc b/qtdoc/doc/src/platforms/linux.qdoc
-index e3a0299f3..c1a675da7 100644
+index 897d4ea25..c1a675da7 100644
 --- a/qtdoc/doc/src/platforms/linux.qdoc
 +++ b/qtdoc/doc/src/platforms/linux.qdoc
-@@ -149,43 +149,49 @@
-     \li libxcb-render
-     \li X C Bindings for Render extension
-     \li auto-detected
--    \li 1.9
-+    \li 1.11
-     \row {id="OptionalColor"}
-     \li xcb-render-util
-     \li libxcb-render-util
-     \li Utility library for XCB for Render extension
-     \li auto-detected
--    \li 0.3.8
-+    \li 0.3.9
-     \row {id="OptionalColor"}
-     \li xcb-shape
-     \li libxcb-shape
-     \li X C Bindings for Shape extension
-     \li auto-detected
--    \li 1.9
-+    \li 1.11
-     \row {id="DefaultColor"}
-     \li xcb-randr
-     \li libxcb-randr
-     \li X C Bindings for Resize and Rotate Extension
-     \li auto-detected
--    \li 1.9
-+    \li 1.11
-     \row {id="DefaultColor"}
-     \li xcb-xfixes
-     \li libxcb-xfixes
-     \li X C Bindings for Fixes Extension
-     \li auto-detected
--    \li 1.9
-+    \li 1.11
-+    \row {id="DefaultColor"}
-+    \li xcb-xkb
-+    \li libxcb-xkb
-+    \li X C Bindings for XKeyboard Extension
-+    \li auto-detected
-+    \li 1.11
-     \row {id="DefaultColor"}
-     \li xcb-sync
-     \li libxcb-sync
-     \li X C Bindings for Sync Extension
-     \li auto-detected
--    \li 1.9
-+    \li 1.11
-     \row {id="DefaultColor"}
-     \li xcb-shm
-     \li libxcb-shm
-     \li X C Bindings for Shared Memory Extension
-     \li auto-detected
--    \li 1.9
-+    \li 1.11
-     \row {id="DefaultColor"}
-     \li xcb-icccm
-     \li libxcb-icccm
-@@ -204,6 +210,12 @@
-     \li Utility library for XCB for XImage and XShmImage, used for QBackingStore and cursor support
-     \li auto-detected
-     \li 0.3.9
-+    \row {id="DefaultColor"}
-+    \li xcb-util
-+    \li libxcb-util
-+    \li Utility library for XCB for atom, aux and event
-+    \li auto-detected
-+    \li 0.3.9
- 
-     \row {id="OptionalColor"}
-     \li xkbcommon
-@@ -247,7 +259,7 @@
-     \li libxcb
-     \li X C Binding library
-     \li
--    \li 1.9
-+    \li 1.11
-     \row {id="DefaultColor"}
-     \li X11-xcb
-     \li libX11-xcb
-@@ -307,7 +319,9 @@
+@@ -319,7 +319,9 @@
      \li libxcb-shape0-dev
      \li libxcb-randr0-dev
      \li libxcb-render-util0-dev
@@ -85834,6 +85022,188 @@ index e3a0299f3..c1a675da7 100644
      \li libxkbcommon-dev
      \li libxkbcommon-x11-dev
      \endlist
+Submodule qtdocgallery e36e6f0a...00000000 (submodule deleted)
+Submodule qtfeedback 9ac8d8c2...00000000 (submodule deleted)
+Submodule qtimageformats ba9056b1..4076e38d:
+diff --git a/qtimageformats/src/plugins/imageformats/tiff/qtiffhandler.cpp b/qtimageformats/src/plugins/imageformats/tiff/qtiffhandler.cpp
+index f0dfe7f6..5cb0522e 100644
+--- a/qtimageformats/src/plugins/imageformats/tiff/qtiffhandler.cpp
++++ b/qtimageformats/src/plugins/imageformats/tiff/qtiffhandler.cpp
+@@ -38,13 +38,14 @@
+ ****************************************************************************/
+ 
+ #include "qtiffhandler_p.h"
+-#include <qvariant.h>
+ #include <qcolorspace.h>
+ #include <qdebug.h>
+ #include <qimage.h>
+ #include <qglobal.h>
+ #include <qbuffer.h>
+ #include <qfiledevice.h>
++#include <qvariant.h>
++#include <qvarlengtharray.h>
+ 
+ extern "C" {
+ #include "tiffio.h"
+diff --git a/qtimageformats/src/plugins/imageformats/webp/qwebphandler.cpp b/qtimageformats/src/plugins/imageformats/webp/qwebphandler.cpp
+index 82d38cbc..d02eb054 100644
+--- a/qtimageformats/src/plugins/imageformats/webp/qwebphandler.cpp
++++ b/qtimageformats/src/plugins/imageformats/webp/qwebphandler.cpp
+@@ -45,6 +45,7 @@
+ #include <qdebug.h>
+ #include <qpainter.h>
+ #include <qvariant.h>
++#include <QtEndian>
+ 
+ static const int riffHeaderSize = 12; // RIFF_HEADER_SIZE from webp/format_constants.h
+ 
+@@ -102,21 +103,23 @@ bool QWebpHandler::ensureScanned() const
+ 
+     m_scanState = ScanError;
+ 
+-    if (device()->isSequential()) {
+-        qWarning() << "Sequential devices are not supported";
++    QWebpHandler *that = const_cast<QWebpHandler *>(this);
++    const int headerBytesNeeded = sizeof(WebPBitstreamFeatures);
++    QByteArray header = device()->peek(headerBytesNeeded);
++    if (header.size() < headerBytesNeeded)
+         return false;
+-    }
+ 
+-    qint64 oldPos = device()->pos();
+-    device()->seek(0);
+-
+-    QWebpHandler *that = const_cast<QWebpHandler *>(this);
+-    QByteArray header = device()->peek(sizeof(WebPBitstreamFeatures));
++    // We do no random access during decoding, just a readAll() of the whole image file. So if
++    // if it is all available already, we can accept a sequential device. The riff header contains
++    // the file size minus 8 bytes header
++    qint64 byteSize = qFromLittleEndian<quint32>(header.constData() + 4);
++    if (device()->isSequential() && device()->bytesAvailable() < byteSize + 8) {
++        qWarning() << "QWebpHandler: Insufficient data available in sequential device";
++        return false;
++    }
+     if (WebPGetFeatures((const uint8_t*)header.constData(), header.size(), &(that->m_features)) == VP8_STATUS_OK) {
+         if (m_features.has_animation) {
+             // For animation, we have to read and scan whole file to determine loop count and images count
+-            device()->seek(oldPos);
+-
+             if (that->ensureDemuxer()) {
+                 that->m_loop = WebPDemuxGetI(m_demuxer, WEBP_FF_LOOP_COUNT);
+                 that->m_frameCount = WebPDemuxGetI(m_demuxer, WEBP_FF_FRAME_COUNT);
+@@ -126,17 +129,13 @@ bool QWebpHandler::ensureScanned() const
+                 if (that->m_features.has_alpha)
+                     that->m_composited->fill(Qt::transparent);
+ 
+-                // We do not reset device position since we have read in all data
+                 m_scanState = ScanSuccess;
+-                return true;
+             }
+         } else {
+             m_scanState = ScanSuccess;
+         }
+     }
+ 
+-    device()->seek(oldPos);
+-
+     return m_scanState == ScanSuccess;
+ }
+ 
+@@ -159,7 +158,7 @@ bool QWebpHandler::ensureDemuxer()
+ 
+ bool QWebpHandler::read(QImage *image)
+ {
+-    if (!ensureScanned() || device()->isSequential() || !ensureDemuxer())
++    if (!ensureScanned() || !ensureDemuxer())
+         return false;
+ 
+     QRect prevFrameRect;
+Submodule qtlocation ef9e860d..81f560be:
+Submodule src/3rdparty/mapbox-gl-native d3101bbc2..35d566724:
+diff --git a/qtlocation/src/3rdparty/mapbox-gl-native/deps/rapidjson/1.1.0/include/rapidjson/document.h b/qtlocation/src/3rdparty/mapbox-gl-native/deps/rapidjson/1.1.0/include/rapidjson/document.h
+index e3e20dfbd..19f5a6a5f 100644
+--- a/qtlocation/src/3rdparty/mapbox-gl-native/deps/rapidjson/1.1.0/include/rapidjson/document.h
++++ b/qtlocation/src/3rdparty/mapbox-gl-native/deps/rapidjson/1.1.0/include/rapidjson/document.h
+@@ -316,8 +316,6 @@ struct GenericStringRef {
+ 
+     GenericStringRef(const GenericStringRef& rhs) : s(rhs.s), length(rhs.length) {}
+ 
+-    GenericStringRef& operator=(const GenericStringRef& rhs) { s = rhs.s; length = rhs.length; }
+-
+     //! implicit conversion to plain CharType pointer
+     operator const Ch *() const { return s; }
+ 
+@@ -328,6 +326,8 @@ private:
+     //! Disallow construction from non-const array
+     template<SizeType N>
+     GenericStringRef(CharType (&str)[N]) /* = delete */;
++    //! Copy assignment operator not permitted - immutable type
++    GenericStringRef& operator=(const GenericStringRef& rhs) /* = delete */;
+ };
+ 
+ //! Mark a character pointer as constant string
+diff --git a/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp b/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp
+index a28c59a47..283ec7dbb 100644
+--- a/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp
++++ b/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp
+@@ -1,5 +1,7 @@
+ #pragma once
+ 
++#include <cstdint>
++
+ #include <mapbox/geometry/geometry.hpp>
+ #include <mapbox/geometry/point_arithmetic.hpp>
+ #include <mapbox/geometry/for_each_point.hpp>
+diff --git a/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp b/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp
+index 13498ccb9..2f6acb641 100644
+--- a/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp
++++ b/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp
+@@ -3,6 +3,7 @@
+ #include <sstream>
+ #include <string>
+ #include <cassert>
++#include <cstdint>
+ #include <cstdlib>
+ #include <exception>
+ 
+diff --git a/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/unique_any.hpp b/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/unique_any.hpp
+index c7dc8b38e..0fb25b8b4 100644
+--- a/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/unique_any.hpp
++++ b/qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/unique_any.hpp
+@@ -3,6 +3,7 @@
+ #include <typeinfo>
+ #include <type_traits>
+ #include <stdexcept>
++#include <utility>
+ namespace mbgl {
+ namespace util {
+ 
+diff --git a/qtlocation/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro b/qtlocation/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro
+index ed974db77..4d5835d73 100644
+--- a/qtlocation/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro
++++ b/qtlocation/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro
+@@ -2,8 +2,7 @@ TARGET = qmapboxgl
+ 
+ load(qt_helper_lib)
+ 
+-CONFIG += qt c++14 exceptions warn_off staticlib object_parallel_to_source
+-CONFIG -= c++1z
++CONFIG += qt c++17 exceptions warn_off staticlib object_parallel_to_source
+ 
+ QT += network-private \
+       gui-private \
+diff --git a/qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp b/qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp
+index bc959c9a7..fd00370f8 100644
+--- a/qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp
++++ b/qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp
+@@ -1,5 +1,7 @@
+ #pragma once
+ 
++#include <cstdint>
++
+ #include <mbgl/util/variant.hpp>
+ 
+ namespace mbgl {
 diff --git a/qtlocation/src/location/configure.json b/qtlocation/src/location/configure.json
 index 6d01a9a37..d1e623a1e 100644
 --- a/qtlocation/src/location/configure.json
@@ -86278,196 +85648,495 @@ index 8db47beb5..030006f59 100644
 +const QString MAP_TILES_HOST_AERIAL = QLatin1String("1-4.aerial.maps.ls.hereapi.com");
  
  QT_END_NAMESPACE
-diff --git a/qtconnectivity/src/bluetooth/qlowenergycontroller_bluez.cpp b/qtconnectivity/src/bluetooth/qlowenergycontroller_bluez.cpp
-index 6cb6ad66..0608e2ca 100644
---- a/qtconnectivity/src/bluetooth/qlowenergycontroller_bluez.cpp
-+++ b/qtconnectivity/src/bluetooth/qlowenergycontroller_bluez.cpp
-@@ -179,12 +179,13 @@ static inline QBluetoothUuid convert_uuid128(const quint128 *p)
-     return QBluetoothUuid(qtdst);
- }
+Submodule qtmultimedia 54f54ab7..8ddc4410:
+diff --git a/qtmultimedia/src/gsttools/qgstvideorenderersink.cpp b/qtmultimedia/src/gsttools/qgstvideorenderersink.cpp
+index 4000f2178..a446d93fe 100644
+--- a/qtmultimedia/src/gsttools/qgstvideorenderersink.cpp
++++ b/qtmultimedia/src/gsttools/qgstvideorenderersink.cpp
+@@ -368,7 +368,8 @@ static GstGLContext *gstGLDisplayContext(QAbstractVideoSurface *surface)
+     if (!nativeContext)
+         qWarning() << "Could not find resource for" << contextName;
  
--static void dumpErrorInformation(const QByteArray &response)
-+/* returns false if the format is incorrect */
-+static bool dumpErrorInformation(const QByteArray &response)
- {
-     const char *data = response.constData();
-     if (response.size() != 5 || data[0] != ATT_OP_ERROR_RESPONSE) {
-         qCWarning(QT_BT_BLUEZ) << QLatin1String("Not a valid error response");
--        return;
-+        return false;
+-    GstGLContext *appContext = gst_gl_context_new_wrapped(display, (guintptr)nativeContext, glPlatform, GST_GL_API_ANY);
++    GstGLAPI glApi = QOpenGLContext::openGLModuleType() == QOpenGLContext::LibGL ? GST_GL_API_OPENGL : GST_GL_API_GLES2;
++    GstGLContext *appContext = gst_gl_context_new_wrapped(display, (guintptr)nativeContext, glPlatform, glApi);
+     if (!appContext)
+         qWarning() << "Could not create wrappped context for platform:" << glPlatform;
+ 
+diff --git a/qtmultimedia/src/multimediawidgets/multimediawidgets.pro b/qtmultimedia/src/multimediawidgets/multimediawidgets.pro
+index 1919e8107..4c30d8fbf 100644
+--- a/qtmultimedia/src/multimediawidgets/multimediawidgets.pro
++++ b/qtmultimedia/src/multimediawidgets/multimediawidgets.pro
+@@ -2,8 +2,6 @@
+ TARGET = QtMultimediaWidgets
+ QT = core gui multimedia widgets-private
+ QT_PRIVATE += multimedia-private
+-qtHaveModule(opengl): \
+-   QT_PRIVATE += opengl
+ 
+ PRIVATE_HEADERS += \
+     qvideowidget_p.h \
+Submodule qtpim 02efef5e...00000000 (submodule deleted)
+Submodule qtquick3d a27ab465..4e85bd06:
+diff --git a/qtquick3d/src/plugins/assetimporters/assimp/assimp.pro b/qtquick3d/src/plugins/assetimporters/assimp/assimp.pro
+index ca5c499ed..174a075bd 100644
+--- a/qtquick3d/src/plugins/assetimporters/assimp/assimp.pro
++++ b/qtquick3d/src/plugins/assetimporters/assimp/assimp.pro
+@@ -10,7 +10,7 @@ QT_FOR_CONFIG += assetimporters-private
+ include($$OUT_PWD/../qtassetimporters-config.pri)
+ 
+ qtConfig(system-assimp):!if(cross_compile:host_build) {
+-    QMAKE_USE_PRIVATE += assimp
++    QMAKE_USE_PRIVATE += quick3d-assimp
+ } else {
+     include(../../../3rdparty/assimp/assimp.pri)
+ }
+Submodule qtquickcontrols2 00c62148..5b808e09:
+diff --git a/qtquickcontrols2/src/imports/platform/widgets/qwidgetplatformmenu.cpp b/qtquickcontrols2/src/imports/platform/widgets/qwidgetplatformmenu.cpp
+index e5fe734f7..e36922775 100644
+--- a/qtquickcontrols2/src/imports/platform/widgets/qwidgetplatformmenu.cpp
++++ b/qtquickcontrols2/src/imports/platform/widgets/qwidgetplatformmenu.cpp
+@@ -38,6 +38,7 @@
+ #include "qwidgetplatformmenuitem_p.h"
+ 
+ #include <QtGui/qwindow.h>
++#include <QtGui/private/qhighdpiscaling_p.h>
+ #include <QtWidgets/qmenu.h>
+ #include <QtWidgets/qaction.h>
+ 
+@@ -145,7 +146,7 @@ void QWidgetPlatformMenu::showPopup(const QWindow *window, const QRect &targetRe
+ 
+     QPoint targetPos = targetRect.bottomLeft();
+     if (window)
+-        targetPos = window->mapToGlobal(targetPos);
++        targetPos = window->mapToGlobal(QHighDpi::fromNativeLocalPosition(targetPos, window));
+ 
+     const QWidgetPlatformMenuItem *widgetItem = qobject_cast<const QWidgetPlatformMenuItem *>(item);
+     m_menu->popup(targetPos, widgetItem ? widgetItem->action() : nullptr);
+diff --git a/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton.cpp b/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton.cpp
+index 20cf59c1a..43af47a94 100644
+--- a/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton.cpp
++++ b/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton.cpp
+@@ -1201,6 +1201,12 @@ QAccessible::Role QQuickAbstractButton::accessibleRole() const
      }
- 
-     quint8 lastCommand = data[1];
-@@ -238,6 +239,8 @@ static void dumpErrorInformation(const QByteArray &response)
-     qCDebug(QT_BT_BLUEZ) << "Error1:" << errorString
-              << "last command:" << hex << lastCommand
-              << "handle:" << handle;
-+
-+    return true;
+     return QAccessible::Button;
  }
- 
- static int getUuidSize(const QBluetoothUuid &uuid)
-@@ -1014,6 +1017,7 @@ QLowEnergyHandle parseReadByTypeCharDiscovery(
- {
-     Q_ASSERT(charData);
-     Q_ASSERT(data);
-+    Q_ASSERT(elementLength >= 5);
- 
-     QLowEnergyHandle attributeHandle = bt_get_le16(&data[0]);
-     charData->properties =
-@@ -1022,7 +1026,7 @@ QLowEnergyHandle parseReadByTypeCharDiscovery(
- 
-     if (elementLength == 7) // 16 bit uuid
-         charData->uuid = QBluetoothUuid(bt_get_le16(&data[5]));
--    else
-+    else if (elementLength == 21) // 128 bit uuid
-         charData->uuid = convert_uuid128((quint128 *)&data[5]);
- 
-     qCDebug(QT_BT_BLUEZ) << "Found handle:" << hex << attributeHandle
-@@ -1039,6 +1043,7 @@ QLowEnergyHandle parseReadByTypeIncludeDiscovery(
- {
-     Q_ASSERT(foundServices);
-     Q_ASSERT(data);
-+    Q_ASSERT(elementLength >= 6);
- 
-     QLowEnergyHandle attributeHandle = bt_get_le16(&data[0]);
- 
-@@ -1048,9 +1053,14 @@ QLowEnergyHandle parseReadByTypeIncludeDiscovery(
-     // data[2] -> included service start handle
-     // data[4] -> included service end handle
- 
-+    // TODO: Spec v. 5.3, Vol. 3, Part G, 4.5.1 mentions that only
-+    // 16-bit UUID can be returned here. If the UUID is 128-bit,
-+    // then it is omitted from the response, and should be requested
-+    // separately with the ATT_READ_REQ command.
 +
-     if (elementLength == 8) //16 bit uuid
-         foundServices->append(QBluetoothUuid(bt_get_le16(&data[6])));
--    else
-+    else if (elementLength == 22) // 128 bit uuid
-         foundServices->append(convert_uuid128((quint128 *) &data[6]));
- 
-     qCDebug(QT_BT_BLUEZ) << "Found included service: " << hex
-@@ -1059,17 +1069,29 @@ QLowEnergyHandle parseReadByTypeIncludeDiscovery(
-     return attributeHandle;
- }
- 
-+Q_DECL_COLD_FUNCTION
-+static void reportMalformedData(quint8 cmd, const QByteArray &response)
++void QQuickAbstractButton::accessiblePressAction()
 +{
-+    qCDebug(QT_BT_BLUEZ, "Command 0x%X malformed data: %s", cmd,
-+            response.toHex().constData());
++    Q_D(QQuickAbstractButton);
++    d->trigger();
 +}
-+
- void QLowEnergyControllerPrivateBluez::processReply(
-         const Request &request, const QByteArray &response)
+ #endif
+ 
+ QT_END_NAMESPACE
+diff --git a/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton_p.h b/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton_p.h
+index 0fa48980e..ab66220d0 100644
+--- a/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton_p.h
++++ b/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton_p.h
+@@ -209,6 +209,7 @@ protected:
+ #if QT_CONFIG(accessibility)
+     void accessibilityActiveChanged(bool active) override;
+     QAccessible::Role accessibleRole() const override;
++    Q_INVOKABLE void accessiblePressAction();
+ #endif
+ 
+ private:
+diff --git a/qtquickcontrols2/src/quicktemplates2/qquickcontainer.cpp b/qtquickcontrols2/src/quicktemplates2/qquickcontainer.cpp
+index f38c2b09c..6eed2a024 100644
+--- a/qtquickcontrols2/src/quicktemplates2/qquickcontainer.cpp
++++ b/qtquickcontrols2/src/quicktemplates2/qquickcontainer.cpp
+@@ -225,6 +225,7 @@ void QQuickContainerPrivate::cleanup()
+     QObject::disconnect(contentModel, &QQmlObjectModel::countChanged, q, &QQuickContainer::countChanged);
+     QObject::disconnect(contentModel, &QQmlObjectModel::childrenChanged, q, &QQuickContainer::contentChildrenChanged);
+     delete contentModel;
++    contentModel = nullptr;
+ }
+ 
+ QQuickItem *QQuickContainerPrivate::itemAt(int index) const
+@@ -436,7 +437,7 @@ void QQuickContainerPrivate::contentChildren_clear(QQmlListProperty<QQuickItem>
+ void QQuickContainerPrivate::updateContentWidth()
  {
-     Q_Q(QLowEnergyController);
+     Q_Q(QQuickContainer);
+-    if (hasContentWidth || qFuzzyCompare(contentWidth, implicitContentWidth))
++    if (hasContentWidth || qFuzzyCompare(contentWidth, implicitContentWidth) || !contentModel)
+         return;
  
-+    // We already have an isEmpty() check at the only calling site that reads
-+    // incoming data, so Q_ASSERT is enough.
-+    Q_ASSERT(!response.isEmpty());
-+
-     quint8 command = response.constData()[0];
- 
-     bool isErrorResponse = false;
-     // if error occurred 2. byte is previous request type
-     if (command == ATT_OP_ERROR_RESPONSE) {
--        dumpErrorInformation(response);
-+        if (!dumpErrorInformation(response))
-+            return;
-         command = response.constData()[1];
-         isErrorResponse = true;
-     }
-@@ -1083,7 +1105,10 @@ void QLowEnergyControllerPrivateBluez::processReply(
-             mtuSize = ATT_DEFAULT_LE_MTU;
-             break;
-         }
--
-+        if (response.size() < 3) {
-+            reportMalformedData(command, response);
-+            break;
-+        }
-         const char *data = response.constData();
-         quint16 mtu = bt_get_le16(&data[1]);
-         mtuSize = mtu;
-@@ -1111,8 +1136,15 @@ void QLowEnergyControllerPrivateBluez::processReply(
-             break;
-         }
- 
-+        // response[1] == elementLength. According to the spec it should be
-+        // at least 4 bytes. See Spec v5.3, Vol 3, Part F, 3.4.4.10
-+        if (response.size() < 2 || response[1] < 4) {
-+            reportMalformedData(command, response);
-+            break;
-+        }
-+
-         QLowEnergyHandle start = 0, end = 0;
--        const quint16 elementLength = response.constData()[1];
-+        const quint16 elementLength = response.constData()[1]; // value checked above
-         const quint16 numElements = (response.size() - 2) / elementLength;
-         quint16 offset = 2;
-         const char *data = response.constData();
-@@ -1190,16 +1222,25 @@ void QLowEnergyControllerPrivateBluez::processReply(
-         }
- 
-         /* packet format:
--         * if GATT_CHARACTERISTIC discovery
-+         * if GATT_CHARACTERISTIC discovery (Spec 5.3, Vol. 3, Part G, 4.6)
-          *      <opcode><elementLength>
-          *          [<handle><property><charHandle><uuid>]+
-+         * The minimum elementLength is 7 bytes (uuid is always included)
-          *
--         * if GATT_INCLUDE discovery
-+         * if GATT_INCLUDE discovery (Spec 5.3, Vol. 3, Part G, 4.5.1)
-          *      <opcode><elementLength>
-          *          [<handle><startHandle_included><endHandle_included><uuid>]+
-+         *  The minimum elementLength is 6 bytes (uuid can be omitted).
-          *
-          *  The uuid can be 16 or 128 bit.
-          */
-+
-+        const quint8 minimumElementLength = attributeType == GATT_CHARACTERISTIC ? 7 : 6;
-+        if (response.size() < 2 || response[1] < minimumElementLength) {
-+            reportMalformedData(command, response);
-+            break;
-+        }
-+
-         QLowEnergyHandle lastHandle;
-         const quint16 elementLength = response.constData()[1];
-         const quint16 numElements = (response.size() - 2) / elementLength;
-@@ -1401,6 +1442,12 @@ void QLowEnergyControllerPrivateBluez::processReply(
-             break;
-         }
- 
-+        // Spec 5.3, Vol. 3, Part F, 3.4.3.2
-+        if (response.size() < 6) {
-+            reportMalformedData(command, response);
-+            break;
-+        }
-+
-         const quint8 format = response[1];
-         quint16 elementLength;
-         switch (format) {
-@@ -1831,8 +1878,17 @@ void QLowEnergyControllerPrivateBluez::discoverServiceDescriptors(
- 
- void QLowEnergyControllerPrivateBluez::processUnsolicitedReply(const QByteArray &payload)
+     contentWidth = implicitContentWidth;
+@@ -446,7 +447,7 @@ void QQuickContainerPrivate::updateContentWidth()
+ void QQuickContainerPrivate::updateContentHeight()
  {
-+    Q_ASSERT(!payload.isEmpty());
+     Q_Q(QQuickContainer);
+-    if (hasContentHeight || qFuzzyCompare(contentHeight, implicitContentHeight))
++    if (hasContentHeight || qFuzzyCompare(contentHeight, implicitContentHeight) || !contentModel)
+         return;
+ 
+     contentHeight = implicitContentHeight;
+diff --git a/qtquickcontrols2/src/quicktemplates2/qquickdialogbuttonbox.cpp b/qtquickcontrols2/src/quicktemplates2/qquickdialogbuttonbox.cpp
+index e33c5c934..9afabd18a 100644
+--- a/qtquickcontrols2/src/quicktemplates2/qquickdialogbuttonbox.cpp
++++ b/qtquickcontrols2/src/quicktemplates2/qquickdialogbuttonbox.cpp
+@@ -237,7 +237,7 @@ static QRectF alignedRect(Qt::LayoutDirection direction, Qt::Alignment alignment
+ void QQuickDialogButtonBoxPrivate::resizeContent()
+ {
+     Q_Q(QQuickDialogButtonBox);
+-    if (!contentItem)
++    if (!contentItem || !contentModel)
+         return;
+ 
+     QRectF geometry = q->boundingRect().adjusted(q->leftPadding(), q->topPadding(), -q->rightPadding(), -q->bottomPadding());
+@@ -322,6 +322,9 @@ void QQuickDialogButtonBoxPrivate::updateLayout()
+ qreal QQuickDialogButtonBoxPrivate::getContentWidth() const
+ {
+     Q_Q(const QQuickDialogButtonBox);
++    if (!contentModel)
++        return 0;
 +
-     const char *data = payload.constData();
--    bool isNotification = (data[0] == ATT_OP_HANDLE_VAL_NOTIFICATION);
-+    const quint8 command = data[0];
-+    bool isNotification = (command == ATT_OP_HANDLE_VAL_NOTIFICATION);
+     const int count = contentModel->count();
+     const qreal totalSpacing = qMax(0, count - 1) * spacing;
+     qreal totalWidth = totalSpacing;
+@@ -341,6 +344,9 @@ qreal QQuickDialogButtonBoxPrivate::getContentWidth() const
+ qreal QQuickDialogButtonBoxPrivate::getContentHeight() const
+ {
+     Q_Q(const QQuickDialogButtonBox);
++    if (!contentModel)
++        return 0;
 +
-+    if (payload.size() < 3) {
-+        reportMalformedData(command, payload);
-+        return;
+     const int count = contentModel->count();
+     qreal maxHeight = 0;
+     for (int i = 0; i < count; ++i) {
+diff --git a/qtquickcontrols2/src/quicktemplates2/qquickoverlay.cpp b/qtquickcontrols2/src/quicktemplates2/qquickoverlay.cpp
+index 91bd59184..0ce518f84 100644
+--- a/qtquickcontrols2/src/quicktemplates2/qquickoverlay.cpp
++++ b/qtquickcontrols2/src/quicktemplates2/qquickoverlay.cpp
+@@ -399,8 +399,11 @@ void QQuickOverlay::itemChange(ItemChange change, const ItemChangeData &data)
+     Q_D(QQuickOverlay);
+     QQuickItem::itemChange(change, data);
+ 
+-    if (change == ItemChildAddedChange || change == ItemChildRemovedChange)
++    if (change == ItemChildAddedChange || change == ItemChildRemovedChange) {
+         setVisible(!d->allDrawers.isEmpty() || !childItems().isEmpty());
++        if (data.item->parent() == d->mouseGrabberPopup)
++            d->setMouseGrabberPopup(nullptr);
++    }
+ }
+ 
+ void QQuickOverlay::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
+diff --git a/qtquickcontrols2/src/quicktemplates2/qquickpopup.cpp b/qtquickcontrols2/src/quicktemplates2/qquickpopup.cpp
+index 3f8691e2c..6b1ca32b3 100644
+--- a/qtquickcontrols2/src/quicktemplates2/qquickpopup.cpp
++++ b/qtquickcontrols2/src/quicktemplates2/qquickpopup.cpp
+@@ -46,6 +46,7 @@
+ 
+ #include <QtQml/qqmlinfo.h>
+ #include <QtQuick/qquickitem.h>
++#include <QtQuick/private/qquickaccessibleattached_p.h>
+ #include <QtQuick/private/qquicktransition_p.h>
+ #include <QtQuick/private/qquickitem_p.h>
+ #include <QtQuick/private/qquickaccessibleattached_p.h>
+diff --git a/qtquickcontrols2/tests/auto/qquickpopup/data/releaseAfterExitTransition.qml b/qtquickcontrols2/tests/auto/qquickpopup/data/releaseAfterExitTransition.qml
+new file mode 100644
+index 000000000..9e4598b9f
+--- /dev/null
++++ b/qtquickcontrols2/tests/auto/qquickpopup/data/releaseAfterExitTransition.qml
+@@ -0,0 +1,78 @@
++/****************************************************************************
++**
++** Copyright (C) 2021 The Qt Company Ltd.
++** Contact: https://www.qt.io/licensing/
++**
++** This file is part of the test suite of the Qt Toolkit.
++**
++** $QT_BEGIN_LICENSE:BSD$
++** Commercial License Usage
++** Licensees holding valid commercial Qt licenses may use this file in
++** accordance with the commercial license agreement provided with the
++** Software or, alternatively, in accordance with the terms contained in
++** a written agreement between you and The Qt Company. For licensing terms
++** and conditions see https://www.qt.io/terms-conditions. For further
++** information use the contact form at https://www.qt.io/contact-us.
++**
++** BSD License Usage
++** Alternatively, you may use this file under the terms of the BSD license
++** as follows:
++**
++** "Redistribution and use in source and binary forms, with or without
++** modification, are permitted provided that the following conditions are
++** met:
++**   * Redistributions of source code must retain the above copyright
++**     notice, this list of conditions and the following disclaimer.
++**   * Redistributions in binary form must reproduce the above copyright
++**     notice, this list of conditions and the following disclaimer in
++**     the documentation and/or other materials provided with the
++**     distribution.
++**   * Neither the name of The Qt Company Ltd nor the names of its
++**     contributors may be used to endorse or promote products derived
++**     from this software without specific prior written permission.
++**
++**
++** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++** "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
++** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
++** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
++**
++** $QT_END_LICENSE$
++**
++****************************************************************************/
++
++import QtQuick 2.15
++import QtQuick.Controls 2.15
++
++ApplicationWindow {
++    id: window
++    width: 400
++    height: 400
++    title: "releaseAfterExitTransition"
++
++    property alias popup: popup
++    property alias modalPopup: modalPopup
++
++    Popup {
++        id: popup
++        y: parent.height - height
++        width: 50
++        height: 50
 +    }
 +
-     const QLowEnergyHandle changedHandle = bt_get_le16(&data[1]);
++    Popup {
++        id: modalPopup
++        modal: true
++        y: parent.height - height
++        width: 50
++        height: 50
++        exit:  Transition { PauseAnimation { duration: 100 } }
++    }
++}
+diff --git a/qtquickcontrols2/tests/auto/qquickpopup/tst_qquickpopup.cpp b/qtquickcontrols2/tests/auto/qquickpopup/tst_qquickpopup.cpp
+index 54952d128..3d50e2dd4 100644
+--- a/qtquickcontrols2/tests/auto/qquickpopup/tst_qquickpopup.cpp
++++ b/qtquickcontrols2/tests/auto/qquickpopup/tst_qquickpopup.cpp
+@@ -100,6 +100,7 @@ private slots:
+     void invisibleToolTipOpen();
+     void centerInOverlayWithinStackViewItem();
+     void destroyDuringExitTransition();
++    void releaseAfterExitTransition();
+ };
  
-     if (QT_BT_BLUEZ().isDebugEnabled()) {
+ void tst_QQuickPopup::initTestCase()
+@@ -1575,6 +1576,34 @@ void tst_QQuickPopup::destroyDuringExitTransition()
+     QVERIFY(!button->isDown());
+ }
+ 
++void tst_QQuickPopup::releaseAfterExitTransition()
++{
++    QQuickApplicationHelper helper(this, "releaseAfterExitTransition.qml");
++    QVERIFY2(helper.ready, helper.failureMessage());
++
++    QQuickWindow *window = helper.window;
++    window->show();
++    QVERIFY(QTest::qWaitForWindowActive(window));
++
++    QQuickOverlay *overlay = QQuickOverlay::overlay(window);
++    QQuickPopup *modalPopup = window->property("modalPopup").value<QQuickPopup *>();
++    QQuickPopup *popup = window->property("popup").value<QQuickPopup *>();
++
++    modalPopup->open();
++    QTRY_VERIFY(modalPopup->isOpened());
++
++    QTest::mousePress(window, Qt::LeftButton, Qt::NoModifier, QPoint(1, 1));
++    // wait until the transition is finished and the overlay hides itself
++    QTRY_VERIFY(!overlay->isVisible());
++    QTest::mouseRelease(window, Qt::LeftButton, Qt::NoModifier, QPoint(1, 1));
++
++    popup->open();
++    QTRY_VERIFY(popup->isOpened());
++    QTest::mouseClick(window, Qt::LeftButton, Qt::NoModifier, QPoint(1, 1));
++    QTRY_VERIFY(!popup->isOpened());
++}
++
++
+ QTEST_QUICKCONTROLS_MAIN(tst_QQuickPopup)
+ 
+ #include "tst_qquickpopup.moc"
+Submodule qtrepotools ee34618d...00000000 (submodule deleted)
+Submodule qtspeech 18db0a3d..a384f0d4:
+diff --git a/qtspeech/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp b/qtspeech/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp
+index 6eb74b8..bcc7dd1 100644
+--- a/qtspeech/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp
++++ b/qtspeech/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp
+@@ -357,7 +357,9 @@ QVector<QLocale> QTextToSpeechEngineSpeechd::availableLocales() const
+ 
+ QVector<QVoice> QTextToSpeechEngineSpeechd::availableVoices() const
+ {
+-    return m_voices.values(m_currentLocale.name()).toVector();
++    QList<QVoice> resultList = m_voices.values(m_currentLocale.name());
++    std::reverse(resultList.begin(), resultList.end());
++    return resultList.toVector();
+ }
+ 
+ // We have no way of knowing our own client_id since speech-dispatcher seems to be incomplete
+Submodule qtsvg 62c4a8da..d2abfb9c:
+diff --git a/qtsvg/src/plugins/imageformats/svg/qsvgiohandler.cpp b/qtsvg/src/plugins/imageformats/svg/qsvgiohandler.cpp
+index 561e77e9..12e05748 100644
+--- a/qtsvg/src/plugins/imageformats/svg/qsvgiohandler.cpp
++++ b/qtsvg/src/plugins/imageformats/svg/qsvgiohandler.cpp
+@@ -191,6 +191,8 @@ bool QSvgIOHandler::read(QImage *image)
+             }
+         }
+         if (!finalSize.isEmpty()) {
++            if (qMax(finalSize.width(), finalSize.height()) > 0xffff)
++                return false; // Assume corrupted file
+             image->fill(d->backColor.rgba());
+             QPainter p(image);
+             d->r.render(&p, bounds);
+diff --git a/qtsvg/src/svg/qsvghandler.cpp b/qtsvg/src/svg/qsvghandler.cpp
+index dd9b7164..222b6d89 100644
+--- a/qtsvg/src/svg/qsvghandler.cpp
++++ b/qtsvg/src/svg/qsvghandler.cpp
+@@ -1393,9 +1393,10 @@ static void parseFont(QSvgNode *node,
+         case FontSizeNone:
+             break;
+         case FontSizeValue: {
+-            QSvgHandler::LengthType dummy; // should always be pixel size
+-            fontStyle->setSize(qMin(parseLength(attributes.fontSize, dummy, handler),
+-                                    qreal(0xffff)));
++            QSvgHandler::LengthType type;
++            qreal fs = parseLength(attributes.fontSize, type, handler);
++            fs = convertToPixels(fs, true, type);
++            fontStyle->setSize(qMin(fs, qreal(0xffff)));
+         }
+             break;
+         default:
+@@ -2578,6 +2579,8 @@ static QSvgNode *createCircleNode(QSvgNode *parent,
+     qreal ncx = toDouble(cx);
+     qreal ncy = toDouble(cy);
+     qreal nr  = toDouble(r);
++    if (nr < 0.0)
++        return nullptr;
+ 
+     QRectF rect(ncx-nr, ncy-nr, nr*2, nr*2);
+     QSvgNode *circle = new QSvgCircle(parent, rect);
+@@ -3048,15 +3051,16 @@ static QSvgStyleProperty *createRadialGradientNode(QSvgNode *node,
+ 
+     qreal ncx = 0.5;
+     qreal ncy = 0.5;
+-    qreal nr  = 0.5;
+     if (!cx.isEmpty())
+         ncx = toDouble(cx);
+     if (!cy.isEmpty())
+         ncy = toDouble(cy);
++
++    qreal nr = 0.0;
+     if (!r.isEmpty())
+         nr = toDouble(r);
+-    if (nr < 0.5)
+-        nr = 0.5;
++    if (nr <= 0.0)
++        return nullptr;
+ 
+     qreal nfx = ncx;
+     if (!fx.isEmpty())
+@@ -3352,7 +3356,9 @@ static QSvgNode *createTextNode(QSvgNode *parent,
+     //### editable and rotate not handled
+     QSvgHandler::LengthType type;
+     qreal nx = parseLength(x, type, handler);
++    nx = convertToPixels(nx, true, type);
+     qreal ny = parseLength(y, type, handler);
++    ny = convertToPixels(ny, true, type);
+ 
+     QSvgNode *text = new QSvgText(parent, QPointF(nx, ny));
+     return text;
+diff --git a/qtsvg/src/svg/qsvgstructure.cpp b/qtsvg/src/svg/qsvgstructure.cpp
+index b89608b5..89c9e4ec 100644
+--- a/qtsvg/src/svg/qsvgstructure.cpp
++++ b/qtsvg/src/svg/qsvgstructure.cpp
+@@ -255,9 +255,13 @@ inline static bool isSupportedSvgFeature(const QString &str)
+     };
+ 
+     if (str.length() <= MAX_WORD_LENGTH && str.length() >= MIN_WORD_LENGTH) {
++        const char16_t unicode44 = str.at(44).unicode();
++        const char16_t unicode45 = str.at(45).unicode();
++        if (unicode44 >= sizeof(asso_values) || unicode45 >= sizeof(asso_values))
++            return false;
+         const int key = str.length()
+-                        + asso_values[str.at(45).unicode()]
+-                        + asso_values[str.at(44).unicode()];
++                        + asso_values[unicode45]
++                        + asso_values[unicode44];
+         if (key <= MAX_HASH_VALUE && key >= 0)
+             return str == QLatin1String(wordlist[key]);
+     }
+Submodule qtsystems 434af789...00000000 (submodule deleted)
+Submodule qttools 58e16bdc..3e3ab58b:
+diff --git a/qttools/src/assistant/help/help.pro b/qttools/src/assistant/help/help.pro
+index 800c4a38d..7556f451b 100644
+--- a/qttools/src/assistant/help/help.pro
++++ b/qttools/src/assistant/help/help.pro
+@@ -1,7 +1,6 @@
+ TARGET = QtHelp
+ 
+ QT = core-private gui widgets sql
+-QT_PRIVATE = network
+ 
+ DEFINES += QHELP_LIB
+ 
+diff --git a/qttools/src/assistant/qhelpgenerator/helpgenerator.cpp b/qttools/src/assistant/qhelpgenerator/helpgenerator.cpp
+index feab1e2d5..cbfb82507 100644
+--- a/qttools/src/assistant/qhelpgenerator/helpgenerator.cpp
++++ b/qttools/src/assistant/qhelpgenerator/helpgenerator.cpp
+@@ -445,7 +445,9 @@ bool HelpGeneratorPrivate::insertFiles(const QStringList &files, const QString &
+     if (filterSetId < 0)
+         return false;
+     ++filterSetId;
+-    for (int attId : qAsConst(filterAtts)) {
++    QList<int> attValues = filterAtts.values();
++    std::sort(attValues.begin(), attValues.end());
++    for (int attId : qAsConst(attValues)) {
+         m_query->prepare(QLatin1String("INSERT INTO FileAttributeSetTable "
+             "VALUES(?, ?)"));
+         m_query->bindValue(0, filterSetId);
+diff --git a/qttools/src/assistant/qhelpgenerator/qhelpgenerator.pro b/qttools/src/assistant/qhelpgenerator/qhelpgenerator.pro
+index bb22000c8..415347a00 100644
+--- a/qttools/src/assistant/qhelpgenerator/qhelpgenerator.pro
++++ b/qttools/src/assistant/qhelpgenerator/qhelpgenerator.pro
+@@ -1,4 +1,4 @@
+-QT += network help-private
++QT += help-private
+ 
+ QTPLUGIN.platforms = qminimal
+ QTPLUGIN.sqldrivers = qsqlite
+diff --git a/qttools/src/qdoc/clangcodeparser.cpp b/qttools/src/qdoc/clangcodeparser.cpp
+index 539a603da..a41b99cec 100644
+--- a/qttools/src/qdoc/clangcodeparser.cpp
++++ b/qttools/src/qdoc/clangcodeparser.cpp
+@@ -1395,8 +1395,7 @@ void ClangCodeParser::buildPCH()
+             args_.push_back("-xc++");
+             CXTranslationUnit tu;
+             QString tmpHeader = pchFileDir_->path() + "/" + module;
+-            QFile tmpHeaderFile(tmpHeader);
+-            if (tmpHeaderFile.open(QIODevice::Text | QIODevice::WriteOnly)) {
++            { QFile tmpHeaderFile(tmpHeader); if (tmpHeaderFile.open(QIODevice::Text | QIODevice::WriteOnly)) {
+                 QTextStream out(&tmpHeaderFile);
+                 if (header.isEmpty()) {
+                     for (auto it = allHeaders_.constKeyValueBegin();
+@@ -1421,8 +1420,7 @@ void ClangCodeParser::buildPCH()
+                             out << line << "\n";
+                     }
+                 }
+-                tmpHeaderFile.close();
+-            }
++            } }
+             if (printParsingErrors_ == 0)
+                 qCWarning(lcQdoc) << "clang not printing errors; include paths were guessed";
+             CXErrorCode err =
+Submodule qtwayland a0e9561a..605b8bc9:
 diff --git a/qtwayland/src/client/configure.json b/qtwayland/src/client/configure.json
 index 73f233622..6247f85e6 100644
 --- a/qtwayland/src/client/configure.json
@@ -89558,124 +89227,7 @@ index 1c23728b2..f2181fd69 100644
      QCOMPOSITOR_TRY_COMPARE(xdgToplevel()->m_committed.minSize, QSize(50, 40));
  }
  
-diff --git a/qtimageformats/src/plugins/imageformats/tiff/qtiffhandler.cpp b/qtimageformats/src/plugins/imageformats/tiff/qtiffhandler.cpp
-index f0dfe7f6..5cb0522e 100644
---- a/qtimageformats/src/plugins/imageformats/tiff/qtiffhandler.cpp
-+++ b/qtimageformats/src/plugins/imageformats/tiff/qtiffhandler.cpp
-@@ -38,13 +38,14 @@
- ****************************************************************************/
- 
- #include "qtiffhandler_p.h"
--#include <qvariant.h>
- #include <qcolorspace.h>
- #include <qdebug.h>
- #include <qimage.h>
- #include <qglobal.h>
- #include <qbuffer.h>
- #include <qfiledevice.h>
-+#include <qvariant.h>
-+#include <qvarlengtharray.h>
- 
- extern "C" {
- #include "tiffio.h"
-diff --git a/qtimageformats/src/plugins/imageformats/webp/qwebphandler.cpp b/qtimageformats/src/plugins/imageformats/webp/qwebphandler.cpp
-index 82d38cbc..d02eb054 100644
---- a/qtimageformats/src/plugins/imageformats/webp/qwebphandler.cpp
-+++ b/qtimageformats/src/plugins/imageformats/webp/qwebphandler.cpp
-@@ -45,6 +45,7 @@
- #include <qdebug.h>
- #include <qpainter.h>
- #include <qvariant.h>
-+#include <QtEndian>
- 
- static const int riffHeaderSize = 12; // RIFF_HEADER_SIZE from webp/format_constants.h
- 
-@@ -102,21 +103,23 @@ bool QWebpHandler::ensureScanned() const
- 
-     m_scanState = ScanError;
- 
--    if (device()->isSequential()) {
--        qWarning() << "Sequential devices are not supported";
-+    QWebpHandler *that = const_cast<QWebpHandler *>(this);
-+    const int headerBytesNeeded = sizeof(WebPBitstreamFeatures);
-+    QByteArray header = device()->peek(headerBytesNeeded);
-+    if (header.size() < headerBytesNeeded)
-         return false;
--    }
- 
--    qint64 oldPos = device()->pos();
--    device()->seek(0);
--
--    QWebpHandler *that = const_cast<QWebpHandler *>(this);
--    QByteArray header = device()->peek(sizeof(WebPBitstreamFeatures));
-+    // We do no random access during decoding, just a readAll() of the whole image file. So if
-+    // if it is all available already, we can accept a sequential device. The riff header contains
-+    // the file size minus 8 bytes header
-+    qint64 byteSize = qFromLittleEndian<quint32>(header.constData() + 4);
-+    if (device()->isSequential() && device()->bytesAvailable() < byteSize + 8) {
-+        qWarning() << "QWebpHandler: Insufficient data available in sequential device";
-+        return false;
-+    }
-     if (WebPGetFeatures((const uint8_t*)header.constData(), header.size(), &(that->m_features)) == VP8_STATUS_OK) {
-         if (m_features.has_animation) {
-             // For animation, we have to read and scan whole file to determine loop count and images count
--            device()->seek(oldPos);
--
-             if (that->ensureDemuxer()) {
-                 that->m_loop = WebPDemuxGetI(m_demuxer, WEBP_FF_LOOP_COUNT);
-                 that->m_frameCount = WebPDemuxGetI(m_demuxer, WEBP_FF_FRAME_COUNT);
-@@ -126,17 +129,13 @@ bool QWebpHandler::ensureScanned() const
-                 if (that->m_features.has_alpha)
-                     that->m_composited->fill(Qt::transparent);
- 
--                // We do not reset device position since we have read in all data
-                 m_scanState = ScanSuccess;
--                return true;
-             }
-         } else {
-             m_scanState = ScanSuccess;
-         }
-     }
- 
--    device()->seek(oldPos);
--
-     return m_scanState == ScanSuccess;
- }
- 
-@@ -159,7 +158,7 @@ bool QWebpHandler::ensureDemuxer()
- 
- bool QWebpHandler::read(QImage *image)
- {
--    if (!ensureScanned() || device()->isSequential() || !ensureDemuxer())
-+    if (!ensureScanned() || !ensureDemuxer())
-         return false;
- 
-     QRect prevFrameRect;
-diff --git a/qtwebsockets/src/websockets/qwebsocket_p.cpp b/qtwebsockets/src/websockets/qwebsocket_p.cpp
-index cf3087f..0dd0fa6 100644
---- a/qtwebsockets/src/websockets/qwebsocket_p.cpp
-+++ b/qtwebsockets/src/websockets/qwebsocket_p.cpp
-@@ -1100,6 +1100,8 @@ void QWebSocketPrivate::processHandshake(QTcpSocket *pSocket)
-         m_handshakeState = AllDoneState;
-         setErrorString(errorDescription);
-         Q_EMIT q->error(QAbstractSocket::ConnectionRefusedError);
-+        if (m_pSocket->state() != QAbstractSocket::UnconnectedState)
-+            m_pSocket->disconnectFromHost();
-     }
- }
- 
-diff --git a/qtwebsockets/src/websockets/qwebsocketdataprocessor.cpp b/qtwebsockets/src/websockets/qwebsocketdataprocessor.cpp
-index 2affdd5..95f1194 100644
---- a/qtwebsockets/src/websockets/qwebsocketdataprocessor.cpp
-+++ b/qtwebsockets/src/websockets/qwebsocketdataprocessor.cpp
-@@ -273,6 +273,7 @@ void QWebSocketDataProcessor::clear()
-     if (!m_pConverterState)
-         m_pConverterState = new QTextCodec::ConverterState(QTextCodec::ConvertInvalidToNull |
-                                                            QTextCodec::IgnoreHeader);
-+    frame.clear();
- }
- 
- /*!
+Submodule qtwebchannel 4d9f25e1..6a20afae:
 diff --git a/qtwebchannel/src/webchannel/qmetaobjectpublisher.cpp b/qtwebchannel/src/webchannel/qmetaobjectpublisher.cpp
 index 536eb5c..898d769 100644
 --- a/qtwebchannel/src/webchannel/qmetaobjectpublisher.cpp
@@ -90113,304 +89665,30 @@ index eae21f4..dd4e690 100644
      void testDeletionDuringMethodInvocation_data();
      void testDeletionDuringMethodInvocation();
  
-diff --git a/qtquickcontrols2/src/imports/platform/widgets/qwidgetplatformmenu.cpp b/qtquickcontrols2/src/imports/platform/widgets/qwidgetplatformmenu.cpp
-index e5fe734f7..e36922775 100644
---- a/qtquickcontrols2/src/imports/platform/widgets/qwidgetplatformmenu.cpp
-+++ b/qtquickcontrols2/src/imports/platform/widgets/qwidgetplatformmenu.cpp
-@@ -38,6 +38,7 @@
- #include "qwidgetplatformmenuitem_p.h"
- 
- #include <QtGui/qwindow.h>
-+#include <QtGui/private/qhighdpiscaling_p.h>
- #include <QtWidgets/qmenu.h>
- #include <QtWidgets/qaction.h>
- 
-@@ -145,7 +146,7 @@ void QWidgetPlatformMenu::showPopup(const QWindow *window, const QRect &targetRe
- 
-     QPoint targetPos = targetRect.bottomLeft();
-     if (window)
--        targetPos = window->mapToGlobal(targetPos);
-+        targetPos = window->mapToGlobal(QHighDpi::fromNativeLocalPosition(targetPos, window));
- 
-     const QWidgetPlatformMenuItem *widgetItem = qobject_cast<const QWidgetPlatformMenuItem *>(item);
-     m_menu->popup(targetPos, widgetItem ? widgetItem->action() : nullptr);
-diff --git a/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton.cpp b/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton.cpp
-index 20cf59c1a..43af47a94 100644
---- a/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton.cpp
-+++ b/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton.cpp
-@@ -1201,6 +1201,12 @@ QAccessible::Role QQuickAbstractButton::accessibleRole() const
+Submodule qtwebengine f328054d...00000000 (submodule deleted)
+Submodule qtwebsockets 33f427f8..10eb706b:
+diff --git a/qtwebsockets/src/websockets/qwebsocket_p.cpp b/qtwebsockets/src/websockets/qwebsocket_p.cpp
+index cf3087f..0dd0fa6 100644
+--- a/qtwebsockets/src/websockets/qwebsocket_p.cpp
++++ b/qtwebsockets/src/websockets/qwebsocket_p.cpp
+@@ -1100,6 +1100,8 @@ void QWebSocketPrivate::processHandshake(QTcpSocket *pSocket)
+         m_handshakeState = AllDoneState;
+         setErrorString(errorDescription);
+         Q_EMIT q->error(QAbstractSocket::ConnectionRefusedError);
++        if (m_pSocket->state() != QAbstractSocket::UnconnectedState)
++            m_pSocket->disconnectFromHost();
      }
-     return QAccessible::Button;
- }
-+
-+void QQuickAbstractButton::accessiblePressAction()
-+{
-+    Q_D(QQuickAbstractButton);
-+    d->trigger();
-+}
- #endif
- 
- QT_END_NAMESPACE
-diff --git a/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton_p.h b/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton_p.h
-index 0fa48980e..ab66220d0 100644
---- a/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton_p.h
-+++ b/qtquickcontrols2/src/quicktemplates2/qquickabstractbutton_p.h
-@@ -209,6 +209,7 @@ protected:
- #if QT_CONFIG(accessibility)
-     void accessibilityActiveChanged(bool active) override;
-     QAccessible::Role accessibleRole() const override;
-+    Q_INVOKABLE void accessiblePressAction();
- #endif
- 
- private:
-diff --git a/qtquickcontrols2/src/quicktemplates2/qquickcontainer.cpp b/qtquickcontrols2/src/quicktemplates2/qquickcontainer.cpp
-index f38c2b09c..6eed2a024 100644
---- a/qtquickcontrols2/src/quicktemplates2/qquickcontainer.cpp
-+++ b/qtquickcontrols2/src/quicktemplates2/qquickcontainer.cpp
-@@ -225,6 +225,7 @@ void QQuickContainerPrivate::cleanup()
-     QObject::disconnect(contentModel, &QQmlObjectModel::countChanged, q, &QQuickContainer::countChanged);
-     QObject::disconnect(contentModel, &QQmlObjectModel::childrenChanged, q, &QQuickContainer::contentChildrenChanged);
-     delete contentModel;
-+    contentModel = nullptr;
  }
  
- QQuickItem *QQuickContainerPrivate::itemAt(int index) const
-@@ -436,7 +437,7 @@ void QQuickContainerPrivate::contentChildren_clear(QQmlListProperty<QQuickItem>
- void QQuickContainerPrivate::updateContentWidth()
- {
-     Q_Q(QQuickContainer);
--    if (hasContentWidth || qFuzzyCompare(contentWidth, implicitContentWidth))
-+    if (hasContentWidth || qFuzzyCompare(contentWidth, implicitContentWidth) || !contentModel)
-         return;
- 
-     contentWidth = implicitContentWidth;
-@@ -446,7 +447,7 @@ void QQuickContainerPrivate::updateContentWidth()
- void QQuickContainerPrivate::updateContentHeight()
- {
-     Q_Q(QQuickContainer);
--    if (hasContentHeight || qFuzzyCompare(contentHeight, implicitContentHeight))
-+    if (hasContentHeight || qFuzzyCompare(contentHeight, implicitContentHeight) || !contentModel)
-         return;
- 
-     contentHeight = implicitContentHeight;
-diff --git a/qtquickcontrols2/src/quicktemplates2/qquickdialogbuttonbox.cpp b/qtquickcontrols2/src/quicktemplates2/qquickdialogbuttonbox.cpp
-index e33c5c934..9afabd18a 100644
---- a/qtquickcontrols2/src/quicktemplates2/qquickdialogbuttonbox.cpp
-+++ b/qtquickcontrols2/src/quicktemplates2/qquickdialogbuttonbox.cpp
-@@ -237,7 +237,7 @@ static QRectF alignedRect(Qt::LayoutDirection direction, Qt::Alignment alignment
- void QQuickDialogButtonBoxPrivate::resizeContent()
- {
-     Q_Q(QQuickDialogButtonBox);
--    if (!contentItem)
-+    if (!contentItem || !contentModel)
-         return;
- 
-     QRectF geometry = q->boundingRect().adjusted(q->leftPadding(), q->topPadding(), -q->rightPadding(), -q->bottomPadding());
-@@ -322,6 +322,9 @@ void QQuickDialogButtonBoxPrivate::updateLayout()
- qreal QQuickDialogButtonBoxPrivate::getContentWidth() const
- {
-     Q_Q(const QQuickDialogButtonBox);
-+    if (!contentModel)
-+        return 0;
-+
-     const int count = contentModel->count();
-     const qreal totalSpacing = qMax(0, count - 1) * spacing;
-     qreal totalWidth = totalSpacing;
-@@ -341,6 +344,9 @@ qreal QQuickDialogButtonBoxPrivate::getContentWidth() const
- qreal QQuickDialogButtonBoxPrivate::getContentHeight() const
- {
-     Q_Q(const QQuickDialogButtonBox);
-+    if (!contentModel)
-+        return 0;
-+
-     const int count = contentModel->count();
-     qreal maxHeight = 0;
-     for (int i = 0; i < count; ++i) {
-diff --git a/qtquickcontrols2/src/quicktemplates2/qquickoverlay.cpp b/qtquickcontrols2/src/quicktemplates2/qquickoverlay.cpp
-index 91bd59184..0ce518f84 100644
---- a/qtquickcontrols2/src/quicktemplates2/qquickoverlay.cpp
-+++ b/qtquickcontrols2/src/quicktemplates2/qquickoverlay.cpp
-@@ -399,8 +399,11 @@ void QQuickOverlay::itemChange(ItemChange change, const ItemChangeData &data)
-     Q_D(QQuickOverlay);
-     QQuickItem::itemChange(change, data);
- 
--    if (change == ItemChildAddedChange || change == ItemChildRemovedChange)
-+    if (change == ItemChildAddedChange || change == ItemChildRemovedChange) {
-         setVisible(!d->allDrawers.isEmpty() || !childItems().isEmpty());
-+        if (data.item->parent() == d->mouseGrabberPopup)
-+            d->setMouseGrabberPopup(nullptr);
-+    }
+diff --git a/qtwebsockets/src/websockets/qwebsocketdataprocessor.cpp b/qtwebsockets/src/websockets/qwebsocketdataprocessor.cpp
+index 2affdd5..95f1194 100644
+--- a/qtwebsockets/src/websockets/qwebsocketdataprocessor.cpp
++++ b/qtwebsockets/src/websockets/qwebsocketdataprocessor.cpp
+@@ -273,6 +273,7 @@ void QWebSocketDataProcessor::clear()
+     if (!m_pConverterState)
+         m_pConverterState = new QTextCodec::ConverterState(QTextCodec::ConvertInvalidToNull |
+                                                            QTextCodec::IgnoreHeader);
++    frame.clear();
  }
  
- void QQuickOverlay::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
-diff --git a/qtquickcontrols2/src/quicktemplates2/qquickpopup.cpp b/qtquickcontrols2/src/quicktemplates2/qquickpopup.cpp
-index 3f8691e2c..6b1ca32b3 100644
---- a/qtquickcontrols2/src/quicktemplates2/qquickpopup.cpp
-+++ b/qtquickcontrols2/src/quicktemplates2/qquickpopup.cpp
-@@ -46,6 +46,7 @@
- 
- #include <QtQml/qqmlinfo.h>
- #include <QtQuick/qquickitem.h>
-+#include <QtQuick/private/qquickaccessibleattached_p.h>
- #include <QtQuick/private/qquicktransition_p.h>
- #include <QtQuick/private/qquickitem_p.h>
- #include <QtQuick/private/qquickaccessibleattached_p.h>
-diff --git a/qtquickcontrols2/tests/auto/qquickpopup/data/releaseAfterExitTransition.qml b/qtquickcontrols2/tests/auto/qquickpopup/data/releaseAfterExitTransition.qml
-new file mode 100644
-index 000000000..9e4598b9f
---- /dev/null
-+++ b/qtquickcontrols2/tests/auto/qquickpopup/data/releaseAfterExitTransition.qml
-@@ -0,0 +1,78 @@
-+/****************************************************************************
-+**
-+** Copyright (C) 2021 The Qt Company Ltd.
-+** Contact: https://www.qt.io/licensing/
-+**
-+** This file is part of the test suite of the Qt Toolkit.
-+**
-+** $QT_BEGIN_LICENSE:BSD$
-+** Commercial License Usage
-+** Licensees holding valid commercial Qt licenses may use this file in
-+** accordance with the commercial license agreement provided with the
-+** Software or, alternatively, in accordance with the terms contained in
-+** a written agreement between you and The Qt Company. For licensing terms
-+** and conditions see https://www.qt.io/terms-conditions. For further
-+** information use the contact form at https://www.qt.io/contact-us.
-+**
-+** BSD License Usage
-+** Alternatively, you may use this file under the terms of the BSD license
-+** as follows:
-+**
-+** "Redistribution and use in source and binary forms, with or without
-+** modification, are permitted provided that the following conditions are
-+** met:
-+**   * Redistributions of source code must retain the above copyright
-+**     notice, this list of conditions and the following disclaimer.
-+**   * Redistributions in binary form must reproduce the above copyright
-+**     notice, this list of conditions and the following disclaimer in
-+**     the documentation and/or other materials provided with the
-+**     distribution.
-+**   * Neither the name of The Qt Company Ltd nor the names of its
-+**     contributors may be used to endorse or promote products derived
-+**     from this software without specific prior written permission.
-+**
-+**
-+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-+** "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-+** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-+** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-+** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-+** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-+** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-+** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-+** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-+** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-+** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
-+**
-+** $QT_END_LICENSE$
-+**
-+****************************************************************************/
-+
-+import QtQuick 2.15
-+import QtQuick.Controls 2.15
-+
-+ApplicationWindow {
-+    id: window
-+    width: 400
-+    height: 400
-+    title: "releaseAfterExitTransition"
-+
-+    property alias popup: popup
-+    property alias modalPopup: modalPopup
-+
-+    Popup {
-+        id: popup
-+        y: parent.height - height
-+        width: 50
-+        height: 50
-+    }
-+
-+    Popup {
-+        id: modalPopup
-+        modal: true
-+        y: parent.height - height
-+        width: 50
-+        height: 50
-+        exit:  Transition { PauseAnimation { duration: 100 } }
-+    }
-+}
-diff --git a/qtquickcontrols2/tests/auto/qquickpopup/tst_qquickpopup.cpp b/qtquickcontrols2/tests/auto/qquickpopup/tst_qquickpopup.cpp
-index 54952d128..3d50e2dd4 100644
---- a/qtquickcontrols2/tests/auto/qquickpopup/tst_qquickpopup.cpp
-+++ b/qtquickcontrols2/tests/auto/qquickpopup/tst_qquickpopup.cpp
-@@ -100,6 +100,7 @@ private slots:
-     void invisibleToolTipOpen();
-     void centerInOverlayWithinStackViewItem();
-     void destroyDuringExitTransition();
-+    void releaseAfterExitTransition();
- };
- 
- void tst_QQuickPopup::initTestCase()
-@@ -1575,6 +1576,34 @@ void tst_QQuickPopup::destroyDuringExitTransition()
-     QVERIFY(!button->isDown());
- }
- 
-+void tst_QQuickPopup::releaseAfterExitTransition()
-+{
-+    QQuickApplicationHelper helper(this, "releaseAfterExitTransition.qml");
-+    QVERIFY2(helper.ready, helper.failureMessage());
-+
-+    QQuickWindow *window = helper.window;
-+    window->show();
-+    QVERIFY(QTest::qWaitForWindowActive(window));
-+
-+    QQuickOverlay *overlay = QQuickOverlay::overlay(window);
-+    QQuickPopup *modalPopup = window->property("modalPopup").value<QQuickPopup *>();
-+    QQuickPopup *popup = window->property("popup").value<QQuickPopup *>();
-+
-+    modalPopup->open();
-+    QTRY_VERIFY(modalPopup->isOpened());
-+
-+    QTest::mousePress(window, Qt::LeftButton, Qt::NoModifier, QPoint(1, 1));
-+    // wait until the transition is finished and the overlay hides itself
-+    QTRY_VERIFY(!overlay->isVisible());
-+    QTest::mouseRelease(window, Qt::LeftButton, Qt::NoModifier, QPoint(1, 1));
-+
-+    popup->open();
-+    QTRY_VERIFY(popup->isOpened());
-+    QTest::mouseClick(window, Qt::LeftButton, Qt::NoModifier, QPoint(1, 1));
-+    QTRY_VERIFY(!popup->isOpened());
-+}
-+
-+
- QTEST_QUICKCONTROLS_MAIN(tst_QQuickPopup)
- 
- #include "tst_qquickpopup.moc"
-diff --git a/qtspeech/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp b/qtspeech/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp
-index 6eb74b8..bcc7dd1 100644
---- a/qtspeech/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp
-+++ b/qtspeech/src/plugins/tts/speechdispatcher/qtexttospeech_speechd.cpp
-@@ -357,7 +357,9 @@ QVector<QLocale> QTextToSpeechEngineSpeechd::availableLocales() const
- 
- QVector<QVoice> QTextToSpeechEngineSpeechd::availableVoices() const
- {
--    return m_voices.values(m_currentLocale.name()).toVector();
-+    QList<QVoice> resultList = m_voices.values(m_currentLocale.name());
-+    std::reverse(resultList.begin(), resultList.end());
-+    return resultList.toVector();
- }
- 
- // We have no way of knowing our own client_id since speech-dispatcher seems to be incomplete
-diff --git a/qtquick3d/src/plugins/assetimporters/assimp/assimp.pro b/qtquick3d/src/plugins/assetimporters/assimp/assimp.pro
-index ca5c499ed..174a075bd 100644
---- a/qtquick3d/src/plugins/assetimporters/assimp/assimp.pro
-+++ b/qtquick3d/src/plugins/assetimporters/assimp/assimp.pro
-@@ -10,7 +10,7 @@ QT_FOR_CONFIG += assetimporters-private
- include($$OUT_PWD/../qtassetimporters-config.pri)
- 
- qtConfig(system-assimp):!if(cross_compile:host_build) {
--    QMAKE_USE_PRIVATE += assimp
-+    QMAKE_USE_PRIVATE += quick3d-assimp
- } else {
-     include(../../../3rdparty/assimp/assimp.pri)
- }
+ /*!
