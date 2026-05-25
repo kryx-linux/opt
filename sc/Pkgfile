@@ -4,21 +4,12 @@
 # Depends on: ncurses
 
 name=sc
-version=7.16-1.1.3
+version=7.16-1.2.0
 release=1
-source=(http://ftp.de.debian.org/debian/pool/main/s/sc/sc_$version.orig.tar.gz \
-    http://ftp.de.debian.org/debian/pool/main/s/sc/sc_$version-1.debian.tar.xz)
+source=(https://github.com/n-t-roff/sc/archive/refs/tags/${version/-/_}/$name-$version.tar.gz)
 
 build() {
     cd $name-${version/-/_}
-
-    local p
-    sed '/^#/d' -i $SRC/debian/patches/series
-    for p in $(< $SRC/debian/patches/series); do
-        patch -p1 -i $SRC/debian/patches/$p
-    done
-
-    sed '/^prefix/s|/local||' -i Makefile.in
 
     ./configure
     make
