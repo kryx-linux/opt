@@ -6,7 +6,7 @@
 
 name=qt5
 version=5.15.19
-release=1
+release=2
 source=(https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-opensource-src-$version.tar.xz
     qt-everywhere-opensource-src-$version-kf5-1.patch
     qt5-cflags.patch
@@ -19,7 +19,7 @@ source=(https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-ope
     qtbase-use-wayland-on-gnome.patch
     0200-Bump-mapbox-gl-native-deps.patch
     0201-mapbox-gl-fix-smart-ptr.patch
-    qtbase-5.15.8-fix-missing-qtsan-include.patch
+    qtbase-5.15.19-fix-missing-qtsan-include.patch
     include.patch)
 
 build() {
@@ -37,7 +37,7 @@ build() {
     patch -d qtbase -p1 -i $SRC/qtbase-everywhere-src-5.15.2-libglvnd.patch
     patch -d qtbase -p1 -i $SRC/qtbase-use-wayland-on-gnome.patch
     patch -d qtlocation -p1 -i $SRC/qtlocation-fix-rapidjson-build.patch
-    patch -d qtbase -p1 -i $SRC/qtbase-5.15.8-fix-missing-qtsan-include.patch
+    patch -Np1 -i $SRC/qtbase-5.15.19-fix-missing-qtsan-include.patch
     patch -Np1 -i $SRC/include.patch
     patch -Np1 -d qtlocation -i $SRC/0200-Bump-mapbox-gl-native-deps.patch
     patch -Np1 -d qtlocation -i $SRC/0201-mapbox-gl-fix-smart-ptr.patch
