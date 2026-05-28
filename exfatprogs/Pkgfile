@@ -3,13 +3,20 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=exfatprogs
-version=1.3.2
+version=1.4.1
 release=1
 source=(https://github.com/exfatprogs/exfatprogs/releases/download/$version/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --sbindir=/sbin
+    
+    CONFIG_SHELL=/bin/bash \
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/sbin \
+        --libexecdir=/usr/lib/$name
     make
     make DESTDIR=$PKG install
+    
+    rm -r $PKG/usr/share/doc
 }
