@@ -1,0 +1,32 @@
+From 10fe6f111fb4c514748dca48b23c5feb2cf6d390 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fernando=20Apestegu=C3=ADa?= <fernando.apesteguia@gmail.com>
+Date: Sat, 23 May 2026 19:49:01 +0200
+Subject: [PATCH] Fix crash when XDG_SESSION_TYPE is empty (#2371)
+
+In that case session_ty is empty and there is an assert violation when trying to
+print the values.
+---
+ src/conky.cc | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/src/conky.cc b/src/conky.cc
+index 58713b256..8118b4559 100644
+--- a/src/conky.cc
++++ b/src/conky.cc
+@@ -1861,10 +1861,12 @@ void get_system_details() {
+   }
+ #endif
+ 
+-  if (info.system.wm_name != nullptr) {
+-    LOG_INFO("'{}' {} session running", info.system.wm_name, session_ty);
+-  } else {
+-    LOG_INFO("unknown {} session running", session_ty);
++  if (session_ty != nullptr) {
++    if (info.system.wm_name != nullptr) {
++      LOG_INFO("'{}' {} session running", info.system.wm_name, session_ty);
++    } else {
++      LOG_INFO("unknown {} session running", session_ty);
++    }
+   }
+ }
+ 
