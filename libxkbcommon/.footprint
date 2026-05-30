@@ -11,11 +11,11 @@ drwxr-xr-x	root/root	usr/include/xkbcommon/
 -rw-r--r--	root/root	usr/include/xkbcommon/xkbregistry.h
 drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libxkbcommon.so -> libxkbcommon.so.0
-lrwxrwxrwx	root/root	usr/lib/libxkbcommon.so.0 -> libxkbcommon.so.0.13.1
--rwxr-xr-x	root/root	usr/lib/libxkbcommon.so.0.13.1
+lrwxrwxrwx	root/root	usr/lib/libxkbcommon.so.0 -> libxkbcommon.so.0.13.2
+-rwxr-xr-x	root/root	usr/lib/libxkbcommon.so.0.13.2
 lrwxrwxrwx	root/root	usr/lib/libxkbregistry.so -> libxkbregistry.so.0
-lrwxrwxrwx	root/root	usr/lib/libxkbregistry.so.0 -> libxkbregistry.so.0.13.1
--rwxr-xr-x	root/root	usr/lib/libxkbregistry.so.0.13.1
+lrwxrwxrwx	root/root	usr/lib/libxkbregistry.so.0 -> libxkbregistry.so.0.13.2
+-rwxr-xr-x	root/root	usr/lib/libxkbregistry.so.0.13.2
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/xkbcommon.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/xkbregistry.pc
@@ -23,6 +23,7 @@ drwxr-xr-x	root/root	usr/lib/xkbcommon/
 -rwxr-xr-x	root/root	usr/lib/xkbcommon/xkbcli-compile-compose
 -rwxr-xr-x	root/root	usr/lib/xkbcommon/xkbcli-compile-keymap
 -rwxr-xr-x	root/root	usr/lib/xkbcommon/xkbcli-how-to-type
+-rwxr-xr-x	root/root	usr/lib/xkbcommon/xkbcli-info
 -rwxr-xr-x	root/root	usr/lib/xkbcommon/xkbcli-interactive
 -rwxr-xr-x	root/root	usr/lib/xkbcommon/xkbcli-interactive-evdev
 -rwxr-xr-x	root/root	usr/lib/xkbcommon/xkbcli-list
@@ -32,6 +33,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/xkbcli-compile-compose.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/xkbcli-compile-keymap.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/xkbcli-how-to-type.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/xkbcli-info.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/xkbcli-interactive-evdev.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/xkbcli-list.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/xkbcli.1.gz
