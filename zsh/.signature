@@ -1,19 +1,13 @@
 untrusted comment: verify with /etc/ports/opt.pub
-RWSE3ohX2g5d/aa+qYfeVhYXgPA8MXgIVrA4GfynzGhmIDSDFYu6xK+EY7iS0sS0NE9VsPvxG9KKmnKZbMXlh3HUwGnLzoyX3gQ=
-SHA256 (Pkgfile) = 21d5370bc43bebcb2b91f9a383ba54a0011b0146cc629c66baba0c74db6bcf30
-SHA256 (.footprint) = f4bf0634a73205ac5c1ae0739ef230cbbf6867bd012755e13da4ed8da30a838b
-SHA256 (zsh-5.9.tar.xz) = 9b8d1ecedd5b5e81fbf1918e876752a7dd948e05c1a0dba10ab863842d45acd5
+RWSE3ohX2g5d/Q1rQaah8Izs5LKhAXQ4uc/Gxi7/8NyL6vlwV+o9o0/dcrK32elJPa8JxmgmYxHITcFc1jLljSBjXYhTaezPGA4=
+SHA256 (Pkgfile) = 7b7ab384aa9a808a50dd3ab8a734fead0bbdc1f324ec9ca85ff07a9891ffd7b3
+SHA256 (.footprint) = fa51079cde5a05de5a440d05ae12ea93169175b6408c505599d38c9379386ba4
+SHA256 (zsh-5.9.1.tar.xz) = 5d20bec03f981dc4e9a09ec245e7415388ff641f79c5c5c416b5042e58d8280d
 SHA256 (_prt-get) = a0ffcbe04f9a217543e8923b20c676bf8ea6864dbc4037a3e1afe41e0b33ff91
 SHA256 (_pkgadd) = 2d1e07012c72e6eeabdb4298e985ed27b8eebd25030f4f3703ae1c344ab5eeec
 SHA256 (_pkgmk) = 1499c43d5092d98dfa3ed07be6388735ed4f0e43608e26eedd3cf95494c5801d
 SHA256 (_pkginfo) = 90d7e38e0982271133d5a9a6ff436830e6c7669c4d3b47bcca49e33bfbdd9f7f
 SHA256 (_pkgrm) = cdd2bc5097cfc5c57592b677dee39f5ff4ae065e04997fa628367977068d4458
 SHA256 (_rejmerge) = d9060208a9f26c88bfe96f734cdbd461252dcbc413782c947a3a2a0e25e82d38
-SHA256 (0001-zsh-5.9-do-not-use-egrep-in-tests.patch) = bdd4a2b643fe387d8acff42a3c1a3f10385f8c94577195fb3b6740d494776c27
-SHA256 (0002-zsh-Use-int-main-in-test-c-codes.patch) = 1e39a0e1b12c51fb0095adace1bbe612fa12c8f6507f8c4cbf16487d9f067438
-SHA256 (0002-fix-autocompletion.patch) = e7060f64936bcc94aeaf44e69b6d476917a8c14cd339a3bc779c080fb01bb2f7
 SHA256 (0003-zsh-fix-module-loading-problem-with-full-RELRO.patch) = 63c520a80cc4818db652651e348e73a1ca773128d58455d2985214cdd93ac1c2
-SHA256 (0004-zsh-enable-PCRE-locale-switching.patch) = fc7ee5c381851eb7eeff474aa15973afc150a43f8ec5871d023e99ae09401368
-SHA256 (0005-zsh-port-to-pcre2.patch) = 8e6b2b7e6a489c31b914d6c9c686668ea0d7bc0d2b5cf022581a126d6f917bd9
-SHA256 (0007-zsh-configure-c99.patch) = fa6dc2ff9f901861c8b281fc998b83166c7887a06735716c33ee5413523c028c
-SHA256 (zsh-lovers.1) = c13688b37897c98d2593826b0ab7606927a28998d73ff0c8a2a4d07dad93944a
+SHA256 (zsh-lovers.1) = d561bae37ed6b523bfffe6a747dee97a4ea02b50fc9fc4e2b1199fc18363d808

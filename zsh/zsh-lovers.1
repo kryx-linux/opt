@@ -2,12 +2,12 @@
 .\"     Title: zsh-lovers
 .\"    Author: [see the "AUTHORS" section]
 .\" Generator: DocBook XSL-NS Stylesheets vsnapshot <http://docbook.sf.net/>
-.\"      Date: 02/28/2023
+.\"      Date: 06/01/2026
 .\"    Manual: \ \&
 .\"    Source: \ \&
 .\"  Language: English
 .\"
-.TH "ZSH\-LOVERS" "1" "02/28/2023" "\ \&" "\ \&"
+.TH "ZSH\-LOVERS" "1" "06/01/2026" "\ \&" "\ \&"
 .\" -----------------------------------------------------------------
 .\" * Define some portability stuff
 .\" -----------------------------------------------------------------
@@ -34,14 +34,14 @@ zsh-lovers \- tips, tricks and examples for the Z shell
 Just read it\&. ;\-)
 .SH "OVERVIEW"
 .sp
-Whenever we look at the zsh manual we wonder why there are no examples or those simple things in (shell) life\&. The zsh contains many features, but there was no manpage with some examples (like procmailex(5))\&. That\(cqs why we wrote this manpage\&.
+Whenever we look at the zsh manual we wonder why there are no examples or those simply things in (shell) life\&. The zsh contains many features, but there was no manpage with some examples (like procmailex(5))\&. That\(cqs why we wrote this manpage\&.
 .sp
-Most of the tricks and oneliners come from the mailing lists zsh\-users, zsh\-workers, google, newsgroups and from ourselves\&. See section \fBLINKS\fR for details\&.
+Most of the tricks and oneliner come from the mailinglists zsh\-users, zsh\-workers, google, newsgroups and from ourself\&. See section \fBLINKS\fR for details\&.
 .sp
 Note: This manpage (zsh\-lovers(1)) is \fBnot\fR an official part of the Z shell! It\(cqs just a just for fun \- manpage ;) For comments, bugreports and feedback take a quick look at the section \fBBUGS\fR\&.
 .SH "SHELL\-SCRIPTING"
 .sp
-This section provides some examples for often needed shellscript\-stuff\&. \fBNote:\fR You should not use this otherwise most examples won\(cqt work\&. Parse options in shellscripts\&. Example taken from ZWS by Adam Chodorowski (http://www\&.chodorowski\&.com/projects/zws/):
+This section provides some examples for often needed shellscript\-stuff\&. Notice that you should not use otherwise most examples won\(cqt work\&. Parse options in shellscripts\&. Example taken from ZWS by Adam Chodorowski (http://www\&.chodorowski\&.com/projects/zws/):
 .sp
 .if n \{\
 .RS 4
@@ -90,7 +90,7 @@ alias \-s org=w3m
 .RE
 .\}
 .sp
-Now pressing the return\-key after entering \fIfoobar\&.tex\fR starts vim with foobar\&.tex\&. Calling an html\-file runs browser w3m\&. \fIwww\&.zsh\&.org\fR and pressing enter starts w3m with argument www\&.zsh\&.org\&. Global aliases can be used anywhere in the command line\&. Example:
+Now pressing return\-key after entering \fIfoobar\&.tex\fR starts vim with foobar\&.tex\&. Calling a html\-file runs browser w3m\&. \fIwww\&.zsh\&.org\fR and pressing enter starts w3m with argument www\&.zsh\&.org\&. Global aliases can be used anywhere in the command line\&. Example:
 .sp
 .if n \{\
 .RS 4
@@ -495,7 +495,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   $ print ${(r:10::0:)foo}
 
 # find the name of all the files in their home directory that have
-# more than 20 characters in their file names
+# 20 or more characters in their file names
   print \-rl $HOME/${(l:20::?:)~:\-}*
 
 # Save arrays
@@ -574,7 +574,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   $ for i (\&./*\&.mp3){mpg321 \-\-w \- $i > ${i:r}\&.wav}
 
 # Download with LaTeX2HTML  created Files (for example the ZSH\-Guide):
-  $ for f in http://zsh\&.sunsite\&.dk/Guide/zshguide{,{01\&.\&.08}}\&.html; do
+  $ for f in https://zsh\&.sourceforge\&.io/Guide/zshguide{,{01\&.\&.08}}\&.html; do
   >     lynx \-source $f >${f:t}
   > done
 
@@ -1759,14 +1759,14 @@ Primary site
 \fBhttp://www\&.zsh\&.org/\fR
 .RE
 .PP
+Zsh Web Pages
+.RS 4
+\fBhttps://zsh\&.sourceforge\&.io/\fR
+.RE
+.PP
 Project\-page
 .RS 4
 \fBhttp://sourceforge\&.net/projects/zsh/\fR
-.RE
-.PP
-Z shell page at sunsite\&.dk
-.RS 4
-\fBhttp://zsh\&.sunsite\&.dk/\fR
 .RE
 .PP
 From Bash to Z Shell: Conquering the Command Line \- the book
@@ -1786,22 +1786,17 @@ Mailinglistarchive
 .PP
 ZSH\-FAQ
 .RS 4
-\fBhttp://zsh\&.dotsrc\&.org/FAQ/\fR
+\fBhttps://zsh\&.sourceforge\&.io/FAQ/zshfaq\&.html\fR
 .RE
 .PP
 Userguide
 .RS 4
-\fBhttp://zsh\&.sunsite\&.dk/Guide/\fR
+\fBhttps://zsh\&.sourceforge\&.io/Guide/\fR
 .RE
 .PP
-ZSH\-Wiki
+ZSH\-Wiki (Archived link)
 .RS 4
-\fBhttp://zshwiki\&.org/home/\fR
-.RE
-.PP
-A short introduction from BYU
-.RS 4
-\fBhttp://docs\&.cs\&.byu\&.edu/linux/advanced/zsh\&.html\fR
+\fBhttps://web\&.archive\&.org/web/20160304135622/http://zshwiki\&.org/home/\fR
 .RE
 .PP
 Mouse\-Support ;)
@@ -1809,29 +1804,19 @@ Mouse\-Support ;)
 \fBhttp://stchaz\&.free\&.fr/mouse\&.zsh\fR
 .RE
 .PP
-Curtains up: introducing the Z shell
-.RS 4
-\fBhttp://www\-128\&.ibm\&.com/developerworks/linux/library/l\-z\&.html?dwzone=linux\fR
-.RE
-.PP
-ZSH\-Liebhaberseite (german)
-.RS 4
-\fBhttp://michael\-prokop\&.at/computer/tools_zsh_liebhaber\&.html\fR
-.RE
-.PP
-ZSH\-Seite von Michael Prokop (german)
-.RS 4
-\fBhttp://michael\-prokop\&.at/computer/tools_zsh\&.html\fR
-.RE
-.PP
 ZSH Prompt introduction
 .RS 4
 \fBhttp://aperiodic\&.net/phil/prompt/\fR
 .RE
 .PP
+ft\(cqs blog posts around zsh
+.RS 4
+\fBhttp://bewatermyfriend\&.org/tag/zsh/\fR
+.RE
+.PP
 ft\(cqs zsh configuration
 .RS 4
-\fBhttp://ft\&.bewatermyfriend\&.org/computer/zsh\&.html\fR
+\fBhttps://gitlab\&.com/ft/etc\-zsh\fR
 .RE
 .PP
 Adam\(cqs ZSH page
@@ -1839,9 +1824,9 @@ Adam\(cqs ZSH page
 \fBhttp://www\&.adamspiers\&.org/computing/zsh/\fR
 .RE
 .PP
-Zzappers Best of ZSH Tips
+Zzappers Best of ZSH Tips (Archived link)
 .RS 4
-\fBhttp://www\&.rayninfo\&.co\&.uk/tips/zshtips\&.html\fR
+\fBhttps://web\&.archive\&.org/web/20190517011103/http://www\&.rayninfo\&.co\&.uk/tips/zshtips\&.html\fR
 .RE
 .PP
 Zsh Webpage by Christian Schneider
@@ -1921,7 +1906,7 @@ Manpages of zsh:
 Note: especially \fIman zshcontrib\fR covers very useful topics! Book: \fBFrom Bash to Z Shell\fR by Oliver Kiddle, Jerry Peck and Peter Stephenson\&. \fBISBN: 1590593766\fR\&. \- \fBbash2zsh\&.com\fR Also take a look at the section \fBLINKS\fR in this manpage\&.
 .SH "BUGS"
 .sp
-Probably\&. This manpage might be never complete\&. So please report bugs, feedback and suggestions to <zsh\-lovers@michael\-prokop\&.at>\&. Thank you!
+Probably\&. This manpage might be never complete\&. So please report bugs, feedback and suggestions via https://github\&.com/grml/zsh\-lovers Thank you!
 .SH "COPYRIGHT"
 .sp
 Copyright (C) Michael Prokop, Christian Schneider and Matthias Kopfermann\&.
