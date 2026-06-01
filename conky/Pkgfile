@@ -4,16 +4,11 @@
 # Depends on: imlib2 lua xorg-libxdamage xorg-libxft xorg-libxi xorg-libxinerama
 
 name=conky
-version=1.23.0
+version=1.24.0
 release=1
-source=(https://github.com/brndnmtthws/conky/archive/v$version/$name-$version.tar.gz
-    10fe6f111fb4c514748dca48b23c5feb2cf6d390.patch)
+source=(https://github.com/brndnmtthws/conky/archive/v$version/$name-$version.tar.gz)
 
 build() {
-
-    # fix crash when XDG_SESSION_TYPE is empty
-    patch -d $name-$version -p1 -i $SRC/10fe6f111fb4c514748dca48b23c5feb2cf6d390.patch
-
     prt-get isinst wayland && PKGMK_CONKY+=' -D BUILD_WAYLAND=ON'
 
     sed -i '/include(CCache)/d' -i $name-$version/CMakeLists.txt
