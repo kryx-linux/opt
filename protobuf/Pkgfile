@@ -5,7 +5,7 @@
 
 name=protobuf
 version=35.0
-release=1
+release=2
 source=(https://github.com/protocolbuffers/protobuf/archive/v$version/$name-$version.tar.gz)
 
 build() {
