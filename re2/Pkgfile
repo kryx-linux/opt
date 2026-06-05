@@ -5,11 +5,12 @@
 
 name=re2
 version=2025-11-05
-release=1
+release=2
 source=(https://github.com/google/re2/archive/$version/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
+
   make
   make prefix=/usr DESTDIR=$PKG install
 }
