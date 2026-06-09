@@ -272,6 +272,7 @@ drwxr-xr-x	root/root	var/www/error/
 -rw-r--r--	root/root	var/www/error/HTTP_BAD_GATEWAY.html.var
 -rw-r--r--	root/root	var/www/error/HTTP_BAD_REQUEST.html.var
 -rw-r--r--	root/root	var/www/error/HTTP_FORBIDDEN.html.var
+-rw-r--r--	root/root	var/www/error/HTTP_GATEWAY_TIME_OUT.html.var
 -rw-r--r--	root/root	var/www/error/HTTP_GONE.html.var
 -rw-r--r--	root/root	var/www/error/HTTP_INTERNAL_SERVER_ERROR.html.var
 -rw-r--r--	root/root	var/www/error/HTTP_LENGTH_REQUIRED.html.var
