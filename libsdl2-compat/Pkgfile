@@ -4,7 +4,7 @@
 # Depends on: libsdl3
 
 name=libsdl2-compat
-version=2.32.68
+version=2.32.70
 release=1
 source=(https://github.com/libsdl-org/sdl2-compat/releases/download/release-$version/sdl2-compat-$version.tar.gz)
 
@@ -13,7 +13,8 @@ build() {
         -D CMAKE_INSTALL_PREFIX=/usr \
         -D CMAKE_INSTALL_LIBDIR=lib \
         -D CMAKE_BUILD_TYPE=Release \
-        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS"
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D SDL2COMPAT_TESTS=OFF
     
     cmake --build build -j ${JOBS:-1}
     DESTDIR=$PKG cmake --install build
