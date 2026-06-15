@@ -1,10 +1,11 @@
+drwxr-xr-x	root/root	bin/
+-rwxr-xr-x	root/root	bin/chdosattr
+-rwxr-xr-x	root/root	bin/lsdosattr
 drwxr-xr-x	root/root	sbin/
--rwxr-xr-x	root/root	sbin/chdosattr
 -rwxr-xr-x	root/root	sbin/dump.exfat
 -rwxr-xr-x	root/root	sbin/exfat2img
 -rwxr-xr-x	root/root	sbin/exfatlabel
 -rwxr-xr-x	root/root	sbin/fsck.exfat
--rwxr-xr-x	root/root	sbin/lsdosattr
 -rwxr-xr-x	root/root	sbin/mkfs.exfat
 -rwxr-xr-x	root/root	sbin/tune.exfat
 drwxr-xr-x	root/root	usr/
