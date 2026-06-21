@@ -5,7 +5,7 @@
 
 name=docbook-xsl
 version=2020-06-03
-release=1
+release=2
 source=(https://github.com/docbook/xslt10-stylesheets/releases/download/snapshot%2F$version/$name-nons-snapshot.zip)
 renames=($name-snapshot-$version.zip)
 
