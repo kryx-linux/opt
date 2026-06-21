@@ -6,10 +6,10 @@
 name=hunspell-en
 version=2026.02.25
 release=1
-source=(http://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_AU-$version.zip
-  http://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_US-$version.zip
-  http://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_CA-$version.zip
-  http://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_GB-ise-$version.zip)
+source=(https://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_AU-$version.zip
+  https://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_US-$version.zip
+  https://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_CA-$version.zip
+  https://downloads.sourceforge.net/wordlist/speller/$version/hunspell-en_GB-ise-$version.zip)
 
 build() {
   declare -A missing
