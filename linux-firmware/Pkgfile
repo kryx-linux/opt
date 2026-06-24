@@ -5,7 +5,7 @@
 # Optional: parallel
 
 name=linux-firmware
-version=20260519
+version=20260622
 release=1
 source=(https://www.kernel.org/pub/linux/kernel/firmware/$name-$version.tar.xz)
 
@@ -15,5 +15,6 @@ build() {
     prt-get isinst parallel || MAKEFLAGS="-j 1"
     make DESTDIR=$PKG FIRMWAREDIR=/lib/firmware install
     make DESTDIR=$PKG dedup
+
     find $PKG \( -name 'ChangeLog' -or -name 'README' \) -delete
 }
