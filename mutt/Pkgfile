@@ -2,11 +2,11 @@
 # URL: http://www.mutt.org
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: gdbm openssl zlib
-# Optional: cyrus-sasl gpgme libidn2
+# Optional: cyrus-sasl gpgme libidn2 lynx
 
 name=mutt
 version=2.4.0
-release=1
+release=2
 source=(http://ftp.mutt.org/pub/mutt/$name-$version.tar.gz)
 
 build() {
