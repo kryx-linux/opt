@@ -4,8 +4,8 @@
 # Depends on: glycin
 
 name=gdk-pixbuf
-version=2.44.4
-release=2
+version=2.44.6
+release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz
      gdk-pixbuf.loaders gdk-pixbuf-register.sh)
 
@@ -26,7 +26,8 @@ build() {
         -D jpeg=disabled \
         -D gif=disabled \
         -D others=enabled \
-        -D thumbnailer=disabled
+        -D thumbnailer=disabled \
+        -D legacy_xpm=enabled
 
     meson compile -C build -j ${JOBS:-1}
     DESTDIR=$PKG meson install  -C build
