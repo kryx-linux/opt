@@ -2,10 +2,10 @@
 # URL: https://git-scm.com/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: curl expat
-# Optional: tk
+# Optional: rust tk
 
 name=git
-version=2.54.0
+version=2.55.0
 release=1
 source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar.xz
     git gitd.rc)
@@ -13,7 +13,9 @@ source=(https://www.kernel.org/pub/software/scm/git/git-{,manpages-}$version.tar
 build() {
     sed -i "s|git_exec_path = libexec|& / 'git-core'|" -i $name-$version/meson.build
 
-    meson setup $name-$version build \
+    prt-get isinst rust && PKGMK_GIT+=' -D rust=enabled' || PKGMK_GIT+=' -D rust=disabled'
+
+    meson setup $name-$version build $PKGMK_GIT \
         --prefix=/usr \
         --libexecdir=lib \
         --buildtype=plain \
