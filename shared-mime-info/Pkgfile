@@ -4,24 +4,17 @@
 # Depends on: glib itstool
 
 name=shared-mime-info
-version=2.4
-release=2
+version=2.5.1
+release=1
 
 # https://gitlab.freedesktop.org/xdg/shared-mime-info/-/blob/master/xdgmime
-_xdgmimever=e861d3eb3d522a9c22c5a870526728e2a3d9fc04
+_xdgmimever=04ce4cd90cb3fa77d5348662de221a6f33b21b17
 
 source=(https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/$name-$version.tar.bz2
   https://gitlab.freedesktop.org/xdg/xdgmime/-/archive/$_xdgmimever/xdgmime-$_xdgmimever.tar.bz2)
 
 build() {
-  # Build mime database
-  meson setup xdgmime-$_xdgmimever xdgmime-build \
-    --prefix=/usr \
-    --buildtype=plain \
-    --wrap-mode nodownload \
-    -D b_pie=true
-  meson compile -C xdgmime-build
-
+  cp -r $SRC/xdgmime-$_xdgmimever $name-$version/subprojects/xdgmime
   meson setup $name-$version build \
     --prefix=/usr \
     --buildtype=plain \
@@ -29,7 +22,7 @@ build() {
     -D b_lto=true \
     -D b_pie=true \
     -D update-mimedb=false \
-    -D xdgmime-path=$SRC/xdgmime-build
+    -D build-spec=false
   meson compile -C build
   DESTDIR=$PKG meson install -C build
 
