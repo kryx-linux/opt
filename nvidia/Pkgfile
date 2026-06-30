@@ -4,7 +4,7 @@
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia
-version=595.80
+version=595.84
 release=1
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	https://github.com/NVIDIA/open-gpu-kernel-modules/archive/$version/$name-open-$version.tar.gz \
@@ -170,6 +170,7 @@ build() {
 	install -D -m 0644 $SRC/90-nvidia-uvm.rules $PKG/lib/udev/rules.d/90-nvidia-uvm.rules
 
 	# kernel modules
+	export SYSSRC=/lib/modules/${KVER:-$(uname -r)}/build
 	if [ "${NVIDIA_PROPRIETARY_MODULES}" -eq 1 ]; then
 		cd kernel
 		IGNORE_CC_MISMATCH=1 make module
