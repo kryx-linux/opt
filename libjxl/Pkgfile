@@ -5,17 +5,17 @@
 # Optional: openexr
 
 name=libjxl
-version=0.11.2
+version=0.12.0
 release=1
-_testdata_commit=ff8d743aaba05b3014f17e5475e576242fa979fc
-_brotli_commit=36533a866ed1ca4b75cf049f4521e4ec5fe24727
+_testdata_commit=73695d303670c90e4d506ea89d9901b081385089
+_brotli_commit=028fb5a23661f123017c060daa546b55cf4bde29
 _googletest_commit=6910c9d9165801d8827d628cb72eb7ea9dd538c5
 _highway_commit=457c891775a7397bdb0376bb1031e6e027af1c48
 _lcms_commit=5176347635785e53ee5cee92328f76fda766ecc6
 _libjpeg_turbo_commit=8ecba3647edb6dd940463fedf38ca33a8e2a73d1
 _libpng_commit=872555f4ba910252783af1507f9e7fe1653be252
 _sjpeg_commit=94e0df6d0f8b44228de5be0ff35efb9f946a13c9
-_skcms_commit=b2e692629c1fb19342517d7fb61f1cf83d075492
+_skcms_commit=96d9171c94b937a1b5f0293de7309ac16311b722
 _zlib_commit=51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf
 
 source=(https://github.com/libjxl/libjxl/archive/v$version/$name-$version.tar.gz
