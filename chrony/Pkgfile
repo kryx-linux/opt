@@ -6,12 +6,14 @@
 
 name=chrony
 version=4.8
-release=1
+release=2
 source=(https://chrony-project.org/releases/$name-$version.tar.gz
-    chronyd)
+    chronyd nettle4.patch)
 
 build() {
     cd $name-$version
+
+    patch -p1 -i $SRC/nettle4.patch
 
     ./configure \
         --prefix=/usr \
