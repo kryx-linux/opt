@@ -7,12 +7,15 @@
 name=libxkbcommon
 version=1.13.2
 release=1
-source=(https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-$version.tar.gz)
+source=(https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-$version.tar.gz
+    libxkbcommon-1.13.2-upstream_fix-1.patch)
 
 build() {
     prt-get isinst wayland-protocols || PKGMK_XKBCOMMON+=' -D enable-wayland=false'
     prt-get isinst xkeyboard-config  || PKGMK_XKBCOMMON+=' -D enable-x11=false'
     prt-get isinst bash-completion   || PKGMK_XKBCOMMON+=' -D enable-bash-completion=false'
+
+    patch -Np1 -d libxkbcommon-xkbcommon-$version -i $SRC/libxkbcommon-1.13.2-upstream_fix-1.patch
 
     meson setup build libxkbcommon-xkbcommon-$version $PKGMK_XKBCOMMON \
         --prefix=/usr \
