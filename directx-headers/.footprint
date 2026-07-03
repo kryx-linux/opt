@@ -5,6 +5,7 @@ drwxr-xr-x	root/root	usr/include/composition/
 drwxr-xr-x	root/root	usr/include/directx/
 -rw-r--r--	root/root	usr/include/directx/D3D12MarkerApiEnums.idl
 -rw-r--r--	root/root	usr/include/directx/D3D12TokenizedProgramFormat.hpp
+-rw-r--r--	root/root	usr/include/directx/DXDumpFileFormat.h
 -rw-r--r--	root/root	usr/include/directx/DirectML.h
 -rw-r--r--	root/root	usr/include/directx/d3d12.h
 -rw-r--r--	root/root	usr/include/directx/d3d12.idl
@@ -32,6 +33,9 @@ drwxr-xr-x	root/root	usr/include/directx/
 -rw-r--r--	root/root	usr/include/directx/d3dx12_resource_helpers.h
 -rw-r--r--	root/root	usr/include/directx/d3dx12_root_signature.h
 -rw-r--r--	root/root	usr/include/directx/d3dx12_state_object.h
+-rw-r--r--	root/root	usr/include/directx/d3dx12_state_object_database.h
+-rw-r--r--	root/root	usr/include/directx/directsr.h
+-rw-r--r--	root/root	usr/include/directx/directsr.idl
 -rw-r--r--	root/root	usr/include/directx/dxcore.h
 -rw-r--r--	root/root	usr/include/directx/dxcore_interface.h
 -rw-r--r--	root/root	usr/include/directx/dxgicommon.h
