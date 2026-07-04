@@ -5,8 +5,8 @@
 # Optional: cyrus-sasl gpgme libidn2 lynx
 
 name=mutt
-version=2.4.0
-release=2
+version=2.4.1
+release=1
 source=(http://ftp.mutt.org/pub/mutt/$name-$version.tar.gz)
 
 build() {
