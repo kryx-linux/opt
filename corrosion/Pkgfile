@@ -1,0 +1,25 @@
+# Description: Easy Rust and C/C++ Integration
+# URL: https://github.com/corrosion-rs/corrosion
+# Maintainer: Tim Biermann, tbier at posteo dot de
+# Depends on: rust
+
+name=corrosion
+version=0.6.1
+release=2
+source=(https://github.com/corrosion-rs/corrosion/archive/v$version/$name-$version.tar.gz
+  cmake.patch)
+
+build() {
+  patch -Np1 -d $name-$version -i $SRC/cmake.patch
+
+  cmake -S $name-$version -B build -G Ninja \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -D CORROSION_BUILD_TESTS=OFF \
+    -Wno-dev
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+}

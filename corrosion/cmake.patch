@@ -1,0 +1,17 @@
+diff -Naur corrosion-0.6.1.orig/cmake/Corrosion.cmake corrosion-0.6.1/cmake/Corrosion.cmake
+--- corrosion-0.6.1.orig/cmake/Corrosion.cmake	2026-04-17 08:06:59.370111137 +0200
++++ corrosion-0.6.1/cmake/Corrosion.cmake	2026-04-17 08:07:39.688320417 +0200
+@@ -44,7 +44,12 @@
+         FORCE)
+ endif()
+ 
+-find_package(Rust REQUIRED)
++set(Rust_FIND_REQUIRED TRUE)
++include("${CMAKE_CURRENT_LIST_DIR}/FindRust.cmake")
++unset(Rust_FIND_REQUIRED)
++if(NOT Rust_FOUND)
++    message(FATAL_ERROR "Rust not found")
++endif()
+ 
+ if(CMAKE_GENERATOR MATCHES "Visual Studio"
+         AND (NOT CMAKE_VS_PLATFORM_NAME STREQUAL CMAKE_VS_PLATFORM_NAME_DEFAULT)
