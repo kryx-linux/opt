@@ -2,19 +2,26 @@
 # URL:         http://lame.sourceforge.net/
 # Maintainer:  Juergen Daubert, jue at crux dot nu
 # Depends on:  ncurses
+# Optional:    mpg123
 
 name=lame
-version=3.100
+version=4.0
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr \
-                --disable-analyzer-hooks \
-                --disable-gtktest \
-                --enable-nasm
+
+    prt-get isinst mpg123 || PKGMK_LAME+=' --disable-decoder'
+
+    CFLAGS+=" -Wno-implicit-function-declaration -Wno-incompatible-pointer-types" \
+    ./configure $PKGMK_LAME \
+        --prefix=/usr \
+        --disable-analyzer-hooks \
+        --disable-gtktest \
+        --enable-nasm
     make
     make DESTDIR=$PKG install
+
     rm -r $PKG/usr/share/doc
 }
