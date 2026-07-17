@@ -1,8 +1,44 @@
 #compdef pkginfo
 
+local -A opt_args
+
+_pkginfo_installed_packages() {
+  local root db_path cache_key cache_stamp output
+  local -a cmd lines list
+
+  root=${opt_args[-r]:-${opt_args[--root]}}
+  db_path=${root:+${root%/}}/var/lib/pkg/db
+  cache_stamp=$(command stat -c %Y "$db_path" 2>/dev/null)
+  cache_key="${root:-/}:$cache_stamp"
+
+  typeset -gA _pkginfo_installed_packages_cache
+
+  if (( $+_pkginfo_installed_packages_cache[$cache_key] )); then
+    output=$_pkginfo_installed_packages_cache[$cache_key]
+  else
+    cmd=(pkginfo)
+    [[ -n $root ]] && cmd+=(-r "$root")
+    cmd+=(-i)
+
+    output=$("${cmd[@]}" 2>/dev/null) || return 1
+    _pkginfo_installed_packages_cache[$cache_key]=$output
+  fi
+
+  lines=(${(f)output})
+  list=(${lines%%[[:space:]]*})
+
+  _describe 'installed packages' list
+}
+
+_pkginfo_package_or_file() {
+  _alternative \
+    'installed packages:installed package:_pkginfo_installed_packages' \
+    'files:file:_files'
+}
+
 _arguments \
   '(-i --installed)'{-i,--installed}'[show installed packages]' \
-  '(-l --list)'{-l,--list}'[list files in package]:package:_files' \
+  '(-l --list)'{-l,--list}'[list files in package]:package or file:_pkginfo_package_or_file' \
   '(-o --owner)'{-o,--owner}'[list owner(s) of file(s) matching pattern]:pattern:_files' \
   '(-f --footprint)'{-f,--footprint}'[print footprint for file]:file:_files' \
   '(-r --root)'{-r,--root}'[specify alternative installation root]:root:_directories' \

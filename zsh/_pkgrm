@@ -1,7 +1,37 @@
 #compdef pkgrm
 
+local -A opt_args
+
+_pkgrm_installed_packages() {
+  local root db_path cache_key cache_stamp output
+  local -a cmd lines list
+
+  root=${opt_args[-r]:-${opt_args[--root]}}
+  db_path=${root:+${root%/}}/var/lib/pkg/db
+  cache_stamp=$(command stat -c %Y "$db_path" 2>/dev/null)
+  cache_key="${root:-/}:$cache_stamp"
+
+  typeset -gA _pkgrm_installed_packages_cache
+
+  if (( $+_pkgrm_installed_packages_cache[$cache_key] )); then
+    output=$_pkgrm_installed_packages_cache[$cache_key]
+  else
+    cmd=(pkginfo)
+    [[ -n $root ]] && cmd+=(-r "$root")
+    cmd+=(-i)
+
+    output=$("${cmd[@]}" 2>/dev/null) || return 1
+    _pkgrm_installed_packages_cache[$cache_key]=$output
+  fi
+
+  lines=(${(f)output})
+  list=(${lines%%[[:space:]]*})
+
+  _describe 'installed packages' list
+}
+
 _arguments -s \
-  '-r[specify alternative installation root]:root:_directories' \
-  '-v[print version and exit]' \
-  '-h[print help and exit]' \
-  '*:package:_files'
+  '(-r --root)'{-r,--root}'[specify alternative installation root]:root:_directories' \
+  '(-v --version)'{-v,--version}'[print version and exit]' \
+  '(-h --help)'{-h,--help}'[print help and exit]' \
+  '*:package:_pkgrm_installed_packages'

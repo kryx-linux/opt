@@ -1,12 +1,71 @@
 #compdef pkgadd
 
-_packages() {
-  local -a list
-  DIR=$(/usr/bin/grep -e "^PKGMK_PACKAGE_DIR" /etc/pkgmk.conf &> /dev/null | cut -d = -f 2 | sed 's/\"//g')
-  for i in $DIR/*.pkg.tar.*; do
-    list+=($(echo "$i"))
-  done
-  _describe 'packages' list
+_pkgmk_config_package_dir() {
+  emulate -L zsh
+  setopt extendedglob
+
+  local config=/etc/pkgmk.conf
+  local line dir
+
+  [[ -r $config ]] || return 1
+
+  while IFS= read -r line; do
+    line=${line%%\#*}
+    line=${line##[[:space:]]##}
+    [[ $line == export[[:space:]]##* ]] && line=${line#export[[:space:]]##}
+    [[ $line == PKGMK_PACKAGE_DIR[[:space:]]#=* ]] || continue
+
+    dir=${line#*=}
+    dir=${dir##[[:space:]]##}
+    dir=${dir%%[[:space:]]##}
+    dir=${dir#\"}
+    dir=${dir%\"}
+    dir=${dir#\'}
+    dir=${dir%\'}
+
+    [[ -n $dir ]] && print -r -- $dir && return 0
+  done < $config
+
+  return 1
+}
+
+_pkgmk_package_dirs() {
+  local -a dirs style_dirs
+  local dir
+
+  zstyle -a ":completion:${curcontext}:" package-dirs style_dirs
+  dirs+=("${style_dirs[@]}")
+
+  [[ -n $PKGMK_PACKAGE_DIR ]] && dirs+=("$PKGMK_PACKAGE_DIR")
+
+  dir=$(_pkgmk_config_package_dir)
+  [[ -n $dir ]] && dirs+=("$dir")
+
+  print -rl -- "${(@u)dirs}"
+}
+
+_pkgadd_packages() {
+  local -a dirs list packages
+  local dir cur ret=1
+
+  cur=${PREFIX:-${words[CURRENT]}}
+
+  if [[ $cur != */* ]]; then
+    dirs=(${(f)"$(_pkgmk_package_dirs)"})
+    for dir in "${dirs[@]}"; do
+      [[ -d $dir ]] || continue
+
+      list=("$dir"/*.pkg.tar.*(N-.))
+      if (( $#list )); then
+        packages=(${list:t})
+        compadd -f -p "$dir/" -a packages && ret=0
+      fi
+    done
+  fi
+
+  _files -g '*.pkg.tar.*(-.)' && ret=0
+
+  return ret
 }
 
 _arguments -s \
@@ -16,4 +75,4 @@ _arguments -s \
   '(-c --config)'{-c,--config}'[use alternate configuration file]:config-file:_files' \
   '(-v --version)'{-v,--version}'[print version and exit]' \
   '(-h --help)'{-h,--help}'[print help and exit]' \
-  '*:package:_packages'
+  '*:package:_pkgadd_packages'

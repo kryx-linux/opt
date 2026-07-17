@@ -4,17 +4,14 @@
 # Depends on: libpcre2
 
 name=zsh
-version=5.9.1
+version=5.9.2
 release=1
 source=(https://www.zsh.org/pub/$name-$version.tar.xz
   _prt-get _pkgadd _pkgmk _pkginfo _pkgrm _rejmerge
-  0003-zsh-fix-module-loading-problem-with-full-RELRO.patch
   zsh-lovers.1)
 
 build() {
   cd $name-$version
-
-  patch -Np1 -i $SRC/0003-zsh-fix-module-loading-problem-with-full-RELRO.patch
 
   # fix paths https://crux.nu/bugs/index.php?getfile=539
   sed -i 's#/usr/share/keymaps#/usr/share/kbd/keymaps#g' Completion/Unix/Command/_loadkeys
@@ -49,10 +46,8 @@ build() {
     --with-tcsetpgrp \
     --enable-function-subdirs \
     --enable-pcre \
-    --enable-restricted-r \
     --enable-cap \
-    --enable-multibyte \
-    --enable-zsh-secure-free
+    --enable-multibyte
 
   make -C Src headers
   make -C Src -f Makemod zsh{path,xmod}s.h version.h

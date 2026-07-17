@@ -1,5 +1,11 @@
 #compdef prt-get prt-cache
 
+local curcontext="$curcontext" ret=1 _prt_get_current_install_root _prt_get_command state
+local -a state_descr line _prt_get_current_global_args
+local -A opt_args
+local -a _commands _infooptions _diffoptions _depoptions _installoptions
+local -a _sysupoptions _printfoptions _options
+
 _commands=(
   help:'show this help'
   version:'show the current version'
@@ -71,7 +77,7 @@ _installoptions=(
   "--rargs=[pass 'string' to pkgrm]"
   "--test[test mode]"
   "--log[write log file]"
-  "--ignore=[Don't install/update those packages]:ignored packages:_allports"
+  "--ignore=[Don't install/update those packages]:ignored packages:_sequence -s , _allports"
   "--pre-install[execute pre-install script]"
   "--post-install[execute post-install script]"
   "--install-scripts[execute pre-install and post-install script]"
@@ -118,22 +124,62 @@ _options=(
 )
 
 # Port list generators
+_prt_get_global_args() {
+  reply=()
+
+  (( $+opt_args[--cache] )) && reply+=(--cache)
+  (( $+opt_args[--no-std-config] )) && reply+=(--no-std-config)
+
+  [[ -n ${opt_args[--config]} ]] &&
+    reply+=(--config=${opt_args[--config]})
+  [[ -n ${opt_args[--install-root]} ]] &&
+    reply+=(--install-root=${opt_args[--install-root]})
+  [[ -n ${opt_args[--config-prepend]} ]] &&
+    reply+=(--config-prepend=${opt_args[--config-prepend]})
+  [[ -n ${opt_args[--config-append]} ]] &&
+    reply+=(--config-append=${opt_args[--config-append]})
+  [[ -n ${opt_args[--config-set]} ]] &&
+    reply+=(--config-set=${opt_args[--config-set]})
+}
+
+_prt_get_cached() {
+  local cache_key cache_stamp db_path output
+  local -a cmd
+
+  typeset -gA _prt_get_completion_cache
+
+  cache_stamp=$(command stat -c %Y /var/lib/pkg/prt-get.cache 2>/dev/null)
+  db_path=${_prt_get_current_install_root:+${_prt_get_current_install_root%/}}/var/lib/pkg/db
+  cache_stamp+=":$(command stat -c %Y "$db_path" 2>/dev/null)"
+  cmd=(prt-cache "${_prt_get_current_global_args[@]}" "$@")
+  cache_key="${cache_stamp}:${(j: :)${(qq)cmd}}"
+
+  if (( $+_prt_get_completion_cache[$cache_key] )); then
+    print -r -- ${_prt_get_completion_cache[$cache_key]}
+    return 0
+  fi
+
+  output=$("${cmd[@]}" 2>/dev/null) || return 1
+  _prt_get_completion_cache[$cache_key]=$output
+  print -r -- $output
+}
+
 _allports() {
   local -a list
-  list=(${(f)"$(prt-get list 2>/dev/null)"})
+  list=(${(f)"$(_prt_get_cached list)"})
   _describe 'ports' list
 }
 
 _installedports() {
   local -a list
-  list=(${(f)"$(prt-get listinst 2>/dev/null)"})
+  list=(${(f)"$(_prt_get_cached listinst)"})
   _describe 'installedports' list
 }
 
 _notinstalledports() {
   local -a installed_ports all_ports not_installed_ports
-  installed_ports=(${(f)"$(prt-cache listinst 2>/dev/null)"})
-  all_ports=(${(f)"$(prt-cache list 2>/dev/null)"})
+  installed_ports=(${(f)"$(_prt_get_cached listinst)"})
+  all_ports=(${(f)"$(_prt_get_cached list)"})
   not_installed_ports=(${all_ports:|installed_ports})
 
   _describe 'notinstalledports' not_installed_ports
@@ -141,157 +187,165 @@ _notinstalledports() {
 
 _lockedports() {
   local -a list
-  list=(${(f)"$(prt-cache listlocked 2>/dev/null)"})
+  list=(${(f)"$(_prt_get_cached listlocked)"})
   _describe 'lockedports' list
 }
 
 _unlockedports() {
-    local -a installed locked list
-    installed=("${(f)$(prt-cache listinst)}")
-    locked=("${(f)$(prt-cache listlocked)}")
-    list=("${(f)$(echo ${installed[@]} ${locked[@]} | tr ' ' '\n' | sort | uniq -u)}")
-    _describe 'unlockedports' list
+  local -a installed locked list
+  installed=(${(f)"$(_prt_get_cached listinst)"})
+  locked=(${(f)"$(_prt_get_cached listlocked)"})
+  list=(${installed:|locked})
+
+  _describe 'unlockedports' list
 }
 
 _outdatedports() {
   local -a list
-  list=(${(f)"$(prt-cache quickdiff | tr ' ' '\n' | sort)"})
+  local quickdiff
+  quickdiff=$(_prt_get_cached quickdiff)
+  list=(${(o)${(z)quickdiff}})
+
   _describe 'outdatedports' list
 }
 
-# TODO: print files from <port> that exist inside the directory
-# valid file for cat and edit
-_validfiles() {
-  local -a list
-  list=(
-    "Pkgfile"
-    ".signature"
-    ".footprint"
-    "README"
-    "README.md"
-  )
-  _describe 'validfiles' list
+_prt_get_diff_ports() {
+  _alternative \
+    'outdated ports:outdated port:_outdatedports' \
+    'installed ports:installed port:_installedports'
 }
 
-# Main completion function
-_arguments \
+_prt_get_port_files() {
+  local -a list
+  local port
+
+  port=${line[1]}
+  [[ $port == $_prt_get_command && -n ${line[2]} ]] && port=${line[2]}
+  [[ -n $port ]] || return 1
+
+  list=(${(f)"$(_prt_get_cached ls $port)"})
+  (( $#list )) || return 1
+
+  _describe 'port files' list
+}
+
+_prt_get_printf_formats() {
+  _describe 'format specifiers' _printfoptions
+}
+
+_arguments -C \
   "${_options[@]}" \
   ":command:->command" \
-  "*::options:->options"
+  "*::argument:->argument" && ret=0
+
+_prt_get_global_args
+_prt_get_current_global_args=("${reply[@]}")
+_prt_get_current_install_root=${opt_args[--install-root]}
 
 # Command completion
 case $state in
   command)
-    _describe 'commands' _commands
+    _describe 'commands' _commands && ret=0
     ;;
-  options)
-    case $words[1] in
+  argument)
+    _prt_get_command=${line[1]}
+    curcontext="${curcontext%:*:*}:prt-get-${_prt_get_command}:"
+
+    case $_prt_get_command in
       help | version | listorphans)
         # No options for help | version command
         ;;
       list)
-        _description list list '<filter>, e.g. *xorg*'
+        _arguments -S \
+          ":filter pattern:" && ret=0
         ;;
       listinst)
-        # TODO [<filter>]
-        _arguments -C \
-          "${_infooptions[@]}"
+        _arguments -S \
+          "${_infooptions[@]}" \
+          ":filter pattern:" && ret=0
         ;;
       printf)
-        # TODO <format>
-        # TODO [--sort=<format string2>] [--filter=<filter>]
-        local msg=(
-          'format string'
-          '[--sort=format_string2] [--filter=filter_string]'
-          ''
-          'Supported format specifiers:'
-          '%n - name'
-          '%p - path'
-          '%v - version'
-          '%r - release'
-          '%d - description'
-          '%e - dependencies'
-          '%u - URL'
-          '%P - Packager'
-          '%M - Maintainer'
-          '%R - Readme (yes/no)'
-          '%E - pre-install script (yes/no)'
-          '%O - post-install script (yes/no)'
-          '%l - is locked (yes/no)'
-          '%i - installed (no/yes/diff)'
-        )
+        _arguments -S \
+          "--sort=[sort by format string]:sort format:_prt_get_printf_formats" \
+          "--filter=[filter ports]:filter pattern:" \
+          ":format:_prt_get_printf_formats" && ret=0
         ;;
       info | path | readme | ls)
         _arguments \
-          ":port:_allports"
+          ":port:_allports" && ret=0
         ;;
       current)
         _arguments -S \
-          ":installedports:_installedports"
+          ":installedports:_installedports" && ret=0
         ;;
       cat | edit)
         _arguments -C \
           ":port:_allports" \
-          ":validfiles:_validfiles" \
+          ":file:_prt_get_port_files" && ret=0
         ;;
       diff)
         _arguments -S \
-          "*:outdatedports:_outdatedports" \
-          "${_diffoptions[@]}"
+          "${_diffoptions[@]}" \
+          "*:port:_prt_get_diff_ports" && ret=0
         ;;
       quickdiff)
         # No Options for quickdiff
         ;;
       depends | quickdep | isinst)
         _arguments -S \
-          ":port:_allports" \
+          "*:port:_allports" && ret=0
         ;;
       dependent)
-        _arguments \
-          ":port:_allports" \
-          "${_depoptions[@]}"
+        _arguments -S \
+          "${_depoptions[@]}" \
+          ":port:_allports" && ret=0
         ;;
       deptree)
         _arguments \
-          ":port:_allports"
+          ":port:_allports" && ret=0
         ;;
       dup | listlocked)
         # No arguments for dup and listlocked commands
         ;;
       search | dsearch)
-        # TODO <expr>
+        _arguments \
+          ":expression:" && ret=0
         ;;
       fsearch)
-        # TODO <pattern>
+        _arguments \
+          ":pattern:" && ret=0
         ;;
-      update | remove)
-        # TODO: highlight ports that have an update available?
-        # TODO: this completes only outdated once, if available,
-        # then show installedports..
+      update)
         _arguments -S \
-          ":outdatedports:_outdatedports" \
-          "*:installedports:_installedports" \
-          "${_installoptions[@]}"
+          "${_installoptions[@]}" \
+          "*:port:_prt_get_diff_ports" && ret=0
+        ;;
+      remove)
+        _arguments -S \
+          "${_installoptions[@]}" \
+          "*:installedports:_installedports" && ret=0
         ;;
       install | grpinst | depinst)
         _arguments -S \
           "*:notinstalledports:_notinstalledports" \
-          "${_installoptions[@]}"
+          "${_installoptions[@]}" && ret=0
         ;;
       sysup)
         _arguments -S \
-          "${_sysupoptions[@]}"
+          "${_sysupoptions[@]}" && ret=0
         ;;
       lock)
         _arguments -S \
-          "*:unlockedports:_unlockedports"
+          "*:unlockedports:_unlockedports" && ret=0
         ;;
       unlock)
         _arguments -S \
-          "*:lockedports:_lockedports"
+          "*:lockedports:_lockedports" && ret=0
         ;;
       *)
         ;;
     esac
     ;;
 esac
+
+return ret
