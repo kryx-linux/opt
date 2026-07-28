@@ -5,7 +5,7 @@
 # Optional: fontconfig lcms2 libpng libtiff libxml2 openjpeg2 pango xorg-libxt
 
 name=imagemagick
-version=7.1.2-27
+version=7.1.2-29
 release=1
 source=(https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$version/$name-$version.tar.gz)
 
@@ -32,4 +32,5 @@ build () {
     find $PKG -regex '.*\(ChangeLog\|LICENSE\|NEWS\.txt\)$' -delete
     find $PKG -regex '.*\(\.packlist\|perllocal.pod\|\.bs\)$' -delete
     find $PKG -type d -empty -delete
+    find $PKG -name autosplit.ix -delete
 }
