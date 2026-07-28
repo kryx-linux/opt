@@ -7,7 +7,7 @@ name=libid3tag
 version=0.16.4
 release=1
 source=(https://codeberg.org/tenacityteam/libid3tag/archive/$version.tar.gz)
-renames=($name-$version.tar.gz)
+renames=($name-$version-$release.tar.gz)
 
 build() {
   cmake -S $name -B build -G Ninja \
