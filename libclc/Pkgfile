@@ -12,6 +12,7 @@ build() {
   # Strip mcpu|march|mtune flags
   shopt -s extglob
   CFLAGS="${CFLAGS// -@(mcpu|march|mtune)=+([![:space:]]) / }"
+  CXXFLAGS="${CFLAGS}"
   shopt -u extglob
 
   # libclc is intended to be used with the Clang compiler's OpenCL frontend
