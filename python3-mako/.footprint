@@ -4,14 +4,14 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/python3.12/
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/
-drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/mako-1.4.0.dist-info/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.0.dist-info/METADATA
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.0.dist-info/RECORD
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.0.dist-info/WHEEL
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.0.dist-info/entry_points.txt
-drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/mako-1.4.0.dist-info/licenses/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.0.dist-info/licenses/LICENSE
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.0.dist-info/top_level.txt
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/mako-1.4.1.dist-info/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.1.dist-info/METADATA
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.1.dist-info/RECORD
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.1.dist-info/WHEEL
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.1.dist-info/entry_points.txt
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/mako-1.4.1.dist-info/licenses/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.1.dist-info/licenses/LICENSE
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako-1.4.1.dist-info/top_level.txt
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/mako/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako/__init__.py
 drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/mako/__pycache__/
@@ -117,14 +117,3 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/mako/testing/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako/testing/fixtures.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako/testing/helpers.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/mako/util.py
-drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/tools/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/tools/__init__.py (EMPTY)
-drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/tools/__pycache__/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/tools/__pycache__/__init__.cpython-312.opt-1.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/tools/__pycache__/__init__.cpython-312.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/tools/__pycache__/toxnox.cpython-312.opt-1.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/tools/__pycache__/toxnox.cpython-312.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/tools/__pycache__/warn_tox.cpython-312.opt-1.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/tools/__pycache__/warn_tox.cpython-312.pyc
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/tools/toxnox.py
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/tools/warn_tox.py
