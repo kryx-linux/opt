@@ -6,10 +6,12 @@
 
 name=glycin
 version=2.1.5
-release=1
-source=(https://gitlab.gnome.org/GNOME/glycin/-/archive/$version/glycin-$version.tar.bz2)
+release=2
+source=(https://gitlab.gnome.org/GNOME/glycin/-/archive/$version/glycin-$version.tar.bz2 glycin-thumbnailer.patch)
 
 build() {
+  patch -d $name-$version -i $SRC/glycin-thumbnailer.patch
+
   prt-get isinst sccache && export RUSTC_WRAPPER=/usr/bin/sccache
   [[ ! -e $PKGMK_SOURCE_DIR/rust ]] && mkdir $PKGMK_SOURCE_DIR/rust
 
@@ -29,7 +31,7 @@ build() {
     -D test_skip_install=false \
     -D tests=false \
     -D glycin-loaders=true \
-    -D glycin-thumbnailer=false \
+    -D glycin-thumbnailer=true \
     -D loaders="$PKGMK_GLYCIN_LOADERS" \
     -D vapi=false
 
