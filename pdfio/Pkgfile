@@ -1,0 +1,22 @@
+# Description: Simple C library for reading and writing PDF files
+# URL: https://www.msweet.org/pdfio/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: libpng zlib
+
+name=pdfio
+version=1.6.4
+release=1
+source=(https://github.com/michaelrsweet/$name/releases/download/v$version/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    ./configure \
+        --prefix=/usr \
+        --enable-shared
+
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/share/doc
+}
