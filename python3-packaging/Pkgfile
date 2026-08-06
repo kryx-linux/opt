@@ -4,7 +4,7 @@
 # Depends on: python3-pyproject-hooks
 
 name=python3-packaging
-version=26.2
+version=26.3
 release=1
 source=(https://pypi.org/packages/source/p/packaging/packaging-$version.tar.gz)
 
