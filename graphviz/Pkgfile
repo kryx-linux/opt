@@ -6,7 +6,7 @@
 
 name=graphviz
 version=15.1.1
-release=1
+release=2
 source=(https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/$version/$name-$version.tar.xz)
 
 build() {
@@ -15,7 +15,11 @@ build() {
     # build fails if swig is installed but tcl is not
     prt-get isinst swig && ! prt-get isinst tcl && PKGMK_GRAPHVIZ='--disable-swig'
 
-    ./configure --prefix=/usr $PKGMK_GRAPHVIZ
+    ./configure \
+        --prefix=/usr \
+        $PKGMK_GRAPHVIZ \
+        LIBPOSTFIX= \
+
     make
     make DESTDIR=$PKG install
 
