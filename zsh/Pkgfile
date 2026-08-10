@@ -5,10 +5,11 @@
 
 name=zsh
 version=5.9.2
-release=1
+release=2
 source=(https://www.zsh.org/pub/$name-$version.tar.xz
-  _prt-get _pkgadd _pkgmk _pkginfo _pkgrm _rejmerge
-  zsh-lovers.1)
+  https://github.com/grml/zsh-lovers/releases/download/build-20260809-205919/zsh-lovers.1
+  _prt-get _pkgadd _pkgmk _pkginfo _pkgrm _rejmerge)
+renames=(SKIP zsh-lovers.1-CRUX-$version-$release SKIP SKIP SKIP SKIP SKIP SKIP)
 
 build() {
   cd $name-$version
@@ -54,7 +55,7 @@ build() {
   make all
   make DESTDIR=$PKG install
 
-  install -m 644 $SRC/zsh-lovers.1 $PKG/usr/share/man/man1/
+  install -m 644 $SRC/zsh-lovers.1-CRUX-$version-$release -D $PKG/usr/share/man/man1/zsh-lovers.1
 
   rm $PKG/usr/share/man/man1/zshall.1
   cat $PKG/usr/share/man/man1/* > $PKG/usr/share/man/man1/zshall.1
