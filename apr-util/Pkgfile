@@ -4,7 +4,7 @@
 # Depends on: apr db expat gdbm openssl sqlite3
 
 name=apr-util
-version=1.6.4
+version=1.6.5
 release=1
 source=(https://downloads.apache.org/apr/$name-$version.tar.bz2)
 
