@@ -2,6 +2,9 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/task
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/fish/
+drwxr-xr-x	root/root	usr/share/fish/vendor_completions.d/
+-rw-r--r--	root/root	usr/share/fish/vendor_completions.d/task.fish
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/task.1.gz
@@ -21,6 +24,7 @@ drwxr-xr-x	root/root	usr/share/task/rc/
 -rw-r--r--	root/root	usr/share/task/rc/dark-red-256.theme
 -rw-r--r--	root/root	usr/share/task/rc/dark-violets-256.theme
 -rw-r--r--	root/root	usr/share/task/rc/dark-yellow-green.theme
+-rw-r--r--	root/root	usr/share/task/rc/default.theme
 -rw-r--r--	root/root	usr/share/task/rc/holidays.cs-CZ.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.da-DK.rc
 -rw-r--r--	root/root	usr/share/task/rc/holidays.de-AT.rc
@@ -66,8 +70,6 @@ drwxr-xr-x	root/root	usr/share/task/scripts/add-ons/
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/update-holidays.pl
 drwxr-xr-x	root/root	usr/share/task/scripts/bash/
 -rw-r--r--	root/root	usr/share/task/scripts/bash/task.sh
-drwxr-xr-x	root/root	usr/share/task/scripts/fish/
--rw-r--r--	root/root	usr/share/task/scripts/fish/task.fish
 drwxr-xr-x	root/root	usr/share/task/scripts/hooks/
 -rw-r--r--	root/root	usr/share/task/scripts/hooks/on-add
 -rw-r--r--	root/root	usr/share/task/scripts/hooks/on-add.the
