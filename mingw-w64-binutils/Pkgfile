@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=mingw-w64-binutils
-version=2.46.1
+version=2.47
 release=1
 source=(http://ftpmirror.gnu.org/gnu/binutils/binutils-$version.tar.xz)
 
@@ -23,4 +23,5 @@ build() {
 	done
 	rm -r $PKG/usr/share/info
 	rm $PKG/usr/lib/bfd-plugins/libdep.so
+	find $PKG/usr/x86_64-w64-mingw32/bin -type f -empty -delete
 }
