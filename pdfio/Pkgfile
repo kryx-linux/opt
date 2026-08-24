@@ -4,7 +4,7 @@
 # Depends on: libpng zlib
 
 name=pdfio
-version=1.6.4
+version=1.6.5
 release=1
 source=(https://github.com/michaelrsweet/$name/releases/download/v$version/$name-$version.tar.gz)
 
