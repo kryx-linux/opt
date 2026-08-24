@@ -5,7 +5,7 @@
 # Optional: brotli gnutls krb5 libunistr libidn2 nettle tdb
 
 name=squid
-version=7.6
+version=7.7
 release=1
 source=(https://github.com/squid-cache/squid/releases/download/SQUID_${version/./_}/$name-$version.tar.xz
     squid)
