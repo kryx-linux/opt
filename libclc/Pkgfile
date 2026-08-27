@@ -4,7 +4,7 @@
 # Depends on: clang lld spirv-llvm-translator
 
 name=libclc
-version=22.1.8
+version=23.1.0
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz)
 
@@ -15,17 +15,32 @@ build() {
   CXXFLAGS="${CFLAGS}"
   shopt -u extglob
 
+  local cmake_options=(
+    -S llvm-project-$version.src/libclc -G Ninja
+    -D CMAKE_INSTALL_PREFIX=/usr
+    -D CMAKE_INSTALL_LIBDIR=lib
+    -D CMAKE_BUILD_TYPE=Release
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS"
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS"
+    -D LIBCLC_USE_SPIRV_BACKEND=ON
+  )
+
+  targets=(
+    amdgcn-amd-amdhsa-llvm
+    nvptx64-nvidia-cuda
+    spirv32-unknown-unknown
+    spirv64-unknown-unknown
+    spirv32-unknown-vulkan
+    spirv64-unknown-vulkan
+  )
   # libclc is intended to be used with the Clang compiler's OpenCL frontend
   export CC=clang CXX=clang++ AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib LDFLAGS+=' -fuse-ld=lld'
 
-  cmake -S llvm-project-$version.src/libclc -B build -G Ninja \
-    -D CMAKE_INSTALL_PREFIX=/usr \
-    -D CMAKE_INSTALL_LIBDIR=lib \
-    -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-    -Wno-dev
-
-  cmake --build build
-  DESTDIR=$PKG cmake --install build
+  for target in "${targets[@]}"; do
+    cmake "${cmake_options[@]}" -B build-$target \
+      -D LLVM_DEFAULT_TARGET_TRIPLE="$target" \
+      -Wno-dev
+    cmake --build build-$target
+    DESTDIR=$PKG cmake --install "build-$target"
+  done
 }
