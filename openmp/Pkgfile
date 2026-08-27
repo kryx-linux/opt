@@ -4,17 +4,18 @@
 # Depends on: clang
 
 name=openmp
-version=22.1.8
+version=23.1.0
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz)
 
 build() {
-    cmake -S llvm-project-$version.src/openmp -B build -G Ninja \
+    cmake -S llvm-project-$version.src/runtimes -B build -G Ninja \
         -D CMAKE_INSTALL_PREFIX=/usr \
         -D CMAKE_BUILD_TYPE=Release \
         -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
         -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
         -D LIBOMP_INSTALL_ALIASES=OFF \
+        -D LLVM_ENABLE_RUNTIMES=openmp \
         -Wno-dev
 
     cmake --build build
