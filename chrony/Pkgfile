@@ -5,15 +5,13 @@
 # Optional: gnutls nettle nss
 
 name=chrony
-version=4.8
-release=2
+version=4.9
+release=1
 source=(https://chrony-project.org/releases/$name-$version.tar.gz
-    chronyd nettle4.patch)
+    chronyd)
 
 build() {
     cd $name-$version
-
-    patch -p1 -i $SRC/nettle4.patch
 
     ./configure \
         --prefix=/usr \
