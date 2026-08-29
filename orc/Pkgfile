@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=orc
-version=0.4.42
+version=0.4.43
 release=1
 source=(https://gitlab.freedesktop.org/gstreamer/orc/-/archive/$version/orc-$version.tar.bz2)
 
