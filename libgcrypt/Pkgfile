@@ -4,16 +4,18 @@
 # Depends on: libgpg-error
 
 name=libgcrypt
-version=1.12.2
+version=1.12.3
 release=1
 source=(https://www.gnupg.org/ftp/gcrypt/libgcrypt/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
 
+    # reenable avx512-support in the future with updated binutils
     ./configure \
         --prefix=/usr \
         --disable-padlock-support \
+        --disable-avx512-support \
         --enable-static=yes
     make
     make DESTDIR=$PKG install
