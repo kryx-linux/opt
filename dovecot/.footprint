@@ -12,6 +12,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/dovecot-sysreport
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/dovecot/
+-rw-r--r--	root/root	usr/include/dovecot/abnf.h
 -rw-r--r--	root/root	usr/include/dovecot/acl-api-private.h
 -rw-r--r--	root/root	usr/include/dovecot/acl-api.h
 -rw-r--r--	root/root	usr/include/dovecot/acl-cache.h
@@ -60,6 +61,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/backtrace-string.h
 -rw-r--r--	root/root	usr/include/dovecot/base32.h
 -rw-r--r--	root/root	usr/include/dovecot/base64.h
+-rw-r--r--	root/root	usr/include/dovecot/bitmap.h
 -rw-r--r--	root/root	usr/include/dovecot/bits.h
 -rw-r--r--	root/root	usr/include/dovecot/bsearch-insert-pos.h
 -rw-r--r--	root/root	usr/include/dovecot/buffer.h
@@ -185,6 +187,8 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/http-server.h
 -rw-r--r--	root/root	usr/include/dovecot/http-transfer.h
 -rw-r--r--	root/root	usr/include/dovecot/http-url.h
+-rw-r--r--	root/root	usr/include/dovecot/idna-punycode.h
+-rw-r--r--	root/root	usr/include/dovecot/idna.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-arg.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-base-subject.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-bodystructure.h
@@ -217,6 +221,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/imap-search.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-seqset.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-settings.h
+-rw-r--r--	root/root	usr/include/dovecot/imap-state-private.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-state.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-stats.h
 -rw-r--r--	root/root	usr/include/dovecot/imap-status.h
@@ -513,7 +518,6 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/process-stat.h
 -rw-r--r--	root/root	usr/include/dovecot/process-title.h
 -rw-r--r--	root/root	usr/include/dovecot/program-client.h
--rw-r--r--	root/root	usr/include/dovecot/punycode.h
 -rw-r--r--	root/root	usr/include/dovecot/push-notification-drivers.h
 -rw-r--r--	root/root	usr/include/dovecot/push-notification-event-flagsclear.h
 -rw-r--r--	root/root	usr/include/dovecot/push-notification-event-flagsset.h
@@ -556,6 +560,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/safe-mkstemp.h
 -rw-r--r--	root/root	usr/include/dovecot/sasl-common.h
 -rw-r--r--	root/root	usr/include/dovecot/sasl-oauth2.h
+-rw-r--r--	root/root	usr/include/dovecot/sasl-proxy.h
 -rw-r--r--	root/root	usr/include/dovecot/sasl-server-gssapi.h
 -rw-r--r--	root/root	usr/include/dovecot/sasl-server-mech-scram.h
 -rw-r--r--	root/root	usr/include/dovecot/sasl-server-oauth2.h
@@ -605,6 +610,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/ssl-settings.h
 -rw-r--r--	root/root	usr/include/dovecot/stats-client.h
 -rw-r--r--	root/root	usr/include/dovecot/stats-dist.h
+-rw-r--r--	root/root	usr/include/dovecot/storage-version.h
 -rw-r--r--	root/root	usr/include/dovecot/str-find.h
 -rw-r--r--	root/root	usr/include/dovecot/str-parse.h
 -rw-r--r--	root/root	usr/include/dovecot/str-sanitize.h
@@ -649,6 +655,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/
 -rw-r--r--	root/root	usr/include/dovecot/version.h
 -rw-r--r--	root/root	usr/include/dovecot/wildcard-match.h
 -rw-r--r--	root/root	usr/include/dovecot/write-full.h
+-rw-r--r--	root/root	usr/include/dovecot/xxh64.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/dovecot/
 -rwxr-xr-x	root/root	usr/lib/dovecot/anvil

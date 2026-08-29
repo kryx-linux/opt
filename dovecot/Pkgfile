@@ -5,7 +5,7 @@
 # Optional: clucene cyrus-sasl icu krb5 libsodium lua lz4 mariadb nss openldap postgresql
 
 name=dovecot
-version=2.4.4
+version=2.4.5
 release=1
 source=(https://dovecot.org/releases/2.4/$name-$version.tar.gz
     dovecot.rc dovecot.pam)
