@@ -1,23 +1,18 @@
 # Description: Automatically generates Rust FFI bindings to C (and some C++) libraries
 # URL: https://github.com/rust-lang/rust-bindgen
 # Maintainer: Tim Biermann, tbier at posteo dot de
-# Depends on: clang rust
+# Depends on: rust
 
 name=rust-bindgen
-version=0.72.1
+version=0.73.1
 release=1
-#source=(https://github.com/rust-lang/rust-bindgen/archive/v$version/$name-$version.tar.gz)
-source=(https://github.com/rust-lang/rust-bindgen/archive/d874de8d646d9b8a3e7ba2db2bcd52f2fba8f1f5/$name-d874de8d646d9b8a3e7ba2db2bcd52f2fba8f1f5.tar.gz)
-renames=($name-$version.tar.gz)
+source=(https://github.com/rust-lang/rust-bindgen/archive/v$version/$name-$version.tar.gz)
 
 build() {
   prt-get isinst sccache && export RUSTC_WRAPPER=/usr/bin/sccache
   [[ ! -e $PKGMK_SOURCE_DIR/rust ]] && mkdir $PKGMK_SOURCE_DIR/rust
 
-  #cargo build --release --manifest-path $name-$version/Cargo.toml
+  cargo build --release --manifest-path $name-$version/Cargo.toml
 
-  #install -Dt $PKG/usr/bin $name-$version/target/release/bindgen
-  cargo build --release --manifest-path $name-d874de8d646d9b8a3e7ba2db2bcd52f2fba8f1f5/Cargo.toml
-
-  install -Dt $PKG/usr/bin $name-d874de8d646d9b8a3e7ba2db2bcd52f2fba8f1f5/target/release/bindgen
+  install -Dt $PKG/usr/bin $name-$version/target/release/bindgen
 }
