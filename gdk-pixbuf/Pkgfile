@@ -4,8 +4,8 @@
 # Depends on: glycin
 
 name=gdk-pixbuf
-version=2.44.7
-release=2
+version=2.44.8
+release=1
 source=(https://download.gnome.org/sources/$name/${version:0:4}/$name-$version.tar.xz)
 
 build() {
