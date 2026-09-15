@@ -1729,6 +1729,7 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/BasicSpecification/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BasicSpecification/have_extensions%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BasicSpecification/have_file%3f-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BasicSpecification/ignored%3f-i.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BasicSpecification/lib_dirs-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BasicSpecification/lib_dirs_glob-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BasicSpecification/loaded_from-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/BasicSpecification/matches_for_glob-i.ri
@@ -2249,6 +2250,7 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/Ext/Builder/NoMakefileError/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Ext/Builder/run-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Ext/Builder/shelljoin-c.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Ext/Builder/shellsplit-c.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Ext/Builder/shellsplit_command-c.ri
 drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/Ext/CargoBuilder/
 drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/Ext/CargoBuilder/DylibNotFoundError/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/Ext/CargoBuilder/DylibNotFoundError/cdesc-DylibNotFoundError.ri
@@ -3214,6 +3216,8 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/EOFError/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/EOFError/cdesc-EOFError.ri
 drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/Error/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/Error/cdesc-Error.ri
+drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/LengthTooLongError/
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/LengthTooLongError/cdesc-LengthTooLongError.ri
 drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/NegativeLengthError/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/NegativeLengthError/cdesc-NegativeLengthError.ri
 drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/NotImplementedError/
@@ -3231,6 +3235,7 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/UnsupportedV
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/read_bytes-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/read_class-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/read_class_or_module-i.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/read_count-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/read_data-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/read_element-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Gem/SafeMarshal/Reader/read_extended_object-i.ri

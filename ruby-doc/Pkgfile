@@ -4,7 +4,7 @@
 # Depends on: ruby
 
 name=ruby-doc
-version=4.0.6
+version=4.0.7
 release=1
 source=(https://cache.ruby-lang.org/pub/ruby/${version%.*}/ruby-$version.tar.xz)
 
