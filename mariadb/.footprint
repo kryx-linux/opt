@@ -269,7 +269,6 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/deprecation.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/derived_handler.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/derror.h
--rw-r--r--	root/root	usr/include/mysql/server/private/des_key_file.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/discover.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/dur_prop.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/embedded_priv.h
@@ -390,6 +389,7 @@ drwxr-xr-x	root/root	usr/include/mysql/server/private/atomic/
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_group_by_cardinality.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_hints.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_hints_parser.h
+-rw-r--r--	root/root	usr/include/mysql/server/private/opt_hints_structs.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_histogram_json.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_range.h
 -rw-r--r--	root/root	usr/include/mysql/server/private/opt_rewrite_date_cmp.h

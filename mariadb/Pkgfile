@@ -4,9 +4,9 @@
 # Depends on: bzip2 curl fmt libaio libpcre2 libxcrypt libxml2 linux-pam lzo ncurses
 
 name=mariadb
-version=12.3.3
+version=13.0.2
 release=1
-source=(https://dlm.mariadb.com/4805490/MariaDB/$name-$version/source/$name-$version.tar.gz
+source=(https://dlm.mariadb.com/4844754/MariaDB/$name-$version/source/$name-$version.tar.gz
     mariadb.rc mariadb.pam
     pre-install)
 
@@ -29,8 +29,7 @@ source=(https://dlm.mariadb.com/4805490/MariaDB/$name-$version/source/$name-$ver
         -D WITH_SYSTEMD=no \
         -D WITH_EXTRA_CHARSETS=complex \
         -D WITH_EMBEDDED_SERVER=ON \
-        -D WITH_UNIT_TESTS=OFF \
-        -D SKIP_TESTS=ON
+        -D WITH_UNIT_TESTS=OFF
 
     cmake --build build -j ${JOBS:-1}
     DESTDIR=$PKG cmake --install build
