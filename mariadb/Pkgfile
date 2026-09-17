@@ -5,10 +5,14 @@
 
 name=mariadb
 version=13.0.2
-release=1
+release=2
 source=(https://dlm.mariadb.com/4844754/MariaDB/$name-$version/source/$name-$version.tar.gz
     mariadb.rc mariadb.pam
     pre-install)
+
+    if command -v ccache >/dev/null 2>&1; then
+        export PATH=$(echo $PATH | tr ':' '\n' | grep -E '/(s?bin)$' | tr '\n' ':')
+    fi
 
     build() {
     cmake -S $name-$version -B build -G Ninja \
@@ -29,7 +33,8 @@ source=(https://dlm.mariadb.com/4844754/MariaDB/$name-$version/source/$name-$ver
         -D WITH_SYSTEMD=no \
         -D WITH_EXTRA_CHARSETS=complex \
         -D WITH_EMBEDDED_SERVER=ON \
-        -D WITH_UNIT_TESTS=OFF
+        -D WITH_UNIT_TESTS=OFF \
+        -D PLUGIN_DUCKDB=NO
 
     cmake --build build -j ${JOBS:-1}
     DESTDIR=$PKG cmake --install build
