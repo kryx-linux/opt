@@ -1,13 +1,13 @@
 # Description: HTTP library implementation in C.
-# URL: https://wiki.gnome.org/Projects/libsoup
+# URL: https://libsoup.gnome.org/libsoup-3.0
 # Maintainer: John McQuah, jmcquah at disroot dot org
 # Depends on: glib-introspection glib-networking libpsl libxml2
 # Optional: brotli krb5 vala
 
 name=libsoup3
-version=3.6.5
+version=3.6.6
 release=1
-source=(https://download.gnome.org/sources/libsoup/${version%.*}/libsoup-$version.tar.xz)
+source=(https://gitlab.gnome.org/GNOME/libsoup/-/archive/$version/libsoup-$version.tar.bz2)
 
 build() {
   prt-get isinst brotli && PKGMK_LIBSOUP3+=' -D brotli=enabled'
@@ -28,5 +28,5 @@ build() {
     --auto-features disabled
 
   ninja -C build -j ${JOBS:-1}
-  DESTDIR=$PKG ninja -C build install
+  DESTDIR="$PKG" ninja -C build install
 }
