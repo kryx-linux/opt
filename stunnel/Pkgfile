@@ -4,7 +4,7 @@
 # Depends on: openssl zlib
 
 name=stunnel
-version=5.81
+version=5.82
 release=1
 source=(https://www.stunnel.org/downloads/$name-$version.tar.gz \
     $name.conf $name)
