@@ -28,6 +28,8 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjs
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/__pycache__/draft06.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/__pycache__/draft07.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/__pycache__/draft07.cpython-312.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/__pycache__/draft2019.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/__pycache__/draft2019.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/__pycache__/exceptions.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/__pycache__/exceptions.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/__pycache__/generator.cpython-312.opt-1.pyc
@@ -41,6 +43,7 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjs
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/draft04.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/draft06.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/draft07.py
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/draft2019.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/exceptions.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/generator.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/fastjsonschema/indent.py
@@ -183,6 +186,8 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packag
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/_musllinux.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/_parser.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/_parser.cpython-312.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/_ranges.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/_ranges.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/_structures.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/_structures.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/_tokenizer.cpython-312.opt-1.pyc
@@ -199,6 +204,8 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packag
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/metadata.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/pylock.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/pylock.cpython-312.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/ranges.cpython-312.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/ranges.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/requirements.cpython-312.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/requirements.cpython-312.pyc
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/__pycache__/specifiers.cpython-312.opt-1.pyc
@@ -213,6 +220,7 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packag
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/_manylinux.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/_musllinux.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/_parser.py
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/_ranges.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/_structures.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/_tokenizer.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/dependency_groups.py
@@ -230,6 +238,7 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packag
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/metadata.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/py.typed (EMPTY)
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/pylock.py
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/ranges.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/requirements.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/specifiers.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/_vendor/packaging/tags.py
@@ -519,9 +528,9 @@ drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry/core/version/pep440
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/version/pep440/segments.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/version/pep440/version.py
 -rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry/core/version/requirements.py
-drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry_core-2.4.1.dist-info/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.4.1.dist-info/METADATA
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.4.1.dist-info/RECORD
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.4.1.dist-info/WHEEL
-drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry_core-2.4.1.dist-info/licenses/
--rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.4.1.dist-info/licenses/LICENSE
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry_core-2.5.0.dist-info/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.5.0.dist-info/METADATA
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.5.0.dist-info/RECORD
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.5.0.dist-info/WHEEL
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/poetry_core-2.5.0.dist-info/licenses/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/poetry_core-2.5.0.dist-info/licenses/LICENSE
