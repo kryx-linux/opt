@@ -1,12 +1,12 @@
 # Description: A 2D graphics library with support for multiple output devices
-# URL: https://www.cairographics.org/
+# URL: https://cairographics.org/
 # Maintainer: CRUX System Team, core-ports at crux dot nu
 # Depends on: fontconfig glib xorg-libpixman xorg-libxext xorg-libxrender xorg-xcb-util
 
 name=cairo
-version=1.18.4
-release=2
-source=(https://gitlab.freedesktop.org/cairo/cairo/-/archive/$version/$name-$version.tar.bz2)
+version=1.18.6
+release=1
+source=(https://cairographics.org/releases/$name-$version.tar.xz)
 
 build() {
     meson setup build $name-$version $PKGMK_CAIRO \
