@@ -1,0 +1,16 @@
+diff -Naur qttools-everywhere-src-6.12.0.orig/src/assistant/qlitehtml/src/3rdparty/litehtml/CMakeLists.txt qttools-everywhere-src-6.12.0/src/assistant/qlitehtml/src/3rdparty/litehtml/CMakeLists.txt
+--- qttools-everywhere-src-6.12.0.orig/src/assistant/qlitehtml/src/3rdparty/litehtml/CMakeLists.txt	2026-09-30 16:32:15.681909589 +0200
++++ qttools-everywhere-src-6.12.0/src/assistant/qlitehtml/src/3rdparty/litehtml/CMakeLists.txt	2026-09-30 16:33:55.571250646 +0200
+@@ -163,7 +163,11 @@
+ endif()
+ 
+ add_library(${PROJECT_NAME} ${HEADER_LITEHTML} ${SOURCE_LITEHTML})
+-set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_LIB_VERSION} SOVERSION ${PROJECT_SO_VERSION})
++set_target_properties(${PROJECT_NAME} PROPERTIES
++    VERSION ${PROJECT_LIB_VERSION}
++    SOVERSION ${PROJECT_SO_VERSION}
++    UNITY_BUILD OFF
++)
+ 
+ set_target_properties(${PROJECT_NAME} PROPERTIES
+ 	CXX_STANDARD 17
