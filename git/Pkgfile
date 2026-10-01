@@ -23,7 +23,8 @@ build() {
         -D b_lto=true \
         -D b_pie=true \
         -D runtime_prefix=true \
-        -D tests=false
+        -D tests=false \
+        -D gitk=disabled
     meson compile -C build -j ${JOBS:-1}
     DESTDIR=$PKG meson install -C build
 
