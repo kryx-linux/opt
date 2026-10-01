@@ -1,0 +1,14 @@
+--- src/ck-manager.c
++++ src/ck-manager.c
+@@ -2651,8 +2651,9 @@ find_seat_for_session (CkManager *manager,
+ 
+         g_debug ("find_seat_for_session vtnr returned: %d", vtnr);
+ 
+-        if (IS_STR_SET (x11_display)
+-            && IS_STR_SET (x11_display_device)
++        /* x11-display-device is also the VT backing a Wayland session.
++         * The later vtnr check establishes that it is a real VT. */
++        if (IS_STR_SET (x11_display_device)
+             && ! IS_STR_SET (remote_host_name)
+             && is_local == TRUE) {
+                 is_static_x11 = TRUE;

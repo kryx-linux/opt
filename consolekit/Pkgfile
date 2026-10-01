@@ -6,12 +6,15 @@
 
 name=consolekit
 version=2.0.0
-release=1
+release=2
 source=(https://github.com/ConsoleKit2/ConsoleKit2/archive/$version/ConsoleKit2-$version.tar.gz
+  session.patch
   system-session pam-foreground-compat.ck)
 
 build() {
   cd ConsoleKit2-$version
+
+  patch -Np0 -i $SRC/session.patch
 
   NOCONFIGURE=1 ./autogen.sh
   ./configure \
