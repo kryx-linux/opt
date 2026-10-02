@@ -37,7 +37,7 @@ drwxr-xr-x	root/root	usr/lib/thunderbird/distribution/
 -rw-r--r--	root/root	usr/lib/thunderbird/distribution/policies.json
 drwxr-xr-x	root/root	usr/lib/thunderbird/fonts/
 -rw-r--r--	root/root	usr/lib/thunderbird/fonts/TwemojiMozilla.ttf
--rwxr-xr-x	root/root	usr/lib/thunderbird/glxtest
+-rwxr-xr-x	root/root	usr/lib/thunderbird/gfxtest
 drwxr-xr-x	root/root	usr/lib/thunderbird/icons/
 -rw-r--r--	root/root	usr/lib/thunderbird/icons/updater.png
 -rw-r--r--	root/root	usr/lib/thunderbird/interesting_serverknobs.json
@@ -72,14 +72,11 @@ drwxr-xr-x	root/root	usr/lib/thunderbird/isp/
 -rw-r--r--	root/root	usr/lib/thunderbird/platform.ini
 -rw-r--r--	root/root	usr/lib/thunderbird/precomplete
 -rw-r--r--	root/root	usr/lib/thunderbird/removed-files
--rwxr-xr-x	root/root	usr/lib/thunderbird/rnp-cli
--rwxr-xr-x	root/root	usr/lib/thunderbird/rnpkeys
 -rwxr-xr-x	root/root	usr/lib/thunderbird/thunderbird
 -rwxr-xr-x	root/root	usr/lib/thunderbird/thunderbird-bin
 -rw-r--r--	root/root	usr/lib/thunderbird/update-settings.ini
 -rwxr-xr-x	root/root	usr/lib/thunderbird/updater
 -rw-r--r--	root/root	usr/lib/thunderbird/updater.ini
--rwxr-xr-x	root/root	usr/lib/thunderbird/vaapitest
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/applications/
 -rw-r--r--	root/root	usr/share/applications/thunderbird.desktop
