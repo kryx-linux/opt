@@ -4,11 +4,11 @@
 # Depends on: ruby ruby-gdbm
 
 name=ck4up
-version=1.4.1
+version=1.5
 release=1
 source=(https://github.com/fjaell/ck4up/archive/refs/tags/$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    make MANDIR=/usr/share/man/man1 DESTDIR=$PKG install
+    make DESTDIR=$PKG install
 }
