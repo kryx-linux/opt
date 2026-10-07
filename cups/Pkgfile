@@ -2,10 +2,10 @@
 # URL: https://openprinting.github.io/cups/
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: acl libusb zlib linux-pam
-# Optional: dbus gnutls
+# Optional: avahi dbus gnutls
 
 name=cups
-version=2.4.19
+version=2.4.20
 release=1
 source=(https://github.com/OpenPrinting/cups/releases/download/v$version/$name-$version-source.tar.gz
     cups.rc cups.pam)
