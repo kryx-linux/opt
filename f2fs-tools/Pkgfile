@@ -3,14 +3,12 @@
 # Maintainer: Matt Housh, jaeger at crux dot ninja
 
 name=f2fs-tools
-version=1.16.0
+version=1.17.0
 release=1
-source=(https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/$name-$version.tar.gz\
-    0001-f2fs-tools-use-stdbool.h-instead-of-bool.patch)
+source=(https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    patch -p1 -i $SRC/0001-f2fs-tools-use-stdbool.h-instead-of-bool.patch
     autoreconf -fi
     ./configure --prefix=/usr \
         --sbindir=/sbin

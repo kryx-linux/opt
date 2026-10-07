@@ -6,6 +6,7 @@ lrwxrwxrwx	root/root	sbin/dump.f2fs -> fsck.f2fs
 lrwxrwxrwx	root/root	sbin/f2fslabel -> fsck.f2fs
 -rwxr-xr-x	root/root	sbin/fibmap.f2fs
 -rwxr-xr-x	root/root	sbin/fsck.f2fs
+lrwxrwxrwx	root/root	sbin/inject.f2fs -> fsck.f2fs
 -rwxr-xr-x	root/root	sbin/mkfs.f2fs
 -rwxr-xr-x	root/root	sbin/parse.f2fs
 lrwxrwxrwx	root/root	sbin/resize.f2fs -> fsck.f2fs
@@ -17,14 +18,14 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libf2fs.a
 -rwxr-xr-x	root/root	usr/lib/libf2fs.la
-lrwxrwxrwx	root/root	usr/lib/libf2fs.so -> libf2fs.so.10.0.0
-lrwxrwxrwx	root/root	usr/lib/libf2fs.so.10 -> libf2fs.so.10.0.0
--rwxr-xr-x	root/root	usr/lib/libf2fs.so.10.0.0
+lrwxrwxrwx	root/root	usr/lib/libf2fs.so -> libf2fs.so.11.0.0
+lrwxrwxrwx	root/root	usr/lib/libf2fs.so.11 -> libf2fs.so.11.0.0
+-rwxr-xr-x	root/root	usr/lib/libf2fs.so.11.0.0
 -rw-r--r--	root/root	usr/lib/libf2fs_format.a
 -rwxr-xr-x	root/root	usr/lib/libf2fs_format.la
-lrwxrwxrwx	root/root	usr/lib/libf2fs_format.so -> libf2fs_format.so.9.0.0
-lrwxrwxrwx	root/root	usr/lib/libf2fs_format.so.9 -> libf2fs_format.so.9.0.0
--rwxr-xr-x	root/root	usr/lib/libf2fs_format.so.9.0.0
+lrwxrwxrwx	root/root	usr/lib/libf2fs_format.so -> libf2fs_format.so.10.0.0
+lrwxrwxrwx	root/root	usr/lib/libf2fs_format.so.10 -> libf2fs_format.so.10.0.0
+-rwxr-xr-x	root/root	usr/lib/libf2fs_format.so.10.0.0
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/man/
 drwxr-xr-x	root/root	usr/share/man/man8/
@@ -34,6 +35,7 @@ drwxr-xr-x	root/root	usr/share/man/man8/
 -rw-r--r--	root/root	usr/share/man/man8/f2fscrypt.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/f2fslabel.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/fsck.f2fs.8.gz
+-rw-r--r--	root/root	usr/share/man/man8/inject.f2fs.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/mkfs.f2fs.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/resize.f2fs.8.gz
 -rw-r--r--	root/root	usr/share/man/man8/sload.f2fs.8.gz
