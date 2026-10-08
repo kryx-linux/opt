@@ -1,9 +1,11 @@
 # Description: Packet capture library
 # URL: https://www.tcpdump.org/
 # Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on:
+# Optional: dbus libnl
 
 name=libpcap
-version=1.10.7
+version=1.11.0
 release=1
 source=(https://www.tcpdump.org/release/$name-$version.tar.gz)
 
