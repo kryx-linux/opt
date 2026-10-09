@@ -6,12 +6,15 @@
 
 name=cups
 version=2.4.20
-release=1
+release=2
 source=(https://github.com/OpenPrinting/cups/releases/download/v$version/$name-$version-source.tar.gz
-    cups.rc cups.pam)
+    cups.rc cups.pam
+    no-dns-sd.patch)
 
 build() {
     cd $name-$version
+
+    patch -p1 -i $SRC/no-dns-sd.patch
 
     prt-get isinst gnutls && PKGMK_CUPS='--with-tls=gnutls' || PKGMK_CUPS='--with-tls=openssl'
 
