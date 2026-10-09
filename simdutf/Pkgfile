@@ -5,15 +5,19 @@
 
 name=simdutf
 version=9.2.1
-release=1
+release=2
 source=(https://github.com/simdutf/simdutf/archive/v$version/$name-$version.tar.gz)
 
 build() {
+  sed -i 's/set(CMAKE_CXX_EXTENSIONS OFF)/set(CMAKE_CXX_EXTENSIONS ON)/' \
+    $name-$version/cmake/simdutf-flags.cmake
+
   cmake -S $name-$version -B build -G Ninja \
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=lib \
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D SIMDUTF_CXX_STANDARD=20 \
     -D BUILD_SHARED_LIBS=ON \
     -D SIMDUTF_TESTS=OFF \
     -Wno-dev
