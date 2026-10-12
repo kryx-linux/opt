@@ -20,6 +20,7 @@ build() {
     prt-get isinst openjpeg2 || PKGMK_POPPLER+=' -D ENABLE_LIBOPENJPEG=off'
     prt-get isinst qt5 || PKGMK_POPPLER+=' -D ENABLE_QT5=off'
     prt-get isinst qt6-base || PKGMK_POPPLER+=' -D ENABLE_QT6=off'
+    prt-get isinst brotli || PKGMK_POPPLER+=' -D ENABLE_BROTLI=OFF'
 
     cmake -S $name-$version -B build -G Ninja $PKGMK_POPPLER \
         -D CMAKE_BUILD_TYPE=Release \
