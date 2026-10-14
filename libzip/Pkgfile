@@ -3,7 +3,7 @@
 # Maintainer: Tim Biermann, tbier at posteo dot de
 
 name=libzip
-version=1.12
+version=1.12.1
 release=1
 source=(https://libzip.org/download/$name-$version.tar.xz)
 
@@ -13,7 +13,8 @@ build() {
     -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
     -D CMAKE_INSTALL_PREFIX=/usr \
     -D CMAKE_INSTALL_LIBDIR=lib \
-    -D ENABLE_GNUTLS=OFF
+    -D ENABLE_GNUTLS=OFF \
+    -Wno-dev
   cmake --build build
   DESTDIR=$PKG cmake --install build
 }
