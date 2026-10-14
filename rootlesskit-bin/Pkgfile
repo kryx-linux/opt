@@ -3,7 +3,7 @@
 # Maintainer: Juergen Daubert, jue at crux dot nu
 
 name=rootlesskit-bin
-version=3.2.0
+version=3.3.0
 release=1
 source=(https://github.com/rootless-containers/rootlesskit/releases/download/v$version/rootlesskit-x86_64.tar.gz)
 renames=(rootlesskit-$version-x86_64.tar.gz)
