@@ -4,11 +4,11 @@
 
 name=mathopd
 version=1.6b17
-release=1
+release=2
 source=(http://www.mathopd.org/dist/$name-$version.tar.gz \
         http://www.mathopd.org/doc/mathopd.8.gz \
         http://www.mathopd.org/doc/mathopd.conf.5.gz \
-        dir_cgi-1.1.tar.gz \
+        https://crux.nu/files/distfiles/dir_cgi-1.1.tar.gz \
         mathopd-config.patch mathopd.conf mathopd)
 
 build () {
