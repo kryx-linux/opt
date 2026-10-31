@@ -5,11 +5,14 @@
 
 name=links
 version=2.30
-release=1
-source=(http://links.twibright.com/download/links-$version.tar.bz2)
+release=2
+source=(http://links.twibright.com/download/links-$version.tar.bz2
+    0001-fix-build-with-recent-gcc.patch)
 
 build() {
     cd $name-$version
+
+    patch -p1 -i $SRC/0001-fix-build-with-recent-gcc.patch
 
     CFLAGS="$CFLAGS -Wno-error=implicit-int" \
     ./configure \
