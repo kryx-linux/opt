@@ -5,7 +5,7 @@
 # Optional: alsa-lib cups json-c libical python3-docutils
 
 name=bluez
-version=5.87
+version=5.88
 release=1
 source=(https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-$version.tar.xz
   bluetoothd.service)
