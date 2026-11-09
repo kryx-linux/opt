@@ -4,10 +4,10 @@
 # Depends on: gtk gtk3 libglvnd
 
 name=nvidia
-version=595.112.07
+version=620.70.06
 release=1
-source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
-	https://github.com/NVIDIA/open-gpu-kernel-modules/archive/$version/$name-open-$version.tar.gz \
+source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run
+	https://github.com/NVIDIA/open-gpu-kernel-modules/archive/$version/$name-open-$version.tar.gz
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf nvidia-powerd.rc)
 
 build() {
@@ -56,7 +56,7 @@ build() {
 	install -D -m 0644 nvidia_layers.json $PKG/usr/share/vulkan/implicit_layer.d/nvidia_layers.json
 
 	# driver component libraries
-	for C in cfg {e,}glcore gl{si,vkspirv} rtcore allocator; do
+	for C in allocator cfg {e,}glcore gl{si,vkspirv} gpucomp rtcore; do
 		install -m 0755 libnvidia-${C}.so.$version $PKG/usr/lib/
 		ln -s libnvidia-${C}.so.$version $PKG/usr/lib/libnvidia-${C}.so.1
 		ln -s libnvidia-${C}.so.$version $PKG/usr/lib/libnvidia-${C}.so
@@ -67,16 +67,16 @@ build() {
 	ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so.1
 	ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so
 
-	# CUDA libraries
-	install -m 0755 libcuda.so.$version $PKG/usr/lib/
-	ln -s libcuda.so.$version $PKG/usr/lib/libcuda.so.1
-	ln -s libcuda.so.$version $PKG/usr/lib/libcuda.so
-	install -m 0755 libcudadebugger.so.$version $PKG/usr/lib/
-	ln -s libcudadebugger.so.$version $PKG/usr/lib/libcudadebugger.so.1
-	ln -s libcudadebugger.so.$version $PKG/usr/lib/libcudadebugger.so
-	install -m 0755 libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/
-	ln -s libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/libnvidia-ptxjitcompiler.so.1
-	ln -s libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/libnvidia-ptxjitcompiler.so
+	# compute libraries
+	for C in cuda cudadebugger nvidia-pkcs11-openssl3 nvidia-ptxjitcompiler; do
+		install -m 0755 lib${C}.so.$version $PKG/usr/lib/
+		ln -s lib${C}.so.$version $PKG/usr/lib/lib${C}.so.1
+		ln -s lib${C}.so.$version $PKG/usr/lib/lib${C}.so
+	done
+	install -m 0755 libnvidia-nvvm.so.$version $PKG/usr/lib/
+	ln -s libnvidia-nvvm.so.$version $PKG/usr/lib/libnvidia-nvvm.so.4
+	ln -s libnvidia-nvvm.so.$version $PKG/usr/lib/libnvidia-nvvm.so
+	install -m 0755 libnvidia-nvvm70.so.4 $PKG/usr/lib/
 
 	# OpenCL libraries and config
 	install -m 0755 libOpenCL.so.1.0.0 $PKG/usr/lib/
@@ -92,6 +92,9 @@ build() {
 
 	# TLS libraries
 	install -m 0755 libnvidia-tls.so.$version $PKG/usr/lib/
+	ln -s libnvidia-tls.so.$version $PKG/usr/lib/libnvidia-tls.so.1
+	ln -s libnvidia-tls.so.$version $PKG/usr/lib/libnvidia-tls.so
+	#install -d $PKG/usr/lib/tls
 
 	# monitoring and management API library
 	install -m 0755 libnvidia-ml.so.$version $PKG/usr/lib/
@@ -108,15 +111,11 @@ build() {
 	install -m 0755 libnvidia-gtk{2,3}.so.$version $PKG/usr/lib/
 
 	# encoding/decoding libraries
-	install -m 0755 libnvcuvid.so.$version $PKG/usr/lib/
-	ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so.1
-	ln -s libnvcuvid.so.$version $PKG/usr/lib/libnvcuvid.so
-	install -m 0755 libnvidia-encode.so.$version $PKG/usr/lib/
-	ln -s libnvidia-encode.so.$version $PKG/usr/lib/libnvidia-encode.so.1
-	ln -s libnvidia-encode.so.$version $PKG/usr/lib/libnvidia-encode.so
-	install -m 0755 libnvidia-fbc.so.$version $PKG/usr/lib/
-	ln -s libnvidia-fbc.so.$version $PKG/usr/lib/libnvidia-fbc.so.1
-	ln -s libnvidia-fbc.so.$version $PKG/usr/lib/libnvidia-fbc.so
+	for C in nvcuvid nvidia-{encode,fbc}; do
+		install -m 0755 lib${C}.so.$version $PKG/usr/lib/
+		ln -s lib${C}.so.$version $PKG/usr/lib/lib${C}.so.1
+		ln -s lib${C}.so.$version $PKG/usr/lib/lib${C}.so
+	done
 
 	# OptiX ray tracing engine
 	install -m 0755 libnvoptix.so.$version $PKG/usr/lib/
@@ -136,20 +135,14 @@ build() {
 	install -m 0755 nvidia-ngx-updater $PKG/usr/bin/
 
 	# NGX for wine/proton
-	if prt-get listinst --regex '^wine' >/dev/null 2>&1; then
-		install -d $PKG/usr/lib/nvidia/wine
-		install -m 0755 nvngx.dll $PKG/usr/lib/nvidia/wine/
-		install -m 0755 _nvngx.dll $PKG/usr/lib/nvidia/wine/
+	if prt-get listinst --regex '^wine' > /dev/null 2>&1; then
+		install -m 0755 -d $PKG/usr/lib/nvidia/wine
+		install -m 0755 *.dll $PKG/usr/lib/nvidia/wine/
 	fi
 
-	# gpucomp shader compilation library
-	install -m 0755 libnvidia-gpucomp.so.$version $PKG/usr/lib/
-	ln -s libnvidia-gpucomp.so.$version $PKG/usr/lib/libnvidia-gpucomp.so.1
-	ln -s libnvidia-gpucomp.so.$version $PKG/usr/lib/libnvidia-gpucomp.so
-
-	# GSP firmware
-	install -d $PKG/lib/firmware/$name/$version
-	install -m 0644 firmware/gsp_*.bin $PKG/lib/firmware/$name/$version/
+	# GSP/ucodes firmwares
+	install -m 0755 -d $PKG/lib/firmware/$name/$version
+	install -m 0644 firmware/{gsp,ucodes}_*.bin $PKG/lib/firmware/$name/$version/
 
 	# X driver config
 	install -D -m 0644 $SRC/10-nvidia-drm-outputclass.conf \
@@ -171,7 +164,7 @@ build() {
 
 	# kernel modules
 	export SYSSRC=/lib/modules/${KVER:-$(uname -r)}/build
-	if [ "${NVIDIA_PROPRIETARY_MODULES}" -eq 1 ]; then
+	if [ "${NVIDIA_PROPRIETARY_MODULES}" = 1 ]; then
 		cd kernel
 		IGNORE_CC_MISMATCH=1 make module
 		install -d $PKG/lib/modules/${KVER:-$(uname -r)}/extra

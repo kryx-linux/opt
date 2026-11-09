@@ -14,7 +14,7 @@ NVIDIA_PROPRIETARY_MODULES=1
 NOTE about groups and device permissions:
 -----------------------------------------
 
-Add your user to the "video" group to be able to
+Add your user to the "render" and "video" groups to be able to
 use the nvidia devices required for 3D to function properly.
 
 
