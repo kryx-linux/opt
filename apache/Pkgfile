@@ -5,7 +5,7 @@
 # Optional: brotli lua
 
 name=apache
-version=2.4.70
+version=2.4.71
 release=1
 source=(https://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
     crux.layout apache)
