@@ -5,105 +5,128 @@
 # Optional: openexr
 
 name=libjxl
-version=0.12.0
+version=0.13.0
 release=1
 _testdata_commit=73695d303670c90e4d506ea89d9901b081385089
-_brotli_commit=028fb5a23661f123017c060daa546b55cf4bde29
+_brotli_commit=db24a98aed38a16de78cc05ca15cdd8dc2a0d92d
 _googletest_commit=6910c9d9165801d8827d628cb72eb7ea9dd538c5
 _highway_commit=457c891775a7397bdb0376bb1031e6e027af1c48
 _lcms_commit=5176347635785e53ee5cee92328f76fda766ecc6
 _libjpeg_turbo_commit=8ecba3647edb6dd940463fedf38ca33a8e2a73d1
 _libpng_commit=872555f4ba910252783af1507f9e7fe1653be252
-_sjpeg_commit=94e0df6d0f8b44228de5be0ff35efb9f946a13c9
+_sjpeg_commit=dd4d9857c58a25713711a46d37385ad23ca2177e
 _skcms_commit=96d9171c94b937a1b5f0293de7309ac16311b722
 _zlib_commit=51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf
 
 source=(https://github.com/libjxl/libjxl/archive/v$version/$name-$version.tar.gz
-  https://github.com/webmproject/sjpeg/archive/$_sjpeg_commit/sjpeg-$_sjpeg_commit.tar.gz
-  https://github.com/libjxl/testdata/archive/$_testdata_commit/testdata-$_testdata_commit.tar.gz
-  https://github.com/libjpeg-turbo/libjpeg-turbo/archive/$_libjpeg_turbo_commit/libjpeg-turbo-$_libjpeg_turbo_commit.tar.gz
-  https://github.com/glennrp/libpng/archive/$_libpng_commit/libpng-$_libpng_commit.tar.gz
-  https://github.com/google/brotli/archive/$_brotli_commit/brotli-$_brotli_commit.tar.gz
-  https://github.com/madler/zlib/archive/$_zlib_commit/zlib-$_zlib_commit.tar.gz
-  https://github.com/google/googletest/archive/$_googletest_commit/googletest-$_googletest_commit.tar.gz
-  https://github.com/google/highway/archive/$_highway_commit/highway-$_highway_commit.tar.gz
-  https://github.com/mm2/Little-CMS/archive/$_lcms_commit/lcms-$_lcms_commit.tar.gz
-  https://skia.googlesource.com/skcms/+archive/$_skcms_commit.tar.gz)
-renames=(SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP skcms-$_skcms_commit.tar.gz)
+    https://github.com/webmproject/sjpeg/archive/$_sjpeg_commit/sjpeg-$_sjpeg_commit.tar.gz
+    https://github.com/libjxl/testdata/archive/$_testdata_commit/testdata-$_testdata_commit.tar.gz
+    https://github.com/libjpeg-turbo/libjpeg-turbo/archive/$_libjpeg_turbo_commit/libjpeg-turbo-$_libjpeg_turbo_commit.tar.gz
+    https://github.com/glennrp/libpng/archive/$_libpng_commit/libpng-$_libpng_commit.tar.gz
+    https://github.com/google/brotli/archive/$_brotli_commit/brotli-$_brotli_commit.tar.gz
+    https://github.com/madler/zlib/archive/$_zlib_commit/zlib-$_zlib_commit.tar.gz
+    https://github.com/google/googletest/archive/$_googletest_commit/googletest-$_googletest_commit.tar.gz
+    https://github.com/google/highway/archive/$_highway_commit/highway-$_highway_commit.tar.gz
+    https://github.com/mm2/Little-CMS/archive/$_lcms_commit/lcms-$_lcms_commit.tar.gz
+    https://skia.googlesource.com/skcms/+archive/$_skcms_commit.tar.gz
+    checksources.sh)
+renames=(SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP skcms-$_skcms_commit.tar.gz SKIP)
 
 unpack_source() {
-  mkdir -p $SRC/$name-$version/{testdata,third_party/{sjpeg,skcms,libjpeg-turbo,libpng,brotli,zlib,googletest,highway,lcms}}
-  local i url orig rename local_file base
-  for (( i=0; i<${#source[@]}; i++ )); do
-    url="${source[i]}"
-    orig="$(get_filename "$url")"
-    rename="${renames[i]}"
-    local_file="$orig"
-    if [ -n "$rename" ] && [ "$rename" != "SKIP" ]; then
-      local_file="$PKGMK_SOURCE_DIR/$rename"
-    fi
-    base="${local_file##*/}"
+    mkdir -p $SRC/$name-$version/{testdata,third_party/{sjpeg,skcms,libjpeg-turbo,libpng,brotli,zlib,googletest,highway,lcms}}
+    local i url orig rename local_file base
+    for (( i=0; i<${#source[@]}; i++ )); do
+        url="${source[i]}"
+        orig="$(get_filename "$url")"
+        rename="${renames[i]}"
+        local_file="$orig"
+        if [ -n "$rename" ] && [ "$rename" != "SKIP" ]; then
+          local_file="$PKGMK_SOURCE_DIR/$rename"
+        fi
+        base="${local_file##*/}"
 
-    case "$base" in
-      $name-$version.tar.gz)
-        bsdtar -p -o -C "$SRC" -xf "$local_file" ;;
-      sjpeg-$_sjpeg_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/third_party/sjpeg" \
-               --strip-components 1 -xf "$local_file" ;;
-      libjpeg-turbo-$_libjpeg_turbo_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/third_party/libjpeg-turbo" \
-               --strip-components 1 -xf "$local_file" ;;
-      skcms-$_skcms_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/third_party/skcms" \
-               -xf "$local_file" ;;
-      brotli-$_brotli_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/third_party/brotli" \
-               --strip-components 1 -xf "$local_file" ;;
-      libpng-$_libpng_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/third_party/libpng" \
-               --strip-components 1 -xf "$local_file" ;;
-      highway-$_highway_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/third_party/highway" \
-               --strip-components 1 -xf "$local_file" ;;
-      googletest-$_googletest_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/third_party/googletest" \
-               --strip-components 1 -xf "$local_file" ;;
-      lcms-$_lcms_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/third_party/lcms" \
-               --strip-components 1 -xf "$local_file" ;;
-      zlib-$_zlib_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/third_party/zlib" \
-               --strip-components 1 -xf "$local_file" ;;
-      testdata-$_testdata_commit.tar.gz)
-        bsdtar -p -o -C "$SRC/$name-$version/testdata" \
-          --strip-components 1 -xf $local_file ;;
-      *)
-        cp "$local_file" "$SRC" ;;
-    esac
-  done
+        case "$base" in
+            $name-$version.tar.gz)
+                extpath="${SRC}"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" -xf "$local_file" ;;
+            sjpeg-$_sjpeg_commit.tar.gz)
+                extpath="$SRC/$name-$version/third_party/sjpeg"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" \
+                    --strip-components 1 -xf "$local_file" ;;
+            libjpeg-turbo-$_libjpeg_turbo_commit.tar.gz)
+                extpath="$SRC/$name-$version/third_party/libjpeg-turbo"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" \
+                    --strip-components 1 -xf "$local_file" ;;
+            skcms-$_skcms_commit.tar.gz)
+                extpath="$SRC/$name-$version/third_party/skcms"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" -xf "$local_file" ;;
+            brotli-$_brotli_commit.tar.gz)
+                extpath="$SRC/$name-$version/third_party/brotli"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" \
+                    --strip-components 1 -xf "$local_file" ;;
+            libpng-$_libpng_commit.tar.gz)
+                extpath="$SRC/$name-$version/third_party/libpng"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" \
+                    --strip-components 1 -xf "$local_file" ;;
+            highway-$_highway_commit.tar.gz)
+                extpath="$SRC/$name-$version/third_party/highway"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" \
+                    --strip-components 1 -xf "$local_file" ;;
+            googletest-$_googletest_commit.tar.gz)
+                extpath="$SRC/$name-$version/third_party/googletest"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" \
+                    --strip-components 1 -xf "$local_file" ;;
+            lcms-$_lcms_commit.tar.gz)
+                extpath="$SRC/$name-$version/third_party/lcms"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" \
+                    --strip-components 1 -xf "$local_file" ;;
+            zlib-$_zlib_commit.tar.gz)
+                extpath="$SRC/$name-$version/third_party/zlib"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" \
+                    --strip-components 1 -xf "$local_file" ;;
+            testdata-$_testdata_commit.tar.gz)
+                extpath="$SRC/$name-$version/testdata"
+                echo "Unpacking $local_file to $extpath"
+                bsdtar -p -o -C "$extpath" \
+                    --strip-components 1 -xf "$local_file" ;;
+            *)
+                cp "$local_file" "$SRC" ;;
+        esac
+    done
 }
 
 build() {
-  prt-get isinst openexr && \
-    PKGMK_LIBJXL+=' -D JPEGXL_ENABLE_OPENEXR=ON' || \
-    PKGMK_LIBJXL+=' -D JPEGXL_ENABLE_OPENEXR=OFF'
+    prt-get isinst openexr && \
+        PKGMK_LIBJXL+=' -D JPEGXL_ENABLE_OPENEXR=ON' || \
+        PKGMK_LIBJXL+=' -D JPEGXL_ENABLE_OPENEXR=OFF'
 
-  cmake -S $name-$version -B build -G Ninja $PKGMK_LIBJXL \
-    -D CMAKE_INSTALL_PREFIX=/usr \
-    -D CMAKE_INSTALL_LIBDIR=lib \
-    -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS -ffat-lto-objects" \
-    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -ffat-lto-objects" \
-    -D JPEGXL_FORCE_SYSTEM_BROTLI=ON \
-    -D JPEGXL_FORCE_SYSTEM_HWY=ON \
-    -D JPEGXL_ENABLE_TOOLS=ON \
-    -D JPEGXL_ENABLE_EXAMPLES=OFF \
-    -D JPEGXL_ENABLE_FUZZERS=OFF \
-    -D BUILD_TESTING=OFF \
-    -D JPEGXL_ENABLE_DOXYGEN=OFF \
-    -D JPEGXL_ENABLE_BENCHMARK=OFF \
-    -D JPEGXL_ENABLE_SKCMS=OFF \
-    -Wno-dev
-  cmake --build build
-  DESTDIR=$PKG cmake --install build
+    cmake -S $name-$version -B build -G Ninja $PKGMK_LIBJXL \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBDIR=lib \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS -ffat-lto-objects" \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS -ffat-lto-objects" \
+        -D JPEGXL_VERSION="$version" \
+        -D JPEGXL_FORCE_SYSTEM_BROTLI=ON \
+        -D JPEGXL_FORCE_SYSTEM_HWY=ON \
+        -D JPEGXL_ENABLE_TOOLS=ON \
+        -D BUILD_TESTING=OFF \
+        -D JPEGXL_ENABLE_EXAMPLES=OFF \
+        -D JPEGXL_ENABLE_FUZZERS=OFF \
+        -D JPEGXL_ENABLE_DOXYGEN=OFF \
+        -D JPEGXL_ENABLE_BENCHMARK=OFF \
+        -D JPEGXL_ENABLE_SKCMS=OFF \
+        -Wno-dev
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
 }
