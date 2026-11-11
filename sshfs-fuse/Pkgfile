@@ -1,13 +1,17 @@
 # Description: Remote filesystem in userspace using SSH
-# URL: https://github.com/libfuse/sshfs 
+# URL: https://github.com/libfuse/sshfs
 # Maintainer: Juergen Daubert, jue at crux dot nu
 # Depends on: fuse3 glib
 # Optional: python3-docutils
 
 name=sshfs-fuse
-version=3.7.6
+version=3.7.7
 release=1
 source=(https://github.com/libfuse/sshfs/releases/download/sshfs-$version/sshfs-$version.tar.xz)
+
+unpack_source() {
+    bsdtar -xf $PKGMK_SOURCE_DIR/sshfs-$version.tar.xz -C $SRC -po --no-xattr
+}
 
 build() {
     meson setup build sshfs-$version \
