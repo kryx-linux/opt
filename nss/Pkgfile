@@ -4,7 +4,7 @@
 # Depends on: nspr sqlite3
 
 name=nss
-version=3.133
+version=3.134
 release=1
 source=(https://ftp.mozilla.org/pub/security/nss/releases/NSS_${version//./_}_RTM/src/$name-$version.tar.gz
     nss-3.54-standalone-2.patch
@@ -31,7 +31,7 @@ build() {
     install -d $PKG/usr/{bin,lib/pkgconfig,include/nss/private}
 
     cd dist/*.OBJ/bin
-    install -t "$PKG/usr/bin" *util shlibsign signtool signver ssltap
+    install -t "$PKG/usr/bin" *util shlibsign signver ssltap
     cd ../lib
     install -t "$PKG/usr/lib" *.so
     install -t "$PKG/usr/lib" -m644 libfreebl.a *.chk
