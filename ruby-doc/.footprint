@@ -1106,6 +1106,7 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/_enumerable_collect_concat-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/_enumerable_drop-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/_enumerable_drop_while-i.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/_enumerable_each_with_index-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/_enumerable_filter-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/_enumerable_filter_map-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/_enumerable_find_all-i.ri
@@ -1128,6 +1129,7 @@ drwxr-xr-x	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/compact-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/drop-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/drop_while-i.ri
+-rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/each_with_index-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/eager-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/enum_for-i.ri
 -rw-r--r--	root/root	usr/share/ri/4.0/system/Enumerator/Lazy/filter-i.ri
