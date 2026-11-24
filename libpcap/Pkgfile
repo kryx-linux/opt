@@ -5,7 +5,7 @@
 # Optional: dbus libnl
 
 name=libpcap
-version=1.11.0
+version=1.11.1
 release=1
 source=(https://www.tcpdump.org/release/$name-$version.tar.gz)
 
