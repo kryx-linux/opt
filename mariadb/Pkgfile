@@ -4,9 +4,9 @@
 # Depends on: bzip2 curl fmt libaio libpcre2 libxcrypt libxml2 linux-pam lzo ncurses
 
 name=mariadb
-version=13.0.2
-release=2
-source=(https://dlm.mariadb.com/4844754/MariaDB/$name-$version/source/$name-$version.tar.gz
+version=13.1.2
+release=1
+source=(https://dlm.mariadb.com/MariaDB/$name-$version/source/$name-$version.tar.gz
     mariadb.rc mariadb.pam
     pre-install)
 
