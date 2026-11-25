@@ -10,6 +10,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/task.1.gz
 drwxr-xr-x	root/root	usr/share/man/man5/
 -rw-r--r--	root/root	usr/share/man/man5/task-color.5.gz
+-rw-r--r--	root/root	usr/share/man/man5/task-iterative.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/task-sync.5.gz
 -rw-r--r--	root/root	usr/share/man/man5/taskrc.5.gz
 drwxr-xr-x	root/root	usr/share/task/
@@ -68,8 +69,6 @@ lrwxrwxrwx	root/root	usr/share/task/rc/holidays.por-PRT.rc -> holidays.pt-PT.rc
 drwxr-xr-x	root/root	usr/share/task/scripts/
 drwxr-xr-x	root/root	usr/share/task/scripts/add-ons/
 -rwxr-xr-x	root/root	usr/share/task/scripts/add-ons/update-holidays.pl
-drwxr-xr-x	root/root	usr/share/task/scripts/bash/
--rw-r--r--	root/root	usr/share/task/scripts/bash/task.sh
 drwxr-xr-x	root/root	usr/share/task/scripts/hooks/
 -rw-r--r--	root/root	usr/share/task/scripts/hooks/on-add
 -rw-r--r--	root/root	usr/share/task/scripts/hooks/on-add.the
